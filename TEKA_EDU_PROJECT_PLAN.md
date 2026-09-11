@@ -1574,7 +1574,7 @@ This section adds the infrastructure specification the project owner provided on
 ### 46.5 Configuration and secrets
 
 - Use the current Supabase key model: a publishable key for browsers, a secret key for server-only code. A secret must never use a `NEXT_PUBLIC_` name.
-- Environment templates are committed (`.env.example`, `.env.local.example`, `.env.development.example`, `.env.production.example`). Real values are never committed.
+- No `.env*` file is tracked by Git, not even templates (owner policy, 2026-09-11; this supersedes the original template requirement). Variables and safe examples are documented in `docs/ENVIRONMENT_VARIABLES.md`. Real values are never committed.
 - Application variables live in Vercel, scoped per environment. Deployment credentials live in GitHub Environment secrets (`staging`, `production`) and are never application runtime variables.
 - Configuration is validated centrally and type-safely, with a guard against cross-environment connections.
 - Logs never print secrets.

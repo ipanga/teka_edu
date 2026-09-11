@@ -30,6 +30,8 @@ Short architecture/product decision records (ADRs). They cover decisions future 
 | 019 | Canonical curriculum stays in Git; Supabase holds user data                | Accepted               |
 | 020 | Phase 0 toolchain baseline                                                 | Accepted               |
 | 021 | Centralised, validated environment configuration                           | Accepted               |
+| 022 | Branch protection with GitHub Rulesets; merge strategy                     | Accepted               |
+| 023 | No `.env*` files in the repository                                         | Accepted               |
 
 ---
 
@@ -145,7 +147,7 @@ Short architecture/product decision records (ADRs). They cover decisions future 
 
 **Decision:** All work happens on `feature/*` branches, which are squash-merged into `develop` (integration and staging). `develop` is promoted to `main` (production). `main` is protected and requires CI. Nobody develops directly on `main`.
 
-**Consequences:** CI runs on PRs to and pushes on `develop` and `main`. Deploys are staging from `develop` and production from `main`. Branch protection must be configured on GitHub.
+**Consequences:** CI runs on PRs to and pushes on `develop` and `main`. Deploys are staging from `develop` and production from `main`. Branch protection must be configured on GitHub. It was configured on 2026-09-11 (ADR-022).
 
 ---
 
@@ -297,7 +299,7 @@ When documents disagree about intended behavior, the order is plan → decisions
 - Deployment credentials are **GitHub Environment secrets** (`staging` / `production`, same names, environment-specific values, restricted to their branch). They are never Vercel or app variables.
 - Deploy jobs are gated by the repository variables `STAGING_DEPLOY_ENABLED` / `PRODUCTION_DEPLOY_ENABLED` until the services are configured.
 - Deployments are serialised per environment and never cancelled mid-run.
-- PRs into `main` must come from `develop` or `hotfix/*`.
+- PRs into `main` must come from `develop` or `hotfix/*` in this same repository (branch name and head repository identity; see ADR-022).
 
 **Consequences:** A failed check, migration or build stops the pipeline before anything is deployed, and a failed smoke test marks the deployment unhealthy. Manual production approval can be switched on through GitHub environment protection without changing the workflows.
 
@@ -387,5 +389,67 @@ When documents disagree about intended behavior, the order is plan → decisions
 **Consequences:**
 
 - Application code does not read `process.env` directly, except in Next.js/tooling configuration.
-- Adding a variable means updating the schema, the inventory, the `.env*.example` templates and, if public, both Dockerfiles' `ARG` lists.
+- Adding a variable means updating the schema, the inventory (`docs/ENVIRONMENT_VARIABLES.md`) and, if public, both Dockerfiles' `ARG` lists. No `.env*` template exists (ADR-023).
 - CI builds with fake sentinel secrets and fails if any appears in browser bundles.
+
+---
+
+## ADR-022 — Branch protection with GitHub Rulesets; merge strategy
+
+**Status:** Accepted · **Date:** 2026-09-11 · **Refines:** ADR-008, ADR-016
+
+**Context:**
+
+- The pull-request CI was validated on PR #1.
+- The repository has a single maintainer, so required approvals would make merging impossible, since authors cannot approve their own PRs.
+- Squash-merging `develop` into `main`, or requiring `main` PRs to be up to date, would make every later promotion diverge or need `main` merged back into the protected `develop`.
+
+**Decision:**
+
+- **Mechanism:** repository **Rulesets**, not classic branch protection: "Protect develop" (id 22930061) and "Protect main" (id 22930078), both active.
+- **No bypass actors.** The owner cannot push directly either.
+- **Both branches:**
+  - A PR is required, with 0 approvals and conversations resolved.
+  - Force pushes and deletion are blocked.
+  - The four CI quality jobs are required checks, pinned to the GitHub Actions app (integration 15368).
+- **`main` also requires `Promotion source`**, so only `develop` or `hotfix/<name>` **from this repository** can be merged into it. It checks the head repository ID from the `pull_request` payload as well as the branch name, so fork branches are refused (hardened 2026-09-11).
+- **Deployment jobs are never required checks** while deployments are disabled.
+- **`develop`:**
+  - The branch must be up to date before merging.
+  - Merge methods: squash (normal PRs) and merge commit (a `main → develop` back-merge after a hotfix).
+- **`main`:**
+  - It does not need to be up to date.
+  - Merge commits only, which preserves the shared `develop`/`main` history.
+- Required approvals can be raised when collaborators join.
+
+**Consequences:**
+
+- Every change, including documentation, goes through a PR and green CI.
+- Renaming a CI job requires updating both rulesets in the same PR.
+- In an emergency, an admin can edit or disable a ruleset. That is a recorded, deliberate act, never a silent bypass.
+
+---
+
+## ADR-023 — No `.env*` files in the repository
+
+**Status:** Accepted · **Date:** 2026-09-11 · **Amends:** ADR-021 · **Supersedes:** the template requirement in Plan §46.5 (original infrastructure spec §15)
+
+**Context:** The repository is public. The committed `.env.example`, `.env.local.example`, `.env.development.example` and `.env.production.example` contained only placeholders: gitleaks and a pattern scan of the full history found no real value. Even so, `.env`-named files in a public repository invite copy-paste mistakes, and a template filled in by accident would be one `git add` away from publishing a secret.
+
+**Decision:**
+
+- No file whose name starts with `.env` is ever tracked by Git, templates included. This is intentionally stricter than the common `.env.example` practice.
+- `.gitignore` ignores `.env` and `.env.*` with no exceptions.
+- The four templates were removed in a normal commit. History was not rewritten, because they never contained a secret.
+- Variables, with safe placeholder examples, are documented only in Markdown: `docs/ENVIRONMENT_VARIABLES.md` is the single source of truth.
+- Real values live only in:
+  - a developer's local, ignored `.env.local`, created by hand
+  - GitHub Environment secrets and variables
+  - Vercel project environment variables
+  - Supabase
+
+**Consequences:**
+
+- There is no `cp .env.example` step: developers create `.env.local` themselves, and only when they need to override the working defaults.
+- Tooling must not generate tracked `.env*` files. Build contexts (`.dockerignore`, `.vercelignore`) already exclude them.
+- The public history still contains the removed placeholder templates. That is harmless and accepted.

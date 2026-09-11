@@ -64,7 +64,7 @@ Keep this table in sync with the repository. Mark a row **Implemented** only whe
 | Lint / format          | ESLint 9 (`eslint-config-next`) + Prettier                                          | Implemented                                  |
 | Container              | `Dockerfile` (portable) + `Dockerfile.vercel` (Vercel container)                    | Implemented (built and smoke-tested locally) |
 | Database               | Supabase (PostgreSQL 17): CLI config, migrations folder, pgTAP tests; no tables yet | Scaffolded (local only)                      |
-| CI/CD                  | GitHub Actions: `ci.yml`, `deploy-staging.yml`, `deploy-production.yml`             | Written, linted; never run on GitHub         |
+| CI/CD                  | GitHub Actions: `ci.yml`, `deploy-staging.yml`, `deploy-production.yml`             | Implemented; run status in PROJECT_STATUS.md |
 | Hosting                | Vercel container deployment, portable to any OCI host                               | Not configured (no Vercel project yet)       |
 
 - **Deprecated / replaced:** plain Vercel/Next.js builds, replaced by `Dockerfile.vercel` container deployment (ADR-013).
@@ -103,6 +103,8 @@ Details are in `docs/`. Decisions are ADR-012 to ADR-021.
   - Vercel Git auto-deploy is off.
   - Deploy credentials live only in GitHub Environment secrets.
 - **Secrets:** never `NEXT_PUBLIC_`, never committed, never printed.
+- **No `.env*` file is ever tracked by Git, not even templates (ADR-023).** Environment variables are documented in `docs/ENVIRONMENT_VARIABLES.md`. Real values live only in local ignored files (`.env.local`) or in secure stores (GitHub Environment secrets, Vercel, Supabase).
+- **Production promotion:** only `develop` or `hotfix/<name>` from this repository (never a fork) may be merged into `main` (the `Promotion source` check).
 
 ## Commands
 
@@ -120,7 +122,8 @@ feature/*  -> develop  -> main
 (work)        (staging)   (production)
 ```
 
-- Do not develop directly on `main`. Feature PRs are squash-merged. `main` is protected and requires CI.
+- `develop` and `main` are protected by GitHub Rulesets (ADR-022). Every change, docs included, goes through a PR with green required checks, and direct pushes are rejected, even for the owner.
+- Feature, fix, chore and docs PRs are **squash**-merged into `develop`. `develop → main` uses a **merge commit**. If you rename a CI job, update the rulesets' required checks in the same PR.
 - Before calling work complete, run every check that applies: lint, format check, typecheck, unit tests, content validation, build, and where relevant E2E/smoke tests and Docker build.
 - Never suppress a failing check (skip, `@ts-ignore`, `eslint-disable`, lowering thresholds) just to get a green run.
 - Commit or push only when the user explicitly asks. Never create or modify remote Supabase or Vercel resources, or deploy, unless explicitly asked.
@@ -171,7 +174,7 @@ feature/*  -> develop  -> main
 2. Prefer simple architecture over early abstraction.
 3. Keep dependencies few. Use current stable versions and check them with the package registry at install time.
 4. Do not use `any` unless there is a written justification. Do not suppress TypeScript errors.
-5. Never commit secrets. Environment variables hold configuration only, never curriculum.
+5. Never commit secrets, and never create a tracked `.env*` file. Environment variables hold configuration only, never curriculum.
 6. Never claim implementation status that is not true.
 7. Add automated tests for domain logic, especially calendar, curriculum, content validation and review scheduling (required tests: Plan §41).
 8. Keep educational content out of UI components.

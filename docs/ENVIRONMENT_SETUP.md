@@ -26,14 +26,21 @@ The Supabase CLI and Playwright are project dependencies. Installing anything gl
 
 ## 1. Local environment
 
-No cloud account or credential is needed.
+No cloud account, credential or environment file is needed.
 
 ```bash
 npm ci                                   # install exact dependency versions
 npx playwright install chromium          # browser for E2E tests (once)
-cp .env.local.example .env.local         # optional: the app runs with defaults
-npm run dev                              # http://localhost:3000
+npm run dev                              # http://localhost:3000, with built-in defaults
 ```
+
+**Optional: `.env.local`.** The repository deliberately contains **no** `.env*` file, not even a template (ADR-023). To override a default, create the file yourself:
+
+```bash
+touch .env.local        # Git-ignored: never commit it
+```
+
+Then add only the variables you need, using the "Local: `.env.local`" example in [ENVIRONMENT_VARIABLES.md](ENVIRONMENT_VARIABLES.md#local-envlocal-optional) as a guide.
 
 **Optional: local Supabase.** The app does not need it yet, because child progress is stored locally in V1.
 
@@ -42,7 +49,7 @@ npm run db:start      # first run downloads the Supabase images (several minutes
 npx supabase status   # prints Project URL, Publishable key, Secret key, Database URL, Studio URL
 ```
 
-To fill `.env.local`, either copy the printed values into the placeholders, or print them already named for this project:
+To fill `.env.local`, either copy the printed values into it by hand, or print them already named for this project and paste the lines into `.env.local`:
 
 ```bash
 npx supabase status -o env \
@@ -149,13 +156,11 @@ Scope to **Production**. Use the PROD values:
 
 ## 9. GitHub repository basics
 
-1. [ ] The repository must contain `main` and `develop`. Bootstrapping: initialise Git, push `main`, create `develop` from it. Claude Code does this only when you ask.
-2. [ ] Settings → General → Pull Requests: allow **squash merging**. Optionally disable merge commits.
-3. [ ] Settings → Code security: enable **Secret scanning** and **Push protection** (free for public repositories).
-4. [ ] Settings → Rules → Rulesets (or Branches → branch protection):
-   - `main`: require a pull request, require the status checks below, block force pushes and deletions
-   - `develop`: require a pull request and the same checks
-   - Required checks (job names from `ci.yml`): `Format, lint, typecheck, unit tests, content`, `Build, client-bundle secret check, E2E smoke`, `Supabase migrations and database tests`, `Docker images (portable + Vercel)`, plus `Promotion source` for `main`. The names appear once CI has run at least once.
+1. [x] The repository contains `main` and `develop` (bootstrapped 2026-09-11 from commit `3df64bf`; `main` is the default branch).
+2. [x] Settings → General → Pull Requests: keep **squash merging** and **merge commits** enabled. Both are needed: squash for PRs into `develop`, merge commits for `develop → main`. The rulesets restrict which method each branch accepts.
+3. [x] Settings → Code security: **Secret scanning** and **Push protection** are enabled (verified 2026-09-11; there are no alerts).
+4. [x] Settings → Actions → General → "Approval for running fork pull request workflows from contributors" is set to **Require approval for all external contributors**. On `pull_request` events the workflow files come from the PR itself, so an outside contributor's workflow must never run without the owner reviewing it first.
+5. [x] Settings → Rules → Rulesets: **Protect develop** and **Protect main** have been active since 2026-09-11 and are configured through the API. Their exact rules are in [DEPLOYMENT.md, section Branch protection](DEPLOYMENT.md#branch-protection-github-rulesets-adr-022). If a CI job is renamed, update the required checks in both rulesets in the same PR, otherwise every PR is blocked.
 
 ## 10. GitHub `staging` environment
 

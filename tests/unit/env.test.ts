@@ -51,6 +51,35 @@ describe("parsePublicEnv", () => {
     expect(env.NEXT_PUBLIC_SUPABASE_URL).toBe("http://127.0.0.1:54321");
   });
 
+  describe("context-aware requirements (no .env file needed for local/static use)", () => {
+    const production = {
+      NEXT_PUBLIC_APP_ENV: "production",
+      NEXT_PUBLIC_APP_URL: "https://teka.example.org",
+    };
+
+    it("runs in production without any Supabase value while cloud sync is off", () => {
+      const env = parsePublicEnv(production);
+      expect(env.NEXT_PUBLIC_ENABLE_CLOUD_SYNC).toBe(false);
+      expect(env.NEXT_PUBLIC_SUPABASE_URL).toBeUndefined();
+    });
+
+    it("requires both hosted Supabase browser values in production once cloud sync is on", () => {
+      const run = () => parsePublicEnv({ ...production, NEXT_PUBLIC_ENABLE_CLOUD_SYNC: "true" });
+      expectEnvError(run, /NEXT_PUBLIC_SUPABASE_URL: is required/);
+      expectEnvError(run, /NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: is required/);
+    });
+
+    it("accepts production with cloud sync on and hosted Supabase values", () => {
+      const env = parsePublicEnv({
+        ...production,
+        NEXT_PUBLIC_ENABLE_CLOUD_SYNC: "true",
+        NEXT_PUBLIC_SUPABASE_URL: "https://abcdefghijklmnop.supabase.co",
+        NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: PUBLISHABLE,
+      });
+      expect(env.NEXT_PUBLIC_ENABLE_CLOUD_SYNC).toBe(true);
+    });
+  });
+
   it("requires Supabase browser variables when cloud sync is enabled", () => {
     expectEnvError(
       () => parsePublicEnv({ NEXT_PUBLIC_ENABLE_CLOUD_SYNC: "true" }),
