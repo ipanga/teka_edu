@@ -1,0 +1,71 @@
+{
+  "schoolYear": {
+    "id": "2026-2027",
+    "label": "2026–2027",
+    "startsOn": "2026-09-01",
+    "endsOn": "2027-07-02",
+    "instructionalWeekdays": [1, 2, 3, 4, 5],
+    "authority": "ministry",
+    "verification": "verified",
+    "source": "Calendrier scolaire 2026-2027, Ministère de l’Éducation nationale et Nouvelle Citoyenneté (MINEDU-NC), Kinshasa, 26 juin 2026, § IV.1 Enseignement maternel — https://edu-nc.gouv.cd/docs/1784193331_CALENDRIER%20SCOLAIRE%202026%20%E2%80%93%202027%20F_copy.pdf",
+    "notes": "Maternelle: children's activities run Monday to Friday. The calendar also counts four Saturdays as working days (14 Nov 2026, 27 Feb, 20 Mar and 29 May 2027) for results and report cards; they are not children's activity days, so they are not instructional days in Teka Edu. The ministry announces 192 working days including those Saturdays."
+  },
+  "periods": [
+    { "position": 1, "term": 1, "startsOn": "2026-09-01", "endsOn": "2026-11-04" },
+    { "position": 2, "term": 1, "startsOn": "2026-11-09", "endsOn": "2026-12-22" },
+    { "position": 3, "term": 2, "startsOn": "2027-01-11", "endsOn": "2027-02-17" },
+    { "position": 4, "term": 2, "startsOn": "2027-02-22", "endsOn": "2027-03-20" },
+    { "position": 5, "term": 3, "startsOn": "2027-04-05", "endsOn": "2027-05-21" },
+    { "position": 6, "term": 3, "startsOn": "2027-05-24", "endsOn": "2027-07-02" }
+  ],
+  "exceptions": [
+    {
+      "id": "2026-2027-detente-trimestre-1",
+      "kind": "school-vacation",
+      "startsOn": "2026-11-05",
+      "endsOn": "2026-11-07",
+      "name": "Congé de détente du 1er trimestre",
+      "publicHolidayId": null,
+      "authority": "ministry",
+      "verification": "verified",
+      "source": "Calendrier scolaire 2026-2027 (MINEDU-NC, 26 juin 2026), § IV.1",
+      "notes": null
+    },
+    {
+      "id": "2026-2027-vacances-trimestre-1",
+      "kind": "school-vacation",
+      "startsOn": "2026-12-23",
+      "endsOn": "2027-01-09",
+      "name": "Vacances du 1er trimestre",
+      "publicHolidayId": null,
+      "authority": "ministry",
+      "verification": "verified",
+      "source": "Calendrier scolaire 2026-2027 (MINEDU-NC, 26 juin 2026), § IV.1",
+      "notes": null
+    },
+    {
+      "id": "2026-2027-detente-trimestre-2",
+      "kind": "school-vacation",
+      "startsOn": "2027-02-18",
+      "endsOn": "2027-02-20",
+      "name": "Congé de détente du 2ème trimestre",
+      "publicHolidayId": null,
+      "authority": "ministry",
+      "verification": "verified",
+      "source": "Calendrier scolaire 2026-2027 (MINEDU-NC, 26 juin 2026), § IV.1",
+      "notes": null
+    },
+    {
+      "id": "2026-2027-vacances-trimestre-2",
+      "kind": "school-vacation",
+      "startsOn": "2027-03-22",
+      "endsOn": "2027-04-03",
+      "name": "Vacances du 2ème trimestre",
+      "publicHolidayId": null,
+      "authority": "ministry",
+      "verification": "verified",
+      "source": "Calendrier scolaire 2026-2027 (MINEDU-NC, 26 juin 2026), § IV.1",
+      "notes": null
+    }
+  ]
+}

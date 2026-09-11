@@ -2,7 +2,7 @@
 
 A French-first educational web app (PWA) giving preschool children (1ère, 2ème and 3ème maternelle) structured daily lessons. A parent guides each session at home, online or offline. It follows the official French Cycle 1 curriculum and the DRC school calendar.
 
-> **Status:** Phase 0 (foundation and infrastructure). The app is a placeholder French home page plus a health endpoint. There is no educational feature yet. See [`PROJECT_STATUS.md`](PROJECT_STATUS.md).
+> **Status:** Phase 1 (educational foundation). The school calendar, education levels and curriculum domains exist as validated data with a tested instructional-day generator. The child experience does not exist yet: the app is a placeholder French home page plus `/api/health` and `/api/calendar/<date>`. See [`PROJECT_STATUS.md`](PROJECT_STATUS.md).
 
 ## Documentation
 
@@ -15,6 +15,8 @@ A French-first educational web app (PWA) giving preschool children (1ère, 2ème
 | [`docs/ENVIRONMENT_SETUP.md`](docs/ENVIRONMENT_SETUP.md)         | Configure local, Supabase, Vercel and GitHub step by step |
 | [`docs/ENVIRONMENT_VARIABLES.md`](docs/ENVIRONMENT_VARIABLES.md) | Every environment variable (authoritative inventory)      |
 | [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md)                       | CI/CD, migrations, rollback, troubleshooting              |
+| [`docs/SCHOOL_CALENDAR.md`](docs/SCHOOL_CALENDAR.md)             | School calendar model, DRC holidays, generator rules      |
+| [`docs/EDUCATIONAL_MODEL.md`](docs/EDUCATIONAL_MODEL.md)         | Education levels, curriculum versions and domains         |
 
 ## Stack
 
@@ -52,7 +54,9 @@ npm run db:stop
 | `npm run lint`, `npm run format`, `npm run format:check`, `npm run typecheck` | Code quality                                                                                           |
 | `npm run test` / `npm run test:watch`                                         | Unit and component tests (Vitest)                                                                      |
 | `npm run test:e2e`                                                            | Playwright smoke tests against the local build (run `npm run build` first)                             |
-| `npm run content:validate`                                                    | Educational content validation                                                                         |
+| `npm run content:validate`                                                    | Educational content validation (registration, schemas, calendar and curriculum rules)                  |
+| `npm run calendar:report [-- 2026-2027 --days]`                               | Summary of the generated school calendar (instructional days, holidays, vacations)                     |
+| `npm run db:reference [-- --new-migration <name>]`                            | Regenerate the reference-data database test; with the flag, also a data migration (ADR-028)            |
 | `npm run check:client-bundle`                                                 | Fails if server-only values appear in browser bundles (used by CI)                                     |
 | `npm run db:start` / `db:stop` / `db:status`                                  | Local Supabase stack                                                                                   |
 | `npm run db:reset` / `db:test`                                                | Replay migrations + seed / run pgTAP database tests                                                    |
@@ -65,6 +69,14 @@ npm run db:stop
 npx supabase migration new <description>
 npm run db:reset
 npm run db:test
+```
+
+**Changed reference content** (`content/`: levels, curricula, calendars):
+
+```bash
+npm run content:validate
+npm run db:reference -- --new-migration <description>   # data migration + regenerated pgTAP test
+npm run db:reset && npm run db:test
 ```
 
 ## Configuration

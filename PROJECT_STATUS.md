@@ -6,30 +6,31 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-11
-Branch:     chore/free-tier-readiness-review (PR into develop)
-Commit:     develop at 7b87e85; main at 1b95480
+Branch:     feat/educational-foundation (PR into develop)
+Commit:     develop at d123b54; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
 ## Current Phase
 
 ```text
-Phase 0 — Foundation: COMPLETE (2026-09-11)
-Status:    The foundation is in Git and on GitHub. CI is verified on both push and pull_request
-           events (Linux x86_64), and develop/main are protected by rulesets. The first
-           develop → main promotion (PR #5) is done; no .env* file on either branch.
-           Infrastructure for the development phase is complete and verified on free tiers
-           (Vercel Hobby, Supabase Free, $0/month, ADR-027). Staging is live.
-           Next: Phase 1 functional development on local + staging. Production stays disabled.
-Objective: Next.js + TypeScript app with lint/format/test tooling, Docker, Supabase local
-           stack, CI/CD workflows and environment documentation (Plan §38 Phase 0, §46).
+Phase 1 — Curriculum Engine: IN PROGRESS (educational foundation done, 2026-09-11)
+Status:    School-year model, DRC holiday rules, calendar exceptions, instructional-day
+           generator, education structure (stage → level), curriculum versions and the six
+           Cycle 1 domains exist as validated content, tested domain logic and a database
+           mirror (10 reference tables, RLS server-only). Sources verified: MINEDU-NC
+           calendar 2026-2027, Ordonnance n° 23/042, arrêté du 16 avril 2026.
+           Remaining in Phase 1: learning objectives / competencies, lesson and activity
+           schemas, daily programme. Production stays disabled (ADR-027).
+Objective: Plan §38 Phase 1 (school-year schema, calendar engine, RDC holiday rules,
+           curriculum competency schema, lesson schema, content validator).
 ```
 
 ## Overall Progress
 
 ```text
 [x] Phase 0 — Foundation              (complete: CI verified on GitHub, branch protection active)
-[ ] Phase 1 — Curriculum Engine
+[~] Phase 1 — Curriculum Engine       (foundation done; objectives, lessons, daily plan next)
 [ ] Phase 2 — Child Experience
 [ ] Phase 3 — Activity Engine
 [ ] Phase 4 — Progress Tracking
@@ -70,6 +71,17 @@ Objective: Next.js + TypeScript app with lint/format/test tooling, Docker, Supab
 - [x] Environment variables documented in `docs/ENVIRONMENT_VARIABLES.md` (the single source of truth). **No `.env*` file is tracked** (ADR-023): the four placeholder templates were removed on 2026-09-11, and `.gitignore` ignores `.env` and `.env.*` with no exceptions
 - [x] Scripts: `validate-content.ts`, `check-client-bundle.ts`, `start-standalone.mjs`, `docker-smoke.sh`
 
+### Phase 1 — Educational foundation (PR `feat/educational-foundation`)
+
+- [x] Calendar domain (`domain/calendar/`): civil dates without `Date`, holiday expansion, instructional-day generator, school-year lookup, validation (ADR-029)
+- [x] Curriculum domain (`domain/curriculum/`): stages, levels, curriculum versions, domains, lookup and validation (ADR-030)
+- [x] Reference content (`content/`): levels, curriculum `maternelle-cycle1-cd-2026`, DRC holidays (`national.json`), school year 2026–2027 (official dates, periods, vacations)
+- [x] `lib/content/`: Zod schemas and the validated, bundled reference data; `npm run content:validate` checks registration, schemas and rules
+- [x] Database: migration `20260911203000_educational_foundation` (10 tables, constraints, deferred triggers, RLS server-only) and generated data migration `20260911204157_reference_data_2026_2027` (ADR-028)
+- [x] pgTAP: access registry guard, generated reference-data equality and idempotency test, 30 integrity tests
+- [x] `npm run calendar:report`, `npm run db:reference`, `GET /api/calendar/<date>` (checked by the deploy smoke tests)
+- [x] Docs: `docs/SCHOOL_CALENDAR.md`, `docs/EDUCATIONAL_MODEL.md`, ADR-028 to ADR-030, ADR-003/004/019 amended
+
 ## Infrastructure Status
 
 Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED`.
@@ -84,7 +96,7 @@ Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED
 | Supabase DEV (`teka-edu-dev`)   | **VERIFIED**                                     | Ref `quyhkkizsmosybavoewd`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Working copy linked. `db push` up to date (no migrations), remote pgTAP RLS test PASS, 0 public tables without RLS, security advisors clean. Pooled `DATABASE_URL` connects. CI secrets are in GitHub `staging`; runtime values are in the owner's Keychain.                                                                                                     |
 | Supabase PROD (`teka-edu-prod`) | **VERIFIED**                                     | Ref `eganrivpkjhozkkahyxy`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Read-only checks only: migration list empty, 0 public tables without RLS, security advisors clean; pooled `DATABASE_URL` connects. Nothing pushed or seeded. CI secrets are in GitHub `production`; runtime values are in the owner's Keychain.                                                                                                                  |
 | GitHub environments             | **CONFIGURED**                                   | `staging` (branch `develop`): Supabase + Vercel secrets (incl. the project-scoped `VERCEL_TOKEN`) and `STAGING_DOMAIN`. `production` (branch `main`, required reviewer): Supabase secrets, `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` / bypass secret, **no `VERCEL_TOKEN`**.                                                                                                                                                                   |
-| Database migrations             | **CONFIGURED**                                   | Migration-only pipeline in CI/CD. No migrations exist yet (no schema needed in V1). DEV: `db push` verified (up to date). PROD: untouched (read-only `migration list`).                                                                                                                                                                                                                                                                    |
+| Database migrations             | **CONFIGURED**                                   | Two migrations (educational foundation schema + generated reference data), verified locally (`db reset`, 55 pgTAP assertions). DEV: applied by the staging deploy after merge (see Deployment Status). PROD: untouched; the migrations reach it only with a future, approved production promotion.                                                                                                                                         |
 | Vercel staging                  | **VERIFIED**                                     | Project `teka-edu` (Hobby, `container` preset, `cdg1`, no Git link). First verified deployment: run 34635262697, `dpl_99QEWbwtBTV53u5HzdudDaKndjgy` (Preview, READY, commit `e2f8f69`), alias https://teka-edu-staging.vercel.app. `/api/health` reports `staging` and the DEV ref; region `cdg1` confirmed by `x-vercel-id`. Protection returns 302 without auth. Browser bundle and logs are secret-free. `STAGING_DEPLOY_ENABLED=true`. |
 | Vercel production               | **CONFIGURED (not deployed; deferred, ADR-027)** | Production scope has the PROD Supabase URL and publishable key, `NEXT_PUBLIC_APP_ENV=production` and `PORT=3000`. `NEXT_PUBLIC_APP_URL` is intentionally unset. There is no production `VERCEL_TOKEN`, and `PRODUCTION_DEPLOY_ENABLED` is unset. The only production deployment is the failed first one (never served).                                                                                                                    |
 | Environment variables           | **CONFIGURED**                                   | Validation and Markdown inventory complete. Environment-file cleanup is VERIFIED on both `develop` and `main`: no `.env*` file in either tree, and the public default branch shows none (ADR-023). No hosted values exist yet.                                                                                                                                                                                                             |
@@ -96,19 +108,23 @@ Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED
 ## In Progress
 
 ```text
-Task:           Free-tier readiness review (this PR)
-Status:         Open as a PR into develop; merging triggers the next automatic staging deploy
-Relevant files: docs/FREE_TIER.md (new), lib/env/schema.ts (strict project-ref guard),
-                DECISIONS.md (ADR-027, ADR-015 amended), CLAUDE.md, docs/*
+Task:           Phase 1 educational foundation (PR feat/educational-foundation → develop)
+Status:         Implemented and verified locally; merging triggers the staging deploy, which
+                applies the two migrations to Supabase DEV and runs the smoke tests
+                (including /api/calendar)
+Relevant files: domain/, content/, lib/content/, lib/supabase/reference-sql.ts,
+                supabase/migrations/, supabase/tests/database/, docs/SCHOOL_CALENDAR.md,
+                docs/EDUCATIONAL_MODEL.md, DECISIONS.md (ADR-028–030)
 ```
 
 ## Next Tasks
 
 ### P0 — Next
 
-1. **Begin functional development** (Phase 1) on the verified local + staging infrastructure:
-   - calendar and school-year domain models, the DRC holiday data file, the instruction-day generator and its tests (Plan §39 Tasks 5–6; needs PD-002 / PD-003)
-   - curriculum and lesson schemas (Task 7)
+1. **Curriculum objectives, lesson/activity model and daily learning programme** (rest of Phase 1, Plan §39 Task 7):
+   - learning objectives / competencies per domain from the official annexes (PD-004), with age bands mapped to levels
+   - lesson and activity schemas, keyed by instructional-day number (ADR-004), with the optional `scaffolding.en` extension point
+   - daily plan model (`docs/EDUCATIONAL_MODEL.md`, "Daily plan extension point")
 
 ### Deferred — production (not in the current phase, ADR-027)
 
@@ -129,11 +145,11 @@ Relevant files: docs/FREE_TIER.md (new), lib/env/schema.ts (strict project-ref g
 
 ## Known Issues
 
-### ISSUE-002 — Official curriculum source not yet obtained
+### ISSUE-002 — Official curriculum source: competency text not yet extracted
 
-Severity: High for Phases 1, 6 and 7 · Status: Open
-Description: The domain list in Plan §3.1 has not been checked against the official Bulletin officiel text, and no competency catalogue exists.
-Recommended action: PD-004. Do not create competency IDs until the source is cited.
+Severity: Medium for Phases 6 and 7 · Status: Partly resolved (2026-09-11)
+Description: The programme in force is identified and cited: arrêté du 16 avril 2026 (BO n° 19 du 7 mai 2026), with the arrêté du 22 octobre 2024 (BO n° 41) for language and mathematics. The six domain titles and order are verified. The competency catalogue (objectives per age band) has not been extracted yet.
+Recommended action: PD-004, next phase. Do not create competency IDs until each is cited from the annexes.
 
 ### ISSUE-003 — The school year is already under way
 
@@ -194,8 +210,22 @@ Severity: Low · Status: Open (recommendation only)
 Description: Nothing uses them. Supabase deprecates them by the end of 2026, and turning them off (Settings → API Keys) is reversible.
 Recommended action: with owner approval, turn them off in DEV first, confirm staging stays healthy, then do the same in PROD.
 
+### ISSUE-015 — DRC holiday substitution practice is uncertain
+
+Severity: Low (calendar accuracy) · Status: Open
+Description: Ord. 23/042 art. 2 moves a Sunday holiday to the preceding day, but Ministry of Labour communiqués in 2025–2026 gave Mondays off (also for Saturday holidays), and they do not clearly cover schools. For 2026–2027: 16 Jan 2027 (Sat), 17 Jan 2027 (Sun) and 1 May 2027 (Sat). Nothing is announced and no observed day is configured.
+Recommended action: watch communiqués in early January and late April 2027. If schools are concerned, add an `observed-holiday` exception with its source and generate a data migration (docs/SCHOOL_CALENDAR.md).
+
+### ISSUE-016 — Period 5 day count differs from the official calendar
+
+Severity: Low · Status: Open
+Description: The MINEDU-NC calendar gives 32 working days for maternelle period 5 (5 Apr – 21 May 2027). Monday–Friday minus the 6 April and 17 May holidays gives 33. The other period differences are explained by the four working Saturdays. The difference may anticipate a substitute day for 1 May.
+Recommended action: none until an announcement. Recorded in docs/SCHOOL_CALENDAR.md and asserted in tests/unit/school-days.test.ts.
+
 ## Resolved Issues
 
+- **PD-002 (school-year end date and vacations)**, resolved 2026-09-11: official MINEDU-NC calendar of 26 June 2026 (maternelle: 1 Sep 2026 – 2 Jul 2027, six periods, four vacation periods), encoded in `content/calendars/cd/2026-2027.json`.
+- **PD-003 (DRC public holidays)**, resolved 2026-09-11: Ordonnance n° 23/042 du 30 mars 2023 (ten holidays, including 6 April added in 2023). Weekend substitution is handled as data (observed-holiday exceptions), not code; the open practice question is ISSUE-015.
 - **ISSUE-005 (commit SHA forwarding)**, resolved 2026-09-11: `--build-env` does not reach container builds (Vercel passes no build arguments). The commit is now passed at runtime with `vercel deploy --env`, and `/api/health` reports the exact SHA (ADR-025).
 - **First staging attempts (2026-09-11), all fixed, no production impact:**
   - Run 34628609695: Vercel's "first deployment is production" rule plus a missing container preset. The build was refused by the env guard and never served. Fixed in PR #9.
@@ -213,7 +243,7 @@ Recommended action: with owner approval, turn them off in DEV first, confirm sta
 Description: Applies to **production only**, which is deferred (ADR-027). There is **no blocker for development**. Production will later need a production `VERCEL_TOKEN`, a domain, a Vercel plan decision, backups, custom SMTP and a privacy review.
 Required action: none in the current phase.
 
-Phase 1 calendar and curriculum data also need PD-002, PD-003 and PD-004. That does not block the remaining Phase 0 work.
+PD-002 and PD-003 are resolved. PD-004 (competency text) is needed for the next part of Phase 1.
 
 ## Tests / Quality Status
 
@@ -223,13 +253,15 @@ Local runs on 2026-09-11 (macOS arm64, Node 22.22.2, Docker 29.7.2), repeated be
 Lint:                  PASS
 Format:                PASS
 TypeScript:            PASS
-Unit tests:            PASS (44 tests, Vitest; includes promotion-source, runtime-config and strict-guard tests)
-Content validation:    PASS (0 content files: none exist yet)
-Playwright:            PASS (2 smoke tests against the standalone build)
+Unit tests:            PASS (96 tests, Vitest: calendar dates and time zones, generator, validation,
+                       reference data, SQL generator drift, calendar API, architecture, env guard)
+Content validation:    PASS (4 JSON files: registered, schema-valid, consistent)
+Playwright:            PASS (3 smoke tests incl. /api/calendar against the standalone build)
 Next.js build:         PASS
 Client-bundle check:   PASS (sentinel secrets absent; a planted leak is detected)
 Docker build:          PASS (Dockerfile and Dockerfile.vercel, with health and graceful-stop smoke)
-Supabase DB tests:     PASS (pgTAP: RLS guard; a table without RLS correctly fails)
+Supabase DB tests:     PASS (55 pgTAP assertions in 3 files: RLS + access registry, reference data =
+                       content/ and idempotent sync, 30 integrity rules)
 Workflow lint:         PASS (actionlint 1.7.12)
 Secret scan:           PASS (gitleaks v8.30.1 on full Git history, all refs; pattern scan)
 Promotion source live: REFUSED as expected (draft PR #4, fix/* → main, run 34615884503)
@@ -247,7 +279,8 @@ GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891,
 | 2ème maternelle | Not started        | Not started | Not started | Not started |
 | 3ème maternelle | Not started        | Not started | Not started | Not started |
 
-DRC 2026–2027 calendar data: Not started.
+DRC 2026–2027 calendar data: DONE (official MINEDU-NC calendar and Ordonnance n° 23/042; 189 instructional days).
+Curriculum: version `maternelle-cycle1-cd-2026` with the six verified domains; objectives not started.
 
 ## Deployment Status
 
@@ -275,19 +308,17 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
    - `STAGING_DEPLOY_ENABLED` / `PRODUCTION_DEPLOY_ENABLED` (deploy gates)
    - `VERCEL_STAGING_TARGET` / `STAGING_DOMAIN` (optional)
    - `NEXT_PUBLIC_GIT_SHA` (runtime deployment metadata). The version comes from `package.json`; `NEXT_PUBLIC_APP_VERSION` was removed.
-6. **No `lib/supabase/database.types.ts` yet.** There is no schema; `npm run db:types` was tested and works.
+6. **No `lib/supabase/database.types.ts` yet.** The reference schema exists, but no application code queries the database (the app reads the bundled `content/`). Generate the types when the first database query is written.
 7. **No `.env*` templates** (spec §15–19 asked for four committed templates). The owner's stricter policy on 2026-09-11 removed them, and the values are documented in `docs/ENVIRONMENT_VARIABLES.md` instead (ADR-023).
 8. **Local Supabase `edge_runtime` and `analytics` disabled** in `config.toml` to keep the stack light (ADR-014).
 
 ## Important Pending Decisions
 
-- **PD-002: School-year end date and DRC vacation periods** (before Phase 1 data)
-  - The plan gives only 2026-09-01.
-- **PD-003: DRC public holidays** (before Phase 1 data)
-  - Verify the Plan §4.3 list against the current legal text.
-  - Settle the rule for holidays falling on a weekend.
-- **PD-004: Official curriculum text** (before Phase 1 competency data)
-  - Obtain the exact Bulletin officiel reference and applicability date, and check reuse terms (the repository is public).
+- **PD-004: Competency catalogue** (before the objectives/lessons part of Phase 1)
+  - Reference identified and reuse terms checked (Licence Ouverte / freely reusable regulatory text; `docs/EDUCATIONAL_MODEL.md`).
+  - Remaining: extract objectives per domain and age band from the 2026 annex and the 2024 annexes, with citations.
+- **PD-014: EVAR (éducation à la vie affective et relationnelle)** (before content authoring)
+  - The 2026 annex attaches the French EVAR programme (arrêté du 3 février 2025) to the six domains. The model supports it as a `transversal` component, but whether and how Teka Edu includes it in the DRC context is an owner decision. Not configured.
 - **PD-005: Mid-year start** (before Phase 2)
   - Proposal: calendar-aligned by default, with a per-child position the parent can reset.
 - **PD-006: PWA tooling** (before Phase 5)
@@ -311,24 +342,26 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  Free-tier readiness review (no cost incurred, production untouched).
-            - Verified current official limits of Vercel Hobby and Supabase Free, classified in
-              docs/FREE_TIER.md. Architecture verdict: suitable, unchanged.
-            - Cost: $0. Vercel Hobby has no payment method on file; Supabase DEV and PROD on Free.
-            - Security: gitleaks (full history) clean; no Keychain secret in history; staging
-              browser code free of secrets, tokens, DB URLs and project refs; environments
-              correctly scoped.
-            - Found and fixed a gap: the env guard accepted an unrelated third Supabase project.
-              It now requires the environment's own ref.
-            - Production config audited read-only. CI/CD paths audited: production has four
-              independent blocks (switch, branch rule, approval, no token).
-            - Designed a zero-cost encrypted db-dump backup (not implemented); recommendations
-              for legacy keys, DIRECT_DATABASE_URL (not needed; session pooler), registry
-              pruning, pausing.
-Changed:    docs/FREE_TIER.md (new), lib/env/schema.ts + tests, DECISIONS.md (ADR-027,
-            ADR-015 amended), CLAUDE.md, PROJECT_STATUS.md, docs/*.
-Tests:      See the Tests / Quality Status section; CI on the PR.
-Remaining:  None for development. Production is deferred.
-Recommended next task: begin functional development of Teka Edu (Phase 1) using the verified
-            local + staging infrastructure.
+Completed:  Phase 1 educational foundation.
+            - Verified sources: MINEDU-NC school calendar 2026-2027 (26 June 2026, maternelle
+              1 Sep 2026 – 2 Jul 2027, 6 periods, 4 vacations), Ordonnance n° 23/042 (10 DRC
+              holidays), arrêté du 16 avril 2026 (six Cycle 1 domains, exact titles and order).
+            - Calendar engine: civil dates, holiday expansion, exceptions (one-off/observed
+              holidays, vacations, closures, instructional overrides), gap-free numbering,
+              reasons with precedence. 2026-2027 = 305 dates, 189 instructional days.
+            - Education model: stage → level, curriculum versions assigned per school year,
+              domains with learning-domain/transversal kinds.
+            - Database: 10 reference tables (RLS on, server-only), constraints, deferred
+              triggers; data written by a generated idempotent migration; pgTAP proves the
+              database equals content/ (ADR-028).
+            - Developer report (npm run calendar:report) and GET /api/calendar/<date>.
+Changed:    domain/, content/, lib/content/, lib/supabase/, scripts/, app/api/calendar/,
+            supabase/migrations/ + tests, tests/unit + e2e, docs (SCHOOL_CALENDAR.md,
+            EDUCATIONAL_MODEL.md, DEPLOYMENT.md, FREE_TIER.md), DECISIONS.md, CLAUDE.md,
+            README.md.
+Tests:      See the Tests / Quality Status section.
+Remaining:  ISSUE-015 (holiday substitution practice), ISSUE-016 (period 5 count), PD-004
+            (competency text), PD-014 (EVAR).
+Recommended next task: curriculum objectives, lesson/activity model and daily learning
+            programme generation.
 ```

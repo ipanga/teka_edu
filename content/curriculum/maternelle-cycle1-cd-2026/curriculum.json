@@ -1,0 +1,65 @@
+{
+  "id": "maternelle-cycle1-cd-2026",
+  "stageId": "maternelle",
+  "name": "Teka Edu Maternelle — Cycle 1 adapté pour la RDC",
+  "version": "2026",
+  "status": "active",
+  "reference": {
+    "title": "Programme d’enseignement de l’école maternelle (cycle 1)",
+    "publisher": "Ministère de l’Éducation nationale (France)",
+    "citation": "Arrêté du 16 avril 2026 fixant le programme d’enseignement de l’école maternelle (cycle 1), NOR MENE2608627A, BO n° 19 du 7 mai 2026, applicable from the 2026-2027 school year. Domains 1 and 4: annexes 1 and 2 of the arrêté du 22 octobre 2024, NOR MENE2415135A, BO n° 41 du 31 octobre 2024.",
+    "url": "https://www.education.gouv.fr/bo/2026/Hebdo19/MENE2608627A",
+    "verification": "verified"
+  },
+  "adaptationNote": "Teka Edu adaptation for the DRC (Teka Edu decision, not an official DRC programme): DRC school calendar and holidays, Congolese or universal examples, French-first with optional English scaffolding. The 2026 French programme states objectives by age band (before 4, from 4, from 5); Teka Edu maps its classes to the French sections PS, MS and GS.",
+  "schoolYearIds": ["2026-2027"],
+  "levels": [
+    { "levelId": "maternelle-1", "referenceSection": "PS" },
+    { "levelId": "maternelle-2", "referenceSection": "MS" },
+    { "levelId": "maternelle-3", "referenceSection": "GS" }
+  ],
+  "domains": [
+    {
+      "code": "LANG",
+      "kind": "learning-domain",
+      "position": 1,
+      "title": "Le développement et la structuration du langage oral et écrit",
+      "active": true
+    },
+    {
+      "code": "PHYS",
+      "kind": "learning-domain",
+      "position": 2,
+      "title": "Agir, s’exprimer, comprendre à travers les activités physiques",
+      "active": true
+    },
+    {
+      "code": "ART",
+      "kind": "learning-domain",
+      "position": 3,
+      "title": "Agir, s’exprimer, comprendre à travers les activités artistiques",
+      "active": true
+    },
+    {
+      "code": "MATH",
+      "kind": "learning-domain",
+      "position": 4,
+      "title": "L’acquisition des premiers outils mathématiques",
+      "active": true
+    },
+    {
+      "code": "TIME-SPACE",
+      "kind": "learning-domain",
+      "position": 5,
+      "title": "Se repérer dans le temps et l’espace",
+      "active": true
+    },
+    {
+      "code": "WORLD",
+      "kind": "learning-domain",
+      "position": 6,
+      "title": "Découvrir le monde du vivant, de la matière et des objets",
+      "active": true
+    }
+  ]
+}

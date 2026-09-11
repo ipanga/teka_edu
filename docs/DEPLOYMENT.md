@@ -106,13 +106,13 @@ The deploy jobs run only when the repository variables `STAGING_DEPLOY_ENABLED` 
 
 These are separate jobs that run in parallel. Any failure blocks the merge and the deployment.
 
-| Job                                          | Steps                                                                                                                                                                                |
-| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Promotion source                             | PRs into `main` must come from `develop` or `hotfix/<name>` **in this repository**, never from a fork (unit-tested in `tests/unit/promotion-source.test.ts`)                         |
-| Format, lint, typecheck, unit tests, content | `npm ci` → `format:check` → `lint` → `typecheck` → `test` (Vitest) → `content:validate`                                                                                              |
-| Build, client-bundle secret check, E2E smoke | `next build` with fake sentinel values for server secrets → `check:client-bundle` (fails if a sentinel appears in browser JS) → Playwright smoke against the built standalone server |
-| Supabase migrations and database tests       | `supabase db start` (applies all migrations and the dev seed) → `supabase db reset` → `supabase test db` (pgTAP; includes the "RLS on every public table" guard)                     |
-| Docker images                                | build `Dockerfile` → run it, wait for `/api/health`, stop it (must exit on SIGTERM, not be killed) → the same for `Dockerfile.vercel`                                                |
+| Job                                          | Steps                                                                                                                                                                                   |
+| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Promotion source                             | PRs into `main` must come from `develop` or `hotfix/<name>` **in this repository**, never from a fork (unit-tested in `tests/unit/promotion-source.test.ts`)                            |
+| Format, lint, typecheck, unit tests, content | `npm ci` → `format:check` → `lint` → `typecheck` → `test` (Vitest) → `content:validate`                                                                                                 |
+| Build, client-bundle secret check, E2E smoke | `next build` with fake sentinel values for server secrets → `check:client-bundle` (fails if a sentinel appears in browser JS) → Playwright smoke against the built standalone server    |
+| Supabase migrations and database tests       | `supabase db start` (applies all migrations and the dev seed) → `supabase db reset` → `supabase test db` (pgTAP: RLS and access registry, reference data = `content/`, integrity rules) |
+| Docker images                                | build `Dockerfile` → run it, wait for `/api/health`, stop it (must exit on SIGTERM, not be killed) → the same for `Dockerfile.vercel`                                                   |
 
 CI never connects to a hosted Supabase project. On pushes to `develop` and `main`, CI runs inside the deploy workflows (as a reusable workflow) instead of a second time on its own.
 
@@ -140,6 +140,8 @@ Rules (ADR-017):
 - **Expand, then contract.** Add new structures first, release code that uses them, and remove the old ones in a later migration. Do not ship `DROP`/`RENAME` in the same release as the code change that stops using the old structure.
 - **Label destructive migrations.** Anything that drops, renames or rewrites data needs a comment at the top of the file with `-- DESTRUCTIVE:`, the recovery plan, and a note in the PR description.
 - **No seeding of hosted projects.** `supabase/seed.sql` is local-only, and `db push` runs without `--include-seed`.
+- **Reference data travels as migrations.** Levels, curricula, school years, holidays and calendar exceptions are canonical in `content/`. They reach every database through **generated, idempotent data migrations** (`npm run db:reference -- --new-migration <name>`, ADR-028), never through seeds. The generated pgTAP test `reference_data.test.sql` fails CI if the migrations and `content/` differ.
+- **Access decisions are tested.** Every new public table must be added, with its access decision, to the registry in `supabase/tests/database/rls.test.sql`, or the database job fails.
 - **Commit applied migrations as they are.** Once a migration is on DEV or PROD, never edit or rename it. Fix forward with a new migration.
 
 ## Vercel container deployment
