@@ -7,8 +7,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-09-11
 Branch:     develop
-Commit:     3df64bf (initial baseline, identical on main and develop); this status update is
-            the next commit on develop
+Commit:     3df64bf (initial baseline, identical on main and develop); the status update and its
+            formatting fix follow on develop
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -71,19 +71,19 @@ Objective: Next.js + TypeScript app with lint/format/test tooling, Docker, Supab
 
 Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED`.
 
-| Area                            | Status               | Evidence / remaining                                                                                                                                                                      |
-| ------------------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Git repository                  | **VERIFIED**         | Initialised 2026-09-11. `origin/main` and `origin/develop` both at `3df64bf`. No force push; remote was empty beforehand. |
-| Docker                          | **VERIFIED**         | Both images build, report healthy, run as user `node`, and exit on SIGTERM with code 143, both locally (arm64) and on GitHub runners (x86_64). |
-| GitHub Actions                  | **IN PROGRESS**      | Every CI job **passed on GitHub** in the push-triggered runs `Deploy production` 34610713969 (main) and `Deploy staging` 34610729923 (develop), with deploy jobs skipped as designed. Still to do: the PR-triggered `ci.yml` run, the `Promotion source` check, branch rules. No GitHub environments exist yet. |
-| Supabase local                  | **VERIFIED**         | `db start` / `db reset` / `test db` (PASS) / `stop` all work. Full `supabase start` confirmed `sb_publishable_…` / `sb_secret_…` local keys, and the env validation accepts them.         |
-| Supabase DEV (`teka-edu-dev`)   | **BLOCKED**          | Project not created. Owner must create it and provide values (see below).                                                                                                                 |
-| Supabase PROD (`teka-edu-prod`) | **BLOCKED**          | Project not created. Owner action.                                                                                                                                                        |
-| Database migrations             | **CONFIGURED**       | Migration-only pipeline in CI/CD. No migrations exist yet (no schema needed in V1). Nothing applied to any hosted database.                                                               |
-| Vercel staging                  | **BLOCKED**          | No Vercel project, token or IDs. Staging deploy job gated by `STAGING_DEPLOY_ENABLED` (unset).                                                                                            |
-| Vercel production               | **BLOCKED**          | Same as staging. Gated by `PRODUCTION_DEPLOY_ENABLED` (unset).                                                                                                                            |
-| Environment variables           | **CONFIGURED**       | Templates, validation and inventory complete. No hosted values exist yet.                                                                                                                 |
-| Deployment documentation        | **CONFIGURED**       | Written. Must be re-checked against the first real staging and production deployments.                                                                                                    |
+| Area                            | Status          | Evidence / remaining                                                                                                                                                                                                                                                                                            |
+| ------------------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Git repository                  | **VERIFIED**    | Initialised 2026-09-11. `origin/main` and `origin/develop` both at `3df64bf`. No force push; remote was empty beforehand.                                                                                                                                                                                       |
+| Docker                          | **VERIFIED**    | Both images build, report healthy, run as user `node`, and exit on SIGTERM with code 143, both locally (arm64) and on GitHub runners (x86_64).                                                                                                                                                                  |
+| GitHub Actions                  | **IN PROGRESS** | Every CI job **passed on GitHub** in the push-triggered runs `Deploy production` 34610713969 (main) and `Deploy staging` 34610729923 (develop), with deploy jobs skipped as designed. Still to do: the PR-triggered `ci.yml` run, the `Promotion source` check, branch rules. No GitHub environments exist yet. |
+| Supabase local                  | **VERIFIED**    | `db start` / `db reset` / `test db` (PASS) / `stop` all work. Full `supabase start` confirmed `sb_publishable_…` / `sb_secret_…` local keys, and the env validation accepts them.                                                                                                                               |
+| Supabase DEV (`teka-edu-dev`)   | **BLOCKED**     | Project not created. Owner must create it and provide values (see below).                                                                                                                                                                                                                                       |
+| Supabase PROD (`teka-edu-prod`) | **BLOCKED**     | Project not created. Owner action.                                                                                                                                                                                                                                                                              |
+| Database migrations             | **CONFIGURED**  | Migration-only pipeline in CI/CD. No migrations exist yet (no schema needed in V1). Nothing applied to any hosted database.                                                                                                                                                                                     |
+| Vercel staging                  | **BLOCKED**     | No Vercel project, token or IDs. Staging deploy job gated by `STAGING_DEPLOY_ENABLED` (unset).                                                                                                                                                                                                                  |
+| Vercel production               | **BLOCKED**     | Same as staging. Gated by `PRODUCTION_DEPLOY_ENABLED` (unset).                                                                                                                                                                                                                                                  |
+| Environment variables           | **CONFIGURED**  | Templates, validation and inventory complete. No hosted values exist yet.                                                                                                                                                                                                                                       |
+| Deployment documentation        | **CONFIGURED**  | Written. Must be re-checked against the first real staging and production deployments.                                                                                                                                                                                                                          |
 
 ## In Progress
 
@@ -216,7 +216,7 @@ Staging:    Not configured (no Supabase DEV / Vercel project); not deployed
 Production: Not configured; not deployed
 CI:         Passing on GitHub (push-triggered via deploy workflows); PR-triggered run pending
 CD:         Deploy jobs skipped: STAGING_/PRODUCTION_DEPLOY_ENABLED unset; no GitHub environments
-Remote:     github.com/ipanga/teka_edu (public). main (default) = 3df64bf; develop = 3df64bf + status docs commit
+Remote:     github.com/ipanga/teka_edu (public). main (default) = 3df64bf; develop = main + documentation-only status commits
 ```
 
 ## Deviations From the Infrastructure Spec (documented)
