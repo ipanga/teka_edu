@@ -150,12 +150,9 @@ Scope to **Production**. Use the PROD values:
 ## 9. GitHub repository basics
 
 1. [x] The repository contains `main` and `develop` (bootstrapped 2026-09-11 from commit `3df64bf`; `main` is the default branch).
-2. [ ] Settings → General → Pull Requests: allow **squash merging**. Optionally disable merge commits.
+2. [x] Settings → General → Pull Requests: keep **squash merging** and **merge commits** enabled. Both are needed: squash for PRs into `develop`, merge commits for `develop → main`. The rulesets restrict which method each branch accepts.
 3. [ ] Settings → Code security: enable **Secret scanning** and **Push protection** (free for public repositories).
-4. [ ] Settings → Rules → Rulesets (or Branches → branch protection):
-   - `main`: require a pull request, require the status checks below, block force pushes and deletions
-   - `develop`: require a pull request and the same checks
-   - Required checks (job names from `ci.yml`): `Format, lint, typecheck, unit tests, content`, `Build, client-bundle secret check, E2E smoke`, `Supabase migrations and database tests`, `Docker images (portable + Vercel)`, plus `Promotion source` for `main`. The names appear once CI has run at least once.
+4. [x] Settings → Rules → Rulesets: **Protect develop** and **Protect main** have been active since 2026-09-11 and are configured through the API. Their exact rules are in [DEPLOYMENT.md, section Branch protection](DEPLOYMENT.md#branch-protection-github-rulesets-adr-022). If a CI job is renamed, update the required checks in both rulesets in the same PR, otherwise every PR is blocked.
 
 ## 10. GitHub `staging` environment
 

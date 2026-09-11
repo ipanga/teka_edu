@@ -4,7 +4,7 @@ This document covers how code moves from a feature branch to production, what ea
 
 - Configuration of the services: [ENVIRONMENT_SETUP.md](ENVIRONMENT_SETUP.md).
 - Variables: [ENVIRONMENT_VARIABLES.md](ENVIRONMENT_VARIABLES.md).
-- Decisions: ADR-012 to ADR-018 in [`DECISIONS.md`](../DECISIONS.md).
+- Decisions: ADR-012 to ADR-018 and ADR-022 in [`DECISIONS.md`](../DECISIONS.md).
 
 ## Overview
 
@@ -44,7 +44,23 @@ Persistent state never lives in the container. Postgres, and later Auth and Stor
 
 ## Branch lifecycles
 
-### Feature branch (`feature/*`, `fix/*`)
+### Branch protection (GitHub Rulesets, ADR-022)
+
+`develop` and `main` are protected by the repository rulesets **Protect develop** and **Protect main**. Nobody can bypass them, including the owner:
+
+| Rule                                     | `develop`                                                                                                                                                                     | `main`                                                                   |
+| ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Changes only through a pull request      | yes (0 approvals, conversations must be resolved)                                                                                                                             | yes (0 approvals, conversations must be resolved)                        |
+| Required checks (GitHub Actions)         | `Format, lint, typecheck, unit tests, content`, `Build, client-bundle secret check, E2E smoke`, `Supabase migrations and database tests`, `Docker images (portable + Vercel)` | same 4 + `Promotion source`                                              |
+| Branch must be up to date before merging | yes                                                                                                                                                                           | no, so `develop` → `main` promotions never need `main` merged back first |
+| Allowed merge methods                    | squash (feature/fix/chore PRs), merge commit (back-merge of `main` after a hotfix)                                                                                            | merge commit only                                                        |
+| Force push / deletion                    | blocked                                                                                                                                                                       | blocked                                                                  |
+
+- Direct pushes are rejected with `GH013 … Changes must be made through a pull request`.
+- The disabled deployment jobs are **not** required checks.
+- In an emergency, an admin can temporarily edit or disable a ruleset under Settings → Rules. Record why in `PROJECT_STATUS.md`.
+
+### Feature branch (`feature/*`, `fix/*`, `chore/*`, `docs/*`)
 
 ```bash
 git checkout develop && git pull
@@ -58,7 +74,7 @@ git push -u origin feature/my-feature   # then open a PR into develop
 
 - Feature branches never deploy.
 - CI runs on the PR, and a failed check blocks the merge.
-- Merge with **squash**.
+- Merge into `develop` with **squash**. Afterwards, delete the branch on GitHub and locally. Git reports squashed branches as "not fully merged"; check `git diff <branch> develop` is empty before `git branch -D`.
 
 ### `develop` (integration and staging)
 
@@ -73,12 +89,13 @@ If a step fails, the job stops and the steps after it do not run. In particular,
 
 ### `main` (production)
 
-- Only `develop` (or an emergency `hotfix/*` branch) may be merged into `main`. The CI `Promotion source` check enforces this.
+- Only `develop` (or an emergency `hotfix/*` branch) may be merged into `main`. The CI `Promotion source` check enforces this and is required by the `main` ruleset.
+- Promote with a PR `develop → main` and a **merge commit**, not a squash, so `main` and `develop` keep a shared history. Never delete `develop` after the merge.
 - `deploy-production.yml` does the same as staging against `teka-edu-prod`, and deploys with `vercel deploy --prod`.
 - Production runs are strictly serialised (`concurrency: deploy-production`, never cancelled mid-run).
 - Manual approval can be added with **Required reviewers** on the GitHub `production` environment.
 
-**Hotfix:** branch `hotfix/x` from `main`, then open a PR into `main`. Afterwards, merge `main` back into `develop` so the branches do not diverge.
+**Hotfix:** branch `hotfix/x` from `main`, then open a PR into `main` (merge commit). Afterwards, open a PR `main → develop` and merge it with a **merge commit**, so the branches do not diverge.
 
 ### Before the services are configured
 
