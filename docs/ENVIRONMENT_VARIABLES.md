@@ -11,7 +11,7 @@ This is the **single source of truth** for every environment variable Teka Edu u
 >
 > The examples in this document are placeholders or harmless constants only.
 >
-> **Current storage (2026-09-11):** the real Supabase DEV and PROD values are in the owner's macOS Keychain (accounts `teka-edu-dev` / `teka-edu-prod`, one item per variable; see [ENVIRONMENT_SETUP.md section 2](ENVIRONMENT_SETUP.md#2-supabase-projects-done-2026-09-11)). The CI credentials are in the GitHub `staging` / `production` environments.
+> **Current storage (2026-09-11):** the real Supabase DEV and PROD values are in the owner's macOS Keychain (accounts `teka-edu-dev` / `teka-edu-prod`, one item per variable; see [ENVIRONMENT_SETUP.md section 2](ENVIRONMENT_SETUP.md#2-supabase-projects-done-2026-09-11)). The CI credentials are in the GitHub `staging` / `production` environments. The Vercel project `teka-edu` holds the runtime values: Preview (= staging) has the DEV values and Production the PROD values, without `NEXT_PUBLIC_APP_URL` yet. See [ENVIRONMENT_SETUP.md sections 6–8](ENVIRONMENT_SETUP.md#6-vercel-project-done-2026-09-11).
 
 Keep this file in sync with:
 

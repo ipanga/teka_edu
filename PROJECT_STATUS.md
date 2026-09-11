@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-11
-Branch:     chore/configure-supabase-environments (PR into develop)
-Commit:     develop at 02bc112; main at 1b95480
+Branch:     docs/record-vercel-staging (PR into develop)
+Commit:     develop at e2f8f69 (first verified staging deployment); main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -72,48 +72,41 @@ Objective: Next.js + TypeScript app with lint/format/test tooling, Docker, Supab
 
 Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED`.
 
-| Area                            | Status         | Evidence / remaining                                                                                                                                                                                                                                                                                                                                                                                                |
-| ------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Git repository                  | **VERIFIED**   | Initialised 2026-09-11 with no force push (the remote was empty beforehand). `origin/main` = `1b95480`, a merge commit of `3df64bf` + `4abe26e`; `origin/develop` = `4abe26e`. Both branches have identical trees.                                                                                                                                                                                                  |
-| Docker                          | **VERIFIED**   | Both images build, report healthy, run as user `node`, and exit on SIGTERM with code 143, both locally (arm64) and on GitHub runners (x86_64).                                                                                                                                                                                                                                                                      |
-| GitHub Actions                  | **VERIFIED**   | Push-triggered CI: VERIFIED (runs 34610713969, 34610729923, 34611359891, 34612999684, 34617650743 on the promotion merge; deploy jobs skipped as designed). PR-triggered CI: VERIFIED (PR #1, run 34612652962, Linux x86_64). No GitHub environments exist yet.                                                                                                                                                     |
-| Branch protection               | **VERIFIED**   | GitHub Rulesets active for `develop` and `main` (re-verified after the promotion; `main` accepted PR #5 only with all 5 checks green, merge commit only): PR required, 0 approvals, conversations resolved, 4 quality checks required (+ `Promotion source` on `main`), force push and deletion blocked, no bypass actors. A direct push to `develop` was rejected (GH013). Details: `docs/DEPLOYMENT.md`, ADR-022. |
-| Supabase local                  | **VERIFIED**   | `db start` / `db reset` / `test db` (PASS) / `stop` all work. Full `supabase start` confirmed `sb_publishable_…` / `sb_secret_…` local keys, and the env validation accepts them.                                                                                                                                                                                                                                   |
-| Supabase DEV (`teka-edu-dev`)   | **VERIFIED**   | Ref `quyhkkizsmosybavoewd`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Working copy linked. `db push` up to date (no migrations), remote pgTAP RLS test PASS, 0 public tables without RLS, security advisors clean. Pooled `DATABASE_URL` connects. CI secrets are in GitHub `staging`; runtime values are in the owner's Keychain.                                                                              |
-| Supabase PROD (`teka-edu-prod`) | **VERIFIED**   | Ref `eganrivpkjhozkkahyxy`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Read-only checks only: migration list empty, 0 public tables without RLS, security advisors clean; pooled `DATABASE_URL` connects. Nothing pushed or seeded. CI secrets are in GitHub `production`; runtime values are in the owner's Keychain.                                                                                           |
-| GitHub environments             | **CONFIGURED** | `staging` (branch `develop`) and `production` (branch `main`, required reviewer `ipanga`, self-review allowed) each hold `SUPABASE_ACCESS_TOKEN`, `SUPABASE_PROJECT_ID`, `SUPABASE_DB_PASSWORD` for their own project. The Vercel secrets are not added yet.                                                                                                                                                        |
-| Database migrations             | **CONFIGURED** | Migration-only pipeline in CI/CD. No migrations exist yet (no schema needed in V1). DEV: `db push` verified (up to date). PROD: untouched (read-only `migration list`).                                                                                                                                                                                                                                             |
-| Vercel staging                  | **BLOCKED**    | No Vercel project, token or IDs. Staging deploy job gated by `STAGING_DEPLOY_ENABLED` (unset).                                                                                                                                                                                                                                                                                                                      |
-| Vercel production               | **BLOCKED**    | Same as staging. Gated by `PRODUCTION_DEPLOY_ENABLED` (unset).                                                                                                                                                                                                                                                                                                                                                      |
-| Environment variables           | **CONFIGURED** | Validation and Markdown inventory complete. Environment-file cleanup is VERIFIED on both `develop` and `main`: no `.env*` file in either tree, and the public default branch shows none (ADR-023). No hosted values exist yet.                                                                                                                                                                                      |
-| develop → main promotion        | **VERIFIED**   | PR #5, merged 2026-09-11 as merge commit `1b95480`. `Promotion source` passed on a real event ("'develop' from ipanga/teka_edu may be promoted to main", run 34617296272), and all 4 quality checks passed. The merge-triggered `Deploy production` run 34617650743 skipped its deploy job. There are no GitHub deployments or environments.                                                                        |
-| Repository security             | **VERIFIED**   | No real secret in the full Git history (gitleaks, all refs + pattern scan). Secret scanning and push protection enabled (no alerts). Fork PR workflows need owner approval for all external contributors. `Promotion source` checks the repository identity.                                                                                                                                                        |
-| Deployment documentation        | **CONFIGURED** | Written. Must be re-checked against the first real staging and production deployments.                                                                                                                                                                                                                                                                                                                              |
+| Area                            | Status                        | Evidence / remaining                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Git repository                  | **VERIFIED**                  | Initialised 2026-09-11 with no force push (the remote was empty beforehand). `origin/main` = `1b95480`, a merge commit of `3df64bf` + `4abe26e`; `origin/develop` = `4abe26e`. Both branches have identical trees.                                                                                                                                                                                                                         |
+| Docker                          | **VERIFIED**                  | Both images build, report healthy, run as user `node`, and exit on SIGTERM with code 143, both locally (arm64) and on GitHub runners (x86_64).                                                                                                                                                                                                                                                                                             |
+| GitHub Actions                  | **VERIFIED**                  | Push-triggered CI: VERIFIED (runs 34610713969, 34610729923, 34611359891, 34612999684, 34617650743 on the promotion merge; deploy jobs skipped as designed). PR-triggered CI: VERIFIED (PR #1, run 34612652962, Linux x86_64). No GitHub environments exist yet.                                                                                                                                                                            |
+| Branch protection               | **VERIFIED**                  | GitHub Rulesets active for `develop` and `main` (re-verified after the promotion; `main` accepted PR #5 only with all 5 checks green, merge commit only): PR required, 0 approvals, conversations resolved, 4 quality checks required (+ `Promotion source` on `main`), force push and deletion blocked, no bypass actors. A direct push to `develop` was rejected (GH013). Details: `docs/DEPLOYMENT.md`, ADR-022.                        |
+| Supabase local                  | **VERIFIED**                  | `db start` / `db reset` / `test db` (PASS) / `stop` all work. Full `supabase start` confirmed `sb_publishable_…` / `sb_secret_…` local keys, and the env validation accepts them.                                                                                                                                                                                                                                                          |
+| Supabase DEV (`teka-edu-dev`)   | **VERIFIED**                  | Ref `quyhkkizsmosybavoewd`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Working copy linked. `db push` up to date (no migrations), remote pgTAP RLS test PASS, 0 public tables without RLS, security advisors clean. Pooled `DATABASE_URL` connects. CI secrets are in GitHub `staging`; runtime values are in the owner's Keychain.                                                                                                     |
+| Supabase PROD (`teka-edu-prod`) | **VERIFIED**                  | Ref `eganrivpkjhozkkahyxy`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Read-only checks only: migration list empty, 0 public tables without RLS, security advisors clean; pooled `DATABASE_URL` connects. Nothing pushed or seeded. CI secrets are in GitHub `production`; runtime values are in the owner's Keychain.                                                                                                                  |
+| GitHub environments             | **CONFIGURED**                | `staging` (branch `develop`): Supabase + Vercel secrets (incl. the project-scoped `VERCEL_TOKEN`) and `STAGING_DOMAIN`. `production` (branch `main`, required reviewer): Supabase secrets, `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` / bypass secret, **no `VERCEL_TOKEN`**.                                                                                                                                                                   |
+| Database migrations             | **CONFIGURED**                | Migration-only pipeline in CI/CD. No migrations exist yet (no schema needed in V1). DEV: `db push` verified (up to date). PROD: untouched (read-only `migration list`).                                                                                                                                                                                                                                                                    |
+| Vercel staging                  | **VERIFIED**                  | Project `teka-edu` (Hobby, `container` preset, `cdg1`, no Git link). First verified deployment: run 34635262697, `dpl_99QEWbwtBTV53u5HzdudDaKndjgy` (Preview, READY, commit `e2f8f69`), alias https://teka-edu-staging.vercel.app. `/api/health` reports `staging` and the DEV ref; region `cdg1` confirmed by `x-vercel-id`. Protection returns 302 without auth. Browser bundle and logs are secret-free. `STAGING_DEPLOY_ENABLED=true`. |
+| Vercel production               | **CONFIGURED (not deployed)** | Production scope has the PROD Supabase URL and publishable key, `NEXT_PUBLIC_APP_ENV=production` and `PORT=3000`. `NEXT_PUBLIC_APP_URL` is intentionally unset. There is no production `VERCEL_TOKEN`, and `PRODUCTION_DEPLOY_ENABLED` is unset. The only production deployment is the failed first one (never served).                                                                                                                    |
+| Environment variables           | **CONFIGURED**                | Validation and Markdown inventory complete. Environment-file cleanup is VERIFIED on both `develop` and `main`: no `.env*` file in either tree, and the public default branch shows none (ADR-023). No hosted values exist yet.                                                                                                                                                                                                             |
+| develop → main promotion        | **VERIFIED**                  | PR #5, merged 2026-09-11 as merge commit `1b95480`. `Promotion source` passed on a real event ("'develop' from ipanga/teka_edu may be promoted to main", run 34617296272), and all 4 quality checks passed. The merge-triggered `Deploy production` run 34617650743 skipped its deploy job. There are no GitHub deployments or environments.                                                                                               |
+| Repository security             | **VERIFIED**                  | No real secret in the full Git history (gitleaks, all refs + pattern scan). Secret scanning and push protection enabled (no alerts). Fork PR workflows need owner approval for all external contributors. `Promotion source` checks the repository identity.                                                                                                                                                                               |
+| Deployment documentation        | **CONFIGURED**                | Written. Must be re-checked against the first real staging and production deployments.                                                                                                                                                                                                                                                                                                                                                     |
 
 ## In Progress
 
 ```text
-Task:           Record the Supabase DEV/PROD configuration (this PR)
-Status:         Open as a PR into develop; merges once the required checks pass
-Relevant files: lib/env/supabase-projects.ts (environment guard refs), docs/*, DECISIONS.md
-                (ADR-024), CLAUDE.md, PROJECT_STATUS.md
+Task:           Record the Vercel staging configuration and first deployment (this docs PR)
+Status:         Open as a PR into develop; merging it triggers the next automatic staging deploy
+Relevant files: PROJECT_STATUS.md, docs/*, DECISIONS.md (ADR-026), CLAUDE.md
 ```
 
 ## Next Tasks
 
 ### P0 — Next
 
-1. **Vercel setup** (`docs/ENVIRONMENT_SETUP.md` sections 6–8):
-   - the Vercel project, with the function region Paris `cdg1`
-   - Preview/Production variables, filled from the Keychain items, plus `PORT=3000`
-   - the GitHub Vercel secrets in `staging` / `production`
+1. **Prepare production (controlled, not yet enabled):**
+   - Decide the Vercel plan (Hobby is non-commercial only, PD-010) and the production domain (PD-012).
+   - Owner creates the production `VERCEL_TOKEN`; set `NEXT_PUBLIC_APP_URL` in the Production scope.
+   - Then do a supervised first production deployment: `develop → main` PR, approval, and a production smoke test that includes the PROD ref check.
 2. **Decide before real child data:** upgrade `teka-edu-prod` from Free (no backups, pauses when idle) or schedule `supabase db dump` exports (ISSUE-009).
-3. **First staging deployment:** set `STAGING_DEPLOY_ENABLED=true`, then verify:
-   - `PORT=3000` routing
-   - that `--build-env NEXT_PUBLIC_GIT_SHA` reaches the image (ISSUE-005)
-   - the Deployment Protection bypass
-   - that the container build is detected
-     Then update this file and `docs/DEPLOYMENT.md` with what was observed.
 
 ### P1 — Soon
 
@@ -148,12 +141,6 @@ Severity: Low · Status: Accepted for now
 Description: `npm install` warns that ESLint 9.39.5 is no longer supported. create-next-app 16.3.4 still pins ESLint ^9.
 Recommended action: move to ESLint 10 when `eslint-config-next` supports it (ADR-020).
 
-### ISSUE-005 — Commit SHA forwarding on Vercel container builds is unverified
-
-Severity: Low · Status: Open
-Description: The workflows pass `--build-env NEXT_PUBLIC_GIT_SHA=…`. That these values reach a container build as `--build-arg` is inferred from the Vercel CLI source, not documented. The smoke test skips the commit check if `/api/health` reports `commit: null`.
-Recommended action: confirm on the first staging deployment. If it does not work, pass the SHA another way.
-
 ### ISSUE-006 — Every request reaches the Vercel container
 
 Severity: Low (performance, cost) · Status: Open
@@ -180,6 +167,11 @@ Recommended action: for IPv4 tooling use the session pooler (pooler host, port 5
 
 ## Resolved Issues
 
+- **ISSUE-005 (commit SHA forwarding)**, resolved 2026-09-11: `--build-env` does not reach container builds (Vercel passes no build arguments). The commit is now passed at runtime with `vercel deploy --env`, and `/api/health` reports the exact SHA (ADR-025).
+- **First staging attempts (2026-09-11), all fixed, no production impact:**
+  - Run 34628609695: Vercel's "first deployment is production" rule plus a missing container preset. The build was refused by the env guard and never served. Fixed in PR #9.
+  - Run 34630689646: the target check using `vercel inspect` failed with a project-scoped token ("User not found"). Fixed in PR #10 (REST API).
+  - Run 34631971649: the smoke test caught `environment: local` because Vercel passes no build arguments. Fixed in PR #11 (runtime configuration, ADR-025).
 - **ISSUE-008 (Promotion source checked the branch name only)**, resolved 2026-09-11: `scripts/check-promotion-source.mjs` also requires the head repository ID to equal this repository's, so fork `develop` / `hotfix/*` branches are refused. Covered by 17 unit tests. Live check on a real `pull_request` event: draft PR #4 (`fix/*` → `main`) was refused by `Promotion source` (run 34615884503) and closed unmerged. The same-repo `develop` → `main` pass path was verified live on PR #5 (run 34617296272).
 - **ISSUE-001 (not a Git repository)**, resolved 2026-09-11: Git initialised, and `main` and `develop` pushed to `ipanga/teka_edu` at `3df64bf`.
 - **PD-001 (Vercel mechanism)**, resolved 2026-09-11: Vercel runs `Dockerfile.vercel` containers (ADR-013).
@@ -189,8 +181,8 @@ Recommended action: for IPv4 tooling use the session pooler (pooler host, port 5
 
 ### BLOCKER-001 — External accounts and credentials
 
-Description: Supabase DEV/PROD, the GitHub environments and their Supabase secrets are done (2026-09-11). The **Vercel** project, its variables and the GitHub Vercel secrets do not exist yet. Staging and production deployment cannot proceed without them.
-Required action: owner follows `docs/ENVIRONMENT_SETUP.md` and provides the values listed in "Values still required from the owner".
+Description: Staging is fully configured and deployed (2026-09-11). **Production** still needs: a production `VERCEL_TOKEN`, a production domain (`NEXT_PUBLIC_APP_URL`), a Vercel plan decision, and a Supabase PROD backup decision.
+Required action: owner decisions and values listed in `docs/ENVIRONMENT_SETUP.md`, "Values still required from the owner".
 
 Phase 1 calendar and curriculum data also need PD-002, PD-003 and PD-004. That does not block the remaining Phase 0 work.
 
@@ -233,11 +225,11 @@ DRC 2026–2027 calendar data: Not started.
 ```text
 Local:      Runs: npm run dev, npm run start (standalone), Docker image
 Docker:     Verified locally (arm64) and in GitHub CI (x86_64), both Dockerfiles
-Staging:    Supabase DEV ready; no Vercel project; not deployed
-Production: Supabase PROD ready (no schema pushed); no Vercel project; not deployed
+Staging:    LIVE https://teka-edu-staging.vercel.app (Vercel Preview, container, cdg1, Supabase DEV); auto-deploys from develop
+Production: Supabase PROD ready (no schema pushed); Vercel Production scope prepared; NOT deployed (switch off, no token)
 CI:         Verified on GitHub for push and pull_request events; required by the develop/main rulesets;
             first production promotion PR #5 green
-CD:         Deploy jobs skipped: STAGING_/PRODUCTION_DEPLOY_ENABLED unset; no GitHub environments
+CD:         STAGING_DEPLOY_ENABLED=true (verified run 34635262697); PRODUCTION_DEPLOY_ENABLED unset
 Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge of develop 4abe26e);
             develop = 4abe26e. Same tree; develop lacks only the merge commit, which is expected (ADR-022)
 ```
@@ -246,14 +238,14 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 
 1. **`NEXT_PUBLIC_ENABLE_CLOUD_SYNC=false`** in the documented staging and production values, where the spec's examples say `true`. No sync feature exists yet (spec §55), and `true` makes the Supabase browser variables mandatory.
 2. **CI on push:** `ci.yml` does not trigger on push by itself. The deploy workflows call it for the pushed commit, which gives the same coverage without running CI twice (spec §27 asks to avoid repeated work).
-3. **No `vercel pull` / `vercel build` / `--prebuilt`:** container deployments use a remote `vercel deploy` so that `NEXT_PUBLIC_*` build arguments reach the image (spec §32 anticipated this; ADR-013).
+3. **No `vercel pull` / `vercel build` / `--prebuilt`:** container deployments use a remote `vercel deploy` (spec §32 anticipated this; ADR-013). All configuration, including `NEXT_PUBLIC_*`, is read at **runtime**, because Vercel's container builder passes no build arguments (ADR-025).
 4. **`SUPABASE_DB_URL` not used.** Migrations use `supabase link` with `SUPABASE_DB_PASSWORD`.
 5. **Additional variables:**
    - `PORT=3000` (Vercel, required)
    - `VERCEL_AUTOMATION_BYPASS_SECRET` (smoke tests)
    - `STAGING_DEPLOY_ENABLED` / `PRODUCTION_DEPLOY_ENABLED` (deploy gates)
    - `VERCEL_STAGING_TARGET` / `STAGING_DOMAIN` (optional)
-   - `NEXT_PUBLIC_APP_VERSION` / `NEXT_PUBLIC_GIT_SHA` (build metadata)
+   - `NEXT_PUBLIC_GIT_SHA` (runtime deployment metadata). The version comes from `package.json`; `NEXT_PUBLIC_APP_VERSION` was removed.
 6. **No `lib/supabase/database.types.ts` yet.** There is no schema; `npm run db:types` was tested and works.
 7. **No `.env*` templates** (spec §15–19 asked for four committed templates). The owner's stricter policy on 2026-09-11 removed them, and the values are documented in `docs/ENVIRONMENT_VARIABLES.md` instead (ADR-023).
 8. **Local Supabase `edge_runtime` and `analytics` disabled** in `config.toml` to keep the stack light (ADR-014).
@@ -275,38 +267,40 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
   - Some browser voices are network-backed (`localService === false`). Consider prerecorded core audio.
 - **PD-008: Media sourcing and licensing** (before Phase 6)
   - Also consider the 4.5 MB response limit (ISSUE-007).
-- **PD-010: Vercel plan**
-  - Hobby: staging is Preview plus an alias, and rollback goes only to the previous deployment.
-  - Pro: a `staging` Custom Environment, and rollback to any earlier production deployment.
+- **PD-010: Vercel plan**: currently **Hobby** (ADR-026)
+  - Staging is Preview plus an alias, and rollback goes only to the previous deployment.
+  - Hobby is **non-commercial use only**, and its production domain cannot be protected.
+  - Decide before any public production launch: Pro costs $20 per member per month.
 - **PD-011: Regions**
   - Supabase: **resolved**, Paris `eu-west-3` for DEV and PROD (ADR-024).
-  - Vercel function region: set it to Paris `cdg1` in the Vercel task, next to the database.
+  - Vercel function region: **resolved**, Paris `cdg1`, verified live (ADR-026).
 - **PD-012: Domains**
-  - Production domain and staging domain.
+  - Staging: `teka-edu-staging.vercel.app` (resolved).
+  - Production domain: still open. It is required for `NEXT_PUBLIC_APP_URL` before any production deployment.
 - **PD-013: Production approval**
   - Whether to require manual reviewers on the GitHub `production` environment from the start.
 
 ## Last Session Summary
 
 ```text
-Completed:  Supabase DEV/PROD configuration.
-            - The owner logged in the CLI and created the CI access token, stored in both GitHub
-              environments by the owner.
-            - Org TEKA (Free plan, no prior projects): created teka-edu-dev (quyhkkizsmosybavoewd)
-              and teka-edu-prod (eganrivpkjhozkkahyxy) in Paris eu-west-3, with separate
-              random DB passwords.
-            - Created GitHub environments: staging (develop) and production (main, required
-              reviewer). Each holds its own project's ref and DB password.
-            - Stored the runtime values (URL, publishable and secret keys, pooler and direct DB
-              URLs) in the macOS Keychain. Nothing was printed or committed.
-            - DEV: linked, db push (up to date), remote pgTAP PASS, 0 tables without RLS,
-              advisors clean. PROD: read-only checks, all clean.
-            - Environment guard enabled with the real refs; the real values were accepted and
-              cross-environment use was refused.
-Changed:    lib/env/supabase-projects.ts, docs (ENVIRONMENT_SETUP, ENVIRONMENT_VARIABLES,
-            DEPLOYMENT), DECISIONS.md (ADR-024), CLAUDE.md, this file.
-Tests:      See the Tests / Quality Status section; CI on the PR.
-Remaining:  Vercel project and variables, the GitHub Vercel secrets, the first staging deployment.
-Recommended next task: configure Vercel (project in cdg1, Preview/Production variables from the
-            Keychain, GitHub Vercel secrets), then enable and test the first staging deployment.
+Completed:  Vercel configuration and the first verified staging deployment.
+            - Vercel: team TEKA (Hobby, free), project teka-edu (prj_cJcoXbMF…), container
+              preset, region cdg1, no Git link, Standard Protection, bypass secret.
+            - Vercel variables: Preview = staging (DEV values), Production = PROD values (no
+              APP_URL); isolation checked against the Keychain values.
+            - GitHub: Vercel secrets in staging (owner's project-scoped token) and partly in
+              production (no token), STAGING_DOMAIN; STAGING_DEPLOY_ENABLED=true.
+            - Three attempts failed safely and were fixed by PRs #9-#11: first deploy became
+              production, container preset missing, CLI/token limits, and no build args
+              (runtime configuration, ADR-025).
+            - Run 34635262697 green. Live checks: HTTPS, French page, health = staging + DEV
+              ref + exact commit, cdg1, 302 without auth, cold start 3.6s then about 1s. No
+              secrets in the browser bundle, GitHub log or Vercel build log. No duplicate
+              deployments.
+Changed:    PRs #8 (region, health ref), #9 (container preset, target guards), #10 (REST API
+            checks), #11 (runtime config); this docs PR.
+Tests:      CI green on all PRs; staging smoke tests green.
+Remaining:  Production prerequisites (token, domain, plan, PROD backups), Phase 1.
+Recommended next task: prepare and validate the production deployment in a controlled task
+            (plan and domain decision, production token, supervised first production deploy).
 ```
