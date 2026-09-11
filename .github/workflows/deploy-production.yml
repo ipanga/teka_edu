@@ -95,6 +95,17 @@ jobs:
             --token="$VERCEL_TOKEN")"
           echo "url=$url" >> "$GITHUB_OUTPUT"
           echo "Deployed $GITHUB_SHA to $url"
+      - name: Verify the deployment target is production
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          DEPLOY_URL: ${{ steps.deploy.outputs.url }}
+        run: |
+          actual="$(vercel inspect "$DEPLOY_URL" --json --token="$VERCEL_TOKEN" | jq -r '.target // "preview"')"
+          echo "Vercel deployment target: $actual (expected: production)"
+          if [[ "$actual" != "production" ]]; then
+            echo "::error::Expected a production deployment but Vercel reports '$actual'."
+            exit 1
+          fi
 
       # ---- 3. Smoke test against the exact deployment ----------------------------------
       - run: npm ci
