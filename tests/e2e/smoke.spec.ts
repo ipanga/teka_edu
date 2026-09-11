@@ -27,6 +27,24 @@ test("health endpoint reports ok", async ({ request }) => {
   }
 });
 
+test("school calendar ships with the release and answers date questions", async ({ request }) => {
+  const firstDay = await (await request.get("/api/calendar/2026-09-01")).json();
+  expect(firstDay).toMatchObject({
+    schoolYear: { id: "2026-2027" },
+    instructional: true,
+    instructionalDay: 1,
+  });
+
+  const saturday = await (await request.get("/api/calendar/2026-09-05")).json();
+  expect(saturday).toMatchObject({ instructional: false, reasons: [{ code: "weekend" }] });
+
+  const holiday = await (await request.get("/api/calendar/2027-04-06")).json();
+  expect(holiday.instructional).toBe(false);
+  expect(holiday.reasons[0].code).toBe("public-holiday");
+
+  expect((await request.get("/api/calendar/not-a-date")).status()).toBe(400);
+});
+
 test("home page is served in French", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator("html")).toHaveAttribute("lang", "fr");

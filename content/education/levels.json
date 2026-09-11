@@ -1,0 +1,8 @@
+{
+  "stages": [{ "id": "maternelle", "position": 1, "name": "Enseignement maternel" }],
+  "levels": [
+    { "id": "maternelle-1", "stageId": "maternelle", "position": 1, "name": "1ère maternelle" },
+    { "id": "maternelle-2", "stageId": "maternelle", "position": 2, "name": "2ème maternelle" },
+    { "id": "maternelle-3", "stageId": "maternelle", "position": 3, "name": "3ème maternelle" }
+  ]
+}

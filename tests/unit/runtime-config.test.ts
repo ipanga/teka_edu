@@ -3,7 +3,7 @@ import path from "node:path";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 const ROOT = path.resolve(import.meta.dirname, "../..");
-const SOURCE_DIRS = ["app", "lib", "components"];
+const SOURCE_DIRS = ["app", "lib", "components", "domain"];
 const SOURCE_FILES = ["instrumentation.ts", "next.config.ts"];
 
 function sourceFiles(): string[] {

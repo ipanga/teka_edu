@@ -36,6 +36,9 @@ Short architecture/product decision records (ADRs). They cover decisions future 
 | 025 | Runtime configuration for container deployments                                         | Accepted               |
 | 026 | Vercel project configuration: Hobby, Preview as staging, no Git connection              | Accepted               |
 | 027 | Free tiers only during the development phase ($0/month)                                 | Accepted               |
+| 028 | Reference data: canonical in Git, mirrored into PostgreSQL by generated migrations      | Accepted               |
+| 029 | School calendar model: civil dates, data-driven holidays and exceptions                 | Accepted               |
+| 030 | Education hierarchy and lightweight curriculum versioning                               | Accepted               |
 
 ---
 
@@ -76,6 +79,13 @@ Short architecture/product decision records (ADRs). They cover decisions future 
 - Competency data must be taken from the official text and cite its source. Nothing may be invented.
 - **Open item:** the exact official text (Bulletin officiel reference and applicability date) has not yet been obtained or checked against the domain list in Plan §3.1. It is tracked in `PROJECT_STATUS.md`.
 
+**Amended 2026-09-11 (Phase 1):** the open item is resolved.
+
+- **Programme:** the programme in force for 2026–2027 is the **arrêté du 16 avril 2026** (NOR MENE2608627A, BO n° 19 du 7 mai 2026). It applies from the 2026–2027 school year and repeals the 2015/2021 programme. Its language and mathematics domains point to the arrêté du 22 octobre 2024 (BO n° 41).
+- **Domains:** the six domains of Plan §3.1 match the official titles and order exactly.
+- **Age bands:** the programme states objectives by age band rather than by PS/MS/GS. The PS/MS/GS mapping stays a Teka Edu decision.
+- **Details:** `docs/EDUCATIONAL_MODEL.md`. Competency-level text is still to be taken from the annexes (PD-004).
+
 ---
 
 ## ADR-004 — Data-driven instructional calendar and lesson numbering
@@ -92,6 +102,8 @@ Short architecture/product decision records (ADRs). They cover decisions future 
 - School years are configuration (`SchoolYear`). No logic may hard-code 2026.
 
 **Consequences:** The calendar engine is pure domain logic with required tests (Plan §41). Changing a holiday is a data change. That can shift which date each lesson number falls on, so content keyed by instructional day stays valid.
+
+**Amended 2026-09-11 (ADR-029):** the fixed-date national holidays moved to `content/calendars/cd/national.json`. `content/calendars/cd/<school-year>.json` holds the school year, its periods and its dated exceptions (vacations, closures, one-off or observed holidays, exceptional instructional days).
 
 ---
 
@@ -355,6 +367,8 @@ When documents disagree about intended behavior, the order is plan → decisions
 - Curriculum changes stay reviewable, validated by CI, easy to roll back and deterministic per release.
 - A future admin or CMS tool (Plan §36) needs a new ADR if it moves canonical content into the database.
 
+**Amended 2026-09-11 (ADR-028):** the database also holds a **generated, read-only mirror** of the reference data. That covers levels, curricula and domains, school years, periods, holidays and calendar exceptions, so future user data can reference them with foreign keys. The canonical copy stays in Git, and the mirror is written by generated migrations, never by seeds.
+
 ---
 
 ## ADR-020 — Phase 0 toolchain baseline
@@ -581,3 +595,91 @@ When documents disagree about intended behavior, the order is plan → decisions
   - built-in auth email limits
   - Hobby's non-commercial terms
 - The last three are **blockers before public production**, not before development.
+
+---
+
+## ADR-028 — Reference data: canonical in Git, mirrored into PostgreSQL by generated migrations
+
+**Status:** Accepted · **Date:** 2026-09-11 · **Refines:** ADR-005, ADR-017, ADR-019
+
+**Context:**
+
+- Phase 1 introduces reference data: education levels, curriculum versions and domains, school years, periods, DRC public holidays and calendar exceptions.
+- The app must work offline from bundled content (ADR-006, ADR-019).
+- Future user data in Supabase (children, progress, daily plans) will need foreign keys to these entities, and the owner asked for strong database constraints and RLS.
+- Keeping two hand-maintained copies would drift.
+- `seed.sql` never reaches hosted projects, but the reference data is needed in every environment.
+
+**Decision:**
+
+- **Canonical copy:** `content/` JSON, validated by Zod schemas and domain rules (`npm run content:validate`) and imported statically by `lib/content/reference-data.ts`. The application reads only this copy.
+- **Database mirror:** PostgreSQL holds the same rows in ten reference tables with their own constraints, written by **generated, idempotent migrations**:
+  - `npm run db:reference -- --new-migration <name>` emits upserts for every row and deletes rows no longer in `content/`, children first.
+  - A delete that would orphan user data fails on its foreign key instead of cascading.
+  - Applied migrations are never edited; a content change means a new generated migration.
+- **Drift guard:**
+  - `npm run db:reference` also generates the pgTAP test `reference_data.test.sql`. It asserts that the migrated database equals `content/`, then re-applies the sync to prove idempotency.
+  - A unit test fails if that generated test is stale.
+- **Access:** RLS on, no policy, and no `anon` / `authenticated` privilege (server-only). The access-registry test forces a decision for every new public table.
+- **Seeds:** `seed.sql` stays local-only and free of reference and child data.
+
+**Consequences:**
+
+- Reference data reaches DEV (and PROD, when production is enabled) through the normal migration pipeline. It is canonical data, not demo data.
+- One source of truth, and CI proves the two copies are identical.
+- An admin tool that edits the calendar in the database would move the source of truth for those rows, and needs a new ADR.
+
+---
+
+## ADR-029 — School calendar model: civil dates, data-driven holidays and exceptions
+
+**Status:** Accepted · **Date:** 2026-09-11 · **Refines:** ADR-004
+
+**Context:**
+
+- The DRC has two time zones (UTC+1, UTC+2).
+- DRC holiday observance changes in practice: Ord. 23/042 art. 2 moves a Sunday holiday to the preceding day, but recent communiqués moved days to Mondays, and it is unclear whether they cover schools.
+- The ministry publishes an annual calendar with periods and vacations (MINEDU-NC, 26 June 2026, for 2026–2027).
+
+**Decision:**
+
+- **Civil dates:** calendar concepts use `YYYY-MM-DD` dates (PostgreSQL `date`), never timestamps.
+  - Arithmetic uses integer day numbers, with no `Date`.
+  - The only time-zone step turns an instant into a date, using the device's zone (server default `Africa/Kinshasa`).
+- **Holidays:** fixed-date national holidays are data (`national.json`) with provenance and optional validity windows. **No substitution rule is coded**: substitute days are explicit `observed-holiday` exceptions citing their source.
+- **School years:** each has its dates, instructional weekdays (Mon–Fri), periods and exceptions. The exception kinds are one-off holiday, observed holiday, vacation, closure and exceptional instructional day. An instructional-day exception overrides weekends and holidays, but may not contradict another exception.
+- **Provenance:** every fact carries `authority` (`law` / `ministry` / `teka-edu`), `verification` and `source`.
+- **Generator:**
+  - Pure and deterministic: every date of the year, the gap-free instructional-day number, and every reason with a documented primary-reason precedence.
+  - Its output is not persisted.
+- **Saturdays:** the 2026–2027 maternelle calendar counts four Saturdays as working days for results and report cards. Teka Edu does not treat them as instructional days, because children's activities run Monday to Friday.
+
+**Consequences:**
+
+- Future years, ministry adjustments and substitute days are data changes: a content change plus a generated migration.
+- The generator gives 189 instructional days for 2026–2027 against the ministry's 192, which include the four Saturdays. The period 5 difference is documented in `docs/SCHOOL_CALENDAR.md`.
+
+---
+
+## ADR-030 — Education hierarchy and lightweight curriculum versioning
+
+**Status:** Accepted · **Date:** 2026-09-11 · **Refines:** ADR-001, ADR-003
+
+**Decision:**
+
+- **Hierarchy:** **stage → level** (`maternelle` → `maternelle-1..3`). Primary and secondary are added as data; there is no separate grade concept.
+- **Identifiers:**
+  - Stable slugs or codes that application logic uses and never displays.
+  - French names and titles are the canonical display text.
+  - Other languages come from UI message catalogues keyed by identifier, so translation needs no migration.
+- **Curriculum versioning:**
+  - A curriculum row is one version: stage, version label, status, reference citation, adaptation note.
+  - It has its own domains (`learning-domain` or `transversal`) and the levels it covers, each with its reference section.
+  - Each school year is assigned exactly one curriculum per stage.
+  - A new programme is a new row; past years are never rewritten.
+- **Domains:** the six Cycle 1 domains use the codes `LANG`, `PHYS`, `ART`, `MATH`, `TIME-SPACE`, `WORLD`.
+- **Deferred:**
+  - No `DailyPlan`, objective or lesson tables yet: those are the next phase, keyed by instructional-day number (ADR-004).
+  - English scaffolding is a future optional `scaffolding.en` block on content entities, never a parallel curriculum.
+
+**Consequences:** changes to the curriculum or the school system are additive data changes. The model is documented in `docs/EDUCATIONAL_MODEL.md`.
