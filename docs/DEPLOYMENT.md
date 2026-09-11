@@ -145,11 +145,12 @@ Rules (ADR-017):
 
 - The project root contains `Dockerfile.vercel`. Vercel detects it, builds the image **remotely** (linux/amd64), stores it in the **Vercel Container Registry**, and runs it as a Vercel Function (Fluid compute).
 - No second registry is used (ADR-013). `Dockerfile` is the portable twin for other OCI hosts and for local production-like runs. **Keep the two files in sync.**
-- The workflows use plain `vercel deploy` (remote build), not `vercel build && vercel deploy --prebuilt`. Research on 2026-09-11 (vercel/vercel source and docs) found:
-  - The prebuilt path does not pass the project's build variables to `docker build`, so `NEXT_PUBLIC_*` values would be missing from the image.
-  - The prebuilt path needs Docker plus an OIDC token on the runner.
-  - A remote build passes the project's build variables as `--build-arg`, which is why `Dockerfile.vercel` declares every `NEXT_PUBLIC_*` as `ARG`.
-- **Build metadata:** `--build-env NEXT_PUBLIC_GIT_SHA=$GITHUB_SHA` passes the commit to the build. Forwarding `--build-env` into container build arguments is inferred from the Vercel CLI source, not documented. If `/api/health` reports `"commit": null`, the commit check is skipped rather than failed.
+- The project uses Vercel's **`container` framework preset** (project setting and `vercel.json`). A project created with `vercel project add` had no preset, so Vercel ran the generic `npm run build` instead of building `Dockerfile.vercel` (first staging attempt, 2026-09-11).
+- The workflows use plain `vercel deploy` (a remote build).
+- **No build arguments reach the image.** The first real container build showed `buildah` warning "missing `NEXT_PUBLIC_…` build argument" for every `ARG`, including values passed with `--build-env`. Vercel provides project variables **only to the running container**.
+- The app therefore reads **all** configuration at runtime (ADR-025). The image is identical for every environment, and `Dockerfile.vercel` declares no `ARG`.
+- **Build metadata:** `vercel deploy --env NEXT_PUBLIC_GIT_SHA=$GITHUB_SHA` passes the commit as a runtime variable for that deployment. If `/api/health` reports `"commit": null`, the commit check is skipped rather than failed.
+- **First deployment = production:** Vercel makes the first deployment of a new project a production deployment even without `--prod`. The staging workflow refuses to deploy into a project with no deployment, passes an explicit `--target`, and verifies the target through the REST API before aliasing or smoke testing.
 - **Runtime contract:**
   - The container listens on `$PORT`. Set the Vercel project variable `PORT=3000`, because the image runs as the non-root `node` user and may not bind port 80.
   - It binds `0.0.0.0` and is stateless.
@@ -207,7 +208,7 @@ Migrations are not assumed to be reversible:
 | Build fails with `Invalid public environment configuration` | A Vercel variable is missing or wrong (e.g. local URL in staging, secret key in a `NEXT_PUBLIC_` var) | Fix the variable in Vercel. The message names it without revealing the value                                           |
 | Deployment works but requests time out or return 502        | `PORT` not set to `3000` in Vercel                                                                    | Set `PORT=3000` for that environment and redeploy                                                                      |
 | Smoke test gets 401/403                                     | Deployment Protection without bypass                                                                  | Configure `VERCEL_AUTOMATION_BYPASS_SECRET`                                                                            |
-| Smoke test: `environment` mismatch                          | `NEXT_PUBLIC_APP_ENV` missing or wrong in that Vercel scope                                           | Fix it and redeploy (the value is inlined at build time)                                                               |
+| Smoke test: `environment` mismatch                          | `NEXT_PUBLIC_APP_ENV` missing or wrong in that Vercel scope                                           | Fix it in that Vercel scope and redeploy (read at container start)                                                     |
 | Two deployments for one push                                | Vercel Git integration re-enabled                                                                     | Keep `git.deploymentEnabled: false`, and check the project settings                                                    |
 | CI `Promotion source` fails                                 | PR into `main` from a feature branch, or from a fork                                                  | Merge into `develop` first                                                                                             |
 

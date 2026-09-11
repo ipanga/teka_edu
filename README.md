@@ -83,7 +83,7 @@ npm run docker:smoke     # health check + graceful-stop check
 
 - `Dockerfile` is the portable image, for any OCI host.
 - `Dockerfile.vercel` is what Vercel builds and runs.
-- `NEXT_PUBLIC_*` values are build arguments (`--build-arg`). Secrets are passed at runtime only (`docker run -e` / `--env-file`).
+- The image is environment-neutral: all configuration, including the browser-safe `NEXT_PUBLIC_*` values, is read at runtime (`docker run -e KEY=value`, or the platform's variables). Nothing environment-specific is baked into the image (ADR-025).
 
 ## Branching and deployment
 

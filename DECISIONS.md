@@ -33,6 +33,7 @@ Short architecture/product decision records (ADRs). They cover decisions future 
 | 022 | Branch protection with GitHub Rulesets; merge strategy                                  | Accepted               |
 | 023 | No `.env*` files in the repository                                                      | Accepted               |
 | 024 | Supabase projects in Paris (eu-west-3); credentials in Keychain and GitHub environments | Accepted               |
+| 025 | Runtime configuration for container deployments                                         | Accepted               |
 
 ---
 
@@ -217,10 +218,10 @@ When documents disagree about intended behavior, the order is plan → decisions
 - The application ships as an OCI image built from a multi-stage `Dockerfile` (`deps → builder → runner`).
 - The image uses the Next.js standalone output, a pinned `node:<version>-alpine` base, `npm ci`, the non-root `node` user, `NODE_ENV=production`, and a `HEALTHCHECK` on `/api/health`.
 - It contains no secrets.
-- `NEXT_PUBLIC_*` values are build arguments, because Next.js inlines them. Secrets are runtime-only.
+- ~~`NEXT_PUBLIC_*` values are build arguments.~~ **Amended by ADR-025:** all configuration, including `NEXT_PUBLIC_*`, is read at runtime. Secrets are runtime-only.
 - CI builds and smoke-tests the image on every PR, including a check that it exits gracefully on SIGTERM.
 
-**Consequences:** One image is specific to one environment's public configuration. To move hosts, rebuild with that host's `NEXT_PUBLIC_*` values. `Dockerfile.vercel` (ADR-013) must stay in sync with `Dockerfile`.
+**Consequences:** Since ADR-025 the image is environment-neutral: the same image serves any environment, configured with runtime variables. `Dockerfile.vercel` (ADR-013) must stay in sync with `Dockerfile`.
 
 ---
 
@@ -237,7 +238,7 @@ When documents disagree about intended behavior, the order is plan → decisions
 **Decision:**
 
 - Staging and production run the app as a container via `Dockerfile.vercel`.
-- Deploys use **remote builds** (`vercel deploy`, plus `--prod` for production), not `vercel build --prebuilt`, so that `NEXT_PUBLIC_*` values reach the image as build arguments.
+- Deploys use **remote builds** (`vercel deploy`, plus `--prod` for production), not `vercel build --prebuilt`, (the documented container path; the assumption that this passes `NEXT_PUBLIC_*` values as build arguments proved false, see ADR-025) so that `NEXT_PUBLIC_*` values reach the image as build arguments.
 - The container runs as non-root on port 3000, and the Vercel project sets `PORT=3000` in every environment.
 - VCR is used implicitly. No second registry (GHCR) is added unless a concrete need appears; that would be a new ADR.
 - Vercel-specific configuration is confined to `Dockerfile.vercel`, `vercel.json` and the deploy workflows. Application code has no Vercel dependency.
@@ -247,7 +248,14 @@ When documents disagree about intended behavior, the order is plan → decisions
 - Vercel function limits apply to the app (4.5 MB bodies, plan-dependent maximum duration).
 - Every request reaches the container unless responses opt into CDN caching (a later optimisation).
 - Staging uses Preview deployments, or a `staging` Custom Environment on the Pro plan.
-- Forwarding `--build-env` values into container build arguments is inferred from source, not documented, so the smoke test tolerates a missing commit SHA.
+- ~~Forwarding `--build-env` values into container build arguments is inferred from source.~~ That was disproven on 2026-09-11: no build arguments are passed, and the commit is passed at runtime with `--env` (ADR-025). The smoke test still tolerates a missing commit SHA.
+
+**Amended 2026-09-11 (first staging deployment):**
+
+- The project must use Vercel's `container` framework preset (`vercel.json` `"framework": "container"`). A project created without framework detection builds with the generic `npm run build` instead of `Dockerfile.vercel`.
+- Vercel makes the **first deployment of a new project a production deployment**, even without `--prod`. The staging workflow refuses to deploy into a project with no deployment, passes an explicit `--target`, and verifies the target through the REST API.
+- Vercel's container builder passes **no build arguments** (ADR-025).
+- A project-scoped Vercel token cannot use `vercel inspect` / `vercel alias` ("User not found"), so the workflows call the REST API for those.
 
 ---
 
@@ -379,7 +387,7 @@ When documents disagree about intended behavior, the order is plan → decisions
 
 - All configuration is read through `lib/env/`:
   - `schema.ts` holds pure Zod schemas and the cross-variable and environment-isolation rules.
-  - `public.ts` holds the browser-safe `NEXT_PUBLIC_*` values, listed literally so Next.js can inline them, and validates them at import (build) time.
+  - `public.ts` holds the browser-safe `NEXT_PUBLIC_*` values. ~~They are listed literally so Next.js can inline them.~~ Amended by ADR-025: it is a server-only `getPublicEnv()` that reads them at runtime.
   - `server.ts` holds the secrets, guarded by `import "server-only"`, so a Client Component import fails the build. They are validated on first use and at server start (`instrumentation.ts`).
 - Empty values count as unset.
 - Errors name the variable and never its value.
@@ -479,3 +487,35 @@ When documents disagree about intended behavior, the order is plan → decisions
 - Free-plan limits apply to both projects: pausing after about a week of inactivity, no backups and no point-in-time recovery. PROD must be upgraded, or regularly exported, before real child data is stored.
 - Changing region later means creating new projects and migrating.
 - The legacy `anon` / `service_role` keys still exist but are unused. Disabling them is an optional hardening step.
+
+---
+
+## ADR-025 — Runtime configuration for container deployments
+
+**Status:** Accepted · **Date:** 2026-09-11 · **Amends:** ADR-012, ADR-013, ADR-021
+
+**Context:**
+
+- The first real `Dockerfile.vercel` build (run 34630689646) showed `buildah` warning "missing `NEXT_PUBLIC_APP_ENV` build argument" for every `ARG`. That included values passed with `vercel deploy --build-env`.
+- **Vercel's container builder passes no build arguments.** Project variables reach the container only at runtime.
+- Next.js' build-time inlining of `NEXT_PUBLIC_*` therefore froze the defaults into the image. The staging deployment reported `environment: local`, which the deploy smoke test caught.
+
+**Decision:**
+
+- **Runtime reading:**
+  - All configuration, public and secret, is read by the **server at runtime** from the container environment.
+  - `lib/env/public.ts` is a server-only `getPublicEnv()` over `parsePublicEnv(process.env)`.
+  - No code reads a `NEXT_PUBLIC_` variable as a literal `process.env` member; a unit test enforces this.
+- **Rendering:** pages are rendered per request (`force-dynamic` in the root layout), so they reflect the running environment.
+- **Validation:** configuration is checked at container start (`instrumentation.ts`) and confirmed by the deploy smoke tests. It is no longer checked at build time.
+- **Browser access:** browser code never reads configuration itself. A future Client Component receives exactly the browser-safe values a Server Component passes to it.
+- **Version and commit:**
+  - The app version comes from `package.json`; `NEXT_PUBLIC_APP_VERSION` is removed.
+  - The deployed commit is passed as a runtime variable (`vercel deploy --env NEXT_PUBLIC_GIT_SHA=…`).
+- **Naming:** the `NEXT_PUBLIC_` prefix is kept, as the marker for browser-safe values.
+
+**Consequences:**
+
+- The image is environment-neutral: one build can serve staging, production or any OCI host.
+- A misconfigured container fails at start, not at build. The staging smoke test covers this, and a local test proved a staging container with the PROD ref returns HTTP 500 and `EnvValidationError`.
+- There is no static prerendering. That is acceptable for this app, and static assets are still built.

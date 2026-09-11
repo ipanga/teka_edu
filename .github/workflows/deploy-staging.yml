@@ -111,7 +111,7 @@ jobs:
             exit 1
           fi
           url="$(vercel deploy --yes --target="$target" \
-            --build-env NEXT_PUBLIC_GIT_SHA="$GITHUB_SHA" \
+            --env NEXT_PUBLIC_GIT_SHA="$GITHUB_SHA" \
             --token="$VERCEL_TOKEN")"
           echo "url=$url" >> "$GITHUB_OUTPUT"
           echo "Deployed $GITHUB_SHA to $url"
