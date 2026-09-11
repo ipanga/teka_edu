@@ -1,0 +1,16 @@
+# Generated / tool output
+.next/
+out/
+build/
+coverage/
+playwright-report/
+test-results/
+blob-report/
+next-env.d.ts
+package-lock.json
+supabase/.temp/
+supabase/.branches/
+lib/supabase/database.types.ts
+
+# User-authored specification, kept verbatim
+TEKA_EDU_PROJECT_PLAN.md

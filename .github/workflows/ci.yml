@@ -1,0 +1,125 @@
+# Continuous integration. Independent of deployment.
+#
+# - Runs on pull requests into develop/main (these are the required status checks).
+# - Deploy workflows call it (workflow_call) on pushes to develop/main, so a deployment only
+#   starts after CI has passed for that exact commit. That covers "CI on push" without
+#   running the whole suite twice.
+# See docs/DEPLOYMENT.md.
+name: CI
+
+on:
+  pull_request:
+    branches: [develop, main]
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  # Cancel superseded runs of the same pull request; never cancel CI called by a deployment.
+  group: ci-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  promotion-source:
+    name: Promotion source
+    if: github.event_name == 'pull_request' && github.base_ref == 'main'
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Only develop (or hotfix/*) may be merged into main
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          if [[ "$HEAD_REF" != "develop" && "$HEAD_REF" != hotfix/* ]]; then
+            echo "::error::Pull requests into main must come from develop (or hotfix/*), not '$HEAD_REF'."
+            exit 1
+          fi
+
+  quality:
+    name: Format, lint, typecheck, unit tests, content
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Format check
+        run: npm run format:check
+      - name: Lint
+        run: npm run lint
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Unit tests
+        run: npm run test
+      - name: Curriculum / content validation
+        run: npm run content:validate
+
+  build:
+    name: Build, client-bundle secret check, E2E smoke
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      # Fake, CI-only sentinel values: the next step fails if any reaches browser bundles.
+      - name: Next.js build (with sentinel server-only values)
+        env: &sentinels
+          SUPABASE_SECRET_KEY: sb_secret_ci_sentinel_not_a_real_key
+          DATABASE_URL: postgresql://ci:ci-sentinel-database-url@127.0.0.1:54322/postgres
+          DIRECT_DATABASE_URL: postgresql://ci:ci-sentinel-direct-url@127.0.0.1:54322/postgres
+        run: npm run build
+      - name: Client bundle secret check
+        env: *sentinels
+        run: npm run check:client-bundle
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+      - name: E2E smoke tests
+        run: npm run test:e2e
+      - name: Upload Playwright report
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7
+
+  database:
+    name: Supabase migrations and database tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      # Installs the Supabase CLI version pinned in package-lock.json.
+      - uses: supabase/setup-cli@v3
+      - name: Start local database (applies all migrations and the dev seed)
+        run: supabase db start
+      - name: Reset database (replays migrations from scratch)
+        run: supabase db reset
+      - name: Database tests (pgTAP)
+        run: supabase test db
+      - name: Stop database
+        if: always()
+        run: supabase stop --no-backup
+
+  docker:
+    name: Docker images (portable + Vercel)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build portable image (Dockerfile)
+        run: docker build --tag teka-edu:ci .
+      - name: Smoke test portable image
+        run: bash scripts/docker-smoke.sh teka-edu:ci 3099
+      - name: Build Vercel image (Dockerfile.vercel, reuses cached layers)
+        run: docker build --file Dockerfile.vercel --tag teka-edu:vercel-ci .
+      - name: Smoke test Vercel image
+        run: bash scripts/docker-smoke.sh teka-edu:vercel-ci 3098

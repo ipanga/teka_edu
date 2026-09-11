@@ -1,0 +1,75 @@
+# syntax=docker/dockerfile:1
+#
+# Teka Edu — Vercel container deployment.
+#
+# Vercel detects this file at the project root, builds the image remotely (linux/amd64),
+# stores it in the Vercel Container Registry and runs it as a Vercel Function on Fluid
+# compute. See https://vercel.com/docs/functions/container-images and docs/DEPLOYMENT.md.
+#
+# Differences from ./Dockerfile (keep the rest in sync):
+#   - No HEALTHCHECK: Vercel does not use Docker health checks; smoke tests call /api/health.
+#   - Vercel routes traffic to the port in the project env var PORT (default 80). This image
+#     runs as a non-root user, which may not bind port 80, so the Vercel project MUST define
+#     PORT=3000 for every environment (docs/ENVIRONMENT_SETUP.md).
+#
+# Vercel passes the project's build environment variables as --build-arg, so every
+# NEXT_PUBLIC_* value must be declared as ARG below to reach `next build`.
+# Server secrets are provided at runtime by Vercel and must never be declared here.
+
+ARG NODE_VERSION=22.22.2
+ARG ALPINE_VERSION=3.22
+
+FROM node:${NODE_VERSION}-alpine${ALPINE_VERSION} AS base
+ENV NEXT_TELEMETRY_DISABLED=1
+
+FROM base AS deps
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci --no-audit --no-fund
+
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+
+ARG NEXT_PUBLIC_APP_NAME
+ARG NEXT_PUBLIC_DEFAULT_LOCALE
+ARG NEXT_PUBLIC_DEFAULT_COUNTRY
+ARG NEXT_PUBLIC_APP_ENV
+ARG NEXT_PUBLIC_APP_URL
+ARG NEXT_PUBLIC_SUPABASE_URL
+ARG NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+ARG NEXT_PUBLIC_ENABLE_ENGLISH_SCAFFOLDING
+ARG NEXT_PUBLIC_ENABLE_CLOUD_SYNC
+ARG NEXT_PUBLIC_APP_VERSION
+ARG NEXT_PUBLIC_GIT_SHA
+ENV NEXT_PUBLIC_APP_NAME=$NEXT_PUBLIC_APP_NAME \
+    NEXT_PUBLIC_DEFAULT_LOCALE=$NEXT_PUBLIC_DEFAULT_LOCALE \
+    NEXT_PUBLIC_DEFAULT_COUNTRY=$NEXT_PUBLIC_DEFAULT_COUNTRY \
+    NEXT_PUBLIC_APP_ENV=$NEXT_PUBLIC_APP_ENV \
+    NEXT_PUBLIC_APP_URL=$NEXT_PUBLIC_APP_URL \
+    NEXT_PUBLIC_SUPABASE_URL=$NEXT_PUBLIC_SUPABASE_URL \
+    NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=$NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY \
+    NEXT_PUBLIC_ENABLE_ENGLISH_SCAFFOLDING=$NEXT_PUBLIC_ENABLE_ENGLISH_SCAFFOLDING \
+    NEXT_PUBLIC_ENABLE_CLOUD_SYNC=$NEXT_PUBLIC_ENABLE_CLOUD_SYNC \
+    NEXT_PUBLIC_APP_VERSION=$NEXT_PUBLIC_APP_VERSION \
+    NEXT_PUBLIC_GIT_SHA=$NEXT_PUBLIC_GIT_SHA
+
+RUN npm run build
+
+FROM base AS runner
+WORKDIR /app
+ENV NODE_ENV=production \
+    PORT=3000 \
+    HOSTNAME=0.0.0.0
+
+COPY --from=builder --chown=node:node /app/public ./public
+COPY --from=builder --chown=node:node /app/.next/standalone ./
+COPY --from=builder --chown=node:node /app/.next/static ./.next/static
+
+USER node
+EXPOSE 3000
+
+# The server reads PORT/HOSTNAME at startup and exits cleanly on SIGTERM
+# (Vercel sends SIGTERM with a 30 s grace period on scale-down).
+CMD ["node", "server.js"]

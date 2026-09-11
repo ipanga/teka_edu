@@ -1,0 +1,275 @@
+# Teka Edu — Project Status
+
+Live implementation status. Read after `CLAUDE.md`. Update at the end of every meaningful session. Everything here must match the actual repository.
+
+## Last Updated
+
+```text
+Date:       2026-09-11
+Branch:     none (local directory is not yet a Git repository)
+Commit:     none
+Updated by: Claude Code (claude-opus-5)
+```
+
+## Current Phase
+
+```text
+Phase 0 — Foundation
+Status:    In progress. App foundation and infrastructure scaffolding are implemented and
+           validated locally. Not yet in Git, and never run on GitHub.
+Objective: Next.js + TypeScript app with lint/format/test tooling, Docker, Supabase local
+           stack, CI/CD workflows and environment documentation (Plan §38 Phase 0, §46).
+```
+
+## Overall Progress
+
+```text
+[ ] Phase 0 — Foundation              (in progress: Git bootstrap and first GitHub CI run pending)
+[ ] Phase 1 — Curriculum Engine
+[ ] Phase 2 — Child Experience
+[ ] Phase 3 — Activity Engine
+[ ] Phase 4 — Progress Tracking
+[ ] Phase 5 — PWA / Offline
+[ ] Phase 6 — Content Pilot
+[ ] Phase 7 — Full 2026–2027 Curriculum
+[ ] Phase 8 — Staging / Production    (workflows written; external services not configured)
+```
+
+## Completed
+
+### Documentation
+
+- [x] `TEKA_EDU_PROJECT_PLAN.md` (spec verbatim, plus §46 infrastructure addendum)
+- [x] `CLAUDE.md`, `PROJECT_STATUS.md`, `DECISIONS.md` (ADR-001 to ADR-021), `README.md`
+- [x] `docs/ENVIRONMENT_SETUP.md`, `docs/ENVIRONMENT_VARIABLES.md`, `docs/DEPLOYMENT.md`
+
+### Foundation
+
+- [x] Repository inspected (Plan §39 Task 1)
+- [x] Next.js 16.3.4 + React 19.2.8 + TypeScript 5.9.3 (App Router, standalone output, ESM package), with a placeholder French home page
+- [x] Tailwind CSS 4, ESLint 9 (`eslint-config-next`), Prettier, Zod 4
+- [x] Vitest 5 + React Testing Library + jsdom (18 unit tests), Playwright 1.63 (2 smoke tests)
+- [x] Toolchain decisions recorded (ADR-020): npm, Node 22 (`.nvmrc`), exact version pins
+- [ ] Git repository initialised, remote linked, `develop` created (**needs owner approval**)
+
+### Infrastructure foundation
+
+- [x] `lib/env/`: typed env validation (public/server split, `server-only`, environment guard, key-prefix checks, no values in errors) and `instrumentation.ts` startup validation (ADR-021)
+- [x] `/api/health` (status, environment, version, commit)
+- [x] `Dockerfile` and `Dockerfile.vercel` (multi-stage, pinned `node:22.22.2-alpine3.22`, non-root, standalone), `.dockerignore`, `.vercelignore`, `vercel.json` (Git auto-deploy off)
+- [x] `supabase/` (`config.toml` from CLI 2.117.0, PostgreSQL 17; `migrations/`; dev-only `seed.sql`; pgTAP RLS guard test)
+- [x] `.github/workflows/`: `ci.yml`, `deploy-staging.yml`, `deploy-production.yml`
+- [x] Env templates (`.env.example`, `.env.local.example`, `.env.development.example`, `.env.production.example`) and `.gitignore` (real `.env*` ignored, templates kept)
+- [x] Scripts: `validate-content.ts`, `check-client-bundle.ts`, `start-standalone.mjs`, `docker-smoke.sh`
+
+## Infrastructure Status
+
+Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED`.
+
+| Area                            | Status               | Evidence / remaining                                                                                                                                                                      |
+| ------------------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Docker                          | **VERIFIED (local)** | Both images build. Container is healthy about 6 s after start, runs as user `node`, and exits on SIGTERM with code 143 (graceful). Verified on arm64 only; CI builds amd64 (not yet run). |
+| GitHub Actions                  | **IN PROGRESS**      | 3 workflows written, and `actionlint` 1.7.12 reports 0 errors. Every CI step passes locally. Never run on GitHub (nothing pushed). Branch rules and environments not created.             |
+| Supabase local                  | **VERIFIED**         | `db start` / `db reset` / `test db` (PASS) / `stop` all work. Full `supabase start` confirmed `sb_publishable_…` / `sb_secret_…` local keys, and the env validation accepts them.         |
+| Supabase DEV (`teka-edu-dev`)   | **BLOCKED**          | Project not created. Owner must create it and provide values (see below).                                                                                                                 |
+| Supabase PROD (`teka-edu-prod`) | **BLOCKED**          | Project not created. Owner action.                                                                                                                                                        |
+| Database migrations             | **CONFIGURED**       | Migration-only pipeline in CI/CD. No migrations exist yet (no schema needed in V1). Nothing applied to any hosted database.                                                               |
+| Vercel staging                  | **BLOCKED**          | No Vercel project, token or IDs. Staging deploy job gated by `STAGING_DEPLOY_ENABLED` (unset).                                                                                            |
+| Vercel production               | **BLOCKED**          | Same as staging. Gated by `PRODUCTION_DEPLOY_ENABLED` (unset).                                                                                                                            |
+| Environment variables           | **CONFIGURED**       | Templates, validation and inventory complete. No hosted values exist yet.                                                                                                                 |
+| Deployment documentation        | **CONFIGURED**       | Written. Must be re-checked against the first real staging and production deployments.                                                                                                    |
+
+## In Progress
+
+```text
+Task:           Phase 0 completion
+Status:         Local work done; waiting on owner for Git bootstrap and external accounts
+Relevant files: .github/workflows/*, docs/ENVIRONMENT_SETUP.md
+Remaining:      git init + first push, first GitHub CI run, branch rules, GitHub environments,
+                Supabase and Vercel setup, first staging deployment
+```
+
+## Next Tasks
+
+### P0 — Next
+
+1. **Git bootstrap** (needs owner approval to commit and push):
+   - `git init`, set `origin`, first commit on `main`, create `develop`
+   - open a PR so `ci.yml` runs on GitHub, then fix any runner-specific issue (amd64 Docker build, `supabase/setup-cli@v3`, Playwright system dependencies)
+2. **Owner: external setup** following `docs/ENVIRONMENT_SETUP.md` sections 2–12. The value checklist is at the end of that file.
+3. **First staging deployment:** set `STAGING_DEPLOY_ENABLED=true`, then verify:
+   - `PORT=3000` routing
+   - that `--build-env NEXT_PUBLIC_GIT_SHA` reaches the image (ISSUE-005)
+   - the Deployment Protection bypass
+   - that the container build is detected
+     Then update this file and `docs/DEPLOYMENT.md` with what was observed.
+
+### P1 — Soon
+
+1. Calendar and school-year domain models, the DRC holiday data file, the instruction-day generator and its tests (Plan §39 Tasks 5–6). Needs PD-002 and PD-003.
+2. Obtain and cite the official Cycle 1 curriculum text, then build the competency ID catalogue (PD-004).
+3. Curriculum and lesson Zod schemas, registered in `scripts/validate-content.ts` (Task 7).
+4. Fill `lib/env/supabase-projects.ts` with the DEV and PROD refs once the projects exist.
+
+### P2 — Later
+
+1. Minimal French child UI (Task 8), sample content (Task 9), IndexedDB progress (Task 10), PWA (Task 11).
+2. CDN caching for static assets on the Vercel container (ISSUE-006).
+3. Docker build caching in CI (buildx + GitHub Actions cache) if CI time becomes a problem.
+
+## Known Issues
+
+### ISSUE-001 — Local directory is not a Git repository
+
+Severity: Medium · Status: Open
+Description: There is no `.git` directory and the GitHub remote is empty. The CI/CD workflows cannot run until the code is pushed.
+Recommended action: P0 task 1 (needs owner approval).
+
+### ISSUE-002 — Official curriculum source not yet obtained
+
+Severity: High for Phases 1, 6 and 7 · Status: Open
+Description: The domain list in Plan §3.1 has not been checked against the official Bulletin officiel text, and no competency catalogue exists.
+Recommended action: PD-004. Do not create competency IDs until the source is cited.
+
+### ISSUE-003 — The school year is already under way
+
+Severity: Medium (product timing) · Status: Open
+Description: 2026-09-01 was instructional day 1. On 2026-09-11 it is day 9. The pilot covers days 1–5.
+Recommended action: PD-005.
+
+### ISSUE-004 — ESLint 9 is end-of-life upstream
+
+Severity: Low · Status: Accepted for now
+Description: `npm install` warns that ESLint 9.39.5 is no longer supported. create-next-app 16.3.4 still pins ESLint ^9.
+Recommended action: move to ESLint 10 when `eslint-config-next` supports it (ADR-020).
+
+### ISSUE-005 — Commit SHA forwarding on Vercel container builds is unverified
+
+Severity: Low · Status: Open
+Description: The workflows pass `--build-env NEXT_PUBLIC_GIT_SHA=…`. That these values reach a container build as `--build-arg` is inferred from the Vercel CLI source, not documented. The smoke test skips the commit check if `/api/health` reports `commit: null`.
+Recommended action: confirm on the first staging deployment. If it does not work, pass the SHA another way.
+
+### ISSUE-006 — Every request reaches the Vercel container
+
+Severity: Low (performance, cost) · Status: Open
+Description: With the container preset, Vercel's CDN caches only responses that send `s-maxage` / `CDN-Cache-Control`. Next.js static assets send neither by default.
+Recommended action: add CDN cache headers for `/_next/static/*` and media before real traffic.
+
+### ISSUE-007 — Vercel function limits constrain media
+
+Severity: Medium (for Phase 6 content) · Status: Open
+Description: Requests and responses through the container are limited to 4.5 MB.
+Recommended action: keep media files small, or serve large media from Supabase Storage or a CDN (PD-008).
+
+## Resolved Issues
+
+- **PD-001 (Vercel mechanism)**, resolved 2026-09-11: Vercel runs `Dockerfile.vercel` containers (ADR-013).
+- **PD-009 (test runner)**, resolved 2026-09-11: Vitest (ADR-020).
+
+## Blockers
+
+### BLOCKER-001 — External accounts and credentials
+
+Description: Supabase DEV/PROD, the Vercel project, and the GitHub environments and secrets do not exist yet. Staging and production deployment cannot proceed without them.
+Required action: owner follows `docs/ENVIRONMENT_SETUP.md` and provides the values listed in "Values still required from the owner".
+
+Phase 1 calendar and curriculum data also need PD-002, PD-003 and PD-004. That does not block the remaining Phase 0 work.
+
+## Tests / Quality Status
+
+All values below are local runs on 2026-09-11 (macOS arm64, Node 22.22.2, Docker 29.7.2).
+
+```text
+Lint:                  PASS
+Format:                PASS
+TypeScript:            PASS
+Unit tests:            PASS (18 tests, Vitest)
+Content validation:    PASS (0 content files: none exist yet)
+Playwright:            PASS (2 smoke tests against the standalone build)
+Next.js build:         PASS
+Client-bundle check:   PASS (sentinel secrets absent; a planted leak is detected)
+Docker build:          PASS (Dockerfile and Dockerfile.vercel, with health and graceful-stop smoke)
+Supabase DB tests:     PASS (pgTAP: RLS guard; a table without RLS correctly fails)
+Workflow lint:         PASS (actionlint 1.7.12)
+GitHub Actions CI:     NOT RUN (repository not pushed)
+```
+
+## Content Status
+
+| Class           | Curriculum mapping | Week 1      | Week 2      | Full year   |
+| --------------- | ------------------ | ----------- | ----------- | ----------- |
+| 1ère maternelle | Not started        | Not started | Not started | Not started |
+| 2ème maternelle | Not started        | Not started | Not started | Not started |
+| 3ème maternelle | Not started        | Not started | Not started | Not started |
+
+DRC 2026–2027 calendar data: Not started.
+
+## Deployment Status
+
+```text
+Local:      Runs: npm run dev, npm run start (standalone), Docker image
+Docker:     Verified locally (both Dockerfiles)
+Staging:    Not configured (no Supabase DEV / Vercel project)
+Production: Not configured
+CI:         Workflow written and linted; never run on GitHub
+CD:         Workflows written; deploy jobs disabled until STAGING_/PRODUCTION_DEPLOY_ENABLED=true
+Remote:     github.com/ipanga/teka_edu exists (public, empty, no branches)
+```
+
+## Deviations From the Infrastructure Spec (documented)
+
+1. **`NEXT_PUBLIC_ENABLE_CLOUD_SYNC=false`** in the staging and production templates, where the spec's examples say `true`. No sync feature exists yet (spec §55), and `true` makes the Supabase browser variables mandatory.
+2. **CI on push:** `ci.yml` does not trigger on push by itself. The deploy workflows call it for the pushed commit, which gives the same coverage without running CI twice (spec §27 asks to avoid repeated work).
+3. **No `vercel pull` / `vercel build` / `--prebuilt`:** container deployments use a remote `vercel deploy` so that `NEXT_PUBLIC_*` build arguments reach the image (spec §32 anticipated this; ADR-013).
+4. **`SUPABASE_DB_URL` not used.** Migrations use `supabase link` with `SUPABASE_DB_PASSWORD`.
+5. **Additional variables:**
+   - `PORT=3000` (Vercel, required)
+   - `VERCEL_AUTOMATION_BYPASS_SECRET` (smoke tests)
+   - `STAGING_DEPLOY_ENABLED` / `PRODUCTION_DEPLOY_ENABLED` (deploy gates)
+   - `VERCEL_STAGING_TARGET` / `STAGING_DOMAIN` (optional)
+   - `NEXT_PUBLIC_APP_VERSION` / `NEXT_PUBLIC_GIT_SHA` (build metadata)
+6. **No `lib/supabase/database.types.ts` yet.** There is no schema; `npm run db:types` was tested and works.
+7. **Local Supabase `edge_runtime` and `analytics` disabled** in `config.toml` to keep the stack light (ADR-014).
+
+## Important Pending Decisions
+
+- **PD-002: School-year end date and DRC vacation periods** (before Phase 1 data)
+  - The plan gives only 2026-09-01.
+- **PD-003: DRC public holidays** (before Phase 1 data)
+  - Verify the Plan §4.3 list against the current legal text.
+  - Settle the rule for holidays falling on a weekend.
+- **PD-004: Official curriculum text** (before Phase 1 competency data)
+  - Obtain the exact Bulletin officiel reference and applicability date, and check reuse terms (the repository is public).
+- **PD-005: Mid-year start** (before Phase 2)
+  - Proposal: calendar-aligned by default, with a per-child position the parent can reset.
+- **PD-006: PWA tooling** (before Phase 5)
+  - Choose a maintained service-worker approach compatible with Next.js 16 / Turbopack.
+- **PD-007: Offline speech** (before Phases 2 and 5)
+  - Some browser voices are network-backed (`localService === false`). Consider prerecorded core audio.
+- **PD-008: Media sourcing and licensing** (before Phase 6)
+  - Also consider the 4.5 MB response limit (ISSUE-007).
+- **PD-010: Vercel plan**
+  - Hobby: staging is Preview plus an alias, and rollback goes only to the previous deployment.
+  - Pro: a `staging` Custom Environment, and rollback to any earlier production deployment.
+- **PD-011: Regions**
+  - Supabase region (the same for DEV and PROD), and the Vercel function region next to it, both close to DRC users.
+- **PD-012: Domains**
+  - Production domain and staging domain.
+- **PD-013: Production approval**
+  - Whether to require manual reviewers on the GitHub `production` environment from the start.
+
+## Last Session Summary
+
+```text
+Completed:  Researched the current Vercel container deployment (Dockerfile.vercel, GA) and the
+            Supabase CLI/key conventions. Initialised the Next.js 16 app and tooling.
+            Implemented env validation, the health endpoint, both Dockerfiles, the Supabase local
+            config and pgTAP guard, the three GitHub workflows, the env templates, the infra docs
+            (3 files), ADR-012..021 and the plan §46 addendum.
+Changed:    Everything is new except the docs from the previous session, which were updated.
+            Nothing committed (no Git repository).
+Tests:      All local checks PASS (see Tests / Quality Status). GitHub CI not run.
+Remaining:  Git bootstrap; owner setup of Supabase, Vercel and GitHub; first staging deployment.
+Recommended next task: with owner approval, initialise Git, push main and develop, and open a PR
+            to see CI run on GitHub.
+```

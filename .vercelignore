@@ -1,0 +1,14 @@
+# Files the Vercel CLI must never upload. Runtime configuration comes from the Vercel
+# project settings, never from local .env files.
+.env
+.env.*
+node_modules
+.next
+coverage
+playwright-report
+test-results
+blob-report
+supabase/.temp
+supabase/.branches
+*.pem
+*.key

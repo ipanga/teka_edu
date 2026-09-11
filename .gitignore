@@ -1,0 +1,48 @@
+# dependencies
+/node_modules
+
+# testing
+/coverage
+/playwright-report/
+/test-results/
+/blob-report/
+/playwright/.cache/
+
+# next.js
+/.next/
+/out/
+/build
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# environment files: real values are never committed, templates are
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# vercel CLI link and pulled environment files
+.vercel
+
+# supabase CLI local state (also covered by supabase/.gitignore)
+supabase/.temp/
+supabase/.branches/
+
+# local secrets / keys / database dumps
+*.pem
+*.key
+*.p12
+*.pfx
+*.dump
+
+# editor / IDE state (may contain local paths or credentials)
+.idea/
+.vscode/
+*.swp
+
+# OS / misc
+.DS_Store
+Thumbs.db
+npm-debug.log*

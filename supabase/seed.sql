@@ -1,0 +1,8 @@
+-- Development-only seed data.
+--
+-- Applied by `supabase db start` / `supabase db reset` on the LOCAL stack only.
+-- CI/CD never seeds hosted projects (`supabase db push` runs without --include-seed),
+-- and production is never seeded with test data. Canonical curriculum content is not
+-- stored here: it ships from the Git repository (ADR-019).
+--
+-- Empty for now: the schema has no tables yet (child progress is local IndexedDB in V1).

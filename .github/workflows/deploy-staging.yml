@@ -1,0 +1,139 @@
+# Staging deployment: develop -> Supabase DEV migrations -> Vercel staging container -> smoke.
+#
+# Disabled until the owner has configured the external services: set the repository
+# variable STAGING_DEPLOY_ENABLED=true (docs/ENVIRONMENT_SETUP.md). Until then this workflow
+# still runs CI on every push to develop and skips the deploy job.
+# See docs/DEPLOYMENT.md for the full lifecycle, failure handling and rollback.
+name: Deploy staging
+
+on:
+  push:
+    branches: [develop]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  # Serialise deployments. Never cancel a run in progress: it may be applying migrations.
+  # A newer push waits; older queued runs are superseded automatically.
+  group: deploy-staging
+  cancel-in-progress: false
+
+env:
+  VERCEL_CLI_VERSION: 59.16.0
+  VERCEL_TELEMETRY_DISABLED: "1"
+
+jobs:
+  ci:
+    name: CI
+    uses: ./.github/workflows/ci.yml
+
+  deploy:
+    name: Migrate Supabase DEV, deploy Vercel staging, smoke test
+    needs: ci
+    if: vars.STAGING_DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    environment:
+      name: staging
+      url: ${{ steps.deploy.outputs.url }}
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Check required secrets (names only, values are never printed)
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_PROJECT_ID: ${{ secrets.SUPABASE_PROJECT_ID }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+        run: |
+          missing=0
+          for name in VERCEL_TOKEN VERCEL_ORG_ID VERCEL_PROJECT_ID SUPABASE_ACCESS_TOKEN SUPABASE_PROJECT_ID SUPABASE_DB_PASSWORD; do
+            if [[ -z "${!name}" ]]; then echo "::error::Missing secret $name in the 'staging' environment"; missing=1; fi
+          done
+          exit "$missing"
+
+      # ---- 1. Database: must succeed before any application deployment ----------------
+      - uses: supabase/setup-cli@v3
+      - name: Link Supabase DEV project
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+          PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_ID }}
+        run: supabase link --project-ref "$PROJECT_REF"
+      - name: Show migration state and pending changes
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+        run: |
+          supabase migration list --linked
+          supabase db push --dry-run
+      - name: Apply migrations to Supabase DEV
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+        run: supabase db push --yes
+
+      # ---- 2. Application: Vercel builds Dockerfile.vercel remotely --------------------
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - name: Install Vercel CLI
+        run: npm install --global "vercel@${VERCEL_CLI_VERSION}"
+      - name: Deploy to Vercel (staging)
+        id: deploy
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          # "staging" when a Vercel Custom Environment exists (Pro plan); empty = Preview.
+          VERCEL_TARGET: ${{ vars.VERCEL_STAGING_TARGET }}
+        run: |
+          target_args=()
+          if [[ -n "$VERCEL_TARGET" && "$VERCEL_TARGET" != "preview" ]]; then
+            target_args=(--target="$VERCEL_TARGET")
+          fi
+          url="$(vercel deploy --yes "${target_args[@]}" \
+            --build-env NEXT_PUBLIC_GIT_SHA="$GITHUB_SHA" \
+            --token="$VERCEL_TOKEN")"
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "Deployed $GITHUB_SHA to $url"
+      - name: Assign stable staging domain
+        if: vars.STAGING_DOMAIN != ''
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          DEPLOY_URL: ${{ steps.deploy.outputs.url }}
+          STAGING_DOMAIN: ${{ vars.STAGING_DOMAIN }}
+        run: vercel alias set "$DEPLOY_URL" "$STAGING_DOMAIN" --token="$VERCEL_TOKEN"
+
+      # ---- 3. Smoke tests against the exact deployment ---------------------------------
+      - run: npm ci
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+      - name: Smoke tests
+        env:
+          PLAYWRIGHT_BASE_URL: ${{ steps.deploy.outputs.url }}
+          EXPECTED_GIT_SHA: ${{ github.sha }}
+          EXPECTED_APP_ENV: staging
+          VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
+        run: npm run test:e2e
+
+      - name: Summary
+        if: always()
+        env:
+          DEPLOY_URL: ${{ steps.deploy.outputs.url }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          {
+            echo "## Staging deployment: ${JOB_STATUS}"
+            echo "- Commit: \`${GITHUB_SHA}\`"
+            echo "- URL: ${DEPLOY_URL:-not deployed}"
+            if [[ "$JOB_STATUS" != "success" ]]; then
+              echo ""
+              echo "**Deployment unhealthy or incomplete: investigate before promoting to main.**"
+              echo "See docs/DEPLOYMENT.md, section Common deployment failures."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

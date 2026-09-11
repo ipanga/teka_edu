@@ -1,0 +1,8 @@
+# Supabase CLI local state (same entries `supabase init` generates inside a git repository)
+.branches
+.temp
+
+# dotenvx
+.env.keys
+.env.local
+.env.*.local

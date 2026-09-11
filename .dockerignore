@@ -1,0 +1,33 @@
+# Keep the build context small and free of secrets.
+.git
+.github
+.vercel
+.next
+out
+build
+node_modules
+coverage
+playwright-report
+test-results
+blob-report
+
+# Environment files (real values and templates): runtime config never enters the image.
+.env
+.env.*
+
+# Local tooling state
+supabase/.temp
+supabase/.branches
+*.pem
+*.key
+.DS_Store
+npm-debug.log*
+
+# Not needed to build or run the app.
+# `*.md` only matches root-level docs; Markdown under content/ stays in the context.
+docs
+tests
+*.md
+Dockerfile
+Dockerfile.vercel
+.dockerignore
