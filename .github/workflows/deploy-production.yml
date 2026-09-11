@@ -99,9 +99,13 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           DEPLOY_URL: ${{ steps.deploy.outputs.url }}
+        # REST API rather than `vercel inspect`: a project-scoped token may not use the
+        # user-level endpoints the CLI calls ("User not found").
         run: |
-          actual="$(vercel inspect "$DEPLOY_URL" --json --token="$VERCEL_TOKEN" | jq -r '.target // "preview"')"
-          echo "Vercel deployment target: $actual (expected: production)"
+          dep="$(curl -sS --fail-with-body -H "Authorization: Bearer $VERCEL_TOKEN" \
+            "https://api.vercel.com/v13/deployments/${DEPLOY_URL#https://}?teamId=${VERCEL_ORG_ID}")"
+          actual="$(jq -r '.target // "preview"' <<<"$dep")"
+          echo "Vercel deployment $(jq -r .id <<<"$dep"): target=$actual (expected: production)"
           if [[ "$actual" != "production" ]]; then
             echo "::error::Expected a production deployment but Vercel reports '$actual'."
             exit 1

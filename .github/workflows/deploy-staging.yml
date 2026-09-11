@@ -115,26 +115,37 @@ jobs:
             --token="$VERCEL_TOKEN")"
           echo "url=$url" >> "$GITHUB_OUTPUT"
           echo "Deployed $GITHUB_SHA to $url"
+      # REST API rather than `vercel inspect` / `vercel alias`: those CLI commands also call
+      # user-level endpoints that a project-scoped token may not use ("User not found").
       - name: Verify the deployment target is not production
+        id: target
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           DEPLOY_URL: ${{ steps.deploy.outputs.url }}
           VERCEL_TARGET: ${{ vars.VERCEL_STAGING_TARGET }}
         run: |
-          actual="$(vercel inspect "$DEPLOY_URL" --json --token="$VERCEL_TOKEN" | jq -r '.target // "preview"')"
+          dep="$(curl -sS --fail-with-body -H "Authorization: Bearer $VERCEL_TOKEN" \
+            "https://api.vercel.com/v13/deployments/${DEPLOY_URL#https://}?teamId=${VERCEL_ORG_ID}")"
+          actual="$(jq -r '.target // "preview"' <<<"$dep")"   # preview deployments have target null
           expected="${VERCEL_TARGET:-preview}"
-          echo "Vercel deployment target: $actual (expected: $expected)"
+          echo "Vercel deployment $(jq -r .id <<<"$dep"): target=$actual (expected: $expected), state=$(jq -r .readyState <<<"$dep")"
           if [[ "$actual" != "$expected" ]]; then
             echo "::error::Vercel created a '$actual' deployment from the staging workflow. Stop and investigate (docs/DEPLOYMENT.md)."
             exit 1
           fi
+          echo "id=$(jq -r .id <<<"$dep")" >> "$GITHUB_OUTPUT"
       - name: Assign stable staging domain
         if: vars.STAGING_DOMAIN != ''
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          DEPLOY_URL: ${{ steps.deploy.outputs.url }}
+          DEPLOYMENT_ID: ${{ steps.target.outputs.id }}
           STAGING_DOMAIN: ${{ vars.STAGING_DOMAIN }}
-        run: vercel alias set "$DEPLOY_URL" "$STAGING_DOMAIN" --token="$VERCEL_TOKEN"
+        run: |
+          curl -sS --fail-with-body -X POST -H "Authorization: Bearer $VERCEL_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "{\"alias\":\"${STAGING_DOMAIN}\"}" \
+            "https://api.vercel.com/v2/deployments/${DEPLOYMENT_ID}/aliases?teamId=${VERCEL_ORG_ID}" \
+            | jq -r '"Aliased \(.alias) -> \(.deploymentId // "deployment")"'
 
       # ---- 3. Smoke tests against the exact deployment ---------------------------------
       - run: npm ci
