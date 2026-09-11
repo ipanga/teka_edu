@@ -10,10 +10,12 @@
  * Pure and deterministic (rows sorted by key). Used by scripts and tests only; never
  * bundled into the application.
  */
+import { ACTIVITY_TYPES } from "@/domain/lessons/types";
 import type { ReferenceData } from "@/lib/content/reference-data";
 
-type SqlType = "text" | "smallint" | "boolean" | "date" | "smallint[]";
-type SqlValue = string | number | boolean | null | readonly number[];
+type SqlType = "text" | "smallint" | "boolean" | "date" | "smallint[]" | "jsonb";
+type SqlValue =
+  string | number | boolean | null | readonly number[] | Readonly<Record<string, unknown>>;
 type Column = { name: string; type: SqlType };
 type TableData = {
   table: string;
@@ -42,10 +44,16 @@ function literal(value: SqlValue, type: SqlType): string {
     case "smallint[]":
       if (!Array.isArray(value)) throw new TypeError("expected an array for smallint[]");
       return `'{${value.join(",")}}'::smallint[]`;
+    case "jsonb": {
+      if (typeof value !== "object") throw new TypeError("expected an object for jsonb");
+      // Stable key order, so the generated SQL does not depend on object iteration order.
+      const stable = JSON.stringify(value, Object.keys(value as object).sort());
+      return `'${stable.replaceAll("'", "''")}'::jsonb`;
+    }
   }
 }
 
-/** The ten reference tables, parents before children. */
+/** Every reference table, parents before children. */
 export function referenceTables(data: ReferenceData): TableData[] {
   const provenance = [
     col("authority", "text"),
@@ -204,6 +212,24 @@ export function referenceTables(data: ReferenceData): TableData[] {
       })),
     },
     {
+      table: "curriculum_age_bands",
+      key: ["curriculum_id", "code"],
+      columns: [
+        col("curriculum_id", "text"),
+        col("code", "text"),
+        col("position", "smallint"),
+        col("label", "text"),
+      ],
+      rows: data.curricula.flatMap((c) =>
+        c.ageBands.map((band) => ({
+          curriculum_id: c.id,
+          code: band.code,
+          position: band.position,
+          label: band.label,
+        })),
+      ),
+    },
+    {
       table: "curriculum_levels",
       key: ["curriculum_id", "level_id"],
       columns: [
@@ -211,6 +237,7 @@ export function referenceTables(data: ReferenceData): TableData[] {
         col("level_id", "text"),
         col("stage_id", "text"),
         col("reference_section", "text"),
+        col("age_band_code", "text"),
       ],
       rows: data.curricula.flatMap((c) =>
         c.levels.map((l) => ({
@@ -218,6 +245,7 @@ export function referenceTables(data: ReferenceData): TableData[] {
           level_id: l.levelId,
           stage_id: c.stageId,
           reference_section: l.referenceSection,
+          age_band_code: l.ageBandCode,
         })),
       ),
     },
@@ -241,6 +269,336 @@ export function referenceTables(data: ReferenceData): TableData[] {
           title: d.title,
           is_active: d.active,
         })),
+      ),
+    },
+    {
+      table: "curriculum_sources",
+      key: ["curriculum_id", "code"],
+      columns: [
+        col("curriculum_id", "text"),
+        col("code", "text"),
+        col("title", "text"),
+        col("citation", "text"),
+        col("url", "text"),
+        col("sha256", "text"),
+        col("verification", "text"),
+      ],
+      rows: data.curricula.flatMap((c) =>
+        c.sources.map((source) => ({
+          curriculum_id: c.id,
+          code: source.id,
+          title: source.title,
+          citation: source.citation,
+          url: source.url,
+          sha256: source.sha256,
+          verification: source.verification,
+        })),
+      ),
+    },
+    {
+      table: "curriculum_source_domains",
+      key: ["curriculum_id", "source_code", "domain_code"],
+      columns: [
+        col("curriculum_id", "text"),
+        col("source_code", "text"),
+        col("domain_code", "text"),
+      ],
+      rows: data.curricula.flatMap((c) =>
+        c.sources.flatMap((source) =>
+          source.covers.map((domainCode) => ({
+            curriculum_id: c.id,
+            source_code: source.id,
+            domain_code: domainCode,
+          })),
+        ),
+      ),
+    },
+    {
+      table: "curriculum_subdomains",
+      key: ["curriculum_id", "code"],
+      columns: [
+        col("curriculum_id", "text"),
+        col("code", "text"),
+        col("domain_code", "text"),
+        col("position", "smallint"),
+        col("title", "text"),
+      ],
+      rows: data.syllabi.flatMap((syllabus) =>
+        syllabus.subdomains.map((subdomain) => ({
+          curriculum_id: syllabus.curriculumId,
+          code: subdomain.code,
+          domain_code: subdomain.domainCode,
+          position: subdomain.position,
+          title: subdomain.title,
+        })),
+      ),
+    },
+    {
+      table: "curriculum_competencies",
+      key: ["curriculum_id", "code"],
+      columns: [
+        col("curriculum_id", "text"),
+        col("code", "text"),
+        col("subdomain_code", "text"),
+        col("position", "smallint"),
+        col("title", "text"),
+      ],
+      rows: data.syllabi.flatMap((syllabus) =>
+        syllabus.competencies.map((competency) => ({
+          curriculum_id: syllabus.curriculumId,
+          code: competency.code,
+          subdomain_code: competency.subdomainCode,
+          position: competency.position,
+          title: competency.title,
+        })),
+      ),
+    },
+    {
+      table: "learning_objectives",
+      key: ["curriculum_id", "code"],
+      columns: [
+        col("curriculum_id", "text"),
+        col("code", "text"),
+        col("competency_code", "text"),
+        col("position", "smallint"),
+        col("statement", "text"),
+        col("group_title", "text"),
+        col("origin", "text"),
+        col("source_code", "text"),
+        col("source_page", "smallint"),
+      ],
+      rows: data.syllabi.flatMap((syllabus) =>
+        syllabus.objectives.map((objective) => ({
+          curriculum_id: syllabus.curriculumId,
+          code: objective.code,
+          competency_code: objective.competencyCode,
+          position: objective.position,
+          statement: objective.statement,
+          group_title: objective.group,
+          origin: objective.origin,
+          source_code: objective.sourceId,
+          source_page: objective.sourcePage,
+        })),
+      ),
+    },
+    {
+      table: "learning_objective_age_bands",
+      key: ["curriculum_id", "objective_code", "age_band_code"],
+      columns: [
+        col("curriculum_id", "text"),
+        col("objective_code", "text"),
+        col("age_band_code", "text"),
+      ],
+      rows: data.syllabi.flatMap((syllabus) =>
+        syllabus.objectives.flatMap((objective) =>
+          objective.ageBandCodes.map((band) => ({
+            curriculum_id: syllabus.curriculumId,
+            objective_code: objective.code,
+            age_band_code: band,
+          })),
+        ),
+      ),
+    },
+    {
+      table: "success_examples",
+      key: ["curriculum_id", "competency_code", "age_band_code", "position"],
+      columns: [
+        col("curriculum_id", "text"),
+        col("competency_code", "text"),
+        col("age_band_code", "text"),
+        col("position", "smallint"),
+        col("statement", "text"),
+        col("group_title", "text"),
+        col("source_code", "text"),
+        col("source_page", "smallint"),
+      ],
+      rows: data.syllabi.flatMap((syllabus) =>
+        syllabus.successExamples.map((example) => ({
+          curriculum_id: syllabus.curriculumId,
+          competency_code: example.competencyCode,
+          age_band_code: example.ageBandCode,
+          position: example.position,
+          statement: example.statement,
+          group_title: example.group,
+          source_code: example.sourceId,
+          source_page: example.sourcePage,
+        })),
+      ),
+    },
+    {
+      table: "materials",
+      key: ["code"],
+      columns: [col("code", "text"), col("name", "text"), col("category", "text")],
+      rows: data.materials.map((material) => ({
+        code: material.code,
+        name: material.name,
+        category: material.category,
+      })),
+    },
+    {
+      table: "activity_types",
+      key: ["code"],
+      columns: [col("code", "text")],
+      rows: ACTIVITY_TYPES.map((type) => ({ code: type })),
+    },
+    {
+      table: "lessons",
+      key: ["id"],
+      columns: [
+        col("id", "text"),
+        col("curriculum_id", "text"),
+        col("domain_code", "text"),
+        col("title", "text"),
+        col("summary", "text"),
+        col("stage", "text"),
+        col("difficulty", "smallint"),
+        col("theme_id", "text"),
+        col("parent_guidance", "text"),
+        col("origin", "text"),
+        col("status", "text"),
+      ],
+      rows: data.lessons.map((lesson) => ({
+        id: lesson.id,
+        curriculum_id: lesson.curriculumId,
+        domain_code: lesson.domainCode,
+        title: lesson.title,
+        summary: lesson.summary,
+        stage: lesson.stage,
+        difficulty: lesson.difficulty,
+        theme_id: lesson.themeId,
+        parent_guidance: lesson.parentGuidance,
+        origin: lesson.origin,
+        status: lesson.status,
+      })),
+    },
+    {
+      table: "lesson_levels",
+      key: ["lesson_id", "level_id"],
+      columns: [col("lesson_id", "text"), col("level_id", "text")],
+      rows: data.lessons.flatMap((lesson) =>
+        lesson.levelIds.map((levelId) => ({ lesson_id: lesson.id, level_id: levelId })),
+      ),
+    },
+    {
+      table: "lesson_objectives",
+      key: ["lesson_id", "objective_code"],
+      columns: [
+        col("lesson_id", "text"),
+        col("curriculum_id", "text"),
+        col("objective_code", "text"),
+        col("role", "text"),
+      ],
+      rows: data.lessons.flatMap((lesson) => [
+        ...lesson.objectiveCodes.map((code) => ({
+          lesson_id: lesson.id,
+          curriculum_id: lesson.curriculumId,
+          objective_code: code,
+          role: "taught",
+        })),
+        ...lesson.supportingObjectiveCodes.map((code) => ({
+          lesson_id: lesson.id,
+          curriculum_id: lesson.curriculumId,
+          objective_code: code,
+          role: "supporting",
+        })),
+      ]),
+    },
+    {
+      table: "activities",
+      key: ["id"],
+      columns: [
+        col("id", "text"),
+        col("lesson_id", "text"),
+        col("curriculum_id", "text"),
+        col("position", "smallint"),
+        col("type", "text"),
+        col("title", "text"),
+        col("child_instruction", "text"),
+        col("adult_guidance", "text"),
+        col("minutes", "smallint"),
+        col("mode", "text"),
+        col("payload", "jsonb"),
+      ],
+      rows: data.lessons.flatMap((lesson) =>
+        lesson.activities.map((activity) => ({
+          id: activity.id,
+          lesson_id: lesson.id,
+          curriculum_id: lesson.curriculumId,
+          position: activity.position,
+          type: activity.type,
+          title: activity.title,
+          child_instruction: activity.childInstruction,
+          adult_guidance: activity.adultGuidance,
+          minutes: activity.minutes,
+          mode: activity.mode,
+          payload: activity.payload,
+        })),
+      ),
+    },
+    {
+      table: "activity_objectives",
+      key: ["activity_id", "objective_code"],
+      columns: [
+        col("activity_id", "text"),
+        col("curriculum_id", "text"),
+        col("objective_code", "text"),
+      ],
+      rows: data.lessons.flatMap((lesson) =>
+        lesson.activities.flatMap((activity) =>
+          activity.objectiveCodes.map((code) => ({
+            activity_id: activity.id,
+            curriculum_id: lesson.curriculumId,
+            objective_code: code,
+          })),
+        ),
+      ),
+    },
+    {
+      table: "activity_materials",
+      key: ["activity_id", "material_code"],
+      columns: [col("activity_id", "text"), col("material_code", "text")],
+      rows: data.lessons.flatMap((lesson) =>
+        lesson.activities.flatMap((activity) =>
+          activity.materialCodes.map((code) => ({ activity_id: activity.id, material_code: code })),
+        ),
+      ),
+    },
+    {
+      table: "activity_vocabulary",
+      key: ["activity_id", "position"],
+      columns: [
+        col("activity_id", "text"),
+        col("position", "smallint"),
+        col("french", "text"),
+        col("english", "text"),
+      ],
+      rows: data.lessons.flatMap((lesson) =>
+        lesson.activities.flatMap((activity) =>
+          activity.vocabulary.map((entry, index) => ({
+            activity_id: activity.id,
+            position: index + 1,
+            french: entry.fr,
+            english: entry.en,
+          })),
+        ),
+      ),
+    },
+    {
+      table: "activity_scaffolds",
+      key: ["activity_id", "language"],
+      columns: [
+        col("activity_id", "text"),
+        col("language", "text"),
+        col("child_instruction", "text"),
+      ],
+      rows: data.lessons.flatMap((lesson) =>
+        lesson.activities.flatMap((activity) =>
+          activity.scaffolds.map((scaffold) => ({
+            activity_id: activity.id,
+            language: scaffold.language,
+            child_instruction: scaffold.childInstruction,
+          })),
+        ),
       ),
     },
     {

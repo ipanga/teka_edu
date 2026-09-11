@@ -1,0 +1,1601 @@
+{
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "domainCode": "LANG",
+  "sourceId": "programme-2024-langage",
+  "subdomains": [
+    {
+      "code": "LANG-S01",
+      "position": 1,
+      "title": "Acquérir le langage oral",
+      "competencies": [
+        {
+          "code": "LANG-S01-C01",
+          "position": 1,
+          "title": "Enrichir son vocabulaire",
+          "objectives": [
+            {
+              "code": "LANG-S01-C01-O01",
+              "position": 1,
+              "group": null,
+              "statement": "Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).",
+              "ageBands": ["before-4", "from-4"],
+              "sourcePage": 3
+            },
+            {
+              "code": "LANG-S01-C01-O02",
+              "position": 2,
+              "group": null,
+              "statement": "Organiser les mots en catégorie et en réseau.",
+              "ageBands": ["before-4", "from-4", "from-5"],
+              "sourcePage": 3
+            },
+            {
+              "code": "LANG-S01-C01-O03",
+              "position": 3,
+              "group": null,
+              "statement": "Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).",
+              "ageBands": ["from-5"],
+              "sourcePage": 3
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": null,
+              "statement": "Comprendre et utiliser les réseaux lexicaux :\n• de la vie familiale ;\n• des activités récurrentes dans la vie de la classe (ex. :verbes de mouvement en lien avec les activités de motricité) ;\n• des relations avec les autres, des activités scolaires, des albums lus en classe.",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": null,
+              "statement": "Écouter et échanger avec le professeur qui commente ses actions en situation",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "before-4",
+              "position": 3,
+              "group": null,
+              "statement": "Trouver un objet présent nommé par le professeur en contexte (ex. : Peux-tu me donner la colle ?).",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "before-4",
+              "position": 4,
+              "group": null,
+              "statement": "Reconnaitre et nommer un objet présenté sous différentes formes.",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "before-4",
+              "position": 5,
+              "group": null,
+              "statement": "Retrouver un mot jamais entendu",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "before-4",
+              "position": 6,
+              "group": null,
+              "statement": "Retrouver un intrus.",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "before-4",
+              "position": 7,
+              "group": null,
+              "statement": "Attribuer un objet à une catégorie.",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "before-4",
+              "position": 8,
+              "group": null,
+              "statement": "Ranger des jeux familiers par catégorie (ex. : ranger par catégorie les couverts de la dinette).",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "from-4",
+              "position": 9,
+              "group": null,
+              "statement": "Comprendre et utiliser :\n• les mots qui vont permettre de décrire l’environnement immédiat de l’élève ;\n• les mots spécifiques des projets et des différents domaines travaillés en classe ;\n• les mots des histoires entendues.",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "from-4",
+              "position": 10,
+              "group": null,
+              "statement": "Trouver un intrus dans une catégorie.",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "from-4",
+              "position": 11,
+              "group": null,
+              "statement": "S’appuyer sur des noms qu’il connait déjà pour comprendre un mot nouveau : animal/animalerie.",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "from-4",
+              "position": 12,
+              "group": null,
+              "statement": "Trouver des mots polysémiques : l’élève différencie la glace dans laquelle on se regarde et la glace que l’on mange.",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "from-4",
+              "position": 13,
+              "group": null,
+              "statement": "Ranger des jeux familiers par catégorie (ranger par catégorie les couverts de la dinette).",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "from-4",
+              "position": 14,
+              "group": null,
+              "statement": "Trouver des synonymes.",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "from-5",
+              "position": 15,
+              "group": null,
+              "statement": "Comprendre et utiliser :\n• les mots des émotions, des sentiments et des états mentaux des personnages de fiction ;\n• les mots qui entretiennent une proximité phonique (poule/roule/boule/moule) ;\n• les mots qui vont permettre de s’emparer des apprentissages du CP.",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "from-5",
+              "position": 16,
+              "group": null,
+              "statement": "Distinguer le sens propre du sens figuré (sans que ces notions ne soient enseignées) : l’élève comprend le sens de dévorer un gâteau et dévorer un livre.",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "from-5",
+              "position": 17,
+              "group": null,
+              "statement": "Construire des dérivations (sans que ces notions ne soient enseignées) : arroser → arrosage ; gentil → gentiment → gentillesse.",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "from-5",
+              "position": 18,
+              "group": null,
+              "statement": "S’appuyer sur des verbes et des noms qu’il connait déjà pour comprendre et essayer de construire un nouveau mot : jambe/enjamber.",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "from-5",
+              "position": 19,
+              "group": null,
+              "statement": "Chercher des hyperonymes des réseaux étudiés (véhicule est un hyperonyme de voiture, bus, vélo, etc. ; animal est un hyperonyme de chat, chien, grenouille, etc.).",
+              "sourcePage": 3
+            },
+            {
+              "ageBand": "from-5",
+              "position": 20,
+              "group": null,
+              "statement": "Inférer le sens d’un mot inconnu.",
+              "sourcePage": 3
+            }
+          ]
+        },
+        {
+          "code": "LANG-S01-C02",
+          "position": 2,
+          "title": "Développer sa syntaxe",
+          "objectives": [
+            {
+              "code": "LANG-S01-C02-O01",
+              "position": 1,
+              "group": null,
+              "statement": "Diversifier les pronoms employés.",
+              "ageBands": ["before-4", "from-4", "from-5"],
+              "sourcePage": 4
+            },
+            {
+              "code": "LANG-S01-C02-O02",
+              "position": 2,
+              "group": null,
+              "statement": "Construire à l’oral un système de temps de plus en plus efficace.",
+              "ageBands": ["before-4", "from-4", "from-5"],
+              "sourcePage": 4
+            },
+            {
+              "code": "LANG-S01-C02-O03",
+              "position": 3,
+              "group": null,
+              "statement": "Formuler des énoncés de plus en plus complexes.",
+              "ageBands": ["before-4", "from-4", "from-5"],
+              "sourcePage": 4
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": null,
+              "statement": "Comprendre et utiliser :\n• les pronoms il-elle/ils-elles : « Il mange le gâteau », « Elle est partie », « Ils sont sur le toboggan » ;\n• plus tard dans l’année, le pronom je : « Moi, je mange le gâteau. »",
+              "sourcePage": 4
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": null,
+              "statement": "Utiliser :\n• dans la première partie de l’année, le présent : « Il mange le gâteau » ;\n• en fin d’année, un système à trois temps : présent/passé composé/présent à valeur de futur proche (aller) : « Moi, je fais du toboggan. J’ai joué à la balançoire et je vais faire du vélo. »",
+              "sourcePage": 4
+            },
+            {
+              "ageBand": "before-4",
+              "position": 3,
+              "group": null,
+              "statement": "Coordonner des propositions grâce à de premiers connecteurs : et/et puis : « Il monte sur le banc et puis il lance le ballon et puis il saute. »",
+              "sourcePage": 4
+            },
+            {
+              "ageBand": "from-4",
+              "position": 4,
+              "group": null,
+              "statement": "Utiliser :\n• le pronom tu : « Toi, tu manges le gâteau » ;\n• le pronom on : « On a été chez mamie et on a mangé le gâteau. »",
+              "sourcePage": 4
+            },
+            {
+              "ageBand": "from-4",
+              "position": 5,
+              "group": null,
+              "statement": "Utiliser :\n• l’imparfait et le passé composé : « Moi, j’étais dans la cour. J’ai fait du vélo » ;\n• le conditionnel : « Moi, je serais un voleur et toi, tu serais un gendarme. »",
+              "sourcePage": 4
+            },
+            {
+              "ageBand": "from-4",
+              "position": 6,
+              "group": null,
+              "statement": "Utiliser :\n• dans son énoncé de nouveaux connecteurs temporels et spatiaux : d’abord/ensuite/après/pendant, etc. : « D’abord j’ai lancé le ballon et après j’ai sauté dans le cerceau » ;\n• de nouveaux connecteurs afin de subordonner les propositions : parce que/que/qui : « Moi, je n’ai pas mon manteau parce qu’il est resté dans la voiture. »",
+              "sourcePage": 4
+            },
+            {
+              "ageBand": "from-5",
+              "position": 7,
+              "group": null,
+              "statement": "Utiliser les pronoms nous et vous : « Avec les CP, nous avons mangé un gâteau », « Vous, vous mangez un gâteau et pas nous. »",
+              "sourcePage": 5
+            },
+            {
+              "ageBand": "from-5",
+              "position": 8,
+              "group": null,
+              "statement": "Utiliser :\n• un système à trois temps : imparfait/plus-que-parfait/imparfait à valeur de futur dans le passé (aller) « Moi, j’étais sur un toboggan. J’avais fait de la balançoire et j’allais faire du vélo » ;\n• le futur simple : « Quand on écrira aux correspondants » ;\n• un système à deux temps : futur/futur antérieur : « Quand on ira chez les correspondants, on aura déjà été au spectacle et on pourra leur raconter l’histoire. »",
+              "sourcePage": 5
+            },
+            {
+              "ageBand": "from-5",
+              "position": 9,
+              "group": null,
+              "statement": "Utiliser de nouveaux introducteurs de complexité : où/quand/pour que/si/comme, etc. :\n• « Là, c’est la maison où le loup a mangé le petit chaperon rouge. »\n• « Le chevreau s’est caché dans l’horloge pour que le loup ne le voie pas. »\n• « Quand je vais à la boulangerie, la boulangère me donne un bonbon. »\n• « Comme il fait chaud, elle va boire de l’eau. »",
+              "sourcePage": 5
+            }
+          ]
+        },
+        {
+          "code": "LANG-S01-C03",
+          "position": 3,
+          "title": "Articuler distinctement",
+          "objectives": [
+            {
+              "code": "LANG-S01-C03-O01",
+              "position": 1,
+              "group": null,
+              "statement": "Articuler distinctement les couples de consonnes proches suivants : t/k, f/s, m/n.",
+              "ageBands": ["before-4"],
+              "sourcePage": 5
+            },
+            {
+              "code": "LANG-S01-C03-O02",
+              "position": 2,
+              "group": null,
+              "statement": "Distinguer et produire correctement les nasales : é/in, a/an, o/on.",
+              "ageBands": ["from-4"],
+              "sourcePage": 5
+            },
+            {
+              "code": "LANG-S01-C03-O03",
+              "position": 3,
+              "group": null,
+              "statement": "Articuler distinctement les couples de consonnes proches suivants : f/v, s/z, p/b, t/d, k/g.",
+              "ageBands": ["from-4"],
+              "sourcePage": 5
+            },
+            {
+              "code": "LANG-S01-C03-O04",
+              "position": 4,
+              "group": null,
+              "statement": "Prononcer correctement les couples de consonnes proches suivants : ch/s, ch/j, ch/z.",
+              "ageBands": ["from-5"],
+              "sourcePage": 6
+            },
+            {
+              "code": "LANG-S01-C03-O05",
+              "position": 5,
+              "group": null,
+              "statement": "Prononcer correctement les doubles consonnes : br/cr/bl/pl/sl.",
+              "ageBands": ["from-5"],
+              "sourcePage": 6
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": null,
+              "statement": "Commencer à percevoir les distinctions entre des mots proches phonologiquement.",
+              "sourcePage": 5
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": null,
+              "statement": "À partir d’un imagier composé de paires distinctives, prononcer correctement : cour/tour, cube/tube, cassé/café, pouce/pouf, nain/main.",
+              "sourcePage": 5
+            },
+            {
+              "ageBand": "from-4",
+              "position": 3,
+              "group": null,
+              "statement": "À partir d’un imagier composé de paires distinctives, notamment dans une situation de jeu traditionnel, prononcer correctement : ville/fil, dessert/désert, poison/poisson, pépé/bébé, doigt/toit, gare/car et les mots à phonèmes proches : boule/poule.",
+              "sourcePage": 5
+            },
+            {
+              "ageBand": "from-5",
+              "position": 4,
+              "group": null,
+              "statement": "À partir d’un imagier composé de paires distinctives, notamment dans une situation de jeux traditionnels, prononcer correctement : chaud/seau ; mouche/mousse ; bijou/bisou ; manche/mange.",
+              "sourcePage": 6
+            }
+          ]
+        },
+        {
+          "code": "LANG-S01-C04",
+          "position": 4,
+          "title": "Produire des discours variés",
+          "objectives": [
+            {
+              "code": "LANG-S01-C04-O01",
+              "position": 1,
+              "group": null,
+              "statement": "Entrer en communication verbale avec un adulte ou un autre élève.",
+              "ageBands": ["before-4"],
+              "sourcePage": 6
+            },
+            {
+              "code": "LANG-S01-C04-O02",
+              "position": 2,
+              "group": null,
+              "statement": "Dire ce qu’on fait.",
+              "ageBands": ["before-4"],
+              "sourcePage": 6
+            },
+            {
+              "code": "LANG-S01-C04-O03",
+              "position": 3,
+              "group": null,
+              "statement": "Dire ce qu’on a fait et, peu à peu, ce qu’on va faire.",
+              "ageBands": ["before-4"],
+              "sourcePage": 6
+            },
+            {
+              "code": "LANG-S01-C04-O04",
+              "position": 4,
+              "group": null,
+              "statement": "Prendre part à l’oralisation d’un court texte mémorisé.",
+              "ageBands": ["before-4"],
+              "sourcePage": 6
+            },
+            {
+              "code": "LANG-S01-C04-O05",
+              "position": 5,
+              "group": null,
+              "statement": "Dire ce qu’on va faire.",
+              "ageBands": ["from-4"],
+              "sourcePage": 6
+            },
+            {
+              "code": "LANG-S01-C04-O06",
+              "position": 6,
+              "group": null,
+              "statement": "Dire comment on a fait ou comment on va faire.",
+              "ageBands": ["from-4"],
+              "sourcePage": 6
+            },
+            {
+              "code": "LANG-S01-C04-O07",
+              "position": 7,
+              "group": null,
+              "statement": "Oraliser un court texte mémorisé.",
+              "ageBands": ["from-4"],
+              "sourcePage": 6
+            },
+            {
+              "code": "LANG-S01-C04-O08",
+              "position": 8,
+              "group": null,
+              "statement": "Participer à des échanges en restant dans le propos.",
+              "ageBands": ["from-4"],
+              "sourcePage": 6
+            },
+            {
+              "code": "LANG-S01-C04-O09",
+              "position": 9,
+              "group": null,
+              "statement": "Décrire une action ou une activité qui a été menée par un autre élève.",
+              "ageBands": ["from-5"],
+              "sourcePage": 6
+            },
+            {
+              "code": "LANG-S01-C04-O10",
+              "position": 10,
+              "group": null,
+              "statement": "Se faire comprendre, par le truchement du langage, d’un adulte qui ne connait rien à la situation évoquée.",
+              "ageBands": ["from-5"],
+              "sourcePage": 6
+            },
+            {
+              "code": "LANG-S01-C04-O11",
+              "position": 11,
+              "group": null,
+              "statement": "Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.",
+              "ageBands": ["from-5"],
+              "sourcePage": 6
+            },
+            {
+              "code": "LANG-S01-C04-O12",
+              "position": 12,
+              "group": null,
+              "statement": "Émettre une hypothèse.",
+              "ageBands": ["from-5"],
+              "sourcePage": 6
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": null,
+              "statement": "Oser parler pour exprimer un besoin ou prendre part à la vie de la classe.",
+              "sourcePage": 6
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": null,
+              "statement": "S’exprimer lorsqu’on est sollicité.",
+              "sourcePage": 6
+            },
+            {
+              "ageBand": "before-4",
+              "position": 3,
+              "group": null,
+              "statement": "Dire : « Moi, je fais du toboggan. J’ai joué à la balançoire et je vais faire du vélo. »",
+              "sourcePage": 6
+            },
+            {
+              "ageBand": "before-4",
+              "position": 4,
+              "group": null,
+              "statement": "Participer à un moment collectif d’oralisation d’une comptine, d’une chanson, d’un court poème ou d’un bref extrait d’un album qui a été mémorisé.",
+              "sourcePage": 6
+            },
+            {
+              "ageBand": "from-4",
+              "position": 5,
+              "group": null,
+              "statement": "Dire : « Après la récréation, on va aller dans la salle de motricité et on va rouler sur le tapis. »",
+              "sourcePage": 6
+            },
+            {
+              "ageBand": "from-4",
+              "position": 6,
+              "group": null,
+              "statement": "Dire : « Sur la grande affiche, on a collé les papiers et après on a mis la peinture avec les doigts. On a tapoté doucement. Dans l’atelier, on va coller les papiers et après on va mettre la peinture. »",
+              "sourcePage": 6
+            },
+            {
+              "ageBand": "from-4",
+              "position": 7,
+              "group": null,
+              "statement": "Réciter une comptine, une chanson, un court poème ou un bref extrait d’album qui a été mémorisé.",
+              "sourcePage": 6
+            },
+            {
+              "ageBand": "from-5",
+              "position": 8,
+              "group": null,
+              "statement": "Dire : « Pour acheter les fruits du gouter, il faudrait compter les élèves de la classe. »",
+              "sourcePage": 6
+            },
+            {
+              "ageBand": "from-5",
+              "position": 9,
+              "group": null,
+              "statement": "Dire : « Si on voulait de la peinture verte, il faudrait mélanger du jaune avec du bleu. »",
+              "sourcePage": 6
+            },
+            {
+              "ageBand": "from-5",
+              "position": 10,
+              "group": null,
+              "statement": "Dire : « Peut-être que Corentin a mis la peinture avant de dessiner avec les feutres. »",
+              "sourcePage": 6
+            },
+            {
+              "ageBand": "from-5",
+              "position": 11,
+              "group": null,
+              "statement": "Suffisamment se décentrer et identifier les informations qu’on doit communiquer pour qu’un interlocuteur qui n’a pas vécu la situation évoquée puisse la comprendre.",
+              "sourcePage": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "LANG-S02",
+      "position": 2,
+      "title": "Passer de l’oral à l’écrit : se préparer à apprendre à lire",
+      "competencies": [
+        {
+          "code": "LANG-S02-C01",
+          "position": 1,
+          "title": "Acquérir les habiletés phonologiques et le principe alphabétique",
+          "objectives": [
+            {
+              "code": "LANG-S02-C01-O01",
+              "position": 1,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Identifier les sons de la langue, lors de situations d’écoute proposées par le professeur.",
+              "ageBands": ["before-4"],
+              "sourcePage": 7
+            },
+            {
+              "code": "LANG-S02-C01-O02",
+              "position": 2,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Identifier un mot donné à l’oral dans une phrase, dans un texte.",
+              "ageBands": ["before-4"],
+              "sourcePage": 7
+            },
+            {
+              "code": "LANG-S02-C01-O03",
+              "position": 3,
+              "group": "Manipuler des syllabes orales puis des phonèmes",
+              "statement": "Scander les syllabes d’un mot.",
+              "ageBands": ["before-4", "from-4"],
+              "sourcePage": 7
+            },
+            {
+              "code": "LANG-S02-C01-O04",
+              "position": 4,
+              "group": "Manipuler des syllabes orales puis des phonèmes",
+              "statement": "Dire des comptines courtes comprenant des phonèmes proches.",
+              "ageBands": ["before-4", "from-4"],
+              "sourcePage": 7
+            },
+            {
+              "code": "LANG-S02-C01-O05",
+              "position": 5,
+              "group": "Connaitre le nom des lettres",
+              "statement": "Reconnaitre et nommer certaines lettres de son prénom écrit en capitales.",
+              "ageBands": ["before-4"],
+              "sourcePage": 7
+            },
+            {
+              "code": "LANG-S02-C01-O06",
+              "position": 6,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Utiliser la voix parlée, chantée et les possibilités vocales (imitation de sons, onomatopées) afin d’expérimenter différents sons.",
+              "ageBands": ["from-4"],
+              "sourcePage": 8
+            },
+            {
+              "code": "LANG-S02-C01-O07",
+              "position": 7,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Entendre, discriminer des phonèmes.",
+              "ageBands": ["from-4"],
+              "sourcePage": 8
+            },
+            {
+              "code": "LANG-S02-C01-O08",
+              "position": 8,
+              "group": "Manipuler des syllabes orales puis des phonèmes",
+              "statement": "Manipuler les syllabes d’un mot (ajout, suppression, permutation, répétition, fusion, substitution).",
+              "ageBands": ["from-4"],
+              "sourcePage": 8
+            },
+            {
+              "code": "LANG-S02-C01-O09",
+              "position": 9,
+              "group": "Connaitre le nom des lettres",
+              "statement": "Nommer les lettres de son prénom et quelques lettres de mots connus (le professeur nomme systématiquement les lettres).",
+              "ageBands": ["from-4"],
+              "sourcePage": 8
+            },
+            {
+              "code": "LANG-S02-C01-O10",
+              "position": 10,
+              "group": "Connaitre le nom des lettres",
+              "statement": "Connaitre la correspondance entre les lettres scriptes majuscules et minuscules et les lettres cursives minuscules.",
+              "ageBands": ["from-4"],
+              "sourcePage": 8
+            },
+            {
+              "code": "LANG-S02-C01-O11",
+              "position": 11,
+              "group": "Connaitre le son des lettres",
+              "statement": "Donner les valeurs sonores de quelques lettres de mots simples connus.",
+              "ageBands": ["from-4"],
+              "sourcePage": 8
+            },
+            {
+              "code": "LANG-S02-C01-O12",
+              "position": 12,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Utiliser les possibilités sonores de la voix.",
+              "ageBands": ["from-5"],
+              "sourcePage": 8
+            },
+            {
+              "code": "LANG-S02-C01-O13",
+              "position": 13,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Augmenter sa mémoire auditive et sa capacité de concentration.",
+              "ageBands": ["from-5"],
+              "sourcePage": 8
+            },
+            {
+              "code": "LANG-S02-C01-O14",
+              "position": 14,
+              "group": "Manipuler des syllabes orales puis des phonèmes",
+              "statement": "Supprimer, ajouter, remplacer, inverser, substituer, fusionner les syllabes d’un mot.",
+              "ageBands": ["from-5"],
+              "sourcePage": 8
+            },
+            {
+              "code": "LANG-S02-C01-O15",
+              "position": 15,
+              "group": "Manipuler des syllabes orales puis des phonèmes",
+              "statement": "Repérer et produire des rimes et des assonances.",
+              "ageBands": ["from-5"],
+              "sourcePage": 8
+            },
+            {
+              "code": "LANG-S02-C01-O16",
+              "position": 16,
+              "group": "Manipuler des syllabes orales puis des phonèmes",
+              "statement": "Entendre, discriminer, manipuler des phonèmes.",
+              "ageBands": ["from-5"],
+              "sourcePage": 8
+            },
+            {
+              "code": "LANG-S02-C01-O17",
+              "position": 17,
+              "group": "Connaitre le nom des lettres",
+              "statement": "Connaitre le nom des lettres de l’alphabet.",
+              "ageBands": ["from-5"],
+              "sourcePage": 8
+            },
+            {
+              "code": "LANG-S02-C01-O18",
+              "position": 18,
+              "group": "Connaitre le nom des lettres",
+              "statement": "Connaitre les différentes graphies d’une même lettre (majuscule lettre capitale ; minuscules scriptes ; cursives).",
+              "ageBands": ["from-5"],
+              "sourcePage": 8
+            },
+            {
+              "code": "LANG-S02-C01-O19",
+              "position": 19,
+              "group": "Connaitre le nom des lettres",
+              "statement": "Distinguer des lettres visuellement proches (b/d, c/e/o, p/q) grâce à leur écriture cursive et les nommer correctement.",
+              "ageBands": ["from-5"],
+              "sourcePage": 8
+            },
+            {
+              "code": "LANG-S02-C01-O20",
+              "position": 20,
+              "group": "Connaitre le son des lettres",
+              "statement": "Connaitre le nom des lettres de l’alphabet et leur valeur sonore hormis les occlusives.",
+              "ageBands": ["from-5"],
+              "sourcePage": 9
+            },
+            {
+              "code": "LANG-S02-C01-O21",
+              "position": 21,
+              "group": "Connaitre le son des lettres",
+              "statement": "Discriminer des mots auditivement proches.",
+              "ageBands": ["from-5"],
+              "sourcePage": 9
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Discriminer et identifier des sons familiers, localiser le son (la source).",
+              "sourcePage": 7
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Reconnaitre les sons de la langue les plus fréquents dans une suite.",
+              "sourcePage": 7
+            },
+            {
+              "ageBand": "before-4",
+              "position": 3,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Comparer, apparier et reproduire les sons.",
+              "sourcePage": 7
+            },
+            {
+              "ageBand": "before-4",
+              "position": 4,
+              "group": "Manipuler des syllabes orales puis des phonèmes",
+              "statement": "Prononcer son prénom, puis une comptine en scandant les syllabes.",
+              "sourcePage": 7
+            },
+            {
+              "ageBand": "before-4",
+              "position": 5,
+              "group": "Manipuler des syllabes orales puis des phonèmes",
+              "statement": "Frapper les syllabes d’un mot dans ses mains, sur ses cuisses, éventuellement à l’aide d’un instrument.",
+              "sourcePage": 7
+            },
+            {
+              "ageBand": "before-4",
+              "position": 6,
+              "group": "Manipuler des syllabes orales puis des phonèmes",
+              "statement": "Dire des comptines courtes comprenant des phonèmes proches.",
+              "sourcePage": 7
+            },
+            {
+              "ageBand": "before-4",
+              "position": 7,
+              "group": "Connaitre le nom des lettres",
+              "statement": "Retrouver l’étiquette de son prénom (lettres capitales) parmi d’autres en prenant des indices sur les lettres (mêmes signes limités, permanents, alignés, normés).",
+              "sourcePage": 7
+            },
+            {
+              "ageBand": "before-4",
+              "position": 8,
+              "group": "Connaitre le nom des lettres",
+              "statement": "Utiliser l’étiquette de son prénom pour marquer sa présence, évoquer une production.",
+              "sourcePage": 7
+            },
+            {
+              "ageBand": "from-4",
+              "position": 9,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Discriminer et identifier les sons de la langue. Les localiser dans une suite.",
+              "sourcePage": 8
+            },
+            {
+              "ageBand": "from-4",
+              "position": 10,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Reproduire des sons (onomatopées).",
+              "sourcePage": 8
+            },
+            {
+              "ageBand": "from-4",
+              "position": 11,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Reproduire des intonations (sirènes vocales ascendantes, descendantes).",
+              "sourcePage": 8
+            },
+            {
+              "ageBand": "from-4",
+              "position": 12,
+              "group": "Manipuler des syllabes orales puis des phonèmes",
+              "statement": "Ajouter, supprimer, permuter, répéter, fusionner, substituer les syllabes d’un mot dit à l’oral.",
+              "sourcePage": 8
+            },
+            {
+              "ageBand": "from-4",
+              "position": 13,
+              "group": "Manipuler des syllabes orales puis des phonèmes",
+              "statement": "À l’oral et sans support écrit, dénombrer les syllabes de mots familiers, comparer les mots selon le nombre de syllabes et les classer (ex. : discriminer une syllabe cible dans une suite de syllabes énoncées MA → FA → PA → MA → SA).",
+              "sourcePage": 8
+            },
+            {
+              "ageBand": "from-4",
+              "position": 14,
+              "group": "Connaitre le nom des lettres",
+              "statement": "Épeler son prénom ou un mot connu afin qu’un tiers puisse le composer.",
+              "sourcePage": 8
+            },
+            {
+              "ageBand": "from-4",
+              "position": 15,
+              "group": "Connaitre le nom des lettres",
+              "statement": "Composer un mot connu en commençant par la première lettre et respectant l’ordre des lettres (même graphie, puis graphies différentes).",
+              "sourcePage": 8
+            },
+            {
+              "ageBand": "from-4",
+              "position": 16,
+              "group": "Connaitre le son des lettres",
+              "statement": "Utiliser le nom de quelques lettres connues pour représenter les sons entendus (les voyelles).",
+              "sourcePage": 8
+            },
+            {
+              "ageBand": "from-5",
+              "position": 17,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Discriminer et identifier les sons de la langue. Les localiser dans une suite et les mémoriser.",
+              "sourcePage": 8
+            },
+            {
+              "ageBand": "from-5",
+              "position": 18,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Différencier les sons proches : on/en/un.",
+              "sourcePage": 8
+            },
+            {
+              "ageBand": "from-5",
+              "position": 19,
+              "group": "Manipuler des syllabes orales puis des phonèmes",
+              "statement": "Fusionner les syllabes d’attaque de POISSON et la syllabe finale de SOURIS pour obtenir un pseudo-mot POIRIS.",
+              "sourcePage": 8
+            },
+            {
+              "ageBand": "from-5",
+              "position": 20,
+              "group": "Manipuler des syllabes orales puis des phonèmes",
+              "statement": "Trouver le son /f/ dans une liste de mots.",
+              "sourcePage": 8
+            },
+            {
+              "ageBand": "from-5",
+              "position": 21,
+              "group": "Manipuler des syllabes orales puis des phonèmes",
+              "statement": "Trouver l’intrus à l’initiale entre sac/Sacha/cartable",
+              "sourcePage": 8
+            },
+            {
+              "ageBand": "from-5",
+              "position": 22,
+              "group": "Manipuler des syllabes orales puis des phonèmes",
+              "statement": "Localiser un phonème dans un mot.",
+              "sourcePage": 8
+            },
+            {
+              "ageBand": "from-5",
+              "position": 23,
+              "group": "Connaitre le nom des lettres",
+              "statement": "Reconnaitre et nommer toutes les lettres d’un mot écrit dans les trois graphies.",
+              "sourcePage": 8
+            },
+            {
+              "ageBand": "from-5",
+              "position": 24,
+              "group": "Connaitre le nom des lettres",
+              "statement": "Épeler les lettres d’un mot connu afin qu’un tiers puisse l’écrire.",
+              "sourcePage": 8
+            },
+            {
+              "ageBand": "from-5",
+              "position": 25,
+              "group": "Connaitre le son des lettres",
+              "statement": "Répéter un mot lentement et essayer de prolonger les phonèmes (voyelles, consonnes fricatives : s/r/f/v/j/ch et liquide : l) pour retrouver les lettres auxquelles ils correspondent.",
+              "sourcePage": 9
+            },
+            {
+              "ageBand": "from-5",
+              "position": 26,
+              "group": "Connaitre le son des lettres",
+              "statement": "Discriminer et identifier les mots auditivement proches : poule/boule/roule/moule/coule/foule.",
+              "sourcePage": 9
+            }
+          ]
+        },
+        {
+          "code": "LANG-S02-C02",
+          "position": 2,
+          "title": "S’éveiller à la diversité linguistique",
+          "objectives": [
+            {
+              "code": "LANG-S02-C02-O01",
+              "position": 1,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Écouter des chants, des comptines, des histoires connues dans des versions en français et en langue étrangère.",
+              "ageBands": ["before-4"],
+              "sourcePage": 9
+            },
+            {
+              "code": "LANG-S02-C02-O02",
+              "position": 2,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Participer à des jeux dans une autre langue : jeux de doigts, rondes, jeux dansés, mimes, jeux de cour, jeux de cartes.",
+              "ageBands": ["from-4"],
+              "sourcePage": 9
+            },
+            {
+              "code": "LANG-S02-C02-O03",
+              "position": 3,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Comparer des histoires lues en français et dans une autre langue.",
+              "ageBands": ["from-4"],
+              "sourcePage": 9
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Manifester son intérêt pour d’autres langues que la sienne.",
+              "sourcePage": 9
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Prendre plaisir à s’exercer, à répéter des sons, des mots, voire des phrases très simples.",
+              "sourcePage": 9
+            },
+            {
+              "ageBand": "from-4",
+              "position": 3,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Distinguer des sons nouveaux en les comparant avec des sons de la langue française.",
+              "sourcePage": 9
+            },
+            {
+              "ageBand": "from-4",
+              "position": 4,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Mémoriser des chants et des comptines dans une autre langue.",
+              "sourcePage": 9
+            },
+            {
+              "ageBand": "from-4",
+              "position": 5,
+              "group": "Écouter, identifier, discriminer et reproduire des sons",
+              "statement": "Mémoriser quelques mots isolés, mais aussi des consignes simples permettant de réaliser une activité ou des tournures usuelles permettant de saluer et de se présenter.",
+              "sourcePage": 9
+            }
+          ]
+        },
+        {
+          "code": "LANG-S02-C03",
+          "position": 3,
+          "title": "Écouter et comprendre différentes formes d’écrits",
+          "objectives": [
+            {
+              "code": "LANG-S02-C03-O01",
+              "position": 1,
+              "group": "Découvrir les supports de l’écrit",
+              "statement": "Repérer les outils fonctionnels utilisés quotidiennement en classe (étiquette du prénom, emploi du temps, affiches, etc.).",
+              "ageBands": ["before-4"],
+              "sourcePage": 10
+            },
+            {
+              "code": "LANG-S02-C03-O02",
+              "position": 2,
+              "group": "Découvrir les supports de l’écrit",
+              "statement": "Reconnaitre quelques écrits utilisés et produits en classe (comptines, recettes, carnet de lecteur).",
+              "ageBands": ["before-4"],
+              "sourcePage": 10
+            },
+            {
+              "code": "LANG-S02-C03-O03",
+              "position": 3,
+              "group": "Comprendre des textes lus par le professeur",
+              "statement": "Reconnaitre un personnage, le nommer et le situer dans les illustrations.",
+              "ageBands": ["before-4"],
+              "sourcePage": 10
+            },
+            {
+              "code": "LANG-S02-C03-O04",
+              "position": 4,
+              "group": "Comprendre des textes lus par le professeur",
+              "statement": "Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).",
+              "ageBands": ["before-4"],
+              "sourcePage": 10
+            },
+            {
+              "code": "LANG-S02-C03-O05",
+              "position": 5,
+              "group": "Découvrir les supports de l’écrit",
+              "statement": "Reconnaitre, nommer et identifier la fonction de différents écrits rencontrés dans la vie courante.",
+              "ageBands": ["from-4"],
+              "sourcePage": 10
+            },
+            {
+              "code": "LANG-S02-C03-O06",
+              "position": 6,
+              "group": "Découvrir les supports de l’écrit",
+              "statement": "Prendre conscience de la notion de destinataire et de contenu de la requête adressée par un écrit.",
+              "ageBands": ["from-4"],
+              "sourcePage": 10
+            },
+            {
+              "code": "LANG-S02-C03-O07",
+              "position": 7,
+              "group": "Découvrir les supports de l’écrit",
+              "statement": "Identifier et utiliser quotidiennement des outils fonctionnels pour se repérer, s’organiser, ranger.",
+              "ageBands": ["from-4"],
+              "sourcePage": 10
+            },
+            {
+              "code": "LANG-S02-C03-O08",
+              "position": 8,
+              "group": "Comprendre des textes lus par le professeur",
+              "statement": "Identifier et décrire le personnage principal et les personnages secondaires.",
+              "ageBands": ["from-4"],
+              "sourcePage": 11
+            },
+            {
+              "code": "LANG-S02-C03-O09",
+              "position": 9,
+              "group": "Comprendre des textes lus par le professeur",
+              "statement": "Comprendre des histoires dont les actions sont organisées autour d’une structure répétitive (rencontres successives) et commencer à comprendre les informations implicites (émotions, états et sentiments des personnages).",
+              "ageBands": ["from-4"],
+              "sourcePage": 11
+            },
+            {
+              "code": "LANG-S02-C03-O10",
+              "position": 10,
+              "group": "Découvrir les supports de l’écrit",
+              "statement": "Différencier les types d’écrits et associer un écrit à un projet d’écriture ou de communication.",
+              "ageBands": ["from-5"],
+              "sourcePage": 11
+            },
+            {
+              "code": "LANG-S02-C03-O11",
+              "position": 11,
+              "group": "Découvrir les supports de l’écrit",
+              "statement": "Repérer et dégager la structure et l’organisation (mise en page, typographie) de formes d’écrits fréquemment utilisés en classe (structure de la lettre, de la recette, du conte, d’un écrit documentaire, d’une notice de fabrication).",
+              "ageBands": ["from-5"],
+              "sourcePage": 11
+            },
+            {
+              "code": "LANG-S02-C03-O12",
+              "position": 12,
+              "group": "Comprendre des textes lus par le professeur",
+              "statement": "Construire les caractéristiques des personnages archétypaux (loup, princesse, ogre, sorcière, renard, fée, etc.).",
+              "ageBands": ["from-5"],
+              "sourcePage": 11
+            },
+            {
+              "code": "LANG-S02-C03-O13",
+              "position": 13,
+              "group": "Comprendre des textes lus par le professeur",
+              "statement": "Comprendre des histoires où l’enchainement des actions est lié au destin de personnages centraux ou secondaires qui évoluent et interagissent, dans des lieux diversifiés.",
+              "ageBands": ["from-5"],
+              "sourcePage": 11
+            },
+            {
+              "code": "LANG-S02-C03-O14",
+              "position": 14,
+              "group": "Comprendre des textes lus par le professeur",
+              "statement": "Comprendre les émotions, les intentions et les sentiments qui animent les personnages.",
+              "ageBands": ["from-5"],
+              "sourcePage": 11
+            },
+            {
+              "code": "LANG-S02-C03-O15",
+              "position": 15,
+              "group": "Comprendre des textes lus par le professeur",
+              "statement": "Établir un lien entre la lecture effectuée et sa propre expérience.",
+              "ageBands": ["from-5"],
+              "sourcePage": 11
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": "Découvrir les supports de l’écrit",
+              "statement": "Associer un écrit connu à son utilisation : « C’est pour : chanter, raconter/écouter des histoires, le dire aux parents, faire un gâteau. »",
+              "sourcePage": 10
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": "Comprendre des textes lus par le professeur",
+              "statement": "Identifier les livres dans lesquels se retrouve un même personnage.",
+              "sourcePage": 10
+            },
+            {
+              "ageBand": "before-4",
+              "position": 3,
+              "group": "Comprendre des textes lus par le professeur",
+              "statement": "Utiliser une marotte et raconter ce que le personnage fait dans chacun des albums.",
+              "sourcePage": 10
+            },
+            {
+              "ageBand": "from-4",
+              "position": 4,
+              "group": "Découvrir les supports de l’écrit",
+              "statement": "Comprendre la fonction et la destination d’une lettre d’information aux parents, des étiquettes de rangement dans la classe, de l’affichage du menu de la cantine, etc.",
+              "sourcePage": 10
+            },
+            {
+              "ageBand": "from-4",
+              "position": 5,
+              "group": "Découvrir les supports de l’écrit",
+              "statement": "Identifier les livres présents dans la classe et leur usage.",
+              "sourcePage": 10
+            },
+            {
+              "ageBand": "from-4",
+              "position": 6,
+              "group": "Comprendre des textes lus par le professeur",
+              "statement": "À l’aide d’un support (marotte, décor, boite à histoires, tapis d’histoires), raconter l’histoire entendue plusieurs fois, en structurant son propos selon les caractéristiques des personnages et l’enchainement des évènements.",
+              "sourcePage": 11
+            },
+            {
+              "ageBand": "from-5",
+              "position": 7,
+              "group": "Découvrir les supports de l’écrit",
+              "statement": "Identifier la fonction d’un écrit (ex. : une recette de cuisine), liée aux raisons que l’on peut avoir de l’utiliser.",
+              "sourcePage": 11
+            },
+            {
+              "ageBand": "from-5",
+              "position": 8,
+              "group": "Découvrir les supports de l’écrit",
+              "statement": "Utiliser le vocabulaire approprié pour parler des écrits (page, paragraphe, ligne, majuscule, ponctuation).",
+              "sourcePage": 11
+            },
+            {
+              "ageBand": "from-5",
+              "position": 9,
+              "group": "Comprendre des textes lus par le professeur",
+              "statement": "Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).",
+              "sourcePage": 11
+            },
+            {
+              "ageBand": "from-5",
+              "position": 10,
+              "group": "Comprendre des textes lus par le professeur",
+              "statement": "Raconter une histoire connue, dans son intégralité et sans support.",
+              "sourcePage": 11
+            },
+            {
+              "ageBand": "from-5",
+              "position": 11,
+              "group": "Comprendre des textes lus par le professeur",
+              "statement": "Transposer les émotions ressenties par les personnages à sa propre expérience.",
+              "sourcePage": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "LANG-S03",
+      "position": 3,
+      "title": "Passer de l’oral à l’écrit : se préparer à apprendre à écrire",
+      "competencies": [
+        {
+          "code": "LANG-S03-C01",
+          "position": 1,
+          "title": "Apprendre le geste d’écriture",
+          "objectives": [
+            {
+              "code": "LANG-S03-C01-O01",
+              "position": 1,
+              "group": null,
+              "statement": "Participer aux activités de motricité générale, de motricité fine et aux exercices de graphismes",
+              "ageBands": ["before-4"],
+              "sourcePage": 11
+            },
+            {
+              "code": "LANG-S03-C01-O02",
+              "position": 2,
+              "group": null,
+              "statement": "Guider son geste par le regard lorsqu’il trace ou écrit",
+              "ageBands": ["before-4"],
+              "sourcePage": 12
+            },
+            {
+              "code": "LANG-S03-C01-O03",
+              "position": 3,
+              "group": null,
+              "statement": "Prendre des repères spatiaux sur le support utilisé pour tracer.",
+              "ageBands": ["before-4"],
+              "sourcePage": 12
+            },
+            {
+              "code": "LANG-S03-C01-O04",
+              "position": 4,
+              "group": null,
+              "statement": "Adopter une posture adaptée au geste d’écriture.",
+              "ageBands": ["from-4"],
+              "sourcePage": 12
+            },
+            {
+              "code": "LANG-S03-C01-O05",
+              "position": 5,
+              "group": null,
+              "statement": "Adopter une préhension correcte du stylo et s’entrainer à ne pas le lever en écrivant.",
+              "ageBands": ["from-4"],
+              "sourcePage": 12
+            },
+            {
+              "code": "LANG-S03-C01-O06",
+              "position": 6,
+              "group": null,
+              "statement": "Utiliser de façon coordonnée les quatre articulations qui servent à tenir et guider le crayon (épaule, coude, poignet, doigts).",
+              "ageBands": ["from-4"],
+              "sourcePage": 12
+            },
+            {
+              "code": "LANG-S03-C01-O07",
+              "position": 7,
+              "group": null,
+              "statement": "Tracer des lettres capitales.",
+              "ageBands": ["from-4"],
+              "sourcePage": 12
+            },
+            {
+              "code": "LANG-S03-C01-O08",
+              "position": 8,
+              "group": null,
+              "statement": "S’initier aux tracés de l’écriture cursive.",
+              "ageBands": ["from-4"],
+              "sourcePage": 12
+            },
+            {
+              "code": "LANG-S03-C01-O09",
+              "position": 9,
+              "group": null,
+              "statement": "Tenir correctement son stylo par la pince des doigts et utiliser de façon coordonnée les quatre articulations (épaule, coude, poignet, doigts).",
+              "ageBands": ["from-5"],
+              "sourcePage": 12
+            },
+            {
+              "code": "LANG-S03-C01-O10",
+              "position": 10,
+              "group": null,
+              "statement": "Travailler la ligature entre deux lettres.",
+              "ageBands": ["from-5"],
+              "sourcePage": 12
+            },
+            {
+              "code": "LANG-S03-C01-O11",
+              "position": 11,
+              "group": null,
+              "statement": "Tracer des lettres en écriture cursive, les enchainer.",
+              "ageBands": ["from-5"],
+              "sourcePage": 12
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": null,
+              "statement": "Exercer sa dextérité par des activités manuelles (reproduire des formes en pâte à modeler).",
+              "sourcePage": 11
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": null,
+              "statement": "Produire librement des tracés continus ou discontinus.",
+              "sourcePage": 12
+            },
+            {
+              "ageBand": "before-4",
+              "position": 3,
+              "group": null,
+              "statement": "Tracer quelques formes de base : traits verticaux, traits horizontaux, points, boucles et cercles.",
+              "sourcePage": 12
+            },
+            {
+              "ageBand": "from-4",
+              "position": 4,
+              "group": null,
+              "statement": "Copier en lettres capitales son prénom et/ou d’autres mots du répertoire de mots familiers de la classe.",
+              "sourcePage": 12
+            },
+            {
+              "ageBand": "from-4",
+              "position": 5,
+              "group": null,
+              "statement": "Se repérer sur un support d’écriture (aller de gauche à droite).",
+              "sourcePage": 12
+            },
+            {
+              "ageBand": "from-5",
+              "position": 6,
+              "group": null,
+              "statement": "Mémoriser et automatiser le tracé des lettres en cursive et leur enchainement pour écrire son prénom sans modèle.",
+              "sourcePage": 12
+            },
+            {
+              "ageBand": "from-5",
+              "position": 7,
+              "group": null,
+              "statement": "Écrire un mot orthographiquement transparent en cursive avec ou sans modèle.",
+              "sourcePage": 12
+            }
+          ]
+        },
+        {
+          "code": "LANG-S03-C02",
+          "position": 2,
+          "title": "Produire de premiers écrits",
+          "objectives": [
+            {
+              "code": "LANG-S03-C02-O01",
+              "position": 1,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Percevoir que l’écrit encode l’oral.",
+              "ageBands": ["before-4"],
+              "sourcePage": 12
+            },
+            {
+              "code": "LANG-S03-C02-O02",
+              "position": 2,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Utiliser un support écrit connu.",
+              "ageBands": ["before-4"],
+              "sourcePage": 12
+            },
+            {
+              "code": "LANG-S03-C02-O03",
+              "position": 3,
+              "group": "Produire des écrits",
+              "statement": "Mimer la posture et les gestes d’écriture de l’adulte lors de la production de traces qui s’apparentent à de l’écriture.",
+              "ageBands": ["before-4"],
+              "sourcePage": 13
+            },
+            {
+              "code": "LANG-S03-C02-O04",
+              "position": 4,
+              "group": "Produire des écrits",
+              "statement": "Tracer volontairement des signes abstraits dont on comprend qu’il ne s’agit pas de dessins, mais de lettres.",
+              "ageBands": ["before-4"],
+              "sourcePage": 13
+            },
+            {
+              "code": "LANG-S03-C02-O05",
+              "position": 5,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Comprendre que lorsque l’adulte lit un même écrit plusieurs fois, ce qu’il lit est toujours identique.",
+              "ageBands": ["from-4"],
+              "sourcePage": 13
+            },
+            {
+              "code": "LANG-S03-C02-O06",
+              "position": 6,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Comprendre que l’écrit code des sons.",
+              "ageBands": ["from-4"],
+              "sourcePage": 13
+            },
+            {
+              "code": "LANG-S03-C02-O07",
+              "position": 7,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Proposer au professeur, lors d’une activité de dictée à l’adulte, le contenu d’un court message, stabiliser un énoncé oral et le mémoriser pour pouvoir ensuite le dicter au professeur.",
+              "ageBands": ["from-4"],
+              "sourcePage": 13
+            },
+            {
+              "code": "LANG-S03-C02-O08",
+              "position": 8,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Comparer la longueur d’un texte écrit et la durée du texte entendu.",
+              "ageBands": ["from-4"],
+              "sourcePage": 13
+            },
+            {
+              "code": "LANG-S03-C02-O09",
+              "position": 9,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Savoir que le sens de la lecture est de gauche à droite et de haut en bas.",
+              "ageBands": ["from-4"],
+              "sourcePage": 13
+            },
+            {
+              "code": "LANG-S03-C02-O10",
+              "position": 10,
+              "group": "Produire des écrits",
+              "statement": "Chercher parmi les outils à sa disposition des modèles qui seront réutilisés dans un essai d’écriture.",
+              "ageBands": ["from-4"],
+              "sourcePage": 13
+            },
+            {
+              "code": "LANG-S03-C02-O11",
+              "position": 11,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Segmenter l’oral en mots, les mots en syllabes, quelques syllabes en phonèmes.",
+              "ageBands": ["from-5"],
+              "sourcePage": 13
+            },
+            {
+              "code": "LANG-S03-C02-O12",
+              "position": 12,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Comprendre que l’écrit encode l’oral et que les sons de la langue sont codés par des lettres.",
+              "ageBands": ["from-5"],
+              "sourcePage": 13
+            },
+            {
+              "code": "LANG-S03-C02-O13",
+              "position": 13,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Suivre la trace écrite des yeux lors d’une relecture par l’adulte d’un message produit lors d’une dictée à l’adulte.",
+              "ageBands": ["from-5"],
+              "sourcePage": 13
+            },
+            {
+              "code": "LANG-S03-C02-O14",
+              "position": 14,
+              "group": "Produire des écrits",
+              "statement": "Mémoriser la graphie d’un mot transparent, en s’appuyant sur la connaissance des lettres et la conscience phonologique et le retranscrire sur un support.",
+              "ageBands": ["from-5"],
+              "sourcePage": 13
+            },
+            {
+              "code": "LANG-S03-C02-O15",
+              "position": 15,
+              "group": "Produire des écrits",
+              "statement": "Réinvestir ses premières connaissances relatives au principe alphabétique pour produire un écrit.",
+              "ageBands": ["from-5"],
+              "sourcePage": 13
+            },
+            {
+              "code": "LANG-S03-C02-O16",
+              "position": 16,
+              "group": "Produire des écrits",
+              "statement": "Se repérer dans l’alphabet pour retrouver l’écriture d’une lettre nécessaire pour produire un écrit.",
+              "ageBands": ["from-5"],
+              "sourcePage": 13
+            },
+            {
+              "code": "LANG-S03-C02-O17",
+              "position": 17,
+              "group": "Produire des écrits",
+              "statement": "Mémoriser l’écriture de mots transparents ou de syllabes connues pour les réutiliser dans une production d’écrit.",
+              "ageBands": ["from-5"],
+              "sourcePage": 13
+            },
+            {
+              "code": "LANG-S03-C02-O18",
+              "position": 18,
+              "group": "Produire des écrits",
+              "statement": "Comprendre qu’il existe une norme pour écrire : ponctuation, majuscules, mise en page, etc.",
+              "ageBands": ["from-5"],
+              "sourcePage": 13
+            },
+            {
+              "code": "LANG-S03-C02-O19",
+              "position": 19,
+              "group": "Produire des écrits",
+              "statement": "Persévérer pour mener la production d’écrit à son terme : préparation, énonciation et révision.",
+              "ageBands": ["from-5"],
+              "sourcePage": 13
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Demander à l’adulte d’écrire, de légender un dessin, comprendre que le dessin se distingue de l’écriture.",
+              "sourcePage": 12
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Réciter une comptine apprise en identifiant le support écrit dont elle est issue.",
+              "sourcePage": 12
+            },
+            {
+              "ageBand": "before-4",
+              "position": 3,
+              "group": "Produire des écrits",
+              "statement": "Tracer des signes sur une feuille en indiquant au professeur qu’on a écrit.",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-4",
+              "position": 4,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Utiliser le nom de quelques lettres connues pour représenter les sons entendus.",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-4",
+              "position": 5,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Participer à l’activité de dictée à l’adulte et s’engager dans des essais d’écriture.",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-4",
+              "position": 6,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Recourir aux compétences qui seront nécessaires à l’activité d’écriture : reconnaitre par exemple la syllabe d’attaque d’un mot.",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-4",
+              "position": 7,
+              "group": "Produire des écrits",
+              "statement": "Écrire un mot transparent avec l’appui d’un modèle, sur commande du professeur.",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-4",
+              "position": 8,
+              "group": "Produire des écrits",
+              "statement": "Jouer avec la langue en inventant des pseudo-mots.",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-5",
+              "position": 9,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Repérer un mot transparent dans une phrase écrite que le professeur vient de lire.",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-5",
+              "position": 10,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Reformuler son propos afin d’arriver à un message syntaxiquement correct qui sera dicté.",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-5",
+              "position": 11,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Moduler le débit de sa parole pour l’ajuster au geste d’écriture.",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-5",
+              "position": 12,
+              "group": "Passer de l’oral à l’écrit",
+              "statement": "Repérer un oubli volontaire par le professeur d’un mot lors d’une activité de dictée à l’adulte.",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-5",
+              "position": 13,
+              "group": "Produire des écrits",
+              "statement": "Utiliser ses propres ressources mémorisées et celles de la classe pour écrire des mots.",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-5",
+              "position": 14,
+              "group": "Produire des écrits",
+              "statement": "Proposer l’écriture d’un mot transparent et expliciter la stratégie utilisée (copie de morceaux de mots, tracé de lettres connues, recours au principe alphabétique).",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-5",
+              "position": 15,
+              "group": "Produire des écrits",
+              "statement": "Utiliser quelques rapports phonie-graphie parmi les plus simples à percevoir : quelques voyelles simples et quelques consonnes fricatives (s, f, v, z, r) et liquides (l) pour produire des écrits.",
+              "sourcePage": 13
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

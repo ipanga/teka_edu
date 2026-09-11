@@ -1,0 +1,99 @@
+{
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "levelId": "maternelle-3",
+  "domainCode": "TIME-SPACE",
+  "lessons": [
+    {
+      "id": "m3-time-01",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "TIME-SPACE",
+      "title": "Les jours de la semaine",
+      "summary": "L’enfant énonce la date du jour et situe un évènement dans la semaine.",
+      "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
+      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O07"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "la-rentree",
+      "parentGuidance": "Reprenez cette question chaque matin, en quelques secondes : c’est la répétition quotidienne qui installe les repères, pas la longueur de la leçon.",
+      "activities": [
+        {
+          "id": "m3-time-01-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Quel jour sommes-nous ?",
+          "childInstruction": "Dis quel jour nous sommes aujourd’hui, quel jour c’était hier et quel jour ce sera demain.",
+          "adultGuidance": "Donnez la date complète en modèle : « Aujourd’hui, nous sommes mardi 1er septembre. » Faites répéter la phrase entière.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "TIME-SPACE-S01-C01-O10"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "aujourd’hui",
+              "en": "today"
+            },
+            {
+              "fr": "hier",
+              "en": "yesterday"
+            },
+            {
+              "fr": "demain",
+              "en": "tomorrow"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "What day is it today? And yesterday? And tomorrow?"
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Quel jour sommes-nous aujourd’hui ?",
+              "Quel jour étions-nous hier ?",
+              "Que feras-tu samedi, quand il n’y a pas d’école ?"
+            ]
+          }
+        },
+        {
+          "id": "m3-time-01-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Je range les sept jours",
+          "childInstruction": "Remets les sept jours de la semaine dans l’ordre, en commençant par lundi.",
+          "adultGuidance": "Écrivez les sept jours sur des papiers. Faites remarquer que la semaine revient toujours dans le même ordre, et marquez les jours d’école et les jours de repos.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O07"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [
+            {
+              "fr": "la semaine",
+              "en": "the week"
+            },
+            {
+              "fr": "lundi",
+              "en": "Monday"
+            },
+            {
+              "fr": "dimanche",
+              "en": "Sunday"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put the seven days of the week in order."
+            }
+          ],
+          "payload": {
+            "objects": "sept papiers portant les jours de la semaine"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review"
+    }
+  ]
+}

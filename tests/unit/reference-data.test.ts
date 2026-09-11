@@ -122,7 +122,11 @@ describe("reference data validation", () => {
         title: "x",
         active: true,
       });
-      (json.levels as unknown[]).push({ levelId: "maternelle-9", referenceSection: null });
+      (json.levels as unknown[]).push({
+        levelId: "maternelle-9",
+        referenceSection: null,
+        ageBandCode: "from-5",
+      });
     });
     const found = problems(files);
     expect(found).toContain(

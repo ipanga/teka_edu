@@ -22,7 +22,27 @@ insert into access_registry (table_name, access) values
   ('school_periods', 'server-only'),
   ('public_holidays', 'server-only'),
   ('calendar_exceptions', 'server-only'),
-  ('school_year_curricula', 'server-only');
+  ('school_year_curricula', 'server-only'),
+  -- Official curriculum content (Phase 2): quoted from the programme, server-side reads only.
+  ('curriculum_sources', 'server-only'),
+  ('curriculum_source_domains', 'server-only'),
+  ('curriculum_age_bands', 'server-only'),
+  ('curriculum_subdomains', 'server-only'),
+  ('curriculum_competencies', 'server-only'),
+  ('learning_objectives', 'server-only'),
+  ('learning_objective_age_bands', 'server-only'),
+  ('success_examples', 'server-only'),
+  -- Lessons and activities authored by Teka Edu, and what they need.
+  ('materials', 'server-only'),
+  ('activity_types', 'server-only'),
+  ('lessons', 'server-only'),
+  ('lesson_levels', 'server-only'),
+  ('lesson_objectives', 'server-only'),
+  ('activities', 'server-only'),
+  ('activity_objectives', 'server-only'),
+  ('activity_materials', 'server-only'),
+  ('activity_vocabulary', 'server-only'),
+  ('activity_scaffolds', 'server-only');
 
 select is(
   (

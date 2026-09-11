@@ -93,9 +93,34 @@ export const curriculumFileSchema = z.strictObject({
     url: z.url({ protocol: /^https$/ }).nullable(),
     verification: z.enum(VERIFICATIONS),
   }),
+  sources: z
+    .array(
+      z.strictObject({
+        id: slug,
+        title: text,
+        citation: text,
+        url: z.url({ protocol: /^https$/ }).nullable(),
+        sha256: z
+          .string()
+          .regex(/^[0-9a-f]{64}$/, { message: "must be a SHA-256 hex digest" })
+          .nullable(),
+        covers: z.array(z.string()).min(1),
+        verification: z.enum(VERIFICATIONS),
+      }),
+    )
+    .min(1),
+  ageBands: z.array(z.strictObject({ code: slug, position: positiveInt, label: text })).min(1),
   adaptationNote: text.nullable(),
   schoolYearIds: z.array(z.string()),
-  levels: z.array(z.strictObject({ levelId: slug, referenceSection: text.nullable() })).min(1),
+  levels: z
+    .array(
+      z.strictObject({
+        levelId: slug,
+        referenceSection: text.nullable(),
+        ageBandCode: slug,
+      }),
+    )
+    .min(1),
   domains: z.array(curriculumDomain).min(1),
 }) satisfies z.ZodType<Curriculum>;
 

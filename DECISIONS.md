@@ -39,6 +39,10 @@ Short architecture/product decision records (ADRs). They cover decisions future 
 | 028 | Reference data: canonical in Git, mirrored into PostgreSQL by generated migrations      | Accepted               |
 | 029 | School calendar model: civil dates, data-driven holidays and exceptions                 | Accepted               |
 | 030 | Education hierarchy and lightweight curriculum versioning                               | Accepted               |
+| 031 | Official objectives imported verbatim, with provenance and age bands                    | Accepted               |
+| 032 | One lesson/activity model, with typed payloads and a kind registry                      | Accepted               |
+| 033 | Deterministic daily programme: authored rhythm and tracks, keyed by instructional day   | Accepted               |
+| 034 | Home sessions adapt classroom rules; the DRC preschool programme diverges               | Accepted               |
 
 ---
 
@@ -683,3 +687,130 @@ When documents disagree about intended behavior, the order is plan → decisions
   - English scaffolding is a future optional `scaffolding.en` block on content entities, never a parallel curriculum.
 
 **Consequences:** changes to the curriculum or the school system are additive data changes. The model is documented in `docs/EDUCATIONAL_MODEL.md`.
+
+---
+
+## ADR-031 — Official objectives imported verbatim, with provenance and age bands
+
+**Status:** Accepted · **Date:** 2026-09-12 · **Implements:** ADR-003 · **Refines:** ADR-030
+
+**Context:** Phase 2 needed the actual learning objectives. The programme in force is three
+documents (arrêté du 16 avril 2026 for four domains; arrêté du 22 octobre 2024 for language and
+mathematics). Their objectives are stated **by age band**, with "exemples de réussite" that the
+tables do not align row-by-row with individual objectives. Teka Edu must never present its own
+wording as official.
+
+**Decision:**
+
+- **Verbatim import.** Objectives and success examples are copied from the official PDFs, never
+  reworded, summarised or normalised — not even their apostrophes, which the ministry's own
+  files use inconsistently.
+- **Structure:** domain → part → competency → objective, with success examples attached to a
+  **competency and an age band** (not to an objective), because that is the only link the
+  official tables make.
+- **Age bands, not classes:** an objective is stored once with every band it belongs to. Levels
+  are mapped to bands as a Teka Edu decision, and a level's programme includes earlier bands,
+  because the programme expects earlier learning to be reinvested.
+- **Provenance on every row:** `origin` (`official` / `teka-edu-adaptation` / `teka-edu-created`),
+  a source document with its citation, URL and the SHA-256 of the imported PDF, and a page
+  number. The database refuses official wording without a source.
+- **Stable positional codes** (`PHYS-S01-C01-O03`) that do not depend on the French wording.
+- **Verified import:** the importer (`tools/curriculum-import/`, kept in the repository for
+  audit) cross-checks every extracted line against a second, independent PDF extraction and
+  matches bullet counts exactly. 398 objectives and 529 success examples were imported this way.
+
+**Consequences:** the application can always say what is official and what is ours. A new
+programme is a new curriculum version, not an edit. Re-verification is possible because the
+exact source files are identified by hash.
+
+---
+
+## ADR-032 — One lesson/activity model, with typed payloads and a kind registry
+
+**Status:** Accepted · **Date:** 2026-09-12 · **Refines:** ADR-005
+
+**Context:** Lessons contain activities of many kinds (conversation, counting, movement, song…),
+and more kinds will come. A table per kind, or a JSON blob per lesson, would both be wrong.
+
+**Decision:**
+
+- **One `lessons` table and one `activities` table.** The kind is a value (`activity_types`
+  registry generated from the code), never a table. Relationships that PostgreSQL can model —
+  levels, objectives, materials, vocabulary, scaffolds — are their own tables with foreign keys.
+- **`payload` is jsonb**, only for the kind-specific presentation data a future renderer needs.
+  Each kind has a Zod payload schema, so an activity whose payload does not match its kind is
+  rejected by content validation.
+- **Traceability is mandatory:** every activity serves at least one official objective, and a
+  lesson separates what it **teaches** from what it **reinvests**.
+- **Instructions are split** into `childInstruction` (French, spoken to the child) and
+  `adultGuidance` (spoken to the parent). English exists only as an optional `scaffold`, never as
+  a second curriculum (ADR-001).
+- **Lessons are always `teka-edu-created`.** A check constraint makes it impossible to store a
+  lesson as official text.
+
+**Consequences:** adding an activity kind is a data + renderer change with no migration. Progress
+tracking can later reference an activity, a lesson or an objective directly.
+
+---
+
+## ADR-033 — Deterministic daily programme: authored rhythm and tracks, keyed by instructional day
+
+**Status:** Accepted · **Date:** 2026-09-12 · **Implements:** ADR-004
+
+**Context:** The product needs to answer "what should this child do today?" without an adaptive
+algorithm, and without content becoming invalid when the calendar changes.
+
+**Decision:**
+
+- **Keyed by instructional-day number**, not by date. The calendar maps numbers to dates, so a
+  holiday shifts dates and never the order of learning.
+- **The programme definition is authored content**: a repeating `rhythm` of days made of slots,
+  and one ordered `track` of lessons per domain. A reviewer can read the whole shape; nothing is
+  generated by a scoring function.
+- **The generator is pure**: rhythm day = `((n − 1) mod R) + 1`; each slot takes the next lesson
+  of its track; an exhausted track yields an empty slot and a `partial`/`no-content` status
+  rather than a repeat; a non-instructional date yields no programme at all.
+- **Plans are not stored.** They are derived, like school days.
+- **Balance rules are validated** for every generated day: session length, screen time at most
+  half a session, a daily physical activity, no repeat on consecutive days, and every domain
+  within one cycle. Rules are labelled OFFICIAL or TEKA EDU in `docs/DAILY_PROGRAMME.md`.
+- **Progression is authored and checked**: an objective is discovered once per track, and a
+  practice/consolidation/review lesson must build on something taught earlier.
+
+**Consequences:** the same request always returns the same plan, which makes review, caching and
+offline packaging straightforward. A spaced-repetition scheduler stays a later, separate concern.
+
+---
+
+## ADR-034 — Home sessions adapt classroom rules; the DRC preschool programme diverges
+
+**Status:** Accepted · **Date:** 2026-09-12
+
+**Context:** The official rules Teka Edu follows were written for a classroom, and a second
+official programme exists for the DRC:
+
+- The French programme prescribes **daily physical education of 30–45 effective minutes** and
+  ministry booklets describe taught sessions of **20–30 minutes in a group of 4–6 children**.
+  Teka Edu is one parent and one child at home.
+- The **DRC PNEM (SERNAFOR, 2021)** sets a weekly grid of 30-minute slots, 08h30–12h00, with free
+  activity closing each day and **physical activity about twice a week**.
+- No official source gives an attention span for five-year-olds, and no French official source
+  gives a numerical screen-time limit for ages 3–6 (the guidance is "exceptionnel, contenus
+  éducatifs, toujours accompagné par un adulte").
+
+**Decision:**
+
+- Teka Edu keeps the **French Cycle 1 programme as its academic reference** (ADR-003) and uses
+  the **DRC school calendar** (ADR-029). Where the two prescribe different rhythms, the French
+  programme wins for now: movement is scheduled **every day**.
+- Classroom durations are **not transposed as if they were evidence** for a home session. The
+  30–45 minute home session for 3ème maternelle is a Teka Edu decision (Plan §6), recorded as
+  such.
+- Screen time is limited to **at most half a session**, as a checkable form of "exceptionnel and
+  adult-accompanied". It is not presented as an official limit.
+- Every scheduling rule is labelled OFFICIAL / OFFICIAL GUIDANCE / TEKA EDU in
+  `docs/DAILY_PROGRAMME.md`.
+
+**Consequences:** the divergence with the DRC programme is explicit and revisable (PD-016). If
+Teka Edu later aligns with the PNEM grid, it is a change of programme definition — data, not
+code.

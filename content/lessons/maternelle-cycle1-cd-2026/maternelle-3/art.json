@@ -1,0 +1,172 @@
+{
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "levelId": "maternelle-3",
+  "domainCode": "ART",
+  "lessons": [
+    {
+      "id": "m3-art-01",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Je dessine ma famille",
+      "summary": "L’enfant dessine les personnes de sa maison en regardant un modèle, puis parle de son dessin.",
+      "objectiveCodes": ["ART-S01-C01-O05", "ART-S01-C01-O08"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "la-rentree",
+      "parentGuidance": "Ne dessinez pas à la place de l’enfant et ne corrigez pas son dessin. Parlez plutôt de ce qu’il a tracé : c’est le vocabulaire du dessin qui est travaillé ici.",
+      "activities": [
+        {
+          "id": "m3-art-01-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Les personnes de ma maison",
+          "childInstruction": "Dessine les personnes qui habitent avec toi. Regarde-les bien avant de commencer.",
+          "adultGuidance": "Installez l’enfant confortablement, la feuille bien placée. Laissez le temps nécessaire ; un dessin de personne à cet âge comporte une tête, un corps, des bras et des jambes.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "objectiveCodes": ["ART-S01-C01-O05"],
+          "materialCodes": ["papier", "crayons-couleur"],
+          "vocabulary": [
+            {
+              "fr": "dessiner",
+              "en": "to draw"
+            },
+            {
+              "fr": "le trait",
+              "en": "the line"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Draw the people who live with you."
+            }
+          ],
+          "payload": {
+            "subject": "les personnes de la maison"
+          }
+        },
+        {
+          "id": "m3-art-01-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Je parle de mon dessin",
+          "childInstruction": "Montre ton dessin et explique : qui as-tu dessiné, avec quelles couleurs ?",
+          "adultGuidance": "Employez et faites employer les mots du dessin : le trait, la ligne, la couleur, le contour, le fond.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "objectiveCodes": ["ART-S01-C01-O08"],
+          "materialCodes": ["papier"],
+          "vocabulary": [
+            {
+              "fr": "la couleur",
+              "en": "the colour"
+            },
+            {
+              "fr": "le contour",
+              "en": "the outline"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Show your drawing and tell me who you drew."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Qui as-tu dessiné ?",
+              "Quelles couleurs as-tu utilisées ?",
+              "Montre-moi un trait droit et un trait courbe."
+            ]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review"
+    },
+    {
+      "id": "m3-art-02",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Une comptine pour compter",
+      "summary": "L’enfant apprend et dit une comptine numérique, en jouant avec sa voix.",
+      "objectiveCodes": ["ART-S02-C01-O09", "ART-S02-C01-O07"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": "la-rentree",
+      "parentGuidance": "Apprenez la comptine par petits morceaux, en la répétant plusieurs fois : la mémorisation demande de nombreuses répétitions. Vous pouvez la remplacer par une comptine en français connue dans votre famille.",
+      "activities": [
+        {
+          "id": "m3-art-02-a1",
+          "position": 1,
+          "type": "song-rhyme",
+          "title": "Un, deux, trois…",
+          "childInstruction": "Écoute la comptine, puis dis-la avec moi. Ensuite, dis-la tout seul.",
+          "adultGuidance": "Dites deux vers, l’enfant répète, puis enchaînez. Frappez le rythme dans les mains pour aider la mémoire.",
+          "minutes": 5,
+          "mode": "mixed",
+          "objectiveCodes": ["ART-S02-C01-O09"],
+          "materialCodes": ["ecran"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the counting rhyme, then say it with me."
+            }
+          ],
+          "payload": {
+            "title": "Un, deux, trois, nous irons au bois",
+            "lines": [
+              "Un, deux, trois, nous irons au bois,",
+              "Quatre, cinq, six, cueillir des cerises,",
+              "Sept, huit, neuf, dans mon panier neuf,",
+              "Dix, onze, douze, elles seront toutes rouges."
+            ]
+          }
+        },
+        {
+          "id": "m3-art-02-a2",
+          "position": 2,
+          "type": "song-rhyme",
+          "title": "Je joue avec ma voix",
+          "childInstruction": "Dis la comptine tout doucement, puis très fort, puis comme une souris.",
+          "adultGuidance": "Faites varier la hauteur et l’intensité de la voix. Ce jeu vocal prépare l’écoute fine des sons de la langue.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "objectiveCodes": ["ART-S02-C01-O07"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "doucement",
+              "en": "softly"
+            },
+            {
+              "fr": "fort",
+              "en": "loudly"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme softly, then loudly, then like a mouse."
+            }
+          ],
+          "payload": {
+            "title": "Un, deux, trois, nous irons au bois",
+            "lines": [
+              "Un, deux, trois, nous irons au bois,",
+              "Quatre, cinq, six, cueillir des cerises,"
+            ]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review"
+    }
+  ]
+}

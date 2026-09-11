@@ -1,0 +1,27 @@
+{
+  "materials": [
+    { "code": "aucun", "name": "Aucun matériel", "category": "none" },
+    { "code": "ecran", "name": "Écran (téléphone, tablette ou ordinateur)", "category": "screen" },
+    { "code": "papier", "name": "Feuille de papier", "category": "paper" },
+    { "code": "crayon", "name": "Crayon", "category": "writing" },
+    { "code": "crayons-couleur", "name": "Crayons de couleur", "category": "writing" },
+    {
+      "code": "petits-objets",
+      "name": "Petits objets à compter (cailloux, capsules, haricots)",
+      "category": "household"
+    },
+    { "code": "boite", "name": "Boîte, seau ou récipient", "category": "household" },
+    {
+      "code": "objets-ecole",
+      "name": "Objets de l’école (cahier, crayon, cartable)",
+      "category": "household"
+    },
+    {
+      "code": "objets-maison",
+      "name": "Objets de la maison (coussins, chaises, bâton, tissu)",
+      "category": "household"
+    },
+    { "code": "balle-papier", "name": "Balle en papier froissé", "category": "toy" },
+    { "code": "espace-degage", "name": "Espace dégagé pour bouger", "category": "outdoor" }
+  ]
+}

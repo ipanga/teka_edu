@@ -31,7 +31,8 @@
     "verify": "npm run format:check && npm run lint && npm run typecheck && npm run test && npm run content:validate && npm run build",
     "docker:smoke": "bash scripts/docker-smoke.sh teka-edu:local",
     "db:reference": "tsx scripts/generate-reference-sql.ts",
-    "calendar:report": "tsx scripts/calendar-report.ts"
+    "calendar:report": "tsx scripts/calendar-report.ts",
+    "programme:report": "tsx scripts/programme-report.ts"
   },
   "dependencies": {
     "next": "16.3.4",

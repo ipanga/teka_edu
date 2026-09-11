@@ -2,7 +2,7 @@
 
 A French-first educational web app (PWA) giving preschool children (1ère, 2ème and 3ème maternelle) structured daily lessons. A parent guides each session at home, online or offline. It follows the official French Cycle 1 curriculum and the DRC school calendar.
 
-> **Status:** Phase 1 (educational foundation). The school calendar, education levels and curriculum domains exist as validated data with a tested instructional-day generator. The child experience does not exist yet: the app is a placeholder French home page plus `/api/health` and `/api/calendar/<date>`. See [`PROJECT_STATUS.md`](PROJECT_STATUS.md).
+> **Status:** Phase 2 (curriculum, lessons and daily programme). The school calendar, the 398 official Cycle 1 objectives, a pilot week of lessons for 3ème maternelle and a deterministic daily-programme generator exist as validated data and tested domain logic. The child-facing experience does not exist yet: the app serves `/api/health`, `/api/calendar/<date>` and `/api/programme/<year>/<level>/<day>` plus a placeholder French home page. See [`PROJECT_STATUS.md`](PROJECT_STATUS.md).
 
 ## Documentation
 
@@ -17,6 +17,9 @@ A French-first educational web app (PWA) giving preschool children (1ère, 2ème
 | [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md)                       | CI/CD, migrations, rollback, troubleshooting              |
 | [`docs/SCHOOL_CALENDAR.md`](docs/SCHOOL_CALENDAR.md)             | School calendar model, DRC holidays, generator rules      |
 | [`docs/EDUCATIONAL_MODEL.md`](docs/EDUCATIONAL_MODEL.md)         | Education levels, curriculum versions and domains         |
+| [`docs/CURRICULUM.md`](docs/CURRICULUM.md)                       | Official objectives: sources, age bands, provenance       |
+| [`docs/DAILY_PROGRAMME.md`](docs/DAILY_PROGRAMME.md)             | Daily programme generator and its scheduling rules        |
+| [`docs/CONTENT_AUTHORING.md`](docs/CONTENT_AUTHORING.md)         | Writing lessons and activities                            |
 
 ## Stack
 
@@ -56,6 +59,7 @@ npm run db:stop
 | `npm run test:e2e`                                                            | Playwright smoke tests against the local build (run `npm run build` first)                             |
 | `npm run content:validate`                                                    | Educational content validation (registration, schemas, calendar and curriculum rules)                  |
 | `npm run calendar:report [-- 2026-2027 --days]`                               | Summary of the generated school calendar (instructional days, holidays, vacations)                     |
+| `npm run programme:report -- --level=maternelle-3 --day=1`                    | The generated daily programme: sessions, objectives, activities, materials, scaffolding                |
 | `npm run db:reference [-- --new-migration <name>]`                            | Regenerate the reference-data database test; with the flag, also a data migration (ADR-028)            |
 | `npm run check:client-bundle`                                                 | Fails if server-only values appear in browser bundles (used by CI)                                     |
 | `npm run db:start` / `db:stop` / `db:status`                                  | Local Supabase stack                                                                                   |

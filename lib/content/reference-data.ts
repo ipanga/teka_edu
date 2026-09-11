@@ -10,6 +10,20 @@
  */
 import type { z } from "zod";
 import calendar20262027 from "@/content/calendars/cd/2026-2027.json";
+import objectivesArt from "@/content/curriculum/maternelle-cycle1-cd-2026/objectives/ART.json";
+import objectivesLang from "@/content/curriculum/maternelle-cycle1-cd-2026/objectives/LANG.json";
+import objectivesMath from "@/content/curriculum/maternelle-cycle1-cd-2026/objectives/MATH.json";
+import objectivesPhys from "@/content/curriculum/maternelle-cycle1-cd-2026/objectives/PHYS.json";
+import objectivesTimeSpace from "@/content/curriculum/maternelle-cycle1-cd-2026/objectives/TIME-SPACE.json";
+import objectivesWorld from "@/content/curriculum/maternelle-cycle1-cd-2026/objectives/WORLD.json";
+import lessonsArt from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-3/art.json";
+import lessonsLang from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-3/lang.json";
+import lessonsMath from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-3/math.json";
+import lessonsPhys from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-3/phys.json";
+import lessonsTimeSpace from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-3/time-space.json";
+import lessonsWorld from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-3/world.json";
+import materialsFile from "@/content/materials.json";
+import programmeMaternelle3 from "@/content/programmes/maternelle-cycle1-cd-2026/maternelle-3.json";
 import nationalCalendar from "@/content/calendars/cd/national.json";
 import curriculumMaternelle2026 from "@/content/curriculum/maternelle-cycle1-cd-2026/curriculum.json";
 import educationLevels from "@/content/education/levels.json";
@@ -20,7 +34,23 @@ import {
   checkSchoolYearsDoNotOverlap,
 } from "@/domain/calendar/validation";
 import { checkCurricula, checkEducationStructure } from "@/domain/curriculum/curriculum";
-import type { Curriculum, EducationStage, SchoolLevel } from "@/domain/curriculum/types";
+import { checkSyllabus, mergeSyllabi } from "@/domain/curriculum/objectives";
+import type {
+  Curriculum,
+  DomainSyllabus,
+  EducationStage,
+  SchoolLevel,
+} from "@/domain/curriculum/types";
+import type { Lesson, Material } from "@/domain/lessons/types";
+import { checkLessons, checkProgramme } from "@/domain/programme/validation";
+import type { LevelProgramme } from "@/domain/programme/types";
+import {
+  domainObjectivesFileSchema,
+  flattenObjectives,
+  lessonsFileSchema,
+  materialsFileSchema,
+  programmeFileSchema,
+} from "./lesson-schemas";
 import {
   curriculumFileSchema,
   educationLevelsFileSchema,
@@ -40,7 +70,11 @@ export type ReferenceContentFile =
   | ContentFile<"education-levels", typeof educationLevelsFileSchema>
   | ContentFile<"curriculum", typeof curriculumFileSchema>
   | ContentFile<"national-calendar", typeof nationalCalendarFileSchema>
-  | ContentFile<"school-calendar", typeof schoolCalendarFileSchema>;
+  | ContentFile<"school-calendar", typeof schoolCalendarFileSchema>
+  | ContentFile<"objectives", typeof domainObjectivesFileSchema>
+  | ContentFile<"materials", typeof materialsFileSchema>
+  | ContentFile<"lessons", typeof lessonsFileSchema>
+  | ContentFile<"programme", typeof programmeFileSchema>;
 
 export const REFERENCE_CONTENT_FILES: readonly ReferenceContentFile[] = [
   {
@@ -67,6 +101,85 @@ export const REFERENCE_CONTENT_FILES: readonly ReferenceContentFile[] = [
     schema: schoolCalendarFileSchema,
     data: calendar20262027,
   },
+  {
+    kind: "objectives",
+    path: "curriculum/maternelle-cycle1-cd-2026/objectives/ART.json",
+    schema: domainObjectivesFileSchema,
+    data: objectivesArt,
+  },
+  {
+    kind: "objectives",
+    path: "curriculum/maternelle-cycle1-cd-2026/objectives/LANG.json",
+    schema: domainObjectivesFileSchema,
+    data: objectivesLang,
+  },
+  {
+    kind: "objectives",
+    path: "curriculum/maternelle-cycle1-cd-2026/objectives/MATH.json",
+    schema: domainObjectivesFileSchema,
+    data: objectivesMath,
+  },
+  {
+    kind: "objectives",
+    path: "curriculum/maternelle-cycle1-cd-2026/objectives/PHYS.json",
+    schema: domainObjectivesFileSchema,
+    data: objectivesPhys,
+  },
+  {
+    kind: "objectives",
+    path: "curriculum/maternelle-cycle1-cd-2026/objectives/TIME-SPACE.json",
+    schema: domainObjectivesFileSchema,
+    data: objectivesTimeSpace,
+  },
+  {
+    kind: "objectives",
+    path: "curriculum/maternelle-cycle1-cd-2026/objectives/WORLD.json",
+    schema: domainObjectivesFileSchema,
+    data: objectivesWorld,
+  },
+  { kind: "materials", path: "materials.json", schema: materialsFileSchema, data: materialsFile },
+  {
+    kind: "lessons",
+    path: "lessons/maternelle-cycle1-cd-2026/maternelle-3/art.json",
+    schema: lessonsFileSchema,
+    data: lessonsArt,
+  },
+  {
+    kind: "lessons",
+    path: "lessons/maternelle-cycle1-cd-2026/maternelle-3/lang.json",
+    schema: lessonsFileSchema,
+    data: lessonsLang,
+  },
+  {
+    kind: "lessons",
+    path: "lessons/maternelle-cycle1-cd-2026/maternelle-3/math.json",
+    schema: lessonsFileSchema,
+    data: lessonsMath,
+  },
+  {
+    kind: "lessons",
+    path: "lessons/maternelle-cycle1-cd-2026/maternelle-3/phys.json",
+    schema: lessonsFileSchema,
+    data: lessonsPhys,
+  },
+  {
+    kind: "lessons",
+    path: "lessons/maternelle-cycle1-cd-2026/maternelle-3/time-space.json",
+    schema: lessonsFileSchema,
+    data: lessonsTimeSpace,
+  },
+  {
+    kind: "lessons",
+    path: "lessons/maternelle-cycle1-cd-2026/maternelle-3/world.json",
+    schema: lessonsFileSchema,
+    data: lessonsWorld,
+  },
+  {
+    kind: "programme",
+    path: "programmes/maternelle-cycle1-cd-2026/maternelle-3.json",
+    schema: programmeFileSchema,
+    data: programmeMaternelle3,
+  },
 ];
 
 export type ReferenceData = {
@@ -78,6 +191,13 @@ export type ReferenceData = {
   defaultTimeZone: string;
   /** Sorted by start date. */
   calendars: readonly SchoolCalendar[];
+  /** Official objectives and success examples, one entry per curriculum domain. */
+  syllabi: readonly DomainSyllabus[];
+  materials: readonly Material[];
+  /** Lessons and activities authored by Teka Edu. */
+  lessons: readonly Lesson[];
+  /** Daily-programme definitions, one per level. */
+  programmes: readonly LevelProgramme[];
 };
 
 export class ReferenceDataError extends Error {
@@ -100,6 +220,22 @@ export function checkReferenceData(data: ReferenceData): string[] {
       data.levels,
       data.calendars.map((c) => c.schoolYear.id),
     ),
+    ...data.syllabi.flatMap((syllabus) => checkSyllabus(syllabus, data.curricula)),
+    ...checkLessons(
+      data.lessons,
+      data.curricula,
+      data.syllabi.flatMap((syllabus) => syllabus.objectives),
+      data.levels,
+      data.materials,
+    ),
+    ...data.programmes.flatMap((programme) =>
+      checkProgramme(
+        programme,
+        data.lessons,
+        data.curricula,
+        data.calendars.map((c) => c.schoolYear.id),
+      ),
+    ),
   ];
 }
 
@@ -119,6 +255,10 @@ export function parseReferenceData(files: readonly ReferenceContentFile[]): Refe
   const levels: SchoolLevel[] = [];
   const curricula: Curriculum[] = [];
   const calendars: SchoolCalendar[] = [];
+  const syllabi: DomainSyllabus[] = [];
+  const materials: Material[] = [];
+  const lessons: Lesson[] = [];
+  const programmes: LevelProgramme[] = [];
   const nationals: z.output<typeof nationalCalendarFileSchema>[] = [];
   for (const file of files) {
     switch (file.kind) {
@@ -149,6 +289,58 @@ export function parseReferenceData(files: readonly ReferenceContentFile[]): Refe
         }
         break;
       }
+      case "objectives": {
+        const parsed = parse(file);
+        if (parsed) {
+          const expected = `curriculum/${parsed.curriculumId}/objectives/${parsed.domainCode}.json`;
+          if (file.path !== expected) problems.push(`${file.path}: must be named ${expected}`);
+          syllabi.push({
+            curriculumId: parsed.curriculumId,
+            domainCode: parsed.domainCode,
+            sourceId: parsed.sourceId,
+            ...flattenObjectives(parsed),
+          });
+        }
+        break;
+      }
+      case "materials": {
+        const parsed = parse(file);
+        if (parsed) materials.push(...parsed.materials);
+        break;
+      }
+      case "lessons": {
+        const parsed = parse(file);
+        if (parsed) {
+          const expected = `lessons/${parsed.curriculumId}/${parsed.levelId}/${parsed.domainCode.toLowerCase()}.json`;
+          if (file.path !== expected) problems.push(`${file.path}: must be named ${expected}`);
+          for (const lesson of parsed.lessons) {
+            if (
+              lesson.curriculumId !== parsed.curriculumId ||
+              lesson.domainCode !== parsed.domainCode
+            ) {
+              problems.push(
+                `${file.path}: lesson "${lesson.id}" does not match the file's curriculum/domain`,
+              );
+            }
+            if (!lesson.levelIds.includes(parsed.levelId)) {
+              problems.push(
+                `${file.path}: lesson "${lesson.id}" is not written for ${parsed.levelId}`,
+              );
+            }
+          }
+          lessons.push(...parsed.lessons);
+        }
+        break;
+      }
+      case "programme": {
+        const parsed = parse(file);
+        if (parsed) {
+          const expected = `programmes/${parsed.curriculumId}/${parsed.levelId}.json`;
+          if (file.path !== expected) problems.push(`${file.path}: must be named ${expected}`);
+          programmes.push(parsed);
+        }
+        break;
+      }
     }
   }
   const [national, ...otherNationals] = nationals;
@@ -164,6 +356,10 @@ export function parseReferenceData(files: readonly ReferenceContentFile[]): Refe
     publicHolidays: national.publicHolidays,
     defaultTimeZone: national.defaultTimeZone,
     calendars: calendars.sort((a, b) => (a.schoolYear.startsOn < b.schoolYear.startsOn ? -1 : 1)),
+    syllabi,
+    materials,
+    lessons,
+    programmes,
   };
   const ruleProblems = checkReferenceData(data);
   if (ruleProblems.length > 0) throw new ReferenceDataError(ruleProblems);
@@ -176,4 +372,20 @@ let cached: ReferenceData | undefined;
 export function getReferenceData(): ReferenceData {
   cached ??= parseReferenceData(REFERENCE_CONTENT_FILES);
   return cached;
+}
+
+/** All official objectives of one curriculum version, across its domains. */
+export function getSyllabus(curriculumId: string, data: ReferenceData = getReferenceData()) {
+  return mergeSyllabi(curriculumId, data.syllabi);
+}
+
+/** The daily programme of a level, if one is configured. */
+export function getProgramme(
+  levelId: string,
+  schoolYearId: string,
+  data: ReferenceData = getReferenceData(),
+): LevelProgramme | undefined {
+  return data.programmes.find(
+    (programme) => programme.levelId === levelId && programme.schoolYearIds.includes(schoolYearId),
+  );
 }
