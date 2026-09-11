@@ -193,7 +193,7 @@ Migrations are not assumed to be reversible:
 
 1. **Prefer a forward fix:** a new migration that repairs the problem, shipped through the normal pipeline.
 2. **Backward-compatible design** (expand/contract) keeps the previous application version working against the new schema, so an application rollback alone is usually enough.
-3. **Backups / point-in-time recovery** in Supabase are for data loss. Their availability depends on the plan, recorded in ENVIRONMENT_SETUP.md section 3. Restoring is a manual, deliberate decision.
+3. **Backups / point-in-time recovery** in Supabase are for data loss. Both projects are on the **Free plan (2026-09-11), which has no downloadable backups and no point-in-time recovery**. Until PROD is upgraded, the only recovery path is your own exports (`npx supabase db dump --project-ref <ref>` for schema, plus `--data-only` for data), kept outside the repository. Upgrade PROD before real user data arrives. Restoring is a manual, deliberate decision.
 4. **Never** run destructive rollback SQL automatically, and never because an application deployment failed.
 
 ## Common deployment failures
