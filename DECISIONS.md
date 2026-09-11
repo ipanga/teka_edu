@@ -30,6 +30,7 @@ Short architecture/product decision records (ADRs). They cover decisions future 
 | 019 | Canonical curriculum stays in Git; Supabase holds user data                | Accepted               |
 | 020 | Phase 0 toolchain baseline                                                 | Accepted               |
 | 021 | Centralised, validated environment configuration                           | Accepted               |
+| 022 | Branch protection with GitHub Rulesets; merge strategy                     | Accepted               |
 
 ---
 
@@ -145,7 +146,7 @@ Short architecture/product decision records (ADRs). They cover decisions future 
 
 **Decision:** All work happens on `feature/*` branches, which are squash-merged into `develop` (integration and staging). `develop` is promoted to `main` (production). `main` is protected and requires CI. Nobody develops directly on `main`.
 
-**Consequences:** CI runs on PRs to and pushes on `develop` and `main`. Deploys are staging from `develop` and production from `main`. Branch protection must be configured on GitHub.
+**Consequences:** CI runs on PRs to and pushes on `develop` and `main`. Deploys are staging from `develop` and production from `main`. Branch protection must be configured on GitHub. It was configured on 2026-09-11 (ADR-022).
 
 ---
 
@@ -389,3 +390,39 @@ When documents disagree about intended behavior, the order is plan → decisions
 - Application code does not read `process.env` directly, except in Next.js/tooling configuration.
 - Adding a variable means updating the schema, the inventory, the `.env*.example` templates and, if public, both Dockerfiles' `ARG` lists.
 - CI builds with fake sentinel secrets and fails if any appears in browser bundles.
+
+---
+
+## ADR-022 — Branch protection with GitHub Rulesets; merge strategy
+
+**Status:** Accepted · **Date:** 2026-09-11 · **Refines:** ADR-008, ADR-016
+
+**Context:**
+
+- The pull-request CI was validated on PR #1.
+- The repository has a single maintainer, so required approvals would make merging impossible, since authors cannot approve their own PRs.
+- Squash-merging `develop` into `main`, or requiring `main` PRs to be up to date, would make every later promotion diverge or need `main` merged back into the protected `develop`.
+
+**Decision:**
+
+- **Mechanism:** repository **Rulesets**, not classic branch protection: "Protect develop" (id 22930061) and "Protect main" (id 22930078), both active.
+- **No bypass actors.** The owner cannot push directly either.
+- **Both branches:**
+  - A PR is required, with 0 approvals and conversations resolved.
+  - Force pushes and deletion are blocked.
+  - The four CI quality jobs are required checks, pinned to the GitHub Actions app (integration 15368).
+- **`main` also requires `Promotion source`**, so only `develop` or `hotfix/*` can be merged into it.
+- **Deployment jobs are never required checks** while deployments are disabled.
+- **`develop`:**
+  - The branch must be up to date before merging.
+  - Merge methods: squash (normal PRs) and merge commit (a `main → develop` back-merge after a hotfix).
+- **`main`:**
+  - It does not need to be up to date.
+  - Merge commits only, which preserves the shared `develop`/`main` history.
+- Required approvals can be raised when collaborators join.
+
+**Consequences:**
+
+- Every change, including documentation, goes through a PR and green CI.
+- Renaming a CI job requires updating both rulesets in the same PR.
+- In an emergency, an admin can edit or disable a ruleset. That is a recorded, deliberate act, never a silent bypass.

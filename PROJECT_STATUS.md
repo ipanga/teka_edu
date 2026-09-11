@@ -6,18 +6,18 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-11
-Branch:     chore/validate-ci (PR into develop)
-Commit:     develop at 0800b48; main at 3df64bf (production baseline)
+Branch:     docs/record-branch-protection (PR into develop)
+Commit:     develop at defb272 (after PR #1); main at 3df64bf (production baseline)
 Updated by: Claude Code (claude-opus-5)
 ```
 
 ## Current Phase
 
 ```text
-Phase 0 — Foundation
-Status:    In progress. The foundation is in Git and on GitHub (main + develop). All CI jobs
-           passed on GitHub runners through the push-triggered workflows. Remaining: a PR-based
-           CI run, branch protection, and the external service setup.
+Phase 0 — Foundation: COMPLETE (2026-09-11)
+Status:    The foundation is in Git and on GitHub. CI is verified on both push and pull_request
+           events (Linux x86_64), and develop/main are protected by rulesets.
+           Next: external infrastructure setup (Supabase DEV/PROD), then Phase 1.
 Objective: Next.js + TypeScript app with lint/format/test tooling, Docker, Supabase local
            stack, CI/CD workflows and environment documentation (Plan §38 Phase 0, §46).
 ```
@@ -25,7 +25,7 @@ Objective: Next.js + TypeScript app with lint/format/test tooling, Docker, Supab
 ## Overall Progress
 
 ```text
-[ ] Phase 0 — Foundation              (in progress: PR-based CI validation and branch protection pending)
+[x] Phase 0 — Foundation              (complete: CI verified on GitHub, branch protection active)
 [ ] Phase 1 — Curriculum Engine
 [ ] Phase 2 — Child Experience
 [ ] Phase 3 — Activity Engine
@@ -54,7 +54,8 @@ Objective: Next.js + TypeScript app with lint/format/test tooling, Docker, Supab
 - [x] Git repository initialised on `main`; `origin` = `https://github.com/ipanga/teka_edu.git`
 - [x] Initial commit `3df64bf` ("chore: initialize Teka Edu project foundation", 56 files; gitleaks: no leaks)
 - [x] `main` pushed (default branch) and `develop` created from `main` and pushed; both track `origin`
-- [ ] Branch protection / rulesets for `main` and `develop` (not yet configured; PR-triggered CI validation in progress)
+- [x] PR-triggered CI validated: PR #1 (`chore/validate-ci` → `develop`), CI run 34612652962, all 4 quality checks passed, squash-merged as `defb272`
+- [x] Branch protection: rulesets "Protect develop" (22930061) and "Protect main" (22930078) active; verified through the API and a rejected direct push (GH013)
 
 ### Infrastructure foundation
 
@@ -70,39 +71,36 @@ Objective: Next.js + TypeScript app with lint/format/test tooling, Docker, Supab
 
 Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED`.
 
-| Area                            | Status          | Evidence / remaining                                                                                                                                                                                                                                                                                               |
-| ------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Git repository                  | **VERIFIED**    | Initialised 2026-09-11. `origin/main` and `origin/develop` both at `3df64bf`. No force push; remote was empty beforehand.                                                                                                                                                                                          |
-| Docker                          | **VERIFIED**    | Both images build, report healthy, run as user `node`, and exit on SIGTERM with code 143, both locally (arm64) and on GitHub runners (x86_64).                                                                                                                                                                     |
-| GitHub Actions                  | **IN PROGRESS** | Git initialization: COMPLETE. Push-triggered CI: VERIFIED (runs 34610713969 on main, 34610729923 and 34611359891 on develop; deploy jobs skipped as designed). PR-triggered CI: VALIDATION IN PROGRESS (`chore/validate-ci` → `develop`). Branch protection: NOT YET CONFIGURED. No GitHub environments exist yet. |
-| Supabase local                  | **VERIFIED**    | `db start` / `db reset` / `test db` (PASS) / `stop` all work. Full `supabase start` confirmed `sb_publishable_…` / `sb_secret_…` local keys, and the env validation accepts them.                                                                                                                                  |
-| Supabase DEV (`teka-edu-dev`)   | **BLOCKED**     | Project not created. Owner must create it and provide values (see below).                                                                                                                                                                                                                                          |
-| Supabase PROD (`teka-edu-prod`) | **BLOCKED**     | Project not created. Owner action.                                                                                                                                                                                                                                                                                 |
-| Database migrations             | **CONFIGURED**  | Migration-only pipeline in CI/CD. No migrations exist yet (no schema needed in V1). Nothing applied to any hosted database.                                                                                                                                                                                        |
-| Vercel staging                  | **BLOCKED**     | No Vercel project, token or IDs. Staging deploy job gated by `STAGING_DEPLOY_ENABLED` (unset).                                                                                                                                                                                                                     |
-| Vercel production               | **BLOCKED**     | Same as staging. Gated by `PRODUCTION_DEPLOY_ENABLED` (unset).                                                                                                                                                                                                                                                     |
-| Environment variables           | **CONFIGURED**  | Templates, validation and inventory complete. No hosted values exist yet.                                                                                                                                                                                                                                          |
-| Deployment documentation        | **CONFIGURED**  | Written. Must be re-checked against the first real staging and production deployments.                                                                                                                                                                                                                             |
+| Area                            | Status         | Evidence / remaining                                                                                                                                                                                                                                                                                       |
+| ------------------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Git repository                  | **VERIFIED**   | Initialised 2026-09-11. `origin/main` and `origin/develop` both at `3df64bf`. No force push; remote was empty beforehand.                                                                                                                                                                                  |
+| Docker                          | **VERIFIED**   | Both images build, report healthy, run as user `node`, and exit on SIGTERM with code 143, both locally (arm64) and on GitHub runners (x86_64).                                                                                                                                                             |
+| GitHub Actions                  | **VERIFIED**   | Push-triggered CI: VERIFIED (runs 34610713969, 34610729923, 34611359891, 34612999684; deploy jobs skipped as designed). PR-triggered CI: VERIFIED (PR #1, run 34612652962, Linux x86_64). No GitHub environments exist yet.                                                                                |
+| Branch protection               | **VERIFIED**   | GitHub Rulesets active for `develop` and `main`: PR required, 0 approvals, conversations resolved, 4 quality checks required (+ `Promotion source` on `main`), force push and deletion blocked, no bypass actors. A direct push to `develop` was rejected (GH013). Details: `docs/DEPLOYMENT.md`, ADR-022. |
+| Supabase local                  | **VERIFIED**   | `db start` / `db reset` / `test db` (PASS) / `stop` all work. Full `supabase start` confirmed `sb_publishable_…` / `sb_secret_…` local keys, and the env validation accepts them.                                                                                                                          |
+| Supabase DEV (`teka-edu-dev`)   | **BLOCKED**    | Project not created. Owner must create it and provide values (see below).                                                                                                                                                                                                                                  |
+| Supabase PROD (`teka-edu-prod`) | **BLOCKED**    | Project not created. Owner action.                                                                                                                                                                                                                                                                         |
+| Database migrations             | **CONFIGURED** | Migration-only pipeline in CI/CD. No migrations exist yet (no schema needed in V1). Nothing applied to any hosted database.                                                                                                                                                                                |
+| Vercel staging                  | **BLOCKED**    | No Vercel project, token or IDs. Staging deploy job gated by `STAGING_DEPLOY_ENABLED` (unset).                                                                                                                                                                                                             |
+| Vercel production               | **BLOCKED**    | Same as staging. Gated by `PRODUCTION_DEPLOY_ENABLED` (unset).                                                                                                                                                                                                                                             |
+| Environment variables           | **CONFIGURED** | Templates, validation and inventory complete. No hosted values exist yet.                                                                                                                                                                                                                                  |
+| Deployment documentation        | **CONFIGURED** | Written. Must be re-checked against the first real staging and production deployments.                                                                                                                                                                                                                     |
 
 ## In Progress
 
 ```text
-Task:           Phase 0 completion
-Status:         Git bootstrap done; CI green on GitHub via push-triggered runs
-Relevant files: .github/workflows/*, docs/ENVIRONMENT_SETUP.md
-Remaining:      PR-based CI validation, branch rules, GitHub environments, Supabase and Vercel
-                setup, first staging deployment
+Task:           Record branch protection (this docs PR)
+Status:         Open as a PR into develop; merges once the required checks pass
+Relevant files: PROJECT_STATUS.md, DECISIONS.md (ADR-022), CLAUDE.md, docs/DEPLOYMENT.md,
+                docs/ENVIRONMENT_SETUP.md
 ```
 
 ## Next Tasks
 
 ### P0 — Next
 
-1. **Validate CI through a pull request:**
-   - create `chore/validate-ci` from `develop` and open the first PR into `develop`
-   - confirm the PR-triggered `ci.yml` run
-   - then configure branch rules for `main` / `develop` with the CI job names as required checks (`docs/ENVIRONMENT_SETUP.md` section 9)
-2. **Owner: external setup** following `docs/ENVIRONMENT_SETUP.md` sections 2–12. The value checklist is at the end of that file.
+1. **Supabase DEV and PROD** (`teka-edu-dev`, `teka-edu-prod`): create the projects, collect their values, and configure the GitHub `staging` / `production` Environment secrets, without enabling deployment (`docs/ENVIRONMENT_SETUP.md` sections 2–5 and 10–11).
+2. **Owner: Vercel setup** following `docs/ENVIRONMENT_SETUP.md` sections 6–8. The value checklist is at the end of that file.
 3. **First staging deployment:** set `STAGING_DEPLOY_ENABLED=true`, then verify:
    - `PORT=3000` routing
    - that `--build-env NEXT_PUBLIC_GIT_SHA` reaches the image (ISSUE-005)
@@ -161,6 +159,12 @@ Severity: Medium (for Phase 6 content) · Status: Open
 Description: Requests and responses through the container are limited to 4.5 MB.
 Recommended action: keep media files small, or serve large media from Supabase Storage or a CDN (PD-008).
 
+### ISSUE-008 — `Promotion source` checks the branch name only
+
+Severity: Low · Status: Open
+Description: The check allows PRs into `main` whose head branch is named `develop` or `hotfix/*`. A PR from a **fork** with a branch named `develop` would also pass. The risk is low: merging still needs the owner, and the fork's code must pass every other required check.
+Recommended action: also require `github.event.pull_request.head.repo.full_name == github.repository` in the `promotion-source` job, in a small `fix/` PR.
+
 ## Resolved Issues
 
 - **ISSUE-001 (not a Git repository)**, resolved 2026-09-11: Git initialised, and `main` and `develop` pushed to `ipanga/teka_edu` at `3df64bf`.
@@ -192,8 +196,8 @@ Client-bundle check:   PASS (sentinel secrets absent; a planted leak is detected
 Docker build:          PASS (Dockerfile and Dockerfile.vercel, with health and graceful-stop smoke)
 Supabase DB tests:     PASS (pgTAP: RLS guard; a table without RLS correctly fails)
 Workflow lint:         PASS (actionlint 1.7.12)
-GitHub Actions CI:     PASS on push-triggered runs 34610713969 (main) and 34610729923 (develop),
-                       commit 3df64bf, ubuntu-24.04 x86_64; PR-triggered ci.yml NOT RUN yet
+GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891, 34612999684)
+                       and on pull_request (PR #1, run 34612652962); ubuntu-24.04 x86_64
 ```
 
 ## Content Status
@@ -213,9 +217,9 @@ Local:      Runs: npm run dev, npm run start (standalone), Docker image
 Docker:     Verified locally (arm64) and in GitHub CI (x86_64), both Dockerfiles
 Staging:    Not configured (no Supabase DEV / Vercel project); not deployed
 Production: Not configured; not deployed
-CI:         Passing on GitHub (push-triggered via deploy workflows); PR-triggered run pending
+CI:         Verified on GitHub for push and pull_request events; required by the develop/main rulesets
 CD:         Deploy jobs skipped: STAGING_/PRODUCTION_DEPLOY_ENABLED unset; no GitHub environments
-Remote:     github.com/ipanga/teka_edu (public). main (default) = 3df64bf; develop = main + documentation-only status commits
+Remote:     github.com/ipanga/teka_edu (public). main (default) = 3df64bf; develop = main + documentation-only commits (incl. PR #1)
 ```
 
 ## Deviations From the Infrastructure Spec (documented)
@@ -263,21 +267,20 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 3df64bf; devel
 ## Last Session Summary
 
 ```text
-Completed:  Git bootstrap.
-            - Verified the remote was empty (no commits, branches, variables, secrets or
-              environments).
-            - Reviewed and extended .gitignore; checked the env templates (placeholders only).
-            - Ran a pattern scan and gitleaks v8.30.1 on the staged content: no leaks.
-            - Re-ran local validation (all PASS).
-            - git init -b main, origin set, initial commit 3df64bf; pushed main; created and
-              pushed develop.
-            - The pushes triggered the deploy workflows: all CI jobs passed on GitHub and the
-              deploy jobs were skipped.
-Changed:    .gitignore (IDE/OS/credential patterns, in the initial commit). Status docs commit on
-            develop: PROJECT_STATUS.md, CLAUDE.md (CI/CD row), docs/ENVIRONMENT_SETUP.md §9.
-Tests:      Local PASS; GitHub CI PASS (push-triggered). PR-triggered CI not yet run.
-Remaining:  PR-based CI validation, branch rules, owner setup of Supabase/Vercel/GitHub
-            environments, first staging deployment.
-Recommended next task: create chore/validate-ci from develop, open the first PR into develop,
-            and validate the PR-triggered CI pipeline before configuring Supabase or Vercel.
+Completed:  PR CI validation and branch protection.
+            - PR #1 (chore/validate-ci -> develop): CI run 34612652962 on pull_request, all 4
+              quality checks passed, Promotion source skipped (target develop); squash-merged as
+              defb272; branch deleted.
+            - Created GitHub Rulesets "Protect develop" (22930061) and "Protect main" (22930078)
+              and verified them through the API. A direct push to develop was rejected (GH013).
+            - Tested the Promotion source rule locally against sample branch names (ISSUE-008
+              noted).
+Changed:    PROJECT_STATUS.md (in PR #1 and this docs PR), DECISIONS.md (ADR-022), CLAUDE.md
+            (workflow rules), docs/DEPLOYMENT.md (branch protection, merge methods),
+            docs/ENVIRONMENT_SETUP.md section 9.
+Tests:      Local verify PASS; GitHub CI PASS on push and pull_request.
+Remaining:  External setup (Supabase DEV/PROD, Vercel, GitHub environments), first staging
+            deployment, Phase 1.
+Recommended next task: configure the isolated Supabase projects teka-edu-dev and teka-edu-prod
+            and their GitHub Environment secrets, without enabling deployment.
 ```

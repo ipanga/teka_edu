@@ -120,7 +120,8 @@ feature/*  -> develop  -> main
 (work)        (staging)   (production)
 ```
 
-- Do not develop directly on `main`. Feature PRs are squash-merged. `main` is protected and requires CI.
+- `develop` and `main` are protected by GitHub Rulesets (ADR-022). Every change, docs included, goes through a PR with green required checks, and direct pushes are rejected, even for the owner.
+- Feature, fix, chore and docs PRs are **squash**-merged into `develop`. `develop → main` uses a **merge commit**. If you rename a CI job, update the rulesets' required checks in the same PR.
 - Before calling work complete, run every check that applies: lint, format check, typecheck, unit tests, content validation, build, and where relevant E2E/smoke tests and Docker build.
 - Never suppress a failing check (skip, `@ts-ignore`, `eslint-disable`, lowering thresholds) just to get a green run.
 - Commit or push only when the user explicitly asks. Never create or modify remote Supabase or Vercel resources, or deploy, unless explicitly asked.
