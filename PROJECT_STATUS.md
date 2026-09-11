@@ -162,7 +162,7 @@ Recommended action: keep media files small, or serve large media from Supabase S
 
 ## Resolved Issues
 
-- **ISSUE-008 (Promotion source checked the branch name only)**, resolved 2026-09-11: `scripts/check-promotion-source.mjs` also requires the head repository ID to equal this repository's, so fork `develop` / `hotfix/*` branches are refused. Covered by 17 unit tests.
+- **ISSUE-008 (Promotion source checked the branch name only)**, resolved 2026-09-11: `scripts/check-promotion-source.mjs` also requires the head repository ID to equal this repository's, so fork `develop` / `hotfix/*` branches are refused. Covered by 17 unit tests. Live check on a real `pull_request` event: draft PR #4 (`fix/*` → `main`) was refused by `Promotion source` (run 34615884503) and closed unmerged. The same-repo `develop` → `main` pass path is unit-tested and will run live at the first promotion.
 - **ISSUE-001 (not a Git repository)**, resolved 2026-09-11: Git initialised, and `main` and `develop` pushed to `ipanga/teka_edu` at `3df64bf`.
 - **PD-001 (Vercel mechanism)**, resolved 2026-09-11: Vercel runs `Dockerfile.vercel` containers (ADR-013).
 - **PD-009 (test runner)**, resolved 2026-09-11: Vitest (ADR-020).
@@ -193,6 +193,7 @@ Docker build:          PASS (Dockerfile and Dockerfile.vercel, with health and g
 Supabase DB tests:     PASS (pgTAP: RLS guard; a table without RLS correctly fails)
 Workflow lint:         PASS (actionlint 1.7.12)
 Secret scan:           PASS (gitleaks v8.30.1 on full Git history, all refs; pattern scan)
+Promotion source live: REFUSED as expected (draft PR #4, fix/* → main, run 34615884503)
 Tracked .env* files:   NONE (git ls-files)
 GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891, 34612999684)
                        and on pull_request (PR #1, run 34612652962); ubuntu-24.04 x86_64
