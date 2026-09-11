@@ -8,6 +8,6 @@
  * See docs/ENVIRONMENT_SETUP.md, section "Environment guard".
  */
 export const SUPABASE_PROJECT_REFS: Readonly<Record<"staging" | "production", string | null>> = {
-  staging: null,
-  production: null,
+  staging: "quyhkkizsmosybavoewd", // teka-edu-dev (eu-west-3)
+  production: "eganrivpkjhozkkahyxy", // teka-edu-prod (eu-west-3)
 };

@@ -7,31 +7,32 @@ Short architecture/product decision records (ADRs). They cover decisions future 
 - Status values: `Proposed`, `Accepted`, `Superseded`, `Deprecated`.
 - "Plan §N" refers to `TEKA_EDU_PROJECT_PLAN.md`. Details stay there and are not copied here.
 
-| ADR | Title                                                                      | Status                 |
-| --- | -------------------------------------------------------------------------- | ---------------------- |
-| 001 | French is the default product language                                     | Accepted               |
-| 002 | No runtime LLM dependency in V1                                            | Accepted               |
-| 003 | French Cycle 1 curriculum is the academic reference                        | Accepted               |
-| 004 | Data-driven instructional calendar and lesson numbering                    | Accepted               |
-| 005 | Educational content is versioned, validated data                           | Accepted               |
-| 006 | Local-first V1 with storage behind repository interfaces                   | Accepted               |
-| 007 | Single Next.js / TypeScript PWA                                            | Accepted               |
-| 008 | Git branching: feature/* → develop → main                                  | Accepted               |
-| 009 | Vercel hosting with a portable standard Dockerfile                         | Superseded by 012, 013 |
-| 010 | Positive, observation-based assessment                                     | Accepted               |
-| 011 | Four-file project documentation system                                     | Accepted               |
-| 012 | Docker/OCI is the deployment format                                        | Accepted               |
-| 013 | Vercel is the initial application host (container via `Dockerfile.vercel`) | Accepted               |
-| 014 | Supabase is the managed PostgreSQL/backend platform                        | Accepted               |
-| 015 | DEV and PROD use separate Supabase projects                                | Accepted               |
-| 016 | GitHub Actions is the authoritative CI/CD orchestrator                     | Accepted               |
-| 017 | Database changes are migration-only                                        | Accepted               |
-| 018 | Application runtime remains stateless                                      | Accepted               |
-| 019 | Canonical curriculum stays in Git; Supabase holds user data                | Accepted               |
-| 020 | Phase 0 toolchain baseline                                                 | Accepted               |
-| 021 | Centralised, validated environment configuration                           | Accepted               |
-| 022 | Branch protection with GitHub Rulesets; merge strategy                     | Accepted               |
-| 023 | No `.env*` files in the repository                                         | Accepted               |
+| ADR | Title                                                                                   | Status                 |
+| --- | --------------------------------------------------------------------------------------- | ---------------------- |
+| 001 | French is the default product language                                                  | Accepted               |
+| 002 | No runtime LLM dependency in V1                                                         | Accepted               |
+| 003 | French Cycle 1 curriculum is the academic reference                                     | Accepted               |
+| 004 | Data-driven instructional calendar and lesson numbering                                 | Accepted               |
+| 005 | Educational content is versioned, validated data                                        | Accepted               |
+| 006 | Local-first V1 with storage behind repository interfaces                                | Accepted               |
+| 007 | Single Next.js / TypeScript PWA                                                         | Accepted               |
+| 008 | Git branching: feature/* → develop → main                                               | Accepted               |
+| 009 | Vercel hosting with a portable standard Dockerfile                                      | Superseded by 012, 013 |
+| 010 | Positive, observation-based assessment                                                  | Accepted               |
+| 011 | Four-file project documentation system                                                  | Accepted               |
+| 012 | Docker/OCI is the deployment format                                                     | Accepted               |
+| 013 | Vercel is the initial application host (container via `Dockerfile.vercel`)              | Accepted               |
+| 014 | Supabase is the managed PostgreSQL/backend platform                                     | Accepted               |
+| 015 | DEV and PROD use separate Supabase projects                                             | Accepted               |
+| 016 | GitHub Actions is the authoritative CI/CD orchestrator                                  | Accepted               |
+| 017 | Database changes are migration-only                                                     | Accepted               |
+| 018 | Application runtime remains stateless                                                   | Accepted               |
+| 019 | Canonical curriculum stays in Git; Supabase holds user data                             | Accepted               |
+| 020 | Phase 0 toolchain baseline                                                              | Accepted               |
+| 021 | Centralised, validated environment configuration                                        | Accepted               |
+| 022 | Branch protection with GitHub Rulesets; merge strategy                                  | Accepted               |
+| 023 | No `.env*` files in the repository                                                      | Accepted               |
+| 024 | Supabase projects in Paris (eu-west-3); credentials in Keychain and GitHub environments | Accepted               |
 
 ---
 
@@ -453,3 +454,28 @@ When documents disagree about intended behavior, the order is plan → decisions
 - There is no `cp .env.example` step: developers create `.env.local` themselves, and only when they need to override the working defaults.
 - Tooling must not generate tracked `.env*` files. Build contexts (`.dockerignore`, `.vercelignore`) already exclude them.
 - The public history still contains the removed placeholder templates. That is harmless and accepted.
+
+---
+
+## ADR-024 — Supabase projects in Paris (eu-west-3); credentials in Keychain and GitHub environments
+
+**Status:** Accepted · **Date:** 2026-09-11 · **Implements:** ADR-014, ADR-015 · **Resolves:** PD-011 (Supabase part)
+
+**Context:** Users are in the DRC, with some in Europe. Supabase has no African region, and Central African traffic generally reaches Europe first. The organization **TEKA** is on the Free plan with room for exactly two free projects. Credentials must never touch the repository (ADR-023), and GitHub secrets cannot be read back.
+
+**Decision:**
+
+- **Projects:** `teka-edu-dev` (`quyhkkizsmosybavoewd`, used by staging) and `teka-edu-prod` (`eganrivpkjhozkkahyxy`, used by production). Both are in **Paris `eu-west-3`**, and the Vercel function region should match (`cdg1`). They are separate projects with independently generated 40-character database passwords.
+- **Credential custody:**
+  - The CI credentials (`SUPABASE_ACCESS_TOKEN`, `SUPABASE_PROJECT_ID`, `SUPABASE_DB_PASSWORD`) are GitHub **Environment** secrets, DEV values in `staging` and PROD values in `production` only.
+  - The runtime values (URL, publishable key, secret key, `DATABASE_URL`, `DIRECT_DATABASE_URL`) and the passwords are kept in the owner's macOS Keychain, to be copied into Vercel in the next task. They are not GitHub secrets, because no workflow reads them.
+- **Connections:**
+  - `DATABASE_URL` is the Supabase transaction pooler (port 6543).
+  - `DIRECT_DATABASE_URL` is the direct host, which is IPv6-only, so IPv4 tooling uses the session pooler.
+- **Local development** keeps using the local stack (ADR-015). The working copy is linked to DEV; PROD is never linked locally.
+
+**Consequences:**
+
+- Free-plan limits apply to both projects: pausing after about a week of inactivity, no backups and no point-in-time recovery. PROD must be upgraded, or regularly exported, before real child data is stored.
+- Changing region later means creating new projects and migrating.
+- The legacy `anon` / `service_role` keys still exist but are unused. Disabling them is an optional hardening step.

@@ -95,6 +95,10 @@ Dependency direction: `app/`, `components/` → `domain/` ← `lib/`. `domain/` 
 Details are in `docs/`. Decisions are ADR-012 to ADR-021.
 
 - **Environments:** local (Next.js dev + Supabase CLI stack in Docker), staging (`develop` → Supabase `teka-edu-dev` + Vercel Preview/staging), production (`main` → Supabase `teka-edu-prod` + Vercel Production). DEV and PROD never share credentials or databases. `lib/env` enforces this.
+- **Supabase projects (ADR-024):**
+  - They exist in Paris `eu-west-3`, on the Free plan: `teka-edu-dev` = `quyhkkizsmosybavoewd` and `teka-edu-prod` = `eganrivpkjhozkkahyxy`.
+  - This working copy is linked to DEV only.
+  - CI credentials are in the GitHub `staging` / `production` environments. Runtime values are in the owner's Keychain until they go into Vercel.
 - **Containers:** `Dockerfile` (portable OCI image) and `Dockerfile.vercel` (Vercel builds and runs it as a container). Keep them in sync. `NEXT_PUBLIC_*` values are build arguments; secrets are runtime only. On Vercel, `PORT=3000` is required.
 - **State:** the runtime is stateless. Data lives in Supabase or in the browser (IndexedDB). Curriculum stays in Git.
 - **Database:** migration-only (`supabase/migrations/`), expand/contract, RLS on every public table (a pgTAP guard enforces it), and no hosted dashboard schema edits.
