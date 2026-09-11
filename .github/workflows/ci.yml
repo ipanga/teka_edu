@@ -22,19 +22,21 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
+  # Required check on main (ruleset "Protect main"). Keep the job name unchanged.
   promotion-source:
     name: Promotion source
     if: github.event_name == 'pull_request' && github.base_ref == 'main'
     runs-on: ubuntu-24.04
+    timeout-minutes: 5
     steps:
-      - name: Only develop (or hotfix/*) may be merged into main
-        env:
-          HEAD_REF: ${{ github.head_ref }}
-        run: |
-          if [[ "$HEAD_REF" != "develop" && "$HEAD_REF" != hotfix/* ]]; then
-            echo "::error::Pull requests into main must come from develop (or hotfix/*), not '$HEAD_REF'."
-            exit 1
-          fi
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+      # Checks the head branch name AND that it belongs to this repository (not a fork),
+      # using the pull_request event payload. Unit-tested in tests/unit/promotion-source.test.ts.
+      - name: Only develop (or hotfix/*) from this repository may be merged into main
+        run: node scripts/check-promotion-source.mjs
 
   quality:
     name: Format, lint, typecheck, unit tests, content

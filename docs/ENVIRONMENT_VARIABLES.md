@@ -1,106 +1,178 @@
 # Environment Variable Inventory
 
-This is the **single authoritative list** of every variable Teka Edu uses. Keep it in sync with:
+This is the **single source of truth** for every environment variable Teka Edu uses.
 
-- `lib/env/schema.ts`, which validates the values (the app refuses to start or build if they are invalid)
-- `.env.example`, `.env.local.example`, `.env.development.example`, `.env.production.example`
-- `.github/workflows/*.yml` and `Dockerfile` / `Dockerfile.vercel`
-- the Vercel project settings and GitHub Environments (see [ENVIRONMENT_SETUP.md](ENVIRONMENT_SETUP.md))
+> **Repository policy (ADR-023):** no file whose name starts with `.env` is ever tracked by Git. That includes `.env.example`-style templates. Real values live only in:
+>
+> - your local, Git-ignored `.env.local`
+> - GitHub Environment secrets and variables
+> - Vercel project environment variables
+> - the Supabase dashboard
+>
+> The examples in this document are placeholders or harmless constants only.
 
-Change a variable in all of those places in the same pull request, and update this file too.
+Keep this file in sync with:
+
+- `lib/env/schema.ts`, which validates the values (the app refuses to build or start with an invalid configuration)
+- `.github/workflows/*.yml`
+- `Dockerfile` / `Dockerfile.vercel`: every `NEXT_PUBLIC_*` variable must be declared there as `ARG`
+- the Vercel project settings and GitHub Environments ([ENVIRONMENT_SETUP.md](ENVIRONMENT_SETUP.md))
+
+Change a variable in all of those places in the same pull request.
 
 **Two families that must never mix:**
 
-1. **Application variables** (A, B and C below) are read by the Next.js app. They live in `.env.local` locally and in **Vercel** for hosted environments.
-2. **Deployment and CI credentials** (D and E) let GitHub Actions control Vercel and Supabase. They live **only** in **GitHub Environment secrets and variables**. They are never Vercel variables, never `NEXT_PUBLIC_*`, and never read by the app.
+1. **Application variables** are read by the Next.js app (sections 1–2 and 6). They live in `.env.local` locally and in **Vercel** when hosted.
+2. **Deployment credentials and controls** are used only by GitHub Actions (sections 3–5). They live **only** in **GitHub**. They are never Vercel variables, never `NEXT_PUBLIC_*`, and never read by the app.
 
-Legend: **Public** means inlined into the browser JavaScript, so anyone can read it. **Secret** means server-side only and must never be exposed. **Build** means the value is fixed when `next build` runs. **Runtime** means it is read when the server starts or on use.
+**Public** means Next.js inlines the value into the browser JavaScript at build time, so anyone can read it and changing it requires a rebuild. **Secret** means server- or CI-only and must never be exposed.
 
-## A. Application: browser-safe (`NEXT_PUBLIC_*`, build time)
+## 1. Application
 
-Next.js inlines these into the JavaScript at build time. Changing one requires a **rebuild or redeploy**. In Docker they are build arguments. On Vercel, the platform passes them to `docker build` as build arguments.
+| Variable                                 | Purpose                                                                                  | Local                   | Staging                   | Production                | Public / Secret | Where configured                             | Where obtained           | Required / Optional                                                                                  |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------- | ----------------------- | ------------------------- | ------------------------- | --------------- | -------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_APP_NAME`                   | App name (page title)                                                                    | `Teka Edu`              | `Teka Edu`                | `Teka Edu`                | Public          | `.env.local` / Vercel                        | Constant                 | Optional (default `Teka Edu`)                                                                        |
+| `NEXT_PUBLIC_APP_ENV`                    | Environment identity; drives the environment guard and `/api/health`                     | `local`                 | `staging`                 | `production`              | Public          | `.env.local` / Vercel (per scope)            | Per environment          | **Required** in staging/production (defaults to `local`; deploy smoke tests check it)                |
+| `NEXT_PUBLIC_APP_URL`                    | Public URL of this deployment                                                            | `http://localhost:3000` | staging URL               | production domain         | Public          | `.env.local` / Vercel                        | Vercel domain / DNS      | **Required** in staging/production (must not be a local host)                                        |
+| `NEXT_PUBLIC_DEFAULT_LOCALE`             | Default UI language (`<html lang>`)                                                      | `fr`                    | `fr`                      | `fr`                      | Public          | `.env.local` / Vercel                        | Constant (ADR-001)       | Optional (default `fr`)                                                                              |
+| `NEXT_PUBLIC_DEFAULT_COUNTRY`            | Default country (calendar in Phase 1)                                                    | `CD`                    | `CD`                      | `CD`                      | Public          | `.env.local` / Vercel                        | Constant                 | Optional (default `CD`)                                                                              |
+| `NEXT_PUBLIC_ENABLE_ENGLISH_SCAFFOLDING` | Feature flag: optional English support                                                   | `true`                  | `true`                    | `true`                    | Public          | `.env.local` / Vercel                        | Product decision         | Optional (default `true`)                                                                            |
+| `NEXT_PUBLIC_ENABLE_CLOUD_SYNC`          | Feature flag: cloud progress sync. `true` makes the Supabase browser variables mandatory | `false`                 | `false` until sync exists | `false` until sync exists | Public          | `.env.local` / Vercel                        | Product decision         | Optional (default `false`)                                                                           |
+| `AI_ENABLED`                             | Must stay `false`: V1 has no runtime AI (ADR-002)                                        | `false`                 | `false`                   | `false`                   | Server config   | `.env.local` / Vercel                        | Constant                 | Optional (default `false`; `true` is refused)                                                        |
+| `PORT`                                   | Port the server listens on                                                               | `3000` (default)        | **`3000`**                | **`3000`**                | Config          | Vercel (all scopes); Dockerfiles default it  | Constant                 | **Required on Vercel** (Vercel routes to `PORT`, default 80; the non-root container listens on 3000) |
+| `NEXT_PUBLIC_APP_VERSION`                | Version reported by `/api/health`                                                        | (package.json)          | (package.json)            | (package.json)            | Public          | `next.config.ts` (automatic)                 | `package.json` `version` | Optional                                                                                             |
+| `NEXT_PUBLIC_GIT_SHA`                    | Deployed commit reported by `/api/health`                                                | empty                   | commit SHA                | commit SHA                | Public          | Deploy workflow: `vercel deploy --build-env` | GitHub (`github.sha`)    | Optional (set by CD)                                                                                 |
 
-| Name                                     | Scope | Local                             | Staging                         | Production                       | Public/Secret             | Used by                                                        | Required                                                                    | Source                           |
-| ---------------------------------------- | ----- | --------------------------------- | ------------------------------- | -------------------------------- | ------------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------- | -------------------------------- |
-| `NEXT_PUBLIC_APP_NAME`                   | build | `Teka Edu`                        | `Teka Edu`                      | `Teka Edu`                       | Public                    | `app/layout.tsx` (title)                                       | No (default `Teka Edu`)                                                     | Constant                         |
-| `NEXT_PUBLIC_DEFAULT_LOCALE`             | build | `fr`                              | `fr`                            | `fr`                             | Public                    | `<html lang>`                                                  | No (default `fr`)                                                           | Constant (ADR-001)               |
-| `NEXT_PUBLIC_DEFAULT_COUNTRY`            | build | `CD`                              | `CD`                            | `CD`                             | Public                    | Config (calendar in Phase 1)                                   | No (default `CD`)                                                           | Constant                         |
-| `NEXT_PUBLIC_APP_ENV`                    | build | `local`                           | `staging`                       | `production`                     | Public                    | Env guard, `/api/health`                                       | **Yes** in staging/prod (defaults to `local`; deploy smoke tests verify it) | Per environment                  |
-| `NEXT_PUBLIC_APP_URL`                    | build | `http://localhost:3000`           | staging URL                     | production domain                | Public                    | Guard (future: auth redirects, links)                          | **Yes** in staging/prod (must not be a local host)                          | Vercel domain / DNS              |
-| `NEXT_PUBLIC_SUPABASE_URL`               | build | `http://127.0.0.1:54321` or empty | `https://<DEV_REF>.supabase.co` | `https://<PROD_REF>.supabase.co` | Public                    | Future Supabase browser client                                 | Only if cloud sync is on (set together with the key)                        | Supabase → Connect / project URL |
-| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`   | build | local `sb_publishable_…` or empty | DEV `sb_publishable_…`          | PROD `sb_publishable_…`          | Public (protected by RLS) | Future Supabase browser client                                 | Only if cloud sync is on                                                    | Supabase → Settings → API Keys   |
-| `NEXT_PUBLIC_ENABLE_ENGLISH_SCAFFOLDING` | build | `true`                            | `true`                          | `true`                           | Public                    | Feature flag (Phase 2)                                         | No (default `true`)                                                         | Product decision                 |
-| `NEXT_PUBLIC_ENABLE_CLOUD_SYNC`          | build | `false`                           | `false` until sync exists       | `false` until sync exists        | Public                    | Feature flag; `true` makes the Supabase browser vars mandatory | No (default `false`)                                                        | Product decision                 |
-| `NEXT_PUBLIC_APP_VERSION`                | build | (package.json)                    | (package.json)                  | (package.json)                   | Public                    | `/api/health`                                                  | No (default `package.json` version)                                         | `next.config.ts`                 |
-| `NEXT_PUBLIC_GIT_SHA`                    | build | empty                             | commit SHA                      | commit SHA                       | Public                    | `/api/health`, smoke tests                                     | No (set by CD)                                                              | CD: `vercel deploy --build-env`  |
+## 2. Supabase runtime (application)
 
-Validation rules enforced in `lib/env/schema.ts`:
+| Variable                               | Purpose                                                                  | Local                             | Staging                                 | Production                               | Public / Secret | Where configured                  | Where obtained                                                      | Required / Optional                                             |
+| -------------------------------------- | ------------------------------------------------------------------------ | --------------------------------- | --------------------------------------- | ---------------------------------------- | --------------- | --------------------------------- | ------------------------------------------------------------------- | --------------------------------------------------------------- |
+| `NEXT_PUBLIC_SUPABASE_URL`             | Supabase API URL for the browser client                                  | `http://127.0.0.1:54321` or unset | `https://<DEV_PROJECT_REF>.supabase.co` | `https://<PROD_PROJECT_REF>.supabase.co` | Public          | `.env.local` / Vercel             | `npx supabase status` (local); dashboard → **Connect** (hosted)     | Required only when cloud sync is on (set together with the key) |
+| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Browser key (`sb_publishable_…`), protected by RLS                       | local publishable key or unset    | DEV publishable key                     | PROD publishable key                     | Public          | `.env.local` / Vercel             | `npx supabase status`; dashboard → Settings → **API Keys**          | Required only when cloud sync is on                             |
+| `SUPABASE_SECRET_KEY`                  | Privileged server key (`sb_secret_…`)                                    | local secret key or unset         | DEV secret key                          | PROD secret key                          | **Secret**      | `.env.local` / Vercel (Sensitive) | `npx supabase status`; dashboard → Settings → **API Keys**          | Optional (no code uses it yet)                                  |
+| `DATABASE_URL`                         | Postgres URL for server code (serverless: transaction pooler, port 6543) | local DB URL or unset             | DEV pooler URL                          | PROD pooler URL                          | **Secret**      | `.env.local` / Vercel (Sensitive) | `npx supabase status`; dashboard → **Connect** → Transaction pooler | Optional (planned)                                              |
+| `DIRECT_DATABASE_URL`                  | Direct Postgres URL for tooling (port 5432)                              | local DB URL or unset             | DEV direct URL                          | PROD direct URL                          | **Secret**      | `.env.local` / Vercel (Sensitive) | `npx supabase status`; dashboard → **Connect** → Direct connection  | Optional (planned)                                              |
 
-- The publishable key must start with `sb_publishable_`. A key starting with `sb_secret_` is refused with a "rotate it" error.
-- With `NEXT_PUBLIC_APP_ENV=local`, Supabase URLs must be local hosts (`127.0.0.1`, `localhost`, `[::1]`, `host.docker.internal`).
-- With `staging` or `production`, Supabase URLs must use https and must not be local hosts.
-- Once the project refs are recorded in `lib/env/supabase-projects.ts`, a staging deployment pointing at the PROD project is refused, and vice versa.
+Server secrets are read only through `lib/env/server.ts` (which imports `server-only`) and validated at server start (`instrumentation.ts`). CI proves they never reach browser bundles (`npm run check:client-bundle`). CI/CD migrations do **not** use these database URLs; they use section 3.
 
-## B. Application: server-only secrets (runtime)
+## 3. Supabase deployment (GitHub Actions only)
 
-Never prefix these with `NEXT_PUBLIC_`. They are read only through `lib/env/server.ts` (which imports `server-only`) and validated at server start (`instrumentation.ts`). CI verifies they never appear in browser bundles (`npm run check:client-bundle`).
+| Variable                | Purpose                                        | Local | Staging                        | Production               | Public / Secret         | Where configured                                     | Where obtained                                               | Required / Optional |
+| ----------------------- | ---------------------------------------------- | ----- | ------------------------------ | ------------------------ | ----------------------- | ---------------------------------------------------- | ------------------------------------------------------------ | ------------------- |
+| `SUPABASE_ACCESS_TOKEN` | Lets the Supabase CLI link and push migrations | —     | Supabase personal access token | same or a separate token | **Secret**              | GitHub Environment secret (`staging` / `production`) | https://supabase.com/dashboard/account/tokens                | **Required** for CD |
+| `SUPABASE_PROJECT_ID`   | Project ref for `supabase link --project-ref`  | —     | **DEV** ref                    | **PROD** ref             | **Secret** (identifier) | GitHub Environment secret                            | Dashboard URL `…/project/<ref>` or Settings → General        | **Required** for CD |
+| `SUPABASE_DB_PASSWORD`  | Database password used by `link` / `db push`   | —     | **DEV** password               | **PROD** password        | **Secret**              | GitHub Environment secret                            | Chosen at project creation (reset under Settings → Database) | **Required** for CD |
 
-| Name                  | Scope             | Local                        | Staging                                    | Production                  | Public/Secret | Used by                                       | Required                                | Source                                      |
-| --------------------- | ----------------- | ---------------------------- | ------------------------------------------ | --------------------------- | ------------- | --------------------------------------------- | --------------------------------------- | ------------------------------------------- |
-| `SUPABASE_SECRET_KEY` | runtime           | local `sb_secret_…` or empty | DEV `sb_secret_…`                          | PROD `sb_secret_…`          | **Secret**    | Nothing yet (future privileged server code)   | No (planned)                            | Supabase → Settings → API Keys              |
-| `DATABASE_URL`        | runtime           | local DB URL or empty        | DEV **transaction pooler** URL (port 6543) | PROD transaction pooler URL | **Secret**    | Nothing yet (planned server/DB tooling)       | No (planned)                            | Supabase → **Connect** → Transaction pooler |
-| `DIRECT_DATABASE_URL` | runtime / tooling | local DB URL or empty        | DEV **direct** URL (port 5432)             | PROD direct URL             | **Secret**    | Nothing yet (planned migration/admin tooling) | No (planned)                            | Supabase → **Connect** → Direct connection  |
-| `AI_ENABLED`          | runtime           | `false`                      | `false`                                    | `false`                     | Config        | Env guard: must be `false` (ADR-002)          | No (default `false`; `true` is refused) | Constant                                    |
+`SUPABASE_DB_URL` is **not used**. In a job that runs the _local_ Supabase stack, never export `SUPABASE_PROJECT_ID`: the CLI also treats it as the local project id.
 
-- The secret key must start with `sb_secret_`.
-- Both database URLs must be `postgres://` or `postgresql://` URLs. Percent-encode special characters in the password.
-- CI/CD migrations do **not** use these URLs. They use `supabase link` with the D-section credentials.
+## 4. Vercel deployment (GitHub Actions only)
 
-## C. Application: runtime/platform
+| Variable                          | Purpose                                                                    | Local | Staging       | Production                     | Public / Secret         | Where configured          | Where obtained                                                                   | Required / Optional                                        |
+| --------------------------------- | -------------------------------------------------------------------------- | ----- | ------------- | ------------------------------ | ----------------------- | ------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| `VERCEL_TOKEN`                    | Authenticates `vercel deploy` / `vercel alias`                             | —     | Vercel token  | Vercel token (may be the same) | **Secret**              | GitHub Environment secret | Vercel → Account Settings → Tokens                                               | **Required** for CD                                        |
+| `VERCEL_ORG_ID`                   | Selects the Vercel team                                                    | —     | team/user ID  | same                           | **Secret** (identifier) | GitHub Environment secret | Team Settings → General (Team ID), or `.vercel/project.json` after `vercel link` | **Required** for CD                                        |
+| `VERCEL_PROJECT_ID`               | Selects the Vercel project                                                 | —     | project ID    | same (one project)             | **Secret** (identifier) | GitHub Environment secret | Project → Settings → General (Project ID)                                        | **Required** for CD                                        |
+| `VERCEL_AUTOMATION_BYPASS_SECRET` | Lets smoke tests pass Deployment Protection (`x-vercel-protection-bypass`) | —     | bypass secret | same                           | **Secret**              | GitHub Environment secret | Project → Settings → Deployment Protection → Protection Bypass for Automation    | Required only if Deployment Protection is on (recommended) |
 
-| Name                      | Scope         | Local                          | Staging    | Production | Public/Secret | Used by                   | Required                                                                                        | Source                         |
-| ------------------------- | ------------- | ------------------------------ | ---------- | ---------- | ------------- | ------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------ |
-| `PORT`                    | runtime       | `3000` (default)               | **`3000`** | **`3000`** | Config        | Next.js standalone server | **Yes on Vercel** (Vercel routes to `PORT`, default 80; the non-root container listens on 3000) | Set in Vercel project env vars |
-| `HOSTNAME`                | runtime       | set by Dockerfiles (`0.0.0.0`) | same       | same       | Config        | Next.js standalone server | Do not set in Vercel                                                                            | Dockerfiles                    |
-| `NODE_ENV`                | runtime       | `production` in images         | same       | same       | Config        | Node/Next.js              | Set by Dockerfiles / Next.js                                                                    | Dockerfiles                    |
-| `NEXT_TELEMETRY_DISABLED` | build/runtime | `1` in images                  | same       | same       | Config        | Next.js                   | Set by Dockerfiles                                                                              | Dockerfiles                    |
+## 5. Deployment controls (GitHub variables, not secret)
 
-## D. Deployment/CI credentials: GitHub Environment secrets
+| Variable                    | Purpose                                                                  | Local | Staging                           | Production                           | Public / Secret | Where configured                      | Where obtained       | Required / Optional                           |
+| --------------------------- | ------------------------------------------------------------------------ | ----- | --------------------------------- | ------------------------------------ | --------------- | ------------------------------------- | -------------------- | --------------------------------------------- |
+| `STAGING_DEPLOY_ENABLED`    | Enables the deploy job of `deploy-staging.yml`                           | —     | `true` once staging is configured | —                                    | Not secret      | GitHub **repository** variable        | Owner decision       | Unset = staging CD **off** (current state)    |
+| `PRODUCTION_DEPLOY_ENABLED` | Enables the deploy job of `deploy-production.yml`                        | —     | —                                 | `true` once production is configured | Not secret      | GitHub **repository** variable        | Owner decision       | Unset = production CD **off** (current state) |
+| `VERCEL_STAGING_TARGET`     | `staging` to use a Vercel Custom Environment (Pro plan); empty = Preview | —     | empty or `staging`                | —                                    | Not secret      | GitHub `staging` environment variable | Vercel plan          | Optional                                      |
+| `STAGING_DOMAIN`            | Stable alias assigned to each staging deployment                         | —     | e.g. `staging.<domain>`           | —                                    | Not secret      | GitHub `staging` environment variable | DNS / Vercel domains | Optional                                      |
 
-These are stored in GitHub → Settings → Environments → `staging` / `production`. The same names are used in both environments and each holds that environment's value. Workflows read them as `secrets.X`. They must **never** be added to Vercel or to any `.env` file.
+## 6. Platform and workflow-internal (never configured by hand)
 
-| Name                              | Scope | Local | Staging (`staging` env)        | Production (`production` env)        | Public/Secret           | Used by                                                                                | Required                                          | Source                                                                                  |
-| --------------------------------- | ----- | ----- | ------------------------------ | ------------------------------------ | ----------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `VERCEL_TOKEN`                    | CI    | —     | Vercel token                   | Vercel token (may be the same token) | **Secret**              | `vercel deploy`, `vercel alias`                                                        | **Yes**                                           | Vercel → Account Settings → Tokens                                                      |
-| `VERCEL_ORG_ID`                   | CI    | —     | Vercel team/user ID            | same value                           | **Secret** (identifier) | Vercel CLI project selection                                                           | **Yes**                                           | Vercel team Settings → General (Team ID), or `.vercel/project.json` after `vercel link` |
-| `VERCEL_PROJECT_ID`               | CI    | —     | Vercel project ID              | same value (one Vercel project)      | **Secret** (identifier) | Vercel CLI project selection                                                           | **Yes**                                           | Vercel project → Settings → General (Project ID)                                        |
-| `SUPABASE_ACCESS_TOKEN`           | CI    | —     | Supabase personal access token | same or a separate token             | **Secret**              | `supabase link`, `supabase db push`                                                    | **Yes**                                           | https://supabase.com/dashboard/account/tokens                                           |
-| `SUPABASE_PROJECT_ID`             | CI    | —     | **DEV** project ref            | **PROD** project ref                 | **Secret** (identifier) | `supabase link --project-ref`                                                          | **Yes**                                           | Dashboard URL `…/project/<ref>` or Settings → General                                   |
-| `SUPABASE_DB_PASSWORD`            | CI    | —     | **DEV** database password      | **PROD** database password           | **Secret**              | `supabase link` / `db push`                                                            | **Yes**                                           | Set when creating the project (Settings → Database to reset)                            |
-| `VERCEL_AUTOMATION_BYPASS_SECRET` | CI    | —     | bypass secret                  | same value                           | **Secret**              | Smoke tests through Vercel Deployment Protection (`x-vercel-protection-bypass` header) | Only if Deployment Protection is on (recommended) | Vercel project → Settings → Deployment Protection → Protection Bypass for Automation    |
+| Variable                                                                           | Purpose                                                                                            | Set by                                       |
+| ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| `HOSTNAME` (`0.0.0.0`), `NODE_ENV` (`production`), `NEXT_TELEMETRY_DISABLED` (`1`) | Container runtime                                                                                  | Dockerfiles. Do not set `HOSTNAME` in Vercel |
+| `VERCEL_CLI_VERSION`, `VERCEL_TELEMETRY_DISABLED`                                  | Pinned Vercel CLI, no telemetry                                                                    | Deploy workflows                             |
+| `PLAYWRIGHT_BASE_URL`, `EXPECTED_GIT_SHA`, `EXPECTED_APP_ENV`                      | Smoke tests against the exact deployment                                                           | Deploy workflows                             |
+| Sentinel values for `SUPABASE_SECRET_KEY`, `DATABASE_URL`, `DIRECT_DATABASE_URL`   | Fake values proving no server secret reaches browser bundles                                       | `ci.yml`                                     |
+| `GITHUB_EVENT_PATH`, `GITHUB_SHA`, …                                               | GitHub-provided context (for example, the `Promotion source` check reads the pull request payload) | GitHub Actions                               |
 
-`SUPABASE_DB_URL` is **not used**: migrations run through `supabase link` plus `SUPABASE_DB_PASSWORD`.
+## Examples (Markdown only: never commit them as files)
 
-In any job that runs the _local_ Supabase stack, do not export `SUPABASE_PROJECT_ID`: the CLI also treats it as the local project id.
+### Local: `.env.local` (optional)
 
-## E. Deployment/CI switches: GitHub variables (not secret)
+The app runs locally with **no** environment file at all. Create `.env.local` only to override defaults or to use the local Supabase stack. The Supabase values are printed by `npx supabase status` once `npm run db:start` is running.
 
-| Name                        | Where                          | Value                                                              | Used by                                                | Required                     |
-| --------------------------- | ------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------ | ---------------------------- |
-| `STAGING_DEPLOY_ENABLED`    | Repository variable            | `true` once staging is configured                                  | `deploy-staging.yml` (deploy job is skipped otherwise) | Yes, to enable staging CD    |
-| `PRODUCTION_DEPLOY_ENABLED` | Repository variable            | `true` once production is configured                               | `deploy-production.yml`                                | Yes, to enable production CD |
-| `VERCEL_STAGING_TARGET`     | `staging` environment variable | empty (Preview) or `staging` (Vercel Custom Environment, Pro plan) | `deploy-staging.yml`                                   | No                           |
-| `STAGING_DOMAIN`            | `staging` environment variable | e.g. `staging.<domain>`                                            | `deploy-staging.yml` (`vercel alias set`)              | No                           |
+```dotenv
+NEXT_PUBLIC_APP_NAME=Teka Edu
+NEXT_PUBLIC_DEFAULT_LOCALE=fr
+NEXT_PUBLIC_DEFAULT_COUNTRY=CD
+NEXT_PUBLIC_APP_ENV=local
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_ENABLE_ENGLISH_SCAFFOLDING=true
+NEXT_PUBLIC_ENABLE_CLOUD_SYNC=false
+AI_ENABLED=false
 
-## F. Workflow-internal (set by the workflows, never configured)
+# Optional: local Supabase stack (leave all unset to run without Supabase)
+NEXT_PUBLIC_SUPABASE_URL=http://127.0.0.1:54321
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=<LOCAL_SUPABASE_PUBLISHABLE_KEY>
+SUPABASE_SECRET_KEY=<LOCAL_SUPABASE_SECRET_KEY>
+DATABASE_URL=<LOCAL_SUPABASE_DATABASE_URL>
+DIRECT_DATABASE_URL=<LOCAL_SUPABASE_DATABASE_URL>
+```
 
-| Name                                                                            | Purpose                                                                  |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| `VERCEL_CLI_VERSION`                                                            | Pinned Vercel CLI version in deploy workflows                            |
-| `VERCEL_TELEMETRY_DISABLED`                                                     | Disables Vercel CLI telemetry in CI                                      |
-| `PLAYWRIGHT_BASE_URL`                                                           | Target URL for deployment smoke tests                                    |
-| `EXPECTED_GIT_SHA`, `EXPECTED_APP_ENV`                                          | Smoke tests assert the deployed commit and environment via `/api/health` |
-| CI sentinels for `SUPABASE_SECRET_KEY` / `DATABASE_URL` / `DIRECT_DATABASE_URL` | Fake values used only to prove no server secret reaches browser bundles  |
+With `NEXT_PUBLIC_APP_ENV=local`, the app accepts only local Supabase and database hosts. It never connects to a hosted project from local.
+
+### Staging: Vercel Preview (or `staging`) scope
+
+```dotenv
+NEXT_PUBLIC_APP_NAME=Teka Edu
+NEXT_PUBLIC_DEFAULT_LOCALE=fr
+NEXT_PUBLIC_DEFAULT_COUNTRY=CD
+NEXT_PUBLIC_APP_ENV=staging
+NEXT_PUBLIC_APP_URL=<STAGING_URL>
+NEXT_PUBLIC_ENABLE_ENGLISH_SCAFFOLDING=true
+NEXT_PUBLIC_ENABLE_CLOUD_SYNC=false
+AI_ENABLED=false
+PORT=3000
+NEXT_PUBLIC_SUPABASE_URL=https://<DEV_PROJECT_REF>.supabase.co
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=<DEV_SUPABASE_PUBLISHABLE_KEY>
+SUPABASE_SECRET_KEY=<DEV_SUPABASE_SECRET_KEY>
+DATABASE_URL=<DEV_SUPABASE_POOLER_DATABASE_URL>
+DIRECT_DATABASE_URL=<DEV_SUPABASE_DIRECT_DATABASE_URL>
+```
+
+### Production: Vercel Production scope
+
+This is the same list as staging with `NEXT_PUBLIC_APP_ENV=production`, `NEXT_PUBLIC_APP_URL=<PRODUCTION_DOMAIN>`, and every Supabase value taken from **`teka-edu-prod`**: `<PROD_PROJECT_REF>`, `<PROD_SUPABASE_PUBLISHABLE_KEY>`, `<PROD_SUPABASE_SECRET_KEY>`, `<PROD_SUPABASE_POOLER_DATABASE_URL>`, `<PROD_SUPABASE_DIRECT_DATABASE_URL>`.
+
+### GitHub Environment secrets (`staging` and `production`, same names, different values)
+
+```text
+VERCEL_TOKEN=<VERCEL_TOKEN>
+VERCEL_ORG_ID=<VERCEL_ORG_ID>
+VERCEL_PROJECT_ID=<VERCEL_PROJECT_ID>
+VERCEL_AUTOMATION_BYPASS_SECRET=<VERCEL_AUTOMATION_BYPASS_SECRET>
+SUPABASE_ACCESS_TOKEN=<SUPABASE_ACCESS_TOKEN>
+SUPABASE_PROJECT_ID=<DEV_OR_PROD_PROJECT_REF>
+SUPABASE_DB_PASSWORD=<DEV_OR_PROD_DB_PASSWORD>
+```
+
+## Validation rules (enforced by `lib/env/schema.ts`)
+
+- **Context-aware requirements:**
+  - Without cloud sync, no Supabase value is required in any environment.
+  - With `NEXT_PUBLIC_ENABLE_CLOUD_SYNC=true`, the Supabase URL and publishable key are required.
+  - Setting one of those two without the other is refused.
+- **Key checks:**
+  - The publishable key must start with `sb_publishable_`.
+  - A value starting with `sb_secret_` in a `NEXT_PUBLIC_` variable is refused with a "rotate it" error.
+  - The secret key must start with `sb_secret_`.
+- **Environment isolation:**
+  - `local` accepts only local hosts (`127.0.0.1`, `localhost`, `[::1]`, `host.docker.internal`).
+  - `staging` and `production` require https and refuse local hosts.
+  - Once the project refs are recorded in `lib/env/supabase-projects.ts`, a deployment that points at the other environment's project is refused.
+- **Other rules:**
+  - Database URLs must be `postgres://` or `postgresql://` URLs. Percent-encode special characters in the password.
+  - `AI_ENABLED=true` is refused.
+  - Empty values count as unset.
+  - Error messages name the variable and never include its value.
 
 ## DEV/PROD separation (strict)
 

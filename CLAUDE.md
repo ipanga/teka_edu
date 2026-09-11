@@ -103,6 +103,8 @@ Details are in `docs/`. Decisions are ADR-012 to ADR-021.
   - Vercel Git auto-deploy is off.
   - Deploy credentials live only in GitHub Environment secrets.
 - **Secrets:** never `NEXT_PUBLIC_`, never committed, never printed.
+- **No `.env*` file is ever tracked by Git, not even templates (ADR-023).** Environment variables are documented in `docs/ENVIRONMENT_VARIABLES.md`. Real values live only in local ignored files (`.env.local`) or in secure stores (GitHub Environment secrets, Vercel, Supabase).
+- **Production promotion:** only `develop` or `hotfix/<name>` from this repository (never a fork) may be merged into `main` (the `Promotion source` check).
 
 ## Commands
 
@@ -172,7 +174,7 @@ feature/*  -> develop  -> main
 2. Prefer simple architecture over early abstraction.
 3. Keep dependencies few. Use current stable versions and check them with the package registry at install time.
 4. Do not use `any` unless there is a written justification. Do not suppress TypeScript errors.
-5. Never commit secrets. Environment variables hold configuration only, never curriculum.
+5. Never commit secrets, and never create a tracked `.env*` file. Environment variables hold configuration only, never curriculum.
 6. Never claim implementation status that is not true.
 7. Add automated tests for domain logic, especially calendar, curriculum, content validation and review scheduling (required tests: Plan §41).
 8. Keep educational content out of UI components.
