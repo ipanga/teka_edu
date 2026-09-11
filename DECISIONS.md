@@ -35,6 +35,7 @@ Short architecture/product decision records (ADRs). They cover decisions future 
 | 024 | Supabase projects in Paris (eu-west-3); credentials in Keychain and GitHub environments | Accepted               |
 | 025 | Runtime configuration for container deployments                                         | Accepted               |
 | 026 | Vercel project configuration: Hobby, Preview as staging, no Git connection              | Accepted               |
+| 027 | Free tiers only during the development phase ($0/month)                                 | Accepted               |
 
 ---
 
@@ -295,6 +296,8 @@ When documents disagree about intended behavior, the order is plan → decisions
 
 **Consequences:** Connecting staging or local to PROD is a high-severity configuration defect. The guard turns the most likely mistakes into build or startup failures.
 
+**Amended 2026-09-11 (free-tier review):** the guard is now an **allowlist**. Once an environment's project ref is known, its Supabase URL and database URLs must contain exactly that ref. A third, unrelated project is refused, not only the other environment's project.
+
 ---
 
 ## ADR-016 — GitHub Actions is the authoritative CI/CD orchestrator
@@ -545,3 +548,36 @@ When documents disagree about intended behavior, the order is plan → decisions
 - A public production launch needs a plan decision: Hobby terms, plus the fact that the production domain cannot be protected on Hobby.
 - Moving to Pro would allow a named `staging` Custom Environment (`VERCEL_STAGING_TARGET=staging`) and rollback to any earlier production deployment.
 - The project's first (failed) production deployment is kept deliberately (ADR-013 amendment).
+
+---
+
+## ADR-027 — Free tiers only during the development phase ($0/month)
+
+**Status:** Accepted · **Date:** 2026-09-11 · **Owner decision** · **Resolves:** PD-010 for the current phase
+
+**Context:** Staging is verified and the next phase is application development. The owner requires zero platform cost until production readiness is explicitly approved.
+
+**Decision:**
+
+- **Plans:**
+  - Vercel stays on **Hobby**.
+  - Supabase `teka-edu-dev` and `teka-edu-prod` stay on **Free**.
+- **Nothing paid:**
+  - No upgrade, add-on (including the Supabase IPv4 add-on), billing information or paid feature is enabled.
+  - The default answer to any paid proposal in this phase is **no**.
+  - Where a requirement cannot be met for free, it is documented and classified in `docs/FREE_TIER.md` (OK / Monitor / Blocker before public production), and a free workaround is preferred.
+- **Production stays disabled.** No production deployment, token, domain or DNS change is made in this phase.
+- **No real personal data of children or parents in the cloud.** DEV uses synthetic data, and PROD stays essentially empty.
+- **Local Supabase is preferred** for routine development, so cloud DEV resources are not consumed unnecessarily.
+
+**Consequences:**
+
+- The verified architecture (GitHub Actions → Vercel container → Next.js; Supabase via the pooler) is kept, because it fits the free tiers.
+- Known limits to design around:
+  - 50 container images per registry repository (needs periodic, owner-approved pruning)
+  - the 4.5 MB response limit
+  - Supabase pausing after about 7 days of low activity
+  - no Supabase backups (a zero-cost `supabase db dump` design exists and must be implemented before real PROD data)
+  - built-in auth email limits
+  - Hobby's non-commercial terms
+- The last three are **blockers before public production**, not before development.

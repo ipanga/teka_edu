@@ -96,10 +96,18 @@ function checkEnvironmentIsolation(
     });
   }
   const owner = knownProjectEnvironmentIn(url, refs);
+  const expectedRef = refs[appEnv];
   if (owner !== undefined && owner !== appEnv) {
     issues.push({
       path: name,
       message: `points at the ${owner} Supabase project but NEXT_PUBLIC_APP_ENV=${appEnv}`,
+    });
+  } else if (expectedRef !== null && !url.includes(expectedRef)) {
+    // Allowlist, not just denylist: once an environment's project is known, nothing else
+    // (for example a third, unrelated project) is accepted.
+    issues.push({
+      path: name,
+      message: `must use the ${appEnv} Supabase project (${expectedRef})`,
     });
   }
 }

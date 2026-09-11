@@ -10,6 +10,7 @@ This guide takes the project owner step by step through configuring every enviro
 - Never paste a real key, token or password into a file in this repository, into an issue, or into chat. Values go only into Vercel, GitHub secrets or your password manager.
 - Keep DEV and PROD values separate. A staging or local setup that reaches the PROD database is a high-severity defect.
 - Never change the PROD database schema from the Supabase dashboard. Schema changes are migrations only (ADR-017).
+- **Free tiers only** in the current phase (ADR-027). Never upgrade, buy add-ons or enter billing details. See [FREE_TIER.md](FREE_TIER.md).
 
 ---
 
@@ -226,10 +227,10 @@ Until these are set, pushes to `develop` / `main` still run the full CI, but the
 
 Supabase (section 2) and Vercel staging (sections 6, 7 and 10) are complete. Claude Code has no access to these values and must never invent them.
 
-**Before production:**
+**Before production** (not now: production is disabled in the current phase):
 
 - [ ] `VERCEL_TOKEN` for the GitHub `production` environment (a project-scoped token, created in the dashboard)
 - [ ] Production domain, which is then set as `NEXT_PUBLIC_APP_URL` in the Vercel Production scope and added to the project domains
-- [ ] Vercel plan decision. Hobby is free but for non-commercial use only, and its production domain cannot be protected. Pro removes those limits.
+- [ ] Vercel plan decision at launch time only. The current phase stays on Hobby (ADR-027); Hobby is for non-commercial use only.
 - [ ] Supabase PROD backup strategy (upgrade or scheduled exports) before real child data (ISSUE-009)
 - [x] Regions: Supabase Paris `eu-west-3`, Vercel function region Paris `cdg1`

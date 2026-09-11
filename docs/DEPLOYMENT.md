@@ -4,7 +4,8 @@ This document covers how code moves from a feature branch to production, what ea
 
 - Configuration of the services: [ENVIRONMENT_SETUP.md](ENVIRONMENT_SETUP.md).
 - Variables: [ENVIRONMENT_VARIABLES.md](ENVIRONMENT_VARIABLES.md).
-- Decisions: ADR-012 to ADR-018 and ADR-022 in [`DECISIONS.md`](../DECISIONS.md).
+- Decisions: ADR-012 to ADR-018, ADR-022 and ADR-025 to ADR-027 in [`DECISIONS.md`](../DECISIONS.md).
+- Free-tier limits and cost: [FREE_TIER.md](FREE_TIER.md).
 
 ## Overview
 
@@ -201,7 +202,7 @@ Migrations are not assumed to be reversible:
 
 1. **Prefer a forward fix:** a new migration that repairs the problem, shipped through the normal pipeline.
 2. **Backward-compatible design** (expand/contract) keeps the previous application version working against the new schema, so an application rollback alone is usually enough.
-3. **Backups / point-in-time recovery** in Supabase are for data loss. Both projects are on the **Free plan (2026-09-11), which has no downloadable backups and no point-in-time recovery**. Until PROD is upgraded, the only recovery path is your own exports (`npx supabase db dump --project-ref <ref>` for schema, plus `--data-only` for data), kept outside the repository. Upgrade PROD before real user data arrives. Restoring is a manual, deliberate decision.
+3. **Backups / point-in-time recovery** in Supabase are for data loss. Both projects are on the **Free plan (2026-09-11), which has no downloadable backups and no point-in-time recovery**. The project stays on Free in this phase (ADR-027), so the only recovery path is your own exports. The zero-cost design, not yet implemented, is in [FREE_TIER.md](FREE_TIER.md#zero-cost-backup-design-for-teka-edu-prod-design-only-not-implemented). Until then, the path is exports (`npx supabase db dump --project-ref <ref>` for schema, plus `--data-only` for data), kept outside the repository. Upgrade PROD before real user data arrives. Restoring is a manual, deliberate decision.
 4. **Never** run destructive rollback SQL automatically, and never because an application deployment failed.
 
 ## Common deployment failures
