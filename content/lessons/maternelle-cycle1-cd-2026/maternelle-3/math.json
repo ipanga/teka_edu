@@ -1,0 +1,387 @@
+{
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "levelId": "maternelle-3",
+  "domainCode": "MATH",
+  "lessons": [
+    {
+      "id": "m3-math-01",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Je compte jusqu’à cinq",
+      "summary": "L’enfant dénombre une petite collection, puis constitue une collection d’un nombre donné.",
+      "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": "la-rentree",
+      "parentGuidance": "Utilisez de vrais objets : cailloux, capsules ou haricots. L’enfant doit déplacer chaque objet en le comptant : c’est le déplacement qui construit le comptage, pas la récitation.",
+      "activities": [
+        {
+          "id": "m3-math-01-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Je compte les cailloux",
+          "childInstruction": "Compte les cailloux, un par un, en les déplaçant. Dis combien il y en a en tout.",
+          "adultGuidance": "Posez trois cailloux, puis quatre, puis cinq. Après le comptage, demandez toujours : « Alors, combien y en a-t-il ? » pour que l’enfant redise le dernier nombre comme total.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "objectiveCodes": ["MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "combien",
+              "en": "how many"
+            },
+            {
+              "fr": "en tout",
+              "en": "altogether"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count the stones one by one, then say how many there are."
+            }
+          ],
+          "payload": {
+            "upTo": 5,
+            "objects": "cailloux"
+          }
+        },
+        {
+          "id": "m3-math-01-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Donne-moi exactement…",
+          "childInstruction": "Donne-moi exactement quatre cailloux, pas un de plus, pas un de moins.",
+          "adultGuidance": "Demandez 2, puis 5, puis 4 objets, dans le désordre. Si l’enfant se trompe, faites recompter ensemble plutôt que de corriger.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "objectiveCodes": ["MATH-S01-C01-O21"],
+          "materialCodes": ["petits-objets", "boite"],
+          "vocabulary": [
+            {
+              "fr": "exactement",
+              "en": "exactly"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Give me exactly four stones."
+            }
+          ],
+          "payload": {
+            "objects": "cailloux, capsules ou haricots"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review"
+    },
+    {
+      "id": "m3-math-02",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Plus que, moins que, autant que",
+      "summary": "L’enfant compare deux collections, d’abord à l’œil, puis en comptant.",
+      "objectiveCodes": ["MATH-S01-C01-O05"],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O20"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "la-rentree",
+      "parentGuidance": "Faites d’abord comparer sans compter, puis vérifier en comptant. Les mots « plus que », « moins que », « autant que » doivent être dits par l’enfant, pas seulement par vous.",
+      "activities": [
+        {
+          "id": "m3-math-02-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Qui en a le plus ?",
+          "childInstruction": "Regarde les deux tas. Dis lequel a le plus d’objets, sans compter.",
+          "adultGuidance": "Commencez par deux tas très différents (deux et six), puis rapprochez les quantités. Faites dire la phrase entière : « Il y a plus de cailloux ici. »",
+          "minutes": 5,
+          "mode": "off-screen",
+          "objectiveCodes": ["MATH-S01-C01-O05"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "plus que",
+              "en": "more than"
+            },
+            {
+              "fr": "moins que",
+              "en": "fewer than"
+            },
+            {
+              "fr": "autant que",
+              "en": "as many as"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Which pile has more? Do not count yet."
+            }
+          ],
+          "payload": {
+            "objects": "deux tas de cailloux"
+          }
+        },
+        {
+          "id": "m3-math-02-a2",
+          "position": 2,
+          "type": "counting",
+          "title": "Je vérifie en comptant",
+          "childInstruction": "Maintenant, compte chaque tas et dis si tu avais raison.",
+          "adultGuidance": "Faites compter les deux tas, puis comparer les deux nombres. Terminez par un cas où les deux tas ont la même quantité : « Il y en a autant. »",
+          "minutes": 4,
+          "mode": "off-screen",
+          "objectiveCodes": ["MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Now count each pile and check."
+            }
+          ],
+          "payload": {
+            "upTo": 6,
+            "objects": "cailloux"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review"
+    },
+    {
+      "id": "m3-math-03",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Les formes autour de moi",
+      "summary": "L’enfant nomme le carré, le rectangle, le triangle et le disque, puis les retrouve dans la maison.",
+      "objectiveCodes": ["MATH-S03-C01-O08", "MATH-S03-C01-O07"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "la-rentree",
+      "parentGuidance": "Employez les mots exacts : un carré a quatre côtés égaux ; on dit un disque, pas un rond. Faites suivre le contour de la forme avec le doigt.",
+      "activities": [
+        {
+          "id": "m3-math-03-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Je nomme les formes",
+          "childInstruction": "Regarde la forme, suis son contour avec ton doigt et dis son nom.",
+          "adultGuidance": "Nommez la forme, faites-la suivre du doigt, puis demandez à l’enfant de trouver le même objet dans la maison : une porte (rectangle), une assiette (disque).",
+          "minutes": 5,
+          "mode": "mixed",
+          "objectiveCodes": ["MATH-S03-C01-O08"],
+          "materialCodes": ["ecran", "objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "le carré",
+              "en": "the square"
+            },
+            {
+              "fr": "le rectangle",
+              "en": "the rectangle"
+            },
+            {
+              "fr": "le triangle",
+              "en": "the triangle"
+            },
+            {
+              "fr": "le disque",
+              "en": "the disc"
+            },
+            {
+              "fr": "le côté",
+              "en": "the side"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Look at the shape, trace it with your finger and say its name."
+            }
+          ],
+          "payload": {
+            "focus": "le carré, le rectangle, le triangle et le disque"
+          }
+        },
+        {
+          "id": "m3-math-03-a2",
+          "position": 2,
+          "type": "sorting",
+          "title": "Je classe les formes",
+          "childInstruction": "Range ensemble tous les objets qui ont la même forme.",
+          "adultGuidance": "Réunissez des objets de la maison de formes différentes. Demandez pourquoi deux objets vont ensemble : c’est la forme qui compte, pas la couleur ni la taille.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "objectiveCodes": ["MATH-S03-C01-O07"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put together the objects that have the same shape."
+            }
+          ],
+          "payload": {
+            "categories": ["Carrés", "Rectangles", "Triangles", "Disques"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review"
+    },
+    {
+      "id": "m3-math-04",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Trois et deux font cinq",
+      "summary": "L’enfant compose et décompose les nombres jusqu’à cinq, puis dit ce qu’il a fait.",
+      "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O23"],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O20"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "la-rentree",
+      "parentGuidance": "Cette leçon reprend le comptage du premier jour et va plus loin : l’enfant doit dire à voix haute ce qu’il fait, par exemple « trois et deux, cela fait cinq ».",
+      "activities": [
+        {
+          "id": "m3-math-04-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Je cache et je devine",
+          "childInstruction": "Il y a cinq cailloux. J’en cache quelques-uns sous la boîte : devine combien sont cachés.",
+          "adultGuidance": "Travaillez d’abord avec quatre objets, puis cinq. Après chaque essai, montrez les objets cachés et verbalisez : « Deux et trois, cela fait cinq. »",
+          "minutes": 6,
+          "mode": "off-screen",
+          "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O23", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets", "boite"],
+          "vocabulary": [
+            {
+              "fr": "cacher",
+              "en": "to hide"
+            },
+            {
+              "fr": "cela fait",
+              "en": "that makes"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Some stones are hidden. Guess how many are hidden."
+            }
+          ],
+          "payload": {
+            "objects": "cinq cailloux et une boîte"
+          }
+        },
+        {
+          "id": "m3-math-04-a2",
+          "position": 2,
+          "type": "counting",
+          "title": "Les doigts, pour montrer cinq",
+          "childInstruction": "Montre cinq avec tes doigts, de deux façons différentes.",
+          "adultGuidance": "Une main entière, puis trois doigts d’une main et deux de l’autre. Faites dire les deux décompositions à voix haute.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "objectiveCodes": ["MATH-S01-C01-O22"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Show five with your fingers in two different ways."
+            }
+          ],
+          "payload": {
+            "upTo": 5,
+            "objects": "doigts"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review"
+    },
+    {
+      "id": "m3-math-05",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "La bande numérique jusqu’à dix",
+      "summary": "L’enfant récite la comptine numérique et remet les nombres de un à dix dans l’ordre.",
+      "objectiveCodes": ["MATH-S01-C01-O26", "MATH-S01-C02-O06"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 3,
+      "themeId": "la-rentree",
+      "parentGuidance": "Écrivez les nombres de 1 à 10 sur des morceaux de papier avant de commencer. La bande construite peut rester affichée toute l’année.",
+      "activities": [
+        {
+          "id": "m3-math-05-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Je récite la comptine des nombres",
+          "childInstruction": "Compte à voix haute de un jusqu’à dix, puis continue le plus loin que tu peux.",
+          "adultGuidance": "Comptez ensemble une fois, puis laissez l’enfant seul. Reprenez au nombre où il s’arrête plutôt que de recommencer depuis un.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "objectiveCodes": ["MATH-S01-C01-O26"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count out loud from one to ten, then as far as you can."
+            }
+          ],
+          "payload": {
+            "upTo": 10,
+            "objects": "la comptine numérique"
+          }
+        },
+        {
+          "id": "m3-math-05-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Je range les nombres dans l’ordre",
+          "childInstruction": "Remets les nombres de un à dix dans l’ordre, du plus petit au plus grand.",
+          "adultGuidance": "Mélangez les papiers. Quand la bande est faite, cachez un nombre et demandez lequel manque.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "objectiveCodes": ["MATH-S01-C02-O06"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [
+            {
+              "fr": "avant",
+              "en": "before"
+            },
+            {
+              "fr": "après",
+              "en": "after"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put the numbers from one to ten in order."
+            }
+          ],
+          "payload": {
+            "objects": "dix papiers portant les nombres de 1 à 10"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review"
+    }
+  ]
+}

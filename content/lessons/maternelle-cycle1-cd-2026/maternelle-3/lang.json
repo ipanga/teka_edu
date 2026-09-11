@@ -1,0 +1,533 @@
+{
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "levelId": "maternelle-3",
+  "domainCode": "LANG",
+  "lessons": [
+    {
+      "id": "m3-lang-01",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Bonjour ! Je me présente",
+      "summary": "L’enfant salue, dit son nom et son âge, et parle des personnes de sa maison.",
+      "objectiveCodes": ["LANG-S01-C04-O11", "LANG-S01-C02-O01", "LANG-S01-C01-O03"],
+      "supportingObjectiveCodes": ["LANG-S02-C03-O15"],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": "la-rentree",
+      "parentGuidance": "Installez-vous face à l’enfant, au calme. Parlez lentement, en phrases courtes et complètes. Montrez d’abord vous-même : « Bonjour, je m’appelle… » Laissez à l’enfant le temps de répondre ; reformulez sa phrase correctement au lieu de la corriger.",
+      "activities": [
+        {
+          "id": "m3-lang-01-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Je dis bonjour et je me présente",
+          "childInstruction": "Dis bonjour, puis présente-toi : « Bonjour, je m’appelle… J’ai … ans. »",
+          "adultGuidance": "Commencez par vous présenter vous-même. Posez ensuite les questions une par une, en laissant un vrai temps de réponse. Si l’enfant répond par un seul mot, redites sa réponse en phrase complète : « Oui, tu t’appelles Kanza. »",
+          "minutes": 7,
+          "mode": "off-screen",
+          "objectiveCodes": ["LANG-S01-C04-O11", "LANG-S01-C02-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "bonjour",
+              "en": "hello"
+            },
+            {
+              "fr": "je m’appelle",
+              "en": "my name is"
+            },
+            {
+              "fr": "au revoir",
+              "en": "goodbye"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me your name and your age."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Bonjour ! Comment t’appelles-tu ?",
+              "Quel âge as-tu ?",
+              "Qui habite avec toi à la maison ?"
+            ]
+          }
+        },
+        {
+          "id": "m3-lang-01-a2",
+          "position": 2,
+          "type": "vocabulary",
+          "title": "Les personnes de ma maison",
+          "childInstruction": "Nomme les personnes de ta maison : la maman, le papa, le frère, la sœur, la grand-mère.",
+          "adultGuidance": "Nommez chaque personne avec l’article : « la maman », « le frère ». Faites répéter le mot entier, puis employez-le dans une phrase : « Ton frère s’appelle comment ? »",
+          "minutes": 5,
+          "mode": "mixed",
+          "objectiveCodes": ["LANG-S01-C01-O03"],
+          "materialCodes": ["ecran"],
+          "vocabulary": [
+            {
+              "fr": "la maman",
+              "en": "the mother"
+            },
+            {
+              "fr": "le papa",
+              "en": "the father"
+            },
+            {
+              "fr": "le frère",
+              "en": "the brother"
+            },
+            {
+              "fr": "la sœur",
+              "en": "the sister"
+            },
+            {
+              "fr": "la grand-mère",
+              "en": "the grandmother"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Name the people who live in your house."
+            }
+          ],
+          "payload": {
+            "focus": "les personnes de la famille"
+          }
+        },
+        {
+          "id": "m3-lang-01-a3",
+          "position": 3,
+          "type": "read-aloud",
+          "title": "Un livre ou une histoire de la famille",
+          "childInstruction": "Écoute l’histoire jusqu’au bout. Aujourd’hui, il n’y a pas de question : on écoute pour le plaisir.",
+          "adultGuidance": "Lisez un livre, ou racontez une histoire que vous connaissez. Ne posez aucune question après : ce temps quotidien sert au plaisir de la lecture.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "objectiveCodes": ["LANG-S02-C03-O15"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story. There are no questions today."
+            }
+          ],
+          "payload": {
+            "suggestion": "un livre de la maison, ou une histoire connue de la famille"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review"
+    },
+    {
+      "id": "m3-lang-02",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Les mots de l’école",
+      "summary": "L’enfant nomme les objets de l’école, puis les range par catégories.",
+      "objectiveCodes": ["LANG-S01-C01-O02"],
+      "supportingObjectiveCodes": ["LANG-S01-C01-O03", "LANG-S02-C03-O15"],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": "la-rentree",
+      "parentGuidance": "Réunissez si possible les objets réels avant de commencer. Un mot n’est appris que s’il est entendu, redit et réutilisé : revenez sur ces mots pendant la journée.",
+      "activities": [
+        {
+          "id": "m3-lang-02-a1",
+          "position": 1,
+          "type": "vocabulary",
+          "title": "Je nomme les objets de l’école",
+          "childInstruction": "Montre chaque objet et dis son nom : le cahier, le crayon, le cartable, l’ardoise, la craie.",
+          "adultGuidance": "Montrez l’objet, nommez-le, puis demandez à l’enfant de le nommer à son tour. Ajoutez une phrase d’usage : « Le crayon sert à écrire. »",
+          "minutes": 6,
+          "mode": "mixed",
+          "objectiveCodes": ["LANG-S01-C01-O03"],
+          "materialCodes": ["objets-ecole", "ecran"],
+          "vocabulary": [
+            {
+              "fr": "le cahier",
+              "en": "the notebook"
+            },
+            {
+              "fr": "le crayon",
+              "en": "the pencil"
+            },
+            {
+              "fr": "le cartable",
+              "en": "the school bag"
+            },
+            {
+              "fr": "l’ardoise",
+              "en": "the slate"
+            },
+            {
+              "fr": "la craie",
+              "en": "the chalk"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Point to each object and say its name in French."
+            }
+          ],
+          "payload": {
+            "focus": "les objets de l’école"
+          }
+        },
+        {
+          "id": "m3-lang-02-a2",
+          "position": 2,
+          "type": "sorting",
+          "title": "Je range les objets",
+          "childInstruction": "Range les objets : ceux qui servent à écrire, ceux qui servent à porter, ceux qui servent à s’asseoir.",
+          "adultGuidance": "Demandez à l’enfant d’expliquer son choix : « Pourquoi as-tu mis le crayon ici ? » C’est la justification orale qui fait progresser, pas le rangement lui-même.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "objectiveCodes": ["LANG-S01-C01-O02"],
+          "materialCodes": ["objets-ecole"],
+          "vocabulary": [],
+          "scaffolds": [],
+          "payload": {
+            "categories": ["Pour écrire", "Pour porter", "Pour s’asseoir"]
+          }
+        },
+        {
+          "id": "m3-lang-02-a3",
+          "position": 3,
+          "type": "read-aloud",
+          "title": "Une histoire avant de ranger",
+          "childInstruction": "Installe-toi, écoute l’histoire et regarde les images.",
+          "adultGuidance": "Montrez la couverture et nommez le livre avant de commencer. Lisez sans interrompre, puis arrêtez-vous là : pas de question aujourd’hui.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "objectiveCodes": ["LANG-S02-C03-O15"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story. There are no questions today."
+            }
+          ],
+          "payload": {
+            "suggestion": "un livre illustré, ou une histoire racontée"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review"
+    },
+    {
+      "id": "m3-lang-03",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "J’écoute une histoire",
+      "summary": "L’enfant écoute une courte histoire, puis parle du personnage et de ce qu’il ressent.",
+      "objectiveCodes": ["LANG-S02-C03-O13", "LANG-S02-C03-O14"],
+      "supportingObjectiveCodes": ["LANG-S02-C03-O15"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "la-rentree",
+      "parentGuidance": "Installez le calme avant de raconter. Racontez lentement, avec des silences. Ne posez les questions qu’après la fin de l’histoire.",
+      "activities": [
+        {
+          "id": "m3-lang-03-a1",
+          "position": 1,
+          "type": "listening-story",
+          "title": "L’histoire de Kumu, le petit poussin",
+          "childInstruction": "Écoute bien l’histoire, sans parler. Après, tu me raconteras ce qui arrive à Kumu.",
+          "adultGuidance": "Racontez cette histoire courte : « Kumu est un petit poussin. Ce matin, il suit sa maman dans la cour. Il voit un papillon et court derrière lui. Quand il se retourne, sa maman n’est plus là. Kumu a peur. Il appelle : piou ! piou ! Sa maman l’entend et revient. Kumu est content. » Vous pouvez raconter une histoire que vous connaissez à la place.",
+          "minutes": 8,
+          "mode": "mixed",
+          "objectiveCodes": ["LANG-S02-C03-O13"],
+          "materialCodes": ["ecran"],
+          "vocabulary": [
+            {
+              "fr": "le poussin",
+              "en": "the chick"
+            },
+            {
+              "fr": "la cour",
+              "en": "the yard"
+            },
+            {
+              "fr": "le papillon",
+              "en": "the butterfly"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story. Afterwards you will tell me what happens."
+            }
+          ],
+          "payload": {
+            "storyTitle": "Kumu, le petit poussin",
+            "questions": [
+              "Qui est Kumu ?",
+              "Pourquoi Kumu ne voit-il plus sa maman ?",
+              "Que fait Kumu pour appeler sa maman ?"
+            ]
+          }
+        },
+        {
+          "id": "m3-lang-03-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Comment se sent Kumu ?",
+          "childInstruction": "Dis comment se sent Kumu au début, au milieu et à la fin de l’histoire.",
+          "adultGuidance": "Aidez l’enfant à nommer l’émotion : « Il a peur », « Il est content ». Demandez toujours « Comment le sais-tu ? » pour qu’il revienne à l’histoire.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "objectiveCodes": ["LANG-S02-C03-O14"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "avoir peur",
+              "en": "to be afraid"
+            },
+            {
+              "fr": "être content",
+              "en": "to be happy"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "How does Kumu feel at the beginning and at the end?"
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Comment se sent Kumu quand sa maman n’est plus là ?",
+              "Comment se sent-il à la fin ?",
+              "Et toi, quand as-tu déjà eu peur ?"
+            ]
+          }
+        },
+        {
+          "id": "m3-lang-03-a3",
+          "position": 3,
+          "type": "read-aloud",
+          "title": "Encore une histoire, pour le plaisir",
+          "childInstruction": "Écoute encore une histoire, juste pour le plaisir.",
+          "adultGuidance": "Après le travail de compréhension, ce second temps de lecture se fait sans questionnement. L’enfant peut choisir l’histoire.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "objectiveCodes": ["LANG-S02-C03-O15"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story. There are no questions today."
+            }
+          ],
+          "payload": {
+            "suggestion": "une histoire choisie par l’enfant"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review"
+    },
+    {
+      "id": "m3-lang-04",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Les syllabes et les rimes",
+      "summary": "L’enfant frappe les syllabes des mots, enlève une syllabe, puis cherche des rimes.",
+      "objectiveCodes": ["LANG-S02-C01-O03", "LANG-S02-C01-O14", "LANG-S02-C01-O15"],
+      "supportingObjectiveCodes": ["LANG-S02-C03-O12"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "la-rentree",
+      "parentGuidance": "Ces jeux se font uniquement à l’oreille : n’écrivez rien. Frappez d’abord vous-même, l’enfant répète. Allez lentement, un mot à la fois.",
+      "activities": [
+        {
+          "id": "m3-lang-04-a1",
+          "position": 1,
+          "type": "phonology",
+          "title": "Je frappe les syllabes",
+          "childInstruction": "Frappe dans tes mains les syllabes du mot, puis dis combien tu en as frappé.",
+          "adultGuidance": "Dites le mot en entier, puis frappez-le syllabe par syllabe : ca-hier. L’enfant frappe à son tour. Terminez par son prénom.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "objectiveCodes": ["LANG-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Clap the parts of the word, then say how many claps."
+            }
+          ],
+          "payload": {
+            "words": ["cahier", "banane", "cartable", "maman", "crayon"]
+          }
+        },
+        {
+          "id": "m3-lang-04-a2",
+          "position": 2,
+          "type": "phonology",
+          "title": "J’enlève une syllabe, je cherche une rime",
+          "childInstruction": "Dis le mot sans sa première syllabe. Ensuite, trouve un mot qui finit comme « banane ».",
+          "adultGuidance": "Donnez un exemple avant : « banane sans ba, cela donne nane ». Ce jeu est difficile : acceptez les essais et recommencez avec un mot plus court.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "objectiveCodes": ["LANG-S02-C01-O14", "LANG-S02-C01-O15"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the word without its first part, then find a word that ends the same."
+            }
+          ],
+          "payload": {
+            "words": ["banane", "chapeau", "tomate", "bateau"]
+          }
+        },
+        {
+          "id": "m3-lang-04-a3",
+          "position": 3,
+          "type": "read-aloud",
+          "title": "Une histoire avec des animaux",
+          "childInstruction": "Écoute l’histoire et repère bien le personnage le plus rusé.",
+          "adultGuidance": "Choisissez une histoire avec des animaux : le lièvre, la tortue, le lion. Ces personnages reviennent souvent dans les contes ; l’enfant apprend à les reconnaître d’une histoire à l’autre.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "objectiveCodes": ["LANG-S02-C03-O12"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story. There are no questions today."
+            }
+          ],
+          "payload": {
+            "suggestion": "un conte d’animaux connu de la famille"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review"
+    },
+    {
+      "id": "m3-lang-05",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Je raconte ma journée",
+      "summary": "L’enfant raconte ce qu’il a fait et ce qu’il fera, puis décrit ce qu’un autre a fait.",
+      "objectiveCodes": ["LANG-S01-C02-O02", "LANG-S01-C04-O09"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O11", "LANG-S02-C03-O15"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "la-rentree",
+      "parentGuidance": "Cette leçon reprend les échanges du premier jour, avec des phrases plus longues. Écoutez sans interrompre, puis redites la phrase de l’enfant au bon temps : « Ce matin, tu as mangé… »",
+      "activities": [
+        {
+          "id": "m3-lang-05-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Ce matin, tout à l’heure, demain",
+          "childInstruction": "Raconte ce que tu as fait ce matin, puis ce que tu feras demain.",
+          "adultGuidance": "Aidez avec des mots de temps : d’abord, après, ensuite, demain. Ne corrigez pas les erreurs de temps : redites la phrase correctement et continuez.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "objectiveCodes": ["LANG-S01-C04-O11", "LANG-S01-C02-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "d’abord",
+              "en": "first"
+            },
+            {
+              "fr": "ensuite",
+              "en": "then"
+            },
+            {
+              "fr": "demain",
+              "en": "tomorrow"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Tell me what you did this morning, then what you will do tomorrow."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Qu’as-tu fait ce matin, avant la leçon ?",
+              "Et après, qu’est-ce que tu as fait ?",
+              "Que feras-tu demain ?"
+            ]
+          }
+        },
+        {
+          "id": "m3-lang-05-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Je raconte ce que tu as fait",
+          "childInstruction": "Regarde bien ce que je fais, puis raconte-le avec tes mots.",
+          "adultGuidance": "Faites trois actions simples à la suite (prendre un verre, le poser, ouvrir la porte). L’enfant les raconte dans l’ordre. Recommencez en changeant l’ordre.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "objectiveCodes": ["LANG-S01-C04-O09"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Watch what I do, then tell it back in French."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Qu’est-ce que j’ai fait en premier ?",
+              "Et ensuite ?",
+              "Qu’est-ce que j’ai fait à la fin ?"
+            ]
+          }
+        },
+        {
+          "id": "m3-lang-05-a3",
+          "position": 3,
+          "type": "read-aloud",
+          "title": "L’histoire de la semaine",
+          "childInstruction": "Choisis l’histoire que tu as préférée cette semaine et écoute-la encore.",
+          "adultGuidance": "Relire une histoire déjà entendue est utile : la répétition dans des conditions variées stabilise le vocabulaire et la syntaxe.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "objectiveCodes": ["LANG-S02-C03-O15"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story. There are no questions today."
+            }
+          ],
+          "payload": {
+            "suggestion": "l’histoire préférée de l’enfant, relue"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review"
+    }
+  ]
+}

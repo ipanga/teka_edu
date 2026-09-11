@@ -15,6 +15,9 @@ Read this file first in every session. It holds **stable context and working rul
 | `docs/FREE_TIER.md`             | Free-tier limits (classified), cost, safety rules, zero-cost backup design |
 | `docs/SCHOOL_CALENDAR.md`       | Calendar model, DRC holidays and sources, generator rules, 2026–2027 facts |
 | `docs/EDUCATIONAL_MODEL.md`     | Education hierarchy, curriculum versions/domains, reference-data mirror    |
+| `docs/CURRICULUM.md`            | Official objectives: sources, hierarchy, age bands, provenance, import     |
+| `docs/DAILY_PROGRAMME.md`       | Daily programme generator, scheduling rules and where each one comes from  |
+| `docs/CONTENT_AUTHORING.md`     | How to write lessons and activities, and the rules CI enforces             |
 
 Do not copy content between these files. Link to it instead.
 
@@ -50,28 +53,30 @@ Only preschool is in scope now, but the domain model must not block later levels
 
 Keep this table in sync with the repository. Mark a row **Implemented** only when it exists in code or configuration.
 
-| Area                   | Choice                                                                           | Status                                       |
-| ---------------------- | -------------------------------------------------------------------------------- | -------------------------------------------- |
-| App framework          | Next.js 16 (App Router, standalone output) + React 19 + TypeScript 5.9           | Implemented (placeholder French home page)   |
-| Styling / UI           | Tailwind CSS 4; shadcn/ui where useful                                           | Tailwind implemented; shadcn/ui planned      |
-| Animation              | Framer Motion, only where it helps learning or UX                                | Planned                                      |
-| Env configuration      | `lib/env/` (Zod, public/server split, environment guard; ADR-021)                | Implemented                                  |
-| Health endpoint        | `/api/health` (status, environment, version, commit)                             | Implemented                                  |
-| Content validation     | `scripts/validate-content.ts`: registration, Zod schemas, cross-file rules       | Implemented (reference data)                 |
-| Reference data         | `content/` JSON → `lib/content/reference-data.ts` (bundled, offline; ADR-028)    | Implemented                                  |
-| Calendar engine        | `domain/calendar/` (civil dates, holidays, instructional-day generator; ADR-029) | Implemented                                  |
-| Curriculum model       | `domain/curriculum/` (stages, levels, curriculum versions, domains; ADR-030)     | Implemented (no objectives/lessons yet)      |
-| Local persistence      | IndexedDB behind repository interfaces                                           | Planned                                      |
-| Offline                | PWA: manifest + service worker (library not chosen yet)                          | Planned                                      |
-| Speech                 | `SpeechProvider` interface; `BrowserSpeechProvider` (Web Speech API, `fr-FR`)    | Planned                                      |
-| i18n                   | `fr` default, optional `en`                                                      | Planned                                      |
-| Unit / component tests | Vitest 5 + React Testing Library + jsdom                                         | Implemented                                  |
-| E2E / smoke tests      | Playwright (Chromium)                                                            | Implemented                                  |
-| Lint / format          | ESLint 9 (`eslint-config-next`) + Prettier                                       | Implemented                                  |
-| Container              | `Dockerfile` (portable) + `Dockerfile.vercel` (Vercel container)                 | Implemented (built and smoke-tested locally) |
-| Database               | Supabase (PostgreSQL 17): 10 reference tables mirrored from `content/` (ADR-028) | Implemented (local + DEV); PROD untouched    |
-| CI/CD                  | GitHub Actions: `ci.yml`, `deploy-staging.yml`, `deploy-production.yml`          | Implemented; run status in PROJECT_STATUS.md |
-| Hosting                | Vercel container deployment, portable to any OCI host                            | Staging live; production deferred (ADR-027)  |
+| Area                   | Choice                                                                            | Status                                       |
+| ---------------------- | --------------------------------------------------------------------------------- | -------------------------------------------- |
+| App framework          | Next.js 16 (App Router, standalone output) + React 19 + TypeScript 5.9            | Implemented (placeholder French home page)   |
+| Styling / UI           | Tailwind CSS 4; shadcn/ui where useful                                            | Tailwind implemented; shadcn/ui planned      |
+| Animation              | Framer Motion, only where it helps learning or UX                                 | Planned                                      |
+| Env configuration      | `lib/env/` (Zod, public/server split, environment guard; ADR-021)                 | Implemented                                  |
+| Health endpoint        | `/api/health` (status, environment, version, commit)                              | Implemented                                  |
+| Content validation     | `scripts/validate-content.ts`: registration, Zod schemas, cross-file rules        | Implemented (reference data)                 |
+| Reference data         | `content/` JSON → `lib/content/reference-data.ts` (bundled, offline; ADR-028)     | Implemented                                  |
+| Calendar engine        | `domain/calendar/` (civil dates, holidays, instructional-day generator; ADR-029)  | Implemented                                  |
+| Curriculum model       | `domain/curriculum/` (stages, levels, versions, domains, objectives; ADR-030/031) | Implemented (398 official objectives)        |
+| Lessons / activities   | `domain/lessons/` (lesson + typed activities, English scaffolds; ADR-032)         | Implemented (20 pilot lessons, 3ème mat.)    |
+| Daily programme        | `domain/programme/` (authored rhythm + tracks, pure generator; ADR-033)           | Implemented (pilot week; report + API)       |
+| Local persistence      | IndexedDB behind repository interfaces                                            | Planned                                      |
+| Offline                | PWA: manifest + service worker (library not chosen yet)                           | Planned                                      |
+| Speech                 | `SpeechProvider` interface; `BrowserSpeechProvider` (Web Speech API, `fr-FR`)     | Planned                                      |
+| i18n                   | `fr` default, optional `en`                                                       | Planned                                      |
+| Unit / component tests | Vitest 5 + React Testing Library + jsdom                                          | Implemented                                  |
+| E2E / smoke tests      | Playwright (Chromium)                                                             | Implemented                                  |
+| Lint / format          | ESLint 9 (`eslint-config-next`) + Prettier                                        | Implemented                                  |
+| Container              | `Dockerfile` (portable) + `Dockerfile.vercel` (Vercel container)                  | Implemented (built and smoke-tested locally) |
+| Database               | Supabase (PostgreSQL 17): 28 reference tables mirrored from `content/` (ADR-028)  | Implemented (local + DEV); PROD untouched    |
+| CI/CD                  | GitHub Actions: `ci.yml`, `deploy-staging.yml`, `deploy-production.yml`           | Implemented; run status in PROJECT_STATUS.md |
+| Hosting                | Vercel container deployment, portable to any OCI host                             | Staging live; production deferred (ADR-027)  |
 
 - **Deprecated / replaced:** plain Vercel/Next.js builds, replaced by `Dockerfile.vercel` container deployment (ADR-013).
 - Real statuses per service live in `PROJECT_STATUS.md` (Infrastructure Status). Open questions are under "Important Pending Decisions" there.
@@ -83,7 +88,7 @@ This is the target layout (Plan §17). **Exists now:** `app/` (layout, placehold
 ```text
 app/          Next.js routes: (child)/ child area, parent/ parent area, api/ (health)
 components/   UI: child/, parent/, activities/ (activity renderers), ui/
-content/      Educational data: education/, calendars/, curriculum/ (later: school-years/, vocabulary/, stories/, songs/, games/)
+content/      Educational data: education/, calendars/, curriculum/ (+ objectives/), lessons/, programmes/, materials.json
 domain/       Business logic without framework or storage code: calendar/, curriculum/, lessons/, progress/, review/
 lib/          Adapters and utilities: env/ (configuration), content/ loaders, storage/ (IndexedDB), speech/, pwa/, supabase/
 public/media/ Static educational media, referenced through a media registry
@@ -135,6 +140,7 @@ npm run content:validate | check:client-bundle        npm run docker:build | doc
 npm run db:start | db:stop | db:status | db:reset | db:test | db:types   (Supabase CLI; needs Docker)
 npm run db:reference [-- --new-migration <name>]   (regenerate the reference-data pgTAP test / data migration)
 npm run calendar:report [-- <YYYY-YYYY> --days]    (generated school calendar summary)
+npm run programme:report -- --level=maternelle-3 --day=1 [--to=5|--date=YYYY-MM-DD]  (daily plan)
 ```
 
 ## Development workflow
@@ -164,14 +170,18 @@ feature/*  -> develop  -> main
 
 - **Primary reference:** the official French École Maternelle / Cycle 1 curriculum applicable in 2026–2027: the arrêté du 16 avril 2026 (BO n° 19 du 7 mai 2026), with the arrêté du 22 octobre 2024 (BO n° 41) for language and mathematics. Curriculum version `maternelle-cycle1-cd-2026` (`docs/EDUCATIONAL_MODEL.md`).
 - **Class mapping:** 1ère maternelle → Petite Section (PS), 2ème → Moyenne Section (MS), 3ème → Grande Section (GS).
-- The six learning domains (Plan §3.1, verified against the 2026 annex) have the codes `LANG`, `PHYS`, `ART`, `MATH`, `TIME-SPACE`, `WORLD`. Competencies get stable internal IDs (for example `MATH-NUM-01`, Plan §8.3).
+- The six learning domains (Plan §3.1, verified against the 2026 annex) have the codes `LANG`, `PHYS`, `ART`, `MATH`, `TIME-SPACE`, `WORLD`.
+- **398 official objectives and 529 success examples are imported verbatim** with their source and page (ADR-031). Never reword them, never normalise their punctuation, and never mark Teka Edu wording as official. Codes: `DOMAIN-Snn-Cnn-Onn` (`docs/CURRICULUM.md`).
+- Objectives are stated by **age band** (`before-4`, `from-4`, `from-5`); the level → band mapping is a Teka Edu decision. A lesson may use its band or an earlier one, never a later one.
 - Reference data is canonical in `content/`; after changing it, generate a data migration (`npm run db:reference -- --new-migration <name>`, ADR-028).
 - **Never invent curriculum references, competency wording or official sources.** If something is uncertain, mark it `needsVerification` (or leave a clear TODO) and list it in `PROJECT_STATUS.md`.
 
 ## Educational content rules
 
 - Content lives in `content/` as structured data (JSON/YAML, Markdown where appropriate), never in components.
-- Every lesson traces to one or more curriculum competency IDs.
+- Every lesson and every activity traces to at least one official objective code, and separates what it **teaches** from what it **reinvests** (`docs/CONTENT_AUTHORING.md`).
+- Lessons and activities are always `teka-edu-created`; the database refuses to store one as official text.
+- The daily programme is generated from an authored rhythm + tracks, keyed by **instructional-day number** (ADR-033). Scheduling rules are labelled OFFICIAL / OFFICIAL GUIDANCE / TEKA EDU in `docs/DAILY_PROGRAMME.md`.
 - The authoring pipeline is strictly ordered:
 
   ```text

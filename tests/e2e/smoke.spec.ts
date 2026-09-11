@@ -45,6 +45,34 @@ test("school calendar ships with the release and answers date questions", async 
   expect((await request.get("/api/calendar/not-a-date")).status()).toBe(400);
 });
 
+test("daily programme ships with the release and is deterministic", async ({ request }) => {
+  const first = await (await request.get("/api/programme/2026-2027/maternelle-3/1")).json();
+  expect(first).toMatchObject({
+    level: { id: "maternelle-3" },
+    curriculum: { id: "maternelle-cycle1-cd-2026" },
+    instructionalDay: 1,
+    status: "complete",
+  });
+  expect(first.sessions.map((s: { domainCode: string }) => s.domainCode)).toEqual([
+    "LANG",
+    "MATH",
+    "PHYS",
+    "WORLD",
+  ]);
+  expect(first.sessions[0].lesson.objectives[0].origin).toBe("official");
+
+  // The same request always returns the same plan.
+  const again = await (await request.get("/api/programme/2026-2027/maternelle-3/1")).json();
+  expect(again).toEqual(first);
+
+  // A holiday has no programme, and says why.
+  const holiday = await (
+    await request.get("/api/programme/2026-2027/maternelle-3/2027-05-17")
+  ).json();
+  expect(holiday.status).toBe("not-instructional");
+  expect(holiday.sessions).toEqual([]);
+});
+
 test("home page is served in French", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator("html")).toHaveAttribute("lang", "fr");

@@ -1,0 +1,182 @@
+{
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "levelId": "maternelle-3",
+  "domainCode": "WORLD",
+  "lessons": [
+    {
+      "id": "m3-world-01",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "Mon corps bouge",
+      "summary": "L’enfant nomme les parties du corps et quelques articulations, puis se dessine en mouvement.",
+      "objectiveCodes": ["WORLD-S01-C02-O08", "WORLD-S01-C02-O09"],
+      "supportingObjectiveCodes": ["WORLD-S01-C02-O04"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "la-rentree",
+      "parentGuidance": "Faites toucher et bouger chaque partie nommée : le mot se retient mieux quand le corps l’accompagne. Le coude, le genou et l’épaule sont des articulations : ce sont les endroits où le corps plie.",
+      "activities": [
+        {
+          "id": "m3-world-01-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Où est-ce que ça plie ?",
+          "childInstruction": "Touche ton coude, ton genou, ton épaule. Fais-les plier, puis dis leur nom.",
+          "adultGuidance": "Nommez d’abord, l’enfant touche. Puis inversez : l’enfant nomme, vous touchez. Insistez sur l’idée que le bras est fait de deux parties reliées par le coude.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "objectiveCodes": ["WORLD-S01-C02-O04", "WORLD-S01-C02-O08"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "le coude",
+              "en": "the elbow"
+            },
+            {
+              "fr": "le genou",
+              "en": "the knee"
+            },
+            {
+              "fr": "l’épaule",
+              "en": "the shoulder"
+            },
+            {
+              "fr": "plier",
+              "en": "to bend"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Touch your elbow, your knee, your shoulder, then name them in French."
+            }
+          ],
+          "payload": {
+            "focus": "les articulations : le coude, le genou, l’épaule"
+          }
+        },
+        {
+          "id": "m3-world-01-a2",
+          "position": 2,
+          "type": "drawing",
+          "title": "Je me dessine en train de courir",
+          "childInstruction": "Dessine-toi en train de courir. N’oublie pas les bras, les jambes et les endroits qui plient.",
+          "adultGuidance": "Laissez dessiner sans modèle. Ensuite, demandez de montrer sur le dessin le coude et le genou : c’est la représentation du corps articulé qui est visée, pas la beauté du dessin.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "objectiveCodes": ["WORLD-S01-C02-O09"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Draw yourself running."
+            }
+          ],
+          "payload": {
+            "subject": "moi en train de courir"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review"
+    },
+    {
+      "id": "m3-world-02",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "Les animaux autour de nous",
+      "summary": "L’enfant observe des animaux familiers et dit de quoi ils ont besoin pour vivre.",
+      "objectiveCodes": ["WORLD-S01-C01-O08", "WORLD-S01-C01-O10"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "la-rentree",
+      "parentGuidance": "Parlez d’animaux que l’enfant voit vraiment : la poule, la chèvre, le chien, le lézard. Une observation réelle vaut mieux qu’une image.",
+      "activities": [
+        {
+          "id": "m3-world-02-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Je regarde et je décris",
+          "childInstruction": "Regarde bien l’animal. Dis ce qu’il a : des pattes, des plumes, un bec, une queue.",
+          "adultGuidance": "Observez un animal du voisinage, ou parlez d’un animal bien connu de l’enfant. Faites compter les pattes : les nombres se travaillent aussi ici.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "objectiveCodes": ["WORLD-S01-C01-O08"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "la patte",
+              "en": "the leg (of an animal)"
+            },
+            {
+              "fr": "la plume",
+              "en": "the feather"
+            },
+            {
+              "fr": "le bec",
+              "en": "the beak"
+            },
+            {
+              "fr": "la queue",
+              "en": "the tail"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Look at the animal and say what it has."
+            }
+          ],
+          "payload": {
+            "focus": "la poule, la chèvre, le chien : pattes, plumes, bec, queue"
+          }
+        },
+        {
+          "id": "m3-world-02-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "De quoi a-t-il besoin pour vivre ?",
+          "childInstruction": "Dis ce qu’il faut à l’animal pour vivre : manger, boire, un endroit pour dormir.",
+          "adultGuidance": "Guidez vers les besoins essentiels : la nourriture, l’eau, un abri, être protégé. Comparez avec ce dont l’enfant a besoin lui-même.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "objectiveCodes": ["WORLD-S01-C01-O10"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "la nourriture",
+              "en": "food"
+            },
+            {
+              "fr": "l’eau",
+              "en": "water"
+            },
+            {
+              "fr": "l’abri",
+              "en": "the shelter"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "What does the animal need to live?"
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Que mange cet animal ?",
+              "Où dort-il ?",
+              "Et toi, de quoi as-tu besoin pour grandir ?"
+            ]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "prog-maternelle-3-2026-2027",
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "levelId": "maternelle-3",
+  "schoolYearIds": ["2026-2027"],
+  "sessionMinutes": { "min": 30, "max": 45 },
+  "rhythm": [
+    {
+      "position": 1,
+      "slots": [
+        { "position": 1, "trackId": "langage" },
+        { "position": 2, "trackId": "mathematiques" },
+        { "position": 3, "trackId": "activite-physique" },
+        { "position": 4, "trackId": "monde" }
+      ]
+    },
+    {
+      "position": 2,
+      "slots": [
+        { "position": 1, "trackId": "langage" },
+        { "position": 2, "trackId": "mathematiques" },
+        { "position": 3, "trackId": "activite-physique" },
+        { "position": 4, "trackId": "arts" }
+      ]
+    },
+    {
+      "position": 3,
+      "slots": [
+        { "position": 1, "trackId": "langage" },
+        { "position": 2, "trackId": "mathematiques" },
+        { "position": 3, "trackId": "activite-physique" },
+        { "position": 4, "trackId": "temps-espace" }
+      ]
+    },
+    {
+      "position": 4,
+      "slots": [
+        { "position": 1, "trackId": "langage" },
+        { "position": 2, "trackId": "mathematiques" },
+        { "position": 3, "trackId": "activite-physique" },
+        { "position": 4, "trackId": "arts" }
+      ]
+    },
+    {
+      "position": 5,
+      "slots": [
+        { "position": 1, "trackId": "langage" },
+        { "position": 2, "trackId": "mathematiques" },
+        { "position": 3, "trackId": "activite-physique" },
+        { "position": 4, "trackId": "monde" }
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "id": "langage",
+      "domainCode": "LANG",
+      "lessonIds": ["m3-lang-01", "m3-lang-02", "m3-lang-03", "m3-lang-04", "m3-lang-05"]
+    },
+    {
+      "id": "mathematiques",
+      "domainCode": "MATH",
+      "lessonIds": ["m3-math-01", "m3-math-02", "m3-math-03", "m3-math-04", "m3-math-05"]
+    },
+    {
+      "id": "activite-physique",
+      "domainCode": "PHYS",
+      "lessonIds": ["m3-phys-01", "m3-phys-02", "m3-phys-03", "m3-phys-04", "m3-phys-05"]
+    },
+    { "id": "arts", "domainCode": "ART", "lessonIds": ["m3-art-01", "m3-art-02"] },
+    { "id": "monde", "domainCode": "WORLD", "lessonIds": ["m3-world-01", "m3-world-02"] },
+    { "id": "temps-espace", "domainCode": "TIME-SPACE", "lessonIds": ["m3-time-01"] }
+  ]
+}

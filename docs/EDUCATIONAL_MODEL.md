@@ -1,14 +1,16 @@
 # Educational model
 
-How Teka Edu represents **what** children learn: the education hierarchy, curriculum versions and domains, and how that reference data reaches the application and the database. Decisions: ADR-003, ADR-005, ADR-019, ADR-028, ADR-030. The calendar (**when**) is in [`SCHOOL_CALENDAR.md`](SCHOOL_CALENDAR.md).
+How Teka Edu represents **what** children learn: the education hierarchy, curriculum versions and domains, and how that reference data reaches the application and the database. Decisions: ADR-003, ADR-005, ADR-019, ADR-028, ADR-030.
+
+Companion documents: the calendar (**when**) is in [`SCHOOL_CALENDAR.md`](SCHOOL_CALENDAR.md); the official objectives under each domain are in [`CURRICULUM.md`](CURRICULUM.md); how a day is assembled is in [`DAILY_PROGRAMME.md`](DAILY_PROGRAMME.md); how to write lessons is in [`CONTENT_AUTHORING.md`](CONTENT_AUTHORING.md).
 
 ## Three separate concerns
 
-| Concern              | Answers                        | Where                                                                         |
-| -------------------- | ------------------------------ | ----------------------------------------------------------------------------- |
-| Calendar             | When does learning happen?     | `domain/calendar/`, `content/calendars/` (school years, holidays, exceptions) |
-| Curriculum           | What should the child learn?   | `domain/curriculum/`, `content/education/`, `content/curriculum/`             |
-| Instruction planning | What is taught on a given day? | Next phase (see "Daily plan extension point" below)                           |
+| Concern              | Answers                        | Where                                                                                    |
+| -------------------- | ------------------------------ | ---------------------------------------------------------------------------------------- |
+| Calendar             | When does learning happen?     | `domain/calendar/`, `content/calendars/` (school years, holidays, exceptions)            |
+| Curriculum           | What should the child learn?   | `domain/curriculum/`, `content/education/`, `content/curriculum/`                        |
+| Instruction planning | What is taught on a given day? | `domain/programme/` + `content/programmes/` ([`DAILY_PROGRAMME.md`](DAILY_PROGRAMME.md)) |
 
 No table or file mixes dates, curriculum and progress.
 
@@ -89,18 +91,27 @@ content/*.json ──(Zod + rules, npm run content:validate)──▶ lib/conten
 
 ### Tables
 
-| Table                   | Key                            | Main constraints                                                                                                                                                                                                           |
-| ----------------------- | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `education_stages`      | `id`                           | slug format; unique `position`                                                                                                                                                                                             |
-| `school_levels`         | `id`                           | FK stage; unique (`stage_id`, `position`)                                                                                                                                                                                  |
-| `curricula`             | `id`                           | FK stage; unique (`stage_id`, `version`); status and verification enums; https reference URL                                                                                                                               |
-| `curriculum_levels`     | (`curriculum_id`, `level_id`)  | Composite FKs through `stage_id`: a curriculum only covers levels of its own stage                                                                                                                                         |
-| `curriculum_domains`    | (`curriculum_id`, `code`)      | code format; unique (`curriculum_id`, `position`); `kind` enum                                                                                                                                                             |
-| `school_years`          | `id`                           | `YYYY-YYYY` with consecutive years; starts in the first year; ends after it starts and within one year; weekdays 1–7; source required unless `teka-edu`; **no overlap** (exclusion constraint)                             |
-| `school_periods`        | (`school_year_id`, `position`) | no overlap within a year; inside the school year (deferred trigger)                                                                                                                                                        |
-| `public_holidays`       | `id`                           | real month/day (29 Feb allowed); validity window ordered; source required unless `teka-edu`                                                                                                                                |
-| `calendar_exceptions`   | `id`                           | FK school year; kind enum; only and exactly `observed-holiday` references a holiday; inside the school year (deferred trigger); an `instructional-day` never overlaps a non-instructional exception (exclusion constraint) |
-| `school_year_curricula` | (`school_year_id`, `stage_id`) | FK (`curriculum_id`, `stage_id`) → curricula: one curriculum per stage and year, of the right stage                                                                                                                        |
+| Table                                                                              | Key                                                 | Main constraints                                                                                                                                                                                                           |
+| ---------------------------------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `education_stages`                                                                 | `id`                                                | slug format; unique `position`                                                                                                                                                                                             |
+| `school_levels`                                                                    | `id`                                                | FK stage; unique (`stage_id`, `position`)                                                                                                                                                                                  |
+| `curricula`                                                                        | `id`                                                | FK stage; unique (`stage_id`, `version`); status and verification enums; https reference URL                                                                                                                               |
+| `curriculum_levels`                                                                | (`curriculum_id`, `level_id`)                       | Composite FKs through `stage_id`: a curriculum only covers levels of its own stage                                                                                                                                         |
+| `curriculum_domains`                                                               | (`curriculum_id`, `code`)                           | code format; unique (`curriculum_id`, `position`); `kind` enum                                                                                                                                                             |
+| `school_years`                                                                     | `id`                                                | `YYYY-YYYY` with consecutive years; starts in the first year; ends after it starts and within one year; weekdays 1–7; source required unless `teka-edu`; **no overlap** (exclusion constraint)                             |
+| `school_periods`                                                                   | (`school_year_id`, `position`)                      | no overlap within a year; inside the school year (deferred trigger)                                                                                                                                                        |
+| `public_holidays`                                                                  | `id`                                                | real month/day (29 Feb allowed); validity window ordered; source required unless `teka-edu`                                                                                                                                |
+| `calendar_exceptions`                                                              | `id`                                                | FK school year; kind enum; only and exactly `observed-holiday` references a holiday; inside the school year (deferred trigger); an `instructional-day` never overlaps a non-instructional exception (exclusion constraint) |
+| `school_year_curricula`                                                            | (`school_year_id`, `stage_id`)                      | FK (`curriculum_id`, `stage_id`) → curricula: one curriculum per stage and year, of the right stage                                                                                                                        |
+| `curriculum_sources` + `curriculum_source_domains`                                 | (`curriculum_id`, `code`)                           | The official documents quoted, with citation, URL and the SHA-256 of the imported PDF                                                                                                                                      |
+| `curriculum_age_bands`                                                             | (`curriculum_id`, `code`)                           | Official age bands; `curriculum_levels.age_band_code` maps a level to one                                                                                                                                                  |
+| `curriculum_subdomains` / `curriculum_competencies`                                | (`curriculum_id`, `code`)                           | Official structure; a code must extend its parent's code                                                                                                                                                                   |
+| `learning_objectives`                                                              | (`curriculum_id`, `code`)                           | Verbatim official wording; `origin = 'official'` requires a source                                                                                                                                                         |
+| `learning_objective_age_bands`                                                     | (…, `objective_code`, `age_band_code`)              | One objective, several bands: never one copy per level                                                                                                                                                                     |
+| `success_examples`                                                                 | (…, `competency_code`, `age_band_code`, `position`) | Evidence of progress, attached where the official tables attach it                                                                                                                                                         |
+| `materials`, `activity_types`                                                      | `code`                                              | Registries; an activity kind is a value, never a table                                                                                                                                                                     |
+| `lessons` + `lesson_levels` + `lesson_objectives`                                  | `id`                                                | Teka Edu lessons; `origin` can only be `teka-edu-created`; objectives are `taught` or `supporting`                                                                                                                         |
+| `activities` + `activity_objectives` / `_materials` / `_vocabulary` / `_scaffolds` | `id`                                                | Typed activities with a jsonb payload; French is never a scaffold language                                                                                                                                                 |
 
 - **Dates** are `date`.
 - **Indexes** exist on every foreign key and on exception dates.
@@ -122,21 +133,20 @@ The application does not need database access: it reads the bundled JSON. If a b
 - `server-only` tables have no policy and no browser-role privilege
 - an anonymous read is refused
 
-## Daily plan extension point (next phase)
-
-The next phase is curriculum objectives, the lesson and activity model, and the daily learning programme. It attaches to this foundation as follows:
+## From objectives to a daily plan (implemented in Phase 2)
 
 ```text
-SchoolYear → SchoolDay (generated: date, instructionalDay n, period)
-Curriculum → CurriculumDomain → LearningObjective (next) → Lesson / Activity (next)
-DailyPlan (next) = (curriculum, level, instructionalDay n) → LearningSession[] → objectives / activities
+SchoolYear → SchoolDay (date, instructional day n, period)                docs/SCHOOL_CALENDAR.md
+Curriculum → part → competency → LearningObjective (+ success examples)   docs/CURRICULUM.md
+Lesson (teaches / reinvests objectives) → Activity (typed, traceable)     docs/CONTENT_AUTHORING.md
+LevelProgramme (rhythm + tracks) + instructional day n → DailyPlan        docs/DAILY_PROGRAMME.md
 ```
 
-- **A daily plan is keyed by instructional-day number, not by date** (ADR-004). A calendar change moves lessons to other dates without invalidating content.
-- **The date comes from the generator:** `SchoolDay.instructionalDay` ↔ date.
-- **No `DailyPlan` table exists yet.** It would be premature before lessons exist.
-- **Lesson content stays in `content/`** (ADR-005, ADR-019).
-- **Periods:** `SchoolPeriod` gives the unit for "period objectives" (Plan §5).
+- A daily plan is **derived, not stored**: it is generated from the calendar, the programme
+  definition and the lessons, and is keyed by instructional-day number (ADR-033).
+- Lessons and activities are mirrored into the database so future user data (a child's progress,
+  completed activities) can reference them with foreign keys.
+- Progress tracking, the review scheduler and the child-facing renderers are later phases.
 
 ## English scaffolding extension point (not implemented)
 

@@ -1,0 +1,1305 @@
+{
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "domainCode": "ART",
+  "sourceId": "programme-2026",
+  "subdomains": [
+    {
+      "code": "ART-S01",
+      "position": 1,
+      "title": "Arts visuels",
+      "competencies": [
+        {
+          "code": "ART-S01-C01",
+          "position": 1,
+          "title": "Dessiner",
+          "objectives": [
+            {
+              "code": "ART-S01-C01-O01",
+              "position": 1,
+              "group": null,
+              "statement": "S’exercer au dessin pour développer son habileté motrice.",
+              "ageBands": ["before-4"],
+              "sourcePage": 10
+            },
+            {
+              "code": "ART-S01-C01-O02",
+              "position": 2,
+              "group": null,
+              "statement": "S’exercer progressivement au dessin avec une intention de représentation.",
+              "ageBands": ["before-4"],
+              "sourcePage": 10
+            },
+            {
+              "code": "ART-S01-C01-O03",
+              "position": 3,
+              "group": null,
+              "statement": "Expérimenter la diversité des outils, des supports, des matériaux et faire des choix.",
+              "ageBands": ["from-4"],
+              "sourcePage": 10
+            },
+            {
+              "code": "ART-S01-C01-O04",
+              "position": 4,
+              "group": null,
+              "statement": "S’exercer au dessin avec une intention de représentation.",
+              "ageBands": ["from-4"],
+              "sourcePage": 10
+            },
+            {
+              "code": "ART-S01-C01-O05",
+              "position": 5,
+              "group": null,
+              "statement": "Dessiner pour représenter sur la base d’un modèle.",
+              "ageBands": ["from-5"],
+              "sourcePage": 10
+            },
+            {
+              "code": "ART-S01-C01-O06",
+              "position": 6,
+              "group": null,
+              "statement": "Dessiner pour représenter un personnage ou un évènement fictif.",
+              "ageBands": ["from-5"],
+              "sourcePage": 10
+            },
+            {
+              "code": "ART-S01-C01-O07",
+              "position": 7,
+              "group": null,
+              "statement": "Participer à la réalisation d’une œuvre collective à partir d’une consigne ou d’un problème à résoudre.",
+              "ageBands": ["from-5"],
+              "sourcePage": 10
+            },
+            {
+              "code": "ART-S01-C01-O08",
+              "position": 8,
+              "group": null,
+              "statement": "Utiliser le vocabulaire spécifique au dessin.",
+              "ageBands": ["from-5"],
+              "sourcePage": 10
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": null,
+              "statement": "Dessiner avec des fusains, des craies grasses, des feutres sur des papiers de grand format sur un plan vertical, en commençant par des gestes amples.",
+              "sourcePage": 10
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": null,
+              "statement": "Représenter par le dessin le doudou de la classe ou un membre de sa famille.",
+              "sourcePage": 10
+            },
+            {
+              "ageBand": "from-4",
+              "position": 3,
+              "group": null,
+              "statement": "Dessiner un bonhomme ou un animal en utilisant différents outils, supports et médiums et observer les effets produits.",
+              "sourcePage": 10
+            },
+            {
+              "ageBand": "from-4",
+              "position": 4,
+              "group": null,
+              "statement": "Dessiner les fruits de l’espace « épicerie », les vêtements des poupées, etc.",
+              "sourcePage": 10
+            },
+            {
+              "ageBand": "from-5",
+              "position": 5,
+              "group": null,
+              "statement": "Lors d’une sortie au musée, dessiner une statue sous forme de croquis.",
+              "sourcePage": 10
+            },
+            {
+              "ageBand": "from-5",
+              "position": 6,
+              "group": null,
+              "statement": "Dessiner des représentations du visage en s’inspirant de différentes œuvres (par exemple, X-chen de Paul Klee, La jeune femme au col marin d‘Amadeo Modigliani, Autoportrait sur fond noir d’Hélène Schjerfbeck, Madame Vigée-Lebrun et sa fille Julie d’Elisabeth Vigée-Lebrun, Portrait de Marianne von Werefkin de Gabriele Munter, etc.).",
+              "sourcePage": 10
+            },
+            {
+              "ageBand": "from-5",
+              "position": 7,
+              "group": null,
+              "statement": "Représenter un personnage de conte ou de littérature de jeunesse (La sorcière de la rue Mouffetard de Pierre Gripari) avec une contrainte liée au matériel, aux outils ou au support.",
+              "sourcePage": 10
+            },
+            {
+              "ageBand": "from-5",
+              "position": 8,
+              "group": null,
+              "statement": "Sur un support de grand format, dessiner collectivement le village ou le quartier à partir de photographies prises lors d’une sortie.",
+              "sourcePage": 11
+            },
+            {
+              "ageBand": "from-5",
+              "position": 9,
+              "group": null,
+              "statement": "Présenter et décrire son dessin lors d’un temps collectif en utilisant le lexique approprié (couleurs, nuances, outils, matériaux, etc.).",
+              "sourcePage": 11
+            }
+          ]
+        },
+        {
+          "code": "ART-S01-C02",
+          "position": 2,
+          "title": "S’exercer au graphisme artistique",
+          "objectives": [
+            {
+              "code": "ART-S01-C02-O01",
+              "position": 1,
+              "group": null,
+              "statement": "Explorer des gestes et commencer à les associer à des types de tracés précis.",
+              "ageBands": ["before-4"],
+              "sourcePage": 11
+            },
+            {
+              "code": "ART-S01-C02-O02",
+              "position": 2,
+              "group": null,
+              "statement": "Repérer des motifs graphiques issus de son environnement proche.",
+              "ageBands": ["before-4"],
+              "sourcePage": 11
+            },
+            {
+              "code": "ART-S01-C02-O03",
+              "position": 3,
+              "group": null,
+              "statement": "Découvrir des expressions graphiques dans des œuvres d’art.",
+              "ageBands": ["before-4"],
+              "sourcePage": 11
+            },
+            {
+              "code": "ART-S01-C02-O04",
+              "position": 4,
+              "group": null,
+              "statement": "Exercer et développer sa motricité fine.",
+              "ageBands": ["from-4"],
+              "sourcePage": 11
+            },
+            {
+              "code": "ART-S01-C02-O05",
+              "position": 5,
+              "group": null,
+              "statement": "Repérer des motifs graphiques issus de son environnement.",
+              "ageBands": ["from-4"],
+              "sourcePage": 11
+            },
+            {
+              "code": "ART-S01-C02-O06",
+              "position": 6,
+              "group": null,
+              "statement": "Reproduire et créer des motifs de plus en plus élaborés.",
+              "ageBands": ["from-4"],
+              "sourcePage": 11
+            },
+            {
+              "code": "ART-S01-C02-O07",
+              "position": 7,
+              "group": null,
+              "statement": "Transformer ou détourner des motifs du répertoire de la classe pour observer les effets produits.",
+              "ageBands": ["from-5"],
+              "sourcePage": 11
+            },
+            {
+              "code": "ART-S01-C02-O08",
+              "position": 8,
+              "group": null,
+              "statement": "Créer de nouveaux motifs.",
+              "ageBands": ["from-5"],
+              "sourcePage": 11
+            },
+            {
+              "code": "ART-S01-C02-O09",
+              "position": 9,
+              "group": null,
+              "statement": "Réaliser une composition à partir de plusieurs contraintes.",
+              "ageBands": ["from-5"],
+              "sourcePage": 11
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": null,
+              "statement": "Tracer à deux des lignes verticales sur un support tel qu’une piste graphique.",
+              "sourcePage": 11
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": null,
+              "statement": "Découvrir les traces produites par un geste particulier sur une feuille enduite de peinture ou dans du sable (caresser, tapoter, frotter, griffer, etc.).",
+              "sourcePage": 11
+            },
+            {
+              "ageBand": "before-4",
+              "position": 3,
+              "group": null,
+              "statement": "Reproduire des motifs graphiques simples (cercles, boucles, lignes, croix, etc.) à l’appui de photographies prises dans l’école.",
+              "sourcePage": 11
+            },
+            {
+              "ageBand": "before-4",
+              "position": 4,
+              "group": null,
+              "statement": "Découvrir les lignes avec Sol Lewitt, Agnès Martin, Piet Mondrian ou Bridget Riley, les cercles avec Sonia Delaunay ou Ronnie Tjampitjinpa, les boucles avec Hilma Af Klint, les spirales avec Andy Goldsworthy, etc.",
+              "sourcePage": 11
+            },
+            {
+              "ageBand": "from-4",
+              "position": 5,
+              "group": null,
+              "statement": "Utiliser quotidiennement dans le cadre d’activités libres ou guidées, le répertoire graphique de la classe pour s’entrainer à reproduire différents motifs (boucles, spirales, formes géométriques, etc.).",
+              "sourcePage": 11
+            },
+            {
+              "ageBand": "from-4",
+              "position": 6,
+              "group": null,
+              "statement": "Dans l’école ou lors d’une sortie dans le village ou le quartier, identifier et reproduire des motifs que les professeurs photographient pour enrichir le répertoire graphique de la classe.",
+              "sourcePage": 11
+            },
+            {
+              "ageBand": "from-4",
+              "position": 7,
+              "group": null,
+              "statement": "Choisir et reproduire des motifs issus de répertoires culturels (œuvres d’art, motifs sur des poteries, mosaïques, tissus, broderie, etc.).",
+              "sourcePage": 11
+            },
+            {
+              "ageBand": "from-5",
+              "position": 8,
+              "group": null,
+              "statement": "Réaliser une fresque à partir de motifs graphiques choisis, agrandis ou réduits.",
+              "sourcePage": 11
+            },
+            {
+              "ageBand": "from-5",
+              "position": 9,
+              "group": null,
+              "statement": "Choisir les outils adaptés pour faire varier la largeur et le relief du tracé (dans une plaque d’argile, sur une feuille humidifiée, sur du papier de verre, etc.).",
+              "sourcePage": 11
+            },
+            {
+              "ageBand": "from-5",
+              "position": 10,
+              "group": null,
+              "statement": "Réaliser une affiche pour un évènement au sein de l’école en utilisant trois motifs, deux outils différents, en temps limité et à plusieurs.",
+              "sourcePage": 11
+            }
+          ]
+        },
+        {
+          "code": "ART-S01-C03",
+          "position": 3,
+          "title": "Réaliser des compositions planes ou en volume",
+          "objectives": [
+            {
+              "code": "ART-S01-C03-O01",
+              "position": 1,
+              "group": null,
+              "statement": "Explorer l’usage des outils et observer leurs effets sur le geste.",
+              "ageBands": ["before-4"],
+              "sourcePage": 12
+            },
+            {
+              "code": "ART-S01-C03-O02",
+              "position": 2,
+              "group": null,
+              "statement": "Utiliser différents médiums et observer leurs effets sur les couleurs, les formes et les volumes.",
+              "ageBands": ["before-4"],
+              "sourcePage": 12
+            },
+            {
+              "code": "ART-S01-C03-O03",
+              "position": 3,
+              "group": null,
+              "statement": "Expérimenter la résistance de certains matériaux.",
+              "ageBands": ["before-4"],
+              "sourcePage": 12
+            },
+            {
+              "code": "ART-S01-C03-O04",
+              "position": 4,
+              "group": null,
+              "statement": "Réaliser individuellement ou collectivement une production plastique en volume.",
+              "ageBands": ["before-4"],
+              "sourcePage": 12
+            },
+            {
+              "code": "ART-S01-C03-O05",
+              "position": 5,
+              "group": null,
+              "statement": "S’approprier les constituants plastiques (couleurs, formes, matières, rythmes, etc.).",
+              "ageBands": ["from-4"],
+              "sourcePage": 12
+            },
+            {
+              "code": "ART-S01-C03-O06",
+              "position": 6,
+              "group": null,
+              "statement": "Réaliser une composition en deux ou trois dimensions en fonction d’un projet individuel ou collectif.",
+              "ageBands": ["from-4"],
+              "sourcePage": 12
+            },
+            {
+              "code": "ART-S01-C03-O07",
+              "position": 7,
+              "group": null,
+              "statement": "Découvrir différentes formes d’expression artistique.",
+              "ageBands": ["from-4"],
+              "sourcePage": 12
+            },
+            {
+              "code": "ART-S01-C03-O08",
+              "position": 8,
+              "group": null,
+              "statement": "Réaliser des compositions plastiques, seul ou en petit groupe, en choisissant et combinant des matériaux et en réinvestissant des techniques et des procédés.",
+              "ageBands": ["from-5"],
+              "sourcePage": 12
+            },
+            {
+              "code": "ART-S01-C03-O09",
+              "position": 9,
+              "group": null,
+              "statement": "Se familiariser avec différentes formes d’expression artistique.",
+              "ageBands": ["from-5"],
+              "sourcePage": 12
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": null,
+              "statement": "Découvrir l’usage de la spatule, du rouleau, du pochoir, du tamis, de la brosse à dents, etc.",
+              "sourcePage": 12
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": null,
+              "statement": "Réaliser une composition sur un support de grand format placé au sol avec différents médiums (gouaches, encres, terre, sable, pastels, sanguines, crayons de papier, etc.).",
+              "sourcePage": 12
+            },
+            {
+              "ageBand": "before-4",
+              "position": 3,
+              "group": null,
+              "statement": "Expérimenter différentes actions avec les matériaux mis à disposition (déchirer, mouiller, écraser, aplatir etc.).",
+              "sourcePage": 12
+            },
+            {
+              "ageBand": "before-4",
+              "position": 4,
+              "group": null,
+              "statement": "Construire collectivement une maison pour une poupée avec des boites en carton qui ont été peintes.",
+              "sourcePage": 12
+            },
+            {
+              "ageBand": "from-4",
+              "position": 5,
+              "group": null,
+              "statement": "Explorer les nuances d’une couleur à partir de mélanges ou en fonction de la couleur du support et de l’exposition à la lumière.",
+              "sourcePage": 12
+            },
+            {
+              "ageBand": "from-4",
+              "position": 6,
+              "group": null,
+              "statement": "Fabriquer un mobile avec des papiers pliés pour une exposition sous le préau de l’école.",
+              "sourcePage": 12
+            },
+            {
+              "ageBand": "from-4",
+              "position": 7,
+              "group": null,
+              "statement": "Réaliser collectivement l’illustration de la couverture d’une histoire inventée sur le thème de la mer après en avoir observé quelques représentations (La grande vague de Kanagawa de Katsushika Hokusai, Le port de Lorient de Berthe Morisot, , Blue sea with rocks de Georgia O’Keeffe, Mountains and Sea de Helen Frankenthaler, etc.).",
+              "sourcePage": 12
+            },
+            {
+              "ageBand": "from-5",
+              "position": 8,
+              "group": null,
+              "statement": "Réaliser en petit groupe des totems à partir des matériaux et des outils mis à disposition pour construire les décors d’un spectacle.",
+              "sourcePage": 12
+            },
+            {
+              "ageBand": "from-5",
+              "position": 9,
+              "group": null,
+              "statement": "Faire le portrait d’un camarade par découpage et collage de différents matériaux (papier cristal, photographies, carton ondulé, etc.).",
+              "sourcePage": 12
+            },
+            {
+              "ageBand": "from-5",
+              "position": 10,
+              "group": null,
+              "statement": "Explorer les possibilités de détournement d’objets du quotidien dans une démarche de création (un ready-made de Marcel Duchamp, Le déjeuner en fourrure de Meret Oppenheim, Tête de taureau de Pablo Picasso, La Mariée de Niki de Saint-Phalle, Faire des cartes de France d’Annette Messager, etc.).",
+              "sourcePage": 12
+            }
+          ]
+        },
+        {
+          "code": "ART-S01-C04",
+          "position": 4,
+          "title": "Observer, comprendre et transformer des images",
+          "objectives": [
+            {
+              "code": "ART-S01-C04-O01",
+              "position": 1,
+              "group": null,
+              "statement": "Apprendre à regarder avec attention et à identifier des éléments visuels.",
+              "ageBands": ["before-4"],
+              "sourcePage": 13
+            },
+            {
+              "code": "ART-S01-C04-O02",
+              "position": 2,
+              "group": null,
+              "statement": "Découvrir quelques éléments constitutifs d’une illustration.",
+              "ageBands": ["before-4"],
+              "sourcePage": 13
+            },
+            {
+              "code": "ART-S01-C04-O03",
+              "position": 3,
+              "group": null,
+              "statement": "Différencier une image fixe d’une image animée.",
+              "ageBands": ["from-4"],
+              "sourcePage": 13
+            },
+            {
+              "code": "ART-S01-C04-O04",
+              "position": 4,
+              "group": null,
+              "statement": "Fabriquer des images à partir d’images existantes.",
+              "ageBands": ["from-4"],
+              "sourcePage": 13
+            },
+            {
+              "code": "ART-S01-C04-O05",
+              "position": 5,
+              "group": null,
+              "statement": "Identifier et nommer des éléments graphiques d’une illustration.",
+              "ageBands": ["from-4"],
+              "sourcePage": 13
+            },
+            {
+              "code": "ART-S01-C04-O06",
+              "position": 6,
+              "group": null,
+              "statement": "Différencier des types d’images (portrait, paysage, nature morte, etc.).",
+              "ageBands": ["from-5"],
+              "sourcePage": 13
+            },
+            {
+              "code": "ART-S01-C04-O07",
+              "position": 7,
+              "group": null,
+              "statement": "Identifier et nommer des éléments esthétiques d’une illustration.",
+              "ageBands": ["from-5"],
+              "sourcePage": 13
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": null,
+              "statement": "Dans des collections d’images, identifier un objet ou un animal représenté de différentes manières et comparer ses représentations.",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": null,
+              "statement": "Échanger des idées en petit groupe à partir des photographies prises par les professeurs lors d’une activité motrice pour se remémorer et décrire ce que l’on voit.",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "before-4",
+              "position": 3,
+              "group": null,
+              "statement": "Décrire les illustrations d’un album de la littérature de jeunesse (personnages, couleurs, motifs, etc.).",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-4",
+              "position": 4,
+              "group": null,
+              "statement": "S’initier à l’animation image par image (stop-motion).",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-4",
+              "position": 5,
+              "group": null,
+              "statement": "Composer une nouvelle image en assemblant des éléments issus d’autres images (détourner, découper, plier, coller, assembler, etc.).",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-4",
+              "position": 6,
+              "group": null,
+              "statement": "Repérer et distinguer, dans un ouvrage documentaire, les photographies des illustrations pour représenter un même sujet.",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-4",
+              "position": 7,
+              "group": null,
+              "statement": "Décrire une illustration d’un album de la littérature de jeunesse (couleurs, technique graphique, illustration pleine page ou encadrée, etc.).",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-5",
+              "position": 8,
+              "group": null,
+              "statement": "Trier et classer des images représentant des paysages en fonction d’un critère choisi par l’élève et expliquer ses choix en utilisant un lexique adapté.",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-5",
+              "position": 9,
+              "group": null,
+              "statement": "Comparer les illustrations d’un même conte à partir de différentes éditions d’albums de jeunesse.",
+              "sourcePage": 13
+            },
+            {
+              "ageBand": "from-5",
+              "position": 10,
+              "group": null,
+              "statement": "Décrire la composition d’une œuvre photographique ou plastique et comprendre son organisation en utilisant un vocabulaire de plus en plus précis.",
+              "sourcePage": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ART-S02",
+      "position": 2,
+      "title": "Les univers sonores",
+      "competencies": [
+        {
+          "code": "ART-S02-C01",
+          "position": 1,
+          "title": "Jouer avec sa voix et acquérir un répertoire de comptines et de chansons",
+          "objectives": [
+            {
+              "code": "ART-S02-C01-O01",
+              "position": 1,
+              "group": null,
+              "statement": "Dépasser les usages courants de la voix.",
+              "ageBands": ["before-4"],
+              "sourcePage": 14
+            },
+            {
+              "code": "ART-S02-C01-O02",
+              "position": 2,
+              "group": null,
+              "statement": "Chanter en se faisant comprendre des autres.",
+              "ageBands": ["before-4"],
+              "sourcePage": 14
+            },
+            {
+              "code": "ART-S02-C01-O03",
+              "position": 3,
+              "group": null,
+              "statement": "Dire ou chanter au moins cinq comptines.",
+              "ageBands": ["before-4"],
+              "sourcePage": 14
+            },
+            {
+              "code": "ART-S02-C01-O04",
+              "position": 4,
+              "group": null,
+              "statement": "Découvrir et explorer la richesse de sa voix.",
+              "ageBands": ["from-4"],
+              "sourcePage": 14
+            },
+            {
+              "code": "ART-S02-C01-O05",
+              "position": 5,
+              "group": null,
+              "statement": "Chanter en exprimant une émotion.",
+              "ageBands": ["from-4"],
+              "sourcePage": 14
+            },
+            {
+              "code": "ART-S02-C01-O06",
+              "position": 6,
+              "group": null,
+              "statement": "Dire ou chanter au moins huit comptines ou chants, en réinvestissant les comptines apprises l’année précédente.",
+              "ageBands": ["from-4"],
+              "sourcePage": 14
+            },
+            {
+              "code": "ART-S02-C01-O07",
+              "position": 7,
+              "group": null,
+              "statement": "Développer et affirmer son inventivité avec sa voix.",
+              "ageBands": ["from-5"],
+              "sourcePage": 14
+            },
+            {
+              "code": "ART-S02-C01-O08",
+              "position": 8,
+              "group": null,
+              "statement": "Trouver sa place dans un collectif chantant.",
+              "ageBands": ["from-5"],
+              "sourcePage": 14
+            },
+            {
+              "code": "ART-S02-C01-O09",
+              "position": 9,
+              "group": null,
+              "statement": "Dire ou chanter au moins dix comptines ou chants, en réinvestissant ceux appris les années antérieures.",
+              "ageBands": ["from-5"],
+              "sourcePage": 14
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": null,
+              "statement": "Jouer avec sa voix pour reproduire des bruits d’animaux, d’objets et des onomatopées à partir d’images.",
+              "sourcePage": 14
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": null,
+              "statement": "Dire ou chanter en articulant correctement le texte de manière audible pour faire deviner le titre de la comptine ou de la chanson.",
+              "sourcePage": 14
+            },
+            {
+              "ageBand": "before-4",
+              "position": 3,
+              "group": null,
+              "statement": "Dire ou chanter une comptine, en même temps que les professeurs et en reproduisant la gestuelle (Toc, toc, toc Monsieur Pouce ; Petit escargot).",
+              "sourcePage": 14
+            },
+            {
+              "ageBand": "from-4",
+              "position": 4,
+              "group": null,
+              "statement": "Reproduire avec sa voix, par imitation, des sons brefs, tenus, graves, aigus et avec des variations de volume.",
+              "sourcePage": 14
+            },
+            {
+              "ageBand": "from-4",
+              "position": 5,
+              "group": null,
+              "statement": "Chanter avec une voix douce, lentement ou rapidement pour exprimer la joie, la tristesse, etc.",
+              "sourcePage": 14
+            },
+            {
+              "ageBand": "from-4",
+              "position": 6,
+              "group": null,
+              "statement": "Dire ou chanter de mémoire une comptine ou un chant en variant le volume ou le timbre de sa voix, de manière de plus en plus autonome (Promenons-nous dans les bois ; Un éléphant qui se balançait).",
+              "sourcePage": 14
+            },
+            {
+              "ageBand": "from-5",
+              "position": 7,
+              "group": null,
+              "statement": "Imiter avec sa voix un son produit par un instrument.",
+              "sourcePage": 14
+            },
+            {
+              "ageBand": "from-5",
+              "position": 8,
+              "group": null,
+              "statement": "Chanter avec les autres, en respectant le tempo et les nuances et avec une intention.",
+              "sourcePage": 14
+            },
+            {
+              "ageBand": "from-5",
+              "position": 9,
+              "group": null,
+              "statement": "Chanter de mémoire devant les autres et sans l’aide des professeurs (Ah ! Les crocodiles ; Voici le mois de mai !).",
+              "sourcePage": 14
+            }
+          ]
+        },
+        {
+          "code": "ART-S02-C02",
+          "position": 2,
+          "title": "Explorer des instruments, utiliser les sonorités du corps",
+          "objectives": [
+            {
+              "code": "ART-S02-C02-O01",
+              "position": 1,
+              "group": null,
+              "statement": "Explorer les possibilités sonores de son corps, d’objets et d’instruments.",
+              "ageBands": ["before-4"],
+              "sourcePage": 14
+            },
+            {
+              "code": "ART-S02-C02-O02",
+              "position": 2,
+              "group": null,
+              "statement": "Découvrir les possibilités expressives de son corps, d’objets et d’instruments.",
+              "ageBands": ["before-4"],
+              "sourcePage": 15
+            },
+            {
+              "code": "ART-S02-C02-O03",
+              "position": 3,
+              "group": null,
+              "statement": "Observer et commenter ce que font les camarades de classe pour produire des sons avec leur corps, des objets et des instruments.",
+              "ageBands": ["before-4"],
+              "sourcePage": 15
+            },
+            {
+              "code": "ART-S02-C02-O04",
+              "position": 4,
+              "group": null,
+              "statement": "Produire des sons à partir de son corps, d’objets et d’instruments.",
+              "ageBands": ["from-4"],
+              "sourcePage": 15
+            },
+            {
+              "code": "ART-S02-C02-O05",
+              "position": 5,
+              "group": null,
+              "statement": "Adapter son geste pour produire un son en fonction d’une consigne.",
+              "ageBands": ["from-4"],
+              "sourcePage": 15
+            },
+            {
+              "code": "ART-S02-C02-O06",
+              "position": 6,
+              "group": null,
+              "statement": "Reproduire un rythme simple collectivement.",
+              "ageBands": ["from-4"],
+              "sourcePage": 15
+            },
+            {
+              "code": "ART-S02-C02-O07",
+              "position": 7,
+              "group": null,
+              "statement": "Explorer le lien entre le son et le geste.",
+              "ageBands": ["from-5"],
+              "sourcePage": 15
+            },
+            {
+              "code": "ART-S02-C02-O08",
+              "position": 8,
+              "group": null,
+              "statement": "Créer un paysage sonore en répondant à une consigne simple avec son corps, des objets ou des instruments.",
+              "ageBands": ["from-5"],
+              "sourcePage": 15
+            },
+            {
+              "code": "ART-S02-C02-O09",
+              "position": 9,
+              "group": null,
+              "statement": "Créer collectivement une production musicale.",
+              "ageBands": ["from-5"],
+              "sourcePage": 15
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": null,
+              "statement": "Explorer différentes actions pour faire sonner quelques petits instruments à percussion : taper, secouer, gratter, frotter, etc.",
+              "sourcePage": 14
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": null,
+              "statement": "Manipuler et faire sonner des objets de différentes matières (pots, couvercles, bouteilles etc.).",
+              "sourcePage": 15
+            },
+            {
+              "ageBand": "before-4",
+              "position": 3,
+              "group": null,
+              "statement": "Décrire l’action associée à l’objet et au geste : « Il frappe la bouteille vide avec la cuillère. », « Elle secoue les maracas. »",
+              "sourcePage": 15
+            },
+            {
+              "ageBand": "before-4",
+              "position": 4,
+              "group": null,
+              "statement": "Découvrir les possibilités sonores de son corps : « Nous claquons la langue. Elle tape des pieds. »",
+              "sourcePage": 15
+            },
+            {
+              "ageBand": "from-4",
+              "position": 5,
+              "group": null,
+              "statement": "Reproduire un rythme avec des claves, en alternance avec les professeurs.",
+              "sourcePage": 15
+            },
+            {
+              "ageBand": "from-4",
+              "position": 6,
+              "group": null,
+              "statement": "Frotter, froisser et déchirer des papiers de toutes sortes pour explorer et comparer les différents sons produits.",
+              "sourcePage": 15
+            },
+            {
+              "ageBand": "from-4",
+              "position": 7,
+              "group": null,
+              "statement": "Écouter et reproduire avec des triangles, ou en frappant dans ses mains, le rythme proposé par un élève au sein d’un petit groupe.",
+              "sourcePage": 15
+            },
+            {
+              "ageBand": "from-5",
+              "position": 8,
+              "group": null,
+              "statement": "Produire le plus de sons différents avec un même instrument à percussion : doux avec la paume de la main, fort avec une mailloche, etc.",
+              "sourcePage": 15
+            },
+            {
+              "ageBand": "from-5",
+              "position": 9,
+              "group": null,
+              "statement": "Reproduire le bruit d’un orage ou la pluie, en groupe de trois à quatre élèves et avec de petits instruments.",
+              "sourcePage": 15
+            },
+            {
+              "ageBand": "from-5",
+              "position": 10,
+              "group": null,
+              "statement": "Créer l’illustration sonore d’une histoire inventée collectivement en classe pour la présenter aux parents.",
+              "sourcePage": 15
+            }
+          ]
+        },
+        {
+          "code": "ART-S02-C03",
+          "position": 3,
+          "title": "Affiner son écoute",
+          "objectives": [
+            {
+              "code": "ART-S02-C03-O01",
+              "position": 1,
+              "group": null,
+              "statement": "Traduire la musique entendue en mouvements.",
+              "ageBands": ["before-4"],
+              "sourcePage": 15
+            },
+            {
+              "code": "ART-S02-C03-O02",
+              "position": 2,
+              "group": null,
+              "statement": "Développer une posture d’écoute.",
+              "ageBands": ["before-4"],
+              "sourcePage": 15
+            },
+            {
+              "code": "ART-S02-C03-O03",
+              "position": 3,
+              "group": null,
+              "statement": "Traduire la musique entendue en mouvements et en mots.",
+              "ageBands": ["from-4"],
+              "sourcePage": 15
+            },
+            {
+              "code": "ART-S02-C03-O04",
+              "position": 4,
+              "group": null,
+              "statement": "Exprimer ses émotions après l’écoute d’un extrait musical.",
+              "ageBands": ["from-4"],
+              "sourcePage": 15
+            },
+            {
+              "code": "ART-S02-C03-O05",
+              "position": 5,
+              "group": null,
+              "statement": "Découvrir au moins deux œuvres musicales patrimoniales.",
+              "ageBands": ["from-4"],
+              "sourcePage": 15
+            },
+            {
+              "code": "ART-S02-C03-O06",
+              "position": 6,
+              "group": null,
+              "statement": "Traduire la musique entendue en dessin.",
+              "ageBands": ["from-5"],
+              "sourcePage": 16
+            },
+            {
+              "code": "ART-S02-C03-O07",
+              "position": 7,
+              "group": null,
+              "statement": "Écouter une œuvre musicale patrimoniale pour repérer des éléments musicaux significatifs.",
+              "ageBands": ["from-5"],
+              "sourcePage": 16
+            },
+            {
+              "code": "ART-S02-C03-O08",
+              "position": 8,
+              "group": null,
+              "statement": "Connaitre au moins trois œuvres musicales patrimoniales.",
+              "ageBands": ["from-5"],
+              "sourcePage": 16
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": null,
+              "statement": "Se déplacer librement à l’écoute du « Coucou au fond des bois », du Carnaval des animaux de Camille Saint-Saëns.",
+              "sourcePage": 15
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": null,
+              "statement": "Reconnaitre, à l’écoute seulement, les sons du quotidien de l’école (une porte qui claque, un trousseau de clés, des pas dans le couloir, etc.).",
+              "sourcePage": 15
+            },
+            {
+              "ageBand": "from-4",
+              "position": 3,
+              "group": null,
+              "statement": "Se déplacer en imitant la démarche de l’animal à partir de « L’éléphant » du Carnaval des animaux de Camille de Saint- Saëns, D’un matin de printemps de Lili Boulanger, puis décrire oralement ses mouvements.",
+              "sourcePage": 15
+            },
+            {
+              "ageBand": "from-4",
+              "position": 4,
+              "group": null,
+              "statement": "Partager son ressenti en groupe, après avoir écouté des extraits d’Émilie jolie de Philippe Chatel et de La Flute enchantée de Mozart.",
+              "sourcePage": 15
+            },
+            {
+              "ageBand": "from-4",
+              "position": 5,
+              "group": null,
+              "statement": "Après plusieurs écoutes successives d’extraits de Pierre et le loup de Serge Prokofiev ou de Piccolo, Saxo et compagnie d’André Popp, associer un instrument entendu à un personnage de l’histoire.",
+              "sourcePage": 15
+            },
+            {
+              "ageBand": "from-5",
+              "position": 6,
+              "group": null,
+              "statement": "Dessiner des sons joués par le professeur dissimulé derrière un panneau (un point pour un coup de tambour, des traits pour un triangle, une ligne courbe pour une flute à coulisse, etc.).",
+              "sourcePage": 16
+            },
+            {
+              "ageBand": "from-5",
+              "position": 7,
+              "group": null,
+              "statement": "Après plusieurs écoutes d’un extrait musical, décrire le rythme (lent, rapide), reproduire un motif mélodique en chantant, identifier les voix, les nuances, etc.",
+              "sourcePage": 16
+            },
+            {
+              "ageBand": "from-5",
+              "position": 8,
+              "group": null,
+              "statement": "Écouter des contes musicaux, des opéras, des musiques du monde appartenant à différents styles, cultures et époques pour décrire les voix, identifier les instruments, etc.",
+              "sourcePage": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ART-S03",
+      "position": 3,
+      "title": "Le spectacle vivant",
+      "competencies": [
+        {
+          "code": "ART-S03-C01",
+          "position": 1,
+          "title": "Pratiquer",
+          "objectives": [
+            {
+              "code": "ART-S03-C01-O01",
+              "position": 1,
+              "group": null,
+              "statement": "Découvrir différentes façons d’exprimer ses émotions par le corps.",
+              "ageBands": ["before-4"],
+              "sourcePage": 16
+            },
+            {
+              "code": "ART-S03-C01-O02",
+              "position": 2,
+              "group": null,
+              "statement": "Découvrir des rôles simples.",
+              "ageBands": ["before-4"],
+              "sourcePage": 16
+            },
+            {
+              "code": "ART-S03-C01-O03",
+              "position": 3,
+              "group": null,
+              "statement": "Découvrir le jeu dans une mise en scène collective.",
+              "ageBands": ["before-4"],
+              "sourcePage": 16
+            },
+            {
+              "code": "ART-S03-C01-O04",
+              "position": 4,
+              "group": null,
+              "statement": "Se familiariser avec l’expression des émotions par le corps et la voix.",
+              "ageBands": ["from-4"],
+              "sourcePage": 16
+            },
+            {
+              "code": "ART-S03-C01-O05",
+              "position": 5,
+              "group": null,
+              "statement": "Se familiariser avec des rôles simples.",
+              "ageBands": ["from-4"],
+              "sourcePage": 16
+            },
+            {
+              "code": "ART-S03-C01-O06",
+              "position": 6,
+              "group": null,
+              "statement": "Se familiariser avec le jeu dans une mise en scène collective.",
+              "ageBands": ["from-4"],
+              "sourcePage": 16
+            },
+            {
+              "code": "ART-S03-C01-O07",
+              "position": 7,
+              "group": null,
+              "statement": "Explorer des enchainements d’émotions par le corps et la voix.",
+              "ageBands": ["from-5"],
+              "sourcePage": 16
+            },
+            {
+              "code": "ART-S03-C01-O08",
+              "position": 8,
+              "group": null,
+              "statement": "Explorer des rôles simples.",
+              "ageBands": ["from-5"],
+              "sourcePage": 17
+            },
+            {
+              "code": "ART-S03-C01-O09",
+              "position": 9,
+              "group": null,
+              "statement": "Explorer le jeu dans une mise en scène collective.",
+              "ageBands": ["from-5"],
+              "sourcePage": 17
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": null,
+              "statement": "Reproduire des gestes ou des mimiques proposés par les professeurs puis par des camarades pour exprimer la joie, la tristesse, etc.",
+              "sourcePage": 16
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": null,
+              "statement": "Jouer les personnages d’une histoire racontée et lue en classe.",
+              "sourcePage": 16
+            },
+            {
+              "ageBand": "before-4",
+              "position": 3,
+              "group": null,
+              "statement": "Jouer librement avec des foulards, des cerceaux, des briques en mousse puis imiter un camarade désigné par le professeur.",
+              "sourcePage": 16
+            },
+            {
+              "ageBand": "from-4",
+              "position": 4,
+              "group": null,
+              "statement": "Exprimer de différentes manières la colère, en référence à une histoire racontée ou à des illustrations présentées par les professeurs.",
+              "sourcePage": 16
+            },
+            {
+              "ageBand": "from-4",
+              "position": 5,
+              "group": null,
+              "statement": "Faire semblant d’être un animal ou un personnage en lien avec la littérature, les contes et les comptines du répertoire de la classe.",
+              "sourcePage": 16
+            },
+            {
+              "ageBand": "from-4",
+              "position": 6,
+              "group": null,
+              "statement": "Jouer ensemble en détournant l’usage habituel des objets : le cerceau devient la maison, le foulard la queue du loup, etc.",
+              "sourcePage": 16
+            },
+            {
+              "ageBand": "from-5",
+              "position": 7,
+              "group": null,
+              "statement": "Passer du rire à la peur ou à la surprise en répondant aux consignes du professeur ou d’un camarade, avec ou sans référence à un support travaillé.",
+              "sourcePage": 16
+            },
+            {
+              "ageBand": "from-5",
+              "position": 8,
+              "group": null,
+              "statement": "Jouer avec des marionnettes à gaine ou à doigts et les faire parler en suivant le fil d’une histoire courte et bien connue.",
+              "sourcePage": 17
+            },
+            {
+              "ageBand": "from-5",
+              "position": 9,
+              "group": null,
+              "statement": "Commencer à jouer des personnages simples ou archétypaux en utilisant son corps et sa voix (le loup, la sorcière, l’ogre, etc.).",
+              "sourcePage": 17
+            },
+            {
+              "ageBand": "from-5",
+              "position": 10,
+              "group": null,
+              "statement": "Jouer ensemble les personnages d’une histoire en improvisant et en utilisant des objets en tant qu’éléments du décor : une chaise devient un refuge, un tapis devient une rivière, etc.",
+              "sourcePage": 17
+            }
+          ]
+        },
+        {
+          "code": "ART-S03-C02",
+          "position": 2,
+          "title": "Fréquenter et devenir spectateur et spectatrice",
+          "objectives": [
+            {
+              "code": "ART-S03-C02-O01",
+              "position": 1,
+              "group": null,
+              "statement": "Découvrir des œuvres adaptées.",
+              "ageBands": ["before-4"],
+              "sourcePage": 17
+            },
+            {
+              "code": "ART-S03-C02-O02",
+              "position": 2,
+              "group": null,
+              "statement": "Découvrir l’espace scénique.",
+              "ageBands": ["before-4"],
+              "sourcePage": 17
+            },
+            {
+              "code": "ART-S03-C02-O03",
+              "position": 3,
+              "group": null,
+              "statement": "Se familiariser avec l’espace scénique.",
+              "ageBands": ["from-4"],
+              "sourcePage": 17
+            },
+            {
+              "code": "ART-S03-C02-O04",
+              "position": 4,
+              "group": null,
+              "statement": "Se familiariser avec des œuvres adaptées.",
+              "ageBands": ["from-4"],
+              "sourcePage": 17
+            },
+            {
+              "code": "ART-S03-C02-O05",
+              "position": 5,
+              "group": null,
+              "statement": "Rencontrer des artistes.",
+              "ageBands": ["from-4"],
+              "sourcePage": 17
+            },
+            {
+              "code": "ART-S03-C02-O06",
+              "position": 6,
+              "group": null,
+              "statement": "Explorer l’espace scénique.",
+              "ageBands": ["from-5"],
+              "sourcePage": 17
+            },
+            {
+              "code": "ART-S03-C02-O07",
+              "position": 7,
+              "group": null,
+              "statement": "Explorer des œuvres adaptées.",
+              "ageBands": ["from-5"],
+              "sourcePage": 17
+            },
+            {
+              "code": "ART-S03-C02-O08",
+              "position": 8,
+              "group": null,
+              "statement": "Rencontrer des artistes et des professionnels.",
+              "ageBands": ["from-5"],
+              "sourcePage": 17
+            }
+          ],
+          "successExamples": [
+            {
+              "ageBand": "before-4",
+              "position": 1,
+              "group": null,
+              "statement": "Écouter de premières histoires théâtralisées très courtes et adaptées (théâtre pour les tout-petits, théâtre de marionnettes, etc.).",
+              "sourcePage": 17
+            },
+            {
+              "ageBand": "before-4",
+              "position": 2,
+              "group": null,
+              "statement": "Assister dans la mesure du possible à une représentation de danse contemporaine d’une durée adaptée au sein de l’école ou d’une structure culturelle locale.",
+              "sourcePage": 17
+            },
+            {
+              "ageBand": "from-4",
+              "position": 3,
+              "group": null,
+              "statement": "Après avoir assisté à une représentation, évoquer les personnages, les lieux, les décors, les costumes, etc.",
+              "sourcePage": 17
+            },
+            {
+              "ageBand": "from-4",
+              "position": 4,
+              "group": null,
+              "statement": "Dire ce que l’on a aimé ou pas dans un spectacle, ce qui a fait peur ou fait rire, et écouter ce que disent les camarades.",
+              "sourcePage": 17
+            },
+            {
+              "ageBand": "from-4",
+              "position": 5,
+              "group": null,
+              "statement": "Participer à des interventions menées par des comédiens et comédiennes, clowns, jongleurs et jongleuses, danseurs et danseuses, mimes, etc.",
+              "sourcePage": 17
+            },
+            {
+              "ageBand": "from-5",
+              "position": 6,
+              "group": null,
+              "statement": "Jouer dans un espace scénique devant des camarades spectateurs et spectatrices en utilisant les coulisses.",
+              "sourcePage": 17
+            },
+            {
+              "ageBand": "from-5",
+              "position": 7,
+              "group": null,
+              "statement": "Être spectateur et spectatrice de différents genres théâtraux : le mime, le théâtre d’ombres, le théâtre d’objets, les contes théâtralisés ou divers types de marionnettes (marottes, marionnettes empoignées, à tringles, sur table, etc.).",
+              "sourcePage": 17
+            },
+            {
+              "ageBand": "from-5",
+              "position": 8,
+              "group": null,
+              "statement": "Visiter des espaces dédiés au spectacle vivant et échanger autant que possible avec les professionnels et les artistes sur leur métier, à l’occasion d’un spectacle.",
+              "sourcePage": 17
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
