@@ -6,9 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-11
-Branch:     develop
-Commit:     3df64bf (initial baseline, identical on main and develop); the status update and its
-            formatting fix follow on develop
+Branch:     chore/validate-ci (PR into develop)
+Commit:     develop at 0800b48; main at 3df64bf (production baseline)
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -55,7 +54,7 @@ Objective: Next.js + TypeScript app with lint/format/test tooling, Docker, Supab
 - [x] Git repository initialised on `main`; `origin` = `https://github.com/ipanga/teka_edu.git`
 - [x] Initial commit `3df64bf` ("chore: initialize Teka Edu project foundation", 56 files; gitleaks: no leaks)
 - [x] `main` pushed (default branch) and `develop` created from `main` and pushed; both track `origin`
-- [ ] Branch protection / rulesets for `main` and `develop` (not configured yet)
+- [ ] Branch protection / rulesets for `main` and `develop` (not yet configured; PR-triggered CI validation in progress)
 
 ### Infrastructure foundation
 
@@ -71,19 +70,19 @@ Objective: Next.js + TypeScript app with lint/format/test tooling, Docker, Supab
 
 Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED`.
 
-| Area                            | Status          | Evidence / remaining                                                                                                                                                                                                                                                                                            |
-| ------------------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Git repository                  | **VERIFIED**    | Initialised 2026-09-11. `origin/main` and `origin/develop` both at `3df64bf`. No force push; remote was empty beforehand.                                                                                                                                                                                       |
-| Docker                          | **VERIFIED**    | Both images build, report healthy, run as user `node`, and exit on SIGTERM with code 143, both locally (arm64) and on GitHub runners (x86_64).                                                                                                                                                                  |
-| GitHub Actions                  | **IN PROGRESS** | Every CI job **passed on GitHub** in the push-triggered runs `Deploy production` 34610713969 (main) and `Deploy staging` 34610729923 (develop), with deploy jobs skipped as designed. Still to do: the PR-triggered `ci.yml` run, the `Promotion source` check, branch rules. No GitHub environments exist yet. |
-| Supabase local                  | **VERIFIED**    | `db start` / `db reset` / `test db` (PASS) / `stop` all work. Full `supabase start` confirmed `sb_publishable_…` / `sb_secret_…` local keys, and the env validation accepts them.                                                                                                                               |
-| Supabase DEV (`teka-edu-dev`)   | **BLOCKED**     | Project not created. Owner must create it and provide values (see below).                                                                                                                                                                                                                                       |
-| Supabase PROD (`teka-edu-prod`) | **BLOCKED**     | Project not created. Owner action.                                                                                                                                                                                                                                                                              |
-| Database migrations             | **CONFIGURED**  | Migration-only pipeline in CI/CD. No migrations exist yet (no schema needed in V1). Nothing applied to any hosted database.                                                                                                                                                                                     |
-| Vercel staging                  | **BLOCKED**     | No Vercel project, token or IDs. Staging deploy job gated by `STAGING_DEPLOY_ENABLED` (unset).                                                                                                                                                                                                                  |
-| Vercel production               | **BLOCKED**     | Same as staging. Gated by `PRODUCTION_DEPLOY_ENABLED` (unset).                                                                                                                                                                                                                                                  |
-| Environment variables           | **CONFIGURED**  | Templates, validation and inventory complete. No hosted values exist yet.                                                                                                                                                                                                                                       |
-| Deployment documentation        | **CONFIGURED**  | Written. Must be re-checked against the first real staging and production deployments.                                                                                                                                                                                                                          |
+| Area                            | Status          | Evidence / remaining                                                                                                                                                                                                                                                                                               |
+| ------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Git repository                  | **VERIFIED**    | Initialised 2026-09-11. `origin/main` and `origin/develop` both at `3df64bf`. No force push; remote was empty beforehand.                                                                                                                                                                                          |
+| Docker                          | **VERIFIED**    | Both images build, report healthy, run as user `node`, and exit on SIGTERM with code 143, both locally (arm64) and on GitHub runners (x86_64).                                                                                                                                                                     |
+| GitHub Actions                  | **IN PROGRESS** | Git initialization: COMPLETE. Push-triggered CI: VERIFIED (runs 34610713969 on main, 34610729923 and 34611359891 on develop; deploy jobs skipped as designed). PR-triggered CI: VALIDATION IN PROGRESS (`chore/validate-ci` → `develop`). Branch protection: NOT YET CONFIGURED. No GitHub environments exist yet. |
+| Supabase local                  | **VERIFIED**    | `db start` / `db reset` / `test db` (PASS) / `stop` all work. Full `supabase start` confirmed `sb_publishable_…` / `sb_secret_…` local keys, and the env validation accepts them.                                                                                                                                  |
+| Supabase DEV (`teka-edu-dev`)   | **BLOCKED**     | Project not created. Owner must create it and provide values (see below).                                                                                                                                                                                                                                          |
+| Supabase PROD (`teka-edu-prod`) | **BLOCKED**     | Project not created. Owner action.                                                                                                                                                                                                                                                                                 |
+| Database migrations             | **CONFIGURED**  | Migration-only pipeline in CI/CD. No migrations exist yet (no schema needed in V1). Nothing applied to any hosted database.                                                                                                                                                                                        |
+| Vercel staging                  | **BLOCKED**     | No Vercel project, token or IDs. Staging deploy job gated by `STAGING_DEPLOY_ENABLED` (unset).                                                                                                                                                                                                                     |
+| Vercel production               | **BLOCKED**     | Same as staging. Gated by `PRODUCTION_DEPLOY_ENABLED` (unset).                                                                                                                                                                                                                                                     |
+| Environment variables           | **CONFIGURED**  | Templates, validation and inventory complete. No hosted values exist yet.                                                                                                                                                                                                                                          |
+| Deployment documentation        | **CONFIGURED**  | Written. Must be re-checked against the first real staging and production deployments.                                                                                                                                                                                                                             |
 
 ## In Progress
 
