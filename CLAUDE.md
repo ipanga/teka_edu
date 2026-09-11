@@ -64,7 +64,7 @@ Keep this table in sync with the repository. Mark a row **Implemented** only whe
 | Lint / format          | ESLint 9 (`eslint-config-next`) + Prettier                                          | Implemented                                  |
 | Container              | `Dockerfile` (portable) + `Dockerfile.vercel` (Vercel container)                    | Implemented (built and smoke-tested locally) |
 | Database               | Supabase (PostgreSQL 17): CLI config, migrations folder, pgTAP tests; no tables yet | Scaffolded (local only)                      |
-| CI/CD                  | GitHub Actions: `ci.yml`, `deploy-staging.yml`, `deploy-production.yml`             | Written, linted; never run on GitHub         |
+| CI/CD                  | GitHub Actions: `ci.yml`, `deploy-staging.yml`, `deploy-production.yml`             | Implemented; run status in PROJECT_STATUS.md |
 | Hosting                | Vercel container deployment, portable to any OCI host                               | Not configured (no Vercel project yet)       |
 
 - **Deprecated / replaced:** plain Vercel/Next.js builds, replaced by `Dockerfile.vercel` container deployment (ADR-013).

@@ -149,7 +149,7 @@ Scope to **Production**. Use the PROD values:
 
 ## 9. GitHub repository basics
 
-1. [ ] The repository must contain `main` and `develop`. Bootstrapping: initialise Git, push `main`, create `develop` from it. Claude Code does this only when you ask.
+1. [x] The repository contains `main` and `develop` (bootstrapped 2026-09-11 from commit `3df64bf`; `main` is the default branch).
 2. [ ] Settings → General → Pull Requests: allow **squash merging**. Optionally disable merge commits.
 3. [ ] Settings → Code security: enable **Secret scanning** and **Push protection** (free for public repositories).
 4. [ ] Settings → Rules → Rulesets (or Branches → branch protection):

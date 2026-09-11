@@ -6,8 +6,9 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-11
-Branch:     none (local directory is not yet a Git repository)
-Commit:     none
+Branch:     develop
+Commit:     3df64bf (initial baseline, identical on main and develop); this status update is
+            the next commit on develop
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -15,8 +16,9 @@ Updated by: Claude Code (claude-opus-5)
 
 ```text
 Phase 0 — Foundation
-Status:    In progress. App foundation and infrastructure scaffolding are implemented and
-           validated locally. Not yet in Git, and never run on GitHub.
+Status:    In progress. The foundation is in Git and on GitHub (main + develop). All CI jobs
+           passed on GitHub runners through the push-triggered workflows. Remaining: a PR-based
+           CI run, branch protection, and the external service setup.
 Objective: Next.js + TypeScript app with lint/format/test tooling, Docker, Supabase local
            stack, CI/CD workflows and environment documentation (Plan §38 Phase 0, §46).
 ```
@@ -24,7 +26,7 @@ Objective: Next.js + TypeScript app with lint/format/test tooling, Docker, Supab
 ## Overall Progress
 
 ```text
-[ ] Phase 0 — Foundation              (in progress: Git bootstrap and first GitHub CI run pending)
+[ ] Phase 0 — Foundation              (in progress: PR-based CI validation and branch protection pending)
 [ ] Phase 1 — Curriculum Engine
 [ ] Phase 2 — Child Experience
 [ ] Phase 3 — Activity Engine
@@ -50,7 +52,10 @@ Objective: Next.js + TypeScript app with lint/format/test tooling, Docker, Supab
 - [x] Tailwind CSS 4, ESLint 9 (`eslint-config-next`), Prettier, Zod 4
 - [x] Vitest 5 + React Testing Library + jsdom (18 unit tests), Playwright 1.63 (2 smoke tests)
 - [x] Toolchain decisions recorded (ADR-020): npm, Node 22 (`.nvmrc`), exact version pins
-- [ ] Git repository initialised, remote linked, `develop` created (**needs owner approval**)
+- [x] Git repository initialised on `main`; `origin` = `https://github.com/ipanga/teka_edu.git`
+- [x] Initial commit `3df64bf` ("chore: initialize Teka Edu project foundation", 56 files; gitleaks: no leaks)
+- [x] `main` pushed (default branch) and `develop` created from `main` and pushed; both track `origin`
+- [ ] Branch protection / rulesets for `main` and `develop` (not configured yet)
 
 ### Infrastructure foundation
 
@@ -68,8 +73,9 @@ Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED
 
 | Area                            | Status               | Evidence / remaining                                                                                                                                                                      |
 | ------------------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Docker                          | **VERIFIED (local)** | Both images build. Container is healthy about 6 s after start, runs as user `node`, and exits on SIGTERM with code 143 (graceful). Verified on arm64 only; CI builds amd64 (not yet run). |
-| GitHub Actions                  | **IN PROGRESS**      | 3 workflows written, and `actionlint` 1.7.12 reports 0 errors. Every CI step passes locally. Never run on GitHub (nothing pushed). Branch rules and environments not created.             |
+| Git repository                  | **VERIFIED**         | Initialised 2026-09-11. `origin/main` and `origin/develop` both at `3df64bf`. No force push; remote was empty beforehand. |
+| Docker                          | **VERIFIED**         | Both images build, report healthy, run as user `node`, and exit on SIGTERM with code 143, both locally (arm64) and on GitHub runners (x86_64). |
+| GitHub Actions                  | **IN PROGRESS**      | Every CI job **passed on GitHub** in the push-triggered runs `Deploy production` 34610713969 (main) and `Deploy staging` 34610729923 (develop), with deploy jobs skipped as designed. Still to do: the PR-triggered `ci.yml` run, the `Promotion source` check, branch rules. No GitHub environments exist yet. |
 | Supabase local                  | **VERIFIED**         | `db start` / `db reset` / `test db` (PASS) / `stop` all work. Full `supabase start` confirmed `sb_publishable_…` / `sb_secret_…` local keys, and the env validation accepts them.         |
 | Supabase DEV (`teka-edu-dev`)   | **BLOCKED**          | Project not created. Owner must create it and provide values (see below).                                                                                                                 |
 | Supabase PROD (`teka-edu-prod`) | **BLOCKED**          | Project not created. Owner action.                                                                                                                                                        |
@@ -83,19 +89,20 @@ Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED
 
 ```text
 Task:           Phase 0 completion
-Status:         Local work done; waiting on owner for Git bootstrap and external accounts
+Status:         Git bootstrap done; CI green on GitHub via push-triggered runs
 Relevant files: .github/workflows/*, docs/ENVIRONMENT_SETUP.md
-Remaining:      git init + first push, first GitHub CI run, branch rules, GitHub environments,
-                Supabase and Vercel setup, first staging deployment
+Remaining:      PR-based CI validation, branch rules, GitHub environments, Supabase and Vercel
+                setup, first staging deployment
 ```
 
 ## Next Tasks
 
 ### P0 — Next
 
-1. **Git bootstrap** (needs owner approval to commit and push):
-   - `git init`, set `origin`, first commit on `main`, create `develop`
-   - open a PR so `ci.yml` runs on GitHub, then fix any runner-specific issue (amd64 Docker build, `supabase/setup-cli@v3`, Playwright system dependencies)
+1. **Validate CI through a pull request:**
+   - create `chore/validate-ci` from `develop` and open the first PR into `develop`
+   - confirm the PR-triggered `ci.yml` run
+   - then configure branch rules for `main` / `develop` with the CI job names as required checks (`docs/ENVIRONMENT_SETUP.md` section 9)
 2. **Owner: external setup** following `docs/ENVIRONMENT_SETUP.md` sections 2–12. The value checklist is at the end of that file.
 3. **First staging deployment:** set `STAGING_DEPLOY_ENABLED=true`, then verify:
    - `PORT=3000` routing
@@ -118,12 +125,6 @@ Remaining:      git init + first push, first GitHub CI run, branch rules, GitHub
 3. Docker build caching in CI (buildx + GitHub Actions cache) if CI time becomes a problem.
 
 ## Known Issues
-
-### ISSUE-001 — Local directory is not a Git repository
-
-Severity: Medium · Status: Open
-Description: There is no `.git` directory and the GitHub remote is empty. The CI/CD workflows cannot run until the code is pushed.
-Recommended action: P0 task 1 (needs owner approval).
 
 ### ISSUE-002 — Official curriculum source not yet obtained
 
@@ -163,6 +164,7 @@ Recommended action: keep media files small, or serve large media from Supabase S
 
 ## Resolved Issues
 
+- **ISSUE-001 (not a Git repository)**, resolved 2026-09-11: Git initialised, and `main` and `develop` pushed to `ipanga/teka_edu` at `3df64bf`.
 - **PD-001 (Vercel mechanism)**, resolved 2026-09-11: Vercel runs `Dockerfile.vercel` containers (ADR-013).
 - **PD-009 (test runner)**, resolved 2026-09-11: Vitest (ADR-020).
 
@@ -177,7 +179,7 @@ Phase 1 calendar and curriculum data also need PD-002, PD-003 and PD-004. That d
 
 ## Tests / Quality Status
 
-All values below are local runs on 2026-09-11 (macOS arm64, Node 22.22.2, Docker 29.7.2).
+Local runs on 2026-09-11 (macOS arm64, Node 22.22.2, Docker 29.7.2), repeated before the initial commit. The same checks also passed on GitHub runners (last line).
 
 ```text
 Lint:                  PASS
@@ -191,7 +193,8 @@ Client-bundle check:   PASS (sentinel secrets absent; a planted leak is detected
 Docker build:          PASS (Dockerfile and Dockerfile.vercel, with health and graceful-stop smoke)
 Supabase DB tests:     PASS (pgTAP: RLS guard; a table without RLS correctly fails)
 Workflow lint:         PASS (actionlint 1.7.12)
-GitHub Actions CI:     NOT RUN (repository not pushed)
+GitHub Actions CI:     PASS on push-triggered runs 34610713969 (main) and 34610729923 (develop),
+                       commit 3df64bf, ubuntu-24.04 x86_64; PR-triggered ci.yml NOT RUN yet
 ```
 
 ## Content Status
@@ -208,12 +211,12 @@ DRC 2026–2027 calendar data: Not started.
 
 ```text
 Local:      Runs: npm run dev, npm run start (standalone), Docker image
-Docker:     Verified locally (both Dockerfiles)
-Staging:    Not configured (no Supabase DEV / Vercel project)
-Production: Not configured
-CI:         Workflow written and linted; never run on GitHub
-CD:         Workflows written; deploy jobs disabled until STAGING_/PRODUCTION_DEPLOY_ENABLED=true
-Remote:     github.com/ipanga/teka_edu exists (public, empty, no branches)
+Docker:     Verified locally (arm64) and in GitHub CI (x86_64), both Dockerfiles
+Staging:    Not configured (no Supabase DEV / Vercel project); not deployed
+Production: Not configured; not deployed
+CI:         Passing on GitHub (push-triggered via deploy workflows); PR-triggered run pending
+CD:         Deploy jobs skipped: STAGING_/PRODUCTION_DEPLOY_ENABLED unset; no GitHub environments
+Remote:     github.com/ipanga/teka_edu (public). main (default) = 3df64bf; develop = 3df64bf + status docs commit
 ```
 
 ## Deviations From the Infrastructure Spec (documented)
@@ -261,15 +264,21 @@ Remote:     github.com/ipanga/teka_edu exists (public, empty, no branches)
 ## Last Session Summary
 
 ```text
-Completed:  Researched the current Vercel container deployment (Dockerfile.vercel, GA) and the
-            Supabase CLI/key conventions. Initialised the Next.js 16 app and tooling.
-            Implemented env validation, the health endpoint, both Dockerfiles, the Supabase local
-            config and pgTAP guard, the three GitHub workflows, the env templates, the infra docs
-            (3 files), ADR-012..021 and the plan §46 addendum.
-Changed:    Everything is new except the docs from the previous session, which were updated.
-            Nothing committed (no Git repository).
-Tests:      All local checks PASS (see Tests / Quality Status). GitHub CI not run.
-Remaining:  Git bootstrap; owner setup of Supabase, Vercel and GitHub; first staging deployment.
-Recommended next task: with owner approval, initialise Git, push main and develop, and open a PR
-            to see CI run on GitHub.
+Completed:  Git bootstrap.
+            - Verified the remote was empty (no commits, branches, variables, secrets or
+              environments).
+            - Reviewed and extended .gitignore; checked the env templates (placeholders only).
+            - Ran a pattern scan and gitleaks v8.30.1 on the staged content: no leaks.
+            - Re-ran local validation (all PASS).
+            - git init -b main, origin set, initial commit 3df64bf; pushed main; created and
+              pushed develop.
+            - The pushes triggered the deploy workflows: all CI jobs passed on GitHub and the
+              deploy jobs were skipped.
+Changed:    .gitignore (IDE/OS/credential patterns, in the initial commit). Status docs commit on
+            develop: PROJECT_STATUS.md, CLAUDE.md (CI/CD row), docs/ENVIRONMENT_SETUP.md §9.
+Tests:      Local PASS; GitHub CI PASS (push-triggered). PR-triggered CI not yet run.
+Remaining:  PR-based CI validation, branch rules, owner setup of Supabase/Vercel/GitHub
+            environments, first staging deployment.
+Recommended next task: create chore/validate-ci from develop, open the first PR into develop,
+            and validate the PR-triggered CI pipeline before configuring Supabase or Vercel.
 ```
