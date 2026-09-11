@@ -34,6 +34,7 @@ Short architecture/product decision records (ADRs). They cover decisions future 
 | 023 | No `.env*` files in the repository                                                      | Accepted               |
 | 024 | Supabase projects in Paris (eu-west-3); credentials in Keychain and GitHub environments | Accepted               |
 | 025 | Runtime configuration for container deployments                                         | Accepted               |
+| 026 | Vercel project configuration: Hobby, Preview as staging, no Git connection              | Accepted               |
 
 ---
 
@@ -519,3 +520,28 @@ When documents disagree about intended behavior, the order is plan → decisions
 - The image is environment-neutral: one build can serve staging, production or any OCI host.
 - A misconfigured container fails at start, not at build. The staging smoke test covers this, and a local test proved a staging container with the PROD ref returns HTTP 500 and `EnvValidationError`.
 - There is no static prerendering. That is acceptable for this app, and static assets are still built.
+
+---
+
+## ADR-026 — Vercel project configuration: Hobby, Preview as staging, no Git connection
+
+**Status:** Accepted · **Date:** 2026-09-11 · **Implements:** ADR-013, ADR-016 · **Partly resolves:** PD-010
+
+**Context:** Team TEKA is on the Vercel **Hobby** plan. It is free, hard limits pause usage rather than billing it, and it is restricted to **non-commercial, personal use**. Custom Environments (a named `staging` target) need Pro.
+
+**Decision:**
+
+- **Project:** `teka-edu` (`prj_cJcoXbMF0fi3Uf4SejFnRH6uCmph`), created without a Git connection. Git auto-deploys are also disabled in `vercel.json`, so the GitHub Actions workflows are the only deployment path.
+- **Build and region:** `container` preset, function region `cdg1` (next to Supabase `eu-west-3`).
+- **Staging:**
+  - Staging is **Preview**. Only `develop` is ever deployed there, so the Preview scope carries the DEV values only.
+  - Each staging deployment gets the alias `teka-edu-staging.vercel.app`, set through the REST API.
+- **Production:** the Production scope carries the PROD values only.
+- **Protection:** Vercel Authentication covers every deployment except custom domains. CI smoke tests use a Protection Bypass for Automation secret.
+- **CI tokens:** owner-created in the dashboard, one per GitHub environment, scoped to the project. The CLI's own login cannot create tokens.
+
+**Consequences:**
+
+- A public production launch needs a plan decision: Hobby terms, plus the fact that the production domain cannot be protected on Hobby.
+- Moving to Pro would allow a named `staging` Custom Environment (`VERCEL_STAGING_TARGET=staging`) and rollback to any earlier production deployment.
+- The project's first (failed) production deployment is kept deliberately (ADR-013 amendment).

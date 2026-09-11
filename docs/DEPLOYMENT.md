@@ -160,12 +160,18 @@ Rules (ADR-017):
   - Every request reaches the container (static files are not CDN-cached unless the response sends `s-maxage` / `CDN-Cache-Control`). This is a later optimisation, tracked in `PROJECT_STATUS.md`.
 - **No duplicate deploys:** `vercel.json` sets `"git": { "deploymentEnabled": false }`, so Vercel's Git integration never deploys on its own. GitHub Actions is the only deployer (ADR-016).
 
+## Staging (live since 2026-09-11)
+
+- The URL is **https://teka-edu-staging.vercel.app**, protected by Vercel Authentication. Check it yourself with `vercel curl … --scope teka10`.
+- The first verified deployment was run 34635262697: `dpl_99QEWbwtBTV53u5HzdudDaKndjgy`, commit `e2f8f69`, Preview, container, `cdg1`, Supabase DEV.
+- Every merge into `develop` now deploys staging automatically (`STAGING_DEPLOY_ENABLED=true`). Production stays disabled.
+
 ## Smoke tests
 
 - `tests/e2e/smoke.spec.ts` runs:
   - in CI, against the local standalone build
   - after each deployment, against the deployed URL (`PLAYWRIGHT_BASE_URL`)
-- It checks `/api/health` (`status`, expected `environment`, expected `commit`) and that the French home page renders.
+- It checks `/api/health` (`status`, the expected `environment`, the expected `supabaseProjectRef` (the environment's own `SUPABASE_PROJECT_ID`), and the expected `commit`) and that the French home page renders.
 - Vercel Deployment Protection is bypassed with the `x-vercel-protection-bypass` header when `VERCEL_AUTOMATION_BYPASS_SECRET` is configured.
 - A failed smoke test turns the job red, and the job summary marks the deployment **unhealthy**. Investigate before promoting, and consider rolling back production.
 
@@ -182,7 +188,8 @@ vercel rollback status --token ...
 vercel promote <deployment-url-or-id> --token ...       # re-enable normal promotion afterwards
 ```
 
-- On **Hobby**, only the previous production deployment is available. On **Pro/Enterprise**, any earlier production deployment is.
+- On **Hobby** (the current plan), only the previous production deployment is available. On **Pro/Enterprise**, any earlier production deployment is.
+- **Staging** uses Preview deployments. To roll staging back, re-point the alias: `vercel alias set <older-deployment-url> teka-edu-staging.vercel.app --scope teka10`.
 - After a rollback, automatic promotion of new production deployments is paused until `vercel promote` is run.
 - **Code rollback:** revert the faulty commit on `develop` → staging → `main`. The normal pipeline redeploys.
   - Re-running an **old** deployment workflow run is not a rollback. Its `supabase db push` fails if the remote database already has newer migrations.
@@ -199,18 +206,22 @@ Migrations are not assumed to be reversible:
 
 ## Common deployment failures
 
-| Symptom                                                     | Likely cause                                                                                          | Action                                                                                                                 |
-| ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `Missing secret X in the 'staging' environment`             | GitHub Environment secret not set                                                                     | Add it (ENVIRONMENT_SETUP.md sections 10–11)                                                                           |
-| `supabase link` fails                                       | Wrong `SUPABASE_PROJECT_ID`, expired `SUPABASE_ACCESS_TOKEN`, or wrong `SUPABASE_DB_PASSWORD`         | Check the values of _that_ environment                                                                                 |
-| `db push`: remote migration versions not found locally      | Someone changed the hosted schema outside migrations, or an old commit is being deployed              | Never edit hosted schemas by hand. Reconcile with `supabase migration list` / `supabase migration repair` after review |
-| `db push` fails on SQL                                      | Migration invalid against real data                                                                   | Nothing was deployed. Fix forward with a new migration                                                                 |
-| Build fails with `Invalid public environment configuration` | A Vercel variable is missing or wrong (e.g. local URL in staging, secret key in a `NEXT_PUBLIC_` var) | Fix the variable in Vercel. The message names it without revealing the value                                           |
-| Deployment works but requests time out or return 502        | `PORT` not set to `3000` in Vercel                                                                    | Set `PORT=3000` for that environment and redeploy                                                                      |
-| Smoke test gets 401/403                                     | Deployment Protection without bypass                                                                  | Configure `VERCEL_AUTOMATION_BYPASS_SECRET`                                                                            |
-| Smoke test: `environment` mismatch                          | `NEXT_PUBLIC_APP_ENV` missing or wrong in that Vercel scope                                           | Fix it in that Vercel scope and redeploy (read at container start)                                                     |
-| Two deployments for one push                                | Vercel Git integration re-enabled                                                                     | Keep `git.deploymentEnabled: false`, and check the project settings                                                    |
-| CI `Promotion source` fails                                 | PR into `main` from a feature branch, or from a fork                                                  | Merge into `develop` first                                                                                             |
+| Symptom                                                                                                                   | Likely cause                                                                                          | Action                                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Missing secret X in the 'staging' environment`                                                                           | GitHub Environment secret not set                                                                     | Add it (ENVIRONMENT_SETUP.md sections 10–11)                                                                                                          |
+| `supabase link` fails                                                                                                     | Wrong `SUPABASE_PROJECT_ID`, expired `SUPABASE_ACCESS_TOKEN`, or wrong `SUPABASE_DB_PASSWORD`         | Check the values of _that_ environment                                                                                                                |
+| `db push`: remote migration versions not found locally                                                                    | Someone changed the hosted schema outside migrations, or an old commit is being deployed              | Never edit hosted schemas by hand. Reconcile with `supabase migration list` / `supabase migration repair` after review                                |
+| `db push` fails on SQL                                                                                                    | Migration invalid against real data                                                                   | Nothing was deployed. Fix forward with a new migration                                                                                                |
+| Build fails with `Invalid public environment configuration`                                                               | A Vercel variable is missing or wrong (e.g. local URL in staging, secret key in a `NEXT_PUBLIC_` var) | Fix the variable in Vercel. The message names it without revealing the value                                                                          |
+| Deployment works but requests time out or return 502                                                                      | `PORT` not set to `3000` in Vercel                                                                    | Set `PORT=3000` for that environment and redeploy                                                                                                     |
+| Smoke test gets 401/403                                                                                                   | Deployment Protection without bypass                                                                  | Configure `VERCEL_AUTOMATION_BYPASS_SECRET`                                                                                                           |
+| Smoke test: `environment` mismatch                                                                                        | `NEXT_PUBLIC_APP_ENV` missing or wrong in that Vercel scope                                           | Fix it in that Vercel scope and redeploy (read at container start)                                                                                    |
+| Two deployments for one push                                                                                              | Vercel Git integration re-enabled                                                                     | Keep `git.deploymentEnabled: false`, and check the project settings                                                                                   |
+| Staging build fails with `Invalid public environment configuration … production deployment` on the project's first deploy | Vercel makes the **first deployment of a new project** production, even without `--prod`              | Expected on a brand-new project. The failed production deployment is kept; later deploys are Preview. The workflow pre-check refuses an empty project |
+| Vercel runs `npm run build` instead of building the image                                                                 | Project framework preset is not `container`                                                           | Set the project framework to `container` (it is also pinned in `vercel.json`)                                                                         |
+| `/api/health` reports `environment: local` on Vercel                                                                      | Configuration was expected at build time (Vercel passes no build arguments)                           | Read configuration at runtime only (ADR-025). Check the Vercel variables of that scope                                                                |
+| `Error: User not found.` from `vercel inspect` / `vercel alias` in CI                                                     | Project-scoped token cannot call user-level endpoints                                                 | Use the REST API (the workflows already do)                                                                                                           |
+| CI `Promotion source` fails                                                                                               | PR into `main` from a feature branch, or from a fork                                                  | Merge into `develop` first                                                                                                                            |
 
 ## Secrets in logs
 
