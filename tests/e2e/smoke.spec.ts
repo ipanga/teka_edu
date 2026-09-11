@@ -15,6 +15,11 @@ test("health endpoint reports ok", async ({ request }) => {
   if (expectedEnvironment) {
     expect(body.environment).toBe(expectedEnvironment);
   }
+  // ...that it is wired to this environment's Supabase project (never the other one)...
+  const expectedSupabaseRef = process.env.EXPECTED_SUPABASE_PROJECT_REF;
+  if (expectedSupabaseRef) {
+    expect(body.supabaseProjectRef).toBe(expectedSupabaseRef);
+  }
   // ...and that this exact commit is live (skipped if the build did not receive the SHA).
   const expectedCommit = process.env.EXPECTED_GIT_SHA;
   if (expectedCommit && body.commit !== null) {

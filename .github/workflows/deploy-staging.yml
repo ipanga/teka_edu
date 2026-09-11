@@ -118,6 +118,8 @@ jobs:
           PLAYWRIGHT_BASE_URL: ${{ steps.deploy.outputs.url }}
           EXPECTED_GIT_SHA: ${{ github.sha }}
           EXPECTED_APP_ENV: staging
+          # The environment's own Supabase project ref (DEV for staging, PROD for production).
+          EXPECTED_SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_ID }}
           VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
         run: npm run test:e2e
 
