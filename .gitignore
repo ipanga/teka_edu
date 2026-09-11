@@ -17,11 +17,10 @@
 *.tsbuildinfo
 next-env.d.ts
 
-# environment files: real values are never committed, templates are
+# environment files: NO file starting with .env is ever tracked, not even templates
+# (ADR-023). Variables are documented in docs/ENVIRONMENT_VARIABLES.md.
 .env
 .env.*
-!.env.example
-!.env.*.example
 
 # vercel CLI link and pulled environment files
 .vercel

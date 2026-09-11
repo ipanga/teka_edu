@@ -89,7 +89,7 @@ If a step fails, the job stops and the steps after it do not run. In particular,
 
 ### `main` (production)
 
-- Only `develop` (or an emergency `hotfix/*` branch) may be merged into `main`. The CI `Promotion source` check enforces this and is required by the `main` ruleset.
+- Only `develop` (or an emergency `hotfix/<name>` branch) **from this repository** may be merged into `main`. The CI `Promotion source` check (`scripts/check-promotion-source.mjs`) enforces this and is required by the `main` ruleset. It checks both the head branch name and the head repository ID from the `pull_request` event payload, so a fork's branch named `develop` or `hotfix/*` is refused.
 - Promote with a PR `develop → main` and a **merge commit**, not a squash, so `main` and `develop` keep a shared history. Never delete `develop` after the merge.
 - `deploy-production.yml` does the same as staging against `teka-edu-prod`, and deploys with `vercel deploy --prod`.
 - Production runs are strictly serialised (`concurrency: deploy-production`, never cancelled mid-run).
@@ -107,7 +107,7 @@ These are separate jobs that run in parallel. Any failure blocks the merge and t
 
 | Job                                          | Steps                                                                                                                                                                                |
 | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Promotion source                             | PRs into `main` must come from `develop` or `hotfix/*`                                                                                                                               |
+| Promotion source                             | PRs into `main` must come from `develop` or `hotfix/<name>` **in this repository**, never from a fork (unit-tested in `tests/unit/promotion-source.test.ts`)                         |
 | Format, lint, typecheck, unit tests, content | `npm ci` → `format:check` → `lint` → `typecheck` → `test` (Vitest) → `content:validate`                                                                                              |
 | Build, client-bundle secret check, E2E smoke | `next build` with fake sentinel values for server secrets → `check:client-bundle` (fails if a sentinel appears in browser JS) → Playwright smoke against the built standalone server |
 | Supabase migrations and database tests       | `supabase db start` (applies all migrations and the dev seed) → `supabase db reset` → `supabase test db` (pgTAP; includes the "RLS on every public table" guard)                     |
@@ -209,7 +209,7 @@ Migrations are not assumed to be reversible:
 | Smoke test gets 401/403                                     | Deployment Protection without bypass                                                                  | Configure `VERCEL_AUTOMATION_BYPASS_SECRET`                                                                            |
 | Smoke test: `environment` mismatch                          | `NEXT_PUBLIC_APP_ENV` missing or wrong in that Vercel scope                                           | Fix it and redeploy (the value is inlined at build time)                                                               |
 | Two deployments for one push                                | Vercel Git integration re-enabled                                                                     | Keep `git.deploymentEnabled: false`, and check the project settings                                                    |
-| CI `Promotion source` fails                                 | PR into `main` from a feature branch                                                                  | Merge into `develop` first                                                                                             |
+| CI `Promotion source` fails                                 | PR into `main` from a feature branch, or from a fork                                                  | Merge into `develop` first                                                                                             |
 
 ## Secrets in logs
 

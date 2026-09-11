@@ -30,9 +30,10 @@ Next.js 16 (App Router, standalone output) · React 19 · TypeScript 5.9 · Tail
 ```bash
 npm ci
 npx playwright install chromium     # once, for E2E tests
-cp .env.local.example .env.local    # optional: the app runs with defaults
 npm run dev                         # http://localhost:3000
 ```
+
+No environment file is needed. The repository contains **no** `.env*` file, not even a template (ADR-023). To override defaults, create a Git-ignored `.env.local` by hand, using the examples in [`docs/ENVIRONMENT_VARIABLES.md`](docs/ENVIRONMENT_VARIABLES.md).
 
 The app needs no Supabase or cloud credentials to run locally. To start the local Supabase stack (PostgreSQL, Auth, Storage, Studio):
 
@@ -69,9 +70,8 @@ npm run db:test
 ## Configuration
 
 - All configuration is validated by `lib/env/`. The app refuses to build or start with an invalid configuration, and the error names the variable without revealing its value.
-- Templates: `.env.example` (canonical), `.env.local.example` (local), `.env.development.example` (staging reference), `.env.production.example` (production reference).
-- Real `.env*` files are Git-ignored.
-- See [`docs/ENVIRONMENT_VARIABLES.md`](docs/ENVIRONMENT_VARIABLES.md).
+- No `.env*` file is ever committed (ADR-023). Every variable, with safe examples, is documented in [`docs/ENVIRONMENT_VARIABLES.md`](docs/ENVIRONMENT_VARIABLES.md). Real values live only in your local `.env.local` (Git-ignored), GitHub Environment secrets, Vercel and Supabase.
+- `.gitignore` ignores every file starting with `.env`.
 
 ## Docker
 
