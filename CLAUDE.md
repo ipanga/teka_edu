@@ -2,16 +2,17 @@
 
 Read this file first in every session. It holds **stable context and working rules only**.
 
-| File                            | Answers                                                            |
-| ------------------------------- | ------------------------------------------------------------------ |
-| `CLAUDE.md`                     | What to remember while working (this file)                         |
-| `PROJECT_STATUS.md`             | Where implementation stands, what is next                          |
-| `DECISIONS.md`                  | Why important choices were made (ADRs)                             |
-| `TEKA_EDU_PROJECT_PLAN.md`      | What Teka Edu should become (full spec, cited as "Plan §N")        |
-| `README.md`                     | How a developer sets up, runs and tests the project                |
-| `docs/ENVIRONMENT_VARIABLES.md` | Every environment variable: the single authoritative inventory     |
-| `docs/ENVIRONMENT_SETUP.md`     | Step-by-step configuration of local, Supabase, Vercel and GitHub   |
-| `docs/DEPLOYMENT.md`            | Branch lifecycles, CI/CD pipelines, migrations, rollback, failures |
+| File                            | Answers                                                                    |
+| ------------------------------- | -------------------------------------------------------------------------- |
+| `CLAUDE.md`                     | What to remember while working (this file)                                 |
+| `PROJECT_STATUS.md`             | Where implementation stands, what is next                                  |
+| `DECISIONS.md`                  | Why important choices were made (ADRs)                                     |
+| `TEKA_EDU_PROJECT_PLAN.md`      | What Teka Edu should become (full spec, cited as "Plan §N")                |
+| `README.md`                     | How a developer sets up, runs and tests the project                        |
+| `docs/ENVIRONMENT_VARIABLES.md` | Every environment variable: the single authoritative inventory             |
+| `docs/ENVIRONMENT_SETUP.md`     | Step-by-step configuration of local, Supabase, Vercel and GitHub           |
+| `docs/DEPLOYMENT.md`            | Branch lifecycles, CI/CD pipelines, migrations, rollback, failures         |
+| `docs/FREE_TIER.md`             | Free-tier limits (classified), cost, safety rules, zero-cost backup design |
 
 Do not copy content between these files. Link to it instead.
 
@@ -105,6 +106,11 @@ Details are in `docs/`. Decisions are ADR-012 to ADR-021.
   - Function region `cdg1`, with no Git connection.
   - Staging is Preview plus the alias https://teka-edu-staging.vercel.app, deployed on every merge into `develop`.
   - Production is prepared but not deployed: there is no production token and no domain.
+- **Free tiers only (ADR-027):**
+  - Vercel Hobby and Supabase Free, $0/month.
+  - Never upgrade, buy add-ons, enter billing details or enable paid features. The default answer to any paid option is **no**; document the limitation in `docs/FREE_TIER.md` and prefer a free workaround.
+  - No real children's or parents' data in the cloud; DEV uses synthetic data.
+  - Production stays disabled until explicitly approved.
 - **State:** the runtime is stateless. Data lives in Supabase or in the browser (IndexedDB). Curriculum stays in Git.
 - **Database:** migration-only (`supabase/migrations/`), expand/contract, RLS on every public table (a pgTAP guard enforces it), and no hosted dashboard schema edits.
 - **CI/CD invariant:** GitHub Actions is the only deployer.
@@ -199,7 +205,7 @@ feature/*  -> develop  -> main
 At the start of every session:
 
 1. Read `CLAUDE.md`, then `PROJECT_STATUS.md`, then `DECISIONS.md`.
-2. Read only the sections of `TEKA_EDU_PROJECT_PLAN.md` that the task needs. Read the whole plan only when the task needs wide context. For infrastructure work (env vars, Docker, database, CI/CD, Supabase, Vercel, branch workflow), also read `docs/ENVIRONMENT_SETUP.md`, `docs/ENVIRONMENT_VARIABLES.md` and `docs/DEPLOYMENT.md`.
+2. Read only the sections of `TEKA_EDU_PROJECT_PLAN.md` that the task needs. Read the whole plan only when the task needs wide context. For infrastructure work (env vars, Docker, database, CI/CD, Supabase, Vercel, branch workflow), also read `docs/ENVIRONMENT_SETUP.md`, `docs/ENVIRONMENT_VARIABLES.md`, `docs/DEPLOYMENT.md` and `docs/FREE_TIER.md`.
 3. Check the actual repository (`git status`, `git log`, the files) before coding, because the docs can be out of date.
 
 Which source wins when documents disagree:
