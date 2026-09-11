@@ -28,7 +28,7 @@ describe("pilot lessons (3ème maternelle)", () => {
 
   it("traces every activity to an official objective of the curriculum", () => {
     const activities = data.lessons.flatMap((l) => l.activities);
-    expect(activities.length).toBeGreaterThanOrEqual(20);
+    expect(activities).toHaveLength(40);
     for (const activity of activities) {
       expect(activity.objectiveCodes.length).toBeGreaterThan(0);
       for (const code of activity.objectiveCodes) {

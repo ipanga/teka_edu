@@ -92,7 +92,7 @@ Objective: Plan §38 Phase 1 complete (curriculum engine); Phase 2 of the owner'
 - [x] Import tool kept for audit (`tools/curriculum-import/`), with a cross-check against an independent PDF extraction (0 unmatched lines) and exact bullet counts
 - [x] Age-band model (`before-4` / `from-4` / `from-5`) and the level → band mapping; a level's objectives include earlier bands (reinvestment)
 - [x] Lesson and activity model with typed payloads, materials, French instructions, adult guidance and optional English scaffolds (ADR-032)
-- [x] Pilot week for 3ème maternelle: 20 lessons, 44 activities, 5 complete days (40–41 min each)
+- [x] Pilot week for 3ème maternelle: 20 lessons, 40 activities, 5 complete days (40–41 min each)
 - [x] Deterministic daily-programme generator keyed by instructional day, with balance and progression rules (ADR-033, ADR-034)
 - [x] `GET /api/programme/<year>/<level>/<day>` and `npm run programme:report`
 - [x] Database: 18 new tables (28 total), generated reference data, 119 pgTAP assertions
@@ -306,7 +306,7 @@ GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891,
 | --------------- | ---------------------- | ------------------------------------------------- | ----------- | ----------- |
 | 1ère maternelle | DONE (band `before-4`) | Not started                                       | Not started | Not started |
 | 2ème maternelle | DONE (band `from-4`)   | Not started                                       | Not started | Not started |
-| 3ème maternelle | DONE (band `from-5`)   | DONE, awaiting review (20 lessons, 44 activities) | Not started | Not started |
+| 3ème maternelle | DONE (band `from-5`)   | DONE, awaiting review (20 lessons, 40 activities) | Not started | Not started |
 
 DRC 2026–2027 calendar data: DONE (official MINEDU-NC calendar and Ordonnance n° 23/042; 189 instructional days).
 Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 official objectives and 529 success examples** imported with provenance.
@@ -381,7 +381,7 @@ Completed:  Phase 2 — curriculum objectives, lesson/activity model, daily prog
               include earlier bands (official reinvestment).
             - Lesson + activity model (typed payloads, materials, French instruction, adult
               guidance, optional English scaffold), all traced to official objectives.
-            - Pilot week for 3ème maternelle: 20 lessons, 44 activities, 5 days of 40-41 min.
+            - Pilot week for 3ème maternelle: 20 lessons, 40 activities, 5 days of 40-41 min.
             - Deterministic daily-programme generator keyed by instructional day, with balance
               and progression rules labelled OFFICIAL / TEKA EDU.
             - 18 new database tables (28 total, ~2 MB), generated reference data, 119 pgTAP
