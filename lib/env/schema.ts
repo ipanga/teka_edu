@@ -119,7 +119,6 @@ const publicEnvSchema = z.object({
   NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: fromEnv(z.string().optional()),
   NEXT_PUBLIC_ENABLE_ENGLISH_SCAFFOLDING: flag(true),
   NEXT_PUBLIC_ENABLE_CLOUD_SYNC: flag(false),
-  NEXT_PUBLIC_APP_VERSION: fromEnv(z.string().optional()),
   NEXT_PUBLIC_GIT_SHA: fromEnv(
     z
       .string()

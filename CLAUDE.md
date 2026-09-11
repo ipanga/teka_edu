@@ -99,7 +99,7 @@ Details are in `docs/`. Decisions are ADR-012 to ADR-021.
   - They exist in Paris `eu-west-3`, on the Free plan: `teka-edu-dev` = `quyhkkizsmosybavoewd` and `teka-edu-prod` = `eganrivpkjhozkkahyxy`.
   - This working copy is linked to DEV only.
   - CI credentials are in the GitHub `staging` / `production` environments. Runtime values are in the owner's Keychain until they go into Vercel.
-- **Containers:** `Dockerfile` (portable OCI image) and `Dockerfile.vercel` (Vercel builds and runs it as a container). Keep them in sync. `NEXT_PUBLIC_*` values are build arguments; secrets are runtime only. On Vercel, `PORT=3000` is required.
+- **Containers:** `Dockerfile` (portable OCI image) and `Dockerfile.vercel` (Vercel builds and runs it as a container). Keep them in sync. The image is environment-neutral: **all configuration, including `NEXT_PUBLIC_*`, is read at runtime** (ADR-025). Never read a `NEXT_PUBLIC_` variable as a literal `process.env` member (a unit test enforces it). On Vercel, `PORT=3000` is required.
 - **State:** the runtime is stateless. Data lives in Supabase or in the browser (IndexedDB). Curriculum stays in Git.
 - **Database:** migration-only (`supabase/migrations/`), expand/contract, RLS on every public table (a pgTAP guard enforces it), and no hosted dashboard schema edits.
 - **CI/CD invariant:** GitHub Actions is the only deployer.

@@ -6,9 +6,9 @@
 #   docker build -t teka-edu:local .
 #   docker run --rm -p 3000:3000 teka-edu:local
 #
-# NEXT_PUBLIC_* values are inlined into the JavaScript at build time (Next.js behaviour), so
-# they are build arguments. Server secrets are runtime-only: pass them with `docker run -e`
-# or `--env-file`, never as build arguments.
+# The image is environment-neutral (ADR-025): ALL configuration, including the browser-safe
+# NEXT_PUBLIC_* values, is read at runtime. Pass it with `docker run -e KEY=value` (or the
+# platform's environment variables); never bake configuration or secrets into the image.
 
 ARG NODE_VERSION=22.22.2
 ARG ALPINE_VERSION=3.22
@@ -27,30 +27,6 @@ FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-
-ARG NEXT_PUBLIC_APP_NAME
-ARG NEXT_PUBLIC_DEFAULT_LOCALE
-ARG NEXT_PUBLIC_DEFAULT_COUNTRY
-ARG NEXT_PUBLIC_APP_ENV
-ARG NEXT_PUBLIC_APP_URL
-ARG NEXT_PUBLIC_SUPABASE_URL
-ARG NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
-ARG NEXT_PUBLIC_ENABLE_ENGLISH_SCAFFOLDING
-ARG NEXT_PUBLIC_ENABLE_CLOUD_SYNC
-ARG NEXT_PUBLIC_APP_VERSION
-ARG NEXT_PUBLIC_GIT_SHA
-ENV NEXT_PUBLIC_APP_NAME=$NEXT_PUBLIC_APP_NAME \
-    NEXT_PUBLIC_DEFAULT_LOCALE=$NEXT_PUBLIC_DEFAULT_LOCALE \
-    NEXT_PUBLIC_DEFAULT_COUNTRY=$NEXT_PUBLIC_DEFAULT_COUNTRY \
-    NEXT_PUBLIC_APP_ENV=$NEXT_PUBLIC_APP_ENV \
-    NEXT_PUBLIC_APP_URL=$NEXT_PUBLIC_APP_URL \
-    NEXT_PUBLIC_SUPABASE_URL=$NEXT_PUBLIC_SUPABASE_URL \
-    NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=$NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY \
-    NEXT_PUBLIC_ENABLE_ENGLISH_SCAFFOLDING=$NEXT_PUBLIC_ENABLE_ENGLISH_SCAFFOLDING \
-    NEXT_PUBLIC_ENABLE_CLOUD_SYNC=$NEXT_PUBLIC_ENABLE_CLOUD_SYNC \
-    NEXT_PUBLIC_APP_VERSION=$NEXT_PUBLIC_APP_VERSION \
-    NEXT_PUBLIC_GIT_SHA=$NEXT_PUBLIC_GIT_SHA
-
 RUN npm run build
 
 # ---- runner: minimal runtime, non-root --------------------------------------------------
