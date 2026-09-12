@@ -40,7 +40,12 @@ describe("GET /api/programme/[schoolYear]/[level]/[day]", () => {
       expect(objective.origin).toBe("official");
       expect(objective.source).toMatch(/^programme-/);
       expect(typeof objective.statement).toBe("string");
-      expect(Array.isArray(objective.successExamples)).toBe(true);
+      // The official tables attach success examples to a competency and an age band, so the
+      // field says so rather than implying they belong to this single objective.
+      expect(objective.competency.code).toMatch(/^[A-Z][A-Z0-9-]*-S\d{2}-C\d{2}$/);
+      expect(typeof objective.competency.title).toBe("string");
+      expect(Array.isArray(objective.competencySuccessExamples)).toBe(true);
+      expect(objective).not.toHaveProperty("successExamples");
     }
   });
 

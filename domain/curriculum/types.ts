@@ -98,6 +98,11 @@ export type CurriculumSource = {
   /** Legal citation (arrêté, annexe, Bulletin officiel). */
   citation: string;
   url: string | null;
+  /**
+   * Date the official document was published (its "last update", which the Licence Ouverte
+   * requires to be cited alongside the source).
+   */
+  publishedOn: string;
   /** SHA-256 of the PDF that was imported, so the import can be re-verified. */
   sha256: string | null;
   /** Domain codes this document covers. */

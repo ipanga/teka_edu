@@ -11,6 +11,8 @@ package-lock.json
 supabase/.temp/
 supabase/.branches/
 lib/supabase/database.types.ts
+# Written by `npm run review:package` from content/; the generator owns its layout.
+docs/review/
 
 # User-authored specification, kept verbatim
 TEKA_EDU_PROJECT_PLAN.md

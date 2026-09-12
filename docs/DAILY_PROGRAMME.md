@@ -68,6 +68,13 @@ same kind of claim.
 In the generator these become: physical activity every day, language every day (ending with the
 daily read-aloud), mathematics every day, and no worksheet-style activity type.
 
+**Where the pilot does not yet meet the text.** The official rule is two daily moments: a taught
+read-aloud _"et enseigne la compréhension"_, **and** a separate reading _"sans questionnement"_.
+The pilot has the pleasure reading every day, but the comprehension read-aloud only once in five
+days. A 40-minute home session cannot hold both every day without dropping something else, so
+this is recorded as a content decision for the next phase rather than a silent claim of
+compliance ([`PEDAGOGICAL_REVIEW.md`](PEDAGOGICAL_REVIEW.md)).
+
 ### Official guidance (ministry booklets, not binding)
 
 - éduscol _livrets d'accompagnement_ "à partir de 5 ans" describe taught sessions of about
@@ -95,6 +102,13 @@ For ages 3–6, screen use should stay "exceptionnel", limited to quality educat
 
 The validator checks the checkable ones for every generated day, so a content change that breaks
 the balance fails CI rather than reaching a child.
+
+### Session model
+
+The 40 minutes are **one home session, which may be split in two** (for example language and
+mathematics after school, movement and the rotating domain later). Teka Edu is **reinforcement,
+not replacement**: the child's school day remains the main teaching, and the PNEM's own school
+week is 17h30. This is a Teka Edu decision, awaiting the reviewer's confirmation.
 
 ### A known divergence: the DRC's own preschool programme
 

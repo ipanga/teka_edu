@@ -1,6 +1,11 @@
 import { type CalendarDate, isCalendarDate } from "@/domain/calendar/date";
 import { describeDate, generateSchoolDays } from "@/domain/calendar/school-days";
-import { ageBandOfLevel, findObjective, successExamplesFor } from "@/domain/curriculum/objectives";
+import {
+  ageBandOfLevel,
+  findCompetency,
+  findObjective,
+  successExamplesFor,
+} from "@/domain/curriculum/objectives";
 import { generateDailyPlan } from "@/domain/programme/daily-plan";
 import { getProgramme, getReferenceData, getSyllabus } from "@/lib/content/reference-data";
 
@@ -60,13 +65,17 @@ export async function GET(
   const objective = (code: string) => {
     const found = findObjective(syllabus, code);
     if (found === undefined) return { code, statement: null, origin: null, source: null };
+    const competency = findCompetency(syllabus, found.competencyCode);
     return {
       code,
       statement: found.statement,
       // Official wording, quoted from the programme: never a Teka Edu formulation.
       origin: found.origin,
       source: found.sourceId,
-      successExamples: band
+      competency: competency ? { code: competency.code, title: competency.title } : null,
+      // The programme lists its "exemples de réussite" per competency and age band, not per
+      // objective, so they are returned under that name: they illustrate the whole competency.
+      competencySuccessExamples: band
         ? successExamplesFor(syllabus, found, band.code).map((example) => example.statement)
         : [],
     };

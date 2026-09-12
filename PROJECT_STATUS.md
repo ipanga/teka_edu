@@ -6,15 +6,15 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-11
-Branch:     feat/curriculum-lessons-daily-programme (PR into develop)
-Commit:     develop at a271347; main at 1b95480
+Branch:     feat/pedagogical-quality-gate (PR into develop)
+Commit:     develop at 36e39ad; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
 ## Current Phase
 
 ```text
-Phase 2 — Curriculum, lessons and daily programme: IN PROGRESS (2026-09-12)
+Phase 2.5 — Pedagogical review and content quality gate: IN PROGRESS (2026-09-12)
 Status:    School-year model, DRC holiday rules, calendar exceptions, instructional-day
            generator, education structure (stage → level), curriculum versions and the six
            Cycle 1 domains exist as validated content, tested domain logic and a database
@@ -23,8 +23,12 @@ Status:    School-year model, DRC holiday rules, calendar exceptions, instructio
            Phase 2 adds the official objectives (398, imported verbatim with provenance),
            the lesson/activity model, a pilot week for 3ème maternelle and a deterministic
            daily-programme generator with its API and report.
-           Remaining before the child experience: pedagogical review of the pilot, then
-           content for the rest of the year and the other two levels.
+           Phase 2.5 pre-reviewed the pilot (0 blockers, 3 major defects found and fixed),
+           read the DRC PNEM 2021 in full and compared it with the French programme, added
+           the content quality gate (AI content can never approve itself) and planned the
+           Phase 3 renderer families.
+           Remaining before the child experience: HUMAN pedagogical review of the pilot
+           (ISSUE-017), then the owner's curriculum-strategy decision (PD-017).
            Production stays disabled (ADR-027).
 Objective: Plan §38 Phase 1 complete (curriculum engine); Phase 2 of the owner's plan
            (objectives, competencies, lessons, activities, daily programme).
@@ -98,6 +102,20 @@ Objective: Plan §38 Phase 1 complete (curriculum engine); Phase 2 of the owner'
 - [x] Database: 18 new tables (28 total), generated reference data, 119 pgTAP assertions
 - [x] Docs: `docs/CURRICULUM.md`, `docs/DAILY_PROGRAMME.md`, `docs/CONTENT_AUTHORING.md`, ADR-031 to ADR-034
 
+### Phase 2.5 — Pedagogical review, DRC comparison and quality gate (PR `feat/pedagogical-quality-gate`)
+
+- [x] Read the **DRC PNEM 2021** (140 pages) in full and compared it with the French Cycle 1 programme: `docs/DRC_CURRICULUM_COMPARISON.md`
+- [x] Curriculum strategy recommended (keep French Cycle 1 now, prepare curriculum profiles) — **ADR-037 is `Proposed` and needs the owner (PD-017)**
+- [x] Pre-review of 20 lessons and 40 activities against a 13-criterion rubric: 0 blockers, 3 major, 7 minor, 4 suggestions (`docs/PEDAGOGICAL_REVIEW.md`)
+- [x] The 3 major defects, all from Phase 2, fixed: success examples presented at competency level, screen dependence corrected (daily screen time 0–6 min instead of 5–13), an objective actually exercised
+- [x] Content quality gate (ADR-035): `draft → review → approved → retired`, an approval names a reviewer and is bound to a digest of the exact text; enforced in content validation and by database constraints
+- [x] Materials carry `alternatives` and `safetyNote`; a lesson never depends on one particular object
+- [x] Human review package generated from canonical content: `docs/review/2026-2027-maternelle-3-semaine-1.md`, kept current by a test
+- [x] Phase 3 renderer families planned: 15 activity kinds → 10 families (ADR-036, `docs/PHASE3_RENDERER_PLAN.md`)
+- [x] The official daily read-aloud rule re-verified in the source; the pilot's gap is documented rather than implied away
+- [x] Reuse of both programmes examined from the documents themselves: attribution wording, the Licence Ouverte's date-of-update requirement (now `curriculum_sources.published_on`), exclusion of emblems, and three questions left for a lawyer (`docs/CURRICULUM.md`, ISSUE-021)
+- [ ] **HUMAN pedagogical review of the pilot week — not done (ISSUE-017)**
+
 ## Infrastructure Status
 
 Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED`.
@@ -112,7 +130,7 @@ Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED
 | Supabase DEV (`teka-edu-dev`)   | **VERIFIED**                                     | Ref `quyhkkizsmosybavoewd`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Working copy linked. `db push` up to date (no migrations), remote pgTAP RLS test PASS, 0 public tables without RLS, security advisors clean. Pooled `DATABASE_URL` connects. CI secrets are in GitHub `staging`; runtime values are in the owner's Keychain.                                                                                                     |
 | Supabase PROD (`teka-edu-prod`) | **VERIFIED**                                     | Ref `eganrivpkjhozkkahyxy`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Read-only checks only: migration list empty, 0 public tables without RLS, security advisors clean; pooled `DATABASE_URL` connects. Nothing pushed or seeded. CI secrets are in GitHub `production`; runtime values are in the owner's Keychain.                                                                                                                  |
 | GitHub environments             | **CONFIGURED**                                   | `staging` (branch `develop`): Supabase + Vercel secrets (incl. the project-scoped `VERCEL_TOKEN`) and `STAGING_DOMAIN`. `production` (branch `main`, required reviewer): Supabase secrets, `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` / bypass secret, **no `VERCEL_TOKEN`**.                                                                                                                                                                   |
-| Database migrations             | **VERIFIED**                                     | Four migrations (Phase 1 schema + reference data, Phase 2 schema + reference data). Local: `db reset` + 119 pgTAP assertions pass. DEV: Phase 1 migrations applied and verified on 2026-09-11 (remote pgTAP PASS, advisors clean); Phase 2 migrations are applied by the staging deploy of this PR. PROD: untouched; migrations reach it only with a future, approved production promotion.                                                |
+| Database migrations             | **VERIFIED**                                     | Six migrations (Phase 1 schema + data, Phase 2 schema + data, Phase 2.5 quality gate + data). Local: `db reset` + 128 pgTAP assertions pass. DEV: Phase 1 and 2 verified on merge; Phase 2.5 applied by the staging deploy of this PR. PROD: untouched.                                                                                                                                                                                    |
 | Vercel staging                  | **VERIFIED**                                     | Project `teka-edu` (Hobby, `container` preset, `cdg1`, no Git link). First verified deployment: run 34635262697, `dpl_99QEWbwtBTV53u5HzdudDaKndjgy` (Preview, READY, commit `e2f8f69`), alias https://teka-edu-staging.vercel.app. `/api/health` reports `staging` and the DEV ref; region `cdg1` confirmed by `x-vercel-id`. Protection returns 302 without auth. Browser bundle and logs are secret-free. `STAGING_DEPLOY_ENABLED=true`. |
 | Vercel production               | **CONFIGURED (not deployed; deferred, ADR-027)** | Production scope has the PROD Supabase URL and publishable key, `NEXT_PUBLIC_APP_ENV=production` and `PORT=3000`. `NEXT_PUBLIC_APP_URL` is intentionally unset. There is no production `VERCEL_TOKEN`, and `PRODUCTION_DEPLOY_ENABLED` is unset. The only production deployment is the failed first one (never served).                                                                                                                    |
 | Environment variables           | **CONFIGURED**                                   | Validation and Markdown inventory complete. Environment-file cleanup is VERIFIED on both `develop` and `main`: no `.env*` file in either tree, and the public default branch shows none (ADR-023). No hosted values exist yet.                                                                                                                                                                                                             |
@@ -124,22 +142,24 @@ Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED
 ## In Progress
 
 ```text
-Task:           Phase 2 curriculum, lessons and daily programme (PR feat/curriculum-lessons-daily-programme)
+Task:           Phase 2.5 pedagogical review and content quality gate
+                (PR feat/pedagogical-quality-gate)
 Status:         Implemented and verified locally; merging triggers the staging deploy, which
-                applies the two Phase 2 migrations to Supabase DEV and runs the smoke tests
-Relevant files: content/curriculum/**/objectives/, content/lessons/, content/programmes/,
-                content/materials.json, domain/curriculum/objectives.ts, domain/lessons/,
-                domain/programme/, lib/content/lesson-schemas.ts, app/api/programme/,
-                scripts/programme-report.ts, tools/curriculum-import/, supabase/migrations/,
-                docs/CURRICULUM.md, docs/DAILY_PROGRAMME.md, docs/CONTENT_AUTHORING.md
+                applies the two Phase 2.5 migrations to Supabase DEV
+Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/content/review-package.ts,
+                scripts/review-package.ts, content/materials.json, content/lessons/**,
+                supabase/migrations/2026091200*, docs/PEDAGOGICAL_REVIEW.md,
+                docs/DRC_CURRICULUM_COMPARISON.md, docs/CONTENT_QUALITY_GATE.md,
+                docs/PHASE3_RENDERER_PLAN.md, docs/review/
 ```
 
 ## Next Tasks
 
 ### P0 — Next
 
-1. **Pedagogical review of the pilot week** by a person who teaches this age (ISSUE-017), before any child-facing work.
-2. **Phase 3 (child experience)**: activity renderers, a French child UI for today's programme, first interactive games, media architecture and TV presentation mode. Needs a decision on media sourcing (PD-008).
+1. **Human pedagogical review of the pilot week** (ISSUE-017). The review document is ready at `docs/review/2026-2027-maternelle-3-semaine-1.md`; a person who teaches 3ème maternelle fills in the checklists, we apply their corrections, and only then does any lesson become `approved`.
+2. **Owner decision on the curriculum strategy** (PD-017, ADR-037) and on the language of instruction (PD-018).
+3. **Phase 3 (child experience)**: the ten renderer families of `docs/PHASE3_RENDERER_PLAN.md`, a French child UI for today's programme, media architecture (PD-008) and TV presentation mode.
 
 ### Deferred — production (not in the current phase, ADR-027)
 
@@ -237,11 +257,29 @@ Severity: Low · Status: Open
 Description: The MINEDU-NC calendar gives 32 working days for maternelle period 5 (5 Apr – 21 May 2027). Monday–Friday minus the 6 April and 17 May holidays gives 33. The other period differences are explained by the four working Saturdays. The difference may anticipate a substitute day for 1 May.
 Recommended action: none until an announcement. Recorded in docs/SCHOOL_CALENDAR.md and asserted in tests/unit/school-days.test.ts.
 
-### ISSUE-017 — The pilot week has not had a pedagogical review
+### ISSUE-017 — The pilot week has not had a human pedagogical review
 
-Severity: High before any child uses it · Status: Open
-Description: The 20 pilot lessons for 3ème maternelle are written, schema-valid, traced to official objectives and balanced, but no teacher or early-childhood specialist has reviewed them. Their `status` is `review`, never `published`.
-Recommended action: human review before Phase 3 content work; keep `status: review` until then (Plan §28, §35).
+Severity: High before any child uses it · Status: **Open** (unchanged by the Phase 2.5 pre-review)
+Description: The 20 pilot lessons were pre-reviewed by Claude in Phase 2.5 (rubric, severities, three defects fixed), but **no teacher or early-childhood specialist has read them**. All 20 remain `status: review`; the quality gate makes it impossible for them to become `approved` without a named reviewer (ADR-035).
+Recommended action: hand `docs/review/2026-2027-maternelle-3-semaine-1.md` to a person who teaches 3ème maternelle. Their answers to the five questions at the end of `docs/PEDAGOGICAL_REVIEW.md` decide whether content scaling can start.
+
+### ISSUE-019 — The daily comprehension read-aloud is not yet daily
+
+Severity: Medium (content calibration) · Status: Open
+Description: The 2024 language annex asks for a taught read-aloud with comprehension work at least once a day, plus a separate daily reading without questions. The pilot has the pleasure reading every day but the comprehension read-aloud only once in five days.
+Recommended action: when content scales, alternate the daily read-aloud (questions on some days) or lengthen the language block on days without a story lesson. Documented in `docs/DAILY_PROGRAMME.md` and `docs/PEDAGOGICAL_REVIEW.md`.
+
+### ISSUE-020 — DRC official curriculum text may not be reproduced
+
+Severity: Medium (legal) · Status: Open
+Description: edu-nc.gouv.cd reserves all site content to the ministry: consultation, download and printing for personal and educational use with attribution, but reproduction or copying without authorisation is prohibited. There is no open licence, unlike the French texts. Teka Edu therefore **references** the PNEM and does not store its wording.
+Recommended action: keep referencing only. If PNEM objectives are ever to be stored (Strategy B or C, ADR-037), request written authorisation from MINEDU-NC first. A human/legal opinion is needed before any such use.
+
+### ISSUE-021 — Reuse of the French programme needs a legal opinion
+
+Severity: Medium (legal) · Status: Open
+Description: The three official annexes carry no rights notice. The exclusion of official texts from copyright is French **case law**, not a statutory exception, and education.gouv.fr states its reuse terms twice and contradictorily (an etalab-2.0 footer against restrictive _mentions légales_). Teka Edu takes the narrower reading and complies with the Licence Ouverte 2.0 in full — source, date of last update, no suggestion of endorsement, no emblem or logo — which is stricter than the doctrine would require. That is a defensible position, not a verified one.
+Recommended action: put the three questions at the end of `docs/CURRICULUM.md` to a lawyer before any public launch. Nothing blocks development meanwhile: the position already taken is the conservative one.
 
 ### ISSUE-018 — Teka Edu diverges from the DRC preschool programme (PNEM 2021)
 
@@ -251,7 +289,7 @@ Recommended action: owner decision (PD-016) on whether to align the rhythm with 
 
 ## Resolved Issues
 
-- **PD-004 (competency catalogue)**, resolved 2026-09-12: the objectives of the three official annexes are imported verbatim with provenance (398 objectives, 529 success examples). Reuse terms checked (Licence Ouverte / freely reusable regulatory text).
+- **PD-004 (competency catalogue)**, resolved 2026-09-12: the objectives of the three official annexes are imported verbatim with provenance (398 objectives, 529 success examples). Reuse terms re-examined in Phase 2.5; the conditions and the remaining legal questions are in `docs/CURRICULUM.md` (ISSUE-021).
 - **PD-002 (school-year end date and vacations)**, resolved 2026-09-11: official MINEDU-NC calendar of 26 June 2026 (maternelle: 1 Sep 2026 – 2 Jul 2027, six periods, four vacation periods), encoded in `content/calendars/cd/2026-2027.json`.
 - **PD-003 (DRC public holidays)**, resolved 2026-09-11: Ordonnance n° 23/042 du 30 mars 2023 (ten holidays, including 6 April added in 2023). Weekend substitution is handled as data (observed-holiday exceptions), not code; the open practice question is ISSUE-015.
 - **ISSUE-005 (commit SHA forwarding)**, resolved 2026-09-11: `--build-env` does not reach container builds (Vercel passes no build arguments). The commit is now passed at runtime with `vercel deploy --env`, and `/api/health` reports the exact SHA (ADR-025).
@@ -281,16 +319,17 @@ Local runs on 2026-09-11 (macOS arm64, Node 22.22.2, Docker 29.7.2), repeated be
 Lint:                  PASS
 Format:                PASS
 TypeScript:            PASS
-Unit tests:            PASS (141 tests, Vitest: calendar, curriculum objectives, lessons/activities,
-                       daily programme, programme API, SQL generator drift, architecture, env guard)
+Unit tests:            PASS (156 tests, Vitest: calendar, curriculum objectives, lessons/activities,
+                       daily programme, programme API, quality gate, renderer families, review
+                       package freshness, SQL generator drift, architecture, env guard)
 Content validation:    PASS (18 JSON files: registered, schema-valid, consistent; includes the
                        progression and daily-balance rules)
 Playwright:            PASS (4 smoke tests incl. /api/calendar and /api/programme)
 Next.js build:         PASS
 Client-bundle check:   PASS (sentinel secrets absent; a planted leak is detected)
 Docker build:          PASS (Dockerfile and Dockerfile.vercel, with health and graceful-stop smoke)
-Supabase DB tests:     PASS (119 pgTAP assertions in 4 files: RLS + access registry (28 tables),
-                       reference data = content/ and idempotent sync, integrity rules)
+Supabase DB tests:     PASS (128 pgTAP assertions in 4 files: RLS + access registry (28 tables),
+                       reference data = content/ and idempotent sync, integrity rules, quality gate)
 Workflow lint:         PASS (actionlint 1.7.12)
 Secret scan:           PASS (gitleaks v8.30.1 on full Git history, all refs; pattern scan)
 Promotion source live: REFUSED as expected (draft PR #4, fix/* → main, run 34615884503)
@@ -302,11 +341,11 @@ GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891,
 
 ## Content Status
 
-| Class           | Curriculum mapping     | Week 1                                            | Week 2      | Full year   |
-| --------------- | ---------------------- | ------------------------------------------------- | ----------- | ----------- |
-| 1ère maternelle | DONE (band `before-4`) | Not started                                       | Not started | Not started |
-| 2ème maternelle | DONE (band `from-4`)   | Not started                                       | Not started | Not started |
-| 3ème maternelle | DONE (band `from-5`)   | DONE, awaiting review (20 lessons, 40 activities) | Not started | Not started |
+| Class           | Curriculum mapping     | Week 1                                                                        | Week 2      | Full year   |
+| --------------- | ---------------------- | ----------------------------------------------------------------------------- | ----------- | ----------- |
+| 1ère maternelle | DONE (band `before-4`) | Not started                                                                   | Not started | Not started |
+| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                   | Not started | Not started |
+| 3ème maternelle | DONE (band `from-5`)   | Written + pre-reviewed, **awaiting human review** (20 lessons, 40 activities) | Not started | Not started |
 
 DRC 2026–2027 calendar data: DONE (official MINEDU-NC calendar and Ordonnance n° 23/042; 189 instructional days).
 Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 official objectives and 529 success examples** imported with provenance.
@@ -347,6 +386,11 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
   - The pilot covers 3ème maternelle, one five-day cycle. Decide the order of what comes next: the rest of the year for 3ème maternelle, or the first week of the other two levels.
 - **PD-016: Alignment with the DRC PNEM 2021** (ISSUE-018)
   - Whether the daily rhythm should follow the DRC grid (30-minute slots, physical activity twice a week, daily free activity) rather than the French daily-PE rule.
+- **PD-017: Curriculum strategy for the DRC** (ADR-037, `docs/DRC_CURRICULUM_COMPARISON.md`)
+  - Keep French Cycle 1 as the reference (A, current), or move to DRC-primary (B), DRC core + French enrichment (C), or curriculum profiles (D, recommended target).
+  - B and C require written permission from MINEDU-NC to store PNEM text (ISSUE-020).
+- **PD-018: Language of instruction in the early years**
+  - The PNEM expects the local or national language in niveaux 1–2; Teka Edu is French-first (ADR-001) for a child moving from English to French. Confirm the choice explicitly.
 - **PD-014: EVAR (éducation à la vie affective et relationnelle)** (before content authoring)
   - The 2026 annex attaches the French EVAR programme (arrêté du 3 février 2025) to the six domains. The model supports it as a `transversal` component, but whether and how Teka Edu includes it in the DRC context is an owner decision. Not configured.
 - **PD-005: Mid-year start** (before Phase 2)
@@ -372,28 +416,34 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  Phase 2 — curriculum objectives, lesson/activity model, daily programme.
-            - Imported 398 official objectives and 529 success examples verbatim from the three
-              programme annexes (arrêté du 16 avril 2026; arrêté du 22 octobre 2024, annexes 1
-              and 2), with source, page and PDF SHA-256. Cross-checked against a second,
-              independent PDF extraction: 0 unmatched lines, exact bullet counts.
-            - Age bands (before-4 / from-4 / from-5) with the level mapping; a level's objectives
-              include earlier bands (official reinvestment).
-            - Lesson + activity model (typed payloads, materials, French instruction, adult
-              guidance, optional English scaffold), all traced to official objectives.
-            - Pilot week for 3ème maternelle: 20 lessons, 40 activities, 5 days of 40-41 min.
-            - Deterministic daily-programme generator keyed by instructional day, with balance
-              and progression rules labelled OFFICIAL / TEKA EDU.
-            - 18 new database tables (28 total, ~2 MB), generated reference data, 119 pgTAP
-              assertions; GET /api/programme/... and npm run programme:report.
-Changed:    content/ (objectives, lessons, programmes, materials), domain/curriculum,
-            domain/lessons, domain/programme, lib/content, lib/supabase, app/api/programme,
-            scripts/programme-report.ts, tools/curriculum-import/, supabase/migrations + tests,
-            tests/unit + e2e, docs (CURRICULUM, DAILY_PROGRAMME, CONTENT_AUTHORING,
-            EDUCATIONAL_MODEL, FREE_TIER), DECISIONS (ADR-031..034), CLAUDE.md, README.md.
+Completed:  Phase 2.5 — pedagogical pre-review, DRC comparison, content quality gate.
+            - Read the DRC PNEM 2021 (SERNAFOR/DIPROMAD, 140 pages) in full and compared it
+              with the French Cycle 1 programme across 16 aspects. The pilot week lands inside
+              DRC expectations on themes and mathematics; it lacks the PNEM's activités libres,
+              vie pratique and promotion de la santé. Recommended: keep French Cycle 1 now,
+              prepare curriculum profiles (ADR-037, Proposed — owner decision PD-017).
+            - PNEM text may not be reproduced (no open licence): Teka Edu references it only
+              (ISSUE-020). On the French side, reuse conditions and attribution wording are now
+              written down, the source publication date is stored so attribution is generated
+              from data, and three questions are left for a lawyer (ISSUE-021).
+            - Pre-reviewed 20 lessons / 40 activities: 0 blockers, 3 major, 7 minor,
+              4 suggestions. The 3 major defects were Phase 2's own and are fixed.
+            - Content quality gate: draft → review → approved → retired, approval bound to a
+              digest of the reviewed text, enforced in validation and in the database.
+            - Materials now carry alternatives and safety notes.
+            - Generated the teacher's review document; a test keeps it current.
+            - Planned Phase 3: 15 activity kinds → 10 renderer families.
+Changed:    domain/lessons/{review,renderers,types}.ts, domain/programme/validation.ts,
+            lib/content/{review-package,review-packages,lesson-schemas}.ts, app/api/programme,
+            scripts/review-package.ts, content/materials.json, content/lessons/**,
+            supabase/migrations + tests, tests/unit, docs (PEDAGOGICAL_REVIEW,
+            DRC_CURRICULUM_COMPARISON, CONTENT_QUALITY_GATE, PHASE3_RENDERER_PLAN, CURRICULUM,
+            DAILY_PROGRAMME, CONTENT_AUTHORING), DECISIONS (ADR-035..037), CLAUDE.md.
 Tests:      See the Tests / Quality Status section.
-Remaining:  ISSUE-017 (pedagogical review of the pilot), ISSUE-018 / PD-016 (DRC PNEM
-            divergence), PD-014 (EVAR), PD-015 (next content scope), ISSUE-015/016 (calendar).
-Recommended next task: Phase 3 — child-facing experience, activity renderers, first games,
-            media architecture and TV presentation mode (after the pedagogical review).
+Remaining:  ISSUE-017 (human review, blocking Phase 3 content), ISSUE-019 (daily comprehension
+            read-aloud), ISSUE-020 (DRC text reuse), ISSUE-021 (French text reuse: legal
+            opinion), PD-017/PD-018 (strategy, language),
+            PD-014 (EVAR), PD-015, ISSUE-015/016 (calendar).
+Recommended next task: hand the review document to a teacher; then Phase 3 (child experience)
+            once the strategy decision is made.
 ```

@@ -32,7 +32,8 @@
     "docker:smoke": "bash scripts/docker-smoke.sh teka-edu:local",
     "db:reference": "tsx scripts/generate-reference-sql.ts",
     "calendar:report": "tsx scripts/calendar-report.ts",
-    "programme:report": "tsx scripts/programme-report.ts"
+    "programme:report": "tsx scripts/programme-report.ts",
+    "review:package": "tsx scripts/review-package.ts"
   },
   "dependencies": {
     "next": "16.3.4",

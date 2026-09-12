@@ -85,7 +85,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review"
+      "status": "review",
+      "review": null
     },
     {
       "id": "m3-art-02",
@@ -109,9 +110,9 @@
           "childInstruction": "Écoute la comptine, puis dis-la avec moi. Ensuite, dis-la tout seul.",
           "adultGuidance": "Dites deux vers, l’enfant répète, puis enchaînez. Frappez le rythme dans les mains pour aider la mémoire.",
           "minutes": 5,
-          "mode": "mixed",
+          "mode": "off-screen",
           "objectiveCodes": ["ART-S02-C01-O09"],
-          "materialCodes": ["ecran"],
+          "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -166,7 +167,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review"
+      "status": "review",
+      "review": null
     }
   ]
 }

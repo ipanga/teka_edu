@@ -43,6 +43,9 @@ Short architecture/product decision records (ADRs). They cover decisions future 
 | 032 | One lesson/activity model, with typed payloads and a kind registry                      | Accepted               |
 | 033 | Deterministic daily programme: authored rhythm and tracks, keyed by instructional day   | Accepted               |
 | 034 | Home sessions adapt classroom rules; the DRC preschool programme diverges               | Accepted               |
+| 035 | Content quality gate: AI-assisted lessons never approve themselves                      | Accepted               |
+| 036 | Renderer families: ten interactions for fifteen activity kinds                          | Accepted               |
+| 037 | Curriculum strategy in the DRC: keep French Cycle 1 now, prepare curriculum profiles    | Proposed               |
 
 ---
 
@@ -814,3 +817,105 @@ official programme exists for the DRC:
 **Consequences:** the divergence with the DRC programme is explicit and revisable (PD-016). If
 Teka Edu later aligns with the PNEM grid, it is a change of programme definition — data, not
 code.
+
+---
+
+## ADR-035 — Content quality gate: AI-assisted lessons never approve themselves
+
+**Status:** Accepted · **Date:** 2026-09-12 · **Refines:** ADR-005, ADR-032
+
+**Context:** Teka Edu's lessons are drafted with the help of a language model. Schema validation
+proves a lesson is well-formed and traceable to an official objective; it cannot tell whether the
+lesson suits a five-year-old. Fluent, well-structured content that nobody qualified has read is
+exactly the failure mode a children's product cannot afford, and "we will review it later" is not
+a control.
+
+**Decision:**
+
+- **Lifecycle:** `draft` → `review` → `approved` → `retired`. AI-assisted content stops at
+  `review`; only a person moves it to `approved`.
+- **An approval is attributable:** it records the reviewer's name, their role, the date, and a
+  digest of the exact text reviewed. The database enforces that all four exist together, and only
+  for an approved lesson.
+- **An approval is bound to the text.** `reviewedDigest` covers the child instruction, the adult
+  guidance, the objectives, durations, materials, vocabulary, scaffolds and payloads. Any edit
+  changes the digest, content validation fails, and the lesson returns to `review`.
+- **Only approved content may be taught.** `isTeachable` is the single place that decides, so the
+  rule cannot drift as features are added.
+- **Official curriculum is not subject to this gate**: quoted objectives are verified by their
+  import and provenance (ADR-031), not by pedagogical review.
+- **No identity system.** The reviewer is a name and a role in the content. Accounts and roles
+  belong with the parent area, later.
+- **Tests check structure, never judgement.** They assert that an approval is complete,
+  attributable and current; they never attempt to score whether a lesson is pedagogically good.
+
+**Consequences:** the pilot week stays `review` until a teacher reads it, and the repository can
+state that plainly. Approving content becomes a deliberate, reviewable commit: fixes, then the
+review block, generated together.
+
+---
+
+## ADR-036 — Renderer families: ten interactions for fifteen activity kinds
+
+**Status:** Accepted · **Date:** 2026-09-12 · **Prepares:** Phase 3 · **Refines:** ADR-032
+
+**Context:** Fifteen activity kinds exist. Building fifteen unrelated screens would multiply work
+and give children fifteen different interaction grammars to learn.
+
+**Decision:**
+
+- Each activity kind is mapped to one of **ten renderer families**, recorded in
+  `domain/lessons/renderers.ts` with its interaction, what the screen shows, the media it will
+  need, how completion is evidenced, and whether it can work offline.
+- The map is **planning data, not an implementation**. A test keeps it complete, so a new
+  activity kind cannot be added without deciding how it would be shown.
+- Three families (`oral-exchange`, `move`, `hands-on`) need no media and cover most of the pilot:
+  Phase 3 can prove the daily flow before any media exists.
+- `move` renders nothing: the screen must be able to disappear during an activity.
+- Completion is mostly **confirmed by the adult**, not measured by the app, which matches the
+  observation-based assessment of ADR-010.
+
+**Consequences:** Phase 3 has a build order and a media dependency list before it starts. Details
+in `docs/PHASE3_RENDERER_PLAN.md`.
+
+---
+
+## ADR-037 — Curriculum strategy in the DRC: keep French Cycle 1 now, prepare curriculum profiles
+
+**Status:** Proposed — needs the owner's decision (PD-017) · **Date:** 2026-09-12 · **Refines:** ADR-003
+
+**Context:** Phase 2.5 read the DRC's own preschool curriculum in full: the _Programme National de
+l'Enseignement Maternel_ (PNEM), SERNAFOR/DIPROMAD, August 2021, the reference document for every
+maternelle educator in the country. It is built on an approche par les compétences: one objectif
+terminal, five compétences de base, twelve activity families, a weekly grid of 17h30 and a theme
+list by age. Teka Edu currently uses the French Cycle 1 programme (ADR-003) with the DRC calendar.
+
+Three facts shape the decision:
+
+1. **The two programmes agree more than they differ** on what a five-year-old should learn. The
+   pilot week, written against the French programme, lands inside the PNEM's own themes and
+   third-year mathematics (`docs/DRC_CURRICULUM_COMPARISON.md`).
+2. **The PNEM's text may not be copied.** edu-nc.gouv.cd reserves all content to the ministry and
+   allows personal and educational use with attribution, but prohibits reproduction without
+   authorisation. There is no open licence, unlike the French texts.
+3. **Real differences exist**: language of instruction in the first two years, the frequency of
+   physical activity, and whole activity families the PNEM timetables (vie pratique, comportement,
+   promotion de la santé, and 2h30 a week of activités libres) that Teka Edu does not cover.
+
+**Decision (proposed):**
+
+- **Keep French Cycle 1 as the academic reference for now** (Strategy A). It exists, it is
+  legally safe to quote, and nothing in the pilot conflicts with the PNEM.
+- **Prepare Strategy D, curriculum profiles**, as the target: a second profile describing the
+  PNEM **by reference** — official names and citations, Teka Edu's own short descriptions marked
+  `teka-edu-adaptation`, never copied text — plus a mapping from each lesson to the PNEM activity
+  family it serves. The data model already supports several curriculum versions, so no
+  destructive migration is implied.
+- **Do not adopt Strategy B or C** (DRC text as the stored baseline) unless MINEDU-NC grants
+  written permission to reproduce the programme.
+- **Add what the PNEM timetables and we lack** when content scales: a free-play closing
+  suggestion and practical-life/health content.
+
+**Consequences:** Teka Edu can eventually answer "does this follow the Congolese programme?"
+honestly, without copying a text it is not licensed to copy. Until the owner decides, nothing
+changes: this ADR stays `Proposed`.

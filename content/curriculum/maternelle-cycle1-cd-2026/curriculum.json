@@ -17,6 +17,7 @@
       "title": "Programme d’enseignement de l’école maternelle (cycle 1)",
       "citation": "Arrêté du 16 avril 2026 (NOR MENE2608627A), annexe, BO n° 19 du 7 mai 2026",
       "url": "https://www.education.gouv.fr/sites/default/files/document/annexe-programme-d-enseignement-de-l-ecole-maternelle-cycle-1-516107.pdf",
+      "publishedOn": "2026-05-07",
       "sha256": "d4ef177c83542c287cd61b1be35b8cec2416b4a21e9396361623482e42905237",
       "covers": ["PHYS", "ART", "TIME-SPACE", "WORLD"],
       "verification": "verified"
@@ -26,6 +27,7 @@
       "title": "Programme d’enseignement pour le développement et la structuration du langage oral et écrit du cycle 1",
       "citation": "Arrêté du 22 octobre 2024 (NOR MENE2415135A), annexe 1, BO n° 41 du 31 octobre 2024",
       "url": "https://www.education.gouv.fr/sites/default/files/document/Annexe%201%20%E2%80%93%20Programme%20d%E2%80%98enseignement%20pour%20le%20d%C3%A9veloppement%20et%20la%20structuration%20du%20langage%20oral%20et%20%C3%A9crit%20du%20cycle%201-403812.pdf",
+      "publishedOn": "2024-10-31",
       "sha256": "83321493e74b07cc4827aba17a1cd213e2de09fa3955ebea87148b7ae8aafa09",
       "covers": ["LANG"],
       "verification": "verified"
@@ -35,6 +37,7 @@
       "title": "Programme d’enseignement pour l’acquisition des premiers outils mathématiques du cycle 1",
       "citation": "Arrêté du 22 octobre 2024 (NOR MENE2415135A), annexe 2, BO n° 41 du 31 octobre 2024",
       "url": "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20d%E2%80%99enseignement%20pour%20l%E2%80%99acquisition%20des%20premiers%20outils%20math%C3%A9matiques%20du%20cycle%201-403815.pdf",
+      "publishedOn": "2024-10-31",
       "sha256": "d1473025200ad2f5380d8c196b3099bf9d851f3d0eddaee1c0b2344a708c48fa",
       "covers": ["MATH"],
       "verification": "verified"

@@ -93,7 +93,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review"
+      "status": "review",
+      "review": null
     }
   ]
 }

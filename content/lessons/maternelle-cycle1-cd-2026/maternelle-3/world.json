@@ -80,7 +80,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review"
+      "status": "review",
+      "review": null
     },
     {
       "id": "m3-world-02",
@@ -176,7 +177,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review"
+      "status": "review",
+      "review": null
     }
   ]
 }
