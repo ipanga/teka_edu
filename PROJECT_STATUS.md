@@ -5,9 +5,9 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-09-11
-Branch:     feat/pedagogical-quality-gate (PR into develop)
-Commit:     develop at 36e39ad; main at 1b95480
+Date:       2026-09-12
+Branch:     develop
+Commit:     develop at 35d4fd0; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -102,7 +102,7 @@ Objective: Plan §38 Phase 1 complete (curriculum engine); Phase 2 of the owner'
 - [x] Database: 18 new tables (28 total), generated reference data, 119 pgTAP assertions
 - [x] Docs: `docs/CURRICULUM.md`, `docs/DAILY_PROGRAMME.md`, `docs/CONTENT_AUTHORING.md`, ADR-031 to ADR-034
 
-### Phase 2.5 — Pedagogical review, DRC comparison and quality gate (PR `feat/pedagogical-quality-gate`)
+### Phase 2.5 — Pedagogical review, DRC comparison and quality gate (PR #17, merged)
 
 - [x] Read the **DRC PNEM 2021** (140 pages) in full and compared it with the French Cycle 1 programme: `docs/DRC_CURRICULUM_COMPARISON.md`
 - [x] Curriculum strategy recommended (keep French Cycle 1 now, prepare curriculum profiles) — **ADR-037 is `Proposed` and needs the owner (PD-017)**
@@ -130,7 +130,7 @@ Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED
 | Supabase DEV (`teka-edu-dev`)   | **VERIFIED**                                     | Ref `quyhkkizsmosybavoewd`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Working copy linked. `db push` up to date (no migrations), remote pgTAP RLS test PASS, 0 public tables without RLS, security advisors clean. Pooled `DATABASE_URL` connects. CI secrets are in GitHub `staging`; runtime values are in the owner's Keychain.                                                                                                     |
 | Supabase PROD (`teka-edu-prod`) | **VERIFIED**                                     | Ref `eganrivpkjhozkkahyxy`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Read-only checks only: migration list empty, 0 public tables without RLS, security advisors clean; pooled `DATABASE_URL` connects. Nothing pushed or seeded. CI secrets are in GitHub `production`; runtime values are in the owner's Keychain.                                                                                                                  |
 | GitHub environments             | **CONFIGURED**                                   | `staging` (branch `develop`): Supabase + Vercel secrets (incl. the project-scoped `VERCEL_TOKEN`) and `STAGING_DOMAIN`. `production` (branch `main`, required reviewer): Supabase secrets, `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` / bypass secret, **no `VERCEL_TOKEN`**.                                                                                                                                                                   |
-| Database migrations             | **VERIFIED**                                     | Six migrations (Phase 1 schema + data, Phase 2 schema + data, Phase 2.5 quality gate + data). Local: `db reset` + 128 pgTAP assertions pass. DEV: Phase 1 and 2 verified on merge; Phase 2.5 applied by the staging deploy of this PR. PROD: untouched.                                                                                                                                                                                    |
+| Database migrations             | **VERIFIED**                                     | Six migrations (Phase 1 schema + data, Phase 2 schema + data, Phase 2.5 quality gate + data). Local: `db reset` + 128 pgTAP assertions pass. DEV: all six migrations applied and local/remote lists match; row counts checked read-only (20 lessons, all `review`, 0 approved; 398 objectives; 529 success examples). Security and performance advisors: no issues. PROD: untouched.                                                       |
 | Vercel staging                  | **VERIFIED**                                     | Project `teka-edu` (Hobby, `container` preset, `cdg1`, no Git link). First verified deployment: run 34635262697, `dpl_99QEWbwtBTV53u5HzdudDaKndjgy` (Preview, READY, commit `e2f8f69`), alias https://teka-edu-staging.vercel.app. `/api/health` reports `staging` and the DEV ref; region `cdg1` confirmed by `x-vercel-id`. Protection returns 302 without auth. Browser bundle and logs are secret-free. `STAGING_DEPLOY_ENABLED=true`. |
 | Vercel production               | **CONFIGURED (not deployed; deferred, ADR-027)** | Production scope has the PROD Supabase URL and publishable key, `NEXT_PUBLIC_APP_ENV=production` and `PORT=3000`. `NEXT_PUBLIC_APP_URL` is intentionally unset. There is no production `VERCEL_TOKEN`, and `PRODUCTION_DEPLOY_ENABLED` is unset. The only production deployment is the failed first one (never served).                                                                                                                    |
 | Environment variables           | **CONFIGURED**                                   | Validation and Markdown inventory complete. Environment-file cleanup is VERIFIED on both `develop` and `main`: no `.env*` file in either tree, and the public default branch shows none (ADR-023). No hosted values exist yet.                                                                                                                                                                                                             |
@@ -142,10 +142,10 @@ Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED
 ## In Progress
 
 ```text
-Task:           Phase 2.5 pedagogical review and content quality gate
-                (PR feat/pedagogical-quality-gate)
-Status:         Implemented and verified locally; merging triggers the staging deploy, which
-                applies the two Phase 2.5 migrations to Supabase DEV
+Task:           None. Phase 2.5 is merged (PR #17) and deployed to staging.
+Status:         Waiting on people, not on code: the human pedagogical review (ISSUE-017) and
+                the owner's curriculum-strategy decision (PD-017, ADR-037 is Proposed).
+                Phase 3 has not started.
 Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/content/review-package.ts,
                 scripts/review-package.ts, content/materials.json, content/lessons/**,
                 supabase/migrations/2026091200*, docs/PEDAGOGICAL_REVIEW.md,
