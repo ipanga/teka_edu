@@ -6,26 +6,27 @@
 
   Git wins over this file when the two disagree. Keep it current: an out-of-date checkpoint is
   worse than none, because it is believed.
+
+  When a task starts: fill this in before the first substantial edit, and create the branch.
+  When a task ends: mark it `completed`, copy it to docs/work/archive/<YYYY-MM>-<task>.md,
+  then reset this file to the shape below.
 -->
 
 ## Task
 
-Phase 3B — the September parent experience: visuals, interaction and real-session testing.
+None in progress.
 
 ## Objective
 
-A parent can open the staging app on a phone and run a September lesson that feels like a guided
-session rather than rendered database rows: clear French, simple visuals where they help, a few
-genuinely useful interactions, everything else deliberately off-screen — plus a way for the owner
-to run one real 30-to-45-minute session and record what happened.
+Phase 3B is complete and merged. No new task has been started.
 
 ## Status
 
-`in_progress`
+`planned`
 
 ## Branch
 
-`feat/september-experience-and-media`
+`develop` — no feature branch open.
 
 ## Base Branch
 
@@ -33,103 +34,78 @@ to run one real 30-to-45-minute session and record what happened.
 
 ## Started
 
-2026-09-12
+—
 
 ## Last Checkpoint
 
-2026-09-12 — documentation written (ADR-042, MEDIA_ARCHITECTURE, REAL_SESSION_TESTING, plan
-amendment) and the full validation suite is green. About to mark PR #24 ready and wait for CI.
+2026-09-12 — reset after PR #24 merged as `0d12f20` and verified on staging.
 
 ## Scope
 
-- Audit the Phase 3A staging experience and fix what actually hurts a parent or child.
-- Resolve PD-008: a media architecture, recorded as an ADR.
-- A reusable visual baseline — shapes, quantities, word cards, story illustration — repository-
-  managed, free, offline-friendly.
-- A small set of interactive activities where interaction genuinely teaches: image choice,
-  quantity, matching, sorting, shapes.
-- A September media/interaction coverage report.
-- A real-session test mode that records observations locally, with no child data.
-- Non-destructive update of `TEKA_EDU_PROJECT_PLAN.md` so it stops misleading future sessions.
+To be filled in when the next task begins.
 
 ## Out of Scope
 
-- **October content**, and 1ère/2ème maternelle content.
-- Rewriting the 88 lessons. Content changes only where a visual genuinely requires it, minimal,
-  documented, objective mapping preserved, status unchanged.
-- Approving any lesson: usability testing is **not** pedagogical approval.
-- Expanding the annual plan (ISSUE-022 stays open).
-- Scoring, grades, dashboards, adaptive engines.
-- Paid anything: no TTS, CDN, stock images, storage or extra projects.
-- Production, `main`.
+- **October content authoring**, and 1ère/2ème maternelle content, until September has been
+  reviewed by a person who teaches this age (ISSUE-017).
+- Approving any lesson. All 88 stay in `review`; usability testing is not pedagogical approval.
+- Production, `main`, paid services.
 
 ## Product Decisions
 
-- Teka Edu is a parent-led after-school digital répétiteur; a session is 30–45 minutes (ADR-039).
-- French Cycle 1 is the curriculum, DRC calendar and context, French-first with optional English
-  scaffolding, PNEM as compatibility reference (ADR-037).
-- The screen guides; it is not the activity. Movement, manipulation, drawing and conversation
-  stay off-screen.
-- The app must never claim to have assessed what it cannot observe.
+- Parent-led after-school digital répétiteur; 30–45 minutes a day (ADR-039).
+- French Cycle 1 is the curriculum; the PNEM is a compatibility reference (ADR-037).
+- The year's pacing is authored before a month's lessons (ADR-040).
+- Media is SVG in the repository, named by stable id, costing nothing (ADR-042).
+- Long tasks are resumable from the repository (ADR-041).
 
 ## Completed
 
-- [x] Resume protocol: read `CLAUDE.md`, `PROJECT_STATUS.md`, `ACTIVE_TASK.md`,
-      `RESUMABLE_WORKFLOW.md`; verified git, PRs, Actions, DEV migrations
+- [x] Phase 3A — September programme and the parent session (archived)
+- [x] Session duration policy and the resumable-work protocol (archived)
+- [x] Phase 3B — September experience, visuals and interaction (archived)
 
 ## In Progress
 
-- [ ] PR #24 ready for review, four required CI checks, squash-merge, verify staging
+- [ ] Nothing.
 
 ## Remaining
 
-1. Audit the September experience (calendar, lesson flow, guidance, English, pause, completion,
-   catch-up, non-school day, phone and desktop). Record concrete problems, not aesthetics.
-2. Media architecture + ADR resolving PD-008; `docs/MEDIA_ARCHITECTURE.md`.
-3. Media registry and the first reusable assets (shapes, digits/quantities, a few object cards).
-4. Classify all 170 activities: visual required / useful / not needed; audio; interactive or not.
-5. Interactive renderers: image choice, quantity, matching, sorting, shapes — with gentle retry.
-6. Wire media into the September activities that need it (minimal content change).
-7. `npm run media:report` — September media and interaction coverage.
-8. Real-session test mode + `docs/REAL_SESSION_TESTING.md`.
-9. Tests: media integrity, renderer selection, interaction, parent flow, responsive, security.
-10. Documentation, including a non-destructive amendment to `TEKA_EDU_PROJECT_PLAN.md`.
-11. Full validation suite; PR ready; CI; squash-merge; verify staging.
+1. Awaiting the owner's choice of next task.
 
 ## Validation State
 
-| Check              | Result  | At                                         |
-| ------------------ | ------- | ------------------------------------------ |
-| format             | PASS    | working tree                               |
-| lint               | PASS    | working tree — 0 warnings                  |
-| typecheck          | PASS    | working tree                               |
-| unit tests         | PASS    | working tree — 206 tests                   |
-| content validation | PASS    | working tree — 21 files                    |
-| database tests     | PASS    | working tree — 144 pgTAP assertions        |
-| build              | PASS    | working tree                               |
-| E2E                | PASS    | working tree — 17 tests                    |
-| Docker             | NOT RUN | left to CI; no Dockerfile change           |
-| secret scans       | PASS    | working tree — no leaks, 0 tracked `.env*` |
-| staging            | STALE   | this branch has not been deployed yet      |
+From Phase 3B, at `0d12f20` on `develop`. Current until something changes.
+
+| Check              | Result | At                                      |
+| ------------------ | ------ | --------------------------------------- |
+| format             | PASS   | `0d12f20`                               |
+| lint               | PASS   | `0d12f20` — 0 warnings                  |
+| typecheck          | PASS   | `0d12f20`                               |
+| unit tests         | PASS   | `0d12f20` — 206 tests                   |
+| content validation | PASS   | `0d12f20` — 21 files                    |
+| database tests     | PASS   | `0d12f20` — 144 pgTAP assertions        |
+| build              | PASS   | `0d12f20`                               |
+| E2E                | PASS   | `0d12f20` — 17 tests, local and staging |
+| Docker             | PASS   | CI at `0d12f20` — both images           |
+| secret scans       | PASS   | `0d12f20` — no leaks, 0 tracked `.env*` |
+| staging            | PASS   | `0d12f20` deployed and verified         |
 
 ## Database State
 
-- Local: 8 migrations applied.
-- DEV: 8 migrations applied; local and remote lists identical (verified 2026-09-12).
-- PROD: untouched, and must stay so.
-- Expected here: at most one additive migration, only if media metadata needs mirroring.
+- Local: 10 migrations; `db reset` + pgTAP pass.
+- DEV: 10 migrations, local and remote identical; 36 tables, 22 media assets, 0 approved lessons;
+  advisors clean.
+- PROD: untouched.
 
 ## Deployment State
 
-- Staging: enabled; last deployment `cd86efd`, success.
+- Staging: enabled; last deployment `0d12f20`, verified.
 - Production: disabled. No production token, no `PRODUCTION_DEPLOY_ENABLED`; `main` at `1b95480`.
 
 ## Git State
 
-- Branch `feat/september-experience-and-media`, from `develop` at `cd86efd`.
-- Last checkpoint commit: none yet.
-- Pushed: no. PR: none yet.
-- Uncommitted work: this file.
+- `develop` at `0d12f20` plus this closing change. No feature branch, no open PR once merged.
 
 ## Blockers
 
@@ -137,20 +113,19 @@ None.
 
 ## User Decisions Needed
 
-None yet. If any media approach risked a charge, work would stop and ask first.
+- Which task comes next. The recommendation is to run one real September session with a child,
+  using `/seance/<n>/observation` to record it, before deciding between more media, October
+  authoring, or acting on teacher review.
 
 ## Exact Resume Point
 
-Mark PR #24 ready (`gh pr ready 24`), wait for the four required checks, squash-merge, then
-verify staging: the September calendar, a language lesson, a mathematics lesson, the shape
-interaction, counting, a story, an off-screen activity, English hidden by default, catch-up, a
-non-school date, and that the environment is staging on the DEV Supabase ref with no PROD ref.
+No task is in progress. When the next one starts: fill this file in, create the feature branch
+from `develop`, commit an initial checkpoint, and open a Draft PR before the long work begins.
 
 ## Resume Verification
 
-1. `git branch --show-current` is `feat/september-experience-and-media`;
-2. `git log -n 5 --oneline` — the branch point is `cd86efd`;
-3. `git status --short` — read any uncommitted work before discarding it;
-4. `gh pr list --head feat/september-experience-and-media` — a Draft PR may already exist;
-5. `npx supabase migration list --linked` if a migration was in flight;
-6. `gh run list --branch develop --limit 3` before assuming a deployment is needed.
+1. `git branch --show-current` is `develop` and `git status --short` is empty;
+2. `git log -n 5 --oneline` starts at the Phase 3B merge or later;
+3. `gh pr list --state open` is empty;
+4. `npx supabase migration list --linked` if the new task touches the database;
+5. `gh run list --branch develop --limit 3` before assuming a deployment is needed.
