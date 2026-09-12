@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-12
-Branch:     feat/september-experience-and-media (PR #24 into develop)
-Commit:     develop at cd86efd; main at 1b95480
+Branch:     develop
+Commit:     develop at 0d12f20; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -175,7 +175,7 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 - [x] **Resumable-work protocol** (ADR-041): `docs/work/ACTIVE_TASK.md`, `docs/RESUMABLE_WORKFLOW.md`, `docs/work/archive/`, a `CLAUDE.md` instruction, and a test that enforces the checkpoint's structure
 - [x] Phase 3A archived as the first baseline; September content unchanged
 
-### Phase 3B — the September parent experience (PR #24)
+### Phase 3B — the September parent experience (PR #24, merged)
 
 - [x] UX audit of the running app: seven concrete findings, starting with « Regarde les formes » showing no shapes
 - [x] **PD-008 resolved** — media is SVG in the repository, named by stable id, no cloud storage, no paid service (ADR-042, `docs/MEDIA_ARCHITECTURE.md`)
