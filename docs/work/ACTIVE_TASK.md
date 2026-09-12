@@ -100,19 +100,19 @@ confirmed (clean tree, no open PRs, staging green at `cd86efd`, DEV 8/8 migratio
 
 Inherited from `develop` at `cd86efd`; all become `STALE` as soon as this branch changes code.
 
-| Check              | Result | At                                 |
-| ------------------ | ------ | ---------------------------------- |
-| format             | PASS   | `cd86efd`                          |
-| lint               | PASS   | `cd86efd`                          |
-| typecheck          | PASS   | `cd86efd`                          |
-| unit tests         | PASS   | `cd86efd` — 196 tests              |
-| content validation | PASS   | `cd86efd` — 20 files               |
-| database tests     | PASS   | `cd86efd` — 138 pgTAP assertions   |
-| build              | PASS   | `cd86efd`                          |
-| E2E                | PASS   | `cd86efd` — 12 tests               |
-| Docker             | PASS   | CI at `cd86efd`                    |
-| secret scans       | PASS   | `cd86efd`                          |
-| staging            | PASS   | `cd86efd` deployed, workflow green |
+| Check              | Result | At                                           |
+| ------------------ | ------ | -------------------------------------------- |
+| format             | STALE  | content and code changed since `cd86efd`     |
+| lint               | STALE  | —                                            |
+| typecheck          | PASS   | `14bea31`                                    |
+| unit tests         | STALE  | `Activity.mediaIds` added since the last run |
+| content validation | PASS   | `14bea31` — 21 files                         |
+| database tests     | STALE  | the mirror needs `mediaIds`; migration to do |
+| build              | STALE  | —                                            |
+| E2E                | STALE  | UI about to change                           |
+| Docker             | STALE  | —                                            |
+| secret scans       | STALE  | —                                            |
+| staging            | PASS   | `cd86efd` — unchanged, nothing deployed yet  |
 
 ## Database State
 

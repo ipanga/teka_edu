@@ -48,6 +48,8 @@ export type SessionActivity = {
   adultGuidance: string;
   minutes: number;
   role: Activity["role"];
+  /** off-screen activities tell the parent to put the screen down (ADR-039). */
+  mode: Activity["mode"];
   renderer: RendererFamily;
   type: Activity["type"];
   vocabulary: readonly { fr: string; en: string | null }[];
@@ -92,6 +94,7 @@ function toActivity(activity: Activity): SessionActivity {
     adultGuidance: activity.adultGuidance,
     minutes: activity.minutes,
     role: activity.role,
+    mode: activity.mode,
     renderer: ACTIVITY_RENDERERS[activity.type].family,
     type: activity.type,
     vocabulary: activity.vocabulary,
