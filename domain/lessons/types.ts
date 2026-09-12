@@ -1,4 +1,5 @@
 import type { ContentOrigin } from "../curriculum/types";
+import type { LessonReview, LessonStatus } from "./review";
 
 /**
  * Lessons and activities are **authored by Teka Edu** (`origin: "teka-edu-created"`). They are
@@ -96,7 +97,10 @@ export type Lesson = {
   parentGuidance: string;
   activities: readonly Activity[];
   origin: ContentOrigin;
-  status: "draft" | "review" | "published";
+  /** Where the lesson stands in the quality gate (ADR-035, domain/lessons/review.ts). */
+  status: LessonStatus;
+  /** Who approved this exact text, and when. Only an approved lesson has one. */
+  review: LessonReview | null;
 };
 
 /** Something needed to run an activity (content/materials.json). */
@@ -105,6 +109,13 @@ export type Material = {
   name: string;
   /** none | screen | paper | writing | household | toy | outdoor */
   category: string;
+  /**
+   * What to use instead when a home does not have it. Homes in the DRC differ widely, so an
+   * activity must never depend on one particular object (docs/CONTENT_AUTHORING.md).
+   */
+  alternatives: string | null;
+  /** What the adult must watch for with a preschool child; null when there is nothing to add. */
+  safetyNote: string | null;
 };
 
 export function lessonMinutes(lesson: Lesson): number {

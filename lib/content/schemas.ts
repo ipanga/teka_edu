@@ -100,6 +100,9 @@ export const curriculumFileSchema = z.strictObject({
         title: text,
         citation: text,
         url: z.url({ protocol: /^https$/ }).nullable(),
+        publishedOn: z
+          .string()
+          .regex(/^\d{4}-\d{2}-\d{2}$/, { message: "must be a YYYY-MM-DD publication date" }),
         sha256: z
           .string()
           .regex(/^[0-9a-f]{64}$/, { message: "must be a SHA-256 hex digest" })

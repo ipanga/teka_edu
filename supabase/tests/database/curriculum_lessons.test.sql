@@ -2,7 +2,7 @@
 -- Every change is rolled back. Run with `npm run db:test`.
 begin;
 set constraints all immediate;
-select plan(28);
+select plan(37);
 
 -- ---- Imported official data ------------------------------------------------------------------
 
@@ -177,6 +177,56 @@ select throws_ok(
   $$ insert into public.activity_scaffolds (activity_id, language, child_instruction)
      values ('m3-lang-01-a1', 'fr', 'x') $$,
   '23514', null, 'French cannot be added as a scaffold language'
+);
+
+-- ---- Content quality gate (Phase 2.5, ADR-035) ------------------------------------------------
+
+select is(
+  (select count(*)::int from public.lessons where status <> 'review'),
+  0,
+  'no pilot lesson claims approval: they all wait for a human reviewer'
+);
+select is(
+  (select count(*)::int from public.lessons where reviewer is not null),
+  0,
+  'no lesson records a reviewer yet'
+);
+select throws_ok(
+  $$ update public.lessons set status = 'approved' where id = 'm3-lang-01' $$,
+  '23514', null, 'a lesson cannot become approved without a named reviewer'
+);
+select throws_ok(
+  $$ update public.lessons set status = 'approved', reviewer = 'X' where id = 'm3-lang-01' $$,
+  '23514', null, 'an approval needs the reviewer role, date and reviewed digest too'
+);
+select throws_ok(
+  $$ update public.lessons set reviewer = 'X', reviewer_role = 'institutrice',
+       reviewed_on = '2026-09-20', reviewed_digest = '0123456789abcdef' where id = 'm3-lang-01' $$,
+  '23514', null, 'a review record cannot be attached to a lesson that is not approved'
+);
+select lives_ok(
+  $$ update public.lessons set status = 'approved', reviewer = 'X', reviewer_role = 'institutrice',
+       reviewed_on = '2026-09-20', reviewed_digest = '0123456789abcdef' where id = 'm3-lang-01' $$,
+  'an approval with a named reviewer, a role, a date and a digest is accepted'
+);
+select throws_ok(
+  $$ update public.lessons set status = 'publie' where id = 'm3-lang-02' $$,
+  '23514', null, 'the lifecycle is draft, review, approved or retired'
+);
+
+-- ---- Materials: alternatives and safety -------------------------------------------------------
+
+select is(
+  (
+    select count(*)::int from public.materials
+    where alternatives is null and code <> 'aucun'
+  ),
+  0,
+  'every material other than "aucun" says what to use instead'
+);
+select ok(
+  (select safety_note is not null from public.materials where code = 'petits-objets'),
+  'small objects to count carry a safety note for the adult'
 );
 
 select * from finish();

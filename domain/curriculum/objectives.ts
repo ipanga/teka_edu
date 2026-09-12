@@ -77,6 +77,10 @@ export function findObjective(syllabus: Syllabus, code: string): LearningObjecti
   return syllabus.objectives.find((objective) => objective.code === code);
 }
 
+export function findCompetency(syllabus: Syllabus, code: string): Competency | undefined {
+  return syllabus.competencies.find((competency) => competency.code === code);
+}
+
 export function domainOfObjective(
   syllabus: Syllabus,
   objective: LearningObjective,

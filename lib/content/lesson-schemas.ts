@@ -13,6 +13,7 @@ import type {
   LearningObjective,
   SuccessExample,
 } from "@/domain/curriculum/types";
+import { LESSON_STATUSES } from "@/domain/lessons/review";
 import {
   ACTIVITY_MODES,
   ACTIVITY_TYPES,
@@ -97,6 +98,8 @@ export const materialsFileSchema = z.strictObject({
         code: slug,
         name: french,
         category: z.enum(["none", "screen", "paper", "writing", "household", "toy", "outdoor"]),
+        alternatives: french.nullable(),
+        safetyNote: french.nullable(),
       }) satisfies z.ZodType<Material>,
     )
     .min(1),
@@ -105,10 +108,9 @@ export const materialsFileSchema = z.strictObject({
 // ---- content/lessons/<curriculum>/<level>/<domain>.json --------------------------------------
 
 /**
- * Activity payloads by type: what a future renderer needs beyond the instruction. Types with
- * no extra data take an empty object, so an unexpected field is still an error.
+ * Activity payloads by type: what a future renderer needs beyond the instruction. Every payload
+ * is strict, so an unexpected field is an error rather than silently ignored data.
  */
-const EMPTY = z.strictObject({});
 const ACTIVITY_PAYLOADS: Record<ActivityType, z.ZodType> = {
   conversation: z.strictObject({ prompts: z.array(french).min(1) }),
   vocabulary: z.strictObject({ focus: french.optional() }),
@@ -174,7 +176,16 @@ const lesson = z.strictObject({
   parentGuidance: french,
   activities: z.array(activity).min(1),
   origin: z.enum(CONTENT_ORIGINS),
-  status: z.enum(["draft", "review", "published"]),
+  status: z.enum(LESSON_STATUSES),
+  review: z
+    .strictObject({
+      reviewer: text,
+      reviewerRole: text,
+      reviewedOn: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, { message: "must be a YYYY-MM-DD date" }),
+      reviewedDigest: z.string().regex(/^[0-9a-f]{16}$/, { message: "must be a lesson digest" }),
+      notes: text.nullable(),
+    })
+    .nullable(),
 }) satisfies z.ZodType<Lesson>;
 
 export const lessonsFileSchema = z.strictObject({

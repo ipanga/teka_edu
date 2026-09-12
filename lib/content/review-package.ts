@@ -1,0 +1,288 @@
+/**
+ * Builds the human review package: a Markdown document a teacher can read without opening
+ * JSON or the database (docs/PEDAGOGICAL_REVIEW.md, ADR-035).
+ *
+ * Pure and deterministic: generated from the canonical content, never hand-written, so it
+ * cannot drift from what the application actually serves. `npm run review:package` writes it
+ * and a unit test fails if the committed file is out of date.
+ */
+import { generateSchoolDays } from "@/domain/calendar/school-days";
+import {
+  ageBandOfLevel,
+  findCompetency,
+  findObjective,
+  successExamplesFor,
+} from "@/domain/curriculum/objectives";
+import type { Syllabus } from "@/domain/curriculum/objectives";
+import type { Curriculum } from "@/domain/curriculum/types";
+import type { Activity, Lesson } from "@/domain/lessons/types";
+import { generateDailyPlan } from "@/domain/programme/daily-plan";
+import type { DailyPlan } from "@/domain/programme/types";
+import { type ReferenceData, getProgramme, getSyllabus } from "./reference-data";
+
+/** The checklist a reviewer fills in. Kept here so the document and the rubric stay in step. */
+export const REVIEW_CHECKLIST: readonly { key: string; question: string }[] = [
+  {
+    key: "objective-alignment",
+    question: "L’activité travaille-t-elle réellement l’objectif annoncé ?",
+  },
+  { key: "age", question: "Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ?" },
+  { key: "clarity", question: "La consigne enfant et la guidance adulte sont-elles claires ?" },
+  {
+    key: "cognitive-load",
+    question: "La difficulté est-elle juste (ni trop facile, ni trop complexe) ?",
+  },
+  { key: "duration", question: "La durée annoncée est-elle réaliste ?" },
+  { key: "engagement", question: "L’enfant agit-il vraiment, au lieu de regarder ?" },
+  { key: "language", question: "Le français proposé est-il accessible et utile à l’acquisition ?" },
+  {
+    key: "culture",
+    question: "Les exemples sont-ils compréhensibles en RDC (ville comme village) ?",
+  },
+  { key: "materials", question: "Le matériel est-il trouvable à la maison, ou remplaçable ?" },
+  { key: "safety", question: "L’activité est-elle sans risque pour un enfant de cet âge ?" },
+];
+
+const MODE_LABEL: Record<string, string> = {
+  "off-screen": "sans écran",
+  "on-screen": "à l’écran",
+  mixed: "mixte (écran puis action)",
+};
+
+function activityBlock(activity: Activity, data: ReferenceData, syllabus: Syllabus): string[] {
+  const used = activity.materialCodes.map((code) => data.materials.find((m) => m.code === code));
+  const materials = activity.materialCodes
+    .map((code, index) => used[index]?.name ?? code)
+    .join(", ");
+  const scaffold = activity.scaffolds.find((s) => s.language === "en");
+  const lines = [
+    `#### ${activity.position}. ${activity.title} — ${activity.minutes} min, ${MODE_LABEL[activity.mode] ?? activity.mode} (${activity.type})`,
+    "",
+    `- **Consigne à l’enfant :** « ${activity.childInstruction} »`,
+    `- **Guidance adulte :** ${activity.adultGuidance}`,
+    `- **Matériel :** ${materials}`,
+  ];
+  if (activity.vocabulary.length > 0) {
+    lines.push(
+      `- **Lexique visé :** ${activity.vocabulary.map((v) => (v.en ? `${v.fr} _(${v.en})_` : v.fr)).join(" · ")}`,
+    );
+  }
+  for (const material of used) {
+    if (material?.alternatives) lines.push(`- **À défaut :** ${material.alternatives}`);
+    if (material?.safetyNote) lines.push(`- **⚠ Sécurité :** ${material.safetyNote}`);
+  }
+  if (scaffold)
+    lines.push(`- **Aide en anglais (optionnelle) :** « ${scaffold.childInstruction} »`);
+  lines.push(
+    `- **Objectifs travaillés :** ${activity.objectiveCodes
+      .map((code) => `\`${code}\` ${findObjective(syllabus, code)?.statement.split("\n")[0] ?? ""}`)
+      .join(" ; ")}`,
+  );
+  lines.push("");
+  return lines;
+}
+
+/**
+ * Official evidence of progress. The programme lists its "exemples de réussite" per competency
+ * and age band, never per objective, so they are shown once per competency and said to be such:
+ * putting them beside one activity would suggest a link the official tables do not make.
+ */
+function successExampleBlock(
+  lesson: Lesson,
+  syllabus: Syllabus,
+  bandCode: string | null,
+): string[] {
+  if (bandCode === null) return [];
+  const competencyCodes = [
+    ...new Set(
+      [...lesson.objectiveCodes, ...lesson.supportingObjectiveCodes]
+        .map((code) => findObjective(syllabus, code)?.competencyCode)
+        .filter((code): code is string => code !== undefined),
+    ),
+  ];
+  const lines: string[] = [];
+  for (const code of competencyCodes) {
+    const competency = findCompetency(syllabus, code);
+    const objective = lesson.objectiveCodes
+      .map((objectiveCode) => findObjective(syllabus, objectiveCode))
+      .find((candidate) => candidate?.competencyCode === code);
+    const examples = objective ? successExamplesFor(syllabus, objective, bandCode) : [];
+    if (competency === undefined || examples.length === 0) continue;
+    lines.push(
+      `**Réussites attendues — texte officiel pour la compétence « ${competency.title} » (${bandCode}) :**`,
+      "",
+      ...examples.slice(0, 4).map((example) => `- ${example.statement.split("\n")[0]}`),
+      "",
+      "_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._",
+      "",
+    );
+  }
+  return lines;
+}
+
+function lessonBlock(
+  lesson: Lesson,
+  domainTitle: string,
+  minutes: number,
+  data: ReferenceData,
+  syllabus: Syllabus,
+  bandCode: string | null,
+): string[] {
+  const lines = [
+    `### ${lesson.title} — ${domainTitle} (${minutes} min)`,
+    "",
+    `_${lesson.summary}_`,
+    "",
+    `- **Statut :** \`${lesson.status}\` · **origine :** ${lesson.origin} · **étape :** ${lesson.stage} · **difficulté :** ${lesson.difficulty}/3`,
+    `- **Conseil au parent :** ${lesson.parentGuidance}`,
+  ];
+  const objectives = lesson.objectiveCodes.map((code) => {
+    const objective = findObjective(syllabus, code);
+    return `  - \`${code}\` — ${objective?.statement.split("\n")[0] ?? "?"} _(source : ${objective?.sourceId ?? "?"})_`;
+  });
+  lines.push("- **Objectifs enseignés :**", ...objectives);
+  if (lesson.supportingObjectiveCodes.length > 0) {
+    lines.push(
+      "- **Objectifs repris (déjà vus) :**",
+      ...lesson.supportingObjectiveCodes.map((code) => {
+        const objective = findObjective(syllabus, code);
+        return `  - \`${code}\` — ${objective?.statement.split("\n")[0] ?? "?"}`;
+      }),
+    );
+  }
+  lines.push("");
+  for (const activity of lesson.activities) {
+    lines.push(...activityBlock(activity, data, syllabus));
+  }
+  lines.push(...successExampleBlock(lesson, syllabus, bandCode));
+  lines.push(
+    "**Avis du relecteur / de la relectrice :**",
+    "",
+    "| Critère | OK / à revoir | Commentaire |",
+    "| --- | --- | --- |",
+    ...REVIEW_CHECKLIST.map((item) => `| ${item.question} |  |  |`),
+    "",
+    "> Décision : ☐ accepté ☐ accepté avec modifications ☐ à refaire — _à remplir par la personne qui relit_",
+    "",
+  );
+  return lines;
+}
+
+function dayBlock(
+  plan: DailyPlan,
+  data: ReferenceData,
+  curriculum: Curriculum | undefined,
+  syllabus: Syllabus,
+  bandCode: string | null,
+): string[] {
+  const domainTitle = (code: string) =>
+    curriculum?.domains.find((domain) => domain.code === code)?.title ?? code;
+  const lines = [
+    `## Jour ${plan.instructionalDay} — ${plan.date}`,
+    "",
+    `**Durée totale : ${plan.totalMinutes} min** (dont ${plan.screenMinutes} min avec écran) · ${plan.sessions.length} séances · jour ${plan.rhythmDay} du rythme`,
+    "",
+    `**Matériel à préparer :** ${plan.materialCodes
+      .map((code) => data.materials.find((m) => m.code === code)?.name ?? code)
+      .join(", ")}`,
+    "",
+  ];
+  for (const session of plan.sessions) {
+    if (session.lesson === null) {
+      lines.push(`### (contenu à écrire) — ${domainTitle(session.domainCode)}`, "");
+      continue;
+    }
+    lines.push(
+      ...lessonBlock(
+        session.lesson,
+        domainTitle(session.domainCode),
+        session.minutes,
+        data,
+        syllabus,
+        bandCode,
+      ),
+    );
+  }
+  return lines;
+}
+
+/** The whole review package for one level and school year. */
+export function buildReviewPackage(
+  data: ReferenceData,
+  options: { levelId: string; schoolYearId: string; days: number },
+): string {
+  const calendar = data.calendars.find((c) => c.schoolYear.id === options.schoolYearId);
+  const programme = getProgramme(options.levelId, options.schoolYearId, data);
+  if (calendar === undefined || programme === undefined) {
+    throw new RangeError(`no programme for ${options.levelId} in ${options.schoolYearId}`);
+  }
+  const syllabus = getSyllabus(programme.curriculumId, data);
+  const curriculum = data.curricula.find((c) => c.id === programme.curriculumId);
+  const band = curriculum ? ageBandOfLevel(curriculum, options.levelId) : undefined;
+  const level = data.levels.find((l) => l.id === options.levelId);
+  const schoolDays = generateSchoolDays(calendar, data.publicHolidays);
+
+  const plans: DailyPlan[] = [];
+  for (let day = 1; day <= options.days; day++) {
+    const schoolDay = schoolDays.find((d) => d.instructionalDay === day);
+    if (schoolDay === undefined) break;
+    plans.push(generateDailyPlan(schoolDay, programme, data.lessons));
+  }
+
+  const lessons = plans.flatMap((plan) =>
+    plan.sessions.flatMap((session) => (session.lesson ? [session.lesson] : [])),
+  );
+  const activities = lessons.flatMap((lesson) => lesson.activities);
+
+  const header = [
+    `# Dossier de relecture pédagogique — ${level?.name ?? options.levelId}, ${calendar.schoolYear.label}`,
+    "",
+    "> **Ce document est généré automatiquement** à partir du contenu du dépôt",
+    "> (`npm run review:package`). Ne le modifiez pas à la main : corrigez le contenu, puis",
+    "> régénérez-le. Les leçons sont **écrites par Teka Edu** et **n’ont pas encore été relues**",
+    "> par une personne qui enseigne à cet âge.",
+    "",
+    "## Ce qu’on vous demande",
+    "",
+    "Vous lisez ici la première semaine de programme telle qu’un parent la recevrait. Pour chaque",
+    "leçon, dites si elle convient à un enfant de 5 ans en RDC, et signalez ce qui vous gêne :",
+    "une consigne trop longue, une durée irréaliste, un matériel introuvable, un exemple mal choisi,",
+    "un objectif qui ne correspond pas à l’activité. Les tableaux de relecture sont là pour cela.",
+    "",
+    "Une leçon ne pourra passer au statut « approuvé » qu’après votre accord explicite.",
+    "",
+    "## Repères",
+    "",
+    `- **Niveau :** ${level?.name ?? options.levelId} · **tranche d’âge du programme :** ${band?.label ?? "—"}`,
+    `- **Curriculum :** ${curriculum?.name ?? programme.curriculumId} (version ${curriculum?.version ?? "?"})`,
+    `- **Référence officielle :** ${curriculum?.reference.citation ?? "—"}`,
+    `- **Séance visée :** ${programme.sessionMinutes.min}–${programme.sessionMinutes.max} min par jour, à la maison, avec un adulte`,
+    `- **Contenu relu ici :** ${plans.length} jours · ${lessons.length} leçons · ${activities.length} activités`,
+    "",
+    "Les objectifs et les « réussites attendues » sont cités mot pour mot du programme officiel ;",
+    "les leçons, les consignes et les activités sont rédigées par Teka Edu.",
+    "",
+  ];
+
+  const footer = [
+    "## Avis d’ensemble",
+    "",
+    "| Question | Réponse |",
+    "| --- | --- |",
+    "| La semaine est-elle adaptée à des enfants de 5 ans en RDC ? |  |",
+    "| Le rythme quotidien (langage, mathématiques, activité physique, domaine tournant) convient-il ? |  |",
+    "| La durée quotidienne est-elle réaliste à la maison ? |  |",
+    "| L’aide en anglais est-elle utile, et assez discrète ? |  |",
+    "| Que faudrait-il ajouter ou retirer avant d’écrire la suite de l’année ? |  |",
+    "",
+    "**Relecteur / relectrice :** ______________________  **Rôle :** ______________________",
+    "",
+    "**Date :** ______________  **Décision globale :** ☐ semaine acceptée ☐ acceptée avec modifications ☐ à refaire",
+    "",
+  ];
+
+  const body = plans.flatMap((plan) =>
+    dayBlock(plan, data, curriculum, syllabus, band?.code ?? null),
+  );
+  return [...header, ...body, ...footer].join("\n");
+}

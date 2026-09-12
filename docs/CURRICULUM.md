@@ -22,9 +22,8 @@ The 2026 arrêté applies from the 2026–2027 school year and repeals the 2015 
 **not** restate language and mathematics: for those two domains it points to the 2024 annexes,
 which is why the curriculum has three sources rather than one.
 
-**Reuse:** education.gouv.fr publishes under the Licence Ouverte (etalab-2.0) and states that
-official regulatory documents may be reproduced freely. Every quoted statement carries its
-source and page.
+Every quoted statement carries its source and page. What may be reused, and on what terms, is
+set out in [Reuse, licence and attribution](#reuse-licence-and-attribution) below.
 
 ## Hierarchy
 
@@ -90,6 +89,12 @@ objective's competency and band (narrowed by row group when both have one).
 The programme also warns that the examples "ne sont pas exhaustifs": they illustrate, they are
 not a checklist.
 
+**Present them as what they are.** Showing an example beside a single activity suggests a link
+the official tables do not make — a Phase 2.5 review found exactly that defect and fixed it. The
+API returns them as `competencySuccessExamples` with the competency's code and title, and the
+review document groups them per competency with a note. Keep that wording in any future
+interface.
+
 ## Provenance: official vs Teka Edu
 
 Every statement says where it comes from, and nothing blurs the two:
@@ -105,6 +110,81 @@ Every statement says where it comes from, and nothing blurs the two:
 - The database refuses an objective marked `official` without a source, and refuses to store a
   lesson as official text at all.
 - The API returns `origin` and `source` next to each objective.
+
+## Reuse, licence and attribution
+
+The repository is public and quotes official text verbatim, so the terms matter. What follows is
+the result of checking the documents and the sites themselves; **it is not legal advice**, and
+the three questions at the end need a lawyer (ISSUE-021).
+
+### The French programme
+
+- **No rights notice.** The three annexes carry no licence statement, no copyright line and no
+  reuse terms of their own. Nothing in the PDFs grants a reuse right, so the right has to come
+  from the law or from the publisher's site terms.
+- **Statute.** French law has **no statutory exception** for official texts. The exclusion of
+  _actes officiels_ from copyright is a **case-law doctrine** (Cour de cassation, and the Conseil
+  d'État for administrative acts): an act that everyone is required to know is not protected by
+  author's rights. An arrêté and its annexed programme fall within it, but it is a doctrine, not
+  an article of the Code de la propriété intellectuelle that can be cited by number.
+- **Site terms.** education.gouv.fr's footer points to **etalab-2.0** (Licence Ouverte 2.0),
+  while its _mentions légales_ elsewhere describe the ministry as a non-commercial body and
+  restrict reuse. **The two statements contradict each other.** Teka Edu therefore relies on the
+  narrower of the two readings and complies with the Licence Ouverte in full, which is stricter
+  than the official-texts doctrine would require.
+- **Licence Ouverte 2.0 obliges the reuser to cite the source _and_ the date of its last
+  update**, and not to suggest endorsement. That is why every source record now carries
+  `publishedOn` (mirrored as `curriculum_sources.published_on`): the attribution line is
+  generated from the data, not hand-written.
+- **Excluded from any reuse:** the **Marianne**, the Republic's and the ministry's logos, and any
+  other official emblem. They are protected separately from the text and are **not** in this
+  repository. Do not add them, and do not reproduce the PDFs' layout or headers.
+- **The PDFs themselves are not redistributed.** Only the statements are stored, as data, with
+  their citation and SHA-256 so the import can be re-verified from the official URL.
+
+**Attribution wording to use wherever official statements are displayed:**
+
+> Objectifs d'apprentissage issus du programme d'enseignement de l'école maternelle (cycle 1),
+> ministère de l'Éducation nationale, publié le \<date de dernière mise à jour de la source\>,
+> repris sous [Licence Ouverte 2.0](https://www.etalab.gouv.fr/licence-ouverte-open-licence/).
+> Teka Edu n'est ni édité, ni approuvé, ni cautionné par le ministère de l'Éducation nationale.
+
+The no-endorsement sentence is not optional politeness: the Licence Ouverte forbids suggesting
+endorsement, and a product marked "programme officiel" without it invites exactly that reading.
+
+### The DRC programme (PNEM 2021)
+
+The opposite situation, and it is why the PNEM is referenced and never copied (ISSUE-020):
+
+- **Ordonnance-loi n° 86-033 du 5 avril 1986, art. 7** places official acts in the public domain
+  but **protects other State publications for the State itself**. The PNEM is a ministry
+  publication, and no arrêté promulgating it was found, so it is not an official act.
+- **edu-nc.gouv.cd** allows consultation, download and printing for personal and educational use
+  with attribution, and **prohibits reproduction without authorisation**.
+- Consequence for the model: a PNEM curriculum profile may hold **codes, official names, a
+  citation and Teka Edu's own short description** marked `teka-edu-adaptation`. Storing the
+  wording requires written permission from MINEDU-NC first.
+
+### Rules that follow, for anyone adding content
+
+1. Official text is stored **verbatim with `origin: "official"`, a source and a page**, or it is
+   not stored as official at all.
+2. A paraphrase is **never** `official`. It is `teka-edu-adaptation`, and its wording is Teka
+   Edu's, which is what the reader is told.
+3. Displaying official statements means displaying the attribution above, with the source's
+   publication date.
+4. No emblem, logo or PDF reproduction.
+5. Anything whose status is unclear is marked for human or legal review rather than assumed.
+
+### For the lawyer (ISSUE-021)
+
+1. Does the official-texts doctrine cover a **programme annexed to an arrêté**, or only the
+   arrêté's articles?
+2. Which of education.gouv.fr's two contradictory statements governs — the etalab-2.0 footer or
+   the restrictive _mentions légales_ — and does the answer change for a **public repository**
+   rather than a product screen?
+3. Does quoting a French programme inside a product distributed in the **DRC** raise any
+   additional obligation, and is the attribution wording above sufficient in both countries?
 
 ## Importing and verifying
 

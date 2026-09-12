@@ -44,9 +44,15 @@ A lesson is one coherent unit for one level, small enough for a home session.
   "parentGuidance": "…",                // how to guide, what to watch for
   "activities": [ … ],
   "origin": "teka-edu-created",
-  "status": "review"                    // draft | review | published
+  "status": "review",                   // draft | review | approved | retired (ADR-035)
+  "review": null                        // filled in only when a person approves it
 }
 ```
+
+**A lesson you write stops at `review`.** Only a named human reviewer moves it to `approved`, and
+the approval records who, their role, the date and a digest of the exact text
+([`CONTENT_QUALITY_GATE.md`](CONTENT_QUALITY_GATE.md)). Editing approved content lapses the
+approval, on purpose.
 
 ### Rules the validator checks
 
@@ -117,6 +123,16 @@ can be packaged for offline use. Adding the field is additive: no existing conte
 `writing`, `household`, `toy`, `outdoor`). Every activity lists its materials, using `aucun`
 when it needs none. The daily plan aggregates them so a parent can prepare in one go. There is
 no inventory tracking.
+
+Every material also carries:
+
+- **`alternatives`** — what to use instead. Homes in the DRC differ: city flat, peri-urban plot,
+  village. An activity must never fail because one object is missing, so write "cailloux,
+  capsules, haricots, graines" rather than "cailloux".
+- **`safetyNote`** — what the adult must watch for, when there is something to watch: small
+  objects near a toddler, furniture that must be stable, an outdoor space to check first.
+
+Both are shown to the parent in the daily plan and in the review document.
 
 ## Before you commit
 

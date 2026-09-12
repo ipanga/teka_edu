@@ -2,22 +2,26 @@
 
 Read this file first in every session. It holds **stable context and working rules only**.
 
-| File                            | Answers                                                                    |
-| ------------------------------- | -------------------------------------------------------------------------- |
-| `CLAUDE.md`                     | What to remember while working (this file)                                 |
-| `PROJECT_STATUS.md`             | Where implementation stands, what is next                                  |
-| `DECISIONS.md`                  | Why important choices were made (ADRs)                                     |
-| `TEKA_EDU_PROJECT_PLAN.md`      | What Teka Edu should become (full spec, cited as "Plan §N")                |
-| `README.md`                     | How a developer sets up, runs and tests the project                        |
-| `docs/ENVIRONMENT_VARIABLES.md` | Every environment variable: the single authoritative inventory             |
-| `docs/ENVIRONMENT_SETUP.md`     | Step-by-step configuration of local, Supabase, Vercel and GitHub           |
-| `docs/DEPLOYMENT.md`            | Branch lifecycles, CI/CD pipelines, migrations, rollback, failures         |
-| `docs/FREE_TIER.md`             | Free-tier limits (classified), cost, safety rules, zero-cost backup design |
-| `docs/SCHOOL_CALENDAR.md`       | Calendar model, DRC holidays and sources, generator rules, 2026–2027 facts |
-| `docs/EDUCATIONAL_MODEL.md`     | Education hierarchy, curriculum versions/domains, reference-data mirror    |
-| `docs/CURRICULUM.md`            | Official objectives: sources, hierarchy, age bands, provenance, import     |
-| `docs/DAILY_PROGRAMME.md`       | Daily programme generator, scheduling rules and where each one comes from  |
-| `docs/CONTENT_AUTHORING.md`     | How to write lessons and activities, and the rules CI enforces             |
+| File                                | Answers                                                                    |
+| ----------------------------------- | -------------------------------------------------------------------------- |
+| `CLAUDE.md`                         | What to remember while working (this file)                                 |
+| `PROJECT_STATUS.md`                 | Where implementation stands, what is next                                  |
+| `DECISIONS.md`                      | Why important choices were made (ADRs)                                     |
+| `TEKA_EDU_PROJECT_PLAN.md`          | What Teka Edu should become (full spec, cited as "Plan §N")                |
+| `README.md`                         | How a developer sets up, runs and tests the project                        |
+| `docs/ENVIRONMENT_VARIABLES.md`     | Every environment variable: the single authoritative inventory             |
+| `docs/ENVIRONMENT_SETUP.md`         | Step-by-step configuration of local, Supabase, Vercel and GitHub           |
+| `docs/DEPLOYMENT.md`                | Branch lifecycles, CI/CD pipelines, migrations, rollback, failures         |
+| `docs/FREE_TIER.md`                 | Free-tier limits (classified), cost, safety rules, zero-cost backup design |
+| `docs/SCHOOL_CALENDAR.md`           | Calendar model, DRC holidays and sources, generator rules, 2026–2027 facts |
+| `docs/EDUCATIONAL_MODEL.md`         | Education hierarchy, curriculum versions/domains, reference-data mirror    |
+| `docs/CURRICULUM.md`                | Official objectives: sources, hierarchy, age bands, provenance, import     |
+| `docs/DAILY_PROGRAMME.md`           | Daily programme generator, scheduling rules and where each one comes from  |
+| `docs/CONTENT_AUTHORING.md`         | How to write lessons and activities, and the rules CI enforces             |
+| `docs/CONTENT_QUALITY_GATE.md`      | Lifecycle draft → review → approved; why AI content never self-approves    |
+| `docs/PEDAGOGICAL_REVIEW.md`        | Pre-review of the pilot week: rubric, findings, what a teacher must decide |
+| `docs/DRC_CURRICULUM_COMPARISON.md` | The DRC PNEM 2021 vs the French Cycle 1 programme, and the strategy        |
+| `docs/PHASE3_RENDERER_PLAN.md`      | Renderer families that Phase 3 should build                                |
 
 Do not copy content between these files. Link to it instead.
 
@@ -141,6 +145,7 @@ npm run db:start | db:stop | db:status | db:reset | db:test | db:types   (Supaba
 npm run db:reference [-- --new-migration <name>]   (regenerate the reference-data pgTAP test / data migration)
 npm run calendar:report [-- <YYYY-YYYY> --days]    (generated school calendar summary)
 npm run programme:report -- --level=maternelle-3 --day=1 [--to=5|--date=YYYY-MM-DD]  (daily plan)
+npm run review:package                             (regenerate the teacher's review document)
 ```
 
 ## Development workflow
@@ -181,6 +186,8 @@ feature/*  -> develop  -> main
 - Content lives in `content/` as structured data (JSON/YAML, Markdown where appropriate), never in components.
 - Every lesson and every activity traces to at least one official objective code, and separates what it **teaches** from what it **reinvests** (`docs/CONTENT_AUTHORING.md`).
 - Lessons and activities are always `teka-edu-created`; the database refuses to store one as official text.
+- **Content written with AI help stops at `status: "review"`.** Only a named human reviewer moves a lesson to `approved`, and the approval is bound to a digest of the exact text (ADR-035). Never mark content approved, "teacher validated" or "pedagogically certified" yourself, and never claim a review that has not happened.
+- Every material lists `alternatives` (what to use instead) and, where relevant, a `safetyNote`. An activity must never depend on one particular object.
 - The daily programme is generated from an authored rhythm + tracks, keyed by **instructional-day number** (ADR-033). Scheduling rules are labelled OFFICIAL / OFFICIAL GUIDANCE / TEKA EDU in `docs/DAILY_PROGRAMME.md`.
 - The authoring pipeline is strictly ordered:
 

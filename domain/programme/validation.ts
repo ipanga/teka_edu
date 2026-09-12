@@ -1,4 +1,5 @@
 import type { Curriculum, LearningObjective, SchoolLevel } from "../curriculum/types";
+import { checkLessonReview } from "../lessons/review";
 import { type Lesson, type Material, lessonMinutes } from "../lessons/types";
 import { planForInstructionalDay } from "./daily-plan";
 import type { LevelProgramme } from "./types";
@@ -28,6 +29,8 @@ export function checkLessons(
     const at = `lesson "${lesson.id}"`;
     if (seenLessonIds.has(lesson.id)) problems.push(`${at}: id is used twice`);
     seenLessonIds.add(lesson.id);
+    // The quality gate: AI-assisted content never approves itself (ADR-035).
+    problems.push(...checkLessonReview(lesson));
 
     const curriculum = curricula.find((c) => c.id === lesson.curriculumId);
     if (curriculum === undefined) {

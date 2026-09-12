@@ -1,27 +1,81 @@
 {
   "materials": [
-    { "code": "aucun", "name": "Aucun matériel", "category": "none" },
-    { "code": "ecran", "name": "Écran (téléphone, tablette ou ordinateur)", "category": "screen" },
-    { "code": "papier", "name": "Feuille de papier", "category": "paper" },
-    { "code": "crayon", "name": "Crayon", "category": "writing" },
-    { "code": "crayons-couleur", "name": "Crayons de couleur", "category": "writing" },
+    {
+      "code": "aucun",
+      "name": "Aucun matériel",
+      "category": "none",
+      "alternatives": null,
+      "safetyNote": null
+    },
+    {
+      "code": "ecran",
+      "name": "Écran (téléphone, tablette ou ordinateur)",
+      "category": "screen",
+      "alternatives": "Facultatif : l’adulte peut lire la consigne et montrer les objets réels.",
+      "safetyNote": null
+    },
+    {
+      "code": "papier",
+      "name": "Feuille de papier",
+      "category": "paper",
+      "alternatives": "Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.",
+      "safetyNote": null
+    },
+    {
+      "code": "crayon",
+      "name": "Crayon",
+      "category": "writing",
+      "alternatives": "Un crayon, un stylo, une craie ou un morceau de charbon conviennent.",
+      "safetyNote": null
+    },
+    {
+      "code": "crayons-couleur",
+      "name": "Crayons de couleur",
+      "category": "writing",
+      "alternatives": "À défaut : un seul crayon, des craies de couleur ou des morceaux de charbon et de brique.",
+      "safetyNote": null
+    },
     {
       "code": "petits-objets",
       "name": "Petits objets à compter (cailloux, capsules, haricots)",
-      "category": "household"
+      "category": "household",
+      "alternatives": "Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.",
+      "safetyNote": "Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans."
     },
-    { "code": "boite", "name": "Boîte, seau ou récipient", "category": "household" },
+    {
+      "code": "boite",
+      "name": "Boîte, seau ou récipient",
+      "category": "household",
+      "alternatives": "Une boîte, un seau, une bassine, un panier ou un carton.",
+      "safetyNote": null
+    },
     {
       "code": "objets-ecole",
       "name": "Objets de l’école (cahier, crayon, cartable)",
-      "category": "household"
+      "category": "household",
+      "alternatives": "À défaut de vrai matériel scolaire : une feuille pliée en guise de cahier, un sac, une craie.",
+      "safetyNote": null
     },
     {
       "code": "objets-maison",
       "name": "Objets de la maison (coussins, chaises, bâton, tissu)",
-      "category": "household"
+      "category": "household",
+      "alternatives": "Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.",
+      "safetyNote": "Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer."
     },
-    { "code": "balle-papier", "name": "Balle en papier froissé", "category": "toy" },
-    { "code": "espace-degage", "name": "Espace dégagé pour bouger", "category": "outdoor" }
+    {
+      "code": "balle-papier",
+      "name": "Balle en papier froissé",
+      "category": "toy",
+      "alternatives": "Une balle en papier froissé, une chaussette roulée ou un petit sac de graines.",
+      "safetyNote": null
+    },
+    {
+      "code": "espace-degage",
+      "name": "Espace dégagé pour bouger",
+      "category": "outdoor",
+      "alternatives": "La cour, la parcelle, une pièce dégagée ou un endroit ombragé dehors.",
+      "safetyNote": "Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité."
+    }
   ]
 }
