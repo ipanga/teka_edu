@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-12
-Branch:     feat/september-parent-learning-mvp (PR into develop)
-Commit:     develop at c58ab46; main at 1b95480
+Branch:     develop
+Commit:     develop at 0ea23a2; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -155,7 +155,7 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
                 docs/PHASE3_RENDERER_PLAN.md, docs/review/
 ```
 
-### Phase 3A — September programme and the parent session (PR `feat/september-parent-learning-mvp`)
+### Phase 3A — September programme and the parent session (PR #20, merged)
 
 - [x] Product purpose recorded: Teka Edu is a **parent-led after-school reinforcement platform**, 30-45 min per instructional day (ADR-039, `docs/PARENT_SESSION.md`)
 - [x] **Annual scope and sequence** for 3ème maternelle: 162 objectives over 189 instructional days, six phases, with `homeFeasibility` per objective (ADR-040, `docs/ANNUAL_PLAN.md`)
@@ -281,13 +281,25 @@ Recommended action: hand `docs/review/2026-2027-maternelle-3-semaine-1.md` to a 
 
 Severity: Medium (content calibration) · Status: Open
 Description: The 2024 language annex asks for a taught read-aloud with comprehension work at least once a day, plus a separate daily reading without questions. The pilot has the pleasure reading every day but the comprehension read-aloud only once in five days.
-Recommended action: when content scales, alternate the daily read-aloud (questions on some days) or lengthen the language block on days without a story lesson. Documented in `docs/DAILY_PROGRAMME.md` and `docs/PEDAGOGICAL_REVIEW.md`.
+Recommended action: when content scales, alternate the daily read-aloud (questions on some days) or lengthen the language block on days without a story lesson. Documented in `docs/DAILY_PROGRAMME.md` and `docs/PEDAGOGICAL_REVIEW.md`. September did not close it: the pleasure reading is there all 22 days, the taught comprehension read-aloud on days 3, 9 and 15 only.
 
 ### ISSUE-020 — DRC official curriculum text may not be reproduced
 
 Severity: Medium (legal) · Status: Open
 Description: edu-nc.gouv.cd reserves all site content to the ministry: consultation, download and printing for personal and educational use with attribution, but reproduction or copying without authorisation is prohibited. There is no open licence, unlike the French texts. Teka Edu therefore **references** the PNEM and does not store its wording.
 Recommended action: keep referencing only. If PNEM objectives are ever to be stored (Strategy B or C, ADR-037), request written authorisation from MINEDU-NC first. A human/legal opinion is needed before any such use.
+
+### ISSUE-022 — The year's pacing after September is a first draft
+
+Severity: Medium (content planning) · Status: Open
+Description: The annual plan allocates September by hand and spreads the remaining 126 objectives deterministically across periods 2 to 5, interleaved by domain in official order. That is a defensible skeleton and it makes coverage provable, but it is not a pedagogical sequence the way September is: it does not yet consider which objectives depend on which.
+Recommended action: refine each month's slice of the plan when that month is authored, in `tools/annual-plan/build.ts`, the way September was. The tests will then hold the content to the refined plan.
+
+### ISSUE-023 — 16 objectives cannot be fully carried by a session at home
+
+Severity: Medium (product honesty) · Status: Open, documented
+Description: Of the 162 objectives 3ème maternelle should meet, 14 are marked `partial` and 2 `school-only` in the annual plan: swimming (`PHYS-S02-C01-O06`), meeting artists (`ART-S03-C02-O08`), singing in a group, collective artwork and staging, attacking and defending roles, describing what another pupil did, heritage musical works, and the spaces around the school.
+Recommended action: no fix — this is a limit of an after-school product, and the plan records it rather than hiding it. Decide before any launch how it is communicated to parents, so Teka Edu never implies it delivers the whole official programme on its own.
 
 ### ISSUE-021 — Reuse of the French programme needs a legal opinion
 
