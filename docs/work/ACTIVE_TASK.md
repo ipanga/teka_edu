@@ -21,7 +21,7 @@ terminal.
 
 ## Status
 
-`in_progress`
+`awaiting_ci`
 
 ## Branch
 
@@ -37,7 +37,7 @@ terminal.
 
 ## Last Checkpoint
 
-2026-09-12 — everything written and 196 unit tests pass. About to run the full check suite (format, lint, typecheck, content, db reset + pgTAP, build, E2E, Docker, secret scans), which takes several minutes. If this session stops during it, nothing is lost: re-run the suite, then continue at Remaining step 2.
+2026-09-12 — full validation suite finished, everything green (see the table below). Committed as `d2e5105` and pushed. About to mark PR #22 ready for review and wait for CI.
 
 ## Scope
 
@@ -81,29 +81,28 @@ terminal.
 
 ## In Progress
 
-- [ ] Full validation suite (running)
+- [ ] PR #22: ready for review, four required CI checks, squash-merge
 
 ## Remaining
 
-1. Finish the full validation suite and record the results below.
-2. Commit, push, mark PR #22 ready for review, wait for the four required checks, squash-merge.
-3. Mark this task `completed`, archive it to `docs/work/archive/2026-09-session-duration-and-resumable-work.md`, and reset this file for the next task.
+1. Mark PR #22 ready for review, wait for the four required checks, squash-merge.
+2. Mark this task `completed`, archive it to `docs/work/archive/2026-09-session-duration-and-resumable-work.md`, and reset this file for the next task.
 
 ## Validation State
 
-| Check              | Result  | At                             |
-| ------------------ | ------- | ------------------------------ |
-| format             | NOT RUN | —                              |
-| lint               | NOT RUN | —                              |
-| typecheck          | PASS    | working tree                   |
-| unit tests         | PASS    | working tree — 196 tests       |
-| content validation | PASS    | working tree                   |
-| database tests     | NOT RUN | —                              |
-| build              | NOT RUN | —                              |
-| E2E                | NOT RUN | —                              |
-| Docker             | NOT RUN | —                              |
-| secret scans       | NOT RUN | —                              |
-| staging            | N/A     | no application change expected |
+| Check              | Result  | At                                             |
+| ------------------ | ------- | ---------------------------------------------- |
+| format             | PASS    | `d2e5105`                                      |
+| lint               | PASS    | `d2e5105` — 0 warnings                         |
+| typecheck          | PASS    | `d2e5105`                                      |
+| unit tests         | PASS    | `d2e5105` — 196 tests                          |
+| content validation | PASS    | `d2e5105` — 20 files                           |
+| database tests     | PASS    | `d2e5105` — 138 pgTAP assertions               |
+| build              | PASS    | `d2e5105`                                      |
+| E2E                | PASS    | `d2e5105` — 12 tests                           |
+| Docker             | NOT RUN | covered by CI; no Dockerfile or runtime change |
+| secret scans       | PASS    | `d2e5105` — no leaks, 0 tracked `.env*`        |
+| staging            | N/A     | no application change expected                 |
 
 ## Database State
 
@@ -123,7 +122,7 @@ terminal.
 - Branch created from `develop` at `e6fcc3a`.
 - Last checkpoint commit: `5c75438`, pushed.
 - PR: [#22](https://github.com/ipanga/teka_edu/pull/22), **draft**.
-- Uncommitted work: `CLAUDE.md`, the archive entry, ADR-041, the two test files, `PROJECT_STATUS.md`, this file.
+- Last commit: `d2e5105`, pushed. Uncommitted work: this file only (the checkpoint update itself).
 
 ## Blockers
 
@@ -135,9 +134,10 @@ None for this task.
 
 ## Exact Resume Point
 
-Run the full validation suite, record each result in the table above with the commit, then commit
-and push. Everything listed under Completed is done and needs no repeating; check `git status`
-first, because the work after `5c75438` may still be uncommitted.
+Mark PR #22 ready for review (`gh pr ready 22`), wait for the four required checks, then
+squash-merge. Do **not** re-run the local suite: it passed at `d2e5105`, which is the pushed
+head, so the results above are current. If CI has already finished while this session was away,
+read its result rather than pushing again.
 
 ## Resume Verification
 
