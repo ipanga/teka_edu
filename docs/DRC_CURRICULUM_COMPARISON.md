@@ -102,7 +102,7 @@ built unless a concrete requirement later needs it.
 | **Vie pratique**            | Enrichment mapped onto existing domains (autonomy, hygiene, responsibility, everyday reasoning, practical manipulation) — not a new competing domain.                                                              |
 | **Language of instruction** | French-first (ADR-001, PD-018 resolved), even when the school, home or previous schooling is not French-speaking. English scaffolding supports comprehension and reduces as French improves.                       |
 | **Calendar**                | The DRC official calendar governs _when_ (ADR-029). Academic reference France, calendar and context DRC.                                                                                                           |
-| **Workload**                | The compatibility layer must not double the work. About 40 minutes a day stays the target.                                                                                                                         |
+| **Workload**                | The compatibility layer must not double the work. 30 to 45 minutes a day stays the range.                                                                                                                         |
 
 The standard for content is **mastery and enrichment, never premature acceleration** (ADR-038):
 satisfy the French expectations, consolidate them, enrich around them — do not import

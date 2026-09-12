@@ -30,7 +30,7 @@ import {
   HOME_FEASIBILITIES,
   OBJECTIVE_CADENCES,
 } from "@/domain/programme/annual-plan";
-import type { LevelProgramme } from "@/domain/programme/types";
+import { DURATION_POLICIES, type LevelProgramme } from "@/domain/programme/types";
 
 const text = z.string().trim().min(1, { message: "must not be empty" });
 const positiveInt = z.number().int().positive();
@@ -231,6 +231,7 @@ export const programmeFileSchema = z.strictObject({
   levelId: slug,
   schoolYearIds: z.array(z.string()).min(1),
   sessionMinutes: z.strictObject({ min: positiveInt, max: positiveInt }),
+  durationPolicy: z.enum(DURATION_POLICIES).optional(),
   rhythm: z
     .array(
       z.strictObject({

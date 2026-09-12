@@ -2,7 +2,7 @@ import type { Curriculum, LearningObjective, SchoolLevel } from "../curriculum/t
 import { checkLessonReview } from "../lessons/review";
 import { type Lesson, type Material, lessonMinutes } from "../lessons/types";
 import { planForInstructionalDay } from "./daily-plan";
-import type { LevelProgramme } from "./types";
+import { type LevelProgramme, SESSION_MINUTES_POLICY } from "./types";
 
 /**
  * Rules for authored content (docs/CONTENT_AUTHORING.md, docs/DAILY_PROGRAMME.md).
@@ -147,6 +147,20 @@ export function checkProgramme(
   }
   if (programme.sessionMinutes.min > programme.sessionMinutes.max) {
     problems.push(`${at}: sessionMinutes.min is greater than sessionMinutes.max`);
+  }
+  // TEKA EDU (ADR-039): a day is 30 to 45 minutes. A level may not quietly redefine what a
+  // session is; departing from the policy has to be declared and is then visible in review.
+  if ((programme.durationPolicy ?? "standard") === "standard") {
+    if (
+      programme.sessionMinutes.min < SESSION_MINUTES_POLICY.min ||
+      programme.sessionMinutes.max > SESSION_MINUTES_POLICY.max
+    ) {
+      problems.push(
+        `${at}: a session is ${SESSION_MINUTES_POLICY.min}-${SESSION_MINUTES_POLICY.max} min ` +
+          `(ADR-039), but this programme declares ${programme.sessionMinutes.min}-` +
+          `${programme.sessionMinutes.max}. Set durationPolicy: "exceptional" to depart from it.`,
+      );
+    }
   }
 
   const rhythmPositions = programme.rhythm.map((day) => day.position).sort((a, b) => a - b);
