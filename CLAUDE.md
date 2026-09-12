@@ -23,6 +23,8 @@ Read this file first in every session. It holds **stable context and working rul
 | `docs/DRC_CURRICULUM_COMPARISON.md` | The DRC PNEM 2021 vs the French Cycle 1 programme, and the strategy        |
 | `docs/PHASE3_RENDERER_PLAN.md`      | Renderer families that Phase 3 should build                                |
 | `docs/PARENT_SESSION.md`            | How a parent runs the daily session, and what the interface does           |
+| `docs/RESUMABLE_WORKFLOW.md`        | How a long task survives an interruption; checkpoints, Git, recovery       |
+| `docs/work/ACTIVE_TASK.md`          | The task in progress: what is done, what remains, the exact next action    |
 | `docs/ANNUAL_PLAN.md`               | The year's scope and sequence, and how coverage is proved                  |
 
 Do not copy content between these files. Link to it instead.
@@ -49,7 +51,7 @@ Only preschool is in scope now, but the domain model must not block later levels
 2. **Curriculum reference.** The official French Cycle 1 (école maternelle) curriculum for 2026–2027 is the primary academic reference. (ADR-003)
 3. **DRC context.** Use the DRC school calendar and public holidays. Prefer DRC-relevant or universal examples over France-specific ones.
 4. **Instructional days only.** Lessons exist only on valid instructional days. (ADR-004)
-5. **After-school reinforcement, 30 to 45 minutes.** One session per instructional day, about 35 minutes, one block that may be split in two, with a pause point in the middle (ADR-039).
+5. **After-school reinforcement, 30 to 45 minutes.** One structured session per instructional school day, about 35 minutes, one block that may be split in two, with a pause point in the middle (ADR-039).
 6. **Age-appropriate pedagogy.** Use play, manipulation, oral interaction, movement, songs, repetition and short activities, not worksheets. Do not turn 3ème maternelle (GS) into CP.
 7. **Parent–child interaction.** Each lesson mixes on-screen work, talking with a parent, real objects, movement and an offline activity. The app is not a babysitting screen.
 8. **Offline-first PWA.** Once content is downloaded, daily lessons and core games work without Internet.
@@ -200,7 +202,7 @@ feature/*  -> develop  -> main
 - **Content written with AI help stops at `status: "review"`.** Only a named human reviewer moves a lesson to `approved`, and the approval is bound to a digest of the exact text (ADR-035). Never mark content approved, "teacher validated" or "pedagogically certified" yourself, and never claim a review that has not happened.
 - Every material lists `alternatives` (what to use instead) and, where relevant, a `safetyNote`. An activity must never depend on one particular object.
 - The daily programme is generated from an authored rhythm + tracks, keyed by **instructional-day number** (ADR-033). Scheduling rules are labelled OFFICIAL / OFFICIAL GUIDANCE / TEKA EDU in `docs/DAILY_PROGRAMME.md`.
-- **A day is 30 to 45 minutes** (about 35), one block with a pause point (ADR-039). The programme validator enforces the range.
+- **A day is 30 to 45 minutes** (about 35), one block with a pause point (ADR-039). The range is flexibility, not a target: a light revision day may be 30–35, a rich story or consolidation day may approach 45. Never pad a day to reach the maximum or trim one to reach the minimum. The validator checks both the generated day and the range a programme declares for itself.
 - **Author the year's pacing before the month's lessons** (ADR-040, `docs/ANNUAL_PLAN.md`): the annual plan says when each objective is introduced, reinforced and consolidated, and `npm run coverage:report` proves the content matches it.
 - **Every day brings something back**: a retrieval activity opens each day from day 2, and the last instructional day of a week consolidates. `role` on an activity says which (`teach` / `retrieval` / `consolidation`).
 - **Nothing a lesson needs comes from outside**: stories, rhymes and songs live in `content/texts/` and are Teka Edu originals. A lesson never tells a parent to find a book.
@@ -242,11 +244,22 @@ feature/*  -> develop  -> main
 13. Avoid very large files. Record non-obvious decisions in `DECISIONS.md`.
 14. Flag uncertain pedagogical content for review instead of presenting it as final.
 
+## Resumable work (read this before any long task)
+
+**For substantial or multi-step work, use the repository's resumable-task protocol
+(`docs/RESUMABLE_WORKFLOW.md`). Read `docs/work/ACTIVE_TASK.md` before continuing an existing
+task, keep it checkpointed at every milestone and before anything long or interruptible, commit
+and push recoverable checkpoints on the feature branch, and never rely on chat context alone to
+remember progress.** When the checkpoint and the repository disagree, the repository wins. Mark a
+test result `STALE` in the same edit that invalidates it. Before re-running a migration or a
+deployment, check the actual remote state — an interrupted session usually did not interrupt the
+remote operation.
+
 ## Documentation protocol
 
 At the start of every session:
 
-1. Read `CLAUDE.md`, then `PROJECT_STATUS.md`, then `DECISIONS.md`.
+1. Read `CLAUDE.md`, then `PROJECT_STATUS.md`, then `DECISIONS.md`, then `docs/work/ACTIVE_TASK.md` if a task is in progress.
 2. Read only the sections of `TEKA_EDU_PROJECT_PLAN.md` that the task needs. Read the whole plan only when the task needs wide context. For infrastructure work (env vars, Docker, database, CI/CD, Supabase, Vercel, branch workflow), also read `docs/ENVIRONMENT_SETUP.md`, `docs/ENVIRONMENT_VARIABLES.md`, `docs/DEPLOYMENT.md` and `docs/FREE_TIER.md`.
 3. Check the actual repository (`git status`, `git log`, the files) before coding, because the docs can be out of date.
 

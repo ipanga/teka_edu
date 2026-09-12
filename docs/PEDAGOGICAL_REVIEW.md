@@ -144,10 +144,17 @@ The pilot's day is language + mathematics + physical + one rotating domain, 40â€
   domain later. Teka Edu is **reinforcement, not replacement**: the child's school day remains
   the main teaching. This is stated for the reviewer to confirm.
 
+> **Superseded on 2026-09-12 (ADR-039).** The 40 minutes above describe the pilot week as it
+> stood at this review. The product decision is now **30 to 45 minutes**, about 35, and the
+> September programme runs at 35. The finding is kept as written because it is the record of
+> what was reviewed; the split-session recommendation was accepted and implemented as the plan's
+> pause point.
+
 ## What the human reviewer must decide
 
 1. Are the 20 lessons appropriate for 5-year-olds in the DRC? (ISSUE-017)
-2. Is 40 minutes a day realistic in a home, as one block or two?
+2. Is the daily session realistic in a home, as one block or two? (40 min when this review was
+   written; **35 min in the September programme**, within the 30â€“45 range of ADR-039.)
 3. Should the daily read-aloud include comprehension questions more often?
 4. Are minor findings m4, m5, m6 and m7 worth changing?
 5. Should free play and practical-life content be added before the year is written? (s1, s2)

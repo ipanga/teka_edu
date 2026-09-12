@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-12
-Branch:     develop
-Commit:     develop at 0ea23a2; main at 1b95480
+Branch:     chore/resumable-workflow-and-session-duration (PR #22 into develop)
+Commit:     develop at e6fcc3a; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -167,6 +167,13 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 - [x] **Parent session UI**: `/` (today), `/seance/[day]`, `/calendrier`, with materials, guidance on demand, English hidden by default, a pause point and catch-up
 - [x] Ten renderer families implemented (ADR-036); progress kept in the browser only
 - [x] Five weekly review packages instead of one monthly file; all 88 lessons remain `review`
+
+### Governance — session duration and resumable work (PR #22)
+
+- [x] The daily session is **30–45 minutes** (about 35) wherever a product requirement is stated; ADR-039 amended, the Phase 2.5 40-minute recommendation marked superseded rather than rewritten
+- [x] The range is enforced on a programme's declared `sessionMinutes` as well as on each generated day; a departure must declare `durationPolicy: "exceptional"`
+- [x] **Resumable-work protocol** (ADR-041): `docs/work/ACTIVE_TASK.md`, `docs/RESUMABLE_WORKFLOW.md`, `docs/work/archive/`, a `CLAUDE.md` instruction, and a test that enforces the checkpoint's structure
+- [x] Phase 3A archived as the first baseline; September content unchanged
 
 ## Next Tasks
 

@@ -932,7 +932,7 @@ Three facts shaped the decision:
 progression it can quote and verify. The compatibility layer, once built, lets Teka Edu answer a
 Congolese parent's question — _does this follow what my child's school teaches?_ — by reference,
 without copying a text it is not licensed to copy. The PNEM never adds a second set of daily
-work: it must not increase the child's workload (ADR-034 keeps the day at about 40 minutes).
+work: it must not increase the child's workload (ADR-039 keeps the day at 30 to 45 minutes).
 Content authors take their objectives from the French programme and their examples, materials and
 context from the DRC.
 
@@ -969,7 +969,7 @@ reviewers and authors a rule for rejecting content that is impressive but premat
 
 ## ADR-039 — Teka Edu is a parent-led after-school reinforcement platform
 
-**Status:** Accepted · **Date:** 2026-09-12 · **Decided by:** the owner · **Refines:** ADR-001, ADR-003, ADR-033, ADR-034
+**Status:** Accepted · **Date:** 2026-09-12 · **Amended:** 2026-09-12 (duration range confirmed as 30–45 min) · **Decided by:** the owner · **Refines:** ADR-001, ADR-003, ADR-033, ADR-034 · **Supersedes** the "about 40 minutes" figure used in the Phase 2.5 pre-review
 
 **Context:** Until now the product was described by what it contains — a curriculum, lessons, a
 daily programme — rather than by the moment it is used in. That left real questions open: how
@@ -979,10 +979,15 @@ teacher taught that day.
 **Decision:** Teka Edu is a **digital répétiteur guided by the parent**. A child attends school
 during the day; afterwards, a parent opens Teka Edu and runs a structured session with them.
 
-- **Duration: 30 to 45 minutes per instructional day**, about 35 where the pedagogy allows. The
-  session is one block that **may be split in two**, because a five-year-old coming home from
-  school does not always have 40 minutes of attention left. The daily plan therefore carries a
-  **pause point**, computed from the session's own shape.
+- **Duration: a structured session of 30 to 45 minutes on each instructional school day**, about
+  35 where the pedagogy allows. The session is one block that **may be split in two**, because a
+  five-year-old coming home from school does not always have that much attention left. The daily
+  plan therefore carries a **pause point**, computed from the session's own shape.
+- **The range is flexibility, not a target to hit.** A light revision day may run 30–35 minutes;
+  a normal day 35–40; a richer story, artistic or consolidation day may reasonably approach 45.
+  Nothing may force every day to the same length, and no day may be padded to reach the maximum
+  or trimmed to reach the minimum. September runs at 35 minutes throughout, which is valid and
+  is left alone.
 - **The parent is the adult who teaches.** Guidance is written for someone who is not a trained
   teacher: numbered, concrete, jargon-free, and short enough to read while the child waits.
 - **Teka Edu does not replace school and never claims to know what the class did today.** It
@@ -1000,8 +1005,11 @@ during the day; afterwards, a parent opens Teka Edu and runs a structured sessio
 who is not a teacher run this in about 35 minutes after school?_ Lesson text is written for that
 adult, the interface is a stepper rather than a dashboard, and curriculum apparatus — objective
 codes, competencies, success examples — stays out of the session screen and lives in the review
-packages and the API. The 30-45 minute range is enforced by the programme validator, so content
-cannot quietly grow past it.
+packages and the API. The 30–45 minute range is enforced twice by the programme validator — on
+every generated day, and on the range a programme declares for itself — so content cannot quietly
+grow past it, and a level cannot quietly redefine what "a session" means. A programme that must
+sit outside the range has to say so explicitly (`durationPolicy: "exceptional"`), which makes the
+exception visible in review rather than silent.
 
 ---
 
@@ -1037,3 +1045,47 @@ and nobody notices until June. The official programme states 398 objectives for 
 should have been taught, and a test compares that with the lessons that exist
 (`npm run coverage:report`). It also makes the gaps visible early — 16 objectives that a home
 session cannot fully carry were surfaced by writing the plan, not by discovering them in June.
+
+---
+
+## ADR-041 — Long tasks are resumable from the repository, not from memory
+
+**Status:** Accepted · **Date:** 2026-09-12 · **Decided by:** the owner
+
+**Context:** A substantial task now takes hours and crosses operations that can each be cut
+short: a context reset, a closed terminal, a restart, a dropped network, a crash, a run that is
+simply stopped. Phase 3A was authored, migrated, deployed and verified across one long session;
+had it been interrupted in the middle, the only record of _where_ it stopped would have been the
+conversation, which is exactly the thing that disappears.
+
+**Decision:** Progress lives in the repository.
+
+- **Two levels of state.** `PROJECT_STATUS.md` keeps where the _project_ stands and is not a work
+  log. `docs/work/ACTIVE_TASK.md` keeps where the _current task_ stands, in detail, and there is
+  normally exactly one.
+- **The checkpoint answers the resuming session's questions**: what, why, which branch, what is
+  done, what remains, what failed, what was verified, whether anything is uncommitted, and the
+  exact next action. Its sections are fixed so they can be read mechanically.
+- **Checkpoint at milestones**, and **before** anything long or interruptible — bulk generation, a
+  database reset, CI, Docker, a deployment — saying what is about to run and what to do if it
+  never reports back. Update it again afterwards.
+- **Git carries what the checkpoint describes**: branch created early, a Draft PR opened early for
+  a major phase, checkpoint commits at recoverable milestones, pushed. Squash-merge keeps
+  `develop` history clean regardless.
+- **The repository wins** when it and the checkpoint disagree.
+- **Validation has freshness**: `PASS` / `FAIL` / `NOT RUN` / `STALE`, each with the commit it was
+  observed at. A result becomes `STALE` in the same edit that invalidates it.
+- **Remote state is checked, never assumed.** An interrupted session rarely interrupts a CI run, a
+  deployment or a migration: look at the run, the deployment and `supabase migration list` before
+  repeating anything. Checkpoints record migration filenames and applied/not-applied only — never
+  a credential.
+- **Work is structured to be restartable**: content by month → school week → instructional day, so
+  a resumed session continues instead of regenerating.
+- A unit test enforces the checkpoint's structure, its status vocabulary and the freshness
+  vocabulary, so the protocol cannot quietly rot into a document nobody follows.
+
+**Consequences:** A fresh session can reconstruct an in-flight task from `CLAUDE.md`,
+`PROJECT_STATUS.md`, `docs/work/ACTIVE_TASK.md` and `git log` alone. The cost is real but small:
+a checkpoint edit at each milestone, and the discipline not to leave it claiming something is
+still running after it has finished. Finished tasks are archived under `docs/work/archive/`, one
+summary each, so a later reader can reconstruct what was done without a diary of every edit.

@@ -35,7 +35,7 @@ The academic standard is **mastery and enrichment, never premature acceleration*
 - **Do:** satisfy the French expectation, then consolidate it by revisiting it; widen vocabulary
   and reasoning; build autonomy; keep movement and artistic work in the week.
 - **Don't:** introduce primary-school (CP) content early because it looks advanced, or lengthen
-  the day to fit more in. About 40 minutes stays the target (ADR-034).
+  the day to fit more in. 30 to 45 minutes stays the range, about 35 (ADR-039).
 - **When a child has not consolidated something, the answer is the same concept again**, not the
   next one.
 

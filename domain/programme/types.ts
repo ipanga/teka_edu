@@ -29,6 +29,17 @@ export type ProgrammeTrack = {
   lessonIds: readonly string[];
 };
 
+/**
+ * The product's session policy (ADR-039): a day of Teka Edu is 30 to 45 minutes. The range is
+ * flexibility — a light revision day may be 30, a rich story day 45 — not a target every day
+ * should hit. A programme that genuinely needs to sit outside it declares
+ * `durationPolicy: "exceptional"`, so the exception is visible instead of silent.
+ */
+export const SESSION_MINUTES_POLICY = { min: 30, max: 45 } as const;
+
+export const DURATION_POLICIES = ["standard", "exceptional"] as const;
+export type DurationPolicy = (typeof DURATION_POLICIES)[number];
+
 export type LevelProgramme = {
   id: string;
   curriculumId: string;
@@ -37,6 +48,11 @@ export type LevelProgramme = {
   schoolYearIds: readonly string[];
   /** Guided minutes a session should stay within, for this level. */
   sessionMinutes: { min: number; max: number };
+  /**
+   * `standard` (the default) keeps `sessionMinutes` inside SESSION_MINUTES_POLICY. `exceptional`
+   * is a deliberate, reviewable departure from the product's 30-45 minute session.
+   */
+  durationPolicy?: DurationPolicy;
   /** The repeating rhythm; its length is the rotation period in instructional days. */
   rhythm: readonly ProgrammeRhythmDay[];
   tracks: readonly ProgrammeTrack[];
