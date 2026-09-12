@@ -558,6 +558,48 @@ export function referenceTables(data: ReferenceData): TableData[] {
       ),
     },
     {
+      table: "media_assets",
+      key: ["id"],
+      columns: [
+        col("id", "text"),
+        col("kind", "text"),
+        col("file", "text"),
+        col("alt", "text"),
+        col("origin", "text"),
+        col("provenance", "text"),
+      ],
+      rows: data.media.map((asset) => ({
+        id: asset.id,
+        kind: asset.kind,
+        file: asset.file,
+        alt: asset.alt,
+        origin: asset.origin,
+        provenance: asset.provenance,
+      })),
+    },
+    {
+      table: "media_asset_tags",
+      key: ["media_id", "position"],
+      columns: [col("media_id", "text"), col("position", "smallint"), col("tag", "text")],
+      rows: data.media.flatMap((asset) =>
+        asset.tags.map((tag, index) => ({ media_id: asset.id, position: index + 1, tag })),
+      ),
+    },
+    {
+      table: "activity_media",
+      key: ["activity_id", "position"],
+      columns: [col("activity_id", "text"), col("position", "smallint"), col("media_id", "text")],
+      rows: data.lessons.flatMap((lesson) =>
+        lesson.activities.flatMap((activity) =>
+          activity.mediaIds.map((mediaId, index) => ({
+            activity_id: activity.id,
+            position: index + 1,
+            media_id: mediaId,
+          })),
+        ),
+      ),
+    },
+    {
       table: "activity_objectives",
       key: ["activity_id", "objective_code"],
       columns: [

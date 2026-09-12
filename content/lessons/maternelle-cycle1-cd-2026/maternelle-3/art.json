@@ -6,15 +6,11 @@
     {
       "id": "m3-art-01",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": [
-        "maternelle-3"
-      ],
+      "levelIds": ["maternelle-3"],
       "domainCode": "ART",
       "title": "Je dessine ce que je vois",
       "summary": "Dessiner en regardant un objet réel posé devant soi.",
-      "objectiveCodes": [
-        "ART-S01-C01-O05"
-      ],
+      "objectiveCodes": ["ART-S01-C01-O05"],
       "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 2,
@@ -32,14 +28,8 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": [
-            "ART-S01-C01-O05"
-          ],
-          "materialCodes": [
-            "papier",
-            "crayon",
-            "objets-maison"
-          ],
+          "objectiveCodes": ["ART-S01-C01-O05"],
+          "materialCodes": ["papier", "crayon", "objets-maison"],
           "vocabulary": [
             {
               "fr": "regarder",
@@ -72,18 +62,12 @@
     {
       "id": "m3-art-02",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": [
-        "maternelle-3"
-      ],
+      "levelIds": ["maternelle-3"],
       "domainCode": "ART",
       "title": "Une comptine pour compter",
       "summary": "Apprendre une comptine par cœur et la dire en rythme.",
-      "objectiveCodes": [
-        "ART-S02-C01-O09"
-      ],
-      "supportingObjectiveCodes": [
-        "MATH-S01-C01-O26"
-      ],
+      "objectiveCodes": ["ART-S02-C01-O09"],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O26"],
       "stage": "discovery",
       "difficulty": 1,
       "themeId": "la-rentree",
@@ -100,12 +84,8 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": [
-            "ART-S02-C01-O09"
-          ],
-          "materialCodes": [
-            "aucun"
-          ],
+          "objectiveCodes": ["ART-S02-C01-O09"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "la comptine",
@@ -134,18 +114,12 @@
     {
       "id": "m3-art-03",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": [
-        "maternelle-3"
-      ],
+      "levelIds": ["maternelle-3"],
       "domainCode": "ART",
       "title": "Je dessine d’après un modèle",
       "summary": "Regarder un modèle et le reproduire de mieux en mieux.",
-      "objectiveCodes": [
-        "ART-S01-C01-O05"
-      ],
-      "supportingObjectiveCodes": [
-        "ART-S01-C01-O08"
-      ],
+      "objectiveCodes": ["ART-S01-C01-O05"],
+      "supportingObjectiveCodes": ["ART-S01-C01-O08"],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "ma-maison",
@@ -162,14 +136,8 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": [
-            "ART-S01-C01-O05"
-          ],
-          "materialCodes": [
-            "papier",
-            "crayons-couleur",
-            "objets-maison"
-          ],
+          "objectiveCodes": ["ART-S01-C01-O05"],
+          "materialCodes": ["papier", "crayons-couleur", "objets-maison"],
           "vocabulary": [
             {
               "fr": "la forme",
@@ -202,18 +170,12 @@
     {
       "id": "m3-art-04",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": [
-        "maternelle-3"
-      ],
+      "levelIds": ["maternelle-3"],
       "domainCode": "ART",
       "title": "Le paysage sonore",
       "summary": "Fabriquer des sons avec son corps et des objets, et les organiser.",
-      "objectiveCodes": [
-        "ART-S02-C02-O08"
-      ],
-      "supportingObjectiveCodes": [
-        "ART-S02-C01-O09"
-      ],
+      "objectiveCodes": ["ART-S02-C02-O08"],
+      "supportingObjectiveCodes": ["ART-S02-C01-O09"],
       "stage": "discovery",
       "difficulty": 2,
       "themeId": "objets-et-formes",
@@ -230,12 +192,8 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": [
-            "ART-S02-C02-O08"
-          ],
-          "materialCodes": [
-            "objets-maison"
-          ],
+          "objectiveCodes": ["ART-S02-C02-O08"],
+          "materialCodes": ["objets-maison"],
           "vocabulary": [
             {
               "fr": "le bruit",
@@ -268,19 +226,12 @@
     {
       "id": "m3-art-05",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": [
-        "maternelle-3"
-      ],
+      "levelIds": ["maternelle-3"],
       "domainCode": "ART",
       "title": "La comptine de la semaine",
       "summary": "Dire la comptine du mois par cœur, en rythme, et en commencer une autre.",
-      "objectiveCodes": [
-        "ART-S02-C01-O09"
-      ],
-      "supportingObjectiveCodes": [
-        "LANG-S02-C01-O15",
-        "ART-S02-C02-O08"
-      ],
+      "objectiveCodes": ["ART-S02-C01-O09"],
+      "supportingObjectiveCodes": ["LANG-S02-C01-O15", "ART-S02-C02-O08"],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "objets-et-formes",
@@ -297,12 +248,8 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": [
-            "ART-S02-C01-O09"
-          ],
-          "materialCodes": [
-            "aucun"
-          ],
+          "objectiveCodes": ["ART-S02-C01-O09"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "par cœur",
@@ -331,19 +278,12 @@
     {
       "id": "m3-art-06",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": [
-        "maternelle-3"
-      ],
+      "levelIds": ["maternelle-3"],
       "domainCode": "ART",
       "title": "Je dessine un personnage de l’histoire",
       "summary": "Dessiner un personnage qui n’existe pas devant soi.",
-      "objectiveCodes": [
-        "ART-S01-C01-O06"
-      ],
-      "supportingObjectiveCodes": [
-        "ART-S01-C01-O05",
-        "LANG-S02-C03-O14"
-      ],
+      "objectiveCodes": ["ART-S01-C01-O06"],
+      "supportingObjectiveCodes": ["ART-S01-C01-O05", "LANG-S02-C03-O14"],
       "stage": "discovery",
       "difficulty": 3,
       "themeId": "au-marche",
@@ -360,13 +300,8 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": [
-            "ART-S01-C01-O06"
-          ],
-          "materialCodes": [
-            "papier",
-            "crayons-couleur"
-          ],
+          "objectiveCodes": ["ART-S01-C01-O06"],
+          "materialCodes": ["papier", "crayons-couleur"],
           "vocabulary": [
             {
               "fr": "imaginer",
@@ -395,20 +330,12 @@
     {
       "id": "m3-art-07",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": [
-        "maternelle-3"
-      ],
+      "levelIds": ["maternelle-3"],
       "domainCode": "ART",
       "title": "Je chante et je dessine",
       "summary": "Reprendre le répertoire de comptines et le dessin du mois.",
-      "objectiveCodes": [
-        "ART-S02-C01-O09",
-        "ART-S01-C01-O06"
-      ],
-      "supportingObjectiveCodes": [
-        "ART-S01-C01-O05",
-        "ART-S02-C02-O08"
-      ],
+      "objectiveCodes": ["ART-S02-C01-O09", "ART-S01-C01-O06"],
+      "supportingObjectiveCodes": ["ART-S01-C01-O05", "ART-S02-C02-O08"],
       "stage": "consolidation",
       "difficulty": 2,
       "themeId": "je-montre-ce-que-je-sais",
@@ -425,13 +352,8 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": [
-            "ART-S02-C01-O09",
-            "ART-S01-C01-O06"
-          ],
-          "materialCodes": [
-            "aucun"
-          ],
+          "objectiveCodes": ["ART-S02-C01-O09", "ART-S01-C01-O06"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "préférée",
@@ -463,13 +385,8 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": [
-            "ART-S02-C01-O09"
-          ],
-          "materialCodes": [
-            "papier",
-            "crayons-couleur"
-          ],
+          "objectiveCodes": ["ART-S02-C01-O09"],
+          "materialCodes": ["papier", "crayons-couleur"],
           "vocabulary": [
             {
               "fr": "raconter",

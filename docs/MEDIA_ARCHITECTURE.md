@@ -9,7 +9,7 @@ The September audit found the gap in one screen. A lesson said:
 
 > « Regarde les formes. Nomme-les : le carré, le rectangle, le triangle, le disque. »
 
-and the screen showed the sentence *"À observer : le carré, le rectangle…"* — and nothing else.
+and the screen showed the sentence _"À observer : le carré, le rectangle…"_ — and nothing else.
 The child was told to look at shapes that did not exist unless the parent had cut them out of
 paper first. Counting activities named objects but showed none; word cards were words with no
 pictures.
@@ -21,12 +21,12 @@ A digital répétiteur that asks a five-year-old to look at something has to sho
 **In the repository, as static files under `public/media/`, described by
 `content/media/registry.json`.** Nothing else.
 
-| Considered | Decision |
-| --- | --- |
-| Supabase Storage | **No.** It buys nothing here and costs complexity: the assets are small, static, versioned with the content they belong to, and must work offline. A bucket would add a network hop, a policy surface and a free-tier quota for no gain. Revisit only if parents ever upload. |
-| A CDN or image service | **No.** Paid, and the Vercel build already serves `public/` from its edge. |
-| Generated images from a paid API | **No.** Paid, non-deterministic, and unreviewable. |
-| SVG committed to Git | **Yes.** A few kilobytes each, diffable, deterministic, scalable to a TV, works offline, costs nothing. |
+| Considered                       | Decision                                                                                                                                                                                                                                                                      |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Supabase Storage                 | **No.** It buys nothing here and costs complexity: the assets are small, static, versioned with the content they belong to, and must work offline. A bucket would add a network hop, a policy surface and a free-tier quota for no gain. Revisit only if parents ever upload. |
+| A CDN or image service           | **No.** Paid, and the Vercel build already serves `public/` from its edge.                                                                                                                                                                                                    |
+| Generated images from a paid API | **No.** Paid, non-deterministic, and unreviewable.                                                                                                                                                                                                                            |
+| SVG committed to Git             | **Yes.** A few kilobytes each, diffable, deterministic, scalable to a TV, works offline, costs nothing.                                                                                                                                                                       |
 
 Consequence: media ships **inside the release**, like the curriculum. No runtime fetch, no key,
 no quota, and a lesson cannot break because an external URL rotted.
@@ -65,10 +65,10 @@ A test fails on an unknown id, a duplicate id, a missing file, or a missing `alt
 
 Two different things, deliberately:
 
-| | |
-| --- | --- |
-| **Assets** (in the registry) | Things with an identity: the square, the triangle, a pencil, a hen. Authored once, reused. |
-| **Computed visuals** (no asset) | Things whose identity is the *number*: five dots to count, a number strip to ten. The `quantity` renderer draws them from the activity's own payload, so there is no `quantite-5.svg` to maintain, and `upTo: 7` needs nothing new. |
+|                                 |                                                                                                                                                                                                                                     |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Assets** (in the registry)    | Things with an identity: the square, the triangle, a pencil, a hen. Authored once, reused.                                                                                                                                          |
+| **Computed visuals** (no asset) | Things whose identity is the _number_: five dots to count, a number strip to ten. The `quantity` renderer draws them from the activity's own payload, so there is no `quantite-5.svg` to maintain, and `upTo: 7` needs nothing new. |
 
 ## Generation
 

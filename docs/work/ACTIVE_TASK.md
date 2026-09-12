@@ -37,8 +37,9 @@ to run one real 30-to-45-minute session and record what happened.
 
 ## Last Checkpoint
 
-2026-09-12 — branch created from `develop` at `cd86efd`; resume protocol run and reality
-confirmed (clean tree, no open PRs, staging green at `cd86efd`, DEV 8/8 migrations matched).
+2026-09-12 — media mirrored to the database (144 pgTAP assertions), `npm run media:report`
+written, observation form built, 206 unit tests and 17 E2E tests pass. Next: documentation,
+then the full suite and the PR.
 
 ## Scope
 
@@ -79,7 +80,8 @@ confirmed (clean tree, no open PRs, staging green at `cd86efd`, DEV 8/8 migratio
 
 ## In Progress
 
-- [ ] First checkpoint commit, push, Draft PR
+- [ ] Documentation: ADR-042, PARENT_SESSION, CONTENT_AUTHORING, EDUCATIONAL_MODEL, CLAUDE.md,
+      PROJECT_STATUS, REAL_SESSION_TESTING, and the plan amendment
 
 ## Remaining
 
@@ -98,21 +100,19 @@ confirmed (clean tree, no open PRs, staging green at `cd86efd`, DEV 8/8 migratio
 
 ## Validation State
 
-Inherited from `develop` at `cd86efd`; all become `STALE` as soon as this branch changes code.
-
-| Check              | Result | At                                           |
-| ------------------ | ------ | -------------------------------------------- |
-| format             | STALE  | content and code changed since `cd86efd`     |
-| lint               | STALE  | —                                            |
-| typecheck          | PASS   | `14bea31`                                    |
-| unit tests         | STALE  | `Activity.mediaIds` added since the last run |
-| content validation | PASS   | `14bea31` — 21 files                         |
-| database tests     | STALE  | the mirror needs `mediaIds`; migration to do |
-| build              | STALE  | —                                            |
-| E2E                | STALE  | UI about to change                           |
-| Docker             | STALE  | —                                            |
-| secret scans       | STALE  | —                                            |
-| staging            | PASS   | `cd86efd` — unchanged, nothing deployed yet  |
+| Check              | Result  | At                                                |
+| ------------------ | ------- | ------------------------------------------------- |
+| format             | STALE   | not run since the renderers changed               |
+| lint               | PASS    | working tree                                      |
+| typecheck          | PASS    | working tree                                      |
+| unit tests         | PASS    | working tree — 206 tests                          |
+| content validation | PASS    | working tree — 21 files                           |
+| database tests     | PASS    | working tree — 144 pgTAP assertions               |
+| build              | PASS    | working tree                                      |
+| E2E                | PASS    | working tree — 17 tests                           |
+| Docker             | NOT RUN | left to CI                                        |
+| secret scans       | NOT RUN | to run before the PR is marked ready              |
+| staging            | PASS    | `cd86efd` — nothing deployed from this branch yet |
 
 ## Database State
 

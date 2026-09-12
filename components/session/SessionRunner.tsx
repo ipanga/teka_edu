@@ -136,6 +136,12 @@ export function SessionRunner({ session }: { session: SessionDay }) {
             Revoir la séance
           </button>
           <Link
+            href={`/seance/${session.instructionalDay}/observation`}
+            className="rounded-2xl border-2 border-stone-300 px-5 py-3 text-lg font-medium"
+          >
+            Noter comment ça s’est passé
+          </Link>
+          <Link
             href="/calendrier"
             className="rounded-2xl bg-emerald-700 px-5 py-3 text-lg font-semibold text-white"
           >

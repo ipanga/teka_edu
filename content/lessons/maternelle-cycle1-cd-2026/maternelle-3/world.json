@@ -6,16 +6,11 @@
     {
       "id": "m3-world-01",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": [
-        "maternelle-3"
-      ],
+      "levelIds": ["maternelle-3"],
       "domainCode": "WORLD",
       "title": "Mon corps bouge",
       "summary": "Nommer les parties du corps qui plient, et se dessiner en mouvement.",
-      "objectiveCodes": [
-        "WORLD-S01-C02-O08",
-        "WORLD-S01-C02-O09"
-      ],
+      "objectiveCodes": ["WORLD-S01-C02-O08", "WORLD-S01-C02-O09"],
       "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 1,
@@ -33,13 +28,8 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": [
-            "WORLD-S01-C02-O08",
-            "WORLD-S01-C02-O09"
-          ],
-          "materialCodes": [
-            "aucun"
-          ],
+          "objectiveCodes": ["WORLD-S01-C02-O08", "WORLD-S01-C02-O09"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "le coude",
@@ -79,13 +69,8 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": [
-            "WORLD-S01-C02-O08"
-          ],
-          "materialCodes": [
-            "papier",
-            "crayon"
-          ],
+          "objectiveCodes": ["WORLD-S01-C02-O08"],
+          "materialCodes": ["papier", "crayon"],
           "vocabulary": [
             {
               "fr": "bouger",
@@ -114,16 +99,11 @@
     {
       "id": "m3-world-02",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": [
-        "maternelle-3"
-      ],
+      "levelIds": ["maternelle-3"],
       "domainCode": "WORLD",
       "title": "Les animaux autour de nous",
       "summary": "Nommer les parties d’un animal et dire ce dont il a besoin pour vivre.",
-      "objectiveCodes": [
-        "WORLD-S01-C01-O08",
-        "WORLD-S01-C01-O10"
-      ],
+      "objectiveCodes": ["WORLD-S01-C01-O08", "WORLD-S01-C01-O10"],
       "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 2,
@@ -140,17 +120,9 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "mediaIds": [
-            "animal-poule",
-            "animal-chevre"
-          ],
-          "objectiveCodes": [
-            "WORLD-S01-C01-O08",
-            "WORLD-S01-C01-O10"
-          ],
-          "materialCodes": [
-            "aucun"
-          ],
+          "mediaIds": ["animal-poule", "animal-chevre"],
+          "objectiveCodes": ["WORLD-S01-C01-O08", "WORLD-S01-C01-O10"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "la patte",
@@ -190,12 +162,8 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": [
-            "WORLD-S01-C01-O08"
-          ],
-          "materialCodes": [
-            "aucun"
-          ],
+          "objectiveCodes": ["WORLD-S01-C01-O08"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "manger",
@@ -233,16 +201,11 @@
     {
       "id": "m3-world-03",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": [
-        "maternelle-3"
-      ],
+      "levelIds": ["maternelle-3"],
       "domainCode": "WORLD",
       "title": "De quoi a besoin une plante ?",
       "summary": "Découvrir les besoins d’un végétal, et les comparer à ceux d’un animal.",
-      "objectiveCodes": [
-        "WORLD-S01-C01-O10",
-        "WORLD-S01-C01-O08"
-      ],
+      "objectiveCodes": ["WORLD-S01-C01-O10", "WORLD-S01-C01-O08"],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -260,13 +223,8 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": [
-            "WORLD-S01-C01-O10",
-            "WORLD-S01-C01-O08"
-          ],
-          "materialCodes": [
-            "aucun"
-          ],
+          "objectiveCodes": ["WORLD-S01-C01-O10", "WORLD-S01-C01-O08"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "la feuille",
@@ -302,12 +260,8 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": [
-            "WORLD-S01-C01-O10"
-          ],
-          "materialCodes": [
-            "aucun"
-          ],
+          "objectiveCodes": ["WORLD-S01-C01-O10"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "l’eau",
@@ -345,16 +299,11 @@
     {
       "id": "m3-world-04",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": [
-        "maternelle-3"
-      ],
+      "levelIds": ["maternelle-3"],
       "domainCode": "WORLD",
       "title": "Mes articulations",
       "summary": "Retrouver et nommer les endroits du corps qui plient, et s’en servir.",
-      "objectiveCodes": [
-        "WORLD-S01-C02-O08",
-        "WORLD-S01-C02-O09"
-      ],
+      "objectiveCodes": ["WORLD-S01-C02-O08", "WORLD-S01-C02-O09"],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -372,13 +321,8 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": [
-            "WORLD-S01-C02-O08",
-            "WORLD-S01-C02-O09"
-          ],
-          "materialCodes": [
-            "aucun"
-          ],
+          "objectiveCodes": ["WORLD-S01-C02-O08", "WORLD-S01-C02-O09"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "le poignet",
@@ -414,13 +358,8 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": [
-            "WORLD-S01-C02-O08"
-          ],
-          "materialCodes": [
-            "papier",
-            "crayon"
-          ],
+          "objectiveCodes": ["WORLD-S01-C02-O08"],
+          "materialCodes": ["papier", "crayon"],
           "vocabulary": [
             {
               "fr": "le bras",
@@ -449,18 +388,12 @@
     {
       "id": "m3-world-05",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": [
-        "maternelle-3"
-      ],
+      "levelIds": ["maternelle-3"],
       "domainCode": "WORLD",
       "title": "L’animal et ses parties",
       "summary": "Comparer deux animaux et dire ce qui les distingue.",
-      "objectiveCodes": [
-        "WORLD-S01-C01-O08"
-      ],
-      "supportingObjectiveCodes": [
-        "WORLD-S01-C01-O10"
-      ],
+      "objectiveCodes": ["WORLD-S01-C01-O08"],
+      "supportingObjectiveCodes": ["WORLD-S01-C01-O10"],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "au-marche",
@@ -476,17 +409,9 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "mediaIds": [
-            "animal-poule",
-            "animal-chevre",
-            "animal-poussin"
-          ],
-          "objectiveCodes": [
-            "WORLD-S01-C01-O08"
-          ],
-          "materialCodes": [
-            "aucun"
-          ],
+          "mediaIds": ["animal-poule", "animal-chevre", "animal-poussin"],
+          "objectiveCodes": ["WORLD-S01-C01-O08"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "pareil",
@@ -522,13 +447,8 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": [
-            "WORLD-S01-C01-O08"
-          ],
-          "materialCodes": [
-            "papier",
-            "crayons-couleur"
-          ],
+          "objectiveCodes": ["WORLD-S01-C01-O08"],
+          "materialCodes": ["papier", "crayons-couleur"],
           "vocabulary": [
             {
               "fr": "dessiner",
@@ -553,18 +473,12 @@
     {
       "id": "m3-world-06",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": [
-        "maternelle-3"
-      ],
+      "levelIds": ["maternelle-3"],
       "domainCode": "WORLD",
       "title": "Prendre soin d’un animal ou d’une plante",
       "summary": "Dire et faire ce qu’il faut pour qu’un être vivant aille bien.",
-      "objectiveCodes": [
-        "WORLD-S01-C01-O10"
-      ],
-      "supportingObjectiveCodes": [
-        "WORLD-S01-C01-O08"
-      ],
+      "objectiveCodes": ["WORLD-S01-C01-O10"],
+      "supportingObjectiveCodes": ["WORLD-S01-C01-O08"],
       "stage": "consolidation",
       "difficulty": 2,
       "themeId": "au-marche",
@@ -581,12 +495,8 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": [
-            "WORLD-S01-C01-O10"
-          ],
-          "materialCodes": [
-            "aucun"
-          ],
+          "objectiveCodes": ["WORLD-S01-C01-O10"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "prendre soin",
@@ -626,12 +536,8 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": [
-            "WORLD-S01-C01-O10"
-          ],
-          "materialCodes": [
-            "aucun"
-          ],
+          "objectiveCodes": ["WORLD-S01-C01-O10"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "remarquer",
@@ -656,16 +562,11 @@
     {
       "id": "m3-world-07",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": [
-        "maternelle-3"
-      ],
+      "levelIds": ["maternelle-3"],
       "domainCode": "WORLD",
       "title": "Je me dessine en mouvement",
       "summary": "Reprendre le corps, ses articulations et son mouvement.",
-      "objectiveCodes": [
-        "WORLD-S01-C02-O09",
-        "WORLD-S01-C02-O08"
-      ],
+      "objectiveCodes": ["WORLD-S01-C02-O09", "WORLD-S01-C02-O08"],
       "supportingObjectiveCodes": [],
       "stage": "consolidation",
       "difficulty": 2,
@@ -683,14 +584,8 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": [
-            "WORLD-S01-C02-O09",
-            "WORLD-S01-C02-O08"
-          ],
-          "materialCodes": [
-            "papier",
-            "crayons-couleur"
-          ],
+          "objectiveCodes": ["WORLD-S01-C02-O09", "WORLD-S01-C02-O08"],
+          "materialCodes": ["papier", "crayons-couleur"],
           "vocabulary": [
             {
               "fr": "le mouvement",
@@ -722,12 +617,8 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": [
-            "WORLD-S01-C02-O09"
-          ],
-          "materialCodes": [
-            "aucun"
-          ],
+          "objectiveCodes": ["WORLD-S01-C02-O09"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "le coude",

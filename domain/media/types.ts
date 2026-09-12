@@ -29,10 +29,7 @@ export function mediaUrl(asset: MediaAsset): string {
   return `/media/${asset.file}`;
 }
 
-export function findAsset(
-  assets: readonly MediaAsset[],
-  id: string,
-): MediaAsset | undefined {
+export function findAsset(assets: readonly MediaAsset[], id: string): MediaAsset | undefined {
   return assets.find((asset) => asset.id === id);
 }
 
