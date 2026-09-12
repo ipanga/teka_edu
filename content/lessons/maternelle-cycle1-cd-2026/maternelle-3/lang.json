@@ -6,12 +6,21 @@
     {
       "id": "m3-lang-01",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Bonjour ! Je me présente",
       "summary": "L’enfant salue, dit son nom et son âge, et parle des personnes qui vivent avec lui.",
-      "objectiveCodes": ["LANG-S01-C04-O11", "LANG-S01-C02-O01", "LANG-S01-C01-O03"],
-      "supportingObjectiveCodes": ["LANG-S02-C03-O15", "TIME-SPACE-S01-C01-O12"],
+      "objectiveCodes": [
+        "LANG-S01-C04-O11",
+        "LANG-S01-C02-O01",
+        "LANG-S01-C01-O03"
+      ],
+      "supportingObjectiveCodes": [
+        "LANG-S02-C03-O15",
+        "TIME-SPACE-S01-C01-O12"
+      ],
       "stage": "discovery",
       "difficulty": 1,
       "themeId": "la-rentree",
@@ -27,8 +36,13 @@
           "minutes": 2,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -37,7 +51,9 @@
             }
           ],
           "payload": {
-            "prompts": ["Regarde dehors, puis dis avec moi quel jour nous sommes aujourd’hui."]
+            "prompts": [
+              "Regarde dehors, puis dis avec moi quel jour nous sommes aujourd’hui."
+            ]
           }
         },
         {
@@ -50,8 +66,15 @@
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S01-C04-O11", "LANG-S01-C02-O01", "LANG-S01-C01-O03"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S01-C04-O11",
+            "LANG-S01-C02-O01",
+            "LANG-S01-C01-O03"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "bonjour",
@@ -91,8 +114,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -112,12 +140,20 @@
     {
       "id": "m3-lang-02",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Les mots de l’école",
       "summary": "Premier corpus de mots : nommer et ranger les objets de l’école.",
-      "objectiveCodes": ["LANG-S01-C01-O03", "LANG-S01-C02-O01"],
-      "supportingObjectiveCodes": ["LANG-S02-C03-O15", "TIME-SPACE-S01-C01-O12"],
+      "objectiveCodes": [
+        "LANG-S01-C01-O03",
+        "LANG-S01-C02-O01"
+      ],
+      "supportingObjectiveCodes": [
+        "LANG-S02-C03-O15",
+        "TIME-SPACE-S01-C01-O12"
+      ],
       "stage": "practice",
       "difficulty": 1,
       "themeId": "la-rentree",
@@ -133,8 +169,14 @@
           "minutes": 2,
           "mode": "off-screen",
           "role": "retrieval",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C01-O03"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S01-C01-O03"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -143,7 +185,10 @@
             }
           ],
           "payload": {
-            "prompts": ["Dis la date avec moi.", "Puis redis-moi ton nom et ton âge."]
+            "prompts": [
+              "Dis la date avec moi.",
+              "Puis redis-moi ton nom et ton âge."
+            ]
           }
         },
         {
@@ -156,8 +201,20 @@
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S01-C01-O03", "LANG-S01-C02-O01"],
-          "materialCodes": ["objets-ecole"],
+          "mediaIds": [
+            "objet-cahier",
+            "objet-crayon",
+            "objet-sac",
+            "objet-table",
+            "objet-chaise"
+          ],
+          "objectiveCodes": [
+            "LANG-S01-C01-O03",
+            "LANG-S01-C02-O01"
+          ],
+          "materialCodes": [
+            "objets-ecole"
+          ],
           "vocabulary": [
             {
               "fr": "le cahier",
@@ -200,8 +257,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -221,11 +283,15 @@
     {
       "id": "m3-lang-03",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "J’écoute l’histoire de Kumu",
       "summary": "Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre expérience.",
-      "objectiveCodes": ["LANG-S02-C03-O15"],
+      "objectiveCodes": [
+        "LANG-S02-C03-O15"
+      ],
       "supportingObjectiveCodes": [
         "LANG-S01-C04-O11",
         "LANG-S02-C01-O13",
@@ -246,8 +312,14 @@
           "minutes": 2,
           "mode": "off-screen",
           "role": "retrieval",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -256,7 +328,10 @@
             }
           ],
           "payload": {
-            "prompts": ["Dis la date avec moi.", "Puis nomme-moi trois objets de l’école."]
+            "prompts": [
+              "Dis la date avec moi.",
+              "Puis nomme-moi trois objets de l’école."
+            ]
           }
         },
         {
@@ -269,8 +344,17 @@
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15", "LANG-S01-C04-O11"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [
+            "animal-poussin",
+            "animal-poule"
+          ],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15",
+            "LANG-S01-C04-O11"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "le poussin",
@@ -310,8 +394,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -331,11 +420,15 @@
     {
       "id": "m3-lang-04",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Les syllabes de mon prénom",
       "summary": "Frapper les syllabes des prénoms de la maison : entendre que les mots sont faits de morceaux.",
-      "objectiveCodes": ["LANG-S02-C01-O03"],
+      "objectiveCodes": [
+        "LANG-S02-C01-O03"
+      ],
       "supportingObjectiveCodes": [
         "LANG-S02-C01-O13",
         "LANG-S02-C03-O15",
@@ -356,8 +449,14 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "consolidation",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C01-O03"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S02-C01-O03"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -366,7 +465,10 @@
             }
           ],
           "payload": {
-            "prompts": ["Dis la date.", "Puis raconte-moi ce que nous avons fait cette semaine."]
+            "prompts": [
+              "Dis la date.",
+              "Puis raconte-moi ce que nous avons fait cette semaine."
+            ]
           }
         },
         {
@@ -379,8 +481,13 @@
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C01-O03"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C01-O03"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "la syllabe",
@@ -394,7 +501,13 @@
             }
           ],
           "payload": {
-            "words": ["ma-man", "pa-pa", "ca-hier", "ta-ble", "cra-yon"]
+            "words": [
+              "ma-man",
+              "pa-pa",
+              "ca-hier",
+              "ta-ble",
+              "cra-yon"
+            ]
           }
         },
         {
@@ -407,8 +520,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -428,12 +546,20 @@
     {
       "id": "m3-lang-05",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Je raconte ma journée",
       "summary": "Dire ce qu’on a fait, dans l’ordre, en phrases entières.",
-      "objectiveCodes": ["LANG-S01-C04-O11", "LANG-S01-C01-O03"],
-      "supportingObjectiveCodes": ["LANG-S02-C03-O15", "TIME-SPACE-S01-C01-O12"],
+      "objectiveCodes": [
+        "LANG-S01-C04-O11",
+        "LANG-S01-C01-O03"
+      ],
+      "supportingObjectiveCodes": [
+        "LANG-S02-C03-O15",
+        "TIME-SPACE-S01-C01-O12"
+      ],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "ma-maison",
@@ -449,8 +575,14 @@
           "minutes": 2,
           "mode": "off-screen",
           "role": "retrieval",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C04-O11"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S01-C04-O11"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -475,8 +607,14 @@
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S01-C04-O11", "LANG-S01-C01-O03"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S01-C04-O11",
+            "LANG-S01-C01-O03"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "d’abord",
@@ -516,8 +654,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -537,11 +680,15 @@
     {
       "id": "m3-lang-06",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Écoute bien !",
       "summary": "Écouter une suite de mots et la redire : la mémoire des sons se travaille comme un muscle.",
-      "objectiveCodes": ["LANG-S02-C01-O13"],
+      "objectiveCodes": [
+        "LANG-S02-C01-O13"
+      ],
       "supportingObjectiveCodes": [
         "LANG-S01-C01-O03",
         "LANG-S02-C03-O15",
@@ -562,8 +709,14 @@
           "minutes": 2,
           "mode": "off-screen",
           "role": "retrieval",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C01-O13"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S02-C01-O13"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -572,7 +725,10 @@
             }
           ],
           "payload": {
-            "prompts": ["Dis la date.", "Puis raconte-moi ce que tu as fait hier après l’école."]
+            "prompts": [
+              "Dis la date.",
+              "Puis raconte-moi ce que tu as fait hier après l’école."
+            ]
           }
         },
         {
@@ -585,8 +741,13 @@
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C01-O13"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C01-O13"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "écouter",
@@ -604,7 +765,13 @@
             }
           ],
           "payload": {
-            "words": ["soleil", "maison", "chèvre", "panier", "crayon"]
+            "words": [
+              "soleil",
+              "maison",
+              "chèvre",
+              "panier",
+              "crayon"
+            ]
           }
         },
         {
@@ -617,8 +784,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -638,11 +810,15 @@
     {
       "id": "m3-lang-07",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Les mots de la maison",
       "summary": "Deuxième corpus de mots : nommer les objets et les pièces de la maison.",
-      "objectiveCodes": ["LANG-S01-C01-O03"],
+      "objectiveCodes": [
+        "LANG-S01-C01-O03"
+      ],
       "supportingObjectiveCodes": [
         "LANG-S01-C04-O11",
         "LANG-S02-C03-O15",
@@ -663,8 +839,14 @@
           "minutes": 2,
           "mode": "off-screen",
           "role": "retrieval",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C01-O03"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S01-C01-O03"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -673,7 +855,10 @@
             }
           ],
           "payload": {
-            "prompts": ["Dis la date.", "Puis frappe dans tes mains les syllabes de ton prénom."]
+            "prompts": [
+              "Dis la date.",
+              "Puis frappe dans tes mains les syllabes de ton prénom."
+            ]
           }
         },
         {
@@ -686,8 +871,19 @@
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S01-C01-O03"],
-          "materialCodes": ["objets-maison"],
+          "mediaIds": [
+            "objet-porte",
+            "objet-fenetre",
+            "objet-lit",
+            "objet-marmite",
+            "objet-seau"
+          ],
+          "objectiveCodes": [
+            "LANG-S01-C01-O03"
+          ],
+          "materialCodes": [
+            "objets-maison"
+          ],
           "vocabulary": [
             {
               "fr": "la porte",
@@ -730,8 +926,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -751,12 +952,20 @@
     {
       "id": "m3-lang-08",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Qui fait quoi ?",
       "summary": "Employer « il » et « elle » pour parler de quelqu’un d’autre.",
-      "objectiveCodes": ["LANG-S01-C02-O01", "LANG-S01-C04-O11"],
-      "supportingObjectiveCodes": ["LANG-S02-C03-O15", "TIME-SPACE-S01-C01-O12"],
+      "objectiveCodes": [
+        "LANG-S01-C02-O01",
+        "LANG-S01-C04-O11"
+      ],
+      "supportingObjectiveCodes": [
+        "LANG-S02-C03-O15",
+        "TIME-SPACE-S01-C01-O12"
+      ],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "ma-maison",
@@ -772,8 +981,14 @@
           "minutes": 2,
           "mode": "off-screen",
           "role": "retrieval",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C02-O01"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S01-C02-O01"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -782,7 +997,10 @@
             }
           ],
           "payload": {
-            "prompts": ["Dis la date.", "Puis nomme-moi trois choses de ta maison."]
+            "prompts": [
+              "Dis la date.",
+              "Puis nomme-moi trois choses de ta maison."
+            ]
           }
         },
         {
@@ -795,8 +1013,14 @@
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S01-C02-O01", "LANG-S01-C04-O11"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S01-C02-O01",
+            "LANG-S01-C04-O11"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "il",
@@ -836,8 +1060,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -857,11 +1086,15 @@
     {
       "id": "m3-lang-09",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Les émotions de Bibi",
       "summary": "Comprendre ce que ressent un personnage, et le dire.",
-      "objectiveCodes": ["LANG-S02-C03-O14"],
+      "objectiveCodes": [
+        "LANG-S02-C03-O14"
+      ],
       "supportingObjectiveCodes": [
         "LANG-S02-C03-O15",
         "LANG-S01-C04-O11",
@@ -882,8 +1115,14 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "consolidation",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C03-O14"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S02-C03-O14"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -892,7 +1131,10 @@
             }
           ],
           "payload": {
-            "prompts": ["Dis la date.", "Puis raconte-moi ce que nous avons appris cette semaine."]
+            "prompts": [
+              "Dis la date.",
+              "Puis raconte-moi ce que nous avons appris cette semaine."
+            ]
           }
         },
         {
@@ -905,8 +1147,15 @@
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O14"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [
+            "animal-chevre"
+          ],
+          "objectiveCodes": [
+            "LANG-S02-C03-O14"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "content",
@@ -950,8 +1199,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -971,12 +1225,20 @@
     {
       "id": "m3-lang-10",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Je décris ce que je vois",
       "summary": "Dire ce qu’on voit avec assez de mots pour être compris sans montrer du doigt.",
-      "objectiveCodes": ["LANG-S01-C04-O11", "LANG-S01-C01-O03"],
-      "supportingObjectiveCodes": ["LANG-S02-C03-O15", "TIME-SPACE-S01-C01-O12"],
+      "objectiveCodes": [
+        "LANG-S01-C04-O11",
+        "LANG-S01-C01-O03"
+      ],
+      "supportingObjectiveCodes": [
+        "LANG-S02-C03-O15",
+        "TIME-SPACE-S01-C01-O12"
+      ],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "objets-et-formes",
@@ -992,8 +1254,14 @@
           "minutes": 2,
           "mode": "off-screen",
           "role": "retrieval",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C04-O11"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S01-C04-O11"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1018,8 +1286,14 @@
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S01-C04-O11", "LANG-S01-C01-O03"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S01-C04-O11",
+            "LANG-S01-C01-O03"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "grand",
@@ -1059,8 +1333,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1080,11 +1359,15 @@
     {
       "id": "m3-lang-11",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Raconte-moi Kumu",
       "summary": "Redire une histoire connue dans l’ordre, avec ses propres mots.",
-      "objectiveCodes": ["LANG-S01-C04-O11"],
+      "objectiveCodes": [
+        "LANG-S01-C04-O11"
+      ],
       "supportingObjectiveCodes": [
         "LANG-S02-C03-O13",
         "LANG-S02-C03-O15",
@@ -1105,8 +1388,14 @@
           "minutes": 2,
           "mode": "off-screen",
           "role": "retrieval",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C04-O11"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S01-C04-O11"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1115,7 +1404,10 @@
             }
           ],
           "payload": {
-            "prompts": ["Dis la date.", "Puis dis-moi le nom de l’histoire d’hier."]
+            "prompts": [
+              "Dis la date.",
+              "Puis dis-moi le nom de l’histoire d’hier."
+            ]
           }
         },
         {
@@ -1128,8 +1420,13 @@
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S01-C04-O11"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S01-C04-O11"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "le début",
@@ -1165,8 +1462,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1186,11 +1488,15 @@
     {
       "id": "m3-lang-12",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Les mots qui vont ensemble",
       "summary": "Ranger les mots par familles : ce qui se mange, ce qui sert à écrire, ce qui se porte.",
-      "objectiveCodes": ["LANG-S01-C01-O02"],
+      "objectiveCodes": [
+        "LANG-S01-C01-O02"
+      ],
       "supportingObjectiveCodes": [
         "LANG-S01-C01-O03",
         "LANG-S02-C03-O15",
@@ -1211,8 +1517,14 @@
           "minutes": 2,
           "mode": "off-screen",
           "role": "retrieval",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C01-O02"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S01-C01-O02"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1221,7 +1533,10 @@
             }
           ],
           "payload": {
-            "prompts": ["Dis la date.", "Puis raconte-moi la fin de l’histoire de Kumu."]
+            "prompts": [
+              "Dis la date.",
+              "Puis raconte-moi la fin de l’histoire de Kumu."
+            ]
           }
         },
         {
@@ -1234,8 +1549,13 @@
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S01-C01-O02"],
-          "materialCodes": ["objets-maison"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S01-C01-O02"
+          ],
+          "materialCodes": [
+            "objets-maison"
+          ],
           "vocabulary": [
             {
               "fr": "la famille de mots",
@@ -1253,7 +1573,11 @@
             }
           ],
           "payload": {
-            "categories": ["ce qui se mange", "ce qui sert à écrire", "ce qui se porte"]
+            "categories": [
+              "ce qui se mange",
+              "ce qui sert à écrire",
+              "ce qui se porte"
+            ]
           }
         },
         {
@@ -1266,8 +1590,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1287,11 +1616,15 @@
     {
       "id": "m3-lang-13",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Les mots du marché",
       "summary": "Troisième corpus de mots : le marché, les fruits, les légumes, les quantités.",
-      "objectiveCodes": ["LANG-S01-C01-O03"],
+      "objectiveCodes": [
+        "LANG-S01-C01-O03"
+      ],
       "supportingObjectiveCodes": [
         "LANG-S01-C01-O02",
         "LANG-S02-C03-O15",
@@ -1312,8 +1645,14 @@
           "minutes": 2,
           "mode": "off-screen",
           "role": "retrieval",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C01-O03"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S01-C01-O03"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1322,7 +1661,10 @@
             }
           ],
           "payload": {
-            "prompts": ["Dis la date.", "Puis dis-moi deux mots qui vont ensemble."]
+            "prompts": [
+              "Dis la date.",
+              "Puis dis-moi deux mots qui vont ensemble."
+            ]
           }
         },
         {
@@ -1335,8 +1677,18 @@
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S01-C01-O03"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [
+            "objet-tomate",
+            "objet-banane",
+            "objet-oignon",
+            "objet-panier"
+          ],
+          "objectiveCodes": [
+            "LANG-S01-C01-O03"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "la tomate",
@@ -1379,8 +1731,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1400,11 +1757,15 @@
     {
       "id": "m3-lang-14",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Je tape les syllabes",
       "summary": "Frapper les syllabes de mots plus longs et compter combien il y en a.",
-      "objectiveCodes": ["LANG-S02-C01-O03"],
+      "objectiveCodes": [
+        "LANG-S02-C01-O03"
+      ],
       "supportingObjectiveCodes": [
         "LANG-S02-C01-O13",
         "LANG-S02-C03-O15",
@@ -1425,8 +1786,14 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "consolidation",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C01-O03"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S02-C01-O03"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1435,7 +1802,10 @@
             }
           ],
           "payload": {
-            "prompts": ["Dis la date.", "Puis raconte-moi ce que nous avons appris cette semaine."]
+            "prompts": [
+              "Dis la date.",
+              "Puis raconte-moi ce que nous avons appris cette semaine."
+            ]
           }
         },
         {
@@ -1448,8 +1818,13 @@
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C01-O03"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C01-O03"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "la syllabe",
@@ -1467,7 +1842,13 @@
             }
           ],
           "payload": {
-            "words": ["ba-nane", "to-ma-te", "pa-nier", "mar-ché", "cha-peau"]
+            "words": [
+              "ba-nane",
+              "to-ma-te",
+              "pa-nier",
+              "mar-ché",
+              "cha-peau"
+            ]
           }
         },
         {
@@ -1480,8 +1861,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1501,12 +1887,20 @@
     {
       "id": "m3-lang-15",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "L’histoire du premier jour",
       "summary": "Comprendre ce que ressent un personnage et le comparer à ce qu’on a vécu soi-même.",
-      "objectiveCodes": ["LANG-S02-C03-O14", "LANG-S01-C04-O11"],
-      "supportingObjectiveCodes": ["LANG-S02-C03-O15", "TIME-SPACE-S01-C01-O12"],
+      "objectiveCodes": [
+        "LANG-S02-C03-O14",
+        "LANG-S01-C04-O11"
+      ],
+      "supportingObjectiveCodes": [
+        "LANG-S02-C03-O15",
+        "TIME-SPACE-S01-C01-O12"
+      ],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "au-marche",
@@ -1522,8 +1916,14 @@
           "minutes": 2,
           "mode": "off-screen",
           "role": "retrieval",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C03-O14"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S02-C03-O14"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1532,7 +1932,10 @@
             }
           ],
           "payload": {
-            "prompts": ["Dis la date.", "Puis frappe les syllabes de trois mots du marché."]
+            "prompts": [
+              "Dis la date.",
+              "Puis frappe les syllabes de trois mots du marché."
+            ]
           }
         },
         {
@@ -1545,8 +1948,14 @@
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O14", "LANG-S01-C04-O11"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O14",
+            "LANG-S01-C04-O11"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "avoir peur",
@@ -1582,8 +1991,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1603,11 +2017,15 @@
     {
       "id": "m3-lang-16",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Les mots qui riment",
       "summary": "Entendre que deux mots finissent pareil.",
-      "objectiveCodes": ["LANG-S02-C01-O15"],
+      "objectiveCodes": [
+        "LANG-S02-C01-O15"
+      ],
       "supportingObjectiveCodes": [
         "LANG-S02-C01-O13",
         "LANG-S02-C03-O15",
@@ -1628,8 +2046,14 @@
           "minutes": 2,
           "mode": "off-screen",
           "role": "retrieval",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C01-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S02-C01-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1638,7 +2062,10 @@
             }
           ],
           "payload": {
-            "prompts": ["Dis la date.", "Puis dis-moi ce qui se passe dans l’histoire de la pluie."]
+            "prompts": [
+              "Dis la date.",
+              "Puis dis-moi ce qui se passe dans l’histoire de la pluie."
+            ]
           }
         },
         {
@@ -1651,8 +2078,13 @@
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C01-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C01-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "la rime",
@@ -1670,7 +2102,14 @@
             }
           ],
           "payload": {
-            "words": ["chat", "rat", "maison", "poisson", "banane", "cabane"]
+            "words": [
+              "chat",
+              "rat",
+              "maison",
+              "poisson",
+              "banane",
+              "cabane"
+            ]
           }
         },
         {
@@ -1683,8 +2122,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1704,11 +2148,15 @@
     {
       "id": "m3-lang-17",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Je trouve une rime",
       "summary": "Produire un mot qui rime, après l’avoir reconnu.",
-      "objectiveCodes": ["LANG-S02-C01-O15"],
+      "objectiveCodes": [
+        "LANG-S02-C01-O15"
+      ],
       "supportingObjectiveCodes": [
         "LANG-S02-C01-O13",
         "LANG-S02-C03-O15",
@@ -1729,8 +2177,14 @@
           "minutes": 2,
           "mode": "off-screen",
           "role": "retrieval",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C01-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S02-C01-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1739,7 +2193,10 @@
             }
           ],
           "payload": {
-            "prompts": ["Dis la date.", "Puis trouve un mot qui rime avec « chat »."]
+            "prompts": [
+              "Dis la date.",
+              "Puis trouve un mot qui rime avec « chat »."
+            ]
           }
         },
         {
@@ -1752,8 +2209,13 @@
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C01-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C01-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "trouver",
@@ -1771,7 +2233,12 @@
             }
           ],
           "payload": {
-            "words": ["maison", "chapeau", "bébé", "souris"]
+            "words": [
+              "maison",
+              "chapeau",
+              "bébé",
+              "souris"
+            ]
           }
         },
         {
@@ -1784,8 +2251,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1805,11 +2277,15 @@
     {
       "id": "m3-lang-18",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Je raconte dans l’ordre",
       "summary": "Remettre les moments d’une histoire ou d’une journée dans l’ordre et les dire.",
-      "objectiveCodes": ["LANG-S01-C04-O11"],
+      "objectiveCodes": [
+        "LANG-S01-C04-O11"
+      ],
       "supportingObjectiveCodes": [
         "LANG-S02-C03-O13",
         "TIME-SPACE-S01-C02-O08",
@@ -1831,8 +2307,14 @@
           "minutes": 2,
           "mode": "off-screen",
           "role": "retrieval",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C04-O11"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S01-C04-O11"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1841,7 +2323,10 @@
             }
           ],
           "payload": {
-            "prompts": ["Dis la date.", "Puis dis-moi deux mots qui riment."]
+            "prompts": [
+              "Dis la date.",
+              "Puis dis-moi deux mots qui riment."
+            ]
           }
         },
         {
@@ -1854,8 +2339,13 @@
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S01-C04-O11"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S01-C04-O11"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "d’abord",
@@ -1895,8 +2385,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1916,12 +2411,20 @@
     {
       "id": "m3-lang-19",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Je range les mots",
       "summary": "Reprendre les familles de mots du mois et y ranger des mots nouveaux.",
-      "objectiveCodes": ["LANG-S01-C01-O02", "LANG-S01-C01-O03"],
-      "supportingObjectiveCodes": ["LANG-S02-C03-O15", "TIME-SPACE-S01-C01-O12"],
+      "objectiveCodes": [
+        "LANG-S01-C01-O02",
+        "LANG-S01-C01-O03"
+      ],
+      "supportingObjectiveCodes": [
+        "LANG-S02-C03-O15",
+        "TIME-SPACE-S01-C01-O12"
+      ],
       "stage": "consolidation",
       "difficulty": 2,
       "themeId": "au-marche",
@@ -1937,8 +2440,14 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "consolidation",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C01-O02"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S01-C01-O02"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -1947,7 +2456,10 @@
             }
           ],
           "payload": {
-            "prompts": ["Dis la date.", "Puis raconte-moi ce que nous avons appris cette semaine."]
+            "prompts": [
+              "Dis la date.",
+              "Puis raconte-moi ce que nous avons appris cette semaine."
+            ]
           }
         },
         {
@@ -1960,8 +2472,14 @@
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S01-C01-O02", "LANG-S01-C01-O03"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S01-C01-O02",
+            "LANG-S01-C01-O03"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "ranger",
@@ -1979,7 +2497,11 @@
             }
           ],
           "payload": {
-            "categories": ["les mots de l’école", "les mots de la maison", "les mots du marché"]
+            "categories": [
+              "les mots de l’école",
+              "les mots de la maison",
+              "les mots du marché"
+            ]
           }
         },
         {
@@ -1992,8 +2514,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -2013,12 +2540,20 @@
     {
       "id": "m3-lang-20",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Je présente mon dessin",
       "summary": "Parler de ce qu’on a fait à quelqu’un qui ne l’a pas vu.",
-      "objectiveCodes": ["LANG-S01-C04-O11", "LANG-S01-C01-O03"],
-      "supportingObjectiveCodes": ["LANG-S02-C03-O15", "TIME-SPACE-S01-C01-O12"],
+      "objectiveCodes": [
+        "LANG-S01-C04-O11",
+        "LANG-S01-C01-O03"
+      ],
+      "supportingObjectiveCodes": [
+        "LANG-S02-C03-O15",
+        "TIME-SPACE-S01-C01-O12"
+      ],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "je-montre-ce-que-je-sais",
@@ -2034,8 +2569,14 @@
           "minutes": 2,
           "mode": "off-screen",
           "role": "retrieval",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C04-O11"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S01-C04-O11"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -2060,8 +2601,14 @@
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S01-C04-O11", "LANG-S01-C01-O03"],
-          "materialCodes": ["papier"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S01-C04-O11",
+            "LANG-S01-C01-O03"
+          ],
+          "materialCodes": [
+            "papier"
+          ],
           "vocabulary": [
             {
               "fr": "dessiner",
@@ -2097,8 +2644,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -2118,12 +2670,20 @@
     {
       "id": "m3-lang-21",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Devine le mot",
       "summary": "Reconnaitre un mot à partir de ses syllabes et de sa rime.",
-      "objectiveCodes": ["LANG-S02-C01-O15", "LANG-S02-C01-O03"],
-      "supportingObjectiveCodes": ["LANG-S02-C03-O15", "TIME-SPACE-S01-C01-O12"],
+      "objectiveCodes": [
+        "LANG-S02-C01-O15",
+        "LANG-S02-C01-O03"
+      ],
+      "supportingObjectiveCodes": [
+        "LANG-S02-C03-O15",
+        "TIME-SPACE-S01-C01-O12"
+      ],
       "stage": "practice",
       "difficulty": 3,
       "themeId": "je-montre-ce-que-je-sais",
@@ -2139,8 +2699,14 @@
           "minutes": 2,
           "mode": "off-screen",
           "role": "retrieval",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C01-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S02-C01-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -2149,7 +2715,10 @@
             }
           ],
           "payload": {
-            "prompts": ["Dis la date.", "Puis compte pour moi jusqu’à dix."]
+            "prompts": [
+              "Dis la date.",
+              "Puis compte pour moi jusqu’à dix."
+            ]
           }
         },
         {
@@ -2162,8 +2731,14 @@
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C01-O15", "LANG-S02-C01-O03"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C01-O15",
+            "LANG-S02-C01-O03"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "deviner",
@@ -2181,7 +2756,13 @@
             }
           ],
           "payload": {
-            "words": ["ba-nane", "mai-son", "cra-yon", "cha-peau", "to-ma-te"]
+            "words": [
+              "ba-nane",
+              "mai-son",
+              "cra-yon",
+              "cha-peau",
+              "to-ma-te"
+            ]
           }
         },
         {
@@ -2194,8 +2775,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -2215,11 +2801,16 @@
     {
       "id": "m3-lang-22",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "LANG",
       "title": "Tout ce que je sais dire",
       "summary": "Reprendre, en parlant, ce que le mois a apporté.",
-      "objectiveCodes": ["LANG-S01-C04-O11", "LANG-S01-C01-O03"],
+      "objectiveCodes": [
+        "LANG-S01-C04-O11",
+        "LANG-S01-C01-O03"
+      ],
       "supportingObjectiveCodes": [
         "LANG-S01-C02-O01",
         "LANG-S02-C03-O15",
@@ -2240,8 +2831,14 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "consolidation",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C04-O11"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O12",
+            "LANG-S01-C04-O11"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -2266,8 +2863,14 @@
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S01-C04-O11", "LANG-S01-C01-O03"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S01-C04-O11",
+            "LANG-S01-C01-O03"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "préférer",
@@ -2303,8 +2906,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["LANG-S02-C03-O15"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "LANG-S02-C03-O15"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [],
           "scaffolds": [
             {

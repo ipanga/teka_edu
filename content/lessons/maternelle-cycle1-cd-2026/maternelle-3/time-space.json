@@ -6,11 +6,16 @@
     {
       "id": "m3-time-01",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "TIME-SPACE",
       "title": "Les jours de la semaine",
       "summary": "Nommer les jours et situer aujourd’hui, hier et demain.",
-      "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
+      "objectiveCodes": [
+        "TIME-SPACE-S01-C01-O10",
+        "TIME-SPACE-S01-C01-O12"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 2,
@@ -27,8 +32,14 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O10",
+            "TIME-SPACE-S01-C01-O12"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "aujourd’hui",
@@ -68,8 +79,14 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
-          "materialCodes": ["papier", "crayon"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O10"
+          ],
+          "materialCodes": [
+            "papier",
+            "crayon"
+          ],
           "vocabulary": [
             {
               "fr": "la semaine",
@@ -98,11 +115,16 @@
     {
       "id": "m3-time-02",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "TIME-SPACE",
       "title": "Quel jour sommes-nous ?",
       "summary": "Situer un évènement dans la semaine.",
-      "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
+      "objectiveCodes": [
+        "TIME-SPACE-S01-C01-O10",
+        "TIME-SPACE-S01-C01-O12"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -119,8 +141,14 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
-          "materialCodes": ["papier"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O10",
+            "TIME-SPACE-S01-C01-O12"
+          ],
+          "materialCodes": [
+            "papier"
+          ],
           "vocabulary": [
             {
               "fr": "le jour",
@@ -156,8 +184,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
-          "materialCodes": ["papier"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O10"
+          ],
+          "materialCodes": [
+            "papier"
+          ],
           "vocabulary": [
             {
               "fr": "hier",
@@ -186,11 +219,15 @@
     {
       "id": "m3-time-03",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "TIME-SPACE",
       "title": "Devant, derrière, à côté",
       "summary": "Situer les objets par rapport à soi.",
-      "objectiveCodes": ["TIME-SPACE-S02-C01-O16"],
+      "objectiveCodes": [
+        "TIME-SPACE-S02-C01-O16"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 2,
@@ -207,8 +244,13 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["TIME-SPACE-S02-C01-O16"],
-          "materialCodes": ["objets-maison"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S02-C01-O16"
+          ],
+          "materialCodes": [
+            "objets-maison"
+          ],
           "vocabulary": [
             {
               "fr": "devant",
@@ -247,8 +289,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["TIME-SPACE-S02-C01-O16"],
-          "materialCodes": ["objets-maison"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S02-C01-O16"
+          ],
+          "materialCodes": [
+            "objets-maison"
+          ],
           "vocabulary": [
             {
               "fr": "derrière",
@@ -266,7 +313,11 @@
             }
           ],
           "payload": {
-            "prompts": ["Où est l’objet ?", "Et maintenant ?", "Où est-il par rapport à toi ?"]
+            "prompts": [
+              "Où est l’objet ?",
+              "Et maintenant ?",
+              "Où est-il par rapport à toi ?"
+            ]
           }
         }
       ],
@@ -277,11 +328,15 @@
     {
       "id": "m3-time-04",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "TIME-SPACE",
       "title": "Où est l’objet ?",
       "summary": "Situer un objet par rapport à un autre, et dire le trajet pour y aller.",
-      "objectiveCodes": ["TIME-SPACE-S02-C01-O16"],
+      "objectiveCodes": [
+        "TIME-SPACE-S02-C01-O16"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -298,8 +353,13 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["TIME-SPACE-S02-C01-O16"],
-          "materialCodes": ["objets-maison"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S02-C01-O16"
+          ],
+          "materialCodes": [
+            "objets-maison"
+          ],
           "vocabulary": [
             {
               "fr": "près de",
@@ -338,8 +398,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["TIME-SPACE-S02-C01-O16"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S02-C01-O16"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "le chemin",
@@ -373,12 +438,18 @@
     {
       "id": "m3-time-05",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "TIME-SPACE",
       "title": "Ma semaine",
       "summary": "Situer les évènements de sa semaine et les mettre en ordre.",
-      "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O12"],
+      "objectiveCodes": [
+        "TIME-SPACE-S01-C01-O10"
+      ],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12"
+      ],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "objets-et-formes",
@@ -394,8 +465,14 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
-          "materialCodes": ["papier", "crayon"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O10"
+          ],
+          "materialCodes": [
+            "papier",
+            "crayon"
+          ],
           "vocabulary": [
             {
               "fr": "le jour",
@@ -430,8 +507,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
-          "materialCodes": ["papier"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O10"
+          ],
+          "materialCodes": [
+            "papier"
+          ],
           "vocabulary": [
             {
               "fr": "avant",
@@ -464,12 +546,18 @@
     {
       "id": "m3-time-06",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "TIME-SPACE",
       "title": "Avant, pendant, après",
       "summary": "Repérer les étapes d’une activité vécue et les ordonner.",
-      "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O10"],
+      "objectiveCodes": [
+        "TIME-SPACE-S01-C02-O08"
+      ],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O10"
+      ],
       "stage": "discovery",
       "difficulty": 3,
       "themeId": "au-marche",
@@ -485,8 +573,14 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
-          "materialCodes": ["papier", "crayon"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C02-O08"
+          ],
+          "materialCodes": [
+            "papier",
+            "crayon"
+          ],
           "vocabulary": [
             {
               "fr": "l’étape",
@@ -521,8 +615,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C02-O08"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "avant",
@@ -559,12 +658,18 @@
     {
       "id": "m3-time-07",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "TIME-SPACE",
       "title": "Les étapes de l’histoire",
       "summary": "Ordonner les moments d’une histoire connue.",
-      "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
-      "supportingObjectiveCodes": ["LANG-S02-C03-O13"],
+      "objectiveCodes": [
+        "TIME-SPACE-S01-C02-O08"
+      ],
+      "supportingObjectiveCodes": [
+        "LANG-S02-C03-O13"
+      ],
       "stage": "practice",
       "difficulty": 3,
       "themeId": "au-marche",
@@ -580,8 +685,14 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
-          "materialCodes": ["papier", "crayon"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C02-O08"
+          ],
+          "materialCodes": [
+            "papier",
+            "crayon"
+          ],
           "vocabulary": [
             {
               "fr": "le moment",
@@ -612,8 +723,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C02-O08"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "inventer",
@@ -646,12 +762,19 @@
     {
       "id": "m3-time-08",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "TIME-SPACE",
       "title": "La semaine et la date",
       "summary": "Dire la date du jour et situer la journée dans la semaine.",
-      "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C02-O08"],
+      "objectiveCodes": [
+        "TIME-SPACE-S01-C01-O10",
+        "TIME-SPACE-S01-C01-O12"
+      ],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C02-O08"
+      ],
       "stage": "consolidation",
       "difficulty": 2,
       "themeId": "je-montre-ce-que-je-sais",
@@ -667,8 +790,14 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "consolidation",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O10",
+            "TIME-SPACE-S01-C01-O12"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "la date",
@@ -704,8 +833,13 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "consolidation",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
-          "materialCodes": ["papier"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O10"
+          ],
+          "materialCodes": [
+            "papier"
+          ],
           "vocabulary": [
             {
               "fr": "l’ordre",

@@ -6,11 +6,16 @@
     {
       "id": "m3-phys-01",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Je cours, je m’arrête",
       "summary": "Courir puis s’arrêter net au signal, en respectant l’espace et les règles.",
-      "objectiveCodes": ["PHYS-S02-C01-O07", "PHYS-S01-C01-O10"],
+      "objectiveCodes": [
+        "PHYS-S02-C01-O07",
+        "PHYS-S01-C01-O10"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 1,
@@ -27,8 +32,14 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S02-C01-O07", "PHYS-S01-C01-O10"],
-          "materialCodes": ["espace-degage"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S02-C01-O07",
+            "PHYS-S01-C01-O10"
+          ],
+          "materialCodes": [
+            "espace-degage"
+          ],
           "vocabulary": [
             {
               "fr": "courir",
@@ -46,7 +57,11 @@
             }
           ],
           "payload": {
-            "moves": ["courir", "s’arrêter net", "repartir"]
+            "moves": [
+              "courir",
+              "s’arrêter net",
+              "repartir"
+            ]
           }
         }
       ],
@@ -57,11 +72,15 @@
     {
       "id": "m3-phys-02",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Je cours plus longtemps",
       "summary": "Courir sans s’arrêter un peu plus longtemps chaque fois.",
-      "objectiveCodes": ["PHYS-S01-C01-O10"],
+      "objectiveCodes": [
+        "PHYS-S01-C01-O10"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -78,8 +97,13 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S01-C01-O10"],
-          "materialCodes": ["espace-degage"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S01-C01-O10"
+          ],
+          "materialCodes": [
+            "espace-degage"
+          ],
           "vocabulary": [
             {
               "fr": "longtemps",
@@ -97,7 +121,11 @@
             }
           ],
           "payload": {
-            "moves": ["courir sans s’arrêter", "souffler", "repartir"]
+            "moves": [
+              "courir sans s’arrêter",
+              "souffler",
+              "repartir"
+            ]
           }
         }
       ],
@@ -108,11 +136,15 @@
     {
       "id": "m3-phys-03",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Je danse avec un tissu",
       "summary": "Reproduire et inventer des gestes dansés avec un objet léger.",
-      "objectiveCodes": ["PHYS-S03-C01-O09"],
+      "objectiveCodes": [
+        "PHYS-S03-C01-O09"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 2,
@@ -129,8 +161,13 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S03-C01-O09"],
-          "materialCodes": ["objets-maison"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S03-C01-O09"
+          ],
+          "materialCodes": [
+            "objets-maison"
+          ],
           "vocabulary": [
             {
               "fr": "danser",
@@ -148,7 +185,11 @@
             }
           ],
           "payload": {
-            "moves": ["lever le tissu", "le faire tourner", "le poser doucement"]
+            "moves": [
+              "lever le tissu",
+              "le faire tourner",
+              "le poser doucement"
+            ]
           }
         }
       ],
@@ -159,11 +200,15 @@
     {
       "id": "m3-phys-04",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Je vise le panier",
       "summary": "Lancer avec précision vers une cible.",
-      "objectiveCodes": ["PHYS-S01-C01-O09"],
+      "objectiveCodes": [
+        "PHYS-S01-C01-O09"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 2,
@@ -180,8 +225,14 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S01-C01-O09"],
-          "materialCodes": ["balle-papier", "boite"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S01-C01-O09"
+          ],
+          "materialCodes": [
+            "balle-papier",
+            "boite"
+          ],
           "vocabulary": [
             {
               "fr": "viser",
@@ -199,7 +250,11 @@
             }
           ],
           "payload": {
-            "moves": ["viser", "lancer", "reculer d’un pas"]
+            "moves": [
+              "viser",
+              "lancer",
+              "reculer d’un pas"
+            ]
           }
         }
       ],
@@ -210,12 +265,18 @@
     {
       "id": "m3-phys-05",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "En équilibre",
       "summary": "Tenir en équilibre en combinant appuis et déplacements.",
-      "objectiveCodes": ["PHYS-S02-C01-O05"],
-      "supportingObjectiveCodes": ["PHYS-S02-C01-O07"],
+      "objectiveCodes": [
+        "PHYS-S02-C01-O05"
+      ],
+      "supportingObjectiveCodes": [
+        "PHYS-S02-C01-O07"
+      ],
       "stage": "discovery",
       "difficulty": 2,
       "themeId": "ma-maison",
@@ -231,8 +292,15 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
-          "materialCodes": ["espace-degage", "objets-maison"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S02-C01-O05",
+            "PHYS-S02-C01-O07"
+          ],
+          "materialCodes": [
+            "espace-degage",
+            "objets-maison"
+          ],
           "vocabulary": [
             {
               "fr": "l’équilibre",
@@ -250,7 +318,11 @@
             }
           ],
           "payload": {
-            "moves": ["marcher sur la ligne", "tenir sur un pied", "repartir"]
+            "moves": [
+              "marcher sur la ligne",
+              "tenir sur un pied",
+              "repartir"
+            ]
           }
         }
       ],
@@ -261,11 +333,16 @@
     {
       "id": "m3-phys-06",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Le parcours de la maison",
       "summary": "Enchainer plusieurs actions dans un parcours, en respectant les règles.",
-      "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
+      "objectiveCodes": [
+        "PHYS-S02-C01-O05",
+        "PHYS-S02-C01-O07"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -282,8 +359,15 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
-          "materialCodes": ["objets-maison", "espace-degage"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S02-C01-O05",
+            "PHYS-S02-C01-O07"
+          ],
+          "materialCodes": [
+            "objets-maison",
+            "espace-degage"
+          ],
           "vocabulary": [
             {
               "fr": "sous",
@@ -301,7 +385,11 @@
             }
           ],
           "payload": {
-            "moves": ["passer sous", "contourner", "enjamber"]
+            "moves": [
+              "passer sous",
+              "contourner",
+              "enjamber"
+            ]
           }
         }
       ],
@@ -312,11 +400,15 @@
     {
       "id": "m3-phys-07",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Je danse comme les animaux",
       "summary": "Inventer des gestes dansés à partir d’une image.",
-      "objectiveCodes": ["PHYS-S03-C01-O09"],
+      "objectiveCodes": [
+        "PHYS-S03-C01-O09"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -333,8 +425,13 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S03-C01-O09"],
-          "materialCodes": ["espace-degage"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S03-C01-O09"
+          ],
+          "materialCodes": [
+            "espace-degage"
+          ],
           "vocabulary": [
             {
               "fr": "sauter",
@@ -367,12 +464,18 @@
     {
       "id": "m3-phys-08",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Le jeu du chat",
       "summary": "Jouer à deux, en tenant un rôle et en respectant la règle.",
-      "objectiveCodes": ["PHYS-S04-C01-O09"],
-      "supportingObjectiveCodes": ["PHYS-S02-C01-O07"],
+      "objectiveCodes": [
+        "PHYS-S04-C01-O09"
+      ],
+      "supportingObjectiveCodes": [
+        "PHYS-S02-C01-O07"
+      ],
       "stage": "discovery",
       "difficulty": 2,
       "themeId": "ma-maison",
@@ -388,8 +491,14 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S02-C01-O07"],
-          "materialCodes": ["espace-degage"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S04-C01-O09",
+            "PHYS-S02-C01-O07"
+          ],
+          "materialCodes": [
+            "espace-degage"
+          ],
           "vocabulary": [
             {
               "fr": "le chat",
@@ -407,7 +516,11 @@
             }
           ],
           "payload": {
-            "moves": ["s’échapper", "attraper", "changer de rôle"]
+            "moves": [
+              "s’échapper",
+              "attraper",
+              "changer de rôle"
+            ]
           }
         }
       ],
@@ -418,11 +531,16 @@
     {
       "id": "m3-phys-09",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Lancer et attraper",
       "summary": "Lancer vers quelqu’un et rattraper à deux mains.",
-      "objectiveCodes": ["PHYS-S01-C01-O09", "PHYS-S04-C01-O09"],
+      "objectiveCodes": [
+        "PHYS-S01-C01-O09",
+        "PHYS-S04-C01-O09"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -439,8 +557,14 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S01-C01-O09", "PHYS-S04-C01-O09"],
-          "materialCodes": ["balle-papier"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S01-C01-O09",
+            "PHYS-S04-C01-O09"
+          ],
+          "materialCodes": [
+            "balle-papier"
+          ],
           "vocabulary": [
             {
               "fr": "attraper",
@@ -458,7 +582,11 @@
             }
           ],
           "payload": {
-            "moves": ["attraper à deux mains", "renvoyer", "compter les passes"]
+            "moves": [
+              "attraper à deux mains",
+              "renvoyer",
+              "compter les passes"
+            ]
           }
         }
       ],
@@ -469,11 +597,16 @@
     {
       "id": "m3-phys-10",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Marcher, s’arrêter, repartir",
       "summary": "Contrôler son déplacement : vite, lentement, à l’arrêt.",
-      "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S01-C01-O10"],
+      "objectiveCodes": [
+        "PHYS-S02-C01-O05",
+        "PHYS-S01-C01-O10"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -490,8 +623,14 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S01-C01-O10"],
-          "materialCodes": ["espace-degage"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S02-C01-O05",
+            "PHYS-S01-C01-O10"
+          ],
+          "materialCodes": [
+            "espace-degage"
+          ],
           "vocabulary": [
             {
               "fr": "vite",
@@ -509,7 +648,12 @@
             }
           ],
           "payload": {
-            "moves": ["marcher vite", "marcher doucement", "s’arrêter", "repartir"]
+            "moves": [
+              "marcher vite",
+              "marcher doucement",
+              "s’arrêter",
+              "repartir"
+            ]
           }
         }
       ],
@@ -520,11 +664,15 @@
     {
       "id": "m3-phys-11",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Je cours et je compte",
       "summary": "Courir plus longtemps, en mesurant avec les nombres du jour.",
-      "objectiveCodes": ["PHYS-S01-C01-O10"],
+      "objectiveCodes": [
+        "PHYS-S01-C01-O10"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -541,8 +689,13 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S01-C01-O10"],
-          "materialCodes": ["espace-degage"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S01-C01-O10"
+          ],
+          "materialCodes": [
+            "espace-degage"
+          ],
           "vocabulary": [
             {
               "fr": "compter",
@@ -560,7 +713,11 @@
             }
           ],
           "payload": {
-            "moves": ["courir", "compter en courant", "souffler"]
+            "moves": [
+              "courir",
+              "compter en courant",
+              "souffler"
+            ]
           }
         }
       ],
@@ -571,11 +728,15 @@
     {
       "id": "m3-phys-12",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Je danse la pluie",
       "summary": "Traduire un paysage sonore en gestes dansés.",
-      "objectiveCodes": ["PHYS-S03-C01-O09"],
+      "objectiveCodes": [
+        "PHYS-S03-C01-O09"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -592,8 +753,13 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S03-C01-O09"],
-          "materialCodes": ["espace-degage"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S03-C01-O09"
+          ],
+          "materialCodes": [
+            "espace-degage"
+          ],
           "vocabulary": [
             {
               "fr": "la goutte",
@@ -611,7 +777,11 @@
             }
           ],
           "payload": {
-            "moves": ["bouger lentement", "bouger vite", "s’immobiliser"]
+            "moves": [
+              "bouger lentement",
+              "bouger vite",
+              "s’immobiliser"
+            ]
           }
         }
       ],
@@ -622,11 +792,16 @@
     {
       "id": "m3-phys-13",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Je passe le ballon",
       "summary": "Coopérer à deux pour réussir un nombre de passes.",
-      "objectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S01-C01-O09"],
+      "objectiveCodes": [
+        "PHYS-S04-C01-O09",
+        "PHYS-S01-C01-O09"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -643,8 +818,14 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S01-C01-O09"],
-          "materialCodes": ["balle-papier"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S04-C01-O09",
+            "PHYS-S01-C01-O09"
+          ],
+          "materialCodes": [
+            "balle-papier"
+          ],
           "vocabulary": [
             {
               "fr": "la passe",
@@ -662,7 +843,11 @@
             }
           ],
           "payload": {
-            "moves": ["passer", "attraper", "compter ensemble"]
+            "moves": [
+              "passer",
+              "attraper",
+              "compter ensemble"
+            ]
           }
         }
       ],
@@ -673,11 +858,16 @@
     {
       "id": "m3-phys-14",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Je saute par-dessus",
       "summary": "Sauter pieds joints par-dessus un obstacle bas.",
-      "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S01-C01-O09"],
+      "objectiveCodes": [
+        "PHYS-S02-C01-O05",
+        "PHYS-S01-C01-O09"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -694,8 +884,15 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S01-C01-O09"],
-          "materialCodes": ["objets-maison", "espace-degage"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S02-C01-O05",
+            "PHYS-S01-C01-O09"
+          ],
+          "materialCodes": [
+            "objets-maison",
+            "espace-degage"
+          ],
           "vocabulary": [
             {
               "fr": "sauter",
@@ -713,7 +910,11 @@
             }
           ],
           "payload": {
-            "moves": ["sauter pieds joints", "atterrir en souplesse", "recommencer"]
+            "moves": [
+              "sauter pieds joints",
+              "atterrir en souplesse",
+              "recommencer"
+            ]
           }
         }
       ],
@@ -724,11 +925,15 @@
     {
       "id": "m3-phys-15",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Je vise plus loin",
       "summary": "Lancer loin, puis viser une cible plus éloignée.",
-      "objectiveCodes": ["PHYS-S01-C01-O09"],
+      "objectiveCodes": [
+        "PHYS-S01-C01-O09"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 3,
@@ -745,8 +950,14 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S01-C01-O09"],
-          "materialCodes": ["balle-papier", "boite"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S01-C01-O09"
+          ],
+          "materialCodes": [
+            "balle-papier",
+            "boite"
+          ],
           "vocabulary": [
             {
               "fr": "loin",
@@ -764,7 +975,11 @@
             }
           ],
           "payload": {
-            "moves": ["lancer loin", "viser", "regarder la cible"]
+            "moves": [
+              "lancer loin",
+              "viser",
+              "regarder la cible"
+            ]
           }
         }
       ],
@@ -775,11 +990,15 @@
     {
       "id": "m3-phys-16",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Un pied, deux pieds",
       "summary": "Varier les appuis en gardant l’équilibre.",
-      "objectiveCodes": ["PHYS-S02-C01-O05"],
+      "objectiveCodes": [
+        "PHYS-S02-C01-O05"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 3,
@@ -796,8 +1015,13 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S02-C01-O05"],
-          "materialCodes": ["espace-degage"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S02-C01-O05"
+          ],
+          "materialCodes": [
+            "espace-degage"
+          ],
           "vocabulary": [
             {
               "fr": "l’équilibre",
@@ -815,7 +1039,11 @@
             }
           ],
           "payload": {
-            "moves": ["tenir sur un pied", "changer de pied", "garder l’équilibre"]
+            "moves": [
+              "tenir sur un pied",
+              "changer de pied",
+              "garder l’équilibre"
+            ]
           }
         }
       ],
@@ -826,11 +1054,16 @@
     {
       "id": "m3-phys-17",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "La statue",
       "summary": "S’immobiliser complètement au signal : contrôler son corps.",
-      "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
+      "objectiveCodes": [
+        "PHYS-S02-C01-O05",
+        "PHYS-S02-C01-O07"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -847,8 +1080,14 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
-          "materialCodes": ["espace-degage"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S02-C01-O05",
+            "PHYS-S02-C01-O07"
+          ],
+          "materialCodes": [
+            "espace-degage"
+          ],
           "vocabulary": [
             {
               "fr": "la statue",
@@ -866,7 +1105,11 @@
             }
           ],
           "payload": {
-            "moves": ["bouger", "s’immobiliser", "tenir la pose"]
+            "moves": [
+              "bouger",
+              "s’immobiliser",
+              "tenir la pose"
+            ]
           }
         }
       ],
@@ -877,11 +1120,15 @@
     {
       "id": "m3-phys-18",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Le parcours des formes",
       "summary": "Suivre un parcours en nommant les formes rencontrées.",
-      "objectiveCodes": ["PHYS-S02-C01-O05"],
+      "objectiveCodes": [
+        "PHYS-S02-C01-O05"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -898,8 +1145,19 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S02-C01-O05"],
-          "materialCodes": ["formes-papier", "espace-degage"],
+          "mediaIds": [
+            "forme-carre",
+            "forme-rectangle",
+            "forme-triangle",
+            "forme-disque"
+          ],
+          "objectiveCodes": [
+            "PHYS-S02-C01-O05"
+          ],
+          "materialCodes": [
+            "formes-papier",
+            "espace-degage"
+          ],
           "vocabulary": [
             {
               "fr": "le pas",
@@ -917,7 +1175,11 @@
             }
           ],
           "payload": {
-            "moves": ["avancer d’un pas", "nommer la forme", "revenir"]
+            "moves": [
+              "avancer d’un pas",
+              "nommer la forme",
+              "revenir"
+            ]
           }
         }
       ],
@@ -928,11 +1190,16 @@
     {
       "id": "m3-phys-19",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "La course des animaux",
       "summary": "Enchainer des déplacements variés sur une durée plus longue.",
-      "objectiveCodes": ["PHYS-S01-C01-O10", "PHYS-S03-C01-O09"],
+      "objectiveCodes": [
+        "PHYS-S01-C01-O10",
+        "PHYS-S03-C01-O09"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "consolidation",
       "difficulty": 2,
@@ -949,8 +1216,14 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "consolidation",
-          "objectiveCodes": ["PHYS-S01-C01-O10", "PHYS-S03-C01-O09"],
-          "materialCodes": ["espace-degage"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S01-C01-O10",
+            "PHYS-S03-C01-O09"
+          ],
+          "materialCodes": [
+            "espace-degage"
+          ],
           "vocabulary": [
             {
               "fr": "traverser",
@@ -968,7 +1241,12 @@
             }
           ],
           "payload": {
-            "moves": ["sauter", "ramper", "trottiner", "souffler"]
+            "moves": [
+              "sauter",
+              "ramper",
+              "trottiner",
+              "souffler"
+            ]
           }
         }
       ],
@@ -979,11 +1257,15 @@
     {
       "id": "m3-phys-20",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Je danse avec mes mains",
       "summary": "Danser en isolant une partie du corps.",
-      "objectiveCodes": ["PHYS-S03-C01-O09"],
+      "objectiveCodes": [
+        "PHYS-S03-C01-O09"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -1000,8 +1282,13 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S03-C01-O09"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S03-C01-O09"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "la main",
@@ -1019,7 +1306,11 @@
             }
           ],
           "payload": {
-            "moves": ["lever les mains", "tourner les poignets", "bouger les épaules"]
+            "moves": [
+              "lever les mains",
+              "tourner les poignets",
+              "bouger les épaules"
+            ]
           }
         }
       ],
@@ -1030,11 +1321,16 @@
     {
       "id": "m3-phys-21",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Le jeu du miroir",
       "summary": "Reproduire exactement le geste de quelqu’un d’autre.",
-      "objectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S03-C01-O09"],
+      "objectiveCodes": [
+        "PHYS-S04-C01-O09",
+        "PHYS-S03-C01-O09"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -1051,8 +1347,14 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S03-C01-O09"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S04-C01-O09",
+            "PHYS-S03-C01-O09"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "le miroir",
@@ -1070,7 +1372,11 @@
             }
           ],
           "payload": {
-            "moves": ["copier le geste", "aller lentement", "changer de rôle"]
+            "moves": [
+              "copier le geste",
+              "aller lentement",
+              "changer de rôle"
+            ]
           }
         }
       ],
@@ -1081,11 +1387,17 @@
     {
       "id": "m3-phys-22",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "PHYS",
       "title": "Tous les mouvements du mois",
       "summary": "Reprendre les actions apprises en septembre.",
-      "objectiveCodes": ["PHYS-S01-C01-O10", "PHYS-S02-C01-O05", "PHYS-S04-C01-O09"],
+      "objectiveCodes": [
+        "PHYS-S01-C01-O10",
+        "PHYS-S02-C01-O05",
+        "PHYS-S04-C01-O09"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "consolidation",
       "difficulty": 2,
@@ -1102,8 +1414,15 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "consolidation",
-          "objectiveCodes": ["PHYS-S01-C01-O10", "PHYS-S02-C01-O05", "PHYS-S04-C01-O09"],
-          "materialCodes": ["espace-degage"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "PHYS-S01-C01-O10",
+            "PHYS-S02-C01-O05",
+            "PHYS-S04-C01-O09"
+          ],
+          "materialCodes": [
+            "espace-degage"
+          ],
           "vocabulary": [
             {
               "fr": "choisir",
@@ -1121,7 +1440,11 @@
             }
           ],
           "payload": {
-            "moves": ["choisir", "montrer", "refaire ensemble"]
+            "moves": [
+              "choisir",
+              "montrer",
+              "refaire ensemble"
+            ]
           }
         }
       ],

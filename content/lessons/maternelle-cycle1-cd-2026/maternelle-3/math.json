@@ -6,11 +6,16 @@
     {
       "id": "m3-math-01",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Je compte jusqu’à cinq",
       "summary": "Compter une petite collection en déplaçant les objets, puis en donner un nombre demandé.",
-      "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
+      "objectiveCodes": [
+        "MATH-S01-C01-O20",
+        "MATH-S01-C01-O21"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 1,
@@ -27,8 +32,16 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [
+            "objet-caillou"
+          ],
+          "objectiveCodes": [
+            "MATH-S01-C01-O20",
+            "MATH-S01-C01-O21"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "combien",
@@ -60,8 +73,14 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O20"],
-          "materialCodes": ["petits-objets", "boite"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O20"
+          ],
+          "materialCodes": [
+            "petits-objets",
+            "boite"
+          ],
           "vocabulary": [
             {
               "fr": "exactement",
@@ -86,12 +105,18 @@
     {
       "id": "m3-math-02",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Plus que, moins que, autant que",
       "summary": "Comparer deux collections sans compter, puis en comptant.",
-      "objectiveCodes": ["MATH-S01-C01-O05"],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O20"],
+      "objectiveCodes": [
+        "MATH-S01-C01-O05"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O20"
+      ],
       "stage": "discovery",
       "difficulty": 2,
       "themeId": "la-rentree",
@@ -107,8 +132,15 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O05"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [
+            "objet-caillou"
+          ],
+          "objectiveCodes": [
+            "MATH-S01-C01-O05"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "plus que",
@@ -143,8 +175,13 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O05"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O05"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "autant",
@@ -170,11 +207,16 @@
     {
       "id": "m3-math-03",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Les formes autour de moi",
       "summary": "Reconnaitre et nommer le carré, le rectangle, le triangle et le disque.",
-      "objectiveCodes": ["MATH-S03-C01-O08", "MATH-S03-C01-O07"],
+      "objectiveCodes": [
+        "MATH-S03-C01-O08",
+        "MATH-S03-C01-O07"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 2,
@@ -191,8 +233,19 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S03-C01-O08", "MATH-S03-C01-O07"],
-          "materialCodes": ["formes-papier"],
+          "mediaIds": [
+            "forme-carre",
+            "forme-rectangle",
+            "forme-triangle",
+            "forme-disque"
+          ],
+          "objectiveCodes": [
+            "MATH-S03-C01-O08",
+            "MATH-S03-C01-O07"
+          ],
+          "materialCodes": [
+            "formes-papier"
+          ],
           "vocabulary": [
             {
               "fr": "le carré",
@@ -235,8 +288,18 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S03-C01-O08"],
-          "materialCodes": ["formes-papier"],
+          "mediaIds": [
+            "forme-carre",
+            "forme-rectangle",
+            "forme-triangle",
+            "forme-disque"
+          ],
+          "objectiveCodes": [
+            "MATH-S03-C01-O08"
+          ],
+          "materialCodes": [
+            "formes-papier"
+          ],
           "vocabulary": [
             {
               "fr": "pareil",
@@ -254,7 +317,12 @@
             }
           ],
           "payload": {
-            "categories": ["les carrés", "les rectangles", "les triangles", "les disques"]
+            "categories": [
+              "les carrés",
+              "les rectangles",
+              "les triangles",
+              "les disques"
+            ]
           }
         }
       ],
@@ -265,12 +333,18 @@
     {
       "id": "m3-math-04",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "La comptine jusqu’à dix",
       "summary": "Dire la suite des nombres jusqu’à dix sans en oublier.",
-      "objectiveCodes": ["MATH-S01-C01-O26"],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O20"],
+      "objectiveCodes": [
+        "MATH-S01-C01-O26"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O20"
+      ],
       "stage": "discovery",
       "difficulty": 1,
       "themeId": "la-rentree",
@@ -286,8 +360,13 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O26"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O26"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "la comptine",
@@ -315,8 +394,15 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O26"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [
+            "objet-caillou"
+          ],
+          "objectiveCodes": [
+            "MATH-S01-C01-O26"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "dix",
@@ -341,12 +427,19 @@
     {
       "id": "m3-math-05",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Je compte jusqu’à six",
       "summary": "Compter des collections un peu plus grandes, en les organisant.",
-      "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O26"],
+      "objectiveCodes": [
+        "MATH-S01-C01-O20",
+        "MATH-S01-C01-O21"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O26"
+      ],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "ma-maison",
@@ -362,8 +455,16 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [
+            "objet-caillou"
+          ],
+          "objectiveCodes": [
+            "MATH-S01-C01-O20",
+            "MATH-S01-C01-O21"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "la ligne",
@@ -395,8 +496,13 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O20"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O20"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "exactement",
@@ -421,12 +527,19 @@
     {
       "id": "m3-math-06",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Autant que, pas plus",
       "summary": "Construire une collection qui en vaut une autre.",
-      "objectiveCodes": ["MATH-S01-C01-O21", "MATH-S01-C01-O05"],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O20"],
+      "objectiveCodes": [
+        "MATH-S01-C01-O21",
+        "MATH-S01-C01-O05"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O20"
+      ],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "ma-maison",
@@ -442,8 +555,14 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O21", "MATH-S01-C01-O05"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O21",
+            "MATH-S01-C01-O05"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "autant que",
@@ -474,8 +593,13 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O21"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O21"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "vérifier",
@@ -501,12 +625,18 @@
     {
       "id": "m3-math-07",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Compter sans rien oublier",
       "summary": "Passer une seule fois par chaque objet d’une collection.",
-      "objectiveCodes": ["MATH-S01-C01-O19"],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O20"],
+      "objectiveCodes": [
+        "MATH-S01-C01-O19"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O20"
+      ],
       "stage": "discovery",
       "difficulty": 3,
       "themeId": "ma-maison",
@@ -522,8 +652,16 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O19"],
-          "materialCodes": ["petits-objets", "boite"],
+          "mediaIds": [
+            "objet-caillou"
+          ],
+          "objectiveCodes": [
+            "MATH-S01-C01-O19"
+          ],
+          "materialCodes": [
+            "petits-objets",
+            "boite"
+          ],
           "vocabulary": [
             {
               "fr": "un par un",
@@ -554,8 +692,13 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O19"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O19"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "le repère",
@@ -581,11 +724,16 @@
     {
       "id": "m3-math-08",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Les formes qui se ressemblent",
       "summary": "Retrouver une forme quelle que soit sa taille ou sa position.",
-      "objectiveCodes": ["MATH-S03-C01-O07", "MATH-S03-C01-O08"],
+      "objectiveCodes": [
+        "MATH-S03-C01-O07",
+        "MATH-S03-C01-O08"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -602,8 +750,19 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S03-C01-O07", "MATH-S03-C01-O08"],
-          "materialCodes": ["formes-papier"],
+          "mediaIds": [
+            "forme-carre",
+            "forme-rectangle",
+            "forme-triangle",
+            "forme-disque"
+          ],
+          "objectiveCodes": [
+            "MATH-S03-C01-O07",
+            "MATH-S03-C01-O08"
+          ],
+          "materialCodes": [
+            "formes-papier"
+          ],
           "vocabulary": [
             {
               "fr": "la taille",
@@ -622,10 +781,22 @@
           ],
           "payload": {
             "pairs": [
-              ["le carré", "un autre carré, plus grand"],
-              ["le triangle", "un triangle posé sur la pointe"],
-              ["le disque", "un disque plus petit"],
-              ["le rectangle", "un rectangle plus long"]
+              [
+                "le carré",
+                "un autre carré, plus grand"
+              ],
+              [
+                "le triangle",
+                "un triangle posé sur la pointe"
+              ],
+              [
+                "le disque",
+                "un disque plus petit"
+              ],
+              [
+                "le rectangle",
+                "un rectangle plus long"
+              ]
             ]
           }
         },
@@ -639,8 +810,18 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S03-C01-O07"],
-          "materialCodes": ["objets-maison"],
+          "mediaIds": [
+            "forme-carre",
+            "forme-rectangle",
+            "forme-triangle",
+            "forme-disque"
+          ],
+          "objectiveCodes": [
+            "MATH-S03-C01-O07"
+          ],
+          "materialCodes": [
+            "objets-maison"
+          ],
           "vocabulary": [
             {
               "fr": "la face",
@@ -665,12 +846,19 @@
     {
       "id": "m3-math-09",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Combien en tout ?",
       "summary": "Reprendre le comptage et la comparaison de la semaine.",
-      "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O05"],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O21"],
+      "objectiveCodes": [
+        "MATH-S01-C01-O20",
+        "MATH-S01-C01-O05"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O21"
+      ],
       "stage": "consolidation",
       "difficulty": 2,
       "themeId": "ma-maison",
@@ -686,8 +874,16 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "consolidation",
-          "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O05"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [
+            "objet-caillou"
+          ],
+          "objectiveCodes": [
+            "MATH-S01-C01-O20",
+            "MATH-S01-C01-O05"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "en tout",
@@ -715,8 +911,13 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "consolidation",
-          "objectiveCodes": ["MATH-S01-C01-O20"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O20"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "plus",
@@ -745,12 +946,18 @@
     {
       "id": "m3-math-10",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "La comptine jusqu’à vingt",
       "summary": "Étendre la suite des nombres de dix à vingt.",
-      "objectiveCodes": ["MATH-S01-C01-O26"],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O20"],
+      "objectiveCodes": [
+        "MATH-S01-C01-O26"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O20"
+      ],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "objets-et-formes",
@@ -766,8 +973,13 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O26"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O26"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "onze",
@@ -803,8 +1015,15 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O26"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [
+            "objet-caillou"
+          ],
+          "objectiveCodes": [
+            "MATH-S01-C01-O26"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "ajouter",
@@ -829,12 +1048,19 @@
     {
       "id": "m3-math-11",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Trois et deux font cinq",
       "summary": "Décomposer un petit nombre en deux parties.",
-      "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O23"],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O20"],
+      "objectiveCodes": [
+        "MATH-S01-C01-O22",
+        "MATH-S01-C01-O23"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O20"
+      ],
       "stage": "discovery",
       "difficulty": 3,
       "themeId": "objets-et-formes",
@@ -850,8 +1076,16 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O23"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [
+            "objet-caillou"
+          ],
+          "objectiveCodes": [
+            "MATH-S01-C01-O22",
+            "MATH-S01-C01-O23"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "cacher",
@@ -882,8 +1116,13 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O22"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O22"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "partager",
@@ -913,12 +1152,19 @@
     {
       "id": "m3-math-12",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Décomposer six",
       "summary": "Trouver plusieurs façons de faire six.",
-      "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O23"],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O21"],
+      "objectiveCodes": [
+        "MATH-S01-C01-O22",
+        "MATH-S01-C01-O23"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O21"
+      ],
       "stage": "practice",
       "difficulty": 3,
       "themeId": "objets-et-formes",
@@ -934,8 +1180,16 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O23"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [
+            "objet-caillou"
+          ],
+          "objectiveCodes": [
+            "MATH-S01-C01-O22",
+            "MATH-S01-C01-O23"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "faire",
@@ -966,8 +1220,13 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O22"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O22"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "l’autre",
@@ -993,12 +1252,19 @@
     {
       "id": "m3-math-13",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Compter ce qui est rangé",
       "summary": "Compter des collections organisées, sans en oublier.",
-      "objectiveCodes": ["MATH-S01-C01-O19", "MATH-S01-C01-O20"],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O26"],
+      "objectiveCodes": [
+        "MATH-S01-C01-O19",
+        "MATH-S01-C01-O20"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O26"
+      ],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "objets-et-formes",
@@ -1014,8 +1280,14 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O19", "MATH-S01-C01-O20"],
-          "materialCodes": ["objets-maison"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O19",
+            "MATH-S01-C01-O20"
+          ],
+          "materialCodes": [
+            "objets-maison"
+          ],
           "vocabulary": [
             {
               "fr": "compter",
@@ -1043,8 +1315,13 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O19"],
-          "materialCodes": ["objets-maison"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O19"
+          ],
+          "materialCodes": [
+            "objets-maison"
+          ],
           "vocabulary": [
             {
               "fr": "chacun",
@@ -1069,12 +1346,19 @@
     {
       "id": "m3-math-14",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Plus, moins, autant",
       "summary": "Reprendre la comparaison des quantités de la semaine.",
-      "objectiveCodes": ["MATH-S01-C01-O05"],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O20"],
+      "objectiveCodes": [
+        "MATH-S01-C01-O05"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O22",
+        "MATH-S01-C01-O20"
+      ],
       "stage": "consolidation",
       "difficulty": 2,
       "themeId": "objets-et-formes",
@@ -1090,8 +1374,13 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "consolidation",
-          "objectiveCodes": ["MATH-S01-C01-O05"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O05"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "plus que",
@@ -1122,8 +1411,13 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "consolidation",
-          "objectiveCodes": ["MATH-S01-C01-O05"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O05"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "autant",
@@ -1149,12 +1443,19 @@
     {
       "id": "m3-math-15",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "La bande numérique jusqu’à dix",
       "summary": "Construire et lire une bande de nombres de un à dix.",
-      "objectiveCodes": ["MATH-S01-C02-O06"],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O26", "MATH-S01-C01-O20"],
+      "objectiveCodes": [
+        "MATH-S01-C02-O06"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O26",
+        "MATH-S01-C01-O20"
+      ],
       "stage": "discovery",
       "difficulty": 3,
       "themeId": "au-marche",
@@ -1170,8 +1471,14 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C02-O06"],
-          "materialCodes": ["papier", "crayon"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C02-O06"
+          ],
+          "materialCodes": [
+            "papier",
+            "crayon"
+          ],
           "vocabulary": [
             {
               "fr": "la bande",
@@ -1202,8 +1509,13 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C02-O06"],
-          "materialCodes": ["papier"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C02-O06"
+          ],
+          "materialCodes": [
+            "papier"
+          ],
           "vocabulary": [
             {
               "fr": "avant",
@@ -1233,12 +1545,19 @@
     {
       "id": "m3-math-16",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Avant et après sur la bande",
       "summary": "Situer un nombre par rapport à ses voisins.",
-      "objectiveCodes": ["MATH-S01-C02-O06", "MATH-S01-C01-O26"],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O20"],
+      "objectiveCodes": [
+        "MATH-S01-C02-O06",
+        "MATH-S01-C01-O26"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O20"
+      ],
       "stage": "practice",
       "difficulty": 3,
       "themeId": "au-marche",
@@ -1254,8 +1573,14 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C02-O06", "MATH-S01-C01-O26"],
-          "materialCodes": ["papier"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C02-O06",
+            "MATH-S01-C01-O26"
+          ],
+          "materialCodes": [
+            "papier"
+          ],
           "vocabulary": [
             {
               "fr": "caché",
@@ -1287,8 +1612,14 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C02-O06"],
-          "materialCodes": ["papier", "petits-objets"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C02-O06"
+          ],
+          "materialCodes": [
+            "papier",
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "poser",
@@ -1313,12 +1644,19 @@
     {
       "id": "m3-math-17",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Composer dix",
       "summary": "Trouver ce qu’il faut ajouter pour arriver à dix.",
-      "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O23"],
-      "supportingObjectiveCodes": ["MATH-S01-C02-O06"],
+      "objectiveCodes": [
+        "MATH-S01-C01-O22",
+        "MATH-S01-C01-O23"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C02-O06"
+      ],
       "stage": "practice",
       "difficulty": 3,
       "themeId": "au-marche",
@@ -1334,8 +1672,16 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O23"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [
+            "objet-caillou"
+          ],
+          "objectiveCodes": [
+            "MATH-S01-C01-O22",
+            "MATH-S01-C01-O23"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "manquer",
@@ -1366,8 +1712,13 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O22"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O22"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "le doigt",
@@ -1397,11 +1748,16 @@
     {
       "id": "m3-math-18",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Les formes dans ma maison",
       "summary": "Retrouver les formes planes sur les objets réels.",
-      "objectiveCodes": ["MATH-S03-C01-O07", "MATH-S03-C01-O08"],
+      "objectiveCodes": [
+        "MATH-S03-C01-O07",
+        "MATH-S03-C01-O08"
+      ],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -1418,8 +1774,20 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S03-C01-O07", "MATH-S03-C01-O08"],
-          "materialCodes": ["formes-papier", "objets-maison"],
+          "mediaIds": [
+            "forme-carre",
+            "forme-rectangle",
+            "forme-triangle",
+            "forme-disque"
+          ],
+          "objectiveCodes": [
+            "MATH-S03-C01-O07",
+            "MATH-S03-C01-O08"
+          ],
+          "materialCodes": [
+            "formes-papier",
+            "objets-maison"
+          ],
           "vocabulary": [
             {
               "fr": "la face",
@@ -1438,10 +1806,22 @@
           ],
           "payload": {
             "pairs": [
-              ["le rectangle", "la face du cahier"],
-              ["le carré", "la face de la boite"],
-              ["le disque", "le fond du seau"],
-              ["le triangle", "un morceau de tissu plié"]
+              [
+                "le rectangle",
+                "la face du cahier"
+              ],
+              [
+                "le carré",
+                "la face de la boite"
+              ],
+              [
+                "le disque",
+                "le fond du seau"
+              ],
+              [
+                "le triangle",
+                "un morceau de tissu plié"
+              ]
             ]
           }
         },
@@ -1455,8 +1835,19 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S03-C01-O07"],
-          "materialCodes": ["papier", "crayon"],
+          "mediaIds": [
+            "forme-carre",
+            "forme-rectangle",
+            "forme-triangle",
+            "forme-disque"
+          ],
+          "objectiveCodes": [
+            "MATH-S03-C01-O07"
+          ],
+          "materialCodes": [
+            "papier",
+            "crayon"
+          ],
           "vocabulary": [
             {
               "fr": "le toit",
@@ -1485,12 +1876,19 @@
     {
       "id": "m3-math-19",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Je compte jusqu’à trente",
       "summary": "Aller au bout de la comptine numérique visée cette année.",
-      "objectiveCodes": ["MATH-S01-C01-O26"],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C02-O06"],
+      "objectiveCodes": [
+        "MATH-S01-C01-O26"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O20",
+        "MATH-S01-C02-O06"
+      ],
       "stage": "consolidation",
       "difficulty": 3,
       "themeId": "au-marche",
@@ -1506,8 +1904,13 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "consolidation",
-          "objectiveCodes": ["MATH-S01-C01-O26"],
-          "materialCodes": ["aucun"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O26"
+          ],
+          "materialCodes": [
+            "aucun"
+          ],
           "vocabulary": [
             {
               "fr": "vingt",
@@ -1539,8 +1942,15 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "consolidation",
-          "objectiveCodes": ["MATH-S01-C01-O26"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [
+            "objet-caillou"
+          ],
+          "objectiveCodes": [
+            "MATH-S01-C01-O26"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "le paquet",
@@ -1565,12 +1975,19 @@
     {
       "id": "m3-math-20",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Combien manque-t-il ?",
       "summary": "Retrouver ce qui a été enlevé d’une collection.",
-      "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O21"],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O20"],
+      "objectiveCodes": [
+        "MATH-S01-C01-O22",
+        "MATH-S01-C01-O21"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O20"
+      ],
       "stage": "practice",
       "difficulty": 3,
       "themeId": "je-montre-ce-que-je-sais",
@@ -1586,8 +2003,16 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O21"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [
+            "objet-caillou"
+          ],
+          "objectiveCodes": [
+            "MATH-S01-C01-O22",
+            "MATH-S01-C01-O21"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "enlever",
@@ -1618,8 +2043,13 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O22"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O22"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "remettre",
@@ -1645,12 +2075,19 @@
     {
       "id": "m3-math-21",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Du plus petit au plus grand",
       "summary": "Ranger des collections de la plus petite à la plus grande.",
-      "objectiveCodes": ["MATH-S01-C01-O05", "MATH-S01-C02-O06"],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O20"],
+      "objectiveCodes": [
+        "MATH-S01-C01-O05",
+        "MATH-S01-C02-O06"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O20"
+      ],
       "stage": "practice",
       "difficulty": 3,
       "themeId": "je-montre-ce-que-je-sais",
@@ -1666,8 +2103,14 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O05", "MATH-S01-C02-O06"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O05",
+            "MATH-S01-C02-O06"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "le plus petit",
@@ -1685,7 +2128,11 @@
             }
           ],
           "payload": {
-            "categories": ["le plus petit", "celui du milieu", "le plus grand"]
+            "categories": [
+              "le plus petit",
+              "celui du milieu",
+              "le plus grand"
+            ]
           }
         },
         {
@@ -1698,8 +2145,14 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "objectiveCodes": ["MATH-S01-C01-O05"],
-          "materialCodes": ["papier", "petits-objets"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O05"
+          ],
+          "materialCodes": [
+            "papier",
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "l’ordre",
@@ -1725,12 +2178,20 @@
     {
       "id": "m3-math-22",
       "curriculumId": "maternelle-cycle1-cd-2026",
-      "levelIds": ["maternelle-3"],
+      "levelIds": [
+        "maternelle-3"
+      ],
       "domainCode": "MATH",
       "title": "Tout ce que je sais compter",
       "summary": "Reprendre en jeu les mathématiques du mois.",
-      "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O22"],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O05", "MATH-S01-C01-O26"],
+      "objectiveCodes": [
+        "MATH-S01-C01-O20",
+        "MATH-S01-C01-O22"
+      ],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O05",
+        "MATH-S01-C01-O26"
+      ],
       "stage": "consolidation",
       "difficulty": 2,
       "themeId": "je-montre-ce-que-je-sais",
@@ -1746,8 +2207,16 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "consolidation",
-          "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O22"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [
+            "objet-caillou"
+          ],
+          "objectiveCodes": [
+            "MATH-S01-C01-O20",
+            "MATH-S01-C01-O22"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "en tout",
@@ -1775,8 +2244,13 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "consolidation",
-          "objectiveCodes": ["MATH-S01-C01-O20"],
-          "materialCodes": ["petits-objets"],
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O20"
+          ],
+          "materialCodes": [
+            "petits-objets"
+          ],
           "vocabulary": [
             {
               "fr": "ensemble",
