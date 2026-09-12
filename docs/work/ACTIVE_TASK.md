@@ -37,7 +37,7 @@ terminal.
 
 ## Last Checkpoint
 
-2026-09-12 — duration corrections and the session-policy check are in the working tree; `docs/RESUMABLE_WORKFLOW.md` written. Not committed yet.
+2026-09-12 — everything written and 196 unit tests pass. About to run the full check suite (format, lint, typecheck, content, db reset + pgTAP, build, E2E, Docker, secret scans), which takes several minutes. If this session stops during it, nothing is lost: re-run the suite, then continue at Remaining step 2.
 
 ## Scope
 
@@ -72,37 +72,37 @@ terminal.
 - [x] Corrected the three stale 40-minute claims (ADR-037 citation, `CONTENT_AUTHORING.md`, `DRC_CURRICULUM_COMPARISON.md`)
 - [x] Marked the Phase 2.5 40-minute recommendation superseded, keeping the historical finding
 - [x] Amended ADR-039: explicit 30–45 statement, flexibility rationale, the exceptional opt-out
-- [x] Added `SESSION_MINUTES_POLICY` + `durationPolicy`, checked in `checkProgramme`; typecheck and content validation pass
+- [x] Added `SESSION_MINUTES_POLICY` + `durationPolicy`, checked in `checkProgramme`
+- [x] `CLAUDE.md`: permanent resumable-work instruction, documentation-index rows, duration wording
+- [x] Phase 3A archived to `docs/work/archive/2026-09-phase-3a.md`
+- [x] ADR-041 (resumable work); `docs/RESUMABLE_WORKFLOW.md`
+- [x] `tests/unit/active-task.test.ts` (10 tests) and four session-policy tests: **196 unit tests pass**
+- [x] Checkpoint commit `5c75438` pushed; **Draft PR #22** opened
 
 ## In Progress
 
-- [ ] `CLAUDE.md` instruction and documentation index rows
-- [ ] Phase 3A archive entry
-- [ ] Structure test for this checkpoint file
+- [ ] Full validation suite (running)
 
 ## Remaining
 
-1. Add the `CLAUDE.md` instruction and the documentation-index rows for the two new documents.
-2. Archive Phase 3A to `docs/work/archive/2026-09-phase-3a.md`.
-3. Add `tests/unit/active-task.test.ts` validating this file's structure and vocabulary.
-4. Add ADR-041 for the resumable-work protocol.
-5. Run the full check suite; commit, push, open the PR, wait for CI, squash-merge.
-6. Mark this task `completed`, archive it, reset the file for the next task.
+1. Finish the full validation suite and record the results below.
+2. Commit, push, mark PR #22 ready for review, wait for the four required checks, squash-merge.
+3. Mark this task `completed`, archive it to `docs/work/archive/2026-09-session-duration-and-resumable-work.md`, and reset this file for the next task.
 
 ## Validation State
 
-| Check              | Result  | At       |
-| ------------------ | ------- | -------- |
-| format             | NOT RUN | —        |
-| lint               | NOT RUN | —        |
-| typecheck          | PASS    | working tree |
-| unit tests         | NOT RUN | —        |
-| content validation | PASS    | working tree |
-| database tests     | NOT RUN | —        |
-| build              | NOT RUN | —        |
-| E2E                | NOT RUN | —        |
-| Docker             | NOT RUN | —        |
-| secret scans       | NOT RUN | —        |
+| Check              | Result  | At                             |
+| ------------------ | ------- | ------------------------------ |
+| format             | NOT RUN | —                              |
+| lint               | NOT RUN | —                              |
+| typecheck          | PASS    | working tree                   |
+| unit tests         | PASS    | working tree — 196 tests       |
+| content validation | PASS    | working tree                   |
+| database tests     | NOT RUN | —                              |
+| build              | NOT RUN | —                              |
+| E2E                | NOT RUN | —                              |
+| Docker             | NOT RUN | —                              |
+| secret scans       | NOT RUN | —                              |
 | staging            | N/A     | no application change expected |
 
 ## Database State
@@ -120,10 +120,10 @@ terminal.
 ## Git State
 
 - Branch: `chore/resumable-workflow-and-session-duration`, created from `develop` at `e6fcc3a`.
-- Last checkpoint commit: none yet (about to make the first).
-- Pushed: no.
-- PR: none yet.
-- Uncommitted work: duration corrections, the session-policy check, `docs/RESUMABLE_WORKFLOW.md`, this file.
+- Branch created from `develop` at `e6fcc3a`.
+- Last checkpoint commit: `5c75438`, pushed.
+- PR: [#22](https://github.com/ipanga/teka_edu/pull/22), **draft**.
+- Uncommitted work: `CLAUDE.md`, the archive entry, ADR-041, the two test files, `PROJECT_STATUS.md`, this file.
 
 ## Blockers
 
@@ -135,10 +135,9 @@ None for this task.
 
 ## Exact Resume Point
 
-Begin at Remaining step 1: add the `CLAUDE.md` instruction and the documentation-index rows.
-The duration work is done and verified in the working tree — do not redo it. If the working tree
-is empty, the interruption lost it: redo Completed items 4 to 8, which are small and precisely
-described above.
+Run the full validation suite, record each result in the table above with the commit, then commit
+and push. Everything listed under Completed is done and needs no repeating; check `git status`
+first, because the work after `5c75438` may still be uncommitted.
 
 ## Resume Verification
 

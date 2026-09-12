@@ -11,10 +11,10 @@ needs to continue accurately must be readable from files and from Git.
 
 ## The two levels of state
 
-| File                                          | Holds                                                                 | Cadence                    |
-| --------------------------------------------- | --------------------------------------------------------------------- | -------------------------- |
-| [`PROJECT_STATUS.md`](../PROJECT_STATUS.md)   | Where the project stands: phases done, architecture, open issues, next | Once per phase or decision |
-| [`work/ACTIVE_TASK.md`](work/ACTIVE_TASK.md)  | Where **this** task stands, in detail, and the exact next action       | Every milestone            |
+| File                                         | Holds                                                                  | Cadence                    |
+| -------------------------------------------- | ---------------------------------------------------------------------- | -------------------------- |
+| [`PROJECT_STATUS.md`](../PROJECT_STATUS.md)  | Where the project stands: phases done, architecture, open issues, next | Once per phase or decision |
+| [`work/ACTIVE_TASK.md`](work/ACTIVE_TASK.md) | Where **this** task stands, in detail, and the exact next action       | Every milestone            |
 
 `PROJECT_STATUS.md` is not a work log. `ACTIVE_TASK.md` is not a second status file: it covers
 one task and is archived when that task ends. There is normally exactly **one** active task.
@@ -126,12 +126,12 @@ decision. **Never** blindly `git reset --hard`, and never blindly regenerate.
 A green test proves nothing about code changed after it ran. The checkpoint records, per check,
 one of:
 
-| Value     | Meaning                                                      |
-| --------- | ------------------------------------------------------------ |
-| `PASS`    | Passed, at the commit named next to it                        |
-| `FAIL`    | Failed; the reason belongs in Blockers                        |
-| `NOT RUN` | Never run for this task                                       |
-| `STALE`   | Passed once, but relevant code or content has changed since   |
+| Value     | Meaning                                                     |
+| --------- | ----------------------------------------------------------- |
+| `PASS`    | Passed, at the commit named next to it                      |
+| `FAIL`    | Failed; the reason belongs in Blockers                      |
+| `NOT RUN` | Never run for this task                                     |
+| `STALE`   | Passed once, but relevant code or content has changed since |
 
 Always record the commit: `unit tests: PASS at 0ea23a2`. When a later change invalidates a
 result, move it to `STALE` in the same edit that makes the change — not later, and never leave it

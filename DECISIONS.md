@@ -1045,3 +1045,47 @@ and nobody notices until June. The official programme states 398 objectives for 
 should have been taught, and a test compares that with the lessons that exist
 (`npm run coverage:report`). It also makes the gaps visible early — 16 objectives that a home
 session cannot fully carry were surfaced by writing the plan, not by discovering them in June.
+
+---
+
+## ADR-041 — Long tasks are resumable from the repository, not from memory
+
+**Status:** Accepted · **Date:** 2026-09-12 · **Decided by:** the owner
+
+**Context:** A substantial task now takes hours and crosses operations that can each be cut
+short: a context reset, a closed terminal, a restart, a dropped network, a crash, a run that is
+simply stopped. Phase 3A was authored, migrated, deployed and verified across one long session;
+had it been interrupted in the middle, the only record of _where_ it stopped would have been the
+conversation, which is exactly the thing that disappears.
+
+**Decision:** Progress lives in the repository.
+
+- **Two levels of state.** `PROJECT_STATUS.md` keeps where the _project_ stands and is not a work
+  log. `docs/work/ACTIVE_TASK.md` keeps where the _current task_ stands, in detail, and there is
+  normally exactly one.
+- **The checkpoint answers the resuming session's questions**: what, why, which branch, what is
+  done, what remains, what failed, what was verified, whether anything is uncommitted, and the
+  exact next action. Its sections are fixed so they can be read mechanically.
+- **Checkpoint at milestones**, and **before** anything long or interruptible — bulk generation, a
+  database reset, CI, Docker, a deployment — saying what is about to run and what to do if it
+  never reports back. Update it again afterwards.
+- **Git carries what the checkpoint describes**: branch created early, a Draft PR opened early for
+  a major phase, checkpoint commits at recoverable milestones, pushed. Squash-merge keeps
+  `develop` history clean regardless.
+- **The repository wins** when it and the checkpoint disagree.
+- **Validation has freshness**: `PASS` / `FAIL` / `NOT RUN` / `STALE`, each with the commit it was
+  observed at. A result becomes `STALE` in the same edit that invalidates it.
+- **Remote state is checked, never assumed.** An interrupted session rarely interrupts a CI run, a
+  deployment or a migration: look at the run, the deployment and `supabase migration list` before
+  repeating anything. Checkpoints record migration filenames and applied/not-applied only — never
+  a credential.
+- **Work is structured to be restartable**: content by month → school week → instructional day, so
+  a resumed session continues instead of regenerating.
+- A unit test enforces the checkpoint's structure, its status vocabulary and the freshness
+  vocabulary, so the protocol cannot quietly rot into a document nobody follows.
+
+**Consequences:** A fresh session can reconstruct an in-flight task from `CLAUDE.md`,
+`PROJECT_STATUS.md`, `docs/work/ACTIVE_TASK.md` and `git log` alone. The cost is real but small:
+a checkpoint edit at each milestone, and the discipline not to leave it claiming something is
+still running after it has finished. Finished tasks are archived under `docs/work/archive/`, one
+summary each, so a later reader can reconstruct what was done without a diary of every edit.

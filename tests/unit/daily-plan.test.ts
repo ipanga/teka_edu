@@ -3,6 +3,7 @@ import { parseCalendarDate as d } from "@/domain/calendar/date";
 import { describeDate, generateSchoolDays } from "@/domain/calendar/school-days";
 import type { SchoolDay } from "@/domain/calendar/types";
 import { generateDailyPlan, planForInstructionalDay } from "@/domain/programme/daily-plan";
+import { SESSION_MINUTES_POLICY, type LevelProgramme } from "@/domain/programme/types";
 import { checkProgramme } from "@/domain/programme/validation";
 import { getProgramme, getReferenceData } from "@/lib/content/reference-data";
 
@@ -210,5 +211,51 @@ describe("programme validation", () => {
     const problems = checkProgramme(programme, longLessons, data.curricula, yearIds);
     expect(problems.join()).toMatch(/longer than the session maximum/);
     expect(problems.join()).toMatch(/on screen, more than half/);
+  });
+});
+
+describe("the session duration policy (ADR-039)", () => {
+  const check = (p: LevelProgramme) =>
+    checkProgramme(
+      p,
+      data.lessons,
+      data.curricula,
+      data.calendars.map((c) => c.schoolYear.id),
+    );
+
+  it("accepts the September programme as it stands, at 35 minutes a day", () => {
+    expect(programme.sessionMinutes).toEqual({ min: 30, max: 45 });
+    expect(check(programme)).toEqual([]);
+  });
+
+  it("refuses a level that quietly shortens or lengthens what a session means", () => {
+    expect(check({ ...programme, sessionMinutes: { min: 20, max: 45 } })[0]).toMatch(
+      /a session is 30-45 min/,
+    );
+    expect(check({ ...programme, sessionMinutes: { min: 30, max: 60 } })[0]).toMatch(
+      /a session is 30-45 min/,
+    );
+  });
+
+  it("allows a departure only when it is declared, so it is visible in review", () => {
+    const exceptional: LevelProgramme = {
+      ...programme,
+      sessionMinutes: { min: 20, max: 60 },
+      durationPolicy: "exceptional",
+    };
+    expect(check(exceptional).filter((p) => p.includes("a session is"))).toEqual([]);
+  });
+
+  it("leaves room inside the range instead of forcing every day to one length", () => {
+    // The range is flexibility: a light day may be 30, a rich story day 45. Both are valid,
+    // and nothing in the validator pushes a day towards a particular number.
+    expect(SESSION_MINUTES_POLICY).toEqual({ min: 30, max: 45 });
+    const plans = [1, 6, 14, 22].map((day) =>
+      planForInstructionalDay(day, programme, data.lessons),
+    );
+    for (const plan of plans) {
+      expect(plan.totalMinutes).toBeGreaterThanOrEqual(SESSION_MINUTES_POLICY.min);
+      expect(plan.totalMinutes).toBeLessThanOrEqual(SESSION_MINUTES_POLICY.max);
+    }
   });
 });
