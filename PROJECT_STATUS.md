@@ -6,7 +6,7 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-12
-Branch:     develop
+Branch:     docs/finalize-curriculum-strategy (PR into develop)
 Commit:     develop at 35d4fd0; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
@@ -27,8 +27,10 @@ Status:    School-year model, DRC holiday rules, calendar exceptions, instructio
            read the DRC PNEM 2021 in full and compared it with the French programme, added
            the content quality gate (AI content can never approve itself) and planned the
            Phase 3 renderer families.
+           The curriculum strategy is now decided (ADR-037): French Cycle 1 is the
+           curriculum, the PNEM is a compatibility and enrichment reference, French-first.
            Remaining before the child experience: HUMAN pedagogical review of the pilot
-           (ISSUE-017), then the owner's curriculum-strategy decision (PD-017).
+           (ISSUE-017).
            Production stays disabled (ADR-027).
 Objective: Plan §38 Phase 1 complete (curriculum engine); Phase 2 of the owner's plan
            (objectives, competencies, lessons, activities, daily programme).
@@ -105,7 +107,7 @@ Objective: Plan §38 Phase 1 complete (curriculum engine); Phase 2 of the owner'
 ### Phase 2.5 — Pedagogical review, DRC comparison and quality gate (PR #17, merged)
 
 - [x] Read the **DRC PNEM 2021** (140 pages) in full and compared it with the French Cycle 1 programme: `docs/DRC_CURRICULUM_COMPARISON.md`
-- [x] Curriculum strategy recommended (keep French Cycle 1 now, prepare curriculum profiles) — **ADR-037 is `Proposed` and needs the owner (PD-017)**
+- [x] Curriculum strategy analysed and put to the owner; **decided 2026-09-12** — French Cycle 1 is the curriculum, the PNEM is a compatibility/enrichment reference (ADR-037 `Accepted`, PD-017 and PD-018 resolved)
 - [x] Pre-review of 20 lessons and 40 activities against a 13-criterion rubric: 0 blockers, 3 major, 7 minor, 4 suggestions (`docs/PEDAGOGICAL_REVIEW.md`)
 - [x] The 3 major defects, all from Phase 2, fixed: success examples presented at competency level, screen dependence corrected (daily screen time 0–6 min instead of 5–13), an objective actually exercised
 - [x] Content quality gate (ADR-035): `draft → review → approved → retired`, an approval names a reviewer and is bound to a digest of the exact text; enforced in content validation and by database constraints
@@ -142,10 +144,10 @@ Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED
 ## In Progress
 
 ```text
-Task:           None. Phase 2.5 is merged (PR #17) and deployed to staging.
-Status:         Waiting on people, not on code: the human pedagogical review (ISSUE-017) and
-                the owner's curriculum-strategy decision (PD-017, ADR-037 is Proposed).
-                Phase 3 has not started.
+Task:           Recording the owner's curriculum decision (ADR-037, ADR-038). Documentation
+                and decision records only: no schema change, no content rewrite.
+Status:         Phase 2.5 is merged (PR #17) and deployed to staging. What remains is the
+                human pedagogical review (ISSUE-017). Phase 3 has not started.
 Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/content/review-package.ts,
                 scripts/review-package.ts, content/materials.json, content/lessons/**,
                 supabase/migrations/2026091200*, docs/PEDAGOGICAL_REVIEW.md,
@@ -158,8 +160,7 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 ### P0 — Next
 
 1. **Human pedagogical review of the pilot week** (ISSUE-017). The review document is ready at `docs/review/2026-2027-maternelle-3-semaine-1.md`; a person who teaches 3ème maternelle fills in the checklists, we apply their corrections, and only then does any lesson become `approved`.
-2. **Owner decision on the curriculum strategy** (PD-017, ADR-037) and on the language of instruction (PD-018).
-3. **Phase 3 (child experience)**: the ten renderer families of `docs/PHASE3_RENDERER_PLAN.md`, a French child UI for today's programme, media architecture (PD-008) and TV presentation mode.
+2. **Phase 3 (child experience)**: the ten renderer families of `docs/PHASE3_RENDERER_PLAN.md`, a French child UI for today's programme, media architecture (PD-008) and TV presentation mode.
 
 ### Deferred — production (not in the current phase, ADR-027)
 
@@ -281,14 +282,16 @@ Severity: Medium (legal) · Status: Open
 Description: The three official annexes carry no rights notice. The exclusion of official texts from copyright is French **case law**, not a statutory exception, and education.gouv.fr states its reuse terms twice and contradictorily (an etalab-2.0 footer against restrictive _mentions légales_). Teka Edu takes the narrower reading and complies with the Licence Ouverte 2.0 in full — source, date of last update, no suggestion of endorsement, no emblem or logo — which is stricter than the doctrine would require. That is a defensible position, not a verified one.
 Recommended action: put the three questions at the end of `docs/CURRICULUM.md` to a lawyer before any public launch. Nothing blocks development meanwhile: the position already taken is the conservative one.
 
-### ISSUE-018 — Teka Edu diverges from the DRC preschool programme (PNEM 2021)
+### ISSUE-018 — PNEM enrichment content and the compatibility mapping are not written yet
 
-Severity: Medium (product alignment) · Status: Open
-Description: The DRC has a national preschool programme (PNEM, SERNAFOR, août 2021) with a weekly grid of 30-minute slots, 08h30–12h00, daily free activity, and physical activity about twice a week. Teka Edu follows the French Cycle 1 programme (ADR-003) and schedules movement daily (ADR-034).
-Recommended action: owner decision (PD-016) on whether to align the rhythm with the PNEM, and whether to map Teka Edu domains onto its activity categories.
+Severity: Medium (product alignment) · Status: Open, narrowed by ADR-037
+Description: The divergence from the PNEM is now a **deliberate, recorded decision**, not an accident: the French programme is the curriculum and movement stays daily. What remains is additive — the PNEM areas Teka Edu does not yet touch (_vie pratique_, _promotion de la santé_, _activités libres_, _comportement_) have no enrichment content, and the compatibility mapping that would answer "which PNEM expectation does this lesson also cover?" is designed but not built.
+Recommended action: write the enrichment content when the year is authored (it belongs in existing domains, not in new ones), and build the mapping when a parent- or teacher-facing view actually displays it. The design is in `docs/DRC_CURRICULUM_COMPARISON.md`; it is additive and rewrites no lesson.
 
 ## Resolved Issues
 
+- **PD-017 (curriculum strategy)**, resolved 2026-09-12 by the owner: the **French Cycle 1 programme is Teka Edu's curriculum**; the DRC PNEM 2021 is a **compatibility, context and enrichment reference**, not a second programme. No full PNEM curriculum profile is built; the lightweight compatibility mapping is designed in `docs/DRC_CURRICULUM_COMPARISON.md` and is additive when needed. Strategies B and C stay rejected while PNEM text may not be stored (ISSUE-020). Recorded as ADR-037 (`Accepted`), with ADR-038 setting the standard: mastery and enrichment, never premature acceleration.
+- **PD-018 (language of instruction)**, resolved 2026-09-12 by the owner: **French-first**, deliberately, including for a child whose school, home or previous schooling is not French-speaking. English stays an optional scaffold that supports comprehension and reduces as French improves; there is no English curriculum. ADR-001 confirmed.
 - **PD-004 (competency catalogue)**, resolved 2026-09-12: the objectives of the three official annexes are imported verbatim with provenance (398 objectives, 529 success examples). Reuse terms re-examined in Phase 2.5; the conditions and the remaining legal questions are in `docs/CURRICULUM.md` (ISSUE-021).
 - **PD-002 (school-year end date and vacations)**, resolved 2026-09-11: official MINEDU-NC calendar of 26 June 2026 (maternelle: 1 Sep 2026 – 2 Jul 2027, six periods, four vacation periods), encoded in `content/calendars/cd/2026-2027.json`.
 - **PD-003 (DRC public holidays)**, resolved 2026-09-11: Ordonnance n° 23/042 du 30 mars 2023 (ten holidays, including 6 April added in 2023). Weekend substitution is handled as data (observed-holiday exceptions), not code; the open practice question is ISSUE-015.
@@ -384,13 +387,9 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 
 - **PD-015: Pilot content scope** (before Phase 3 content)
   - The pilot covers 3ème maternelle, one five-day cycle. Decide the order of what comes next: the rest of the year for 3ème maternelle, or the first week of the other two levels.
-- **PD-016: Alignment with the DRC PNEM 2021** (ISSUE-018)
-  - Whether the daily rhythm should follow the DRC grid (30-minute slots, physical activity twice a week, daily free activity) rather than the French daily-PE rule.
-- **PD-017: Curriculum strategy for the DRC** (ADR-037, `docs/DRC_CURRICULUM_COMPARISON.md`)
-  - Keep French Cycle 1 as the reference (A, current), or move to DRC-primary (B), DRC core + French enrichment (C), or curriculum profiles (D, recommended target).
-  - B and C require written permission from MINEDU-NC to store PNEM text (ISSUE-020).
-- **PD-018: Language of instruction in the early years**
-  - The PNEM expects the local or national language in niveaux 1–2; Teka Edu is French-first (ADR-001) for a child moving from English to French. Confirm the choice explicitly.
+- **PD-016: Alignment with the DRC PNEM 2021** (ISSUE-018) — **partly resolved 2026-09-12 (ADR-037)**
+  - Settled: the French daily-movement rule stays; the PNEM does not set the rhythm.
+  - Still open: when free-play and vie-pratique enrichment content is written, and in what order relative to the rest of the year (PD-015).
 - **PD-014: EVAR (éducation à la vie affective et relationnelle)** (before content authoring)
   - The 2026 annex attaches the French EVAR programme (arrêté du 3 février 2025) to the six domains. The model supports it as a `transversal` component, but whether and how Teka Edu includes it in the DRC context is an owner decision. Not configured.
 - **PD-005: Mid-year start** (before Phase 2)
@@ -416,12 +415,26 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  Phase 2.5 — pedagogical pre-review, DRC comparison, content quality gate.
+Completed:  Curriculum strategy decision recorded (documentation and ADRs only).
+            - The owner decided: French Cycle 1 is Teka Edu's curriculum; the DRC PNEM 2021
+              is a compatibility, context and enrichment reference, not a second programme.
+              French-first instruction, DRC calendar, and "mastery and enrichment, never
+              premature acceleration" as the academic standard.
+            - ADR-037 rewritten and Accepted; ADR-038 added; ADR-001 confirmed.
+              PD-017 and PD-018 resolved; PD-016 narrowed; ISSUE-018 narrowed to enrichment
+              content and the (designed, unbuilt) compatibility mapping.
+            - Checked the pilot against the decision mechanically: all 40 activities trace to
+              official French objectives only, movement is on all five days, French is the
+              instruction language with English only as a scaffold, and the 20 lessons stay
+              in `review`. No conflict, so no lesson was rewritten.
+            - No schema change, no migration, no content change.
+
+Previously:  Phase 2.5 — pedagogical pre-review, DRC comparison, content quality gate.
             - Read the DRC PNEM 2021 (SERNAFOR/DIPROMAD, 140 pages) in full and compared it
               with the French Cycle 1 programme across 16 aspects. The pilot week lands inside
               DRC expectations on themes and mathematics; it lacks the PNEM's activités libres,
               vie pratique and promotion de la santé. Recommended: keep French Cycle 1 now,
-              prepare curriculum profiles (ADR-037, Proposed — owner decision PD-017).
+              prepare curriculum profiles (ADR-037, since decided — see below).
             - PNEM text may not be reproduced (no open licence): Teka Edu references it only
               (ISSUE-020). On the French side, reuse conditions and attribution wording are now
               written down, the source publication date is stored so attribution is generated
@@ -442,8 +455,8 @@ Changed:    domain/lessons/{review,renderers,types}.ts, domain/programme/validat
 Tests:      See the Tests / Quality Status section.
 Remaining:  ISSUE-017 (human review, blocking Phase 3 content), ISSUE-019 (daily comprehension
             read-aloud), ISSUE-020 (DRC text reuse), ISSUE-021 (French text reuse: legal
-            opinion), PD-017/PD-018 (strategy, language),
+            opinion),
             PD-014 (EVAR), PD-015, ISSUE-015/016 (calendar).
-Recommended next task: hand the review document to a teacher; then Phase 3 (child experience)
-            once the strategy decision is made.
+Recommended next task: hand the review document to a teacher who teaches 3ème maternelle;
+            then Phase 3 (child experience) using only review-cleared content.
 ```

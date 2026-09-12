@@ -1,9 +1,12 @@
 # The DRC preschool programme (PNEM 2021) compared with the French Cycle 1 programme
 
-Teka Edu uses the **French Cycle 1 programme** as its academic reference (ADR-003) while
+Teka Edu uses the **French Cycle 1 programme** as its academic curriculum (ADR-003) while
 following the **DRC school calendar** (ADR-029). The DRC has its own preschool curriculum. This
-document compares them, so the choice is made on evidence rather than by default. It changes
-nothing on its own: the strategy decision is the owner's (PD-017).
+document compares them, so the choice rests on evidence rather than on default.
+
+**The choice has been made** (ADR-037, 2026-09-12): French Cycle 1 is the programme, and the
+PNEM is a compatibility, context and enrichment reference. The comparison below is what that
+decision was made on; [the decision itself](#the-decision-taken-2026-09-12) follows it.
 
 ## The DRC source
 
@@ -61,44 +64,97 @@ against the PNEM afterwards, it lands inside DRC expectations more often than no
 - **What it does not cover** are the PNEM's timetabled _activités de comportement_, _vie
   pratique_, _promotion de la santé_ (beyond one body lesson) and, above all, _activités libres_.
 
-## The four strategies
+## The decision (taken 2026-09-12)
 
-|       | Strategy                                                   | What it means                                                                                                                                                                               | Risk                                                                                                                                   |
-| ----- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| **A** | **French Cycle 1 stays the curriculum** (today's position) | DRC context only adapts examples, materials and the calendar                                                                                                                                | Teka Edu is not aligned with what a Congolese school actually teaches; "conforme au programme congolais" could never be claimed        |
-| **B** | **DRC PNEM becomes primary**                               | French Cycle 1 becomes enrichment                                                                                                                                                           | Requires storing PNEM objectives; its licence forbids reproduction without authorisation. Blocked until the ministry grants permission |
-| **C** | **DRC core + French enrichment**                           | PNEM competencies are the baseline, French objectives enrich them                                                                                                                           | Same licensing block as B, plus twice the mapping work                                                                                 |
-| **D** | **Curriculum profiles**                                    | The model already versions curricula. Add a second profile (`maternelle-pnem-cd-2021`) whose competencies are referenced by code and **paraphrased**, never copied, and map lessons to both | Mapping effort; paraphrase must be clearly marked as Teka Edu wording                                                                  |
+Four strategies were put to the owner: **A** keep French Cycle 1, **B** make the PNEM primary,
+**C** DRC core with French enrichment, **D** two curriculum profiles. The decision is **A with an
+explicit PNEM compatibility layer** (ADR-037, Accepted; PD-017 resolved).
 
-### Recommendation: keep A now, plan D — decision needed (PD-017)
+> **The French Cycle 1 programme is the curriculum. The PNEM is a compatibility, context and
+> enrichment reference.**
 
-Keep **Strategy A** for the moment: it is what exists, it is legally safe, and nothing in the
-pilot conflicts with the PNEM. Prepare **Strategy D** as the target, because it is the only one
-that lets Teka Edu say honestly what a Congolese parent will ask — _does this follow the
-Congolese programme?_ — without copying a text we are not licensed to copy.
+```text
+French Cycle 1
+    │
+    ├── official objectives, competencies, progression, expected outcomes
+    │
+    ↓
+Teka Edu lessons
+    │
+    ├── DRC contextualisation (examples, materials, environment)
+    ├── PNEM compatibility mapping (by reference, never copied)
+    ├── local terminology and practices
+    └── optional enrichment (vie pratique, free play, health)
+```
 
-Concretely, Strategy D would mean:
+There is **one** programme the child follows, not two. B and C are rejected while they would
+require storing PNEM text without permission (ISSUE-020), and D's full second profile is not
+built unless a concrete requirement later needs it.
 
-1. A second curriculum profile for the PNEM, holding its five compétences de base and twelve
-   activity families **by reference**: our own short description, the official name, a citation,
-   and `origin: "teka-edu-adaptation"`. No verbatim import.
-2. A mapping table `lesson → PNEM activity family`, so a lesson can be shown as serving both.
-3. Two additions to the pilot rhythm to cover what the PNEM timetables and we do not: a
-   **free-play** closing suggestion (its largest weekly block) and **vie pratique / hygiène**
-   content.
-4. Written permission from MINEDU-NC if the objectives themselves are ever to be stored.
+### What that means where the two differ
 
-This is a curriculum strategy change, so it is **not implemented here**. The data model already
-supports it (curriculum versions, profiles per stage and school year), so no destructive
-migration is implied.
+| Area                        | Rule                                                                                                                                                                                                               |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Language and literacy**   | The French progression is the standard, including phonological awareness, letter names and sounds and early encoding, which the PNEM does not ask for. PNEM expectations are a compatibility check, not a ceiling. |
+| **Mathematics**             | French Cycle 1 is the minimum. Check that relevant PNEM third-year expectations are also covered; take its practical activities as enrichment where they help.                                                     |
+| **Physical activity**       | **Daily movement stays** (ADR-034). The PNEM's roughly twice-weekly grid is not a reason to do less.                                                                                                               |
+| **Free play**               | Valuable, and not a replacement for a structured session. It becomes an optional closing suggestion for the parent, planned but not built.                                                                         |
+| **Vie pratique**            | Enrichment mapped onto existing domains (autonomy, hygiene, responsibility, everyday reasoning, practical manipulation) — not a new competing domain.                                                              |
+| **Language of instruction** | French-first (ADR-001, PD-018 resolved), even when the school, home or previous schooling is not French-speaking. English scaffolding supports comprehension and reduces as French improves.                       |
+| **Calendar**                | The DRC official calendar governs _when_ (ADR-029). Academic reference France, calendar and context DRC.                                                                                                           |
+| **Workload**                | The compatibility layer must not double the work. About 40 minutes a day stays the target.                                                                                                                         |
 
-## Open questions for the owner
+The standard for content is **mastery and enrichment, never premature acceleration** (ADR-038):
+satisfy the French expectations, consolidate them, enrich around them — do not import
+primary-school content early to look advanced.
 
-1. **Language of instruction (PD-018).** The PNEM expects the local or national language in the
-   first two years; Teka Edu is French-first (ADR-001), for a child moving from English to
-   French. Both can be true — the product targets French-medium schooling — but it should be a
-   stated decision, not an accident.
-2. **Strategy (PD-017).** A, B, C or D.
-3. **Permission.** Should we ask MINEDU-NC for authorisation to store PNEM text?
-4. **Physical activity.** French: daily 30–45 min. DRC: about twice a week. Teka Edu schedules
-   movement daily (ADR-034). Confirm or change.
+## The compatibility mapping (designed, not built)
+
+The mechanism has to answer one question: _which PNEM expectation does this French-based lesson
+also cover?_ The design below is deliberately the smallest thing that answers it.
+
+**Shape.** One reference file, `content/curriculum/references/pnem-cd-2021.json`, holding:
+
+- the source metadata already established above (title, issuer, date, URL, and the fact that
+  reproduction needs authorisation);
+- the **five compétences de base** and **twelve activity families**, each as a stable Teka Edu
+  code (`PNEM-CB-01`…, `PNEM-AF-01`…), the official name, and a **Teka Edu-authored one-line
+  description** marked `origin: "teka-edu-adaptation"`. No objective text, no _contenus-matières_,
+  no verbatim body text.
+
+**Where the link lives.** At **domain and track level**, not per lesson: a Teka Edu domain maps to
+one or more PNEM activity families, and a lesson inherits the mapping from its domain. That gives
+the report below without touching 20 lesson files, and without a per-lesson field that would have
+to be maintained for all 189 days.
+
+```text
+Teka Edu lesson   m3-lang-01 « Bonjour ! Je me présente »
+French objective  LANG-S01-C04-O11  (arrêté du 22 octobre 2024, annexe 1)
+Compatible PNEM   PNEM-AF-01  Activités de langage
+                  PNEM-CB-02  (compétence de base)
+```
+
+**Rules it must keep.** References by code, source metadata retained, Teka Edu summaries clearly
+marked as adaptations and never as official text, no verbatim redistribution while ISSUE-020 is
+open, and quotations always distinguishable from authored description.
+
+**Why it is not built yet.** Nothing consumes it today: no child UI, no parent report, and the
+pilot is five days long. It is additive when it arrives — a new content file, a schema, and one
+generated migration; no existing row changes and no lesson is rewritten. Build it when a parent-
+or teacher-facing view actually shows it.
+
+## Questions
+
+**Resolved on 2026-09-12 (ADR-037):**
+
+1. **Strategy (PD-017)** — A with a PNEM compatibility layer.
+2. **Language of instruction (PD-018)** — French-first, confirmed deliberately against the PNEM's
+   expectation of the local language in niveaux 1–2.
+3. **Physical activity** — daily movement stays.
+
+**Still open:**
+
+1. **Permission.** Whether to ask MINEDU-NC for authorisation to store PNEM text (ISSUE-020).
+   Not needed for the mapping above, which stores no PNEM text.
+2. **Enrichment content.** When free play and vie pratique content are written (ISSUE-018), and
+   in what order relative to the rest of the year (PD-015).

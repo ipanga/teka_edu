@@ -173,6 +173,7 @@ feature/*  -> develop  -> main
 
 ## Curriculum rules
 
+- **Curriculum authority (ADR-037, decided 2026-09-12).** The **French Cycle 1 programme is the curriculum**: objectives, competencies, progression and expected outcomes all come from it. The **DRC PNEM 2021 is a compatibility, context and enrichment reference**, never a second programme — use it to keep a child compatible with their Congolese school and to find local terminology, practice and gaps. French is the language of instruction (ADR-001); the DRC calendar governs when teaching happens (ADR-029). The standard is **meet or exceed the French expectations through mastery and enrichment, never premature acceleration** (ADR-038): never teach primary-school content early to look advanced, and never raise the daily workload to fit more in.
 - **Primary reference:** the official French École Maternelle / Cycle 1 curriculum applicable in 2026–2027: the arrêté du 16 avril 2026 (BO n° 19 du 7 mai 2026), with the arrêté du 22 octobre 2024 (BO n° 41) for language and mathematics. Curriculum version `maternelle-cycle1-cd-2026` (`docs/EDUCATIONAL_MODEL.md`).
 - **Class mapping:** 1ère maternelle → Petite Section (PS), 2ème → Moyenne Section (MS), 3ème → Grande Section (GS).
 - The six learning domains (Plan §3.1, verified against the 2026 annex) have the codes `LANG`, `PHYS`, `ART`, `MATH`, `TIME-SPACE`, `WORLD`.
