@@ -45,6 +45,16 @@ const ROLE_LABEL: Record<string, string> = {
   consolidation: "On reprend la semaine",
 };
 
+/** What the day's four parts are called for a parent, who does not think in domain codes. */
+const DOMAIN_LABEL: Record<string, string> = {
+  LANG: "Langage",
+  MATH: "Mathématiques",
+  PHYS: "Bouger",
+  ART: "Arts",
+  WORLD: "Découvrir le monde",
+  "TIME-SPACE": "Temps et espace",
+};
+
 export function SessionRunner({ session }: { session: SessionDay }) {
   const activities = session.steps.flatMap((step) =>
     step.activities.map((activity) => ({ ...activity, step })),
@@ -126,6 +136,12 @@ export function SessionRunner({ session }: { session: SessionDay }) {
             Revoir la séance
           </button>
           <Link
+            href={`/seance/${session.instructionalDay}/observation`}
+            className="rounded-2xl border-2 border-stone-300 px-5 py-3 text-lg font-medium"
+          >
+            Noter comment ça s’est passé
+          </Link>
+          <Link
             href="/calendrier"
             className="rounded-2xl bg-emerald-700 px-5 py-3 text-lg font-semibold text-white"
           >
@@ -144,11 +160,35 @@ export function SessionRunner({ session }: { session: SessionDay }) {
 
   return (
     <section className="flex flex-col gap-5" aria-labelledby="activite">
-      <div className="flex items-baseline justify-between gap-4">
-        <p className="text-sm font-semibold tracking-wide text-stone-500 uppercase">
-          Activité {index + 1} sur {activities.length}
+      <div className="flex flex-col gap-2">
+        <div className="flex items-baseline justify-between gap-4">
+          <p className="text-sm font-semibold tracking-wide text-stone-500 uppercase">
+            Activité {index + 1} sur {activities.length}
+          </p>
+          <p className="text-sm text-stone-500">{activity.minutes} min</p>
+        </div>
+        {/* Which of the day's four parts we are in: the parent should never lose the thread. */}
+        <div className="flex items-center gap-2" aria-label="Progression de la séance">
+          {session.steps.map((step) => (
+            <span
+              key={step.position}
+              title={step.lessonTitle}
+              className={`h-1.5 flex-1 rounded-full ${
+                step.position < activity.step.position
+                  ? "bg-emerald-600"
+                  : step.position === activity.step.position
+                    ? "bg-emerald-400"
+                    : "bg-stone-200"
+              }`}
+            />
+          ))}
+        </div>
+        <p className="text-base text-stone-600">
+          <span className="font-semibold">
+            {DOMAIN_LABEL[activity.step.domainCode] ?? activity.step.domainCode}
+          </span>{" "}
+          · {activity.step.lessonTitle}
         </p>
-        <p className="text-sm text-stone-500">{activity.minutes} min</p>
       </div>
 
       {ROLE_LABEL[activity.role] !== undefined && (
@@ -223,7 +263,13 @@ export function SessionRunner({ session }: { session: SessionDay }) {
           onClick={() => goTo(index + 1)}
           className="rounded-2xl bg-emerald-700 px-6 py-3 text-lg font-semibold text-white hover:bg-emerald-800"
         >
-          {index === activities.length - 1 ? "Terminer" : "Suivant"}
+          {index === activities.length - 1
+            ? "Terminer la séance"
+            : // The app cannot see a child run, speak or draw. For those, finishing is the
+              // parent's word, and the button says so rather than implying a verdict.
+              activity.mode === "off-screen"
+              ? "Terminé"
+              : "Suivant"}
         </button>
       </div>
     </section>

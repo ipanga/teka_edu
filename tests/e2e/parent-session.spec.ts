@@ -42,7 +42,10 @@ test.describe("parent session", () => {
     await expect(page.getByRole("button", { name: "Masquer le conseil" })).toBeVisible();
 
     // Moving on folds it away again: each activity starts from the French instruction.
-    await page.getByRole("button", { name: "Suivant" }).click();
+    await page
+      .getByRole("button", { name: /Suivant|Terminé/ })
+      .first()
+      .click();
     await expect(page.getByText("Activité 2 sur")).toBeVisible();
     await expect(page.getByRole("button", { name: "Afficher le conseil au parent" })).toBeVisible();
 
@@ -68,7 +71,7 @@ test.describe("parent session", () => {
     let sawPause = false;
     for (let step = 0; step < 12; step++) {
       if (await page.getByText("Bon moment pour faire une pause").isVisible()) sawPause = true;
-      const next = page.getByRole("button", { name: /Suivant|Terminer/ });
+      const next = page.getByRole("button", { name: /Suivant|Terminé|Terminer/ }).first();
       if (!(await next.isVisible())) break;
       await next.click();
       if (await page.getByRole("heading", { name: /C’est fini pour aujourd’hui/ }).isVisible()) {
@@ -108,5 +111,93 @@ test.describe("parent session", () => {
     await page.getByRole("button", { name: "Commencer la leçon" }).click();
     const body = (await page.locator("body").textContent()) ?? "";
     expect(body).not.toMatch(/LANG-S\d{2}|MATH-S\d{2}|exemples? de réussite/i);
+  });
+
+  test("the child is shown the shapes the lesson talks about, and can touch them", async ({
+    page,
+  }) => {
+    // The defect this phase existed to fix: « Regarde les formes » with nothing on the screen.
+    await page.goto("/seance/3");
+    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    for (let step = 0; step < 6; step++) {
+      if (await page.getByText("Je nomme les formes").isVisible()) break;
+      await page
+        .getByRole("button", { name: /Suivant|Terminé/ })
+        .first()
+        .click();
+    }
+    await expect(page.getByText("Je nomme les formes")).toBeVisible();
+
+    // Four shapes, each a real button with an accessible name.
+    const shapes = page.getByRole("button", { name: /^Un (carré|rectangle|triangle|disque)/ });
+    await expect(shapes).toHaveCount(4);
+    await expect(page.getByText(/^Montre :/)).toBeVisible();
+
+    // A wrong tap encourages another try; it never says the child is wrong.
+    await page.getByRole("button", { name: "Un triangle" }).click();
+    await expect(page.getByText(/Essaie encore/)).toBeVisible();
+    const body = (await page.locator("body").textContent()) ?? "";
+    expect(body).not.toMatch(/incorrect|faux|erreur/i);
+
+    await page.getByRole("button", { name: "Un carré" }).click();
+    await expect(page.getByText("Bravo !")).toBeVisible();
+  });
+
+  test("counting gives the child something to count", async ({ page }) => {
+    await page.goto("/seance/1");
+    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    for (let step = 0; step < 8; step++) {
+      if (await page.getByText(/Touche chaque objet/).isVisible()) break;
+      await page
+        .getByRole("button", { name: /Suivant|Terminé/ })
+        .first()
+        .click();
+    }
+    await expect(page.getByText(/Touche chaque objet/)).toBeVisible();
+    const objects = page.getByRole("button", { name: /^Objet \d+$/ });
+    await expect(objects.first()).toBeVisible();
+    await objects.nth(2).click();
+    await expect(page.getByRole("status")).toContainText("3");
+  });
+
+  test("an off-screen activity asks the parent to put the screen down", async ({ page }) => {
+    await page.goto("/seance/1");
+    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    let sawOffScreen = false;
+    for (let step = 0; step < 10; step++) {
+      if (await page.getByText(/Posez l’écran/).isVisible()) {
+        sawOffScreen = true;
+        break;
+      }
+      const next = page.getByRole("button", { name: /Suivant|Terminé/ }).first();
+      if (!(await next.isVisible())) break;
+      await next.click();
+    }
+    expect(sawOffScreen).toBe(true);
+  });
+
+  test("a story is read page by page, not as one wall of text", async ({ page }) => {
+    await page.goto("/seance/3");
+    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page
+      .getByRole("button", { name: /Suivant|Terminé/ })
+      .first()
+      .click();
+    await expect(page.getByText("Kumu, le petit poussin")).toBeVisible();
+    await expect(page.getByRole("button", { name: "Page suivante" })).toBeVisible();
+    // The comprehension questions wait until the end of the story.
+    await expect(page.getByText("Questions, après la lecture")).toHaveCount(0);
+  });
+
+  test("the observation form records the session, never the child", async ({ page }) => {
+    await page.goto("/seance/1/observation");
+    await expect(page.getByRole("heading", { name: /Comment ça s’est passé/ })).toBeVisible();
+    await expect(page.getByText(/Aucune information sur l’enfant/)).toBeVisible();
+    // It asks about the session, not about a person.
+    const body = (await page.locator("body").textContent()) ?? "";
+    expect(body).not.toMatch(/prénom de l’enfant|nom de l’enfant|date de naissance/i);
+    await page.getByRole("button", { name: "Oui" }).first().click();
+    await page.getByRole("button", { name: "Enregistrer dans ce navigateur" }).click();
+    await expect(page.getByText("Enregistré.")).toBeVisible();
   });
 });

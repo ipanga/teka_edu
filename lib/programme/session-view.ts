@@ -8,6 +8,7 @@ import type { SchoolDay } from "@/domain/calendar/types";
 import { ACTIVITY_RENDERERS, type RendererFamily } from "@/domain/lessons/renderers";
 import { findText } from "@/domain/lessons/texts";
 import type { Activity, Material } from "@/domain/lessons/types";
+import { type MediaAsset, findAsset, mediaUrl } from "@/domain/media/types";
 import { generateDailyPlan } from "@/domain/programme/daily-plan";
 import type { DailyPlan } from "@/domain/programme/types";
 import { getProgramme, getReferenceData } from "@/lib/content/reference-data";
@@ -30,6 +31,15 @@ export type SessionText = {
   lines: readonly string[];
 };
 
+export type SessionMedia = {
+  id: string;
+  url: string;
+  /** French description, read by assistive technology. */
+  alt: string;
+  /** The words a lesson uses for it, so a renderer can ask for "le carré" by name. */
+  tags: readonly string[];
+};
+
 export type SessionActivity = {
   id: string;
   position: number;
@@ -38,6 +48,8 @@ export type SessionActivity = {
   adultGuidance: string;
   minutes: number;
   role: Activity["role"];
+  /** off-screen activities tell the parent to put the screen down (ADR-039). */
+  mode: Activity["mode"];
   renderer: RendererFamily;
   type: Activity["type"];
   vocabulary: readonly { fr: string; en: string | null }[];
@@ -45,6 +57,8 @@ export type SessionActivity = {
   englishHelp: string | null;
   payload: Readonly<Record<string, unknown>>;
   text: SessionText | null;
+  /** Pictures for this activity, already resolved: the client never sees a file path. */
+  media: readonly SessionMedia[];
 };
 
 export type SessionStep = {
@@ -80,12 +94,19 @@ function toActivity(activity: Activity): SessionActivity {
     adultGuidance: activity.adultGuidance,
     minutes: activity.minutes,
     role: activity.role,
+    mode: activity.mode,
     renderer: ACTIVITY_RENDERERS[activity.type].family,
     type: activity.type,
     vocabulary: activity.vocabulary,
     englishHelp: activity.scaffolds.find((s) => s.language === "en")?.childInstruction ?? null,
     payload: activity.payload,
     text: text === undefined ? null : { title: text.title, kind: text.kind, lines: text.lines },
+    media: activity.mediaIds.flatMap((id) => {
+      const asset: MediaAsset | undefined = findAsset(getReferenceData().media, id);
+      return asset === undefined
+        ? []
+        : [{ id: asset.id, url: mediaUrl(asset), alt: asset.alt, tags: asset.tags }];
+    }),
   };
 }
 

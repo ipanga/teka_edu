@@ -1,0 +1,202 @@
+{
+  "assets": [
+    {
+      "id": "forme-carre",
+      "kind": "shape",
+      "file": "shapes/forme-carre.svg",
+      "alt": "Un carré",
+      "tags": ["carré", "forme", "quatre côtés"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "forme-rectangle",
+      "kind": "shape",
+      "file": "shapes/forme-rectangle.svg",
+      "alt": "Un rectangle",
+      "tags": ["rectangle", "forme", "quatre côtés"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "forme-triangle",
+      "kind": "shape",
+      "file": "shapes/forme-triangle.svg",
+      "alt": "Un triangle",
+      "tags": ["triangle", "forme", "trois côtés"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "forme-disque",
+      "kind": "shape",
+      "file": "shapes/forme-disque.svg",
+      "alt": "Un disque, tout rond",
+      "tags": ["disque", "rond", "cercle", "forme"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "objet-crayon",
+      "kind": "object",
+      "file": "objects/objet-crayon.svg",
+      "alt": "Un crayon",
+      "tags": ["crayon", "école", "écrire"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "objet-cahier",
+      "kind": "object",
+      "file": "objects/objet-cahier.svg",
+      "alt": "Un cahier",
+      "tags": ["cahier", "école"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "objet-sac",
+      "kind": "object",
+      "file": "objects/objet-sac.svg",
+      "alt": "Un sac d’école",
+      "tags": ["sac", "cartable", "école"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "objet-table",
+      "kind": "object",
+      "file": "objects/objet-table.svg",
+      "alt": "Une table",
+      "tags": ["table", "maison", "école"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "objet-chaise",
+      "kind": "object",
+      "file": "objects/objet-chaise.svg",
+      "alt": "Une chaise",
+      "tags": ["chaise", "maison", "école"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "objet-porte",
+      "kind": "object",
+      "file": "objects/objet-porte.svg",
+      "alt": "Une porte",
+      "tags": ["porte", "maison"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "objet-fenetre",
+      "kind": "object",
+      "file": "objects/objet-fenetre.svg",
+      "alt": "Une fenêtre",
+      "tags": ["fenêtre", "maison"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "objet-lit",
+      "kind": "object",
+      "file": "objects/objet-lit.svg",
+      "alt": "Un lit",
+      "tags": ["lit", "maison", "dormir"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "objet-marmite",
+      "kind": "object",
+      "file": "objects/objet-marmite.svg",
+      "alt": "Une marmite",
+      "tags": ["marmite", "maison", "cuisine"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "objet-seau",
+      "kind": "object",
+      "file": "objects/objet-seau.svg",
+      "alt": "Un seau",
+      "tags": ["seau", "maison", "eau"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "objet-panier",
+      "kind": "object",
+      "file": "objects/objet-panier.svg",
+      "alt": "Un panier",
+      "tags": ["panier", "marché"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "objet-tomate",
+      "kind": "object",
+      "file": "objects/objet-tomate.svg",
+      "alt": "Une tomate",
+      "tags": ["tomate", "marché", "manger"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "objet-banane",
+      "kind": "object",
+      "file": "objects/objet-banane.svg",
+      "alt": "Une banane",
+      "tags": ["banane", "marché", "manger"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "objet-oignon",
+      "kind": "object",
+      "file": "objects/objet-oignon.svg",
+      "alt": "Un oignon",
+      "tags": ["oignon", "marché", "manger"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "objet-caillou",
+      "kind": "object",
+      "file": "objects/objet-caillou.svg",
+      "alt": "Un caillou",
+      "tags": ["caillou", "compter", "petit objet"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "animal-poule",
+      "kind": "animal",
+      "file": "animals/animal-poule.svg",
+      "alt": "Une poule",
+      "tags": ["poule", "animal"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "animal-poussin",
+      "kind": "animal",
+      "file": "animals/animal-poussin.svg",
+      "alt": "Un petit poussin",
+      "tags": ["poussin", "animal", "kumu"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "animal-chevre",
+      "kind": "animal",
+      "file": "animals/animal-chevre.svg",
+      "alt": "Une chèvre",
+      "tags": ["chèvre", "animal", "bibi"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    }
+  ]
+}

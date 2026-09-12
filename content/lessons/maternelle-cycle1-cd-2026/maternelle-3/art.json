@@ -27,6 +27,7 @@
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["ART-S01-C01-O05"],
           "materialCodes": ["papier", "crayon", "objets-maison"],
           "vocabulary": [
@@ -82,6 +83,7 @@
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["ART-S02-C01-O09"],
           "materialCodes": ["aucun"],
           "vocabulary": [
@@ -133,6 +135,7 @@
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["ART-S01-C01-O05"],
           "materialCodes": ["papier", "crayons-couleur", "objets-maison"],
           "vocabulary": [
@@ -188,6 +191,7 @@
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["ART-S02-C02-O08"],
           "materialCodes": ["objets-maison"],
           "vocabulary": [
@@ -243,6 +247,7 @@
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["ART-S02-C01-O09"],
           "materialCodes": ["aucun"],
           "vocabulary": [
@@ -294,6 +299,7 @@
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["ART-S01-C01-O06"],
           "materialCodes": ["papier", "crayons-couleur"],
           "vocabulary": [
@@ -345,6 +351,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "consolidation",
+          "mediaIds": [],
           "objectiveCodes": ["ART-S02-C01-O09", "ART-S01-C01-O06"],
           "materialCodes": ["aucun"],
           "vocabulary": [
@@ -377,6 +384,7 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "consolidation",
+          "mediaIds": [],
           "objectiveCodes": ["ART-S02-C01-O09"],
           "materialCodes": ["papier", "crayons-couleur"],
           "vocabulary": [

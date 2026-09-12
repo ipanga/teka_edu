@@ -77,8 +77,31 @@ implements the families September uses:
 | `move`            | movement                                | The moves, numbered                           |
 | `hands-on`        | manipulation                            | What to handle                                |
 
-Audio and images are not implemented. Every activity works without them: the parent reads the
-text aloud, which is what an adult-guided session does anyway.
+**Images are implemented** (ADR-042): the shapes, the objects of the three vocabulary corpora,
+what gets counted, and the animals of the stories. `npm run media:report` says exactly what is
+covered. **Audio is not**, and nothing depends on it: the parent reads aloud, which is what an
+adult-guided session does anyway.
+
+### Where the screen steps back
+
+Movement, phonology, drawing, manipulation and most conversation render inside an explicit frame:
+
+> **Posez l'écran : cette activité se fait sans lui**
+
+That is not decoration. It is the difference between a répétiteur and a screen that keeps a child
+busy.
+
+### Where a tap teaches
+
+Three interactions, and only where they carry the learning:
+
+- **Montre le carré** — the named picture among four. A wrong tap says « Essaie encore. Regarde
+  bien » ; after two, the answer is shown and the parent is asked to name it together.
+- **Compter en touchant** — one tap per object, the count said back, always restartable.
+- **Ranger par groupes** — tap a picture, tap its group. Tapping, never dragging: small fingers.
+
+Nothing is scored. A child who taps the wrong shape has not failed anything, and the interface
+never says so.
 
 ## Progress
 

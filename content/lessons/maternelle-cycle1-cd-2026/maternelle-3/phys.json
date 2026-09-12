@@ -27,6 +27,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S02-C01-O07", "PHYS-S01-C01-O10"],
           "materialCodes": ["espace-degage"],
           "vocabulary": [
@@ -78,6 +79,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S01-C01-O10"],
           "materialCodes": ["espace-degage"],
           "vocabulary": [
@@ -129,6 +131,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S03-C01-O09"],
           "materialCodes": ["objets-maison"],
           "vocabulary": [
@@ -180,6 +183,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S01-C01-O09"],
           "materialCodes": ["balle-papier", "boite"],
           "vocabulary": [
@@ -231,6 +235,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
           "materialCodes": ["espace-degage", "objets-maison"],
           "vocabulary": [
@@ -282,6 +287,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
           "materialCodes": ["objets-maison", "espace-degage"],
           "vocabulary": [
@@ -333,6 +339,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S03-C01-O09"],
           "materialCodes": ["espace-degage"],
           "vocabulary": [
@@ -388,6 +395,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S02-C01-O07"],
           "materialCodes": ["espace-degage"],
           "vocabulary": [
@@ -439,6 +447,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S01-C01-O09", "PHYS-S04-C01-O09"],
           "materialCodes": ["balle-papier"],
           "vocabulary": [
@@ -490,6 +499,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S01-C01-O10"],
           "materialCodes": ["espace-degage"],
           "vocabulary": [
@@ -541,6 +551,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S01-C01-O10"],
           "materialCodes": ["espace-degage"],
           "vocabulary": [
@@ -592,6 +603,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S03-C01-O09"],
           "materialCodes": ["espace-degage"],
           "vocabulary": [
@@ -643,6 +655,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S01-C01-O09"],
           "materialCodes": ["balle-papier"],
           "vocabulary": [
@@ -694,6 +707,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S01-C01-O09"],
           "materialCodes": ["objets-maison", "espace-degage"],
           "vocabulary": [
@@ -745,6 +759,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S01-C01-O09"],
           "materialCodes": ["balle-papier", "boite"],
           "vocabulary": [
@@ -796,6 +811,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S02-C01-O05"],
           "materialCodes": ["espace-degage"],
           "vocabulary": [
@@ -847,6 +863,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
           "materialCodes": ["espace-degage"],
           "vocabulary": [
@@ -898,6 +915,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S02-C01-O05"],
           "materialCodes": ["formes-papier", "espace-degage"],
           "vocabulary": [
@@ -949,6 +967,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "consolidation",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S01-C01-O10", "PHYS-S03-C01-O09"],
           "materialCodes": ["espace-degage"],
           "vocabulary": [
@@ -1000,6 +1019,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S03-C01-O09"],
           "materialCodes": ["aucun"],
           "vocabulary": [
@@ -1051,6 +1071,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S03-C01-O09"],
           "materialCodes": ["aucun"],
           "vocabulary": [
@@ -1102,6 +1123,7 @@
           "minutes": 6,
           "mode": "off-screen",
           "role": "consolidation",
+          "mediaIds": [],
           "objectiveCodes": ["PHYS-S01-C01-O10", "PHYS-S02-C01-O05", "PHYS-S04-C01-O09"],
           "materialCodes": ["espace-degage"],
           "vocabulary": [

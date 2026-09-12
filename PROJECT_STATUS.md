@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-12
-Branch:     develop
-Commit:     develop at d2fb411; main at 1b95480
+Branch:     feat/september-experience-and-media (PR #24 into develop)
+Commit:     develop at cd86efd; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -175,6 +175,18 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 - [x] **Resumable-work protocol** (ADR-041): `docs/work/ACTIVE_TASK.md`, `docs/RESUMABLE_WORKFLOW.md`, `docs/work/archive/`, a `CLAUDE.md` instruction, and a test that enforces the checkpoint's structure
 - [x] Phase 3A archived as the first baseline; September content unchanged
 
+### Phase 3B — the September parent experience (PR #24)
+
+- [x] UX audit of the running app: seven concrete findings, starting with « Regarde les formes » showing no shapes
+- [x] **PD-008 resolved** — media is SVG in the repository, named by stable id, no cloud storage, no paid service (ADR-042, `docs/MEDIA_ARCHITECTURE.md`)
+- [x] 22 assets; **29 activities that need something on screen all have it**, 0 screens left blank (`npm run media:report`)
+- [x] Interaction where it teaches: show the named shape, count by tapping, sort into groups — with gentle retry and no scoring
+- [x] Off-screen activities say « Posez l’écran » instead of pretending to be on-screen ones
+- [x] Stories paginated; the parent sees which of the day's four lessons they are in; "Terminé" for what the app cannot observe
+- [x] **Real-session testing**: `/seance/<n>/observation`, browser-only, asks nothing about the child (`docs/REAL_SESSION_TESTING.md`)
+- [x] Media mirrored to the database with RLS and an access decision per table
+- [x] All 88 lessons remain `review`: usability testing is not pedagogical approval
+
 ## Next Tasks
 
 ### P0 — Next
@@ -295,6 +307,18 @@ Recommended action: when content scales, alternate the daily read-aloud (questio
 Severity: Medium (legal) · Status: Open
 Description: edu-nc.gouv.cd reserves all site content to the ministry: consultation, download and printing for personal and educational use with attribution, but reproduction or copying without authorisation is prohibited. There is no open licence, unlike the French texts. Teka Edu therefore **references** the PNEM and does not store its wording.
 Recommended action: keep referencing only. If PNEM objectives are ever to be stored (Strategy B or C, ADR-037), request written authorisation from MINEDU-NC first. A human/legal opinion is needed before any such use.
+
+### ISSUE-024 — 58 activities would be better with a picture they do not have
+
+Severity: Low (quality of experience) · Status: Open
+Description: `npm run media:report` classifies every September activity. 29 need something on screen and all 29 have it; **58 more would be helped by a picture and do not have one** — mostly story illustrations, drawing models and the objects of conversations. No screen is left blank, so nothing is broken; the experience is simply plainer than it could be.
+Recommended action: decide after a real session with a child which of the 58 actually matter. A child who is engaged without them does not need them, and every asset added is one more thing to maintain. Story illustrations are the most likely first investment.
+
+### ISSUE-025 — No audio anywhere
+
+Severity: Low (deliberate) · Status: Open
+Description: 38 activities would benefit from a recording — pronunciation, stories, rhymes — and none has one. Nothing requires audio: the parent reads aloud, which is what an adult-guided session does anyway. No paid text-to-speech was introduced (ADR-027).
+Recommended action: leave it until a real session shows it matters. If it does, prefer original recordings over a paid service.
 
 ### ISSUE-022 — The year's pacing after September is a first draft
 

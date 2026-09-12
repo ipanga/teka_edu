@@ -77,6 +77,11 @@ export type Activity = {
   materialCodes: readonly string[];
   vocabulary: readonly VocabularyEntry[];
   scaffolds: readonly ActivityScaffold[];
+  /**
+   * Pictures the child looks at, by stable media id (ADR-042). Empty when the activity needs
+   * none — movement, conversation and manipulation happen away from the screen.
+   */
+  mediaIds: readonly string[];
   /** Kind-specific data, validated per activity type by the content schemas. */
   payload: Readonly<Record<string, unknown>>;
 };

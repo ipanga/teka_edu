@@ -25,6 +25,7 @@ import lessonsWorld from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle
 import materialsFile from "@/content/materials.json";
 import annualPlanMaternelle3 from "@/content/programmes/maternelle-cycle1-cd-2026/maternelle-3-annual-plan.json";
 import programmeMaternelle3 from "@/content/programmes/maternelle-cycle1-cd-2026/maternelle-3.json";
+import mediaRegistry from "@/content/media/registry.json";
 import textsMaternelle3 from "@/content/texts/maternelle-3.json";
 import nationalCalendar from "@/content/calendars/cd/national.json";
 import curriculumMaternelle2026 from "@/content/curriculum/maternelle-cycle1-cd-2026/curriculum.json";
@@ -44,6 +45,7 @@ import type {
   SchoolLevel,
 } from "@/domain/curriculum/types";
 import { type TeachingText, checkTexts } from "@/domain/lessons/texts";
+import { type MediaAsset, checkMedia } from "@/domain/media/types";
 import type { Lesson, Material } from "@/domain/lessons/types";
 import { type AnnualPlan, checkAnnualPlan } from "@/domain/programme/annual-plan";
 import { checkLessons, checkProgramme } from "@/domain/programme/validation";
@@ -56,6 +58,7 @@ import {
   programmeFileSchema,
   annualPlanFileSchema,
   teachingTextsFileSchema,
+  mediaRegistryFileSchema,
 } from "./lesson-schemas";
 import {
   curriculumFileSchema,
@@ -82,7 +85,8 @@ export type ReferenceContentFile =
   | ContentFile<"lessons", typeof lessonsFileSchema>
   | ContentFile<"programme", typeof programmeFileSchema>
   | ContentFile<"annual-plan", typeof annualPlanFileSchema>
-  | ContentFile<"texts", typeof teachingTextsFileSchema>;
+  | ContentFile<"texts", typeof teachingTextsFileSchema>
+  | ContentFile<"media", typeof mediaRegistryFileSchema>;
 
 export const REFERENCE_CONTENT_FILES: readonly ReferenceContentFile[] = [
   {
@@ -200,6 +204,12 @@ export const REFERENCE_CONTENT_FILES: readonly ReferenceContentFile[] = [
     schema: teachingTextsFileSchema,
     data: textsMaternelle3,
   },
+  {
+    kind: "media",
+    path: "media/registry.json",
+    schema: mediaRegistryFileSchema,
+    data: mediaRegistry,
+  },
 ];
 
 export type ReferenceData = {
@@ -222,6 +232,8 @@ export type ReferenceData = {
   annualPlans: readonly AnnualPlan[];
   /** Stories and rhymes the platform supplies, so a lesson needs no outside book. */
   texts: readonly TeachingText[];
+  /** Pictures the child looks at, by stable id (ADR-042). */
+  media: readonly MediaAsset[];
 };
 
 export class ReferenceDataError extends Error {
@@ -261,6 +273,7 @@ export function checkReferenceData(data: ReferenceData): string[] {
       ),
     ),
     ...checkTexts(data.texts, data.lessons),
+    ...checkMedia(data.media, data.lessons),
     ...data.annualPlans.flatMap((plan) =>
       checkAnnualPlan(
         plan,
@@ -294,6 +307,7 @@ export function parseReferenceData(files: readonly ReferenceContentFile[]): Refe
   const programmes: LevelProgramme[] = [];
   const annualPlans: AnnualPlan[] = [];
   const texts: TeachingText[] = [];
+  const media: MediaAsset[] = [];
   const nationals: z.output<typeof nationalCalendarFileSchema>[] = [];
   for (const file of files) {
     switch (file.kind) {
@@ -390,6 +404,11 @@ export function parseReferenceData(files: readonly ReferenceContentFile[]): Refe
         if (parsed) texts.push(...parsed.texts);
         break;
       }
+      case "media": {
+        const parsed = parse(file);
+        if (parsed) media.push(...parsed.assets);
+        break;
+      }
     }
   }
   const [national, ...otherNationals] = nationals;
@@ -411,6 +430,7 @@ export function parseReferenceData(files: readonly ReferenceContentFile[]): Refe
     programmes,
     annualPlans,
     texts,
+    media,
   };
   const ruleProblems = checkReferenceData(data);
   if (ruleProblems.length > 0) throw new ReferenceDataError(ruleProblems);

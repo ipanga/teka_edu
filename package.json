@@ -34,6 +34,7 @@
     "calendar:report": "tsx scripts/calendar-report.ts",
     "programme:report": "tsx scripts/programme-report.ts",
     "coverage:report": "tsx scripts/coverage-report.ts",
+    "media:report": "tsx scripts/media-report.ts",
     "review:package": "tsx scripts/review-package.ts"
   },
   "dependencies": {

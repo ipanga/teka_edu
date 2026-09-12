@@ -49,7 +49,12 @@ insert into access_registry (table_name, access) values
   ('teaching_text_lines', 'server-only'),
   ('annual_plans', 'server-only'),
   ('annual_plan_phases', 'server-only'),
-  ('annual_plan_entries', 'server-only');
+  ('annual_plan_entries', 'server-only'),
+  -- Phase 3B: the pictures a child looks at, and which activity shows them. Read server-side
+  -- and served through the programme API; the files themselves are static under public/media/.
+  ('media_assets', 'server-only'),
+  ('media_asset_tags', 'server-only'),
+  ('activity_media', 'server-only');
 
 select is(
   (

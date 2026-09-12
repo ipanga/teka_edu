@@ -27,6 +27,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": ["objet-caillou"],
           "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -60,6 +61,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O20"],
           "materialCodes": ["petits-objets", "boite"],
           "vocabulary": [
@@ -107,6 +109,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": ["objet-caillou"],
           "objectiveCodes": ["MATH-S01-C01-O05"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -143,6 +146,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O05"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -191,6 +195,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": ["forme-carre", "forme-rectangle", "forme-triangle", "forme-disque"],
           "objectiveCodes": ["MATH-S03-C01-O08", "MATH-S03-C01-O07"],
           "materialCodes": ["formes-papier"],
           "vocabulary": [
@@ -235,6 +240,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": ["forme-carre", "forme-rectangle", "forme-triangle", "forme-disque"],
           "objectiveCodes": ["MATH-S03-C01-O08"],
           "materialCodes": ["formes-papier"],
           "vocabulary": [
@@ -286,6 +292,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O26"],
           "materialCodes": ["aucun"],
           "vocabulary": [
@@ -315,6 +322,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": ["objet-caillou"],
           "objectiveCodes": ["MATH-S01-C01-O26"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -362,6 +370,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": ["objet-caillou"],
           "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -395,6 +404,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O20"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -442,6 +452,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O21", "MATH-S01-C01-O05"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -474,6 +485,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O21"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -522,6 +534,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": ["objet-caillou"],
           "objectiveCodes": ["MATH-S01-C01-O19"],
           "materialCodes": ["petits-objets", "boite"],
           "vocabulary": [
@@ -554,6 +567,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O19"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -602,6 +616,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": ["forme-carre", "forme-rectangle", "forme-triangle", "forme-disque"],
           "objectiveCodes": ["MATH-S03-C01-O07", "MATH-S03-C01-O08"],
           "materialCodes": ["formes-papier"],
           "vocabulary": [
@@ -639,6 +654,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": ["forme-carre", "forme-rectangle", "forme-triangle", "forme-disque"],
           "objectiveCodes": ["MATH-S03-C01-O07"],
           "materialCodes": ["objets-maison"],
           "vocabulary": [
@@ -686,6 +702,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "consolidation",
+          "mediaIds": ["objet-caillou"],
           "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O05"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -715,6 +732,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "consolidation",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O20"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -766,6 +784,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O26"],
           "materialCodes": ["aucun"],
           "vocabulary": [
@@ -803,6 +822,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": ["objet-caillou"],
           "objectiveCodes": ["MATH-S01-C01-O26"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -850,6 +870,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": ["objet-caillou"],
           "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O23"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -882,6 +903,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O22"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -934,6 +956,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": ["objet-caillou"],
           "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O23"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -966,6 +989,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O22"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -1014,6 +1038,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O19", "MATH-S01-C01-O20"],
           "materialCodes": ["objets-maison"],
           "vocabulary": [
@@ -1043,6 +1068,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O19"],
           "materialCodes": ["objets-maison"],
           "vocabulary": [
@@ -1090,6 +1116,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "consolidation",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O05"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -1122,6 +1149,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "consolidation",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O05"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -1170,6 +1198,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C02-O06"],
           "materialCodes": ["papier", "crayon"],
           "vocabulary": [
@@ -1202,6 +1231,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C02-O06"],
           "materialCodes": ["papier"],
           "vocabulary": [
@@ -1254,6 +1284,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C02-O06", "MATH-S01-C01-O26"],
           "materialCodes": ["papier"],
           "vocabulary": [
@@ -1287,6 +1318,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C02-O06"],
           "materialCodes": ["papier", "petits-objets"],
           "vocabulary": [
@@ -1334,6 +1366,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": ["objet-caillou"],
           "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O23"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -1366,6 +1399,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O22"],
           "materialCodes": ["aucun"],
           "vocabulary": [
@@ -1418,6 +1452,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": ["forme-carre", "forme-rectangle", "forme-triangle", "forme-disque"],
           "objectiveCodes": ["MATH-S03-C01-O07", "MATH-S03-C01-O08"],
           "materialCodes": ["formes-papier", "objets-maison"],
           "vocabulary": [
@@ -1455,6 +1490,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": ["forme-carre", "forme-rectangle", "forme-triangle", "forme-disque"],
           "objectiveCodes": ["MATH-S03-C01-O07"],
           "materialCodes": ["papier", "crayon"],
           "vocabulary": [
@@ -1506,6 +1542,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "consolidation",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O26"],
           "materialCodes": ["aucun"],
           "vocabulary": [
@@ -1539,6 +1576,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "consolidation",
+          "mediaIds": ["objet-caillou"],
           "objectiveCodes": ["MATH-S01-C01-O26"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -1586,6 +1624,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": ["objet-caillou"],
           "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O21"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -1618,6 +1657,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O22"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -1666,6 +1706,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O05", "MATH-S01-C02-O06"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -1698,6 +1739,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O05"],
           "materialCodes": ["papier", "petits-objets"],
           "vocabulary": [
@@ -1746,6 +1788,7 @@
           "minutes": 5,
           "mode": "off-screen",
           "role": "consolidation",
+          "mediaIds": ["objet-caillou"],
           "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O22"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
@@ -1775,6 +1818,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "consolidation",
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O20"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [

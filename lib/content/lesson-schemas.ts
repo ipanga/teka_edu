@@ -14,6 +14,7 @@ import type {
   SuccessExample,
 } from "@/domain/curriculum/types";
 import { LESSON_STATUSES } from "@/domain/lessons/review";
+import { MEDIA_KINDS, type MediaAsset } from "@/domain/media/types";
 import type { TeachingText } from "@/domain/lessons/texts";
 import {
   ACTIVITY_MODES,
@@ -112,6 +113,27 @@ export const materialsFileSchema = z.strictObject({
     .min(1),
 });
 
+// ---- content/media/registry.json -------------------------------------------------------------
+
+export const mediaRegistryFileSchema = z.strictObject({
+  assets: z
+    .array(
+      z.strictObject({
+        id: slug,
+        kind: z.enum(MEDIA_KINDS),
+        // A path under public/media/, never a URL: lessons must not depend on an outside host.
+        file: z
+          .string()
+          .regex(/^[a-z0-9-]+\/[a-z0-9-]+\.svg$/, { message: "must be <folder>/<id>.svg" }),
+        alt: french,
+        tags: z.array(french),
+        origin: z.enum(CONTENT_ORIGINS),
+        provenance: french,
+      }) satisfies z.ZodType<MediaAsset>,
+    )
+    .min(1),
+});
+
 // ---- content/texts/<level>.json --------------------------------------------------------------
 
 export const teachingTextsFileSchema = z.strictObject({
@@ -168,6 +190,7 @@ const activity = z
     minutes: z.number().int().min(2).max(20),
     mode: z.enum(ACTIVITY_MODES),
     role: z.enum(ACTIVITY_ROLES),
+    mediaIds: z.array(slug),
     objectiveCodes: z.array(objectiveCode).min(1),
     materialCodes: z.array(slug),
     vocabulary: z.array(z.strictObject({ fr: french, en: text.nullable() })),

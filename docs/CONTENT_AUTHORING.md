@@ -69,6 +69,11 @@ Rules that go with it:
 - **Supply what the lesson needs.** A read-aloud, a story or a rhyme names a text in
   `content/texts/`; it never says "read a book you know". A parent may substitute their own book,
   but the default must be in the product.
+- **If the consigne says « regarde » or « montre », give the activity `mediaIds`** — stable ids
+  from `content/media/registry.json`, in the order the words are taught (ADR-042). Check with
+  `npm run media:report`, which lists any activity whose screen would have nothing to show.
+- **Do not give pictures to an activity that happens away from the screen.** A movement activity
+  with paper shapes on the floor needs the material, not an image; a test enforces this.
 - **A pause point is computed, not authored**: the generator marks the halfway seam.
 
 ## Writing a lesson

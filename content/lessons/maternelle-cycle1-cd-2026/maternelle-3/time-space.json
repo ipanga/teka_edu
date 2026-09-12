@@ -27,6 +27,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
           "materialCodes": ["aucun"],
           "vocabulary": [
@@ -68,6 +69,7 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
           "materialCodes": ["papier", "crayon"],
           "vocabulary": [
@@ -119,6 +121,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
           "materialCodes": ["papier"],
           "vocabulary": [
@@ -156,6 +159,7 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
           "materialCodes": ["papier"],
           "vocabulary": [
@@ -207,6 +211,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S02-C01-O16"],
           "materialCodes": ["objets-maison"],
           "vocabulary": [
@@ -247,6 +252,7 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S02-C01-O16"],
           "materialCodes": ["objets-maison"],
           "vocabulary": [
@@ -298,6 +304,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S02-C01-O16"],
           "materialCodes": ["objets-maison"],
           "vocabulary": [
@@ -338,6 +345,7 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S02-C01-O16"],
           "materialCodes": ["aucun"],
           "vocabulary": [
@@ -394,6 +402,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
           "materialCodes": ["papier", "crayon"],
           "vocabulary": [
@@ -430,6 +439,7 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
           "materialCodes": ["papier"],
           "vocabulary": [
@@ -485,6 +495,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
           "materialCodes": ["papier", "crayon"],
           "vocabulary": [
@@ -521,6 +532,7 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
           "materialCodes": ["aucun"],
           "vocabulary": [
@@ -580,6 +592,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
           "materialCodes": ["papier", "crayon"],
           "vocabulary": [
@@ -612,6 +625,7 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
+          "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
           "materialCodes": ["aucun"],
           "vocabulary": [
@@ -667,6 +681,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "consolidation",
+          "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
           "materialCodes": ["aucun"],
           "vocabulary": [
@@ -704,6 +719,7 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "consolidation",
+          "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
           "materialCodes": ["papier"],
           "vocabulary": [
