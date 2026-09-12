@@ -3,51 +3,219 @@
   "curriculumId": "maternelle-cycle1-cd-2026",
   "levelId": "maternelle-3",
   "schoolYearIds": ["2026-2027"],
-  "sessionMinutes": { "min": 30, "max": 45 },
+  "sessionMinutes": {
+    "min": 30,
+    "max": 45
+  },
   "rhythm": [
     {
       "position": 1,
       "slots": [
-        { "position": 1, "trackId": "langage" },
-        { "position": 2, "trackId": "mathematiques" },
-        { "position": 3, "trackId": "activite-physique" },
-        { "position": 4, "trackId": "monde" }
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "monde"
+        }
       ]
     },
     {
       "position": 2,
       "slots": [
-        { "position": 1, "trackId": "langage" },
-        { "position": 2, "trackId": "mathematiques" },
-        { "position": 3, "trackId": "activite-physique" },
-        { "position": 4, "trackId": "arts" }
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "arts"
+        }
       ]
     },
     {
       "position": 3,
       "slots": [
-        { "position": 1, "trackId": "langage" },
-        { "position": 2, "trackId": "mathematiques" },
-        { "position": 3, "trackId": "activite-physique" },
-        { "position": 4, "trackId": "temps-espace" }
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "temps-espace"
+        }
       ]
     },
     {
       "position": 4,
       "slots": [
-        { "position": 1, "trackId": "langage" },
-        { "position": 2, "trackId": "mathematiques" },
-        { "position": 3, "trackId": "activite-physique" },
-        { "position": 4, "trackId": "arts" }
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "arts"
+        }
       ]
     },
     {
       "position": 5,
       "slots": [
-        { "position": 1, "trackId": "langage" },
-        { "position": 2, "trackId": "mathematiques" },
-        { "position": 3, "trackId": "activite-physique" },
-        { "position": 4, "trackId": "monde" }
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "monde"
+        }
+      ]
+    },
+    {
+      "position": 6,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "temps-espace"
+        }
+      ]
+    },
+    {
+      "position": 7,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "arts"
+        }
+      ]
+    },
+    {
+      "position": 8,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "temps-espace"
+        }
+      ]
+    },
+    {
+      "position": 9,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "monde"
+        }
+      ]
+    },
+    {
+      "position": 10,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "temps-espace"
+        }
       ]
     }
   ],
@@ -55,20 +223,126 @@
     {
       "id": "langage",
       "domainCode": "LANG",
-      "lessonIds": ["m3-lang-01", "m3-lang-02", "m3-lang-03", "m3-lang-04", "m3-lang-05"]
+      "lessonIds": [
+        "m3-lang-01",
+        "m3-lang-02",
+        "m3-lang-03",
+        "m3-lang-04",
+        "m3-lang-05",
+        "m3-lang-06",
+        "m3-lang-07",
+        "m3-lang-08",
+        "m3-lang-09",
+        "m3-lang-10",
+        "m3-lang-11",
+        "m3-lang-12",
+        "m3-lang-13",
+        "m3-lang-14",
+        "m3-lang-15",
+        "m3-lang-16",
+        "m3-lang-17",
+        "m3-lang-18",
+        "m3-lang-19",
+        "m3-lang-20",
+        "m3-lang-21",
+        "m3-lang-22"
+      ]
     },
     {
       "id": "mathematiques",
       "domainCode": "MATH",
-      "lessonIds": ["m3-math-01", "m3-math-02", "m3-math-03", "m3-math-04", "m3-math-05"]
+      "lessonIds": [
+        "m3-math-01",
+        "m3-math-02",
+        "m3-math-03",
+        "m3-math-04",
+        "m3-math-05",
+        "m3-math-06",
+        "m3-math-07",
+        "m3-math-08",
+        "m3-math-09",
+        "m3-math-10",
+        "m3-math-11",
+        "m3-math-12",
+        "m3-math-13",
+        "m3-math-14",
+        "m3-math-15",
+        "m3-math-16",
+        "m3-math-17",
+        "m3-math-18",
+        "m3-math-19",
+        "m3-math-20",
+        "m3-math-21",
+        "m3-math-22"
+      ]
     },
     {
       "id": "activite-physique",
       "domainCode": "PHYS",
-      "lessonIds": ["m3-phys-01", "m3-phys-02", "m3-phys-03", "m3-phys-04", "m3-phys-05"]
+      "lessonIds": [
+        "m3-phys-01",
+        "m3-phys-02",
+        "m3-phys-03",
+        "m3-phys-04",
+        "m3-phys-05",
+        "m3-phys-06",
+        "m3-phys-07",
+        "m3-phys-08",
+        "m3-phys-09",
+        "m3-phys-10",
+        "m3-phys-11",
+        "m3-phys-12",
+        "m3-phys-13",
+        "m3-phys-14",
+        "m3-phys-15",
+        "m3-phys-16",
+        "m3-phys-17",
+        "m3-phys-18",
+        "m3-phys-19",
+        "m3-phys-20",
+        "m3-phys-21",
+        "m3-phys-22"
+      ]
     },
-    { "id": "arts", "domainCode": "ART", "lessonIds": ["m3-art-01", "m3-art-02"] },
-    { "id": "monde", "domainCode": "WORLD", "lessonIds": ["m3-world-01", "m3-world-02"] },
-    { "id": "temps-espace", "domainCode": "TIME-SPACE", "lessonIds": ["m3-time-01"] }
+    {
+      "id": "arts",
+      "domainCode": "ART",
+      "lessonIds": [
+        "m3-art-01",
+        "m3-art-02",
+        "m3-art-03",
+        "m3-art-04",
+        "m3-art-05",
+        "m3-art-06",
+        "m3-art-07"
+      ]
+    },
+    {
+      "id": "monde",
+      "domainCode": "WORLD",
+      "lessonIds": [
+        "m3-world-01",
+        "m3-world-02",
+        "m3-world-03",
+        "m3-world-04",
+        "m3-world-05",
+        "m3-world-06",
+        "m3-world-07"
+      ]
+    },
+    {
+      "id": "temps-espace",
+      "domainCode": "TIME-SPACE",
+      "lessonIds": [
+        "m3-time-01",
+        "m3-time-02",
+        "m3-time-03",
+        "m3-time-04",
+        "m3-time-05",
+        "m3-time-06",
+        "m3-time-07",
+        "m3-time-08"
+      ]
+    }
   ]
 }

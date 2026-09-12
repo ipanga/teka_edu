@@ -14,8 +14,10 @@ import type {
   SuccessExample,
 } from "@/domain/curriculum/types";
 import { LESSON_STATUSES } from "@/domain/lessons/review";
+import type { TeachingText } from "@/domain/lessons/texts";
 import {
   ACTIVITY_MODES,
+  ACTIVITY_ROLES,
   ACTIVITY_TYPES,
   type Activity,
   type ActivityType,
@@ -23,6 +25,11 @@ import {
   type Material,
   PROGRESSION_STAGES,
 } from "@/domain/lessons/types";
+import {
+  type AnnualPlan,
+  HOME_FEASIBILITIES,
+  OBJECTIVE_CADENCES,
+} from "@/domain/programme/annual-plan";
 import type { LevelProgramme } from "@/domain/programme/types";
 
 const text = z.string().trim().min(1, { message: "must not be empty" });
@@ -105,6 +112,24 @@ export const materialsFileSchema = z.strictObject({
     .min(1),
 });
 
+// ---- content/texts/<level>.json --------------------------------------------------------------
+
+export const teachingTextsFileSchema = z.strictObject({
+  texts: z
+    .array(
+      z.strictObject({
+        id: slug,
+        kind: z.enum(["story", "rhyme"]),
+        title: french,
+        lines: z.array(french).min(1),
+        origin: z.enum(CONTENT_ORIGINS),
+        provenance: french,
+        minutes: z.number().int().min(1).max(10),
+      }) satisfies z.ZodType<TeachingText>,
+    )
+    .min(1),
+});
+
 // ---- content/lessons/<curriculum>/<level>/<domain>.json --------------------------------------
 
 /**
@@ -114,10 +139,12 @@ export const materialsFileSchema = z.strictObject({
 const ACTIVITY_PAYLOADS: Record<ActivityType, z.ZodType> = {
   conversation: z.strictObject({ prompts: z.array(french).min(1) }),
   vocabulary: z.strictObject({ focus: french.optional() }),
-  "listening-story": z.strictObject({ storyTitle: french, questions: z.array(french).min(1) }),
+  // The text is supplied by Teka Edu (content/texts/), so no lesson depends on the family
+  // owning a particular book.
+  "listening-story": z.strictObject({ textId: slug, questions: z.array(french).min(1) }),
   // Daily reading time: the official text asks for it "sans questionnement", so it has no questions.
-  "read-aloud": z.strictObject({ suggestion: french }),
-  "song-rhyme": z.strictObject({ title: french, lines: z.array(french).min(1) }),
+  "read-aloud": z.strictObject({ textId: slug }),
+  "song-rhyme": z.strictObject({ textId: slug }),
   phonology: z.strictObject({ focusSound: french.optional(), words: z.array(french).min(2) }),
   counting: z.strictObject({ upTo: z.number().int().min(1).max(30), objects: french }),
   matching: z.strictObject({ pairs: z.array(z.tuple([french, french])).min(2) }),
@@ -140,6 +167,7 @@ const activity = z
     adultGuidance: french,
     minutes: z.number().int().min(2).max(20),
     mode: z.enum(ACTIVITY_MODES),
+    role: z.enum(ACTIVITY_ROLES),
     objectiveCodes: z.array(objectiveCode).min(1),
     materialCodes: z.array(slug),
     vocabulary: z.array(z.strictObject({ fr: french, en: text.nullable() })),
@@ -213,6 +241,45 @@ export const programmeFileSchema = z.strictObject({
     .min(1),
   tracks: z.array(z.strictObject({ id: slug, domainCode: code, lessonIds: z.array(slug) })).min(1),
 }) satisfies z.ZodType<LevelProgramme>;
+
+// ---- content/programmes/<curriculum>/<level>-annual-plan.json --------------------------------
+
+export const annualPlanFileSchema = z.strictObject({
+  id: slug,
+  curriculumId: slug,
+  levelId: slug,
+  schoolYearId: z.string(),
+  instructionalDays: positiveInt,
+  phases: z
+    .array(
+      z.strictObject({
+        code: code,
+        name: french,
+        fromDay: positiveInt,
+        toDay: positiveInt,
+        focus: french,
+      }),
+    )
+    .min(1),
+  entries: z
+    .array(
+      z.strictObject({
+        objectiveCode: objectiveCode,
+        domainCode: code,
+        phase: code,
+        introduceFromDay: positiveInt,
+        introduceByDay: positiveInt,
+        reinforceUntilDay: positiveInt,
+        consolidateByDay: positiveInt,
+        plannedRevisits: z.number().int().min(1).max(60),
+        cadence: z.enum(OBJECTIVE_CADENCES),
+        needsDedicatedLesson: z.boolean(),
+        embeddable: z.boolean(),
+        homeFeasibility: z.enum(HOME_FEASIBILITIES),
+      }),
+    )
+    .min(1),
+}) satisfies z.ZodType<AnnualPlan>;
 
 export type DomainObjectivesFile = z.output<typeof domainObjectivesFileSchema>;
 export type MaterialsFile = z.output<typeof materialsFileSchema>;

@@ -9,24 +9,25 @@
       "levelIds": ["maternelle-3"],
       "domainCode": "WORLD",
       "title": "Mon corps bouge",
-      "summary": "L’enfant nomme les parties du corps et quelques articulations, puis se dessine en mouvement.",
+      "summary": "Nommer les parties du corps qui plient, et se dessiner en mouvement.",
       "objectiveCodes": ["WORLD-S01-C02-O08", "WORLD-S01-C02-O09"],
-      "supportingObjectiveCodes": ["WORLD-S01-C02-O04"],
+      "supportingObjectiveCodes": [],
       "stage": "discovery",
-      "difficulty": 2,
+      "difficulty": 1,
       "themeId": "la-rentree",
-      "parentGuidance": "Faites toucher et bouger chaque partie nommée : le mot se retient mieux quand le corps l’accompagne. Le coude, le genou et l’épaule sont des articulations : ce sont les endroits où le corps plie.",
+      "parentGuidance": "On cherche les endroits où le corps plie : ce sont les articulations. Faites-les bouger avant de les nommer.",
       "activities": [
         {
           "id": "m3-world-01-a1",
           "position": 1,
           "type": "observation",
           "title": "Où est-ce que ça plie ?",
-          "childInstruction": "Touche ton coude, ton genou, ton épaule. Fais-les plier, puis dis leur nom.",
-          "adultGuidance": "Nommez d’abord, l’enfant touche. Puis inversez : l’enfant nomme, vous touchez. Insistez sur l’idée que le bras est fait de deux parties reliées par le coude.",
+          "childInstruction": "Trouve les endroits de ton corps qui plient, et fais-les bouger.",
+          "adultGuidance": "1. Pliez votre bras : « Ici, ça plie. C’est le coude. » 2. Faites chercher d’autres endroits : genou, doigt, cheville, épaule. 3. Nommez chacun. 4. Jouez : « Bouge seulement ton coude. »",
           "minutes": 4,
           "mode": "off-screen",
-          "objectiveCodes": ["WORLD-S01-C02-O04", "WORLD-S01-C02-O08"],
+          "role": "teach",
+          "objectiveCodes": ["WORLD-S01-C02-O08", "WORLD-S01-C02-O09"],
           "materialCodes": ["aucun"],
           "vocabulary": [
             {
@@ -42,6 +43,38 @@
               "en": "the shoulder"
             },
             {
+              "fr": "la cheville",
+              "en": "the ankle"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Find the places on your body that bend, and move them."
+            }
+          ],
+          "payload": {
+            "focus": "les endroits du corps qui plient"
+          }
+        },
+        {
+          "id": "m3-world-01-a2",
+          "position": 2,
+          "type": "drawing",
+          "title": "Je me dessine en train de bouger",
+          "childInstruction": "Dessine-toi en train de courir ou de danser.",
+          "adultGuidance": "1. Demandez un dessin de lui-même en mouvement. 2. Ne corrigez pas le dessin. 3. Demandez où sont les bras, les jambes. 4. Faites montrer sur le dessin un endroit qui plie.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["WORLD-S01-C02-O08"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [
+            {
+              "fr": "bouger",
+              "en": "to move"
+            },
+            {
               "fr": "plier",
               "en": "to bend"
             }
@@ -49,33 +82,11 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Touch your elbow, your knee, your shoulder, then name them in French."
+              "childInstruction": "Draw yourself running or dancing."
             }
           ],
           "payload": {
-            "focus": "les articulations : le coude, le genou, l’épaule"
-          }
-        },
-        {
-          "id": "m3-world-01-a2",
-          "position": 2,
-          "type": "drawing",
-          "title": "Je me dessine en train de courir",
-          "childInstruction": "Dessine-toi en train de courir. N’oublie pas les bras, les jambes et les endroits qui plient.",
-          "adultGuidance": "Laissez dessiner sans modèle. Ensuite, demandez de montrer sur le dessin le coude et le genou : c’est la représentation du corps articulé qui est visée, pas la beauté du dessin.",
-          "minutes": 4,
-          "mode": "off-screen",
-          "objectiveCodes": ["WORLD-S01-C02-O09"],
-          "materialCodes": ["papier", "crayon"],
-          "vocabulary": [],
-          "scaffolds": [
-            {
-              "language": "en",
-              "childInstruction": "Draw yourself running."
-            }
-          ],
-          "payload": {
-            "subject": "moi en train de courir"
+            "subject": "soi-même en mouvement"
           }
         }
       ],
@@ -89,72 +100,74 @@
       "levelIds": ["maternelle-3"],
       "domainCode": "WORLD",
       "title": "Les animaux autour de nous",
-      "summary": "L’enfant observe des animaux familiers et dit de quoi ils ont besoin pour vivre.",
+      "summary": "Nommer les parties d’un animal et dire ce dont il a besoin pour vivre.",
       "objectiveCodes": ["WORLD-S01-C01-O08", "WORLD-S01-C01-O10"],
       "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 2,
-      "themeId": "la-rentree",
-      "parentGuidance": "Parlez d’animaux que l’enfant voit vraiment : la poule, la chèvre, le chien, le lézard. Une observation réelle vaut mieux qu’une image.",
+      "themeId": "ma-maison",
+      "parentGuidance": "Partez d’un animal que l’enfant connait vraiment : une poule, une chèvre, un chien du quartier.",
       "activities": [
         {
           "id": "m3-world-02-a1",
           "position": 1,
           "type": "observation",
-          "title": "Je regarde et je décris",
-          "childInstruction": "Regarde bien l’animal. Dis ce qu’il a : des pattes, des plumes, un bec, une queue.",
-          "adultGuidance": "Observez un animal du voisinage, ou parlez d’un animal bien connu de l’enfant. Faites compter les pattes : les nombres se travaillent aussi ici.",
+          "title": "Les parties de l’animal",
+          "childInstruction": "Choisis un animal que tu connais. Nomme ses parties.",
+          "adultGuidance": "1. Choisissez l’animal ensemble. 2. Nommez : la tête, les pattes, la queue, les plumes ou le poil. 3. Comparez avec un autre animal : « La poule a des plumes, la chèvre a du poil. » 4. Faites dire une différence.",
           "minutes": 4,
           "mode": "off-screen",
-          "objectiveCodes": ["WORLD-S01-C01-O08"],
+          "role": "teach",
+          "objectiveCodes": ["WORLD-S01-C01-O08", "WORLD-S01-C01-O10"],
           "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "la patte",
-              "en": "the leg (of an animal)"
+              "en": "the leg"
+            },
+            {
+              "fr": "la queue",
+              "en": "the tail"
             },
             {
               "fr": "la plume",
               "en": "the feather"
             },
             {
-              "fr": "le bec",
-              "en": "the beak"
-            },
-            {
-              "fr": "la queue",
-              "en": "the tail"
+              "fr": "le poil",
+              "en": "the fur"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Look at the animal and say what it has."
+              "childInstruction": "Choose an animal you know and name its parts."
             }
           ],
           "payload": {
-            "focus": "la poule, la chèvre, le chien : pattes, plumes, bec, queue"
+            "focus": "les parties du corps d’un animal connu"
           }
         },
         {
           "id": "m3-world-02-a2",
           "position": 2,
           "type": "conversation",
-          "title": "De quoi a-t-il besoin pour vivre ?",
-          "childInstruction": "Dis ce qu’il faut à l’animal pour vivre : manger, boire, un endroit pour dormir.",
-          "adultGuidance": "Guidez vers les besoins essentiels : la nourriture, l’eau, un abri, être protégé. Comparez avec ce dont l’enfant a besoin lui-même.",
-          "minutes": 4,
+          "title": "De quoi a-t-il besoin ?",
+          "childInstruction": "Dis ce dont ton animal a besoin pour vivre.",
+          "adultGuidance": "1. Demandez ce que mange l’animal. 2. Demandez ce qu’il boit, où il dort. 3. Concluez les trois besoins : manger, boire, un abri. 4. Reliez à l’histoire de Bibi : « Et Bibi, de quoi avait-elle besoin ? »",
+          "minutes": 3,
           "mode": "off-screen",
-          "objectiveCodes": ["WORLD-S01-C01-O10"],
+          "role": "teach",
+          "objectiveCodes": ["WORLD-S01-C01-O08"],
           "materialCodes": ["aucun"],
           "vocabulary": [
             {
-              "fr": "la nourriture",
-              "en": "food"
+              "fr": "manger",
+              "en": "to eat"
             },
             {
-              "fr": "l’eau",
-              "en": "water"
+              "fr": "boire",
+              "en": "to drink"
             },
             {
               "fr": "l’abri",
@@ -164,15 +177,452 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "What does the animal need to live?"
+              "childInstruction": "Say what your animal needs to live."
             }
           ],
           "payload": {
             "prompts": [
-              "Que mange cet animal ?",
+              "Que mange-t-il ?",
+              "Que boit-il ?",
               "Où dort-il ?",
-              "Et toi, de quoi as-tu besoin pour grandir ?"
+              "Qui s’occupe de lui ?"
             ]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-world-03",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "De quoi a besoin une plante ?",
+      "summary": "Découvrir les besoins d’un végétal, et les comparer à ceux d’un animal.",
+      "objectiveCodes": ["WORLD-S01-C01-O10", "WORLD-S01-C01-O08"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "ma-maison",
+      "parentGuidance": "Si vous avez une plante, un plant ou même une herbe dans un pot, servez-vous-en. Sinon, observez une plante dehors, sur le chemin.",
+      "activities": [
+        {
+          "id": "m3-world-03-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Les parties de la plante",
+          "childInstruction": "Regarde la plante. Montre-moi ses feuilles, sa tige, ses racines.",
+          "adultGuidance": "1. Nommez les parties visibles : la feuille, la tige, la fleur. 2. Expliquez les racines, sous la terre. 3. Comparez deux plantes différentes. 4. Faites dire une différence.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["WORLD-S01-C01-O10", "WORLD-S01-C01-O08"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "la feuille",
+              "en": "the leaf"
+            },
+            {
+              "fr": "la tige",
+              "en": "the stem"
+            },
+            {
+              "fr": "la racine",
+              "en": "the root"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Look at the plant. Show me its leaves, its stem, its roots."
+            }
+          ],
+          "payload": {
+            "focus": "les parties d’une plante"
+          }
+        },
+        {
+          "id": "m3-world-03-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "L’eau et la lumière",
+          "childInstruction": "Dis ce qu’il faut à une plante pour vivre.",
+          "adultGuidance": "1. Demandez ce qui arrive à une plante qu’on n’arrose pas. 2. Amenez les trois besoins : l’eau, la lumière, la terre. 3. Comparez avec l’animal du jour 5 : tous deux ont besoin d’eau. 4. Proposez d’arroser une plante ensemble ce soir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["WORLD-S01-C01-O10"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "l’eau",
+              "en": "water"
+            },
+            {
+              "fr": "la lumière",
+              "en": "light"
+            },
+            {
+              "fr": "arroser",
+              "en": "to water"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say what a plant needs to live."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Que se passe-t-il si on n’arrose pas la plante ?",
+              "De quoi a-t-elle besoin ?",
+              "Et l’animal, de quoi a-t-il besoin ?",
+              "Qu’est-ce qui est pareil ?"
+            ]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-world-04",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "Mes articulations",
+      "summary": "Retrouver et nommer les endroits du corps qui plient, et s’en servir.",
+      "objectiveCodes": ["WORLD-S01-C02-O08", "WORLD-S01-C02-O09"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "Reprise du jour 1, avec plus de précision. On nomme, puis on bouge seulement la partie nommée.",
+      "activities": [
+        {
+          "id": "m3-world-04-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Je nomme et je bouge",
+          "childInstruction": "Je dis une articulation, tu la fais bouger toute seule.",
+          "adultGuidance": "1. Nommez : le coude, le genou, le poignet, la cheville, l’épaule, le cou. 2. L’enfant bouge seulement celle-là. 3. Inversez. 4. Terminez par : « Qu’est-ce qui bouge quand tu marches ? »",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["WORLD-S01-C02-O08", "WORLD-S01-C02-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "le poignet",
+              "en": "the wrist"
+            },
+            {
+              "fr": "le cou",
+              "en": "the neck"
+            },
+            {
+              "fr": "plier",
+              "en": "to bend"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "I name a joint; you move only that one."
+            }
+          ],
+          "payload": {
+            "focus": "les articulations et leur nom"
+          }
+        },
+        {
+          "id": "m3-world-04-a2",
+          "position": 2,
+          "type": "drawing",
+          "title": "Le bonhomme qui plie",
+          "childInstruction": "Dessine un bonhomme avec les bras pliés.",
+          "adultGuidance": "1. Demandez un bonhomme en mouvement, bras pliés. 2. Faites montrer les coudes sur le dessin. 3. Ne corrigez pas la forme du dessin. 4. Demandez ce que fait le bonhomme.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["WORLD-S01-C02-O08"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [
+            {
+              "fr": "le bras",
+              "en": "the arm"
+            },
+            {
+              "fr": "la jambe",
+              "en": "the leg"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Draw a person with bent arms."
+            }
+          ],
+          "payload": {
+            "subject": "un bonhomme aux bras et jambes pliés"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-world-05",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "L’animal et ses parties",
+      "summary": "Comparer deux animaux et dire ce qui les distingue.",
+      "objectiveCodes": ["WORLD-S01-C01-O08"],
+      "supportingObjectiveCodes": ["WORLD-S01-C01-O10"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "au-marche",
+      "parentGuidance": "Comparer, c’est trouver ce qui est pareil et ce qui est différent. Prenez deux animaux bien distincts.",
+      "activities": [
+        {
+          "id": "m3-world-05-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Pareil ou différent ?",
+          "childInstruction": "Compare deux animaux : qu’est-ce qui est pareil ? qu’est-ce qui est différent ?",
+          "adultGuidance": "1. Choisissez deux animaux connus : la poule et la chèvre. 2. Cherchez ce qui est pareil : des pattes, une tête, des yeux. 3. Puis ce qui diffère : les plumes et le poil, deux pattes et quatre pattes. 4. Faites dire une phrase complète pour chaque.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["WORLD-S01-C01-O08"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "pareil",
+              "en": "the same"
+            },
+            {
+              "fr": "différent",
+              "en": "different"
+            },
+            {
+              "fr": "les pattes",
+              "en": "the legs"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Compare two animals: what is the same, what is different?"
+            }
+          ],
+          "payload": {
+            "focus": "ce qui est pareil et ce qui est différent chez deux animaux"
+          }
+        },
+        {
+          "id": "m3-world-05-a2",
+          "position": 2,
+          "type": "drawing",
+          "title": "Je dessine mon animal",
+          "childInstruction": "Dessine l’animal que tu préfères, avec toutes ses parties.",
+          "adultGuidance": "1. Laissez choisir l’animal. 2. Rappelez les parties à ne pas oublier. 3. Faites nommer chaque partie du dessin. 4. Gardez le dessin pour le jour 20.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["WORLD-S01-C01-O08"],
+          "materialCodes": ["papier", "crayons-couleur"],
+          "vocabulary": [
+            {
+              "fr": "dessiner",
+              "en": "to draw"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Draw your favourite animal with all its parts."
+            }
+          ],
+          "payload": {
+            "subject": "un animal connu, avec ses parties"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-world-06",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "Prendre soin d’un animal ou d’une plante",
+      "summary": "Dire et faire ce qu’il faut pour qu’un être vivant aille bien.",
+      "objectiveCodes": ["WORLD-S01-C01-O10"],
+      "supportingObjectiveCodes": ["WORLD-S01-C01-O08"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "au-marche",
+      "parentGuidance": "On passe du savoir à l’acte : arroser, nourrir, donner de l’eau. Quelque chose de vrai, même tout petit.",
+      "activities": [
+        {
+          "id": "m3-world-06-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Ce dont il a besoin",
+          "childInstruction": "Choisis un animal ou une plante, et dis tout ce qu’il lui faut.",
+          "adultGuidance": "1. Laissez choisir. 2. Faites lister : manger, boire, un abri ou de la lumière. 3. Demandez ce qui arrive si un besoin manque. 4. Décidez ensemble d’un geste à faire ce soir.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "objectiveCodes": ["WORLD-S01-C01-O10"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "prendre soin",
+              "en": "to take care"
+            },
+            {
+              "fr": "nourrir",
+              "en": "to feed"
+            },
+            {
+              "fr": "arroser",
+              "en": "to water"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Choose an animal or a plant and say what it needs."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "De quoi a-t-il besoin pour vivre ?",
+              "Que se passe-t-il si ça manque ?",
+              "Qu’est-ce que tu peux faire pour l’aider ?"
+            ]
+          }
+        },
+        {
+          "id": "m3-world-06-a2",
+          "position": 2,
+          "type": "observation",
+          "title": "Je regarde et je raconte",
+          "childInstruction": "Regarde-le bien et dis-moi ce que tu remarques aujourd’hui.",
+          "adultGuidance": "1. Observez ensemble une minute, en silence. 2. Demandez ce qu’il remarque. 3. Comparez avec la dernière fois. 4. Concluez : observer, c’est regarder longtemps.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "objectiveCodes": ["WORLD-S01-C01-O10"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "remarquer",
+              "en": "to notice"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Look closely and tell me what you notice today."
+            }
+          ],
+          "payload": {
+            "focus": "l’état d’un être vivant observé sur la durée"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-world-07",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "Je me dessine en mouvement",
+      "summary": "Reprendre le corps, ses articulations et son mouvement.",
+      "objectiveCodes": ["WORLD-S01-C02-O09", "WORLD-S01-C02-O08"],
+      "supportingObjectiveCodes": [],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "je-montre-ce-que-je-sais",
+      "parentGuidance": "Dernière séance du mois sur le corps. Comparez avec le dessin du jour 1 si vous l’avez gardé : c’est le meilleur moyen de lui montrer ses progrès.",
+      "activities": [
+        {
+          "id": "m3-world-07-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Moi en train de bouger",
+          "childInstruction": "Dessine-toi en train de faire ton mouvement préféré du mois.",
+          "adultGuidance": "1. Rappelez les mouvements du mois. 2. Laissez choisir et dessiner. 3. Faites nommer les articulations qui plient sur le dessin. 4. Comparez avec le dessin du début du mois, sans juger.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "objectiveCodes": ["WORLD-S01-C02-O09", "WORLD-S01-C02-O08"],
+          "materialCodes": ["papier", "crayons-couleur"],
+          "vocabulary": [
+            {
+              "fr": "le mouvement",
+              "en": "the movement"
+            },
+            {
+              "fr": "plier",
+              "en": "to bend"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Draw yourself doing your favourite movement of the month."
+            }
+          ],
+          "payload": {
+            "subject": "soi-même en train de faire un mouvement connu"
+          }
+        },
+        {
+          "id": "m3-world-07-a2",
+          "position": 2,
+          "type": "observation",
+          "title": "Ce qui plie quand je bouge",
+          "childInstruction": "Montre-moi ce qui plie quand tu fais ce mouvement.",
+          "adultGuidance": "1. Faites refaire le mouvement lentement. 2. Demandez ce qui plie. 3. Nommez les articulations ensemble. 4. Terminez par : « Ton corps sait faire tout ça. »",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "objectiveCodes": ["WORLD-S01-C02-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "le coude",
+              "en": "the elbow"
+            },
+            {
+              "fr": "le genou",
+              "en": "the knee"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Show me what bends when you do that movement."
+            }
+          ],
+          "payload": {
+            "focus": "les articulations en action"
           }
         }
       ],

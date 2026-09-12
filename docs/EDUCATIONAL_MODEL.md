@@ -112,6 +112,8 @@ content/*.json ──(Zod + rules, npm run content:validate)──▶ lib/conten
 | `materials`, `activity_types`                                                      | `code`                                              | Registries; an activity kind is a value, never a table                                                                                                                                                                     |
 | `lessons` + `lesson_levels` + `lesson_objectives`                                  | `id`                                                | Teka Edu lessons; `origin` can only be `teka-edu-created`; objectives are `taught` or `supporting`                                                                                                                         |
 | `activities` + `activity_objectives` / `_materials` / `_vocabulary` / `_scaffolds` | `id`                                                | Typed activities with a jsonb payload; French is never a scaffold language                                                                                                                                                 |
+| `teaching_texts` + `teaching_text_lines`                                           | `id` / `text_id, position`                          | The stories and rhymes Teka Edu supplies; each records its own provenance                                                                                                                                                  |
+| `annual_plans` + `annual_plan_phases` / `annual_plan_entries`                      | `id` / `plan_id, code` / `plan_id, objective_code`  | The year's pacing: introduction window, reinforcement, consolidation, cadence, home feasibility (ADR-040)                                                                                                                  |
 
 - **Dates** are `date`.
 - **Indexes** exist on every foreign key and on exception dates.
@@ -133,15 +135,20 @@ The application does not need database access: it reads the bundled JSON. If a b
 - `server-only` tables have no policy and no browser-role privilege
 - an anonymous read is refused
 
-## From objectives to a daily plan (implemented in Phase 2)
+## From objectives to a daily plan
 
 ```text
 SchoolYear → SchoolDay (date, instructional day n, period)                docs/SCHOOL_CALENDAR.md
 Curriculum → part → competency → LearningObjective (+ success examples)   docs/CURRICULUM.md
+AnnualPlan (when each objective is introduced, revisited, consolidated)   docs/ANNUAL_PLAN.md
 Lesson (teaches / reinvests objectives) → Activity (typed, traceable)     docs/CONTENT_AUTHORING.md
+TeachingText (the story or rhyme the lesson supplies)                     content/texts/
 LevelProgramme (rhythm + tracks) + instructional day n → DailyPlan        docs/DAILY_PROGRAMME.md
+DailyPlan → the parent's session (today, /seance/<n>, /calendrier)        docs/PARENT_SESSION.md
 ```
 
+- The **annual plan** is authored before a month's lessons and says what the year owes the child;
+  `npm run coverage:report` compares it with the content that exists (ADR-040).
 - A daily plan is **derived, not stored**: it is generated from the calendar, the programme
   definition and the lessons, and is keyed by instructional-day number (ADR-033).
 - Lessons and activities are mirrored into the database so future user data (a child's progress,

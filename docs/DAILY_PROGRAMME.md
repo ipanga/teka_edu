@@ -105,10 +105,15 @@ the balance fails CI rather than reaching a child.
 
 ### Session model
 
-The 40 minutes are **one home session, which may be split in two** (for example language and
-mathematics after school, movement and the rotating domain later). Teka Edu is **reinforcement,
-not replacement**: the child's school day remains the main teaching, and the PNEM's own school
-week is 17h30. This is a Teka Edu decision, awaiting the reviewer's confirmation.
+**30 to 45 minutes per instructional day, about 35** (ADR-039). It is **one session that may be
+split in two** — for example language and mathematics after school, movement and the rotating
+domain later. The plan carries a **pause point** (`pauseAfterSession`), computed as the session
+that first takes the day past its halfway mark: the parent can stop there and finish later.
+
+Teka Edu is **reinforcement, not replacement**: the child's school day remains the main teaching,
+and the PNEM's own school week is 17h30. The range is enforced by `checkDailyBalance`, so content
+cannot quietly grow past it. Whether 35 minutes is right for a child after a full school day is
+still a question for the human reviewer.
 
 ### A known divergence: the DRC's own preschool programme
 
@@ -149,15 +154,25 @@ The response carries the date, the instructional day, the rhythm day, the status
 screen minutes, the materials, and each session with its lesson, activities, objectives (with
 their official source and success examples) and optional English scaffolding.
 
-## The pilot week (3ème maternelle, 2026–2027)
+## September 2026 (3ème maternelle)
 
-| Day | Date       | Language                  | Mathematics                     | Physical                 | Rotating                             | Min |
-| --- | ---------- | ------------------------- | ------------------------------- | ------------------------ | ------------------------------------ | --- |
-| 1   | 2026-09-01 | Bonjour ! Je me présente  | Je compte jusqu’à cinq          | Je cours, je m’arrête    | Mon corps bouge (WORLD)              | 41  |
-| 2   | 2026-09-02 | Les mots de l’école       | Plus que, moins que, autant que | Je vise le panier        | Je dessine ma famille (ART)          | 40  |
-| 3   | 2026-09-03 | J’écoute une histoire     | Les formes autour de moi        | Je danse avec un tissu   | Les jours de la semaine (TIME-SPACE) | 41  |
-| 4   | 2026-09-04 | Les syllabes et les rimes | Trois et deux font cinq         | Le parcours de la maison | Une comptine pour compter (ART)      | 40  |
-| 5   | 2026-09-07 | Je raconte ma journée     | La bande numérique jusqu’à dix  | Le jeu du chat           | Les animaux autour de nous (WORLD)   | 41  |
+The first month authored in full: **22 instructional days**, 88 lessons, 170 activities, every
+day 35 minutes and 0-6 minutes of screen. The day's shape is language (13 min) + mathematics
+(9) + movement (6) + a rotating domain (7); the rotation runs on a ten-day rhythm so that arts,
+the world and time-space each get a fair share of the month.
 
-Day 6 onwards returns `no-content`: the tracks are exhausted and the generator says so instead
-of inventing a day.
+Print any day with `npm run programme:report -- --level=maternelle-3 --day=<n>`, and the month's
+coverage against the annual plan with `npm run coverage:report`. The weekly review documents are
+in [`review/`](review/).
+
+| Week | Instructional days | Dates           | Theme                                |
+| ---- | ------------------ | --------------- | ------------------------------------ |
+| 1    | 1–4                | 1–4 September   | La rentrée : moi, l’école, mon corps |
+| 2    | 5–9                | 7–11 September  | Ma maison, ma famille, les animaux   |
+| 3    | 10–14              | 14–18 September | Les objets et les formes             |
+| 4    | 15–19              | 21–25 September | Au marché : quantités et rimes       |
+| 5    | 20–22              | 28–30 September | Je montre ce que je sais             |
+
+Each day opens with the ritual — the date, then something brought back — and the last
+instructional day of every week consolidates (days 4, 9, 14, 19, 22). October is deliberately
+not written: it comes after this month has been reviewed.

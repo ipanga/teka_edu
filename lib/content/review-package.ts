@@ -209,7 +209,7 @@ function dayBlock(
 /** The whole review package for one level and school year. */
 export function buildReviewPackage(
   data: ReferenceData,
-  options: { levelId: string; schoolYearId: string; days: number },
+  options: { levelId: string; schoolYearId: string; week: number; fromDay: number; toDay: number },
 ): string {
   const calendar = data.calendars.find((c) => c.schoolYear.id === options.schoolYearId);
   const programme = getProgramme(options.levelId, options.schoolYearId, data);
@@ -223,7 +223,7 @@ export function buildReviewPackage(
   const schoolDays = generateSchoolDays(calendar, data.publicHolidays);
 
   const plans: DailyPlan[] = [];
-  for (let day = 1; day <= options.days; day++) {
+  for (let day = options.fromDay; day <= options.toDay; day++) {
     const schoolDay = schoolDays.find((d) => d.instructionalDay === day);
     if (schoolDay === undefined) break;
     plans.push(generateDailyPlan(schoolDay, programme, data.lessons));
@@ -236,6 +236,8 @@ export function buildReviewPackage(
 
   const header = [
     `# Dossier de relecture pédagogique — ${level?.name ?? options.levelId}, ${calendar.schoolYear.label}`,
+    "",
+    `**Semaine ${options.week}** · jours d’instruction ${options.fromDay} à ${options.toDay}`,
     "",
     "> **Ce document est généré automatiquement** à partir du contenu du dépôt",
     "> (`npm run review:package`). Ne le modifiez pas à la main : corrigez le contenu, puis",

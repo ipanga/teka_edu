@@ -20,13 +20,15 @@ describe("GET /api/programme/[schoolYear]/[level]/[day]", () => {
       instructionalDay: 1,
       rhythmDay: 1,
       status: "complete",
-      totalMinutes: 41,
+      totalMinutes: 35,
     });
     expect(body.sessions).toHaveLength(4);
     const first = body.sessions[0];
     expect(first.domainCode).toBe("LANG");
     expect(first.lesson.origin).toBe("teka-edu-created");
-    expect(first.lesson.activities[0].childInstruction).toContain("Bonjour");
+    // The day opens with the ritual: the date, said with the parent.
+    expect(first.lesson.activities[0].role).toBe("teach");
+    expect(first.lesson.activities[1].childInstruction).toContain("Bonjour");
     expect(first.lesson.activities[0].scaffolds[0].language).toBe("en");
   });
 
@@ -63,7 +65,8 @@ describe("GET /api/programme/[schoolYear]/[level]/[day]", () => {
   });
 
   it("reports a day whose content is not written yet without inventing one", async () => {
-    const body = await (await call("2026-2027", "maternelle-3", "6")).json();
+    // September is authored to instructional day 22; October is not written yet.
+    const body = await (await call("2026-2027", "maternelle-3", "23")).json();
     expect(body.status).toBe("no-content");
     expect(body.sessions.every((s: { lesson: unknown }) => s.lesson === null)).toBe(true);
   });

@@ -9,24 +9,25 @@
       "levelIds": ["maternelle-3"],
       "domainCode": "TIME-SPACE",
       "title": "Les jours de la semaine",
-      "summary": "L’enfant énonce la date du jour et situe un évènement dans la semaine.",
+      "summary": "Nommer les jours et situer aujourd’hui, hier et demain.",
       "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O07"],
+      "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 2,
       "themeId": "la-rentree",
-      "parentGuidance": "Reprenez cette question chaque matin, en quelques secondes : c’est la répétition quotidienne qui installe les repères, pas la longueur de la leçon.",
+      "parentGuidance": "Fabriquez une petite bande des sept jours avec l’enfant : elle servira tous les jours du mois.",
       "activities": [
         {
           "id": "m3-time-01-a1",
           "position": 1,
           "type": "conversation",
-          "title": "Quel jour sommes-nous ?",
-          "childInstruction": "Dis quel jour nous sommes aujourd’hui, quel jour c’était hier et quel jour ce sera demain.",
-          "adultGuidance": "Donnez la date complète en modèle : « Aujourd’hui, nous sommes mardi 1er septembre. » Faites répéter la phrase entière.",
+          "title": "Aujourd’hui, hier, demain",
+          "childInstruction": "Dis quel jour nous sommes, quel jour c’était hier, quel jour ce sera demain.",
+          "adultGuidance": "1. Dites la suite des sept jours ensemble. 2. Montrez aujourd’hui sur la bande. 3. Demandez hier, puis demain. 4. Reliez à du vrai : « Demain, c’est le jour du marché. »",
           "minutes": 4,
           "mode": "off-screen",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "TIME-SPACE-S01-C01-O10"],
+          "role": "teach",
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
           "materialCodes": ["aucun"],
           "vocabulary": [
             {
@@ -45,14 +46,15 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "What day is it today? And yesterday? And tomorrow?"
+              "childInstruction": "Say what day it is today, yesterday and tomorrow."
             }
           ],
           "payload": {
             "prompts": [
               "Quel jour sommes-nous aujourd’hui ?",
-              "Quel jour étions-nous hier ?",
-              "Que feras-tu samedi, quand il n’y a pas d’école ?"
+              "Quel jour était-ce hier ?",
+              "Quel jour sera-t-il demain ?",
+              "Quel jour vas-tu à l’école ?"
             ]
           }
         },
@@ -60,12 +62,13 @@
           "id": "m3-time-01-a2",
           "position": 2,
           "type": "manipulation",
-          "title": "Je range les sept jours",
-          "childInstruction": "Remets les sept jours de la semaine dans l’ordre, en commençant par lundi.",
-          "adultGuidance": "Écrivez les sept jours sur des papiers. Faites remarquer que la semaine revient toujours dans le même ordre, et marquez les jours d’école et les jours de repos.",
-          "minutes": 4,
+          "title": "Ma bande des jours",
+          "childInstruction": "Range les sept jours dans l’ordre sur la bande.",
+          "adultGuidance": "1. Écrivez les sept jours sur des morceaux de papier. 2. Mélangez-les. 3. Faites-les remettre dans l’ordre en les disant. 4. Gardez la bande pour les jours suivants.",
+          "minutes": 3,
           "mode": "off-screen",
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O07"],
+          "role": "teach",
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
           "materialCodes": ["papier", "crayon"],
           "vocabulary": [
             {
@@ -73,22 +76,650 @@
               "en": "the week"
             },
             {
-              "fr": "lundi",
-              "en": "Monday"
-            },
-            {
-              "fr": "dimanche",
-              "en": "Sunday"
+              "fr": "l’ordre",
+              "en": "the order"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Put the seven days of the week in order."
+              "childInstruction": "Put the seven days in order on the strip."
             }
           ],
           "payload": {
-            "objects": "sept papiers portant les jours de la semaine"
+            "objects": "sept papiers, un par jour de la semaine"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-time-02",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "TIME-SPACE",
+      "title": "Quel jour sommes-nous ?",
+      "summary": "Situer un évènement dans la semaine.",
+      "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "ma-maison",
+      "parentGuidance": "Reprenez la bande des jours. Reliez chaque jour à quelque chose de réel dans la vie de la famille.",
+      "activities": [
+        {
+          "id": "m3-time-02-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Le jour de quoi ?",
+          "childInstruction": "Dis-moi ce que tu fais chaque jour de la semaine.",
+          "adultGuidance": "1. Montrez un jour sur la bande. 2. Demandez ce qui se passe ce jour-là. 3. Faites une phrase entière : « Le samedi, nous allons au marché. » 4. Demandez quels jours il va à l’école.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
+          "materialCodes": ["papier"],
+          "vocabulary": [
+            {
+              "fr": "le jour",
+              "en": "the day"
+            },
+            {
+              "fr": "la semaine",
+              "en": "the week"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Tell me what you do on each day of the week."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Que fais-tu le lundi ?",
+              "Et le samedi ?",
+              "Quels jours vas-tu à l’école ?",
+              "Quel jour préfères-tu ? Pourquoi ?"
+            ]
+          }
+        },
+        {
+          "id": "m3-time-02-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Hier et demain",
+          "childInstruction": "Montre aujourd’hui sur la bande, puis hier, puis demain.",
+          "adultGuidance": "1. Faites montrer aujourd’hui. 2. Puis hier, en reculant d’un doigt. 3. Puis demain. 4. Répétez jusqu’à ce que le geste vienne tout seul.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
+          "materialCodes": ["papier"],
+          "vocabulary": [
+            {
+              "fr": "hier",
+              "en": "yesterday"
+            },
+            {
+              "fr": "demain",
+              "en": "tomorrow"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Show today on the strip, then yesterday, then tomorrow."
+            }
+          ],
+          "payload": {
+            "objects": "la bande des sept jours"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-time-03",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "TIME-SPACE",
+      "title": "Devant, derrière, à côté",
+      "summary": "Situer les objets par rapport à soi.",
+      "objectiveCodes": ["TIME-SPACE-S02-C01-O16"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "ma-maison",
+      "parentGuidance": "Tout se dit par rapport au corps de l’enfant : devant lui, derrière lui, à sa droite. Faites-le bouger plutôt que de déplacer les objets.",
+      "activities": [
+        {
+          "id": "m3-time-03-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Où est-ce que je le mets ?",
+          "childInstruction": "Pose l’objet devant toi. Maintenant derrière toi. Maintenant à côté de toi.",
+          "adultGuidance": "1. Donnez un objet. 2. Dites une position, l’enfant la réalise. 3. Inversez : il place, vous dites où c’est. 4. Ajoutez « sous » et « sur » si c’est facile.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["TIME-SPACE-S02-C01-O16"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "devant",
+              "en": "in front"
+            },
+            {
+              "fr": "derrière",
+              "en": "behind"
+            },
+            {
+              "fr": "à côté",
+              "en": "beside"
+            },
+            {
+              "fr": "sous",
+              "en": "under"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put the object in front of you. Now behind you. Now beside you."
+            }
+          ],
+          "payload": {
+            "objects": "un objet de la maison"
+          }
+        },
+        {
+          "id": "m3-time-03-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Je dis où c’est",
+          "childInstruction": "Dis-moi où est l’objet, sans le montrer du doigt.",
+          "adultGuidance": "1. Posez l’objet quelque part. 2. Demandez où il est, sans le doigt. 3. Exigez la phrase entière : « Il est derrière la chaise. » 4. Inversez les rôles.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["TIME-SPACE-S02-C01-O16"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "derrière",
+              "en": "behind"
+            },
+            {
+              "fr": "devant",
+              "en": "in front of"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Tell me where the object is, without pointing."
+            }
+          ],
+          "payload": {
+            "prompts": ["Où est l’objet ?", "Et maintenant ?", "Où est-il par rapport à toi ?"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-time-04",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "TIME-SPACE",
+      "title": "Où est l’objet ?",
+      "summary": "Situer un objet par rapport à un autre, et dire le trajet pour y aller.",
+      "objectiveCodes": ["TIME-SPACE-S02-C01-O16"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "On passe de « par rapport à moi » à « par rapport à un autre objet ». C’est plus difficile : gardez des repères très visibles.",
+      "activities": [
+        {
+          "id": "m3-time-04-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Cache et retrouve",
+          "childInstruction": "Ferme les yeux. Je cache l’objet, tu le retrouves avec mes indications.",
+          "adultGuidance": "1. Cachez l’objet. 2. Guidez seulement avec des mots : « Il est sous quelque chose, près de la porte. » 3. Interdisez-vous de montrer. 4. Inversez les rôles : c’est lui qui vous guide.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["TIME-SPACE-S02-C01-O16"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "près de",
+              "en": "near"
+            },
+            {
+              "fr": "loin de",
+              "en": "far from"
+            },
+            {
+              "fr": "sous",
+              "en": "under"
+            },
+            {
+              "fr": "sur",
+              "en": "on"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Close your eyes. I hide the object; find it using my words."
+            }
+          ],
+          "payload": {
+            "objects": "un petit objet à cacher"
+          }
+        },
+        {
+          "id": "m3-time-04-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Le chemin pour y aller",
+          "childInstruction": "Explique-moi comment aller de la porte jusqu’à ta place.",
+          "adultGuidance": "1. Demandez le trajet en mots. 2. Faites employer « d’abord », « ensuite ». 3. Suivez ses indications à la lettre : s’il manque une étape, cela se verra. 4. Recommencez avec un autre trajet.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["TIME-SPACE-S02-C01-O16"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "le chemin",
+              "en": "the way"
+            },
+            {
+              "fr": "tourner",
+              "en": "to turn"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Tell me how to go from the door to your place."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Par où commences-tu ?",
+              "Et ensuite ?",
+              "Tu passes devant quoi ?",
+              "Où arrives-tu ?"
+            ]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-time-05",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "TIME-SPACE",
+      "title": "Ma semaine",
+      "summary": "Situer les évènements de sa semaine et les mettre en ordre.",
+      "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
+      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O12"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "Servez-vous de la bande des jours. On relie chaque jour à un évènement réel de la famille.",
+      "activities": [
+        {
+          "id": "m3-time-05-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Je range ma semaine",
+          "childInstruction": "Pose sur chaque jour ce que tu fais ce jour-là.",
+          "adultGuidance": "1. Reprenez la bande des sept jours. 2. Pour chaque jour, demandez un évènement. 3. Dessinez ou posez un petit symbole. 4. Relisez la semaine entière, dans l’ordre.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [
+            {
+              "fr": "le jour",
+              "en": "the day"
+            },
+            {
+              "fr": "avant",
+              "en": "before"
+            },
+            {
+              "fr": "après",
+              "en": "after"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put on each day what you do that day."
+            }
+          ],
+          "payload": {
+            "objects": "la bande des jours et des petits papiers"
+          }
+        },
+        {
+          "id": "m3-time-05-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Avant ou après ?",
+          "childInstruction": "L’école, c’est avant ou après le marché ?",
+          "adultGuidance": "1. Posez des questions d’ordre : « Le dimanche vient avant ou après le samedi ? » 2. Faites montrer sur la bande pour vérifier. 3. Faites employer les mots « avant » et « après » dans la réponse.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
+          "materialCodes": ["papier"],
+          "vocabulary": [
+            {
+              "fr": "avant",
+              "en": "before"
+            },
+            {
+              "fr": "après",
+              "en": "after"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Is school before or after the market?"
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Le mardi vient avant ou après le lundi ?",
+              "Quel jour vient juste après aujourd’hui ?",
+              "Combien de jours avant samedi ?"
+            ]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-time-06",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "TIME-SPACE",
+      "title": "Avant, pendant, après",
+      "summary": "Repérer les étapes d’une activité vécue et les ordonner.",
+      "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
+      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O10"],
+      "stage": "discovery",
+      "difficulty": 3,
+      "themeId": "au-marche",
+      "parentGuidance": "Prenez une activité que l’enfant fait vraiment : préparer le repas, se laver, s’habiller. On cherche les étapes, dans l’ordre.",
+      "activities": [
+        {
+          "id": "m3-time-06-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Les étapes, dans l’ordre",
+          "childInstruction": "Remets dans l’ordre les étapes : d’abord, ensuite, à la fin.",
+          "adultGuidance": "1. Choisissez une activité simple en trois étapes. 2. Dites-les dans le désordre. 3. Faites-les remettre en ordre. 4. Faites raconter l’activité entière avec « d’abord », « ensuite », « à la fin ».",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [
+            {
+              "fr": "l’étape",
+              "en": "the step"
+            },
+            {
+              "fr": "d’abord",
+              "en": "first"
+            },
+            {
+              "fr": "à la fin",
+              "en": "at the end"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put the steps in order: first, then, at the end."
+            }
+          ],
+          "payload": {
+            "objects": "trois petits papiers, un par étape"
+          }
+        },
+        {
+          "id": "m3-time-06-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Qu’est-ce qui vient après ?",
+          "childInstruction": "Je te dis une étape, tu me dis celle d’après.",
+          "adultGuidance": "1. Dites une étape. 2. Demandez la suivante. 3. Puis la précédente : « Et avant ? » 4. Terminez par la journée entière : le matin, l’école, le soir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "avant",
+              "en": "before"
+            },
+            {
+              "fr": "après",
+              "en": "after"
+            },
+            {
+              "fr": "en dernier",
+              "en": "last"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "I say a step; you say the next one."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Qu’est-ce qui vient après ?",
+              "Et avant ?",
+              "Qu’est-ce qu’on fait en dernier ?"
+            ]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-time-07",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "TIME-SPACE",
+      "title": "Les étapes de l’histoire",
+      "summary": "Ordonner les moments d’une histoire connue.",
+      "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
+      "supportingObjectiveCodes": ["LANG-S02-C03-O13"],
+      "stage": "practice",
+      "difficulty": 3,
+      "themeId": "au-marche",
+      "parentGuidance": "On applique l’ordre à une histoire du mois. L’enfant connait l’histoire : la difficulté est l’ordre, pas le souvenir.",
+      "activities": [
+        {
+          "id": "m3-time-07-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Je remets l’histoire en ordre",
+          "childInstruction": "Remets les trois moments de l’histoire dans l’ordre.",
+          "adultGuidance": "1. Rappelez les trois moments des Trois cailloux. 2. Dites-les dans le désordre. 3. Faites-les remettre en ordre, en les disant. 4. Faites raconter l’histoire entière.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [
+            {
+              "fr": "le moment",
+              "en": "the moment"
+            },
+            {
+              "fr": "l’ordre",
+              "en": "the order"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put the three moments of the story in order."
+            }
+          ],
+          "payload": {
+            "objects": "trois papiers, un par moment de l’histoire"
+          }
+        },
+        {
+          "id": "m3-time-07-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Et si on changeait la fin ?",
+          "childInstruction": "Raconte une autre fin pour l’histoire.",
+          "adultGuidance": "1. Demandez ce qui se passerait si la sœur ne rendait pas le caillou. 2. Laissez inventer. 3. Reformulez son idée en deux phrases. 4. Faites redire le début, puis sa nouvelle fin.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "inventer",
+              "en": "to make up"
+            },
+            {
+              "fr": "la fin",
+              "en": "the ending"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Tell me a different ending for the story."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Et si la sœur gardait le caillou ?",
+              "Que ferait Tito ?",
+              "Comment ça finirait ?"
+            ]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-time-08",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "TIME-SPACE",
+      "title": "La semaine et la date",
+      "summary": "Dire la date du jour et situer la journée dans la semaine.",
+      "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
+      "supportingObjectiveCodes": ["TIME-SPACE-S01-C02-O08"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "je-montre-ce-que-je-sais",
+      "parentGuidance": "Reprise de tout ce qui touche au temps ce mois-ci : la date, les jours, l’ordre. L’enfant dit, vous vérifiez.",
+      "activities": [
+        {
+          "id": "m3-time-08-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Je dis la date tout seul",
+          "childInstruction": "Dis la date d’aujourd’hui, en entier, tout seul.",
+          "adultGuidance": "1. Laissez dire seul, sans souffler. 2. Complétez seulement ce qui manque. 3. Demandez hier et demain. 4. Demandez quel jour de la semaine il préfère et pourquoi.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "la date",
+              "en": "the date"
+            },
+            {
+              "fr": "la semaine",
+              "en": "the week"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say today’s date, all of it, on your own."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Quelle est la date aujourd’hui ?",
+              "Quel jour était-ce hier ?",
+              "Quel jour sera-t-il demain ?",
+              "Combien de jours dans une semaine ?"
+            ]
+          }
+        },
+        {
+          "id": "m3-time-08-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Ma semaine en ordre",
+          "childInstruction": "Remets les jours de la semaine dans l’ordre, sans modèle.",
+          "adultGuidance": "1. Mélangez les sept papiers. 2. Laissez ranger sans la bande sous les yeux. 3. Vérifiez ensemble avec la bande. 4. Félicitez ce qui est juste avant de corriger le reste.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
+          "materialCodes": ["papier"],
+          "vocabulary": [
+            {
+              "fr": "l’ordre",
+              "en": "the order"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put the days of the week in order, without the model."
+            }
+          ],
+          "payload": {
+            "objects": "les sept papiers des jours"
           }
         }
       ],

@@ -12,6 +12,14 @@ import type { LessonReview, LessonStatus } from "./review";
 export const PROGRESSION_STAGES = ["discovery", "practice", "consolidation", "review"] as const;
 export type ProgressionStage = (typeof PROGRESSION_STAGES)[number];
 
+/**
+ * What an activity is for inside the day. Teka Edu is an after-school reinforcement programme
+ * (ADR-039), so revisiting is deliberate rather than accidental: every day carries a short
+ * retrieval activity, and the last day of a week consolidates what the week covered.
+ */
+export const ACTIVITY_ROLES = ["teach", "retrieval", "consolidation"] as const;
+export type ActivityRole = (typeof ACTIVITY_ROLES)[number];
+
 /** How the child works: the daily programme keeps screen time short. */
 export const ACTIVITY_MODES = ["off-screen", "on-screen", "mixed"] as const;
 export type ActivityMode = (typeof ACTIVITY_MODES)[number];
@@ -62,6 +70,8 @@ export type Activity = {
   adultGuidance: string;
   minutes: number;
   mode: ActivityMode;
+  /** Teaching, bringing something back (retrieval), or tying a week together (consolidation). */
+  role: ActivityRole;
   /** Objectives this activity works on; each must be one of its lesson's objectives. */
   objectiveCodes: readonly string[];
   materialCodes: readonly string[];

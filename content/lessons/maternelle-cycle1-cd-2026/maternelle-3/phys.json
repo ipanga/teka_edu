@@ -9,24 +9,25 @@
       "levelIds": ["maternelle-3"],
       "domainCode": "PHYS",
       "title": "Je cours, je m’arrête",
-      "summary": "L’enfant court de plus en plus longtemps et s’arrête au signal.",
-      "objectiveCodes": ["PHYS-S01-C01-O10"],
+      "summary": "Courir puis s’arrêter net au signal, en respectant l’espace et les règles.",
+      "objectiveCodes": ["PHYS-S02-C01-O07", "PHYS-S01-C01-O10"],
       "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 1,
       "themeId": "la-rentree",
-      "parentGuidance": "Dégagez un espace sûr, dehors si possible. Le programme demande une activité physique quotidienne : ces quelques minutes à la maison en sont une version courte, à compléter par du jeu libre.",
+      "parentGuidance": "Avant de bouger, dégagez l’espace ensemble et dites les deux règles : on ne pousse pas, on s’arrête au signal.",
       "activities": [
         {
           "id": "m3-phys-01-a1",
           "position": 1,
           "type": "movement",
-          "title": "Cours jusqu’au signal",
-          "childInstruction": "Cours sans t’arrêter jusqu’à ce que je frappe dans mes mains. Puis repars !",
-          "adultGuidance": "Trois courses de plus en plus longues (15, 30 puis 45 secondes), avec un vrai repos entre chaque. Comptez à voix haute pour que l’enfant mesure ses progrès.",
-          "minutes": 8,
+          "title": "Cours et arrête-toi",
+          "childInstruction": "Cours quand je tape dans les mains. Arrête-toi net quand je m’arrête.",
+          "adultGuidance": "1. Dégagez l’espace avec l’enfant : c’est lui qui écarte la chaise. 2. Dites les règles. 3. Tapez dans les mains pour partir, arrêtez pour stopper. 4. À l’intérieur, remplacez la course par des pas rapides sur place.",
+          "minutes": 6,
           "mode": "off-screen",
-          "objectiveCodes": ["PHYS-S01-C01-O10"],
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S02-C01-O07", "PHYS-S01-C01-O10"],
           "materialCodes": ["espace-degage"],
           "vocabulary": [
             {
@@ -41,11 +42,11 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Run until I clap, then start again."
+              "childInstruction": "Run when I clap. Stop when I stop."
             }
           ],
           "payload": {
-            "moves": ["courir sans s’arrêter", "s’arrêter au signal", "repartir"]
+            "moves": ["courir", "s’arrêter net", "repartir"]
           }
         }
       ],
@@ -58,48 +59,45 @@
       "curriculumId": "maternelle-cycle1-cd-2026",
       "levelIds": ["maternelle-3"],
       "domainCode": "PHYS",
-      "title": "Je vise le panier",
-      "summary": "L’enfant lance une balle de papier vers une cible, de plus en plus loin.",
-      "objectiveCodes": ["PHYS-S01-C01-O09"],
+      "title": "Je cours plus longtemps",
+      "summary": "Courir sans s’arrêter un peu plus longtemps chaque fois.",
+      "objectiveCodes": ["PHYS-S01-C01-O10"],
       "supportingObjectiveCodes": [],
-      "stage": "discovery",
-      "difficulty": 1,
+      "stage": "practice",
+      "difficulty": 2,
       "themeId": "la-rentree",
-      "parentGuidance": "Une balle de papier froissé et une boîte suffisent. Faites lancer bras levé, puis de plus en plus loin, sans forcer.",
+      "parentGuidance": "On allonge le temps de course, pas la vitesse. Comptez à voix haute : l’enfant entend ses progrès.",
       "activities": [
         {
           "id": "m3-phys-02-a1",
           "position": 1,
           "type": "movement",
-          "title": "Lance dans la boîte",
-          "childInstruction": "Lance la balle dans la boîte. Quand tu réussis deux fois, recule d’un grand pas.",
-          "adultGuidance": "Comptez les réussites à voix haute : cela fait aussi travailler les nombres. Alternez la main droite et la main gauche.",
-          "minutes": 8,
+          "title": "Cours pendant que je compte",
+          "childInstruction": "Cours sans t’arrêter pendant que je compte jusqu’à dix.",
+          "adultGuidance": "1. Comptez jusqu’à dix pendant qu’il court ou marche vite. 2. Faites une pause. 3. Recommencez en comptant jusqu’à quinze. 4. À l’intérieur : marche rapide, montées de genoux ou course sur place.",
+          "minutes": 6,
           "mode": "off-screen",
-          "objectiveCodes": ["PHYS-S01-C01-O09"],
-          "materialCodes": ["balle-papier", "boite", "espace-degage"],
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S01-C01-O10"],
+          "materialCodes": ["espace-degage"],
           "vocabulary": [
             {
-              "fr": "lancer",
-              "en": "to throw"
+              "fr": "longtemps",
+              "en": "a long time"
             },
             {
-              "fr": "viser",
-              "en": "to aim"
-            },
-            {
-              "fr": "loin",
-              "en": "far"
+              "fr": "souffler",
+              "en": "to catch your breath"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Throw the ball into the box, then take a step back."
+              "childInstruction": "Run without stopping while I count to ten."
             }
           ],
           "payload": {
-            "moves": ["lancer vers la cible", "reculer d’un pas", "lancer plus loin"]
+            "moves": ["courir sans s’arrêter", "souffler", "repartir"]
           }
         }
       ],
@@ -113,47 +111,44 @@
       "levelIds": ["maternelle-3"],
       "domainCode": "PHYS",
       "title": "Je danse avec un tissu",
-      "summary": "L’enfant invente et reproduit des gestes dansés, lentement puis vite.",
+      "summary": "Reproduire et inventer des gestes dansés avec un objet léger.",
       "objectiveCodes": ["PHYS-S03-C01-O09"],
       "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 2,
       "themeId": "la-rentree",
-      "parentGuidance": "Chantez ou tapez un rythme : la musique n’est pas obligatoire. Dansez vous aussi : l’enfant imite d’abord, invente ensuite.",
+      "parentGuidance": "Un pagne, un foulard ou même une feuille de papier suffit. Dansez d’abord vous-même : l’enfant imite mieux qu’il n’invente, au début.",
       "activities": [
         {
           "id": "m3-phys-03-a1",
           "position": 1,
           "type": "movement",
-          "title": "Lentement, puis vite",
-          "childInstruction": "Danse avec le tissu : tourne lentement, puis vite, puis arrête-toi comme une statue.",
-          "adultGuidance": "Proposez trois façons de bouger, puis demandez à l’enfant d’en inventer une que vous reproduirez. Terminez par une immobilité complète.",
-          "minutes": 8,
+          "title": "La danse du tissu",
+          "childInstruction": "Fais danser le tissu : en haut, en bas, autour de toi. Puis invente un geste à toi.",
+          "adultGuidance": "1. Montrez trois gestes simples. 2. Faites-les ensemble. 3. Demandez un geste inventé par l’enfant et copiez-le. 4. Terminez par la suite complète : vos trois gestes plus le sien.",
+          "minutes": 6,
           "mode": "off-screen",
+          "role": "teach",
           "objectiveCodes": ["PHYS-S03-C01-O09"],
-          "materialCodes": ["objets-maison", "espace-degage"],
+          "materialCodes": ["objets-maison"],
           "vocabulary": [
             {
-              "fr": "lentement",
-              "en": "slowly"
+              "fr": "danser",
+              "en": "to dance"
             },
             {
-              "fr": "vite",
-              "en": "quickly"
-            },
-            {
-              "fr": "s’immobiliser",
-              "en": "to stand still"
+              "fr": "tourner",
+              "en": "to turn"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Dance with the cloth: slowly, then quickly, then freeze."
+              "childInstruction": "Make the cloth dance: up, down, around you."
             }
           ],
           "payload": {
-            "moves": ["tourner lentement", "tourner vite", "s’immobiliser", "inventer un geste"]
+            "moves": ["lever le tissu", "le faire tourner", "le poser doucement"]
           }
         }
       ],
@@ -166,48 +161,45 @@
       "curriculumId": "maternelle-cycle1-cd-2026",
       "levelIds": ["maternelle-3"],
       "domainCode": "PHYS",
-      "title": "Le parcours de la maison",
-      "summary": "L’enfant enchaîne plusieurs actions : passer sous, monter, marcher en équilibre, sauter.",
-      "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
+      "title": "Je vise le panier",
+      "summary": "Lancer avec précision vers une cible.",
+      "objectiveCodes": ["PHYS-S01-C01-O09"],
       "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 2,
       "themeId": "la-rentree",
-      "parentGuidance": "Construisez le parcours avec l’enfant, avec des coussins et des chaises stables. Vérifiez la sécurité avant chaque passage : c’est aussi un objectif du programme.",
+      "parentGuidance": "Une balle de papier froissé et un seau suffisent. Commencez très près : la réussite d’abord, la distance ensuite.",
       "activities": [
         {
           "id": "m3-phys-04-a1",
           "position": 1,
           "type": "movement",
-          "title": "Je fais tout le parcours",
-          "childInstruction": "Passe sous la chaise, monte sur le coussin, marche sur la ligne, puis saute avec les deux pieds.",
-          "adultGuidance": "Faites nommer chaque étape avant de partir : cela relie le mouvement et le langage. Recommencez trois fois en accélérant un peu.",
-          "minutes": 8,
+          "title": "Vise et lance",
+          "childInstruction": "Lance la balle dans le seau. Puis recule d’un pas et recommence.",
+          "adultGuidance": "1. Placez le seau à deux pas. 2. Laissez lancer trois fois. 3. Reculez d’un pas à chaque réussite. 4. Si trois essais échouent, rapprochez-vous : on termine toujours sur une réussite.",
+          "minutes": 6,
           "mode": "off-screen",
-          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
-          "materialCodes": ["objets-maison", "espace-degage"],
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S01-C01-O09"],
+          "materialCodes": ["balle-papier", "boite"],
           "vocabulary": [
             {
-              "fr": "sous",
-              "en": "under"
+              "fr": "viser",
+              "en": "to aim"
             },
             {
-              "fr": "sur",
-              "en": "on"
-            },
-            {
-              "fr": "sauter",
-              "en": "to jump"
+              "fr": "lancer",
+              "en": "to throw"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Go under, climb on, walk on the line, then jump."
+              "childInstruction": "Throw the ball into the bucket, then step back."
             }
           ],
           "payload": {
-            "moves": ["passer sous", "monter sur", "marcher en équilibre", "sauter à pieds joints"]
+            "moves": ["viser", "lancer", "reculer d’un pas"]
           }
         }
       ],
@@ -220,48 +212,916 @@
       "curriculumId": "maternelle-cycle1-cd-2026",
       "levelIds": ["maternelle-3"],
       "domainCode": "PHYS",
-      "title": "Le jeu du chat",
-      "summary": "L’enfant joue à attraper et à s’échapper, en respectant la règle et en changeant de rôle.",
-      "objectiveCodes": ["PHYS-S04-C01-O09"],
-      "supportingObjectiveCodes": [],
+      "title": "En équilibre",
+      "summary": "Tenir en équilibre en combinant appuis et déplacements.",
+      "objectiveCodes": ["PHYS-S02-C01-O05"],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O07"],
       "stage": "discovery",
       "difficulty": 2,
-      "themeId": "la-rentree",
-      "parentGuidance": "Jouez avec l’enfant, ou avec ses frères et sœurs. Énoncez la règle avant de commencer et arrêtez le jeu si elle n’est plus respectée : la règle fait partie de l’apprentissage.",
+      "themeId": "ma-maison",
+      "parentGuidance": "Restez à côté de l’enfant, prêt à le rattraper. Rien de haut : tout se fait au sol.",
       "activities": [
         {
           "id": "m3-phys-05-a1",
           "position": 1,
           "type": "movement",
-          "title": "Chat et souris",
-          "childInstruction": "Quand je dis « chat », tu m’attrapes. Quand je dis « souris », tu te sauves !",
-          "adultGuidance": "Délimitez l’espace de jeu. Changez de rôle à chaque manche et rappelez la règle : on touche l’épaule, on ne pousse pas.",
-          "minutes": 8,
+          "title": "Sur une ligne",
+          "childInstruction": "Marche sur la ligne sans poser le pied à côté. Puis arrête-toi sur un pied.",
+          "adultGuidance": "1. Tracez une ligne au sol (une corde, un trait de craie, une bande de tissu). 2. Faites marcher dessus. 3. Demandez de s’arrêter sur un pied, en comptant jusqu’à trois. 4. Tenez-lui la main au début si besoin.",
+          "minutes": 6,
           "mode": "off-screen",
-          "objectiveCodes": ["PHYS-S04-C01-O09"],
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "l’équilibre",
+              "en": "balance"
+            },
+            {
+              "fr": "le pied",
+              "en": "the foot"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Walk on the line without stepping off."
+            }
+          ],
+          "payload": {
+            "moves": ["marcher sur la ligne", "tenir sur un pied", "repartir"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-06",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Le parcours de la maison",
+      "summary": "Enchainer plusieurs actions dans un parcours, en respectant les règles.",
+      "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "ma-maison",
+      "parentGuidance": "Construisez le parcours avec l’enfant : passer sous, contourner, enjamber. Vérifiez qu’il n’y a rien de fragile ni de coupant sur le trajet.",
+      "activities": [
+        {
+          "id": "m3-phys-06-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Mon parcours",
+          "childInstruction": "Fais le parcours : passe sous la chaise, contourne le coussin, enjambe le bâton.",
+          "adultGuidance": "1. Installez trois étapes seulement. 2. Montrez le parcours une fois. 3. Laissez-le faire à son rythme. 4. Refaites-le en disant à voix haute ce qu’il fait : « Tu passes sous… »",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
+          "materialCodes": ["objets-maison", "espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "sous",
+              "en": "under"
+            },
+            {
+              "fr": "autour",
+              "en": "around"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Do the course: under the chair, around the cushion, over the stick."
+            }
+          ],
+          "payload": {
+            "moves": ["passer sous", "contourner", "enjamber"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-07",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je danse comme les animaux",
+      "summary": "Inventer des gestes dansés à partir d’une image.",
+      "objectiveCodes": ["PHYS-S03-C01-O09"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "ma-maison",
+      "parentGuidance": "Nommez l’animal, laissez l’enfant trouver le geste. Ne montrez qu’en dernier recours.",
+      "activities": [
+        {
+          "id": "m3-phys-07-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "La danse des animaux",
+          "childInstruction": "Bouge comme la chèvre, puis comme le poussin, puis comme le lézard.",
+          "adultGuidance": "1. Nommez un animal. 2. Laissez inventer le déplacement. 3. Imitez-le à votre tour : il verra que son idée compte. 4. Enchainez les trois animaux comme une petite danse.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S03-C01-O09"],
           "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "sauter",
+              "en": "to jump"
+            },
+            {
+              "fr": "ramper",
+              "en": "to crawl"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move like the goat, then the chick, then the lizard."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "sauter comme la chèvre",
+              "trottiner comme le poussin",
+              "ramper comme le lézard"
+            ]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-08",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Le jeu du chat",
+      "summary": "Jouer à deux, en tenant un rôle et en respectant la règle.",
+      "objectiveCodes": ["PHYS-S04-C01-O09"],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O07"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "ma-maison",
+      "parentGuidance": "Jeu à deux : vous jouez avec lui. Rappelez la règle avant de commencer et tenez-la, même en riant.",
+      "activities": [
+        {
+          "id": "m3-phys-08-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Chat et souris",
+          "childInstruction": "Quand je dis « chat », tu me sauves. Quand je dis « souris », c’est toi qui me cherches.",
+          "adultGuidance": "1. Délimitez l’espace et une zone refuge. 2. Jouez un tour comme chat. 3. Inversez les rôles. 4. À l’intérieur, jouez en marchant vite au lieu de courir.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "le chat",
+              "en": "the cat"
+            },
+            {
+              "fr": "la souris",
+              "en": "the mouse"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "When I say cat, run away. When I say mouse, you chase me."
+            }
+          ],
+          "payload": {
+            "moves": ["s’échapper", "attraper", "changer de rôle"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-09",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Lancer et attraper",
+      "summary": "Lancer vers quelqu’un et rattraper à deux mains.",
+      "objectiveCodes": ["PHYS-S01-C01-O09", "PHYS-S04-C01-O09"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "ma-maison",
+      "parentGuidance": "Lancez doucement, à hauteur de poitrine. Rapprochez-vous jusqu’à ce que l’enfant attrape : la réussite d’abord.",
+      "activities": [
+        {
+          "id": "m3-phys-09-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "La balle qui va et vient",
+          "childInstruction": "Attrape la balle à deux mains, puis renvoie-la-moi.",
+          "adultGuidance": "1. Placez-vous à deux pas. 2. Lancez doucement, en annonçant : « Attention, j’envoie ! » 3. Comptez les réussites ensemble. 4. Reculez d’un pas quand cinq passes de suite réussissent.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S01-C01-O09", "PHYS-S04-C01-O09"],
+          "materialCodes": ["balle-papier"],
           "vocabulary": [
             {
               "fr": "attraper",
               "en": "to catch"
             },
             {
-              "fr": "se sauver",
-              "en": "to run away"
-            },
-            {
-              "fr": "la règle",
-              "en": "the rule"
+              "fr": "envoyer",
+              "en": "to send"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "When I say cat, you catch me. When I say mouse, you run away."
+              "childInstruction": "Catch the ball with both hands, then send it back."
             }
           ],
           "payload": {
-            "moves": ["courir pour attraper", "s’échapper", "changer de rôle"]
+            "moves": ["attraper à deux mains", "renvoyer", "compter les passes"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-10",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Marcher, s’arrêter, repartir",
+      "summary": "Contrôler son déplacement : vite, lentement, à l’arrêt.",
+      "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S01-C01-O10"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "Le travail du jour est le contrôle, pas la vitesse. Variez les consignes lentement.",
+      "activities": [
+        {
+          "id": "m3-phys-10-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Vite, doucement, stop",
+          "childInstruction": "Marche vite. Marche doucement. Stop ! Puis repars.",
+          "adultGuidance": "1. Donnez une consigne à la fois. 2. Laissez trois secondes entre chaque. 3. Ajoutez « à reculons », puis « sur la pointe des pieds ». 4. Terminez par un arrêt complet et trois respirations.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S01-C01-O10"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "vite",
+              "en": "fast"
+            },
+            {
+              "fr": "doucement",
+              "en": "slowly"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Walk fast. Walk slowly. Stop. Then go again."
+            }
+          ],
+          "payload": {
+            "moves": ["marcher vite", "marcher doucement", "s’arrêter", "repartir"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-11",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je cours et je compte",
+      "summary": "Courir plus longtemps, en mesurant avec les nombres du jour.",
+      "objectiveCodes": ["PHYS-S01-C01-O10"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "On relie la course et le comptage : l’enfant entend la comptine numérique pendant l’effort.",
+      "activities": [
+        {
+          "id": "m3-phys-11-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Cours jusqu’à vingt",
+          "childInstruction": "Cours pendant que je compte jusqu’à vingt, sans t’arrêter.",
+          "adultGuidance": "1. Comptez à voix haute pendant qu’il court. 2. Faites une pause franche. 3. Recommencez une fois. 4. À l’intérieur : sur place, genoux hauts.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S01-C01-O10"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "compter",
+              "en": "to count"
+            },
+            {
+              "fr": "s’arrêter",
+              "en": "to stop"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Run while I count to twenty, without stopping."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "compter en courant", "souffler"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-12",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je danse la pluie",
+      "summary": "Traduire un paysage sonore en gestes dansés.",
+      "objectiveCodes": ["PHYS-S03-C01-O09"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "Servez-vous des bruits de l’histoire de la pluie : gouttes lentes, puis averse, puis calme.",
+      "activities": [
+        {
+          "id": "m3-phys-12-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "La danse de la pluie",
+          "childInstruction": "Danse comme les gouttes : d’abord lentes, puis très vite, puis plus rien.",
+          "adultGuidance": "1. Frappez lentement sur la table : l’enfant bouge lentement. 2. Accélérez. 3. Arrêtez net : il s’immobilise. 4. Recommencez en inversant les rôles : c’est lui qui fait la pluie.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S03-C01-O09"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "la goutte",
+              "en": "the drop"
+            },
+            {
+              "fr": "vite",
+              "en": "fast"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Dance like raindrops: slow, then fast, then nothing."
+            }
+          ],
+          "payload": {
+            "moves": ["bouger lentement", "bouger vite", "s’immobiliser"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-13",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je passe le ballon",
+      "summary": "Coopérer à deux pour réussir un nombre de passes.",
+      "objectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S01-C01-O09"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "Ce n’est pas un match : on compte les passes réussies ensemble. Le but est commun.",
+      "activities": [
+        {
+          "id": "m3-phys-13-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Dix passes ensemble",
+          "childInstruction": "On essaie de faire dix passes sans faire tomber la balle.",
+          "adultGuidance": "1. Comptez chaque passe réussie à voix haute. 2. Si la balle tombe, on repart de zéro sans reproche. 3. Essayez trois fois. 4. Fêtez le meilleur score, même s’il est de quatre.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S01-C01-O09"],
+          "materialCodes": ["balle-papier"],
+          "vocabulary": [
+            {
+              "fr": "la passe",
+              "en": "the pass"
+            },
+            {
+              "fr": "ensemble",
+              "en": "together"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Let us try ten passes without dropping the ball."
+            }
+          ],
+          "payload": {
+            "moves": ["passer", "attraper", "compter ensemble"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-14",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je saute par-dessus",
+      "summary": "Sauter pieds joints par-dessus un obstacle bas.",
+      "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S01-C01-O09"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "Obstacle très bas : une corde posée au sol, un tissu plié. Rien de dur ni de haut.",
+      "activities": [
+        {
+          "id": "m3-phys-14-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Saute la rivière",
+          "childInstruction": "Saute par-dessus la rivière, pieds joints, sans marcher dedans.",
+          "adultGuidance": "1. Posez deux tissus au sol pour figurer la rivière. 2. Faites sauter pieds joints. 3. Élargissez d’une main à chaque réussite. 4. Rétrécissez dès qu’il échoue deux fois.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S01-C01-O09"],
+          "materialCodes": ["objets-maison", "espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "sauter",
+              "en": "to jump"
+            },
+            {
+              "fr": "par-dessus",
+              "en": "over"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Jump over the river with both feet together."
+            }
+          ],
+          "payload": {
+            "moves": ["sauter pieds joints", "atterrir en souplesse", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-15",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je vise plus loin",
+      "summary": "Lancer loin, puis viser une cible plus éloignée.",
+      "objectiveCodes": ["PHYS-S01-C01-O09"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 3,
+      "themeId": "au-marche",
+      "parentGuidance": "Deux gestes différents : lancer loin (tout le bras) et viser (regarder la cible). Nommez-les.",
+      "activities": [
+        {
+          "id": "m3-phys-15-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Loin, puis juste",
+          "childInstruction": "D’abord, lance la balle le plus loin possible. Ensuite, vise le seau.",
+          "adultGuidance": "1. Faites lancer loin trois fois : on regarde où la balle tombe. 2. Puis placez le seau à trois pas. 3. Faites viser trois fois. 4. Demandez ce qui change entre les deux gestes.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S01-C01-O09"],
+          "materialCodes": ["balle-papier", "boite"],
+          "vocabulary": [
+            {
+              "fr": "loin",
+              "en": "far"
+            },
+            {
+              "fr": "la cible",
+              "en": "the target"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "First throw the ball as far as you can, then aim at the bucket."
+            }
+          ],
+          "payload": {
+            "moves": ["lancer loin", "viser", "regarder la cible"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-16",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Un pied, deux pieds",
+      "summary": "Varier les appuis en gardant l’équilibre.",
+      "objectiveCodes": ["PHYS-S02-C01-O05"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 3,
+      "themeId": "au-marche",
+      "parentGuidance": "Restez tout près. Comptez à voix haute pendant qu’il tient : cela l’aide à durer.",
+      "activities": [
+        {
+          "id": "m3-phys-16-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Le jeu des appuis",
+          "childInstruction": "Tiens sur un pied pendant que je compte jusqu’à cinq. Puis change de pied.",
+          "adultGuidance": "1. Montrez d’abord. 2. Comptez jusqu’à cinq. 3. Changez de pied. 4. Ajoutez une difficulté seulement si c’est facile : les bras écartés, puis les yeux sur un point fixe.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S02-C01-O05"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "l’équilibre",
+              "en": "balance"
+            },
+            {
+              "fr": "changer",
+              "en": "to change"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Stand on one foot while I count to five, then change feet."
+            }
+          ],
+          "payload": {
+            "moves": ["tenir sur un pied", "changer de pied", "garder l’équilibre"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-17",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "La statue",
+      "summary": "S’immobiliser complètement au signal : contrôler son corps.",
+      "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "au-marche",
+      "parentGuidance": "Jeu calme, parfait le soir. L’immobilité complète est plus difficile qu’elle n’en a l’air.",
+      "activities": [
+        {
+          "id": "m3-phys-17-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Statue !",
+          "childInstruction": "Bouge quand la musique est là. Quand je dis « statue », ne bouge plus du tout.",
+          "adultGuidance": "1. Chantez ou frappez un rythme. 2. Arrêtez net et dites « statue ». 3. Comptez trois secondes d’immobilité. 4. Inversez : c’est l’enfant qui donne le signal.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "la statue",
+              "en": "the statue"
+            },
+            {
+              "fr": "bouger",
+              "en": "to move"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move while there is music. When I say statue, freeze."
+            }
+          ],
+          "payload": {
+            "moves": ["bouger", "s’immobiliser", "tenir la pose"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-18",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Le parcours des formes",
+      "summary": "Suivre un parcours en nommant les formes rencontrées.",
+      "objectiveCodes": ["PHYS-S02-C01-O05"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "au-marche",
+      "parentGuidance": "On relie le mouvement et les formes du mois : l’enfant nomme avant de passer.",
+      "activities": [
+        {
+          "id": "m3-phys-18-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Marche sur les formes",
+          "childInstruction": "Marche d’une forme à l’autre en disant son nom avant de poser le pied.",
+          "adultGuidance": "1. Posez les formes en papier au sol, espacées d’un pas. 2. L’enfant nomme puis avance. 3. Refaites à cloche-pied si c’est facile. 4. Terminez en revenant en arrière.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S02-C01-O05"],
+          "materialCodes": ["formes-papier", "espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "le pas",
+              "en": "the step"
+            },
+            {
+              "fr": "la forme",
+              "en": "the shape"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Step from shape to shape, saying its name before you step."
+            }
+          ],
+          "payload": {
+            "moves": ["avancer d’un pas", "nommer la forme", "revenir"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-19",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "La course des animaux",
+      "summary": "Enchainer des déplacements variés sur une durée plus longue.",
+      "objectiveCodes": ["PHYS-S01-C01-O10", "PHYS-S03-C01-O09"],
+      "supportingObjectiveCodes": [],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "au-marche",
+      "parentGuidance": "Reprise des déplacements du mois, en jeu. On ne cherche pas la performance mais l’endurance et le plaisir.",
+      "activities": [
+        {
+          "id": "m3-phys-19-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "D’un animal à l’autre",
+          "childInstruction": "Traverse la pièce comme la chèvre, reviens comme le lézard, repars comme le poussin.",
+          "adultGuidance": "1. Annoncez un animal par traversée. 2. Enchainez sans pause pendant une minute. 3. Laissez l’enfant choisir le dernier animal. 4. Finissez assis, en soufflant trois fois.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "objectiveCodes": ["PHYS-S01-C01-O10", "PHYS-S03-C01-O09"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "traverser",
+              "en": "to cross"
+            },
+            {
+              "fr": "revenir",
+              "en": "to come back"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Cross the room like the goat, come back like the lizard."
+            }
+          ],
+          "payload": {
+            "moves": ["sauter", "ramper", "trottiner", "souffler"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-20",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je danse avec mes mains",
+      "summary": "Danser en isolant une partie du corps.",
+      "objectiveCodes": ["PHYS-S03-C01-O09"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "je-montre-ce-que-je-sais",
+      "parentGuidance": "Danse assise possible : parfaite quand il n’y a pas de place ou qu’il est tard.",
+      "activities": [
+        {
+          "id": "m3-phys-20-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "La danse des mains",
+          "childInstruction": "Fais danser seulement tes mains : en haut, sur les côtés, devant toi.",
+          "adultGuidance": "1. Montrez trois gestes de mains. 2. Faites-les ensemble en rythme. 3. Ajoutez les épaules, puis la tête. 4. Terminez par un geste inventé par l’enfant, que vous copiez.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S03-C01-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "la main",
+              "en": "the hand"
+            },
+            {
+              "fr": "l’épaule",
+              "en": "the shoulder"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Make only your hands dance: up, to the sides, in front."
+            }
+          ],
+          "payload": {
+            "moves": ["lever les mains", "tourner les poignets", "bouger les épaules"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-21",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Le jeu du miroir",
+      "summary": "Reproduire exactement le geste de quelqu’un d’autre.",
+      "objectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S03-C01-O09"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "je-montre-ce-que-je-sais",
+      "parentGuidance": "Face à face, lentement. C’est un jeu de coopération : si l’autre ne suit pas, c’est qu’on va trop vite.",
+      "activities": [
+        {
+          "id": "m3-phys-21-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Fais comme moi",
+          "childInstruction": "Regarde-moi et fais exactement le même geste, en même temps que moi.",
+          "adultGuidance": "1. Faites un geste très lent. 2. Attendez qu’il suive. 3. Inversez : c’est lui le modèle. 4. Terminez en essayant de bouger ensemble sans meneur.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S03-C01-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "le miroir",
+              "en": "the mirror"
+            },
+            {
+              "fr": "pareil",
+              "en": "the same"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Look at me and make exactly the same move at the same time."
+            }
+          ],
+          "payload": {
+            "moves": ["copier le geste", "aller lentement", "changer de rôle"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-22",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Tous les mouvements du mois",
+      "summary": "Reprendre les actions apprises en septembre.",
+      "objectiveCodes": ["PHYS-S01-C01-O10", "PHYS-S02-C01-O05", "PHYS-S04-C01-O09"],
+      "supportingObjectiveCodes": [],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "je-montre-ce-que-je-sais",
+      "parentGuidance": "Dernière séance du mois : l’enfant choisit. Laissez-le mener, vous suivez.",
+      "activities": [
+        {
+          "id": "m3-phys-22-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Tu choisis",
+          "childInstruction": "Choisis trois mouvements que tu as aimés ce mois-ci, et montre-les-moi.",
+          "adultGuidance": "1. Rappelez ce qui a été fait : courir, lancer, sauter, danser, l’équilibre. 2. Laissez choisir trois mouvements. 3. Faites-les avec lui. 4. Dites ce qu’il sait faire maintenant et qu’il ne savait pas au début.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "objectiveCodes": ["PHYS-S01-C01-O10", "PHYS-S02-C01-O05", "PHYS-S04-C01-O09"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "choisir",
+              "en": "to choose"
+            },
+            {
+              "fr": "montrer",
+              "en": "to show"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Choose three moves you liked this month and show me."
+            }
+          ],
+          "payload": {
+            "moves": ["choisir", "montrer", "refaire ensemble"]
           }
         }
       ],
