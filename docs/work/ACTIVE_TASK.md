@@ -6,26 +6,28 @@
 
   Git wins over this file when the two disagree. Keep it current: an out-of-date checkpoint is
   worse than none, because it is believed.
+
+  When a task starts: fill this in before the first substantial edit, and create the branch.
+  When a task ends: mark it `completed`, copy it to docs/work/archive/<YYYY-MM>-<task>.md,
+  then reset this file to the shape below.
 -->
 
 ## Task
 
-Session duration policy (30–45 min) and the resumable-work protocol.
+None in progress.
 
 ## Objective
 
-The daily session range is 30–45 minutes everywhere the product states a requirement, with no
-contradiction between documentation, validator, tests and UI; and the repository carries a
-durable checkpoint mechanism so that a long task survives a context reset, a crash or a closed
-terminal.
+The last task — the session duration policy and the resumable-work protocol — is complete and
+merged. No new task has been started.
 
 ## Status
 
-`awaiting_ci`
+`planned`
 
 ## Branch
 
-`chore/resumable-workflow-and-session-duration`
+`develop` — no feature branch open.
 
 ## Base Branch
 
@@ -33,96 +35,78 @@ terminal.
 
 ## Started
 
-2026-09-12
+—
 
 ## Last Checkpoint
 
-2026-09-12 — full validation suite finished, everything green (see the table below). Committed as `d2e5105` and pushed. About to mark PR #22 ready for review and wait for CI.
+2026-09-12 — reset after PR #22 merged as `d2fb411`.
 
 ## Scope
 
-- Make 30–45 minutes the stated product requirement wherever a requirement is stated.
-- Enforce the range on a programme's declared `sessionMinutes`, not only on generated days.
-- Add `docs/work/ACTIVE_TASK.md` (this file), `docs/RESUMABLE_WORKFLOW.md`, and an archive for
-  finished tasks.
-- Add a short permanent instruction to `CLAUDE.md` pointing at the protocol.
-- Archive Phase 3A as the first baseline.
-- Validate the checkpoint file itself, so the protocol is enforced rather than hoped for.
+To be filled in when the next task begins.
 
 ## Out of Scope
 
-- **October content.** Not started, not planned here.
-- Regenerating September. The 35-minute days stay exactly as they are.
-- Any curriculum change, new lesson, or content edit made only because the range widened.
+- **October content authoring.** Not started, and should wait until September has been reviewed
+  by a person who teaches this age (ISSUE-017).
+- Approving any lesson. All 88 stay in `review` until a named human reviewer approves them.
 - Production, `main`, paid services.
 
 ## Product Decisions
 
-- **Daily session: 30 to 45 minutes**, about 35 where the pedagogy allows. The range exists for
-  flexibility: a light revision day may be 30–35, a richer story or consolidation day may
-  approach 45. The system must not force every day to the same length.
-- September's existing 35-minute days are valid and unchanged.
-- Long tasks must be resumable from the repository alone, never from chat memory.
+- Teka Edu is a parent-led after-school reinforcement platform; a session is **30–45 minutes**,
+  about 35 (ADR-039).
+- French Cycle 1 is the curriculum; the DRC PNEM is a compatibility and enrichment reference
+  (ADR-037).
+- Long tasks are resumable from the repository, never from chat memory (ADR-041).
 
 ## Completed
 
-- [x] Read `CLAUDE.md`, `PROJECT_STATUS.md`, git state; confirmed `develop` at `e6fcc3a`, clean tree
-- [x] Audited every duration reference in tracked files
-- [x] Established that the validator, content `sessionMinutes` and September tests already use 30–45
-- [x] Corrected the three stale 40-minute claims (ADR-037 citation, `CONTENT_AUTHORING.md`, `DRC_CURRICULUM_COMPARISON.md`)
-- [x] Marked the Phase 2.5 40-minute recommendation superseded, keeping the historical finding
-- [x] Amended ADR-039: explicit 30–45 statement, flexibility rationale, the exceptional opt-out
-- [x] Added `SESSION_MINUTES_POLICY` + `durationPolicy`, checked in `checkProgramme`
-- [x] `CLAUDE.md`: permanent resumable-work instruction, documentation-index rows, duration wording
-- [x] Phase 3A archived to `docs/work/archive/2026-09-phase-3a.md`
-- [x] ADR-041 (resumable work); `docs/RESUMABLE_WORKFLOW.md`
-- [x] `tests/unit/active-task.test.ts` (10 tests) and four session-policy tests: **196 unit tests pass**
-- [x] Checkpoint commit `5c75438` pushed; **Draft PR #22** opened
+- [x] Phase 3A — September programme and the parent session (archived)
+- [x] Session duration policy and the resumable-work protocol (archived)
 
 ## In Progress
 
-- [ ] PR #22: ready for review, four required CI checks, squash-merge
+- [ ] Nothing.
 
 ## Remaining
 
-1. Mark PR #22 ready for review, wait for the four required checks, squash-merge.
-2. Mark this task `completed`, archive it to `docs/work/archive/2026-09-session-duration-and-resumable-work.md`, and reset this file for the next task.
+1. Awaiting the owner's choice of next task.
 
 ## Validation State
 
-| Check              | Result  | At                                             |
-| ------------------ | ------- | ---------------------------------------------- |
-| format             | PASS    | `d2e5105`                                      |
-| lint               | PASS    | `d2e5105` — 0 warnings                         |
-| typecheck          | PASS    | `d2e5105`                                      |
-| unit tests         | PASS    | `d2e5105` — 196 tests                          |
-| content validation | PASS    | `d2e5105` — 20 files                           |
-| database tests     | PASS    | `d2e5105` — 138 pgTAP assertions               |
-| build              | PASS    | `d2e5105`                                      |
-| E2E                | PASS    | `d2e5105` — 12 tests                           |
-| Docker             | NOT RUN | covered by CI; no Dockerfile or runtime change |
-| secret scans       | PASS    | `d2e5105` — no leaks, 0 tracked `.env*`        |
-| staging            | N/A     | no application change expected                 |
+Results below are from the last completed task, at `d2e5105` / CI `36564cd`. They describe
+`develop` at `d2fb411` and remain current until something changes.
+
+| Check              | Result | At                                           |
+| ------------------ | ------ | -------------------------------------------- |
+| format             | PASS   | `d2e5105`                                    |
+| lint               | PASS   | `d2e5105` — 0 warnings                       |
+| typecheck          | PASS   | `d2e5105`                                    |
+| unit tests         | PASS   | `d2e5105` — 196 tests                        |
+| content validation | PASS   | `d2e5105` — 20 files                         |
+| database tests     | PASS   | `d2e5105` — 138 pgTAP assertions             |
+| build              | PASS   | `d2e5105`                                    |
+| E2E                | PASS   | `d2e5105` — 12 tests                         |
+| Docker             | PASS   | CI at `36564cd` — both images                |
+| secret scans       | PASS   | `d2e5105` — no leaks, 0 tracked `.env*`      |
+| staging            | PASS   | `0ea23a2` — last application change deployed |
 
 ## Database State
 
-- Local: 8 migrations applied (`supabase db reset` last run in Phase 3A).
-- DEV: 8 migrations applied, local and remote lists identical as of 2026-09-12.
-- PROD: untouched, and must stay so.
-- No migration is expected in this task.
+- Local: 8 migrations applied; `db reset` + pgTAP pass.
+- DEV: 8 migrations applied; local and remote lists identical as of 2026-09-12.
+- PROD: untouched.
 
 ## Deployment State
 
-- Staging: enabled; last deployment `0ea23a2`, success.
-- Production: disabled. No production token, no `PRODUCTION_DEPLOY_ENABLED`.
+- Staging: enabled. Last application deployment `0ea23a2`; the commits since are documentation
+  and tests only.
+- Production: disabled. No production token, no `PRODUCTION_DEPLOY_ENABLED`, `main` at `1b95480`.
 
 ## Git State
 
-- Branch: `chore/resumable-workflow-and-session-duration`, created from `develop` at `e6fcc3a`.
-- Branch created from `develop` at `e6fcc3a`.
-- Last checkpoint commit: `5c75438`, pushed.
-- PR: [#22](https://github.com/ipanga/teka_edu/pull/22), **draft**.
-- Last commit: `d2e5105`, pushed. Uncommitted work: this file only (the checkpoint update itself).
+- `develop` at `d2fb411`. No feature branch, no open PR, no uncommitted work.
 
 ## Blockers
 
@@ -130,22 +114,21 @@ None.
 
 ## User Decisions Needed
 
-None for this task.
+- Which task comes next. The recommendation is to review the real September parent experience —
+  a teacher reading the weekly packages, and one real 30-to-45-minute session with a child —
+  before October is authored.
 
 ## Exact Resume Point
 
-Mark PR #22 ready for review (`gh pr ready 22`), wait for the four required checks, then
-squash-merge. Do **not** re-run the local suite: it passed at `d2e5105`, which is the pushed
-head, so the results above are current. If CI has already finished while this session was away,
-read its result rather than pushing again.
+No task is in progress. When the next one starts: fill this file in, create the feature branch
+from `develop`, commit an initial checkpoint, and open a Draft PR before the long work begins.
 
 ## Resume Verification
 
-Before continuing, check:
+Before starting anything, check:
 
-1. `git branch --show-current` is `chore/resumable-workflow-and-session-duration`;
-2. `git log -n 5 --oneline` against "Git State" above;
-3. `git status --short` for uncommitted work, and read it before discarding anything;
-4. that `docs/RESUMABLE_WORKFLOW.md` and `docs/work/archive/` exist or not, to locate the first incomplete step;
-5. `npx supabase migration list --linked` only if a migration turns out to be needed;
-6. `gh pr list --head chore/resumable-workflow-and-session-duration` in case a PR was opened before the interruption.
+1. `git branch --show-current` is `develop` and `git status --short` is empty;
+2. `git log -n 5 --oneline` starts at `d2fb411`;
+3. `gh pr list --state open` is empty, so no earlier task is still waiting on CI;
+4. `npx supabase migration list --linked` if the new task touches the database;
+5. `gh run list --branch develop --limit 3` if it depends on a deployment.
