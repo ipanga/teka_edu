@@ -37,9 +37,8 @@ to run one real 30-to-45-minute session and record what happened.
 
 ## Last Checkpoint
 
-2026-09-12 — media mirrored to the database (144 pgTAP assertions), `npm run media:report`
-written, observation form built, 206 unit tests and 17 E2E tests pass. Next: documentation,
-then the full suite and the PR.
+2026-09-12 — documentation written (ADR-042, MEDIA_ARCHITECTURE, REAL_SESSION_TESTING, plan
+amendment) and the full validation suite is green. About to mark PR #24 ready and wait for CI.
 
 ## Scope
 
@@ -80,8 +79,7 @@ then the full suite and the PR.
 
 ## In Progress
 
-- [ ] Documentation: ADR-042, PARENT_SESSION, CONTENT_AUTHORING, EDUCATIONAL_MODEL, CLAUDE.md,
-      PROJECT_STATUS, REAL_SESSION_TESTING, and the plan amendment
+- [ ] PR #24 ready for review, four required CI checks, squash-merge, verify staging
 
 ## Remaining
 
@@ -100,19 +98,19 @@ then the full suite and the PR.
 
 ## Validation State
 
-| Check              | Result  | At                                                |
-| ------------------ | ------- | ------------------------------------------------- |
-| format             | STALE   | not run since the renderers changed               |
-| lint               | PASS    | working tree                                      |
-| typecheck          | PASS    | working tree                                      |
-| unit tests         | PASS    | working tree — 206 tests                          |
-| content validation | PASS    | working tree — 21 files                           |
-| database tests     | PASS    | working tree — 144 pgTAP assertions               |
-| build              | PASS    | working tree                                      |
-| E2E                | PASS    | working tree — 17 tests                           |
-| Docker             | NOT RUN | left to CI                                        |
-| secret scans       | NOT RUN | to run before the PR is marked ready              |
-| staging            | PASS    | `cd86efd` — nothing deployed from this branch yet |
+| Check              | Result  | At                                         |
+| ------------------ | ------- | ------------------------------------------ |
+| format             | PASS    | working tree                               |
+| lint               | PASS    | working tree — 0 warnings                  |
+| typecheck          | PASS    | working tree                               |
+| unit tests         | PASS    | working tree — 206 tests                   |
+| content validation | PASS    | working tree — 21 files                    |
+| database tests     | PASS    | working tree — 144 pgTAP assertions        |
+| build              | PASS    | working tree                               |
+| E2E                | PASS    | working tree — 17 tests                    |
+| Docker             | NOT RUN | left to CI; no Dockerfile change           |
+| secret scans       | PASS    | working tree — no leaks, 0 tracked `.env*` |
+| staging            | STALE   | this branch has not been deployed yet      |
 
 ## Database State
 
@@ -143,8 +141,10 @@ None yet. If any media approach risked a charge, work would stop and ask first.
 
 ## Exact Resume Point
 
-Make the first checkpoint commit, push the branch, open the Draft PR, then start Remaining step 1
-— the audit of the September experience on staging and locally.
+Mark PR #24 ready (`gh pr ready 24`), wait for the four required checks, squash-merge, then
+verify staging: the September calendar, a language lesson, a mathematics lesson, the shape
+interaction, counting, a story, an off-screen activity, English hidden by default, catch-up, a
+non-school date, and that the environment is staging on the DEV Supabase ref with no PROD ref.
 
 ## Resume Verification
 

@@ -24,6 +24,10 @@ Read this file first in every session. It holds **stable context and working rul
 | `docs/PHASE3_RENDERER_PLAN.md`      | Renderer families that Phase 3 should build                                |
 | `docs/PARENT_SESSION.md`            | How a parent runs the daily session, and what the interface does           |
 | `docs/RESUMABLE_WORKFLOW.md`        | How a long task survives an interruption; checkpoints, Git, recovery       |
+| `docs/MEDIA_ARCHITECTURE.md`        | Where pictures live, stable ids, accessibility, why it costs nothing       |
+| `docs/REAL_SESSION_TESTING.md`      | Running one real session with a child, and recording what happened         |
+| `docs/MEDIA_ARCHITECTURE.md`        | Where pictures live, stable ids, accessibility, why it costs nothing       |
+| `docs/REAL_SESSION_TESTING.md`      | Running one real session with a child, and recording what happened         |
 | `docs/work/ACTIVE_TASK.md`          | The task in progress: what is done, what remains, the exact next action    |
 | `docs/ANNUAL_PLAN.md`               | The year's scope and sequence, and how coverage is proved                  |
 
@@ -64,34 +68,35 @@ Only preschool is in scope now, but the domain model must not block later levels
 
 Keep this table in sync with the repository. Mark a row **Implemented** only when it exists in code or configuration.
 
-| Area                   | Choice                                                                            | Status                                        |
-| ---------------------- | --------------------------------------------------------------------------------- | --------------------------------------------- |
-| App framework          | Next.js 16 (App Router, standalone output) + React 19 + TypeScript 5.9            | Implemented                                   |
-| Parent session UI      | `/` (today), `/seance/[day]`, `/calendrier` + `components/session/` (ADR-039)     | Implemented (September, 3ème maternelle)      |
-| Renderer families      | `components/session/ActivityRenderer.tsx`: 15 activity kinds → 10 screens         | Implemented (the families September uses)     |
-| Annual scope/sequence  | `domain/programme/annual-plan.ts` + `content/programmes/**-annual-plan.json`      | Implemented (162 objectives, 189 days)        |
-| Supplied texts         | `content/texts/` — stories and rhymes, so no lesson needs an outside book         | Implemented (14 Teka Edu originals)           |
-| Styling / UI           | Tailwind CSS 4; shadcn/ui where useful                                            | Tailwind implemented; shadcn/ui planned       |
-| Animation              | Framer Motion, only where it helps learning or UX                                 | Planned                                       |
-| Env configuration      | `lib/env/` (Zod, public/server split, environment guard; ADR-021)                 | Implemented                                   |
-| Health endpoint        | `/api/health` (status, environment, version, commit)                              | Implemented                                   |
-| Content validation     | `scripts/validate-content.ts`: registration, Zod schemas, cross-file rules        | Implemented (reference data)                  |
-| Reference data         | `content/` JSON → `lib/content/reference-data.ts` (bundled, offline; ADR-028)     | Implemented                                   |
-| Calendar engine        | `domain/calendar/` (civil dates, holidays, instructional-day generator; ADR-029)  | Implemented                                   |
-| Curriculum model       | `domain/curriculum/` (stages, levels, versions, domains, objectives; ADR-030/031) | Implemented (398 official objectives)         |
-| Lessons / activities   | `domain/lessons/` (lesson + typed activities, English scaffolds; ADR-032)         | Implemented (88 lessons, September)           |
-| Daily programme        | `domain/programme/` (authored rhythm + tracks, pure generator; ADR-033)           | Implemented (22 September days; report + API) |
-| Local persistence      | IndexedDB behind repository interfaces                                            | Planned                                       |
-| Offline                | PWA: manifest + service worker (library not chosen yet)                           | Planned                                       |
-| Speech                 | `SpeechProvider` interface; `BrowserSpeechProvider` (Web Speech API, `fr-FR`)     | Planned                                       |
-| i18n                   | `fr` default, optional `en`                                                       | Planned                                       |
-| Unit / component tests | Vitest 5 + React Testing Library + jsdom                                          | Implemented                                   |
-| E2E / smoke tests      | Playwright (Chromium)                                                             | Implemented                                   |
-| Lint / format          | ESLint 9 (`eslint-config-next`) + Prettier                                        | Implemented                                   |
-| Container              | `Dockerfile` (portable) + `Dockerfile.vercel` (Vercel container)                  | Implemented (built and smoke-tested locally)  |
-| Database               | Supabase (PostgreSQL 17): 33 reference tables mirrored from `content/` (ADR-028)  | Implemented (local + DEV); PROD untouched     |
-| CI/CD                  | GitHub Actions: `ci.yml`, `deploy-staging.yml`, `deploy-production.yml`           | Implemented; run status in PROJECT_STATUS.md  |
-| Hosting                | Vercel container deployment, portable to any OCI host                             | Staging live; production deferred (ADR-027)   |
+| Area                   | Choice                                                                            | Status                                         |
+| ---------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------- |
+| App framework          | Next.js 16 (App Router, standalone output) + React 19 + TypeScript 5.9            | Implemented                                    |
+| Parent session UI      | `/` (today), `/seance/[day]`, `/calendrier` + `components/session/` (ADR-039)     | Implemented (September, 3ème maternelle)       |
+| Renderer families      | `components/session/ActivityRenderer.tsx`: 15 activity kinds → 10 screens         | Implemented, with interaction where it teaches |
+| Media                  | `content/media/registry.json` + `public/media/*.svg`, by stable id (ADR-042)      | Implemented (22 assets, $0)                    |
+| Annual scope/sequence  | `domain/programme/annual-plan.ts` + `content/programmes/**-annual-plan.json`      | Implemented (162 objectives, 189 days)         |
+| Supplied texts         | `content/texts/` — stories and rhymes, so no lesson needs an outside book         | Implemented (14 Teka Edu originals)            |
+| Styling / UI           | Tailwind CSS 4; shadcn/ui where useful                                            | Tailwind implemented; shadcn/ui planned        |
+| Animation              | Framer Motion, only where it helps learning or UX                                 | Planned                                        |
+| Env configuration      | `lib/env/` (Zod, public/server split, environment guard; ADR-021)                 | Implemented                                    |
+| Health endpoint        | `/api/health` (status, environment, version, commit)                              | Implemented                                    |
+| Content validation     | `scripts/validate-content.ts`: registration, Zod schemas, cross-file rules        | Implemented (reference data)                   |
+| Reference data         | `content/` JSON → `lib/content/reference-data.ts` (bundled, offline; ADR-028)     | Implemented                                    |
+| Calendar engine        | `domain/calendar/` (civil dates, holidays, instructional-day generator; ADR-029)  | Implemented                                    |
+| Curriculum model       | `domain/curriculum/` (stages, levels, versions, domains, objectives; ADR-030/031) | Implemented (398 official objectives)          |
+| Lessons / activities   | `domain/lessons/` (lesson + typed activities, English scaffolds; ADR-032)         | Implemented (88 lessons, September)            |
+| Daily programme        | `domain/programme/` (authored rhythm + tracks, pure generator; ADR-033)           | Implemented (22 September days; report + API)  |
+| Local persistence      | IndexedDB behind repository interfaces                                            | Planned                                        |
+| Offline                | PWA: manifest + service worker (library not chosen yet)                           | Planned                                        |
+| Speech                 | `SpeechProvider` interface; `BrowserSpeechProvider` (Web Speech API, `fr-FR`)     | Planned                                        |
+| i18n                   | `fr` default, optional `en`                                                       | Planned                                        |
+| Unit / component tests | Vitest 5 + React Testing Library + jsdom                                          | Implemented                                    |
+| E2E / smoke tests      | Playwright (Chromium)                                                             | Implemented                                    |
+| Lint / format          | ESLint 9 (`eslint-config-next`) + Prettier                                        | Implemented                                    |
+| Container              | `Dockerfile` (portable) + `Dockerfile.vercel` (Vercel container)                  | Implemented (built and smoke-tested locally)   |
+| Database               | Supabase (PostgreSQL 17): 33 reference tables mirrored from `content/` (ADR-028)  | Implemented (local + DEV); PROD untouched      |
+| CI/CD                  | GitHub Actions: `ci.yml`, `deploy-staging.yml`, `deploy-production.yml`           | Implemented; run status in PROJECT_STATUS.md   |
+| Hosting                | Vercel container deployment, portable to any OCI host                             | Staging live; production deferred (ADR-027)    |
 
 - **Deprecated / replaced:** plain Vercel/Next.js builds, replaced by `Dockerfile.vercel` container deployment (ADR-013).
 - Real statuses per service live in `PROJECT_STATUS.md` (Infrastructure Status). Open questions are under "Important Pending Decisions" there.
@@ -158,6 +163,7 @@ npm run calendar:report [-- <YYYY-YYYY> --days]    (generated school calendar su
 npm run programme:report -- --level=maternelle-3 --day=1 [--to=5|--date=YYYY-MM-DD]  (daily plan)
 npm run coverage:report [-- --day=22]              (annual plan vs. the content that exists)
 npm run review:package                             (regenerate the weekly review documents)
+npm run media:report                               (what September shows the child, and what it cannot)
 ```
 
 ## Development workflow
@@ -206,6 +212,9 @@ feature/*  -> develop  -> main
 - **Author the year's pacing before the month's lessons** (ADR-040, `docs/ANNUAL_PLAN.md`): the annual plan says when each objective is introduced, reinforced and consolidated, and `npm run coverage:report` proves the content matches it.
 - **Every day brings something back**: a retrieval activity opens each day from day 2, and the last instructional day of a week consolidates. `role` on an activity says which (`teach` / `retrieval` / `consolidation`).
 - **Nothing a lesson needs comes from outside**: stories, rhymes and songs live in `content/texts/` and are Teka Edu originals. A lesson never tells a parent to find a book.
+- **If the child is told to look at something, show it** (ADR-042). Pictures are SVG in `public/media/`, named by stable id in `content/media/registry.json` and referenced by `mediaIds` — never a path or a URL. `npm run media:report` says what is covered and what is not.
+- **If the child is told to move, speak, draw or handle real objects, the screen steps back** and says « Posez l'écran ». An off-screen activity is not a smaller on-screen one.
+- **Never claim the app observed what it cannot see.** A tap can be checked; a child speaking, running or drawing cannot, and those finish on the parent's word ("Terminé"). No scores, no grades, no dashboards.
 - **Never write a date into content.** Use `{{date}}` or `{{jour}}`; the daily plan fills them in from the day being taught (a test forbids written-out dates).
 - The authoring pipeline is strictly ordered:
 

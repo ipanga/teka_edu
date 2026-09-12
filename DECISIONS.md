@@ -1089,3 +1089,44 @@ conversation, which is exactly the thing that disappears.
 a checkpoint edit at each milestone, and the discipline not to leave it claiming something is
 still running after it has finished. Finished tasks are archived under `docs/work/archive/`, one
 summary each, so a later reader can reconstruct what was done without a diary of every edit.
+
+---
+
+## ADR-042 — Media lives in the repository, as SVG, named by stable id
+
+**Status:** Accepted · **Date:** 2026-09-12 · **Resolves:** PD-008 · **Extends:** ADR-005, ADR-032
+
+**Context:** The Phase 3B audit found the gap in a single screen. A lesson said « Regarde les
+formes. Nomme-les : le carré, le rectangle, le triangle, le disque » and the interface showed the
+sentence _"À observer : le carré, le rectangle…"_ and nothing else. The child was told to look at
+shapes that did not exist unless the parent had already cut them out of paper. Counting named
+objects and showed none; word cards were words without pictures. A répétiteur that asks a
+five-year-old to look at something has to show it.
+
+**Decision:** Media is **static SVG committed under `public/media/`, described by
+`content/media/registry.json`, referenced from content by stable semantic id.**
+
+- **No cloud storage, no CDN, no image API.** Supabase Storage buys nothing here: the assets are
+  kilobytes, static, versioned with the content they belong to, and must work offline. A bucket
+  would add a network hop, a policy surface and a quota for no gain. Revisit only if parents ever
+  upload something.
+- **A lesson names `forme-carre`, never a path or a URL.** The registry owns the file location, so
+  renaming a file is not a content migration, and no lesson can break because an outside host
+  changed. A test fails on an unknown id, a duplicate, a missing file or a missing description.
+- **Assets are drawn; quantities are computed.** Things with an identity — a square, a pencil, a
+  hen — are assets. Things whose identity is a number are drawn by the renderer from the
+  activity's own payload, so there is no `quantite-5.svg` and `upTo: 7` needs nothing new.
+- **Everything shipped is Teka Edu's own**, with `origin` and `provenance` per asset. No stock
+  image, no third-party drawing, nothing with unresolved rights.
+- **French `alt` on every meaningful picture**, repetition hidden from assistive technology behind
+  one group label, and **colour never carries meaning**: the child is asked for the square, not
+  for the blue one.
+- Mirrored to the database like all reference data (`media_assets`, `media_asset_tags`,
+  `activity_media`), RLS on, no browser grant.
+- `tools/media/build.ts` regenerates the set; the SVGs are committed.
+
+**Consequences:** The gap the audit found is closed for the 29 September activities that need
+something on screen, and `npm run media:report` names the 58 more that a picture would help but
+that do not have one yet — so the next media investment is a decision, not a guess. Cost is **$0**
+and stays there; nothing in a lesson depends on a network. The limit is honest: this is a small
+flat icon set, not illustration. Story pictures, richer scenes and audio remain undone.
