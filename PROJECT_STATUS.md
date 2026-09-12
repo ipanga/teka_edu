@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-12
-Branch:     docs/finalize-curriculum-strategy (PR into develop)
-Commit:     develop at 35d4fd0; main at 1b95480
+Branch:     feat/september-parent-learning-mvp (PR into develop)
+Commit:     develop at c58ab46; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -155,11 +155,24 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
                 docs/PHASE3_RENDERER_PLAN.md, docs/review/
 ```
 
+### Phase 3A — September programme and the parent session (PR `feat/september-parent-learning-mvp`)
+
+- [x] Product purpose recorded: Teka Edu is a **parent-led after-school reinforcement platform**, 30-45 min per instructional day (ADR-039, `docs/PARENT_SESSION.md`)
+- [x] **Annual scope and sequence** for 3ème maternelle: 162 objectives over 189 instructional days, six phases, with `homeFeasibility` per objective (ADR-040, `docs/ANNUAL_PLAN.md`)
+- [x] **All 22 September instructional days authored**: 88 lessons, 170 activities, every day exactly 35 min, 0 min of screen
+- [x] Coverage proved: the 36 objectives the plan wants by day 22 are all taught, each appearing 6.2 times on average and never fewer than twice (`npm run coverage:report`)
+- [x] Daily retrieval ritual and weekly consolidation are data (`role` on an activity), not a convention
+- [x] **Self-contained content**: 14 Teka Edu-original stories and rhymes in `content/texts/`; no lesson asks the parent to find a book
+- [x] Dynamic-date defect fixed: content writes `{{date}}`, the daily plan fills it in, a test forbids written-out dates
+- [x] **Parent session UI**: `/` (today), `/seance/[day]`, `/calendrier`, with materials, guidance on demand, English hidden by default, a pause point and catch-up
+- [x] Ten renderer families implemented (ADR-036); progress kept in the browser only
+- [x] Five weekly review packages instead of one monthly file; all 88 lessons remain `review`
+
 ## Next Tasks
 
 ### P0 — Next
 
-1. **Human pedagogical review of the pilot week** (ISSUE-017). The review document is ready at `docs/review/2026-2027-maternelle-3-semaine-1.md`; a person who teaches 3ème maternelle fills in the checklists, we apply their corrections, and only then does any lesson become `approved`.
+1. **Human pedagogical review of September** (ISSUE-017). The review document is ready at `docs/review/2026-2027-maternelle-3-semaine-1.md`; a person who teaches 3ème maternelle fills in the checklists, we apply their corrections, and only then does any lesson become `approved`.
 2. **Phase 3 (child experience)**: the ten renderer families of `docs/PHASE3_RENDERER_PLAN.md`, a French child UI for today's programme, media architecture (PD-008) and TV presentation mode.
 
 ### Deferred — production (not in the current phase, ADR-027)

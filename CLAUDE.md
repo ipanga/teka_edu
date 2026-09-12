@@ -22,6 +22,8 @@ Read this file first in every session. It holds **stable context and working rul
 | `docs/PEDAGOGICAL_REVIEW.md`        | Pre-review of the pilot week: rubric, findings, what a teacher must decide |
 | `docs/DRC_CURRICULUM_COMPARISON.md` | The DRC PNEM 2021 vs the French Cycle 1 programme, and the strategy        |
 | `docs/PHASE3_RENDERER_PLAN.md`      | Renderer families that Phase 3 should build                                |
+| `docs/PARENT_SESSION.md`            | How a parent runs the daily session, and what the interface does           |
+| `docs/ANNUAL_PLAN.md`               | The year's scope and sequence, and how coverage is proved                  |
 
 Do not copy content between these files. Link to it instead.
 
@@ -35,7 +37,9 @@ Do not copy content between these files. Link to it instead.
 - **Initial educational scope:** 1ère maternelle, 2ème maternelle, 3ème maternelle
 - **Future scope:** primary school, secondary school
 
-Teka Edu is a French-first educational web app (installable PWA). It gives young children structured daily lessons (oral language, early literacy, early maths, movement, arts, time and space, discovery of the world). A parent guides each session at home, on a laptop or a projected TV, online or offline.
+Teka Edu is a French-first educational web app (installable PWA): a **parent-led after-school reinforcement platform** — a digital répétiteur guided by the parent (ADR-039). The child attends school during the day; afterwards a parent opens Teka Edu and runs a structured **30-to-45-minute** session (about 35), which may be split in two. Teka Edu supplies the pedagogy, the words to say and the material; the parent is the adult who teaches.
+
+It does **not** replace school, and it never claims to know what the class did that day: it offers _la leçon du jour_, aligned with the curriculum progression for that level and school date.
 
 Only preschool is in scope now, but the domain model must not block later levels: no business logic may assume that exactly three class levels exist.
 
@@ -45,42 +49,47 @@ Only preschool is in scope now, but the domain model must not block later levels
 2. **Curriculum reference.** The official French Cycle 1 (école maternelle) curriculum for 2026–2027 is the primary academic reference. (ADR-003)
 3. **DRC context.** Use the DRC school calendar and public holidays. Prefer DRC-relevant or universal examples over France-specific ones.
 4. **Instructional days only.** Lessons exist only on valid instructional days. (ADR-004)
-5. **Age-appropriate pedagogy.** Use play, manipulation, oral interaction, movement, songs, repetition and short activities, not worksheets. Do not turn 3ème maternelle (GS) into CP.
-6. **Parent–child interaction.** Each lesson mixes on-screen work, talking with a parent, real objects, movement and an offline activity. The app is not a babysitting screen.
-7. **Offline-first PWA.** Once content is downloaded, daily lessons and core games work without Internet.
-8. **No runtime LLM in V1.** No AI SDKs, API keys or AI endpoints. (ADR-002)
-9. **Content separate from code.** Curriculum and lessons are versioned, validated data, not UI code. (ADR-005)
-10. **Positive progress tracking.** Progress is based on observation. No grades, red failure screens, rankings or leaderboards. (ADR-010)
-11. **Privacy-first.** Local-first storage and the minimum of child data. (ADR-006)
+5. **After-school reinforcement, 30 to 45 minutes.** One session per instructional day, about 35 minutes, one block that may be split in two, with a pause point in the middle (ADR-039).
+6. **Age-appropriate pedagogy.** Use play, manipulation, oral interaction, movement, songs, repetition and short activities, not worksheets. Do not turn 3ème maternelle (GS) into CP.
+7. **Parent–child interaction.** Each lesson mixes on-screen work, talking with a parent, real objects, movement and an offline activity. The app is not a babysitting screen.
+8. **Offline-first PWA.** Once content is downloaded, daily lessons and core games work without Internet.
+9. **No runtime LLM in V1.** No AI SDKs, API keys or AI endpoints. (ADR-002)
+10. **Content separate from code.** Curriculum and lessons are versioned, validated data, not UI code. (ADR-005)
+11. **Positive progress tracking.** Progress is based on observation. No grades, red failure screens, rankings or leaderboards. (ADR-010)
+12. **Privacy-first.** Local-first storage and the minimum of child data. (ADR-006)
 
 ## Technical architecture
 
 Keep this table in sync with the repository. Mark a row **Implemented** only when it exists in code or configuration.
 
-| Area                   | Choice                                                                            | Status                                       |
-| ---------------------- | --------------------------------------------------------------------------------- | -------------------------------------------- |
-| App framework          | Next.js 16 (App Router, standalone output) + React 19 + TypeScript 5.9            | Implemented (placeholder French home page)   |
-| Styling / UI           | Tailwind CSS 4; shadcn/ui where useful                                            | Tailwind implemented; shadcn/ui planned      |
-| Animation              | Framer Motion, only where it helps learning or UX                                 | Planned                                      |
-| Env configuration      | `lib/env/` (Zod, public/server split, environment guard; ADR-021)                 | Implemented                                  |
-| Health endpoint        | `/api/health` (status, environment, version, commit)                              | Implemented                                  |
-| Content validation     | `scripts/validate-content.ts`: registration, Zod schemas, cross-file rules        | Implemented (reference data)                 |
-| Reference data         | `content/` JSON → `lib/content/reference-data.ts` (bundled, offline; ADR-028)     | Implemented                                  |
-| Calendar engine        | `domain/calendar/` (civil dates, holidays, instructional-day generator; ADR-029)  | Implemented                                  |
-| Curriculum model       | `domain/curriculum/` (stages, levels, versions, domains, objectives; ADR-030/031) | Implemented (398 official objectives)        |
-| Lessons / activities   | `domain/lessons/` (lesson + typed activities, English scaffolds; ADR-032)         | Implemented (20 pilot lessons, 3ème mat.)    |
-| Daily programme        | `domain/programme/` (authored rhythm + tracks, pure generator; ADR-033)           | Implemented (pilot week; report + API)       |
-| Local persistence      | IndexedDB behind repository interfaces                                            | Planned                                      |
-| Offline                | PWA: manifest + service worker (library not chosen yet)                           | Planned                                      |
-| Speech                 | `SpeechProvider` interface; `BrowserSpeechProvider` (Web Speech API, `fr-FR`)     | Planned                                      |
-| i18n                   | `fr` default, optional `en`                                                       | Planned                                      |
-| Unit / component tests | Vitest 5 + React Testing Library + jsdom                                          | Implemented                                  |
-| E2E / smoke tests      | Playwright (Chromium)                                                             | Implemented                                  |
-| Lint / format          | ESLint 9 (`eslint-config-next`) + Prettier                                        | Implemented                                  |
-| Container              | `Dockerfile` (portable) + `Dockerfile.vercel` (Vercel container)                  | Implemented (built and smoke-tested locally) |
-| Database               | Supabase (PostgreSQL 17): 28 reference tables mirrored from `content/` (ADR-028)  | Implemented (local + DEV); PROD untouched    |
-| CI/CD                  | GitHub Actions: `ci.yml`, `deploy-staging.yml`, `deploy-production.yml`           | Implemented; run status in PROJECT_STATUS.md |
-| Hosting                | Vercel container deployment, portable to any OCI host                             | Staging live; production deferred (ADR-027)  |
+| Area                   | Choice                                                                            | Status                                        |
+| ---------------------- | --------------------------------------------------------------------------------- | --------------------------------------------- |
+| App framework          | Next.js 16 (App Router, standalone output) + React 19 + TypeScript 5.9            | Implemented                                   |
+| Parent session UI      | `/` (today), `/seance/[day]`, `/calendrier` + `components/session/` (ADR-039)     | Implemented (September, 3ème maternelle)      |
+| Renderer families      | `components/session/ActivityRenderer.tsx`: 15 activity kinds → 10 screens         | Implemented (the families September uses)     |
+| Annual scope/sequence  | `domain/programme/annual-plan.ts` + `content/programmes/**-annual-plan.json`      | Implemented (162 objectives, 189 days)        |
+| Supplied texts         | `content/texts/` — stories and rhymes, so no lesson needs an outside book         | Implemented (14 Teka Edu originals)           |
+| Styling / UI           | Tailwind CSS 4; shadcn/ui where useful                                            | Tailwind implemented; shadcn/ui planned       |
+| Animation              | Framer Motion, only where it helps learning or UX                                 | Planned                                       |
+| Env configuration      | `lib/env/` (Zod, public/server split, environment guard; ADR-021)                 | Implemented                                   |
+| Health endpoint        | `/api/health` (status, environment, version, commit)                              | Implemented                                   |
+| Content validation     | `scripts/validate-content.ts`: registration, Zod schemas, cross-file rules        | Implemented (reference data)                  |
+| Reference data         | `content/` JSON → `lib/content/reference-data.ts` (bundled, offline; ADR-028)     | Implemented                                   |
+| Calendar engine        | `domain/calendar/` (civil dates, holidays, instructional-day generator; ADR-029)  | Implemented                                   |
+| Curriculum model       | `domain/curriculum/` (stages, levels, versions, domains, objectives; ADR-030/031) | Implemented (398 official objectives)         |
+| Lessons / activities   | `domain/lessons/` (lesson + typed activities, English scaffolds; ADR-032)         | Implemented (88 lessons, September)           |
+| Daily programme        | `domain/programme/` (authored rhythm + tracks, pure generator; ADR-033)           | Implemented (22 September days; report + API) |
+| Local persistence      | IndexedDB behind repository interfaces                                            | Planned                                       |
+| Offline                | PWA: manifest + service worker (library not chosen yet)                           | Planned                                       |
+| Speech                 | `SpeechProvider` interface; `BrowserSpeechProvider` (Web Speech API, `fr-FR`)     | Planned                                       |
+| i18n                   | `fr` default, optional `en`                                                       | Planned                                       |
+| Unit / component tests | Vitest 5 + React Testing Library + jsdom                                          | Implemented                                   |
+| E2E / smoke tests      | Playwright (Chromium)                                                             | Implemented                                   |
+| Lint / format          | ESLint 9 (`eslint-config-next`) + Prettier                                        | Implemented                                   |
+| Container              | `Dockerfile` (portable) + `Dockerfile.vercel` (Vercel container)                  | Implemented (built and smoke-tested locally)  |
+| Database               | Supabase (PostgreSQL 17): 33 reference tables mirrored from `content/` (ADR-028)  | Implemented (local + DEV); PROD untouched     |
+| CI/CD                  | GitHub Actions: `ci.yml`, `deploy-staging.yml`, `deploy-production.yml`           | Implemented; run status in PROJECT_STATUS.md  |
+| Hosting                | Vercel container deployment, portable to any OCI host                             | Staging live; production deferred (ADR-027)   |
 
 - **Deprecated / replaced:** plain Vercel/Next.js builds, replaced by `Dockerfile.vercel` container deployment (ADR-013).
 - Real statuses per service live in `PROJECT_STATUS.md` (Infrastructure Status). Open questions are under "Important Pending Decisions" there.
@@ -145,7 +154,8 @@ npm run db:start | db:stop | db:status | db:reset | db:test | db:types   (Supaba
 npm run db:reference [-- --new-migration <name>]   (regenerate the reference-data pgTAP test / data migration)
 npm run calendar:report [-- <YYYY-YYYY> --days]    (generated school calendar summary)
 npm run programme:report -- --level=maternelle-3 --day=1 [--to=5|--date=YYYY-MM-DD]  (daily plan)
-npm run review:package                             (regenerate the teacher's review document)
+npm run coverage:report [-- --day=22]              (annual plan vs. the content that exists)
+npm run review:package                             (regenerate the weekly review documents)
 ```
 
 ## Development workflow
@@ -190,6 +200,11 @@ feature/*  -> develop  -> main
 - **Content written with AI help stops at `status: "review"`.** Only a named human reviewer moves a lesson to `approved`, and the approval is bound to a digest of the exact text (ADR-035). Never mark content approved, "teacher validated" or "pedagogically certified" yourself, and never claim a review that has not happened.
 - Every material lists `alternatives` (what to use instead) and, where relevant, a `safetyNote`. An activity must never depend on one particular object.
 - The daily programme is generated from an authored rhythm + tracks, keyed by **instructional-day number** (ADR-033). Scheduling rules are labelled OFFICIAL / OFFICIAL GUIDANCE / TEKA EDU in `docs/DAILY_PROGRAMME.md`.
+- **A day is 30 to 45 minutes** (about 35), one block with a pause point (ADR-039). The programme validator enforces the range.
+- **Author the year's pacing before the month's lessons** (ADR-040, `docs/ANNUAL_PLAN.md`): the annual plan says when each objective is introduced, reinforced and consolidated, and `npm run coverage:report` proves the content matches it.
+- **Every day brings something back**: a retrieval activity opens each day from day 2, and the last instructional day of a week consolidates. `role` on an activity says which (`teach` / `retrieval` / `consolidation`).
+- **Nothing a lesson needs comes from outside**: stories, rhymes and songs live in `content/texts/` and are Teka Edu originals. A lesson never tells a parent to find a book.
+- **Never write a date into content.** Use `{{date}}` or `{{jour}}`; the daily plan fills them in from the day being taught (a test forbids written-out dates).
 - The authoring pipeline is strictly ordered:
 
   ```text

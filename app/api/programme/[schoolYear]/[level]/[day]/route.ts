@@ -6,6 +6,8 @@ import {
   findObjective,
   successExamplesFor,
 } from "@/domain/curriculum/objectives";
+import { ACTIVITY_RENDERERS } from "@/domain/lessons/renderers";
+import { findText } from "@/domain/lessons/texts";
 import { generateDailyPlan } from "@/domain/programme/daily-plan";
 import { getProgramme, getReferenceData, getSyllabus } from "@/lib/content/reference-data";
 
@@ -94,10 +96,18 @@ export async function GET(
       reasons: plan.reasons.map(({ code, name }) => ({ code, name })),
       totalMinutes: plan.totalMinutes,
       screenMinutes: plan.screenMinutes,
-      materials: plan.materialCodes.map((code) => ({
-        code,
-        name: data.materials.find((m) => m.code === code)?.name ?? null,
-      })),
+      // What the parent has to find before starting, with what to use instead and any warning.
+      materials: plan.materialCodes.map((code) => {
+        const material = data.materials.find((m) => m.code === code);
+        return {
+          code,
+          name: material?.name ?? null,
+          alternatives: material?.alternatives ?? null,
+          safetyNote: material?.safetyNote ?? null,
+        };
+      }),
+      // Where the parent may stop and finish the rest later (ADR-039).
+      pauseAfterSession: plan.pauseAfterSession,
       sessions: plan.sessions.map((session) => ({
         position: session.position,
         domainCode: session.domainCode,
@@ -119,21 +129,43 @@ export async function GET(
                 origin: session.lesson.origin,
                 objectives: session.lesson.objectiveCodes.map(objective),
                 supportingObjectives: session.lesson.supportingObjectiveCodes.map(objective),
-                activities: session.lesson.activities.map((activity) => ({
-                  id: activity.id,
-                  position: activity.position,
-                  type: activity.type,
-                  title: activity.title,
-                  childInstruction: activity.childInstruction,
-                  adultGuidance: activity.adultGuidance,
-                  minutes: activity.minutes,
-                  mode: activity.mode,
-                  objectiveCodes: activity.objectiveCodes,
-                  materialCodes: activity.materialCodes,
-                  vocabulary: activity.vocabulary,
-                  scaffolds: activity.scaffolds,
-                  payload: activity.payload,
-                })),
+                activities: session.lesson.activities.map((activity) => {
+                  // A read-aloud, a story or a rhyme carries its text with it, so the parent
+                  // never has to find a book (docs/CONTENT_AUTHORING.md).
+                  const textId = activity.payload["textId"];
+                  const text =
+                    typeof textId === "string" ? findText(data.texts, textId) : undefined;
+                  return {
+                    id: activity.id,
+                    position: activity.position,
+                    type: activity.type,
+                    // Which screen shows it: ten families for fifteen kinds (ADR-036).
+                    renderer: ACTIVITY_RENDERERS[activity.type].family,
+                    title: activity.title,
+                    childInstruction: activity.childInstruction,
+                    adultGuidance: activity.adultGuidance,
+                    minutes: activity.minutes,
+                    mode: activity.mode,
+                    role: activity.role,
+                    objectiveCodes: activity.objectiveCodes,
+                    materialCodes: activity.materialCodes,
+                    vocabulary: activity.vocabulary,
+                    // English is optional help the interface keeps hidden until asked (ADR-001).
+                    scaffolds: activity.scaffolds,
+                    payload: activity.payload,
+                    text:
+                      text === undefined
+                        ? null
+                        : {
+                            id: text.id,
+                            kind: text.kind,
+                            title: text.title,
+                            lines: text.lines,
+                            minutes: text.minutes,
+                            origin: text.origin,
+                          },
+                  };
+                }),
               },
       })),
     },

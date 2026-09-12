@@ -15,9 +15,9 @@ const lesson = (id: string) => {
   return found;
 };
 
-describe("pilot lessons (3ème maternelle)", () => {
-  it("has 20 lessons, all authored by Teka Edu and marked for review", () => {
-    expect(data.lessons).toHaveLength(20);
+describe("September lessons (3ème maternelle)", () => {
+  it("has one lesson per track slot of September, all authored by Teka Edu and marked for review", () => {
+    expect(data.lessons).toHaveLength(88);
     for (const l of data.lessons) {
       expect(l.origin).toBe("teka-edu-created");
       expect(l.status).toBe("review");
@@ -28,7 +28,7 @@ describe("pilot lessons (3ème maternelle)", () => {
 
   it("traces every activity to an official objective of the curriculum", () => {
     const activities = data.lessons.flatMap((l) => l.activities);
-    expect(activities).toHaveLength(40);
+    expect(activities).toHaveLength(170);
     for (const activity of activities) {
       expect(activity.objectiveCodes.length).toBeGreaterThan(0);
       for (const code of activity.objectiveCodes) {
@@ -79,7 +79,7 @@ describe("pilot lessons (3ème maternelle)", () => {
 
   it("includes the daily read-aloud the programme requires, without questions", () => {
     const language = data.lessons.filter((l) => l.domainCode === "LANG");
-    expect(language).toHaveLength(5);
+    expect(language).toHaveLength(22);
     for (const l of language) {
       const readAloud = l.activities.filter((a) => a.type === "read-aloud");
       expect(readAloud, l.id).toHaveLength(1);
@@ -102,7 +102,7 @@ describe("lesson validation", () => {
   const check = (l: Lesson) =>
     checkLessons([l], data.curricula, objectives, data.levels, data.materials);
 
-  it("accepts the pilot lessons", () => {
+  it("accepts the September lessons", () => {
     expect(
       checkLessons(data.lessons, data.curricula, objectives, data.levels, data.materials),
     ).toEqual([]);

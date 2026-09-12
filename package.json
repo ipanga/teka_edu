@@ -33,6 +33,7 @@
     "db:reference": "tsx scripts/generate-reference-sql.ts",
     "calendar:report": "tsx scripts/calendar-report.ts",
     "programme:report": "tsx scripts/programme-report.ts",
+    "coverage:report": "tsx scripts/coverage-report.ts",
     "review:package": "tsx scripts/review-package.ts"
   },
   "dependencies": {

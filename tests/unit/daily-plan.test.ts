@@ -29,8 +29,9 @@ describe("daily programme generator", () => {
   it("follows the instructional sequence, not the calendar weekday", () => {
     expect(dayPlan(1).rhythmDay).toBe(1);
     expect(dayPlan(5).rhythmDay).toBe(5);
-    expect(dayPlan(6).rhythmDay).toBe(1);
+    expect(dayPlan(10).rhythmDay).toBe(10);
     expect(dayPlan(11).rhythmDay).toBe(1);
+    expect(dayPlan(21).rhythmDay).toBe(1);
   });
 
   it("advances each track by one lesson every time the rhythm gives it a slot", () => {
@@ -56,10 +57,10 @@ describe("daily programme generator", () => {
     );
     expect(new Set(used).size).toBe(used.length);
     expect(used).toHaveLength(20);
-    // The pilot covers one cycle: the next cycle has no content yet.
-    expect(dayPlan(6).status).toBe("no-content");
-    expect(dayPlan(6).sessions.every((s) => s.lesson === null)).toBe(true);
-    expect(dayPlan(6).totalMinutes).toBe(0);
+    // September is authored; October is not written yet.
+    expect(dayPlan(23).status).toBe("no-content");
+    expect(dayPlan(23).sessions.every((s) => s.lesson === null)).toBe(true);
+    expect(dayPlan(23).totalMinutes).toBe(0);
   });
 
   it("produces a balanced pilot week", () => {
@@ -93,7 +94,7 @@ describe("daily programme generator", () => {
       "Je cours, je m’arrête",
       "Mon corps bouge",
     ]);
-    expect(plan.totalMinutes).toBe(41);
+    expect(plan.totalMinutes).toBe(35);
     expect(plan.objectiveCodes).toContain("LANG-S01-C04-O11");
     expect(plan.materialCodes).toContain("petits-objets");
   });

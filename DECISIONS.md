@@ -964,3 +964,76 @@ documentation must not say so.
 **Consequences:** "Is this beyond the programme?" is no longer the test for new content;
 "does a five-year-old actually master this, and is it developmentally right?" is. It gives
 reviewers and authors a rule for rejecting content that is impressive but premature.
+
+---
+
+## ADR-039 — Teka Edu is a parent-led after-school reinforcement platform
+
+**Status:** Accepted · **Date:** 2026-09-12 · **Decided by:** the owner · **Refines:** ADR-001, ADR-003, ADR-033, ADR-034
+
+**Context:** Until now the product was described by what it contains — a curriculum, lessons, a
+daily programme — rather than by the moment it is used in. That left real questions open: how
+long is a session, who runs it, does it replace school, and may it claim to know what the
+teacher taught that day.
+
+**Decision:** Teka Edu is a **digital répétiteur guided by the parent**. A child attends school
+during the day; afterwards, a parent opens Teka Edu and runs a structured session with them.
+
+- **Duration: 30 to 45 minutes per instructional day**, about 35 where the pedagogy allows. The
+  session is one block that **may be split in two**, because a five-year-old coming home from
+  school does not always have 40 minutes of attention left. The daily plan therefore carries a
+  **pause point**, computed from the session's own shape.
+- **The parent is the adult who teaches.** Guidance is written for someone who is not a trained
+  teacher: numbered, concrete, jargon-free, and short enough to read while the child waits.
+- **Teka Edu does not replace school and never claims to know what the class did today.** It
+  offers "la leçon du jour" — the day's reinforcement, aligned with the curriculum progression
+  for that level and school date — not "what your teacher taught today".
+- **The session is largely off-screen.** The screen carries the words the parent says and the
+  material the child looks at, then gets out of the way for movement, manipulation and talk.
+- **Each day brings something back**: a short retrieval at the start, and a consolidation on the
+  last instructional day of each week. Revisiting is scheduled, not accidental.
+- **Progress is remembered in the browser only** (`not_started` / `in_progress` / `completed`),
+  per day. It is a convenience for the parent, never a record about a child, and the canonical
+  programme does not depend on it (ADR-006).
+
+**Consequences:** Every content and interface decision now has a test it must pass: _can a parent
+who is not a teacher run this in about 35 minutes after school?_ Lesson text is written for that
+adult, the interface is a stepper rather than a dashboard, and curriculum apparatus — objective
+codes, competencies, success examples — stays out of the session screen and lives in the review
+packages and the API. The 30-45 minute range is enforced by the programme validator, so content
+cannot quietly grow past it.
+
+---
+
+## ADR-040 — A year's scope and sequence, before a month of lessons
+
+**Status:** Accepted · **Date:** 2026-09-12 · **Extends:** ADR-033 · **Refines:** ADR-031
+
+**Context:** Phase 2 authored a five-day pilot and Phase 3A had to author a month. Written month
+by month, a programme drifts: the easy objectives get taught three times, the awkward ones never,
+and nobody notices until June. The official programme states 398 objectives for cycle 1, of which
+162 carry the `from-5` band that 3ème maternelle is meant to teach.
+
+**Decision:** Author the **annual scope and sequence first**, as canonical content
+(`content/programmes/<curriculum>/<level>-annual-plan.json`), and only then the month.
+
+- The year's teaching set is the objectives of the level's **own age band**. Earlier-band
+  objectives are reinvested by lessons as supporting objectives; they are not scheduled, because
+  this level is not introducing them.
+- Each entry says **when it must be introduced** (a window in instructional days), **how long it
+  is reinforced**, **when it should be consolidated**, **how often it comes back**, and whether
+  it needs a lesson of its own or can be embedded in another domain's.
+- Each entry also records **`homeFeasibility`**: `full`, `partial` or `school-only`. Some official
+  objectives assume a class, a stage or a swimming pool. Teka Edu reinforces what a home can
+  carry and says so, rather than pretending a parent can do all of it.
+- The plan is **pacing, never content**: it holds no lesson text.
+- Keyed to **instructional-day numbers**, not dates (ADR-004), so a school closure moves the
+  calendar without rewriting the progression.
+- The first month is allocated **by hand**, because the rentrée has to teach what an after-school
+  session can build on; the rest of the year is spread deterministically and refined as each
+  month is authored. `tools/annual-plan/build.ts` regenerates it, and is kept for audit.
+
+**Consequences:** Coverage becomes provable rather than hoped for: at any day, the plan says what
+should have been taught, and a test compares that with the lessons that exist
+(`npm run coverage:report`). It also makes the gaps visible early — 16 objectives that a home
+session cannot fully carry were surfaced by writing the plan, not by discovering them in June.

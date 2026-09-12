@@ -72,10 +72,17 @@
     },
     {
       "code": "espace-degage",
-      "name": "Espace dégagé pour bouger",
+      "name": "Espace dégagé pour bouger (à l’intérieur ou dehors)",
       "category": "outdoor",
-      "alternatives": "La cour, la parcelle, une pièce dégagée ou un endroit ombragé dehors.",
+      "alternatives": "Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.",
       "safetyNote": "Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité."
+    },
+    {
+      "code": "formes-papier",
+      "name": "Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque)",
+      "category": "paper",
+      "alternatives": "Dessinez les formes sur une feuille et découpez-les, ou tracez-les directement sur le sol ou sur le sable ; à défaut, servez-vous de morceaux de carton d’emballage.",
+      "safetyNote": null
     }
   ]
 }

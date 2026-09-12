@@ -209,6 +209,14 @@ Codes are positional and stable: `PHYS-S01-C01-O03` is part 1, competency 1, obj
 physical-activity domain. They do not depend on the French wording, so a future rewording is a
 data change, not a re-keying.
 
+## From objectives to a year
+
+The 398 objectives are the reference; what turns them into teaching is the **annual scope and
+sequence** ([`ANNUAL_PLAN.md`](ANNUAL_PLAN.md), ADR-040): which of them 3ème maternelle introduces,
+when, how often they come back, and which ones a home session can only partly carry. The year's
+teaching set is the 162 objectives of the level's own age band; the rest are reinvested by lessons
+as supporting objectives.
+
 ## Asking the data questions
 
 ```ts

@@ -42,7 +42,14 @@ insert into access_registry (table_name, access) values
   ('activity_objectives', 'server-only'),
   ('activity_materials', 'server-only'),
   ('activity_vocabulary', 'server-only'),
-  ('activity_scaffolds', 'server-only');
+  ('activity_scaffolds', 'server-only'),
+  -- Phase 3A: texts Teka Edu supplies, and the annual scope and sequence. Read server-side and
+  -- served through the programme API; never written by a client.
+  ('teaching_texts', 'server-only'),
+  ('teaching_text_lines', 'server-only'),
+  ('annual_plans', 'server-only'),
+  ('annual_plan_phases', 'server-only'),
+  ('annual_plan_entries', 'server-only');
 
 select is(
   (

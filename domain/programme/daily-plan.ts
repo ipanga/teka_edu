@@ -1,5 +1,6 @@
 import type { CalendarDate } from "../calendar/date";
 import type { SchoolDay } from "../calendar/types";
+import { resolveLesson } from "../lessons/template";
 import { type Lesson, lessonMinutes, lessonScreenMinutes } from "../lessons/types";
 import type {
   DailyPlan,
@@ -42,6 +43,7 @@ export function generateDailyPlan(
     sessions: [],
     totalMinutes: 0,
     screenMinutes: 0,
+    pauseAfterSession: null,
     objectiveCodes: [],
     materialCodes: [],
   };
@@ -105,11 +107,26 @@ export function planForInstructionalDay(
         position: index + 1,
         trackId: track.id,
         domainCode: track.domainCode,
-        lesson,
+        // Anything the lesson wrote as {{date}} becomes the real date of this day.
+        lesson: lesson === null ? null : resolveLesson(lesson, context.date),
         trackStep: lesson === null ? null : step,
         minutes: lesson === null ? 0 : lessonMinutes(lesson),
       };
     });
+
+  // Where to split the session if the child needs a break: after the session that first takes
+  // the day past its halfway mark, never after the last one (a pause at the end is just an end).
+  const totalWithLessons = sessions.reduce((total, session) => total + session.minutes, 0);
+  let elapsed = 0;
+  let pauseAfterSession: number | null = null;
+  for (const session of sessions) {
+    elapsed += session.minutes;
+    if (pauseAfterSession === null && elapsed * 2 >= totalWithLessons && session.lesson !== null) {
+      pauseAfterSession = session.position;
+    }
+  }
+  if (pauseAfterSession === sessions.length) pauseAfterSession = sessions.length - 1;
+  if (totalWithLessons === 0) pauseAfterSession = null;
 
   const withLesson = sessions.filter((session) => session.lesson !== null);
   const status: DailyPlanStatus =
@@ -127,6 +144,7 @@ export function planForInstructionalDay(
     levelId: programme.levelId,
     curriculumId: programme.curriculumId,
     status,
+    pauseAfterSession,
     sessions,
     totalMinutes: sessions.reduce((total, session) => total + session.minutes, 0),
     screenMinutes: withLesson.reduce(

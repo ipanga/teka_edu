@@ -113,6 +113,39 @@ export function isoWeekday(date: CalendarDate): IsoWeekday {
   return (((((toDayNumber(date) + 3) % 7) + 7) % 7) + 1) as IsoWeekday;
 }
 
+const WEEKDAY_NAMES = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
+const MONTH_NAMES = [
+  "janvier",
+  "février",
+  "mars",
+  "avril",
+  "mai",
+  "juin",
+  "juillet",
+  "aout",
+  "septembre",
+  "octobre",
+  "novembre",
+  "décembre",
+];
+
+/**
+ * The date as a parent would say it: "mardi 8 septembre 2026". Built from the civil date, never
+ * from a `Date`, so it is the same in every time zone (ADR-029). Lesson content must never spell
+ * a date out: it writes {{date}} and this fills it in (docs/CONTENT_AUTHORING.md).
+ */
+export function formatFrenchDate(date: CalendarDate): string {
+  const [year, month, day] = date.split("-").map(Number) as [number, number, number];
+  const weekday = WEEKDAY_NAMES[isoWeekday(date) - 1];
+  const dayLabel = day === 1 ? "1er" : String(day);
+  return `${weekday} ${dayLabel} ${MONTH_NAMES[month - 1]} ${year}`;
+}
+
+/** The weekday alone: "mardi". */
+export function frenchWeekday(date: CalendarDate): string {
+  return WEEKDAY_NAMES[isoWeekday(date) - 1] as string;
+}
+
 /** Negative, zero or positive, like a sort comparator. ISO dates sort lexicographically. */
 export function compareDates(a: CalendarDate, b: CalendarDate): number {
   return a < b ? -1 : a > b ? 1 : 0;

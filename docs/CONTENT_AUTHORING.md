@@ -45,6 +45,32 @@ as a parallel programme. Contextualise without stereotyping: the same activity h
 Kinshasa, Lubumbashi, Kolwezi, a peri-urban quartier and a village, which is why every material
 carries `alternatives`.
 
+## The shape of a day
+
+Teka Edu is an after-school session of **30 to 45 minutes**, about 35 (ADR-039). September's day
+is built like this, and a new month should keep the same skeleton unless there is a reason not to:
+
+| Slot                                 | Minutes | What it carries                                                            |
+| ------------------------------------ | ------- | -------------------------------------------------------------------------- |
+| Language                             | 13      | the ritual (date + retrieval), one teaching activity, the daily read-aloud |
+| Mathematics                          | 9       | two short activities                                                       |
+| Movement                             | 6       | one activity, with an indoor option                                        |
+| Rotating (arts / world / time-space) | 7       | one or two activities                                                      |
+
+Rules that go with it:
+
+- **Open with the ritual.** Every day starts with the date (`{{date}}`) and, from day 2, something
+  brought back from before — `role: "retrieval"`. The last instructional day of a week
+  consolidates instead: `role: "consolidation"`.
+- **Never write a date into the text.** Write `{{date}}` or `{{jour}}`; the daily plan fills them
+  in from the day being taught. A test fails on a written-out date.
+- **Movement every day**, and every physical activity has a version that works indoors, in the
+  evening, in one room.
+- **Supply what the lesson needs.** A read-aloud, a story or a rhyme names a text in
+  `content/texts/`; it never says "read a book you know". A parent may substitute their own book,
+  but the default must be in the product.
+- **A pause point is computed, not authored**: the generator marks the halfway seam.
+
 ## Writing a lesson
 
 A lesson is one coherent unit for one level, small enough for a home session.

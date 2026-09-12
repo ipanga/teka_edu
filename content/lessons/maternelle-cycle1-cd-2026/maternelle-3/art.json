@@ -8,79 +8,49 @@
       "curriculumId": "maternelle-cycle1-cd-2026",
       "levelIds": ["maternelle-3"],
       "domainCode": "ART",
-      "title": "Je dessine ma famille",
-      "summary": "L’enfant dessine les personnes de sa maison en regardant un modèle, puis parle de son dessin.",
-      "objectiveCodes": ["ART-S01-C01-O05", "ART-S01-C01-O08"],
+      "title": "Je dessine ce que je vois",
+      "summary": "Dessiner en regardant un objet réel posé devant soi.",
+      "objectiveCodes": ["ART-S01-C01-O05"],
       "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 2,
       "themeId": "la-rentree",
-      "parentGuidance": "Ne dessinez pas à la place de l’enfant et ne corrigez pas son dessin. Parlez plutôt de ce qu’il a tracé : c’est le vocabulaire du dessin qui est travaillé ici.",
+      "parentGuidance": "Posez un seul objet devant l’enfant. Le travail est de regarder puis de dessiner, en allant et venant entre l’objet et la feuille.",
       "activities": [
         {
           "id": "m3-art-01-a1",
           "position": 1,
           "type": "drawing",
-          "title": "Les personnes de ma maison",
-          "childInstruction": "Dessine les personnes qui habitent avec toi. Regarde-les bien avant de commencer.",
-          "adultGuidance": "Installez l’enfant confortablement, la feuille bien placée. Laissez le temps nécessaire ; un dessin de personne à cet âge comporte une tête, un corps, des bras et des jambes.",
-          "minutes": 5,
+          "title": "Le modèle et moi",
+          "childInstruction": "Regarde bien l’objet, puis dessine-le sur ta feuille.",
+          "adultGuidance": "1. Posez un objet simple : une tasse, un fruit, une cuillère. 2. Faites-le décrire à voix haute avant de dessiner. 3. Rappelez de regarder l’objet pendant le dessin. 4. Ne comparez jamais le dessin à l’objet pour le juger : demandez plutôt ce qu’il a regardé.",
+          "minutes": 7,
           "mode": "off-screen",
+          "role": "teach",
           "objectiveCodes": ["ART-S01-C01-O05"],
-          "materialCodes": ["papier", "crayons-couleur"],
+          "materialCodes": ["papier", "crayon", "objets-maison"],
           "vocabulary": [
+            {
+              "fr": "regarder",
+              "en": "to look"
+            },
             {
               "fr": "dessiner",
               "en": "to draw"
             },
             {
-              "fr": "le trait",
-              "en": "the line"
+              "fr": "le modèle",
+              "en": "the model"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Draw the people who live with you."
+              "childInstruction": "Look at the object, then draw it."
             }
           ],
           "payload": {
-            "subject": "les personnes de la maison"
-          }
-        },
-        {
-          "id": "m3-art-01-a2",
-          "position": 2,
-          "type": "conversation",
-          "title": "Je parle de mon dessin",
-          "childInstruction": "Montre ton dessin et explique : qui as-tu dessiné, avec quelles couleurs ?",
-          "adultGuidance": "Employez et faites employer les mots du dessin : le trait, la ligne, la couleur, le contour, le fond.",
-          "minutes": 3,
-          "mode": "off-screen",
-          "objectiveCodes": ["ART-S01-C01-O08"],
-          "materialCodes": ["papier"],
-          "vocabulary": [
-            {
-              "fr": "la couleur",
-              "en": "the colour"
-            },
-            {
-              "fr": "le contour",
-              "en": "the outline"
-            }
-          ],
-          "scaffolds": [
-            {
-              "language": "en",
-              "childInstruction": "Show your drawing and tell me who you drew."
-            }
-          ],
-          "payload": {
-            "prompts": [
-              "Qui as-tu dessiné ?",
-              "Quelles couleurs as-tu utilisées ?",
-              "Montre-moi un trait droit et un trait courbe."
-            ]
+            "subject": "un objet réel posé devant l’enfant"
           }
         }
       ],
@@ -94,75 +64,335 @@
       "levelIds": ["maternelle-3"],
       "domainCode": "ART",
       "title": "Une comptine pour compter",
-      "summary": "L’enfant apprend et dit une comptine numérique, en jouant avec sa voix.",
-      "objectiveCodes": ["ART-S02-C01-O09", "ART-S02-C01-O07"],
-      "supportingObjectiveCodes": [],
+      "summary": "Apprendre une comptine par cœur et la dire en rythme.",
+      "objectiveCodes": ["ART-S02-C01-O09"],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O26"],
       "stage": "discovery",
       "difficulty": 1,
       "themeId": "la-rentree",
-      "parentGuidance": "Apprenez la comptine par petits morceaux, en la répétant plusieurs fois : la mémorisation demande de nombreuses répétitions. Vous pouvez la remplacer par une comptine en français connue dans votre famille.",
+      "parentGuidance": "La comptine s’apprend par morceaux : deux vers à la fois, répétés. C’est la première du répertoire de l’année ; il en faudra au moins dix.",
       "activities": [
         {
           "id": "m3-art-02-a1",
           "position": 1,
           "type": "song-rhyme",
-          "title": "Un, deux, trois…",
-          "childInstruction": "Écoute la comptine, puis dis-la avec moi. Ensuite, dis-la tout seul.",
-          "adultGuidance": "Dites deux vers, l’enfant répète, puis enchaînez. Frappez le rythme dans les mains pour aider la mémoire.",
-          "minutes": 5,
+          "title": "J’apprends la comptine",
+          "childInstruction": "Écoute la comptine, puis dis-la avec moi.",
+          "adultGuidance": "1. Dites la comptine en entier, en frappant le rythme. 2. Reprenez deux vers, faites répéter. 3. Ajoutez deux vers. 4. Dites-la en entier ensemble. Reprenez-la les jours suivants : c’est la répétition qui l’installe.",
+          "minutes": 7,
           "mode": "off-screen",
+          "role": "teach",
           "objectiveCodes": ["ART-S02-C01-O09"],
-          "materialCodes": ["aucun"],
-          "vocabulary": [],
-          "scaffolds": [
-            {
-              "language": "en",
-              "childInstruction": "Listen to the counting rhyme, then say it with me."
-            }
-          ],
-          "payload": {
-            "title": "Un, deux, trois, nous irons au bois",
-            "lines": [
-              "Un, deux, trois, nous irons au bois,",
-              "Quatre, cinq, six, cueillir des cerises,",
-              "Sept, huit, neuf, dans mon panier neuf,",
-              "Dix, onze, douze, elles seront toutes rouges."
-            ]
-          }
-        },
-        {
-          "id": "m3-art-02-a2",
-          "position": 2,
-          "type": "song-rhyme",
-          "title": "Je joue avec ma voix",
-          "childInstruction": "Dis la comptine tout doucement, puis très fort, puis comme une souris.",
-          "adultGuidance": "Faites varier la hauteur et l’intensité de la voix. Ce jeu vocal prépare l’écoute fine des sons de la langue.",
-          "minutes": 3,
-          "mode": "off-screen",
-          "objectiveCodes": ["ART-S02-C01-O07"],
           "materialCodes": ["aucun"],
           "vocabulary": [
             {
-              "fr": "doucement",
-              "en": "softly"
+              "fr": "la comptine",
+              "en": "the rhyme"
             },
             {
-              "fr": "fort",
-              "en": "loudly"
+              "fr": "compter",
+              "en": "to count"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Say the rhyme softly, then loudly, then like a mouse."
+              "childInstruction": "Listen to the rhyme, then say it with me."
             }
           ],
           "payload": {
-            "title": "Un, deux, trois, nous irons au bois",
-            "lines": [
-              "Un, deux, trois, nous irons au bois,",
-              "Quatre, cinq, six, cueillir des cerises,"
-            ]
+            "textId": "un-deux-trois-je-compte"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-art-03",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Je dessine d’après un modèle",
+      "summary": "Regarder un modèle et le reproduire de mieux en mieux.",
+      "objectiveCodes": ["ART-S01-C01-O05"],
+      "supportingObjectiveCodes": ["ART-S01-C01-O08"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "ma-maison",
+      "parentGuidance": "Deuxième dessin d’observation. Cette fois, faites décrire avant et après : le vocabulaire du dessin s’installe.",
+      "activities": [
+        {
+          "id": "m3-art-03-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Je regarde, puis je dessine",
+          "childInstruction": "Regarde l’objet, décris-le, puis dessine-le.",
+          "adultGuidance": "1. Posez un objet un peu plus complexe qu’au jour 2 : une plante, une chaussure. 2. Faites décrire : la forme, les parties, la couleur. 3. Laissez dessiner. 4. Faites comparer avec l’objet, sans jugement : « Qu’est-ce que tu as réussi à mettre ? »",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["ART-S01-C01-O05"],
+          "materialCodes": ["papier", "crayons-couleur", "objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "la forme",
+              "en": "the shape"
+            },
+            {
+              "fr": "la couleur",
+              "en": "the colour"
+            },
+            {
+              "fr": "le trait",
+              "en": "the line"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Look at the object, describe it, then draw it."
+            }
+          ],
+          "payload": {
+            "subject": "un objet réel un peu plus détaillé"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-art-04",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Le paysage sonore",
+      "summary": "Fabriquer des sons avec son corps et des objets, et les organiser.",
+      "objectiveCodes": ["ART-S02-C02-O08"],
+      "supportingObjectiveCodes": ["ART-S02-C01-O09"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "On fabrique la pluie avec les mains et les objets de la maison. Cherchez les sons avant de les organiser.",
+      "activities": [
+        {
+          "id": "m3-art-04-a1",
+          "position": 1,
+          "type": "song-rhyme",
+          "title": "Le bruit de la pluie",
+          "childInstruction": "Fais le bruit de la pluie : d’abord doucement, puis très fort, puis plus rien.",
+          "adultGuidance": "1. Cherchez des sons : frotter les mains, taper du bout des doigts, frapper la table. 2. Choisissez trois sons. 3. Faites-les dans l’ordre : petite pluie, grosse pluie, fin de la pluie. 4. Redites la comptine du mois par-dessus si l’enfant le veut.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["ART-S02-C02-O08"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "le bruit",
+              "en": "the sound"
+            },
+            {
+              "fr": "fort",
+              "en": "loud"
+            },
+            {
+              "fr": "doucement",
+              "en": "softly"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Make the sound of rain: soft, then loud, then nothing."
+            }
+          ],
+          "payload": {
+            "textId": "un-deux-trois-je-compte"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-art-05",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "La comptine de la semaine",
+      "summary": "Dire la comptine du mois par cœur, en rythme, et en commencer une autre.",
+      "objectiveCodes": ["ART-S02-C01-O09"],
+      "supportingObjectiveCodes": ["LANG-S02-C01-O15", "ART-S02-C02-O08"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "Le répertoire se construit par reprise. Redites celle du mois, puis ajoutez-en une deuxième, courte.",
+      "activities": [
+        {
+          "id": "m3-art-05-a1",
+          "position": 1,
+          "type": "song-rhyme",
+          "title": "Je connais ma comptine",
+          "childInstruction": "Dis la comptine tout seul. Puis écoute-en une nouvelle.",
+          "adultGuidance": "1. Laissez dire la comptine des nombres seul, en frappant le rythme. 2. Aidez seulement si l’enfant bloque. 3. Présentez la nouvelle comptine, deux vers à la fois. 4. Accompagnez-la des bruits trouvés au jour 12 (mains frottées, doigts sur la table) : la comptine devient un petit paysage sonore.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["ART-S02-C01-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "par cœur",
+              "en": "by heart"
+            },
+            {
+              "fr": "le rythme",
+              "en": "the rhythm"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme on your own, then listen to a new one."
+            }
+          ],
+          "payload": {
+            "textId": "les-formes-qui-dansent"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-art-06",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Je dessine un personnage de l’histoire",
+      "summary": "Dessiner un personnage qui n’existe pas devant soi.",
+      "objectiveCodes": ["ART-S01-C01-O06"],
+      "supportingObjectiveCodes": ["ART-S01-C01-O05", "LANG-S02-C03-O14"],
+      "stage": "discovery",
+      "difficulty": 3,
+      "themeId": "au-marche",
+      "parentGuidance": "Cette fois, il n’y a pas de modèle : le personnage est dans l’histoire, donc dans sa tête. Faites-le décrire avant de dessiner.",
+      "activities": [
+        {
+          "id": "m3-art-06-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Kumu tel que je l’imagine",
+          "childInstruction": "Dessine Kumu, le petit poussin, comme tu l’imagines.",
+          "adultGuidance": "1. Faites décrire Kumu avant de dessiner : sa taille, sa couleur, ce qu’il fait. 2. Laissez dessiner sans modèle. 3. Demandez d’ajouter un endroit de l’histoire : le poulailler, l’herbe. 4. Faites raconter le dessin.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "objectiveCodes": ["ART-S01-C01-O06"],
+          "materialCodes": ["papier", "crayons-couleur"],
+          "vocabulary": [
+            {
+              "fr": "imaginer",
+              "en": "to imagine"
+            },
+            {
+              "fr": "le personnage",
+              "en": "the character"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Draw Kumu the chick as you imagine him."
+            }
+          ],
+          "payload": {
+            "subject": "un personnage de l’histoire, dessiné de mémoire"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-art-07",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Je chante et je dessine",
+      "summary": "Reprendre le répertoire de comptines et le dessin du mois.",
+      "objectiveCodes": ["ART-S02-C01-O09", "ART-S01-C01-O06"],
+      "supportingObjectiveCodes": ["ART-S01-C01-O05", "ART-S02-C02-O08"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "je-montre-ce-que-je-sais",
+      "parentGuidance": "Dernière séance du mois. L’enfant choisit sa comptine et dessine ce qu’elle raconte.",
+      "activities": [
+        {
+          "id": "m3-art-07-a1",
+          "position": 1,
+          "type": "song-rhyme",
+          "title": "Ma comptine préférée",
+          "childInstruction": "Choisis ta comptine préférée du mois et dis-la-moi.",
+          "adultGuidance": "1. Rappelez les comptines apprises. 2. Laissez choisir et dire seul. 3. Frappez le rythme avec lui. 4. Dites-lui combien il en connait maintenant : c’est le début du répertoire de l’année.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "objectiveCodes": ["ART-S02-C01-O09", "ART-S01-C01-O06"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "préférée",
+              "en": "favourite"
+            },
+            {
+              "fr": "par cœur",
+              "en": "by heart"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Choose your favourite rhyme of the month and say it to me."
+            }
+          ],
+          "payload": {
+            "textId": "les-formes-qui-dansent"
+          }
+        },
+        {
+          "id": "m3-art-07-a2",
+          "position": 2,
+          "type": "drawing",
+          "title": "Je dessine ma comptine",
+          "childInstruction": "Dessine ce que raconte ta comptine.",
+          "adultGuidance": "1. Demandez ce que la comptine raconte. 2. Laissez dessiner librement. 3. Faites expliquer le dessin. 4. Gardez-le : c’est la dernière page du mois.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "objectiveCodes": ["ART-S02-C01-O09"],
+          "materialCodes": ["papier", "crayons-couleur"],
+          "vocabulary": [
+            {
+              "fr": "raconter",
+              "en": "to tell"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Draw what your rhyme is about."
+            }
+          ],
+          "payload": {
+            "subject": "ce que raconte la comptine choisie"
           }
         }
       ],

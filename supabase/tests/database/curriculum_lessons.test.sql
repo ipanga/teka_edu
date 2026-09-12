@@ -55,7 +55,7 @@ select results_eq(
 -- ---- Teka Edu content -------------------------------------------------------------------------
 
 select is(
-  (select count(*)::int from public.lessons), 20, 'the 20 pilot lessons are loaded'
+  (select count(*)::int from public.lessons), 88, 'the 88 September lessons are loaded'
 );
 select is(
   (select count(*)::int from public.lessons where origin <> 'teka-edu-created'),
@@ -145,23 +145,23 @@ select throws_ok(
   '23503', null, 'a lesson belongs to a domain of its curriculum'
 );
 select throws_ok(
-  $$ insert into public.activities (id, lesson_id, curriculum_id, position, type, title, child_instruction, adult_guidance, minutes, mode)
-     values ('t-act', 'm3-lang-01', 'maternelle-cycle1-cd-2026', 9, 'quiz-surprise', 'x', 'x', 'x', 5, 'off-screen') $$,
+  $$ insert into public.activities (id, lesson_id, curriculum_id, position, type, title, child_instruction, adult_guidance, minutes, mode, role)
+     values ('t-act', 'm3-lang-01', 'maternelle-cycle1-cd-2026', 9, 'quiz-surprise', 'x', 'x', 'x', 5, 'off-screen', 'teach') $$,
   '23503', null, 'an activity uses a known activity type'
 );
 select throws_ok(
-  $$ insert into public.activities (id, lesson_id, curriculum_id, position, type, title, child_instruction, adult_guidance, minutes, mode)
-     values ('t-act', 'm3-lang-01', 'maternelle-cycle1-cd-2026', 9, 'conversation', 'x', 'x', 'x', 45, 'off-screen') $$,
+  $$ insert into public.activities (id, lesson_id, curriculum_id, position, type, title, child_instruction, adult_guidance, minutes, mode, role)
+     values ('t-act', 'm3-lang-01', 'maternelle-cycle1-cd-2026', 9, 'conversation', 'x', 'x', 'x', 45, 'off-screen', 'teach') $$,
   '23514', null, 'a preschool activity stays between 2 and 20 minutes'
 );
 select throws_ok(
-  $$ insert into public.activities (id, lesson_id, curriculum_id, position, type, title, child_instruction, adult_guidance, minutes, mode)
-     values ('t-act', 'm3-lang-01', 'maternelle-cycle1-cd-2026', 1, 'conversation', 'x', 'x', 'x', 5, 'off-screen') $$,
+  $$ insert into public.activities (id, lesson_id, curriculum_id, position, type, title, child_instruction, adult_guidance, minutes, mode, role)
+     values ('t-act', 'm3-lang-01', 'maternelle-cycle1-cd-2026', 1, 'conversation', 'x', 'x', 'x', 5, 'off-screen', 'teach') $$,
   '23505', null, 'two activities of a lesson cannot share a position'
 );
 select throws_ok(
-  $$ insert into public.activities (id, lesson_id, curriculum_id, position, type, title, child_instruction, adult_guidance, minutes, mode, payload)
-     values ('t-act', 'm3-lang-01', 'maternelle-cycle1-cd-2026', 9, 'conversation', 'x', 'x', 'x', 5, 'off-screen', '"texte"'::jsonb) $$,
+  $$ insert into public.activities (id, lesson_id, curriculum_id, position, type, title, child_instruction, adult_guidance, minutes, mode, role, payload)
+     values ('t-act', 'm3-lang-01', 'maternelle-cycle1-cd-2026', 9, 'conversation', 'x', 'x', 'x', 5, 'off-screen', 'teach', '"texte"'::jsonb) $$,
   '23514', null, 'an activity payload is a JSON object'
 );
 select throws_ok(

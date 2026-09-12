@@ -76,6 +76,12 @@ export type DailyPlan = {
   sessions: readonly DailyPlanSession[];
   totalMinutes: number;
   screenMinutes: number;
+  /**
+   * Position of the session after which the parent may stop and finish later (ADR-039). The
+   * session is one block of 30 to 45 minutes, but a five-year-old coming home from school may
+   * need it in two halves; this says where the seam is. Null when the day has no content.
+   */
+  pauseAfterSession: number | null;
   /** Every objective the day works on, in session order, without duplicates. */
   objectiveCodes: readonly string[];
   materialCodes: readonly string[];

@@ -175,8 +175,14 @@ describe("human review package", () => {
     expect(committed).not.toMatch(/validé par|approuvé par|certifié/i);
   });
 
-  it("covers the five pilot days and every lesson", () => {
-    for (let day = 1; day <= 5; day++) expect(committed).toContain(`## Jour ${day} —`);
-    for (const l of data.lessons) expect(committed, l.id).toContain(l.title);
+  it("covers its own week, and the five packages together cover September", () => {
+    for (let day = options.fromDay; day <= options.toDay; day++) {
+      expect(committed).toContain(`## Jour ${day} —`);
+    }
+    const everyWeek = REVIEW_PACKAGES.map((week) =>
+      readFileSync(path.join(ROOT, reviewPackagePath(week)), "utf8"),
+    ).join("\n");
+    for (const l of data.lessons) expect(everyWeek, l.id).toContain(l.title);
+    expect(REVIEW_PACKAGES.at(-1)?.toDay).toBe(22);
   });
 });
