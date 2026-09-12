@@ -24,6 +24,27 @@ fails. Git is the editable source of truth; the database copy is generated (ADR-
 carry a source; lessons and activities are ours and are marked `teka-edu-created`. A lesson
 _implements_ an objective, it never restates it as if it were the programme.
 
+## What to aim for
+
+The curriculum is the **French Cycle 1 programme**; the context is Congolese (ADR-037). So an
+author takes the objective from the French programme and everything else — examples, materials,
+names, places, food, weather, animals — from the child's own surroundings.
+
+The academic standard is **mastery and enrichment, never premature acceleration** (ADR-038):
+
+- **Do:** satisfy the French expectation, then consolidate it by revisiting it; widen vocabulary
+  and reasoning; build autonomy; keep movement and artistic work in the week.
+- **Don't:** introduce primary-school (CP) content early because it looks advanced, or lengthen
+  the day to fit more in. About 40 minutes stays the target (ADR-034).
+- **When a child has not consolidated something, the answer is the same concept again**, not the
+  next one.
+
+The DRC's PNEM is worth consulting for what a Congolese preschool expects — practical life,
+hygiene, free play, local terminology — and those belong in existing domains as enrichment, never
+as a parallel programme. Contextualise without stereotyping: the same activity has to work in
+Kinshasa, Lubumbashi, Kolwezi, a peri-urban quartier and a village, which is why every material
+carries `alternatives`.
+
 ## Writing a lesson
 
 A lesson is one coherent unit for one level, small enough for a home session.

@@ -51,9 +51,9 @@ Short architecture/product decision records (ADRs). They cover decisions future 
 
 ## ADR-001 — French is the default product language
 
-**Status:** Accepted · **Date:** 2026-09-11 · **Source:** Plan §2.1, §7, §25
+**Status:** Accepted · **Date:** 2026-09-11 · **Confirmed:** 2026-09-12 (PD-018, ADR-037) · **Source:** Plan §2.1, §7, §25
 
-**Context:** Teka Edu targets preschool children in a French-speaking context (DRC). Some of them come from English-speaking homes.
+**Context:** Teka Edu targets preschool children in a French-speaking context (DRC). Some of them come from English-speaking homes. The DRC's own programme expects the local or national language in the first two years of maternelle, so French-first is a deliberate choice rather than an inherited default; the owner confirmed it on 2026-09-12 (ADR-037).
 
 **Decision:** All child-facing UI, instructions, curriculum labels and lessons are in French by default. English is an optional scaffold enabled per child (`englishScaffoldingEnabled`, `frenchSupportLevel`), shown as short vocabulary aids and parent notes, never full sentence-by-sentence translation. i18n supports `fr` (default) and optional `en` from the start.
 
@@ -880,42 +880,87 @@ in `docs/PHASE3_RENDERER_PLAN.md`.
 
 ---
 
-## ADR-037 — Curriculum strategy in the DRC: keep French Cycle 1 now, prepare curriculum profiles
+## ADR-037 — Curriculum authority: French Cycle 1 is the programme, the PNEM is the compatibility layer
 
-**Status:** Proposed — needs the owner's decision (PD-017) · **Date:** 2026-09-12 · **Refines:** ADR-003
+**Status:** Accepted · **Date:** 2026-09-12 · **Decided by:** the owner (resolves PD-017 and PD-018) · **Refines:** ADR-001, ADR-003
 
-**Context:** Phase 2.5 read the DRC's own preschool curriculum in full: the _Programme National de
-l'Enseignement Maternel_ (PNEM), SERNAFOR/DIPROMAD, August 2021, the reference document for every
-maternelle educator in the country. It is built on an approche par les compétences: one objectif
-terminal, five compétences de base, twelve activity families, a weekly grid of 17h30 and a theme
-list by age. Teka Edu currently uses the French Cycle 1 programme (ADR-003) with the DRC calendar.
+**Context:** Phase 2.5 read the DRC's own preschool curriculum in full — the _Programme National
+de l'Enseignement Maternel_ (PNEM), SERNAFOR/DIPROMAD, August 2021 — and compared it with the
+French Cycle 1 programme across sixteen aspects (`docs/DRC_CURRICULUM_COMPARISON.md`). Four
+strategies were put to the owner. The child Teka Edu is built for attends a school in the DRC,
+possibly following the Congolese programme, but should receive an academic progression calibrated
+against the French system.
 
-Three facts shape the decision:
+Three facts shaped the decision:
 
 1. **The two programmes agree more than they differ** on what a five-year-old should learn. The
    pilot week, written against the French programme, lands inside the PNEM's own themes and
-   third-year mathematics (`docs/DRC_CURRICULUM_COMPARISON.md`).
-2. **The PNEM's text may not be copied.** edu-nc.gouv.cd reserves all content to the ministry and
-   allows personal and educational use with attribution, but prohibits reproduction without
-   authorisation. There is no open licence, unlike the French texts.
+   third-year mathematics.
+2. **The PNEM's text may not be copied.** edu-nc.gouv.cd prohibits reproduction without
+   authorisation, and no open licence applies (ISSUE-020).
 3. **Real differences exist**: language of instruction in the first two years, the frequency of
-   physical activity, and whole activity families the PNEM timetables (vie pratique, comportement,
-   promotion de la santé, and 2h30 a week of activités libres) that Teka Edu does not cover.
+   physical activity, and whole activity families the PNEM timetables (vie pratique,
+   comportement, promotion de la santé, and 2h30 a week of activités libres).
 
-**Decision (proposed):**
+**Decision:**
 
-- **Keep French Cycle 1 as the academic reference for now** (Strategy A). It exists, it is
-  legally safe to quote, and nothing in the pilot conflicts with the PNEM.
-- **Prepare Strategy D, curriculum profiles**, as the target: a second profile describing the
-  PNEM **by reference** — official names and citations, Teka Edu's own short descriptions marked
-  `teka-edu-adaptation`, never copied text — plus a mapping from each lesson to the PNEM activity
-  family it serves. The data model already supports several curriculum versions, so no
-  destructive migration is implied.
-- **Do not adopt Strategy B or C** (DRC text as the stored baseline) unless MINEDU-NC grants
-  written permission to reproduce the programme.
-- **Add what the PNEM timetables and we lack** when content scales: a free-play closing
-  suggestion and practical-life/health content.
+- **The French Cycle 1 programme is Teka Edu's academic curriculum** — objectives, progression,
+  competencies and expected outcomes all come from it (ADR-003, ADR-031). There is one
+  curriculum, not two.
+- **The PNEM is a compatibility, context and enrichment reference**, not a second programme. It
+  is used to check that a child stays compatible with the Congolese school they attend, to find
+  local terminology and practices, and to spot gaps worth covering as enrichment.
+- **French remains the language of instruction** (ADR-001), including for a child whose school,
+  home or previous schooling is not French-speaking. English stays an optional scaffold that
+  supports comprehension, never replaces French, and reduces as French improves. There is no
+  English curriculum.
+- **The DRC school calendar continues to govern _when_ teaching happens** (ADR-029). Academic
+  reference France, calendar and context DRC.
+- **Where the two differ, the stronger expectation wins when it serves the child**: the French
+  progression for language, literacy and mathematics as the academic standard; **daily** physical
+  activity kept, even though the PNEM schedules it about twice a week; PNEM _vie pratique_ and
+  free play supported as enrichment and optional extension, mapped onto existing Teka Edu
+  domains rather than becoming new competing domains.
+- **No second curriculum profile is built.** Strategy D's full PNEM profile is not implemented
+  unless a concrete requirement later needs it; the lightweight compatibility mapping described
+  in `docs/DRC_CURRICULUM_COMPARISON.md` is the designed mechanism, and it is additive when
+  built.
+- **Strategies B and C are rejected** (they require storing PNEM text) unless MINEDU-NC grants
+  written permission.
 
-**Consequences:** Teka Edu can eventually answer "does this follow the Congolese programme?"
-honestly, without copying a text it is not licensed to copy. Until the owner decides, nothing
-changes: this ADR stays `Proposed`.
+**Consequences:** The academic bar is the French one, so Teka Edu is measured against a
+progression it can quote and verify. The compatibility layer, once built, lets Teka Edu answer a
+Congolese parent's question — _does this follow what my child's school teaches?_ — by reference,
+without copying a text it is not licensed to copy. The PNEM never adds a second set of daily
+work: it must not increase the child's workload (ADR-034 keeps the day at about 40 minutes).
+Content authors take their objectives from the French programme and their examples, materials and
+context from the DRC.
+
+---
+
+## ADR-038 — Mastery and enrichment, never premature acceleration
+
+**Status:** Accepted · **Date:** 2026-09-12 · **Decided by:** the owner · **Refines:** ADR-037
+
+**Context:** Deciding that the French programme is the academic reference raises the question of
+how far beyond it Teka Edu should go. "Calibrated against the French system" could be read as an
+invitation to teach earlier and faster, which is exactly the failure mode of ambitious preschool
+material: CP content pushed into 3ème maternelle because it looks advanced.
+
+**Decision:** The standard is **meet or exceed the learning expectations of the French curriculum
+through mastery and enrichment, while remaining practically compatible with schooling in the
+DRC** — not acceleration. In practice:
+
+- satisfy the French expectations first, then consolidate them by repetition and revisiting;
+- enrich with broader vocabulary, reasoning, autonomy, physical and artistic activity;
+- **do not** teach primary-school content early to appear advanced, and do not raise the daily
+  workload to fit more in (ADR-034);
+- enrichment stays age-appropriate, and a child who has not consolidated a concept gets it again
+  rather than the next one.
+
+This is not a promise that any individual child will outperform a pupil in a French school, and
+documentation must not say so.
+
+**Consequences:** "Is this beyond the programme?" is no longer the test for new content;
+"does a five-year-old actually master this, and is it developmentally right?" is. It gives
+reviewers and authors a rule for rejecting content that is impressive but premature.

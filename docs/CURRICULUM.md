@@ -5,6 +5,14 @@ text apart from its own work. Decisions: ADR-003, ADR-030, ADR-031. The daily pr
 [`DAILY_PROGRAMME.md`](DAILY_PROGRAMME.md); authoring rules are in
 [`CONTENT_AUTHORING.md`](CONTENT_AUTHORING.md).
 
+## Curriculum authority
+
+The **French Cycle 1 programme is Teka Edu's curriculum** — everything below comes from it. The
+DRC's own preschool programme (PNEM 2021) is a **compatibility, context and enrichment
+reference**, not a second curriculum: see [`DRC_CURRICULUM_COMPARISON.md`](DRC_CURRICULUM_COMPARISON.md)
+for the comparison, the decision (ADR-037) and the mapping designed to answer "which PNEM
+expectation does this lesson also cover?". Academic reference France, calendar and context DRC.
+
 ## Sources
 
 Teka Edu's preschool curriculum version `maternelle-cycle1-cd-2026` quotes three official
