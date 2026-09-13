@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-12
-Branch:     feat/september-child-experience (PR #26 into develop)
-Commit:     develop at ec4eb26; main at 1b95480
+Branch:     develop
+Commit:     develop at 27e9054; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -187,7 +187,7 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 - [x] Media mirrored to the database with RLS and an access decision per table
 - [x] All 88 lessons remain `review`: usability testing is not pedagogical approval
 
-### Phase 3C — the session a parent and child can sit down and do (PR #26)
+### Phase 3C — the session a parent and child can sit down and do (PR #26, merged)
 
 - [x] Audit of the whole September journey: seven concrete problems, all fixed
 - [x] **Bug**: on a non-school day the app offered the last day written (30 September) instead of the most recent session
