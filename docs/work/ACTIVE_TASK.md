@@ -21,7 +21,7 @@ picture when a picture helps.
 
 ## Status
 
-`in_progress`
+`awaiting_ci`
 
 ## Branch
 
@@ -37,10 +37,9 @@ picture when a picture helps.
 
 ## Last Checkpoint
 
-2026-09-13 — M1 to M4 done. Audit found seven problems and all seven are fixed; 16 new
-illustrations cut the visual gaps from 58 to 27, and the 27 that remain are deliberate. 207 unit
-tests, 144 pgTAP assertions, 20 E2E tests pass. Next: M5/M6 documentation and the real-session
-procedure, then validation and staging.
+2026-09-13 — all milestones done and the full suite is green. ADR-043 written,
+`REAL_SESSION_TESTING.md` rewritten for a non-technical parent, documentation updated. About to
+mark PR #26 ready and wait for CI.
 
 ## Scope
 
@@ -87,7 +86,7 @@ procedure, then validation and staging.
 
 ## In Progress
 
-- [ ] M5/M6 — story review, real-session procedure, documentation
+- [ ] PR #26 ready, four required CI checks, squash-merge, verify staging
 
 ## Remaining
 
@@ -101,19 +100,19 @@ procedure, then validation and staging.
 
 ## Validation State
 
-| Check              | Result  | At                                  |
-| ------------------ | ------- | ----------------------------------- |
-| format             | PASS    | working tree                        |
-| lint               | PASS    | working tree                        |
-| typecheck          | PASS    | working tree                        |
-| unit tests         | PASS    | working tree — 207 tests            |
-| content validation | PASS    | working tree — 21 files             |
-| database tests     | PASS    | working tree — 144 pgTAP assertions |
-| build              | PASS    | working tree                        |
-| E2E                | PASS    | working tree — 20 tests             |
-| Docker             | NOT RUN | left to CI                          |
-| secret scans       | NOT RUN | before the PR is marked ready       |
-| staging            | STALE   | this branch is not deployed yet     |
+| Check              | Result  | At                                         |
+| ------------------ | ------- | ------------------------------------------ |
+| format             | PASS    | working tree                               |
+| lint               | PASS    | working tree — 0 warnings                  |
+| typecheck          | PASS    | working tree                               |
+| unit tests         | PASS    | working tree — 207 tests                   |
+| content validation | PASS    | working tree — 21 files                    |
+| database tests     | PASS    | working tree — 144 pgTAP assertions        |
+| build              | PASS    | working tree                               |
+| E2E                | PASS    | working tree — 20 tests                    |
+| Docker             | NOT RUN | left to CI                                 |
+| secret scans       | PASS    | working tree — no leaks, 0 tracked `.env*` |
+| staging            | STALE   | not deployed from this branch yet          |
 
 ## Database State
 
@@ -143,9 +142,9 @@ None yet.
 
 ## Exact Resume Point
 
-Continue at M5/M6: review the stories as a child experience, rewrite
-`docs/REAL_SESSION_TESTING.md` as a procedure a non-technical parent can follow, then write
-ADR-043, update the documentation, run the full suite and mark PR #26 ready.
+Mark PR #26 ready (`gh pr ready 26`), wait for the four required checks, squash-merge, then
+verify staging and DEV (two new migrations: `20260913060000_media_illustrations.sql` and its
+generated data migration).
 
 ## Resume Verification
 

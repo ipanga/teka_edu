@@ -1130,3 +1130,44 @@ something on screen, and `npm run media:report` names the 58 more that a picture
 that do not have one yet — so the next media investment is a decision, not a guess. Cost is **$0**
 and stays there; nothing in a lesson depends on a network. The limit is honest: this is a small
 flat icon set, not illustration. Story pictures, richer scenes and audio remain undone.
+
+---
+
+## ADR-043 — One screen, two zones: the parent's guide and the child's part
+
+**Status:** Accepted · **Date:** 2026-09-13 · **Extends:** ADR-039, ADR-042
+
+**Context:** Phase 3B rendered the content correctly but left everything on one flat surface: the
+sentence to say to the child, the pedagogical guidance, the English scaffold and the navigation
+all sat in the same visual register. Running the September session as a parent exposed the cost —
+you cannot tell at a glance what to read aloud, and you cannot hand the phone to the child without
+handing them the guidance too. It also exposed a real bug: on a Sunday the app offered the last
+day of the month rather than the most recent session.
+
+A child area was still missing, and the obvious answer — accounts, profiles, a separate child
+application — would have been a large architecture for a problem that is mostly about layout.
+
+**Decision:** One page, **two zones that look different**, plus a full-screen child view.
+
+- **« La part de l'enfant »** — a card holding the sentence to read aloud, the picture and the
+  interaction. It is the visually dominant thing on the screen.
+- **« Pour vous »** — the guidance, the optional English, the controls. Quieter, smaller, folded
+  away until the parent asks.
+- **« Montrer à l'enfant »** expands the child's part to fill the device, with **no parent chrome
+  on it at all**. Tapping « Revenir au guide du parent » comes back. This is the whole of "child
+  mode": no account, no profile, no second application, no route.
+- **Stopping is normal.** A break and an early end are one tap away at every activity, and the
+  early-end screen says the session will wait — a tired five-year-old learns nothing, and the
+  interface should not imply otherwise.
+- **A refresh is not a restart.** The position is kept in the browser and offered back as
+  « Reprendre où nous nous étions arrêtés », never applied automatically.
+- **Preparation is a list, not a page**: material names first, replacements and safety notes
+  behind a disclosure.
+- **The day the app offers when today is not a school day** is the most recent instructional day
+  that has one, not the last one written.
+
+**Consequences:** The parent can read the screen while talking to the child, and can hand it over
+without exposing guidance meant for an adult. The cost is a small amount of state in one
+component and a rule to keep: anything written for an adult belongs in the second zone. Nothing
+about this decision requires a child profile, so the future `frenchSupportLevel` setting can
+arrive without unpicking it.
