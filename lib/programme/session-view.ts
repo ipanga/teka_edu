@@ -29,6 +29,8 @@ export type SessionText = {
   title: string;
   kind: "story" | "rhyme";
   lines: readonly string[];
+  /** A picture for the story itself, so the child has somewhere to rest their eyes. */
+  illustration: SessionMedia | null;
 };
 
 export type SessionMedia = {
@@ -83,6 +85,15 @@ export type SessionDay = {
   status: DailyPlan["status"];
 };
 
+/** Resolves a media id to what the client needs, or null when there is none. */
+function toMedia(id: string | null): SessionMedia | null {
+  if (id === null) return null;
+  const asset: MediaAsset | undefined = findAsset(getReferenceData().media, id);
+  return asset === undefined
+    ? null
+    : { id: asset.id, url: mediaUrl(asset), alt: asset.alt, tags: asset.tags };
+}
+
 function toActivity(activity: Activity): SessionActivity {
   const textId = activity.payload["textId"];
   const text = typeof textId === "string" ? findText(getReferenceData().texts, textId) : undefined;
@@ -100,7 +111,15 @@ function toActivity(activity: Activity): SessionActivity {
     vocabulary: activity.vocabulary,
     englishHelp: activity.scaffolds.find((s) => s.language === "en")?.childInstruction ?? null,
     payload: activity.payload,
-    text: text === undefined ? null : { title: text.title, kind: text.kind, lines: text.lines },
+    text:
+      text === undefined
+        ? null
+        : {
+            title: text.title,
+            kind: text.kind,
+            lines: text.lines,
+            illustration: toMedia(text.illustrationId),
+          },
     media: activity.mediaIds.flatMap((id) => {
       const asset: MediaAsset | undefined = findAsset(getReferenceData().media, id);
       return asset === undefined
@@ -207,7 +226,16 @@ export function todaysSession(): {
         (day.reasons[0]?.code === "weekend"
           ? "C’est le week-end : il n’y a pas de séance aujourd’hui."
           : "Il n’y a pas de séance aujourd’hui."));
-  const fallback = authored.at(-1);
+  // Not simply the last day written: on a Sunday a parent expects Friday's session, not the end
+  // of the month. Offer the most recent instructional day that has already happened, and only
+  // fall back to the first one before the year starts.
+  const previous = schoolDays().filter(
+    (candidate) =>
+      candidate.date <= today &&
+      candidate.instructionalDay !== null &&
+      authored.includes(candidate.instructionalDay),
+  );
+  const fallback = previous.at(-1)?.instructionalDay ?? authored[0];
   return {
     today,
     todayLabel: formatFrenchDate(today),

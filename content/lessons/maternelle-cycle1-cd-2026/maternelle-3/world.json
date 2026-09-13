@@ -68,7 +68,7 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "mediaIds": [],
+          "mediaIds": ["bonhomme-articule"],
           "objectiveCodes": ["WORLD-S01-C02-O08"],
           "materialCodes": ["papier", "crayon"],
           "vocabulary": [
@@ -222,7 +222,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "mediaIds": [],
+          "mediaIds": ["plante-parties"],
           "objectiveCodes": ["WORLD-S01-C01-O10", "WORLD-S01-C01-O08"],
           "materialCodes": ["aucun"],
           "vocabulary": [
@@ -357,7 +357,7 @@
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "mediaIds": [],
+          "mediaIds": ["bonhomme-articule"],
           "objectiveCodes": ["WORLD-S01-C02-O08"],
           "materialCodes": ["papier", "crayon"],
           "vocabulary": [

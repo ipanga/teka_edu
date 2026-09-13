@@ -11,6 +11,7 @@
  * tells the child to look at something needs a picture, and one that tells them to run does not.
  */
 import { ACTIVITY_RENDERERS } from "@/domain/lessons/renderers";
+import type { TeachingText } from "@/domain/lessons/texts";
 import type { Activity } from "@/domain/lessons/types";
 import { getReferenceData } from "@/lib/content/reference-data";
 
@@ -45,12 +46,19 @@ function visualNeed(activity: Activity): Need {
 }
 
 /**
- * Whether the screen actually has something to show. Counting always does: the renderer draws
- * counters when the lesson names no picture.
+ * Whether the screen actually has something to show. Three ways it can:
+ *
+ *  - the activity names its own pictures;
+ *  - counting draws its own counters when no picture is named;
+ *  - a story or a rhyme carries an illustration on the text itself, so every activity that reads
+ *    it inherits one rather than repeating the id in 27 places.
  */
-function isCovered(activity: Activity): boolean {
+function isCovered(activity: Activity, texts: readonly TeachingText[]): boolean {
   if (activity.mediaIds.length > 0) return true;
-  return ACTIVITY_RENDERERS[activity.type].family === "quantity";
+  if (ACTIVITY_RENDERERS[activity.type].family === "quantity") return true;
+  const textId = activity.payload["textId"];
+  if (typeof textId !== "string") return false;
+  return texts.find((text) => text.id === textId)?.illustrationId != null;
 }
 
 /** Would a recording help, beyond the parent reading aloud? Nothing requires it today. */
@@ -88,7 +96,7 @@ const rows = activities.map(({ lesson, activity }) => ({
   audio: audioNeed(activity),
   interactive: isInteractive(activity),
   hasMedia: activity.mediaIds.length > 0,
-  covered: isCovered(activity),
+  covered: isCovered(activity, data.texts),
   offScreen: activity.mode === "off-screen",
 }));
 
@@ -135,7 +143,7 @@ console.log("\nÉcran et interaction");
 console.log(`  sans écran            ${pad(count((row) => row.offScreen))}`);
 console.log(`  avec écran            ${pad(count((row) => !row.offScreen))}`);
 console.log(`  interactives          ${pad(count((row) => row.interactive))}`);
-console.log(`  images au total       ${pad(count((row) => row.hasMedia))}`);
+console.log(`  avec un visuel        ${pad(count((row) => row.covered))}`);
 
 console.log("\nBibliothèque");
 const byKind = new Map<string, number>();

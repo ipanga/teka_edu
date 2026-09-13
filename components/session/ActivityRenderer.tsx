@@ -57,12 +57,21 @@ function Feedback({ state, hint }: { state: "idle" | "retry" | "done"; hint: str
   );
 }
 
-function OffScreen({ children }: { children: React.ReactNode }) {
+/**
+ * Says, plainly, that this activity happens away from the screen. When there is nothing to put
+ * inside it, it is a single line rather than an empty dashed box: an empty frame looks broken,
+ * and a parent should not wonder whether something failed to load.
+ */
+function OffScreen({ children }: { children?: React.ReactNode }) {
+  const label = (
+    <p className="text-sm font-semibold tracking-wide text-stone-500 uppercase">
+      Posez l’écran : cette activité se fait sans lui
+    </p>
+  );
+  if (children === null || children === undefined || children === false) return label;
   return (
     <div className="rounded-2xl border-2 border-dashed border-stone-300 px-5 py-4">
-      <p className="mb-2 text-sm font-semibold tracking-wide text-stone-500 uppercase">
-        Posez l’écran : cette activité se fait sans lui
-      </p>
+      <div className="mb-2">{label}</div>
       {children}
     </div>
   );
@@ -90,12 +99,23 @@ const labelOf = (media: SessionMedia) => media.tags[0] ?? media.alt;
  * "Montre le carré." The child taps the named picture. Three tries at most before the answer is
  * shown and the parent is asked to name it together — a five-year-old must not be left stuck.
  */
-function ChooseOne({ media }: { media: readonly SessionMedia[] }) {
+function ChooseOne({
+  media,
+  labels,
+}: {
+  media: readonly SessionMedia[];
+  /** What to call each picture, when the lesson's own word is better than the asset's tag. */
+  labels?: readonly string[];
+}) {
   const [target, setTarget] = useState(0);
   const [tries, setTries] = useState(0);
   const [state, setState] = useState<"idle" | "retry" | "done">("idle");
   const [revealed, setRevealed] = useState(false);
   const wanted = media[target]!;
+  const nameOf = (item: SessionMedia) => {
+    const at = media.indexOf(item);
+    return labels?.[at] ?? labelOf(item);
+  };
 
   const choose = (chosen: SessionMedia) => {
     if (state === "done") return;
@@ -117,7 +137,7 @@ function ChooseOne({ media }: { media: readonly SessionMedia[] }) {
 
   return (
     <div className="flex flex-col gap-4">
-      <Prompt>Montre : {labelOf(wanted)}</Prompt>
+      <Prompt>Montre : {nameOf(wanted)}</Prompt>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         {media.map((item) => {
           const isAnswer = item.id === wanted.id;
@@ -144,7 +164,7 @@ function ChooseOne({ media }: { media: readonly SessionMedia[] }) {
         state={state}
         hint={
           revealed
-            ? `C’est celui-ci : ${labelOf(wanted)}. Nommez-le ensemble, puis recommencez.`
+            ? `C’est celui-ci : ${nameOf(wanted)}. Nommez-le ensemble, puis recommencez.`
             : "Essaie encore. Regarde bien la forme."
         }
       />
@@ -302,7 +322,8 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
       const prompts = asStrings(activity.payload["prompts"]).filter(
         (prompt) => !activity.childInstruction.includes(prompt),
       );
-      const body = (
+      const hasBody = media.length > 0 || prompts.length > 0;
+      const body = hasBody ? (
         <div className="flex flex-col gap-3">
           {media.length > 0 && (
             <div className="flex flex-wrap gap-3">
@@ -318,27 +339,12 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
             </>
           )}
         </div>
-      );
+      ) : null;
       return offScreen ? <OffScreen>{body}</OffScreen> : body;
     }
 
     case "word-cards":
-      return (
-        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-          {activity.vocabulary.map((entry, index) => {
-            const picture = media[index];
-            return (
-              <li
-                key={entry.fr}
-                className="flex flex-col items-center gap-2 rounded-2xl bg-white px-3 py-4 shadow-sm"
-              >
-                {picture && <Picture media={picture} />}
-                <span className="text-center text-lg font-semibold">{entry.fr}</span>
-              </li>
-            );
-          })}
-        </ul>
-      );
+      return <WordCards activity={activity} />;
 
     case "sound-game": {
       const words = asStrings(activity.payload["words"]);
@@ -471,6 +477,60 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
   }
 }
 
+/**
+ * The taught words, each with its picture — then, once they have been seen, the same pictures
+ * without their words so the child can be asked for one by name. Naming a picture is how a word
+ * moves from heard to owned; the cards alone only show it.
+ */
+function WordCards({ activity }: { activity: SessionActivity }) {
+  const [playing, setPlaying] = useState(false);
+  const media = activity.media;
+  const words = activity.vocabulary.map((entry) => entry.fr);
+
+  if (playing && media.length > 1) {
+    return (
+      <div className="flex flex-col gap-4">
+        <ChooseOne media={media} labels={words} />
+        <button
+          type="button"
+          onClick={() => setPlaying(false)}
+          className="w-fit rounded-xl border-2 border-stone-300 px-4 py-2 text-base font-medium"
+        >
+          Revoir les mots
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex flex-col gap-4">
+      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+        {activity.vocabulary.map((entry, index) => {
+          const picture = media[index];
+          return (
+            <li
+              key={entry.fr}
+              className="flex flex-col items-center gap-2 rounded-2xl bg-white px-3 py-4 shadow-sm"
+            >
+              {picture && <Picture media={picture} />}
+              <span className="text-center text-lg font-semibold">{entry.fr}</span>
+            </li>
+          );
+        })}
+      </ul>
+      {media.length > 1 && (
+        <button
+          type="button"
+          onClick={() => setPlaying(true)}
+          className="w-fit rounded-xl border-2 border-emerald-700 px-4 py-2 text-base font-medium text-emerald-800"
+        >
+          Jouer : je montre le mot
+        </button>
+      )}
+    </div>
+  );
+}
+
 /** A story or a rhyme, read by the parent, one page at a time rather than one long scroll. */
 function Narrative({ activity }: { activity: SessionActivity }) {
   const text = activity.text;
@@ -494,11 +554,13 @@ function Narrative({ activity }: { activity: SessionActivity }) {
             </span>
           )}
         </div>
-        {activity.media.length > 0 && page === 0 && (
+        {page === 0 && (text.illustration !== null || activity.media.length > 0) && (
           <div className="mb-4 flex justify-center gap-3">
-            {activity.media.map((item) => (
-              <Picture key={item.id} media={item} size="lg" />
-            ))}
+            {text.illustration !== null ? (
+              <Picture media={text.illustration} size="lg" />
+            ) : (
+              activity.media.map((item) => <Picture key={item.id} media={item} size="lg" />)
+            )}
           </div>
         )}
         <div className={text.kind === "rhyme" ? "flex flex-col gap-1" : "flex flex-col gap-3"}>

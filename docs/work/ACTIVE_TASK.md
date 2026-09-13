@@ -37,9 +37,10 @@ picture when a picture helps.
 
 ## Last Checkpoint
 
-2026-09-13 — branch created from `develop` at `ec4eb26`. Resume protocol run: clean tree, no open
-PRs, staging green at `ec4eb26`, DEV 10/10 migrations matched, media report reproduced (29/29
-required visuals served, 58 useful gaps).
+2026-09-13 — M1 to M4 done. Audit found seven problems and all seven are fixed; 16 new
+illustrations cut the visual gaps from 58 to 27, and the 27 that remain are deliberate. 207 unit
+tests, 144 pgTAP assertions, 20 E2E tests pass. Next: M5/M6 documentation and the real-session
+procedure, then validation and staging.
 
 ## Scope
 
@@ -71,10 +72,22 @@ required visuals served, 58 useful gaps).
 ## Completed
 
 - [x] Resume protocol; state verified against the repository and the cloud
+- [x] Checkpoint commit, push, **Draft PR #26**
+- [x] **M1 audit** — seven concrete problems, all fixed (listed in the PR)
+- [x] **Weekend bug fixed**: a Sunday offered day 22 instead of the most recent session
+- [x] **M2 parent/child separation**: « La part de l'enfant » card versus a quiet « Pour vous »
+      zone, plus « Montrer à l'enfant » filling the phone with no parent chrome on it
+- [x] Preparation is a scannable list; alternatives and safety notes wait behind a disclosure
+- [x] Pause, stop early without it reading as failure, and resume where the session stopped
+- [x] Empty « Posez l'écran » frame replaced by a single line when there is nothing inside
+- [x] **M3 visuals**: the 58 gaps classified individually; 16 new illustrations (one per story and
+      rhyme, plus a plant and a jointed figure); gaps 58 → 27, all 27 deliberate
+- [x] **M4 interaction**: word cards can be played — « je montre le mot » — reusing the choose-one
+      pattern with the lesson's own words
 
 ## In Progress
 
-- [ ] M1 — audit the September parent journey
+- [ ] M5/M6 — story review, real-session procedure, documentation
 
 ## Remaining
 
@@ -88,21 +101,19 @@ required visuals served, 58 useful gaps).
 
 ## Validation State
 
-Inherited from `develop` at `ec4eb26`; each becomes `STALE` when this branch changes what it covers.
-
-| Check              | Result | At                                 |
-| ------------------ | ------ | ---------------------------------- |
-| format             | PASS   | `ec4eb26`                          |
-| lint               | PASS   | `ec4eb26`                          |
-| typecheck          | PASS   | `ec4eb26`                          |
-| unit tests         | PASS   | `ec4eb26` — 206 tests              |
-| content validation | PASS   | `ec4eb26` — 21 files               |
-| database tests     | PASS   | `ec4eb26` — 144 pgTAP assertions   |
-| build              | PASS   | `ec4eb26`                          |
-| E2E                | PASS   | `ec4eb26` — 17 tests               |
-| Docker             | PASS   | CI at `ec4eb26`                    |
-| secret scans       | PASS   | `ec4eb26`                          |
-| staging            | PASS   | `ec4eb26` deployed, workflow green |
+| Check              | Result  | At                                  |
+| ------------------ | ------- | ----------------------------------- |
+| format             | PASS    | working tree                        |
+| lint               | PASS    | working tree                        |
+| typecheck          | PASS    | working tree                        |
+| unit tests         | PASS    | working tree — 207 tests            |
+| content validation | PASS    | working tree — 21 files             |
+| database tests     | PASS    | working tree — 144 pgTAP assertions |
+| build              | PASS    | working tree                        |
+| E2E                | PASS    | working tree — 20 tests             |
+| Docker             | NOT RUN | left to CI                          |
+| secret scans       | NOT RUN | before the PR is marked ready       |
+| staging            | STALE   | this branch is not deployed yet     |
 
 ## Database State
 
@@ -132,9 +143,9 @@ None yet.
 
 ## Exact Resume Point
 
-Commit this checkpoint, push, open the Draft PR, then run M1: the audit of the September journey
-in a real browser at phone, tablet and desktop widths, recording concrete problems before fixing
-anything.
+Continue at M5/M6: review the stories as a child experience, rewrite
+`docs/REAL_SESSION_TESTING.md` as a procedure a non-technical parent can follow, then write
+ADR-043, update the documentation, run the full suite and mark PR #26 ready.
 
 ## Resume Verification
 

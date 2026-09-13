@@ -197,6 +197,150 @@
       "tags": ["chèvre", "animal", "bibi"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "histoire-kumu",
+      "kind": "illustration",
+      "file": "illustrations/histoire-kumu.svg",
+      "alt": "Un petit poussin devant la porte ouverte du poulailler",
+      "tags": ["kumu", "poussin", "histoire"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "histoire-nsimba",
+      "kind": "illustration",
+      "file": "illustrations/histoire-nsimba.svg",
+      "alt": "Un enfant avec un sac devant la porte de l’école",
+      "tags": ["nsimba", "école", "rentrée", "histoire"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "histoire-mangue",
+      "kind": "illustration",
+      "file": "illustrations/histoire-mangue.svg",
+      "alt": "Une mangue coupée en trois morceaux",
+      "tags": ["mangue", "partage", "histoire"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "histoire-bibi",
+      "kind": "illustration",
+      "file": "illustrations/histoire-bibi.svg",
+      "alt": "Une chèvre devant une barrière et des feuilles",
+      "tags": ["bibi", "chèvre", "jardin", "histoire"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "histoire-marche",
+      "kind": "illustration",
+      "file": "illustrations/histoire-marche.svg",
+      "alt": "Un panier de marché avec des tomates et une banane",
+      "tags": ["marché", "panier", "histoire"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "histoire-pluie",
+      "kind": "illustration",
+      "file": "illustrations/histoire-pluie.svg",
+      "alt": "La pluie qui tombe sur un toit",
+      "tags": ["pluie", "toit", "histoire"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "histoire-cailloux",
+      "kind": "illustration",
+      "file": "illustrations/histoire-cailloux.svg",
+      "alt": "Trois cailloux : un rond, un plat et un pointu",
+      "tags": ["cailloux", "trois", "histoire"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "histoire-malo",
+      "kind": "illustration",
+      "file": "illustrations/histoire-malo.svg",
+      "alt": "Un petit chien endormi en rond sous la lune",
+      "tags": ["malo", "chien", "dormir", "histoire"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "comptine-compter",
+      "kind": "illustration",
+      "file": "illustrations/comptine-compter.svg",
+      "alt": "Une main qui montre trois doigts",
+      "tags": ["compter", "comptine", "doigts"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "comptine-bonjour",
+      "kind": "illustration",
+      "file": "illustrations/comptine-bonjour.svg",
+      "alt": "Le soleil qui se lève et deux mains qui se saluent",
+      "tags": ["bonjour", "soleil", "comptine"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "comptine-mains",
+      "kind": "illustration",
+      "file": "illustrations/comptine-mains.svg",
+      "alt": "Deux mains levées",
+      "tags": ["mains", "corps", "comptine"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "comptine-semaine",
+      "kind": "illustration",
+      "file": "illustrations/comptine-semaine.svg",
+      "alt": "Les sept jours de la semaine, alignés",
+      "tags": ["semaine", "jours", "comptine"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "comptine-cabri",
+      "kind": "illustration",
+      "file": "illustrations/comptine-cabri.svg",
+      "alt": "Un petit cabri qui saute",
+      "tags": ["cabri", "sauter", "comptine"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "comptine-formes",
+      "kind": "illustration",
+      "file": "illustrations/comptine-formes.svg",
+      "alt": "Les quatre formes qui dansent : rond, carré, rectangle, triangle",
+      "tags": ["formes", "comptine"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "plante-parties",
+      "kind": "illustration",
+      "file": "illustrations/plante-parties.svg",
+      "alt": "Une plante avec ses feuilles, sa tige et ses racines sous la terre",
+      "tags": ["plante", "feuille", "tige", "racine"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "bonhomme-articule",
+      "kind": "illustration",
+      "file": "illustrations/bonhomme-articule.svg",
+      "alt": "Un bonhomme dessiné avec les bras et les jambes pliés",
+      "tags": ["bonhomme", "corps", "articulation", "dessin"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
     }
   ]
 }
