@@ -675,6 +675,7 @@ export function referenceTables(data: ReferenceData): TableData[] {
         col("minutes", "smallint"),
         col("origin", "text"),
         col("provenance", "text"),
+        col("illustration_id", "text"),
       ],
       rows: data.texts.map((text) => ({
         id: text.id,
@@ -683,6 +684,7 @@ export function referenceTables(data: ReferenceData): TableData[] {
         minutes: text.minutes,
         origin: text.origin,
         provenance: text.provenance,
+        illustration_id: text.illustrationId,
       })),
     },
     {

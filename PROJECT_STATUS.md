@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-12
-Branch:     develop
-Commit:     develop at 0d12f20; main at 1b95480
+Branch:     feat/september-child-experience (PR #26 into develop)
+Commit:     develop at ec4eb26; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -187,6 +187,17 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 - [x] Media mirrored to the database with RLS and an access decision per table
 - [x] All 88 lessons remain `review`: usability testing is not pedagogical approval
 
+### Phase 3C — the session a parent and child can sit down and do (PR #26)
+
+- [x] Audit of the whole September journey: seven concrete problems, all fixed
+- [x] **Bug**: on a non-school day the app offered the last day written (30 September) instead of the most recent session
+- [x] **Two zones** (ADR-043): « La part de l'enfant » versus a quiet « Pour vous », plus « Montrer à l'enfant » filling the device with no parent chrome
+- [x] Preparation reduced to a scannable list; replacements behind a disclosure
+- [x] Pause, early stop framed as normal, and resume where the session stopped
+- [x] 16 new illustrations — one per story and rhyme, a plant, a jointed figure; visual gaps 58 → 27, and all 27 are deliberate
+- [x] Fourth interaction: « je montre le mot » on the vocabulary cards
+- [x] `docs/REAL_SESSION_TESTING.md` rewritten as a procedure needing no technical knowledge
+
 ## Next Tasks
 
 ### P0 — Next
@@ -308,11 +319,11 @@ Severity: Medium (legal) · Status: Open
 Description: edu-nc.gouv.cd reserves all site content to the ministry: consultation, download and printing for personal and educational use with attribution, but reproduction or copying without authorisation is prohibited. There is no open licence, unlike the French texts. Teka Edu therefore **references** the PNEM and does not store its wording.
 Recommended action: keep referencing only. If PNEM objectives are ever to be stored (Strategy B or C, ADR-037), request written authorisation from MINEDU-NC first. A human/legal opinion is needed before any such use.
 
-### ISSUE-024 — 58 activities would be better with a picture they do not have
+### ISSUE-024 — the remaining visual gaps are deliberate
 
-Severity: Low (quality of experience) · Status: Open
-Description: `npm run media:report` classifies every September activity. 29 need something on screen and all 29 have it; **58 more would be helped by a picture and do not have one** — mostly story illustrations, drawing models and the objects of conversations. No screen is left blank, so nothing is broken; the experience is simply plainer than it could be.
-Recommended action: decide after a real session with a child which of the 58 actually matter. A child who is engaged without them does not need them, and every asset added is one more thing to maintain. Story illustrations are the most likely first investment.
+Severity: Low · Status: **Resolved by review**, 2026-09-13
+Description: Phase 3B reported 58 activities that a picture would help. Each was classified in Phase 3C. 31 now have one — every story and rhyme carries its own illustration, plus a plant diagram and a jointed figure. The remaining **27 are better without**: 17 where the child handles real cailloux, papers or objects, 4 where the child looks at their own body or a real plant, and 6 where the child draws from a real model in front of them or from imagination (drawing Kumu _with_ a picture of Kumu would defeat the activity).
+Recommended action: none. A real session may still show a specific gap; `npm run media:report` lists them.
 
 ### ISSUE-025 — No audio anywhere
 

@@ -28,12 +28,17 @@ test.describe("parent session", () => {
   test("a session runs from preparation to the end, one activity at a time", async ({ page }) => {
     await page.goto("/seance/1");
     await expect(page.getByRole("heading", { name: "À préparer" })).toBeVisible();
-    // Materials come with what to use instead, because homes differ.
+    // The list is short and scannable; what to use instead waits until the parent asks, so the
+    // preparation screen is a list to fetch rather than a page to read.
+    await expect(page.getByText("À défaut :")).toHaveCount(0);
+    await page.getByRole("button", { name: /Je n’ai pas tout/ }).click();
     await expect(page.getByText("À défaut :").first()).toBeVisible();
 
     await page.getByRole("button", { name: "Commencer la leçon" }).click();
     await expect(page.getByText("Activité 1 sur")).toBeVisible();
-    await expect(page.getByText("À dire à l’enfant")).toBeVisible();
+    // The child's part and the parent's part are now distinct zones on the screen.
+    await expect(page.getByText("La part de l’enfant")).toBeVisible();
+    await expect(page.getByText("Pour vous")).toBeVisible();
 
     // Parent guidance is folded away until asked for.
     const guidance = page.getByRole("button", { name: "Afficher le conseil au parent" });
@@ -199,5 +204,61 @@ test.describe("parent session", () => {
     await page.getByRole("button", { name: "Oui" }).first().click();
     await page.getByRole("button", { name: "Enregistrer dans ce navigateur" }).click();
     await expect(page.getByText("Enregistré.")).toBeVisible();
+  });
+
+  test("the parent can pause, stop early, and pick the session up again", async ({ page }) => {
+    await page.goto("/seance/4");
+    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page
+      .getByRole("button", { name: /Suivant|Terminé/ })
+      .first()
+      .click();
+
+    // A break is one tap away, and coming back is not a restart.
+    await page.getByRole("button", { name: "Faire une petite pause" }).click();
+    await expect(page.getByRole("heading", { name: "Petite pause." })).toBeVisible();
+    await page.getByRole("button", { name: "Continuer" }).click();
+    await expect(page.getByText("Activité 2 sur")).toBeVisible();
+
+    // Stopping early is offered as a normal thing to do, never as a failure.
+    await page.getByRole("button", { name: "Terminer pour aujourd’hui" }).click();
+    await expect(page.getByRole("heading", { name: /On s’arrête là/ })).toBeVisible();
+    const body = (await page.locator("body").textContent()) ?? "";
+    expect(body).not.toMatch(/échec|abandon|incomplet/i);
+
+    // The browser remembers where we were, and offers to resume rather than deciding.
+    await page.reload();
+    await expect(
+      page.getByRole("button", { name: /Reprendre où nous nous étions arrêtés/ }),
+    ).toBeVisible();
+  });
+
+  test("the child's screen can fill the phone, with no parent chrome on it", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto("/seance/3");
+    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page.getByRole("button", { name: "Montrer à l’enfant" }).click();
+
+    const childScreen = page.getByRole("region", { name: "Écran de l’enfant" });
+    await expect(childScreen).toBeVisible();
+    // Nothing of the parent's guidance is on the child's screen.
+    await expect(page.getByRole("button", { name: "Afficher le conseil au parent" })).toHaveCount(
+      0,
+    );
+    await expect(page.getByRole("button", { name: "Besoin d’aide en anglais ?" })).toHaveCount(0);
+
+    await page.getByRole("button", { name: "Revenir au guide du parent" }).click();
+    await expect(page.getByRole("button", { name: "Afficher le conseil au parent" })).toBeVisible();
+  });
+
+  test("a story shows its own picture", async ({ page }) => {
+    await page.goto("/seance/3");
+    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page
+      .getByRole("button", { name: /Suivant|Terminé/ })
+      .first()
+      .click();
+    await expect(page.getByText("Kumu, le petit poussin")).toBeVisible();
+    await expect(page.getByRole("img", { name: /poussin/i }).first()).toBeVisible();
   });
 });

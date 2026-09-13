@@ -20,6 +20,11 @@ export type TeachingText = {
   provenance: string;
   /** Roughly how long it takes to read aloud, in minutes. */
   minutes: number;
+  /**
+   * A picture for the story or the rhyme, by media id (ADR-042). A five-year-old listening needs
+   * somewhere to rest their eyes, and it is the first thing a parent can point at afterwards.
+   */
+  illustrationId: string | null;
 };
 
 export function findText(texts: readonly TeachingText[], id: string): TeachingText | undefined {

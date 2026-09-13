@@ -8,7 +8,7 @@ import type { ContentOrigin } from "../curriculum/types";
  * change, not a content migration, and a missing file is a test failure rather than a blank space
  * in front of a five-year-old.
  */
-export const MEDIA_KINDS = ["shape", "object", "animal"] as const;
+export const MEDIA_KINDS = ["shape", "object", "animal", "illustration"] as const;
 export type MediaKind = (typeof MEDIA_KINDS)[number];
 
 export type MediaAsset = {

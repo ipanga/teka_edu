@@ -147,6 +147,7 @@ export const teachingTextsFileSchema = z.strictObject({
         origin: z.enum(CONTENT_ORIGINS),
         provenance: french,
         minutes: z.number().int().min(1).max(10),
+        illustrationId: slug.nullable(),
       }) satisfies z.ZodType<TeachingText>,
     )
     .min(1),

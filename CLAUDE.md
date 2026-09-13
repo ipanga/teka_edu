@@ -214,6 +214,7 @@ feature/*  -> develop  -> main
 - **Nothing a lesson needs comes from outside**: stories, rhymes and songs live in `content/texts/` and are Teka Edu originals. A lesson never tells a parent to find a book.
 - **If the child is told to look at something, show it** (ADR-042). Pictures are SVG in `public/media/`, named by stable id in `content/media/registry.json` and referenced by `mediaIds` — never a path or a URL. `npm run media:report` says what is covered and what is not.
 - **If the child is told to move, speak, draw or handle real objects, the screen steps back** and says « Posez l'écran ». An off-screen activity is not a smaller on-screen one.
+- **Two zones, always** (ADR-043): « La part de l'enfant » holds what the child sees and does; « Pour vous » holds everything written for an adult, folded away. Anything an adult reads belongs in the second zone, never the first.
 - **Never claim the app observed what it cannot see.** A tap can be checked; a child speaking, running or drawing cannot, and those finish on the parent's word ("Terminé"). No scores, no grades, no dashboards.
 - **Never write a date into content.** Use `{{date}}` or `{{jour}}`; the daily plan fills them in from the day being taught (a test forbids written-out dates).
 - The authoring pipeline is strictly ordered:

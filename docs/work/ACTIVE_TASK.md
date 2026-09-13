@@ -6,27 +6,26 @@
 
   Git wins over this file when the two disagree. Keep it current: an out-of-date checkpoint is
   worse than none, because it is believed.
-
-  When a task starts: fill this in before the first substantial edit, and create the branch.
-  When a task ends: mark it `completed`, copy it to docs/work/archive/<YYYY-MM>-<task>.md,
-  then reset this file to the shape below.
 -->
 
 ## Task
 
-None in progress.
+Phase 3C — the September session a parent and child can actually sit down and do.
 
 ## Objective
 
-Phase 3B is complete and merged. No new task has been started.
+A parent opens Teka Edu after school, understands at once what to prepare, what to say and what
+the child should do, runs a pleasant 30-to-45-minute session without teaching expertise, and
+finishes knowing it went well. The child sees one clear thing at a time, in large type, with a
+picture when a picture helps.
 
 ## Status
 
-`planned`
+`awaiting_ci`
 
 ## Branch
 
-`develop` — no feature branch open.
+`feat/september-child-experience`
 
 ## Base Branch
 
@@ -34,78 +33,104 @@ Phase 3B is complete and merged. No new task has been started.
 
 ## Started
 
-—
+2026-09-13
 
 ## Last Checkpoint
 
-2026-09-12 — reset after PR #24 merged as `0d12f20` and verified on staging.
+2026-09-13 — all milestones done and the full suite is green. ADR-043 written,
+`REAL_SESSION_TESTING.md` rewritten for a non-technical parent, documentation updated. About to
+mark PR #26 ready and wait for CI.
 
 ## Scope
 
-To be filled in when the next task begins.
+- M1 audit the whole September parent journey at phone, tablet and desktop widths.
+- M2 separate what the parent needs from what the child needs, with the smallest model that fits.
+- M3 classify the 58 visual opportunities one by one and close the ones that matter.
+- M4 add interaction only where it carries the learning.
+- M5 stories, pauses, stopping early without it feeling like failure.
+- M6 make a real session trivial for a non-technical parent to run and report.
+- M7 full validation and staging. M8 documentation and report.
 
 ## Out of Scope
 
-- **October content authoring**, and 1ère/2ème maternelle content, until September has been
-  reviewed by a person who teaches this age (ISSUE-017).
-- Approving any lesson. All 88 stay in `review`; usability testing is not pedagogical approval.
-- Production, `main`, paid services.
+- **October**, and 1ère/2ème maternelle content.
+- Approving any lesson; ISSUE-017 stays open.
+- Scores, points, rewards, dashboards, adaptive engines.
+- A child account or profile system.
+- Paid anything: no TTS, CDN, stock imagery, storage.
+- Production, `main`.
 
 ## Product Decisions
 
-- Parent-led after-school digital répétiteur; 30–45 minutes a day (ADR-039).
-- French Cycle 1 is the curriculum; the PNEM is a compatibility reference (ADR-037).
-- The year's pacing is authored before a month's lessons (ADR-040).
-- Media is SVG in the repository, named by stable id, costing nothing (ADR-042).
-- Long tasks are resumable from the repository (ADR-041).
+- Parent-led after-school répétiteur; 30-45 minutes, September stays at 35 (ADR-039).
+- French Cycle 1 is the curriculum; DRC calendar and context; PNEM as compatibility (ADR-037).
+- Media is repository SVG by stable id, $0 (ADR-042).
+- The screen guides; it never replaces speaking, moving or handling real things.
+- Never claim the app observed what it cannot see.
 
 ## Completed
 
-- [x] Phase 3A — September programme and the parent session (archived)
-- [x] Session duration policy and the resumable-work protocol (archived)
-- [x] Phase 3B — September experience, visuals and interaction (archived)
+- [x] Resume protocol; state verified against the repository and the cloud
+- [x] Checkpoint commit, push, **Draft PR #26**
+- [x] **M1 audit** — seven concrete problems, all fixed (listed in the PR)
+- [x] **Weekend bug fixed**: a Sunday offered day 22 instead of the most recent session
+- [x] **M2 parent/child separation**: « La part de l'enfant » card versus a quiet « Pour vous »
+      zone, plus « Montrer à l'enfant » filling the phone with no parent chrome on it
+- [x] Preparation is a scannable list; alternatives and safety notes wait behind a disclosure
+- [x] Pause, stop early without it reading as failure, and resume where the session stopped
+- [x] Empty « Posez l'écran » frame replaced by a single line when there is nothing inside
+- [x] **M3 visuals**: the 58 gaps classified individually; 16 new illustrations (one per story and
+      rhyme, plus a plant and a jointed figure); gaps 58 → 27, all 27 deliberate
+- [x] **M4 interaction**: word cards can be played — « je montre le mot » — reusing the choose-one
+      pattern with the lesson's own words
 
 ## In Progress
 
-- [ ] Nothing.
+- [ ] PR #26 ready, four required CI checks, squash-merge, verify staging
 
 ## Remaining
 
-1. Awaiting the owner's choice of next task.
+1. M1 audit, recorded as concrete problems before any fix.
+2. M2 parent/child separation.
+3. M3 visual classification and the assets that matter.
+4. M4 interactions.
+5. M5 stories, pause, early stop.
+6. M6 real-session testing procedure.
+7. M7 validation and staging; M8 documentation and final report.
 
 ## Validation State
 
-From Phase 3B, at `0d12f20` on `develop`. Current until something changes.
-
-| Check              | Result | At                                      |
-| ------------------ | ------ | --------------------------------------- |
-| format             | PASS   | `0d12f20`                               |
-| lint               | PASS   | `0d12f20` — 0 warnings                  |
-| typecheck          | PASS   | `0d12f20`                               |
-| unit tests         | PASS   | `0d12f20` — 206 tests                   |
-| content validation | PASS   | `0d12f20` — 21 files                    |
-| database tests     | PASS   | `0d12f20` — 144 pgTAP assertions        |
-| build              | PASS   | `0d12f20`                               |
-| E2E                | PASS   | `0d12f20` — 17 tests, local and staging |
-| Docker             | PASS   | CI at `0d12f20` — both images           |
-| secret scans       | PASS   | `0d12f20` — no leaks, 0 tracked `.env*` |
-| staging            | PASS   | `0d12f20` deployed and verified         |
+| Check              | Result  | At                                         |
+| ------------------ | ------- | ------------------------------------------ |
+| format             | PASS    | working tree                               |
+| lint               | PASS    | working tree — 0 warnings                  |
+| typecheck          | PASS    | working tree                               |
+| unit tests         | PASS    | working tree — 207 tests                   |
+| content validation | PASS    | working tree — 21 files                    |
+| database tests     | PASS    | working tree — 144 pgTAP assertions        |
+| build              | PASS    | working tree                               |
+| E2E                | PASS    | working tree — 20 tests                    |
+| Docker             | NOT RUN | left to CI                                 |
+| secret scans       | PASS    | working tree — no leaks, 0 tracked `.env*` |
+| staging            | STALE   | not deployed from this branch yet          |
 
 ## Database State
 
-- Local: 10 migrations; `db reset` + pgTAP pass.
-- DEV: 10 migrations, local and remote identical; 36 tables, 22 media assets, 0 approved lessons;
-  advisors clean.
-- PROD: untouched.
+- Local: 10 migrations.
+- DEV: 10 migrations, local and remote identical (verified 2026-09-13).
+- PROD: untouched, and must stay so.
+- Expected here: no migration unless the session model genuinely needs one.
 
 ## Deployment State
 
-- Staging: enabled; last deployment `0d12f20`, verified.
-- Production: disabled. No production token, no `PRODUCTION_DEPLOY_ENABLED`; `main` at `1b95480`.
+- Staging: enabled; last deployment `ec4eb26`, success.
+- Production: disabled; `main` at `1b95480`.
 
 ## Git State
 
-- `develop` at `0d12f20` plus this closing change. No feature branch, no open PR once merged.
+- Branch `feat/september-child-experience`, from `develop` at `ec4eb26`.
+- No checkpoint commit yet, not pushed, no PR.
+- Uncommitted: this file.
 
 ## Blockers
 
@@ -113,19 +138,19 @@ None.
 
 ## User Decisions Needed
 
-- Which task comes next. The recommendation is to run one real September session with a child,
-  using `/seance/<n>/observation` to record it, before deciding between more media, October
-  authoring, or acting on teacher review.
+None yet.
 
 ## Exact Resume Point
 
-No task is in progress. When the next one starts: fill this file in, create the feature branch
-from `develop`, commit an initial checkpoint, and open a Draft PR before the long work begins.
+Mark PR #26 ready (`gh pr ready 26`), wait for the four required checks, squash-merge, then
+verify staging and DEV (two new migrations: `20260913060000_media_illustrations.sql` and its
+generated data migration).
 
 ## Resume Verification
 
-1. `git branch --show-current` is `develop` and `git status --short` is empty;
-2. `git log -n 5 --oneline` starts at the Phase 3B merge or later;
-3. `gh pr list --state open` is empty;
-4. `npx supabase migration list --linked` if the new task touches the database;
-5. `gh run list --branch develop --limit 3` before assuming a deployment is needed.
+1. `git branch --show-current` is `feat/september-child-experience`;
+2. `git log -n 5 --oneline` — branch point is `ec4eb26`;
+3. `git status --short` — read uncommitted work before discarding it;
+4. `gh pr list --head feat/september-child-experience` — a Draft PR may exist;
+5. `npx supabase migration list --linked` only if a migration was in flight;
+6. `gh run list --branch develop --limit 3` before assuming a deployment is needed.

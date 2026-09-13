@@ -5,6 +5,7 @@
       "kind": "story",
       "title": "Kumu, le petit poussin",
       "minutes": 3,
+      "illustrationId": "histoire-kumu",
       "origin": "teka-edu-created",
       "provenance": "Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris.",
       "lines": [
@@ -27,6 +28,7 @@
       "kind": "story",
       "title": "Le premier jour de Nsimba",
       "minutes": 3,
+      "illustrationId": "histoire-nsimba",
       "origin": "teka-edu-created",
       "provenance": "Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris.",
       "lines": [
@@ -50,6 +52,7 @@
       "kind": "story",
       "title": "La mangue partagée",
       "minutes": 2,
+      "illustrationId": "histoire-mangue",
       "origin": "teka-edu-created",
       "provenance": "Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris.",
       "lines": [
@@ -70,6 +73,7 @@
       "kind": "story",
       "title": "Bibi, la chèvre curieuse",
       "minutes": 3,
+      "illustrationId": "histoire-bibi",
       "origin": "teka-edu-created",
       "provenance": "Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris.",
       "lines": [
@@ -92,6 +96,7 @@
       "kind": "story",
       "title": "Le marché de mama Lelo",
       "minutes": 3,
+      "illustrationId": "histoire-marche",
       "origin": "teka-edu-created",
       "provenance": "Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris.",
       "lines": [
@@ -112,6 +117,7 @@
       "kind": "story",
       "title": "La pluie sur le toit",
       "minutes": 2,
+      "illustrationId": "histoire-pluie",
       "origin": "teka-edu-created",
       "provenance": "Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris.",
       "lines": [
@@ -132,6 +138,7 @@
       "kind": "story",
       "title": "Les trois cailloux de Tito",
       "minutes": 2,
+      "illustrationId": "histoire-cailloux",
       "origin": "teka-edu-created",
       "provenance": "Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris.",
       "lines": [
@@ -153,6 +160,7 @@
       "kind": "story",
       "title": "Malo ne veut pas dormir",
       "minutes": 3,
+      "illustrationId": "histoire-malo",
       "origin": "teka-edu-created",
       "provenance": "Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris.",
       "lines": [
@@ -175,6 +183,7 @@
       "kind": "rhyme",
       "title": "Un, deux, trois, je compte",
       "minutes": 2,
+      "illustrationId": "comptine-compter",
       "origin": "teka-edu-created",
       "provenance": "Comptine originale écrite pour Teka Edu. Aucune comptine existante n’est reprise.",
       "lines": [
@@ -193,6 +202,7 @@
       "kind": "rhyme",
       "title": "Bonjour, bonjour",
       "minutes": 2,
+      "illustrationId": "comptine-bonjour",
       "origin": "teka-edu-created",
       "provenance": "Comptine originale écrite pour Teka Edu. Aucune comptine existante n’est reprise.",
       "lines": [
@@ -211,6 +221,7 @@
       "kind": "rhyme",
       "title": "Mes deux mains",
       "minutes": 2,
+      "illustrationId": "comptine-mains",
       "origin": "teka-edu-created",
       "provenance": "Comptine originale écrite pour Teka Edu. Aucune comptine existante n’est reprise.",
       "lines": [
@@ -229,6 +240,7 @@
       "kind": "rhyme",
       "title": "La semaine de Kiki",
       "minutes": 2,
+      "illustrationId": "comptine-semaine",
       "origin": "teka-edu-created",
       "provenance": "Comptine originale écrite pour Teka Edu. Aucune comptine existante n’est reprise.",
       "lines": [
@@ -247,6 +259,7 @@
       "kind": "rhyme",
       "title": "Saute, petit cabri",
       "minutes": 2,
+      "illustrationId": "comptine-cabri",
       "origin": "teka-edu-created",
       "provenance": "Comptine originale écrite pour Teka Edu. Aucune comptine existante n’est reprise.",
       "lines": [
@@ -265,6 +278,7 @@
       "kind": "rhyme",
       "title": "Les formes qui dansent",
       "minutes": 2,
+      "illustrationId": "comptine-formes",
       "origin": "teka-edu-created",
       "provenance": "Comptine originale écrite pour Teka Edu. Aucune comptine existante n’est reprise.",
       "lines": [

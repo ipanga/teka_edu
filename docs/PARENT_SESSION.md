@@ -22,18 +22,20 @@ a fait aujourd’hui"_.
 
 ```text
 Aujourd’hui            →  the date, whether it is a school day, today's session
+  ↓                       (not a school day → the most recent session, and why)
+À préparer             →  a short list; replacements behind « Je n’ai pas tout »
   ↓
-À préparer             →  materials, what to use instead, safety notes
+Activité 1 … n         →  two zones (ADR-043)
+    · La part de l’enfant     the sentence to read aloud, the picture, the interaction
+    · Montrer à l’enfant      fills the device; no parent chrome on it
+    · Pour vous               guidance and English, folded away until asked
+    · Faire une petite pause · Terminer pour aujourd’hui
   ↓
-Activité 1 … n         →  one instruction at a time
-    · À dire à l’enfant       the French sentence the parent reads aloud
-    · Afficher le conseil     the guidance, folded away until asked
-    · Besoin d’aide en anglais ?   optional, hidden by default
-  ↓
-Pause suggérée         →  about halfway, if the child needs it
-  ↓
-C’est fini !           →  what the child managed today
+C’est fini !           →  what the child managed · noter comment ça s’est passé
 ```
+
+Leaving and coming back is safe: the browser remembers the position and offers
+« Reprendre où nous nous étions arrêtés » rather than deciding for you.
 
 Three pages carry it:
 
@@ -93,12 +95,14 @@ busy.
 
 ### Where a tap teaches
 
-Three interactions, and only where they carry the learning:
+Four interactions, and only where they carry the learning:
 
 - **Montre le carré** — the named picture among four. A wrong tap says « Essaie encore. Regarde
   bien » ; after two, the answer is shown and the parent is asked to name it together.
 - **Compter en touchant** — one tap per object, the count said back, always restartable.
 - **Ranger par groupes** — tap a picture, tap its group. Tapping, never dragging: small fingers.
+- **Je montre le mot** — after the word cards have been seen, the same pictures without their
+  words, and the child is asked for one by name.
 
 Nothing is scored. A child who taps the wrong shape has not failed anything, and the interface
 never says so.

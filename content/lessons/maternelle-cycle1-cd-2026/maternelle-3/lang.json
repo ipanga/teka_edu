@@ -2015,7 +2015,14 @@
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
-          "mediaIds": [],
+          "mediaIds": [
+            "objet-cahier",
+            "objet-crayon",
+            "objet-porte",
+            "objet-marmite",
+            "objet-tomate",
+            "objet-panier"
+          ],
           "objectiveCodes": ["LANG-S01-C01-O02", "LANG-S01-C01-O03"],
           "materialCodes": ["aucun"],
           "vocabulary": [

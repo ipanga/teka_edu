@@ -28,7 +28,9 @@ describe("the media registry (ADR-042)", () => {
   it("gives every asset a unique, stable, semantic id", () => {
     const ids = data.media.map((asset) => asset.id);
     expect(new Set(ids).size).toBe(ids.length);
-    for (const id of ids) expect(id, id).toMatch(/^(forme|objet|animal)-[a-z0-9-]+$/);
+    for (const id of ids) {
+      expect(id, id).toMatch(/^(forme|objet|animal|histoire|comptine|plante|bonhomme)-[a-z0-9-]+$/);
+    }
   });
 
   it("ships the file behind every id", () => {
@@ -102,8 +104,22 @@ describe("what September shows the child", () => {
   });
 
   it("uses every asset it ships, so the set stays deliberate", () => {
-    const used = new Set(activities.flatMap((activity) => activity.mediaIds));
+    // An asset is used either by an activity or by a story, which lends its picture to every
+    // activity that reads it.
+    const used = new Set([
+      ...activities.flatMap((activity) => activity.mediaIds),
+      ...data.texts.flatMap((text) => (text.illustrationId === null ? [] : [text.illustrationId])),
+    ]);
     const unused = data.media.filter((asset) => !used.has(asset.id));
     expect(unused.map((asset) => asset.id)).toEqual([]);
+  });
+
+  it("gives every story and rhyme a picture of its own", () => {
+    for (const text of data.texts) {
+      expect(text.illustrationId, `${text.id} has no illustration`).not.toBeNull();
+      const asset = data.media.find((item) => item.id === text.illustrationId);
+      expect(asset, `${text.id} → ${String(text.illustrationId)}`).toBeDefined();
+      expect(asset!.kind).toBe("illustration");
+    }
   });
 });
