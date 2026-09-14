@@ -30,8 +30,9 @@ Roles, kept distinct on purpose:
 | ---------------------------------- | ---------- | --------------------- | ----------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------- |
 | 3ème maternelle, Week 1 (days 1–5) | 2026-09-14 | AI-assisted (ChatGPT) | `accepted-with-modifications` | 13 items, all applied | `review` — the corrections materially changed the pedagogy, so the regenerated package awaits re-review |
 | 3ème maternelle, Weeks 2–5         | —          | —                     | not yet reviewed              | —                     | `review`                                                                                                |
+| 1ère maternelle, Weeks 1–5         | —          | —                     | not yet reviewed              | —                     | `review` — authored 2026-09-15, packages generated and ready to submit                                  |
 
-**No lesson is `approved`.** All 88 September lessons remain at `review`.
+**No lesson is `approved`.** All 176 September lessons — 88 for each of 1ère and 3ème maternelle — remain at `review`.
 
 ---
 

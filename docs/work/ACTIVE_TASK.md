@@ -36,7 +36,8 @@ the ADR-047 review gate.
 
 ## Last Checkpoint
 
-2026-09-15 — annual plan generated and feasibility reported. September not authored yet.
+2026-09-15 — September authored, database migrated locally, docs updated, full local suite
+green. Next: PR, CI, merge, staging.
 
 ## Scope
 
@@ -89,29 +90,26 @@ the ADR-047 review gate.
 
 ## In Progress
 
-- [ ] September 2026 lessons for `maternelle-1` (the daily rhythm/tracks programme first)
+- [ ] PR into `develop`, CI, squash-merge, staging verification
 
 ## Remaining
 
-- [ ] `content/programmes/**/maternelle-1.json` — the daily rhythm and tracks
-- [ ] September lessons, media classification, texts (comptines)
-- [ ] Weekly review packages; home-screen availability; level-isolation tests
-- [ ] Full validation, PR, staging
+- [ ] Final report; then submit the first 1ère package to the review gate (a separate task)
 
 ## Validation State
 
-| Check              | Result  | At                            |
-| ------------------ | ------- | ----------------------------- |
-| format             | PASS    | `ead8d8b`, before any edit    |
-| lint               | PASS    | `ead8d8b`, before any edit    |
-| typecheck          | PASS    | `ead8d8b`, before any edit    |
-| unit tests         | PASS    | `ead8d8b` — 217 tests         |
-| content validation | PASS    | `ead8d8b` — 21 files          |
-| database tests     | PASS    | `ead8d8b` — 147 assertions    |
-| build              | PASS    | `ead8d8b`                     |
-| E2E                | PASS    | `ead8d8b` — 27 tests          |
-| Docker             | NOT RUN | left to CI                    |
-| secret scans       | NOT RUN | before the PR is marked ready |
+| Check              | Result  | At                                |
+| ------------------ | ------- | --------------------------------- |
+| format             | PASS    | working tree                      |
+| lint               | PASS    | working tree                      |
+| typecheck          | PASS    | working tree                      |
+| unit tests         | PASS    | working tree — 218 tests          |
+| content validation | PASS    | working tree — 30 files           |
+| database tests     | PASS    | fresh reset — 149 assertions      |
+| build              | PASS    | working tree                      |
+| E2E                | PASS    | working tree — 28 tests           |
+| Docker             | NOT RUN | left to CI                        |
+| secret scans       | PASS    | 0 tracked `.env*`; gitleaks in CI |
 
 ## Database State
 
@@ -141,8 +139,7 @@ None.
 
 ## Exact Resume Point
 
-Author `content/programmes/maternelle-cycle1-cd-2026/maternelle-1.json` (rhythm + tracks),
-then the September lessons domain by domain.
+Open the PR into `develop`, wait for the four required checks, squash-merge, verify staging.
 
 ## Resume Verification
 

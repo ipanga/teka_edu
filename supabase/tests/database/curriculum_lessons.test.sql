@@ -2,7 +2,7 @@
 -- Every change is rolled back. Run with `npm run db:test`.
 begin;
 set constraints all immediate;
-select plan(40);
+select plan(42);
 
 -- ---- Imported official data ------------------------------------------------------------------
 
@@ -54,8 +54,25 @@ select results_eq(
 
 -- ---- Teka Edu content -------------------------------------------------------------------------
 
+-- Per level, not as one total: a single number would keep passing while one class's month
+-- silently replaced another's.
 select is(
-  (select count(*)::int from public.lessons), 88, 'the 88 September lessons are loaded'
+  (select count(*)::int from public.lessons l
+     join public.lesson_levels ll on ll.lesson_id = l.id
+    where ll.level_id = 'maternelle-3'),
+  88, 'the 88 September lessons of 3ème maternelle are loaded'
+);
+select is(
+  (select count(*)::int from public.lessons l
+     join public.lesson_levels ll on ll.lesson_id = l.id
+    where ll.level_id = 'maternelle-1'),
+  88, 'the 88 September lessons of 1ère maternelle are loaded'
+);
+select is(
+  (select count(*)::int from public.lessons l
+     join public.lesson_levels ll on ll.lesson_id = l.id
+    where ll.level_id = 'maternelle-2'),
+  0, 'no lesson is served to 2ème maternelle, which has no content yet'
 );
 select is(
   (select count(*)::int from public.lessons where origin <> 'teka-edu-created'),
