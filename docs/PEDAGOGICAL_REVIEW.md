@@ -6,8 +6,9 @@ human reviewer spends their time on judgement, not on typos. Nothing here approv
 
 - **The content it reviews:** [`review/2026-2027-maternelle-3-semaine-1.md`](review/2026-2027-maternelle-3-semaine-1.md)
 - **The gate it feeds:** [`CONTENT_QUALITY_GATE.md`](CONTENT_QUALITY_GATE.md)
-- **Status:** all 20 lessons remain `review`. ISSUE-017 stays open until a person who teaches
-  this age has read them.
+- **Status:** all 88 September lessons remain `review`. ISSUE-017 stays open until a person who
+  teaches this age has read them. The owner's Week 1 review (2026-09-14, _accepted with
+  modifications_) is applied and recorded below; it is not that review.
 
 ## Rubric
 
@@ -149,6 +150,38 @@ The pilot's day is language + mathematics + physical + one rotating domain, 40�
 > September programme runs at 35. The finding is kept as written because it is the record of
 > what was reviewed; the split-session recommendation was accepted and implemented as the plan's
 > pause point.
+
+## Week 1 review, 2026-09-14 — accepted with modifications
+
+The owner reviewed the generated Week 1 package and returned 13 items. **All are applied**, in
+the content and in the generator, and the packages were regenerated. The decision was _accepted
+with modifications_; **no lesson became `approved`**, and ISSUE-017 stays open, because this
+review does not replace the required review by a person who teaches this age group.
+
+What it changed, and what it taught us:
+
+- **A mis-mapped objective repeats.** « Le temps de lecture » claimed
+  `LANG-S02-C03-O15` on days 1, 2 and 4 — and, once audited, on all 22 days. The lesson for the
+  authoring pipeline is that a ritual copied across a month copies its defects across a month;
+  when one instance is wrong, the audit is the whole month, not the days quoted.
+- **Do not fix a mapping by changing the pedagogy.** The daily moment is deliberately
+  question-free. Adding comprehension questions to justify O15 would have damaged the activity to
+  protect a claim. O15 moved instead to the two activities that genuinely link a story to the
+  child's life; the ritual took `LANG-S02-C03-O04`, which sustained listening really does build.
+- **The annual plan can inherit a wrong claim.** O15 was paced `daily, introduce by day 3`
+  because the plan had been fitted to the ritual. When a mapping is corrected, its pacing entry
+  must be re-examined in the same change.
+- **An earlier band is not a demotion.** `O04` is `before-4`; using it at `from-5` is allowed and
+  is the opposite of acceleration. The alternative, `O13`, sits at day 127 in the plan, and
+  pulling it forward to make a mapping neat would have been exactly the acceleration ADR-038
+  forbids.
+- **A generated package can hide the thing being judged.** The reviewer was asked to approve
+  « L'histoire de Kumu » and its three questions without being shown either, and official
+  excerpts were being cut at their first line. Both are now tested, not just fixed.
+
+Item 3 of _What the human reviewer must decide_ below — whether the daily read-aloud should carry
+questions more often — is now a live question with a documented default rather than an
+assumption: it stays question-free.
 
 ## What the human reviewer must decide
 
