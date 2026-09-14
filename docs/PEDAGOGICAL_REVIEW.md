@@ -1,14 +1,50 @@
-# Pedagogical pre-review of the pilot week
+# Pedagogical review
+
+How Teka Edu content is reviewed, the register of reviews performed, and what each decided. The
+gate itself is in [`CONTENT_QUALITY_GATE.md`](CONTENT_QUALITY_GATE.md); the decision is
+**ADR-047**.
+
+## The current gate
+
+**An independent pedagogical review of a generated Markdown package against the official
+programme.** Today that review is performed by **ChatGPT**, outside the product, and submitted by
+the product owner. It is an **AI-assisted pedagogical review** — never a teacher's approval, and
+both the documentation and the stored record say so.
+
+**A review by a person who teaches this age is optional future external assurance.** It is a
+stronger claim, it stays desirable before broad school adoption, and it **does not block**
+authoring, new classes, later months or staging.
+
+Roles, kept distinct on purpose:
+
+|                      | Does what                                                                                                                                       |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Claude Code**      | Authors content from authoritative sources, generates the package, applies corrections. Never approves its own work                             |
+| **ChatGPT**          | Reviews the package independently; returns `accepted` / `accepted-with-modifications` / `needs-revision`                                        |
+| **Product owner**    | Requests work, submits packages for review, decides direction, tests the live app. Not recorded as a teacher, because that is not what they are |
+| **A teacher, later** | Optional external assurance                                                                                                                     |
+
+## Register of reviews
+
+| Batch                              | Date       | Kind                  | Outcome                       | Corrections           | Status                                                                                                  |
+| ---------------------------------- | ---------- | --------------------- | ----------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------- |
+| 3ème maternelle, Week 1 (days 1–5) | 2026-09-14 | AI-assisted (ChatGPT) | `accepted-with-modifications` | 13 items, all applied | `review` — the corrections materially changed the pedagogy, so the regenerated package awaits re-review |
+| 3ème maternelle, Weeks 2–5         | —          | —                     | not yet reviewed              | —                     | `review`                                                                                                |
+
+**No lesson is `approved`.** All 88 September lessons remain at `review`.
+
+---
+
+## Phase 2.5 pre-review of the pilot week
 
 A structured review of the 20 pilot lessons and 40 activities for 3ème maternelle, done in
 Phase 2.5 **by Claude, not by a teacher**. It is a pre-review: it clears away defects so that the
-human reviewer spends their time on judgement, not on typos. Nothing here approves anything.
+independent reviewer spends their time on judgement, not on typos. Nothing here approves
+anything.
 
 - **The content it reviews:** [`review/2026-2027-maternelle-3-semaine-1.md`](review/2026-2027-maternelle-3-semaine-1.md)
 - **The gate it feeds:** [`CONTENT_QUALITY_GATE.md`](CONTENT_QUALITY_GATE.md)
-- **Status:** all 88 September lessons remain `review`. ISSUE-017 stays open until a person who
-  teaches this age has read them. The owner's Week 1 review (2026-09-14, _accepted with
-  modifications_) is applied and recorded below; it is not that review.
+- **Status:** all 88 September lessons remain `review`. See the register above.
 
 ## Rubric
 
@@ -40,7 +76,7 @@ Each lesson and activity was judged on thirteen criteria, and each finding given
 ## Result
 
 **0 blockers · 3 major · 7 minor · 4 suggestions.** The three major findings were defects in
-Phase 2's own work and are **fixed in this phase**; the rest are recorded for the human reviewer
+Phase 2's own work and are **fixed in this phase**; the rest are recorded for the reviewer
 or for the next content phase.
 
 ### Major findings (all fixed here)
@@ -153,10 +189,15 @@ The pilot's day is language + mathematics + physical + one rotating domain, 40�
 
 ## Week 1 review, 2026-09-14 — accepted with modifications
 
-The owner reviewed the generated Week 1 package and returned 13 items. **All are applied**, in
-the content and in the generator, and the packages were regenerated. The decision was _accepted
-with modifications_; **no lesson became `approved`**, and ISSUE-017 stays open, because this
-review does not replace the required review by a person who teaches this age group.
+The generated Week 1 package was submitted to **ChatGPT**, which reviewed it against the official
+Cycle 1 programme and returned **`accepted-with-modifications`** with 13 items. **All are
+applied**, in the content and in the generator, and the packages were regenerated.
+
+**No lesson became `approved`.** The corrections materially changed the pedagogy — objective
+mappings, a redesigned activity, changed guidance — so under the re-review rule
+([`CONTENT_QUALITY_GATE.md`](CONTENT_QUALITY_GATE.md)) the corrected package goes back for a
+second pass before Week 1 is recorded as accepted. Promoting it on the strength of a review of
+the _uncorrected_ text would claim approval for words the reviewer never saw.
 
 What it changed, and what it taught us:
 
@@ -179,11 +220,11 @@ What it changed, and what it taught us:
   « L'histoire de Kumu » and its three questions without being shown either, and official
   excerpts were being cut at their first line. Both are now tested, not just fixed.
 
-Item 3 of _What the human reviewer must decide_ below — whether the daily read-aloud should carry
+Item 3 of _Open questions for a reviewer_ below — whether the daily read-aloud should carry
 questions more often — is now a live question with a documented default rather than an
 assumption: it stays question-free.
 
-## What the human reviewer must decide
+## Open questions for a reviewer
 
 1. Are the 20 lessons appropriate for 5-year-olds in the DRC? (ISSUE-017)
 2. Is the daily session realistic in a home, as one block or two? (40 min when this review was

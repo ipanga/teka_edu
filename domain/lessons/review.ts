@@ -1,15 +1,21 @@
 import type { Lesson } from "./types";
 
 /**
- * The content quality gate (ADR-035, docs/CONTENT_QUALITY_GATE.md).
+ * The content quality gate (ADR-035, refined by ADR-047; docs/CONTENT_QUALITY_GATE.md).
  *
  * Lessons and activities are written by Teka Edu, often with the help of a language model.
- * Nothing written that way may reach a child as "approved" on its own authority: a person who
- * teaches this age has to read it and say so. This module makes that rule mechanical.
+ * Nothing written that way may reach a child as "approved" on its own authority: an independent
+ * review has to read it and say so. This module makes that rule mechanical.
+ *
+ * ADR-047 changed who that reviewer must be, and only that. No preschool teacher is available to
+ * the project, so the active development gate is an AI-assisted review of a generated package
+ * against the official programme; a review by a person who teaches this age remains a stronger
+ * claim and optional future assurance. Because the two are not equivalent, an approval records
+ * which one it was — see `REVIEW_KINDS` below.
  *
  *   draft    — being written; never scheduled for a child
- *   review   — finished and waiting for a human reviewer (where AI-assisted content stops)
- *   approved — a named person accepted this exact text, on a date
+ *   review   — finished, and not yet through the gate (where AI-drafted content stops)
+ *   approved — an independent review accepted this exact text, on a date, and said which kind
  *   retired  — withdrawn; kept for history
  *
  * Approval is bound to the exact content through `reviewedDigest`. Editing an approved lesson
@@ -18,9 +24,35 @@ import type { Lesson } from "./types";
  */
 
 export const LESSON_STATUSES = ["draft", "review", "approved", "retired"] as const;
+
+/**
+ * Who performed a pedagogical review (ADR-047).
+ *
+ * `approved` on its own says only that the gate was passed, never by whom. Teka Edu's active
+ * development gate is an AI-assisted review of a generated package against the official
+ * programme; a review by a person who teaches this age is a different, stronger claim, and the
+ * two must never be confused. So the record names the kind, and anything that repeats the claim
+ * — the review package, a report, one day an interface — reads it rather than assuming.
+ */
+export const REVIEW_KINDS = ["ai-assisted", "human-teacher"] as const;
+export type ReviewKind = (typeof REVIEW_KINDS)[number];
+
+/**
+ * What a pedagogical review concluded. `needs-revision` never accompanies an approval: content
+ * that needs revision stays at `review`, which is what the status already means.
+ */
+export const REVIEW_OUTCOMES = ["accepted", "accepted-with-modifications"] as const;
+export type ReviewOutcome = (typeof REVIEW_OUTCOMES)[number];
 export type LessonStatus = (typeof LESSON_STATUSES)[number];
 
 export type LessonReview = {
+  /**
+   * Whether a person who teaches this age read it, or an AI-assisted review did. Required, and
+   * never inferred: an approval that cannot say which kind it was is not usable as either.
+   */
+  reviewKind: ReviewKind;
+  /** What the review concluded. */
+  outcome: ReviewOutcome;
   /** Who accepted it: a name or role, kept so the claim is attributable. */
   reviewer: string;
   /** What the reviewer does, e.g. "institutrice de 3ème maternelle". */
@@ -105,6 +137,20 @@ export function checkLessonReview(lesson: Lesson): string[] {
     }
     if (!review.reviewer.trim() || !review.reviewerRole.trim()) {
       problems.push(`${at}: an approval needs a named reviewer and their role`);
+    }
+    if (!REVIEW_KINDS.includes(review.reviewKind)) {
+      problems.push(
+        `${at}: an approval must say which kind of review it was (${REVIEW_KINDS.join(" | ")})`,
+      );
+    }
+    // A human-teacher review is the stronger claim, so it must be a person, not a tool.
+    if (
+      review.reviewKind === "human-teacher" &&
+      /\b(chatgpt|gpt|claude|gemini|llm|ia|ai)\b/i.test(review.reviewer)
+    ) {
+      problems.push(
+        `${at}: "${review.reviewer}" is recorded as a human-teacher review. An AI-assisted review must use reviewKind "ai-assisted".`,
+      );
     }
     if (!/^\d{4}-\d{2}-\d{2}$/.test(review.reviewedOn)) {
       problems.push(`${at}: the review date must be a YYYY-MM-DD date`);

@@ -13,7 +13,7 @@ import type {
   LearningObjective,
   SuccessExample,
 } from "@/domain/curriculum/types";
-import { LESSON_STATUSES } from "@/domain/lessons/review";
+import { LESSON_STATUSES, REVIEW_KINDS, REVIEW_OUTCOMES } from "@/domain/lessons/review";
 import { AUDIO_KINDS, type AudioAsset, MEDIA_KINDS, type MediaAsset } from "@/domain/media/types";
 import type { TeachingText } from "@/domain/lessons/texts";
 import {
@@ -252,6 +252,8 @@ const lesson = z.strictObject({
   status: z.enum(LESSON_STATUSES),
   review: z
     .strictObject({
+      reviewKind: z.enum(REVIEW_KINDS),
+      outcome: z.enum(REVIEW_OUTCOMES),
       reviewer: text,
       reviewerRole: text,
       reviewedOn: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, { message: "must be a YYYY-MM-DD date" }),

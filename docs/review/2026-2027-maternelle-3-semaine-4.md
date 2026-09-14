@@ -4,8 +4,8 @@
 
 > **Ce document est généré automatiquement** à partir du contenu du dépôt
 > (`npm run review:package`). Ne le modifiez pas à la main : corrigez le contenu, puis
-> régénérez-le. Les leçons sont **écrites par Teka Edu** et **n’ont pas encore été relues**
-> par une personne qui enseigne à cet âge.
+> régénérez-le. Les leçons sont **écrites par Teka Edu** et **ne sont approuvées par**
+> **personne** tant que cette relecture n’a pas conclu.
 
 ## Ce qu’on vous demande
 
@@ -14,7 +14,10 @@ leçon, dites si elle convient à un enfant de 5 ans en RDC, et signalez ce qui 
 une consigne trop longue, une durée irréaliste, un matériel introuvable, un exemple mal choisi,
 un objectif qui ne correspond pas à l’activité. Les tableaux de relecture sont là pour cela.
 
-Une leçon ne pourra passer au statut « approuvé » qu’après votre accord explicite.
+Une leçon ne pourra passer au statut « approuvé » qu’après votre accord explicite. Votre
+conclusion est enregistrée telle quelle — « accepté », « accepté avec modifications » ou
+« à revoir » — ainsi que la nature de la relecture : assistée par IA, ou faite par une
+personne qui enseigne à cet âge. Les deux ne sont pas présentées comme équivalentes.
 
 ## Repères
 

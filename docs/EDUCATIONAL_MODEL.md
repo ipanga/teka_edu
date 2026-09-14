@@ -167,4 +167,4 @@ French remains the only instructional language (ADR-001). English is never a sec
 
 ## No runtime AI
 
-Nothing here calls an LLM (ADR-002). Educational material drafted outside the app is imported as ordinary content and goes through schema validation and human review.
+Nothing here calls an LLM (ADR-002). Educational material drafted outside the app is imported as ordinary content and goes through schema validation and an independent pedagogical review (ADR-047).

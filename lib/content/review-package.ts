@@ -75,7 +75,13 @@ function teachingTextBlock(activity: Activity, data: ReferenceData): string[] {
   const textId = activity.payload["textId"];
   if (typeof textId !== "string") return [];
   const text = findText(data.texts, textId);
-  if (text === undefined) return [`- **Texte \`${textId}\` introuvable.**`, ""];
+  if (text === undefined) {
+    // Failing generation is the point: a package that names a story it cannot quote asks a
+    // reviewer to approve something they were never shown. That happened once already.
+    throw new RangeError(
+      `review package: activity "${activity.id}" uses text "${textId}", which is not in content/texts/`,
+    );
+  }
   const kind = text.kind === "story" ? "Histoire" : "Comptine";
   const lines = [
     `- **${kind} lue à l’enfant — « ${text.title} »** (${text.minutes} min, \`${text.id}\`) :`,
@@ -300,8 +306,8 @@ export function buildReviewPackage(
     "",
     "> **Ce document est généré automatiquement** à partir du contenu du dépôt",
     "> (`npm run review:package`). Ne le modifiez pas à la main : corrigez le contenu, puis",
-    "> régénérez-le. Les leçons sont **écrites par Teka Edu** et **n’ont pas encore été relues**",
-    "> par une personne qui enseigne à cet âge.",
+    "> régénérez-le. Les leçons sont **écrites par Teka Edu** et **ne sont approuvées par**",
+    "> **personne** tant que cette relecture n’a pas conclu.",
     "",
     "## Ce qu’on vous demande",
     "",
@@ -310,7 +316,10 @@ export function buildReviewPackage(
     "une consigne trop longue, une durée irréaliste, un matériel introuvable, un exemple mal choisi,",
     "un objectif qui ne correspond pas à l’activité. Les tableaux de relecture sont là pour cela.",
     "",
-    "Une leçon ne pourra passer au statut « approuvé » qu’après votre accord explicite.",
+    "Une leçon ne pourra passer au statut « approuvé » qu’après votre accord explicite. Votre",
+    "conclusion est enregistrée telle quelle — « accepté », « accepté avec modifications » ou",
+    "« à revoir » — ainsi que la nature de la relecture : assistée par IA, ou faite par une",
+    "personne qui enseigne à cet âge. Les deux ne sont pas présentées comme équivalentes.",
     "",
     "## Repères",
     "",
@@ -350,5 +359,32 @@ export function buildReviewPackage(
   const body = plans.flatMap((plan) =>
     dayBlock(plan, data, curriculum, syllabus, band?.code ?? null),
   );
-  return [...header, ...body, ...footer].join("\n");
+  const document = [...header, ...body, ...footer].join("\n");
+  const missing = incompleteBullets(document);
+  if (missing.length > 0) {
+    throw new RangeError(
+      `review package: ${missing.length} bullet(s) promise a list and deliver nothing — ${missing[0]}`,
+    );
+  }
+  return document;
+}
+
+/**
+ * A bullet whose text ends on a colon promises a list. If nothing indented follows, the reviewer
+ * sees a heading with no content — which reads as missing curriculum rather than as a rendering
+ * fault. Official statements are quoted verbatim and many are several lines, so this is exactly
+ * how the truncation bug looked before it was found.
+ */
+export function incompleteBullets(document: string): string[] {
+  const lines = document.split("\n");
+  const problems: string[] = [];
+  lines.forEach((line, index) => {
+    if (!/^\s*[-*] .*:\s*$/.test(line)) return;
+    let next = index + 1;
+    while (next < lines.length && lines[next]!.trim() === "") next += 1;
+    if (next >= lines.length || !/^\s{2,}\S/.test(lines[next]!)) {
+      problems.push(`ligne ${index + 1}: « ${line.trim()} »`);
+    }
+  });
+  return problems;
 }

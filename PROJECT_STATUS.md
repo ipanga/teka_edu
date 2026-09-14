@@ -5,36 +5,32 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-09-14
-Branch:     feat/home-visual-audio-experience (PR #28)
-Commit:     develop at 11c8f6c; main at 1b95480
+Date:       2026-09-15
+Branch:     docs/pedagogical-review-policy
+Commit:     develop at c820dc5; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
 ## Current Phase
 
 ```text
-Phase 3D — Home screen, class selection, visual design, illustrations, motion, audio: IN PROGRESS
+Pedagogical review policy (ADR-047): IN PROGRESS
 Status:    The calendar engine, the education structure, the 398 official Cycle 1 objectives,
            the lesson/activity model and the deterministic daily-programme generator are all
-           implemented, tested and mirrored into the database (RLS server-only). Sources
-           verified: MINEDU-NC calendar 2026-2027, Ordonnance n° 23/042, arrêté du 16 avril
-           2026. The curriculum strategy is decided (ADR-037): French Cycle 1 is the
-           curriculum, the DRC PNEM a compatibility and enrichment reference, French-first.
-           A year-long scope and sequence exists for 3ème maternelle (ADR-040) and all 22
-           September instructional days are authored — 88 lessons, 170 activities, 35 minutes
-           each — with 38 repository SVG assets behind them (ADR-042).
-           Phase 3D adds the front door: the app opens on the three maternelle classes, the
-           level is a route parameter, and a class with no lessons says so instead of
-           borrowing another's (ADR-044). The child's view is a real modal, so the parent's
-           navigation cannot be tapped while a child works. Motion is four CSS keyframes,
-           all disabled by prefers-reduced-motion (ADR-045). Audio has an architecture and
-           zero recordings, deliberately: browser speech synthesis was evaluated and rejected
-           as the educational voice (ADR-046).
-           Remaining before the child experience is called done: HUMAN pedagogical review of
-           September (ISSUE-017). Production stays disabled (ADR-027).
-Objective: A September session a parent and child can sit down and do, on any device, for
-           the class the parent chooses.
+           implemented, tested and mirrored into the database (RLS server-only). A year-long
+           scope and sequence exists for 3ème maternelle (ADR-040) and all 22 September
+           instructional days are authored — 88 lessons, 170 activities, 35 minutes each —
+           with 38 repository SVG assets (ADR-042) and a class-aware front door (ADR-044).
+           The pedagogical gate has changed shape. No preschool teacher is available to the
+           project, so ADR-047 makes an independent AI-assisted review of the generated
+           package the active development gate; a teacher's review becomes optional future
+           external assurance and blocks nothing. Every approval now records which kind of
+           review it was, so `approved` can never be read as teacher certification.
+           September Week 1 has had one AI-assisted review (accepted with modifications, 13
+           corrections applied) and awaits re-review because those corrections materially
+           changed the pedagogy. Weeks 2-5 are unreviewed. No lesson is `approved`.
+           Production stays disabled (ADR-027).
+Objective: Unblock curriculum development without ever claiming a review that did not happen.
 ```
 
 ## Overall Progress
@@ -117,7 +113,7 @@ Objective: A September session a parent and child can sit down and do, on any de
 - [x] Phase 3 renderer families planned: 15 activity kinds → 10 families (ADR-036, `docs/PHASE3_RENDERER_PLAN.md`)
 - [x] The official daily read-aloud rule re-verified in the source; the pilot's gap is documented rather than implied away
 - [x] Reuse of both programmes examined from the documents themselves: attribution wording, the Licence Ouverte's date-of-update requirement (now `curriculum_sources.published_on`), exclusion of emblems, and three questions left for a lawyer (`docs/CURRICULUM.md`, ISSUE-021)
-- [ ] **HUMAN pedagogical review of September — not done (ISSUE-017)**. The owner reviewed the Week 1 package on 2026-09-14 and returned 13 corrections, all applied (`docs/PEDAGOGICAL_REVIEW.md`). That is an owner's review of a generated document; the gate still requires a person who teaches 3ème maternelle.
+- [ ] **Human-teacher review — not done, and no longer blocking (ISSUE-017, ADR-047)**. Week 1 had an AI-assisted review on 2026-09-14 (ChatGPT, `accepted-with-modifications`, 13 corrections applied). The active gate is that review; a teacher's is optional future assurance.
 
 ## Infrastructure Status
 
@@ -147,8 +143,9 @@ Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED
 ```text
 Task:           Recording the owner's curriculum decision (ADR-037, ADR-038). Documentation
                 and decision records only: no schema change, no content rewrite.
-Status:         Phase 2.5 is merged (PR #17) and deployed to staging. What remains is the
-                human pedagogical review (ISSUE-017). Phase 3 has not started.
+Status:         Phase 2.5 is merged (PR #17) and deployed to staging. What remained at the time
+                was the human pedagogical review (ISSUE-017); ADR-047 has since made an
+                AI-assisted review the active gate. Phase 3 has not started.
 Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/content/review-package.ts,
                 scripts/review-package.ts, content/materials.json, content/lessons/**,
                 supabase/migrations/2026091200*, docs/PEDAGOGICAL_REVIEW.md,
@@ -230,9 +227,9 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 
 ### P0 — Next
 
-1. **Human pedagogical review of September** (ISSUE-017). The review document is ready at `docs/review/2026-2027-maternelle-3-semaine-1.md`; a person who teaches 3ème maternelle fills in the checklists, we apply their corrections, and only then does any lesson become `approved`.
-2. **October and beyond for 3ème maternelle**, once September has been reviewed by a teacher and tested by real families — authoring a second month before either has happened would multiply any mistake by two.
-3. **1ère and 2ème maternelle**: their cards exist and say they are being prepared. The routing, the renderers and the annual-plan machinery are level-agnostic, so each is content plus one annual plan.
+1. **1ère maternelle**: the full 2026–2027 annual progression first, then September daily lessons only. The routing, the renderers and the annual-plan machinery are level-agnostic, so it is content plus one annual plan — then the review gate.
+2. **Re-review of September Week 1** (ADR-047). The corrections materially changed the pedagogy, so the regenerated package goes back for a second pass before Week 1 can be recorded as accepted. Weeks 2–5 have not been reviewed at all.
+3. **October and beyond for 3ème maternelle**, once September has completed the gate and been tested by real families — authoring a second month before either would multiply any mistake by two.
 4. **TV presentation mode** and the offline service worker (`docs/PHASE3_RENDERER_PLAN.md`).
 
 ### Deferred — production (not in the current phase, ADR-027)
@@ -331,11 +328,17 @@ Severity: Low · Status: Open
 Description: The MINEDU-NC calendar gives 32 working days for maternelle period 5 (5 Apr – 21 May 2027). Monday–Friday minus the 6 April and 17 May holidays gives 33. The other period differences are explained by the four working Saturdays. The difference may anticipate a substitute day for 1 May.
 Recommended action: none until an announcement. Recorded in docs/SCHOOL_CALENDAR.md and asserted in tests/unit/school-days.test.ts.
 
-### ISSUE-017 — The pilot week has not had a human pedagogical review
+### ISSUE-017 — No human teacher has reviewed the content
 
-Severity: High before any child uses it · Status: **Open** (unchanged by the Phase 2.5 pre-review)
-Description: The 20 pilot lessons were pre-reviewed by Claude in Phase 2.5 (rubric, severities, three defects fixed), but **no teacher or early-childhood specialist has read them**. All 20 remain `status: review`; the quality gate makes it impossible for them to become `approved` without a named reviewer (ADR-035).
-Recommended action: hand `docs/review/2026-2027-maternelle-3-semaine-1.md` to a person who teaches 3ème maternelle. Their answers to the five questions at the end of `docs/PEDAGOGICAL_REVIEW.md` decide whether content scaling can start.
+Category: **future external pedagogical assurance** · Severity: Desirable before broad school adoption · Status: **Open, not blocking** (reclassified 2026-09-15, ADR-047)
+
+**Originally** (2026-09-12): _"Human teacher review required before further curriculum expansion."_ The 20 pilot lessons were pre-reviewed by Claude in Phase 2.5 (rubric, severities, three defects fixed), but no teacher or early-childhood specialist had read them, and the quality gate made `approved` unreachable without one. That reasoning is preserved because it was right about the risk.
+
+**What changed**: no preschool teacher is available to the project and none is in prospect. A gate that can never open is an outage, not a quality control — 88 lessons frozen and two class levels unable to start. ADR-047 keeps the gate and changes who closes it: an **AI-assisted pedagogical review** of the generated package against the official programme is now the active development gate.
+
+**Current meaning**: human-teacher validation is unavailable; it remains a desirable future external quality-assurance step; **it does not block curriculum development**. It stays open as a non-blocking assurance item rather than being closed, because the thing it asks for has not happened.
+
+Recommended action: none required to continue. When a teacher becomes available, hand them `docs/review/2026-2027-maternelle-3-semaine-1.md`; a `human-teacher` review is recorded as a strictly stronger claim than the AI-assisted one (`reviewKind`).
 
 ### ISSUE-019 — The daily comprehension read-aloud is not yet daily
 
@@ -441,11 +444,11 @@ GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891,
 
 ## Content Status
 
-| Class           | Curriculum mapping     | Week 1                                                                        | Week 2      | Full year   |
-| --------------- | ---------------------- | ----------------------------------------------------------------------------- | ----------- | ----------- |
-| 1ère maternelle | DONE (band `before-4`) | Not started                                                                   | Not started | Not started |
-| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                   | Not started | Not started |
-| 3ème maternelle | DONE (band `from-5`)   | Written + pre-reviewed, **awaiting human review** (20 lessons, 40 activities) | Not started | Not started |
+| Class           | Curriculum mapping     | Week 1                                                                               | Week 2      | Full year   |
+| --------------- | ---------------------- | ------------------------------------------------------------------------------------ | ----------- | ----------- |
+| 1ère maternelle | DONE (band `before-4`) | Not started                                                                          | Not started | Not started |
+| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                          | Not started | Not started |
+| 3ème maternelle | DONE (band `from-5`)   | September written and corrected; **awaiting re-review** (88 lessons, 170 activities) | Not started | Not started |
 
 DRC 2026–2027 calendar data: DONE (official MINEDU-NC calendar and Ordonnance n° 23/042; 189 instructional days).
 Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 official objectives and 529 success examples** imported with provenance.
@@ -512,24 +515,29 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  The owner's Week 1 pedagogical review, applied in full (13 items).
-            - The daily reading ritual claimed an objective its own text rules out. The
-              reviewer flagged days 1, 2 and 4; the audit found all 22. O15 moved to the two
-              activities whose guidance already asks "Et toi, comment tu te sentais ?", and
-              the ritual took O04 (stories tied to everyday experience, an earlier band).
-            - O13 was considered and rejected: the annual plan places it at day 127, so using
-              it in September would have been acceleration to make a mapping tidy.
-            - The annual plan's O15 entry was corrected too: daily-from-day-3 existed only
-              because the plan had been fitted to the mis-mapped ritual.
-            - "Courir de plus en plus longtemps" removed from four activities where nobody
-              runs without stopping; kept on the two where a child does.
-            - The week strip no longer requires reading seven written day names in week one.
-            - Market examples now say to use what is true in that family.
-            - The review package quotes every story, rhyme and comprehension question in
-              full, and stopped cutting official excerpts at their first line.
-Validation: format, lint, typecheck, unit (214), content (21 files), pgTAP (144) on a fresh
-            reset with a new data migration, build, E2E (27).
-Cost:       $0.
-Not done:   No lesson approved. ISSUE-017 stays open: the owner's review is not the review by
-            a person who teaches this age group. October not authored.
+Completed:  Pedagogical review policy (ADR-047). The gate stays; the reviewer changed.
+            - No preschool teacher is available, and a gate that can never open is an outage,
+              not a quality control: 88 lessons frozen, two class levels unable to start.
+            - The active development gate is now an independent AI-assisted review of the
+              generated package against the official programme (ChatGPT, outside the product,
+              submitted by the owner). A teacher's review is optional future assurance.
+            - Smallest schema change that keeps this honest: every approval records
+              reviewKind (ai-assisted | human-teacher) and an outcome (accepted |
+              accepted-with-modifications). Mirrored in the database with a constraint, and a
+              check refuses to record an obvious tool name as a human teacher.
+            - needs-revision is deliberately NOT a status: such content stays at `review`,
+              which is already what that means.
+            - Review package generation now FAILS when it names a text it cannot quote, or
+              when a bullet promises a list and delivers nothing. Both happened for real.
+            - ISSUE-017 reclassified: open, non-blocking, "future external pedagogical
+              assurance". Its original reasoning is preserved verbatim.
+            - Two tests that asserted "every lesson is review" were rewritten as invariants:
+              they would have failed on the first legitimate approval and invited deletion.
+Validation: format, lint, typecheck, unit (217), content (21 files), pgTAP (147) on a fresh
+            reset, build, E2E.
+Cost:       $0. No paid service; the review happens outside the product and no AI SDK,
+            endpoint or credential enters the runtime (ADR-002 intact).
+Not done:   No lesson approved — September Week 1 awaits re-review because its corrections
+            materially changed the pedagogy. Weeks 2-5 unreviewed. 1ère maternelle not
+            started; that is the next task and was deliberately not begun here.
 ```

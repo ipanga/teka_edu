@@ -471,6 +471,8 @@ export function referenceTables(data: ReferenceData): TableData[] {
         col("reviewed_on", "date"),
         col("reviewed_digest", "text"),
         col("review_notes", "text"),
+        col("review_kind", "text"),
+        col("review_outcome", "text"),
       ],
       rows: data.lessons.map((lesson) => ({
         id: lesson.id,
@@ -489,6 +491,9 @@ export function referenceTables(data: ReferenceData): TableData[] {
         reviewed_on: lesson.review?.reviewedOn ?? null,
         reviewed_digest: lesson.review?.reviewedDigest ?? null,
         review_notes: lesson.review?.notes ?? null,
+        // Which gate the approval came through, never inferred from the reviewer's name (ADR-047).
+        review_kind: lesson.review?.reviewKind ?? null,
+        review_outcome: lesson.review?.outcome ?? null,
       })),
     },
     {
