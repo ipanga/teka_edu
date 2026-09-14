@@ -73,7 +73,7 @@ describe("GET /api/programme/[schoolYear]/[level]/[day]", () => {
 
   it("rejects unknown years, levels and malformed days", async () => {
     expect((await call("2030-2031", "maternelle-3", "1")).status).toBe(404);
-    expect((await call("2026-2027", "maternelle-1", "1")).status).toBe(404);
+    expect((await call("2026-2027", "maternelle-2", "1")).status).toBe(404);
     expect((await call("2026-2027", "maternelle-3", "999")).status).toBe(404);
     const bad = await call("2026-2027", "maternelle-3", "lundi");
     expect(bad.status).toBe(400);

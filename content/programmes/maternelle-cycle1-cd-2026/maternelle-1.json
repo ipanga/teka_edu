@@ -1,0 +1,600 @@
+{
+  "id": "prog-maternelle-1-2026-2027",
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "levelId": "maternelle-1",
+  "schoolYearIds": ["2026-2027"],
+  "sessionMinutes": {
+    "min": 30,
+    "max": 45
+  },
+  "rhythm": [
+    {
+      "position": 1,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "temps-espace"
+        }
+      ]
+    },
+    {
+      "position": 2,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "monde"
+        }
+      ]
+    },
+    {
+      "position": 3,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "temps-espace"
+        }
+      ]
+    },
+    {
+      "position": 4,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "arts"
+        }
+      ]
+    },
+    {
+      "position": 5,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "arts"
+        }
+      ]
+    },
+    {
+      "position": 6,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "temps-espace"
+        }
+      ]
+    },
+    {
+      "position": 7,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "arts"
+        }
+      ]
+    },
+    {
+      "position": 8,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "monde"
+        }
+      ]
+    },
+    {
+      "position": 9,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "arts"
+        }
+      ]
+    },
+    {
+      "position": 10,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "temps-espace"
+        }
+      ]
+    },
+    {
+      "position": 11,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "arts"
+        }
+      ]
+    },
+    {
+      "position": 12,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "temps-espace"
+        }
+      ]
+    },
+    {
+      "position": 13,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "monde"
+        }
+      ]
+    },
+    {
+      "position": 14,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "arts"
+        }
+      ]
+    },
+    {
+      "position": 15,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "temps-espace"
+        }
+      ]
+    },
+    {
+      "position": 16,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "monde"
+        }
+      ]
+    },
+    {
+      "position": 17,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "arts"
+        }
+      ]
+    },
+    {
+      "position": 18,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "temps-espace"
+        }
+      ]
+    },
+    {
+      "position": 19,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "arts"
+        }
+      ]
+    },
+    {
+      "position": 20,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "monde"
+        }
+      ]
+    },
+    {
+      "position": 21,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "temps-espace"
+        }
+      ]
+    },
+    {
+      "position": 22,
+      "slots": [
+        {
+          "position": 1,
+          "trackId": "langage"
+        },
+        {
+          "position": 2,
+          "trackId": "mathematiques"
+        },
+        {
+          "position": 3,
+          "trackId": "activite-physique"
+        },
+        {
+          "position": 4,
+          "trackId": "monde"
+        }
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "id": "langage",
+      "domainCode": "LANG",
+      "lessonIds": [
+        "m1-lang-01",
+        "m1-lang-02",
+        "m1-lang-03",
+        "m1-lang-04",
+        "m1-lang-05",
+        "m1-lang-06",
+        "m1-lang-07",
+        "m1-lang-08",
+        "m1-lang-09",
+        "m1-lang-10",
+        "m1-lang-11",
+        "m1-lang-12",
+        "m1-lang-13",
+        "m1-lang-14",
+        "m1-lang-15",
+        "m1-lang-16",
+        "m1-lang-17",
+        "m1-lang-18",
+        "m1-lang-19",
+        "m1-lang-20",
+        "m1-lang-21",
+        "m1-lang-22"
+      ]
+    },
+    {
+      "id": "mathematiques",
+      "domainCode": "MATH",
+      "lessonIds": [
+        "m1-math-01",
+        "m1-math-02",
+        "m1-math-03",
+        "m1-math-04",
+        "m1-math-05",
+        "m1-math-06",
+        "m1-math-07",
+        "m1-math-08",
+        "m1-math-09",
+        "m1-math-10",
+        "m1-math-11",
+        "m1-math-12",
+        "m1-math-13",
+        "m1-math-14",
+        "m1-math-15",
+        "m1-math-16",
+        "m1-math-17",
+        "m1-math-18",
+        "m1-math-19",
+        "m1-math-20",
+        "m1-math-21",
+        "m1-math-22"
+      ]
+    },
+    {
+      "id": "activite-physique",
+      "domainCode": "PHYS",
+      "lessonIds": [
+        "m1-phys-01",
+        "m1-phys-02",
+        "m1-phys-03",
+        "m1-phys-04",
+        "m1-phys-05",
+        "m1-phys-06",
+        "m1-phys-07",
+        "m1-phys-08",
+        "m1-phys-09",
+        "m1-phys-10",
+        "m1-phys-11",
+        "m1-phys-12",
+        "m1-phys-13",
+        "m1-phys-14",
+        "m1-phys-15",
+        "m1-phys-16",
+        "m1-phys-17",
+        "m1-phys-18",
+        "m1-phys-19",
+        "m1-phys-20",
+        "m1-phys-21",
+        "m1-phys-22"
+      ]
+    },
+    {
+      "id": "arts",
+      "domainCode": "ART",
+      "lessonIds": [
+        "m1-art-04",
+        "m1-art-05",
+        "m1-art-07",
+        "m1-art-09",
+        "m1-art-11",
+        "m1-art-14",
+        "m1-art-17",
+        "m1-art-19"
+      ]
+    },
+    {
+      "id": "monde",
+      "domainCode": "WORLD",
+      "lessonIds": [
+        "m1-world-02",
+        "m1-world-08",
+        "m1-world-13",
+        "m1-world-16",
+        "m1-world-20",
+        "m1-world-22"
+      ]
+    },
+    {
+      "id": "temps-espace",
+      "domainCode": "TIME-SPACE",
+      "lessonIds": [
+        "m1-time-01",
+        "m1-time-03",
+        "m1-time-06",
+        "m1-time-10",
+        "m1-time-12",
+        "m1-time-15",
+        "m1-time-18",
+        "m1-time-21"
+      ]
+    }
+  ]
+}

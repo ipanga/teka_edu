@@ -173,6 +173,42 @@
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
     },
     {
+      "id": "corps-main",
+      "kind": "object",
+      "file": "objects/corps-main.svg",
+      "alt": "Une main ouverte",
+      "tags": ["main", "corps"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "corps-pied",
+      "kind": "object",
+      "file": "objects/corps-pied.svg",
+      "alt": "Un pied",
+      "tags": ["pied", "corps"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "corps-tete",
+      "kind": "object",
+      "file": "objects/corps-tete.svg",
+      "alt": "Une tête",
+      "tags": ["tête", "corps", "visage"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "corps-ventre",
+      "kind": "object",
+      "file": "objects/corps-ventre.svg",
+      "alt": "Le ventre",
+      "tags": ["ventre", "corps"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
       "id": "animal-poule",
       "kind": "animal",
       "file": "animals/animal-poule.svg",
@@ -196,6 +232,24 @@
       "file": "animals/animal-chevre.svg",
       "alt": "Une chèvre",
       "tags": ["chèvre", "animal", "bibi"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "histoire-seau-lisa",
+      "kind": "illustration",
+      "file": "illustrations/histoire-seau-lisa.svg",
+      "alt": "Un seau posé sur une chaise",
+      "tags": ["histoire", "seau", "chaise"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
+      "id": "histoire-tika",
+      "kind": "illustration",
+      "file": "illustrations/histoire-tika.svg",
+      "alt": "Un enfant qui se lève de son lit, le soleil à la fenêtre",
+      "tags": ["histoire", "matin", "lit"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
     },

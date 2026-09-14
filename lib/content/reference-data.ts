@@ -16,6 +16,12 @@ import objectivesMath from "@/content/curriculum/maternelle-cycle1-cd-2026/objec
 import objectivesPhys from "@/content/curriculum/maternelle-cycle1-cd-2026/objectives/PHYS.json";
 import objectivesTimeSpace from "@/content/curriculum/maternelle-cycle1-cd-2026/objectives/TIME-SPACE.json";
 import objectivesWorld from "@/content/curriculum/maternelle-cycle1-cd-2026/objectives/WORLD.json";
+import lessons1Art from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-1/art.json";
+import lessons1Lang from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-1/lang.json";
+import lessons1Math from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-1/math.json";
+import lessons1Phys from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-1/phys.json";
+import lessons1TimeSpace from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-1/time-space.json";
+import lessons1World from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-1/world.json";
 import lessonsArt from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-3/art.json";
 import lessonsLang from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-3/lang.json";
 import lessonsMath from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-3/math.json";
@@ -23,9 +29,12 @@ import lessonsPhys from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-
 import lessonsTimeSpace from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-3/time-space.json";
 import lessonsWorld from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-3/world.json";
 import materialsFile from "@/content/materials.json";
+import annualPlanMaternelle1 from "@/content/programmes/maternelle-cycle1-cd-2026/maternelle-1-annual-plan.json";
 import annualPlanMaternelle3 from "@/content/programmes/maternelle-cycle1-cd-2026/maternelle-3-annual-plan.json";
+import programmeMaternelle1 from "@/content/programmes/maternelle-cycle1-cd-2026/maternelle-1.json";
 import programmeMaternelle3 from "@/content/programmes/maternelle-cycle1-cd-2026/maternelle-3.json";
 import mediaRegistry from "@/content/media/registry.json";
+import textsMaternelle1 from "@/content/texts/maternelle-1.json";
 import textsMaternelle3 from "@/content/texts/maternelle-3.json";
 import nationalCalendar from "@/content/calendars/cd/national.json";
 import curriculumMaternelle2026 from "@/content/curriculum/maternelle-cycle1-cd-2026/curriculum.json";
@@ -187,6 +196,48 @@ export const REFERENCE_CONTENT_FILES: readonly ReferenceContentFile[] = [
     data: lessonsWorld,
   },
   {
+    kind: "lessons",
+    path: "lessons/maternelle-cycle1-cd-2026/maternelle-1/art.json",
+    schema: lessonsFileSchema,
+    data: lessons1Art,
+  },
+  {
+    kind: "lessons",
+    path: "lessons/maternelle-cycle1-cd-2026/maternelle-1/lang.json",
+    schema: lessonsFileSchema,
+    data: lessons1Lang,
+  },
+  {
+    kind: "lessons",
+    path: "lessons/maternelle-cycle1-cd-2026/maternelle-1/math.json",
+    schema: lessonsFileSchema,
+    data: lessons1Math,
+  },
+  {
+    kind: "lessons",
+    path: "lessons/maternelle-cycle1-cd-2026/maternelle-1/phys.json",
+    schema: lessonsFileSchema,
+    data: lessons1Phys,
+  },
+  {
+    kind: "lessons",
+    path: "lessons/maternelle-cycle1-cd-2026/maternelle-1/time-space.json",
+    schema: lessonsFileSchema,
+    data: lessons1TimeSpace,
+  },
+  {
+    kind: "lessons",
+    path: "lessons/maternelle-cycle1-cd-2026/maternelle-1/world.json",
+    schema: lessonsFileSchema,
+    data: lessons1World,
+  },
+  {
+    kind: "programme",
+    path: "programmes/maternelle-cycle1-cd-2026/maternelle-1.json",
+    schema: programmeFileSchema,
+    data: programmeMaternelle1,
+  },
+  {
     kind: "programme",
     path: "programmes/maternelle-cycle1-cd-2026/maternelle-3.json",
     schema: programmeFileSchema,
@@ -197,6 +248,18 @@ export const REFERENCE_CONTENT_FILES: readonly ReferenceContentFile[] = [
     path: "programmes/maternelle-cycle1-cd-2026/maternelle-3-annual-plan.json",
     schema: annualPlanFileSchema,
     data: annualPlanMaternelle3,
+  },
+  {
+    kind: "annual-plan",
+    path: "programmes/maternelle-cycle1-cd-2026/maternelle-1-annual-plan.json",
+    schema: annualPlanFileSchema,
+    data: annualPlanMaternelle1,
+  },
+  {
+    kind: "texts",
+    path: "texts/maternelle-1.json",
+    schema: teachingTextsFileSchema,
+    data: textsMaternelle1,
   },
   {
     kind: "texts",

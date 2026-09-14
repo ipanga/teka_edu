@@ -204,20 +204,6 @@
       "homeFeasibility": "full"
     },
     {
-      "objectiveCode": "LANG-S02-C03-O15",
-      "domainCode": "LANG",
-      "phase": "P1",
-      "introduceFromDay": 1,
-      "introduceByDay": 9,
-      "reinforceUntilDay": 63,
-      "consolidateByDay": 93,
-      "plannedRevisits": 6,
-      "cadence": "periodic",
-      "needsDedicatedLesson": true,
-      "embeddable": false,
-      "homeFeasibility": "full"
-    },
-    {
       "objectiveCode": "MATH-S03-C01-O07",
       "domainCode": "MATH",
       "phase": "P1",
@@ -423,6 +409,20 @@
       "consolidateByDay": 99,
       "plannedRevisits": 12,
       "cadence": "daily",
+      "needsDedicatedLesson": true,
+      "embeddable": false,
+      "homeFeasibility": "full"
+    },
+    {
+      "objectiveCode": "LANG-S02-C03-O15",
+      "domainCode": "LANG",
+      "phase": "P1",
+      "introduceFromDay": 1,
+      "introduceByDay": 9,
+      "reinforceUntilDay": 54,
+      "consolidateByDay": 79,
+      "plannedRevisits": 5,
+      "cadence": "periodic",
       "needsDedicatedLesson": true,
       "embeddable": false,
       "homeFeasibility": "full"

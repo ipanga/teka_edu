@@ -1,0 +1,274 @@
+{
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "levelId": "maternelle-1",
+  "domainCode": "WORLD",
+  "lessons": [
+    {
+      "id": "m1-world-02",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "WORLD",
+      "title": "Ma main, mon pied",
+      "summary": "Nommer son corps et se servir de ses sens.",
+      "objectiveCodes": ["WORLD-S01-C02-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.",
+      "activities": [
+        {
+          "id": "m1-world-02-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Ma main, mon pied",
+          "childInstruction": "Montre-moi ta main. Montre-moi ton pied.",
+          "adultGuidance": "Nommez une partie et montrez-la sur vous, puis demandez-lui de la montrer sur lui. Deux parties par séance suffisent. Terminez toujours par une qu’il connaît déjà : on finit sur une réussite.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["corps-main", "corps-pied"],
+          "objectiveCodes": ["WORLD-S01-C02-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "la main",
+              "en": "the hand"
+            },
+            {
+              "fr": "le pied",
+              "en": "the foot"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Show me your hand."
+            }
+          ],
+          "payload": {
+            "focus": "le corps et les sens"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-world-08",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "WORLD",
+      "title": "Ma tête, mon ventre",
+      "summary": "Nommer son corps et se servir de ses sens.",
+      "objectiveCodes": ["WORLD-S01-C02-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.",
+      "activities": [
+        {
+          "id": "m1-world-08-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Ma tête, mon ventre",
+          "childInstruction": "Montre-moi ta main. Montre-moi ton pied.",
+          "adultGuidance": "Nommez une partie et montrez-la sur vous, puis demandez-lui de la montrer sur lui. Deux parties par séance suffisent. Terminez toujours par une qu’il connaît déjà : on finit sur une réussite.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["corps-tete", "corps-ventre"],
+          "objectiveCodes": ["WORLD-S01-C02-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Show me your head."
+            }
+          ],
+          "payload": {
+            "focus": "le corps et les sens"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-world-13",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "WORLD",
+      "title": "Je touche",
+      "summary": "Nommer son corps et se servir de ses sens.",
+      "objectiveCodes": ["WORLD-S01-C02-O02"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.",
+      "activities": [
+        {
+          "id": "m1-world-13-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Je touche",
+          "childInstruction": "Ferme les yeux. Touche. Qu’est-ce que c’est ?",
+          "adultGuidance": "Faites-lui toucher deux choses très différentes — une lisse, une rugueuse — les yeux fermés. Demandez ce qu’il sent, pas ce que c’est. Les mots viendront de vous : doux, piquant, froid.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C02-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Close your eyes and touch."
+            }
+          ],
+          "payload": {
+            "focus": "le corps et les sens"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-world-16",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "WORLD",
+      "title": "Je touche",
+      "summary": "Nommer son corps et se servir de ses sens.",
+      "objectiveCodes": ["WORLD-S01-C02-O02"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.",
+      "activities": [
+        {
+          "id": "m1-world-16-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Je touche",
+          "childInstruction": "Ferme les yeux. Touche. Qu’est-ce que c’est ?",
+          "adultGuidance": "Faites-lui toucher deux choses très différentes — une lisse, une rugueuse — les yeux fermés. Demandez ce qu’il sent, pas ce que c’est. Les mots viendront de vous : doux, piquant, froid.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C02-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Close your eyes and touch."
+            }
+          ],
+          "payload": {
+            "focus": "le corps et les sens"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-world-20",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "WORLD",
+      "title": "Tout mon corps",
+      "summary": "Nommer son corps et se servir de ses sens.",
+      "objectiveCodes": ["WORLD-S01-C02-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.",
+      "activities": [
+        {
+          "id": "m1-world-20-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Tout mon corps",
+          "childInstruction": "Montre-moi ta main. Montre-moi ton pied.",
+          "adultGuidance": "Nommez une partie et montrez-la sur vous, puis demandez-lui de la montrer sur lui. Deux parties par séance suffisent. Terminez toujours par une qu’il connaît déjà : on finit sur une réussite.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": ["corps-main", "corps-pied", "corps-tete", "corps-ventre"],
+          "objectiveCodes": ["WORLD-S01-C02-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Show me your hand, your foot."
+            }
+          ],
+          "payload": {
+            "focus": "le corps et les sens"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-world-22",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "WORLD",
+      "title": "Je touche et je dis",
+      "summary": "Nommer son corps et se servir de ses sens.",
+      "objectiveCodes": ["WORLD-S01-C02-O02"],
+      "supportingObjectiveCodes": [],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.",
+      "activities": [
+        {
+          "id": "m1-world-22-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Je touche et je dis",
+          "childInstruction": "Ferme les yeux. Touche. Qu’est-ce que c’est ?",
+          "adultGuidance": "Faites-lui toucher deux choses très différentes — une lisse, une rugueuse — les yeux fermés. Demandez ce qu’il sent, pas ce que c’est. Les mots viendront de vous : doux, piquant, froid.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C02-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Close your eyes and touch."
+            }
+          ],
+          "payload": {
+            "focus": "le corps et les sens"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    }
+  ]
+}

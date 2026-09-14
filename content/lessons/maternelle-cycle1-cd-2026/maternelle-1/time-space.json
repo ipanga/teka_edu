@@ -1,0 +1,351 @@
+{
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "levelId": "maternelle-1",
+  "domainCode": "TIME-SPACE",
+  "lessons": [
+    {
+      "id": "m1-time-01",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "TIME-SPACE",
+      "title": "Le moment de la journée",
+      "summary": "Repérer le moment, le début, la fin et où sont les choses.",
+      "objectiveCodes": ["TIME-SPACE-S01-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un court moment de repères : quand on est, et où sont les choses. Utilisez votre vraie journée, pas un exemple.",
+      "activities": [
+        {
+          "id": "m1-time-01-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Le moment de la journée",
+          "childInstruction": "C’est le matin, le midi, ou le soir ?",
+          "adultGuidance": "Dites le moment et ce qui va avec : « C’est le soir : on a mangé, bientôt on dort. » Puis demandez-lui. S’il se trompe, ne corrigez pas par non : redites simplement le bon moment avec son indice.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Is it morning or evening?"
+            }
+          ],
+          "payload": {
+            "focus": "le moment de la journée"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-time-03",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "TIME-SPACE",
+      "title": "Le matin et le soir",
+      "summary": "Repérer le moment, le début, la fin et où sont les choses.",
+      "objectiveCodes": ["TIME-SPACE-S01-C01-O02"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un court moment de repères : quand on est, et où sont les choses. Utilisez votre vraie journée, pas un exemple.",
+      "activities": [
+        {
+          "id": "m1-time-03-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Le matin et le soir",
+          "childInstruction": "Montre-moi ce qu’on fait le matin.",
+          "adultGuidance": "Nommez deux moments seulement — le matin et le soir — et ce qu’on y fait vraiment chez vous. Demandez-lui de mimer l’un des deux. Le repère se construit sur sa journée à lui, pas sur une journée modèle.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Show me what we do in the morning."
+            }
+          ],
+          "payload": {
+            "focus": "le moment de la journée"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-time-06",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "TIME-SPACE",
+      "title": "On commence, c’est fini",
+      "summary": "Repérer le moment, le début, la fin et où sont les choses.",
+      "objectiveCodes": ["TIME-SPACE-S01-C03-O02"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un court moment de repères : quand on est, et où sont les choses. Utilisez votre vraie journée, pas un exemple.",
+      "activities": [
+        {
+          "id": "m1-time-06-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "On commence, c’est fini",
+          "childInstruction": "On commence… et maintenant, c’est fini.",
+          "adultGuidance": "Annoncez le début : « On commence. » Faites une chose courte. Annoncez la fin : « C’est fini. » Puis demandez-lui de dire « fini » lui-même à la fin de la suivante. Savoir qu’une activité se termine calme beaucoup d’enfants.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C03-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "We start… and now it is finished."
+            }
+          ],
+          "payload": {
+            "focus": "le moment de la journée"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-time-10",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "TIME-SPACE",
+      "title": "Le matin et le soir",
+      "summary": "Repérer le moment, le début, la fin et où sont les choses.",
+      "objectiveCodes": ["TIME-SPACE-S01-C01-O02"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un court moment de repères : quand on est, et où sont les choses. Utilisez votre vraie journée, pas un exemple.",
+      "activities": [
+        {
+          "id": "m1-time-10-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Le matin et le soir",
+          "childInstruction": "Montre-moi ce qu’on fait le matin.",
+          "adultGuidance": "Nommez deux moments seulement — le matin et le soir — et ce qu’on y fait vraiment chez vous. Demandez-lui de mimer l’un des deux. Le repère se construit sur sa journée à lui, pas sur une journée modèle.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Show me what we do in the morning."
+            }
+          ],
+          "payload": {
+            "focus": "le moment de la journée"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-time-12",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "TIME-SPACE",
+      "title": "Sur, sous, dans",
+      "summary": "Repérer le moment, le début, la fin et où sont les choses.",
+      "objectiveCodes": ["TIME-SPACE-S02-C01-O07"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un court moment de repères : quand on est, et où sont les choses. Utilisez votre vraie journée, pas un exemple.",
+      "activities": [
+        {
+          "id": "m1-time-12-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Sur, sous, dans",
+          "childInstruction": "Mets le caillou sur la table. Maintenant, sous la table.",
+          "adultGuidance": "Trois mots seulement : sur, sous, dans. Dites-le et montrez-le en même temps, puis demandez sans montrer. S’il hésite, refaites le geste avec lui — c’est le corps qui apprend l’espace avant les mots.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S02-C01-O07"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put the stone on the table."
+            }
+          ],
+          "payload": {
+            "objects": "un caillou et une table"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-time-15",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "TIME-SPACE",
+      "title": "On commence, c’est fini",
+      "summary": "Repérer le moment, le début, la fin et où sont les choses.",
+      "objectiveCodes": ["TIME-SPACE-S01-C03-O02"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un court moment de repères : quand on est, et où sont les choses. Utilisez votre vraie journée, pas un exemple.",
+      "activities": [
+        {
+          "id": "m1-time-15-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "On commence, c’est fini",
+          "childInstruction": "On commence… et maintenant, c’est fini.",
+          "adultGuidance": "Annoncez le début : « On commence. » Faites une chose courte. Annoncez la fin : « C’est fini. » Puis demandez-lui de dire « fini » lui-même à la fin de la suivante. Savoir qu’une activité se termine calme beaucoup d’enfants.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C03-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "We start… and now it is finished."
+            }
+          ],
+          "payload": {
+            "focus": "le moment de la journée"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-time-18",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "TIME-SPACE",
+      "title": "Le moment de la journée",
+      "summary": "Repérer le moment, le début, la fin et où sont les choses.",
+      "objectiveCodes": ["TIME-SPACE-S01-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un court moment de repères : quand on est, et où sont les choses. Utilisez votre vraie journée, pas un exemple.",
+      "activities": [
+        {
+          "id": "m1-time-18-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Le moment de la journée",
+          "childInstruction": "C’est le matin, le midi, ou le soir ?",
+          "adultGuidance": "Dites le moment et ce qui va avec : « C’est le soir : on a mangé, bientôt on dort. » Puis demandez-lui. S’il se trompe, ne corrigez pas par non : redites simplement le bon moment avec son indice.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Is it morning or evening?"
+            }
+          ],
+          "payload": {
+            "focus": "le moment de la journée"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-time-21",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "TIME-SPACE",
+      "title": "Sur, sous, dans",
+      "summary": "Repérer le moment, le début, la fin et où sont les choses.",
+      "objectiveCodes": ["TIME-SPACE-S02-C01-O07"],
+      "supportingObjectiveCodes": [],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un court moment de repères : quand on est, et où sont les choses. Utilisez votre vraie journée, pas un exemple.",
+      "activities": [
+        {
+          "id": "m1-time-21-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Sur, sous, dans",
+          "childInstruction": "Mets le caillou sur la table. Maintenant, sous la table.",
+          "adultGuidance": "Trois mots seulement : sur, sous, dans. Dites-le et montrez-le en même temps, puis demandez sans montrer. S’il hésite, refaites le geste avec lui — c’est le corps qui apprend l’espace avant les mots.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S02-C01-O07"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put the stone under the table."
+            }
+          ],
+          "payload": {
+            "objects": "un caillou et une table"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    }
+  ]
+}

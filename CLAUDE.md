@@ -70,12 +70,12 @@ Keep this table in sync with the repository. Mark a row **Implemented** only whe
 | Area                   | Choice                                                                            | Status                                         |
 | ---------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------- |
 | App framework          | Next.js 16 (App Router, standalone output) + React 19 + TypeScript 5.9            | Implemented                                    |
-| Home / class selection | `/` lists the three maternelle classes; `/maternelle/[niveau]/…` (ADR-044)        | Implemented (only 3ème has lessons)            |
+| Home / class selection | `/` lists the three maternelle classes; `/maternelle/[niveau]/…` (ADR-044)        | Implemented (1ère and 3ème have lessons)       |
 | Parent session UI      | `/maternelle/<c>/seance/[day]`, `/calendrier` + `components/session/` (ADR-039)   | Implemented (September, 3ème maternelle)       |
 | Renderer families      | `components/session/ActivityRenderer.tsx`: 15 activity kinds → 10 screens         | Implemented, with interaction where it teaches |
-| Media                  | `content/media/registry.json` + `public/media/*.svg`, by stable id (ADR-042)      | Implemented (38 assets, $0)                    |
+| Media                  | `content/media/registry.json` + `public/media/*.svg`, by stable id (ADR-042)      | Implemented (44 assets, $0)                    |
 | Audio                  | Same registry; recorded human French only, never autoplay (ADR-046)               | Architecture implemented, **0 recordings**     |
-| Annual scope/sequence  | `domain/programme/annual-plan.ts` + `content/programmes/**-annual-plan.json`      | Implemented (162 objectives, 189 days)         |
+| Annual scope/sequence  | `domain/programme/annual-plan.ts` + `content/programmes/**-annual-plan.json`      | Implemented (3ème 162, 1ère 116, 189 days)     |
 | Supplied texts         | `content/texts/` — stories and rhymes, so no lesson needs an outside book         | Implemented (14 Teka Edu originals)            |
 | Styling / UI           | Tailwind CSS 4; shadcn/ui where useful                                            | Tailwind implemented; shadcn/ui planned        |
 | Animation              | CSS keyframes in `app/globals.css`, off under `prefers-reduced-motion` (ADR-045)  | Implemented (4 effects, no library)            |
@@ -85,7 +85,7 @@ Keep this table in sync with the repository. Mark a row **Implemented** only whe
 | Reference data         | `content/` JSON → `lib/content/reference-data.ts` (bundled, offline; ADR-028)     | Implemented                                    |
 | Calendar engine        | `domain/calendar/` (civil dates, holidays, instructional-day generator; ADR-029)  | Implemented                                    |
 | Curriculum model       | `domain/curriculum/` (stages, levels, versions, domains, objectives; ADR-030/031) | Implemented (398 official objectives)          |
-| Lessons / activities   | `domain/lessons/` (lesson + typed activities, English scaffolds; ADR-032)         | Implemented (88 lessons, September)            |
+| Lessons / activities   | `domain/lessons/` (lesson + typed activities, English scaffolds; ADR-032)         | Implemented (176 lessons: 1ère + 3ème, Sept.)  |
 | Daily programme        | `domain/programme/` (authored rhythm + tracks, pure generator; ADR-033)           | Implemented (22 September days; report + API)  |
 | Local persistence      | IndexedDB behind repository interfaces                                            | Planned                                        |
 | Offline                | PWA: manifest + service worker (library not chosen yet)                           | Planned                                        |
@@ -162,9 +162,10 @@ npm run db:start | db:stop | db:status | db:reset | db:test | db:types   (Supaba
 npm run db:reference [-- --new-migration <name>]   (regenerate the reference-data pgTAP test / data migration)
 npm run calendar:report [-- <YYYY-YYYY> --days]    (generated school calendar summary)
 npm run programme:report -- --level=maternelle-3 --day=1 [--to=5|--date=YYYY-MM-DD]  (daily plan)
-npm run coverage:report [-- --day=22]              (annual plan vs. the content that exists)
+npm run coverage:report [-- --level=<id> --day=22] (annual plan vs. the content that exists)
+npm run plan:report -- --level=<id>                (does a year's plan fit the days it has?)
 npm run review:package                             (regenerate the weekly review documents)
-npm run media:report                               (what September shows the child, and what it cannot)
+npm run media:report [-- --level=<id>]             (what September shows the child, and what it cannot)
 ```
 
 ## Development workflow
@@ -195,6 +196,7 @@ feature/*  -> develop  -> main
 - **Curriculum authority (ADR-037, decided 2026-09-12).** The **French Cycle 1 programme is the curriculum**: objectives, competencies, progression and expected outcomes all come from it. The **DRC PNEM 2021 is a compatibility, context and enrichment reference**, never a second programme — use it to keep a child compatible with their Congolese school and to find local terminology, practice and gaps. French is the language of instruction (ADR-001); the DRC calendar governs when teaching happens (ADR-029). The standard is **meet or exceed the French expectations through mastery and enrichment, never premature acceleration** (ADR-038): never teach primary-school content early to look advanced, and never raise the daily workload to fit more in.
 - **Primary reference:** the official French École Maternelle / Cycle 1 curriculum applicable in 2026–2027: the arrêté du 16 avril 2026 (BO n° 19 du 7 mai 2026), with the arrêté du 22 octobre 2024 (BO n° 41) for language and mathematics. Curriculum version `maternelle-cycle1-cd-2026` (`docs/EDUCATIONAL_MODEL.md`).
 - **Class mapping:** 1ère maternelle → Petite Section (PS), 2ème → Moyenne Section (MS), 3ème → Grande Section (GS).
+- **Level → age band** (a Teka Edu interpretation, declared in the curriculum file): 1ère → `before-4` (116 objectives), 2ème → `from-4` (139), 3ème → `from-5` (162). The bands are developmental, not ages: each is worded « ou dès que les apprentissages précédents ont pu être observés ». **`before-4` is the earliest band**, so 1ère maternelle has nothing earlier to reinvest from — everything it touches, it introduces.
 - The six learning domains (Plan §3.1, verified against the 2026 annex) have the codes `LANG`, `PHYS`, `ART`, `MATH`, `TIME-SPACE`, `WORLD`.
 - **398 official objectives and 529 success examples are imported verbatim** with their source and page (ADR-031). Never reword them, never normalise their punctuation, and never mark Teka Edu wording as official. Codes: `DOMAIN-Snn-Cnn-Onn` (`docs/CURRICULUM.md`).
 - Objectives are stated by **age band** (`before-4`, `from-4`, `from-5`); the level → band mapping is a Teka Edu decision. A lesson may use its band or an earlier one, never a later one.

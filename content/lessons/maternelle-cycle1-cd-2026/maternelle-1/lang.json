@@ -1,0 +1,2043 @@
+{
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "levelId": "maternelle-1",
+  "domainCode": "LANG",
+  "lessons": [
+    {
+      "id": "m1-lang-01",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Bonjour, je suis là",
+      "summary": "Oser dire bonjour à l’adulte, et entendre les premiers mots du mois.",
+      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S01-C01-O01"],
+      "supportingObjectiveCodes": ["ART-S02-C01-O03"],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-01-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour !",
+          "childInstruction": "Dis bonjour avec moi.",
+          "adultGuidance": "Mettez-vous à sa hauteur, regardez-le, et dites « Bonjour ! ». Attendez. S’il ne dit rien, dites-le pour lui, gaiement, et passez à la suite : le premier jour, être là suffit.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour avec moi."]
+          }
+        },
+        {
+          "id": "m1-lang-01-a2",
+          "position": 2,
+          "type": "vocabulary",
+          "title": "Les mots de la maison",
+          "childInstruction": "Écoute, puis dis le mot avec moi : la porte, le seau.",
+          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez-la lentement : « la porte ». 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-porte", "objet-seau"],
+          "objectiveCodes": ["LANG-S01-C01-O01"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "la porte",
+              "en": "the door"
+            },
+            {
+              "fr": "le seau",
+              "en": "the bucket"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen, then say the word with me."
+            }
+          ],
+          "payload": {
+            "focus": "la porte et le seau"
+          }
+        },
+        {
+          "id": "m1-lang-01-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Bonjour, petit",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-bonjour-petit"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-02",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Encore des mots de la maison",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S01-C01-O01"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-02-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour !",
+          "childInstruction": "Dis bonjour, puis montre-moi une chose que tu vois.",
+          "adultGuidance": "Dites bonjour, puis : « Qu’est-ce que tu vois ? » Acceptez un doigt pointé sans mot. Nommez ce qu’il montre : « Oui, la porte. »",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour, puis montre-moi une chose que tu vois."]
+          }
+        },
+        {
+          "id": "m1-lang-02-a2",
+          "position": 2,
+          "type": "vocabulary",
+          "title": "Les mots de la maison",
+          "childInstruction": "Écoute, puis dis le mot avec moi : la table, la chaise.",
+          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez-la lentement : « la porte ». 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-table", "objet-chaise"],
+          "objectiveCodes": ["LANG-S01-C01-O01"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "la table",
+              "en": "the table"
+            },
+            {
+              "fr": "la chaise",
+              "en": "the chair"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen, then say the word with me."
+            }
+          ],
+          "payload": {
+            "focus": "la table et la chaise"
+          }
+        },
+        {
+          "id": "m1-lang-02-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Un, deux, trois, mes mains",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-un-deux-trois-mains"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-03",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "L’histoire du seau",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S02-C03-O04"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-03-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-03-a2",
+          "position": 2,
+          "type": "read-aloud",
+          "title": "Le seau de Lisa",
+          "childInstruction": "Écoute l’histoire jusqu’au bout.",
+          "adultGuidance": "Lisez lentement, en montrant l’image. L’histoire est courte exprès : à trois ans, on écoute mieux deux minutes deux fois qu’une fois quatre minutes. S’il redemande la même histoire demain, c’est bon signe. Aujourd’hui, aucune question après : on écoute, c’est tout.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story."
+            }
+          ],
+          "payload": {
+            "textId": "histoire-le-seau-de-lisa"
+          }
+        },
+        {
+          "id": "m1-lang-03-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Bonjour, petit",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-bonjour-petit"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-04",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Je dis ce que je fais",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S01-C04-O02"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-04-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-04-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Dis ce que tu fais",
+          "childInstruction": "Dis-moi ce que tu fais, pendant que tu le fais.",
+          "adultGuidance": "Pendant qu’il agit — il porte, il pose, il marche — dites ce qu’il fait : « Tu portes le seau. » Puis demandez-lui de le dire. Un mot compte. Deux mots, c’est beaucoup. Ne faites pas répéter une phrase entière.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [],
+          "payload": {
+            "prompts": ["Dis-moi ce que tu fais."]
+          }
+        },
+        {
+          "id": "m1-lang-04-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Un, deux, trois, mes mains",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-un-deux-trois-mains"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-05",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Ma main tient le crayon",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S03-C01-O01"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-05-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-05-a2",
+          "position": 2,
+          "type": "graphic-practice",
+          "title": "Je trace",
+          "childInstruction": "Prends le crayon et trace avec moi.",
+          "adultGuidance": "Posez la feuille bien en face de lui. Montrez le geste une fois, lentement, puis laissez-le faire. On ne cherche pas une belle forme : on cherche une main qui tient et un œil qui suit. Arrêtez dès qu’il lâche le crayon.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S03-C01-O01"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [],
+          "payload": {
+            "pattern": "des traits verticaux, puis des ronds"
+          }
+        },
+        {
+          "id": "m1-lang-05-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Je marche, je m’arrête",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-je-marche"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-06",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Je connais quatre mots",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S01-C01-O01"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-06-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-06-a2",
+          "position": 2,
+          "type": "vocabulary",
+          "title": "Les quatre mots de la maison",
+          "childInstruction": "Écoute, puis dis le mot avec moi : la porte, le seau, la table, la chaise.",
+          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez-la lentement : « la porte ». 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-porte", "objet-seau", "objet-table", "objet-chaise"],
+          "objectiveCodes": ["LANG-S01-C01-O01"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "la porte",
+              "en": "the door"
+            },
+            {
+              "fr": "le seau",
+              "en": "the bucket"
+            },
+            {
+              "fr": "la table",
+              "en": "the table"
+            },
+            {
+              "fr": "la chaise",
+              "en": "the chair"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen, then say the word with me."
+            }
+          ],
+          "payload": {
+            "focus": "les quatre mots"
+          }
+        },
+        {
+          "id": "m1-lang-06-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Le petit seau",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-le-petit-seau"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-07",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Je reconnais Lisa",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S02-C03-O03"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-07-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-07-a2",
+          "position": 2,
+          "type": "observation",
+          "title": "Qui est-ce ?",
+          "childInstruction": "Regarde l’image. Montre-moi Lisa.",
+          "adultGuidance": "Montrez l’image de l’histoire. Demandez où est le personnage, puis son nom. Acceptez le doigt sans le mot, et nommez pour lui. C’est reconnaître qui compte, pas dire.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-seau"],
+          "objectiveCodes": ["LANG-S02-C03-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [],
+          "payload": {
+            "focus": "le personnage de l’histoire"
+          }
+        },
+        {
+          "id": "m1-lang-07-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Je marche, je m’arrête",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-je-marche"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-08",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Je raconte ce que je fais",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S01-C04-O02"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-08-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-08-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Dis ce que tu fais",
+          "childInstruction": "Dis-moi ce que tu fais, pendant que tu le fais.",
+          "adultGuidance": "Pendant qu’il agit — il porte, il pose, il marche — dites ce qu’il fait : « Tu portes le seau. » Puis demandez-lui de le dire. Un mot compte. Deux mots, c’est beaucoup. Ne faites pas répéter une phrase entière.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [],
+          "payload": {
+            "prompts": ["Dis-moi ce que tu fais."]
+          }
+        },
+        {
+          "id": "m1-lang-08-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Le petit seau",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-le-petit-seau"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-09",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "L’histoire de Tika",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S02-C03-O04"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-09-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-09-a2",
+          "position": 2,
+          "type": "read-aloud",
+          "title": "Tika se lève",
+          "childInstruction": "Écoute l’histoire jusqu’au bout.",
+          "adultGuidance": "Lisez lentement, en montrant l’image. L’histoire est courte exprès : à trois ans, on écoute mieux deux minutes deux fois qu’une fois quatre minutes. S’il redemande la même histoire demain, c’est bon signe. Aujourd’hui, aucune question après : on écoute, c’est tout.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story."
+            }
+          ],
+          "payload": {
+            "textId": "histoire-tika-se-leve"
+          }
+        },
+        {
+          "id": "m1-lang-09-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "La pluie tombe",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-la-pluie-tombe"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-10",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "J’écoute les bruits",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S02-C01-O01"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-10-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-10-a2",
+          "position": 2,
+          "type": "phonology",
+          "title": "J’écoute",
+          "childInstruction": "Ferme les yeux. Qu’est-ce que tu entends ?",
+          "adultGuidance": "Faites un bruit qu’il connaît : taper sur la table, froisser du papier, verser de l’eau. Demandez ce que c’est. Puis refaites-en deux et demandez lequel était le premier. Deux bruits suffisent.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [],
+          "payload": {
+            "words": ["la table", "le papier", "l’eau"]
+          }
+        },
+        {
+          "id": "m1-lang-10-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "La pluie tombe",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-la-pluie-tombe"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-11",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Ma main, mon pied",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S01-C01-O01"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-11-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-11-a2",
+          "position": 2,
+          "type": "vocabulary",
+          "title": "Les mots de mon corps",
+          "childInstruction": "Écoute, puis dis le mot avec moi : la main, le pied.",
+          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez-la lentement : « la porte ». 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["corps-main", "corps-pied"],
+          "objectiveCodes": ["LANG-S01-C01-O01"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "la main",
+              "en": "the hand"
+            },
+            {
+              "fr": "le pied",
+              "en": "the foot"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen, then say the word with me."
+            }
+          ],
+          "payload": {
+            "focus": "la main et le pied"
+          }
+        },
+        {
+          "id": "m1-lang-11-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Un, deux, trois, mes mains",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-un-deux-trois-mains"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-12",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Je trace encore",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S03-C01-O01"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-12-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-12-a2",
+          "position": 2,
+          "type": "graphic-practice",
+          "title": "Je trace",
+          "childInstruction": "Prends le crayon et trace avec moi.",
+          "adultGuidance": "Posez la feuille bien en face de lui. Montrez le geste une fois, lentement, puis laissez-le faire. On ne cherche pas une belle forme : on cherche une main qui tient et un œil qui suit. Arrêtez dès qu’il lâche le crayon.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S03-C01-O01"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [],
+          "payload": {
+            "pattern": "des traits verticaux, puis des ronds"
+          }
+        },
+        {
+          "id": "m1-lang-12-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Je marche, je m’arrête",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-je-marche"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-13",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Ma tête, mon ventre",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S01-C01-O01"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-13-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-13-a2",
+          "position": 2,
+          "type": "vocabulary",
+          "title": "Les mots de mon corps",
+          "childInstruction": "Écoute, puis dis le mot avec moi : la tête, le ventre.",
+          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez-la lentement : « la porte ». 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["corps-tete", "corps-ventre"],
+          "objectiveCodes": ["LANG-S01-C01-O01"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "la tête",
+              "en": "the head"
+            },
+            {
+              "fr": "le ventre",
+              "en": "the tummy"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen, then say the word with me."
+            }
+          ],
+          "payload": {
+            "focus": "la tête et le ventre"
+          }
+        },
+        {
+          "id": "m1-lang-13-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Bonjour, petit",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-bonjour-petit"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-14",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Je dis ce que je fais",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S01-C04-O02"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-14-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-14-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Dis ce que tu fais",
+          "childInstruction": "Dis-moi ce que tu fais, pendant que tu le fais.",
+          "adultGuidance": "Pendant qu’il agit — il porte, il pose, il marche — dites ce qu’il fait : « Tu portes le seau. » Puis demandez-lui de le dire. Un mot compte. Deux mots, c’est beaucoup. Ne faites pas répéter une phrase entière.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [],
+          "payload": {
+            "prompts": ["Dis-moi ce que tu fais."]
+          }
+        },
+        {
+          "id": "m1-lang-14-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Le petit seau",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-le-petit-seau"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-15",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Encore l’histoire du seau",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S02-C03-O04"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-15-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-15-a2",
+          "position": 2,
+          "type": "listening-story",
+          "title": "Le seau de Lisa",
+          "childInstruction": "Écoute l’histoire jusqu’au bout.",
+          "adultGuidance": "Lisez lentement, en montrant l’image. L’histoire est courte exprès : à trois ans, on écoute mieux deux minutes deux fois qu’une fois quatre minutes. S’il redemande la même histoire demain, c’est bon signe.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story."
+            }
+          ],
+          "payload": {
+            "textId": "histoire-le-seau-de-lisa",
+            "questions": ["Qu’est-ce que Lisa cherche ?", "Où est le seau ?"]
+          }
+        },
+        {
+          "id": "m1-lang-15-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "La pluie tombe",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-la-pluie-tombe"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-16",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "J’écoute bien",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S02-C01-O01"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-16-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-16-a2",
+          "position": 2,
+          "type": "phonology",
+          "title": "J’écoute",
+          "childInstruction": "Ferme les yeux. Qu’est-ce que tu entends ?",
+          "adultGuidance": "Faites un bruit qu’il connaît : taper sur la table, froisser du papier, verser de l’eau. Demandez ce que c’est. Puis refaites-en deux et demandez lequel était le premier. Deux bruits suffisent.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [],
+          "payload": {
+            "words": ["la table", "le papier", "l’eau"]
+          }
+        },
+        {
+          "id": "m1-lang-16-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Un, deux, trois, mes mains",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-un-deux-trois-mains"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-17",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Je montre le personnage",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S02-C03-O03"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-17-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-17-a2",
+          "position": 2,
+          "type": "observation",
+          "title": "Qui est-ce ?",
+          "childInstruction": "Regarde l’image. Montre-moi Lisa.",
+          "adultGuidance": "Montrez l’image de l’histoire. Demandez où est le personnage, puis son nom. Acceptez le doigt sans le mot, et nommez pour lui. C’est reconnaître qui compte, pas dire.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-seau"],
+          "objectiveCodes": ["LANG-S02-C03-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [],
+          "payload": {
+            "focus": "le personnage de l’histoire"
+          }
+        },
+        {
+          "id": "m1-lang-17-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Je marche, je m’arrête",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-je-marche"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-18",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Les mots de mon corps",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S01-C01-O01"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-18-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-18-a2",
+          "position": 2,
+          "type": "vocabulary",
+          "title": "Les quatre mots de mon corps",
+          "childInstruction": "Écoute, puis dis le mot avec moi : la main, le pied, la tête, le ventre.",
+          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez-la lentement : « la porte ». 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["corps-main", "corps-pied", "corps-tete", "corps-ventre"],
+          "objectiveCodes": ["LANG-S01-C01-O01"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "la main",
+              "en": "the hand"
+            },
+            {
+              "fr": "le pied",
+              "en": "the foot"
+            },
+            {
+              "fr": "la tête",
+              "en": "the head"
+            },
+            {
+              "fr": "le ventre",
+              "en": "the tummy"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen, then say the word with me."
+            }
+          ],
+          "payload": {
+            "focus": "les quatre mots du corps"
+          }
+        },
+        {
+          "id": "m1-lang-18-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Le petit seau",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-le-petit-seau"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-19",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Je dis ce que je fais",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S01-C04-O02"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-19-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-19-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Dis ce que tu fais",
+          "childInstruction": "Dis-moi ce que tu fais, pendant que tu le fais.",
+          "adultGuidance": "Pendant qu’il agit — il porte, il pose, il marche — dites ce qu’il fait : « Tu portes le seau. » Puis demandez-lui de le dire. Un mot compte. Deux mots, c’est beaucoup. Ne faites pas répéter une phrase entière.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [],
+          "payload": {
+            "prompts": ["Dis-moi ce que tu fais."]
+          }
+        },
+        {
+          "id": "m1-lang-19-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Bonjour, petit",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-bonjour-petit"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-20",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Je trace",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S03-C01-O01"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-20-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-20-a2",
+          "position": 2,
+          "type": "graphic-practice",
+          "title": "Je trace",
+          "childInstruction": "Prends le crayon et trace avec moi.",
+          "adultGuidance": "Posez la feuille bien en face de lui. Montrez le geste une fois, lentement, puis laissez-le faire. On ne cherche pas une belle forme : on cherche une main qui tient et un œil qui suit. Arrêtez dès qu’il lâche le crayon.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S03-C01-O01"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [],
+          "payload": {
+            "pattern": "des traits verticaux, puis des ronds"
+          }
+        },
+        {
+          "id": "m1-lang-20-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "La pluie tombe",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-la-pluie-tombe"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-21",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Encore Tika",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S02-C03-O04"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-21-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-21-a2",
+          "position": 2,
+          "type": "listening-story",
+          "title": "Tika se lève",
+          "childInstruction": "Écoute l’histoire jusqu’au bout.",
+          "adultGuidance": "Lisez lentement, en montrant l’image. L’histoire est courte exprès : à trois ans, on écoute mieux deux minutes deux fois qu’une fois quatre minutes. S’il redemande la même histoire demain, c’est bon signe.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story."
+            }
+          ],
+          "payload": {
+            "textId": "histoire-tika-se-leve",
+            "questions": ["Que fait Tika le matin ?", "Que fait Tika le soir ?"]
+          }
+        },
+        {
+          "id": "m1-lang-21-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Je marche, je m’arrête",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-je-marche"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-lang-22",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "LANG",
+      "title": "Tout ce que je sais dire",
+      "summary": "Parler avec l’adulte, entendre des mots et les redire.",
+      "objectiveCodes": ["LANG-S01-C01-O01"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.",
+      "activities": [
+        {
+          "id": "m1-lang-22-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bonjour, et on se souvient",
+          "childInstruction": "Dis bonjour. Puis dis-moi ce que nous avons fait hier.",
+          "adultGuidance": "Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say hello, then tell me what we did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis bonjour. Puis dis-moi ce que nous avons fait hier."]
+          }
+        },
+        {
+          "id": "m1-lang-22-a2",
+          "position": 2,
+          "type": "vocabulary",
+          "title": "Tous les mots du mois",
+          "childInstruction": "Écoute, puis dis le mot avec moi : la porte, le seau, la main, la tête.",
+          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez-la lentement : « la porte ». 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-porte", "objet-seau", "corps-main", "corps-tete"],
+          "objectiveCodes": ["LANG-S01-C01-O01"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "la porte",
+              "en": "the door"
+            },
+            {
+              "fr": "le seau",
+              "en": "the bucket"
+            },
+            {
+              "fr": "la main",
+              "en": "the hand"
+            },
+            {
+              "fr": "la tête",
+              "en": "the head"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen, then say the word with me."
+            }
+          ],
+          "payload": {
+            "focus": "les mots appris ce mois-ci"
+          }
+        },
+        {
+          "id": "m1-lang-22-a3",
+          "position": 3,
+          "type": "song-rhyme",
+          "title": "Un, deux, trois, mes mains",
+          "childInstruction": "Dis la comptine avec moi. Tu peux faire les gestes.",
+          "adultGuidance": "Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-un-deux-trois-mains"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    }
+  ]
+}

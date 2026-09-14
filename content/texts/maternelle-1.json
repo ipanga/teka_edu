@@ -1,0 +1,122 @@
+{
+  "texts": [
+    {
+      "id": "comptine-un-deux-trois-mains",
+      "kind": "rhyme",
+      "title": "Un, deux, trois, mes mains",
+      "minutes": 2,
+      "illustrationId": "comptine-mains",
+      "audioId": null,
+      "origin": "teka-edu-created",
+      "provenance": "Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris.",
+      "lines": [
+        "Un, deux, trois,",
+        "mes mains sont là.",
+        "Un, deux, trois,",
+        "je les cache… les voilà !"
+      ]
+    },
+    {
+      "id": "comptine-bonjour-petit",
+      "kind": "rhyme",
+      "title": "Bonjour, petit",
+      "minutes": 2,
+      "illustrationId": "comptine-bonjour",
+      "audioId": null,
+      "origin": "teka-edu-created",
+      "provenance": "Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris.",
+      "lines": [
+        "Bonjour, bonjour, petit bonjour.",
+        "Je dis bonjour à qui est là.",
+        "Bonjour la main, bonjour le pied,",
+        "bonjour, bonjour, et me voilà."
+      ]
+    },
+    {
+      "id": "comptine-la-pluie-tombe",
+      "kind": "rhyme",
+      "title": "La pluie tombe",
+      "minutes": 2,
+      "illustrationId": "histoire-pluie",
+      "audioId": null,
+      "origin": "teka-edu-created",
+      "provenance": "Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris.",
+      "lines": [
+        "La pluie tombe sur le toit :",
+        "plic, plic, plic.",
+        "La pluie tombe sur ma main :",
+        "ploc, ploc, ploc.",
+        "Et puis plus rien. Le soleil revient."
+      ]
+    },
+    {
+      "id": "comptine-je-marche",
+      "kind": "rhyme",
+      "title": "Je marche, je m’arrête",
+      "minutes": 2,
+      "illustrationId": "bonhomme-articule",
+      "audioId": null,
+      "origin": "teka-edu-created",
+      "provenance": "Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris.",
+      "lines": [
+        "Je marche, je marche, je marche,",
+        "et hop ! je m’arrête.",
+        "Je marche, je marche, je marche,",
+        "et hop ! je m’assois."
+      ]
+    },
+    {
+      "id": "comptine-le-petit-seau",
+      "kind": "rhyme",
+      "title": "Le petit seau",
+      "minutes": 2,
+      "illustrationId": "histoire-seau-lisa",
+      "audioId": null,
+      "origin": "teka-edu-created",
+      "provenance": "Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris.",
+      "lines": [
+        "Dans mon seau il y a de l’eau,",
+        "dans ma main il y a le seau,",
+        "sur ma tête il n’y a rien —",
+        "sur ma tête il y a ma main !"
+      ]
+    },
+    {
+      "id": "histoire-le-seau-de-lisa",
+      "kind": "story",
+      "title": "Le seau de Lisa",
+      "minutes": 2,
+      "illustrationId": "histoire-seau-lisa",
+      "audioId": null,
+      "origin": "teka-edu-created",
+      "provenance": "Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris.",
+      "lines": [
+        "Lisa veut de l’eau. Elle cherche son seau.",
+        "Le seau n’est pas sur la table.",
+        "Lisa regarde sous la table : pas de seau.",
+        "Lisa regarde derrière la porte : pas de seau.",
+        "Maman dit : « Regarde sur la chaise. »",
+        "Le seau est sur la chaise ! Lisa rit.",
+        "Lisa prend son seau. Elle a de l’eau."
+      ]
+    },
+    {
+      "id": "histoire-tika-se-leve",
+      "kind": "story",
+      "title": "Tika se lève",
+      "minutes": 2,
+      "illustrationId": "histoire-tika",
+      "audioId": null,
+      "origin": "teka-edu-created",
+      "provenance": "Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris.",
+      "lines": [
+        "Le matin, Tika ouvre les yeux.",
+        "Tika se lève. Tika met un pied, puis l’autre pied.",
+        "Tika boit. Tika mange.",
+        "Puis Tika joue, joue, joue.",
+        "Le soir, Tika est fatigué.",
+        "Tika ferme les yeux. Bonne nuit, Tika."
+      ]
+    }
+  ]
+}

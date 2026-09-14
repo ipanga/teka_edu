@@ -12,21 +12,32 @@ test.describe("home and class selection", () => {
     }
   });
 
-  test("only the class that has lessons can be opened", async ({ page }) => {
+  test("only the classes that have lessons can be opened", async ({ page }) => {
     await page.goto("/");
-    // 3ème maternelle is authored; the other two are honest about being unwritten.
+    // 1ère and 3ème are authored; 2ème is honest about being unwritten.
+    await expect(page.getByRole("link", { name: /1ère maternelle/ })).toBeVisible();
     await expect(page.getByRole("link", { name: /3ème maternelle/ })).toBeVisible();
-    await expect(page.getByRole("link", { name: /1ère maternelle/ })).toHaveCount(0);
-    await expect(page.getByText("Les leçons de cette classe sont en préparation.")).toHaveCount(2);
+    await expect(page.getByRole("link", { name: /2ème maternelle/ })).toHaveCount(0);
+    await expect(page.getByText("Les leçons de cette classe sont en préparation.")).toHaveCount(1);
 
     await page.getByRole("link", { name: /3ème maternelle/ }).click();
     await expect(page).toHaveURL(/\/maternelle\/3$/);
     await expect(page.getByRole("heading", { name: "Aujourd’hui" })).toBeVisible();
   });
 
+  test("the youngest class opens on its own September", async ({ page }) => {
+    await page.goto("/");
+    await page.getByRole("link", { name: /1ère maternelle/ }).click();
+    await expect(page).toHaveURL(/\/maternelle\/1$/);
+    await expect(page.getByRole("heading", { name: "Aujourd’hui" })).toBeVisible();
+    // Its own content, never 3ème's: the two months share no lesson.
+    const body = (await page.locator("body").textContent()) ?? "";
+    expect(body).not.toMatch(/Kumu|Nsimba|Bibi/);
+  });
+
   test("an unwritten class never shows another class's lessons", async ({ page }) => {
-    await page.goto("/maternelle/1");
-    await expect(page.getByRole("heading", { name: "1ère maternelle" })).toBeVisible();
+    await page.goto("/maternelle/2");
+    await expect(page.getByRole("heading", { name: "2ème maternelle" })).toBeVisible();
     await expect(page.getByText(/en préparation/)).toBeVisible();
     // No fallback: nothing from 3ème maternelle leaks in.
     const body = (await page.locator("body").textContent()) ?? "";

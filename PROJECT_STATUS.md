@@ -6,31 +6,32 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-15
-Branch:     docs/pedagogical-review-policy
-Commit:     develop at c820dc5; main at 1b95480
+Branch:     feat/maternelle-1-annual-and-september
+Commit:     develop at ead8d8b; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
 ## Current Phase
 
 ```text
-Pedagogical review policy (ADR-047): IN PROGRESS
-Status:    The calendar engine, the education structure, the 398 official Cycle 1 objectives,
-           the lesson/activity model and the deterministic daily-programme generator are all
-           implemented, tested and mirrored into the database (RLS server-only). A year-long
-           scope and sequence exists for 3ème maternelle (ADR-040) and all 22 September
-           instructional days are authored — 88 lessons, 170 activities, 35 minutes each —
-           with 38 repository SVG assets (ADR-042) and a class-aware front door (ADR-044).
-           The pedagogical gate has changed shape. No preschool teacher is available to the
-           project, so ADR-047 makes an independent AI-assisted review of the generated
-           package the active development gate; a teacher's review becomes optional future
-           external assurance and blocks nothing. Every approval now records which kind of
-           review it was, so `approved` can never be read as teacher certification.
-           September Week 1 has had one AI-assisted review (accepted with modifications, 13
-           corrections applied) and awaits re-review because those corrections materially
-           changed the pedagogy. Weeks 2-5 are unreviewed. No lesson is `approved`.
-           Production stays disabled (ADR-027).
-Objective: Unblock curriculum development without ever claiming a review that did not happen.
+1ère maternelle — annual progression and September: IN PROGRESS
+Status:    Two classes now have a year plan and a written September. 3ème maternelle: 162
+           from-5 objectives over 189 days, 88 lessons, 170 activities. 1ère maternelle: 116
+           before-4 objectives over the same 189 days, 88 lessons, 132 activities, 30-31
+           minutes a day, no screen time.
+           The band mapping was re-derived rather than trusted: 1ère → before-4 is confirmed
+           by the curriculum file and by arithmetic, since the same rule yields the 162 the
+           3ème plan was already built on. before-4 is the earliest band, so 1ère has nothing
+           earlier to reinvest from and its 116 objectives buy repetition rather than
+           breadth — 904 planned passages, 4.8 a day.
+           The annual-plan builder is now one engine parameterised by level. Refactoring it
+           caught a defect: the Week 1 pacing correction had been made by editing generated
+           JSON, so the generator would have reverted it.
+           The home screen turned 1ère's card on by itself — availability is counted from
+           content. 2ème maternelle has no lessons and says so.
+           No lesson is approved. Five 1ère review packages await the ADR-047 gate; 3ème
+           Week 1 awaits re-review. Production stays disabled (ADR-027).
+Objective: A verified year for the youngest class, then one month, then the review gate.
 ```
 
 ## Overall Progress
@@ -184,6 +185,18 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 - [x] **Real-session testing**: `/seance/<n>/observation`, browser-only, asks nothing about the child (`docs/REAL_SESSION_TESTING.md`)
 - [x] Media mirrored to the database with RLS and an access decision per table
 - [x] All 88 lessons remain `review`: usability testing is not pedagogical approval
+
+### 1ère maternelle — annual progression and September (PR #35)
+
+- [x] **Band verified, not assumed**: `maternelle-1` → PS → `before-4`, confirmed by the curriculum file and cross-checked by arithmetic (the same rule yields `from-5` = 162, the count the 3ème plan uses)
+- [x] **Corpus audited**: 116 of 398 objectives apply to `before-4` — 106 exclusive, 10 shared with a later band. Provenance complete, no duplicates, nothing too advanced
+- [x] **Annual plan**: 116 objectives over 189 days, 6 periods, the last introducing nothing
+- [x] **One engine, parameterised by level** (`tools/annual-plan/levels/`); regenerating 3ème is identical apart from a defect it exposed and fixed
+- [x] **`npm run plan:report`**: load per period, domain balance, revisits, home feasibility
+- [x] **September authored**: 22 days, 88 lessons, 132 activities, 30-31 min, 0 screen minutes, 24 objectives all introduced by day 13
+- [x] 6 new SVG assets (4 body parts, 2 story pictures); everything else reused. 44 total, $0
+- [x] **Level isolation proved** in unit, E2E and pgTAP: each class serves only its own content, 2ème serves none
+- [x] Five weekly review packages generated; **all 176 lessons remain `review`**
 
 ### Week 1 review corrections (PR #31)
 
@@ -515,29 +528,27 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  Pedagogical review policy (ADR-047). The gate stays; the reviewer changed.
-            - No preschool teacher is available, and a gate that can never open is an outage,
-              not a quality control: 88 lessons frozen, two class levels unable to start.
-            - The active development gate is now an independent AI-assisted review of the
-              generated package against the official programme (ChatGPT, outside the product,
-              submitted by the owner). A teacher's review is optional future assurance.
-            - Smallest schema change that keeps this honest: every approval records
-              reviewKind (ai-assisted | human-teacher) and an outcome (accepted |
-              accepted-with-modifications). Mirrored in the database with a constraint, and a
-              check refuses to record an obvious tool name as a human teacher.
-            - needs-revision is deliberately NOT a status: such content stays at `review`,
-              which is already what that means.
-            - Review package generation now FAILS when it names a text it cannot quote, or
-              when a bullet promises a list and delivers nothing. Both happened for real.
-            - ISSUE-017 reclassified: open, non-blocking, "future external pedagogical
-              assurance". Its original reasoning is preserved verbatim.
-            - Two tests that asserted "every lesson is review" were rewritten as invariants:
-              they would have failed on the first legitimate approval and invited deletion.
-Validation: format, lint, typecheck, unit (217), content (21 files), pgTAP (147) on a fresh
-            reset, build, E2E.
-Cost:       $0. No paid service; the review happens outside the product and no AI SDK,
-            endpoint or credential enters the runtime (ADR-002 intact).
-Not done:   No lesson approved — September Week 1 awaits re-review because its corrections
-            materially changed the pedagogy. Weeks 2-5 unreviewed. 1ère maternelle not
-            started; that is the next task and was deliberately not begun here.
+Completed:  1ère maternelle: band verification, corpus audit, annual plan, September.
+            - before-4 confirmed for 1ère maternelle, and confirmed by arithmetic rather
+              than by trust: the same rule gives from-5 = 162, the number the 3ème plan was
+              built on. 116 objectives apply, provenance complete.
+            - before-4 is the earliest band, so this level has nothing earlier to reinvest
+              from. 116 objectives over 189 days is not a gap: the spare days buy repetition.
+            - The annual-plan builder became one engine with per-level judgement files.
+              That refactor caught a real defect — the Week 1 pacing fix had been made by
+              editing generated JSON, so the generator would have reverted it silently.
+            - September: 22 days, 88 lessons, 132 activities, 30-31 minutes, no screen.
+              24 objectives, the last introduced on day 13; the back half only returns.
+            - My first pass introduced 31 objectives in September, which contradicted the
+              principle I had just written down. Trimmed to 24.
+            - Validators caught two more of my mistakes: progression stages assigned by date
+              rather than by what a lesson introduces, and no lesson claiming to teach
+              "entrer en communication verbale avec un adulte" — the year's most foundational
+              objective, carried by every ritual and owned by nobody.
+            - Six new assets, everything else reused. Level isolation proved three ways.
+Validation: format, lint, typecheck, unit (218), content (30 files), pgTAP (149) on a fresh
+            reset, build, E2E (28).
+Cost:       $0.
+Not done:   No lesson approved. The five 1ère packages have not been reviewed; 3ème Week 1
+            awaits re-review. October not authored; 2ème maternelle not started.
 ```

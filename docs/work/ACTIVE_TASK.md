@@ -10,42 +10,47 @@
 
 ## Task
 
-None in progress.
+1ère maternelle: verify the `before-4` band, audit its objective corpus, build the full
+2026-2027 annual progression, check 189-day feasibility — and only then author September.
 
 ## Objective
 
-The pedagogical review policy (ADR-047) is merged. No new task has been started.
+A verified, defensible year plan for the youngest class, then one month of lessons, through
+the ADR-047 review gate.
 
 ## Status
 
-`planned`
+`in_progress`
 
 ## Branch
 
-`develop` — no feature branch open.
+`feat/maternelle-1-annual-and-september`
 
 ## Base Branch
 
-`develop`
+`develop` at `ead8d8b`
 
 ## Started
 
-—
+2026-09-15
 
 ## Last Checkpoint
 
-2026-09-15 — reset after PR #33 merged as `d80d7ea` and verified on live staging.
+2026-09-15 — September authored, database migrated locally, docs updated, full local suite
+green. Next: PR, CI, merge, staging.
 
 ## Scope
 
-To be filled in when the next task begins.
+- Verify `before-4` against the authoritative programme; document the interpretation.
+- Audit the 1ère maternelle objective corpus.
+- Full 2026-2027 annual progression + 189-day feasibility.
+- September lessons **only**, then weekly review packages.
 
 ## Out of Scope
 
-- October, and 2ème maternelle content.
-- Marking any lesson `approved` before its batch has passed the review gate.
-- Claiming a human-teacher review: none has happened (ISSUE-017, open and non-blocking).
-- Paid anything; production; `main`.
+- October. 2ème maternelle. Production. `main`.
+- Marking anything `approved`: that needs the review gate (ADR-047).
+- A second planning engine: the runtime model stays level-agnostic.
 
 ## Product Decisions
 
@@ -64,36 +69,47 @@ To be filled in when the next task begins.
 
 ## Completed
 
-- [x] Phase 3A — September programme and the parent session (archived)
-- [x] Session duration policy and the resumable-work protocol (archived)
-- [x] Phase 3B — visuals, interaction and real-session testing (archived)
-- [x] Phase 3C — the session a parent and child can sit down and do (archived)
+- [x] **Band verified.** `maternelle-1` → reference section `PS` → `before-4`
+      (« À aborder avant 4 ans »), declared in `content/curriculum/.../curriculum.json` with the
+      arrêté du 16 avril 2026 as its source. The method is confirmed by arithmetic: the same
+      rule gives `from-5` = **162**, exactly the count the 3ème annual plan was built on.
+- [x] **Corpus audited: 116 objectives applicable to `before-4`** of 398 total — 106 exclusive,
+      plus 10 that also belong to a later band (6 span all three, 4 span before-4 and from-4).
+      By domain: LANG 27 · ART 24 · TIME-SPACE 22 · MATH 17 · WORLD 14 · PHYS 12.
+- [x] **Provenance complete**: 0 objectives missing a source. No duplicates. Nothing found that
+      is too advanced for the band — the corpus reads correctly for three-year-olds (count to
+      three or four, the number rhyme to six, sort by shape, say what you are doing).
+
+- [x] **Annual plan generated**: `maternelle-1-annual-plan.json`, 116 objectives over 189 days,
+      6 periods. P1 40 · P2 22 · P3 19 · P4 13 · P5 22 · **P6 0** (the last period reprises).
+- [x] **The builder is now one engine, parameterised by level** (`tools/annual-plan/levels/`).
+      Regenerating 3ème is byte-identical apart from one objective — see below.
+- [x] **`npm run plan:report`**: load per period, domain balance, revisit distribution,
+      home feasibility, first month. 904 objective-passages over 189 days = 4.8/day.
+- [x] September trimmed from 31 objectives to **24**, all introduced by day 13
 
 ## In Progress
 
-- [ ] Nothing.
+- [ ] PR into `develop`, CI, squash-merge, staging verification
 
 ## Remaining
 
-**Next task (not started):** 1ère maternelle — the full 2026–2027 annual progression first,
-then September daily lessons only. Then the review package and the gate. Not October, not
-2ème maternelle.
+- [ ] Final report; then submit the first 1ère package to the review gate (a separate task)
 
 ## Validation State
 
-| Check              | Result | At                                         |
-| ------------------ | ------ | ------------------------------------------ |
-| format             | PASS   | working tree                               |
-| lint               | PASS   | working tree — 0 warnings                  |
-| typecheck          | PASS   | working tree                               |
-| unit tests         | PASS   | working tree — 207 tests                   |
-| content validation | PASS   | working tree — 21 files                    |
-| database tests     | PASS   | working tree — 144 pgTAP assertions        |
-| build              | PASS   | working tree                               |
-| E2E                | PASS   | working tree — 20 tests                    |
-| Docker             | PASS   | CI at `27e9054` — both images              |
-| secret scans       | PASS   | working tree — no leaks, 0 tracked `.env*` |
-| staging            | PASS   | `27e9054` deployed, 20 E2E against it      |
+| Check              | Result  | At                                |
+| ------------------ | ------- | --------------------------------- |
+| format             | PASS    | working tree                      |
+| lint               | PASS    | working tree                      |
+| typecheck          | PASS    | working tree                      |
+| unit tests         | PASS    | working tree — 218 tests          |
+| content validation | PASS    | working tree — 30 files           |
+| database tests     | PASS    | fresh reset — 149 assertions      |
+| build              | PASS    | working tree                      |
+| E2E                | PASS    | working tree — 28 tests           |
+| Docker             | NOT RUN | left to CI                        |
+| secret scans       | PASS    | 0 tracked `.env*`; gitleaks in CI |
 
 ## Database State
 
@@ -123,8 +139,7 @@ None.
 
 ## Exact Resume Point
 
-No task is in progress. When the next one starts: fill this file in, create the feature branch
-from `develop`, commit an initial checkpoint, and open a Draft PR before the long work begins.
+Open the PR into `develop`, wait for the four required checks, squash-merge, verify staging.
 
 ## Resume Verification
 
@@ -134,3 +149,36 @@ from `develop`, commit an initial checkpoint, and open a Draft PR before the lon
 4. `gh pr list --head feat/september-child-experience` — a Draft PR may exist;
 5. `npx supabase migration list --linked` only if a migration was in flight;
 6. `gh run list --branch develop --limit 3` before assuming a deployment is needed.
+
+## Findings — the 1ère maternelle interpretation, stated so it can be argued with
+
+**`before-4` is right, and it is a floor rather than a bracket.** The programme's bands are
+developmental, not ages: each is worded « ou dès que les apprentissages précédents ont pu être
+observés ». 1ère maternelle maps to Petite Section, where children are three turning four, so
+« à aborder avant 4 ans » is the band whose learning the year is _introducing_.
+
+**The structural difference from 3ème maternelle**: `before-4` is the **earliest** band, so this
+level has no earlier band to draw on. The rule that a lesson may use its own band or an earlier
+one gives 3ème three bands to reinvest from and 1ère exactly one. Every objective a 1ère lesson
+touches is one it is introducing.
+
+**116 objectives over 189 days, against 162 for 3ème.** Fewer objectives across the same year is
+the correct shape, not a gap to fill: a three-year-old learns by repetition, so the plan should
+buy revisits with the spare days rather than invent objectives.
+
+**Ten objectives are shared with a later band** (`LANG-S01-C01-O02`, `MATH-S01-C01-O05` and
+eight others). They are introduced here and deepened in 2ème/3ème; the plan schedules them, and
+the later levels' plans already treat them as their own.
+
+## A defect this work exposed
+
+Regenerating the **3ème** plan did not reproduce the committed file. The Week 1 review had me
+correct `LANG-S02-C03-O15`'s pacing **by editing the generated JSON directly**, so the generator
+still held the old values and would have silently reverted them the next time anyone ran it.
+That is precisely the failure ADR-028 exists to prevent, and I caused it.
+
+Fixed at the source: the objective's day moved to 9 in `levels/maternelle-3.ts`, and a
+`cadenceOverrides` field records that this one objective is periodic inside a daily domain. The
+regenerated plan now differs from the committed one **only** on that objective's derived fields
+(`reinforceUntilDay`, `consolidateByDay`, `plannedRevisits`), which my hand edit had left stale.
+Every one of the other 161 entries is identical.

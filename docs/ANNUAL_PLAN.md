@@ -7,6 +7,34 @@ Decision: ADR-040. It is **pacing, never content**: no lesson text lives here.
 - **The generator (kept for audit):** `tools/annual-plan/build.ts`
 - **The report:** `npm run coverage:report`
 
+## Two levels, two shapes
+
+|                               | 1ère maternelle               | 3ème maternelle           |
+| ----------------------------- | ----------------------------- | ------------------------- |
+| Age band                      | `before-4` (Petite Section)   | `from-5` (Grande Section) |
+| Objectives in the band        | **116**                       | **162**                   |
+| Earlier band to reinvest from | **none** — it is the earliest | two                       |
+| September introduces          | 24, the last on day 13        | 36                        |
+| Periods introducing nothing   | P6                            | P6                        |
+
+The band mapping is declared in `content/curriculum/<curriculum>/curriculum.json` and is a Teka
+Edu interpretation: the official bands are developmental (« ou dès que les apprentissages
+précédents ont pu être observés »), not ages, and the programme does not name Congolese classes.
+
+**Fewer objectives is not a gap.** 1ère maternelle spends the same 189 days on 116 objectives
+rather than 162, and the spare days buy repetition — 904 planned objective-passages, 4.8 a day.
+A three-year-old learns by meeting the same thing again, so the year is built to return rather
+than to advance.
+
+**The generator is one engine.** `tools/annual-plan/build.ts` holds the allocation;
+`tools/annual-plan/levels/<level>.ts` holds the judgements — the band, the period focus, the
+hand-allocated first month, the cadence per domain and the objectives a home cannot carry.
+Run it with `--level=`. Never edit the generated plan by hand: it was done once, and the next
+regeneration would have silently reverted it.
+
+`npm run plan:report -- --level=<id>` answers the question a month has to pass before it is
+written: does the corpus fit the year without bunching, and is anything taught once and forgotten?
+
 ## Why it exists
 
 A month of lessons written without a year in view drifts. Counting gets taught in four different
