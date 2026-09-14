@@ -37,9 +37,9 @@ and audio has an architecture with an honest account of what can and cannot be r
 
 ## Last Checkpoint
 
-2026-09-14 — branch from `develop` at `11c8f6c`. Resume protocol run: clean tree, no open PRs,
-staging green at `11c8f6c`. Confirmed three levels exist in `content/education/levels.json` and
-only `maternelle-3` has a programme and an annual plan.
+2026-09-14 — M1 to M6 done: home screen and level routes, visual pass, motion system, audio
+architecture, extended report. 210 unit tests and 27 E2E tests pass. Next: documentation, full
+suite, PR ready.
 
 ## Scope
 
@@ -69,10 +69,23 @@ only `maternelle-3` has a programme and an annual plan.
 ## Completed
 
 - [x] Resume protocol; state verified against the repository and the cloud
+- [x] Checkpoint commit, push, **Draft PR #28**
+- [x] **M1** home screen with the three classes; `/maternelle/<1|2|3>/…` routes; the level is a
+      parameter everywhere, no component assumes 3ème maternelle; an unwritten class says so and
+      never borrows another's lessons
+- [x] **M2** visual pass: bigger pictures that grow with the screen, larger targets, roomier
+      child surface, the two zones kept
+- [x] **M4** motion system in one stylesheet — rise, pop, nudge, attention — all disabled by
+      `prefers-reduced-motion`, none required to use an activity
+- [x] Child screen is now a real modal `<dialog>`: the parent's navigation is inert behind it,
+      so a mis-tap cannot end the activity (a test proves the home link is unclickable)
+- [x] **M5** audio architecture: `AudioAsset`, registry list, text narration, a listen control
+      that appears only when a recording exists — **zero assets, deliberately**
+- [x] **M6** `npm run media:report` now covers illustrations, audio, motion and class availability
 
 ## In Progress
 
-- [ ] M1 — level-aware routing and the home screen
+- [ ] M8 — documentation, full validation, PR ready, staging
 
 ## Remaining
 
@@ -85,19 +98,19 @@ only `maternelle-3` has a programme and an annual plan.
 
 ## Validation State
 
-| Check              | Result | At                                         |
-| ------------------ | ------ | ------------------------------------------ |
-| format             | PASS   | working tree                               |
-| lint               | PASS   | working tree — 0 warnings                  |
-| typecheck          | PASS   | working tree                               |
-| unit tests         | PASS   | working tree — 207 tests                   |
-| content validation | PASS   | working tree — 21 files                    |
-| database tests     | PASS   | working tree — 144 pgTAP assertions        |
-| build              | PASS   | working tree                               |
-| E2E                | PASS   | working tree — 20 tests                    |
-| Docker             | PASS   | CI at `27e9054` — both images              |
-| secret scans       | PASS   | working tree — no leaks, 0 tracked `.env*` |
-| staging            | PASS   | `27e9054` deployed, 20 E2E against it      |
+| Check              | Result  | At                                |
+| ------------------ | ------- | --------------------------------- |
+| format             | PASS    | working tree                      |
+| lint               | PASS    | working tree                      |
+| typecheck          | PASS    | working tree                      |
+| unit tests         | PASS    | working tree — 210 tests          |
+| content validation | PASS    | working tree — 21 files           |
+| database tests     | STALE   | schemas changed; to re-run        |
+| build              | PASS    | working tree                      |
+| E2E                | PASS    | working tree — 27 tests           |
+| Docker             | NOT RUN | left to CI                        |
+| secret scans       | NOT RUN | before the PR is marked ready     |
+| staging            | STALE   | not deployed from this branch yet |
 
 ## Database State
 
@@ -129,8 +142,8 @@ None.
 
 ## Exact Resume Point
 
-Commit this checkpoint, push, open the Draft PR, then start M1: make the level explicit in
-routing and in `lib/programme/session-view.ts`, and build the home screen.
+Write ADR-044 (home and levels), ADR-045 (motion) and ADR-046 (audio), update the
+documentation, re-run the database tests, then the full suite and mark PR #28 ready.
 
 ## Resume Verification
 

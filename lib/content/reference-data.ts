@@ -45,7 +45,7 @@ import type {
   SchoolLevel,
 } from "@/domain/curriculum/types";
 import { type TeachingText, checkTexts } from "@/domain/lessons/texts";
-import { type MediaAsset, checkMedia } from "@/domain/media/types";
+import { type AudioAsset, type MediaAsset, checkAudio, checkMedia } from "@/domain/media/types";
 import type { Lesson, Material } from "@/domain/lessons/types";
 import { type AnnualPlan, checkAnnualPlan } from "@/domain/programme/annual-plan";
 import { checkLessons, checkProgramme } from "@/domain/programme/validation";
@@ -234,6 +234,8 @@ export type ReferenceData = {
   texts: readonly TeachingText[];
   /** Pictures the child looks at, by stable id (ADR-042). */
   media: readonly MediaAsset[];
+  /** Recordings, where sound itself is the point (ADR-046). Empty until a voice exists. */
+  audio: readonly AudioAsset[];
 };
 
 export class ReferenceDataError extends Error {
@@ -274,6 +276,7 @@ export function checkReferenceData(data: ReferenceData): string[] {
     ),
     ...checkTexts(data.texts, data.lessons),
     ...checkMedia(data.media, data.lessons),
+    ...checkAudio(data.audio, data.texts),
     ...data.annualPlans.flatMap((plan) =>
       checkAnnualPlan(
         plan,
@@ -308,6 +311,7 @@ export function parseReferenceData(files: readonly ReferenceContentFile[]): Refe
   const annualPlans: AnnualPlan[] = [];
   const texts: TeachingText[] = [];
   const media: MediaAsset[] = [];
+  const audio: AudioAsset[] = [];
   const nationals: z.output<typeof nationalCalendarFileSchema>[] = [];
   for (const file of files) {
     switch (file.kind) {
@@ -406,7 +410,10 @@ export function parseReferenceData(files: readonly ReferenceContentFile[]): Refe
       }
       case "media": {
         const parsed = parse(file);
-        if (parsed) media.push(...parsed.assets);
+        if (parsed) {
+          media.push(...parsed.assets);
+          audio.push(...parsed.audio);
+        }
         break;
       }
     }
@@ -431,6 +438,7 @@ export function parseReferenceData(files: readonly ReferenceContentFile[]): Refe
     annualPlans,
     texts,
     media,
+    audio,
   };
   const ruleProblems = checkReferenceData(data);
   if (ruleProblems.length > 0) throw new ReferenceDataError(ruleProblems);

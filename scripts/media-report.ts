@@ -133,11 +133,30 @@ for (const row of opportunities.slice(0, 8)) {
 }
 if (opportunities.length > 8) console.log(`      … et ${opportunities.length - 8} autres`);
 
-console.log("\nBesoin de son (aucun n’est bloquant : l’adulte lit)");
+console.log("\nSon (aucun n’est bloquant : l’adulte lit — ADR-046)");
 for (const need of ["useful", "not-needed"] as const) {
   console.log(`  ${need.padEnd(12)} ${pad(count((row) => row.audio === need))} activités`);
 }
-console.log(`  fichiers audio présents : 0`);
+const withAudio = data.texts.filter((text) => text.audioId !== null).length;
+console.log(`  enregistrements disponibles : ${data.audio.length}`);
+console.log(`  textes avec narration       : ${withAudio} / ${data.texts.length}`);
+if (data.audio.length === 0) {
+  console.log("  → aucune voix enregistrée : c’est une décision, pas un oubli");
+  console.log("    (docs/AUDIO_GUIDELINES.md : la liste des mots à enregistrer)");
+}
+
+console.log("\nAnimation (ADR-045)");
+console.log("  entrées de cartes, confirmation, « regarde bien », mise en avant");
+console.log("  toutes désactivées par prefers-reduced-motion, aucune n’est nécessaire pour jouer");
+
+console.log("\nClasses");
+for (const level of data.levels) {
+  const programme = data.programmes.find((candidate) => candidate.levelId === level.id);
+  const lessons = data.lessons.filter((lesson) => lesson.levelIds.includes(level.id)).length;
+  console.log(
+    `  ${level.name.padEnd(18)} ${programme === undefined ? "en préparation" : `${lessons} leçons`}`,
+  );
+}
 
 console.log("\nÉcran et interaction");
 console.log(`  sans écran            ${pad(count((row) => row.offScreen))}`);

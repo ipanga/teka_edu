@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { SessionDay } from "@/lib/programme/session-view";
 import { ActivityRenderer } from "./ActivityRenderer";
 
@@ -83,7 +83,7 @@ const DOMAIN_LABEL: Record<string, string> = {
   "TIME-SPACE": "Temps et espace",
 };
 
-export function SessionRunner({ session }: { session: SessionDay }) {
+export function SessionRunner({ session, levelSlug }: { session: SessionDay; levelSlug: string }) {
   const activities = session.steps.flatMap((step) =>
     step.activities.map((activity) => ({ ...activity, step })),
   );
@@ -236,7 +236,7 @@ export function SessionRunner({ session }: { session: SessionDay }) {
             Finalement, on continue
           </button>
           <Link
-            href={`/seance/${session.instructionalDay}/observation`}
+            href={`/maternelle/${levelSlug}/seance/${session.instructionalDay}/observation`}
             className="rounded-2xl bg-emerald-700 px-5 py-3 text-lg font-semibold text-white"
           >
             Noter comment ça s’est passé
@@ -266,13 +266,13 @@ export function SessionRunner({ session }: { session: SessionDay }) {
             Revoir la séance
           </button>
           <Link
-            href={`/seance/${session.instructionalDay}/observation`}
+            href={`/maternelle/${levelSlug}/seance/${session.instructionalDay}/observation`}
             className="rounded-2xl border-2 border-stone-300 px-5 py-3 text-lg font-medium"
           >
             Noter comment ça s’est passé
           </Link>
           <Link
-            href="/calendrier"
+            href={`/maternelle/${levelSlug}/calendrier`}
             className="rounded-2xl bg-emerald-700 px-5 py-3 text-lg font-semibold text-white"
           >
             Voir le calendrier
@@ -322,28 +322,12 @@ export function SessionRunner({ session }: { session: SessionDay }) {
     );
   }
 
-  // ---- the child's screen, filling the phone -------------------------------------------------
+  // ---- the child's screen ---------------------------------------------------------------------
+  // A modal dialog, so the browser makes the rest of the page inert: the parent's navigation in
+  // the page header is genuinely out of reach rather than merely covered. Nothing the parent
+  // reads is rendered at all while it is open.
   if (childView) {
-    return (
-      <section
-        className="fixed inset-0 z-50 flex flex-col gap-6 overflow-y-auto bg-[var(--background)] px-5 py-6"
-        aria-label="Écran de l’enfant"
-      >
-        <p className="text-center text-2xl leading-relaxed font-semibold sm:text-3xl">
-          « {activity.childInstruction} »
-        </p>
-        <div className="flex-1">
-          <ActivityRenderer activity={activity} />
-        </div>
-        <button
-          type="button"
-          onClick={() => setChildView(false)}
-          className="self-center rounded-2xl border-2 border-stone-300 px-6 py-3 text-base font-medium"
-        >
-          Revenir au guide du parent
-        </button>
-      </section>
-    );
+    return <ChildScreen open onClose={() => setChildView(false)} activity={activity} />;
   }
 
   // ---- the normal, two-zone screen -----------------------------------------------------------
@@ -391,7 +375,7 @@ export function SessionRunner({ session }: { session: SessionDay }) {
       </h2>
 
       {/* ---- the child's part ---------------------------------------------------------------- */}
-      <div className="flex flex-col gap-4 rounded-3xl bg-white px-5 py-5 shadow-sm">
+      <div className="teka-rise flex flex-col gap-4 rounded-3xl bg-white px-5 py-5 shadow-sm">
         <p className="text-sm font-semibold tracking-wide text-emerald-800 uppercase">
           La part de l’enfant
         </p>
@@ -489,6 +473,57 @@ export function SessionRunner({ session }: { session: SessionDay }) {
         </button>
       </div>
     </section>
+  );
+}
+
+/**
+ * The child's surface, filling the device. No guidance, no English, no home control: the only way
+ * out is one small deliberate button, because a mis-tap must not end a five-year-old's activity.
+ */
+function ChildScreen({
+  open,
+  onClose,
+  activity,
+}: {
+  open: boolean;
+  onClose: () => void;
+  activity: SessionDay["steps"][number]["activities"][number];
+}) {
+  const dialog = useRef<HTMLDialogElement | null>(null);
+
+  useEffect(() => {
+    const element = dialog.current;
+    if (element === null) return;
+    if (open && !element.open) element.showModal();
+    if (!open && element.open) element.close();
+  }, [open]);
+
+  return (
+    <dialog
+      ref={dialog}
+      aria-label="Écran de l’enfant"
+      onCancel={(event) => {
+        // Escape belongs to the parent, not to a child leaning on the keyboard.
+        event.preventDefault();
+      }}
+      className="teka-rise h-full max-h-none w-full max-w-none bg-[var(--background)] p-0 backdrop:bg-stone-900/40"
+    >
+      <div className="flex h-full flex-col gap-6 overflow-y-auto px-5 py-6">
+        <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-6">
+          <p className="text-center text-2xl leading-relaxed font-semibold sm:text-3xl lg:text-4xl">
+            « {activity.childInstruction} »
+          </p>
+          <div className="flex-1">{open && <ActivityRenderer activity={activity} />}</div>
+        </div>
+        <button
+          type="button"
+          onClick={onClose}
+          className="mx-auto rounded-xl border-2 border-stone-300 px-5 py-2 text-sm font-medium text-stone-500"
+        >
+          Revenir au guide du parent
+        </button>
+      </div>
+    </dialog>
   );
 }
 

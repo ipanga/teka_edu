@@ -73,9 +73,14 @@ test("daily programme ships with the release and is deterministic", async ({ req
   expect(holiday.sessions).toEqual([]);
 });
 
-test("home page is served in French and offers the day's session", async ({ page }) => {
+test("home page is served in French and offers the classes", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator("html")).toHaveAttribute("lang", "fr");
+  await expect(page.getByRole("heading", { name: "Teka Edu" })).toBeVisible();
+  await expect(page.getByRole("link", { name: /3ème maternelle/ })).toBeVisible();
+
+  // …and the class that has lessons offers today's session.
+  await page.goto("/maternelle/3");
   await expect(page.getByRole("heading", { name: "Aujourd’hui" })).toBeVisible();
   await expect(page.getByRole("link", { name: /Commencer la leçon/ })).toBeVisible();
 });

@@ -14,7 +14,7 @@ import type {
   SuccessExample,
 } from "@/domain/curriculum/types";
 import { LESSON_STATUSES } from "@/domain/lessons/review";
-import { MEDIA_KINDS, type MediaAsset } from "@/domain/media/types";
+import { AUDIO_KINDS, type AudioAsset, MEDIA_KINDS, type MediaAsset } from "@/domain/media/types";
 import type { TeachingText } from "@/domain/lessons/texts";
 import {
   ACTIVITY_MODES,
@@ -132,6 +132,23 @@ export const mediaRegistryFileSchema = z.strictObject({
       }) satisfies z.ZodType<MediaAsset>,
     )
     .min(1),
+  // Sound, where sound is the point. Empty until a trustworthy recording exists: a synthetic
+  // voice teaching French pronunciation is worse than no voice at all (ADR-046).
+  audio: z
+    .array(
+      z.strictObject({
+        id: slug,
+        kind: z.enum(AUDIO_KINDS),
+        file: z.string().regex(/^[a-z0-9-]+\/[a-z0-9-]+\.(mp3|m4a|ogg)$/, {
+          message: "must be <folder>/<id>.<mp3|m4a|ogg>",
+        }),
+        transcript: french,
+        seconds: z.number().int().min(1).max(600),
+        origin: z.enum(CONTENT_ORIGINS),
+        provenance: french,
+      }) satisfies z.ZodType<AudioAsset>,
+    )
+    .default([]),
 });
 
 // ---- content/texts/<level>.json --------------------------------------------------------------
@@ -148,6 +165,7 @@ export const teachingTextsFileSchema = z.strictObject({
         provenance: french,
         minutes: z.number().int().min(1).max(10),
         illustrationId: slug.nullable(),
+        audioId: slug.nullable(),
       }) satisfies z.ZodType<TeachingText>,
     )
     .min(1),

@@ -25,6 +25,11 @@ export type TeachingText = {
    * somewhere to rest their eyes, and it is the first thing a parent can point at afterwards.
    */
   illustrationId: string | null;
+  /**
+   * A recording of the text read aloud, by audio id, or null. Null is the normal case and not a
+   * gap: the parent reading is the design (ADR-046).
+   */
+  audioId: string | null;
 };
 
 export function findText(texts: readonly TeachingText[], id: string): TeachingText | undefined {
