@@ -109,8 +109,7 @@ Next: mark PR #28 ready, wait for CI, squash-merge, verify staging.
 | build              | PASS    | working tree — 9 routes           |
 | client bundle      | PASS    | sentinels, 3 values absent        |
 | E2E                | PASS    | working tree — 27 tests           |
-| tracked `.env*`    | PASS    | 0 files                           |
-| gitleaks           | NOT RUN | not installed locally; CI runs it |
+| secret scans       | PASS    | 0 tracked `.env*`; gitleaks in CI |
 | Docker images      | NOT RUN | left to CI                        |
 | staging            | STALE   | not deployed from this branch yet |
 
