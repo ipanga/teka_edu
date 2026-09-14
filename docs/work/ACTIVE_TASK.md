@@ -10,35 +10,31 @@
 
 ## Task
 
-Make an independent AI-assisted pedagogical review the active development gate, so the
-absence of a preschool teacher stops blocking curriculum work — without ever implying a teacher
-approved anything (ADR-047).
+None in progress.
 
 ## Objective
 
-Unblock 1ère/2ème maternelle and later months, and make `approved` say which kind of review
-closed the gate.
+The pedagogical review policy (ADR-047) is merged. No new task has been started.
 
 ## Status
 
-`in_progress`
+`planned`
 
 ## Branch
 
-`docs/pedagogical-review-policy`
+`develop` — no feature branch open.
 
 ## Base Branch
 
-`develop` at `c820dc5`
+`develop`
 
 ## Started
 
-2026-09-15
+—
 
 ## Last Checkpoint
 
-2026-09-15 — ADR-047 written, schema/DB/tests/docs updated, full local suite green.
-Next: PR, CI, merge.
+2026-09-15 — reset after PR #33 merged as `d80d7ea` and verified on live staging.
 
 ## Scope
 
@@ -46,12 +42,10 @@ To be filled in when the next task begins.
 
 ## Out of Scope
 
-- **October**, and 1ère/2ème maternelle content.
-- Approving any lesson; ISSUE-017 stays open.
-- Scores, points, rewards, dashboards, adaptive engines.
-- A child account or profile system.
-- Paid anything: no TTS, CDN, stock imagery, storage.
-- Production, `main`.
+- October, and 2ème maternelle content.
+- Marking any lesson `approved` before its batch has passed the review gate.
+- Claiming a human-teacher review: none has happened (ISSUE-017, open and non-blocking).
+- Paid anything; production; `main`.
 
 ## Product Decisions
 
@@ -61,48 +55,45 @@ To be filled in when the next task begins.
 - The app opens on a class; a class with no lessons says so and borrows nothing (ADR-044).
 - Animation is decoration, always off under `prefers-reduced-motion` (ADR-045).
 - The parent is the voice; no synthesised speech for a word a child copies (ADR-046).
-- **An activity claims only what it actually works.** When one instance of a repeated ritual is
-  mis-mapped, audit the whole month, and never repair a mapping by changing the pedagogy.
-- **A reviewer must see what they are asked to judge**: the review package quotes every story,
-  rhyme and question in full, and never truncates official text.
-- The screen guides; it never replaces speaking, moving or handling real things.
+- **The pedagogical gate is an independent review, not necessarily a human one** (ADR-047).
+  AI-assisted review is the active development gate; a teacher's is optional future assurance.
+  Every approval records which kind it was. Never write "teacher approved" unless one did.
+- An activity claims only what it actually works; a mis-mapped ritual means auditing the month.
+- A reviewer must see what they are asked to judge: generation fails if the package cannot.
 - Never claim the app observed what it cannot see.
 
 ## Completed
 
-- [x] **ADR-047** written; ADR-035 marked _refined by_, its original text preserved
-- [x] `reviewKind` (`ai-assisted` | `human-teacher`) and `outcome` on the review record — the
-      whole schema change — with a check that refuses a tool name as a human teacher
-- [x] Database mirror + migration `20260915090000_review_kind.sql`, constraint extended; 147 pgTAP
-- [x] Review package generation **fails** on an unquoted text or a bullet that promises nothing
-- [x] Two tests that asserted "every lesson is `review`" rewritten as invariants
-- [x] ISSUE-017 reclassified: open, **non-blocking**, future external assurance; history kept
-- [x] Active-policy wording updated in CLAUDE.md, README, PROJECT_STATUS, CONTENT_QUALITY_GATE,
-      CONTENT_AUTHORING, PEDAGOGICAL_REVIEW, EDUCATIONAL_MODEL, DAILY_PROGRAMME,
-      REAL_SESSION_TESTING, the shipped class page and the observation form
+- [x] Phase 3A — September programme and the parent session (archived)
+- [x] Session duration policy and the resumable-work protocol (archived)
+- [x] Phase 3B — visuals, interaction and real-session testing (archived)
+- [x] Phase 3C — the session a parent and child can sit down and do (archived)
 
 ## In Progress
 
-- [ ] PR, CI, squash-merge
+- [ ] Nothing.
 
 ## Remaining
 
-- [ ] Report; then 1ère maternelle as a separate task
+**Next task (not started):** 1ère maternelle — the full 2026–2027 annual progression first,
+then September daily lessons only. Then the review package and the gate. Not October, not
+2ème maternelle.
 
 ## Validation State
 
-| Check              | Result  | At                                |
-| ------------------ | ------- | --------------------------------- |
-| format             | PASS    | working tree                      |
-| lint               | PASS    | working tree                      |
-| typecheck          | PASS    | working tree                      |
-| unit tests         | PASS    | working tree — 217 tests          |
-| content validation | PASS    | working tree — 21 files           |
-| database tests     | PASS    | fresh reset — 147 assertions      |
-| build              | PASS    | working tree                      |
-| E2E                | PASS    | working tree — 27 tests           |
-| Docker             | NOT RUN | left to CI                        |
-| secret scans       | PASS    | 0 tracked `.env*`; gitleaks in CI |
+| Check              | Result | At                                         |
+| ------------------ | ------ | ------------------------------------------ |
+| format             | PASS   | working tree                               |
+| lint               | PASS   | working tree — 0 warnings                  |
+| typecheck          | PASS   | working tree                               |
+| unit tests         | PASS   | working tree — 207 tests                   |
+| content validation | PASS   | working tree — 21 files                    |
+| database tests     | PASS   | working tree — 144 pgTAP assertions        |
+| build              | PASS   | working tree                               |
+| E2E                | PASS   | working tree — 20 tests                    |
+| Docker             | PASS   | CI at `27e9054` — both images              |
+| secret scans       | PASS   | working tree — no leaks, 0 tracked `.env*` |
+| staging            | PASS   | `27e9054` deployed, 20 E2E against it      |
 
 ## Database State
 
@@ -132,7 +123,8 @@ None.
 
 ## Exact Resume Point
 
-Open the PR into `develop`, wait for the four required checks, squash-merge.
+No task is in progress. When the next one starts: fill this file in, create the feature branch
+from `develop`, commit an initial checkpoint, and open a Draft PR before the long work begins.
 
 ## Resume Verification
 
