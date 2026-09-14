@@ -113,7 +113,7 @@ that first takes the day past its halfway mark: the parent can stop there and fi
 Teka Edu is **reinforcement, not replacement**: the child's school day remains the main teaching,
 and the PNEM's own school week is 17h30. The range is enforced by `checkDailyBalance`, so content
 cannot quietly grow past it. Whether 35 minutes is right for a child after a full school day is
-still a question for the human reviewer.
+still a question for the pedagogical review.
 
 ### A known divergence: the DRC's own preschool programme
 

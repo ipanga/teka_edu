@@ -18,8 +18,8 @@ Read this file first in every session. It holds **stable context and working rul
 | `docs/CURRICULUM.md`                | Official objectives: sources, hierarchy, age bands, provenance, import     |
 | `docs/DAILY_PROGRAMME.md`           | Daily programme generator, scheduling rules and where each one comes from  |
 | `docs/CONTENT_AUTHORING.md`         | How to write lessons and activities, and the rules CI enforces             |
-| `docs/CONTENT_QUALITY_GATE.md`      | Lifecycle draft → review → approved; why AI content never self-approves    |
-| `docs/PEDAGOGICAL_REVIEW.md`        | Pre-review of the pilot week: rubric, findings, what a teacher must decide |
+| `docs/CONTENT_QUALITY_GATE.md`      | Lifecycle draft → review → approved; the review gate and its two kinds     |
+| `docs/PEDAGOGICAL_REVIEW.md`        | The review process, the register of reviews, and what each one decided     |
 | `docs/DRC_CURRICULUM_COMPARISON.md` | The DRC PNEM 2021 vs the French Cycle 1 programme, and the strategy        |
 | `docs/PHASE3_RENDERER_PLAN.md`      | Renderer families that Phase 3 should build                                |
 | `docs/ANNUAL_PLAN.md`               | The year's scope and sequence, and how coverage is proved                  |
@@ -206,7 +206,11 @@ feature/*  -> develop  -> main
 - Content lives in `content/` as structured data (JSON/YAML, Markdown where appropriate), never in components.
 - Every lesson and every activity traces to at least one official objective code, and separates what it **teaches** from what it **reinvests** (`docs/CONTENT_AUTHORING.md`).
 - Lessons and activities are always `teka-edu-created`; the database refuses to store one as official text.
-- **Content written with AI help stops at `status: "review"`.** Only a named human reviewer moves a lesson to `approved`, and the approval is bound to a digest of the exact text (ADR-035). Never mark content approved, "teacher validated" or "pedagogically certified" yourself, and never claim a review that has not happened.
+- **Content written with AI help stops at `status: "review"` until an independent review passes it** (ADR-035, refined by ADR-047). Never approve your own content, and never claim a review that has not happened.
+  - The **active development gate** is an AI-assisted pedagogical review of a generated Markdown package against the official programme, performed outside the product (today: ChatGPT, submitted by the owner).
+  - **A human teacher review is optional future assurance**, not a precondition for authoring anything.
+  - Every approval records `reviewKind` (`ai-assisted` | `human-teacher`) and an `outcome`, and is bound to a digest of the exact text.
+  - Say _AI-assisted pedagogical review_ or _reviewed against authoritative curriculum references_. Never _teacher approved_, _certified_ or _validated by an educator_ unless a named teacher actually did it.
 - Every material lists `alternatives` (what to use instead) and, where relevant, a `safetyNote`. An activity must never depend on one particular object.
 - The daily programme is generated from an authored rhythm + tracks, keyed by **instructional-day number** (ADR-033). Scheduling rules are labelled OFFICIAL / OFFICIAL GUIDANCE / TEKA EDU in `docs/DAILY_PROGRAMME.md`.
 - **A day is 30 to 45 minutes** (about 35), one block with a pause point (ADR-039). The range is flexibility, not a target: a light revision day may be 30–35, a rich story or consolidation day may approach 45. Never pad a day to reach the maximum or trim one to reach the minimum. The validator checks both the generated day and the range a programme declares for itself.
@@ -222,11 +226,12 @@ feature/*  -> develop  -> main
 
   ```text
   curriculum → year progression → period objectives → weekly objectives
-    → daily lessons → schema validation → pedagogical (human) review
+    → daily lessons → schema validation → review package → independent pedagogical review
+    → corrections → validation again → accepted content
   ```
 
 - Never generate the whole school year in one pass. Pilot first: the first 2 weeks per class, reviewed, before scaling (Plan §28).
-- LLM-drafted content must pass schema validation and human review before it is committed.
+- LLM-drafted content must pass schema validation, and an independent pedagogical review before it is treated as accepted (ADR-047). Review a representative batch — a week or a month — never the whole year at once.
 - Commit only media the project is licensed to use. The repository is **public**.
 
 ## Child UX rules

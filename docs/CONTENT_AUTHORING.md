@@ -101,7 +101,7 @@ A lesson is one coherent unit for one level, small enough for a home session.
 }
 ```
 
-**A lesson you write stops at `review`.** Only a named human reviewer moves it to `approved`, and
+**A lesson you write stops at `review`.** Only an independent pedagogical review moves it to `approved`, and the record says which kind it was (ADR-047), and
 the approval records who, their role, the date and a digest of the exact text
 ([`CONTENT_QUALITY_GATE.md`](CONTENT_QUALITY_GATE.md)). Editing approved content lapses the
 approval, on purpose.
@@ -202,6 +202,9 @@ not advice.
 
 ## Review before a child sees it
 
-`status` starts at `review`. Pedagogical review by a person is still required before content is
-marked `published` (Plan §28, §35); the pilot week is written but **not yet reviewed by a
-teacher**. LLM-drafted material follows the same path: schema validation, then human review.
+`status` starts at `review`. An **independent pedagogical review** is required before content is
+treated as accepted (ADR-035, refined by ADR-047). The active gate is an AI-assisted review of a
+generated Markdown package against the official programme; a review by a person who teaches this
+age is a stronger claim and optional future assurance. September is written and corrected but has
+not completed the gate. LLM-drafted material follows the same path, and an approval always
+records which kind of review it was.

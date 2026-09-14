@@ -7,45 +7,49 @@ Short architecture/product decision records (ADRs). They cover decisions future 
 - Status values: `Proposed`, `Accepted`, `Superseded`, `Deprecated`.
 - "Plan §N" refers to `TEKA_EDU_PROJECT_PLAN.md`. Details stay there and are not copied here.
 
-| ADR | Title                                                                                   | Status                 |
-| --- | --------------------------------------------------------------------------------------- | ---------------------- |
-| 001 | French is the default product language                                                  | Accepted               |
-| 002 | No runtime LLM dependency in V1                                                         | Accepted               |
-| 003 | French Cycle 1 curriculum is the academic reference                                     | Accepted               |
-| 004 | Data-driven instructional calendar and lesson numbering                                 | Accepted               |
-| 005 | Educational content is versioned, validated data                                        | Accepted               |
-| 006 | Local-first V1 with storage behind repository interfaces                                | Accepted               |
-| 007 | Single Next.js / TypeScript PWA                                                         | Accepted               |
-| 008 | Git branching: feature/* → develop → main                                               | Accepted               |
-| 009 | Vercel hosting with a portable standard Dockerfile                                      | Superseded by 012, 013 |
-| 010 | Positive, observation-based assessment                                                  | Accepted               |
-| 011 | Four-file project documentation system                                                  | Accepted               |
-| 012 | Docker/OCI is the deployment format                                                     | Accepted               |
-| 013 | Vercel is the initial application host (container via `Dockerfile.vercel`)              | Accepted               |
-| 014 | Supabase is the managed PostgreSQL/backend platform                                     | Accepted               |
-| 015 | DEV and PROD use separate Supabase projects                                             | Accepted               |
-| 016 | GitHub Actions is the authoritative CI/CD orchestrator                                  | Accepted               |
-| 017 | Database changes are migration-only                                                     | Accepted               |
-| 018 | Application runtime remains stateless                                                   | Accepted               |
-| 019 | Canonical curriculum stays in Git; Supabase holds user data                             | Accepted               |
-| 020 | Phase 0 toolchain baseline                                                              | Accepted               |
-| 021 | Centralised, validated environment configuration                                        | Accepted               |
-| 022 | Branch protection with GitHub Rulesets; merge strategy                                  | Accepted               |
-| 023 | No `.env*` files in the repository                                                      | Accepted               |
-| 024 | Supabase projects in Paris (eu-west-3); credentials in Keychain and GitHub environments | Accepted               |
-| 025 | Runtime configuration for container deployments                                         | Accepted               |
-| 026 | Vercel project configuration: Hobby, Preview as staging, no Git connection              | Accepted               |
-| 027 | Free tiers only during the development phase ($0/month)                                 | Accepted               |
-| 028 | Reference data: canonical in Git, mirrored into PostgreSQL by generated migrations      | Accepted               |
-| 029 | School calendar model: civil dates, data-driven holidays and exceptions                 | Accepted               |
-| 030 | Education hierarchy and lightweight curriculum versioning                               | Accepted               |
-| 031 | Official objectives imported verbatim, with provenance and age bands                    | Accepted               |
-| 032 | One lesson/activity model, with typed payloads and a kind registry                      | Accepted               |
-| 033 | Deterministic daily programme: authored rhythm and tracks, keyed by instructional day   | Accepted               |
-| 034 | Home sessions adapt classroom rules; the DRC preschool programme diverges               | Accepted               |
-| 035 | Content quality gate: AI-assisted lessons never approve themselves                      | Accepted               |
-| 036 | Renderer families: ten interactions for fifteen activity kinds                          | Accepted               |
-| 037 | Curriculum strategy in the DRC: keep French Cycle 1 now, prepare curriculum profiles    | Proposed               |
+| ADR | Title                                                                                   | Status                   |
+| --- | --------------------------------------------------------------------------------------- | ------------------------ |
+| 001 | French is the default product language                                                  | Accepted                 |
+| 002 | No runtime LLM dependency in V1                                                         | Accepted                 |
+| 003 | French Cycle 1 curriculum is the academic reference                                     | Accepted                 |
+| 004 | Data-driven instructional calendar and lesson numbering                                 | Accepted                 |
+| 005 | Educational content is versioned, validated data                                        | Accepted                 |
+| 006 | Local-first V1 with storage behind repository interfaces                                | Accepted                 |
+| 007 | Single Next.js / TypeScript PWA                                                         | Accepted                 |
+| 008 | Git branching: feature/* → develop → main                                               | Accepted                 |
+| 009 | Vercel hosting with a portable standard Dockerfile                                      | Superseded by 012, 013   |
+| 010 | Positive, observation-based assessment                                                  | Accepted                 |
+| 011 | Four-file project documentation system                                                  | Accepted                 |
+| 012 | Docker/OCI is the deployment format                                                     | Accepted                 |
+| 013 | Vercel is the initial application host (container via `Dockerfile.vercel`)              | Accepted                 |
+| 014 | Supabase is the managed PostgreSQL/backend platform                                     | Accepted                 |
+| 015 | DEV and PROD use separate Supabase projects                                             | Accepted                 |
+| 016 | GitHub Actions is the authoritative CI/CD orchestrator                                  | Accepted                 |
+| 017 | Database changes are migration-only                                                     | Accepted                 |
+| 018 | Application runtime remains stateless                                                   | Accepted                 |
+| 019 | Canonical curriculum stays in Git; Supabase holds user data                             | Accepted                 |
+| 020 | Phase 0 toolchain baseline                                                              | Accepted                 |
+| 021 | Centralised, validated environment configuration                                        | Accepted                 |
+| 022 | Branch protection with GitHub Rulesets; merge strategy                                  | Accepted                 |
+| 023 | No `.env*` files in the repository                                                      | Accepted                 |
+| 024 | Supabase projects in Paris (eu-west-3); credentials in Keychain and GitHub environments | Accepted                 |
+| 025 | Runtime configuration for container deployments                                         | Accepted                 |
+| 026 | Vercel project configuration: Hobby, Preview as staging, no Git connection              | Accepted                 |
+| 027 | Free tiers only during the development phase ($0/month)                                 | Accepted                 |
+| 028 | Reference data: canonical in Git, mirrored into PostgreSQL by generated migrations      | Accepted                 |
+| 029 | School calendar model: civil dates, data-driven holidays and exceptions                 | Accepted                 |
+| 030 | Education hierarchy and lightweight curriculum versioning                               | Accepted                 |
+| 031 | Official objectives imported verbatim, with provenance and age bands                    | Accepted                 |
+| 032 | One lesson/activity model, with typed payloads and a kind registry                      | Accepted                 |
+| 033 | Deterministic daily programme: authored rhythm and tracks, keyed by instructional day   | Accepted                 |
+| 034 | Home sessions adapt classroom rules; the DRC preschool programme diverges               | Accepted                 |
+| 035 | Content quality gate: AI-assisted lessons never approve themselves                      | Accepted, refined by 047 |
+| 036 | Renderer families: ten interactions for fifteen activity kinds                          | Accepted                 |
+| 037 | Curriculum strategy in the DRC: keep French Cycle 1 now, prepare curriculum profiles    | Proposed                 |
+| 044 | The application opens on a class, and an empty class says so                            | Accepted                 |
+| 045 | Animation is decoration that can always be switched off                                 | Accepted                 |
+| 046 | Audio has an architecture and no recordings, on purpose                                 | Accepted                 |
+| 047 | The pedagogical gate is an independent review, not necessarily a human one              | Accepted                 |
 
 ---
 
@@ -853,6 +857,11 @@ a control.
 state that plainly. Approving content becomes a deliberate, reviewable commit: fixes, then the
 review block, generated together.
 
+> **Refined by ADR-047 (2026-09-15).** The rule that AI-assisted content never approves itself is
+> unchanged and is the whole point. What changed is _who_ the independent reviewer must be: a
+> human teacher is no longer the only one who can close the gate. The text above is kept as
+> written, because it records what was decided in Phase 2.5.
+
 ---
 
 ## ADR-036 — Renderer families: ten interactions for fifteen activity kinds
@@ -1296,3 +1305,59 @@ parent's voice from the start. When a native French speaker records the list, th
 with no code change. The risk accepted is that pronunciation quality currently depends on the
 parent — which is also true of every book read at home, and is stated plainly in the guidelines
 rather than papered over with a synthetic voice.
+
+---
+
+## ADR-047 — The pedagogical gate is an independent review, not necessarily a human one
+
+**Status:** Accepted · **Date:** 2026-09-15 · **Refines:** ADR-035 · **Decided by:** the product owner
+
+**Context:** ADR-035 built a gate with a specific shape: content drafted with a language model
+stops at `review`, and only a named human reviewer moves it to `approved`. The reasoning was
+sound — fluent, well-formatted content that nobody qualified has read must not reach a
+five-year-old — and it has already caught real defects.
+
+But the gate assumed an input the project does not have. **No preschool teacher is available to
+review Teka Edu**, and none is in prospect. The consequence was not a careful pause; it was a
+standstill: 88 September lessons frozen at `review`, 1ère and 2ème maternelle unable to start,
+and every phase report ending with the same blocked item. A gate that can never open is not a
+quality control. It is an outage.
+
+The Week 1 round showed there is a real alternative. The generated package was submitted to
+ChatGPT, which reviewed it against the official Cycle 1 programme and returned _accepted with
+modifications_ with 13 specific findings. Several were genuine and non-obvious — a daily ritual
+claiming an objective its own text rules out, an endurance objective attached to a stopping game,
+a week-one activity that quietly required reading. That is independent review doing its job. It
+is not equivalent to a teacher's judgement, and it must never be described as one.
+
+**Decision:** The gate stays; the reviewer no longer has to be human.
+
+- **The active development gate** is an independent pedagogical review of a generated Markdown
+  package against the official programme and authoritative references. Today that review is
+  performed by ChatGPT, outside the product, and submitted by the product owner.
+- **A human teacher review becomes optional future external assurance** — valuable before broad
+  school adoption or for difficult content, and no longer a precondition for authoring anything.
+- **Every approval records which kind of review it was.** `review.reviewKind` is `ai-assisted` or
+  `human-teacher`, alongside an `outcome` of `accepted` or `accepted-with-modifications`. This is
+  the whole schema change, and it exists because `approved` alone would otherwise be ambiguous:
+  a report, or one day an interface, could present an AI review as a teacher's. A check refuses
+  to record a review by an obvious tool name as `human-teacher`.
+- **`needs-revision` is not a status.** Content that needs revision stays at `review`, which is
+  already what that status means. Adding a third lifecycle would duplicate it.
+- **The package must contain what is being judged.** A review package that references a story,
+  rhyme or question it does not quote, or truncates official text, fails generation — the
+  reviewer cannot judge what they cannot see, and this failure already happened once.
+- **The vocabulary is fixed**: _AI-assisted pedagogical review_, _reviewed against authoritative
+  curriculum references_. Never _teacher approved_, _certified_, or _validated by an educator_
+  unless a named teacher actually did it.
+
+**Consequences:** curriculum development continues — 1ère maternelle, 2ème maternelle, later
+months — with each batch passing the gate before it is treated as accepted. The honest cost is
+that `approved` now carries a weaker guarantee than ADR-035 intended, which is precisely why the
+kind is stored next to it rather than left to prose. A teacher's review, when one becomes
+available, remains a strictly stronger claim and is recorded as such; it does not have to
+re-examine content the AI review already corrected, but it may.
+
+What this does **not** change: no LLM enters the Teka Edu runtime (ADR-002). The review happens
+outside the running product, on a document, and the application stays deterministic with no AI
+SDK, endpoint or credential.

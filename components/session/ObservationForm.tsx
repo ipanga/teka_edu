@@ -10,8 +10,9 @@ import { useState } from "react";
  * Everything stays in this browser until the tester copies it out deliberately; nothing is sent
  * anywhere, and nothing reaches Supabase (ADR-006).
  *
- * It answers usability questions. It is **not** pedagogical review: a teacher still has to read
- * the lessons before any of them can be approved (ADR-035, ISSUE-017).
+ * It answers usability questions. It is **not** pedagogical review: whether the objectives,
+ * progression and expectations are right is decided by the review gate, on a generated package,
+ * not by watching one session (ADR-047).
  */
 
 type Scale = "" | "oui" | "en-partie" | "non";
@@ -114,7 +115,7 @@ export function ObservationForm({
     "## Notes",
     notes.trim() === "" ? "—" : notes.trim(),
     "",
-    "_Test d’usage. Ce n’est pas une relecture pédagogique : les leçons restent en `review`._",
+    "_Test d’usage. Ce n’est pas une relecture pédagogique._",
   ].join("\n");
 
   const save = () => {

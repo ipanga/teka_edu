@@ -20,7 +20,7 @@ export default async function LevelHomePage({ params }: PageProps<"/maternelle/[
         <h1 className="text-3xl font-bold">{level.name}</h1>
         <p className="rounded-2xl bg-white px-6 py-6 text-lg shadow-sm">
           Les leçons de cette classe sont en préparation. Elles arriveront après celles de 3ème
-          maternelle, une fois relues par une personne qui enseigne à cet âge.
+          maternelle.
         </p>
         <Link href="/" className="text-lg font-medium text-emerald-800 underline">
           Choisir une autre classe

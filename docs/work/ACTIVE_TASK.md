@@ -10,31 +10,35 @@
 
 ## Task
 
-None in progress.
+Make an independent AI-assisted pedagogical review the active development gate, so the
+absence of a preschool teacher stops blocking curriculum work — without ever implying a teacher
+approved anything (ADR-047).
 
 ## Objective
 
-The Week 1 review corrections are merged. No new task has been started.
+Unblock 1ère/2ème maternelle and later months, and make `approved` say which kind of review
+closed the gate.
 
 ## Status
 
-`planned`
+`in_progress`
 
 ## Branch
 
-`develop` — no feature branch open.
+`docs/pedagogical-review-policy`
 
 ## Base Branch
 
-`develop`
+`develop` at `c820dc5`
 
 ## Started
 
-—
+2026-09-15
 
 ## Last Checkpoint
 
-2026-09-14 — reset after PR #31 merged as `183e7e4` and verified on live staging.
+2026-09-15 — ADR-047 written, schema/DB/tests/docs updated, full local suite green.
+Next: PR, CI, merge.
 
 ## Scope
 
@@ -66,34 +70,39 @@ To be filled in when the next task begins.
 
 ## Completed
 
-- [x] Phase 3A — September programme and the parent session (archived)
-- [x] Session duration policy and the resumable-work protocol (archived)
-- [x] Phase 3B — visuals, interaction and real-session testing (archived)
-- [x] Phase 3C — the session a parent and child can sit down and do (archived)
+- [x] **ADR-047** written; ADR-035 marked _refined by_, its original text preserved
+- [x] `reviewKind` (`ai-assisted` | `human-teacher`) and `outcome` on the review record — the
+      whole schema change — with a check that refuses a tool name as a human teacher
+- [x] Database mirror + migration `20260915090000_review_kind.sql`, constraint extended; 147 pgTAP
+- [x] Review package generation **fails** on an unquoted text or a bullet that promises nothing
+- [x] Two tests that asserted "every lesson is `review`" rewritten as invariants
+- [x] ISSUE-017 reclassified: open, **non-blocking**, future external assurance; history kept
+- [x] Active-policy wording updated in CLAUDE.md, README, PROJECT_STATUS, CONTENT_QUALITY_GATE,
+      CONTENT_AUTHORING, PEDAGOGICAL_REVIEW, EDUCATIONAL_MODEL, DAILY_PROGRAMME,
+      REAL_SESSION_TESTING, the shipped class page and the observation form
 
 ## In Progress
 
-- [ ] Nothing.
+- [ ] PR, CI, squash-merge
 
 ## Remaining
 
-1. Awaiting the owner's choice of next task.
+- [ ] Report; then 1ère maternelle as a separate task
 
 ## Validation State
 
-| Check              | Result | At                                         |
-| ------------------ | ------ | ------------------------------------------ |
-| format             | PASS   | working tree                               |
-| lint               | PASS   | working tree — 0 warnings                  |
-| typecheck          | PASS   | working tree                               |
-| unit tests         | PASS   | working tree — 207 tests                   |
-| content validation | PASS   | working tree — 21 files                    |
-| database tests     | PASS   | working tree — 144 pgTAP assertions        |
-| build              | PASS   | working tree                               |
-| E2E                | PASS   | working tree — 20 tests                    |
-| Docker             | PASS   | CI at `27e9054` — both images              |
-| secret scans       | PASS   | working tree — no leaks, 0 tracked `.env*` |
-| staging            | PASS   | `27e9054` deployed, 20 E2E against it      |
+| Check              | Result  | At                                |
+| ------------------ | ------- | --------------------------------- |
+| format             | PASS    | working tree                      |
+| lint               | PASS    | working tree                      |
+| typecheck          | PASS    | working tree                      |
+| unit tests         | PASS    | working tree — 217 tests          |
+| content validation | PASS    | working tree — 21 files           |
+| database tests     | PASS    | fresh reset — 147 assertions      |
+| build              | PASS    | working tree                      |
+| E2E                | PASS    | working tree — 27 tests           |
+| Docker             | NOT RUN | left to CI                        |
+| secret scans       | PASS    | 0 tracked `.env*`; gitleaks in CI |
 
 ## Database State
 
@@ -123,8 +132,7 @@ None.
 
 ## Exact Resume Point
 
-No task is in progress. When the next one starts: fill this file in, create the feature branch
-from `develop`, commit an initial checkpoint, and open a Draft PR before the long work begins.
+Open the PR into `develop`, wait for the four required checks, squash-merge.
 
 ## Resume Verification
 

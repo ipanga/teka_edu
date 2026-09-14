@@ -222,7 +222,13 @@ describe("September content quality", () => {
     }
   });
 
-  it("keeps every lesson waiting for a human reviewer", () => {
+  /**
+   * September is not yet through the pedagogical gate (ADR-047). This asserts that plainly
+   * rather than asserting it can never change: when a batch passes review, this expectation is
+   * updated in the same commit that records the approval, which is the point at which someone
+   * should have to think about it.
+   */
+  it("has no approved lesson yet, and no approval-shaped record without one", () => {
     for (const lesson of lessons) {
       expect(lesson.status, lesson.id).toBe("review");
       expect(lesson.review, lesson.id).toBeNull();

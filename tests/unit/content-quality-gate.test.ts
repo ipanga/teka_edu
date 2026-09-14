@@ -2,7 +2,12 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { ACTIVITY_RENDERERS, RENDERER_FAMILIES, activityTypesOf } from "@/domain/lessons/renderers";
-import { checkLessonReview, lessonDigest } from "@/domain/lessons/review";
+import {
+  REVIEW_KINDS,
+  REVIEW_OUTCOMES,
+  checkLessonReview,
+  lessonDigest,
+} from "@/domain/lessons/review";
 import { ACTIVITY_TYPES, type Lesson } from "@/domain/lessons/types";
 import { buildReviewPackage } from "@/lib/content/review-package";
 import { REVIEW_PACKAGES, reviewPackagePath } from "@/lib/content/review-packages";
@@ -16,12 +21,31 @@ const lesson = (id: string) => {
   return found;
 };
 
-describe("content quality gate (ADR-035)", () => {
-  it("leaves every AI-assisted pilot lesson waiting for a human reviewer", () => {
-    // This is the point of the gate: nothing written by Claude approves itself.
+describe("content quality gate (ADR-035, refined by ADR-047)", () => {
+  /**
+   * The invariant, not the count. Asserting "every lesson is `review`" made the gate untestable
+   * the moment it was allowed to open — it would have failed on the first legitimate approval
+   * and invited someone to delete the test. What must hold is that an approval is never
+   * self-granted: it carries an independent review, and says which kind it was.
+   */
+  it("lets no lesson claim approval without a complete, attributable review", () => {
     for (const l of data.lessons) {
-      expect(l.status, l.id).toBe("review");
-      expect(l.review, l.id).toBeNull();
+      if (l.status === "approved") {
+        expect(l.review, `${l.id} is approved with no review record`).not.toBeNull();
+        expect(REVIEW_KINDS, `${l.id}`).toContain(l.review!.reviewKind);
+        expect(REVIEW_OUTCOMES, `${l.id}`).toContain(l.review!.outcome);
+      } else {
+        expect(l.review, `${l.id} is not approved but carries a review record`).toBeNull();
+      }
+    }
+  });
+
+  it("never records an AI-assisted review as a teacher's", () => {
+    for (const l of data.lessons) {
+      if (l.review?.reviewKind !== "human-teacher") continue;
+      expect(l.review.reviewer, `${l.id}: a human-teacher review must name a person`).not.toMatch(
+        /chatgpt|gpt|claude|gemini|\bia\b|\bai\b/i,
+      );
     }
   });
 
@@ -40,6 +64,8 @@ describe("content quality gate (ADR-035)", () => {
       ...base,
       status: "review",
       review: {
+        reviewKind: "human-teacher",
+        outcome: "accepted",
         reviewer: "A. Mbala",
         reviewerRole: "institutrice de 3ème maternelle",
         reviewedOn: "2026-09-20",
@@ -56,6 +82,8 @@ describe("content quality gate (ADR-035)", () => {
       ...base,
       status: "approved",
       review: {
+        reviewKind: "human-teacher",
+        outcome: "accepted",
         reviewer: "A. Mbala",
         reviewerRole: "institutrice de 3ème maternelle",
         reviewedOn: "2026-09-20",
@@ -66,12 +94,55 @@ describe("content quality gate (ADR-035)", () => {
     expect(checkLessonReview(approved)).toEqual([]);
   });
 
+  /**
+   * ADR-047: the active development gate is an AI-assisted review. `approved` therefore says
+   * only that the gate was passed, and the record has to say which gate — otherwise a later
+   * reader, a report or an interface could present an AI review as a teacher's.
+   */
+  it("accepts an AI-assisted approval, recorded as such", () => {
+    const base = lesson("m3-math-01");
+    const approved: Lesson = {
+      ...base,
+      status: "approved",
+      review: {
+        reviewKind: "ai-assisted",
+        outcome: "accepted-with-modifications",
+        reviewer: "ChatGPT",
+        reviewerRole: "relecture pédagogique assistée par IA, contre le programme officiel",
+        reviewedOn: "2026-09-14",
+        reviewedDigest: lessonDigest(base),
+        notes: "Corrections demandées appliquées.",
+      },
+    };
+    expect(checkLessonReview(approved)).toEqual([]);
+  });
+
+  it("refuses to record an AI review as a human teacher's", () => {
+    const base = lesson("m3-math-01");
+    const mislabelled: Lesson = {
+      ...base,
+      status: "approved",
+      review: {
+        reviewKind: "human-teacher",
+        outcome: "accepted",
+        reviewer: "ChatGPT (GPT-5)",
+        reviewerRole: "institutrice de 3ème maternelle",
+        reviewedOn: "2026-09-14",
+        reviewedDigest: lessonDigest(base),
+        notes: null,
+      },
+    };
+    expect(checkLessonReview(mislabelled)[0]).toMatch(/must use reviewKind "ai-assisted"/);
+  });
+
   it("lapses the approval as soon as the reviewed text changes", () => {
     const base = lesson("m3-math-01");
     const approved: Lesson = {
       ...base,
       status: "approved",
       review: {
+        reviewKind: "human-teacher",
+        outcome: "accepted",
         reviewer: "A. Mbala",
         reviewerRole: "institutrice de 3ème maternelle",
         reviewedOn: "2026-09-20",
@@ -164,7 +235,7 @@ describe("human review package", () => {
   });
 
   it("carries what a reviewer needs, and no approval", () => {
-    expect(committed).toContain("n’ont pas encore été relues");
+    expect(committed).toContain("ne sont approuvées par**");
     expect(committed).toContain("Consigne à l’enfant");
     expect(committed).toContain("Guidance adulte");
     expect(committed).toContain("Réussites attendues — texte officiel pour la compétence");

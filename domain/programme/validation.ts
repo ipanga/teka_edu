@@ -29,7 +29,8 @@ export function checkLessons(
     const at = `lesson "${lesson.id}"`;
     if (seenLessonIds.has(lesson.id)) problems.push(`${at}: id is used twice`);
     seenLessonIds.add(lesson.id);
-    // The quality gate: AI-assisted content never approves itself (ADR-035).
+    // The quality gate: AI-drafted content never approves itself — an independent review does
+    // (ADR-035, refined by ADR-047).
     problems.push(...checkLessonReview(lesson));
 
     const curriculum = curricula.find((c) => c.id === lesson.curriculumId);

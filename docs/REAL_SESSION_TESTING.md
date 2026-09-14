@@ -86,11 +86,13 @@ Please do not type your child's name into the free notes either.
 
 ## What this is not
 
-**Usability tested ≠ teacher approved.**
+**Usability tested ≠ pedagogically reviewed.**
 
 A real session tells us whether a parent can run the lesson and whether a child stays with it. It
-does not tell us whether the teaching is right for a five-year-old — only a person who teaches
-this age can say that. That is ISSUE-017, and it is why all 88 September lessons are still marked
-`review` and none is `approved` (ADR-035).
+does not tell us whether the teaching is right for a five-year-old: that is decided by the
+pedagogical review gate, reading a generated package against the official programme (ADR-047).
+The two answer different questions, and neither stands in for the other. September has been
+corrected after its first review but has not completed the gate, so all 88 lessons are still
+marked `review` and none is `approved`.
 
 Both things are needed. They are not the same thing, and one never substitutes for the other.

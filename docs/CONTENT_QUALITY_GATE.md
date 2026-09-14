@@ -1,16 +1,37 @@
 # Content quality gate
 
 How educational content moves from written to teachable, and why no lesson can approve itself.
-Decision: ADR-035. Authoring rules: [`CONTENT_AUTHORING.md`](CONTENT_AUTHORING.md).
+Decisions: ADR-035, refined by **ADR-047** (who the independent reviewer must be). Authoring
+rules: [`CONTENT_AUTHORING.md`](CONTENT_AUTHORING.md).
 
 ## The problem this solves
 
 Teka Edu's lessons are drafted with the help of a language model. That is allowed (ADR-002 bans
 runtime AI, not authoring help), but it creates a specific risk: plausible, fluent, well-formatted
-content that no qualified person has ever read reaching a five-year-old. Schema validation cannot
-catch "this is wrong for this age" — only a person who teaches it can.
+content that nobody has independently reviewed reaching a five-year-old. Schema validation cannot
+catch "this is wrong for this age"; only a reader judging it against the programme can.
 
 The gate makes that a mechanical property of the content, not a promise in a document.
+
+## Who reviews (ADR-047)
+
+No preschool teacher is available to the project, and a gate that can never open is an outage,
+not a quality control. So the gate stays and the reviewer changed:
+
+|                   | **AI-assisted review**                                                                                                                 | **Human-teacher review**           |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| Status            | **The active development gate**                                                                                                        | Optional future external assurance |
+| Who               | An AI model reading the generated package against the official programme, outside the product (today: ChatGPT, submitted by the owner) | A person who teaches this age      |
+| Blocks authoring? | Yes — each batch passes it before being treated as accepted                                                                            | **No**                             |
+| Recorded as       | `reviewKind: "ai-assisted"`                                                                                                            | `reviewKind: "human-teacher"`      |
+
+The two are **not** equivalent, and the record says which one happened. A check refuses to store
+a review by an obvious tool name as `human-teacher`, and the database constraint refuses an
+approval that does not name a kind at all.
+
+**Never write** _teacher approved_, _certified_ or _validated by an educator_ unless a named
+teacher actually did it. **Write** _AI-assisted pedagogical review_, or _reviewed against
+authoritative curriculum references_.
 
 ## The lifecycle
 
@@ -21,12 +42,12 @@ draft ──▶ review ──▶ approved ──▶ retired
   └─ never scheduled for a child
 ```
 
-| Status     | Meaning                                                                      | Who sets it    |
-| ---------- | ---------------------------------------------------------------------------- | -------------- |
-| `draft`    | Being written, incomplete                                                    | Author         |
-| `review`   | Finished, waiting for a human reviewer. **Where AI-assisted content stops.** | Author         |
-| `approved` | A named person accepted this exact text on a date                            | Human reviewer |
-| `retired`  | Withdrawn, kept for history                                                  | Owner          |
+| Status     | Meaning                                                                              | Who sets it |
+| ---------- | ------------------------------------------------------------------------------------ | ----------- |
+| `draft`    | Being written, incomplete                                                            | Author      |
+| `review`   | Finished, not yet through the gate. **Where AI-drafted content stops.**              | Author      |
+| `approved` | An independent review accepted this exact text on a date, and said which kind it was | Reviewer    |
+| `retired`  | Withdrawn, kept for history                                                          | Owner       |
 
 Every lesson in the repository today is `review`.
 
@@ -38,6 +59,8 @@ exact text** they read:
 ```json
 "status": "approved",
 "review": {
+  "reviewKind": "ai-assisted",
+  "outcome": "accepted-with-modifications",
   "reviewer": "A. Mbala",
   "reviewerRole": "institutrice de 3ème maternelle",
   "reviewedOn": "2026-09-20",
@@ -68,7 +91,7 @@ Do not confuse the two:
 | ----------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------- |
 | What              | Objectives and success examples quoted from the programme                                       | Lessons and activities we write     |
 | Provenance        | `origin: "official"`, with source document and page                                             | `origin: "teka-edu-created"`        |
-| How it is checked | Imported verbatim, cross-checked against a second extraction ([`CURRICULUM.md`](CURRICULUM.md)) | Pedagogical review by a person      |
+| How it is checked | Imported verbatim, cross-checked against a second extraction ([`CURRICULUM.md`](CURRICULUM.md)) | Independent pedagogical review      |
 | Lifecycle         | None: it is a quotation, not a draft                                                            | draft → review → approved → retired |
 
 The database refuses to store a lesson as official text, and refuses an official objective with
@@ -77,22 +100,42 @@ no source.
 ## Reviewing content
 
 1. `npm run review:package` regenerates the reviewer's document from the canonical content.
-2. The reviewer reads [`review/2026-2027-maternelle-3-semaine-1.md`](review/) and fills in the
-   checklist per lesson: objective alignment, age, clarity, load, duration, engagement, language,
-   culture, materials, safety.
-3. Their decisions come back as edits to the content: fixes first, then `status: "approved"` with
-   the review block, generated together so the digest matches.
-4. `npm run content:validate` refuses any approval that is incomplete or stale.
-5. `npm run db:reference -- --new-migration <name>` mirrors it into the database.
+2. The package goes to the reviewer — for the active gate, ChatGPT, submitted by the owner. It is
+   read against the official programme, developmental expectations, objective/activity alignment,
+   progression, language, duration, safety, material availability, DRC context and media use.
+3. The review returns one of **`accepted`**, **`accepted-with-modifications`** or
+   **`needs-revision`**.
+4. Corrections come back as edits to the content: fixes first, then `status: "approved"` with the
+   review block, generated together so the digest matches.
+5. `npm run content:validate` refuses any approval that is incomplete or stale.
+6. `npm run db:reference -- --new-migration <name>` mirrors it into the database.
 
-A unit test fails if the committed review package is out of date, so a reviewer is never handed
-a document that no longer matches what the app serves.
+**Re-review rules.** `accepted` needs nothing further. `accepted-with-modifications` means apply
+every correction, regenerate, re-validate — and **submit again when the corrections materially
+affect the pedagogy**; purely mechanical, fully specified fixes may be recorded as applied without
+pretending they were independently re-approved. `needs-revision` means the content does not
+advance until it is corrected and reviewed again.
+
+**What the package must contain**, so the reviewer never has to open the repository: level, age
+band, curriculum and version, the authoritative source, instructional day, lesson title,
+objectives, official expected outcomes, **the full text of every story, rhyme and song**,
+comprehension questions, activities, child instructions, parent guidance, materials,
+substitutions, safety notes, durations, French vocabulary, optional English scaffolding, media
+information and progression/revisit information.
+
+Generation **fails** — and so does CI — when a package names a text it cannot quote, or when a
+bullet promises a list and delivers nothing. Both are real failures that reached a reviewer once.
+A unit test also fails if the committed package is out of date, so a reviewer is never handed a
+document that no longer matches what the app serves.
+
+**Granularity.** Review a batch small enough to be read properly: a week, or a month. Never
+generate a year and call one pass a review.
 
 ## What is deliberately not built
 
 - **No user accounts, roles or permissions.** The reviewer is a name and a role in the content,
   not a login. A real identity system belongs with parent accounts, later.
 - **No approval workflow in an interface.** Review happens through the document and the PR.
-- **No automated pedagogical judgement.** The tests check structure — that an approval is
-  attributable, complete and bound to the text. They never pretend to decide whether a lesson is
+- **No pedagogical judgement in the test suite.** The tests check structure — that an approval is
+  attributable, complete, current and honest about its kind. They never pretend to decide whether a lesson is
   good for a child.
