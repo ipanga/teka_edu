@@ -36,7 +36,7 @@ the ADR-047 review gate.
 
 ## Last Checkpoint
 
-2026-09-15 — band verified and corpus audited; no content written yet. Findings below.
+2026-09-15 — annual plan generated and feasibility reported. September not authored yet.
 
 ## Scope
 
@@ -79,15 +79,23 @@ the ADR-047 review gate.
       is too advanced for the band — the corpus reads correctly for three-year-olds (count to
       three or four, the number rhyme to six, sort by shape, say what you are doing).
 
+- [x] **Annual plan generated**: `maternelle-1-annual-plan.json`, 116 objectives over 189 days,
+      6 periods. P1 40 · P2 22 · P3 19 · P4 13 · P5 22 · **P6 0** (the last period reprises).
+- [x] **The builder is now one engine, parameterised by level** (`tools/annual-plan/levels/`).
+      Regenerating 3ème is byte-identical apart from one objective — see below.
+- [x] **`npm run plan:report`**: load per period, domain balance, revisit distribution,
+      home feasibility, first month. 904 objective-passages over 189 days = 4.8/day.
+- [x] September trimmed from 31 objectives to **24**, all introduced by day 13
+
 ## In Progress
 
-- [ ] Annual progression for `maternelle-1`, then the feasibility report
+- [ ] September 2026 lessons for `maternelle-1` (the daily rhythm/tracks programme first)
 
 ## Remaining
 
-- [ ] Parameterise the annual-plan builder by level instead of copying it
-- [ ] 189-day feasibility report
-- [ ] September lessons, media, review packages
+- [ ] `content/programmes/**/maternelle-1.json` — the daily rhythm and tracks
+- [ ] September lessons, media classification, texts (comptines)
+- [ ] Weekly review packages; home-screen availability; level-isolation tests
 - [ ] Full validation, PR, staging
 
 ## Validation State
@@ -133,8 +141,8 @@ None.
 
 ## Exact Resume Point
 
-Parameterise `tools/annual-plan/build.ts` by level, then generate
-`content/programmes/maternelle-cycle1-cd-2026/maternelle-1-annual-plan.json`.
+Author `content/programmes/maternelle-cycle1-cd-2026/maternelle-1.json` (rhythm + tracks),
+then the September lessons domain by domain.
 
 ## Resume Verification
 
@@ -164,3 +172,16 @@ buy revisits with the spare days rather than invent objectives.
 **Ten objectives are shared with a later band** (`LANG-S01-C01-O02`, `MATH-S01-C01-O05` and
 eight others). They are introduced here and deepened in 2ème/3ème; the plan schedules them, and
 the later levels' plans already treat them as their own.
+
+## A defect this work exposed
+
+Regenerating the **3ème** plan did not reproduce the committed file. The Week 1 review had me
+correct `LANG-S02-C03-O15`'s pacing **by editing the generated JSON directly**, so the generator
+still held the old values and would have silently reverted them the next time anyone ran it.
+That is precisely the failure ADR-028 exists to prevent, and I caused it.
+
+Fixed at the source: the objective's day moved to 9 in `levels/maternelle-3.ts`, and a
+`cadenceOverrides` field records that this one objective is periodic inside a daily domain. The
+regenerated plan now differs from the committed one **only** on that objective's derived fields
+(`reinforceUntilDay`, `consolidateByDay`, `plannedRevisits`), which my hand edit had left stale.
+Every one of the other 161 entries is identical.

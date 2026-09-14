@@ -1,7 +1,8 @@
 /**
- * Builds the 3ème maternelle annual scope and sequence (ADR-040).
+ * Builds a level's annual scope and sequence (ADR-040).
  *
- *   npx tsx tools/annual-plan/build.ts
+ *   npx tsx tools/annual-plan/build.ts --level=maternelle-3
+ *   npx tsx tools/annual-plan/build.ts --level=maternelle-1
  *
  * The output, content/programmes/<curriculum>/<level>-annual-plan.json, is canonical content:
  * it is committed, validated and tested like every other content file. This script exists so
@@ -13,12 +14,16 @@
  *
  * What the allocation encodes, in one place, so a reviewer can argue with it:
  *
- *  1. The year's teaching set is the objectives of the level's own age band (`from-5`).
- *     Earlier-band objectives are reinvested by lessons as supporting objectives; they are not
- *     scheduled, because this level is not introducing them.
- *  2. September (days 1-22) is allocated **by hand** below: the rentrée has to teach the things
- *     an after-school session can build on — greeting and naming, counting small collections,
- *     the date, the body, daily movement — not whatever came first in the official table.
+ *  1. The year's teaching set is the objectives of the level's own age band. Earlier-band
+ *     objectives are reinvested by lessons as supporting objectives; they are not scheduled,
+ *     because the level is not introducing them. (1ère maternelle sits on the earliest band, so
+ *     for it there is nothing earlier to reinvest: everything it touches, it introduces.)
+ *  2. September is allocated **by hand**, per level, in `levels/<level>.ts`: the rentrée has to
+ *     teach the things an after-school session can build on, not whatever came first in the
+ *     official table.
+ *
+ * Everything that is a pedagogical judgement lives in `levels/`; everything here is the
+ * allocation that applies those judgements the same way for every level.
  *  3. The remaining objectives are spread over the rest of the year in official order within a
  *     domain, which is the order the programme itself progresses in.
  *  4. Daily-cadence domains (language, mathematics, movement) get more revisits than the
@@ -33,15 +38,31 @@ import type {
   AnnualPhase,
   AnnualPlan,
   AnnualPlanEntry,
-  HomeFeasibility,
   ObjectiveCadence,
 } from "../../domain/programme/annual-plan";
+import { maternelle1 } from "./levels/maternelle-1";
+import { maternelle3 } from "./levels/maternelle-3";
+import type { LevelPlanConfig } from "./levels/types";
 
 const ROOT = path.resolve(import.meta.dirname, "../..");
 const CURRICULUM = "maternelle-cycle1-cd-2026";
-const LEVEL = "maternelle-3";
 const SCHOOL_YEAR = "2026-2027";
-const AGE_BAND = "from-5";
+
+const LEVELS: Record<string, LevelPlanConfig> = {
+  "maternelle-1": maternelle1,
+  "maternelle-3": maternelle3,
+};
+
+const requested = process.argv.find((arg) => arg.startsWith("--level="))?.slice("--level=".length);
+if (requested === undefined || LEVELS[requested] === undefined) {
+  console.error(
+    `Usage: npx tsx tools/annual-plan/build.ts --level=<${Object.keys(LEVELS).join(" | ")}>`,
+  );
+  process.exit(1);
+}
+const config = LEVELS[requested]!;
+const LEVEL = config.levelId;
+const AGE_BAND = config.ageBand;
 /** The month authored in full by Phase 3A; everything after it is pacing only. */
 const FIRST_MONTH = "2026-09";
 const DOMAINS = ["LANG", "MATH", "PHYS", "TIME-SPACE", "WORLD", "ART"] as const;
@@ -71,7 +92,7 @@ function calendarShape() {
       name: `Période ${period.position} (trimestre ${period.term})`,
       fromDay: first.instructionalDay,
       toDay: last.instructionalDay,
-      focus: PHASE_FOCUS[index] ?? "Poursuite du programme.",
+      focus: config.phaseFocus[index] ?? "Poursuite du programme.",
     };
   });
   // The phases must tile the year: give the last one every remaining day (a day between two
@@ -86,105 +107,6 @@ function calendarShape() {
   if (lastSeptemberDay == null) throw new Error(`no instructional day in ${FIRST_MONTH}`);
   return { instructionalDays: instructional.length, phases, lastSeptemberDay };
 }
-
-const PHASE_FOCUS = [
-  "Rentrée : entrer dans le français parlé, compter de petites collections, installer le rituel quotidien.",
-  "Consolider l’oral et les premières quantités ; entrer dans la conscience des syllabes.",
-  "Rimes, phonèmes et premières lettres ; problèmes de parties et de tout.",
-  "Écriture des chiffres et des lettres ; comparer longueurs et masses.",
-  "Principe alphabétique et premiers écrits ; motifs et repères dans l’année.",
-  "Consolidation de l’année et préparation de l’entrée en primaire.",
-];
-
-/**
- * September, day by day. Hand-allocated: these are the objectives the first month introduces,
- * and the day by which each must have been taught. The September lessons in content/lessons/
- * are written against this list, and a test checks the two agree.
- */
-const SEPTEMBER: Record<string, number> = {
-  // Language: speaking to an adult, being understood, and hearing how words are made.
-  "LANG-S01-C04-O11": 1,
-  "LANG-S01-C01-O03": 1,
-  "LANG-S01-C02-O01": 2,
-  "LANG-S02-C03-O15": 3,
-  "LANG-S02-C01-O13": 6,
-  "LANG-S02-C03-O14": 9,
-  "LANG-S01-C01-O02": 12,
-  "LANG-S02-C01-O15": 16,
-  // Mathematics: small quantities first, then shapes, then composing them.
-  "MATH-S01-C01-O20": 1,
-  "MATH-S01-C01-O21": 1,
-  "MATH-S01-C01-O05": 2,
-  "MATH-S03-C01-O08": 3,
-  "MATH-S03-C01-O07": 3,
-  "MATH-S01-C01-O26": 4,
-  "MATH-S01-C01-O19": 7,
-  "MATH-S01-C01-O22": 11,
-  "MATH-S01-C01-O23": 11,
-  "MATH-S01-C02-O06": 15,
-  // Movement, every day, starting with the safety rules that make the rest possible.
-  "PHYS-S02-C01-O07": 1,
-  "PHYS-S01-C01-O10": 2,
-  "PHYS-S03-C01-O09": 3,
-  "PHYS-S01-C01-O09": 4,
-  "PHYS-S02-C01-O05": 5,
-  "PHYS-S04-C01-O09": 8,
-  // Time and space: the daily date ritual, then the week, then where things are.
-  "TIME-SPACE-S01-C01-O12": 1,
-  "TIME-SPACE-S01-C01-O10": 3,
-  "TIME-SPACE-S02-C01-O16": 10,
-  "TIME-SPACE-S01-C02-O08": 18,
-  // The world: one's own body first, then animals and plants.
-  "WORLD-S01-C02-O08": 2,
-  "WORLD-S01-C02-O09": 2,
-  "WORLD-S01-C01-O08": 5,
-  "WORLD-S01-C01-O10": 5,
-  // Arts: the rhyme repertoire is built all year, so it starts in week 1.
-  "ART-S02-C01-O09": 4,
-  "ART-S01-C01-O05": 7,
-  "ART-S02-C02-O08": 13,
-  "ART-S01-C01-O06": 20,
-};
-
-/** Objectives an after-school session at home cannot fully carry. */
-const HOME_FEASIBILITY: Record<string, HomeFeasibility> = {
-  "PHYS-S02-C01-O06": "school-only", // swimming: needs a pool and qualified supervision
-  "ART-S03-C02-O08": "school-only", // meeting artists and professionals
-  "LANG-S01-C04-O09": "partial", // describing what another pupil did
-  "PHYS-S01-C01-O13": "partial", // orienting in a less familiar place
-  "PHYS-S04-C01-O08": "partial", // attacking and defending roles need a group
-  "ART-S01-C01-O07": "partial", // collective artwork
-  "ART-S02-C01-O08": "partial", // finding one's place in a singing group
-  "ART-S02-C02-O09": "partial", // collective musical production
-  "ART-S02-C03-O07": "partial", // listening to heritage works: needs media
-  "ART-S02-C03-O08": "partial",
-  "ART-S03-C01-O09": "partial", // collective staging
-  "ART-S03-C02-O06": "partial",
-  "ART-S03-C02-O07": "partial",
-  "TIME-SPACE-S02-C03-O04": "partial", // the spaces around the school
-  "TIME-SPACE-S02-C03-O05": "partial",
-  "TIME-SPACE-S02-C03-O06": "partial",
-};
-
-/** Domains taught every day carry more repetition than the rotating ones. */
-const CADENCE: Record<string, ObjectiveCadence> = {
-  LANG: "daily",
-  MATH: "daily",
-  PHYS: "daily",
-  "TIME-SPACE": "frequent",
-  WORLD: "periodic",
-  ART: "periodic",
-};
-
-/** Objectives that live inside other domains' lessons rather than needing one of their own. */
-const EMBEDDABLE_COMPETENCIES = new Set([
-  "LANG-S01-C01", // vocabulary is reinvested everywhere
-  "LANG-S01-C02",
-  "LANG-S01-C04",
-  "TIME-SPACE-S01-C01", // the date ritual opens any lesson
-  "TIME-SPACE-S01-C03",
-  "PHYS-S02-C01", // safety rules ride along with every movement activity
-]);
 
 type ObjectiveRow = { code: string; competencyCode: string; domainCode: string; position: number };
 
@@ -228,7 +150,8 @@ function main() {
   };
 
   const push = (row: ObjectiveRow, phase: AnnualPhase, fromDay: number, byDay: number) => {
-    const cadence = CADENCE[row.domainCode] ?? "periodic";
+    const cadence =
+      config.cadenceOverrides?.[row.code] ?? config.cadence[row.domainCode] ?? "periodic";
     const reinforceUntilDay = Math.min(instructionalDays, byDay + (cadence === "daily" ? 60 : 45));
     entries.push({
       objectiveCode: row.code,
@@ -243,21 +166,21 @@ function main() {
       ),
       plannedRevisits: plannedRevisits(cadence, byDay),
       cadence,
-      needsDedicatedLesson: !EMBEDDABLE_COMPETENCIES.has(row.competencyCode),
-      embeddable: EMBEDDABLE_COMPETENCIES.has(row.competencyCode),
-      homeFeasibility: HOME_FEASIBILITY[row.code] ?? "full",
+      needsDedicatedLesson: !config.embeddableCompetencies.has(row.competencyCode),
+      embeddable: config.embeddableCompetencies.has(row.competencyCode),
+      homeFeasibility: config.homeFeasibility[row.code] ?? "full",
     });
   };
 
   // 1. September, as allocated by hand above.
   const scheduled = new Set<string>();
   for (const row of objectives) {
-    const byDay = SEPTEMBER[row.code];
+    const byDay = config.september[row.code];
     if (byDay === undefined) continue;
     push(row, september, 1, byDay);
     scheduled.add(row.code);
   }
-  const unknown = Object.keys(SEPTEMBER).filter((code) => !scheduled.has(code));
+  const unknown = Object.keys(config.september).filter((code) => !scheduled.has(code));
   if (unknown.length > 0) {
     throw new Error(`SEPTEMBER lists objectives that are not "${AGE_BAND}": ${unknown.join(", ")}`);
   }

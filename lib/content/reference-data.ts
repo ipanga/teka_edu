@@ -23,6 +23,7 @@ import lessonsPhys from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-
 import lessonsTimeSpace from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-3/time-space.json";
 import lessonsWorld from "@/content/lessons/maternelle-cycle1-cd-2026/maternelle-3/world.json";
 import materialsFile from "@/content/materials.json";
+import annualPlanMaternelle1 from "@/content/programmes/maternelle-cycle1-cd-2026/maternelle-1-annual-plan.json";
 import annualPlanMaternelle3 from "@/content/programmes/maternelle-cycle1-cd-2026/maternelle-3-annual-plan.json";
 import programmeMaternelle3 from "@/content/programmes/maternelle-cycle1-cd-2026/maternelle-3.json";
 import mediaRegistry from "@/content/media/registry.json";
@@ -197,6 +198,12 @@ export const REFERENCE_CONTENT_FILES: readonly ReferenceContentFile[] = [
     path: "programmes/maternelle-cycle1-cd-2026/maternelle-3-annual-plan.json",
     schema: annualPlanFileSchema,
     data: annualPlanMaternelle3,
+  },
+  {
+    kind: "annual-plan",
+    path: "programmes/maternelle-cycle1-cd-2026/maternelle-1-annual-plan.json",
+    schema: annualPlanFileSchema,
+    data: annualPlanMaternelle1,
   },
   {
     kind: "texts",
