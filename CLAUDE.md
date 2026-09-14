@@ -22,6 +22,10 @@ Read this file first in every session. It holds **stable context and working rul
 | `docs/PEDAGOGICAL_REVIEW.md`        | Pre-review of the pilot week: rubric, findings, what a teacher must decide |
 | `docs/DRC_CURRICULUM_COMPARISON.md` | The DRC PNEM 2021 vs the French Cycle 1 programme, and the strategy        |
 | `docs/PHASE3_RENDERER_PLAN.md`      | Renderer families that Phase 3 should build                                |
+| `docs/PARENT_SESSION.md`            | How a parent runs a session, the routes, and the rules the interface keeps |
+| `docs/MEDIA_ARCHITECTURE.md`        | Where images live, how they are named, generated, and kept free            |
+| `docs/AUDIO_GUIDELINES.md`          | Why the parent is the voice, and what to record first if that changes      |
+| `docs/RESUMABLE_WORKFLOW.md`        | How a long task survives losing the conversation (ADR-041)                 |
 | `docs/PARENT_SESSION.md`            | How a parent runs the daily session, and what the interface does           |
 | `docs/RESUMABLE_WORKFLOW.md`        | How a long task survives an interruption; checkpoints, Git, recovery       |
 | `docs/MEDIA_ARCHITECTURE.md`        | Where pictures live, stable ids, accessibility, why it costs nothing       |
@@ -71,13 +75,15 @@ Keep this table in sync with the repository. Mark a row **Implemented** only whe
 | Area                   | Choice                                                                            | Status                                         |
 | ---------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------- |
 | App framework          | Next.js 16 (App Router, standalone output) + React 19 + TypeScript 5.9            | Implemented                                    |
-| Parent session UI      | `/` (today), `/seance/[day]`, `/calendrier` + `components/session/` (ADR-039)     | Implemented (September, 3ème maternelle)       |
+| Home / class selection | `/` lists the three maternelle classes; `/maternelle/[niveau]/…` (ADR-044)        | Implemented (only 3ème has lessons)            |
+| Parent session UI      | `/maternelle/<c>/seance/[day]`, `/calendrier` + `components/session/` (ADR-039)   | Implemented (September, 3ème maternelle)       |
 | Renderer families      | `components/session/ActivityRenderer.tsx`: 15 activity kinds → 10 screens         | Implemented, with interaction where it teaches |
-| Media                  | `content/media/registry.json` + `public/media/*.svg`, by stable id (ADR-042)      | Implemented (22 assets, $0)                    |
+| Media                  | `content/media/registry.json` + `public/media/*.svg`, by stable id (ADR-042)      | Implemented (38 assets, $0)                    |
+| Audio                  | Same registry; recorded human French only, never autoplay (ADR-046)               | Architecture implemented, **0 recordings**     |
 | Annual scope/sequence  | `domain/programme/annual-plan.ts` + `content/programmes/**-annual-plan.json`      | Implemented (162 objectives, 189 days)         |
 | Supplied texts         | `content/texts/` — stories and rhymes, so no lesson needs an outside book         | Implemented (14 Teka Edu originals)            |
 | Styling / UI           | Tailwind CSS 4; shadcn/ui where useful                                            | Tailwind implemented; shadcn/ui planned        |
-| Animation              | Framer Motion, only where it helps learning or UX                                 | Planned                                        |
+| Animation              | CSS keyframes in `app/globals.css`, off under `prefers-reduced-motion` (ADR-045)  | Implemented (4 effects, no library)            |
 | Env configuration      | `lib/env/` (Zod, public/server split, environment guard; ADR-021)                 | Implemented                                    |
 | Health endpoint        | `/api/health` (status, environment, version, commit)                              | Implemented                                    |
 | Content validation     | `scripts/validate-content.ts`: registration, Zod schemas, cross-file rules        | Implemented (reference data)                   |
@@ -88,7 +94,7 @@ Keep this table in sync with the repository. Mark a row **Implemented** only whe
 | Daily programme        | `domain/programme/` (authored rhythm + tracks, pure generator; ADR-033)           | Implemented (22 September days; report + API)  |
 | Local persistence      | IndexedDB behind repository interfaces                                            | Planned                                        |
 | Offline                | PWA: manifest + service worker (library not chosen yet)                           | Planned                                        |
-| Speech                 | `SpeechProvider` interface; `BrowserSpeechProvider` (Web Speech API, `fr-FR`)     | Planned                                        |
+| Speech                 | Rejected as the educational voice (ADR-046); interface convenience only, later    | Not planned for words a child copies           |
 | i18n                   | `fr` default, optional `en`                                                       | Planned                                        |
 | Unit / component tests | Vitest 5 + React Testing Library + jsdom                                          | Implemented                                    |
 | E2E / smoke tests      | Playwright (Chromium)                                                             | Implemented                                    |
@@ -231,7 +237,11 @@ feature/*  -> develop  -> main
 ## Child UX rules
 
 - The child-facing UI is in French by default.
-- Large touch targets, very little text to read, strong visual support, and audio for instructions and words.
+- Large touch targets, very little text to read, strong visual support, and — where a human
+  recording exists — audio for words. Never synthesised speech for a word the child must
+  reproduce, and never autoplay (ADR-046).
+- Animation is decoration: short, never looping, never required, and always switched off by
+  `prefers-reduced-motion` (ADR-045). No points, badges, streaks, rewards or interface sounds.
 - No ads, no social features, no chat, no public profiles, no dark patterns, no infinite scroll, and no competitive leaderboards.
 - Collect no child data beyond: local ID, nickname, class, optional primary language, and French support level.
 - The parent area is separate from the child area.

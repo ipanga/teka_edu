@@ -170,8 +170,15 @@ for (const asset of data.media) byKind.set(asset.kind, (byKind.get(asset.kind) ?
 for (const [kind, total] of [...byKind].sort()) console.log(`  ${kind.padEnd(12)} ${pad(total)}`);
 console.log(`  textes        ${pad(data.texts.length)} (histoires et comptines)`);
 
+// An asset is used if an activity names it *or* if a story or rhyme carries it as its
+// illustration — the second route is how all 14 text pictures reach the screen, so counting
+// only `mediaIds` would report them as dead weight and invite someone to delete them.
+const illustrated = new Set(
+  data.texts.map((text) => text.illustrationId).filter((id): id is string => id !== null),
+);
 const unused = data.media.filter(
-  (asset) => !rows.some((row) => row.activity.mediaIds.includes(asset.id)),
+  (asset) =>
+    !illustrated.has(asset.id) && !rows.some((row) => row.activity.mediaIds.includes(asset.id)),
 );
 if (unused.length > 0) {
   console.log(`\n  Assets jamais utilisés : ${unused.map((asset) => asset.id).join(", ")}`);

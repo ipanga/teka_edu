@@ -5,35 +5,36 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-09-12
-Branch:     develop
-Commit:     develop at 27e9054; main at 1b95480
+Date:       2026-09-14
+Branch:     feat/home-visual-audio-experience (PR #28)
+Commit:     develop at 11c8f6c; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
 ## Current Phase
 
 ```text
-Phase 2.5 — Pedagogical review and content quality gate: IN PROGRESS (2026-09-12)
-Status:    School-year model, DRC holiday rules, calendar exceptions, instructional-day
-           generator, education structure (stage → level), curriculum versions and the six
-           Cycle 1 domains exist as validated content, tested domain logic and a database
-           mirror (10 reference tables, RLS server-only). Sources verified: MINEDU-NC
-           calendar 2026-2027, Ordonnance n° 23/042, arrêté du 16 avril 2026.
-           Phase 2 adds the official objectives (398, imported verbatim with provenance),
-           the lesson/activity model, a pilot week for 3ème maternelle and a deterministic
-           daily-programme generator with its API and report.
-           Phase 2.5 pre-reviewed the pilot (0 blockers, 3 major defects found and fixed),
-           read the DRC PNEM 2021 in full and compared it with the French programme, added
-           the content quality gate (AI content can never approve itself) and planned the
-           Phase 3 renderer families.
-           The curriculum strategy is now decided (ADR-037): French Cycle 1 is the
-           curriculum, the PNEM is a compatibility and enrichment reference, French-first.
-           Remaining before the child experience: HUMAN pedagogical review of the pilot
-           (ISSUE-017).
-           Production stays disabled (ADR-027).
-Objective: Plan §38 Phase 1 complete (curriculum engine); Phase 2 of the owner's plan
-           (objectives, competencies, lessons, activities, daily programme).
+Phase 3D — Home screen, class selection, visual design, illustrations, motion, audio: IN PROGRESS
+Status:    The calendar engine, the education structure, the 398 official Cycle 1 objectives,
+           the lesson/activity model and the deterministic daily-programme generator are all
+           implemented, tested and mirrored into the database (RLS server-only). Sources
+           verified: MINEDU-NC calendar 2026-2027, Ordonnance n° 23/042, arrêté du 16 avril
+           2026. The curriculum strategy is decided (ADR-037): French Cycle 1 is the
+           curriculum, the DRC PNEM a compatibility and enrichment reference, French-first.
+           A year-long scope and sequence exists for 3ème maternelle (ADR-040) and all 22
+           September instructional days are authored — 88 lessons, 170 activities, 35 minutes
+           each — with 38 repository SVG assets behind them (ADR-042).
+           Phase 3D adds the front door: the app opens on the three maternelle classes, the
+           level is a route parameter, and a class with no lessons says so instead of
+           borrowing another's (ADR-044). The child's view is a real modal, so the parent's
+           navigation cannot be tapped while a child works. Motion is four CSS keyframes,
+           all disabled by prefers-reduced-motion (ADR-045). Audio has an architecture and
+           zero recordings, deliberately: browser speech synthesis was evaluated and rejected
+           as the educational voice (ADR-046).
+           Remaining before the child experience is called done: HUMAN pedagogical review of
+           September (ISSUE-017). Production stays disabled (ADR-027).
+Objective: A September session a parent and child can sit down and do, on any device, for
+           the class the parent chooses.
 ```
 
 ## Overall Progress
@@ -187,6 +188,19 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 - [x] Media mirrored to the database with RLS and an access decision per table
 - [x] All 88 lessons remain `review`: usability testing is not pedagogical approval
 
+### Phase 3D — a front door, three classes, motion and the question of a voice (PR #28)
+
+- [x] **Home screen**: the app opens on 1ère, 2ème and 3ème maternelle, each with what it is for and how many sessions exist
+- [x] **Level routing** (ADR-044): `/maternelle/<1|2|3>/…`; `session-view` takes a level, no component names a class, an unknown slug is a 404
+- [x] **Honest availability**: a class with no lessons is not a link and shows no borrowed content; availability is counted from the content, so no flag can lie
+- [x] **The child's screen is a modal `<dialog>`** — the parent's chrome is inert behind it, and a test requires the home link's click to fail
+- [x] Bigger pictures that grow with the screen, larger tap targets, a roomier child surface; the two zones of ADR-043 kept
+- [x] **Motion** (ADR-045): four CSS keyframes, nothing looping, nothing required, all off under `prefers-reduced-motion` — proved by an E2E run with motion disabled
+- [x] **Audio** (ADR-046): registry, transcript, named-speaker provenance, a listen control that appears only when a recording exists — and **zero assets**, because browser speech synthesis is not a voice a child should copy (`docs/AUDIO_GUIDELINES.md`)
+- [x] `npm run media:report` extended to illustrations, audio, motion and per-class availability
+- [x] Cost **$0**: no paid TTS, no CDN, no cloud storage, no new service
+- [x] All 88 lessons remain `review` — the owner's successful use of staging is usability, not pedagogical approval (ISSUE-017 stays open)
+
 ### Phase 3C — the session a parent and child can sit down and do (PR #26, merged)
 
 - [x] Audit of the whole September journey: seven concrete problems, all fixed
@@ -203,7 +217,9 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 ### P0 — Next
 
 1. **Human pedagogical review of September** (ISSUE-017). The review document is ready at `docs/review/2026-2027-maternelle-3-semaine-1.md`; a person who teaches 3ème maternelle fills in the checklists, we apply their corrections, and only then does any lesson become `approved`.
-2. **Phase 3 (child experience)**: the ten renderer families of `docs/PHASE3_RENDERER_PLAN.md`, a French child UI for today's programme, media architecture (PD-008) and TV presentation mode.
+2. **October and beyond for 3ème maternelle**, once September has been reviewed by a teacher and tested by real families — authoring a second month before either has happened would multiply any mistake by two.
+3. **1ère and 2ème maternelle**: their cards exist and say they are being prepared. The routing, the renderers and the annual-plan machinery are level-agnostic, so each is content plus one annual plan.
+4. **TV presentation mode** and the offline service worker (`docs/PHASE3_RENDERER_PLAN.md`).
 
 ### Deferred — production (not in the current phase, ADR-027)
 
@@ -463,9 +479,9 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
   - Proposal: calendar-aligned by default, with a per-child position the parent can reset.
 - **PD-006: PWA tooling** (before Phase 5)
   - Choose a maintained service-worker approach compatible with Next.js 16 / Turbopack.
-- **PD-007: Offline speech** (before Phases 2 and 5)
-  - Some browser voices are network-backed (`localService === false`). Consider prerecorded core audio.
-- **PD-008: Media sourcing and licensing** (before Phase 6)
+- **PD-007: Offline speech**: **resolved** (ADR-046). Browser speech synthesis is not the educational voice — the French differs by platform, several voices are not French-native, and most need a network. Prerecorded human French is the route; until it is recorded, the parent reads aloud (`docs/AUDIO_GUIDELINES.md`).
+  - Still open, but smaller: who records the ~20 core words, and when the repository stops being the right home for the files (~25 MB).
+- **PD-008: Media sourcing and licensing**: **resolved** (ADR-042). SVG drawn in this repository, named by stable id, no third-party asset licence to track.
   - Also consider the 4.5 MB response limit (ISSUE-007).
 - **PD-010: Vercel plan**: **resolved for the current phase: Hobby, $0** (ADR-027). Revisit only at launch.
   - Staging is Preview plus an alias, and rollback goes only to the previous deployment.
@@ -482,48 +498,27 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  Curriculum strategy decision recorded (documentation and ADRs only).
-            - The owner decided: French Cycle 1 is Teka Edu's curriculum; the DRC PNEM 2021
-              is a compatibility, context and enrichment reference, not a second programme.
-              French-first instruction, DRC calendar, and "mastery and enrichment, never
-              premature acceleration" as the academic standard.
-            - ADR-037 rewritten and Accepted; ADR-038 added; ADR-001 confirmed.
-              PD-017 and PD-018 resolved; PD-016 narrowed; ISSUE-018 narrowed to enrichment
-              content and the (designed, unbuilt) compatibility mapping.
-            - Checked the pilot against the decision mechanically: all 40 activities trace to
-              official French objectives only, movement is on all five days, French is the
-              instruction language with English only as a scaffold, and the 20 lessons stay
-              in `review`. No conflict, so no lesson was rewritten.
-            - No schema change, no migration, no content change.
-
-Previously:  Phase 2.5 — pedagogical pre-review, DRC comparison, content quality gate.
-            - Read the DRC PNEM 2021 (SERNAFOR/DIPROMAD, 140 pages) in full and compared it
-              with the French Cycle 1 programme across 16 aspects. The pilot week lands inside
-              DRC expectations on themes and mathematics; it lacks the PNEM's activités libres,
-              vie pratique and promotion de la santé. Recommended: keep French Cycle 1 now,
-              prepare curriculum profiles (ADR-037, since decided — see below).
-            - PNEM text may not be reproduced (no open licence): Teka Edu references it only
-              (ISSUE-020). On the French side, reuse conditions and attribution wording are now
-              written down, the source publication date is stored so attribution is generated
-              from data, and three questions are left for a lawyer (ISSUE-021).
-            - Pre-reviewed 20 lessons / 40 activities: 0 blockers, 3 major, 7 minor,
-              4 suggestions. The 3 major defects were Phase 2's own and are fixed.
-            - Content quality gate: draft → review → approved → retired, approval bound to a
-              digest of the reviewed text, enforced in validation and in the database.
-            - Materials now carry alternatives and safety notes.
-            - Generated the teacher's review document; a test keeps it current.
-            - Planned Phase 3: 15 activity kinds → 10 renderer families.
-Changed:    domain/lessons/{review,renderers,types}.ts, domain/programme/validation.ts,
-            lib/content/{review-package,review-packages,lesson-schemas}.ts, app/api/programme,
-            scripts/review-package.ts, content/materials.json, content/lessons/**,
-            supabase/migrations + tests, tests/unit, docs (PEDAGOGICAL_REVIEW,
-            DRC_CURRICULUM_COMPARISON, CONTENT_QUALITY_GATE, PHASE3_RENDERER_PLAN, CURRICULUM,
-            DAILY_PROGRAMME, CONTENT_AUTHORING), DECISIONS (ADR-035..037), CLAUDE.md.
-Tests:      See the Tests / Quality Status section.
-Remaining:  ISSUE-017 (human review, blocking Phase 3 content), ISSUE-019 (daily comprehension
-            read-aloud), ISSUE-020 (DRC text reuse), ISSUE-021 (French text reuse: legal
-            opinion),
-            PD-014 (EVAR), PD-015, ISSUE-015/016 (calendar).
-Recommended next task: hand the review document to a teacher who teaches 3ème maternelle;
-            then Phase 3 (child experience) using only review-cleared content.
+Completed:  Phase 3D — the front door, and the two questions the plan had left open.
+            - The app opens on a class chooser: 1ere, 2eme, 3eme maternelle. The level is a
+              route parameter (/maternelle/<c>/...), session-view takes a levelId, and no
+              component names a class any more (ADR-044).
+            - A class with no lessons is not a link and shows no borrowed content.
+              Availability is counted from the authored days, so no flag can misreport it.
+            - The child's view became a real modal <dialog>: the parent's navigation is inert
+              behind it, so a mis-tap cannot end the activity. A test clicks at the home link
+              and requires the click to fail.
+            - Visual pass: pictures that grow with the screen, larger tap targets, a roomier
+              child surface, the two zones of ADR-043 unchanged.
+            - Motion: four CSS keyframes in one stylesheet, nothing looping, nothing required
+              to use an activity, all disabled by prefers-reduced-motion (ADR-045). No
+              animation library was added.
+            - Audio: full architecture, zero recordings. Browser speech synthesis was
+              evaluated and rejected as the educational voice; the parent reads aloud, and a
+              listen control appears only where a human recording exists (ADR-046, PD-007).
+            - media:report now covers illustrations, audio, motion and class availability.
+Validation: format, lint, typecheck, unit (210), content (21 files), build, E2E (27),
+            database tests, client-bundle secret check, gitleaks, tracked .env* = 0.
+Cost:       $0. No paid TTS, no CDN, no cloud storage, no new service, no plan change.
+Not done:   No lesson approved. ISSUE-017 stays open: the owner using staging successfully is
+            usability evidence, not pedagogical approval. October not authored.
 ```

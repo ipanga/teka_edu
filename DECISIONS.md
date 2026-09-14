@@ -1171,3 +1171,128 @@ without exposing guidance meant for an adult. The cost is a small amount of stat
 component and a rule to keep: anything written for an adult belongs in the second zone. Nothing
 about this decision requires a child profile, so the future `frenchSupportLevel` setting can
 arrive without unpicking it.
+
+---
+
+## ADR-044 — The application opens on a class, and an empty class says so
+
+**Status:** Accepted · **Date:** 2026-09-14 · **Extends:** ADR-043
+
+**Context:** Until Phase 3D the root route was 3ème maternelle. `session-view.ts` held a
+`LEVEL_ID` constant, the calendar page read it, the session page read it, and the word
+"maternelle-3" appeared in the middle of rendering code. That was honest while one class existed
+and would have become a trap the moment a second one did: three classes are in scope from the
+start of the plan, and a parent with children in two of them has no way to say which child is
+sitting down.
+
+The tempting shortcut was to let the other two classes open and show 3ème maternelle's lessons
+"for now". That puts a three-year-old in a five-year-old's work, which is precisely the mistake
+the age bands exist to prevent.
+
+**Decision:** The home screen is a **class chooser**, and the level is a route parameter.
+
+- `/` lists 1ère, 2ème and 3ème maternelle, each with what it is for and how many sessions exist.
+- `/maternelle/<1|2|3>` is the class home; `/maternelle/<n>/seance/<jour>`, `/calendrier` and
+  `/observation` hang off it. An unknown slug is a 404, not a redirect to a default class.
+- **A class with no lessons is not a link.** It shows « Les leçons de cette classe sont en
+  préparation. » and nothing else. No borrowed content, no empty session, no "coming soon" that
+  opens anyway.
+- Availability is **derived from the content**, never configured: `levelAvailability()` counts the
+  authored days for each level. Writing lessons for 2ème maternelle turns its card on; there is no
+  flag to remember to flip, and no way for the card to lie.
+- The level travels as a parameter through `sessionForDay`, `authoredDays` and `todaysSession`.
+  No component names a class.
+- **The child's screen has no way home.** `HomeLink` renders in the parent's chrome only, and
+  because the child view is a modal `<dialog>`, the browser makes that chrome inert while the
+  child is working — a mis-tap cannot leave the activity. A test clicks at it and requires the
+  click to fail.
+
+**Consequences:** A fourth class — or 1ère maternelle in a later phase — is content plus one entry
+in `MATERNELLE_SLUGS`. The cost is that every session URL changed, so the staging checks and
+`docs/REAL_SESSION_TESTING.md` were updated in the same change. Class selection is deliberately
+**not** persisted yet: a household with two children would have to undo a remembered choice every
+session, and the chooser is one tap.
+
+---
+
+## ADR-045 — Animation is decoration that can always be switched off
+
+**Status:** Accepted · **Date:** 2026-09-14
+
+**Context:** The plan lists Framer Motion "only where it helps learning or UX". Phase 3D is where
+that became a real question, and the honest answer is that most animation in children's software
+is there to hold attention rather than to teach. Teka Edu is a répétiteur, not an entertainment
+app, and the owner's brief was explicit: a few tasteful animations, no rewards, no streaks, no
+badges.
+
+A motion library would also have cost a runtime dependency and a bundle, for effects that are four
+CSS keyframes.
+
+**Decision:** **CSS keyframes in `app/globals.css`, no animation library**, and four effects total.
+
+- `teka-rise` — a card or a panel arriving. Once, on entry, never per list item on every render.
+- `teka-pop` — a correct answer. One gentle pulse. No confetti, no sound, no score.
+- `teka-nudge` — "look again". A small horizontal shift, the visual equivalent of a kind tone.
+- `teka-attention` — the picture the child is asked to find, made findable without relying on
+  colour alone.
+
+The rules that make this safe:
+
+- **Nothing loops**, and nothing runs longer than about a second. A screen a five-year-old is
+  thinking on should be still.
+- **Nothing waits for an animation.** No content is hidden until one finishes; no interaction is
+  blocked while one runs.
+- **`prefers-reduced-motion: reduce` disables every one of them** and clamps transitions to 1ms.
+  This is why the keyframes live in one file instead of being scattered through components — the
+  switch has to be provably complete. An E2E test drives a full activity with reduced motion on
+  and requires it to behave identically.
+- **No animation carries meaning on its own.** Feedback is also words and colour; a nudge repeats
+  what the text already says.
+
+**Consequences:** The motion budget is small and visible in one place, which makes it easy to
+refuse additions. If a future activity genuinely needs sequenced motion — a number line filling,
+say — that is the moment to revisit a library, not before.
+
+---
+
+## ADR-046 — Audio has an architecture and no recordings, on purpose
+
+**Status:** Accepted · **Date:** 2026-09-14 · **Extends:** ADR-042
+
+**Context:** PD-008 asked how sound should work. Early literacy in Cycle 1 rests on phonological
+awareness — hearing that « bol » and « bal » differ — and a child copies whatever voice they are
+given. Three routes existed.
+
+**Browser speech synthesis (`SpeechSynthesis`, `fr-FR`)** is free and already in the platform. It
+was rejected as the educational voice: the available French differs on every operating system and
+browser, several common ones are not French-native, most require a network connection, and the
+voice a child hears would change between the parent's phone and the family laptop. A child
+imitating a moving target learns the wrong word. It remains acceptable later for interface
+convenience, never for a word the child is meant to reproduce.
+
+**Paid text-to-speech** is out of scope: the project runs on Vercel Hobby and Supabase Free at
+$0/month, and any paid service needs the owner's decision first (ADR-027).
+
+**Recorded human French** is the only route that gives one stable, native, offline voice — and
+recording it is a person's job, not a generation step.
+
+**Decision:** Ship the architecture, ship **zero audio assets**, and let the parent be the voice.
+
+- `AUDIO_KINDS` is `pronunciation`, `narration`, `ambience`. An `AudioAsset` carries a
+  `transcript`, a duration and a provenance that **names the speaker** — an unattributed recording
+  cannot enter the registry of a public repository.
+- Audio lives in the registry beside the images (`content/media/registry.json`), under
+  `public/media/`. No cloud storage, no CDN, no external host.
+- A teaching text may name an `audioId`. The listen control renders **only when the recording
+  exists**, so there is no button that does nothing while the corpus is empty.
+- **Never autoplay. Never the only route.** Every word is written for the parent to read aloud;
+  audio is a second opinion on pronunciation, not a replacement for the adult in the room.
+- **No interface sounds at all** — no click, no chime, no reward noise.
+- `docs/AUDIO_GUIDELINES.md` lists the ~20 words worth recording first and the ~25 MB point at
+  which the repository stops being the right home for them.
+
+**Consequences:** The September programme works today with no audio, because it was written for a
+parent's voice from the start. When a native French speaker records the list, the words light up
+with no code change. The risk accepted is that pronunciation quality currently depends on the
+parent — which is also true of every book read at home, and is stated plainly in the guidelines
+rather than papered over with a synthetic voice.

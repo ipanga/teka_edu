@@ -37,9 +37,9 @@ and audio has an architecture with an honest account of what can and cannot be r
 
 ## Last Checkpoint
 
-2026-09-14 — M1 to M6 done: home screen and level routes, visual pass, motion system, audio
-architecture, extended report. 210 unit tests and 27 E2E tests pass. Next: documentation, full
-suite, PR ready.
+2026-09-14 — documentation done (ADR-044/045/046, PARENT_SESSION, MEDIA_ARCHITECTURE,
+REAL_SESSION_TESTING, CLAUDE, README, PROJECT_STATUS) and the full local suite is green.
+Next: mark PR #28 ready, wait for CI, squash-merge, verify staging.
 
 ## Scope
 
@@ -85,7 +85,7 @@ suite, PR ready.
 
 ## In Progress
 
-- [ ] M8 — documentation, full validation, PR ready, staging
+- [ ] M8 — PR #28 ready for review, CI, merge, staging verification
 
 ## Remaining
 
@@ -105,11 +105,13 @@ suite, PR ready.
 | typecheck          | PASS    | working tree                      |
 | unit tests         | PASS    | working tree — 210 tests          |
 | content validation | PASS    | working tree — 21 files           |
-| database tests     | STALE   | schemas changed; to re-run        |
-| build              | PASS    | working tree                      |
+| database tests     | PASS    | local reset — 144 assertions      |
+| build              | PASS    | working tree — 9 routes           |
+| client bundle      | PASS    | sentinels, 3 values absent        |
 | E2E                | PASS    | working tree — 27 tests           |
-| Docker             | NOT RUN | left to CI                        |
-| secret scans       | NOT RUN | before the PR is marked ready     |
+| tracked `.env*`    | PASS    | 0 files                           |
+| gitleaks           | NOT RUN | not installed locally; CI runs it |
+| Docker images      | NOT RUN | left to CI                        |
 | staging            | STALE   | not deployed from this branch yet |
 
 ## Database State
@@ -142,8 +144,8 @@ None.
 
 ## Exact Resume Point
 
-Write ADR-044 (home and levels), ADR-045 (motion) and ADR-046 (audio), update the
-documentation, re-run the database tests, then the full suite and mark PR #28 ready.
+Mark PR #28 ready for review, wait for the four required checks, squash-merge into
+`develop`, then verify the live staging application against the Phase 3D checklist.
 
 ## Resume Verification
 

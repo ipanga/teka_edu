@@ -106,6 +106,24 @@ Static files under `public/` are part of the deployment, so a future service wor
 them with the rest of the release. There is no runtime dependency on any external host, which is
 the point: a session in a home with a weak connection must still show the child a square.
 
+## Audio
+
+The same registry holds an `audio` array, and it is deliberately **empty**. The reasoning, the
+rejection of browser speech synthesis as the educational voice, and the exact words worth
+recording first are in [`AUDIO_GUIDELINES.md`](AUDIO_GUIDELINES.md) and ADR-046. The short
+version: the parent reads aloud, and a recording is a second opinion on pronunciation — never the
+only route, and never autoplaying.
+
+`npm run media:report` counts the recordings alongside the images, so the gap stays visible.
+
+## Motion
+
+Pictures do not move. The four animations the product allows are CSS keyframes in
+`app/globals.css`, all switched off by `prefers-reduced-motion`, and none of them attaches to
+media (ADR-045).
+
 ## Cost
 
 **$0.** Kilobytes of SVG in a Git repository, served by the hosting that already serves the app.
+Audio, when it exists, is recorded by a person and committed the same way; the point at which
+that stops being reasonable (~25 MB) is stated in the audio guidelines.

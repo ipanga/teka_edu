@@ -16,6 +16,9 @@ On your phone or tablet:
 
 Add it to your home screen if you want to find it again easily.
 
+The first screen asks which class. Tap **3ème maternelle** — it is the only one with lessons for
+now, and the other two say so rather than pretending.
+
 ## 2. Choose the day
 
 Tap **« Voir toutes les séances de septembre »**, then pick **séance 1** (mardi 1er septembre) for
@@ -31,6 +34,10 @@ something, tap **« Je n'ai pas tout : que puis-je utiliser ? »** — there is 
 everything.
 
 Then tap **Commencer la leçon**.
+
+During an activity you can tap **« Montrer à l'enfant »** to hand the device over: the child's
+part fills the screen and nothing else on the page can be tapped, so a stray finger cannot end
+the lesson. **« Revenir au guide du parent »** brings you back.
 
 ## 4. Run it as you normally would
 
@@ -58,11 +65,12 @@ These are the ones that matter most:
 3. **Was any instruction unclear to your child?**
 4. **Where did your child lose interest, or get tired?**
 5. **Did you need the English help?**
-6. **Did the pictures help — and where was one missing?**
-7. **Did tapping the screen help, or interrupt?**
-8. **Was anything too easy or too hard?**
-9. **Did your child want to keep going at the end?**
-10. **Anything you noticed that we did not ask about** — that is often the most useful line.
+6. **Were the pictures big enough, and did they help?**
+7. **Did the pictures help — and where was one missing?**
+8. **Did tapping the screen help, or interrupt?**
+9. **Was anything too easy or too hard?**
+10. **Did your child want to keep going at the end?**
+11. **Anything you noticed that we did not ask about** — that is often the most useful line.
 
 Press **« Enregistrer dans ce navigateur »**, then copy the text in the **À copier** box and send
 it back however is convenient.
