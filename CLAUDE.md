@@ -22,18 +22,13 @@ Read this file first in every session. It holds **stable context and working rul
 | `docs/PEDAGOGICAL_REVIEW.md`        | Pre-review of the pilot week: rubric, findings, what a teacher must decide |
 | `docs/DRC_CURRICULUM_COMPARISON.md` | The DRC PNEM 2021 vs the French Cycle 1 programme, and the strategy        |
 | `docs/PHASE3_RENDERER_PLAN.md`      | Renderer families that Phase 3 should build                                |
-| `docs/PARENT_SESSION.md`            | How a parent runs a session, the routes, and the rules the interface keeps |
-| `docs/MEDIA_ARCHITECTURE.md`        | Where images live, how they are named, generated, and kept free            |
-| `docs/AUDIO_GUIDELINES.md`          | Why the parent is the voice, and what to record first if that changes      |
-| `docs/RESUMABLE_WORKFLOW.md`        | How a long task survives losing the conversation (ADR-041)                 |
-| `docs/PARENT_SESSION.md`            | How a parent runs the daily session, and what the interface does           |
-| `docs/RESUMABLE_WORKFLOW.md`        | How a long task survives an interruption; checkpoints, Git, recovery       |
-| `docs/MEDIA_ARCHITECTURE.md`        | Where pictures live, stable ids, accessibility, why it costs nothing       |
-| `docs/REAL_SESSION_TESTING.md`      | Running one real session with a child, and recording what happened         |
-| `docs/MEDIA_ARCHITECTURE.md`        | Where pictures live, stable ids, accessibility, why it costs nothing       |
-| `docs/REAL_SESSION_TESTING.md`      | Running one real session with a child, and recording what happened         |
-| `docs/work/ACTIVE_TASK.md`          | The task in progress: what is done, what remains, the exact next action    |
 | `docs/ANNUAL_PLAN.md`               | The year's scope and sequence, and how coverage is proved                  |
+| `docs/PARENT_SESSION.md`            | How a parent runs the daily session, the routes, and what the UI does      |
+| `docs/MEDIA_ARCHITECTURE.md`        | Where pictures live, stable ids, accessibility, why it costs nothing       |
+| `docs/AUDIO_GUIDELINES.md`          | Why the parent is the voice, and what to record first if that changes      |
+| `docs/REAL_SESSION_TESTING.md`      | Running one real session with a child, and recording what happened         |
+| `docs/RESUMABLE_WORKFLOW.md`        | How a long task survives an interruption; checkpoints, Git, recovery       |
+| `docs/work/ACTIVE_TASK.md`          | The task in progress: what is done, what remains, the exact next action    |
 
 Do not copy content between these files. Link to it instead.
 
