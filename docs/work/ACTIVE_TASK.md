@@ -10,22 +10,19 @@
 
 ## Task
 
-Phase 3D — home screen, class selection, child visual design, illustrations, motion and audio.
+None in progress.
 
 ## Objective
 
-Teka Edu opens on a welcoming home screen where a parent picks the class; the level is explicit
-in the routes and the data rather than assumed in components; the child's surface looks like it
-was made for a five-year-old; illustrations cover what they should; motion is calm and optional;
-and audio has an architecture with an honest account of what can and cannot be recorded.
+Phase 3D is complete and merged. No new task has been started.
 
 ## Status
 
-`in_progress`
+`planned`
 
 ## Branch
 
-`feat/home-visual-audio-experience`
+`develop` — no feature branch open.
 
 ## Base Branch
 
@@ -33,85 +30,67 @@ and audio has an architecture with an honest account of what can and cannot be r
 
 ## Started
 
-2026-09-14
+—
 
 ## Last Checkpoint
 
-2026-09-14 — documentation done (ADR-044/045/046, PARENT_SESSION, MEDIA_ARCHITECTURE,
-REAL_SESSION_TESTING, CLAUDE, README, PROJECT_STATUS) and the full local suite is green.
-Next: mark PR #28 ready, wait for CI, squash-merge, verify staging.
+2026-09-14 — reset after PR #28 merged as `f37aae3` and verified on live staging.
 
 ## Scope
 
-- A home screen with the three maternelle classes, honest about which have content.
-- Level-aware routing and state; no hardcoded `maternelle-3` in components.
-- A visual pass on the child-facing surface; keep the two zones.
-- Re-audit illustrations against current content; add what genuinely helps.
-- A small CSS animation system honouring `prefers-reduced-motion`.
-- An audio architecture, with assets only where a trustworthy recording exists.
-- Report media, motion and audio coverage together.
+To be filled in when the next task begins.
 
 ## Out of Scope
 
-- **October**, and authoring 1ère/2ème maternelle content.
-- Child profiles, accounts, analytics, progress sync, gamification.
-- Approving lessons; ISSUE-017 stays open.
-- Paid anything; production; `main`.
+- **October**, and 1ère/2ème maternelle content.
+- Approving any lesson; ISSUE-017 stays open.
+- Scores, points, rewards, dashboards, adaptive engines.
+- A child account or profile system.
+- Paid anything: no TTS, CDN, stock imagery, storage.
+- Production, `main`.
 
 ## Product Decisions
 
 - Parent-led after-school répétiteur; 30-45 minutes, September stays at 35 (ADR-039).
 - French Cycle 1 is the curriculum; DRC calendar and context; PNEM as compatibility (ADR-037).
 - Media is repository SVG by stable id, $0 (ADR-042).
+- The app opens on a class; a class with no lessons says so and borrows nothing (ADR-044).
+- Animation is decoration: short, never looping, always off under `prefers-reduced-motion` (ADR-045).
+- The parent is the voice. No synthesised speech for a word a child copies; audio only where a
+  human recording exists, never autoplaying (ADR-046).
 - The screen guides; it never replaces speaking, moving or handling real things.
 - Never claim the app observed what it cannot see.
 
 ## Completed
 
-- [x] Resume protocol; state verified against the repository and the cloud
-- [x] Checkpoint commit, push, **Draft PR #28**
-- [x] **M1** home screen with the three classes; `/maternelle/<1|2|3>/…` routes; the level is a
-      parameter everywhere, no component assumes 3ème maternelle; an unwritten class says so and
-      never borrows another's lessons
-- [x] **M2** visual pass: bigger pictures that grow with the screen, larger targets, roomier
-      child surface, the two zones kept
-- [x] **M4** motion system in one stylesheet — rise, pop, nudge, attention — all disabled by
-      `prefers-reduced-motion`, none required to use an activity
-- [x] Child screen is now a real modal `<dialog>`: the parent's navigation is inert behind it,
-      so a mis-tap cannot end the activity (a test proves the home link is unclickable)
-- [x] **M5** audio architecture: `AudioAsset`, registry list, text narration, a listen control
-      that appears only when a recording exists — **zero assets, deliberately**
-- [x] **M6** `npm run media:report` now covers illustrations, audio, motion and class availability
+- [x] Phase 3A — September programme and the parent session (archived)
+- [x] Session duration policy and the resumable-work protocol (archived)
+- [x] Phase 3B — visuals, interaction and real-session testing (archived)
+- [x] Phase 3C — the session a parent and child can sit down and do (archived)
 
 ## In Progress
 
-- [ ] M8 — PR #28 ready for review, CI, merge, staging verification
+- [ ] Nothing.
 
 ## Remaining
 
-1. M1 home screen, level routes, availability, persistence.
-2. M2 child-facing visual pass.
-3. M3 illustration audit and new assets.
-4. M4 animation system with reduced-motion.
-5. M5 audio architecture and an honest pronunciation plan.
-6. M6 reporting; M7 tests; M8 documentation, validation, staging.
+1. Awaiting the owner's choice of next task.
 
 ## Validation State
 
-| Check              | Result  | At                                |
-| ------------------ | ------- | --------------------------------- |
-| format             | PASS    | working tree                      |
-| lint               | PASS    | working tree                      |
-| typecheck          | PASS    | working tree                      |
-| unit tests         | PASS    | working tree — 210 tests          |
-| content validation | PASS    | working tree — 21 files           |
-| database tests     | PASS    | local reset — 144 assertions      |
-| build              | PASS    | working tree — 9 routes           |
-| client bundle      | PASS    | sentinels, 3 values absent        |
-| E2E                | PASS    | working tree — 27 tests           |
-| secret scans       | PASS    | 0 tracked `.env*`; gitleaks in CI |
-| Docker images      | NOT RUN | left to CI                        |
-| staging            | STALE   | not deployed from this branch yet |
+| Check              | Result | At                                         |
+| ------------------ | ------ | ------------------------------------------ |
+| format             | PASS   | working tree                               |
+| lint               | PASS   | working tree — 0 warnings                  |
+| typecheck          | PASS   | working tree                               |
+| unit tests         | PASS   | working tree — 207 tests                   |
+| content validation | PASS   | working tree — 21 files                    |
+| database tests     | PASS   | working tree — 144 pgTAP assertions        |
+| build              | PASS   | working tree                               |
+| E2E                | PASS   | working tree — 20 tests                    |
+| Docker             | PASS   | CI at `27e9054` — both images              |
+| secret scans       | PASS   | working tree — no leaks, 0 tracked `.env*` |
+| staging            | PASS   | `27e9054` deployed, 20 E2E against it      |
 
 ## Database State
 
@@ -127,9 +106,7 @@ Next: mark PR #28 ready, wait for CI, squash-merge, verify staging.
 
 ## Git State
 
-- Branch `feat/home-visual-audio-experience`, from `develop` at `11c8f6c`.
-- No checkpoint commit yet, not pushed, no PR.
-- Uncommitted: this file.
+- `develop` at `27e9054` plus this closing change. No feature branch, no open PR.
 
 ## Blockers
 
@@ -143,8 +120,8 @@ None.
 
 ## Exact Resume Point
 
-Mark PR #28 ready for review, wait for the four required checks, squash-merge into
-`develop`, then verify the live staging application against the Phase 3D checklist.
+No task is in progress. When the next one starts: fill this file in, create the feature branch
+from `develop`, commit an initial checkpoint, and open a Draft PR before the long work begins.
 
 ## Resume Verification
 
