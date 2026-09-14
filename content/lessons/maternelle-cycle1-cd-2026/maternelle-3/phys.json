@@ -10,7 +10,7 @@
       "domainCode": "PHYS",
       "title": "Je cours, je m’arrête",
       "summary": "Courir puis s’arrêter net au signal, en respectant l’espace et les règles.",
-      "objectiveCodes": ["PHYS-S02-C01-O07", "PHYS-S01-C01-O10"],
+      "objectiveCodes": ["PHYS-S02-C01-O07"],
       "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 1,
@@ -28,7 +28,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["PHYS-S02-C01-O07", "PHYS-S01-C01-O10"],
+          "objectiveCodes": ["PHYS-S02-C01-O07"],
           "materialCodes": ["espace-degage"],
           "vocabulary": [
             {
@@ -63,7 +63,7 @@
       "title": "Je cours plus longtemps",
       "summary": "Courir sans s’arrêter un peu plus longtemps chaque fois.",
       "objectiveCodes": ["PHYS-S01-C01-O10"],
-      "supportingObjectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O07"],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "la-rentree",
@@ -75,7 +75,7 @@
           "type": "movement",
           "title": "Cours pendant que je compte",
           "childInstruction": "Cours sans t’arrêter pendant que je compte jusqu’à dix.",
-          "adultGuidance": "1. Comptez jusqu’à dix pendant qu’il court ou marche vite. 2. Faites une pause. 3. Recommencez en comptant jusqu’à quinze. 4. À l’intérieur : marche rapide, montées de genoux ou course sur place.",
+          "adultGuidance": "1. Refaites l’espace dégagé **avec l’enfant**, comme hier : c’est lui qui écarte ce qui gêne. 2. Rappelez la règle d’arrêt. 3. Comptez lentement jusqu’à dix pendant qu’il court sans s’arrêter. 4. S’il s’arrête avant, comptez moins loin demain : on allonge peu à peu, on ne force pas.",
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
@@ -482,7 +482,7 @@
       "domainCode": "PHYS",
       "title": "Marcher, s’arrêter, repartir",
       "summary": "Contrôler son déplacement : vite, lentement, à l’arrêt.",
-      "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S01-C01-O10"],
+      "objectiveCodes": ["PHYS-S02-C01-O05"],
       "supportingObjectiveCodes": [],
       "stage": "practice",
       "difficulty": 2,
@@ -500,7 +500,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S01-C01-O10"],
+          "objectiveCodes": ["PHYS-S02-C01-O05"],
           "materialCodes": ["espace-degage"],
           "vocabulary": [
             {
@@ -950,7 +950,7 @@
       "domainCode": "PHYS",
       "title": "La course des animaux",
       "summary": "Enchainer des déplacements variés sur une durée plus longue.",
-      "objectiveCodes": ["PHYS-S01-C01-O10", "PHYS-S03-C01-O09"],
+      "objectiveCodes": ["PHYS-S03-C01-O09"],
       "supportingObjectiveCodes": [],
       "stage": "consolidation",
       "difficulty": 2,
@@ -968,7 +968,7 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": ["PHYS-S01-C01-O10", "PHYS-S03-C01-O09"],
+          "objectiveCodes": ["PHYS-S03-C01-O09"],
           "materialCodes": ["espace-degage"],
           "vocabulary": [
             {
@@ -1106,7 +1106,7 @@
       "domainCode": "PHYS",
       "title": "Tous les mouvements du mois",
       "summary": "Reprendre les actions apprises en septembre.",
-      "objectiveCodes": ["PHYS-S01-C01-O10", "PHYS-S02-C01-O05", "PHYS-S04-C01-O09"],
+      "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S04-C01-O09"],
       "supportingObjectiveCodes": [],
       "stage": "consolidation",
       "difficulty": 2,
@@ -1124,7 +1124,7 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": ["PHYS-S01-C01-O10", "PHYS-S02-C01-O05", "PHYS-S04-C01-O09"],
+          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S04-C01-O09"],
           "materialCodes": ["espace-degage"],
           "vocabulary": [
             {

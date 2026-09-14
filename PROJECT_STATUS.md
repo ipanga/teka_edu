@@ -117,7 +117,7 @@ Objective: A September session a parent and child can sit down and do, on any de
 - [x] Phase 3 renderer families planned: 15 activity kinds → 10 families (ADR-036, `docs/PHASE3_RENDERER_PLAN.md`)
 - [x] The official daily read-aloud rule re-verified in the source; the pilot's gap is documented rather than implied away
 - [x] Reuse of both programmes examined from the documents themselves: attribution wording, the Licence Ouverte's date-of-update requirement (now `curriculum_sources.published_on`), exclusion of emblems, and three questions left for a lawyer (`docs/CURRICULUM.md`, ISSUE-021)
-- [ ] **HUMAN pedagogical review of the pilot week — not done (ISSUE-017)**
+- [ ] **HUMAN pedagogical review of September — not done (ISSUE-017)**. The owner reviewed the Week 1 package on 2026-09-14 and returned 13 corrections, all applied (`docs/PEDAGOGICAL_REVIEW.md`). That is an owner's review of a generated document; the gate still requires a person who teaches 3ème maternelle.
 
 ## Infrastructure Status
 
@@ -187,6 +187,20 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 - [x] **Real-session testing**: `/seance/<n>/observation`, browser-only, asks nothing about the child (`docs/REAL_SESSION_TESTING.md`)
 - [x] Media mirrored to the database with RLS and an access decision per table
 - [x] All 88 lessons remain `review`: usability testing is not pedagogical approval
+
+### Week 1 review corrections (PR #31)
+
+- [x] **13 items from the owner's Week 1 review applied**, content and generator (`docs/PEDAGOGICAL_REVIEW.md`)
+- [x] **Objective traceability corrected**: the daily read-aloud claimed « établir un lien entre la lecture effectuée et sa propre expérience » on all 22 days while saying it asks no questions — O15 moved to the two activities that genuinely do it, the ritual took `LANG-S02-C03-O04`
+- [x] The annual plan's O15 pacing corrected: it had been fitted to a ritual that never worked it
+- [x] The endurance objective removed from four activities where nobody runs without stopping; kept where a child actually runs
+- [x] « Ma bande des jours » no longer requires reading seven written day names in week one
+- [x] Market examples made explicitly the family's own rather than assuming a market day
+- [x] An optional extension is now a typed field, so it cannot become an untracked expectation
+- [x] **The review package quotes stories, rhymes and comprehension questions in full** — a reviewer was being asked to approve texts they were never shown
+- [x] Official excerpts no longer cut at their first line (43 statements are multi-line)
+- [x] Four new tests hold all of it; 214 unit tests pass
+- [x] All 88 lessons remain `review`; **ISSUE-017 stays open**
 
 ### Phase 3D — a front door, three classes, motion and the question of a voice (PR #28)
 
@@ -498,27 +512,24 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  Phase 3D — the front door, and the two questions the plan had left open.
-            - The app opens on a class chooser: 1ere, 2eme, 3eme maternelle. The level is a
-              route parameter (/maternelle/<c>/...), session-view takes a levelId, and no
-              component names a class any more (ADR-044).
-            - A class with no lessons is not a link and shows no borrowed content.
-              Availability is counted from the authored days, so no flag can misreport it.
-            - The child's view became a real modal <dialog>: the parent's navigation is inert
-              behind it, so a mis-tap cannot end the activity. A test clicks at the home link
-              and requires the click to fail.
-            - Visual pass: pictures that grow with the screen, larger tap targets, a roomier
-              child surface, the two zones of ADR-043 unchanged.
-            - Motion: four CSS keyframes in one stylesheet, nothing looping, nothing required
-              to use an activity, all disabled by prefers-reduced-motion (ADR-045). No
-              animation library was added.
-            - Audio: full architecture, zero recordings. Browser speech synthesis was
-              evaluated and rejected as the educational voice; the parent reads aloud, and a
-              listen control appears only where a human recording exists (ADR-046, PD-007).
-            - media:report now covers illustrations, audio, motion and class availability.
-Validation: format, lint, typecheck, unit (210), content (21 files), build, E2E (27),
-            database tests, client-bundle secret check, gitleaks, tracked .env* = 0.
-Cost:       $0. No paid TTS, no CDN, no cloud storage, no new service, no plan change.
-Not done:   No lesson approved. ISSUE-017 stays open: the owner using staging successfully is
-            usability evidence, not pedagogical approval. October not authored.
+Completed:  The owner's Week 1 pedagogical review, applied in full (13 items).
+            - The daily reading ritual claimed an objective its own text rules out. The
+              reviewer flagged days 1, 2 and 4; the audit found all 22. O15 moved to the two
+              activities whose guidance already asks "Et toi, comment tu te sentais ?", and
+              the ritual took O04 (stories tied to everyday experience, an earlier band).
+            - O13 was considered and rejected: the annual plan places it at day 127, so using
+              it in September would have been acceleration to make a mapping tidy.
+            - The annual plan's O15 entry was corrected too: daily-from-day-3 existed only
+              because the plan had been fitted to the mis-mapped ritual.
+            - "Courir de plus en plus longtemps" removed from four activities where nobody
+              runs without stopping; kept on the two where a child does.
+            - The week strip no longer requires reading seven written day names in week one.
+            - Market examples now say to use what is true in that family.
+            - The review package quotes every story, rhyme and comprehension question in
+              full, and stopped cutting official excerpts at their first line.
+Validation: format, lint, typecheck, unit (214), content (21 files), pgTAP (144) on a fresh
+            reset with a new data migration, build, E2E (27).
+Cost:       $0.
+Not done:   No lesson approved. ISSUE-017 stays open: the owner's review is not the review by
+            a person who teaches this age group. October not authored.
 ```

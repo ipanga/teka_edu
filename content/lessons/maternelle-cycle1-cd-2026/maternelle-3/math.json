@@ -318,7 +318,7 @@
           "type": "manipulation",
           "title": "Le tas de dix",
           "childInstruction": "Fais un tas de dix objets, en comptant à voix haute.",
-          "adultGuidance": "1. Demandez dix objets. 2. Faites compter à voix haute en les posant. 3. Recomptez ensemble pour vérifier. 4. Demandez : « Et si j’en enlève un, il en reste combien ? »",
+          "adultGuidance": "1. Demandez dix objets. 2. Faites compter à voix haute en les posant. 3. Recomptez ensemble pour vérifier. 4. **Si l’enfant en redemande**, et seulement dans ce cas : « Et si j’en enlève un, il en reste combien ? » Ce n’est pas attendu ce mois-ci ; n’insistez pas et ne recommencez pas si la réponse ne vient pas.",
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
@@ -338,7 +338,8 @@
             }
           ],
           "payload": {
-            "objects": "petits objets"
+            "objects": "petits objets",
+            "extension": "Enlever un objet et redire combien il en reste — facultatif."
           }
         }
       ],

@@ -175,6 +175,67 @@ describe("human review package", () => {
     expect(committed).not.toMatch(/validé par|approuvé par|certifié/i);
   });
 
+  /**
+   * The Week 1 review sent this back: the reviewer was asked to judge « L'histoire de Kumu »
+   * and its three questions without being shown either. Nobody can approve a text they have
+   * not read, so the text travels with the activity that uses it.
+   */
+  it("quotes in full every story and rhyme a reviewer is asked to judge", () => {
+    for (const week of REVIEW_PACKAGES) {
+      const document = readFileSync(path.join(ROOT, reviewPackagePath(week)), "utf8");
+      const named = [...document.matchAll(/— « (.+?) »\*\* \(\d+ min, `([a-z0-9-]+)`\)/g)];
+      expect(named.length, `${week.week}: no teaching text quoted`).toBeGreaterThan(0);
+      for (const [, , id] of named) {
+        const text = data.texts.find((candidate) => candidate.id === id);
+        expect(text, `${id} is quoted but not in content/texts/`).toBeDefined();
+        for (const line of text!.lines) {
+          expect(document, `${id}: a line of the text is missing`).toContain(line);
+        }
+      }
+    }
+  });
+
+  it("shows the comprehension questions the child will actually be asked", () => {
+    const withQuestions = data.lessons
+      .flatMap((lesson) => lesson.activities)
+      .filter((activity) => Array.isArray(activity.payload["questions"]));
+    expect(withQuestions.length).toBeGreaterThan(0);
+    const everyWeek = REVIEW_PACKAGES.map((week) =>
+      readFileSync(path.join(ROOT, reviewPackagePath(week)), "utf8"),
+    ).join("\n");
+    for (const activity of withQuestions) {
+      for (const question of activity.payload["questions"] as string[]) {
+        expect(everyWeek, `${activity.id}: question missing`).toContain(question);
+      }
+    }
+  });
+
+  /**
+   * Official statements are quoted verbatim and 43 of them are several lines — an opening line
+   * such as « Utiliser : » and the bullets under it. Rendering only the first line showed the
+   * reviewer a heading with nothing beneath it, which reads as missing curriculum text.
+   */
+  it("never shows an official excerpt as a heading with nothing under it", () => {
+    for (const week of REVIEW_PACKAGES) {
+      const lines = readFileSync(path.join(ROOT, reviewPackagePath(week)), "utf8").split("\n");
+      lines.forEach((line, index) => {
+        if (!/^\s*[-*] .*:\s*$/.test(line)) return;
+        let next = index + 1;
+        while (next < lines.length && lines[next]!.trim() === "") next += 1;
+        expect(
+          next < lines.length && /^\s{2,}\S/.test(lines[next]!),
+          `semaine ${week.week}, ligne ${index + 1}: « ${line.trim()} » n'introduit rien`,
+        ).toBe(true);
+      });
+    }
+  });
+
+  it("tells the reviewer whose screen time is being counted, and that 35 min is not a target", () => {
+    expect(committed).toContain("temps d’écran actif de l’enfant");
+    expect(committed).toContain("Ce n’est pas un objectif à atteindre.");
+    expect(committed).toContain("Une séance écourtée est une séance normale");
+  });
+
   it("covers its own week, and the five packages together cover September", () => {
     for (let day = options.fromDay; day <= options.toDay; day++) {
       expect(committed).toContain(`## Jour ${day} —`);

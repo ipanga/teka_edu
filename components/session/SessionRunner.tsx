@@ -402,9 +402,20 @@ export function SessionRunner({ session, levelSlug }: { session: SessionDay; lev
           {showGuidance ? "Masquer le conseil" : "Afficher le conseil au parent"}
         </button>
         {showGuidance && (
-          <p className="rounded-2xl bg-stone-100 px-5 py-4 text-lg leading-relaxed">
-            {activity.adultGuidance}
-          </p>
+          <div className="flex flex-col gap-3">
+            <p className="rounded-2xl bg-stone-100 px-5 py-4 text-lg leading-relaxed">
+              {activity.adultGuidance}
+            </p>
+            {typeof activity.payload["extension"] === "string" && (
+              <p className="rounded-2xl border-2 border-dashed border-stone-300 px-5 py-4 text-base leading-relaxed">
+                <strong className="font-semibold">Si l’enfant en redemande :</strong>{" "}
+                {activity.payload["extension"]}{" "}
+                <span className="text-stone-600">
+                  Ce n’est pas attendu ce mois-ci — n’insistez pas.
+                </span>
+              </p>
+            )}
+          </div>
         )}
 
         {activity.englishHelp !== null && (
