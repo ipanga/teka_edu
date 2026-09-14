@@ -20,6 +20,11 @@ export const REVIEW_PACKAGES: readonly ReviewPackageOptions[] = [
   { levelId: "maternelle-3", schoolYearId: "2026-2027", week: 3, fromDay: 10, toDay: 14 },
   { levelId: "maternelle-3", schoolYearId: "2026-2027", week: 4, fromDay: 15, toDay: 19 },
   { levelId: "maternelle-3", schoolYearId: "2026-2027", week: 5, fromDay: 20, toDay: 22 },
+  { levelId: "maternelle-1", schoolYearId: "2026-2027", week: 1, fromDay: 1, toDay: 4 },
+  { levelId: "maternelle-1", schoolYearId: "2026-2027", week: 2, fromDay: 5, toDay: 9 },
+  { levelId: "maternelle-1", schoolYearId: "2026-2027", week: 3, fromDay: 10, toDay: 14 },
+  { levelId: "maternelle-1", schoolYearId: "2026-2027", week: 4, fromDay: 15, toDay: 19 },
+  { levelId: "maternelle-1", schoolYearId: "2026-2027", week: 5, fromDay: 20, toDay: 22 },
 ];
 
 export function reviewPackagePath({ levelId, schoolYearId, week }: ReviewPackageOptions): string {

@@ -7,6 +7,14 @@ import { getReferenceData, getSyllabus } from "@/lib/content/reference-data";
 import { lessonsFileSchema } from "@/lib/content/lesson-schemas";
 
 const data = getReferenceData();
+/**
+ * This file is about 3ème maternelle's September. Since 1ère maternelle was authored, the
+ * reference data holds two levels' lessons, so the suite scopes itself explicitly rather than
+ * assuming the repository contains one level — an assumption that silently becomes a different
+ * assertion every time a level is added.
+ */
+const lessonsOf = (levelId: string) => data.lessons.filter((l) => l.levelIds.includes(levelId));
+const m3 = lessonsOf("maternelle-3");
 const syllabus = getSyllabus("maternelle-cycle1-cd-2026", data);
 const objectives = data.syllabi.flatMap((s) => s.objectives);
 const lesson = (id: string) => {
@@ -17,8 +25,8 @@ const lesson = (id: string) => {
 
 describe("September lessons (3ème maternelle)", () => {
   it("has one lesson per track slot of September, all authored by Teka Edu and marked for review", () => {
-    expect(data.lessons).toHaveLength(88);
-    for (const l of data.lessons) {
+    expect(m3).toHaveLength(88);
+    for (const l of m3) {
       expect(l.origin).toBe("teka-edu-created");
       expect(l.status).toBe("review");
       expect(l.levelIds).toEqual(["maternelle-3"]);
@@ -27,7 +35,7 @@ describe("September lessons (3ème maternelle)", () => {
   });
 
   it("traces every activity to an official objective of the curriculum", () => {
-    const activities = data.lessons.flatMap((l) => l.activities);
+    const activities = m3.flatMap((l) => l.activities);
     expect(activities).toHaveLength(170);
     for (const activity of activities) {
       expect(activity.objectiveCodes.length).toBeGreaterThan(0);
@@ -40,7 +48,7 @@ describe("September lessons (3ème maternelle)", () => {
   });
 
   it("gives every activity a French instruction for the child and guidance for the adult", () => {
-    for (const activity of data.lessons.flatMap((l) => l.activities)) {
+    for (const activity of m3.flatMap((l) => l.activities)) {
       expect(activity.childInstruction.length).toBeGreaterThan(10);
       expect(activity.adultGuidance.length).toBeGreaterThan(20);
       expect(activity.childInstruction).not.toContain("'");
@@ -57,7 +65,7 @@ describe("September lessons (3ème maternelle)", () => {
   });
 
   it("offers English only as a scaffold, never as a second curriculum", () => {
-    const activities = data.lessons.flatMap((l) => l.activities);
+    const activities = m3.flatMap((l) => l.activities);
     const scaffolded = activities.filter((a) => a.scaffolds.length > 0);
     expect(scaffolded.length).toBeGreaterThan(20);
     for (const activity of activities) {
@@ -71,14 +79,14 @@ describe("September lessons (3ème maternelle)", () => {
   });
 
   it("keeps a session short: no lesson longer than 15 minutes", () => {
-    for (const l of data.lessons) {
+    for (const l of m3) {
       expect(lessonMinutes(l), l.id).toBeLessThanOrEqual(15);
       expect(lessonScreenMinutes(l)).toBeLessThanOrEqual(lessonMinutes(l));
     }
   });
 
   it("includes the daily read-aloud the programme requires, without questions", () => {
-    const language = data.lessons.filter((l) => l.domainCode === "LANG");
+    const language = m3.filter((l) => l.domainCode === "LANG");
     expect(language).toHaveLength(22);
     for (const l of language) {
       const readAloud = l.activities.filter((a) => a.type === "read-aloud");
@@ -88,7 +96,7 @@ describe("September lessons (3ème maternelle)", () => {
   });
 
   it("uses the DRC context in its vocabulary and examples", () => {
-    const text = data.lessons
+    const text = m3
       .flatMap((l) => l.activities)
       .map((a) => `${a.childInstruction} ${a.adultGuidance} ${JSON.stringify(a.payload)}`)
       .join(" ");
@@ -103,9 +111,7 @@ describe("lesson validation", () => {
     checkLessons([l], data.curricula, objectives, data.levels, data.materials);
 
   it("accepts the September lessons", () => {
-    expect(
-      checkLessons(data.lessons, data.curricula, objectives, data.levels, data.materials),
-    ).toEqual([]);
+    expect(checkLessons(m3, data.curricula, objectives, data.levels, data.materials)).toEqual([]);
   });
 
   it("rejects an activity objective that the lesson does not declare", () => {

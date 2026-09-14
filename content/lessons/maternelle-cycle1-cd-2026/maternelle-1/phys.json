@@ -1,0 +1,953 @@
+{
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "levelId": "maternelle-1",
+  "domainCode": "PHYS",
+  "lessons": [
+    {
+      "id": "m1-phys-01",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Le jeu et la règle",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S04-C01-O03"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-01-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Le jeu et la règle",
+          "childInstruction": "On joue ensemble : on écoute, et on s’arrête quand je dis stop.",
+          "adultGuidance": "Dégagez l’espace avec lui — c’est lui qui pousse la chaise. Dites la règle : on part quand je tape, on s’arrête quand je dis stop. Jouez trente secondes, arrêtez, recommencez. La règle s’apprend en jouant, pas en l’écoutant.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S04-C01-O03"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-02",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je cours",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S01-C01-O02"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-02-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je cours",
+          "childInstruction": "Cours jusqu’au mur, puis reviens en marchant.",
+          "adultGuidance": "Donnez un but visible : le mur, la porte, l’arbre. Faites-le courir, puis revenir doucement. Trois allers suffisent. À l’intérieur, remplacez la course par des pas rapides sur place.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O02"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-03",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je cours",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S01-C01-O02"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-03-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je cours",
+          "childInstruction": "Cours jusqu’au mur, puis reviens en marchant.",
+          "adultGuidance": "Donnez un but visible : le mur, la porte, l’arbre. Faites-le courir, puis revenir doucement. Trois allers suffisent. À l’intérieur, remplacez la course par des pas rapides sur place.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O02"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-04",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je bouge comme toi",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S03-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-04-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je bouge comme toi",
+          "childInstruction": "Bouge comme moi. Puis bouge comme tu veux.",
+          "adultGuidance": "Faites un mouvement simple et lent — lever les bras, tourner — et laissez-le imiter. Puis inversez : c’est lui qui montre, vous imitez. Être copié par un adulte vaut tous les encouragements.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S03-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-05",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je cours",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S01-C01-O02"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-05-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je cours",
+          "childInstruction": "Cours jusqu’au mur, puis reviens en marchant.",
+          "adultGuidance": "Donnez un but visible : le mur, la porte, l’arbre. Faites-le courir, puis revenir doucement. Trois allers suffisent. À l’intérieur, remplacez la course par des pas rapides sur place.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O02"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-06",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je lance",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S01-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-06-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je lance",
+          "childInstruction": "Lance la balle dans le seau.",
+          "adultGuidance": "Une balle en papier froissé et un seau à deux pas. Montrez une fois. S’il rate, rapprochez le seau : on ne fait pas plus difficile, on fait réussi. Cinq lancers, pas plus.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O01"],
+          "materialCodes": ["balle-papier", "boite"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-07",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je bouge comme toi",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S03-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-07-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je bouge comme toi",
+          "childInstruction": "Bouge comme moi. Puis bouge comme tu veux.",
+          "adultGuidance": "Faites un mouvement simple et lent — lever les bras, tourner — et laissez-le imiter. Puis inversez : c’est lui qui montre, vous imitez. Être copié par un adulte vaut tous les encouragements.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S03-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-08",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je lance",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S01-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-08-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je lance",
+          "childInstruction": "Lance la balle dans le seau.",
+          "adultGuidance": "Une balle en papier froissé et un seau à deux pas. Montrez une fois. S’il rate, rapprochez le seau : on ne fait pas plus difficile, on fait réussi. Cinq lancers, pas plus.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O01"],
+          "materialCodes": ["balle-papier", "boite"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-09",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je marche sur la ligne",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S02-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-09-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je marche sur la ligne",
+          "childInstruction": "Marche sur la ligne sans tomber.",
+          "adultGuidance": "Posez une ligne au sol — une corde, un bâton, du ruban. Tenez-lui la main au premier passage, puis lâchez. S’il tombe à côté, il recommence : c’est le jeu, pas une faute.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-10",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je cours",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S01-C01-O02"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-10-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je cours",
+          "childInstruction": "Cours jusqu’au mur, puis reviens en marchant.",
+          "adultGuidance": "Donnez un but visible : le mur, la porte, l’arbre. Faites-le courir, puis revenir doucement. Trois allers suffisent. À l’intérieur, remplacez la course par des pas rapides sur place.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O02"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-11",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je lance",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S01-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-11-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je lance",
+          "childInstruction": "Lance la balle dans le seau.",
+          "adultGuidance": "Une balle en papier froissé et un seau à deux pas. Montrez une fois. S’il rate, rapprochez le seau : on ne fait pas plus difficile, on fait réussi. Cinq lancers, pas plus.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O01"],
+          "materialCodes": ["balle-papier", "boite"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-12",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je marche sur la ligne",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S02-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-12-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je marche sur la ligne",
+          "childInstruction": "Marche sur la ligne sans tomber.",
+          "adultGuidance": "Posez une ligne au sol — une corde, un bâton, du ruban. Tenez-lui la main au premier passage, puis lâchez. S’il tombe à côté, il recommence : c’est le jeu, pas une faute.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-13",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je bouge comme toi",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S03-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-13-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je bouge comme toi",
+          "childInstruction": "Bouge comme moi. Puis bouge comme tu veux.",
+          "adultGuidance": "Faites un mouvement simple et lent — lever les bras, tourner — et laissez-le imiter. Puis inversez : c’est lui qui montre, vous imitez. Être copié par un adulte vaut tous les encouragements.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S03-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-14",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je cours",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S01-C01-O02"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-14-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je cours",
+          "childInstruction": "Cours jusqu’au mur, puis reviens en marchant.",
+          "adultGuidance": "Donnez un but visible : le mur, la porte, l’arbre. Faites-le courir, puis revenir doucement. Trois allers suffisent. À l’intérieur, remplacez la course par des pas rapides sur place.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O02"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-15",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je lance",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S01-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-15-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je lance",
+          "childInstruction": "Lance la balle dans le seau.",
+          "adultGuidance": "Une balle en papier froissé et un seau à deux pas. Montrez une fois. S’il rate, rapprochez le seau : on ne fait pas plus difficile, on fait réussi. Cinq lancers, pas plus.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O01"],
+          "materialCodes": ["balle-papier", "boite"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-16",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je marche sur la ligne",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S02-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-16-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je marche sur la ligne",
+          "childInstruction": "Marche sur la ligne sans tomber.",
+          "adultGuidance": "Posez une ligne au sol — une corde, un bâton, du ruban. Tenez-lui la main au premier passage, puis lâchez. S’il tombe à côté, il recommence : c’est le jeu, pas une faute.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-17",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je bouge comme toi",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S03-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-17-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je bouge comme toi",
+          "childInstruction": "Bouge comme moi. Puis bouge comme tu veux.",
+          "adultGuidance": "Faites un mouvement simple et lent — lever les bras, tourner — et laissez-le imiter. Puis inversez : c’est lui qui montre, vous imitez. Être copié par un adulte vaut tous les encouragements.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S03-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-18",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je cours",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S01-C01-O02"],
+      "supportingObjectiveCodes": [],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-18-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je cours",
+          "childInstruction": "Cours jusqu’au mur, puis reviens en marchant.",
+          "adultGuidance": "Donnez un but visible : le mur, la porte, l’arbre. Faites-le courir, puis revenir doucement. Trois allers suffisent. À l’intérieur, remplacez la course par des pas rapides sur place.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O02"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-19",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je lance",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S01-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-19-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je lance",
+          "childInstruction": "Lance la balle dans le seau.",
+          "adultGuidance": "Une balle en papier froissé et un seau à deux pas. Montrez une fois. S’il rate, rapprochez le seau : on ne fait pas plus difficile, on fait réussi. Cinq lancers, pas plus.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O01"],
+          "materialCodes": ["balle-papier", "boite"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-20",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je marche sur la ligne",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S02-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-20-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je marche sur la ligne",
+          "childInstruction": "Marche sur la ligne sans tomber.",
+          "adultGuidance": "Posez une ligne au sol — une corde, un bâton, du ruban. Tenez-lui la main au premier passage, puis lâchez. S’il tombe à côté, il recommence : c’est le jeu, pas une faute.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-21",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je bouge comme toi",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S03-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-21-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je bouge comme toi",
+          "childInstruction": "Bouge comme moi. Puis bouge comme tu veux.",
+          "adultGuidance": "Faites un mouvement simple et lent — lever les bras, tourner — et laissez-le imiter. Puis inversez : c’est lui qui montre, vous imitez. Être copié par un adulte vaut tous les encouragements.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S03-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-phys-22",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je choisis mon jeu",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S04-C01-O03"],
+      "supportingObjectiveCodes": [],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-22-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je choisis mon jeu",
+          "childInstruction": "Choisis ce que tu veux faire : courir, lancer, ou marcher sur la ligne.",
+          "adultGuidance": "Laissez-le choisir parmi ce qu’il a fait ce mois-ci, et jouez-y avec lui. Choisir est un apprentissage ; c’est aussi la meilleure façon de savoir ce qui lui a plu.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S04-C01-O03"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move with me."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    }
+  ]
+}

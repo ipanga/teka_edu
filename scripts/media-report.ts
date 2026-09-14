@@ -85,7 +85,18 @@ function isInteractive(activity: Activity): boolean {
 }
 
 const data = getReferenceData();
-const activities = data.lessons.flatMap((lesson) =>
+
+/**
+ * One level at a time. Reporting both levels' September in one set of totals hid which class a
+ * gap belonged to — a picture missing for a three-year-old is a different problem from one
+ * missing for a five-year-old.
+ */
+const levelId =
+  process.argv.find((arg) => arg.startsWith("--level="))?.slice("--level=".length) ??
+  "maternelle-3";
+const levelName = data.levels.find((level) => level.id === levelId)?.name ?? levelId;
+const lessonsOfLevel = data.lessons.filter((lesson) => lesson.levelIds.includes(levelId));
+const activities = lessonsOfLevel.flatMap((lesson) =>
   lesson.activities.map((activity) => ({ lesson, activity })),
 );
 
@@ -106,7 +117,7 @@ const line = "─".repeat(84);
 
 console.log(line);
 console.log(
-  `Septembre 2026 · 3ème maternelle · ${data.lessons.length} leçons · ${rows.length} activités`,
+  `Septembre 2026 · ${levelName} · ${lessonsOfLevel.length} leçons · ${rows.length} activités`,
 );
 console.log(line);
 

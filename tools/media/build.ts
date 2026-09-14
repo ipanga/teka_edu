@@ -218,6 +218,64 @@ const OBJECTS: [id: string, alt: string, tags: string[], body: string][] = [
   ],
 ];
 
+/**
+ * Body parts, for 1ère maternelle. Naming your own body is one of the first things the youngest
+ * band asks for (WORLD-S01-C02-O01), and a child cannot be asked to point at « le ventre » on a
+ * screen that shows nothing. Each one is the part alone, on a plain ground: a whole figure would
+ * make the child pick out the part before naming it, which is a second task.
+ */
+const BODY: [id: string, alt: string, tags: string[], body: string][] = [
+  [
+    "corps-main",
+    "Une main ouverte",
+    ["main", "corps"],
+    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" fill="${AMBER}">
+      <rect x="72" y="92" width="56" height="62" rx="14"/>
+      <rect x="72" y="46" width="13" height="52" rx="6"/>
+      <rect x="90" y="36" width="13" height="62" rx="6"/>
+      <rect x="108" y="44" width="13" height="54" rx="6"/>
+      <rect x="124" y="58" width="13" height="42" rx="6"/>
+      <rect x="52" y="96" width="24" height="13" rx="6"/>
+    </g>`,
+  ],
+  [
+    "corps-pied",
+    "Un pied",
+    ["pied", "corps"],
+    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" fill="${AMBER}">
+      <path d="M78 46 q26 0 30 26 l6 52 q4 30 -26 30 q-28 0 -28 -28 l0 -54 q0 -26 18 -26 z"/>
+      <circle cx="122" cy="70" r="9"/>
+      <circle cx="134" cy="84" r="8"/>
+      <circle cx="141" cy="100" r="7"/>
+      <circle cx="144" cy="116" r="6"/>
+    </g>`,
+  ],
+  [
+    "corps-tete",
+    "Une tête",
+    ["tête", "corps", "visage"],
+    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+      <circle cx="100" cy="98" r="52" fill="${AMBER}"/>
+      <circle cx="82" cy="90" r="6" fill="${INK}" stroke="none"/>
+      <circle cx="118" cy="90" r="6" fill="${INK}" stroke="none"/>
+      <path d="M82 118 q18 14 36 0" fill="none"/>
+      <path d="M48 92 q-12 0 -12 12 q0 12 12 12" fill="${AMBER}"/>
+      <path d="M152 92 q12 0 12 12 q0 12 -12 12" fill="${AMBER}"/>
+    </g>`,
+  ],
+  [
+    "corps-ventre",
+    "Le ventre",
+    ["ventre", "corps"],
+    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M62 52 q38 -12 76 0 l0 96 q-38 12 -76 0 z" fill="${BLUE}"/>
+      <circle cx="100" cy="104" r="7" fill="${INK}" stroke="none"/>
+      <path d="M62 52 q-16 10 -18 34" fill="none"/>
+      <path d="M138 52 q16 10 18 34" fill="none"/>
+    </g>`,
+  ],
+];
+
 const ANIMALS: [id: string, alt: string, tags: string[], body: string][] = [
   [
     "animal-poule",
@@ -268,6 +326,33 @@ const ANIMALS: [id: string, alt: string, tags: string[], body: string][] = [
  * the listening, it does not replace it.
  */
 const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] = [
+  [
+    "histoire-seau-lisa",
+    "Un seau posé sur une chaise",
+    ["histoire", "seau", "chaise"],
+    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="44" y="120" width="60" height="8" fill="${AMBER}"/>
+      <rect x="48" y="128" width="8" height="42" fill="${AMBER}"/>
+      <rect x="92" y="128" width="8" height="42" fill="${AMBER}"/>
+      <rect x="92" y="74" width="8" height="52" fill="${AMBER}"/>
+      <path d="M106 76 l44 0 l-8 44 l-28 0 z" fill="${BLUE}"/>
+      <path d="M108 76 q20 -22 40 0" fill="none"/>
+    </g>`,
+  ],
+  [
+    "histoire-tika",
+    "Un enfant qui se lève de son lit, le soleil à la fenêtre",
+    ["histoire", "matin", "lit"],
+    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+      <circle cx="150" cy="56" r="20" fill="${AMBER}"/>
+      <rect x="30" y="110" width="96" height="10" fill="${CLAY}"/>
+      <rect x="30" y="120" width="10" height="40" fill="${CLAY}"/>
+      <rect x="116" y="120" width="10" height="40" fill="${CLAY}"/>
+      <rect x="34" y="92" width="26" height="20" rx="6" fill="${PAPER}"/>
+      <circle cx="84" cy="82" r="16" fill="${AMBER}"/>
+      <path d="M84 98 l0 14" fill="none"/>
+    </g>`,
+  ],
   [
     "histoire-kumu",
     "Un petit poussin devant la porte ouverte du poulailler",
@@ -482,6 +567,14 @@ function main() {
   const assets: Asset[] = [
     ...SHAPES,
     ...OBJECTS.map(([id, alt, tags, body]) => ({
+      id,
+      kind: "object" as const,
+      file: `objects/${id}.svg`,
+      alt,
+      tags,
+      body,
+    })),
+    ...BODY.map(([id, alt, tags, body]) => ({
       id,
       kind: "object" as const,
       file: `objects/${id}.svg`,

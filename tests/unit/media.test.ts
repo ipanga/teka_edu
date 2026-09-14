@@ -29,7 +29,9 @@ describe("the media registry (ADR-042)", () => {
     const ids = data.media.map((asset) => asset.id);
     expect(new Set(ids).size).toBe(ids.length);
     for (const id of ids) {
-      expect(id, id).toMatch(/^(forme|objet|animal|histoire|comptine|plante|bonhomme)-[a-z0-9-]+$/);
+      expect(id, id).toMatch(
+        /^(forme|objet|animal|corps|histoire|comptine|plante|bonhomme)-[a-z0-9-]+$/,
+      );
     }
   });
 

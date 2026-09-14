@@ -1,0 +1,351 @@
+{
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "levelId": "maternelle-1",
+  "domainCode": "ART",
+  "lessons": [
+    {
+      "id": "m1-art-04",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "ART",
+      "title": "Ma comptine",
+      "summary": "Dire des comptines et laisser une trace.",
+      "objectiveCodes": ["ART-S02-C01-O03"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.",
+      "activities": [
+        {
+          "id": "m1-art-04-a1",
+          "position": 1,
+          "type": "song-rhyme",
+          "title": "Ma comptine",
+          "childInstruction": "Dis la comptine avec moi, et fais les gestes.",
+          "adultGuidance": "Choisissez une comptine déjà entendue cette semaine. Dites-la deux fois avec les mêmes gestes. Ce mois-ci, cinq comptines suffisent : c’est de les redire souvent, pas d’en apprendre beaucoup, qui construit le répertoire.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-un-deux-trois-mains"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-art-05",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "ART",
+      "title": "Je dessine",
+      "summary": "Dire des comptines et laisser une trace.",
+      "objectiveCodes": ["ART-S01-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.",
+      "activities": [
+        {
+          "id": "m1-art-05-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Je dessine",
+          "childInstruction": "Prends le crayon et dessine.",
+          "adultGuidance": "Donnez la feuille et un crayon, et laissez-le faire ce qu’il veut. Ne demandez pas ce que c’est, et ne dessinez pas à sa place. S’il vous montre sa feuille, dites ce que vous voyez vraiment : « Tu as fait beaucoup de traits, là. »",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C01-O01"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Take the pencil and draw."
+            }
+          ],
+          "payload": {
+            "subject": "ce qu’il veut"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-art-07",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "ART",
+      "title": "Ma comptine",
+      "summary": "Dire des comptines et laisser une trace.",
+      "objectiveCodes": ["ART-S02-C01-O03"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.",
+      "activities": [
+        {
+          "id": "m1-art-07-a1",
+          "position": 1,
+          "type": "song-rhyme",
+          "title": "Ma comptine",
+          "childInstruction": "Dis la comptine avec moi, et fais les gestes.",
+          "adultGuidance": "Choisissez une comptine déjà entendue cette semaine. Dites-la deux fois avec les mêmes gestes. Ce mois-ci, cinq comptines suffisent : c’est de les redire souvent, pas d’en apprendre beaucoup, qui construit le répertoire.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-un-deux-trois-mains"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-art-09",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "ART",
+      "title": "Je dessine",
+      "summary": "Dire des comptines et laisser une trace.",
+      "objectiveCodes": ["ART-S01-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.",
+      "activities": [
+        {
+          "id": "m1-art-09-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Je dessine",
+          "childInstruction": "Prends le crayon et dessine.",
+          "adultGuidance": "Donnez la feuille et un crayon, et laissez-le faire ce qu’il veut. Ne demandez pas ce que c’est, et ne dessinez pas à sa place. S’il vous montre sa feuille, dites ce que vous voyez vraiment : « Tu as fait beaucoup de traits, là. »",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C01-O01"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Take the pencil and draw."
+            }
+          ],
+          "payload": {
+            "subject": "ce qu’il veut"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-art-11",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "ART",
+      "title": "Ma comptine",
+      "summary": "Dire des comptines et laisser une trace.",
+      "objectiveCodes": ["ART-S02-C01-O03"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.",
+      "activities": [
+        {
+          "id": "m1-art-11-a1",
+          "position": 1,
+          "type": "song-rhyme",
+          "title": "Ma comptine",
+          "childInstruction": "Dis la comptine avec moi, et fais les gestes.",
+          "adultGuidance": "Choisissez une comptine déjà entendue cette semaine. Dites-la deux fois avec les mêmes gestes. Ce mois-ci, cinq comptines suffisent : c’est de les redire souvent, pas d’en apprendre beaucoup, qui construit le répertoire.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-un-deux-trois-mains"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-art-14",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "ART",
+      "title": "Je dessine",
+      "summary": "Dire des comptines et laisser une trace.",
+      "objectiveCodes": ["ART-S01-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.",
+      "activities": [
+        {
+          "id": "m1-art-14-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Je dessine",
+          "childInstruction": "Prends le crayon et dessine.",
+          "adultGuidance": "Donnez la feuille et un crayon, et laissez-le faire ce qu’il veut. Ne demandez pas ce que c’est, et ne dessinez pas à sa place. S’il vous montre sa feuille, dites ce que vous voyez vraiment : « Tu as fait beaucoup de traits, là. »",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C01-O01"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Take the pencil and draw."
+            }
+          ],
+          "payload": {
+            "subject": "ce qu’il veut"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-art-17",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "ART",
+      "title": "Ma comptine",
+      "summary": "Dire des comptines et laisser une trace.",
+      "objectiveCodes": ["ART-S02-C01-O03"],
+      "supportingObjectiveCodes": [],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.",
+      "activities": [
+        {
+          "id": "m1-art-17-a1",
+          "position": 1,
+          "type": "song-rhyme",
+          "title": "Ma comptine",
+          "childInstruction": "Dis la comptine avec moi, et fais les gestes.",
+          "adultGuidance": "Choisissez une comptine déjà entendue cette semaine. Dites-la deux fois avec les mêmes gestes. Ce mois-ci, cinq comptines suffisent : c’est de les redire souvent, pas d’en apprendre beaucoup, qui construit le répertoire.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S02-C01-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the rhyme with me."
+            }
+          ],
+          "payload": {
+            "textId": "comptine-un-deux-trois-mains"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m1-art-19",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "ART",
+      "title": "Je dessine",
+      "summary": "Dire des comptines et laisser une trace.",
+      "objectiveCodes": ["ART-S01-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.",
+      "activities": [
+        {
+          "id": "m1-art-19-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Je dessine",
+          "childInstruction": "Prends le crayon et dessine.",
+          "adultGuidance": "Donnez la feuille et un crayon, et laissez-le faire ce qu’il veut. Ne demandez pas ce que c’est, et ne dessinez pas à sa place. S’il vous montre sa feuille, dites ce que vous voyez vraiment : « Tu as fait beaucoup de traits, là. »",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C01-O01"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Take the pencil and draw."
+            }
+          ],
+          "payload": {
+            "subject": "ce qu’il veut"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    }
+  ]
+}
