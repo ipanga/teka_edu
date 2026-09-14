@@ -59,3 +59,68 @@ export function checkMedia(
   }
   return problems;
 }
+
+/**
+ * Sound, when sound is the point (ADR-046).
+ *
+ * Audio is not decoration here: it exists for what a printed page cannot carry — how a French
+ * word is actually pronounced, what a rhyme sounds like in rhythm, what an animal or the rain
+ * sounds like when recognising it *is* the learning objective.
+ *
+ * It is deliberately never required. Every activity works with no audio at all, because the
+ * parent reading aloud is the design and not a fallback: a five-year-old learning French from a
+ * person they love beats a recording (docs/AUDIO_GUIDELINES.md).
+ */
+export const AUDIO_KINDS = [
+  /** One word or short phrase, said by a human, for a child to hear and copy. */
+  "pronunciation",
+  /** A story or a rhyme read aloud, for the days a parent cannot. */
+  "narration",
+  /** A sound the child must recognise: an animal, rain, an object. */
+  "ambience",
+] as const;
+export type AudioKind = (typeof AUDIO_KINDS)[number];
+
+export type AudioAsset = {
+  id: string;
+  kind: AudioKind;
+  /** Path under public/audio/, e.g. "mots/le-crayon.mp3". */
+  file: string;
+  /** Exactly what is said, so the text and the sound can never drift apart. */
+  transcript: string;
+  /** Roughly how long it lasts, in seconds; used to decide whether to preload. */
+  seconds: number;
+  origin: ContentOrigin;
+  /** Who recorded it and on what terms. A synthetic voice must say so here. */
+  provenance: string;
+};
+
+export function audioUrl(asset: AudioAsset): string {
+  return `/audio/${asset.file}`;
+}
+
+export function findAudio(assets: readonly AudioAsset[], id: string): AudioAsset | undefined {
+  return assets.find((asset) => asset.id === id);
+}
+
+/** Ids are unique, nothing is silent, and every id a text names exists. */
+export function checkAudio(
+  assets: readonly AudioAsset[],
+  texts: readonly { id: string; audioId: string | null }[],
+): string[] {
+  const problems: string[] = [];
+  const ids = new Set<string>();
+  for (const asset of assets) {
+    if (ids.has(asset.id)) problems.push(`audio "${asset.id}": defined more than once`);
+    ids.add(asset.id);
+    if (asset.transcript.trim() === "") {
+      problems.push(`audio "${asset.id}": needs a transcript of what is said`);
+    }
+  }
+  for (const text of texts) {
+    if (text.audioId !== null && !ids.has(text.audioId)) {
+      problems.push(`text "${text.id}": unknown audio "${text.audioId}"`);
+    }
+  }
+  return problems;
+}

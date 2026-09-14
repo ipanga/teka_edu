@@ -146,7 +146,7 @@ Lesson (teaches / reinvests objectives) → Activity (typed, traceable)     docs
 TeachingText (the story or rhyme the lesson supplies)                     content/texts/
 MediaAsset (the picture the child looks at, by stable id)                 docs/MEDIA_ARCHITECTURE.md
 LevelProgramme (rhythm + tracks) + instructional day n → DailyPlan        docs/DAILY_PROGRAMME.md
-DailyPlan → the parent's session (today, /seance/<n>, /calendrier)        docs/PARENT_SESSION.md
+DailyPlan → the parent's session (/maternelle/<c>/seance/<n>)            docs/PARENT_SESSION.md
 ```
 
 - The **annual plan** is authored before a month's lessons and says what the year owes the child;

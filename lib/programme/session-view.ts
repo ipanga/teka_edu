@@ -8,7 +8,7 @@ import type { SchoolDay } from "@/domain/calendar/types";
 import { ACTIVITY_RENDERERS, type RendererFamily } from "@/domain/lessons/renderers";
 import { findText } from "@/domain/lessons/texts";
 import type { Activity, Material } from "@/domain/lessons/types";
-import { type MediaAsset, findAsset, mediaUrl } from "@/domain/media/types";
+import { type MediaAsset, audioUrl, findAsset, findAudio, mediaUrl } from "@/domain/media/types";
 import { generateDailyPlan } from "@/domain/programme/daily-plan";
 import type { DailyPlan } from "@/domain/programme/types";
 import { getProgramme, getReferenceData } from "@/lib/content/reference-data";
@@ -22,8 +22,69 @@ import { getProgramme, getReferenceData } from "@/lib/content/reference-data";
  * packages and the reports.
  */
 
-export const LEVEL_ID = "maternelle-3";
 export const SCHOOL_YEAR_ID = "2026-2027";
+
+/**
+ * The classes Teka Edu knows about, in the order a parent reads them. The level is part of the
+ * URL and of every lookup below (ADR-044): nothing assumes 3ème maternelle any more, so adding a
+ * class — or a primary-school stage later — is content and a row here, not a rewrite.
+ */
+export const MATERNELLE_SLUGS = {
+  "1": "maternelle-1",
+  "2": "maternelle-2",
+  "3": "maternelle-3",
+} as const;
+export type MaternelleSlug = keyof typeof MATERNELLE_SLUGS;
+
+export function levelIdFromSlug(slug: string): string | undefined {
+  return MATERNELLE_SLUGS[slug as MaternelleSlug];
+}
+
+export function slugFromLevelId(levelId: string): MaternelleSlug | undefined {
+  const found = Object.entries(MATERNELLE_SLUGS).find(([, id]) => id === levelId);
+  return found?.[0] as MaternelleSlug | undefined;
+}
+
+export type LevelAvailability = {
+  levelId: string;
+  slug: MaternelleSlug;
+  /** "3ème maternelle", from the education model — never hard-coded in a component. */
+  name: string;
+  /** A class is available when it has a programme with at least one authored day. */
+  available: boolean;
+  /** How many instructional days are written, so the home screen can be honest. */
+  authoredDays: number;
+};
+
+/**
+ * What each class can actually offer today. A class with no content says so; it never falls back
+ * to another class's lessons, which would show a five-year-old the wrong year's work.
+ */
+export function levelAvailability(): LevelAvailability[] {
+  const data = getReferenceData();
+  return Object.entries(MATERNELLE_SLUGS).flatMap(([slug, levelId]) => {
+    const level = data.levels.find((candidate) => candidate.id === levelId);
+    if (level === undefined) return [];
+    const days = authoredDays(levelId);
+    return [
+      {
+        levelId,
+        slug: slug as MaternelleSlug,
+        name: level.name,
+        available: days.length > 0,
+        authoredDays: days.length,
+      },
+    ];
+  });
+}
+
+export type SessionAudio = {
+  id: string;
+  url: string;
+  /** Exactly what is said, so a deaf child or a silent room loses nothing. */
+  transcript: string;
+  seconds: number;
+};
 
 export type SessionText = {
   title: string;
@@ -31,6 +92,8 @@ export type SessionText = {
   lines: readonly string[];
   /** A picture for the story itself, so the child has somewhere to rest their eyes. */
   illustration: SessionMedia | null;
+  /** A recording of the text, when one exists. Null is normal: the parent reads (ADR-046). */
+  audio: SessionAudio | null;
 };
 
 export type SessionMedia = {
@@ -74,6 +137,7 @@ export type SessionStep = {
 
 export type SessionDay = {
   instructionalDay: number;
+  levelId: string;
   date: CalendarDate;
   dateLabel: string;
   levelName: string;
@@ -92,6 +156,15 @@ function toMedia(id: string | null): SessionMedia | null {
   return asset === undefined
     ? null
     : { id: asset.id, url: mediaUrl(asset), alt: asset.alt, tags: asset.tags };
+}
+
+/** Resolves an audio id, or null when the text has no recording. */
+function toAudio(id: string | null): SessionAudio | null {
+  if (id === null) return null;
+  const asset = findAudio(getReferenceData().audio, id);
+  return asset === undefined
+    ? null
+    : { id: asset.id, url: audioUrl(asset), transcript: asset.transcript, seconds: asset.seconds };
 }
 
 function toActivity(activity: Activity): SessionActivity {
@@ -119,6 +192,7 @@ function toActivity(activity: Activity): SessionActivity {
             kind: text.kind,
             lines: text.lines,
             illustration: toMedia(text.illustrationId),
+            audio: toAudio(text.audioId),
           },
     media: activity.mediaIds.flatMap((id) => {
       const asset: MediaAsset | undefined = findAsset(getReferenceData().media, id);
@@ -138,9 +212,9 @@ export function schoolDays(): SchoolDay[] {
 }
 
 /** The session of one instructional day, or undefined when that day has no content yet. */
-export function sessionForDay(day: number): SessionDay | undefined {
+export function sessionForDay(levelId: string, day: number): SessionDay | undefined {
   const data = getReferenceData();
-  const programme = getProgramme(LEVEL_ID, SCHOOL_YEAR_ID, data);
+  const programme = getProgramme(levelId, SCHOOL_YEAR_ID, data);
   const schoolDay = schoolDays().find((d) => d.instructionalDay === day);
   if (programme === undefined || schoolDay === undefined || schoolDay.date === null)
     return undefined;
@@ -150,9 +224,10 @@ export function sessionForDay(day: number): SessionDay | undefined {
 
   return {
     instructionalDay: day,
+    levelId,
     date: schoolDay.date,
     dateLabel: formatFrenchDate(schoolDay.date),
-    levelName: data.levels.find((l) => l.id === LEVEL_ID)?.name ?? LEVEL_ID,
+    levelName: data.levels.find((l) => l.id === levelId)?.name ?? levelId,
     totalMinutes: plan.totalMinutes,
     screenMinutes: plan.screenMinutes,
     pauseAfterSession: plan.pauseAfterSession,
@@ -179,11 +254,14 @@ export function sessionForDay(day: number): SessionDay | undefined {
   };
 }
 
-/** Instructional days that already have a session, in order. */
-export function authoredDays(): number[] {
+/** Instructional days that already have a session for this class, in order. */
+export function authoredDays(levelId: string): number[] {
   const days: number[] = [];
   for (const day of schoolDays()) {
-    if (day.instructionalDay !== null && sessionForDay(day.instructionalDay) !== undefined) {
+    if (
+      day.instructionalDay !== null &&
+      sessionForDay(levelId, day.instructionalDay) !== undefined
+    ) {
       days.push(day.instructionalDay);
     }
   }
@@ -195,7 +273,7 @@ export function authoredDays(): number[] {
  * weekend, a holiday, or a date outside the authored month — the parent is offered the most
  * recent day that has one, and told why.
  */
-export function todaysSession(): {
+export function todaysSession(levelId: string): {
   today: CalendarDate;
   todayLabel: string;
   isInstructional: boolean;
@@ -205,10 +283,10 @@ export function todaysSession(): {
   const data = getReferenceData();
   const today = calendarDateInTimeZone(new Date(), data.defaultTimeZone);
   const day = schoolDays().find((d) => d.date === today);
-  const authored = authoredDays();
+  const authored = authoredDays(levelId);
 
   if (day?.instructional && day.instructionalDay !== null) {
-    const session = sessionForDay(day.instructionalDay);
+    const session = sessionForDay(levelId, day.instructionalDay);
     if (session !== undefined) {
       return {
         today,
@@ -241,6 +319,6 @@ export function todaysSession(): {
     todayLabel: formatFrenchDate(today),
     isInstructional: day?.instructional ?? false,
     reason,
-    session: fallback === undefined ? undefined : sessionForDay(fallback),
+    session: fallback === undefined ? undefined : sessionForDay(levelId, fallback),
   };
 }

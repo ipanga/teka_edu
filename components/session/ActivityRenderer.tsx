@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import type { RendererFamily } from "@/domain/lessons/renderers";
-import type { SessionActivity, SessionMedia } from "@/lib/programme/session-view";
+import type { SessionActivity, SessionMedia, SessionText } from "@/lib/programme/session-view";
 
 /**
  * One component per renderer family, not one per activity kind (ADR-036): fifteen kinds share ten
@@ -23,7 +23,10 @@ import type { SessionActivity, SessionMedia } from "@/lib/programme/session-view
 // ---- shared pieces ---------------------------------------------------------------------------
 
 function Picture({ media, size = "md" }: { media: SessionMedia; size?: "sm" | "md" | "lg" }) {
-  const px = size === "lg" ? 128 : size === "md" ? 96 : 64;
+  const px = size === "lg" ? 192 : size === "md" ? 128 : 72;
+  // Grows with the screen: the same picture should be readable on a phone and across a room.
+  const width =
+    size === "lg" ? "max-w-48 sm:max-w-64" : size === "md" ? "max-w-32 sm:max-w-40" : "max-w-20";
   return (
     // eslint-disable-next-line @next/next/no-img-element -- SVG from public/, no optimisation needed
     <img
@@ -31,7 +34,9 @@ function Picture({ media, size = "md" }: { media: SessionMedia; size?: "sm" | "m
       alt={media.alt}
       width={px}
       height={px}
-      className="h-auto w-full max-w-32"
+      loading="lazy"
+      decoding="async"
+      className={`h-auto w-full ${width}`}
     />
   );
 }
@@ -45,13 +50,16 @@ function Feedback({ state, hint }: { state: "idle" | "retry" | "done"; hint: str
   if (state === "idle") return null;
   if (state === "done") {
     return (
-      <p role="status" className="rounded-2xl bg-emerald-100 px-5 py-3 text-lg font-semibold">
+      <p
+        role="status"
+        className="teka-pop rounded-2xl bg-emerald-100 px-5 py-3 text-lg font-semibold"
+      >
         Bravo !
       </p>
     );
   }
   return (
-    <p role="status" className="rounded-2xl bg-amber-50 px-5 py-3 text-lg">
+    <p role="status" className="teka-nudge rounded-2xl bg-amber-50 px-5 py-3 text-lg">
       {hint ?? "Essaie encore. Regarde bien."}
     </p>
   );
@@ -147,12 +155,12 @@ function ChooseOne({
               type="button"
               onClick={() => choose(item)}
               aria-label={item.alt}
-              className={`flex min-h-28 items-center justify-center rounded-2xl border-4 bg-white p-3 ${
+              className={`flex min-h-32 items-center justify-center rounded-2xl border-4 bg-white p-3 transition sm:min-h-40 ${
                 state === "done" && isAnswer
-                  ? "border-emerald-600"
+                  ? "teka-pop border-emerald-600"
                   : revealed && isAnswer
-                    ? "border-amber-500"
-                    : "border-stone-200"
+                    ? "teka-attention border-amber-500"
+                    : "border-stone-200 hover:border-stone-300"
               }`}
             >
               <Picture media={item} />
@@ -200,8 +208,8 @@ function CountTogether({ upTo, media }: { upTo: number; media: SessionMedia | un
               type="button"
               onClick={() => setCounted(index + 1)}
               aria-label={`Objet ${index + 1}`}
-              className={`flex h-16 w-16 items-center justify-center rounded-2xl border-4 ${
-                done ? "border-emerald-600 bg-emerald-50" : "border-stone-200 bg-white"
+              className={`flex h-20 w-20 items-center justify-center rounded-2xl border-4 transition sm:h-24 sm:w-24 ${
+                done ? "teka-pop border-emerald-600 bg-emerald-50" : "border-stone-200 bg-white"
               }`}
             >
               {media ? (
@@ -215,7 +223,11 @@ function CountTogether({ upTo, media }: { upTo: number; media: SessionMedia | un
           );
         })}
       </div>
-      <p role="status" className="text-2xl font-bold">
+      <p
+        role="status"
+        key={counted}
+        className={`text-3xl font-bold ${counted > 0 ? "teka-pop" : ""}`}
+      >
         {counted === 0 ? "…" : counted === total ? `${counted} en tout. Bravo !` : counted}
       </p>
       {counted > 0 && (
@@ -531,6 +543,49 @@ function WordCards({ activity }: { activity: SessionActivity }) {
   );
 }
 
+/**
+ * A recording, offered and never forced: it plays on a tap, never on arrival, and the transcript
+ * is on the page anyway. Nothing here is the only route to the content (ADR-046).
+ */
+function Listen({ audio }: { audio: NonNullable<SessionText["audio"]> }) {
+  const [playing, setPlaying] = useState(false);
+  const element = useRef<HTMLAudioElement | null>(null);
+
+  return (
+    <div className="flex items-center gap-3">
+      <button
+        type="button"
+        onClick={() => {
+          const player = element.current;
+          if (player === null) return;
+          if (playing) {
+            player.pause();
+            player.currentTime = 0;
+            setPlaying(false);
+            return;
+          }
+          void player.play().then(
+            () => setPlaying(true),
+            // A browser that refuses to play is not an error the child should see.
+            () => setPlaying(false),
+          );
+        }}
+        className="rounded-xl border-2 border-stone-300 px-4 py-2 text-base font-medium"
+      >
+        {playing ? "Arrêter" : "Écouter l’histoire"}
+      </button>
+      {/* No autoplay, no loop: the parent decides when sound happens. */}
+      <audio
+        ref={element}
+        src={audio.url}
+        preload="none"
+        onEnded={() => setPlaying(false)}
+        aria-label={audio.transcript.slice(0, 80)}
+      />
+    </div>
+  );
+}
+
 /** A story or a rhyme, read by the parent, one page at a time rather than one long scroll. */
 function Narrative({ activity }: { activity: SessionActivity }) {
   const text = activity.text;
@@ -571,6 +626,8 @@ function Narrative({ activity }: { activity: SessionActivity }) {
           ))}
         </div>
       </article>
+
+      {text.audio !== null && <Listen audio={text.audio} />}
 
       {pages > 1 && (
         <div className="flex items-center gap-3">

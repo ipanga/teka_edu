@@ -9,7 +9,7 @@
  * Style: flat, two-tone, no gradients, no faces, recognisable at arm's length on a phone. Colour
  * never carries meaning — the child is asked for *the square*, never for *the blue one*.
  */
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 const ROOT = path.resolve(import.meta.dirname, "../..");
@@ -517,6 +517,10 @@ function main() {
   }
 
   const registry = {
+    // Audio is authored by hand, never generated: a recording needs a human voice (ADR-046).
+    // The generator preserves whatever is already declared.
+    audio:
+      JSON.parse(readFileSync(path.join(ROOT, "content/media/registry.json"), "utf8")).audio ?? [],
     assets: assets.map(({ id, kind, file, alt, tags }) => ({
       id,
       kind,

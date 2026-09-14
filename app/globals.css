@@ -21,3 +21,87 @@ body {
     Arial,
     sans-serif;
 }
+
+/*
+ * Motion (ADR-045).
+ *
+ * Every animation here is short, once, and decorative in the strict sense: the lesson is fully
+ * usable and fully legible with all of it switched off. Nothing waits for an animation to finish,
+ * nothing is hidden until one runs, and nothing loops — a screen a five-year-old is trying to
+ * think on should be still.
+ *
+ * `prefers-reduced-motion: reduce` disables all of it, which is the whole reason the rules live
+ * in one place rather than scattered through components.
+ */
+
+@keyframes teka-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes teka-pop {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes teka-nudge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+}
+
+/** A card or a panel arriving: one short rise, never on every render of a list item. */
+.teka-rise {
+  animation: teka-rise 320ms ease-out both;
+}
+
+/** Confirmation of a correct choice: a single gentle pulse, no confetti, no sound. */
+.teka-pop {
+  animation: teka-pop 260ms ease-out;
+}
+
+/** "Look again": a small horizontal nudge, the visual equivalent of a kind tone of voice. */
+.teka-nudge {
+  animation: teka-nudge 240ms ease-in-out;
+}
+
+/** The picture the child is being asked to find, made findable without relying on colour. */
+.teka-attention {
+  animation: teka-pop 900ms ease-in-out 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .teka-rise,
+  .teka-pop,
+  .teka-nudge,
+  .teka-attention {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}

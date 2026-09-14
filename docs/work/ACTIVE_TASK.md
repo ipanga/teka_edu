@@ -10,19 +10,22 @@
 
 ## Task
 
-None in progress.
+Phase 3D — home screen, class selection, child visual design, illustrations, motion and audio.
 
 ## Objective
 
-Phase 3C is complete and merged. No new task has been started.
+Teka Edu opens on a welcoming home screen where a parent picks the class; the level is explicit
+in the routes and the data rather than assumed in components; the child's surface looks like it
+was made for a five-year-old; illustrations cover what they should; motion is calm and optional;
+and audio has an architecture with an honest account of what can and cannot be recorded.
 
 ## Status
 
-`planned`
+`in_progress`
 
 ## Branch
 
-`develop` — no feature branch open.
+`feat/home-visual-audio-experience`
 
 ## Base Branch
 
@@ -30,24 +33,30 @@ Phase 3C is complete and merged. No new task has been started.
 
 ## Started
 
-—
+2026-09-14
 
 ## Last Checkpoint
 
-2026-09-13 — reset after PR #26 merged as `27e9054` and verified on staging.
+2026-09-14 — documentation done (ADR-044/045/046, PARENT_SESSION, MEDIA_ARCHITECTURE,
+REAL_SESSION_TESTING, CLAUDE, README, PROJECT_STATUS) and the full local suite is green.
+Next: mark PR #28 ready, wait for CI, squash-merge, verify staging.
 
 ## Scope
 
-To be filled in when the next task begins.
+- A home screen with the three maternelle classes, honest about which have content.
+- Level-aware routing and state; no hardcoded `maternelle-3` in components.
+- A visual pass on the child-facing surface; keep the two zones.
+- Re-audit illustrations against current content; add what genuinely helps.
+- A small CSS animation system honouring `prefers-reduced-motion`.
+- An audio architecture, with assets only where a trustworthy recording exists.
+- Report media, motion and audio coverage together.
 
 ## Out of Scope
 
-- **October**, and 1ère/2ème maternelle content.
-- Approving any lesson; ISSUE-017 stays open.
-- Scores, points, rewards, dashboards, adaptive engines.
-- A child account or profile system.
-- Paid anything: no TTS, CDN, stock imagery, storage.
-- Production, `main`.
+- **October**, and authoring 1ère/2ème maternelle content.
+- Child profiles, accounts, analytics, progress sync, gamification.
+- Approving lessons; ISSUE-017 stays open.
+- Paid anything; production; `main`.
 
 ## Product Decisions
 
@@ -59,34 +68,50 @@ To be filled in when the next task begins.
 
 ## Completed
 
-- [x] Phase 3A — September programme and the parent session (archived)
-- [x] Session duration policy and the resumable-work protocol (archived)
-- [x] Phase 3B — visuals, interaction and real-session testing (archived)
-- [x] Phase 3C — the session a parent and child can sit down and do (archived)
+- [x] Resume protocol; state verified against the repository and the cloud
+- [x] Checkpoint commit, push, **Draft PR #28**
+- [x] **M1** home screen with the three classes; `/maternelle/<1|2|3>/…` routes; the level is a
+      parameter everywhere, no component assumes 3ème maternelle; an unwritten class says so and
+      never borrows another's lessons
+- [x] **M2** visual pass: bigger pictures that grow with the screen, larger targets, roomier
+      child surface, the two zones kept
+- [x] **M4** motion system in one stylesheet — rise, pop, nudge, attention — all disabled by
+      `prefers-reduced-motion`, none required to use an activity
+- [x] Child screen is now a real modal `<dialog>`: the parent's navigation is inert behind it,
+      so a mis-tap cannot end the activity (a test proves the home link is unclickable)
+- [x] **M5** audio architecture: `AudioAsset`, registry list, text narration, a listen control
+      that appears only when a recording exists — **zero assets, deliberately**
+- [x] **M6** `npm run media:report` now covers illustrations, audio, motion and class availability
 
 ## In Progress
 
-- [ ] Nothing.
+- [ ] M8 — PR #28 ready for review, CI, merge, staging verification
 
 ## Remaining
 
-1. Awaiting the owner's choice of next task.
+1. M1 home screen, level routes, availability, persistence.
+2. M2 child-facing visual pass.
+3. M3 illustration audit and new assets.
+4. M4 animation system with reduced-motion.
+5. M5 audio architecture and an honest pronunciation plan.
+6. M6 reporting; M7 tests; M8 documentation, validation, staging.
 
 ## Validation State
 
-| Check              | Result | At                                         |
-| ------------------ | ------ | ------------------------------------------ |
-| format             | PASS   | working tree                               |
-| lint               | PASS   | working tree — 0 warnings                  |
-| typecheck          | PASS   | working tree                               |
-| unit tests         | PASS   | working tree — 207 tests                   |
-| content validation | PASS   | working tree — 21 files                    |
-| database tests     | PASS   | working tree — 144 pgTAP assertions        |
-| build              | PASS   | working tree                               |
-| E2E                | PASS   | working tree — 20 tests                    |
-| Docker             | PASS   | CI at `27e9054` — both images              |
-| secret scans       | PASS   | working tree — no leaks, 0 tracked `.env*` |
-| staging            | PASS   | `27e9054` deployed, 20 E2E against it      |
+| Check              | Result  | At                                |
+| ------------------ | ------- | --------------------------------- |
+| format             | PASS    | working tree                      |
+| lint               | PASS    | working tree                      |
+| typecheck          | PASS    | working tree                      |
+| unit tests         | PASS    | working tree — 210 tests          |
+| content validation | PASS    | working tree — 21 files           |
+| database tests     | PASS    | local reset — 144 assertions      |
+| build              | PASS    | working tree — 9 routes           |
+| client bundle      | PASS    | sentinels, 3 values absent        |
+| E2E                | PASS    | working tree — 27 tests           |
+| secret scans       | PASS    | 0 tracked `.env*`; gitleaks in CI |
+| Docker images      | NOT RUN | left to CI                        |
+| staging            | STALE   | not deployed from this branch yet |
 
 ## Database State
 
@@ -102,7 +127,9 @@ To be filled in when the next task begins.
 
 ## Git State
 
-- `develop` at `27e9054` plus this closing change. No feature branch, no open PR.
+- Branch `feat/home-visual-audio-experience`, from `develop` at `11c8f6c`.
+- No checkpoint commit yet, not pushed, no PR.
+- Uncommitted: this file.
 
 ## Blockers
 
@@ -116,8 +143,8 @@ None.
 
 ## Exact Resume Point
 
-No task is in progress. When the next one starts: fill this file in, create the feature branch
-from `develop`, commit an initial checkpoint, and open a Draft PR before the long work begins.
+Mark PR #28 ready for review, wait for the four required checks, squash-merge into
+`develop`, then verify the live staging application against the Phase 3D checklist.
 
 ## Resume Verification
 
