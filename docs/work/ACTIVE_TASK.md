@@ -10,19 +10,22 @@
 
 ## Task
 
-None in progress.
+Phase 3D — home screen, class selection, child visual design, illustrations, motion and audio.
 
 ## Objective
 
-Phase 3C is complete and merged. No new task has been started.
+Teka Edu opens on a welcoming home screen where a parent picks the class; the level is explicit
+in the routes and the data rather than assumed in components; the child's surface looks like it
+was made for a five-year-old; illustrations cover what they should; motion is calm and optional;
+and audio has an architecture with an honest account of what can and cannot be recorded.
 
 ## Status
 
-`planned`
+`in_progress`
 
 ## Branch
 
-`develop` — no feature branch open.
+`feat/home-visual-audio-experience`
 
 ## Base Branch
 
@@ -30,24 +33,30 @@ Phase 3C is complete and merged. No new task has been started.
 
 ## Started
 
-—
+2026-09-14
 
 ## Last Checkpoint
 
-2026-09-13 — reset after PR #26 merged as `27e9054` and verified on staging.
+2026-09-14 — branch from `develop` at `11c8f6c`. Resume protocol run: clean tree, no open PRs,
+staging green at `11c8f6c`. Confirmed three levels exist in `content/education/levels.json` and
+only `maternelle-3` has a programme and an annual plan.
 
 ## Scope
 
-To be filled in when the next task begins.
+- A home screen with the three maternelle classes, honest about which have content.
+- Level-aware routing and state; no hardcoded `maternelle-3` in components.
+- A visual pass on the child-facing surface; keep the two zones.
+- Re-audit illustrations against current content; add what genuinely helps.
+- A small CSS animation system honouring `prefers-reduced-motion`.
+- An audio architecture, with assets only where a trustworthy recording exists.
+- Report media, motion and audio coverage together.
 
 ## Out of Scope
 
-- **October**, and 1ère/2ème maternelle content.
-- Approving any lesson; ISSUE-017 stays open.
-- Scores, points, rewards, dashboards, adaptive engines.
-- A child account or profile system.
-- Paid anything: no TTS, CDN, stock imagery, storage.
-- Production, `main`.
+- **October**, and authoring 1ère/2ème maternelle content.
+- Child profiles, accounts, analytics, progress sync, gamification.
+- Approving lessons; ISSUE-017 stays open.
+- Paid anything; production; `main`.
 
 ## Product Decisions
 
@@ -59,18 +68,20 @@ To be filled in when the next task begins.
 
 ## Completed
 
-- [x] Phase 3A — September programme and the parent session (archived)
-- [x] Session duration policy and the resumable-work protocol (archived)
-- [x] Phase 3B — visuals, interaction and real-session testing (archived)
-- [x] Phase 3C — the session a parent and child can sit down and do (archived)
+- [x] Resume protocol; state verified against the repository and the cloud
 
 ## In Progress
 
-- [ ] Nothing.
+- [ ] M1 — level-aware routing and the home screen
 
 ## Remaining
 
-1. Awaiting the owner's choice of next task.
+1. M1 home screen, level routes, availability, persistence.
+2. M2 child-facing visual pass.
+3. M3 illustration audit and new assets.
+4. M4 animation system with reduced-motion.
+5. M5 audio architecture and an honest pronunciation plan.
+6. M6 reporting; M7 tests; M8 documentation, validation, staging.
 
 ## Validation State
 
@@ -102,7 +113,9 @@ To be filled in when the next task begins.
 
 ## Git State
 
-- `develop` at `27e9054` plus this closing change. No feature branch, no open PR.
+- Branch `feat/home-visual-audio-experience`, from `develop` at `11c8f6c`.
+- No checkpoint commit yet, not pushed, no PR.
+- Uncommitted: this file.
 
 ## Blockers
 
@@ -116,8 +129,8 @@ None.
 
 ## Exact Resume Point
 
-No task is in progress. When the next one starts: fill this file in, create the feature branch
-from `develop`, commit an initial checkpoint, and open a Draft PR before the long work begins.
+Commit this checkpoint, push, open the Draft PR, then start M1: make the level explicit in
+routing and in `lib/programme/session-view.ts`, and build the home screen.
 
 ## Resume Verification
 
