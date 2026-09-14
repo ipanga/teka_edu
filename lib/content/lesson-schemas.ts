@@ -194,7 +194,10 @@ const ACTIVITY_PAYLOADS: Record<ActivityType, z.ZodType> = {
   drawing: z.strictObject({ subject: french }),
   "graphic-practice": z.strictObject({ pattern: french }),
   movement: z.strictObject({ moves: z.array(french).min(1) }),
-  manipulation: z.strictObject({ objects: french }),
+  // `extension` is a harder thing to try *if the child asks for more*. It is typed rather than
+  // buried in the guidance so that an optional challenge can never quietly become an expectation
+  // the progression does not plan for: it is visible to the validator and to the reviewer.
+  manipulation: z.strictObject({ objects: french, extension: french.optional() }),
   "memory-game": z.strictObject({ items: z.array(french).min(3) }),
 };
 

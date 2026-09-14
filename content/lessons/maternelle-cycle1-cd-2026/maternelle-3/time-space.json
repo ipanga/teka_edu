@@ -23,7 +23,7 @@
           "type": "conversation",
           "title": "Aujourd’hui, hier, demain",
           "childInstruction": "Dis quel jour nous sommes, quel jour c’était hier, quel jour ce sera demain.",
-          "adultGuidance": "1. Dites la suite des sept jours ensemble. 2. Montrez aujourd’hui sur la bande. 3. Demandez hier, puis demain. 4. Reliez à du vrai : « Demain, c’est le jour du marché. »",
+          "adultGuidance": "1. Dites la suite des sept jours ensemble. 2. Montrez aujourd’hui sur la bande. 3. Demandez hier, puis demain. 4. Reliez à un repère vrai **pour votre famille** : le jour du marché, le jour où l’on ne va pas à l’école, le jour où quelqu’un rentre. Dites-le tel qu’il est chez vous : « Demain, c’est le jour où… »",
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
@@ -64,32 +64,40 @@
           "position": 2,
           "type": "manipulation",
           "title": "Ma bande des jours",
-          "childInstruction": "Range les sept jours dans l’ordre sur la bande.",
-          "adultGuidance": "1. Écrivez les sept jours sur des morceaux de papier. 2. Mélangez-les. 3. Faites-les remettre dans l’ordre en les disant. 4. Gardez la bande pour les jours suivants.",
+          "childInstruction": "Montre-moi le jour d’aujourd’hui sur la bande. Puis hier, puis demain.",
+          "adultGuidance": "1. **Vous** préparez la bande : les sept jours écrits dans l’ordre, une case par jour, toujours la même. L’enfant n’a pas à lire les noms : ajoutez un repère stable par jour (une couleur, un point, un petit dessin) et dites-les en les montrant. 2. Dites la suite des sept jours en glissant le doigt. 3. Posez un repère (un caillou, une pince) sur aujourd’hui : « Aujourd’hui, nous sommes {{date}}. » 4. Demandez hier, puis demain, en laissant l’enfant déplacer le repère. 5. Gardez la bande : demain, c’est l’enfant qui déplace le repère d’une case. Le but est de situer un jour, pas de lire son nom.",
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
-          "materialCodes": ["papier", "crayon"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
+          "materialCodes": ["papier", "crayon", "petits-objets"],
           "vocabulary": [
             {
               "fr": "la semaine",
               "en": "the week"
             },
             {
-              "fr": "l’ordre",
-              "en": "the order"
+              "fr": "aujourd’hui",
+              "en": "today"
+            },
+            {
+              "fr": "hier",
+              "en": "yesterday"
+            },
+            {
+              "fr": "demain",
+              "en": "tomorrow"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Put the seven days in order on the strip."
+              "childInstruction": "Show me today on the strip. Then yesterday, then tomorrow."
             }
           ],
           "payload": {
-            "objects": "sept papiers, un par jour de la semaine"
+            "objects": "une bande des sept jours, préparée par l’adulte, et un repère à déplacer"
           }
         }
       ],
@@ -117,7 +125,7 @@
           "type": "conversation",
           "title": "Le jour de quoi ?",
           "childInstruction": "Dis-moi ce que tu fais chaque jour de la semaine.",
-          "adultGuidance": "1. Montrez un jour sur la bande. 2. Demandez ce qui se passe ce jour-là. 3. Faites une phrase entière : « Le samedi, nous allons au marché. » 4. Demandez quels jours il va à l’école.",
+          "adultGuidance": "1. Montrez un jour sur la bande. 2. Demandez ce qui se passe ce jour-là. 3. Faites une phrase entière avec un repère de **votre** semaine : « Le samedi, nous… » — ce qui est vrai chez vous, pas un exemple appris. 4. Demandez quels jours il va à l’école.",
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
@@ -434,8 +442,8 @@
           "position": 2,
           "type": "conversation",
           "title": "Avant ou après ?",
-          "childInstruction": "L’école, c’est avant ou après le marché ?",
-          "adultGuidance": "1. Posez des questions d’ordre : « Le dimanche vient avant ou après le samedi ? » 2. Faites montrer sur la bande pour vérifier. 3. Faites employer les mots « avant » et « après » dans la réponse.",
+          "childInstruction": "L’école, c’est avant ou après ?",
+          "adultGuidance": "Choisissez deux moments que l’enfant vit vraiment dans la semaine (l’école, le marché, la visite de quelqu’un, le jour sans école). Demandez lequel vient avant. Si votre semaine ne contient pas ces repères, prenez-en deux autres : l’important est qu’ils soient réels.",
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",

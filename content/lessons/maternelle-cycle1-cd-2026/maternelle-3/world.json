@@ -69,7 +69,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": ["bonhomme-articule"],
-          "objectiveCodes": ["WORLD-S01-C02-O08"],
+          "objectiveCodes": ["WORLD-S01-C02-O08", "WORLD-S01-C02-O09"],
           "materialCodes": ["papier", "crayon"],
           "vocabulary": [
             {

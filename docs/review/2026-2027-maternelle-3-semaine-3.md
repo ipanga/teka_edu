@@ -22,6 +22,11 @@ Une leçon ne pourra passer au statut « approuvé » qu’après votre accord e
 - **Curriculum :** Teka Edu Maternelle — Cycle 1 adapté pour la RDC (version 2026)
 - **Référence officielle :** Arrêté du 16 avril 2026 fixant le programme d’enseignement de l’école maternelle (cycle 1), NOR MENE2608627A, BO n° 19 du 7 mai 2026, applicable from the 2026-2027 school year. Domains 1 and 4: annexes 1 and 2 of the arrêté du 22 octobre 2024, NOR MENE2415135A, BO n° 41 du 31 octobre 2024.
 - **Séance visée :** 30–45 min par jour, à la maison, avec un adulte
+- **Ce n’est pas un objectif à atteindre.** La séance peut être mise en pause, coupée en
+  deux moments plus courts, ou arrêtée avant la fin quand l’enfant fatigue. L’application
+  propose « Faire une petite pause » et « Terminer pour aujourd’hui » à chaque activité, et
+  reprend là où l’on s’était arrêté. Une séance écourtée est une séance normale : jugez les
+  activités, pas la capacité d’un enfant à tenir 35 minutes.
 - **Contenu relu ici :** 5 jours · 20 leçons · 38 activités
 
 Les objectifs et les « réussites attendues » sont cités mot pour mot du programme officiel ;
@@ -29,7 +34,11 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Jour 10 — 2026-09-14
 
-**Durée totale : 35 min** (dont 0 min avec écran) · 4 séances · jour 10 du rythme
+**Durée totale : 35 min** · **temps d’écran actif de l’enfant : 0 min** · 4 séances · jour 10 du rythme
+
+_L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus compte le temps
+pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de
+l’appareil._
 
 **Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Objets de la maison (coussins, chaises, bâton, tissu), Petits objets à compter (cailloux, capsules, haricots)
 
@@ -43,7 +52,7 @@ _Dire ce qu’on voit avec assez de mots pour être compris sans montrer du doig
   - `LANG-S01-C04-O11` — Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris. _(source : programme-2024-langage)_
   - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S02-C03-O15` — Établir un lien entre la lecture effectuée et sa propre expérience.
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
@@ -69,7 +78,25 @@ _Dire ce qu’on voit avec assez de mots pour être compris sans montrer du doig
 - **Guidance adulte :** Lisez l’histoire à voix haute, doucement. Ne posez aucune question après : ce moment quotidien sert au plaisir d’écouter. Si l’enfant redemande la même histoire un autre jour, c’est bon signe.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Listen to the story. There are no questions today. »
-- **Objectifs travaillés :** `LANG-S02-C03-O15` Établir un lien entre la lecture effectuée et sa propre expérience.
+- **Objectifs travaillés :** `LANG-S02-C03-O04` Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
+
+- **Histoire lue à l’enfant — « Le premier jour de Nsimba »** (3 min, `le-premier-jour-de-nsimba`) :
+
+  > Ce matin, Nsimba met sa chemise, ses chaussures, et son petit sac sur le dos.
+  > Aujourd’hui, c’est son premier jour à l’école.
+  > Sur le chemin, son ventre fait un drôle de nœud. Nsimba serre très fort la main de son adulte.
+  > Devant le portail, il y a beaucoup d’enfants. Beaucoup de bruit. Beaucoup de pieds.
+  > Nsimba voudrait rentrer à la maison.
+  > La maitresse s’accroupit devant lui. « Bonjour. Moi, c’est madame Kalala. Et toi ? »
+  > Nsimba ne dit rien. Puis, tout doucement : « Nsimba. »
+  > « Viens, Nsimba, dit la maitresse. Ta place est ici, avec ton prénom dessus. »
+  > Sur la table, il y a son prénom. Rien qu’à lui.
+  > À côté, une fille lui tend un crayon bleu. « Tu veux ? Moi, c’est Amina. »
+  > Nsimba prend le crayon. Il dessine une maison, un soleil, et deux enfants.
+  > Le soir, son adulte demande : « Alors, cette école ? »
+  > Nsimba répond : « Demain, j’y retourne. »
+
+  _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (from-5) :**
 
@@ -83,9 +110,14 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 **Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (from-5) :**
 
 - Comprendre et utiliser :
+  • les mots des émotions, des sentiments et des états mentaux des personnages de fiction ;
+  • les mots qui entretiennent une proximité phonique (poule/roule/boule/moule) ;
+  • les mots qui vont permettre de s’emparer des apprentissages du CP.
 - Distinguer le sens propre du sens figuré (sans que ces notions ne soient enseignées) : l’élève comprend le sens de dévorer un gâteau et dévorer un livre.
 - Construire des dérivations (sans que ces notions ne soient enseignées) : arroser → arrosage ; gentil → gentiment → gentillesse.
 - S’appuyer sur des verbes et des noms qu’il connait déjà pour comprendre et essayer de construire un nouveau mot : jambe/enjamber.
+- Chercher des hyperonymes des réseaux étudiés (véhicule est un hyperonyme de voiture, bus, vélo, etc. ; animal est un hyperonyme de chat, chien, grenouille, etc.).
+- Inférer le sens d’un mot inconnu.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -143,6 +175,38 @@ _Étendre la suite des nombres de dix à vingt._
 - Reconnaître et réaliser des collections d’objets (jusqu’à dix, voire au-delà) de même cardinal mais organisées de manières différentes dans l’espace.
 - Reconnaitre et réaliser des collections d’objets dont le cardinal (jusqu’à dix, voire au-delà) est donné par une représentation analogique, par le nom du nombre ou par son écriture chiffrée.
 - Réaliser une collection contenant un objet de plus qu’une collection donnée.
+- Réaliser une collection contenant un objet de moins qu’une collection donnée.
+- Nommer les nombres correspondant au cardinal d’une collection avant et après l’ajout ou le retrait d’un élément.
+- Séparer les éléments déjà pointés de ceux qui ne le sont pas encore.
+- Pointer du doigt ou marquer les éléments déjà parcourus (le nombre d’objets peut être supérieur à dix).
+- Créer un parcours passant une et une seule fois par chaque élément.
+- Utiliser le principe de cardinalité pour dénombrer une collection par énumération. Utiliser des compositions et des décompositions pour dénombrer.
+  Par exemple, si l’enseignant positionne huit objets en les organisant en deux constellations de quatre et demande de dénombrer la collection, l’élève est capable de :
+  • compter de un en un ;
+  • « mettre quatre dans sa tête », surcompter en utilisant ses doigts : « cinq, six, sept, huit » et annoncer qu’il y a huit objets
+- utiliser la connaissance d’une composition et verbaliser « ça fait huit parce que quatre et quatre font huit ».
+- Réaliser une collection :
+  • contenant la même quantité d’objets qu’une collection donnée ;
+  • contenant la même quantité d’objets qu’une représentation analogique donnée (doigts des deux mains, constellations de points) ;
+  • dont la quantité d’objets est énoncée oralement ;
+  • dont la quantité d’objets est représentée par son écriture chiffrée. Réaliser une collection (jusqu’à dix, voire au-delà) en réunissant des collections plus petites.
+- Comparer globalement (sans dénombrer) les cardinaux de deux collections dont les quantités d’objets diffèrent d’un facteur au moins égal à deux et utiliser les locutions « plus que », « moins que », « autant que ». On ne se limite pas aux petites collections.
+- Comparer par correspondance terme à terme les cardinaux de deux collections.
+- Comparer les cardinaux de deux collections en dénombrant chacune d’elles.
+- Comparer des quantités données par leur écriture chiffrée ou par le nom des nombres.
+- Mobiliser des compositions et des décompositions de nombres pour résoudre des problèmes.
+- Réaliser des compositions et des décompositions de nombres avec les doigts des deux mains.
+- Verbaliser les compositions de nombres. Parmi elles, figurent les doubles : « deux et deux font quatre », « deux fois deux font quatre », « trois et trois font six », « deux fois trois font six », « quatre et quatre font huit », « deux fois quatre font huit », « cinq et cinq font dix », « deux fois cinq font dix ».
+- Verbaliser les décompositions des nombres compris entre deux et dix.
+- Pour ajouter deux nombres, surcompter à partir du plus grand. Exemple de verbalisation par un élève : « Pour ajouter quatre et cinq, je mets cinq dans ma tête et je compte quatre sur mes doigts à partir de cinq : six, sept, huit, neuf. Donc quatre et cinq font neuf ».
+- Nommer le nombre (jusqu’à dix, voire au-delà) correspondant à une quantité d’objets ou à une représentation analogique et vice versa.
+- Représenter par une écriture chiffrée une quantité, une représentation analogique, le nom d’un nombre et vice versa.
+- Écrire des nombres dans des situations de communication.
+- Réciter la comptine numérique de un à trente de façon ordonnée et segmentée.
+- Réciter la comptine numérique jusqu’à un nombre donné.
+- Réciter la comptine numérique jusqu’à trente en partant d’un nombre autre que un (en vue du surcomptage).
+- Réciter la comptine numérique à rebours de dix à un (en vue du décomptage).
+- Réciter les comptines numériques (jusqu’à vingt) de deux en deux en partant de un et en partant de deux.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -171,7 +235,6 @@ _Contrôler son déplacement : vite, lentement, à l’arrêt._
 - **Conseil au parent :** Le travail du jour est le contrôle, pas la vitesse. Variez les consignes lentement.
 - **Objectifs enseignés :**
   - `PHYS-S02-C01-O05` — Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions. _(source : programme-2026)_
-  - `PHYS-S01-C01-O10` — Courir de plus en plus longtemps sans s’arrêter. _(source : programme-2026)_
 
 #### 1. Vite, doucement, stop — 6 min, sans écran (movement)
 
@@ -182,7 +245,7 @@ _Contrôler son déplacement : vite, lentement, à l’arrêt._
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
 - **Aide en anglais (optionnelle) :** « Walk fast. Walk slowly. Stop. Then go again. »
-- **Objectifs travaillés :** `PHYS-S02-C01-O05` Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions. ; `PHYS-S01-C01-O10` Courir de plus en plus longtemps sans s’arrêter.
+- **Objectifs travaillés :** `PHYS-S02-C01-O05` Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions.
 
 **Réussites attendues — texte officiel pour la compétence « Tourner, se suspendre, se renverser, grimper, rouler, glisser, nager » (from-5) :**
 
@@ -190,15 +253,6 @@ _Contrôler son déplacement : vite, lentement, à l’arrêt._
 - Se déplacer sans tomber et en maitrisant ses trajectoires sur des patins à glace ou à roulettes, sur des skis, sur un vélo à deux roues, etc.
 - Entrer et sortir seul de l’eau, se déplacer avec les épaules immergées, immerger complètement la tête pendant plusieurs secondes.
 - Aider ses camarades avec les professeurs pour assurer leur sécurité (guide et parade).
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
-
-**Réussites attendues — texte officiel pour la compétence « Manipuler, courir, sauter, lancer, s’orienter » (from-5) :**
-
-- Lancer une balle lestée, un anneau, un cerceau, un petit javelot avec élan (quelques pas de déplacement), pour atteindre une zone de plus en plus éloignée.
-- Courir en limitant les arrêts sur une durée d’effort matérialisée par un support musical ou un sablier.
-- Courir vite et franchir une rivière matérialisée avec des lattes sans ralentir.
-- Courir puis sauter haut ou loin après une impulsion sur un pied pour franchir un obstacle et se réceptionner sur deux pieds.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -254,6 +308,12 @@ _Situer un objet par rapport à un autre, et dire le trajet pour y aller._
 - Réaliser, avec une intention, une construction libre en trois dimensions à partir de solides choisis.
 - Décrire la place d’un objet parmi d’autres dans un rang ou dans une composition.
 - Distinguer la gauche de la droite dans ses déplacements.
+- Décrire la place occupée par un camarade dans la classe : « Elle est assise en face moi et à côté de la bibliothèque. »
+- Réaliser le trajet demandé à partir de sa représentation (dessin ou codage), dans l’école ou dans la cour.
+- Copier une phrase de gauche à droite, avec retour à la ligne.
+- Nommer un ou deux continents et quelques pays dans le cadre de la découverte de l’utilisation d’un globe ou d’un planisphère.
+- Faire la différence entre la mer et la terre.
+- Comprendre et utiliser dans des récits, des descriptions ou des explications :  Noms : le quartier, la place, une ruelle, un sentier, un passage, le centre, un pays, un continent, un océan, la montagne, la frontière, la limite, le globe, etc.  Verbes : superposer, alterner, décaler, espacer, circuler, parcourir, déambuler, cheminer, etc.  Adverbes ou locutions adverbiales, prépositions, adjectifs : au loin, au centre, au premier plan, en continu, en pointillé, lointain, etc.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -276,7 +336,11 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ## Jour 11 — 2026-09-15
 
-**Durée totale : 35 min** (dont 0 min avec écran) · 4 séances · jour 1 du rythme
+**Durée totale : 35 min** · **temps d’écran actif de l’enfant : 0 min** · 4 séances · jour 1 du rythme
+
+_L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus compte le temps
+pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de
+l’appareil._
 
 **Matériel à préparer :** Aucun matériel, Crayon, Espace dégagé pour bouger (à l’intérieur ou dehors), Feuille de papier, Petits objets à compter (cailloux, capsules, haricots)
 
@@ -290,7 +354,7 @@ _Redire une histoire connue dans l’ordre, avec ses propres mots._
   - `LANG-S01-C04-O11` — Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris. _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
   - `LANG-S02-C03-O13` — Comprendre des histoires où l’enchainement des actions est lié au destin de personnages centraux ou secondaires qui évoluent et interagissent, dans des lieux diversifiés.
-  - `LANG-S02-C03-O15` — Établir un lien entre la lecture effectuée et sa propre expérience.
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
@@ -316,7 +380,22 @@ _Redire une histoire connue dans l’ordre, avec ses propres mots._
 - **Guidance adulte :** Lisez l’histoire à voix haute, doucement. Ne posez aucune question après : ce moment quotidien sert au plaisir d’écouter. Si l’enfant redemande la même histoire un autre jour, c’est bon signe.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Listen to the story. There are no questions today. »
-- **Objectifs travaillés :** `LANG-S02-C03-O15` Établir un lien entre la lecture effectuée et sa propre expérience.
+- **Objectifs travaillés :** `LANG-S02-C03-O04` Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
+
+- **Histoire lue à l’enfant — « La mangue partagée »** (2 min, `la-mangue-partagee`) :
+
+  > Ilunga trouve une grosse mangue sous l’arbre. Une seule.
+  > Il la met dans ses deux mains. Elle est lourde, et elle sent très bon.
+  > Ilunga s’assoit pour la manger tout seul.
+  > Mais voilà Ama, sa voisine. Et voilà Tito, son petit frère. Ils regardent la mangue.
+  > Ils sont trois, et il y a une seule mangue.
+  > Ilunga réfléchit. Une mangue, trois enfants. Comment faire ?
+  > Il coupe la mangue en trois morceaux : un, deux, trois.
+  > Un morceau pour Ama. Un morceau pour Tito. Un morceau pour lui.
+  > « Maintenant, dit Ilunga, on a tous quelque chose. »
+  > Et la mangue, partagée en trois, a un gout encore meilleur.
+
+  _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (from-5) :**
 
@@ -384,6 +463,38 @@ _Décomposer un petit nombre en deux parties._
 - Reconnaître et réaliser des collections d’objets (jusqu’à dix, voire au-delà) de même cardinal mais organisées de manières différentes dans l’espace.
 - Reconnaitre et réaliser des collections d’objets dont le cardinal (jusqu’à dix, voire au-delà) est donné par une représentation analogique, par le nom du nombre ou par son écriture chiffrée.
 - Réaliser une collection contenant un objet de plus qu’une collection donnée.
+- Réaliser une collection contenant un objet de moins qu’une collection donnée.
+- Nommer les nombres correspondant au cardinal d’une collection avant et après l’ajout ou le retrait d’un élément.
+- Séparer les éléments déjà pointés de ceux qui ne le sont pas encore.
+- Pointer du doigt ou marquer les éléments déjà parcourus (le nombre d’objets peut être supérieur à dix).
+- Créer un parcours passant une et une seule fois par chaque élément.
+- Utiliser le principe de cardinalité pour dénombrer une collection par énumération. Utiliser des compositions et des décompositions pour dénombrer.
+  Par exemple, si l’enseignant positionne huit objets en les organisant en deux constellations de quatre et demande de dénombrer la collection, l’élève est capable de :
+  • compter de un en un ;
+  • « mettre quatre dans sa tête », surcompter en utilisant ses doigts : « cinq, six, sept, huit » et annoncer qu’il y a huit objets
+- utiliser la connaissance d’une composition et verbaliser « ça fait huit parce que quatre et quatre font huit ».
+- Réaliser une collection :
+  • contenant la même quantité d’objets qu’une collection donnée ;
+  • contenant la même quantité d’objets qu’une représentation analogique donnée (doigts des deux mains, constellations de points) ;
+  • dont la quantité d’objets est énoncée oralement ;
+  • dont la quantité d’objets est représentée par son écriture chiffrée. Réaliser une collection (jusqu’à dix, voire au-delà) en réunissant des collections plus petites.
+- Comparer globalement (sans dénombrer) les cardinaux de deux collections dont les quantités d’objets diffèrent d’un facteur au moins égal à deux et utiliser les locutions « plus que », « moins que », « autant que ». On ne se limite pas aux petites collections.
+- Comparer par correspondance terme à terme les cardinaux de deux collections.
+- Comparer les cardinaux de deux collections en dénombrant chacune d’elles.
+- Comparer des quantités données par leur écriture chiffrée ou par le nom des nombres.
+- Mobiliser des compositions et des décompositions de nombres pour résoudre des problèmes.
+- Réaliser des compositions et des décompositions de nombres avec les doigts des deux mains.
+- Verbaliser les compositions de nombres. Parmi elles, figurent les doubles : « deux et deux font quatre », « deux fois deux font quatre », « trois et trois font six », « deux fois trois font six », « quatre et quatre font huit », « deux fois quatre font huit », « cinq et cinq font dix », « deux fois cinq font dix ».
+- Verbaliser les décompositions des nombres compris entre deux et dix.
+- Pour ajouter deux nombres, surcompter à partir du plus grand. Exemple de verbalisation par un élève : « Pour ajouter quatre et cinq, je mets cinq dans ma tête et je compte quatre sur mes doigts à partir de cinq : six, sept, huit, neuf. Donc quatre et cinq font neuf ».
+- Nommer le nombre (jusqu’à dix, voire au-delà) correspondant à une quantité d’objets ou à une représentation analogique et vice versa.
+- Représenter par une écriture chiffrée une quantité, une représentation analogique, le nom d’un nombre et vice versa.
+- Écrire des nombres dans des situations de communication.
+- Réciter la comptine numérique de un à trente de façon ordonnée et segmentée.
+- Réciter la comptine numérique jusqu’à un nombre donné.
+- Réciter la comptine numérique jusqu’à trente en partant d’un nombre autre que un (en vue du surcomptage).
+- Réciter la comptine numérique à rebours de dix à un (en vue du décomptage).
+- Réciter les comptines numériques (jusqu’à vingt) de deux en deux en partant de un et en partant de deux.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -430,6 +541,7 @@ _Courir plus longtemps, en mesurant avec les nombres du jour._
 - Courir en limitant les arrêts sur une durée d’effort matérialisée par un support musical ou un sablier.
 - Courir vite et franchir une rivière matérialisée avec des lattes sans ralentir.
 - Courir puis sauter haut ou loin après une impulsion sur un pied pour franchir un obstacle et se réceptionner sur deux pieds.
+- Trouver au moins cinq éléments remarquables et repérables sur plusieurs photographies prises par les professeurs dans un lieu extérieur à l’école (cour de récréation, terrain de sport, stade, parc…), en l’absence des élèves ou lors d’une séance précédente.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -507,7 +619,11 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ## Jour 12 — 2026-09-16
 
-**Durée totale : 35 min** (dont 0 min avec écran) · 4 séances · jour 2 du rythme
+**Durée totale : 35 min** · **temps d’écran actif de l’enfant : 0 min** · 4 séances · jour 2 du rythme
+
+_L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus compte le temps
+pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de
+l’appareil._
 
 **Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Objets de la maison (coussins, chaises, bâton, tissu), Petits objets à compter (cailloux, capsules, haricots)
 
@@ -521,7 +637,7 @@ _Ranger les mots par familles : ce qui se mange, ce qui sert à écrire, ce qui 
   - `LANG-S01-C01-O02` — Organiser les mots en catégorie et en réseau. _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
   - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
-  - `LANG-S02-C03-O15` — Établir un lien entre la lecture effectuée et sa propre expérience.
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
@@ -549,14 +665,34 @@ _Ranger les mots par familles : ce qui se mange, ce qui sert à écrire, ce qui 
 - **Guidance adulte :** Lisez l’histoire à voix haute, doucement. Ne posez aucune question après : ce moment quotidien sert au plaisir d’écouter. Si l’enfant redemande la même histoire un autre jour, c’est bon signe.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Listen to the story. There are no questions today. »
-- **Objectifs travaillés :** `LANG-S02-C03-O15` Établir un lien entre la lecture effectuée et sa propre expérience.
+- **Objectifs travaillés :** `LANG-S02-C03-O04` Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
+
+- **Histoire lue à l’enfant — « Le marché de mama Lelo »** (3 min, `le-marche-de-mama-lelo`) :
+
+  > Le samedi, mama Lelo va au marché, et Ama vient avec elle.
+  > Le marché, c’est plein de couleurs : le rouge des tomates, le vert des feuilles, le jaune des bananes.
+  > « Ama, dit mama Lelo, tu comptes avec moi ? »
+  > Elles achètent des tomates : une, deux, trois, quatre, cinq. Cinq tomates dans le panier.
+  > Elles achètent des oignons : un, deux, trois. Trois oignons dans le panier.
+  > « Et maintenant, demande mama Lelo, qu’est-ce qu’il y a le plus ? Les tomates ou les oignons ? »
+  > Ama regarde. Cinq, c’est plus que trois. « Les tomates ! » dit-elle.
+  > Sur le chemin du retour, le panier est lourd. Elles le portent à deux, chacune une anse.
+  > À la maison, Ama range : les tomates avec les tomates, les oignons avec les oignons.
+  > « Tu as bien travaillé », dit mama Lelo. Et Ama est très fière.
+
+  _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
 **Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (from-5) :**
 
 - Comprendre et utiliser :
+  • les mots des émotions, des sentiments et des états mentaux des personnages de fiction ;
+  • les mots qui entretiennent une proximité phonique (poule/roule/boule/moule) ;
+  • les mots qui vont permettre de s’emparer des apprentissages du CP.
 - Distinguer le sens propre du sens figuré (sans que ces notions ne soient enseignées) : l’élève comprend le sens de dévorer un gâteau et dévorer un livre.
 - Construire des dérivations (sans que ces notions ne soient enseignées) : arroser → arrosage ; gentil → gentiment → gentillesse.
 - S’appuyer sur des verbes et des noms qu’il connait déjà pour comprendre et essayer de construire un nouveau mot : jambe/enjamber.
+- Chercher des hyperonymes des réseaux étudiés (véhicule est un hyperonyme de voiture, bus, vélo, etc. ; animal est un hyperonyme de chat, chien, grenouille, etc.).
+- Inférer le sens d’un mot inconnu.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -617,6 +753,38 @@ _Trouver plusieurs façons de faire six._
 - Reconnaître et réaliser des collections d’objets (jusqu’à dix, voire au-delà) de même cardinal mais organisées de manières différentes dans l’espace.
 - Reconnaitre et réaliser des collections d’objets dont le cardinal (jusqu’à dix, voire au-delà) est donné par une représentation analogique, par le nom du nombre ou par son écriture chiffrée.
 - Réaliser une collection contenant un objet de plus qu’une collection donnée.
+- Réaliser une collection contenant un objet de moins qu’une collection donnée.
+- Nommer les nombres correspondant au cardinal d’une collection avant et après l’ajout ou le retrait d’un élément.
+- Séparer les éléments déjà pointés de ceux qui ne le sont pas encore.
+- Pointer du doigt ou marquer les éléments déjà parcourus (le nombre d’objets peut être supérieur à dix).
+- Créer un parcours passant une et une seule fois par chaque élément.
+- Utiliser le principe de cardinalité pour dénombrer une collection par énumération. Utiliser des compositions et des décompositions pour dénombrer.
+  Par exemple, si l’enseignant positionne huit objets en les organisant en deux constellations de quatre et demande de dénombrer la collection, l’élève est capable de :
+  • compter de un en un ;
+  • « mettre quatre dans sa tête », surcompter en utilisant ses doigts : « cinq, six, sept, huit » et annoncer qu’il y a huit objets
+- utiliser la connaissance d’une composition et verbaliser « ça fait huit parce que quatre et quatre font huit ».
+- Réaliser une collection :
+  • contenant la même quantité d’objets qu’une collection donnée ;
+  • contenant la même quantité d’objets qu’une représentation analogique donnée (doigts des deux mains, constellations de points) ;
+  • dont la quantité d’objets est énoncée oralement ;
+  • dont la quantité d’objets est représentée par son écriture chiffrée. Réaliser une collection (jusqu’à dix, voire au-delà) en réunissant des collections plus petites.
+- Comparer globalement (sans dénombrer) les cardinaux de deux collections dont les quantités d’objets diffèrent d’un facteur au moins égal à deux et utiliser les locutions « plus que », « moins que », « autant que ». On ne se limite pas aux petites collections.
+- Comparer par correspondance terme à terme les cardinaux de deux collections.
+- Comparer les cardinaux de deux collections en dénombrant chacune d’elles.
+- Comparer des quantités données par leur écriture chiffrée ou par le nom des nombres.
+- Mobiliser des compositions et des décompositions de nombres pour résoudre des problèmes.
+- Réaliser des compositions et des décompositions de nombres avec les doigts des deux mains.
+- Verbaliser les compositions de nombres. Parmi elles, figurent les doubles : « deux et deux font quatre », « deux fois deux font quatre », « trois et trois font six », « deux fois trois font six », « quatre et quatre font huit », « deux fois quatre font huit », « cinq et cinq font dix », « deux fois cinq font dix ».
+- Verbaliser les décompositions des nombres compris entre deux et dix.
+- Pour ajouter deux nombres, surcompter à partir du plus grand. Exemple de verbalisation par un élève : « Pour ajouter quatre et cinq, je mets cinq dans ma tête et je compte quatre sur mes doigts à partir de cinq : six, sept, huit, neuf. Donc quatre et cinq font neuf ».
+- Nommer le nombre (jusqu’à dix, voire au-delà) correspondant à une quantité d’objets ou à une représentation analogique et vice versa.
+- Représenter par une écriture chiffrée une quantité, une représentation analogique, le nom d’un nombre et vice versa.
+- Écrire des nombres dans des situations de communication.
+- Réciter la comptine numérique de un à trente de façon ordonnée et segmentée.
+- Réciter la comptine numérique jusqu’à un nombre donné.
+- Réciter la comptine numérique jusqu’à trente en partant d’un nombre autre que un (en vue du surcomptage).
+- Réciter la comptine numérique à rebours de dix à un (en vue du décomptage).
+- Réciter les comptines numériques (jusqu’à vingt) de deux en deux en partant de un et en partant de deux.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -663,6 +831,7 @@ _Traduire un paysage sonore en gestes dansés._
 - Reproduire un mouvement très lent ou très rapide, de façon continue, fluide, discontinue, saccadée sur une musique en utilisant l’espace scénique.
 - Danser en miroir, en parallèle, en contact, en prenant appui sur son partenaire, etc.
 - Danser par deux, en demi-groupe, en groupe, en respectant une chorégraphie simple (une entrée en scène, un développement, une fin marquée).
+- Observer ses camarades danser puis exprimer verbalement une émotion et formuler un conseil pour les faire progresser.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -705,6 +874,19 @@ _Fabriquer des sons avec son corps et des objets, et les organiser._
 - **Aide en anglais (optionnelle) :** « Make the sound of rain: soft, then loud, then nothing. »
 - **Objectifs travaillés :** `ART-S02-C02-O08` Créer un paysage sonore en répondant à une consigne simple avec son corps, des objets ou des instruments.
 
+- **Comptine lue à l’enfant — « Un, deux, trois, je compte »** (2 min, `un-deux-trois-je-compte`) :
+
+  > Un, deux, trois,
+  > je compte avec toi.
+  > Quatre, cinq, six,
+  > des cailloux tout lisses.
+  > Sept, huit, neuf,
+  > un panier tout neuf.
+  > Et dix petits doigts
+  > qui comptent avec moi !
+
+  _Comptine originale écrite pour Teka Edu. Aucune comptine existante n’est reprise._
+
 **Réussites attendues — texte officiel pour la compétence « Explorer des instruments, utiliser les sonorités du corps » (from-5) :**
 
 - Produire le plus de sons différents avec un même instrument à percussion : doux avec la paume de la main, fort avec une mailloche, etc.
@@ -732,7 +914,11 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ## Jour 13 — 2026-09-17
 
-**Durée totale : 35 min** (dont 0 min avec écran) · 4 séances · jour 3 du rythme
+**Durée totale : 35 min** · **temps d’écran actif de l’enfant : 0 min** · 4 séances · jour 3 du rythme
+
+_L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus compte le temps
+pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de
+l’appareil._
 
 **Matériel à préparer :** Aucun matériel, Balle en papier froissé, Crayon, Objets de la maison (coussins, chaises, bâton, tissu), Feuille de papier
 
@@ -746,7 +932,7 @@ _Troisième corpus de mots : le marché, les fruits, les légumes, les quantité
   - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
   - `LANG-S01-C01-O02` — Organiser les mots en catégorie et en réseau.
-  - `LANG-S02-C03-O15` — Établir un lien entre la lecture effectuée et sa propre expérience.
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
@@ -772,14 +958,36 @@ _Troisième corpus de mots : le marché, les fruits, les légumes, les quantité
 - **Guidance adulte :** Lisez l’histoire à voix haute, doucement. Ne posez aucune question après : ce moment quotidien sert au plaisir d’écouter. Si l’enfant redemande la même histoire un autre jour, c’est bon signe.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Listen to the story. There are no questions today. »
-- **Objectifs travaillés :** `LANG-S02-C03-O15` Établir un lien entre la lecture effectuée et sa propre expérience.
+- **Objectifs travaillés :** `LANG-S02-C03-O04` Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
+
+- **Histoire lue à l’enfant — « Bibi, la chèvre curieuse »** (3 min, `bibi-la-chevre-curieuse`) :
+
+  > Bibi est une chèvre blanche avec une tache noire sur l’oreille.
+  > Bibi veut toujours savoir ce qu’il y a plus loin.
+  > Un jour, elle pousse la barrière avec sa tête, et la barrière s’ouvre.
+  > Bibi marche jusqu’au jardin. Dans le jardin, il y a des feuilles vertes, bien rangées.
+  > Elle mange une feuille. Puis deux. Puis trois. C’est délicieux.
+  > Mais ce jardin, c’est le jardin de mama Lelo. Et ces feuilles, ce sont ses légumes.
+  > Mama Lelo arrive. « Bibi ! Encore toi ! »
+  > Bibi baisse la tête. Elle sait qu’elle a fait une bêtise.
+  > Mama Lelo réfléchit. Une chèvre a besoin de manger, c’est vrai. Mais pas dans son jardin.
+  > Alors elle coupe de l’herbe, beaucoup d’herbe, et elle la donne à Bibi.
+  > « Voilà ton repas à toi, dit-elle. Les légumes, c’est pour nous. »
+  > Depuis ce jour, Bibi a son tas d’herbe, et le jardin a sa barrière bien fermée.
+
+  _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
 **Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (from-5) :**
 
 - Comprendre et utiliser :
+  • les mots des émotions, des sentiments et des états mentaux des personnages de fiction ;
+  • les mots qui entretiennent une proximité phonique (poule/roule/boule/moule) ;
+  • les mots qui vont permettre de s’emparer des apprentissages du CP.
 - Distinguer le sens propre du sens figuré (sans que ces notions ne soient enseignées) : l’élève comprend le sens de dévorer un gâteau et dévorer un livre.
 - Construire des dérivations (sans que ces notions ne soient enseignées) : arroser → arrosage ; gentil → gentiment → gentillesse.
 - S’appuyer sur des verbes et des noms qu’il connait déjà pour comprendre et essayer de construire un nouveau mot : jambe/enjamber.
+- Chercher des hyperonymes des réseaux étudiés (véhicule est un hyperonyme de voiture, bus, vélo, etc. ; animal est un hyperonyme de chat, chien, grenouille, etc.).
+- Inférer le sens d’un mot inconnu.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -840,6 +1048,38 @@ _Compter des collections organisées, sans en oublier._
 - Reconnaître et réaliser des collections d’objets (jusqu’à dix, voire au-delà) de même cardinal mais organisées de manières différentes dans l’espace.
 - Reconnaitre et réaliser des collections d’objets dont le cardinal (jusqu’à dix, voire au-delà) est donné par une représentation analogique, par le nom du nombre ou par son écriture chiffrée.
 - Réaliser une collection contenant un objet de plus qu’une collection donnée.
+- Réaliser une collection contenant un objet de moins qu’une collection donnée.
+- Nommer les nombres correspondant au cardinal d’une collection avant et après l’ajout ou le retrait d’un élément.
+- Séparer les éléments déjà pointés de ceux qui ne le sont pas encore.
+- Pointer du doigt ou marquer les éléments déjà parcourus (le nombre d’objets peut être supérieur à dix).
+- Créer un parcours passant une et une seule fois par chaque élément.
+- Utiliser le principe de cardinalité pour dénombrer une collection par énumération. Utiliser des compositions et des décompositions pour dénombrer.
+  Par exemple, si l’enseignant positionne huit objets en les organisant en deux constellations de quatre et demande de dénombrer la collection, l’élève est capable de :
+  • compter de un en un ;
+  • « mettre quatre dans sa tête », surcompter en utilisant ses doigts : « cinq, six, sept, huit » et annoncer qu’il y a huit objets
+- utiliser la connaissance d’une composition et verbaliser « ça fait huit parce que quatre et quatre font huit ».
+- Réaliser une collection :
+  • contenant la même quantité d’objets qu’une collection donnée ;
+  • contenant la même quantité d’objets qu’une représentation analogique donnée (doigts des deux mains, constellations de points) ;
+  • dont la quantité d’objets est énoncée oralement ;
+  • dont la quantité d’objets est représentée par son écriture chiffrée. Réaliser une collection (jusqu’à dix, voire au-delà) en réunissant des collections plus petites.
+- Comparer globalement (sans dénombrer) les cardinaux de deux collections dont les quantités d’objets diffèrent d’un facteur au moins égal à deux et utiliser les locutions « plus que », « moins que », « autant que ». On ne se limite pas aux petites collections.
+- Comparer par correspondance terme à terme les cardinaux de deux collections.
+- Comparer les cardinaux de deux collections en dénombrant chacune d’elles.
+- Comparer des quantités données par leur écriture chiffrée ou par le nom des nombres.
+- Mobiliser des compositions et des décompositions de nombres pour résoudre des problèmes.
+- Réaliser des compositions et des décompositions de nombres avec les doigts des deux mains.
+- Verbaliser les compositions de nombres. Parmi elles, figurent les doubles : « deux et deux font quatre », « deux fois deux font quatre », « trois et trois font six », « deux fois trois font six », « quatre et quatre font huit », « deux fois quatre font huit », « cinq et cinq font dix », « deux fois cinq font dix ».
+- Verbaliser les décompositions des nombres compris entre deux et dix.
+- Pour ajouter deux nombres, surcompter à partir du plus grand. Exemple de verbalisation par un élève : « Pour ajouter quatre et cinq, je mets cinq dans ma tête et je compte quatre sur mes doigts à partir de cinq : six, sept, huit, neuf. Donc quatre et cinq font neuf ».
+- Nommer le nombre (jusqu’à dix, voire au-delà) correspondant à une quantité d’objets ou à une représentation analogique et vice versa.
+- Représenter par une écriture chiffrée une quantité, une représentation analogique, le nom d’un nombre et vice versa.
+- Écrire des nombres dans des situations de communication.
+- Réciter la comptine numérique de un à trente de façon ordonnée et segmentée.
+- Réciter la comptine numérique jusqu’à un nombre donné.
+- Réciter la comptine numérique jusqu’à trente en partant d’un nombre autre que un (en vue du surcomptage).
+- Réciter la comptine numérique à rebours de dix à un (en vue du décomptage).
+- Réciter les comptines numériques (jusqu’à vingt) de deux en deux en partant de un et en partant de deux.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -895,6 +1135,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 - Courir en limitant les arrêts sur une durée d’effort matérialisée par un support musical ou un sablier.
 - Courir vite et franchir une rivière matérialisée avec des lattes sans ralentir.
 - Courir puis sauter haut ou loin après une impulsion sur un pied pour franchir un obstacle et se réceptionner sur deux pieds.
+- Trouver au moins cinq éléments remarquables et repérables sur plusieurs photographies prises par les professeurs dans un lieu extérieur à l’école (cour de récréation, terrain de sport, stade, parc…), en l’absence des élèves ou lors d’une séance précédente.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -939,8 +1180,8 @@ _Situer les évènements de sa semaine et les mettre en ordre._
 
 #### 2. Avant ou après ? — 3 min, sans écran (conversation)
 
-- **Consigne à l’enfant :** « L’école, c’est avant ou après le marché ? »
-- **Guidance adulte :** 1. Posez des questions d’ordre : « Le dimanche vient avant ou après le samedi ? » 2. Faites montrer sur la bande pour vérifier. 3. Faites employer les mots « avant » et « après » dans la réponse.
+- **Consigne à l’enfant :** « L’école, c’est avant ou après ? »
+- **Guidance adulte :** Choisissez deux moments que l’enfant vit vraiment dans la semaine (l’école, le marché, la visite de quelqu’un, le jour sans école). Demandez lequel vient avant. Si votre semaine ne contient pas ces repères, prenez-en deux autres : l’important est qu’ils soient réels.
 - **Matériel :** Feuille de papier
 - **Lexique visé :** avant _(before)_ · après _(after)_
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
@@ -953,6 +1194,8 @@ _Situer les évènements de sa semaine et les mettre en ordre._
 - Dire : « Aujourd’hui, nous sommes lundi. », « Hier, c’était dimanche, j’étais à la maison. », « Demain, ce sera mardi, nous irons à la piscine. », « J’aurai bientôt fini mon dessin. »
 - Utiliser les outils de la classe pour composer la date (jour et mois) au tableau et l’énoncer.
 - Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
+- Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
+- Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -975,7 +1218,11 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ## Jour 14 — 2026-09-18
 
-**Durée totale : 35 min** (dont 0 min avec écran) · 4 séances · jour 4 du rythme
+**Durée totale : 35 min** · **temps d’écran actif de l’enfant : 0 min** · 4 séances · jour 4 du rythme
+
+_L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus compte le temps
+pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de
+l’appareil._
 
 **Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Objets de la maison (coussins, chaises, bâton, tissu), Petits objets à compter (cailloux, capsules, haricots)
 
@@ -989,7 +1236,7 @@ _Frapper les syllabes de mots plus longs et compter combien il y en a._
   - `LANG-S02-C01-O03` — Scander les syllabes d’un mot. _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
   - `LANG-S02-C01-O13` — Augmenter sa mémoire auditive et sa capacité de concentration.
-  - `LANG-S02-C03-O15` — Établir un lien entre la lecture effectuée et sa propre expérience.
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : la date et la révision — 3 min, sans écran (conversation)
@@ -1015,7 +1262,23 @@ _Frapper les syllabes de mots plus longs et compter combien il y en a._
 - **Guidance adulte :** Lisez l’histoire à voix haute, doucement. Ne posez aucune question après : ce moment quotidien sert au plaisir d’écouter. Si l’enfant redemande la même histoire un autre jour, c’est bon signe.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Listen to the story. There are no questions today. »
-- **Objectifs travaillés :** `LANG-S02-C03-O15` Établir un lien entre la lecture effectuée et sa propre expérience.
+- **Objectifs travaillés :** `LANG-S02-C03-O04` Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
+
+- **Histoire lue à l’enfant — « Les trois cailloux de Tito »** (2 min, `les-trois-cailloux-de-tito`) :
+
+  > Tito ramasse un caillou rond. Il le met dans sa poche.
+  > Il ramasse un caillou plat. Il le met dans sa poche.
+  > Il ramasse un caillou pointu. Il le met dans sa poche. Ça fait trois.
+  > À la maison, il pose ses trois cailloux sur la table : le rond, le plat, le pointu.
+  > Sa grande sœur en prend un et le cache derrière son dos.
+  > « Il en reste combien ? » demande-t-elle.
+  > Tito compte : un, deux. « Deux ! »
+  > « Et qu’est-ce qui manque ? »
+  > Tito regarde bien. Le rond est là. Le plat est là. « Le pointu ! »
+  > Sa sœur ouvre la main : c’est bien le caillou pointu.
+  > Trois cailloux, moins un, ça fait deux. Et deux, plus un, ça refait trois.
+
+  _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
 **Réussites attendues — texte officiel pour la compétence « Acquérir les habiletés phonologiques et le principe alphabétique » (from-5) :**
 
@@ -1083,6 +1346,38 @@ _Reprendre la comparaison des quantités de la semaine._
 - Reconnaître et réaliser des collections d’objets (jusqu’à dix, voire au-delà) de même cardinal mais organisées de manières différentes dans l’espace.
 - Reconnaitre et réaliser des collections d’objets dont le cardinal (jusqu’à dix, voire au-delà) est donné par une représentation analogique, par le nom du nombre ou par son écriture chiffrée.
 - Réaliser une collection contenant un objet de plus qu’une collection donnée.
+- Réaliser une collection contenant un objet de moins qu’une collection donnée.
+- Nommer les nombres correspondant au cardinal d’une collection avant et après l’ajout ou le retrait d’un élément.
+- Séparer les éléments déjà pointés de ceux qui ne le sont pas encore.
+- Pointer du doigt ou marquer les éléments déjà parcourus (le nombre d’objets peut être supérieur à dix).
+- Créer un parcours passant une et une seule fois par chaque élément.
+- Utiliser le principe de cardinalité pour dénombrer une collection par énumération. Utiliser des compositions et des décompositions pour dénombrer.
+  Par exemple, si l’enseignant positionne huit objets en les organisant en deux constellations de quatre et demande de dénombrer la collection, l’élève est capable de :
+  • compter de un en un ;
+  • « mettre quatre dans sa tête », surcompter en utilisant ses doigts : « cinq, six, sept, huit » et annoncer qu’il y a huit objets
+- utiliser la connaissance d’une composition et verbaliser « ça fait huit parce que quatre et quatre font huit ».
+- Réaliser une collection :
+  • contenant la même quantité d’objets qu’une collection donnée ;
+  • contenant la même quantité d’objets qu’une représentation analogique donnée (doigts des deux mains, constellations de points) ;
+  • dont la quantité d’objets est énoncée oralement ;
+  • dont la quantité d’objets est représentée par son écriture chiffrée. Réaliser une collection (jusqu’à dix, voire au-delà) en réunissant des collections plus petites.
+- Comparer globalement (sans dénombrer) les cardinaux de deux collections dont les quantités d’objets diffèrent d’un facteur au moins égal à deux et utiliser les locutions « plus que », « moins que », « autant que ». On ne se limite pas aux petites collections.
+- Comparer par correspondance terme à terme les cardinaux de deux collections.
+- Comparer les cardinaux de deux collections en dénombrant chacune d’elles.
+- Comparer des quantités données par leur écriture chiffrée ou par le nom des nombres.
+- Mobiliser des compositions et des décompositions de nombres pour résoudre des problèmes.
+- Réaliser des compositions et des décompositions de nombres avec les doigts des deux mains.
+- Verbaliser les compositions de nombres. Parmi elles, figurent les doubles : « deux et deux font quatre », « deux fois deux font quatre », « trois et trois font six », « deux fois trois font six », « quatre et quatre font huit », « deux fois quatre font huit », « cinq et cinq font dix », « deux fois cinq font dix ».
+- Verbaliser les décompositions des nombres compris entre deux et dix.
+- Pour ajouter deux nombres, surcompter à partir du plus grand. Exemple de verbalisation par un élève : « Pour ajouter quatre et cinq, je mets cinq dans ma tête et je compte quatre sur mes doigts à partir de cinq : six, sept, huit, neuf. Donc quatre et cinq font neuf ».
+- Nommer le nombre (jusqu’à dix, voire au-delà) correspondant à une quantité d’objets ou à une représentation analogique et vice versa.
+- Représenter par une écriture chiffrée une quantité, une représentation analogique, le nom d’un nombre et vice versa.
+- Écrire des nombres dans des situations de communication.
+- Réciter la comptine numérique de un à trente de façon ordonnée et segmentée.
+- Réciter la comptine numérique jusqu’à un nombre donné.
+- Réciter la comptine numérique jusqu’à trente en partant d’un nombre autre que un (en vue du surcomptage).
+- Réciter la comptine numérique à rebours de dix à un (en vue du décomptage).
+- Réciter les comptines numériques (jusqu’à vingt) de deux en deux en partant de un et en partant de deux.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -1141,6 +1436,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 - Courir en limitant les arrêts sur une durée d’effort matérialisée par un support musical ou un sablier.
 - Courir vite et franchir une rivière matérialisée avec des lattes sans ralentir.
 - Courir puis sauter haut ou loin après une impulsion sur un pied pour franchir un obstacle et se réceptionner sur deux pieds.
+- Trouver au moins cinq éléments remarquables et repérables sur plusieurs photographies prises par les professeurs dans un lieu extérieur à l’école (cour de récréation, terrain de sport, stade, parc…), en l’absence des élèves ou lors d’une séance précédente.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -1181,6 +1477,19 @@ _Dire la comptine du mois par cœur, en rythme, et en commencer une autre._
 - **Lexique visé :** par cœur _(by heart)_ · le rythme _(the rhythm)_
 - **Aide en anglais (optionnelle) :** « Say the rhyme on your own, then listen to a new one. »
 - **Objectifs travaillés :** `ART-S02-C01-O09` Dire ou chanter au moins dix comptines ou chants, en réinvestissant ceux appris les années antérieures.
+
+- **Comptine lue à l’enfant — « Les formes qui dansent »** (2 min, `les-formes-qui-dansent`) :
+
+  > Le rond tourne, tourne, tourne,
+  > il n’a pas de coin du tout.
+  > Le carré a quatre côtés,
+  > quatre côtés tout pareils.
+  > Le rectangle est plus long,
+  > deux petits et deux grands côtés.
+  > Et le triangle, lui, en a trois :
+  > un, deux, trois, et c’est fini !
+
+  _Comptine originale écrite pour Teka Edu. Aucune comptine existante n’est reprise._
 
 **Réussites attendues — texte officiel pour la compétence « Jouer avec sa voix et acquérir un répertoire de comptines et de chansons » (from-5) :**
 

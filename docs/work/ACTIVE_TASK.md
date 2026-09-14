@@ -37,8 +37,8 @@ activities really do.
 
 ## Last Checkpoint
 
-2026-09-14 — audit complete, no content edited yet. The findings are below; they are the
-plan.
+2026-09-14 — all 13 review items applied; full local suite green including a fresh database
+reset. Next: docs, then mark PR #31 ready.
 
 ## Scope
 
@@ -70,13 +70,27 @@ plan.
 ## Completed
 
 - [x] Audited every activity claiming the three flagged objectives across all 22 September days
-- [x] Found the truncation cause: `statement.split("\n")[0]` in 4 places — 43 official
-      statements are multi-line, so « Utiliser : » is a first line, not a short statement.
-      The canonical data is intact; only the rendering truncates.
+- [x] **Item 1** — stories, rhymes and comprehension questions are quoted in full in the package
+- [x] **Item 2** — the daily read-aloud no longer claims O15; O15 moved to the two activities
+      that genuinely link a story to the child's life (days 9 and 15)
+- [x] **Item 3** — the endurance objective removed from « Cours et arrête-toi », and from three
+      more activities the audit found making the same claim
+- [x] **Item 4** — « Je me dessine en train de bouger » now carries `WORLD-S01-C02-O09`
+- [x] **Item 5** — the pronoun objective kept, and made real: « À quoi sert le crayon ? »
+      « Il sert à écrire. »
+- [x] **Item 6** — the day-3 ritual maps to the taught corpus; the Kumu questions to `O09`
+- [x] **Item 7** — the day strip is prepared in order by the adult, with a marker to move; no
+      reading prerequisite. Market examples are now explicitly the family's own
+- [x] **Item 8** — the take-away question is a typed, optional extension, shown as such
+- [x] **Item 9** — official excerpts are no longer cut at their first line (43 are multi-line)
+- [x] **Item 10** — « temps d'écran actif de l'enfant », with a note that the adult still reads
+- [x] **Item 11** — the package states that 35 min is not a finish line
+- [x] **Item 12** — nothing on the keep-list was touched
+- [x] **Item 13** — packages regenerated; content, traceability, unit, pgTAP, E2E all green
 
 ## In Progress
 
-- [ ] Content corrections (items 2-8), then the generator (items 1, 9, 10, 11)
+- [ ] Documentation, PR ready, CI, merge, staging
 
 ## Remaining
 
@@ -87,18 +101,18 @@ plan.
 
 ## Validation State
 
-| Check              | Result  | At                            |
-| ------------------ | ------- | ----------------------------- |
-| format             | PASS    | `c8e9e0f`, before any edit    |
-| lint               | PASS    | `c8e9e0f`, before any edit    |
-| typecheck          | PASS    | `c8e9e0f`, before any edit    |
-| unit tests         | PASS    | `c8e9e0f` — 210 tests         |
-| content validation | PASS    | `c8e9e0f` — 21 files          |
-| database tests     | PASS    | `c8e9e0f` — 144 assertions    |
-| build              | PASS    | `c8e9e0f`                     |
-| E2E                | PASS    | `c8e9e0f` — 27 tests          |
-| Docker             | NOT RUN | left to CI                    |
-| secret scans       | NOT RUN | before the PR is marked ready |
+| Check              | Result  | At                                |
+| ------------------ | ------- | --------------------------------- |
+| format             | PASS    | working tree                      |
+| lint               | PASS    | working tree                      |
+| typecheck          | PASS    | working tree                      |
+| unit tests         | PASS    | working tree — 214 tests          |
+| content validation | PASS    | working tree — 21 files           |
+| database tests     | PASS    | fresh reset — 144 assertions      |
+| build              | PASS    | working tree                      |
+| E2E                | PASS    | working tree — 27 tests           |
+| Docker             | NOT RUN | left to CI                        |
+| secret scans       | PASS    | 0 tracked `.env*`; gitleaks in CI |
 
 ## Database State
 
@@ -128,9 +142,7 @@ None.
 
 ## Exact Resume Point
 
-Apply the content corrections listed under Findings, in
-`content/lessons/maternelle-cycle1-cd-2026/maternelle-3/*.json`, then the four
-`split("\n")[0]` fixes in `lib/content/review-package.ts`.
+Update the documentation, mark PR #31 ready, wait for CI, squash-merge, verify staging.
 
 ## Resume Verification
 

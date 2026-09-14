@@ -7,6 +7,7 @@
  * and a unit test fails if the committed file is out of date.
  */
 import { generateSchoolDays } from "@/domain/calendar/school-days";
+import { findText } from "@/domain/lessons/texts";
 import {
   ageBandOfLevel,
   findCompetency,
@@ -43,11 +44,58 @@ export const REVIEW_CHECKLIST: readonly { key: string; question: string }[] = [
   { key: "safety", question: "L’activité est-elle sans risque pour un enfant de cet âge ?" },
 ];
 
+/**
+ * Official statements are quoted verbatim, and 43 of them are several lines: an opening line
+ * such as « Utiliser : » followed by the bullets it introduces. Rendering only the first line
+ * showed the reviewer a heading with nothing under it — which reads as missing curriculum text
+ * rather than as a rendering fault. Every line is kept, indented so the Markdown bullet it sits
+ * in stays intact.
+ */
+function officialText(statement: string | undefined, indent = ""): string {
+  if (statement === undefined) return "?";
+  return statement
+    .split("\n")
+    .map((line, index) => (index === 0 ? line : `${indent}  ${line}`))
+    .join("\n");
+}
+
 const MODE_LABEL: Record<string, string> = {
   "off-screen": "sans écran",
   "on-screen": "à l’écran",
   mixed: "mixte (écran puis action)",
 };
+
+/**
+ * The story, rhyme or song an activity names by id, quoted in full, plus the questions the child
+ * will be asked. Without this the reviewer is asked to judge « L'histoire de Kumu » from its
+ * title alone — and no one can approve a text they have not read. The text is Teka Edu's own
+ * (`content/texts/`), so quoting it here reproduces nothing outside the project.
+ */
+function teachingTextBlock(activity: Activity, data: ReferenceData): string[] {
+  const textId = activity.payload["textId"];
+  if (typeof textId !== "string") return [];
+  const text = findText(data.texts, textId);
+  if (text === undefined) return [`- **Texte \`${textId}\` introuvable.**`, ""];
+  const kind = text.kind === "story" ? "Histoire" : "Comptine";
+  const lines = [
+    `- **${kind} lue à l’enfant — « ${text.title} »** (${text.minutes} min, \`${text.id}\`) :`,
+    "",
+    ...text.lines.map((line) => `  > ${line}`),
+    "",
+    `  _${text.provenance}_`,
+    "",
+  ];
+  const questions = activity.payload["questions"];
+  if (Array.isArray(questions) && questions.length > 0) {
+    lines.push(
+      `- **Questions posées à l’enfant après l’écoute (${questions.length}) :**`,
+      "",
+      ...questions.map((question, index) => `  ${index + 1}. ${String(question)}`),
+      "",
+    );
+  }
+  return lines;
+}
 
 function activityBlock(activity: Activity, data: ReferenceData, syllabus: Syllabus): string[] {
   const used = activity.materialCodes.map((code) => data.materials.find((m) => m.code === code));
@@ -73,12 +121,19 @@ function activityBlock(activity: Activity, data: ReferenceData, syllabus: Syllab
   }
   if (scaffold)
     lines.push(`- **Aide en anglais (optionnelle) :** « ${scaffold.childInstruction} »`);
+  const extension = activity.payload["extension"];
+  if (typeof extension === "string") {
+    lines.push(
+      `- **Extension facultative (proposée seulement si l’enfant en redemande) :** ${extension}`,
+    );
+  }
   lines.push(
     `- **Objectifs travaillés :** ${activity.objectiveCodes
-      .map((code) => `\`${code}\` ${findObjective(syllabus, code)?.statement.split("\n")[0] ?? ""}`)
+      .map((code) => `\`${code}\` ${officialText(findObjective(syllabus, code)?.statement, "  ")}`)
       .join(" ; ")}`,
   );
   lines.push("");
+  lines.push(...teachingTextBlock(activity, data));
   return lines;
 }
 
@@ -111,7 +166,7 @@ function successExampleBlock(
     lines.push(
       `**Réussites attendues — texte officiel pour la compétence « ${competency.title} » (${bandCode}) :**`,
       "",
-      ...examples.slice(0, 4).map((example) => `- ${example.statement.split("\n")[0]}`),
+      ...examples.map((example) => `- ${officialText(example.statement, "")}`),
       "",
       "_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._",
       "",
@@ -138,7 +193,7 @@ function lessonBlock(
   ];
   const objectives = lesson.objectiveCodes.map((code) => {
     const objective = findObjective(syllabus, code);
-    return `  - \`${code}\` — ${objective?.statement.split("\n")[0] ?? "?"} _(source : ${objective?.sourceId ?? "?"})_`;
+    return `  - \`${code}\` — ${officialText(objective?.statement, "  ")} _(source : ${objective?.sourceId ?? "?"})_`;
   });
   lines.push("- **Objectifs enseignés :**", ...objectives);
   if (lesson.supportingObjectiveCodes.length > 0) {
@@ -146,7 +201,7 @@ function lessonBlock(
       "- **Objectifs repris (déjà vus) :**",
       ...lesson.supportingObjectiveCodes.map((code) => {
         const objective = findObjective(syllabus, code);
-        return `  - \`${code}\` — ${objective?.statement.split("\n")[0] ?? "?"}`;
+        return `  - \`${code}\` — ${officialText(objective?.statement, "  ")}`;
       }),
     );
   }
@@ -180,7 +235,11 @@ function dayBlock(
   const lines = [
     `## Jour ${plan.instructionalDay} — ${plan.date}`,
     "",
-    `**Durée totale : ${plan.totalMinutes} min** (dont ${plan.screenMinutes} min avec écran) · ${plan.sessions.length} séances · jour ${plan.rhythmDay} du rythme`,
+    `**Durée totale : ${plan.totalMinutes} min** · **temps d’écran actif de l’enfant : ${plan.screenMinutes} min** · ${plan.sessions.length} séances · jour ${plan.rhythmDay} du rythme`,
+    "",
+    "_L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus compte le temps",
+    "pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de",
+    "l’appareil._",
     "",
     `**Matériel à préparer :** ${plan.materialCodes
       .map((code) => data.materials.find((m) => m.code === code)?.name ?? code)
@@ -259,6 +318,11 @@ export function buildReviewPackage(
     `- **Curriculum :** ${curriculum?.name ?? programme.curriculumId} (version ${curriculum?.version ?? "?"})`,
     `- **Référence officielle :** ${curriculum?.reference.citation ?? "—"}`,
     `- **Séance visée :** ${programme.sessionMinutes.min}–${programme.sessionMinutes.max} min par jour, à la maison, avec un adulte`,
+    "- **Ce n’est pas un objectif à atteindre.** La séance peut être mise en pause, coupée en",
+    "  deux moments plus courts, ou arrêtée avant la fin quand l’enfant fatigue. L’application",
+    "  propose « Faire une petite pause » et « Terminer pour aujourd’hui » à chaque activité, et",
+    "  reprend là où l’on s’était arrêté. Une séance écourtée est une séance normale : jugez les",
+    "  activités, pas la capacité d’un enfant à tenir 35 minutes.",
     `- **Contenu relu ici :** ${plans.length} jours · ${lessons.length} leçons · ${activities.length} activités`,
     "",
     "Les objectifs et les « réussites attendues » sont cités mot pour mot du programme officiel ;",
