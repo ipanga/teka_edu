@@ -10,50 +10,44 @@
 
 ## Task
 
-Apply the Week 1 pedagogical review feedback (13 items): correct objective traceability
-in the September content, and make the review package show the reviewer the actual text.
+None in progress.
 
 ## Objective
 
-Give a qualified 3ème maternelle teacher a package they can judge — complete stories,
-rhymes and questions, untruncated official excerpts, and objective claims that match what the
-activities really do.
+The Week 1 review corrections are merged. No new task has been started.
 
 ## Status
 
-`in_progress`
+`planned`
 
 ## Branch
 
-`fix/week-1-review-corrections`
+`develop` — no feature branch open.
 
 ## Base Branch
 
-`develop` at `c8e9e0f`
+`develop`
 
 ## Started
 
-2026-09-14
+—
 
 ## Last Checkpoint
 
-2026-09-14 — all 13 review items applied; full local suite green including a fresh database
-reset. Next: docs, then mark PR #31 ready.
+2026-09-14 — reset after PR #31 merged as `183e7e4` and verified on live staging.
 
 ## Scope
 
-- Review package generator: full story/rhyme text, comprehension questions, untruncated
-  official excerpts, screen-time wording, pause/split guidance.
-- Objective traceability fixes in `content/lessons/**` and the annual plan where the review
-  showed the pacing was fitted to a wrong claim.
-- « Ma bande des jours » redesign; market examples made family-adaptable.
-- Regenerate all five review packages; full validation.
+To be filled in when the next task begins.
 
 ## Out of Scope
 
-- October, and 1ère/2ème maternelle content.
-- Approving any lesson. ISSUE-017 stays open.
-- Rewriting the week: §12 of the review lists what must stay.
+- **October**, and 1ère/2ème maternelle content.
+- Approving any lesson; ISSUE-017 stays open.
+- Scores, points, rewards, dashboards, adaptive engines.
+- A child account or profile system.
+- Paid anything: no TTS, CDN, stock imagery, storage.
+- Production, `main`.
 
 ## Product Decisions
 
@@ -61,58 +55,45 @@ reset. Next: docs, then mark PR #31 ready.
 - French Cycle 1 is the curriculum; DRC calendar and context; PNEM as compatibility (ADR-037).
 - Media is repository SVG by stable id, $0 (ADR-042).
 - The app opens on a class; a class with no lessons says so and borrows nothing (ADR-044).
-- Animation is decoration: short, never looping, always off under `prefers-reduced-motion` (ADR-045).
-- The parent is the voice. No synthesised speech for a word a child copies; audio only where a
-  human recording exists, never autoplaying (ADR-046).
+- Animation is decoration, always off under `prefers-reduced-motion` (ADR-045).
+- The parent is the voice; no synthesised speech for a word a child copies (ADR-046).
+- **An activity claims only what it actually works.** When one instance of a repeated ritual is
+  mis-mapped, audit the whole month, and never repair a mapping by changing the pedagogy.
+- **A reviewer must see what they are asked to judge**: the review package quotes every story,
+  rhyme and question in full, and never truncates official text.
 - The screen guides; it never replaces speaking, moving or handling real things.
 - Never claim the app observed what it cannot see.
 
 ## Completed
 
-- [x] Audited every activity claiming the three flagged objectives across all 22 September days
-- [x] **Item 1** — stories, rhymes and comprehension questions are quoted in full in the package
-- [x] **Item 2** — the daily read-aloud no longer claims O15; O15 moved to the two activities
-      that genuinely link a story to the child's life (days 9 and 15)
-- [x] **Item 3** — the endurance objective removed from « Cours et arrête-toi », and from three
-      more activities the audit found making the same claim
-- [x] **Item 4** — « Je me dessine en train de bouger » now carries `WORLD-S01-C02-O09`
-- [x] **Item 5** — the pronoun objective kept, and made real: « À quoi sert le crayon ? »
-      « Il sert à écrire. »
-- [x] **Item 6** — the day-3 ritual maps to the taught corpus; the Kumu questions to `O09`
-- [x] **Item 7** — the day strip is prepared in order by the adult, with a marker to move; no
-      reading prerequisite. Market examples are now explicitly the family's own
-- [x] **Item 8** — the take-away question is a typed, optional extension, shown as such
-- [x] **Item 9** — official excerpts are no longer cut at their first line (43 are multi-line)
-- [x] **Item 10** — « temps d'écran actif de l'enfant », with a note that the adult still reads
-- [x] **Item 11** — the package states that 35 min is not a finish line
-- [x] **Item 12** — nothing on the keep-list was touched
-- [x] **Item 13** — packages regenerated; content, traceability, unit, pgTAP, E2E all green
+- [x] Phase 3A — September programme and the parent session (archived)
+- [x] Session duration policy and the resumable-work protocol (archived)
+- [x] Phase 3B — visuals, interaction and real-session testing (archived)
+- [x] Phase 3C — the session a parent and child can sit down and do (archived)
 
 ## In Progress
 
-- [ ] Documentation, PR ready, CI, merge, staging
+- [ ] Nothing.
 
 ## Remaining
 
-- [ ] Items 2-8 content edits
-- [ ] Items 1, 9, 10, 11 generator edits
-- [ ] Tests: text present, no truncated bullet, traceability
-- [ ] Regenerate packages, full validation, PR
+1. Awaiting the owner's choice of next task.
 
 ## Validation State
 
-| Check              | Result  | At                                |
-| ------------------ | ------- | --------------------------------- |
-| format             | PASS    | working tree                      |
-| lint               | PASS    | working tree                      |
-| typecheck          | PASS    | working tree                      |
-| unit tests         | PASS    | working tree — 214 tests          |
-| content validation | PASS    | working tree — 21 files           |
-| database tests     | PASS    | fresh reset — 144 assertions      |
-| build              | PASS    | working tree                      |
-| E2E                | PASS    | working tree — 27 tests           |
-| Docker             | NOT RUN | left to CI                        |
-| secret scans       | PASS    | 0 tracked `.env*`; gitleaks in CI |
+| Check              | Result | At                                         |
+| ------------------ | ------ | ------------------------------------------ |
+| format             | PASS   | working tree                               |
+| lint               | PASS   | working tree — 0 warnings                  |
+| typecheck          | PASS   | working tree                               |
+| unit tests         | PASS   | working tree — 207 tests                   |
+| content validation | PASS   | working tree — 21 files                    |
+| database tests     | PASS   | working tree — 144 pgTAP assertions        |
+| build              | PASS   | working tree                               |
+| E2E                | PASS   | working tree — 20 tests                    |
+| Docker             | PASS   | CI at `27e9054` — both images              |
+| secret scans       | PASS   | working tree — no leaks, 0 tracked `.env*` |
+| staging            | PASS   | `27e9054` deployed, 20 E2E against it      |
 
 ## Database State
 
@@ -142,7 +123,8 @@ None.
 
 ## Exact Resume Point
 
-Update the documentation, mark PR #31 ready, wait for CI, squash-merge, verify staging.
+No task is in progress. When the next one starts: fill this file in, create the feature branch
+from `develop`, commit an initial checkpoint, and open a Draft PR before the long work begins.
 
 ## Resume Verification
 
@@ -152,27 +134,3 @@ Update the documentation, mark PR #31 ready, wait for CI, squash-merge, verify s
 4. `gh pr list --head feat/september-child-experience` — a Draft PR may exist;
 5. `npx supabase migration list --linked` only if a migration was in flight;
 6. `gh run list --branch develop --limit 3` before assuming a deployment is needed.
-
-## Findings — the corrections this review requires
-
-**The daily « Le temps de lecture » ritual (22 activities) claims `LANG-S02-C03-O15`
-« Établir un lien entre la lecture effectuée et sa propre expérience », while its own text says
-there are no questions.** The reviewer is right. But O15 _is_ genuinely exercised in September —
-by `m3-lang-09-a2` and `m3-lang-15-a2`, whose guidance ends « Et toi, le premier jour, comment tu
-te sentais ? ». So O15 moves to the two activities that do it, and the ritual takes
-`LANG-S02-C03-O04` (comprehension of stories tied to everyday experience, `before-4`, legal for
-this level and genuinely built by listening to a whole story). `O13` was rejected: the annual plan
-places it at day 127, and pulling it into September would be acceleration.
-
-**The annual plan must follow**: O15 was paced `introduceByDay: 3, daily, 12 revisits` because it
-was pinned to a daily ritual that never did it. Corrected to the two real occurrences.
-
-**`PHYS-S01-C01-O10` « Courir de plus en plus longtemps sans s'arrêter »** is claimed by four
-activities that do not do it — `m3-phys-01-a1` (flagged by the reviewer), and, from the audit,
-`m3-phys-10-a1`, `m3-phys-19-a1`, `m3-phys-22-a1`. It stays on `m3-phys-02-a1` and
-`m3-phys-11-a1`, which genuinely run without stopping.
-
-**`LANG-S01-C02-O01` « Diversifier les pronoms employés »** is genuinely exercised only by
-`m3-lang-08-a2` « Il fait, elle fait ». Removed from the `m3-lang-08-a1` ritual. Kept on
-`m3-lang-02-a2` by making the pronoun use real rather than assumed — « À quoi sert le crayon ? »
-« Il sert à écrire. » — which is the reviewer's own second option, and not a grammar drill.
