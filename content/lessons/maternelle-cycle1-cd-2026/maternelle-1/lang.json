@@ -2025,8 +2025,8 @@
           "position": 2,
           "type": "graphic-practice",
           "title": "Je trace",
-          "childInstruction": "Prends le crayon et trace avec moi.",
-          "adultGuidance": "Posez la feuille bien en face de lui. Montrez le geste une fois, lentement, puis laissez-le faire. On ne cherche pas une belle forme : on cherche une main qui tient et un œil qui suit. Arrêtez dès qu’il lâche le crayon.",
+          "childInstruction": "Fais des traits de haut en bas avec moi. Puis essaie tout seul.",
+          "adultGuidance": "Posez la feuille bien en face de lui. Montrez lentement deux ou trois grands traits verticaux, de haut en bas. Laissez-le ensuite tracer comme il peut : il n’a pas à reproduire une forme parfaite. S’il transforme les traits en gribouillage, ce n’est pas un échec — c’est le geste et le contrôle de la main qu’on travaille, pas le dessin. Arrêtez dès qu’il ne veut plus tenir le crayon. Ni lettres ni chiffres ce mois-ci.",
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
@@ -2034,9 +2034,14 @@
           "objectiveCodes": ["LANG-S03-C01-O01"],
           "materialCodes": ["papier", "crayon"],
           "vocabulary": [],
-          "scaffolds": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Make lines from top to bottom with me. Then try on your own."
+            }
+          ],
           "payload": {
-            "pattern": "des traits verticaux, puis des ronds"
+            "pattern": "des traits verticaux, de haut en bas"
           }
         },
         {
@@ -2213,14 +2218,14 @@
           "position": 2,
           "type": "vocabulary",
           "title": "Tous les mots du mois",
-          "childInstruction": "Montre-moi ce que je nomme. Puis dis avec moi un ou deux mots que tu veux.",
-          "adultGuidance": "Ces mots-là, il les a déjà entendus : on les reconnaît, on n’en apprend pas de nouveaux.\n1. Posez ou montrez les quatre choses. 2. Nommez-en une et demandez-lui de la montrer — le doigt suffit, et suffit vraiment. 3. Nommez ce qui ne vient pas, sans le faire répéter. 4. À la fin seulement, proposez-lui de redire **un ou deux** mots, ceux qu’il choisit. On ne demande jamais les quatre à voix haute.",
+          "childInstruction": "Montre-moi l’image que je nomme. Puis dis avec moi un ou deux mots que tu choisis.",
+          "adultGuidance": "Aucun objet à préparer : les images suffisent.\n1. Montrez les quatre images une à une et nommez-les. 2. Nommez ensuite un mot et demandez-lui de montrer l’image correspondante — le doigt suffit, et suffit vraiment. 3. Pour « la main » et « la tête », il peut aussi montrer la partie sur son propre corps. Pour « la porte » et « le seau », servez-vous d’un objet réel seulement s’il est déjà à portée. 4. À la fin seulement, proposez-lui de redire **un ou deux** mots, ceux qu’il choisit. On ne demande jamais les quatre à voix haute.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": ["objet-porte", "objet-seau", "corps-main", "corps-tete"],
           "objectiveCodes": ["LANG-S01-C01-O01"],
-          "materialCodes": ["objets-maison"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "la porte",
@@ -2242,7 +2247,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Show me the one I name. Then say one or two with me."
+              "childInstruction": "Show me the picture I name. Then say one or two with me."
             }
           ],
           "payload": {

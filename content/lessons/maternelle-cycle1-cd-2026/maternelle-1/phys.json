@@ -1077,8 +1077,8 @@
           "position": 1,
           "type": "movement",
           "title": "Je choisis mon jeu",
-          "childInstruction": "Choisis ce que tu veux faire : courir, lancer, ou marcher sur la ligne.",
-          "adultGuidance": "Laissez-le choisir parmi ce qu’il a fait ce mois-ci, et jouez-y avec lui. Choisir est un apprentissage ; c’est aussi la meilleure façon de savoir ce qui lui a plu.",
+          "childInstruction": "Choisis ton jeu. Puis on joue ensemble, avec une règle.",
+          "adultGuidance": "Laissez-le choisir : courir, lancer, ou marcher sur la ligne. **Avant** de commencer, annoncez une seule règle, adaptée au jeu choisi — attendre « vas-y » avant de partir, lancer chacun son tour, ou attendre que l’autre ait quitté la ligne. Jouez avec lui. Rappelez la règle une fois seulement si besoin. Il n’y a ni gagnant ni perdant : ce qu’on apprend ici, c’est de jouer ensemble en tenant une règle simple.",
           "minutes": 6,
           "mode": "off-screen",
           "role": "consolidation",
@@ -1089,11 +1089,11 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Choose what you want to do: run, throw, or walk the line."
+              "childInstruction": "Choose your game. Then we play together, with one rule."
             }
           ],
           "payload": {
-            "moves": ["courir", "s’arrêter", "recommencer"]
+            "moves": ["choisir son jeu", "écouter la règle", "jouer chacun son tour"]
           }
         }
       ],

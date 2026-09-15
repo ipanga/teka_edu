@@ -1140,13 +1140,13 @@
           "type": "counting",
           "title": "Tout ce que je sais compter",
           "childInstruction": "Compte avec moi : un, deux, trois, quatre, cinq, six.",
-          "adultGuidance": "Comptez lentement en montrant un doigt à chaque nombre. Recommencez et arrêtez-vous à trois pour voir s’il continue. Ne dépassez jamais six ce mois-ci : la suite orale s’installe par la répétition, pas par la longueur.",
+          "adultGuidance": "Comptez lentement jusqu’à six. Vous pouvez lever un doigt à chaque mot-nombre pour accompagner le rythme — **sans** lui demander de dénombrer une collection de six objets : dire la suite des nombres et compter des choses sont deux apprentissages différents, et ce mois-ci on ne compte jamais plus de trois objets. Recommencez, puis arrêtez-vous à trois pour voir s’il poursuit tout seul. S’il ne continue pas, reprenez simplement avec lui. Ne dépassez pas six.",
           "minutes": 7,
           "mode": "off-screen",
           "role": "consolidation",
-          "mediaIds": ["objet-cuillere"],
+          "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O09"],
-          "materialCodes": ["gros-objets"],
+          "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [
             {
