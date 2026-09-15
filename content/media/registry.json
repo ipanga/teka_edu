@@ -8,7 +8,8 @@
       "alt": "Un carré",
       "tags": ["carré", "forme", "quatre côtés"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:b43caa434c57bf26e9fd57a361b3d52343ef911a3c9c627f2d894eca6caf1ec8"
     },
     {
       "id": "forme-rectangle",
@@ -17,7 +18,8 @@
       "alt": "Un rectangle",
       "tags": ["rectangle", "forme", "quatre côtés"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:002764adc95d58be5e69452a9268e6bb5828ef43b1692a3ba6361f50e310b5bf"
     },
     {
       "id": "forme-triangle",
@@ -26,7 +28,8 @@
       "alt": "Un triangle",
       "tags": ["triangle", "forme", "trois côtés"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:80acc883518a11a5ba521929c2dad307e40a4115bb55305f3ac6bb87fa8db459"
     },
     {
       "id": "forme-disque",
@@ -35,7 +38,8 @@
       "alt": "Un disque, tout rond",
       "tags": ["disque", "rond", "cercle", "forme"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:979ad403ed9c1984aae9572befda615716b695f6f58f610de9e1aa20d609bc1e"
     },
     {
       "id": "objet-cuillere",
@@ -44,7 +48,8 @@
       "alt": "Une cuillère",
       "tags": ["cuillère", "maison", "compter"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:273ce87fb67ff6f3bb1c560d3c4fa1d4300efe09fcd1700a1429a0c6d7928dc4"
     },
     {
       "id": "objet-crayon",
@@ -53,7 +58,8 @@
       "alt": "Un crayon",
       "tags": ["crayon", "école", "écrire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:44639e40462c742c3d03bc0cb0189478cdd622ff54fdba29756596563a4b0977"
     },
     {
       "id": "objet-cahier",
@@ -62,7 +68,8 @@
       "alt": "Un cahier",
       "tags": ["cahier", "école"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:3ea07cf1a9323fbf038e4549729b1d55988704a97e61bddaaf3a2af7f1159a6d"
     },
     {
       "id": "objet-sac",
@@ -71,7 +78,8 @@
       "alt": "Un sac d’école",
       "tags": ["sac", "cartable", "école"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:5374cbc67b63849b1647a74ef2cb297215bedc4ae46b7515c50d1e2715af70bd"
     },
     {
       "id": "objet-table",
@@ -80,7 +88,8 @@
       "alt": "Une table",
       "tags": ["table", "maison", "école"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:b733a5818916b7957aeb383ef3672beacb258241a7903bbea25d39413dd0b7d9"
     },
     {
       "id": "objet-chaise",
@@ -89,7 +98,8 @@
       "alt": "Une chaise",
       "tags": ["chaise", "maison", "école"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:cab93d8f258def587ee3b52e93fca8b0888f9c1b92cc382497ed5fc414b904fb"
     },
     {
       "id": "objet-porte",
@@ -98,7 +108,8 @@
       "alt": "Une porte",
       "tags": ["porte", "maison"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:4add18c6bb752c524dde70ba87552718b648cd09d972b685655a4681f6374bbd"
     },
     {
       "id": "objet-fenetre",
@@ -107,7 +118,8 @@
       "alt": "Une fenêtre",
       "tags": ["fenêtre", "maison"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:27e0083280252576a86ad160b4039ed94cdf5f8786d28d852242bdf33b09dcbe"
     },
     {
       "id": "objet-lit",
@@ -116,7 +128,8 @@
       "alt": "Un lit",
       "tags": ["lit", "maison", "dormir"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:940132c489f71fe5e55fab085a3dd1de6364ba2422a65135d811645fc8ef655a"
     },
     {
       "id": "objet-marmite",
@@ -125,7 +138,8 @@
       "alt": "Une marmite",
       "tags": ["marmite", "maison", "cuisine"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:624bada299e4776b0570e8be1b578cc4e9c41ba9f5abcb457c942a11ef29e3ee"
     },
     {
       "id": "objet-seau",
@@ -134,7 +148,8 @@
       "alt": "Un seau",
       "tags": ["seau", "maison", "eau"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:dbfc25b72a397012271c5510f3d5c4e35e503bb3bba7ca23c7fa000df5245071"
     },
     {
       "id": "objet-panier",
@@ -143,7 +158,8 @@
       "alt": "Un panier",
       "tags": ["panier", "marché"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:4bde6a79211a101948048e804f61c36f0aa7a26ea4380ce911545a04ec0c06d0"
     },
     {
       "id": "objet-tomate",
@@ -152,7 +168,8 @@
       "alt": "Une tomate",
       "tags": ["tomate", "marché", "manger"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:c8dc26f182944020a2893947f37f28b3ddfdc6e6a312778d1eeb21df054195d5"
     },
     {
       "id": "objet-banane",
@@ -161,7 +178,8 @@
       "alt": "Une banane",
       "tags": ["banane", "marché", "manger"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:3a2bcb5f71dd7b28847c8232b4de9d7ebdb9e9288268a5c191b63e50c5eb2c52"
     },
     {
       "id": "objet-oignon",
@@ -170,7 +188,8 @@
       "alt": "Un oignon",
       "tags": ["oignon", "marché", "manger"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:fb5b1a17c85c4a4ae288a9c223b15237bdf68775d3f08f082808e9695f4ec3a1"
     },
     {
       "id": "objet-caillou",
@@ -179,7 +198,8 @@
       "alt": "Un caillou",
       "tags": ["caillou", "compter", "petit objet"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:4048c95b6d2c053f4338a4f3d4f21bdbb5ccfb292e34898fa07b29e015ef3855"
     },
     {
       "id": "corps-main",
@@ -188,7 +208,8 @@
       "alt": "Une main ouverte",
       "tags": ["main", "corps"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:daffedc0fae4d0be94d05a74807d6d00d569ab7448713896e34a057bdc559c8b"
     },
     {
       "id": "corps-pied",
@@ -197,7 +218,8 @@
       "alt": "Un pied",
       "tags": ["pied", "corps"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:a86507ecb9221ad637bbcb57a937fbeeca3a725108f2a14d7307939e1138f463"
     },
     {
       "id": "corps-tete",
@@ -206,7 +228,8 @@
       "alt": "Une tête",
       "tags": ["tête", "corps", "visage"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:fdf56b1fac7336ff8edd086c1a8216592b142f25361a69f045320b23237be0d6"
     },
     {
       "id": "corps-ventre",
@@ -215,7 +238,8 @@
       "alt": "Le ventre",
       "tags": ["ventre", "corps"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:c3235304e3e43a8f04212b5e2628c3017d3c1b69f84c7b4d394bd0b5c6e3da1b"
     },
     {
       "id": "animal-poule",
@@ -224,7 +248,8 @@
       "alt": "Une poule",
       "tags": ["poule", "animal"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:99fea0b9f556307cf9d4f59b7452296a469b1c1c1547c6f1b8249416396f6479"
     },
     {
       "id": "animal-poussin",
@@ -233,7 +258,8 @@
       "alt": "Un petit poussin",
       "tags": ["poussin", "animal", "kumu"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:10ad7a4c1989982a7e0b29f296b89c5ca5b74a811e044f2dcaf8beb890e37a89"
     },
     {
       "id": "animal-chevre",
@@ -242,7 +268,8 @@
       "alt": "Une chèvre",
       "tags": ["chèvre", "animal", "bibi"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:9ed15f4a27e4798e09672cca349e713a685073d7485bd516eee73df2bb457752"
     },
     {
       "id": "histoire-seau-lisa",
@@ -251,7 +278,8 @@
       "alt": "Lisa, debout à côté d’une chaise, avec son seau posé dessus",
       "tags": ["histoire", "lisa", "seau", "chaise", "personnage"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:1a1df54d38a059b3c1a851e114ff88d78c92f84f68ea577ba64de101003cee25"
     },
     {
       "id": "histoire-tika",
@@ -260,7 +288,8 @@
       "alt": "Un enfant qui se lève de son lit, le soleil à la fenêtre",
       "tags": ["histoire", "matin", "lit"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:13202c10f4bcfc52bb840810cb3509e5ef23ecdcf04c5a766f063df03b11c4cc"
     },
     {
       "id": "histoire-kumu",
@@ -269,7 +298,8 @@
       "alt": "Un petit poussin devant la porte ouverte du poulailler",
       "tags": ["kumu", "poussin", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:3c706b9a2439464d46c1f19317ad05efb330fa84949489595932a6168070b716"
     },
     {
       "id": "histoire-nsimba",
@@ -278,7 +308,8 @@
       "alt": "Un enfant avec un sac devant la porte de l’école",
       "tags": ["nsimba", "école", "rentrée", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:3d87ea03ed392f14440ff15c60385dd16baa3a475b39bb7a116214a3366c9e23"
     },
     {
       "id": "histoire-mangue",
@@ -287,7 +318,8 @@
       "alt": "Une mangue coupée en trois morceaux",
       "tags": ["mangue", "partage", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:42120f90f8c9daec6036eabca3c59de0e94c5d5d3174beac456a38061efcc71d"
     },
     {
       "id": "histoire-bibi",
@@ -296,7 +328,8 @@
       "alt": "Une chèvre devant une barrière et des feuilles",
       "tags": ["bibi", "chèvre", "jardin", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:7b659c87392c83043b6b826464824d88fb284b7666daa5b5ea04b85344d53c14"
     },
     {
       "id": "histoire-marche",
@@ -305,7 +338,8 @@
       "alt": "Un panier de marché avec des tomates et une banane",
       "tags": ["marché", "panier", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:b58596a1c8ca7fc1be3479b46275fa61dcbc259c640484f5d4f714ac563bca99"
     },
     {
       "id": "histoire-pluie",
@@ -314,7 +348,8 @@
       "alt": "La pluie qui tombe sur un toit",
       "tags": ["pluie", "toit", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:e1f085439c7cbe6fb8dcedfa16531b10ef9545e37e5f18a7ab32d1ff0ca54a07"
     },
     {
       "id": "histoire-cailloux",
@@ -323,7 +358,8 @@
       "alt": "Trois cailloux : un rond, un plat et un pointu",
       "tags": ["cailloux", "trois", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:b8f285ecf0b548c1e2f72eb639ba0d1de055bea9f876e734918e5035becd3811"
     },
     {
       "id": "histoire-malo",
@@ -332,7 +368,8 @@
       "alt": "Un petit chien endormi en rond sous la lune",
       "tags": ["malo", "chien", "dormir", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:af8410b51ad8fd2334c4e3dfdfbed7ba4b8e9a957fb2deda14eaf5bb6bd71e1e"
     },
     {
       "id": "comptine-compter",
@@ -341,7 +378,8 @@
       "alt": "Une main qui montre trois doigts",
       "tags": ["compter", "comptine", "doigts"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:9594d8d30e3ff9cff23c6f32b5f14859b9e37925968e415ca0202c4b73084a8e"
     },
     {
       "id": "comptine-bonjour",
@@ -350,7 +388,8 @@
       "alt": "Le soleil qui se lève et deux mains qui se saluent",
       "tags": ["bonjour", "soleil", "comptine"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:8cfd4f28ad324bd515fdc03a905ca704d5b9d1d7c676418afcc131289f64a0da"
     },
     {
       "id": "comptine-mains",
@@ -359,7 +398,8 @@
       "alt": "Deux mains levées",
       "tags": ["mains", "corps", "comptine"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:3dab6003e9a5522589a3e54da172530d30fa60a392f7042cfa80b2e50b43dc9b"
     },
     {
       "id": "comptine-semaine",
@@ -368,7 +408,8 @@
       "alt": "Les sept jours de la semaine, alignés",
       "tags": ["semaine", "jours", "comptine"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:95be21c437e9be8386dcf705b0cf3d401c5ba1e018a52b69d4c1842aefc52466"
     },
     {
       "id": "comptine-cabri",
@@ -377,7 +418,8 @@
       "alt": "Un petit cabri qui saute",
       "tags": ["cabri", "sauter", "comptine"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:6760e5f334531f30e2a38c23ecffd3236c9cd3e4a5d4096b03dd9c86acbf518a"
     },
     {
       "id": "comptine-formes",
@@ -386,7 +428,8 @@
       "alt": "Les quatre formes qui dansent : rond, carré, rectangle, triangle",
       "tags": ["formes", "comptine"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:0eec93f6874faee3305598d72ea218b52725f270d8c25ce1d942f84921dcefb6"
     },
     {
       "id": "plante-parties",
@@ -395,7 +438,8 @@
       "alt": "Une plante avec ses feuilles, sa tige et ses racines sous la terre",
       "tags": ["plante", "feuille", "tige", "racine"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:27861c6ae3b78d440a7aad5ee7d02c677da3adff334971b5f98232854d431d54"
     },
     {
       "id": "bonhomme-articule",
@@ -404,7 +448,8 @@
       "alt": "Un bonhomme dessiné avec les bras et les jambes pliés",
       "tags": ["bonhomme", "corps", "articulation", "dessin"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:3582b827c7f89c45cec8a4ddbb79fc79ec90f021ee993e28ee748925de96ec9a"
     }
   ]
 }

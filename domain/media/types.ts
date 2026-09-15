@@ -22,7 +22,42 @@ export type MediaAsset = {
   tags: readonly string[];
   origin: ContentOrigin;
   provenance: string;
+  /**
+   * `sha256:<64 hex>` of the file's bytes, written by `tools/media/build.ts` and checked against
+   * the file by content validation.
+   *
+   * An id is not a fingerprint. `histoire-seau-lisa` kept its id while the drawing was redrawn
+   * to put Lisa in it — a real pedagogical change to what a child sees, invisible to any digest
+   * that hashes only the id. This is what makes the picture itself part of an approval.
+   */
+  contentHash: string;
 };
+
+/**
+ * The media source an approval digest uses: an asset's canonical fingerprint, and the picture a
+ * teaching text carries. Built here so the rule lives beside the type it fingerprints.
+ */
+export function mediaDigestSource(
+  assets: readonly MediaAsset[],
+  texts: readonly { id: string; illustrationId: string | null }[],
+): {
+  fingerprint(mediaId: string): string | undefined;
+  illustrationOf(textId: string): string | null;
+} {
+  const byId = new Map(assets.map((asset) => [asset.id, asset]));
+  const illustrations = new Map(texts.map((text) => [text.id, text.illustrationId]));
+  return {
+    fingerprint(mediaId) {
+      const asset = byId.get(mediaId);
+      // Kind and description are part of it: a picture relabelled from "un seau" to "Lisa" is a
+      // different thing to a reviewer even if the bytes happened not to move.
+      return asset === undefined ? undefined : `${asset.kind}|${asset.alt}|${asset.contentHash}`;
+    },
+    illustrationOf(textId) {
+      return illustrations.get(textId) ?? null;
+    },
+  };
+}
 
 /** Public URL of an asset, as the browser requests it. */
 export function mediaUrl(asset: MediaAsset): string {

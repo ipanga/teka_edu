@@ -26,17 +26,19 @@ analytics are **out of scope** and must not delay the release.
 
 ## 1. Pedagogy
 
-**0 of 10 weekly packages currently accepted · 0 of 176 lessons `approved`.**
+**4 of 10 weekly packages accepted · 76 of 176 September lessons `approved`**, all
+`ai-assisted`, all `accepted`. No teacher has read any of it.
 
-Weeks 1–3 _were_ approved and their approvals lapsed on 2026-09-15, deliberately: the Week 4
-review found defects those weeks carried identically, and correcting them changed text a reviewer
-had accepted. Separately, the approval digest was found not to cover `mediaIds` — the picture a
-child sees could change under an approval unnoticed — so it now does, which invalidated the
-remainder. Nothing was re-stamped. Weeks 1–3 need a short re-confirmation, Week 4 a final
-targeted confirmation.
+1ère maternelle Weeks 1–4 are through the gate. **Week 5 is the last 1ère package**; all five
+3ème packages remain.
 
-**That debt is now cleared in the content**: all 31 occurrences were corrected, with 0 unexpected
-substantive changes across 2,552 compared fields. What remains is the review step.
+Getting here was not a straight line, and the record says so. Weeks 1–3 were approved, then their
+approvals lapsed when the Week 4 review found defects those weeks carried identically — and again
+when the approval digest was found not to cover the pictures a child is shown. Both times the
+digests were allowed to fail rather than being re-stamped. The 31 occurrences were corrected with
+0 unexpected substantive changes across 2,552 compared fields, and ChatGPT reconfirmed the weeks
+on a compact diff. The digest now covers the bytes of every referenced illustration, so a picture
+cannot be redrawn under an approval without it lapsing.
 
 | Item                                         | State    | Evidence                                                                                  |
 | -------------------------------------------- | -------- | ----------------------------------------------------------------------------------------- |

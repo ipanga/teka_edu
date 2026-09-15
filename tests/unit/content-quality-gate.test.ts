@@ -12,9 +12,12 @@ import { ACTIVITY_TYPES, type Lesson } from "@/domain/lessons/types";
 import { buildReviewPackage } from "@/lib/content/review-package";
 import { REVIEW_PACKAGES, reviewPackagePath } from "@/lib/content/review-packages";
 import { getReferenceData } from "@/lib/content/reference-data";
+import { mediaDigestSource } from "@/domain/media/types";
 
 const ROOT = path.resolve(import.meta.dirname, "../..");
 const data = getReferenceData();
+/** The real registry: a digest is only meaningful against the pictures actually shipped. */
+const media = mediaDigestSource(data.media, data.texts);
 const lesson = (id: string) => {
   const found = data.lessons.find((l) => l.id === id);
   if (!found) throw new Error(`no lesson ${id}`);
@@ -50,12 +53,12 @@ describe("content quality gate (ADR-035, refined by ADR-047)", () => {
   });
 
   it("accepts the pilot as it stands", () => {
-    expect(data.lessons.flatMap(checkLessonReview)).toEqual([]);
+    expect(data.lessons.flatMap((l) => checkLessonReview(l, media))).toEqual([]);
   });
 
   it("refuses an approval with no reviewer", () => {
     const approved: Lesson = { ...lesson("m3-math-01"), status: "approved", review: null };
-    expect(checkLessonReview(approved)[0]).toMatch(/must record who reviewed it/);
+    expect(checkLessonReview(approved, media)[0]).toMatch(/must record who reviewed it/);
   });
 
   it("refuses a review record on content that is not approved", () => {
@@ -69,11 +72,13 @@ describe("content quality gate (ADR-035, refined by ADR-047)", () => {
         reviewer: "A. Mbala",
         reviewerRole: "institutrice de 3ème maternelle",
         reviewedOn: "2026-09-20",
-        reviewedDigest: lessonDigest(base),
+        reviewedDigest: lessonDigest(base, media),
         notes: null,
       },
     };
-    expect(checkLessonReview(odd)[0]).toMatch(/only an approved lesson carries a review record/);
+    expect(checkLessonReview(odd, media)[0]).toMatch(
+      /only an approved lesson carries a review record/,
+    );
   });
 
   it("accepts an approval that names a reviewer and matches the reviewed text", () => {
@@ -87,11 +92,11 @@ describe("content quality gate (ADR-035, refined by ADR-047)", () => {
         reviewer: "A. Mbala",
         reviewerRole: "institutrice de 3ème maternelle",
         reviewedOn: "2026-09-20",
-        reviewedDigest: lessonDigest(base),
+        reviewedDigest: lessonDigest(base, media),
         notes: "Bien pour des enfants de 5 ans.",
       },
     };
-    expect(checkLessonReview(approved)).toEqual([]);
+    expect(checkLessonReview(approved, media)).toEqual([]);
   });
 
   /**
@@ -110,11 +115,11 @@ describe("content quality gate (ADR-035, refined by ADR-047)", () => {
         reviewer: "ChatGPT",
         reviewerRole: "relecture pédagogique assistée par IA, contre le programme officiel",
         reviewedOn: "2026-09-14",
-        reviewedDigest: lessonDigest(base),
+        reviewedDigest: lessonDigest(base, media),
         notes: "Corrections demandées appliquées.",
       },
     };
-    expect(checkLessonReview(approved)).toEqual([]);
+    expect(checkLessonReview(approved, media)).toEqual([]);
   });
 
   it("refuses to record an AI review as a human teacher's", () => {
@@ -128,11 +133,11 @@ describe("content quality gate (ADR-035, refined by ADR-047)", () => {
         reviewer: "ChatGPT (GPT-5)",
         reviewerRole: "institutrice de 3ème maternelle",
         reviewedOn: "2026-09-14",
-        reviewedDigest: lessonDigest(base),
+        reviewedDigest: lessonDigest(base, media),
         notes: null,
       },
     };
-    expect(checkLessonReview(mislabelled)[0]).toMatch(/must use reviewKind "ai-assisted"/);
+    expect(checkLessonReview(mislabelled, media)[0]).toMatch(/must use reviewKind "ai-assisted"/);
   });
 
   it("lapses the approval as soon as the reviewed text changes", () => {
@@ -146,7 +151,7 @@ describe("content quality gate (ADR-035, refined by ADR-047)", () => {
         reviewer: "A. Mbala",
         reviewerRole: "institutrice de 3ème maternelle",
         reviewedOn: "2026-09-20",
-        reviewedDigest: lessonDigest(base),
+        reviewedDigest: lessonDigest(base, media),
         notes: null,
       },
     };
@@ -158,24 +163,24 @@ describe("content quality gate (ADR-035, refined by ADR-047)", () => {
         ...approved.activities.slice(1),
       ],
     };
-    expect(checkLessonReview(edited)[0]).toMatch(/changed since it was approved/);
+    expect(checkLessonReview(edited, media)[0]).toMatch(/changed since it was approved/);
     // …and changing the objectives, the duration or the guidance lapses it too.
-    expect(checkLessonReview({ ...approved, parentGuidance: "Autre conseil." })[0]).toMatch(
+    expect(checkLessonReview({ ...approved, parentGuidance: "Autre conseil." }, media)[0]).toMatch(
       /changed/,
     );
-    expect(checkLessonReview({ ...approved, objectiveCodes: ["MATH-S01-C01-O20"] })[0]).toMatch(
-      /changed/,
-    );
+    expect(
+      checkLessonReview({ ...approved, objectiveCodes: ["MATH-S01-C01-O20"] }, media)[0],
+    ).toMatch(/changed/);
   });
 
   it("gives a stable digest that ignores the order of lists", () => {
     const base = lesson("m3-world-01");
-    expect(lessonDigest(base)).toBe(lessonDigest({ ...base }));
-    expect(lessonDigest({ ...base, objectiveCodes: [...base.objectiveCodes].reverse() })).toBe(
-      lessonDigest(base),
-    );
-    expect(lessonDigest(base)).toMatch(/^[0-9a-f]{16}$/);
-    expect(lessonDigest(base)).not.toBe(lessonDigest(lesson("m3-world-02")));
+    expect(lessonDigest(base, media)).toBe(lessonDigest({ ...base }, media));
+    expect(
+      lessonDigest({ ...base, objectiveCodes: [...base.objectiveCodes].reverse() }, media),
+    ).toBe(lessonDigest(base, media));
+    expect(lessonDigest(base, media)).toMatch(/^[0-9a-f]{16}$/);
+    expect(lessonDigest(base, media)).not.toBe(lessonDigest(lesson("m3-world-02"), media));
   });
 });
 
@@ -223,6 +228,87 @@ describe("renderer families (Phase 3 planning, ADR-036)", () => {
     for (const type of ACTIVITY_TYPES) {
       expect(["yes", "needs-audio", "needs-image"]).toContain(ACTIVITY_RENDERERS[type].offline);
     }
+  });
+});
+
+/**
+ * An approval is a statement about what a child will see, so the digest has to move when the
+ * picture does. `histoire-seau-lisa` kept its id while being redrawn to put Lisa in it — a real
+ * pedagogical change that a digest hashing only the id would have missed entirely.
+ */
+describe("an approval covers the picture, not just its name", () => {
+  const data = getReferenceData();
+  const base = data.lessons.find((l) => l.id === "m1-lang-17")!;
+  /** A source that can be perturbed one asset at a time. */
+  const sourceWith = (overrides: Record<string, string | undefined> = {}) => ({
+    fingerprint: (id: string) =>
+      id in overrides ? overrides[id] : mediaDigestSource(data.media, data.texts).fingerprint(id),
+    illustrationOf: (id: string) => mediaDigestSource(data.media, data.texts).illustrationOf(id),
+  });
+
+  it("is stable while the asset is unchanged", () => {
+    expect(lessonDigest(base, sourceWith())).toBe(lessonDigest(base, sourceWith()));
+  });
+
+  it("changes when the bytes of a referenced picture change", () => {
+    const before = lessonDigest(base, sourceWith());
+    // Same lesson text, same media id, different asset content.
+    const after = lessonDigest(
+      base,
+      sourceWith({ "histoire-seau-lisa": "illustration|Lisa…|sha256:" + "0".repeat(64) }),
+    );
+    expect(after).not.toBe(before);
+  });
+
+  it("changes when a referenced picture is relabelled", () => {
+    const real = mediaDigestSource(data.media, data.texts).fingerprint("histoire-seau-lisa")!;
+    const relabelled = real.replace("Lisa", "Un seau");
+    expect(lessonDigest(base, sourceWith({ "histoire-seau-lisa": relabelled }))).not.toBe(
+      lessonDigest(base, sourceWith()),
+    );
+  });
+
+  it("changes when the lesson points at a different picture", () => {
+    const swapped = {
+      ...base,
+      activities: base.activities.map((activity) =>
+        activity.mediaIds.length > 0 ? { ...activity, mediaIds: ["objet-seau"] } : activity,
+      ),
+    };
+    expect(lessonDigest(swapped, sourceWith())).not.toBe(lessonDigest(base, sourceWith()));
+  });
+
+  it("ignores a picture the lesson does not reference", () => {
+    const before = lessonDigest(base, sourceWith());
+    const after = lessonDigest(
+      base,
+      sourceWith({ "forme-triangle": "shape|autre chose|sha256:" + "1".repeat(64) }),
+    );
+    expect(after).toBe(before);
+  });
+
+  it("refuses to fingerprint a lesson whose picture is missing", () => {
+    expect(() => lessonDigest(base, sourceWith({ "histoire-seau-lisa": undefined }))).toThrow(
+      /cannot be fingerprinted/,
+    );
+  });
+
+  it("covers the picture a story carries, not only the ones an activity names", () => {
+    const story = data.lessons.find((l) => l.id === "m1-lang-09")!;
+    const withStoryPicture = story.activities.some(
+      (activity) => typeof activity.payload["textId"] === "string",
+    );
+    expect(withStoryPicture).toBe(true);
+    const illustration = mediaDigestSource(data.media, data.texts).illustrationOf(
+      "histoire-tika-se-leve",
+    )!;
+    expect(illustration).not.toBeNull();
+    expect(
+      lessonDigest(
+        story,
+        sourceWith({ [illustration]: "illustration|autre|sha256:" + "2".repeat(64) }),
+      ),
+    ).not.toBe(lessonDigest(story, sourceWith()));
   });
 });
 

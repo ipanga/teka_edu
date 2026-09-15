@@ -1,6 +1,24 @@
 import type { Lesson } from "./types";
 
 /**
+ * What a digest needs to know about the pictures a lesson shows.
+ *
+ * It is an interface rather than the registry itself so the digest stays a pure function of
+ * canonical content: a test can hand it two different fingerprints for the same id and prove the
+ * digest moves, which is the whole point.
+ */
+export type MediaDigestSource = {
+  /**
+   * A canonical fingerprint of the asset — its kind, its French description and a hash of its
+   * bytes. Returns `undefined` when the registry does not know the id, which the digest treats
+   * as an error rather than as "no picture".
+   */
+  fingerprint(mediaId: string): string | undefined;
+  /** The picture a teaching text carries, so a story's illustration is covered too. */
+  illustrationOf(textId: string): string | null;
+};
+
+/**
  * The content quality gate (ADR-035, refined by ADR-047; docs/CONTENT_QUALITY_GATE.md).
  *
  * Lessons and activities are written by Teka Edu, often with the help of a language model.
@@ -74,7 +92,29 @@ export type LessonReview = {
  * FNV-1a over a canonical serialisation: short, dependency-free and stable across platforms.
  * It is a change detector, not a security measure.
  */
-export function lessonDigest(lesson: Lesson): string {
+export function lessonDigest(lesson: Lesson, media: MediaDigestSource): string {
+  /**
+   * Every picture this lesson puts in front of a child: the ones an activity names directly, and
+   * the one that comes with a story or a rhyme. A missing fingerprint throws rather than being
+   * skipped — a digest that silently ignores an unknown picture is worse than no digest.
+   */
+  const fingerprints = (activity: Lesson["activities"][number]): string[] => {
+    const ids = [...activity.mediaIds];
+    const textId = activity.payload["textId"];
+    if (typeof textId === "string") {
+      const illustration = media.illustrationOf(textId);
+      if (illustration !== null) ids.push(illustration);
+    }
+    return [...new Set(ids)].sort().map((id) => {
+      const fingerprint = media.fingerprint(id);
+      if (fingerprint === undefined) {
+        throw new RangeError(
+          `lesson "${lesson.id}", activity "${activity.id}": media "${id}" cannot be fingerprinted`,
+        );
+      }
+      return `${id}=${fingerprint}`;
+    });
+  };
   const canonical = JSON.stringify([
     lesson.id,
     lesson.curriculumId,
@@ -102,7 +142,7 @@ export function lessonDigest(lesson: Lesson): string {
         // The picture a child is shown is something a reviewer judges — « Montre-moi Lisa »
         // depends entirely on it. It was missing here, so an approved lesson could have had its
         // illustration swapped without the approval lapsing. Found when exactly that happened.
-        [...activity.mediaIds].sort(),
+        fingerprints(activity),
         [...activity.objectiveCodes].sort(),
         [...activity.materialCodes].sort(),
         activity.vocabulary.map((entry) => [entry.fr, entry.en]),
@@ -131,7 +171,7 @@ export function isTeachable(lesson: Lesson): boolean {
 }
 
 /** The quality-gate rules. Returns problems; empty means the gate is satisfied. */
-export function checkLessonReview(lesson: Lesson): string[] {
+export function checkLessonReview(lesson: Lesson, media: MediaDigestSource): string[] {
   const problems: string[] = [];
   const at = `lesson "${lesson.id}"`;
   const review = lesson.review;
@@ -161,7 +201,7 @@ export function checkLessonReview(lesson: Lesson): string[] {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(review.reviewedOn)) {
       problems.push(`${at}: the review date must be a YYYY-MM-DD date`);
     }
-    const digest = lessonDigest(lesson);
+    const digest = lessonDigest(lesson, media);
     if (review.reviewedDigest !== digest) {
       problems.push(
         `${at}: the lesson changed since it was approved (reviewed ${review.reviewedDigest}, now ${digest}). Set the status back to "review".`,

@@ -129,6 +129,9 @@ export const mediaRegistryFileSchema = z.strictObject({
         tags: z.array(french),
         origin: z.enum(CONTENT_ORIGINS),
         provenance: french,
+        contentHash: z
+          .string()
+          .regex(/^sha256:[0-9a-f]{64}$/, { message: "must be sha256:<64 hex digits>" }),
       }) satisfies z.ZodType<MediaAsset>,
     )
     .min(1),

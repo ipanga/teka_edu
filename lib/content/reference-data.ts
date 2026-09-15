@@ -54,7 +54,13 @@ import type {
   SchoolLevel,
 } from "@/domain/curriculum/types";
 import { type TeachingText, checkTexts } from "@/domain/lessons/texts";
-import { type AudioAsset, type MediaAsset, checkAudio, checkMedia } from "@/domain/media/types";
+import {
+  checkAudio,
+  checkMedia,
+  mediaDigestSource,
+  type AudioAsset,
+  type MediaAsset,
+} from "@/domain/media/types";
 import type { Lesson, Material } from "@/domain/lessons/types";
 import { type AnnualPlan, checkAnnualPlan } from "@/domain/programme/annual-plan";
 import { checkLessons, checkProgramme } from "@/domain/programme/validation";
@@ -328,6 +334,7 @@ export function checkReferenceData(data: ReferenceData): string[] {
       data.syllabi.flatMap((syllabus) => syllabus.objectives),
       data.levels,
       data.materials,
+      mediaDigestSource(data.media, data.texts),
     ),
     ...data.programmes.flatMap((programme) =>
       checkProgramme(
