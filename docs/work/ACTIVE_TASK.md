@@ -10,12 +10,12 @@
 
 ## Task
 
-Apply the 1ère maternelle Week 3 review corrections (8 items) and return the package for a
-short second pass.
+Approve 1ère maternelle Week 3 after its second pass, and make the Week 4 package ready to
+submit.
 
 ## Objective
 
-Close the copy-and-rename family of defects with general validators, not per-lesson checks.
+56 of 88 1ère lessons approved, with the approval diff proven empty.
 
 ## Status
 
@@ -23,11 +23,11 @@ Close the copy-and-rename family of defects with general validators, not per-les
 
 ## Branch
 
-`fix/maternelle-1-week-3-review`
+`feat/approve-week-3`
 
 ## Base Branch
 
-`develop` at `24d1619`
+`develop` at `24ea120`
 
 ## Started
 
@@ -35,7 +35,7 @@ Close the copy-and-rename family of defects with general validators, not per-les
 
 ## Last Checkpoint
 
-2026-09-15 — all 8 corrections applied, 6 validators added, full local suite green.
+2026-09-15 — Week 3 approved, Week 4 package verified complete, full local suite green.
 
 ## Scope
 
@@ -83,7 +83,7 @@ To be filled in when the next task begins.
 
 ## Remaining
 
-- [ ] Return Week 3 for its short second pass
+- [ ] Submit `docs/review/2026-2027-maternelle-1-semaine-4.md` — the next task
 
 ## Validation State
 
@@ -92,7 +92,7 @@ To be filled in when the next task begins.
 | format             | PASS    | working tree                      |
 | lint               | PASS    | working tree                      |
 | typecheck          | PASS    | working tree                      |
-| unit tests         | PASS    | working tree — 234 tests          |
+| unit tests         | PASS    | working tree — 235 tests          |
 | content validation | PASS    | working tree — 30 files           |
 | database tests     | PASS    | fresh reset — 152 assertions      |
 | build              | PASS    | working tree                      |

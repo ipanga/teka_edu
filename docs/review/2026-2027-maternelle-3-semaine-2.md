@@ -110,6 +110,48 @@ _Dire ce qu’on a fait, dans l’ordre, en phrases entières._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+**Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
+
+- Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
+- Dire : « Aujourd’hui, nous sommes lundi. », « Hier, c’était dimanche, j’étais à la maison. », « Demain, ce sera mardi, nous irons à la piscine. », « J’aurai bientôt fini mon dessin. »
+- Utiliser les outils de la classe pour composer la date (jour et mois) au tableau et l’énoncer.
+- Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
+- Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
+- Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (from-5) :**
+
+- Dire : « Pour acheter les fruits du gouter, il faudrait compter les élèves de la classe. »
+- Dire : « Si on voulait de la peinture verte, il faudrait mélanger du jaune avec du bleu. »
+- Dire : « Peut-être que Corentin a mis la peinture avant de dessiner avec les feutres. »
+- Suffisamment se décentrer et identifier les informations qu’on doit communiquer pour qu’un interlocuteur qui n’a pas vécu la situation évoquée puisse la comprendre.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (from-5) :**
+
+- Comprendre et utiliser :
+  • les mots des émotions, des sentiments et des états mentaux des personnages de fiction ;
+  • les mots qui entretiennent une proximité phonique (poule/roule/boule/moule) ;
+  • les mots qui vont permettre de s’emparer des apprentissages du CP.
+- Distinguer le sens propre du sens figuré (sans que ces notions ne soient enseignées) : l’élève comprend le sens de dévorer un gâteau et dévorer un livre.
+- Construire des dérivations (sans que ces notions ne soient enseignées) : arroser → arrosage ; gentil → gentiment → gentillesse.
+- S’appuyer sur des verbes et des noms qu’il connait déjà pour comprendre et essayer de construire un nouveau mot : jambe/enjamber.
+- Chercher des hyperonymes des réseaux étudiés (véhicule est un hyperonyme de voiture, bus, vélo, etc. ; animal est un hyperonyme de chat, chien, grenouille, etc.).
+- Inférer le sens d’un mot inconnu.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
+
+- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
+- Raconter une histoire connue, dans son intégralité et sans support.
+- Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -159,6 +201,47 @@ _Compter des collections un peu plus grandes, en les organisant._
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Give me six objects, exactly six. »
 - **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
+
+**Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**
+
+- Reconnaître et réaliser des collections d’objets de même cardinal (jusqu’à dix, voire au-delà) mais de caractéristiques différentes (couleur, fonction et surtout taille).
+- Reconnaître et réaliser des collections d’objets (jusqu’à dix, voire au-delà) de même cardinal mais organisées de manières différentes dans l’espace.
+- Reconnaitre et réaliser des collections d’objets dont le cardinal (jusqu’à dix, voire au-delà) est donné par une représentation analogique, par le nom du nombre ou par son écriture chiffrée.
+- Réaliser une collection contenant un objet de plus qu’une collection donnée.
+- Réaliser une collection contenant un objet de moins qu’une collection donnée.
+- Nommer les nombres correspondant au cardinal d’une collection avant et après l’ajout ou le retrait d’un élément.
+- Séparer les éléments déjà pointés de ceux qui ne le sont pas encore.
+- Pointer du doigt ou marquer les éléments déjà parcourus (le nombre d’objets peut être supérieur à dix).
+- Créer un parcours passant une et une seule fois par chaque élément.
+- Utiliser le principe de cardinalité pour dénombrer une collection par énumération. Utiliser des compositions et des décompositions pour dénombrer.
+  Par exemple, si l’enseignant positionne huit objets en les organisant en deux constellations de quatre et demande de dénombrer la collection, l’élève est capable de :
+  • compter de un en un ;
+  • « mettre quatre dans sa tête », surcompter en utilisant ses doigts : « cinq, six, sept, huit » et annoncer qu’il y a huit objets
+- utiliser la connaissance d’une composition et verbaliser « ça fait huit parce que quatre et quatre font huit ».
+- Réaliser une collection :
+  • contenant la même quantité d’objets qu’une collection donnée ;
+  • contenant la même quantité d’objets qu’une représentation analogique donnée (doigts des deux mains, constellations de points) ;
+  • dont la quantité d’objets est énoncée oralement ;
+  • dont la quantité d’objets est représentée par son écriture chiffrée. Réaliser une collection (jusqu’à dix, voire au-delà) en réunissant des collections plus petites.
+- Comparer globalement (sans dénombrer) les cardinaux de deux collections dont les quantités d’objets diffèrent d’un facteur au moins égal à deux et utiliser les locutions « plus que », « moins que », « autant que ». On ne se limite pas aux petites collections.
+- Comparer par correspondance terme à terme les cardinaux de deux collections.
+- Comparer les cardinaux de deux collections en dénombrant chacune d’elles.
+- Comparer des quantités données par leur écriture chiffrée ou par le nom des nombres.
+- Mobiliser des compositions et des décompositions de nombres pour résoudre des problèmes.
+- Réaliser des compositions et des décompositions de nombres avec les doigts des deux mains.
+- Verbaliser les compositions de nombres. Parmi elles, figurent les doubles : « deux et deux font quatre », « deux fois deux font quatre », « trois et trois font six », « deux fois trois font six », « quatre et quatre font huit », « deux fois quatre font huit », « cinq et cinq font dix », « deux fois cinq font dix ».
+- Verbaliser les décompositions des nombres compris entre deux et dix.
+- Pour ajouter deux nombres, surcompter à partir du plus grand. Exemple de verbalisation par un élève : « Pour ajouter quatre et cinq, je mets cinq dans ma tête et je compte quatre sur mes doigts à partir de cinq : six, sept, huit, neuf. Donc quatre et cinq font neuf ».
+- Nommer le nombre (jusqu’à dix, voire au-delà) correspondant à une quantité d’objets ou à une représentation analogique et vice versa.
+- Représenter par une écriture chiffrée une quantité, une représentation analogique, le nom d’un nombre et vice versa.
+- Écrire des nombres dans des situations de communication.
+- Réciter la comptine numérique de un à trente de façon ordonnée et segmentée.
+- Réciter la comptine numérique jusqu’à un nombre donné.
+- Réciter la comptine numérique jusqu’à trente en partant d’un nombre autre que un (en vue du surcomptage).
+- Réciter la comptine numérique à rebours de dix à un (en vue du décomptage).
+- Réciter les comptines numériques (jusqu’à vingt) de deux en deux en partant de un et en partant de deux.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -358,6 +441,25 @@ _Écouter une suite de mots et la redire : la mémoire des sons se travaille com
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
+**Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
+
+- Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
+- Dire : « Aujourd’hui, nous sommes lundi. », « Hier, c’était dimanche, j’étais à la maison. », « Demain, ce sera mardi, nous irons à la piscine. », « J’aurai bientôt fini mon dessin. »
+- Utiliser les outils de la classe pour composer la date (jour et mois) au tableau et l’énoncer.
+- Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
+- Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
+- Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
+
+- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
+- Raconter une histoire connue, dans son intégralité et sans support.
+- Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -408,6 +510,47 @@ _Construire une collection qui en vaut une autre._
 - **Aide en anglais (optionnelle) :** « Count mine, then count yours. »
 - **Objectifs travaillés :** `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
+**Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**
+
+- Reconnaître et réaliser des collections d’objets de même cardinal (jusqu’à dix, voire au-delà) mais de caractéristiques différentes (couleur, fonction et surtout taille).
+- Reconnaître et réaliser des collections d’objets (jusqu’à dix, voire au-delà) de même cardinal mais organisées de manières différentes dans l’espace.
+- Reconnaitre et réaliser des collections d’objets dont le cardinal (jusqu’à dix, voire au-delà) est donné par une représentation analogique, par le nom du nombre ou par son écriture chiffrée.
+- Réaliser une collection contenant un objet de plus qu’une collection donnée.
+- Réaliser une collection contenant un objet de moins qu’une collection donnée.
+- Nommer les nombres correspondant au cardinal d’une collection avant et après l’ajout ou le retrait d’un élément.
+- Séparer les éléments déjà pointés de ceux qui ne le sont pas encore.
+- Pointer du doigt ou marquer les éléments déjà parcourus (le nombre d’objets peut être supérieur à dix).
+- Créer un parcours passant une et une seule fois par chaque élément.
+- Utiliser le principe de cardinalité pour dénombrer une collection par énumération. Utiliser des compositions et des décompositions pour dénombrer.
+  Par exemple, si l’enseignant positionne huit objets en les organisant en deux constellations de quatre et demande de dénombrer la collection, l’élève est capable de :
+  • compter de un en un ;
+  • « mettre quatre dans sa tête », surcompter en utilisant ses doigts : « cinq, six, sept, huit » et annoncer qu’il y a huit objets
+- utiliser la connaissance d’une composition et verbaliser « ça fait huit parce que quatre et quatre font huit ».
+- Réaliser une collection :
+  • contenant la même quantité d’objets qu’une collection donnée ;
+  • contenant la même quantité d’objets qu’une représentation analogique donnée (doigts des deux mains, constellations de points) ;
+  • dont la quantité d’objets est énoncée oralement ;
+  • dont la quantité d’objets est représentée par son écriture chiffrée. Réaliser une collection (jusqu’à dix, voire au-delà) en réunissant des collections plus petites.
+- Comparer globalement (sans dénombrer) les cardinaux de deux collections dont les quantités d’objets diffèrent d’un facteur au moins égal à deux et utiliser les locutions « plus que », « moins que », « autant que ». On ne se limite pas aux petites collections.
+- Comparer par correspondance terme à terme les cardinaux de deux collections.
+- Comparer les cardinaux de deux collections en dénombrant chacune d’elles.
+- Comparer des quantités données par leur écriture chiffrée ou par le nom des nombres.
+- Mobiliser des compositions et des décompositions de nombres pour résoudre des problèmes.
+- Réaliser des compositions et des décompositions de nombres avec les doigts des deux mains.
+- Verbaliser les compositions de nombres. Parmi elles, figurent les doubles : « deux et deux font quatre », « deux fois deux font quatre », « trois et trois font six », « deux fois trois font six », « quatre et quatre font huit », « deux fois quatre font huit », « cinq et cinq font dix », « deux fois cinq font dix ».
+- Verbaliser les décompositions des nombres compris entre deux et dix.
+- Pour ajouter deux nombres, surcompter à partir du plus grand. Exemple de verbalisation par un élève : « Pour ajouter quatre et cinq, je mets cinq dans ma tête et je compte quatre sur mes doigts à partir de cinq : six, sept, huit, neuf. Donc quatre et cinq font neuf ».
+- Nommer le nombre (jusqu’à dix, voire au-delà) correspondant à une quantité d’objets ou à une représentation analogique et vice versa.
+- Représenter par une écriture chiffrée une quantité, une représentation analogique, le nom d’un nombre et vice versa.
+- Écrire des nombres dans des situations de communication.
+- Réciter la comptine numérique de un à trente de façon ordonnée et segmentée.
+- Réciter la comptine numérique jusqu’à un nombre donné.
+- Réciter la comptine numérique jusqu’à trente en partant d’un nombre autre que un (en vue du surcomptage).
+- Réciter la comptine numérique à rebours de dix à un (en vue du décomptage).
+- Réciter les comptines numériques (jusqu’à vingt) de deux en deux en partant de un et en partant de deux.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -448,6 +591,15 @@ _Enchainer plusieurs actions dans un parcours, en respectant les règles._
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
 - **Aide en anglais (optionnelle) :** « Do the course: under the chair, around the cushion, over the stick. »
 - **Objectifs travaillés :** `PHYS-S02-C01-O05` Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions. ; `PHYS-S02-C01-O07` Respecter les règles de sécurité pour soi et pour les autres.
+
+**Réussites attendues — texte officiel pour la compétence « Tourner, se suspendre, se renverser, grimper, rouler, glisser, nager » (from-5) :**
+
+- Sauter puis se déplacer en quadrupédie, se suspendre, se balancer et se lâcher, etc.
+- Se déplacer sans tomber et en maitrisant ses trajectoires sur des patins à glace ou à roulettes, sur des skis, sur un vélo à deux roues, etc.
+- Entrer et sortir seul de l’eau, se déplacer avec les épaules immergées, immerger complètement la tête pendant plusieurs secondes.
+- Aider ses camarades avec les professeurs pour assurer leur sécurité (guide et parade).
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -496,6 +648,17 @@ _Situer un évènement dans la semaine._
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
 - **Aide en anglais (optionnelle) :** « Show today on the strip, then yesterday, then tomorrow. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C01-O10` Situer un évènement dans la semaine.
+
+**Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
+
+- Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
+- Dire : « Aujourd’hui, nous sommes lundi. », « Hier, c’était dimanche, j’étais à la maison. », « Demain, ce sera mardi, nous irons à la piscine. », « J’aurai bientôt fini mon dessin. »
+- Utiliser les outils de la classe pour composer la date (jour et mois) au tableau et l’énoncer.
+- Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
+- Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
+- Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -585,6 +748,39 @@ _Deuxième corpus de mots : nommer les objets et les pièces de la maison._
   > Et il dort.
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
+
+**Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
+
+- Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
+- Dire : « Aujourd’hui, nous sommes lundi. », « Hier, c’était dimanche, j’étais à la maison. », « Demain, ce sera mardi, nous irons à la piscine. », « J’aurai bientôt fini mon dessin. »
+- Utiliser les outils de la classe pour composer la date (jour et mois) au tableau et l’énoncer.
+- Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
+- Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
+- Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (from-5) :**
+
+- Comprendre et utiliser :
+  • les mots des émotions, des sentiments et des états mentaux des personnages de fiction ;
+  • les mots qui entretiennent une proximité phonique (poule/roule/boule/moule) ;
+  • les mots qui vont permettre de s’emparer des apprentissages du CP.
+- Distinguer le sens propre du sens figuré (sans que ces notions ne soient enseignées) : l’élève comprend le sens de dévorer un gâteau et dévorer un livre.
+- Construire des dérivations (sans que ces notions ne soient enseignées) : arroser → arrosage ; gentil → gentiment → gentillesse.
+- S’appuyer sur des verbes et des noms qu’il connait déjà pour comprendre et essayer de construire un nouveau mot : jambe/enjamber.
+- Chercher des hyperonymes des réseaux étudiés (véhicule est un hyperonyme de voiture, bus, vélo, etc. ; animal est un hyperonyme de chat, chien, grenouille, etc.).
+- Inférer le sens d’un mot inconnu.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
+
+- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
+- Raconter une histoire connue, dans son intégralité et sans support.
+- Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -714,6 +910,16 @@ _Inventer des gestes dansés à partir d’une image._
 - **Aide en anglais (optionnelle) :** « Move like the goat, then the chick, then the lizard. »
 - **Objectifs travaillés :** `PHYS-S03-C01-O09` Danser, seul ou à plusieurs, en créant et en reproduisant un ou plusieurs gestes et déplacements.
 
+**Réussites attendues — texte officiel pour la compétence « Explorer, s’exprimer, danser, observer » (from-5) :**
+
+- Danser « grand » (le corps étiré) ou danser « petit » (le corps resserré), jongler avec deux foulards, s’équilibrer sur un rolla bolla, etc.
+- Reproduire un mouvement très lent ou très rapide, de façon continue, fluide, discontinue, saccadée sur une musique en utilisant l’espace scénique.
+- Danser en miroir, en parallèle, en contact, en prenant appui sur son partenaire, etc.
+- Danser par deux, en demi-groupe, en groupe, en respectant une chorégraphie simple (une entrée en scène, un développement, une fin marquée).
+- Observer ses camarades danser puis exprimer verbalement une émotion et formuler un conseil pour les faire progresser.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -753,6 +959,16 @@ _Regarder un modèle et le reproduire de mieux en mieux._
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Look at the object, describe it, then draw it. »
 - **Objectifs travaillés :** `ART-S01-C01-O05` Dessiner pour représenter sur la base d’un modèle.
+
+**Réussites attendues — texte officiel pour la compétence « Dessiner » (from-5) :**
+
+- Lors d’une sortie au musée, dessiner une statue sous forme de croquis.
+- Dessiner des représentations du visage en s’inspirant de différentes œuvres (par exemple, X-chen de Paul Klee, La jeune femme au col marin d‘Amadeo Modigliani, Autoportrait sur fond noir d’Hélène Schjerfbeck, Madame Vigée-Lebrun et sa fille Julie d’Elisabeth Vigée-Lebrun, Portrait de Marianne von Werefkin de Gabriele Munter, etc.).
+- Représenter un personnage de conte ou de littérature de jeunesse (La sorcière de la rue Mouffetard de Pierre Gripari) avec une contrainte liée au matériel, aux outils ou au support.
+- Sur un support de grand format, dessiner collectivement le village ou le quartier à partir de photographies prises lors d’une sortie.
+- Présenter et décrire son dessin lors d’un temps collectif en utilisant le lexique approprié (couleurs, nuances, outils, matériaux, etc.).
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -842,6 +1058,63 @@ _Employer « il » et « elle » pour parler de quelqu’un d’autre._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+**Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
+
+- Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
+- Dire : « Aujourd’hui, nous sommes lundi. », « Hier, c’était dimanche, j’étais à la maison. », « Demain, ce sera mardi, nous irons à la piscine. », « J’aurai bientôt fini mon dessin. »
+- Utiliser les outils de la classe pour composer la date (jour et mois) au tableau et l’énoncer.
+- Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
+- Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
+- Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (from-5) :**
+
+- Comprendre et utiliser :
+  • les mots des émotions, des sentiments et des états mentaux des personnages de fiction ;
+  • les mots qui entretiennent une proximité phonique (poule/roule/boule/moule) ;
+  • les mots qui vont permettre de s’emparer des apprentissages du CP.
+- Distinguer le sens propre du sens figuré (sans que ces notions ne soient enseignées) : l’élève comprend le sens de dévorer un gâteau et dévorer un livre.
+- Construire des dérivations (sans que ces notions ne soient enseignées) : arroser → arrosage ; gentil → gentiment → gentillesse.
+- S’appuyer sur des verbes et des noms qu’il connait déjà pour comprendre et essayer de construire un nouveau mot : jambe/enjamber.
+- Chercher des hyperonymes des réseaux étudiés (véhicule est un hyperonyme de voiture, bus, vélo, etc. ; animal est un hyperonyme de chat, chien, grenouille, etc.).
+- Inférer le sens d’un mot inconnu.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Développer sa syntaxe » (from-5) :**
+
+- Utiliser les pronoms nous et vous : « Avec les CP, nous avons mangé un gâteau », « Vous, vous mangez un gâteau et pas nous. »
+- Utiliser :
+  • un système à trois temps : imparfait/plus-que-parfait/imparfait à valeur de futur dans le passé (aller) « Moi, j’étais sur un toboggan. J’avais fait de la balançoire et j’allais faire du vélo » ;
+  • le futur simple : « Quand on écrira aux correspondants » ;
+  • un système à deux temps : futur/futur antérieur : « Quand on ira chez les correspondants, on aura déjà été au spectacle et on pourra leur raconter l’histoire. »
+- Utiliser de nouveaux introducteurs de complexité : où/quand/pour que/si/comme, etc. :
+  • « Là, c’est la maison où le loup a mangé le petit chaperon rouge. »
+  • « Le chevreau s’est caché dans l’horloge pour que le loup ne le voie pas. »
+  • « Quand je vais à la boulangerie, la boulangère me donne un bonbon. »
+  • « Comme il fait chaud, elle va boire de l’eau. »
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (from-5) :**
+
+- Dire : « Pour acheter les fruits du gouter, il faudrait compter les élèves de la classe. »
+- Dire : « Si on voulait de la peinture verte, il faudrait mélanger du jaune avec du bleu. »
+- Dire : « Peut-être que Corentin a mis la peinture avant de dessiner avec les feutres. »
+- Suffisamment se décentrer et identifier les informations qu’on doit communiquer pour qu’un interlocuteur qui n’a pas vécu la situation évoquée puisse la comprendre.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
+
+- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
+- Raconter une histoire connue, dans son intégralité et sans support.
+- Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -891,6 +1164,18 @@ _Retrouver une forme quelle que soit sa taille ou sa position._
 - **Aide en anglais (optionnelle) :** « Find a shape around you and say its name. »
 - **Objectifs travaillés :** `MATH-S03-C01-O07` Reconnaitre, trier et classer des formes géométriques planes, indépendamment d’autres critères comme la couleur, la taille, l’orientation.
 
+**Réussites attendues — texte officiel pour la compétence « Explorer les solides et les formes planes » (from-5) :**
+
+- Décrire avec des mots simples les solides pour les différencier les uns des autres.
+  Par exemple, l’élève est capable de préciser oralement la nature et le nombre de faces nécessaires à la réalisation d’un cube, d’une pyramide.
+- Reconnaitre visuellement et tactilement une forme géométrique correspondant à une forme géométrique donnée (carré, rectangle, triangle, disque).
+- Trier et classer des formes géométriques.
+- Décrire et nommer quelques formes géométriques planes (carré, rectangle, triangle, disque) présentées dans toutes les orientations et dans les configurations les plus générales (rectangle ou carré dont les côtés ne sont ni horizontaux ni verticaux, triangle non équilatéral et dont aucun côté n’est horizontal).
+- Reproduire un modèle (puzzle, pavage, assemblage de solides) non nécessairement à l’échelle.
+- Utiliser la règle pour effectuer des tracés.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -936,6 +1221,15 @@ _Jouer à deux, en tenant un rôle et en respectant la règle._
 - Construire une stratégie individuelle ou collective (jeux Protéger son trésor, Les renards, les poules et les serpents).
 - Sortir son adversaire d’une zone en le poussant ou le tirant, l’immobiliser au sol sans lui faire mal (jeux Décrocher le coquillage du rocher, Sortir les ours de leur tanière).
 - Accepter les contraintes liées à l’élaboration d’une stratégie au sein d’une équipe (jeu La forêt, jeux d’attaque et de défense d’un territoire).
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Tourner, se suspendre, se renverser, grimper, rouler, glisser, nager » (from-5) :**
+
+- Sauter puis se déplacer en quadrupédie, se suspendre, se balancer et se lâcher, etc.
+- Se déplacer sans tomber et en maitrisant ses trajectoires sur des patins à glace ou à roulettes, sur des skis, sur un vélo à deux roues, etc.
+- Entrer et sortir seul de l’eau, se déplacer avec les épaules immergées, immerger complètement la tête pendant plusieurs secondes.
+- Aider ses camarades avec les professeurs pour assurer leur sécurité (guide et parade).
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -1121,6 +1415,17 @@ _Comprendre ce que ressent un personnage, et le dire._
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
+**Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
+
+- Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
+- Dire : « Aujourd’hui, nous sommes lundi. », « Hier, c’était dimanche, j’étais à la maison. », « Demain, ce sera mardi, nous irons à la piscine. », « J’aurai bientôt fini mon dessin. »
+- Utiliser les outils de la classe pour composer la date (jour et mois) au tableau et l’énoncer.
+- Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
+- Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
+- Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -1171,6 +1476,47 @@ _Reprendre le comptage et la comparaison de la semaine._
 - **Aide en anglais (optionnelle) :** « Make a pile with more objects than mine. »
 - **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
 
+**Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**
+
+- Reconnaître et réaliser des collections d’objets de même cardinal (jusqu’à dix, voire au-delà) mais de caractéristiques différentes (couleur, fonction et surtout taille).
+- Reconnaître et réaliser des collections d’objets (jusqu’à dix, voire au-delà) de même cardinal mais organisées de manières différentes dans l’espace.
+- Reconnaitre et réaliser des collections d’objets dont le cardinal (jusqu’à dix, voire au-delà) est donné par une représentation analogique, par le nom du nombre ou par son écriture chiffrée.
+- Réaliser une collection contenant un objet de plus qu’une collection donnée.
+- Réaliser une collection contenant un objet de moins qu’une collection donnée.
+- Nommer les nombres correspondant au cardinal d’une collection avant et après l’ajout ou le retrait d’un élément.
+- Séparer les éléments déjà pointés de ceux qui ne le sont pas encore.
+- Pointer du doigt ou marquer les éléments déjà parcourus (le nombre d’objets peut être supérieur à dix).
+- Créer un parcours passant une et une seule fois par chaque élément.
+- Utiliser le principe de cardinalité pour dénombrer une collection par énumération. Utiliser des compositions et des décompositions pour dénombrer.
+  Par exemple, si l’enseignant positionne huit objets en les organisant en deux constellations de quatre et demande de dénombrer la collection, l’élève est capable de :
+  • compter de un en un ;
+  • « mettre quatre dans sa tête », surcompter en utilisant ses doigts : « cinq, six, sept, huit » et annoncer qu’il y a huit objets
+- utiliser la connaissance d’une composition et verbaliser « ça fait huit parce que quatre et quatre font huit ».
+- Réaliser une collection :
+  • contenant la même quantité d’objets qu’une collection donnée ;
+  • contenant la même quantité d’objets qu’une représentation analogique donnée (doigts des deux mains, constellations de points) ;
+  • dont la quantité d’objets est énoncée oralement ;
+  • dont la quantité d’objets est représentée par son écriture chiffrée. Réaliser une collection (jusqu’à dix, voire au-delà) en réunissant des collections plus petites.
+- Comparer globalement (sans dénombrer) les cardinaux de deux collections dont les quantités d’objets diffèrent d’un facteur au moins égal à deux et utiliser les locutions « plus que », « moins que », « autant que ». On ne se limite pas aux petites collections.
+- Comparer par correspondance terme à terme les cardinaux de deux collections.
+- Comparer les cardinaux de deux collections en dénombrant chacune d’elles.
+- Comparer des quantités données par leur écriture chiffrée ou par le nom des nombres.
+- Mobiliser des compositions et des décompositions de nombres pour résoudre des problèmes.
+- Réaliser des compositions et des décompositions de nombres avec les doigts des deux mains.
+- Verbaliser les compositions de nombres. Parmi elles, figurent les doubles : « deux et deux font quatre », « deux fois deux font quatre », « trois et trois font six », « deux fois trois font six », « quatre et quatre font huit », « deux fois quatre font huit », « cinq et cinq font dix », « deux fois cinq font dix ».
+- Verbaliser les décompositions des nombres compris entre deux et dix.
+- Pour ajouter deux nombres, surcompter à partir du plus grand. Exemple de verbalisation par un élève : « Pour ajouter quatre et cinq, je mets cinq dans ma tête et je compte quatre sur mes doigts à partir de cinq : six, sept, huit, neuf. Donc quatre et cinq font neuf ».
+- Nommer le nombre (jusqu’à dix, voire au-delà) correspondant à une quantité d’objets ou à une représentation analogique et vice versa.
+- Représenter par une écriture chiffrée une quantité, une représentation analogique, le nom d’un nombre et vice versa.
+- Écrire des nombres dans des situations de communication.
+- Réciter la comptine numérique de un à trente de façon ordonnée et segmentée.
+- Réciter la comptine numérique jusqu’à un nombre donné.
+- Réciter la comptine numérique jusqu’à trente en partant d’un nombre autre que un (en vue du surcomptage).
+- Réciter la comptine numérique à rebours de dix à un (en vue du décomptage).
+- Réciter les comptines numériques (jusqu’à vingt) de deux en deux en partant de un et en partant de deux.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -1209,6 +1555,25 @@ _Lancer vers quelqu’un et rattraper à deux mains._
 - **⚠ Sécurité :** Rien de rempli de petits objets (sac de graines, de haricots) : cela s’ouvre. Une balle en papier ou une chaussette roulée ne blesse personne et ne coûte rien.
 - **Aide en anglais (optionnelle) :** « Catch the ball with both hands, then send it back. »
 - **Objectifs travaillés :** `PHYS-S01-C01-O09` Lancer loin et avec précision différents objets. ; `PHYS-S04-C01-O09` Éprouver le plaisir de coopérer et de s’opposer dans le respect des autres et des règles communes.
+
+**Réussites attendues — texte officiel pour la compétence « Manipuler, courir, sauter, lancer, s’orienter » (from-5) :**
+
+- Lancer une balle lestée, un anneau, un cerceau, un petit javelot avec élan (quelques pas de déplacement), pour atteindre une zone de plus en plus éloignée.
+- Courir en limitant les arrêts sur une durée d’effort matérialisée par un support musical ou un sablier.
+- Courir vite et franchir une rivière matérialisée avec des lattes sans ralentir.
+- Courir puis sauter haut ou loin après une impulsion sur un pied pour franchir un obstacle et se réceptionner sur deux pieds.
+- Trouver au moins cinq éléments remarquables et repérables sur plusieurs photographies prises par les professeurs dans un lieu extérieur à l’école (cour de récréation, terrain de sport, stade, parc…), en l’absence des élèves ou lors d’une séance précédente.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Coopérer, s’opposer, respecter » (from-5) :**
+
+- Atteindre une cible (panier, but, zone, etc.) tout en empêchant l’autre équipe d’y parvenir.
+- Construire une stratégie individuelle ou collective (jeux Protéger son trésor, Les renards, les poules et les serpents).
+- Sortir son adversaire d’une zone en le poussant ou le tirant, l’immobiliser au sol sans lui faire mal (jeux Décrocher le coquillage du rocher, Sortir les ours de leur tanière).
+- Accepter les contraintes liées à l’élaboration d’une stratégie au sein d’une équipe (jeu La forêt, jeux d’attaque et de défense d’un territoire).
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -1255,6 +1620,17 @@ _Découvrir les besoins d’un végétal, et les comparer à ceux d’un animal.
 - **Lexique visé :** l’eau _(water)_ · la lumière _(light)_ · arroser _(to water)_
 - **Aide en anglais (optionnelle) :** « Say what a plant needs to live. »
 - **Objectifs travaillés :** `WORLD-S01-C01-O10` Décrire les besoins essentiels de quelques animaux ou de végétaux.
+
+**Réussites attendues — texte officiel pour la compétence « Découvrir les animaux et les végétaux » (from-5) :**
+
+- Légender avec l’aide de l’adulte, un dessin ou une photographie d’un animal ou d’une plante.
+- Classer des animaux en fonction de leurs caractéristiques (poils, plumes, écailles, etc.).
+- Associer à chaque mode de déplacement des éléments anatomiques spécifiques (ailes, griffes, pattes, nageoires, etc.).
+- Nommer et ordonner les étapes du cycle de vie d’une plante ou d’un animal observées avec la classe (naissance, éclosion, germination – larve, nymphe, métamorphose, etc.).
+- Réaliser une affiche ou un carnet de voyage pour réinvestir les connaissances lexicales acquises (étapes de la vie, morphologie, locomotion, alimentation, milieu de vie), après une sortie (visite d’une ferme, sortie « nature » etc.).
+- Participer avec la classe à la mise en place d’un potager dans l’école ou dans un jardin collectif.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 

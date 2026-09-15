@@ -247,8 +247,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "31d46daf7f82ea1f",
+        "notes": "Semaine 3, deux passes. Passe 1 : accepté avec modifications — 8 corrections (quantité annoncée, vocabulaire du corps, portée du lexique, marqueurs spatiaux, étai anglais, activité sensorielle et son matériel, titre numérique). Passe 2 : accepté. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-art-14",
@@ -290,8 +298,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "cc3b04229c7a04d8",
+        "notes": "Semaine 3, deux passes. Passe 1 : accepté avec modifications — 8 corrections (quantité annoncée, vocabulaire du corps, portée du lexique, marqueurs spatiaux, étai anglais, activité sensorielle et son matériel, titre numérique). Passe 2 : accepté. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-art-17",

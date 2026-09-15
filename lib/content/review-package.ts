@@ -190,7 +190,11 @@ function successExampleBlock(
   const lines: string[] = [];
   for (const code of competencyCodes) {
     const competency = findCompetency(syllabus, code);
-    const objective = lesson.objectiveCodes
+    // Taught *and* revisited. Once progression started counting only first occurrences, a lesson
+    // that revisits teaches nothing new — and looking at the taught list alone made the official
+    // « réussites attendues » disappear entirely from weeks 4 and 5, which is exactly the
+    // material a reviewer needs to judge against.
+    const objective = [...lesson.objectiveCodes, ...lesson.supportingObjectiveCodes]
       .map((objectiveCode) => findObjective(syllabus, objectiveCode))
       .find((candidate) => candidate?.competencyCode === code);
     const examples = objective ? successExamplesFor(syllabus, objective, bandCode) : [];

@@ -447,6 +447,54 @@ _Premier corpus de mots : nommer et ranger les objets de l’école._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+**Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
+
+- Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
+- Dire : « Aujourd’hui, nous sommes lundi. », « Hier, c’était dimanche, j’étais à la maison. », « Demain, ce sera mardi, nous irons à la piscine. », « J’aurai bientôt fini mon dessin. »
+- Utiliser les outils de la classe pour composer la date (jour et mois) au tableau et l’énoncer.
+- Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
+- Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
+- Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (from-5) :**
+
+- Comprendre et utiliser :
+  • les mots des émotions, des sentiments et des états mentaux des personnages de fiction ;
+  • les mots qui entretiennent une proximité phonique (poule/roule/boule/moule) ;
+  • les mots qui vont permettre de s’emparer des apprentissages du CP.
+- Distinguer le sens propre du sens figuré (sans que ces notions ne soient enseignées) : l’élève comprend le sens de dévorer un gâteau et dévorer un livre.
+- Construire des dérivations (sans que ces notions ne soient enseignées) : arroser → arrosage ; gentil → gentiment → gentillesse.
+- S’appuyer sur des verbes et des noms qu’il connait déjà pour comprendre et essayer de construire un nouveau mot : jambe/enjamber.
+- Chercher des hyperonymes des réseaux étudiés (véhicule est un hyperonyme de voiture, bus, vélo, etc. ; animal est un hyperonyme de chat, chien, grenouille, etc.).
+- Inférer le sens d’un mot inconnu.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Développer sa syntaxe » (from-5) :**
+
+- Utiliser les pronoms nous et vous : « Avec les CP, nous avons mangé un gâteau », « Vous, vous mangez un gâteau et pas nous. »
+- Utiliser :
+  • un système à trois temps : imparfait/plus-que-parfait/imparfait à valeur de futur dans le passé (aller) « Moi, j’étais sur un toboggan. J’avais fait de la balançoire et j’allais faire du vélo » ;
+  • le futur simple : « Quand on écrira aux correspondants » ;
+  • un système à deux temps : futur/futur antérieur : « Quand on ira chez les correspondants, on aura déjà été au spectacle et on pourra leur raconter l’histoire. »
+- Utiliser de nouveaux introducteurs de complexité : où/quand/pour que/si/comme, etc. :
+  • « Là, c’est la maison où le loup a mangé le petit chaperon rouge. »
+  • « Le chevreau s’est caché dans l’horloge pour que le loup ne le voie pas. »
+  • « Quand je vais à la boulangerie, la boulangère me donne un bonbon. »
+  • « Comme il fait chaud, elle va boire de l’eau. »
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
+
+- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
+- Raconter une histoire connue, dans son intégralité et sans support.
+- Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -750,6 +798,40 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
+**Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
+
+- Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
+- Dire : « Aujourd’hui, nous sommes lundi. », « Hier, c’était dimanche, j’étais à la maison. », « Demain, ce sera mardi, nous irons à la piscine. », « J’aurai bientôt fini mon dessin. »
+- Utiliser les outils de la classe pour composer la date (jour et mois) au tableau et l’énoncer.
+- Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
+- Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
+- Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (from-5) :**
+
+- Comprendre et utiliser :
+  • les mots des émotions, des sentiments et des états mentaux des personnages de fiction ;
+  • les mots qui entretiennent une proximité phonique (poule/roule/boule/moule) ;
+  • les mots qui vont permettre de s’emparer des apprentissages du CP.
+- Distinguer le sens propre du sens figuré (sans que ces notions ne soient enseignées) : l’élève comprend le sens de dévorer un gâteau et dévorer un livre.
+- Construire des dérivations (sans que ces notions ne soient enseignées) : arroser → arrosage ; gentil → gentiment → gentillesse.
+- S’appuyer sur des verbes et des noms qu’il connait déjà pour comprendre et essayer de construire un nouveau mot : jambe/enjamber.
+- Chercher des hyperonymes des réseaux étudiés (véhicule est un hyperonyme de voiture, bus, vélo, etc. ; animal est un hyperonyme de chat, chien, grenouille, etc.).
+- Inférer le sens d’un mot inconnu.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (from-5) :**
+
+- Dire : « Pour acheter les fruits du gouter, il faudrait compter les élèves de la classe. »
+- Dire : « Si on voulait de la peinture verte, il faudrait mélanger du jaune avec du bleu. »
+- Dire : « Peut-être que Corentin a mis la peinture avant de dessiner avec les feutres. »
+- Suffisamment se décentrer et identifier les informations qu’on doit communiquer pour qu’un interlocuteur qui n’a pas vécu la situation évoquée puisse la comprendre.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -1010,6 +1092,25 @@ _Frapper les syllabes des prénoms de la maison : entendre que les mots sont fai
 - Trouver le son /f/ dans une liste de mots.
 - Trouver l’intrus à l’initiale entre sac/Sacha/cartable
 - Localiser un phonème dans un mot.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
+
+- Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
+- Dire : « Aujourd’hui, nous sommes lundi. », « Hier, c’était dimanche, j’étais à la maison. », « Demain, ce sera mardi, nous irons à la piscine. », « J’aurai bientôt fini mon dessin. »
+- Utiliser les outils de la classe pour composer la date (jour et mois) au tableau et l’énoncer.
+- Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
+- Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
+- Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
+
+- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
+- Raconter une histoire connue, dans son intégralité et sans support.
+- Transposer les émotions ressenties par les personnages à sa propre expérience.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 

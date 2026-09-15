@@ -26,17 +26,20 @@ Roles, kept distinct on purpose:
 
 ## Register of reviews
 
-| Batch                                | Date       | Kind                                              | Outcome                       | Corrections                                                                            | Status                                                                                                                                                                   |
-| ------------------------------------ | ---------- | ------------------------------------------------- | ----------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 3ème maternelle, Week 1 (days 1–5)   | 2026-09-14 | AI-assisted (ChatGPT)                             | `accepted-with-modifications` | 13 items, all applied                                                                  | `review` — the corrections materially changed the pedagogy, so the regenerated package awaits re-review                                                                  |
-| 3ème maternelle, Weeks 2–5           | —          | —                                                 | not yet reviewed              | —                                                                                      | `review`                                                                                                                                                                 |
-| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15 | AI-assisted (ChatGPT), 2 passes + re-confirmation | `accepted-with-modifications` | pass 1: 9 pedagogical and safety items · pass 2: 2 progression-metadata items          | **`approved`** — 16 lessons. The approval lapsed once when the progression engine changed; re-confirmed after a machine-proven metadata-only diff, with a **new** digest |
-| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15 | AI-assisted (ChatGPT), 2 passes                   | `accepted-with-modifications` | pass 1: 6 items · pass 2: 2 items (seed-bag fallback, failure-neutral balance wording) | **`approved`** — 20 lessons                                                                                                                                              |
-| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15 | AI-assisted (ChatGPT)                             | `accepted-with-modifications` | 8 items, all applied                                                                   | `review` — **ready for a short second pass**                                                                                                                             |
-| 1ère maternelle, Weeks 4–5           | —          | —                                                 | not yet reviewed              | —                                                                                      | `review`                                                                                                                                                                 |
+| Batch                                | Date       | Kind                                              | Outcome                                                      | Corrections                                                                            | Status                                                                                                                                                                   |
+| ------------------------------------ | ---------- | ------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 3ème maternelle, Week 1 (days 1–5)   | 2026-09-14 | AI-assisted (ChatGPT)                             | `accepted-with-modifications`                                | 13 items, all applied                                                                  | `review` — the corrections materially changed the pedagogy, so the regenerated package awaits re-review                                                                  |
+| 3ème maternelle, Weeks 2–5           | —          | —                                                 | not yet reviewed                                             | —                                                                                      | `review`                                                                                                                                                                 |
+| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15 | AI-assisted (ChatGPT), 2 passes + re-confirmation | `accepted-with-modifications`                                | pass 1: 9 pedagogical and safety items · pass 2: 2 progression-metadata items          | **`approved`** — 16 lessons. The approval lapsed once when the progression engine changed; re-confirmed after a machine-proven metadata-only diff, with a **new** digest |
+| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15 | AI-assisted (ChatGPT), 2 passes                   | `accepted-with-modifications`                                | pass 1: 6 items · pass 2: 2 items (seed-bag fallback, failure-neutral balance wording) | **`approved`** — 20 lessons                                                                                                                                              |
+| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15 | AI-assisted (ChatGPT), 2 passes                   | pass 1 `accepted-with-modifications` → pass 2 **`accepted`** | 8 items, all applied                                                                   | **`approved`** — 20 lessons                                                                                                                                              |
+| 1ère maternelle, Weeks 4–5           | —          | —                                                 | not yet reviewed                                             | —                                                                                      | `review`                                                                                                                                                                 |
 
-**36 lessons are `approved`** — 1ère maternelle Weeks 1 and 2, all `ai-assisted`. The other 140
-September lessons remain at `review`. **No teacher has read any of it.**
+**56 lessons are `approved`** — 1ère maternelle Weeks 1, 2 and 3, all `ai-assisted`. The other
+120 September lessons remain at `review`: 32 in 1ère (Weeks 4–5) and all 88 in 3ème.
+**No teacher has read any of it.**
+
+Progress against the Beta 0.1 gate: **3 of 10 weekly packages accepted**.
 
 ### Why Week 1 could be re-confirmed without a third full reading
 
@@ -206,10 +209,13 @@ The pilot's day is language + mathematics + physical + one rotating domain, 40�
 > what was reviewed; the split-session recommendation was accepted and implemented as the plan's
 > pause point.
 
-## 1ère maternelle, Week 3 review, 2026-09-15 — accepted with modifications
+## 1ère maternelle, Week 3 — approved 2026-09-15 after two passes
 
-Eight items, all applied. The pattern behind most of them is worth naming, because it will
-recur: **an activity was copied, its title changed, and its body left behind.** « Donne-moi
+Pass 1 returned `accepted-with-modifications` with eight items; after the corrections, pass 2
+returned **`accepted`**, and the 20 lessons are `approved` with `reviewKind: ai-assisted`. The
+history is kept as it happened — Week 3 was not accepted on its first reading.
+
+The pattern behind most of the eight is worth naming, because it will recur: **an activity was copied, its title changed, and its body left behind.** « Donne-moi
 trois » asked for two. « Un, deux, trois, quatre » counted three. « Sur, sous, dans » only did
 two of the three. « Ma tête, mon ventre » had inherited the household-object material of a lesson
 about doors and buckets, and had spread its target words onto a greeting ritual and a rhyme about

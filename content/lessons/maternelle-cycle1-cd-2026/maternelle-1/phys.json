@@ -502,8 +502,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "e5be1e65963acebd",
+        "notes": "Semaine 3, deux passes. Passe 1 : accepté avec modifications — 8 corrections (quantité annoncée, vocabulaire du corps, portée du lexique, marqueurs spatiaux, étai anglais, activité sensorielle et son matériel, titre numérique). Passe 2 : accepté. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-11",
@@ -545,8 +553,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "e4fdab86b1db66e8",
+        "notes": "Semaine 3, deux passes. Passe 1 : accepté avec modifications — 8 corrections (quantité annoncée, vocabulaire du corps, portée du lexique, marqueurs spatiaux, étai anglais, activité sensorielle et son matériel, titre numérique). Passe 2 : accepté. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-12",
@@ -588,8 +604,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "409205a432db998c",
+        "notes": "Semaine 3, deux passes. Passe 1 : accepté avec modifications — 8 corrections (quantité annoncée, vocabulaire du corps, portée du lexique, marqueurs spatiaux, étai anglais, activité sensorielle et son matériel, titre numérique). Passe 2 : accepté. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-13",
@@ -631,8 +655,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "c1cdd2cc53d391ca",
+        "notes": "Semaine 3, deux passes. Passe 1 : accepté avec modifications — 8 corrections (quantité annoncée, vocabulaire du corps, portée du lexique, marqueurs spatiaux, étai anglais, activité sensorielle et son matériel, titre numérique). Passe 2 : accepté. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-14",
@@ -674,8 +706,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "1b06f8bd7ae9b345",
+        "notes": "Semaine 3, deux passes. Passe 1 : accepté avec modifications — 8 corrections (quantité annoncée, vocabulaire du corps, portée du lexique, marqueurs spatiaux, étai anglais, activité sensorielle et son matériel, titre numérique). Passe 2 : accepté. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-15",
