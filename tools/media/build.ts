@@ -73,6 +73,15 @@ const SHAPES: Asset[] = [
 /** Objects a September lesson names: the three vocabulary corpora and what gets counted. */
 const OBJECTS: [id: string, alt: string, tags: string[], body: string][] = [
   [
+    "objet-cuillere",
+    "Une cuillère",
+    ["cuillère", "maison", "compter"],
+    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+      <ellipse cx="100" cy="66" rx="26" ry="32" fill="${STONE}"/>
+      <rect x="92" y="94" width="16" height="70" rx="8" fill="${STONE}"/>
+    </g>`,
+  ],
+  [
     "objet-crayon",
     "Un crayon",
     ["crayon", "école", "écrire"],

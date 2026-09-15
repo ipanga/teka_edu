@@ -38,6 +38,15 @@
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
     },
     {
+      "id": "objet-cuillere",
+      "kind": "object",
+      "file": "objects/objet-cuillere.svg",
+      "alt": "Une cuillère",
+      "tags": ["cuillère", "maison", "compter"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
+    },
+    {
       "id": "objet-crayon",
       "kind": "object",
       "file": "objects/objet-crayon.svg",

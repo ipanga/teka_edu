@@ -9,10 +9,14 @@
 
 ## Ce qu’on vous demande
 
-Vous lisez ici la première semaine de programme telle qu’un parent la recevrait. Pour chaque
-leçon, dites si elle convient à un enfant de 5 ans en RDC, et signalez ce qui vous gêne :
-une consigne trop longue, une durée irréaliste, un matériel introuvable, un exemple mal choisi,
-un objectif qui ne correspond pas à l’activité. Les tableaux de relecture sont là pour cela.
+Vous lisez ici une semaine de programme telle qu’un parent la recevrait. Pour chaque leçon,
+dites si elle convient à un enfant de 1ère maternelle (repère « à aborder avant 4 ans ») en RDC, et signalez ce qui vous gêne : une consigne trop
+longue, une durée irréaliste, un matériel introuvable, un exemple mal choisi, un objectif qui
+ne correspond pas à l’activité. Les tableaux de relecture sont là pour cela.
+
+Les repères du programme sont **développementaux et non chronologiques** : ils sont formulés
+« ou dès que les apprentissages précédents ont pu être observés ». Jugez donc l’activité
+contre le repère, pas contre un âge exact.
 
 Une leçon ne pourra passer au statut « approuvé » qu’après votre accord explicite. Votre
 conclusion est enregistrée telle quelle — « accepté », « accepté avec modifications » ou
@@ -29,7 +33,7 @@ personne qui enseigne à cet âge. Les deux ne sont pas présentées comme équi
   deux moments plus courts, ou arrêtée avant la fin quand l’enfant fatigue. L’application
   propose « Faire une petite pause » et « Terminer pour aujourd’hui » à chaque activité, et
   reprend là où l’on s’était arrêté. Une séance écourtée est une séance normale : jugez les
-  activités, pas la capacité d’un enfant à tenir 35 minutes.
+  activités, pas la capacité d’un enfant à tenir la séance entière.
 - **Contenu relu ici :** 3 jours · 12 leçons · 18 activités
 
 Les objectifs et les « réussites attendues » sont cités mot pour mot du programme officiel ;
@@ -43,7 +47,7 @@ _L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus 
 pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de
 l’appareil._
 
-**Matériel à préparer :** Aucun matériel, Crayon, Espace dégagé pour bouger (à l’intérieur ou dehors), Feuille de papier, Petits objets à compter (cailloux, capsules, haricots)
+**Matériel à préparer :** Aucun matériel, Crayon, Espace dégagé pour bouger (à l’intérieur ou dehors), Gros objets à compter (cuillères, gobelets, chaussettes roulées), Feuille de papier
 
 ### Je trace — Le développement et la structuration du langage oral et écrit (10 min)
 
@@ -106,7 +110,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 1ère maternelle relevant du repère « à aborder avant 4 ans » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -130,10 +134,10 @@ _Compter, donner une petite quantité, ranger par forme._
 #### 1. Un, deux, trois, quatre — 7 min, sans écran (counting)
 
 - **Consigne à l’enfant :** « Combien il y en a ? Compte avec moi. »
-- **Guidance adulte :** Posez trois objets bien séparés. Touchez chaque objet en disant le nombre, une fois. Puis faites-le avec lui, sa main dans la vôtre s’il le veut. À la fin, redites le dernier nombre : « Trois. Il y en a trois. » C’est ce dernier mot qui dit la quantité.
-- **Matériel :** Petits objets à compter (cailloux, capsules, haricots)
-- **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
-- **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
+- **Guidance adulte :** Posez trois objets bien séparés — des cuillères, des gobelets, des chaussettes roulées : à cet âge, préférez ce qui ne tient pas dans une bouche. Touchez chaque objet en disant le nombre, une fois. Puis faites-le avec lui, sa main dans la vôtre s’il le veut. À la fin, redites le dernier nombre : « Trois. Il y en a trois. » C’est ce dernier mot qui dit la quantité.
+- **Matériel :** Gros objets à compter (cuillères, gobelets, chaussettes roulées)
+- **À défaut :** Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.
+- **⚠ Sécurité :** Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe.
 - **Aide en anglais (optionnelle) :** « How many are there? »
 - **Objectifs travaillés :** `MATH-S01-C01-O03` Dénombrer une collection d’objets (jusqu’à trois, voire quatre).
 
@@ -175,7 +179,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 1ère maternelle relevant du repère « à aborder avant 4 ans » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -218,7 +222,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 1ère maternelle relevant du repère « à aborder avant 4 ans » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -262,7 +266,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 1ère maternelle relevant du repère « à aborder avant 4 ans » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -282,7 +286,7 @@ _L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus 
 pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de
 l’appareil._
 
-**Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Petits objets à compter (cailloux, capsules, haricots)
+**Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Gros objets à compter (cuillères, gobelets, chaussettes roulées)
 
 ### Encore Tika — Le développement et la structuration du langage oral et écrit (10 min)
 
@@ -358,7 +362,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 1ère maternelle relevant du repère « à aborder avant 4 ans » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -381,11 +385,11 @@ _Compter, donner une petite quantité, ranger par forme._
 
 #### 1. Donne-moi trois — 7 min, sans écran (manipulation)
 
-- **Consigne à l’enfant :** « Donne-moi deux cailloux. »
-- **Guidance adulte :** Demandez une petite quantité — deux, puis trois. S’il en donne trop, recomptez ensemble sans reprendre l’objet en trop : « Un, deux, trois… tu m’en as donné quatre. » Puis redemandez. Ne demandez jamais plus de trois ce mois-ci.
-- **Matériel :** Petits objets à compter (cailloux, capsules, haricots)
-- **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
-- **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
+- **Consigne à l’enfant :** « Donne-moi deux cuillères. »
+- **Guidance adulte :** Demandez une petite quantité — deux, puis trois — avec des objets assez gros pour être sans danger : cuillères, gobelets, blocs. Les petits objets (cailloux, capsules, haricots) restent possibles, mais seulement sous votre surveillance directe. S’il en donne trop, recomptez ensemble sans reprendre l’objet en trop : « Un, deux, trois… tu m’en as donné quatre. » Puis redemandez. Ne demandez jamais plus de trois ce mois-ci.
+- **Matériel :** Gros objets à compter (cuillères, gobelets, chaussettes roulées)
+- **À défaut :** Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.
+- **⚠ Sécurité :** Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe.
 - **Aide en anglais (optionnelle) :** « Give me three. »
 - **Objectifs travaillés :** `MATH-S01-C01-O04` Constituer une collection (jusqu’à trois, voire quatre objets) d’un cardinal donné.
 
@@ -427,7 +431,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 1ère maternelle relevant du repère « à aborder avant 4 ans » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -472,7 +476,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 1ère maternelle relevant du repère « à aborder avant 4 ans » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -495,11 +499,11 @@ _Repérer le moment, le début, la fin et où sont les choses._
 
 #### 1. Sur, sous, dans — 7 min, sans écran (manipulation)
 
-- **Consigne à l’enfant :** « Mets le caillou sur la table. Maintenant, sous la table. »
+- **Consigne à l’enfant :** « Mets la cuillère sur la table. Maintenant, sous la table. »
 - **Guidance adulte :** Trois mots seulement : sur, sous, dans. Dites-le et montrez-le en même temps, puis demandez sans montrer. S’il hésite, refaites le geste avec lui — c’est le corps qui apprend l’espace avant les mots.
-- **Matériel :** Petits objets à compter (cailloux, capsules, haricots)
-- **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
-- **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
+- **Matériel :** Gros objets à compter (cuillères, gobelets, chaussettes roulées)
+- **À défaut :** Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.
+- **⚠ Sécurité :** Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe.
 - **Aide en anglais (optionnelle) :** « Put the stone under the table. »
 - **Objectifs travaillés :** `TIME-SPACE-S02-C01-O07` Acquérir les premiers marqueurs qui permettent de se repérer dans l’espace.
 
@@ -520,7 +524,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 1ère maternelle relevant du repère « à aborder avant 4 ans » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -540,7 +544,7 @@ _L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus 
 pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de
 l’appareil._
 
-**Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Objets de la maison (coussins, chaises, bâton, tissu), Petits objets à compter (cailloux, capsules, haricots)
+**Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Gros objets à compter (cuillères, gobelets, chaussettes roulées), Objets de la maison (coussins, chaises, bâton, tissu)
 
 ### Tout ce que je sais dire — Le développement et la structuration du langage oral et écrit (11 min)
 
@@ -566,7 +570,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 #### 2. Tous les mots du mois — 5 min, sans écran (vocabulary)
 
 - **Consigne à l’enfant :** « Écoute, puis dis le mot avec moi : la porte, le seau, la main, la tête. »
-- **Guidance adulte :** 1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez-la lentement : « la porte ». 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.
+- **Guidance adulte :** 1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez lentement l’objet que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.
 - **Matériel :** Objets de la maison (coussins, chaises, bâton, tissu)
 - **Lexique visé :** la porte _(the door)_ · le seau _(the bucket)_ · la main _(the hand)_ · la tête _(the head)_
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
@@ -612,7 +616,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 1ère maternelle relevant du repère « à aborder avant 4 ans » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -637,9 +641,9 @@ _Compter, donner une petite quantité, ranger par forme._
 
 - **Consigne à l’enfant :** « Compte avec moi : un, deux, trois, quatre, cinq, six. »
 - **Guidance adulte :** Comptez lentement en montrant un doigt à chaque nombre. Recommencez et arrêtez-vous à trois pour voir s’il continue. Ne dépassez jamais six ce mois-ci : la suite orale s’installe par la répétition, pas par la longueur.
-- **Matériel :** Petits objets à compter (cailloux, capsules, haricots)
-- **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
-- **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
+- **Matériel :** Gros objets à compter (cuillères, gobelets, chaussettes roulées)
+- **À défaut :** Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.
+- **⚠ Sécurité :** Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe.
 - **Aide en anglais (optionnelle) :** « Count with me to six. »
 - **Objectifs travaillés :** `MATH-S01-C01-O09` Connaitre la comptine numérique de un à six.
 
@@ -681,7 +685,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 1ère maternelle relevant du repère « à aborder avant 4 ans » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -725,7 +729,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 1ère maternelle relevant du repère « à aborder avant 4 ans » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -769,7 +773,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 1ère maternelle relevant du repère « à aborder avant 4 ans » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -785,7 +789,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 | Question | Réponse |
 | --- | --- |
-| La semaine est-elle adaptée à des enfants de 5 ans en RDC ? |  |
+| La semaine est-elle adaptée à un enfant de 1ère maternelle (repère « à aborder avant 4 ans ») en RDC ? |  |
 | Le rythme quotidien (langage, mathématiques, activité physique, domaine tournant) convient-il ? |  |
 | La durée quotidienne est-elle réaliste à la maison ? |  |
 | L’aide en anglais est-elle utile, et assez discrète ? |  |

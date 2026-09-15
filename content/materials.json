@@ -36,6 +36,13 @@
       "safetyNote": null
     },
     {
+      "code": "gros-objets",
+      "name": "Gros objets à compter (cuillères, gobelets, chaussettes roulées)",
+      "category": "household",
+      "alternatives": "Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.",
+      "safetyNote": "Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe."
+    },
+    {
       "code": "petits-objets",
       "name": "Petits objets à compter (cailloux, capsules, haricots)",
       "category": "household",

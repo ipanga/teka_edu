@@ -26,11 +26,12 @@ Roles, kept distinct on purpose:
 
 ## Register of reviews
 
-| Batch                              | Date       | Kind                  | Outcome                       | Corrections           | Status                                                                                                  |
-| ---------------------------------- | ---------- | --------------------- | ----------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------- |
-| 3ème maternelle, Week 1 (days 1–5) | 2026-09-14 | AI-assisted (ChatGPT) | `accepted-with-modifications` | 13 items, all applied | `review` — the corrections materially changed the pedagogy, so the regenerated package awaits re-review |
-| 3ème maternelle, Weeks 2–5         | —          | —                     | not yet reviewed              | —                     | `review`                                                                                                |
-| 1ère maternelle, Weeks 1–5         | —          | —                     | not yet reviewed              | —                     | `review` — authored 2026-09-15, packages generated and ready to submit                                  |
+| Batch                              | Date       | Kind                  | Outcome                       | Corrections           | Status                                                                                                    |
+| ---------------------------------- | ---------- | --------------------- | ----------------------------- | --------------------- | --------------------------------------------------------------------------------------------------------- |
+| 3ème maternelle, Week 1 (days 1–5) | 2026-09-14 | AI-assisted (ChatGPT) | `accepted-with-modifications` | 13 items, all applied | `review` — the corrections materially changed the pedagogy, so the regenerated package awaits re-review   |
+| 3ème maternelle, Weeks 2–5         | —          | —                     | not yet reviewed              | —                     | `review`                                                                                                  |
+| 1ère maternelle, Week 1 (days 1–4) | 2026-09-15 | AI-assisted (ChatGPT) | `accepted-with-modifications` | 9 items, all applied  | `review` — corrections affect pedagogy and safety, so the regenerated package goes back for a second pass |
+| 1ère maternelle, Weeks 2–5         | —          | —                     | not yet reviewed              | —                     | `review`                                                                                                  |
 
 **No lesson is `approved`.** All 176 September lessons — 88 for each of 1ère and 3ème maternelle — remain at `review`.
 
@@ -188,7 +189,26 @@ The pilot's day is language + mathematics + physical + one rotating domain, 40�
 > what was reviewed; the split-session recommendation was accepted and implemented as the plan's
 > pause point.
 
-## Week 1 review, 2026-09-14 — accepted with modifications
+## 1ère maternelle, Week 1 review, 2026-09-15 — accepted with modifications
+
+ChatGPT reviewed the generated Week 1 package and returned **`accepted-with-modifications`**.
+All corrections are applied; the package is regenerated and goes back for a second pass, because
+several of them change pedagogy or safety.
+
+The two findings worth carrying forward:
+
+- **A template can be wrong for a whole level at once.** The reviewer's own age question was the
+  fixed string « un enfant de 5 ans (3ème maternelle) », so a reviewer of _three-year-olds_ was
+  asked sixteen times in one week whether the work suited a five-year-old. It was right when
+  written and silently wrong the moment a second level existed. The wording is now derived from
+  the level and its band, and a test refuses to let any package name another level.
+- **Safety defaults are inherited too.** 3ème maternelle counts with cailloux, capsules and
+  haricots, and that material rode into the youngest band, where the same objects are a choking
+  risk. A child was also told to push a chair and to run at a wall. Reusing an interaction is
+  right; reusing its assumptions about what a child's body can do is not — three tests now hold
+  these, because prose did not.
+
+## 3ème maternelle, Week 1 review, 2026-09-14 — accepted with modifications
 
 The generated Week 1 package was submitted to **ChatGPT**, which reviewed it against the official
 Cycle 1 programme and returned **`accepted-with-modifications`** with 13 items. **All are

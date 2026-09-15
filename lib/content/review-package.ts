@@ -21,28 +21,52 @@ import { generateDailyPlan } from "@/domain/programme/daily-plan";
 import type { DailyPlan } from "@/domain/programme/types";
 import { type ReferenceData, getProgramme, getSyllabus } from "./reference-data";
 
-/** The checklist a reviewer fills in. Kept here so the document and the rubric stay in step. */
-export const REVIEW_CHECKLIST: readonly { key: string; question: string }[] = [
-  {
-    key: "objective-alignment",
-    question: "L’activité travaille-t-elle réellement l’objectif annoncé ?",
-  },
-  { key: "age", question: "Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ?" },
-  { key: "clarity", question: "La consigne enfant et la guidance adulte sont-elles claires ?" },
-  {
-    key: "cognitive-load",
-    question: "La difficulté est-elle juste (ni trop facile, ni trop complexe) ?",
-  },
-  { key: "duration", question: "La durée annoncée est-elle réaliste ?" },
-  { key: "engagement", question: "L’enfant agit-il vraiment, au lieu de regarder ?" },
-  { key: "language", question: "Le français proposé est-il accessible et utile à l’acquisition ?" },
-  {
-    key: "culture",
-    question: "Les exemples sont-ils compréhensibles en RDC (ville comme village) ?",
-  },
-  { key: "materials", question: "Le matériel est-il trouvable à la maison, ou remplaçable ?" },
-  { key: "safety", question: "L’activité est-elle sans risque pour un enfant de cet âge ?" },
-];
+/**
+ * The checklist a reviewer fills in, built for the level being reviewed.
+ *
+ * The age question used to be the literal string « Est-ce réaliste pour un enfant de 5 ans
+ * (3ème maternelle) ? », which was true of the only level that existed when it was written and
+ * became false the moment a second one did — it asked a reviewer of 1ère maternelle, sixteen
+ * times in one week's package, whether the work suited a five-year-old. It now names the level
+ * and quotes the band's own official wording.
+ *
+ * The band label is developmental, not chronological (« à aborder avant 4 ans », « à partir de
+ * 4 ans ou dès que les apprentissages précédents ont pu être observés »), so the question keeps
+ * that nuance rather than pinning an age the programme itself does not pin.
+ */
+export function reviewChecklist(
+  levelName: string,
+  bandLabel: string | null,
+): readonly { key: string; question: string }[] {
+  const age =
+    bandLabel === null
+      ? `Est-ce réaliste pour un enfant de ${levelName} ?`
+      : `Est-ce réaliste pour un enfant de ${levelName} relevant du repère « ${bandLabel.toLowerCase()} » ?`;
+  return [
+    {
+      key: "objective-alignment",
+      question: "L’activité travaille-t-elle réellement l’objectif annoncé ?",
+    },
+    { key: "age", question: age },
+    { key: "clarity", question: "La consigne enfant et la guidance adulte sont-elles claires ?" },
+    {
+      key: "cognitive-load",
+      question: "La difficulté est-elle juste (ni trop facile, ni trop complexe) ?",
+    },
+    { key: "duration", question: "La durée annoncée est-elle réaliste ?" },
+    { key: "engagement", question: "L’enfant agit-il vraiment, au lieu de regarder ?" },
+    {
+      key: "language",
+      question: "Le français proposé est-il accessible et utile à l’acquisition ?",
+    },
+    {
+      key: "culture",
+      question: "Les exemples sont-ils compréhensibles en RDC (ville comme village) ?",
+    },
+    { key: "materials", question: "Le matériel est-il trouvable à la maison, ou remplaçable ?" },
+    { key: "safety", question: "L’activité est-elle sans risque pour un enfant de cet âge ?" },
+  ];
+}
 
 /**
  * Official statements are quoted verbatim, and 43 of them are several lines: an opening line
@@ -188,6 +212,7 @@ function lessonBlock(
   data: ReferenceData,
   syllabus: Syllabus,
   bandCode: string | null,
+  checklist: readonly { key: string; question: string }[],
 ): string[] {
   const lines = [
     `### ${lesson.title} — ${domainTitle} (${minutes} min)`,
@@ -221,7 +246,7 @@ function lessonBlock(
     "",
     "| Critère | OK / à revoir | Commentaire |",
     "| --- | --- | --- |",
-    ...REVIEW_CHECKLIST.map((item) => `| ${item.question} |  |  |`),
+    ...checklist.map((item) => `| ${item.question} |  |  |`),
     "",
     "> Décision : ☐ accepté ☐ accepté avec modifications ☐ à refaire — _à remplir par la personne qui relit_",
     "",
@@ -235,6 +260,7 @@ function dayBlock(
   curriculum: Curriculum | undefined,
   syllabus: Syllabus,
   bandCode: string | null,
+  checklist: readonly { key: string; question: string }[],
 ): string[] {
   const domainTitle = (code: string) =>
     curriculum?.domains.find((domain) => domain.code === code)?.title ?? code;
@@ -265,6 +291,7 @@ function dayBlock(
         data,
         syllabus,
         bandCode,
+        checklist,
       ),
     );
   }
@@ -285,6 +312,14 @@ export function buildReviewPackage(
   const curriculum = data.curricula.find((c) => c.id === programme.curriculumId);
   const band = curriculum ? ageBandOfLevel(curriculum, options.levelId) : undefined;
   const level = data.levels.find((l) => l.id === options.levelId);
+  const levelName = level?.name ?? options.levelId;
+  const bandLabel = band?.label ?? null;
+  const checklist = reviewChecklist(levelName, bandLabel);
+  /** How to describe the child being taught, without pinning an age the programme does not. */
+  const childOf =
+    bandLabel === null
+      ? `un enfant de ${levelName}`
+      : `un enfant de ${levelName} (repère « ${bandLabel.toLowerCase()} »)`;
   const schoolDays = generateSchoolDays(calendar, data.publicHolidays);
 
   const plans: DailyPlan[] = [];
@@ -311,10 +346,14 @@ export function buildReviewPackage(
     "",
     "## Ce qu’on vous demande",
     "",
-    "Vous lisez ici la première semaine de programme telle qu’un parent la recevrait. Pour chaque",
-    "leçon, dites si elle convient à un enfant de 5 ans en RDC, et signalez ce qui vous gêne :",
-    "une consigne trop longue, une durée irréaliste, un matériel introuvable, un exemple mal choisi,",
-    "un objectif qui ne correspond pas à l’activité. Les tableaux de relecture sont là pour cela.",
+    `Vous lisez ici une semaine de programme telle qu’un parent la recevrait. Pour chaque leçon,`,
+    `dites si elle convient à ${childOf} en RDC, et signalez ce qui vous gêne : une consigne trop`,
+    "longue, une durée irréaliste, un matériel introuvable, un exemple mal choisi, un objectif qui",
+    "ne correspond pas à l’activité. Les tableaux de relecture sont là pour cela.",
+    "",
+    "Les repères du programme sont **développementaux et non chronologiques** : ils sont formulés",
+    "« ou dès que les apprentissages précédents ont pu être observés ». Jugez donc l’activité",
+    "contre le repère, pas contre un âge exact.",
     "",
     "Une leçon ne pourra passer au statut « approuvé » qu’après votre accord explicite. Votre",
     "conclusion est enregistrée telle quelle — « accepté », « accepté avec modifications » ou",
@@ -331,7 +370,7 @@ export function buildReviewPackage(
     "  deux moments plus courts, ou arrêtée avant la fin quand l’enfant fatigue. L’application",
     "  propose « Faire une petite pause » et « Terminer pour aujourd’hui » à chaque activité, et",
     "  reprend là où l’on s’était arrêté. Une séance écourtée est une séance normale : jugez les",
-    "  activités, pas la capacité d’un enfant à tenir 35 minutes.",
+    "  activités, pas la capacité d’un enfant à tenir la séance entière.",
     `- **Contenu relu ici :** ${plans.length} jours · ${lessons.length} leçons · ${activities.length} activités`,
     "",
     "Les objectifs et les « réussites attendues » sont cités mot pour mot du programme officiel ;",
@@ -344,7 +383,7 @@ export function buildReviewPackage(
     "",
     "| Question | Réponse |",
     "| --- | --- |",
-    "| La semaine est-elle adaptée à des enfants de 5 ans en RDC ? |  |",
+    `| La semaine est-elle adaptée à ${childOf} en RDC ? |  |`,
     "| Le rythme quotidien (langage, mathématiques, activité physique, domaine tournant) convient-il ? |  |",
     "| La durée quotidienne est-elle réaliste à la maison ? |  |",
     "| L’aide en anglais est-elle utile, et assez discrète ? |  |",
@@ -357,7 +396,7 @@ export function buildReviewPackage(
   ];
 
   const body = plans.flatMap((plan) =>
-    dayBlock(plan, data, curriculum, syllabus, band?.code ?? null),
+    dayBlock(plan, data, curriculum, syllabus, band?.code ?? null, checklist),
   );
   const document = [...header, ...body, ...footer].join("\n");
   const missing = incompleteBullets(document);
