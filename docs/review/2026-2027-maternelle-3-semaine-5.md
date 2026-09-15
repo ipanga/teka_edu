@@ -68,7 +68,7 @@ _Parler de ce qu’on a fait à quelqu’un qui ne l’a pas vu._
   - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
 
-#### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
+#### 1. Le rituel : la date et la révision — 2 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis la date. Puis raconte-moi l’histoire que tu préfères depuis le début du mois. »
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes lundi 28 septembre 2026. » Puis laissez choisir une histoire du mois et faites-la raconter en quelques phrases.
@@ -76,7 +76,7 @@ _Parler de ce qu’on a fait à quelqu’un qui ne l’a pas vu._
 - **Aide en anglais (optionnelle) :** « Say the date, then tell me your favourite story of the month. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C04-O11` Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
 
-#### 2. Explique ton dessin — 8 min, sans écran (conversation)
+#### 2. Explique ton dessin — 8 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Montre ton dessin et explique-le : qui est-ce ? que font-ils ? où sont-ils ? »
 - **Guidance adulte :** 1. Faites comme si vous ne voyiez pas le dessin. 2. Posez les trois questions. 3. Demandez un détail de plus : « Et là, qu’est-ce que c’est ? » 4. Redites son explication en une phrase complète pour lui montrer le modèle.
@@ -86,7 +86,7 @@ _Parler de ce qu’on a fait à quelqu’un qui ne l’a pas vu._
 - **Aide en anglais (optionnelle) :** « Show me your drawing and explain it. »
 - **Objectifs travaillés :** `LANG-S01-C04-O11` Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris. ; `LANG-S01-C01-O03` Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
 
-#### 3. Le temps de lecture — 3 min, sans écran (read-aloud)
+#### 3. Le temps de lecture — 3 min, sans interaction écran (read-aloud)
 
 - **Consigne à l’enfant :** « Écoute l’histoire jusqu’au bout. Aujourd’hui, il n’y a pas de question : on écoute pour le plaisir. »
 - **Guidance adulte :** Lisez l’histoire à voix haute, doucement. Ne posez aucune question après : ce moment quotidien sert au plaisir d’écouter. Si l’enfant redemande la même histoire un autre jour, c’est bon signe.
@@ -139,7 +139,7 @@ _Retrouver ce qui a été enlevé d’une collection._
   - `MATH-S01-C01-O22` — Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà.
   - `MATH-S01-C01-O21` — Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
-#### 1. J’en ai enlevé — 5 min, sans écran (manipulation)
+#### 1. J’en ai enlevé — 5 min, sans interaction écran (manipulation)
 
 - **Consigne à l’enfant :** « Compte les objets. Ferme les yeux. Maintenant, combien en ai-je enlevé ? »
 - **Guidance adulte :** 1. Posez huit objets et comptez-les ensemble. 2. Faites fermer les yeux, retirez-en deux. 3. Demandez combien il en manque. 4. Vérifiez en remettant les objets un par un.
@@ -150,7 +150,7 @@ _Retrouver ce qui a été enlevé d’une collection._
 - **Aide en anglais (optionnelle) :** « Count the objects. Close your eyes. How many did I take away? »
 - **Objectifs travaillés :** `MATH-S01-C01-O22` Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà. ; `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
-#### 2. Je refais le tas — 4 min, sans écran (counting)
+#### 2. Je refais le tas — 4 min, sans interaction écran (counting)
 
 - **Consigne à l’enfant :** « Remets exactement le nombre d’objets qu’il y avait. »
 - **Guidance adulte :** 1. Demandez de reconstituer la collection de départ. 2. Faites compter pour vérifier. 3. Dites la phrase : « Six et deux font huit. »
@@ -188,7 +188,7 @@ _Danser en isolant une partie du corps._
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S03-C01-O09` — Danser, seul ou à plusieurs, en créant et en reproduisant un ou plusieurs gestes et déplacements.
 
-#### 1. La danse des mains — 6 min, sans écran (movement)
+#### 1. La danse des mains — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Fais danser seulement tes mains : en haut, sur les côtés, devant toi. »
 - **Guidance adulte :** 1. Montrez trois gestes de mains. 2. Faites-les ensemble en rythme. 3. Ajoutez les épaules, puis la tête. 4. Terminez par un geste inventé par l’enfant, que vous copiez.
@@ -225,7 +225,7 @@ _Dire la date du jour et situer la journée dans la semaine._
   - `TIME-SPACE-S01-C01-O10` — Situer un évènement dans la semaine.
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
-#### 1. Je dis la date tout seul — 4 min, sans écran (conversation)
+#### 1. Je dis la date tout seul — 4 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis la date d’aujourd’hui, en entier, tout seul. »
 - **Guidance adulte :** 1. Laissez dire seul, sans souffler. 2. Complétez seulement ce qui manque. 3. Demandez hier et demain. 4. Demandez quel jour de la semaine il préfère et pourquoi.
@@ -234,7 +234,7 @@ _Dire la date du jour et situer la journée dans la semaine._
 - **Aide en anglais (optionnelle) :** « Say today’s date, all of it, on your own. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C01-O10` Situer un évènement dans la semaine. ; `TIME-SPACE-S01-C01-O12` Énoncer la date.
 
-#### 2. Ma semaine en ordre — 3 min, sans écran (manipulation)
+#### 2. Ma semaine en ordre — 3 min, sans interaction écran (manipulation)
 
 - **Consigne à l’enfant :** « Remets les jours de la semaine dans l’ordre, sans modèle. »
 - **Guidance adulte :** 1. Mélangez les sept papiers. 2. Laissez ranger sans la bande sous les yeux. 3. Vérifiez ensemble avec la bande. 4. Félicitez ce qui est juste avant de corriger le reste.
@@ -291,7 +291,7 @@ _Reconnaitre un mot à partir de ses syllabes et de sa rime._
   - `LANG-S02-C01-O13` — Augmenter sa mémoire auditive et sa capacité de concentration.
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
 
-#### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
+#### 1. Le rituel : la date et la révision — 2 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis la date. Puis compte pour moi jusqu’à dix. »
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes mardi 29 septembre 2026. » Puis faites compter jusqu’à dix, tranquillement, sans se presser.
@@ -299,7 +299,7 @@ _Reconnaitre un mot à partir de ses syllabes et de sa rime._
 - **Aide en anglais (optionnelle) :** « Say the date, then count to ten for me. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S02-C01-O15` Repérer et produire des rimes et des assonances.
 
-#### 2. Le mot coupé en morceaux — 8 min, sans écran (phonology)
+#### 2. Le mot coupé en morceaux — 8 min, sans interaction écran (phonology)
 
 - **Consigne à l’enfant :** « J’ai coupé un mot en morceaux. Écoute et devine quel mot c’est. »
 - **Guidance adulte :** 1. Dites le mot syllabe par syllabe, avec un temps entre : « ba… nane ». 2. Laissez deviner. 3. Commencez par deux syllabes, puis trois. 4. Inversez : c’est l’enfant qui coupe un mot et vous devinez.
@@ -308,7 +308,7 @@ _Reconnaitre un mot à partir de ses syllabes et de sa rime._
 - **Aide en anglais (optionnelle) :** « I cut a word into pieces. Listen and guess the word. »
 - **Objectifs travaillés :** `LANG-S02-C01-O15` Repérer et produire des rimes et des assonances. ; `LANG-S02-C01-O03` Scander les syllabes d’un mot. ; `LANG-S02-C01-O13` Augmenter sa mémoire auditive et sa capacité de concentration.
 
-#### 3. Le temps de lecture — 3 min, sans écran (read-aloud)
+#### 3. Le temps de lecture — 3 min, sans interaction écran (read-aloud)
 
 - **Consigne à l’enfant :** « Écoute l’histoire jusqu’au bout. Aujourd’hui, il n’y a pas de question : on écoute pour le plaisir. »
 - **Guidance adulte :** Lisez l’histoire à voix haute, doucement. Ne posez aucune question après : ce moment quotidien sert au plaisir d’écouter. Si l’enfant redemande la même histoire un autre jour, c’est bon signe.
@@ -359,7 +359,7 @@ _Ranger des collections de la plus petite à la plus grande._
   - `MATH-S01-C01-O05` — Comparer des quantités.
   - `MATH-S01-C02-O06` — Construire la bande numérique jusqu’à dix.
 
-#### 1. Je range les tas — 5 min, sans écran (sorting)
+#### 1. Je range les tas — 5 min, sans interaction écran (sorting)
 
 - **Consigne à l’enfant :** « Range les trois tas, du plus petit au plus grand. »
 - **Guidance adulte :** 1. Faites trois tas (2, 5, 8). 2. Faites compter chacun. 3. Demandez de les ranger. 4. Faites dire : « Deux, c’est moins que cinq ; cinq, c’est moins que huit. »
@@ -370,7 +370,7 @@ _Ranger des collections de la plus petite à la plus grande._
 - **Aide en anglais (optionnelle) :** « Put the three piles in order, from smallest to biggest. »
 - **Objectifs travaillés :** `MATH-S01-C01-O05` Comparer des quantités. ; `MATH-S01-C02-O06` Construire la bande numérique jusqu’à dix.
 
-#### 2. Où est-il sur la bande ? — 4 min, sans écran (counting)
+#### 2. Où est-il sur la bande ? — 4 min, sans interaction écran (counting)
 
 - **Consigne à l’enfant :** « Montre sur la bande le nombre de chaque tas. »
 - **Guidance adulte :** 1. Reprenez la bande des nombres. 2. Pour chaque tas, faites montrer le nombre. 3. Faites constater que l’ordre des tas est l’ordre de la bande.
@@ -410,7 +410,7 @@ _Reproduire exactement le geste de quelqu’un d’autre._
   - `PHYS-S04-C01-O09` — Éprouver le plaisir de coopérer et de s’opposer dans le respect des autres et des règles communes.
   - `PHYS-S03-C01-O09` — Danser, seul ou à plusieurs, en créant et en reproduisant un ou plusieurs gestes et déplacements.
 
-#### 1. Fais comme moi — 6 min, sans écran (movement)
+#### 1. Fais comme moi — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Regarde-moi et fais exactement le même geste, en même temps que moi. »
 - **Guidance adulte :** 1. Faites un geste très lent. 2. Attendez qu’il suive. 3. Inversez : c’est lui le modèle. 4. Terminez en essayant de bouger ensemble sans meneur.
@@ -447,7 +447,7 @@ _Reprendre le corps, ses articulations et son mouvement._
   - `WORLD-S01-C02-O09` — Se représenter avec un corps articulé en mouvement.
   - `WORLD-S01-C02-O08` — Identifier et nommer quelques articulations et la segmentation des membres.
 
-#### 1. Moi en train de bouger — 4 min, sans écran (drawing)
+#### 1. Moi en train de bouger — 4 min, sans interaction écran (drawing)
 
 - **Consigne à l’enfant :** « Dessine-toi en train de faire ton mouvement préféré du mois. »
 - **Guidance adulte :** 1. Rappelez les mouvements du mois. 2. Laissez choisir et dessiner. 3. Faites nommer les articulations qui plient sur le dessin. 4. Comparez avec le dessin du début du mois, sans juger.
@@ -458,7 +458,7 @@ _Reprendre le corps, ses articulations et son mouvement._
 - **Aide en anglais (optionnelle) :** « Draw yourself doing your favourite movement of the month. »
 - **Objectifs travaillés :** `WORLD-S01-C02-O09` Se représenter avec un corps articulé en mouvement. ; `WORLD-S01-C02-O08` Identifier et nommer quelques articulations et la segmentation des membres.
 
-#### 2. Ce qui plie quand je bouge — 3 min, sans écran (observation)
+#### 2. Ce qui plie quand je bouge — 3 min, sans interaction écran (observation)
 
 - **Consigne à l’enfant :** « Montre-moi ce qui plie quand tu fais ce mouvement. »
 - **Guidance adulte :** 1. Faites refaire le mouvement lentement. 2. Demandez ce qui plie. 3. Nommez les articulations ensemble. 4. Terminez par : « Ton corps sait faire tout ça. »
@@ -513,7 +513,7 @@ _Reprendre, en parlant, ce que le mois a apporté._
   - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
 
-#### 1. Le rituel : la date et la révision — 3 min, sans écran (conversation)
+#### 1. Le rituel : la date et la révision — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis la date. Puis dis-moi tout ce que tu sais faire en français maintenant. »
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes mercredi 30 septembre 2026. » Puis faites le bilan du mois, sans aucune note ni jugement : se présenter, compter, nommer, raconter. Dites-lui ce qu’il sait faire maintenant et qu’il ne savait pas au début du mois.
@@ -521,7 +521,7 @@ _Reprendre, en parlant, ce que le mois a apporté._
 - **Aide en anglais (optionnelle) :** « Say the date, then tell me everything you can do in French now. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C04-O11` Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
 
-#### 2. Je parle de mon mois — 7 min, sans écran (conversation)
+#### 2. Je parle de mon mois — 7 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Présente-toi, puis raconte une histoire que tu as aimée ce mois-ci. »
 - **Guidance adulte :** 1. Laissez se présenter seul, sans aide. 2. Demandez l’histoire préférée du mois. 3. Demandez pourquoi. 4. Finissez par un compliment précis : « Au début du mois, tu disais ton nom. Maintenant, tu racontes une histoire entière. »
@@ -530,7 +530,7 @@ _Reprendre, en parlant, ce que le mois a apporté._
 - **Aide en anglais (optionnelle) :** « Introduce yourself, then tell me a story you liked this month. »
 - **Objectifs travaillés :** `LANG-S01-C04-O11` Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris. ; `LANG-S01-C01-O03` Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
 
-#### 3. Le temps de lecture — 3 min, sans écran (read-aloud)
+#### 3. Le temps de lecture — 3 min, sans interaction écran (read-aloud)
 
 - **Consigne à l’enfant :** « Écoute l’histoire jusqu’au bout. Aujourd’hui, il n’y a pas de question : on écoute pour le plaisir. »
 - **Guidance adulte :** Lisez l’histoire à voix haute, doucement. Ne posez aucune question après : ce moment quotidien sert au plaisir d’écouter. Si l’enfant redemande la même histoire un autre jour, c’est bon signe.
@@ -581,7 +581,7 @@ _Reprendre en jeu les mathématiques du mois._
   - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
   - `MATH-S01-C01-O22` — Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà.
 
-#### 1. Le grand jeu du comptage — 5 min, sans écran (counting)
+#### 1. Le grand jeu du comptage — 5 min, sans interaction écran (counting)
 
 - **Consigne à l’enfant :** « Compte ce que je te montre, aussi vite ou aussi lentement que tu veux. »
 - **Guidance adulte :** 1. Proposez trois collections différentes. 2. Laissez compter seul, sans aide. 3. Demandez le total à chaque fois. 4. Dites-lui ce qu’il sait faire : « Au début du mois tu comptais jusqu’à cinq. »
@@ -592,7 +592,7 @@ _Reprendre en jeu les mathématiques du mois._
 - **Aide en anglais (optionnelle) :** « Count what I show you, fast or slow, as you like. »
 - **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). ; `MATH-S01-C01-O22` Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà.
 
-#### 2. Deux tas pour faire dix — 4 min, sans écran (manipulation)
+#### 2. Deux tas pour faire dix — 4 min, sans interaction écran (manipulation)
 
 - **Consigne à l’enfant :** « Fais deux tas qui font dix ensemble. »
 - **Guidance adulte :** 1. Donnez dix objets. 2. Demandez deux tas. 3. Faites dire la phrase : « Six et quatre font dix. » 4. Cherchez une autre façon.
@@ -631,7 +631,7 @@ _Reprendre les actions apprises en septembre._
   - `PHYS-S02-C01-O05` — Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions.
   - `PHYS-S04-C01-O09` — Éprouver le plaisir de coopérer et de s’opposer dans le respect des autres et des règles communes.
 
-#### 1. Tu choisis — 6 min, sans écran (movement)
+#### 1. Tu choisis — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Choisis trois mouvements que tu as aimés ce mois-ci, et montre-les-moi. »
 - **Guidance adulte :** 1. Rappelez ce qui a été fait : courir, lancer, sauter, danser, l’équilibre. 2. Laissez choisir trois mouvements. 3. Faites-les avec lui. 4. Dites ce qu’il sait faire maintenant et qu’il ne savait pas au début.
@@ -670,7 +670,7 @@ _Reprendre le répertoire de comptines et le dessin du mois._
   - `ART-S02-C01-O09` — Dire ou chanter au moins dix comptines ou chants, en réinvestissant ceux appris les années antérieures.
   - `ART-S01-C01-O06` — Dessiner pour représenter un personnage ou un évènement fictif.
 
-#### 1. Ma comptine préférée — 4 min, sans écran (song-rhyme)
+#### 1. Ma comptine préférée — 4 min, sans interaction écran (song-rhyme)
 
 - **Consigne à l’enfant :** « Choisis ta comptine préférée du mois et dis-la-moi. »
 - **Guidance adulte :** 1. Rappelez les comptines apprises. 2. Laissez choisir et dire seul. 3. Frappez le rythme avec lui. 4. Dites-lui combien il en connait maintenant : c’est le début du répertoire de l’année.
@@ -692,7 +692,7 @@ _Reprendre le répertoire de comptines et le dessin du mois._
 
   _Comptine originale écrite pour Teka Edu. Aucune comptine existante n’est reprise._
 
-#### 2. Je dessine ma comptine — 3 min, sans écran (drawing)
+#### 2. Je dessine ma comptine — 3 min, sans interaction écran (drawing)
 
 - **Consigne à l’enfant :** « Dessine ce que raconte ta comptine. »
 - **Guidance adulte :** 1. Demandez ce que la comptine raconte. 2. Laissez dessiner librement. 3. Faites expliquer le dessin. 4. Gardez-le : c’est la dernière page du mois.

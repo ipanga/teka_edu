@@ -43,8 +43,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "35d915f43a09805e",
+        "notes": "Semaine 1, deux passes (9 corrections pédagogiques et de sécurité, puis 2 corrections de progression). Approbation reconfirmée après régénération du moteur de progression : différence prouvée métadonnées seules, aucun contenu vu par l’enfant n’a changé. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-02",
@@ -86,8 +94,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "8397b7d2a6e53dfa",
+        "notes": "Semaine 1, deux passes (9 corrections pédagogiques et de sécurité, puis 2 corrections de progression). Approbation reconfirmée après régénération du moteur de progression : différence prouvée métadonnées seules, aucun contenu vu par l’enfant n’a changé. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-03",
@@ -129,8 +145,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "345bfde56255777d",
+        "notes": "Semaine 1, deux passes (9 corrections pédagogiques et de sécurité, puis 2 corrections de progression). Approbation reconfirmée après régénération du moteur de progression : différence prouvée métadonnées seules, aucun contenu vu par l’enfant n’a changé. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-04",
@@ -172,8 +196,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "af454539c4a8ecfd",
+        "notes": "Semaine 1, deux passes (9 corrections pédagogiques et de sécurité, puis 2 corrections de progression). Approbation reconfirmée après régénération du moteur de progression : différence prouvée métadonnées seules, aucun contenu vu par l’enfant n’a changé. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-05",
@@ -215,8 +247,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "afee3231aae0ab39",
+        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-06",
@@ -258,8 +298,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "cf0f0563768def63",
+        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-07",
@@ -301,8 +349,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "c20f2e203951711e",
+        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-08",
@@ -344,8 +400,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "370f4742f3afe3dc",
+        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-09",
@@ -367,7 +431,7 @@
           "type": "movement",
           "title": "Je marche sur la ligne",
           "childInstruction": "Essaie de marcher sur la ligne.",
-          "adultGuidance": "Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, il repart du début : c’est le jeu, pas une faute. On cherche à explorer l’équilibre, pas à réussir un parcours.",
+          "adultGuidance": "Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, laissez-le continuer, ou recommencer s’il en a envie — c’est lui qui décide. On explore l’équilibre ; il n’y a pas de parcours à réussir ni de retour au départ à imposer.",
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
@@ -387,8 +451,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "8efab267063dbda7",
+        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-10",
@@ -496,7 +568,7 @@
           "type": "movement",
           "title": "Je marche sur la ligne",
           "childInstruction": "Essaie de marcher sur la ligne.",
-          "adultGuidance": "Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, il repart du début : c’est le jeu, pas une faute. On cherche à explorer l’équilibre, pas à réussir un parcours.",
+          "adultGuidance": "Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, laissez-le continuer, ou recommencer s’il en a envie — c’est lui qui décide. On explore l’équilibre ; il n’y a pas de parcours à réussir ni de retour au départ à imposer.",
           "minutes": 6,
           "mode": "off-screen",
           "role": "consolidation",
@@ -668,7 +740,7 @@
           "type": "movement",
           "title": "Je marche sur la ligne",
           "childInstruction": "Essaie de marcher sur la ligne.",
-          "adultGuidance": "Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, il repart du début : c’est le jeu, pas une faute. On cherche à explorer l’équilibre, pas à réussir un parcours.",
+          "adultGuidance": "Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, laissez-le continuer, ou recommencer s’il en a envie — c’est lui qui décide. On explore l’équilibre ; il n’y a pas de parcours à réussir ni de retour au départ à imposer.",
           "minutes": 6,
           "mode": "off-screen",
           "role": "consolidation",
@@ -840,7 +912,7 @@
           "type": "movement",
           "title": "Je marche sur la ligne",
           "childInstruction": "Essaie de marcher sur la ligne.",
-          "adultGuidance": "Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, il repart du début : c’est le jeu, pas une faute. On cherche à explorer l’équilibre, pas à réussir un parcours.",
+          "adultGuidance": "Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, laissez-le continuer, ou recommencer s’il en a envie — c’est lui qui décide. On explore l’équilibre ; il n’y a pas de parcours à réussir ni de retour au départ à imposer.",
           "minutes": 6,
           "mode": "off-screen",
           "role": "consolidation",

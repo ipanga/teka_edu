@@ -84,7 +84,9 @@ function officialText(statement: string | undefined, indent = ""): string {
 }
 
 const MODE_LABEL: Record<string, string> = {
-  "off-screen": "sans écran",
+  // Precise rather than flattering: the child does nothing *on* the screen, which is not the
+  // same as never seeing it. The day header reports looking time separately.
+  "off-screen": "sans interaction écran",
   "on-screen": "à l’écran",
   mixed: "mixte (écran puis action)",
 };

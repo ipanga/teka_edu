@@ -57,8 +57,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "e17c8fdcecd6b1a2",
+        "notes": "Semaine 1, deux passes (9 corrections pédagogiques et de sécurité, puis 2 corrections de progression). Approbation reconfirmée après régénération du moteur de progression : différence prouvée métadonnées seules, aucun contenu vu par l’enfant n’a changé. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-math-02",
@@ -114,8 +122,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "21473177b7006abf",
+        "notes": "Semaine 1, deux passes (9 corrections pédagogiques et de sécurité, puis 2 corrections de progression). Approbation reconfirmée après régénération du moteur de progression : différence prouvée métadonnées seules, aucun contenu vu par l’enfant n’a changé. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-math-03",
@@ -171,8 +187,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "6f890ab386593453",
+        "notes": "Semaine 1, deux passes (9 corrections pédagogiques et de sécurité, puis 2 corrections de progression). Approbation reconfirmée après régénération du moteur de progression : différence prouvée métadonnées seules, aucun contenu vu par l’enfant n’a changé. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-math-04",
@@ -228,8 +252,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "092f2b0cb44c410a",
+        "notes": "Semaine 1, deux passes (9 corrections pédagogiques et de sécurité, puis 2 corrections de progression). Approbation reconfirmée après régénération du moteur de progression : différence prouvée métadonnées seules, aucun contenu vu par l’enfant n’a changé. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-math-05",
@@ -272,8 +304,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "9896cc3bc2a21223",
+        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-math-06",
@@ -315,8 +355,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "b9ce35996afa59c9",
+        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-math-07",
@@ -359,8 +407,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "3cc139f4a65161ec",
+        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-math-08",
@@ -402,8 +458,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "7811a9bea9f9b50a",
+        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-math-09",
@@ -446,8 +510,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "1632e4ab53b69693",
+        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-math-10",

@@ -69,14 +69,21 @@ function Feedback({ state, hint }: { state: "idle" | "retry" | "done"; hint: str
  * Says, plainly, that this activity happens away from the screen. When there is nothing to put
  * inside it, it is a single line rather than an empty dashed box: an empty frame looks broken,
  * and a parent should not wonder whether something failed to load.
+ *
+ * When there *is* something inside — a picture to look at while the adult reads — the label says
+ * so instead of telling the parent to put down a device it is about to ask them to hold up. The
+ * activity is still off-screen in the sense that matters: the child does nothing on it.
  */
 function OffScreen({ children }: { children?: React.ReactNode }) {
+  const empty = children === null || children === undefined || children === false;
   const label = (
     <p className="text-sm font-semibold tracking-wide text-stone-500 uppercase">
-      Posez l’écran : cette activité se fait sans lui
+      {empty
+        ? "Posez l’écran : cette activité se fait sans lui"
+        : "Regardez l’image ensemble ; l’enfant n’a rien à faire sur l’écran"}
     </p>
   );
-  if (children === null || children === undefined || children === false) return label;
+  if (empty) return label;
   return (
     <div className="rounded-2xl border-2 border-dashed border-stone-300 px-5 py-4">
       <div className="mb-2">{label}</div>

@@ -74,8 +74,8 @@
       "code": "balle-papier",
       "name": "Balle en papier froissé",
       "category": "toy",
-      "alternatives": "Une balle en papier froissé, une chaussette roulée ou un petit sac de graines.",
-      "safetyNote": null
+      "alternatives": "Une balle en papier froissé ou une chaussette roulée. Une petite balle souple convient aussi si la maison en a déjà une.",
+      "safetyNote": "Rien de rempli de petits objets (sac de graines, de haricots) : cela s’ouvre. Une balle en papier ou une chaussette roulée ne blesse personne et ne coûte rien."
     },
     {
       "code": "espace-degage",
