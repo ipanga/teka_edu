@@ -248,8 +248,8 @@
       "id": "histoire-seau-lisa",
       "kind": "illustration",
       "file": "illustrations/histoire-seau-lisa.svg",
-      "alt": "Un seau posé sur une chaise",
-      "tags": ["histoire", "seau", "chaise"],
+      "alt": "Lisa, debout à côté d’une chaise, avec son seau posé dessus",
+      "tags": ["histoire", "lisa", "seau", "chaise", "personnage"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu."
     },

@@ -337,15 +337,27 @@ const ANIMALS: [id: string, alt: string, tags: string[], body: string][] = [
 const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] = [
   [
     "histoire-seau-lisa",
-    "Un seau posé sur une chaise",
-    ["histoire", "seau", "chaise"],
+    "Lisa, debout à côté d’une chaise, avec son seau posé dessus",
+    ["histoire", "lisa", "seau", "chaise", "personnage"],
+    // The story is Lisa looking for her bucket, and a later activity asks the child to point at
+    // her — so she has to be in the picture. She is the only figure, and she is clearly the
+    // largest thing in it: a three-year-old should find her without being told where to look.
     `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
-      <rect x="44" y="120" width="60" height="8" fill="${AMBER}"/>
-      <rect x="48" y="128" width="8" height="42" fill="${AMBER}"/>
-      <rect x="92" y="128" width="8" height="42" fill="${AMBER}"/>
-      <rect x="92" y="74" width="8" height="52" fill="${AMBER}"/>
-      <path d="M106 76 l44 0 l-8 44 l-28 0 z" fill="${BLUE}"/>
-      <path d="M108 76 q20 -22 40 0" fill="none"/>
+      <rect x="112" y="118" width="62" height="8" fill="${AMBER}"/>
+      <rect x="116" y="126" width="8" height="44" fill="${AMBER}"/>
+      <rect x="162" y="126" width="8" height="44" fill="${AMBER}"/>
+      <rect x="162" y="74" width="8" height="48" fill="${AMBER}"/>
+      <path d="M124 78 l34 0 l-6 38 l-22 0 z" fill="${BLUE}"/>
+      <path d="M126 78 q15 -18 30 0" fill="none"/>
+      <circle cx="62" cy="62" r="22" fill="${CLAY}"/>
+      <circle cx="55" cy="58" r="3.5" fill="${INK}" stroke="none"/>
+      <circle cx="69" cy="58" r="3.5" fill="${INK}" stroke="none"/>
+      <path d="M55 70 q7 6 14 0" fill="none"/>
+      <path d="M62 84 l0 46" fill="none"/>
+      <path d="M62 96 l-22 16" fill="none"/>
+      <path d="M62 96 l26 10" fill="none"/>
+      <path d="M62 130 l-16 34" fill="none"/>
+      <path d="M62 130 l16 34" fill="none"/>
     </g>`,
   ],
   [

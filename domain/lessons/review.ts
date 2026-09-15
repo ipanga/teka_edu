@@ -66,8 +66,9 @@ export type LessonReview = {
 };
 
 /**
- * A stable digest of everything a reviewer judges: the words a child hears, the guidance an
- * adult follows, the objectives claimed, the durations and the materials. Presentation-only
+ * A stable digest of everything a reviewer judges: the words a child hears, the pictures they
+ * are shown, the guidance an adult follows, the objectives claimed, the durations and the
+ * materials. Presentation-only
  * fields are deliberately included too — if the text changes at all, the approval lapses.
  *
  * FNV-1a over a canonical serialisation: short, dependency-free and stable across platforms.
@@ -97,6 +98,11 @@ export function lessonDigest(lesson: Lesson): string {
         activity.adultGuidance,
         activity.minutes,
         activity.mode,
+        activity.role,
+        // The picture a child is shown is something a reviewer judges — « Montre-moi Lisa »
+        // depends entirely on it. It was missing here, so an approved lesson could have had its
+        // illustration swapped without the approval lapsing. Found when exactly that happened.
+        [...activity.mediaIds].sort(),
         [...activity.objectiveCodes].sort(),
         [...activity.materialCodes].sort(),
         activity.vocabulary.map((entry) => [entry.fr, entry.en]),

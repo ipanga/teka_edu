@@ -10,13 +10,13 @@
 
 ## Task
 
-Apply the 1ère maternelle Week 4 review corrections (7 items) and return the package for a
-short second pass.
+Fix the Week 4 Lisa picture, clear the known defects inside the approved Weeks 1-3, and
+produce a compact re-confirmation package.
 
 ## Objective
 
-Week 4 corrected without touching a single approved digest, and the debt that leaves in
-Weeks 1-3 made visible rather than hidden.
+No known pedagogical defect ships in Beta 0.1, and no approval stands on a digest that
+ignored what the child sees.
 
 ## Status
 
@@ -24,11 +24,11 @@ Weeks 1-3 made visible rather than hidden.
 
 ## Branch
 
-`fix/maternelle-1-week-4-review`
+`fix/lisa-visual-and-approved-debt`
 
 ## Base Branch
 
-`develop` at `667432c`
+`develop` at `af36c75`
 
 ## Started
 
@@ -36,8 +36,8 @@ Weeks 1-3 made visible rather than hidden.
 
 ## Last Checkpoint
 
-2026-09-15 — 7 corrections applied to Weeks 4-5 only, media identification added to the
-package, full local suite green, 56 approvals intact.
+2026-09-15 — Lisa illustration redrawn, 31 debt occurrences corrected, 56 approvals lapsed
+cleanly, re-confirmation package generated, full local suite green.
 
 ## Scope
 
@@ -85,7 +85,7 @@ To be filled in when the next task begins.
 
 ## Remaining
 
-- [ ] Return Week 4 for its short second pass
+- [ ] Return both reviewer documents for ChatGPT
 
 ## Validation State
 
@@ -94,7 +94,7 @@ To be filled in when the next task begins.
 | format             | PASS    | working tree                      |
 | lint               | PASS    | working tree                      |
 | typecheck          | PASS    | working tree                      |
-| unit tests         | PASS    | working tree — 238 tests          |
+| unit tests         | PASS    | working tree — 242 tests          |
 | content validation | PASS    | working tree — 30 files           |
 | database tests     | PASS    | fresh reset — 152 assertions      |
 | build              | PASS    | working tree                      |
