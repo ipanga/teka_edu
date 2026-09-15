@@ -26,22 +26,30 @@ Roles, kept distinct on purpose:
 
 ## Register of reviews
 
-| Batch                                | Date       | Kind                                             | Outcome                       | Corrections                    | Status                                                                                                  |
-| ------------------------------------ | ---------- | ------------------------------------------------ | ----------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------- |
-| 3ème maternelle, Week 1 (days 1–5)   | 2026-09-14 | AI-assisted (ChatGPT)                            | `accepted-with-modifications` | 13 items, all applied          | `review` — the corrections materially changed the pedagogy, so the regenerated package awaits re-review |
-| 3ème maternelle, Weeks 2–5           | —          | —                                                | not yet reviewed              | —                              | `review`                                                                                                |
-| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15 | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                | 11 items across the passes     | **`approved`** — 16 lessons                                                                             |
-| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15 | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                | 8 items                        | **`approved`** — 20 lessons                                                                             |
-| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15 | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                | 8 items                        | **`approved`** — 20 lessons                                                                             |
-| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15 | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons                                                                             |
-| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15 | AI-assisted (ChatGPT)                            | `accepted-with-modifications` | 5 items, all applied           | `review` — **ready for a short second pass**                                                            |
+| Batch                                | Date       | Kind                                             | Outcome                                                      | Corrections                    | Status                                                                                                  |
+| ------------------------------------ | ---------- | ------------------------------------------------ | ------------------------------------------------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| 3ème maternelle, Week 1 (days 1–5)   | 2026-09-14 | AI-assisted (ChatGPT)                            | `accepted-with-modifications`                                | 13 items, all applied          | `review` — the corrections materially changed the pedagogy, so the regenerated package awaits re-review |
+| 3ème maternelle, Weeks 2–5           | —          | —                                                | not yet reviewed                                             | —                              | `review`                                                                                                |
+| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15 | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 11 items across the passes     | **`approved`** — 16 lessons                                                                             |
+| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15 | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 8 items                        | **`approved`** — 20 lessons                                                                             |
+| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15 | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 8 items                        | **`approved`** — 20 lessons                                                                             |
+| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15 | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                               | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons                                                                             |
+| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15 | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`** | 5 items                        | **`approved`** — 12 lessons                                                                             |
 
-**76 lessons are `approved`** — 1ère maternelle Weeks 1 to 4, all `ai-assisted`, all
-`accepted`. The other 100 September lessons remain at `review`: 12 in 1ère (Week 5) and all 88
-in 3ème. **No teacher has read any of it.**
+**1ère maternelle September is complete: 88 of 88 lessons `approved`**, all `ai-assisted`, all
+`accepted`. The remaining 88 September lessons are 3ème maternelle's, all still at `review`.
+**No teacher has read any of it.**
 
-Progress against the Beta 0.1 gate: **4 of 10 weekly packages accepted**. Week 5 has had its
-first pass and awaits a second; all five 3ème packages remain.
+Progress against the Beta 0.1 gate: **5 of 10 weekly packages accepted** — all five of 1ère
+maternelle. The five 3ème packages remain.
+
+## Where the review history lives
+
+Each weekly review is now recorded in `content/reviews/history.json` and **rendered into the
+package itself**, so a reviewer opening a week for the second time is told what the first pass
+asked for and what has changed since — including changes that arrived as a consequence of some
+other week's review, which would otherwise reach them unannounced. The register below stays as
+the human summary.
 
 **Who approved these.** The decision was ChatGPT's, on the regenerated packages and on a compact
 reconfirmation document; Claude Code authored the content and applied the corrections and may not

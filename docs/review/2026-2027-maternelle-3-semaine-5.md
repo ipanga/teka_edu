@@ -39,6 +39,17 @@ personne qui enseigne à cet âge. Les deux ne sont pas présentées comme équi
 Les objectifs et les « réussites attendues » sont cités mot pour mot du programme officiel ;
 les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
+## Relectures précédentes
+
+Cette semaine a déjà été relue 1 fois. Ce qui suit est l’historique, pour
+que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
+
+### 2026-09-15 — Teka Edu (conséquence d’une autre relecture) · `accepted-with-modifications` (ai-assisted)
+
+Changement arrivé dans cette semaine sans relecture propre.
+
+**Suites données :** L’activité « Le mot coupé en morceaux » (jour 21) porte désormais aussi LANG-S02-C01-O13 — « augmenter sa mémoire auditive et sa capacité de concentration ». L’enfant y tenait déjà des syllabes en mémoire le temps d’une pause avant de reconstituer le mot ; c’est la revendication qui manquait, pas le travail.
+
 ## Jour 20 — 2026-09-28
 
 **Durée totale : 35 min** · 4 séances · jour 10 du rythme

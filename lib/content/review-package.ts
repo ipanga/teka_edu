@@ -423,6 +423,39 @@ export function buildReviewPackage(
     "",
   ];
 
+  /**
+   * What earlier passes over this same week decided, and what followed. A reviewer opening a
+   * package for the second time should not have to be told to go and read a changelog — and a
+   * change that arrived here as a consequence of some other week's review is exactly the kind of
+   * thing that otherwise reaches them unannounced.
+   */
+  const history = data.reviewHistory
+    .filter(
+      (entry) =>
+        entry.levelId === options.levelId &&
+        entry.schoolYearId === options.schoolYearId &&
+        entry.week === options.week,
+    )
+    .sort((a, b) => a.reviewedOn.localeCompare(b.reviewedOn));
+  const historyBlock =
+    history.length === 0
+      ? ["## Relectures précédentes", "", "Aucune : cette semaine n’a encore jamais été relue.", ""]
+      : [
+          "## Relectures précédentes",
+          "",
+          `Cette semaine a déjà été relue ${history.length} fois. Ce qui suit est l’historique, pour`,
+          "que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.",
+          "",
+          ...history.flatMap((entry) => [
+            `### ${entry.reviewedOn} — ${entry.reviewer} · \`${entry.outcome}\` (${entry.reviewKind})`,
+            "",
+            entry.summary,
+            "",
+            `**Suites données :** ${entry.corrections}`,
+            "",
+          ]),
+        ];
+
   const footer = [
     "## Avis d’ensemble",
     "",
@@ -443,7 +476,7 @@ export function buildReviewPackage(
   const body = plans.flatMap((plan) =>
     dayBlock(plan, data, curriculum, syllabus, band?.code ?? null, checklist),
   );
-  const document = [...header, ...body, ...footer].join("\n");
+  const document = [...header, ...historyBlock, ...body, ...footer].join("\n");
   const missing = incompleteBullets(document);
   if (missing.length > 0) {
     throw new RangeError(
