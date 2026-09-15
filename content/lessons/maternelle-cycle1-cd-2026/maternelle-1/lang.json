@@ -100,16 +100,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "327b6f221ba84c00",
-        "notes": "Semaine 1, deux passes. Passe 1 : 9 corrections pédagogiques et de sécurité. Passe 2 : deux corrections de métadonnées de progression. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-lang-02",
@@ -118,8 +110,8 @@
       "domainCode": "LANG",
       "title": "Encore des mots de la maison",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S01-C01-O01"],
-      "supportingObjectiveCodes": ["ART-S02-C01-O03"],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "LANG-S01-C01-O01", "ART-S02-C01-O03"],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -208,16 +200,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "dc776f884dbfbd86",
-        "notes": "Semaine 1, deux passes. Passe 1 : 9 corrections pédagogiques et de sécurité. Passe 2 : deux corrections de métadonnées de progression. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-lang-03",
@@ -226,8 +210,8 @@
       "domainCode": "LANG",
       "title": "L’histoire du seau",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S02-C03-O04"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": ["LANG-S02-C03-O04"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
       "stage": "discovery",
       "difficulty": 1,
       "themeId": null,
@@ -308,16 +292,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "842be79b9adfa3e3",
-        "notes": "Semaine 1, deux passes. Passe 1 : 9 corrections pédagogiques et de sécurité. Passe 2 : deux corrections de métadonnées de progression. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-lang-04",
@@ -326,8 +302,8 @@
       "domainCode": "LANG",
       "title": "Je dis ce que je fais",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S01-C04-O02"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": ["LANG-S01-C04-O02"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
       "stage": "discovery",
       "difficulty": 1,
       "themeId": null,
@@ -402,16 +378,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "5c189ce5342c3631",
-        "notes": "Semaine 1, deux passes. Passe 1 : 9 corrections pédagogiques et de sécurité. Passe 2 : deux corrections de métadonnées de progression. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-lang-05",
@@ -420,8 +388,8 @@
       "domainCode": "LANG",
       "title": "Ma main tient le crayon",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S03-C01-O01"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": ["LANG-S03-C01-O01"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
       "stage": "discovery",
       "difficulty": 1,
       "themeId": null,
@@ -506,8 +474,13 @@
       "domainCode": "LANG",
       "title": "Je connais quatre mots",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S01-C01-O01"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C04-O01",
+        "TIME-SPACE-S01-C01-O01",
+        "LANG-S01-C01-O01",
+        "ART-S02-C01-O03"
+      ],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -542,8 +515,8 @@
           "position": 2,
           "type": "vocabulary",
           "title": "Les quatre mots de la maison",
-          "childInstruction": "Écoute, puis dis le mot avec moi : la porte, le seau, la table, la chaise.",
-          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez lentement l’objet que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "childInstruction": "Montre-moi ce que je nomme. Puis dis avec moi un ou deux mots que tu veux.",
+          "adultGuidance": "Ces mots-là, il les a déjà entendus : on les reconnaît, on n’en apprend pas de nouveaux.\n1. Posez ou montrez les quatre choses. 2. Nommez-en une et demandez-lui de la montrer — le doigt suffit, et suffit vraiment. 3. Nommez ce qui ne vient pas, sans le faire répéter. 4. À la fin seulement, proposez-lui de redire **un ou deux** mots, ceux qu’il choisit. On ne demande jamais les quatre à voix haute.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
@@ -571,7 +544,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Listen, then say the word with me."
+              "childInstruction": "Show me the one I name. Then say one or two with me."
             }
           ],
           "payload": {
@@ -614,8 +587,8 @@
       "domainCode": "LANG",
       "title": "Je reconnais Lisa",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S02-C03-O03"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": ["LANG-S02-C03-O03"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
       "stage": "discovery",
       "difficulty": 1,
       "themeId": null,
@@ -700,8 +673,13 @@
       "domainCode": "LANG",
       "title": "Je raconte ce que je fais",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S01-C04-O02"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C04-O01",
+        "TIME-SPACE-S01-C01-O01",
+        "LANG-S01-C04-O02",
+        "ART-S02-C01-O03"
+      ],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -786,8 +764,13 @@
       "domainCode": "LANG",
       "title": "L’histoire de Tika",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S02-C03-O04"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C04-O01",
+        "TIME-SPACE-S01-C01-O01",
+        "LANG-S02-C03-O04",
+        "ART-S02-C01-O03"
+      ],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -820,10 +803,10 @@
         {
           "id": "m1-lang-09-a2",
           "position": 2,
-          "type": "read-aloud",
+          "type": "listening-story",
           "title": "Tika se lève",
-          "childInstruction": "Écoute l’histoire jusqu’au bout.",
-          "adultGuidance": "Lisez lentement, en montrant l’image. L’histoire est courte exprès : à trois ans, on écoute mieux deux minutes deux fois qu’une fois quatre minutes. S’il redemande la même histoire demain, c’est bon signe. Aujourd’hui, aucune question après : on écoute, c’est tout.",
+          "childInstruction": "Écoute l’histoire de Tika. Après, je te poserai une petite question.",
+          "adultGuidance": "Lisez lentement, en montrant l’image. L’histoire est courte exprès.\nÀ la fin, **une seule question** : « Tika ferme les yeux le matin, ou le soir ? » Un doigt, un geste ou un mot suffisent — jamais une phrase entière. Si rien ne vient, répondez vous-même et passez à la suite : « Le soir. Bonne nuit, Tika. »",
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
@@ -834,11 +817,12 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Listen to the story."
+              "childInstruction": "Listen to Tika's story. Then one little question."
             }
           ],
           "payload": {
-            "textId": "histoire-tika-se-leve"
+            "textId": "histoire-tika-se-leve",
+            "questions": ["Tika ferme les yeux le matin, ou le soir ?"]
           }
         },
         {
@@ -877,8 +861,8 @@
       "domainCode": "LANG",
       "title": "J’écoute les bruits",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S02-C01-O01"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": ["LANG-S02-C01-O01"],
+      "supportingObjectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
       "stage": "discovery",
       "difficulty": 1,
       "themeId": null,
@@ -963,8 +947,13 @@
       "domainCode": "LANG",
       "title": "Ma main, mon pied",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S01-C01-O01"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C04-O01",
+        "TIME-SPACE-S01-C01-O01",
+        "LANG-S01-C01-O01",
+        "ART-S02-C01-O03"
+      ],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -1063,8 +1052,13 @@
       "domainCode": "LANG",
       "title": "Je trace encore",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S03-C01-O01"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C04-O01",
+        "TIME-SPACE-S01-C01-O01",
+        "LANG-S03-C01-O01",
+        "ART-S02-C01-O03"
+      ],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -1149,8 +1143,13 @@
       "domainCode": "LANG",
       "title": "Ma tête, mon ventre",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S01-C01-O01"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C04-O01",
+        "TIME-SPACE-S01-C01-O01",
+        "LANG-S01-C01-O01",
+        "ART-S02-C01-O03"
+      ],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -1169,7 +1168,16 @@
           "mediaIds": [],
           "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
           "materialCodes": ["aucun"],
-          "vocabulary": [],
+          "vocabulary": [
+            {
+              "fr": "la tête",
+              "en": "the head"
+            },
+            {
+              "fr": "le ventre",
+              "en": "the tummy"
+            }
+          ],
           "scaffolds": [
             {
               "language": "en",
@@ -1186,7 +1194,7 @@
           "type": "vocabulary",
           "title": "Les mots de mon corps",
           "childInstruction": "Écoute, puis dis le mot avec moi : la tête, le ventre.",
-          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez lentement l’objet que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "adultGuidance": "1. Montrez la partie sur vous, puis sur lui. 2. Nommez lentement l’endroit que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
@@ -1226,7 +1234,16 @@
           "mediaIds": [],
           "objectiveCodes": ["ART-S02-C01-O03"],
           "materialCodes": ["aucun"],
-          "vocabulary": [],
+          "vocabulary": [
+            {
+              "fr": "la tête",
+              "en": "the head"
+            },
+            {
+              "fr": "le ventre",
+              "en": "the tummy"
+            }
+          ],
           "scaffolds": [
             {
               "language": "en",
@@ -1249,8 +1266,13 @@
       "domainCode": "LANG",
       "title": "Je dis ce que je fais",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S01-C04-O02"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C04-O01",
+        "TIME-SPACE-S01-C01-O01",
+        "LANG-S01-C04-O02",
+        "ART-S02-C01-O03"
+      ],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -1335,8 +1357,13 @@
       "domainCode": "LANG",
       "title": "Encore l’histoire du seau",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S02-C03-O04"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C04-O01",
+        "TIME-SPACE-S01-C01-O01",
+        "LANG-S02-C03-O04",
+        "ART-S02-C01-O03"
+      ],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -1427,8 +1454,13 @@
       "domainCode": "LANG",
       "title": "J’écoute bien",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S02-C01-O01"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C04-O01",
+        "TIME-SPACE-S01-C01-O01",
+        "LANG-S02-C01-O01",
+        "ART-S02-C01-O03"
+      ],
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
@@ -1513,8 +1545,13 @@
       "domainCode": "LANG",
       "title": "Je montre le personnage",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S02-C03-O03"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C04-O01",
+        "TIME-SPACE-S01-C01-O01",
+        "LANG-S02-C03-O03",
+        "ART-S02-C01-O03"
+      ],
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
@@ -1599,8 +1636,13 @@
       "domainCode": "LANG",
       "title": "Les mots de mon corps",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S01-C01-O01"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C04-O01",
+        "TIME-SPACE-S01-C01-O01",
+        "LANG-S01-C01-O01",
+        "ART-S02-C01-O03"
+      ],
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
@@ -1635,8 +1677,8 @@
           "position": 2,
           "type": "vocabulary",
           "title": "Les quatre mots de mon corps",
-          "childInstruction": "Écoute, puis dis le mot avec moi : la main, le pied, la tête, le ventre.",
-          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez lentement l’objet que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "childInstruction": "Montre-moi ce que je nomme. Puis dis avec moi un ou deux mots que tu veux.",
+          "adultGuidance": "Ces mots-là, il les a déjà entendus : on les reconnaît, on n’en apprend pas de nouveaux.\n1. Posez ou montrez les quatre choses. 2. Nommez-en une et demandez-lui de la montrer — le doigt suffit, et suffit vraiment. 3. Nommez ce qui ne vient pas, sans le faire répéter. 4. À la fin seulement, proposez-lui de redire **un ou deux** mots, ceux qu’il choisit. On ne demande jamais les quatre à voix haute.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
@@ -1664,7 +1706,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Listen, then say the word with me."
+              "childInstruction": "Show me the one I name. Then say one or two with me."
             }
           ],
           "payload": {
@@ -1707,8 +1749,13 @@
       "domainCode": "LANG",
       "title": "Je dis ce que je fais",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S01-C04-O02"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C04-O01",
+        "TIME-SPACE-S01-C01-O01",
+        "LANG-S01-C04-O02",
+        "ART-S02-C01-O03"
+      ],
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
@@ -1793,8 +1840,13 @@
       "domainCode": "LANG",
       "title": "Je trace",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S03-C01-O01"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C04-O01",
+        "TIME-SPACE-S01-C01-O01",
+        "LANG-S03-C01-O01",
+        "ART-S02-C01-O03"
+      ],
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
@@ -1879,8 +1931,13 @@
       "domainCode": "LANG",
       "title": "Encore Tika",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S02-C03-O04"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C04-O01",
+        "TIME-SPACE-S01-C01-O01",
+        "LANG-S02-C03-O04",
+        "ART-S02-C01-O03"
+      ],
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
@@ -1971,8 +2028,13 @@
       "domainCode": "LANG",
       "title": "Tout ce que je sais dire",
       "summary": "Parler avec l’adulte, entendre des mots et les redire.",
-      "objectiveCodes": ["LANG-S01-C04-O01", "LANG-S01-C01-O01"],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O01", "ART-S02-C01-O03"],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C04-O01",
+        "TIME-SPACE-S01-C01-O01",
+        "LANG-S01-C01-O01",
+        "ART-S02-C01-O03"
+      ],
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
@@ -2007,8 +2069,8 @@
           "position": 2,
           "type": "vocabulary",
           "title": "Tous les mots du mois",
-          "childInstruction": "Écoute, puis dis le mot avec moi : la porte, le seau, la main, la tête.",
-          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez lentement l’objet que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "childInstruction": "Montre-moi ce que je nomme. Puis dis avec moi un ou deux mots que tu veux.",
+          "adultGuidance": "Ces mots-là, il les a déjà entendus : on les reconnaît, on n’en apprend pas de nouveaux.\n1. Posez ou montrez les quatre choses. 2. Nommez-en une et demandez-lui de la montrer — le doigt suffit, et suffit vraiment. 3. Nommez ce qui ne vient pas, sans le faire répéter. 4. À la fin seulement, proposez-lui de redire **un ou deux** mots, ceux qu’il choisit. On ne demande jamais les quatre à voix haute.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
@@ -2036,7 +2098,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Listen, then say the word with me."
+              "childInstruction": "Show me the one I name. Then say one or two with me."
             }
           ],
           "payload": {

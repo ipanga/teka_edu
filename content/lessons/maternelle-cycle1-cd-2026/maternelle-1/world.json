@@ -52,16 +52,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "1768710ee336a80e",
-        "notes": "Semaine 1, deux passes. Passe 1 : 9 corrections pédagogiques et de sécurité. Passe 2 : deux corrections de métadonnées de progression. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-world-08",
@@ -70,8 +62,8 @@
       "domainCode": "WORLD",
       "title": "Ma tête, mon ventre",
       "summary": "Nommer son corps et se servir de ses sens.",
-      "objectiveCodes": ["WORLD-S01-C02-O01"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["WORLD-S01-C02-O01"],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -82,19 +74,28 @@
           "position": 1,
           "type": "observation",
           "title": "Ma tête, mon ventre",
-          "childInstruction": "Montre-moi ta main. Montre-moi ton pied.",
-          "adultGuidance": "Nommez une partie et montrez-la sur vous, puis demandez-lui de la montrer sur lui. Deux parties par séance suffisent. Terminez toujours par une qu’il connaît déjà : on finit sur une réussite.",
+          "childInstruction": "Montre-moi ta tête. Montre-moi ton ventre.",
+          "adultGuidance": "Nommez une partie et montrez-la sur vous, puis demandez-lui de la montrer sur lui. Deux parties par séance suffisent : la tête, puis le ventre. Terminez par une qu’il connaît déjà — la main ou le pied — on finit sur une réussite.",
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": ["corps-tete", "corps-ventre"],
           "objectiveCodes": ["WORLD-S01-C02-O01"],
           "materialCodes": ["aucun"],
-          "vocabulary": [],
+          "vocabulary": [
+            {
+              "fr": "la tête",
+              "en": "the head"
+            },
+            {
+              "fr": "le ventre",
+              "en": "the tummy"
+            }
+          ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Show me your head."
+              "childInstruction": "Show me your head. Show me your tummy."
             }
           ],
           "payload": {
@@ -156,8 +157,8 @@
       "domainCode": "WORLD",
       "title": "Je touche",
       "summary": "Nommer son corps et se servir de ses sens.",
-      "objectiveCodes": ["WORLD-S01-C02-O02"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["WORLD-S01-C02-O02"],
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
@@ -199,8 +200,8 @@
       "domainCode": "WORLD",
       "title": "Tout mon corps",
       "summary": "Nommer son corps et se servir de ses sens.",
-      "objectiveCodes": ["WORLD-S01-C02-O01"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["WORLD-S01-C02-O01"],
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
@@ -211,7 +212,7 @@
           "position": 1,
           "type": "observation",
           "title": "Tout mon corps",
-          "childInstruction": "Montre-moi ta main. Montre-moi ton pied.",
+          "childInstruction": "Montre-moi ta main. Montre-moi ton pied. Montre-moi ta tête. Montre-moi ton ventre.",
           "adultGuidance": "Nommez une partie et montrez-la sur vous, puis demandez-lui de la montrer sur lui. Deux parties par séance suffisent. Terminez toujours par une qu’il connaît déjà : on finit sur une réussite.",
           "minutes": 7,
           "mode": "off-screen",
@@ -223,7 +224,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Show me your hand, your foot."
+              "childInstruction": "Show me your hand, your foot, your head, your tummy."
             }
           ],
           "payload": {
@@ -242,8 +243,8 @@
       "domainCode": "WORLD",
       "title": "Je touche et je dis",
       "summary": "Nommer son corps et se servir de ses sens.",
-      "objectiveCodes": ["WORLD-S01-C02-O02"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["WORLD-S01-C02-O02"],
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,

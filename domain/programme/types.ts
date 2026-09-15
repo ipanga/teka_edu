@@ -91,7 +91,10 @@ export type DailyPlan = {
   status: DailyPlanStatus;
   sessions: readonly DailyPlanSession[];
   totalMinutes: number;
+  /** Minutes the child spends acting on the screen (`domain/lessons/types.ts`). */
   screenMinutes: number;
+  /** Minutes the child spends looking at a picture on the screen without acting on it. */
+  pictureMinutes: number;
   /**
    * Position of the session after which the parent may stop and finish later (ADR-039). The
    * session is one block of 30 to 45 minutes, but a five-year-old coming home from school may

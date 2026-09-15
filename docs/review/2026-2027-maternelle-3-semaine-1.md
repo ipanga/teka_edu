@@ -41,11 +41,17 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Jour 1 — 2026-09-01
 
-**Durée totale : 35 min** · **temps d’écran actif de l’enfant : 0 min** · 4 séances · jour 1 du rythme
+**Durée totale : 35 min** · 4 séances · jour 1 du rythme
 
-_L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus compte le temps
-pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de
-l’appareil._
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
+  touche, choisit, compte sur l’appareil.
+- **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
+  l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
+  l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
+
+_Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences différentes. Le
+temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
+l’autre — l’appareil est alors le sien._
 
 **Matériel à préparer :** Aucun matériel, Boîte, seau ou récipient, Crayon, Espace dégagé pour bouger (à l’intérieur ou dehors), Feuille de papier, Petits objets à compter (cailloux, capsules, haricots)
 
@@ -373,11 +379,17 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ## Jour 2 — 2026-09-02
 
-**Durée totale : 35 min** · **temps d’écran actif de l’enfant : 0 min** · 4 séances · jour 2 du rythme
+**Durée totale : 35 min** · 4 séances · jour 2 du rythme
 
-_L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus compte le temps
-pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de
-l’appareil._
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
+  touche, choisit, compte sur l’appareil.
+- **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
+  l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
+  l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
+
+_Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences différentes. Le
+temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
+l’autre — l’appareil est alors le sien._
 
 **Matériel à préparer :** Aucun matériel, Crayon, Espace dégagé pour bouger (à l’intérieur ou dehors), Objets de l’école (cahier, crayon, cartable), Objets de la maison (coussins, chaises, bâton, tissu), Feuille de papier, Petits objets à compter (cailloux, capsules, haricots)
 
@@ -388,11 +400,11 @@ _Premier corpus de mots : nommer et ranger les objets de l’école._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Posez devant l’enfant les objets que vous avez : un cahier, un crayon, un sac. Nommez chaque objet avec son article, faites répéter, puis employez le mot dans une phrase.
 - **Objectifs enseignés :**
-  - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période). _(source : programme-2024-langage)_
-  - `LANG-S01-C02-O01` — Diversifier les pronoms employés. _(source : programme-2024-langage)_
-  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
+  - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
+  - `LANG-S01-C02-O01` — Diversifier les pronoms employés.
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
 
 #### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
 
@@ -434,43 +446,6 @@ _Premier corpus de mots : nommer et ranger les objets de l’école._
   > Et la mangue, partagée en trois, a un gout encore meilleur.
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
-
-**Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (from-5) :**
-
-- Comprendre et utiliser :
-  • les mots des émotions, des sentiments et des états mentaux des personnages de fiction ;
-  • les mots qui entretiennent une proximité phonique (poule/roule/boule/moule) ;
-  • les mots qui vont permettre de s’emparer des apprentissages du CP.
-- Distinguer le sens propre du sens figuré (sans que ces notions ne soient enseignées) : l’élève comprend le sens de dévorer un gâteau et dévorer un livre.
-- Construire des dérivations (sans que ces notions ne soient enseignées) : arroser → arrosage ; gentil → gentiment → gentillesse.
-- S’appuyer sur des verbes et des noms qu’il connait déjà pour comprendre et essayer de construire un nouveau mot : jambe/enjamber.
-- Chercher des hyperonymes des réseaux étudiés (véhicule est un hyperonyme de voiture, bus, vélo, etc. ; animal est un hyperonyme de chat, chien, grenouille, etc.).
-- Inférer le sens d’un mot inconnu.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
-
-**Réussites attendues — texte officiel pour la compétence « Développer sa syntaxe » (from-5) :**
-
-- Utiliser les pronoms nous et vous : « Avec les CP, nous avons mangé un gâteau », « Vous, vous mangez un gâteau et pas nous. »
-- Utiliser :
-  • un système à trois temps : imparfait/plus-que-parfait/imparfait à valeur de futur dans le passé (aller) « Moi, j’étais sur un toboggan. J’avais fait de la balançoire et j’allais faire du vélo » ;
-  • le futur simple : « Quand on écrira aux correspondants » ;
-  • un système à deux temps : futur/futur antérieur : « Quand on ira chez les correspondants, on aura déjà été au spectacle et on pourra leur raconter l’histoire. »
-- Utiliser de nouveaux introducteurs de complexité : où/quand/pour que/si/comme, etc. :
-  • « Là, c’est la maison où le loup a mangé le petit chaperon rouge. »
-  • « Le chevreau s’est caché dans l’horloge pour que le loup ne le voie pas. »
-  • « Quand je vais à la boulangerie, la boulangère me donne un bonbon. »
-  • « Comme il fait chaud, elle va boire de l’eau. »
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
-
-**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
-
-- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
-- Raconter une histoire connue, dans son intégralité et sans support.
-- Transposer les émotions ressenties par les personnages à sa propre expérience.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -676,11 +651,17 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ## Jour 3 — 2026-09-03
 
-**Durée totale : 35 min** · **temps d’écran actif de l’enfant : 0 min** · 4 séances · jour 3 du rythme
+**Durée totale : 35 min** · 4 séances · jour 3 du rythme
 
-_L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus compte le temps
-pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de
-l’appareil._
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
+  touche, choisit, compte sur l’appareil.
+- **Temps où l’enfant regarde une image à l’écran : 4 min environ** —
+  l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
+  l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
+
+_Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences différentes. Le
+temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
+l’autre — l’appareil est alors le sien._
 
 **Matériel à préparer :** Aucun matériel, Crayon, Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque), Objets de la maison (coussins, chaises, bâton, tissu), Feuille de papier, Petits objets à compter (cailloux, capsules, haricots)
 
@@ -691,12 +672,12 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Lisez l’histoire d’une traite, sans vous interrompre. Posez les questions seulement à la fin. Il n’y a pas de mauvaise réponse : l’enfant peut redire l’histoire avec ses mots.
 - **Objectifs enseignés :**
-  - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période). _(source : programme-2024-langage)_
   - `LANG-S02-C03-O09` — Comprendre des histoires dont les actions sont organisées autour d’une structure répétitive (rencontres successives) et commencer à comprendre les informations implicites (émotions, états et sentiments des personnages). _(source : programme-2024-langage)_
-  - `LANG-S01-C04-O11` — Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris. _(source : programme-2024-langage)_
-  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
+  - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
+  - `LANG-S01-C04-O11` — Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
 
 #### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
 
@@ -761,34 +742,11 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-**Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (from-5) :**
-
-- Comprendre et utiliser :
-  • les mots des émotions, des sentiments et des états mentaux des personnages de fiction ;
-  • les mots qui entretiennent une proximité phonique (poule/roule/boule/moule) ;
-  • les mots qui vont permettre de s’emparer des apprentissages du CP.
-- Distinguer le sens propre du sens figuré (sans que ces notions ne soient enseignées) : l’élève comprend le sens de dévorer un gâteau et dévorer un livre.
-- Construire des dérivations (sans que ces notions ne soient enseignées) : arroser → arrosage ; gentil → gentiment → gentillesse.
-- S’appuyer sur des verbes et des noms qu’il connait déjà pour comprendre et essayer de construire un nouveau mot : jambe/enjamber.
-- Chercher des hyperonymes des réseaux étudiés (véhicule est un hyperonyme de voiture, bus, vélo, etc. ; animal est un hyperonyme de chat, chien, grenouille, etc.).
-- Inférer le sens d’un mot inconnu.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
-
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
 
 - Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
 - Raconter une histoire connue, dans son intégralité et sans support.
 - Transposer les émotions ressenties par les personnages à sa propre expérience.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
-
-**Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (from-5) :**
-
-- Dire : « Pour acheter les fruits du gouter, il faudrait compter les élèves de la classe. »
-- Dire : « Si on voulait de la peinture verte, il faudrait mélanger du jaune avec du bleu. »
-- Dire : « Peut-être que Corentin a mis la peinture avant de dessiner avec les feutres. »
-- Suffisamment se décentrer et identifier les informations qu’on doit communiquer pour qu’un interlocuteur qui n’a pas vécu la situation évoquée puisse la comprendre.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -923,7 +881,8 @@ _Nommer les jours et situer aujourd’hui, hier et demain._
 - **Conseil au parent :** Fabriquez une petite bande des sept jours avec l’enfant : elle servira tous les jours du mois.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C01-O10` — Situer un évènement dans la semaine. _(source : programme-2026)_
-  - `TIME-SPACE-S01-C01-O12` — Énoncer la date. _(source : programme-2026)_
+- **Objectifs repris (déjà vus) :**
+  - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Aujourd’hui, hier, demain — 4 min, sans écran (conversation)
 
@@ -977,11 +936,17 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ## Jour 4 — 2026-09-04
 
-**Durée totale : 35 min** · **temps d’écran actif de l’enfant : 0 min** · 4 séances · jour 4 du rythme
+**Durée totale : 35 min** · 4 séances · jour 4 du rythme
 
-_L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus compte le temps
-pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de
-l’appareil._
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
+  touche, choisit, compte sur l’appareil.
+- **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
+  l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
+  l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
+
+_Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences différentes. Le
+temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
+l’autre — l’appareil est alors le sien._
 
 **Matériel à préparer :** Aucun matériel, Balle en papier froissé, Boîte, seau ou récipient, Petits objets à compter (cailloux, capsules, haricots)
 
@@ -993,9 +958,9 @@ _Frapper les syllabes des prénoms de la maison : entendre que les mots sont fai
 - **Conseil au parent :** C’est un jeu d’oreille, pas de lecture. On tape dans les mains en même temps qu’on dit le mot. Ne montrez aucune lettre écrite : tout se joue par l’écoute.
 - **Objectifs enseignés :**
   - `LANG-S02-C01-O03` — Scander les syllabes d’un mot. _(source : programme-2024-langage)_
-  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
 
 #### 1. Le rituel : la date et la révision — 3 min, sans écran (conversation)
 
@@ -1045,14 +1010,6 @@ _Frapper les syllabes des prénoms de la maison : entendre que les mots sont fai
 - Trouver le son /f/ dans une liste de mots.
 - Trouver l’intrus à l’initiale entre sac/Sacha/cartable
 - Localiser un phonème dans un mot.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
-
-**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
-
-- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
-- Raconter une histoire connue, dans son intégralité et sans support.
-- Transposer les émotions ressenties par les personnages à sa propre expérience.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 

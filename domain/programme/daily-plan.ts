@@ -1,7 +1,12 @@
 import type { CalendarDate } from "../calendar/date";
 import type { SchoolDay } from "../calendar/types";
 import { resolveLesson } from "../lessons/template";
-import { type Lesson, lessonMinutes, lessonScreenMinutes } from "../lessons/types";
+import {
+  lessonMinutes,
+  lessonPictureMinutes,
+  lessonScreenMinutes,
+  type Lesson,
+} from "../lessons/types";
 import type {
   DailyPlan,
   DailyPlanSession,
@@ -43,6 +48,7 @@ export function generateDailyPlan(
     sessions: [],
     totalMinutes: 0,
     screenMinutes: 0,
+    pictureMinutes: 0,
     pauseAfterSession: null,
     objectiveCodes: [],
     materialCodes: [],
@@ -149,6 +155,10 @@ export function planForInstructionalDay(
     totalMinutes: sessions.reduce((total, session) => total + session.minutes, 0),
     screenMinutes: withLesson.reduce(
       (total, session) => total + (session.lesson ? lessonScreenMinutes(session.lesson) : 0),
+      0,
+    ),
+    pictureMinutes: withLesson.reduce(
+      (total, session) => total + (session.lesson ? lessonPictureMinutes(session.lesson) : 0),
       0,
     ),
     objectiveCodes: unique(withLesson.flatMap((session) => session.lesson?.objectiveCodes ?? [])),

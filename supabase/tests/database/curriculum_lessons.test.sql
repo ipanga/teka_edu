@@ -2,7 +2,7 @@
 -- Every change is rolled back. Run with `npm run db:test`.
 begin;
 set constraints all immediate;
-select plan(44);
+select plan(45);
 
 -- ---- Imported official data ------------------------------------------------------------------
 
@@ -87,15 +87,31 @@ select is(
   0,
   'every activity serves at least one learning objective'
 );
+-- A lesson that only revisits teaches nothing new, and says so: the `taught` role marks the
+-- first genuine occurrence only. What must never be empty is the union.
 select is(
   (
     select count(*)::int from public.lessons l
-    where not exists (
-      select 1 from public.lesson_objectives o where o.lesson_id = l.id and o.role = 'taught'
-    )
+    where not exists (select 1 from public.lesson_objectives o where o.lesson_id = l.id)
   ),
   0,
-  'every lesson teaches at least one objective'
+  'every lesson works at least one objective, taught or revisited'
+);
+select is(
+  (
+    select count(*)::int from public.lesson_objectives o
+     where o.role = 'taught'
+       and o.lesson_id like 'm1-%'
+       -- Both sides scoped to the same level: the two classes legitimately teach some of the
+       -- same official objectives, each introducing it once in its own year.
+       and exists (
+         select 1 from public.lesson_objectives e
+          where e.objective_code = o.objective_code and e.role = 'taught'
+            and e.lesson_id <> o.lesson_id and e.lesson_id like 'm1-%'
+       )
+  ),
+  0,
+  'no objective is introduced twice in 1ère maternelle'
 );
 select is(
   (
@@ -200,10 +216,12 @@ select throws_ok(
 
 -- 1ère maternelle Week 1 is the first content through the gate (ADR-047): 16 lessons, an
 -- AI-assisted review, two passes. Everything else is still waiting.
+-- No week is approved at the moment: Week 1's approval lapsed when the progression correction
+-- changed the objective metadata its digest covered (ADR-035).
 select is(
-  (select count(*)::int from public.lessons where status = 'approved'),
-  16,
-  'only the reviewed week is approved'
+  (select count(*)::int from public.lessons where status = 'approved' and review_kind is distinct from 'ai-assisted'),
+  0,
+  'any approval records the kind of review it actually had'
 );
 select is(
   (select count(*)::int from public.lessons where status not in ('review', 'approved')),

@@ -102,6 +102,9 @@ export function checkLessons(
      * after the activity that supposedly carried it had been corrected. A reviewer reads the
      * lesson header, so a claim there is a claim.
      */
+    if (lesson.objectiveCodes.length + lesson.supportingObjectiveCodes.length === 0) {
+      problems.push(`${at}: a lesson must teach or revisit at least one objective`);
+    }
     const worked = new Set(lesson.activities.flatMap((activity) => activity.objectiveCodes));
     for (const code of [...lesson.objectiveCodes, ...lesson.supportingObjectiveCodes]) {
       if (!worked.has(code)) {

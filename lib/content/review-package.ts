@@ -267,11 +267,17 @@ function dayBlock(
   const lines = [
     `## Jour ${plan.instructionalDay} — ${plan.date}`,
     "",
-    `**Durée totale : ${plan.totalMinutes} min** · **temps d’écran actif de l’enfant : ${plan.screenMinutes} min** · ${plan.sessions.length} séances · jour ${plan.rhythmDay} du rythme`,
+    `**Durée totale : ${plan.totalMinutes} min** · ${plan.sessions.length} séances · jour ${plan.rhythmDay} du rythme`,
     "",
-    "_L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus compte le temps",
-    "pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de",
-    "l’appareil._",
+    `- **Temps d’interaction de l’enfant avec l’écran : ${plan.screenMinutes} min** — l’enfant`,
+    "  touche, choisit, compte sur l’appareil.",
+    `- **Temps où l’enfant regarde une image à l’écran : ${plan.pictureMinutes} min environ** —`,
+    "  l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que",
+    "  l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.",
+    "",
+    "_Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences différentes. Le",
+    "temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans",
+    "l’autre — l’appareil est alors le sien._",
     "",
     `**Matériel à préparer :** ${plan.materialCodes
       .map((code) => data.materials.find((m) => m.code === code)?.name ?? code)

@@ -125,11 +125,20 @@ describe("September 2026 (3ème maternelle)", () => {
      * pedagogical review, which has not finished; this task was scoped not to author 3ème
      * content. Remove an entry from this list when the objective genuinely comes back.
      */
-    const knownSingleAppearance = new Set(["LANG-S02-C01-O13", "ART-S02-C02-O08"]);
+    /**
+     * `ART-S02-C02-O08` — creating a soundscape to a simple instruction — is introduced on day 13
+     * and is a `periodic` objective whose plan reinforces it until day 58. One appearance inside
+     * September is what that pacing asks for; the revisits belong to October and November. A
+     * second soundscape was **not** invented to make this number larger.
+     *
+     * `LANG-S02-C01-O13` was a real gap and is now genuinely revisited on day 21, where the
+     * child already had to hold syllables across a pause and rebuild the word.
+     */
+    const plannedBeyondSeptember = new Set(["ART-S02-C02-O08"]);
     for (const entry of entriesDueBy(plan, 14)) {
       const seen = appearances.get(entry.objectiveCode) ?? 0;
-      if (knownSingleAppearance.has(entry.objectiveCode)) {
-        expect(seen, `${entry.objectiveCode} is a tracked gap`).toBe(1);
+      if (plannedBeyondSeptember.has(entry.objectiveCode)) {
+        expect(seen, `${entry.objectiveCode} is paced beyond September`).toBe(1);
         continue;
       }
       expect(seen, entry.objectiveCode).toBeGreaterThan(1);
@@ -259,24 +268,21 @@ describe("September content quality", () => {
   });
 
   /**
-   * 1ère maternelle Week 1 is the first content to pass the gate (ADR-047): two AI-assisted
-   * passes, corrections applied after each. It is `approved` and says which kind of review that
-   * was — no teacher has read it, and nothing here may imply one has.
+   * No week is approved at the moment. Week 1 had been, and its approval lapsed when the
+   * progression correction changed the objective metadata the digest covers — which is exactly
+   * what ADR-035 built the digest for. Re-stamping it silently is the one thing that mechanism
+   * exists to prevent, so it went back to `review` and awaits a short re-confirmation.
+   *
+   * When a week is approved again, assert here that it is recorded as the review it actually
+   * had: `ai-assisted`, with a reviewer no one could mistake for a teacher.
    */
-  it("records the first approved week as an AI-assisted review, never a teacher's", () => {
-    const week1 = data.lessons.filter(
-      (lesson) => lesson.levelIds.includes("maternelle-1") && lesson.status === "approved",
-    );
-    expect(week1).toHaveLength(16);
-    for (const lesson of week1) {
+  it("records any approval as the kind of review it actually was", () => {
+    for (const lesson of data.lessons) {
+      if (lesson.status !== "approved") continue;
       expect(lesson.review, lesson.id).not.toBeNull();
       expect(lesson.review!.reviewKind, lesson.id).toBe("ai-assisted");
-      expect(lesson.review!.outcome, lesson.id).toBe("accepted-with-modifications");
       expect(lesson.review!.reviewer, lesson.id).not.toMatch(/institut|enseignant|professeur/i);
     }
-    // Every other lesson of either level is still waiting.
-    const waiting = data.lessons.filter((lesson) => lesson.status !== "approved");
-    expect(waiting.length).toBe(data.lessons.length - 16);
   });
 });
 
@@ -293,6 +299,55 @@ describe("1ère maternelle safety (before-4)", () => {
 
   it("has content to check", () => {
     expect(activities.length).toBeGreaterThan(100);
+  });
+
+  /**
+   * « Ma tête, mon ventre » asked the child to show their hand and their foot, and the English
+   * scaffold said "head". The activity had been copied from the previous body-part lesson and
+   * only its title updated. A title naming body parts is a promise about what the activity does.
+   */
+  /**
+   * Screen time was reported as a single « 0 min » on days that show a child four pictures,
+   * because only interactive activities counted. Two numbers now answer two questions, and the
+   * looking one must never be zero on a day that actually shows something.
+   */
+  it("never reports zero looking time on a day that shows the child a picture", () => {
+    for (const plan of plans) {
+      const shows = plan.sessions.some(
+        (session) =>
+          session.lesson?.activities.some(
+            (activity) =>
+              activity.mediaIds.length > 0 || typeof activity.payload["textId"] === "string",
+          ) ?? false,
+      );
+      if (!shows) continue;
+      expect(plan.pictureMinutes, `day ${plan.instructionalDay}`).toBeGreaterThan(0);
+    }
+  });
+
+  it("teaches the body parts its title names", () => {
+    const parts: Record<string, { media: string; french: string }> = {
+      main: { media: "corps-main", french: "ta main" },
+      pied: { media: "corps-pied", french: "ton pied" },
+      tête: { media: "corps-tete", french: "ta tête" },
+      ventre: { media: "corps-ventre", french: "ton ventre" },
+    };
+    for (const activity of activities) {
+      if (!activity.mediaIds.some((id) => id.startsWith("corps-"))) continue;
+      const named = Object.keys(parts).filter((part) =>
+        activity.title.toLowerCase().includes(part),
+      );
+      if (named.length === 0) continue;
+      for (const part of named) {
+        expect(activity.mediaIds, `${activity.id}: title says ${part}`).toContain(
+          parts[part]!.media,
+        );
+        const saysIt =
+          activity.childInstruction.includes(parts[part]!.french) ||
+          activity.vocabulary.some((entry) => entry.fr.includes(part));
+        expect(saysIt, `${activity.id}: title says ${part}, the activity never does`).toBe(true);
+      }
+    }
   });
 
   it("never asks the youngest child to move furniture", () => {
