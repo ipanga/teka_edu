@@ -56,9 +56,9 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
+  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève. _(source : programme-2024-langage)_
   - `LANG-S03-C01-O01` — Participer aux activités de motricité générale, de motricité fine et aux exercices de graphismes _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève.
   - `TIME-SPACE-S01-C01-O01` — Acquérir les premiers repères temporels.
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
@@ -96,6 +96,15 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > Et puis plus rien. Le soleil revient.
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+**Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
+
+- Oser parler pour exprimer un besoin ou prendre part à la vie de la classe.
+- S’exprimer lorsqu’on est sollicité.
+- Dire : « Moi, je fais du toboggan. J’ai joué à la balançoire et je vais faire du vélo. »
+- Participer à un moment collectif d’oralisation d’une comptine, d’une chanson, d’un court poème ou d’un bref extrait d’un album qui a été mémorisé.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Réussites attendues — texte officiel pour la compétence « Apprendre le geste d’écriture » (before-4) :**
 
@@ -238,7 +247,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Nommer son corps et se servir de ses sens._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
 - **Conseil au parent :** On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.
 - **Objectifs enseignés :**
   - `WORLD-S01-C02-O01` — Nommer et représenter quelques parties du corps humain. _(source : programme-2026)_
@@ -295,9 +304,9 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
+  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève. _(source : programme-2024-langage)_
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève.
   - `TIME-SPACE-S01-C01-O01` — Acquérir les premiers repères temporels.
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
@@ -349,6 +358,15 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > et hop ! je m’assois.
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+**Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
+
+- Oser parler pour exprimer un besoin ou prendre part à la vie de la classe.
+- S’exprimer lorsqu’on est sollicité.
+- Dire : « Moi, je fais du toboggan. J’ai joué à la balançoire et je vais faire du vélo. »
+- Participer à un moment collectif d’oralisation d’une comptine, d’une chanson, d’un court poème ou d’un bref extrait d’un album qui a été mémorisé.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (before-4) :**
 
@@ -553,9 +571,9 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
+  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève. _(source : programme-2024-langage)_
   - `LANG-S01-C01-O01` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève.
   - `TIME-SPACE-S01-C01-O01` — Acquérir les premiers repères temporels.
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
@@ -594,6 +612,15 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > je les cache… les voilà !
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+**Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
+
+- Oser parler pour exprimer un besoin ou prendre part à la vie de la classe.
+- S’exprimer lorsqu’on est sollicité.
+- Dire : « Moi, je fais du toboggan. J’ai joué à la balançoire et je vais faire du vélo. »
+- Participer à un moment collectif d’oralisation d’une comptine, d’une chanson, d’un court poème ou d’un bref extrait d’un album qui a été mémorisé.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (before-4) :**
 

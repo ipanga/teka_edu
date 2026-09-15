@@ -56,12 +56,11 @@ _L’enfant salue, dit son nom et son âge, et parle des personnes qui vivent av
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Installez-vous face à l’enfant, au calme. Montrez d’abord vous-même : « Bonjour, je m’appelle… » Laissez un vrai temps de réponse. Reformulez au lieu de corriger.
 - **Objectifs enseignés :**
+  - `TIME-SPACE-S01-C01-O12` — Énoncer la date. _(source : programme-2026)_
   - `LANG-S01-C04-O11` — Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris. _(source : programme-2024-langage)_
   - `LANG-S01-C02-O01` — Diversifier les pronoms employés. _(source : programme-2024-langage)_
   - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période). _(source : programme-2024-langage)_
-- **Objectifs repris (déjà vus) :**
-  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
-  - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 
 #### 1. Le rituel du jour — 2 min, sans écran (conversation)
 
@@ -106,6 +105,17 @@ _L’enfant salue, dit son nom et son âge, et parle des personnes qui vivent av
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+**Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
+
+- Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
+- Dire : « Aujourd’hui, nous sommes lundi. », « Hier, c’était dimanche, j’étais à la maison. », « Demain, ce sera mardi, nous irons à la piscine. », « J’aurai bientôt fini mon dessin. »
+- Utiliser les outils de la classe pour composer la date (jour et mois) au tableau et l’énoncer.
+- Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
+- Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
+- Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (from-5) :**
 
 - Dire : « Pour acheter les fruits du gouter, il faudrait compter les élèves de la classe. »
@@ -141,6 +151,14 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 - S’appuyer sur des verbes et des noms qu’il connait déjà pour comprendre et essayer de construire un nouveau mot : jambe/enjamber.
 - Chercher des hyperonymes des réseaux étudiés (véhicule est un hyperonyme de voiture, bus, vélo, etc. ; animal est un hyperonyme de chat, chien, grenouille, etc.).
 - Inférer le sens d’un mot inconnu.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
+
+- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
+- Raconter une histoire connue, dans son intégralité et sans support.
+- Transposer les émotions ressenties par les personnages à sa propre expérience.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -372,8 +390,8 @@ _Premier corpus de mots : nommer et ranger les objets de l’école._
 - **Objectifs enseignés :**
   - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période). _(source : programme-2024-langage)_
   - `LANG-S01-C02-O01` — Diversifier les pronoms employés. _(source : programme-2024-langage)_
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
@@ -446,6 +464,14 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
+**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
+
+- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
+- Raconter une histoire connue, dans son intégralité et sans support.
+- Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -471,8 +497,6 @@ _Comparer deux collections sans compter, puis en comptant._
 - **Conseil au parent :** On compare d’abord en regardant, puis en comptant pour vérifier. Les trois mots à installer sont « plus que », « moins que », « autant que ».
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O05` — Comparer des quantités. _(source : programme-2024-mathematiques)_
-- **Objectifs repris (déjà vus) :**
-  - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
 
 #### 1. Qui en a le plus ? — 5 min, sans écran (manipulation)
 
@@ -558,12 +582,10 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Courir sans s’arrêter un peu plus longtemps chaque fois._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** On allonge le temps de course, pas la vitesse. Comptez à voix haute : l’enfant entend ses progrès.
 - **Objectifs enseignés :**
   - `PHYS-S01-C01-O10` — Courir de plus en plus longtemps sans s’arrêter. _(source : programme-2026)_
-- **Objectifs repris (déjà vus) :**
-  - `PHYS-S02-C01-O07` — Respecter les règles de sécurité pour soi et pour les autres.
 
 #### 1. Cours pendant que je compte — 6 min, sans écran (movement)
 
@@ -669,13 +691,12 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Lisez l’histoire d’une traite, sans vous interrompre. Posez les questions seulement à la fin. Il n’y a pas de mauvaise réponse : l’enfant peut redire l’histoire avec ses mots.
 - **Objectifs enseignés :**
+  - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période). _(source : programme-2024-langage)_
   - `LANG-S02-C03-O09` — Comprendre des histoires dont les actions sont organisées autour d’une structure répétitive (rencontres successives) et commencer à comprendre les informations implicites (émotions, états et sentiments des personnages). _(source : programme-2024-langage)_
+  - `LANG-S01-C04-O11` — Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris. _(source : programme-2024-langage)_
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S01-C04-O11` — Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
-  - `LANG-S02-C01-O13` — Augmenter sa mémoire auditive et sa capacité de concentration.
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
-  - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
-  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
 
 #### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
 
@@ -740,11 +761,34 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+**Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (from-5) :**
+
+- Comprendre et utiliser :
+  • les mots des émotions, des sentiments et des états mentaux des personnages de fiction ;
+  • les mots qui entretiennent une proximité phonique (poule/roule/boule/moule) ;
+  • les mots qui vont permettre de s’emparer des apprentissages du CP.
+- Distinguer le sens propre du sens figuré (sans que ces notions ne soient enseignées) : l’élève comprend le sens de dévorer un gâteau et dévorer un livre.
+- Construire des dérivations (sans que ces notions ne soient enseignées) : arroser → arrosage ; gentil → gentiment → gentillesse.
+- S’appuyer sur des verbes et des noms qu’il connait déjà pour comprendre et essayer de construire un nouveau mot : jambe/enjamber.
+- Chercher des hyperonymes des réseaux étudiés (véhicule est un hyperonyme de voiture, bus, vélo, etc. ; animal est un hyperonyme de chat, chien, grenouille, etc.).
+- Inférer le sens d’un mot inconnu.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
 
 - Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
 - Raconter une histoire connue, dans son intégralité et sans support.
 - Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (from-5) :**
+
+- Dire : « Pour acheter les fruits du gouter, il faudrait compter les élèves de la classe. »
+- Dire : « Si on voulait de la peinture verte, il faudrait mélanger du jaune avec du bleu. »
+- Dire : « Peut-être que Corentin a mis la peinture avant de dessiner avec les feutres. »
+- Suffisamment se décentrer et identifier les informations qu’on doit communiquer pour qu’un interlocuteur qui n’a pas vécu la situation évoquée puisse la comprendre.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -949,9 +993,8 @@ _Frapper les syllabes des prénoms de la maison : entendre que les mots sont fai
 - **Conseil au parent :** C’est un jeu d’oreille, pas de lecture. On tape dans les mains en même temps qu’on dit le mot. Ne montrez aucune lettre écrite : tout se joue par l’écoute.
 - **Objectifs enseignés :**
   - `LANG-S02-C01-O03` — Scander les syllabes d’un mot. _(source : programme-2024-langage)_
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S02-C01-O13` — Augmenter sa mémoire auditive et sa capacité de concentration.
-  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : la date et la révision — 3 min, sans écran (conversation)
@@ -1005,6 +1048,14 @@ _Frapper les syllabes des prénoms de la maison : entendre que les mots sont fai
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
+**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
+
+- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
+- Raconter une histoire connue, dans son intégralité et sans support.
+- Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -1030,8 +1081,6 @@ _Dire la suite des nombres jusqu’à dix sans en oublier._
 - **Conseil au parent :** La comptine est une chanson : on l’apprend en la disant souvent. Cette semaine, on va jusqu’à dix — pas plus loin. On ira à vingt, puis à trente, plus tard dans le mois.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O26` — Connaitre et utiliser la comptine numérique jusqu’à trente. _(source : programme-2024-mathematiques)_
-- **Objectifs repris (déjà vus) :**
-  - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
 
 #### 1. Je dis les nombres jusqu’à dix — 5 min, sans écran (counting)
 
@@ -1167,8 +1216,6 @@ _Apprendre une comptine par cœur et la dire en rythme._
 - **Conseil au parent :** La comptine s’apprend par morceaux : deux vers à la fois, répétés. C’est la première du répertoire de l’année ; il en faudra au moins dix.
 - **Objectifs enseignés :**
   - `ART-S02-C01-O09` — Dire ou chanter au moins dix comptines ou chants, en réinvestissant ceux appris les années antérieures. _(source : programme-2026)_
-- **Objectifs repris (déjà vus) :**
-  - `MATH-S01-C01-O26` — Connaitre et utiliser la comptine numérique jusqu’à trente.
 
 #### 1. J’apprends la comptine — 7 min, sans écran (song-rhyme)
 

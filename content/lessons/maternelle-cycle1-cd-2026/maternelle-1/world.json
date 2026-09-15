@@ -52,8 +52,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "1768710ee336a80e",
+        "notes": "Semaine 1, deux passes. Passe 1 : 9 corrections pédagogiques et de sécurité. Passe 2 : deux corrections de métadonnées de progression. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-world-08",
@@ -150,7 +158,7 @@
       "summary": "Nommer son corps et se servir de ses sens.",
       "objectiveCodes": ["WORLD-S01-C02-O02"],
       "supportingObjectiveCodes": [],
-      "stage": "practice",
+      "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
       "parentGuidance": "On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.",
@@ -193,7 +201,7 @@
       "summary": "Nommer son corps et se servir de ses sens.",
       "objectiveCodes": ["WORLD-S01-C02-O01"],
       "supportingObjectiveCodes": [],
-      "stage": "practice",
+      "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
       "parentGuidance": "On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.",

@@ -26,12 +26,12 @@ Roles, kept distinct on purpose:
 
 ## Register of reviews
 
-| Batch                              | Date       | Kind                  | Outcome                       | Corrections           | Status                                                                                                    |
-| ---------------------------------- | ---------- | --------------------- | ----------------------------- | --------------------- | --------------------------------------------------------------------------------------------------------- |
-| 3ème maternelle, Week 1 (days 1–5) | 2026-09-14 | AI-assisted (ChatGPT) | `accepted-with-modifications` | 13 items, all applied | `review` — the corrections materially changed the pedagogy, so the regenerated package awaits re-review   |
-| 3ème maternelle, Weeks 2–5         | —          | —                     | not yet reviewed              | —                     | `review`                                                                                                  |
-| 1ère maternelle, Week 1 (days 1–4) | 2026-09-15 | AI-assisted (ChatGPT) | `accepted-with-modifications` | 9 items, all applied  | `review` — corrections affect pedagogy and safety, so the regenerated package goes back for a second pass |
-| 1ère maternelle, Weeks 2–5         | —          | —                     | not yet reviewed              | —                     | `review`                                                                                                  |
+| Batch                              | Date       | Kind                                | Outcome                       | Corrections                                                                   | Status                                                                                                  |
+| ---------------------------------- | ---------- | ----------------------------------- | ----------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| 3ème maternelle, Week 1 (days 1–5) | 2026-09-14 | AI-assisted (ChatGPT)               | `accepted-with-modifications` | 13 items, all applied                                                         | `review` — the corrections materially changed the pedagogy, so the regenerated package awaits re-review |
+| 3ème maternelle, Weeks 2–5         | —          | —                                   | not yet reviewed              | —                                                                             | `review`                                                                                                |
+| 1ère maternelle, Week 1 (days 1–4) | 2026-09-15 | AI-assisted (ChatGPT), **2 passes** | `accepted-with-modifications` | pass 1: 9 pedagogical and safety items · pass 2: 2 progression-metadata items | **`approved`** — 16 lessons, the first content through the gate                                         |
+| 1ère maternelle, Weeks 2–5         | —          | —                                   | not yet reviewed              | —                                                                             | `review`                                                                                                |
 
 **No lesson is `approved`.** All 176 September lessons — 88 for each of 1ère and 3ème maternelle — remain at `review`.
 
@@ -189,7 +189,30 @@ The pilot's day is language + mathematics + physical + one rotating domain, 40�
 > what was reviewed; the split-session recommendation was accepted and implemented as the plan's
 > pause point.
 
-## 1ère maternelle, Week 1 review, 2026-09-15 — accepted with modifications
+## 1ère maternelle, Week 1 — finalised 2026-09-15 after two passes
+
+|        | Kind        | Outcome                               | What followed                                                                                                                                                                        |
+| ------ | ----------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Pass 1 | ai-assisted | `accepted-with-modifications`         | 9 items: a level-wide template bug, an objective mismatch, a stale vocabulary example, three safety defaults, a story's causal gap, a comprehension check, a temporal simplification |
+| Pass 2 | ai-assisted | `accepted-with-modifications`         | 2 items, both progression metadata; no child-facing text changed                                                                                                                     |
+| Final  | ai-assisted | **accepted for Teka Edu development** | 16 lessons `approved`, `reviewKind: ai-assisted`                                                                                                                                     |
+
+**No teacher has read this content.** The approval records the review that actually happened.
+
+The second pass found a subtler class of error than the first, and it is worth naming: the
+lesson-level objective lists were **template metadata that had drifted from the activities**. A
+day-2 lesson still listed a temporal objective after the activity carrying it had been corrected,
+and day 1 filed « dire ou chanter au moins cinq comptines » under _already seen_ while being the
+first day the child ever sang one — day 4 then claimed to introduce it.
+
+The fix was not to edit the two lessons. Progression is now derived from the order a child
+actually meets the content — day by day, slot by slot, across tracks rather than inside one — and
+two validators enforce it: a lesson may not claim an objective no activity works, and nothing may
+be listed as _already seen_ before something teaches it. That surfaced **53 stale claims**, 52 of
+them in 3ème maternelle, all metadata; no child-facing field changed, and that was verified field
+by field rather than asserted.
+
+## 3ème maternelle, Week 1 review, 2026-09-14 — accepted with modifications
 
 ChatGPT reviewed the generated Week 1 package and returned **`accepted-with-modifications`**.
 All corrections are applied; the package is regenerated and goes back for a second pass, because

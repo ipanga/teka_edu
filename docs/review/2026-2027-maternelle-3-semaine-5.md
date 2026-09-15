@@ -53,13 +53,13 @@ l’appareil._
 
 _Parler de ce qu’on a fait à quelqu’un qui ne l’a pas vu._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** L’enfant présente son dessin comme à quelqu’un qui ne sait rien. C’est ce qui l’oblige à employer des phrases complètes.
 - **Objectifs enseignés :**
   - `LANG-S01-C04-O11` — Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris. _(source : programme-2024-langage)_
   - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période). _(source : programme-2024-langage)_
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
@@ -128,6 +128,14 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
+**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
+
+- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
+- Raconter une histoire connue, dans son intégralité et sans support.
+- Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -149,13 +157,11 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Retrouver ce qui a été enlevé d’une collection._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 3/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** L’enfant connait le tout, voit une partie, cherche l’autre. Laissez-lui le temps : ce n’est pas un jeu de rapidité.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O22` — Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà. _(source : programme-2024-mathematiques)_
   - `MATH-S01-C01-O21` — Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà). _(source : programme-2024-mathematiques)_
-- **Objectifs repris (déjà vus) :**
-  - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
 
 #### 1. J’en ai enlevé — 5 min, sans écran (manipulation)
 
@@ -241,7 +247,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Danser en isolant une partie du corps._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Danse assise possible : parfaite quand il n’y a pas de place ou qu’il est tard.
 - **Objectifs enseignés :**
   - `PHYS-S03-C01-O09` — Danser, seul ou à plusieurs, en créant et en reproduisant un ou plusieurs gestes et déplacements. _(source : programme-2026)_
@@ -291,8 +297,6 @@ _Dire la date du jour et situer la journée dans la semaine._
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C01-O10` — Situer un évènement dans la semaine. _(source : programme-2026)_
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date. _(source : programme-2026)_
-- **Objectifs repris (déjà vus) :**
-  - `TIME-SPACE-S01-C02-O08` — Repérer les différentes étapes d’un processus ou d’un évènement vécu et les ordonner.
 
 #### 1. Je dis la date tout seul — 4 min, sans écran (conversation)
 
@@ -355,13 +359,13 @@ l’appareil._
 
 _Reconnaitre un mot à partir de ses syllabes et de sa rime._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 3/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Jeu d’écoute pur. Dites les syllabes séparées et laissez l’enfant recoller le mot.
 - **Objectifs enseignés :**
   - `LANG-S02-C01-O15` — Repérer et produire des rimes et des assonances. _(source : programme-2024-langage)_
   - `LANG-S02-C01-O03` — Scander les syllabes d’un mot. _(source : programme-2024-langage)_
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
@@ -413,6 +417,14 @@ _Reconnaitre un mot à partir de ses syllabes et de sa rime._
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
+**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
+
+- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
+- Raconter une histoire connue, dans son intégralité et sans support.
+- Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -434,13 +446,11 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Ranger des collections de la plus petite à la plus grande._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 3/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Ranger trois tas dans l’ordre demande de comparer deux à deux. Faites compter chaque tas avant de ranger.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O05` — Comparer des quantités. _(source : programme-2024-mathematiques)_
   - `MATH-S01-C02-O06` — Construire la bande numérique jusqu’à dix. _(source : programme-2024-mathematiques)_
-- **Objectifs repris (déjà vus) :**
-  - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
 
 #### 1. Je range les tas — 5 min, sans écran (sorting)
 
@@ -545,7 +555,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Reproduire exactement le geste de quelqu’un d’autre._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Face à face, lentement. C’est un jeu de coopération : si l’autre ne suit pas, c’est qu’on va trop vite.
 - **Objectifs enseignés :**
   - `PHYS-S04-C01-O09` — Éprouver le plaisir de coopérer et de s’opposer dans le respect des autres et des règles communes. _(source : programme-2026)_
@@ -670,9 +680,8 @@ _Reprendre, en parlant, ce que le mois a apporté._
 - **Objectifs enseignés :**
   - `LANG-S01-C04-O11` — Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris. _(source : programme-2024-langage)_
   - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période). _(source : programme-2024-langage)_
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S01-C02-O01` — Diversifier les pronoms employés.
-  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : la date et la révision — 3 min, sans écran (conversation)
@@ -738,6 +747,14 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
+**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
+
+- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
+- Raconter une histoire connue, dans son intégralité et sans support.
+- Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -764,9 +781,6 @@ _Reprendre en jeu les mathématiques du mois._
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). _(source : programme-2024-mathematiques)_
   - `MATH-S01-C01-O22` — Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà. _(source : programme-2024-mathematiques)_
-- **Objectifs repris (déjà vus) :**
-  - `MATH-S01-C01-O05` — Comparer des quantités.
-  - `MATH-S01-C01-O26` — Connaitre et utiliser la comptine numérique jusqu’à trente.
 
 #### 1. Le grand jeu du comptage — 5 min, sans écran (counting)
 
@@ -913,9 +927,6 @@ _Reprendre le répertoire de comptines et le dessin du mois._
 - **Objectifs enseignés :**
   - `ART-S02-C01-O09` — Dire ou chanter au moins dix comptines ou chants, en réinvestissant ceux appris les années antérieures. _(source : programme-2026)_
   - `ART-S01-C01-O06` — Dessiner pour représenter un personnage ou un évènement fictif. _(source : programme-2026)_
-- **Objectifs repris (déjà vus) :**
-  - `ART-S01-C01-O05` — Dessiner pour représenter sur la base d’un modèle.
-  - `ART-S02-C02-O08` — Créer un paysage sonore en répondant à une consigne simple avec son corps, des objets ou des instruments.
 
 #### 1. Ma comptine préférée — 4 min, sans écran (song-rhyme)
 

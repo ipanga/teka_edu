@@ -119,7 +119,16 @@ describe("lesson validation", () => {
       ...base,
       activities: [{ ...base.activities[0]!, objectiveCodes: ["MATH-S03-C01-O08"] }],
     };
-    expect(check(broken)[0]).toMatch(/is not among the lesson's objectives/);
+    // Both directions now fail: the activity claims something the lesson does not declare, and
+    // the lesson declares something no activity works. Assert the one this test is about.
+    expect(check(broken).join("\n")).toMatch(/is not among the lesson's objectives/);
+  });
+
+  it("rejects a lesson objective that none of its activities works", () => {
+    const stale: Lesson = { ...base, supportingObjectiveCodes: ["MATH-S03-C01-O08"] };
+    expect(check(stale).join("\n")).toMatch(
+      /objective "MATH-S03-C01-O08" is listed on the lesson but no activity works it/,
+    );
   });
 
   it("rejects an unknown objective, level or material", () => {

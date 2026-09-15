@@ -59,8 +59,8 @@ _Comprendre ce que ressent un personnage et le comparer à ce qu’on a vécu so
   - `LANG-S02-C03-O14` — Comprendre les émotions, les intentions et les sentiments qui animent les personnages. _(source : programme-2024-langage)_
   - `LANG-S01-C04-O11` — Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris. _(source : programme-2024-langage)_
   - `LANG-S02-C03-O15` — Établir un lien entre la lecture effectuée et sa propre expérience. _(source : programme-2024-langage)_
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
@@ -172,9 +172,6 @@ _Construire et lire une bande de nombres de un à dix._
 - **Conseil au parent :** Écrivez les chiffres de 1 à 10 sur une bande de papier, avec l’enfant. Elle servira tout le mois : gardez-la.
 - **Objectifs enseignés :**
   - `MATH-S01-C02-O06` — Construire la bande numérique jusqu’à dix. _(source : programme-2024-mathematiques)_
-- **Objectifs repris (déjà vus) :**
-  - `MATH-S01-C01-O26` — Connaitre et utiliser la comptine numérique jusqu’à trente.
-  - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
 
 #### 1. Je fabrique ma bande des nombres — 5 min, sans écran (manipulation)
 
@@ -287,8 +284,6 @@ _Comparer deux animaux et dire ce qui les distingue._
 - **Conseil au parent :** Comparer, c’est trouver ce qui est pareil et ce qui est différent. Prenez deux animaux bien distincts.
 - **Objectifs enseignés :**
   - `WORLD-S01-C01-O08` — Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale. _(source : programme-2026)_
-- **Objectifs repris (déjà vus) :**
-  - `WORLD-S01-C01-O10` — Décrire les besoins essentiels de quelques animaux ou de végétaux.
 
 #### 1. Pareil ou différent ? — 4 min, sans écran (observation)
 
@@ -356,9 +351,8 @@ _Entendre que deux mots finissent pareil._
 - **Conseil au parent :** La rime s’entend à la fin du mot. Exagérez la fin en parlant : « chaaa-TON, maiii-SON. » L’enfant doit d’abord reconnaitre, avant d’inventer.
 - **Objectifs enseignés :**
   - `LANG-S02-C01-O15` — Repérer et produire des rimes et des assonances. _(source : programme-2024-langage)_
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S02-C01-O13` — Augmenter sa mémoire auditive et sa capacité de concentration.
-  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
@@ -412,6 +406,14 @@ _Entendre que deux mots finissent pareil._
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
+**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
+
+- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
+- Raconter une histoire connue, dans son intégralité et sans support.
+- Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -433,13 +435,11 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Situer un nombre par rapport à ses voisins._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 3/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Servez-vous de la bande fabriquée hier. « Avant » et « après » se montrent avec le doigt avant de se dire.
 - **Objectifs enseignés :**
   - `MATH-S01-C02-O06` — Construire la bande numérique jusqu’à dix. _(source : programme-2024-mathematiques)_
   - `MATH-S01-C01-O26` — Connaitre et utiliser la comptine numérique jusqu’à trente. _(source : programme-2024-mathematiques)_
-- **Objectifs repris (déjà vus) :**
-  - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
 
 #### 1. Le nombre caché — 5 min, sans écran (counting)
 
@@ -543,7 +543,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Varier les appuis en gardant l’équilibre._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 3/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Restez tout près. Comptez à voix haute pendant qu’il tient : cela l’aide à durer.
 - **Objectifs enseignés :**
   - `PHYS-S02-C01-O05` — Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions. _(source : programme-2026)_
@@ -593,8 +593,6 @@ _Repérer les étapes d’une activité vécue et les ordonner._
 - **Conseil au parent :** Prenez une activité que l’enfant fait vraiment : préparer le repas, se laver, s’habiller. On cherche les étapes, dans l’ordre.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C02-O08` — Repérer les différentes étapes d’un processus ou d’un évènement vécu et les ordonner. _(source : programme-2026)_
-- **Objectifs repris (déjà vus) :**
-  - `TIME-SPACE-S01-C01-O10` — Situer un évènement dans la semaine.
 
 #### 1. Les étapes, dans l’ordre — 4 min, sans écran (manipulation)
 
@@ -656,13 +654,12 @@ l’appareil._
 
 _Produire un mot qui rime, après l’avoir reconnu._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 3/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Aujourd’hui, l’enfant produit. Les mots inventés sont acceptés : « chat, bat, gat » montre qu’il a compris la rime. Ne corrigez pas l’invention.
 - **Objectifs enseignés :**
   - `LANG-S02-C01-O15` — Repérer et produire des rimes et des assonances. _(source : programme-2024-langage)_
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S02-C01-O13` — Augmenter sa mémoire auditive et sa capacité de concentration.
-  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
@@ -716,6 +713,14 @@ _Produire un mot qui rime, après l’avoir reconnu._
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
+**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
+
+- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
+- Raconter une histoire connue, dans son intégralité et sans support.
+- Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -737,13 +742,11 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Trouver ce qu’il faut ajouter pour arriver à dix._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 3/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Dix est le nombre le plus utile à décomposer. Servez-vous des deux mains : cinq et cinq.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O22` — Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà. _(source : programme-2024-mathematiques)_
   - `MATH-S01-C01-O23` — Manipuler et verbaliser des compositions et des décompositions de nombres. Cela permet d’installer le fait que, dans une composition, l’ordre ne compte pas. _(source : programme-2024-mathematiques)_
-- **Objectifs repris (déjà vus) :**
-  - `MATH-S01-C02-O06` — Construire la bande numérique jusqu’à dix.
 
 #### 1. Il en manque combien ? — 5 min, sans écran (manipulation)
 
@@ -827,7 +830,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _S’immobiliser complètement au signal : contrôler son corps._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Jeu calme, parfait le soir. L’immobilité complète est plus difficile qu’elle n’en a l’air.
 - **Objectifs enseignés :**
   - `PHYS-S02-C01-O05` — Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions. _(source : programme-2026)_
@@ -878,9 +881,6 @@ _Dessiner un personnage qui n’existe pas devant soi._
 - **Conseil au parent :** Cette fois, il n’y a pas de modèle : le personnage est dans l’histoire, donc dans sa tête. Faites-le décrire avant de dessiner.
 - **Objectifs enseignés :**
   - `ART-S01-C01-O06` — Dessiner pour représenter un personnage ou un évènement fictif. _(source : programme-2026)_
-- **Objectifs repris (déjà vus) :**
-  - `ART-S01-C01-O05` — Dessiner pour représenter sur la base d’un modèle.
-  - `LANG-S02-C03-O14` — Comprendre les émotions, les intentions et les sentiments qui animent les personnages.
 
 #### 1. Kumu tel que je l’imagine — 7 min, sans écran (drawing)
 
@@ -934,14 +934,12 @@ l’appareil._
 
 _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les dire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Servez-vous des mots de l’ordre : d’abord, ensuite, puis, à la fin. Ce sont eux qui structurent le récit.
 - **Objectifs enseignés :**
   - `LANG-S01-C04-O11` — Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris. _(source : programme-2024-langage)_
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S02-C03-O13` — Comprendre des histoires où l’enchainement des actions est lié au destin de personnages centraux ou secondaires qui évoluent et interagissent, dans des lieux diversifiés.
-  - `TIME-SPACE-S01-C02-O08` — Repérer les différentes étapes d’un processus ou d’un évènement vécu et les ordonner.
-  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
@@ -994,6 +992,14 @@ _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
+**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
+
+- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
+- Raconter une histoire connue, dans son intégralité et sans support.
+- Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -1015,7 +1021,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Retrouver les formes planes sur les objets réels._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** On repart des formes en papier, puis on les compare aux faces des objets. Dites toujours « la face de la boite est un carré », jamais « la boite est un carré ».
 - **Objectifs enseignés :**
   - `MATH-S03-C01-O07` — Reconnaitre, trier et classer des formes géométriques planes, indépendamment d’autres critères comme la couleur, la taille, l’orientation. _(source : programme-2024-mathematiques)_
@@ -1077,7 +1083,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Suivre un parcours en nommant les formes rencontrées._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** On relie le mouvement et les formes du mois : l’enfant nomme avant de passer.
 - **Objectifs enseignés :**
   - `PHYS-S02-C01-O05` — Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions. _(source : programme-2026)_
@@ -1124,12 +1130,10 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Ordonner les moments d’une histoire connue._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 3/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** On applique l’ordre à une histoire du mois. L’enfant connait l’histoire : la difficulté est l’ordre, pas le souvenir.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C02-O08` — Repérer les différentes étapes d’un processus ou d’un évènement vécu et les ordonner. _(source : programme-2026)_
-- **Objectifs repris (déjà vus) :**
-  - `LANG-S02-C03-O13` — Comprendre des histoires où l’enchainement des actions est lié au destin de personnages centraux ou secondaires qui évoluent et interagissent, dans des lieux diversifiés.
 
 #### 1. Je remets l’histoire en ordre — 4 min, sans écran (manipulation)
 
@@ -1196,8 +1200,8 @@ _Reprendre les familles de mots du mois et y ranger des mots nouveaux._
 - **Objectifs enseignés :**
   - `LANG-S01-C01-O02` — Organiser les mots en catégorie et en réseau. _(source : programme-2024-langage)_
   - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période). _(source : programme-2024-langage)_
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : la date et la révision — 3 min, sans écran (conversation)
@@ -1254,6 +1258,14 @@ _Reprendre les familles de mots du mois et y ranger des mots nouveaux._
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
+**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
+
+- Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
+- Raconter une histoire connue, dans son intégralité et sans support.
+- Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -1279,9 +1291,6 @@ _Aller au bout de la comptine numérique visée cette année._
 - **Conseil au parent :** Dernière étape de la progression du mois : dix, puis vingt, aujourd’hui trente. Si l’enfant s’arrête à seize, ce n’est pas un échec : on reprend là où ça s’arrête, sans le dire comme une faute.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O26` — Connaitre et utiliser la comptine numérique jusqu’à trente. _(source : programme-2024-mathematiques)_
-- **Objectifs repris (déjà vus) :**
-  - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
-  - `MATH-S01-C02-O06` — Construire la bande numérique jusqu’à dix.
 
 #### 1. De un à trente — 5 min, sans écran (counting)
 
@@ -1416,8 +1425,6 @@ _Dire et faire ce qu’il faut pour qu’un être vivant aille bien._
 - **Conseil au parent :** On passe du savoir à l’acte : arroser, nourrir, donner de l’eau. Quelque chose de vrai, même tout petit.
 - **Objectifs enseignés :**
   - `WORLD-S01-C01-O10` — Décrire les besoins essentiels de quelques animaux ou de végétaux. _(source : programme-2026)_
-- **Objectifs repris (déjà vus) :**
-  - `WORLD-S01-C01-O08` — Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale.
 
 #### 1. Ce dont il a besoin — 4 min, sans écran (conversation)
 
