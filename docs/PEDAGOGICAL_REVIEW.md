@@ -33,7 +33,8 @@ Roles, kept distinct on purpose:
 | 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15 | AI-assisted (ChatGPT), 2 passes + re-confirmation | `accepted-with-modifications`                                | pass 1: 9 pedagogical and safety items · pass 2: 2 progression-metadata items          | **`approved`** — 16 lessons. The approval lapsed once when the progression engine changed; re-confirmed after a machine-proven metadata-only diff, with a **new** digest |
 | 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15 | AI-assisted (ChatGPT), 2 passes                   | `accepted-with-modifications`                                | pass 1: 6 items · pass 2: 2 items (seed-bag fallback, failure-neutral balance wording) | **`approved`** — 20 lessons                                                                                                                                              |
 | 1ère maternelle, Week 3 (days 10–14) | 2026-09-15 | AI-assisted (ChatGPT), 2 passes                   | pass 1 `accepted-with-modifications` → pass 2 **`accepted`** | 8 items, all applied                                                                   | **`approved`** — 20 lessons                                                                                                                                              |
-| 1ère maternelle, Weeks 4–5           | —          | —                                                 | not yet reviewed                                             | —                                                                                      | `review`                                                                                                                                                                 |
+| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15 | AI-assisted (ChatGPT)                             | `accepted-with-modifications`                                | 7 items, all applied                                                                   | `review` — **ready for a short second pass**                                                                                                                             |
+| 1ère maternelle, Week 5              | —          | —                                                 | not yet reviewed                                             | —                                                                                      | `review`                                                                                                                                                                 |
 
 **56 lessons are `approved`** — 1ère maternelle Weeks 1, 2 and 3, all `ai-assisted`. The other
 120 September lessons remain at `review`: 32 in 1ère (Weeks 4–5) and all 88 in 3ème.
@@ -208,6 +209,31 @@ The pilot's day is language + mathematics + physical + one rotating domain, 40�
 > September programme runs at 35. The finding is kept as written because it is the record of
 > what was reviewed; the split-session recommendation was accepted and implemented as the plan's
 > pause point.
+
+## 1ère maternelle, Week 4 review, 2026-09-15 — accepted with modifications
+
+Seven items, all applied to Week 4 and Week 5. The finding that matters beyond this week is
+what the corrections could **not** touch.
+
+**Four of the seven defects also exist, identically, in Weeks 1–3 — which are approved.** The
+same activity text was authored once and reused across the month, so correcting Week 4's copy
+leaves the earlier copies as they were read and signed off:
+
+| Defect                                                            | Approved activities still carrying it |
+| ----------------------------------------------------------------- | ------------------------------------- |
+| « Ferme les yeux » required rather than offered                   | `m1-lang-10-a2` (day 10)              |
+| Generic « Move with me. » English scaffold                        | 12 movement activities, days 1–14     |
+| « à trois ans » instead of a developmental band                   | `m1-lang-03-a2` (day 3)               |
+| Comprehension answers: pointing/one word not stated as sufficient | `m1-lang-03-a2` (day 3)               |
+| Maths advice that reads as contradicting the count to six         | 14 lesson-level notes, days 1–14      |
+
+These were **not** silently fixed. Editing them would change text a reviewer accepted and would
+invalidate 56 digests — precisely what ADR-035 exists to prevent. The 13 activity-level cases are
+listed in `tests/unit/september.test.ts` as `APPROVED_DEBT`, a list that may only shrink, so the
+rules bind all new content while the debt stays visible.
+
+**Deciding what to do about them is the product owner's, not this task's.** Fixing them means
+sending Weeks 1–3 back for a short re-confirmation, exactly as Week 1 needed once before.
 
 ## 1ère maternelle, Week 3 — approved 2026-09-15 after two passes
 

@@ -103,6 +103,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe sur un toit (`public/media/illustrations/histoire-pluie.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
 - Oser parler pour exprimer un besoin ou prendre part à la vie de la classe.
@@ -159,7 +161,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 _Compter, donner une petite quantité, ranger par forme._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
-- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
+- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O03` — Dénombrer une collection d’objets (jusqu’à trois, voire quatre).
@@ -172,6 +174,10 @@ _Compter, donner une petite quantité, ranger par forme._
 - **À défaut :** Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.
 - **⚠ Sécurité :** Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe.
 - **Aide en anglais (optionnelle) :** « How many are there? »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-cuillere` — Une cuillère (`public/media/objects/objet-cuillere.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O03` Dénombrer une collection d’objets (jusqu’à trois, voire quatre).
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (before-4) :**
@@ -284,6 +290,13 @@ _Nommer son corps et se servir de ses sens._
 - **Guidance adulte :** Nommez une partie et montrez-la sur vous, puis demandez-lui de la montrer sur lui. Deux parties par séance suffisent. Terminez toujours par une qu’il connaît déjà : on finit sur une réussite.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Show me your hand, your foot, your head, your tummy. »
+- **Images montrées à l'enfant (4) :**
+
+  - `corps-main` — Une main ouverte (`public/media/objects/corps-main.svg`)
+  - `corps-pied` — Un pied (`public/media/objects/corps-pied.svg`)
+  - `corps-tete` — Une tête (`public/media/objects/corps-tete.svg`)
+  - `corps-ventre` — Le ventre (`public/media/objects/corps-ventre.svg`)
+
 - **Objectifs travaillés :** `WORLD-S01-C02-O01` Nommer et représenter quelques parties du corps humain.
 
 **Réussites attendues — texte officiel pour la compétence « Découvrir le corps humain et la santé » (before-4) :**
@@ -353,7 +366,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
 #### 2. Tika se lève — 4 min, sans interaction écran (listening-story)
 
 - **Consigne à l’enfant :** « Écoute l’histoire jusqu’au bout. »
-- **Guidance adulte :** Lisez lentement, en montrant l’image. L’histoire est courte exprès : à trois ans, on écoute mieux deux minutes deux fois qu’une fois quatre minutes. S’il redemande la même histoire demain, c’est bon signe.
+- **Guidance adulte :** Lisez lentement, en montrant l’image. L’histoire est courte exprès : chez les plus jeunes, on écoute mieux deux minutes deux fois qu’une fois quatre minutes. S’il redemande la même histoire demain, c’est bon signe.
+Un doigt pointé, un geste, un seul mot ou un mot approximatif : tout cela répond. **Une phrase entière n’est jamais demandée.** Si rien ne vient, donnez la réponse vous-même et continuez — on ne repose pas la question, et on ne fait pas répéter.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Listen to the story. »
 - **Objectifs travaillés :** `LANG-S02-C03-O04` Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
@@ -368,6 +382,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > Tika ferme les yeux. Bonne nuit, Tika.
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-tika` — Un enfant qui se lève de son lit, le soleil à la fenêtre (`public/media/illustrations/histoire-tika.svg`)
 
 - **Questions posées à l’enfant après l’écoute (2) :**
 
@@ -390,6 +406,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > et hop ! je m’assois.
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `bonhomme-articule` — Un bonhomme dessiné avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -446,7 +464,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 _Compter, donner une petite quantité, ranger par forme._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
-- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
+- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O04` — Constituer une collection (jusqu’à trois, voire quatre objets) d’un cardinal donné.
@@ -528,7 +546,7 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
-- **Aide en anglais (optionnelle) :** « Move with me. »
+- **Aide en anglais (optionnelle) :** « Move like me. Then move how you want. »
 - **Objectifs travaillés :** `PHYS-S03-C01-O01` Découvrir et explorer le mouvement comme vecteur d’expression.
 
 **Réussites attendues — texte officiel pour la compétence « Explorer, s’exprimer, danser, observer » (before-4) :**
@@ -654,6 +672,13 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Show me the one I name. Then say one or two with me. »
+- **Images montrées à l'enfant (4) :**
+
+  - `objet-porte` — Une porte (`public/media/objects/objet-porte.svg`)
+  - `objet-seau` — Un seau (`public/media/objects/objet-seau.svg`)
+  - `corps-main` — Une main ouverte (`public/media/objects/corps-main.svg`)
+  - `corps-tete` — Une tête (`public/media/objects/corps-tete.svg`)
+
 - **Objectifs travaillés :** `LANG-S01-C01-O01` Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
 
 #### 3. Un, deux, trois, mes mains — 3 min, sans interaction écran (song-rhyme)
@@ -672,6 +697,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > je les cache… les voilà !
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains levées (`public/media/illustrations/comptine-mains.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -737,7 +764,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 _Compter, donner une petite quantité, ranger par forme._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
-- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
+- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O09` — Connaitre la comptine numérique de un à six.
@@ -750,6 +777,10 @@ _Compter, donner une petite quantité, ranger par forme._
 - **À défaut :** Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.
 - **⚠ Sécurité :** Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe.
 - **Aide en anglais (optionnelle) :** « Count with me to six. »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-cuillere` — Une cuillère (`public/media/objects/objet-cuillere.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O09` Connaitre la comptine numérique de un à six.
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (before-4) :**
@@ -819,7 +850,7 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
-- **Aide en anglais (optionnelle) :** « Move with me. »
+- **Aide en anglais (optionnelle) :** « Choose what you want to do: run, throw, or walk the line. »
 - **Objectifs travaillés :** `PHYS-S04-C01-O03` Éprouver le plaisir de jouer dans le respect des autres et des règles communes.
 
 **Réussites attendues — texte officiel pour la compétence « Coopérer, s’opposer, respecter » (before-4) :**

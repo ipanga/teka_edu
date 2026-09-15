@@ -1493,7 +1493,7 @@
           "type": "listening-story",
           "title": "Le seau de Lisa",
           "childInstruction": "Écoute l’histoire jusqu’au bout.",
-          "adultGuidance": "Lisez lentement, en montrant l’image. L’histoire est courte exprès : à trois ans, on écoute mieux deux minutes deux fois qu’une fois quatre minutes. S’il redemande la même histoire demain, c’est bon signe.",
+          "adultGuidance": "Lisez lentement, en montrant l’image. L’histoire est courte exprès : chez les plus jeunes, on écoute mieux deux minutes deux fois qu’une fois quatre minutes. S’il redemande la même histoire demain, c’est bon signe.\nUn doigt pointé, un geste, un seul mot ou un mot approximatif : tout cela répond. **Une phrase entière n’est jamais demandée.** Si rien ne vient, donnez la réponse vous-même et continuez — on ne repose pas la question, et on ne fait pas répéter.",
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
@@ -1589,8 +1589,8 @@
           "position": 2,
           "type": "phonology",
           "title": "J’écoute",
-          "childInstruction": "Ferme les yeux. Qu’est-ce que tu entends ?",
-          "adultGuidance": "Faites un bruit qu’il connaît : taper sur la table, froisser du papier, verser de l’eau. Demandez ce que c’est. Puis refaites-en deux et demandez lequel était le premier. Deux bruits suffisent.",
+          "childInstruction": "Écoute bien. Qu’est-ce que tu entends ? Tu peux fermer les yeux si tu veux.",
+          "adultGuidance": "Fermer les yeux aide à écouter, mais ne l’imposez pas : s’il préfère regarder, il écoute en regardant. Faites un bruit qu’il connaît : taper sur la table, froisser du papier, verser de l’eau. Demandez ce que c’est. Puis refaites-en deux et demandez lequel était le premier. Deux bruits suffisent.",
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
@@ -1598,7 +1598,12 @@
           "objectiveCodes": ["LANG-S02-C01-O01"],
           "materialCodes": ["aucun"],
           "vocabulary": [],
-          "scaffolds": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen. What can you hear? You may close your eyes if you want."
+            }
+          ],
           "payload": {
             "words": ["la table", "le papier", "l’eau"]
           }
@@ -1771,8 +1776,8 @@
           "position": 2,
           "type": "vocabulary",
           "title": "Les quatre mots de mon corps",
-          "childInstruction": "Montre-moi ce que je nomme. Puis dis avec moi un ou deux mots que tu veux.",
-          "adultGuidance": "Rien à préparer : le matériel, c’est vous et lui.\n1. Montrez la partie sur vous et nommez-la lentement, en entier et une seule fois. 2. Demandez-lui de la montrer sur lui — le geste suffit. 3. Laissez un silence : c’est là qu’il essaie de dire le mot. 4. Une approximation compte ; redites le mot correctement une fois, sans le faire répéter. Deux parties par séance suffisent.",
+          "childInstruction": "Montre-moi la partie que je nomme. Puis dis avec moi un ou deux mots que tu choisis.",
+          "adultGuidance": "Ces quatre mots-là, il les connaît déjà : on les revoit, on n’en apprend pas de nouveaux.\n1. Nommez une partie et demandez-lui de la montrer sur lui — le geste suffit, et suffit vraiment. 2. Faites les quatre, dans le désordre. 3. Nommez celle qui ne vient pas, sans la faire répéter. 4. À la fin seulement, proposez-lui de redire **un ou deux** mots, ceux qu’il choisit. On ne demande jamais les quatre à voix haute.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
@@ -1800,7 +1805,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Show me the one I name. Then say one or two with me."
+              "childInstruction": "Show me the part I name. Then say one or two with me."
             }
           ],
           "payload": {
@@ -2067,7 +2072,7 @@
           "type": "listening-story",
           "title": "Tika se lève",
           "childInstruction": "Écoute l’histoire jusqu’au bout.",
-          "adultGuidance": "Lisez lentement, en montrant l’image. L’histoire est courte exprès : à trois ans, on écoute mieux deux minutes deux fois qu’une fois quatre minutes. S’il redemande la même histoire demain, c’est bon signe.",
+          "adultGuidance": "Lisez lentement, en montrant l’image. L’histoire est courte exprès : chez les plus jeunes, on écoute mieux deux minutes deux fois qu’une fois quatre minutes. S’il redemande la même histoire demain, c’est bon signe.\nUn doigt pointé, un geste, un seul mot ou un mot approximatif : tout cela répond. **Une phrase entière n’est jamais demandée.** Si rien ne vient, donnez la réponse vous-même et continuez — on ne repose pas la question, et on ne fait pas répéter.",
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",

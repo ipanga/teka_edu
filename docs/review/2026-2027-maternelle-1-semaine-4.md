@@ -79,7 +79,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
 #### 2. Le seau de Lisa — 4 min, sans interaction écran (listening-story)
 
 - **Consigne à l’enfant :** « Écoute l’histoire jusqu’au bout. »
-- **Guidance adulte :** Lisez lentement, en montrant l’image. L’histoire est courte exprès : à trois ans, on écoute mieux deux minutes deux fois qu’une fois quatre minutes. S’il redemande la même histoire demain, c’est bon signe.
+- **Guidance adulte :** Lisez lentement, en montrant l’image. L’histoire est courte exprès : chez les plus jeunes, on écoute mieux deux minutes deux fois qu’une fois quatre minutes. S’il redemande la même histoire demain, c’est bon signe.
+Un doigt pointé, un geste, un seul mot ou un mot approximatif : tout cela répond. **Une phrase entière n’est jamais demandée.** Si rien ne vient, donnez la réponse vous-même et continuez — on ne repose pas la question, et on ne fait pas répéter.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Listen to the story. »
 - **Objectifs travaillés :** `LANG-S02-C03-O04` Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
@@ -96,6 +97,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > Lisa sourit : elle a son eau.
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Un seau posé sur une chaise (`public/media/illustrations/histoire-seau-lisa.svg`)
 
 - **Questions posées à l’enfant après l’écoute (2) :**
 
@@ -119,6 +122,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > Et puis plus rien. Le soleil revient.
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe sur un toit (`public/media/illustrations/histoire-pluie.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -175,7 +180,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 _Compter, donner une petite quantité, ranger par forme._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
-- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
+- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O04` — Constituer une collection (jusqu’à trois, voire quatre objets) d’un cardinal donné.
@@ -188,6 +193,10 @@ _Compter, donner une petite quantité, ranger par forme._
 - **À défaut :** Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.
 - **⚠ Sécurité :** Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe.
 - **Aide en anglais (optionnelle) :** « Give me three. »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-cuillere` — Une cuillère (`public/media/objects/objet-cuillere.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O04` Constituer une collection (jusqu’à trois, voire quatre objets) d’un cardinal donné.
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (before-4) :**
@@ -258,7 +267,7 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **À défaut :** Une balle en papier froissé ou une chaussette roulée. Une petite balle souple convient aussi si la maison en a déjà une.
 - **⚠ Sécurité :** Rien de rempli de petits objets (sac de graines, de haricots) : cela s’ouvre. Une balle en papier ou une chaussette roulée ne blesse personne et ne coûte rien.
 - **À défaut :** Une boîte, un seau, une bassine, un panier ou un carton.
-- **Aide en anglais (optionnelle) :** « Move with me. »
+- **Aide en anglais (optionnelle) :** « Throw the ball into the bucket. »
 - **Objectifs travaillés :** `PHYS-S01-C01-O01` Manipuler et lancer des objets avec des intentions motrices différentes.
 
 **Réussites attendues — texte officiel pour la compétence « Manipuler, courir, sauter, lancer, s’orienter » (before-4) :**
@@ -369,9 +378,10 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
 #### 2. J’écoute — 4 min, sans interaction écran (phonology)
 
-- **Consigne à l’enfant :** « Ferme les yeux. Qu’est-ce que tu entends ? »
-- **Guidance adulte :** Faites un bruit qu’il connaît : taper sur la table, froisser du papier, verser de l’eau. Demandez ce que c’est. Puis refaites-en deux et demandez lequel était le premier. Deux bruits suffisent.
+- **Consigne à l’enfant :** « Écoute bien. Qu’est-ce que tu entends ? Tu peux fermer les yeux si tu veux. »
+- **Guidance adulte :** Fermer les yeux aide à écouter, mais ne l’imposez pas : s’il préfère regarder, il écoute en regardant. Faites un bruit qu’il connaît : taper sur la table, froisser du papier, verser de l’eau. Demandez ce que c’est. Puis refaites-en deux et demandez lequel était le premier. Deux bruits suffisent.
 - **Matériel :** Aucun matériel
+- **Aide en anglais (optionnelle) :** « Listen. What can you hear? You may close your eyes if you want. »
 - **Objectifs travaillés :** `LANG-S02-C01-O01` Identifier les sons de la langue, lors de situations d’écoute proposées par le professeur.
 
 #### 3. Un, deux, trois, mes mains — 3 min, sans interaction écran (song-rhyme)
@@ -390,6 +400,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > je les cache… les voilà !
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains levées (`public/media/illustrations/comptine-mains.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -447,7 +459,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 _Compter, donner une petite quantité, ranger par forme._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
-- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
+- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S03-C01-O01` — Reconnaitre, trier et classer des objets selon leur forme.
@@ -459,6 +471,12 @@ _Compter, donner une petite quantité, ranger par forme._
 - **Matériel :** Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque)
 - **À défaut :** Dessinez les formes sur une feuille et découpez-les, ou tracez-les directement sur le sol ou sur le sable ; à défaut, servez-vous de morceaux de carton d’emballage.
 - **Aide en anglais (optionnelle) :** « Put the same shapes together. »
+- **Images montrées à l'enfant (3) :**
+
+  - `forme-disque` — Un disque, tout rond (`public/media/shapes/forme-disque.svg`)
+  - `forme-carre` — Un carré (`public/media/shapes/forme-carre.svg`)
+  - `forme-triangle` — Un triangle (`public/media/shapes/forme-triangle.svg`)
+
 - **Objectifs travaillés :** `MATH-S03-C01-O01` Reconnaitre, trier et classer des objets selon leur forme.
 
 **Réussites attendues — texte officiel pour la compétence « Explorer les solides et les formes planes » (before-4) :**
@@ -622,6 +640,10 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Consigne à l’enfant :** « Regarde l’image. Montre-moi Lisa. »
 - **Guidance adulte :** Montrez l’image de l’histoire. Demandez où est le personnage, puis son nom. Acceptez le doigt sans le mot, et nommez pour lui. C’est reconnaître qui compte, pas dire.
 - **Matériel :** Aucun matériel
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-seau` — Un seau (`public/media/objects/objet-seau.svg`)
+
 - **Objectifs travaillés :** `LANG-S02-C03-O03` Reconnaitre un personnage, le nommer et le situer dans les illustrations.
 
 #### 3. Je marche, je m’arrête — 3 min, sans interaction écran (song-rhyme)
@@ -640,6 +662,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > et hop ! je m’assois.
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `bonhomme-articule` — Un bonhomme dessiné avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -696,7 +720,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 _Compter, donner une petite quantité, ranger par forme._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
-- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
+- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O09` — Connaitre la comptine numérique de un à six.
@@ -776,7 +800,7 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
-- **Aide en anglais (optionnelle) :** « Move with me. »
+- **Aide en anglais (optionnelle) :** « Move like me. Then move how you want. »
 - **Objectifs travaillés :** `PHYS-S03-C01-O01` Découvrir et explorer le mouvement comme vecteur d’expression.
 
 **Réussites attendues — texte officiel pour la compétence « Explorer, s’exprimer, danser, observer » (before-4) :**
@@ -831,6 +855,8 @@ _Dire des comptines et laisser une trace._
   > je les cache… les voilà !
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains levées (`public/media/illustrations/comptine-mains.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Jouer avec sa voix et acquérir un répertoire de comptines et de chansons » (before-4) :**
 
@@ -896,12 +922,19 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
 #### 2. Les quatre mots de mon corps — 5 min, sans interaction écran (vocabulary)
 
-- **Consigne à l’enfant :** « Montre-moi ce que je nomme. Puis dis avec moi un ou deux mots que tu veux. »
-- **Guidance adulte :** Rien à préparer : le matériel, c’est vous et lui.
-1. Montrez la partie sur vous et nommez-la lentement, en entier et une seule fois. 2. Demandez-lui de la montrer sur lui — le geste suffit. 3. Laissez un silence : c’est là qu’il essaie de dire le mot. 4. Une approximation compte ; redites le mot correctement une fois, sans le faire répéter. Deux parties par séance suffisent.
+- **Consigne à l’enfant :** « Montre-moi la partie que je nomme. Puis dis avec moi un ou deux mots que tu choisis. »
+- **Guidance adulte :** Ces quatre mots-là, il les connaît déjà : on les revoit, on n’en apprend pas de nouveaux.
+1. Nommez une partie et demandez-lui de la montrer sur lui — le geste suffit, et suffit vraiment. 2. Faites les quatre, dans le désordre. 3. Nommez celle qui ne vient pas, sans la faire répéter. 4. À la fin seulement, proposez-lui de redire **un ou deux** mots, ceux qu’il choisit. On ne demande jamais les quatre à voix haute.
 - **Matériel :** Aucun matériel
 - **Lexique visé :** la main _(the hand)_ · le pied _(the foot)_ · la tête _(the head)_ · le ventre _(the tummy)_
-- **Aide en anglais (optionnelle) :** « Show me the one I name. Then say one or two with me. »
+- **Aide en anglais (optionnelle) :** « Show me the part I name. Then say one or two with me. »
+- **Images montrées à l'enfant (4) :**
+
+  - `corps-main` — Une main ouverte (`public/media/objects/corps-main.svg`)
+  - `corps-pied` — Un pied (`public/media/objects/corps-pied.svg`)
+  - `corps-tete` — Une tête (`public/media/objects/corps-tete.svg`)
+  - `corps-ventre` — Le ventre (`public/media/objects/corps-ventre.svg`)
+
 - **Objectifs travaillés :** `LANG-S01-C01-O01` Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
 
 #### 3. Le petit seau — 3 min, sans interaction écran (song-rhyme)
@@ -920,6 +953,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > sur ma tête il y a ma main !
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Un seau posé sur une chaise (`public/media/illustrations/histoire-seau-lisa.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -985,7 +1020,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 _Compter, donner une petite quantité, ranger par forme._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
-- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
+- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O04` — Constituer une collection (jusqu’à trois, voire quatre objets) d’un cardinal donné.
@@ -1067,7 +1102,7 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
-- **Aide en anglais (optionnelle) :** « Move with me. »
+- **Aide en anglais (optionnelle) :** « Run to the marker, then walk back. »
 - **Objectifs travaillés :** `PHYS-S01-C01-O02` Courir de manière variée et coordonnée.
 
 **Réussites attendues — texte officiel pour la compétence « Manipuler, courir, sauter, lancer, s’orienter » (before-4) :**
@@ -1201,6 +1236,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `comptine-bonjour` — Le soleil qui se lève et deux mains qui se saluent (`public/media/illustrations/comptine-bonjour.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
 - Oser parler pour exprimer un besoin ou prendre part à la vie de la classe.
@@ -1249,7 +1286,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 _Compter, donner une petite quantité, ranger par forme._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
-- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
+- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S03-C01-O01` — Reconnaitre, trier et classer des objets selon leur forme.
@@ -1261,6 +1298,12 @@ _Compter, donner une petite quantité, ranger par forme._
 - **Matériel :** Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque)
 - **À défaut :** Dessinez les formes sur une feuille et découpez-les, ou tracez-les directement sur le sol ou sur le sable ; à défaut, servez-vous de morceaux de carton d’emballage.
 - **Aide en anglais (optionnelle) :** « Put the same shapes together. »
+- **Images montrées à l'enfant (3) :**
+
+  - `forme-disque` — Un disque, tout rond (`public/media/shapes/forme-disque.svg`)
+  - `forme-carre` — Un carré (`public/media/shapes/forme-carre.svg`)
+  - `forme-triangle` — Un triangle (`public/media/shapes/forme-triangle.svg`)
+
 - **Objectifs travaillés :** `MATH-S03-C01-O01` Reconnaitre, trier et classer des objets selon leur forme.
 
 **Réussites attendues — texte officiel pour la compétence « Explorer les solides et les formes planes » (before-4) :**
@@ -1307,7 +1350,7 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **À défaut :** Une balle en papier froissé ou une chaussette roulée. Une petite balle souple convient aussi si la maison en a déjà une.
 - **⚠ Sécurité :** Rien de rempli de petits objets (sac de graines, de haricots) : cela s’ouvre. Une balle en papier ou une chaussette roulée ne blesse personne et ne coûte rien.
 - **À défaut :** Une boîte, un seau, une bassine, un panier ou un carton.
-- **Aide en anglais (optionnelle) :** « Move with me. »
+- **Aide en anglais (optionnelle) :** « Throw the ball into the bucket. »
 - **Objectifs travaillés :** `PHYS-S01-C01-O01` Manipuler et lancer des objets avec des intentions motrices différentes.
 
 **Réussites attendues — texte officiel pour la compétence « Manipuler, courir, sauter, lancer, s’orienter » (before-4) :**

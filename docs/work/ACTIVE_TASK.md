@@ -10,12 +10,13 @@
 
 ## Task
 
-Approve 1ère maternelle Week 3 after its second pass, and make the Week 4 package ready to
-submit.
+Apply the 1ère maternelle Week 4 review corrections (7 items) and return the package for a
+short second pass.
 
 ## Objective
 
-56 of 88 1ère lessons approved, with the approval diff proven empty.
+Week 4 corrected without touching a single approved digest, and the debt that leaves in
+Weeks 1-3 made visible rather than hidden.
 
 ## Status
 
@@ -23,11 +24,11 @@ submit.
 
 ## Branch
 
-`feat/approve-week-3`
+`fix/maternelle-1-week-4-review`
 
 ## Base Branch
 
-`develop` at `24ea120`
+`develop` at `667432c`
 
 ## Started
 
@@ -35,7 +36,8 @@ submit.
 
 ## Last Checkpoint
 
-2026-09-15 — Week 3 approved, Week 4 package verified complete, full local suite green.
+2026-09-15 — 7 corrections applied to Weeks 4-5 only, media identification added to the
+package, full local suite green, 56 approvals intact.
 
 ## Scope
 
@@ -83,7 +85,7 @@ To be filled in when the next task begins.
 
 ## Remaining
 
-- [ ] Submit `docs/review/2026-2027-maternelle-1-semaine-4.md` — the next task
+- [ ] Return Week 4 for its short second pass
 
 ## Validation State
 
@@ -92,7 +94,7 @@ To be filled in when the next task begins.
 | format             | PASS    | working tree                      |
 | lint               | PASS    | working tree                      |
 | typecheck          | PASS    | working tree                      |
-| unit tests         | PASS    | working tree — 235 tests          |
+| unit tests         | PASS    | working tree — 238 tests          |
 | content validation | PASS    | working tree — 30 files           |
 | database tests     | PASS    | fresh reset — 152 assertions      |
 | build              | PASS    | working tree                      |
