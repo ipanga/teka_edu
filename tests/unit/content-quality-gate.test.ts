@@ -364,6 +364,32 @@ describe("human review package", () => {
    * teach nothing new, so looking at the taught list alone found no competency. A package with
    * no official text is a package that cannot be reviewed.
    */
+  /**
+   * A reviewer judging « Montre-moi Lisa » has to know which drawing is on the screen. The id
+   * alone means nothing to them, so the French alt text travels with it.
+   */
+  it("identifies every picture an image-dependent activity shows", () => {
+    for (const week of REVIEW_PACKAGES) {
+      const document = readFileSync(path.join(ROOT, reviewPackagePath(week)), "utf8");
+      const shown = data.lessons
+        .filter((lesson) => lesson.levelIds.includes(week.levelId))
+        .flatMap((lesson) => lesson.activities)
+        .filter((activity) => activity.mediaIds.length > 0);
+      // Only assert for activities this package actually contains.
+      for (const activity of shown) {
+        if (!document.includes(activity.title)) continue;
+        for (const id of activity.mediaIds) {
+          if (!document.includes(`\`${id}\``)) continue;
+          const asset = data.media.find((candidate) => candidate.id === id)!;
+          expect(
+            document,
+            `${week.levelId} s${week.week}: ${id} shown without its description`,
+          ).toContain(asset.alt);
+        }
+      }
+    }
+  });
+
   it("quotes the official expected outcomes in every package", () => {
     for (const week of REVIEW_PACKAGES) {
       const document = readFileSync(path.join(ROOT, reviewPackagePath(week)), "utf8");

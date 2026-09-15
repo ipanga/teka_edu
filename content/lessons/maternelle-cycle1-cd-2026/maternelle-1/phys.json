@@ -748,7 +748,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Move with me."
+              "childInstruction": "Throw the ball into the bucket."
             }
           ],
           "payload": {
@@ -834,7 +834,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Move with me."
+              "childInstruction": "Move like me. Then move how you want."
             }
           ],
           "payload": {
@@ -877,7 +877,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Move with me."
+              "childInstruction": "Run to the marker, then walk back."
             }
           ],
           "payload": {
@@ -920,7 +920,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Move with me."
+              "childInstruction": "Throw the ball into the bucket."
             }
           ],
           "payload": {
@@ -1006,7 +1006,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Move with me."
+              "childInstruction": "Move like me. Then move how you want."
             }
           ],
           "payload": {
@@ -1049,7 +1049,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Move with me."
+              "childInstruction": "Choose what you want to do: run, throw, or walk the line."
             }
           ],
           "payload": {

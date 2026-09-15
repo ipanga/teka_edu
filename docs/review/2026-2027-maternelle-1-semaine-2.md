@@ -102,6 +102,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `bonhomme-articule` — Un bonhomme dessiné avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Apprendre le geste d’écriture » (before-4) :**
 
 - Exercer sa dextérité par des activités manuelles (reproduire des formes en pâte à modeler).
@@ -357,6 +359,13 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Show me the one I name. Then say one or two with me. »
+- **Images montrées à l'enfant (4) :**
+
+  - `objet-porte` — Une porte (`public/media/objects/objet-porte.svg`)
+  - `objet-seau` — Un seau (`public/media/objects/objet-seau.svg`)
+  - `objet-table` — Une table (`public/media/objects/objet-table.svg`)
+  - `objet-chaise` — Une chaise (`public/media/objects/objet-chaise.svg`)
+
 - **Objectifs travaillés :** `LANG-S01-C01-O01` Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
 
 #### 3. Le petit seau — 3 min, sans interaction écran (song-rhyme)
@@ -375,6 +384,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > sur ma tête il y a ma main !
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Un seau posé sur une chaise (`public/media/illustrations/histoire-seau-lisa.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -453,6 +464,10 @@ _Compter, donner une petite quantité, ranger par forme._
 - **À défaut :** Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.
 - **⚠ Sécurité :** Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe.
 - **Aide en anglais (optionnelle) :** « How many are there? »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-cuillere` — Une cuillère (`public/media/objects/objet-cuillere.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O03` Dénombrer une collection d’objets (jusqu’à trois, voire quatre).
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (before-4) :**
@@ -635,6 +650,10 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Consigne à l’enfant :** « Regarde l’image. Montre-moi Lisa. »
 - **Guidance adulte :** Montrez l’image de l’histoire. Demandez où est le personnage, puis son nom. Acceptez le doigt sans le mot, et nommez pour lui. C’est reconnaître qui compte, pas dire.
 - **Matériel :** Aucun matériel
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-seau` — Un seau (`public/media/objects/objet-seau.svg`)
+
 - **Objectifs travaillés :** `LANG-S02-C03-O03` Reconnaitre un personnage, le nommer et le situer dans les illustrations.
 
 #### 3. Je marche, je m’arrête — 3 min, sans interaction écran (song-rhyme)
@@ -653,6 +672,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > et hop ! je m’assois.
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `bonhomme-articule` — Un bonhomme dessiné avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (before-4) :**
 
@@ -847,6 +868,8 @@ _Dire des comptines et laisser une trace._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains levées (`public/media/illustrations/comptine-mains.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Jouer avec sa voix et acquérir un répertoire de comptines et de chansons » (before-4) :**
 
 - Jouer avec sa voix pour reproduire des bruits d’animaux, d’objets et des onomatopées à partir d’images.
@@ -933,6 +956,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Un seau posé sur une chaise (`public/media/illustrations/histoire-seau-lisa.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
 - Oser parler pour exprimer un besoin ou prendre part à la vie de la classe.
@@ -993,6 +1018,10 @@ _Compter, donner une petite quantité, ranger par forme._
 - **À défaut :** Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.
 - **⚠ Sécurité :** Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe.
 - **Aide en anglais (optionnelle) :** « Give me two. »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-cuillere` — Une cuillère (`public/media/objects/objet-cuillere.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O04` Constituer une collection (jusqu’à trois, voire quatre objets) d’un cardinal donné.
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (before-4) :**
@@ -1109,6 +1138,11 @@ _Nommer son corps et se servir de ses sens._
 - **Matériel :** Aucun matériel
 - **Lexique visé :** la tête _(the head)_ · le ventre _(the tummy)_
 - **Aide en anglais (optionnelle) :** « Show me your head. Show me your tummy. »
+- **Images montrées à l'enfant (2) :**
+
+  - `corps-tete` — Une tête (`public/media/objects/corps-tete.svg`)
+  - `corps-ventre` — Le ventre (`public/media/objects/corps-ventre.svg`)
+
 - **Objectifs travaillés :** `WORLD-S01-C02-O01` Nommer et représenter quelques parties du corps humain.
 
 **Réussites attendues — texte officiel pour la compétence « Découvrir le corps humain et la santé » (before-4) :**
@@ -1195,6 +1229,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-tika` — Un enfant qui se lève de son lit, le soleil à la fenêtre (`public/media/illustrations/histoire-tika.svg`)
+
 - **Questions posées à l’enfant après l’écoute (1) :**
 
   1. Tika ferme les yeux le matin, ou le soir ?
@@ -1216,6 +1252,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > Et puis plus rien. Le soleil revient.
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe sur un toit (`public/media/illustrations/histoire-pluie.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 

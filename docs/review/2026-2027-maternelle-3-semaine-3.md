@@ -111,6 +111,8 @@ _Dire ce qu’on voit avec assez de mots pour être compris sans montrer du doig
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-nsimba` — Un enfant avec un sac devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
 - Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
@@ -198,6 +200,10 @@ _Étendre la suite des nombres de dix à vingt._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Make a pile of twelve objects. »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O26` Connaitre et utiliser la comptine numérique jusqu’à trente.
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**
@@ -435,6 +441,8 @@ _Redire une histoire connue dans l’ordre, avec ses propres mots._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue coupée en trois morceaux (`public/media/illustrations/histoire-mangue.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
 - Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
@@ -499,6 +507,10 @@ _Décomposer un petit nombre en deux parties._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Look at the five objects. I hide some; guess how many are hidden. »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O22` Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà. ; `MATH-S01-C01-O23` Manipuler et verbaliser des compositions et des décompositions de nombres. Cela permet d’installer le fait que, dans une composition, l’ordre ne compte pas.
 
 #### 2. Deux façons de faire cinq — 4 min, sans interaction écran (counting)
@@ -647,6 +659,10 @@ _Retrouver et nommer les endroits du corps qui plient, et s’en servir._
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
 - **À défaut :** Un crayon, un stylo, une craie ou un morceau de charbon conviennent.
 - **Aide en anglais (optionnelle) :** « Draw a person with bent arms. »
+- **Images montrées à l'enfant (1) :**
+
+  - `bonhomme-articule` — Un bonhomme dessiné avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
+
 - **Objectifs travaillés :** `WORLD-S01-C02-O08` Identifier et nommer quelques articulations et la segmentation des membres.
 
 **Réussites attendues — texte officiel pour la compétence « Découvrir le corps humain et la santé » (from-5) :**
@@ -744,6 +760,8 @@ _Ranger les mots par familles : ce qui se mange, ce qui sert à écrire, ce qui 
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-marche` — Un panier de marché avec des tomates et une banane (`public/media/illustrations/histoire-marche.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (from-5) :**
 
 - Comprendre et utiliser :
@@ -814,6 +832,10 @@ _Trouver plusieurs façons de faire six._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Split six objects into two piles, then tell me what you did. »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O22` Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà. ; `MATH-S01-C01-O23` Manipuler et verbaliser des compositions et des décompositions de nombres. Cela permet d’installer le fait que, dans une composition, l’ordre ne compte pas.
 
 #### 2. Combien dans l’autre main ? — 4 min, sans interaction écran (counting)
@@ -966,6 +988,8 @@ _Fabriquer des sons avec son corps et des objets, et les organiser._
 
   _Comptine originale écrite pour Teka Edu. Aucune comptine existante n’est reprise._
 
+- **Image montrée pendant la lecture :** `comptine-compter` — Une main qui montre trois doigts (`public/media/illustrations/comptine-compter.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Explorer des instruments, utiliser les sonorités du corps » (from-5) :**
 
 - Produire le plus de sons différents avec un même instrument à percussion : doux avec la paume de la main, fort avec une mailloche, etc.
@@ -1034,6 +1058,13 @@ _Troisième corpus de mots : le marché, les fruits, les légumes, les quantité
 - **Matériel :** Aucun matériel
 - **Lexique visé :** la tomate _(the tomato)_ · la banane _(the banana)_ · l’oignon _(the onion)_ · le panier _(the basket)_ · la monnaie _(the change)_
 - **Aide en anglais (optionnelle) :** « Name what we buy at the market: tomato, banana, onion, basket, change. »
+- **Images montrées à l'enfant (4) :**
+
+  - `objet-tomate` — Une tomate (`public/media/objects/objet-tomate.svg`)
+  - `objet-banane` — Une banane (`public/media/objects/objet-banane.svg`)
+  - `objet-oignon` — Un oignon (`public/media/objects/objet-oignon.svg`)
+  - `objet-panier` — Un panier (`public/media/objects/objet-panier.svg`)
+
 - **Objectifs travaillés :** `LANG-S01-C01-O03` Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
 
 #### 3. Le temps de lecture — 3 min, sans interaction écran (read-aloud)
@@ -1060,6 +1091,8 @@ _Troisième corpus de mots : le marché, les fruits, les légumes, les quantité
   > Depuis ce jour, Bibi a son tas d’herbe, et le jardin a sa barrière bien fermée.
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-bibi` — Une chèvre devant une barrière et des feuilles (`public/media/illustrations/histoire-bibi.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -1388,6 +1421,8 @@ _Frapper les syllabes de mots plus longs et compter combien il y en a._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-cailloux` — Trois cailloux : un rond, un plat et un pointu (`public/media/illustrations/histoire-cailloux.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
 - Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
@@ -1614,6 +1649,8 @@ _Dire la comptine du mois par cœur, en rythme, et en commencer une autre._
   > un, deux, trois, et c’est fini !
 
   _Comptine originale écrite pour Teka Edu. Aucune comptine existante n’est reprise._
+
+- **Image montrée pendant la lecture :** `comptine-formes` — Les quatre formes qui dansent : rond, carré, rectangle, triangle (`public/media/illustrations/comptine-formes.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Jouer avec sa voix et acquérir un répertoire de comptines et de chansons » (from-5) :**
 

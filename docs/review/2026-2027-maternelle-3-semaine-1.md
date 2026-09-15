@@ -111,6 +111,8 @@ _L’enfant salue, dit son nom et son âge, et parle des personnes qui vivent av
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-nsimba` — Un enfant avec un sac devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
 - Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
@@ -204,6 +206,10 @@ _Compter une petite collection en déplaçant les objets, puis en donner un nomb
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Count the objects one by one, then say how many. »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). ; `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
 #### 2. Donne-moi exactement quatre — 4 min, sans interaction écran (manipulation)
@@ -350,6 +356,10 @@ _Nommer les parties du corps qui plient, et se dessiner en mouvement._
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
 - **À défaut :** Un crayon, un stylo, une craie ou un morceau de charbon conviennent.
 - **Aide en anglais (optionnelle) :** « Draw yourself running or dancing. »
+- **Images montrées à l'enfant (1) :**
+
+  - `bonhomme-articule` — Un bonhomme dessiné avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
+
 - **Objectifs travaillés :** `WORLD-S01-C02-O08` Identifier et nommer quelques articulations et la segmentation des membres. ; `WORLD-S01-C02-O09` Se représenter avec un corps articulé en mouvement.
 
 **Réussites attendues — texte officiel pour la compétence « Découvrir le corps humain et la santé » (from-5) :**
@@ -422,6 +432,14 @@ _Premier corpus de mots : nommer et ranger les objets de l’école._
 - **Lexique visé :** le cahier _(the notebook)_ · le crayon _(the pencil)_ · le sac _(the bag)_ · la table _(the table)_ · la chaise _(the chair)_ · il sert à _(it is for)_ · elle sert à _(it is for)_
 - **À défaut :** À défaut de vrai matériel scolaire : une feuille pliée en guise de cahier, un sac, une craie.
 - **Aide en anglais (optionnelle) :** « Name the school things, then say what each one is for: “It is for…”. »
+- **Images montrées à l'enfant (5) :**
+
+  - `objet-cahier` — Un cahier (`public/media/objects/objet-cahier.svg`)
+  - `objet-crayon` — Un crayon (`public/media/objects/objet-crayon.svg`)
+  - `objet-sac` — Un sac d’école (`public/media/objects/objet-sac.svg`)
+  - `objet-table` — Une table (`public/media/objects/objet-table.svg`)
+  - `objet-chaise` — Une chaise (`public/media/objects/objet-chaise.svg`)
+
 - **Objectifs travaillés :** `LANG-S01-C01-O03` Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période). ; `LANG-S01-C02-O01` Diversifier les pronoms employés.
 
 #### 3. Le temps de lecture — 3 min, sans interaction écran (read-aloud)
@@ -446,6 +464,8 @@ _Premier corpus de mots : nommer et ranger les objets de l’école._
   > Et la mangue, partagée en trois, a un gout encore meilleur.
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue coupée en trois morceaux (`public/media/illustrations/histoire-mangue.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -530,6 +550,10 @@ _Comparer deux collections sans compter, puis en comptant._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Look at the two piles. Which one has more? »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O05` Comparer des quantités.
 
 #### 2. J’en mets autant — 4 min, sans interaction écran (counting)
@@ -742,6 +766,11 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
 - **Matériel :** Aucun matériel
 - **Lexique visé :** le poussin _(the chick)_ · écouter _(to listen)_ · appeler _(to call)_
 - **Aide en anglais (optionnelle) :** « Listen to Kumu’s story. I will ask you three questions after. »
+- **Images montrées à l'enfant (2) :**
+
+  - `animal-poussin` — Un petit poussin (`public/media/animals/animal-poussin.svg`)
+  - `animal-poule` — Une poule (`public/media/animals/animal-poule.svg`)
+
 - **Objectifs travaillés :** `LANG-S02-C03-O09` Comprendre des histoires dont les actions sont organisées autour d’une structure répétitive (rencontres successives) et commencer à comprendre les informations implicites (émotions, états et sentiments des personnages). ; `LANG-S01-C04-O11` Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
 
 - **Histoire lue à l’enfant — « Kumu, le petit poussin »** (3 min, `kumu-le-petit-poussin`) :
@@ -760,6 +789,8 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
   > Et Kumu répond : « Piou ! », ce qui veut dire oui.
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-kumu` — Un petit poussin devant la porte ouverte du poulailler (`public/media/illustrations/histoire-kumu.svg`)
 
 - **Questions posées à l’enfant après l’écoute (3) :**
 
@@ -789,6 +820,8 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
   > Tito sort, il met un doigt dessous, et la goutte tombe dans sa main.
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe sur un toit (`public/media/illustrations/histoire-pluie.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
 
@@ -867,6 +900,13 @@ _Reconnaitre et nommer le carré, le rectangle, le triangle et le disque._
 - **Lexique visé :** le carré _(the square)_ · le rectangle _(the rectangle)_ · le triangle _(the triangle)_ · le disque _(the circle)_ · le côté _(the side)_
 - **À défaut :** Dessinez les formes sur une feuille et découpez-les, ou tracez-les directement sur le sol ou sur le sable ; à défaut, servez-vous de morceaux de carton d’emballage.
 - **Aide en anglais (optionnelle) :** « Look at the shapes and name them. »
+- **Images montrées à l'enfant (4) :**
+
+  - `forme-carre` — Un carré (`public/media/shapes/forme-carre.svg`)
+  - `forme-rectangle` — Un rectangle (`public/media/shapes/forme-rectangle.svg`)
+  - `forme-triangle` — Un triangle (`public/media/shapes/forme-triangle.svg`)
+  - `forme-disque` — Un disque, tout rond (`public/media/shapes/forme-disque.svg`)
+
 - **Objectifs travaillés :** `MATH-S03-C01-O08` Décrire et nommer quelques figures géométriques simples : carré, rectangle, triangle, disque. ; `MATH-S03-C01-O07` Reconnaitre, trier et classer des formes géométriques planes, indépendamment d’autres critères comme la couleur, la taille, l’orientation.
 
 #### 2. Je range les formes — 4 min, sans interaction écran (sorting)
@@ -877,6 +917,13 @@ _Reconnaitre et nommer le carré, le rectangle, le triangle et le disque._
 - **Lexique visé :** pareil _(the same)_ · ranger _(to sort)_
 - **À défaut :** Dessinez les formes sur une feuille et découpez-les, ou tracez-les directement sur le sol ou sur le sable ; à défaut, servez-vous de morceaux de carton d’emballage.
 - **Aide en anglais (optionnelle) :** « Put the shapes that are the same together. »
+- **Images montrées à l'enfant (4) :**
+
+  - `forme-carre` — Un carré (`public/media/shapes/forme-carre.svg`)
+  - `forme-rectangle` — Un rectangle (`public/media/shapes/forme-rectangle.svg`)
+  - `forme-triangle` — Un triangle (`public/media/shapes/forme-triangle.svg`)
+  - `forme-disque` — Un disque, tout rond (`public/media/shapes/forme-disque.svg`)
+
 - **Objectifs travaillés :** `MATH-S03-C01-O08` Décrire et nommer quelques figures géométriques simples : carré, rectangle, triangle, disque.
 
 **Réussites attendues — texte officiel pour la compétence « Explorer les solides et les formes planes » (from-5) :**
@@ -1086,6 +1133,8 @@ _Frapper les syllabes des prénoms de la maison : entendre que les mots sont fai
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-kumu` — Un petit poussin devant la porte ouverte du poulailler (`public/media/illustrations/histoire-kumu.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Acquérir les habiletés phonologiques et le principe alphabétique » (from-5) :**
 
 - Fusionner les syllabes d’attaque de POISSON et la syllabe finale de SOURIS pour obtenir un pseudo-mot POIRIS.
@@ -1158,6 +1207,10 @@ _Dire la suite des nombres jusqu’à dix sans en oublier._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Make a pile of ten objects, counting out loud. »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
+
 - **Extension facultative (proposée seulement si l’enfant en redemande) :** Enlever un objet et redire combien il en reste — facultatif.
 - **Objectifs travaillés :** `MATH-S01-C01-O26` Connaitre et utiliser la comptine numérique jusqu’à trente.
 
@@ -1297,6 +1350,8 @@ _Apprendre une comptine par cœur et la dire en rythme._
   > qui comptent avec moi !
 
   _Comptine originale écrite pour Teka Edu. Aucune comptine existante n’est reprise._
+
+- **Image montrée pendant la lecture :** `comptine-compter` — Une main qui montre trois doigts (`public/media/illustrations/comptine-compter.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Jouer avec sa voix et acquérir un répertoire de comptines et de chansons » (from-5) :**
 

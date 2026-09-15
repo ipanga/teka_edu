@@ -294,6 +294,31 @@ describe("September content quality", () => {
  */
 describe("1ère maternelle safety (before-4)", () => {
   const data = getReferenceData();
+  /**
+   * Activities that break a rule below and are **already approved**, so their text cannot be
+   * edited without invalidating a digest a reviewer signed (ADR-035). Every one is a defect the
+   * Week 4 review found in its own week and that the identical earlier activity still carries.
+   *
+   * They are listed rather than hidden, and the list may only shrink: fixing one means sending
+   * its week back for re-confirmation, which is the product owner's decision, not this file's.
+   */
+  const APPROVED_DEBT = new Set([
+    // « Ferme les yeux » required rather than offered (Week 3, day 10).
+    "m1-lang-10-a2",
+    // Generic « Move with me. » where the French task is specific (Weeks 1-3).
+    "m1-phys-01-a1",
+    "m1-phys-02-a1",
+    "m1-phys-03-a1",
+    "m1-phys-04-a1",
+    "m1-phys-05-a1",
+    "m1-phys-06-a1",
+    "m1-phys-07-a1",
+    "m1-phys-08-a1",
+    "m1-phys-10-a1",
+    "m1-phys-11-a1",
+    "m1-phys-13-a1",
+    "m1-phys-14-a1",
+  ]);
   const lessons = data.lessons.filter((lesson) => lesson.levelIds.includes("maternelle-1"));
   const activities = lessons.flatMap((lesson) => lesson.activities);
 
@@ -311,6 +336,39 @@ describe("1ère maternelle safety (before-4)", () => {
    * because only interactive activities counted. Two numbers now answer two questions, and the
    * looking one must never be zero on a day that actually shows something.
    */
+  /**
+   * Narrow on purpose. Closing the eyes is fine as an invitation and is genuinely useful for
+   * listening; what is forbidden is *requiring* it, since neither the auditory nor the tactile
+   * objective needs it. A global ban on the phrase would forbid offering it at all.
+   */
+  it("invites closing the eyes, never requires it", () => {
+    for (const activity of activities) {
+      if (APPROVED_DEBT.has(activity.id)) continue;
+      if (!/ferme les yeux/i.test(activity.childInstruction)) continue;
+      expect(
+        /si tu veux|si tu le veux|tu peux/i.test(activity.childInstruction),
+        `${activity.id}: « ferme les yeux » is an instruction, not an offer`,
+      ).toBe(true);
+    }
+  });
+
+  /**
+   * A physical activity has a specific task; « Move with me. » tells an English-speaking parent
+   * nothing about throwing a ball into a bucket.
+   */
+  it("gives a physical activity an English scaffold about its own task", () => {
+    for (const activity of activities) {
+      if (APPROVED_DEBT.has(activity.id)) continue;
+      if (activity.type !== "movement") continue;
+      const scaffold = activity.scaffolds.find((entry) => entry.language === "en");
+      if (scaffold === undefined) continue;
+      expect(
+        scaffold.childInstruction,
+        `${activity.id}: generic scaffold for « ${activity.childInstruction} »`,
+      ).not.toBe("Move with me.");
+    }
+  });
+
   it("never reports zero looking time on a day that shows the child a picture", () => {
     for (const plan of plans) {
       const shows = plan.sessions.some(

@@ -101,6 +101,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe sur un toit (`public/media/illustrations/histoire-pluie.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Acquérir les habiletés phonologiques et le principe alphabétique » (before-4) :**
 
 - Discriminer et identifier des sons familiers, localiser le son (la source).
@@ -170,6 +172,10 @@ _Compter, donner une petite quantité, ranger par forme._
 - **À défaut :** Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.
 - **⚠ Sécurité :** Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe.
 - **Aide en anglais (optionnelle) :** « Give me three. »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-cuillere` — Une cuillère (`public/media/objects/objet-cuillere.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O04` Constituer une collection (jusqu’à trois, voire quatre objets) d’un cardinal donné.
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (before-4) :**
@@ -357,6 +363,11 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Matériel :** Aucun matériel
 - **Lexique visé :** la main _(the hand)_ · le pied _(the foot)_
 - **Aide en anglais (optionnelle) :** « Listen, then say the word with me. »
+- **Images montrées à l'enfant (2) :**
+
+  - `corps-main` — Une main ouverte (`public/media/objects/corps-main.svg`)
+  - `corps-pied` — Un pied (`public/media/objects/corps-pied.svg`)
+
 - **Objectifs travaillés :** `LANG-S01-C01-O01` Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
 
 #### 3. Un, deux, trois, mes mains — 3 min, sans interaction écran (song-rhyme)
@@ -375,6 +386,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > je les cache… les voilà !
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains levées (`public/media/illustrations/comptine-mains.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -451,6 +464,11 @@ _Compter, donner une petite quantité, ranger par forme._
 - **Matériel :** Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque)
 - **À défaut :** Dessinez les formes sur une feuille et découpez-les, ou tracez-les directement sur le sol ou sur le sable ; à défaut, servez-vous de morceaux de carton d’emballage.
 - **Aide en anglais (optionnelle) :** « Put the same shapes together. »
+- **Images montrées à l'enfant (2) :**
+
+  - `forme-disque` — Un disque, tout rond (`public/media/shapes/forme-disque.svg`)
+  - `forme-carre` — Un carré (`public/media/shapes/forme-carre.svg`)
+
 - **Objectifs travaillés :** `MATH-S03-C01-O01` Reconnaitre, trier et classer des objets selon leur forme.
 
 **Réussites attendues — texte officiel pour la compétence « Explorer les solides et les formes planes » (before-4) :**
@@ -553,6 +571,8 @@ _Dire des comptines et laisser une trace._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains levées (`public/media/illustrations/comptine-mains.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Jouer avec sa voix et acquérir un répertoire de comptines et de chansons » (before-4) :**
 
 - Jouer avec sa voix pour reproduire des bruits d’animaux, d’objets et des onomatopées à partir d’images.
@@ -640,6 +660,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > et hop ! je m’assois.
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `bonhomme-articule` — Un bonhomme dessiné avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -900,6 +922,11 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Matériel :** Aucun matériel
 - **Lexique visé :** la tête _(the head)_ · le ventre _(the tummy)_
 - **Aide en anglais (optionnelle) :** « Listen, then say the word with me. »
+- **Images montrées à l'enfant (2) :**
+
+  - `corps-tete` — Une tête (`public/media/objects/corps-tete.svg`)
+  - `corps-ventre` — Le ventre (`public/media/objects/corps-ventre.svg`)
+
 - **Objectifs travaillés :** `LANG-S01-C01-O01` Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
 
 #### 3. Bonjour, petit — 3 min, sans interaction écran (song-rhyme)
@@ -918,6 +945,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > bonjour, bonjour, et me voilà.
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `comptine-bonjour` — Le soleil qui se lève et deux mains qui se saluent (`public/media/illustrations/comptine-bonjour.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -995,6 +1024,11 @@ _Compter, donner une petite quantité, ranger par forme._
 - **Matériel :** Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque)
 - **À défaut :** Dessinez les formes sur une feuille et découpez-les, ou tracez-les directement sur le sol ou sur le sable ; à défaut, servez-vous de morceaux de carton d’emballage.
 - **Aide en anglais (optionnelle) :** « Put the same shapes together. »
+- **Images montrées à l'enfant (2) :**
+
+  - `forme-disque` — Un disque, tout rond (`public/media/shapes/forme-disque.svg`)
+  - `forme-carre` — Un carré (`public/media/shapes/forme-carre.svg`)
+
 - **Objectifs travaillés :** `MATH-S03-C01-O01` Reconnaitre, trier et classer des objets selon leur forme.
 
 **Réussites attendues — texte officiel pour la compétence « Explorer les solides et les formes planes » (before-4) :**
@@ -1177,6 +1211,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > sur ma tête il y a ma main !
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Un seau posé sur une chaise (`public/media/illustrations/histoire-seau-lisa.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 

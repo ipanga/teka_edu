@@ -111,6 +111,8 @@ _Parler de ce qu’on a fait à quelqu’un qui ne l’a pas vu._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-malo` — Un petit chien endormi en rond sous la lune (`public/media/illustrations/histoire-malo.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
 - Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
@@ -190,6 +192,10 @@ _Retrouver ce qui a été enlevé d’une collection._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Count the objects. Close your eyes. How many did I take away? »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O22` Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà. ; `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
 #### 2. Je refais le tas — 4 min, sans interaction écran (counting)
@@ -434,6 +440,8 @@ _Reconnaitre un mot à partir de ses syllabes et de sa rime._
   > Tito sort, il met un doigt dessous, et la goutte tombe dans sa main.
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe sur un toit (`public/media/illustrations/histoire-pluie.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -771,6 +779,8 @@ _Reprendre, en parlant, ce que le mois a apporté._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue coupée en trois morceaux (`public/media/illustrations/histoire-mangue.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
 - Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
@@ -850,6 +860,10 @@ _Reprendre en jeu les mathématiques du mois._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Count what I show you, fast or slow, as you like. »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). ; `MATH-S01-C01-O22` Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà.
 
 #### 2. Deux tas pour faire dix — 4 min, sans interaction écran (manipulation)
@@ -1010,6 +1024,8 @@ _Reprendre le répertoire de comptines et le dessin du mois._
   > un, deux, trois, et c’est fini !
 
   _Comptine originale écrite pour Teka Edu. Aucune comptine existante n’est reprise._
+
+- **Image montrée pendant la lecture :** `comptine-formes` — Les quatre formes qui dansent : rond, carré, rectangle, triangle (`public/media/illustrations/comptine-formes.svg`)
 
 #### 2. Je dessine ma comptine — 3 min, sans interaction écran (drawing)
 

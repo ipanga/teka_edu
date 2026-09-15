@@ -110,6 +110,8 @@ _Dire ce qu’on a fait, dans l’ordre, en phrases entières._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-bibi` — Une chèvre devant une barrière et des feuilles (`public/media/illustrations/histoire-bibi.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
 - Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
@@ -189,6 +191,10 @@ _Compter des collections un peu plus grandes, en les organisant._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Put the objects in a line, then count them. »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). ; `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
 #### 2. Donne-moi six — 4 min, sans interaction écran (manipulation)
@@ -327,6 +333,11 @@ _Nommer les parties d’un animal et dire ce dont il a besoin pour vivre._
 - **Matériel :** Aucun matériel
 - **Lexique visé :** la patte _(the leg)_ · la queue _(the tail)_ · la plume _(the feather)_ · le poil _(the fur)_
 - **Aide en anglais (optionnelle) :** « Choose an animal you know and name its parts. »
+- **Images montrées à l'enfant (2) :**
+
+  - `animal-poule` — Une poule (`public/media/animals/animal-poule.svg`)
+  - `animal-chevre` — Une chèvre (`public/media/animals/animal-chevre.svg`)
+
 - **Objectifs travaillés :** `WORLD-S01-C01-O08` Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale. ; `WORLD-S01-C01-O10` Décrire les besoins essentiels de quelques animaux ou de végétaux.
 
 #### 2. De quoi a-t-il besoin ? — 3 min, sans interaction écran (conversation)
@@ -433,6 +444,8 @@ _Écouter une suite de mots et la redire : la mémoire des sons se travaille com
   > « Tu as bien travaillé », dit mama Lelo. Et Ama est très fière.
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-marche` — Un panier de marché avec des tomates et une banane (`public/media/illustrations/histoire-marche.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Acquérir les habiletés phonologiques et le principe alphabétique » (from-5) :**
 
@@ -722,6 +735,14 @@ _Deuxième corpus de mots : nommer les objets et les pièces de la maison._
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Name what you can see: door, window, bed, pot, bucket. »
+- **Images montrées à l'enfant (5) :**
+
+  - `objet-porte` — Une porte (`public/media/objects/objet-porte.svg`)
+  - `objet-fenetre` — Une fenêtre (`public/media/objects/objet-fenetre.svg`)
+  - `objet-lit` — Un lit (`public/media/objects/objet-lit.svg`)
+  - `objet-marmite` — Une marmite (`public/media/objects/objet-marmite.svg`)
+  - `objet-seau` — Un seau (`public/media/objects/objet-seau.svg`)
+
 - **Objectifs travaillés :** `LANG-S01-C01-O03` Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
 
 #### 3. Le temps de lecture — 3 min, sans interaction écran (read-aloud)
@@ -748,6 +769,8 @@ _Deuxième corpus de mots : nommer les objets et les pièces de la maison._
   > Et il dort.
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-malo` — Un petit chien endormi en rond sous la lune (`public/media/illustrations/histoire-malo.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -818,6 +841,10 @@ _Passer une seule fois par chaque objet d’une collection._
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **À défaut :** Une boîte, un seau, une bassine, un panier ou un carton.
 - **Aide en anglais (optionnelle) :** « Count the objects by dropping them into the box one by one. »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O19` Poursuivre les stratégies de parcours d’une collection en passant une et une seule fois par chacun de ses éléments.
 
 #### 2. Compter en rond — 4 min, sans interaction écran (counting)
@@ -1058,6 +1085,8 @@ _Employer « il » et « elle » pour parler de quelqu’un d’autre._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-cailloux` — Trois cailloux : un rond, un plat et un pointu (`public/media/illustrations/histoire-cailloux.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
 - Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
@@ -1151,6 +1180,13 @@ _Retrouver une forme quelle que soit sa taille ou sa position._
 - **Lexique visé :** la taille _(the size)_ · tourner _(to turn)_
 - **À défaut :** Dessinez les formes sur une feuille et découpez-les, ou tracez-les directement sur le sol ou sur le sable ; à défaut, servez-vous de morceaux de carton d’emballage.
 - **Aide en anglais (optionnelle) :** « Find the shape that goes with this one. »
+- **Images montrées à l'enfant (4) :**
+
+  - `forme-carre` — Un carré (`public/media/shapes/forme-carre.svg`)
+  - `forme-rectangle` — Un rectangle (`public/media/shapes/forme-rectangle.svg`)
+  - `forme-triangle` — Un triangle (`public/media/shapes/forme-triangle.svg`)
+  - `forme-disque` — Un disque, tout rond (`public/media/shapes/forme-disque.svg`)
+
 - **Objectifs travaillés :** `MATH-S03-C01-O07` Reconnaitre, trier et classer des formes géométriques planes, indépendamment d’autres critères comme la couleur, la taille, l’orientation. ; `MATH-S03-C01-O08` Décrire et nommer quelques figures géométriques simples : carré, rectangle, triangle, disque.
 
 #### 2. Des formes dans la maison — 4 min, sans interaction écran (observation)
@@ -1162,6 +1198,13 @@ _Retrouver une forme quelle que soit sa taille ou sa position._
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Find a shape around you and say its name. »
+- **Images montrées à l'enfant (4) :**
+
+  - `forme-carre` — Un carré (`public/media/shapes/forme-carre.svg`)
+  - `forme-rectangle` — Un rectangle (`public/media/shapes/forme-rectangle.svg`)
+  - `forme-triangle` — Un triangle (`public/media/shapes/forme-triangle.svg`)
+  - `forme-disque` — Un disque, tout rond (`public/media/shapes/forme-disque.svg`)
+
 - **Objectifs travaillés :** `MATH-S03-C01-O07` Reconnaitre, trier et classer des formes géométriques planes, indépendamment d’autres critères comme la couleur, la taille, l’orientation.
 
 **Réussites attendues — texte officiel pour la compétence « Explorer les solides et les formes planes » (from-5) :**
@@ -1357,6 +1400,10 @@ _Comprendre ce que ressent un personnage, et le dire._
 - **Matériel :** Aucun matériel
 - **Lexique visé :** content _(happy)_ · triste _(sad)_ · fâché _(angry)_ · curieux _(curious)_
 - **Aide en anglais (optionnelle) :** « Listen to Bibi’s story, then tell me how she feels. »
+- **Images montrées à l'enfant (1) :**
+
+  - `animal-chevre` — Une chèvre (`public/media/animals/animal-chevre.svg`)
+
 - **Objectifs travaillés :** `LANG-S02-C03-O14` Comprendre les émotions, les intentions et les sentiments qui animent les personnages. ; `LANG-S02-C03-O15` Établir un lien entre la lecture effectuée et sa propre expérience.
 
 - **Histoire lue à l’enfant — « Bibi, la chèvre curieuse »** (3 min, `bibi-la-chevre-curieuse`) :
@@ -1375,6 +1422,8 @@ _Comprendre ce que ressent un personnage, et le dire._
   > Depuis ce jour, Bibi a son tas d’herbe, et le jardin a sa barrière bien fermée.
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-bibi` — Une chèvre devant une barrière et des feuilles (`public/media/illustrations/histoire-bibi.svg`)
 
 - **Questions posées à l’enfant après l’écoute (3) :**
 
@@ -1406,6 +1455,8 @@ _Comprendre ce que ressent un personnage, et le dire._
   > Et Kumu répond : « Piou ! », ce qui veut dire oui.
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-kumu` — Un petit poussin devant la porte ouverte du poulailler (`public/media/illustrations/histoire-kumu.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
 
@@ -1463,6 +1514,10 @@ _Reprendre le comptage et la comparaison de la semaine._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Count what I show you and say how many. »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). ; `MATH-S01-C01-O05` Comparer des quantités.
 
 #### 2. Plus, moins, autant — 4 min, sans interaction écran (manipulation)
@@ -1610,6 +1665,10 @@ _Découvrir les besoins d’un végétal, et les comparer à ceux d’un animal.
 - **Matériel :** Aucun matériel
 - **Lexique visé :** la feuille _(the leaf)_ · la tige _(the stem)_ · la racine _(the root)_
 - **Aide en anglais (optionnelle) :** « Look at the plant. Show me its leaves, its stem, its roots. »
+- **Images montrées à l'enfant (1) :**
+
+  - `plante-parties` — Une plante avec ses feuilles, sa tige et ses racines sous la terre (`public/media/illustrations/plante-parties.svg`)
+
 - **Objectifs travaillés :** `WORLD-S01-C01-O10` Décrire les besoins essentiels de quelques animaux ou de végétaux. ; `WORLD-S01-C01-O08` Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale.
 
 #### 2. L’eau et la lumière — 3 min, sans interaction écran (conversation)

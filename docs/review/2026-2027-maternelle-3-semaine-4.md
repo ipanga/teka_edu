@@ -104,6 +104,8 @@ _Comprendre ce que ressent un personnage et le comparer à ce qu’on a vécu so
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-nsimba` — Un enfant avec un sac devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
+
 - **Questions posées à l’enfant après l’écoute (3) :**
 
   1. Comment se sent Nsimba devant le portail ?
@@ -135,6 +137,8 @@ _Comprendre ce que ressent un personnage et le comparer à ce qu’on a vécu so
   > Nsimba répond : « Demain, j’y retourne. »
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-nsimba` — Un enfant avec un sac devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -312,6 +316,12 @@ _Comparer deux animaux et dire ce qui les distingue._
 - **Matériel :** Aucun matériel
 - **Lexique visé :** pareil _(the same)_ · différent _(different)_ · les pattes _(the legs)_
 - **Aide en anglais (optionnelle) :** « Compare two animals: what is the same, what is different? »
+- **Images montrées à l'enfant (3) :**
+
+  - `animal-poule` — Une poule (`public/media/animals/animal-poule.svg`)
+  - `animal-chevre` — Une chèvre (`public/media/animals/animal-chevre.svg`)
+  - `animal-poussin` — Un petit poussin (`public/media/animals/animal-poussin.svg`)
+
 - **Objectifs travaillés :** `WORLD-S01-C01-O08` Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale.
 
 #### 2. Je dessine mon animal — 3 min, sans interaction écran (drawing)
@@ -422,6 +432,8 @@ _Entendre que deux mots finissent pareil._
   > Et il dort.
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-malo` — Un petit chien endormi en rond sous la lune (`public/media/illustrations/histoire-malo.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Acquérir les habiletés phonologiques et le principe alphabétique » (from-5) :**
 
@@ -749,6 +761,8 @@ _Produire un mot qui rime, après l’avoir reconnu._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-kumu` — Un petit poussin devant la porte ouverte du poulailler (`public/media/illustrations/histoire-kumu.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
 - Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
@@ -814,6 +828,10 @@ _Trouver ce qu’il faut ajouter pour arriver à dix._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « How many more do we need to reach ten? »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O22` Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà. ; `MATH-S01-C01-O23` Manipuler et verbaliser des compositions et des décompositions de nombres. Cela permet d’installer le fait que, dans une composition, l’ordre ne compte pas.
 
 #### 2. Dix avec mes deux mains — 4 min, sans interaction écran (counting)
@@ -1047,6 +1065,8 @@ _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-cailloux` — Trois cailloux : un rond, un plat et un pointu (`public/media/illustrations/histoire-cailloux.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
 - Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
@@ -1113,6 +1133,13 @@ _Retrouver les formes planes sur les objets réels._
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Put the paper shape on an object with the same face. »
+- **Images montrées à l'enfant (4) :**
+
+  - `forme-carre` — Un carré (`public/media/shapes/forme-carre.svg`)
+  - `forme-rectangle` — Un rectangle (`public/media/shapes/forme-rectangle.svg`)
+  - `forme-triangle` — Un triangle (`public/media/shapes/forme-triangle.svg`)
+  - `forme-disque` — Un disque, tout rond (`public/media/shapes/forme-disque.svg`)
+
 - **Objectifs travaillés :** `MATH-S03-C01-O07` Reconnaitre, trier et classer des formes géométriques planes, indépendamment d’autres critères comme la couleur, la taille, l’orientation. ; `MATH-S03-C01-O08` Décrire et nommer quelques figures géométriques simples : carré, rectangle, triangle, disque.
 
 #### 2. Je dessine avec des formes — 4 min, sans interaction écran (drawing)
@@ -1124,6 +1151,13 @@ _Retrouver les formes planes sur les objets réels._
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
 - **À défaut :** Un crayon, un stylo, une craie ou un morceau de charbon conviennent.
 - **Aide en anglais (optionnelle) :** « Draw a house with a square and a triangle. »
+- **Images montrées à l'enfant (4) :**
+
+  - `forme-carre` — Un carré (`public/media/shapes/forme-carre.svg`)
+  - `forme-rectangle` — Un rectangle (`public/media/shapes/forme-rectangle.svg`)
+  - `forme-triangle` — Un triangle (`public/media/shapes/forme-triangle.svg`)
+  - `forme-disque` — Un disque, tout rond (`public/media/shapes/forme-disque.svg`)
+
 - **Objectifs travaillés :** `MATH-S03-C01-O07` Reconnaitre, trier et classer des formes géométriques planes, indépendamment d’autres critères comme la couleur, la taille, l’orientation.
 
 **Réussites attendues — texte officiel pour la compétence « Explorer les solides et les formes planes » (from-5) :**
@@ -1303,6 +1337,15 @@ _Reprendre les familles de mots du mois et y ranger des mots nouveaux._
 - **Matériel :** Aucun matériel
 - **Lexique visé :** ranger _(to sort)_ · la famille de mots _(the word family)_
 - **Aide en anglais (optionnelle) :** « Sort the words: school words, home words, market words. »
+- **Images montrées à l'enfant (6) :**
+
+  - `objet-cahier` — Un cahier (`public/media/objects/objet-cahier.svg`)
+  - `objet-crayon` — Un crayon (`public/media/objects/objet-crayon.svg`)
+  - `objet-porte` — Une porte (`public/media/objects/objet-porte.svg`)
+  - `objet-marmite` — Une marmite (`public/media/objects/objet-marmite.svg`)
+  - `objet-tomate` — Une tomate (`public/media/objects/objet-tomate.svg`)
+  - `objet-panier` — Un panier (`public/media/objects/objet-panier.svg`)
+
 - **Objectifs travaillés :** `LANG-S01-C01-O02` Organiser les mots en catégorie et en réseau. ; `LANG-S01-C01-O03` Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
 
 #### 3. Le temps de lecture — 3 min, sans interaction écran (read-aloud)
@@ -1327,6 +1370,8 @@ _Reprendre les familles de mots du mois et y ranger des mots nouveaux._
   > « Tu as bien travaillé », dit mama Lelo. Et Ama est très fière.
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `histoire-marche` — Un panier de marché avec des tomates et une banane (`public/media/illustrations/histoire-marche.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -1406,6 +1451,10 @@ _Aller au bout de la comptine numérique visée cette année._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Make a pile of twenty, in bundles of ten. »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O26` Connaitre et utiliser la comptine numérique jusqu’à trente.
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**

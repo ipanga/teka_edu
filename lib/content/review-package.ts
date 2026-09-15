@@ -109,6 +109,10 @@ function teachingTextBlock(activity: Activity, data: ReferenceData): string[] {
     );
   }
   const kind = text.kind === "story" ? "Histoire" : "Comptine";
+  const picture =
+    text.illustrationId === null
+      ? null
+      : data.media.find((asset) => asset.id === text.illustrationId);
   const lines = [
     `- **${kind} lue à l’enfant — « ${text.title} »** (${text.minutes} min, \`${text.id}\`) :`,
     "",
@@ -117,6 +121,13 @@ function teachingTextBlock(activity: Activity, data: ReferenceData): string[] {
     `  _${text.provenance}_`,
     "",
   ];
+  if (picture !== undefined && picture !== null) {
+    lines.push(
+      `- **Image montrée pendant la lecture :** \`${picture.id}\` — ${picture.alt} ` +
+        `(\`public/media/${picture.file}\`)`,
+      "",
+    );
+  }
   const questions = activity.payload["questions"];
   if (Array.isArray(questions) && questions.length > 0) {
     lines.push(
@@ -153,6 +164,28 @@ function activityBlock(activity: Activity, data: ReferenceData, syllabus: Syllab
   }
   if (scaffold)
     lines.push(`- **Aide en anglais (optionnelle) :** « ${scaffold.childInstruction} »`);
+  /**
+   * What the child actually sees. A reviewer judging « Montre-moi Lisa » cannot do it without
+   * knowing which drawing is on the screen, and the id alone means nothing to them — so the
+   * French `alt`, which is what a screen reader says, travels with it, plus the file so the
+   * asset can be opened. Nothing here reaches the child's screen; it is reviewer apparatus.
+   */
+  const pictures = activity.mediaIds
+    .map((id) => data.media.find((asset) => asset.id === id))
+    .filter((asset): asset is (typeof data.media)[number] => asset !== undefined);
+  if (pictures.length > 0) {
+    lines.push(`- **Images montrées à l'enfant (${pictures.length}) :**`, "");
+    for (const asset of pictures) {
+      lines.push(`  - \`${asset.id}\` — ${asset.alt} (\`public/media/${asset.file}\`)`);
+    }
+    lines.push("");
+  }
+  if (activity.mediaIds.length !== pictures.length) {
+    const missing = activity.mediaIds.filter((id) => !pictures.some((asset) => asset.id === id));
+    throw new RangeError(
+      `review package: activity "${activity.id}" shows media that is not in the registry: ${missing.join(", ")}`,
+    );
+  }
   const extension = activity.payload["extension"];
   if (typeof extension === "string") {
     lines.push(

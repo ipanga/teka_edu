@@ -83,6 +83,11 @@ _Oser dire bonjour à l’adulte, et entendre les premiers mots du mois._
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Listen, then say the word with me. »
+- **Images montrées à l'enfant (2) :**
+
+  - `objet-porte` — Une porte (`public/media/objects/objet-porte.svg`)
+  - `objet-seau` — Un seau (`public/media/objects/objet-seau.svg`)
+
 - **Objectifs travaillés :** `LANG-S01-C01-O01` Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
 
 #### 3. Bonjour, petit — 3 min, sans interaction écran (song-rhyme)
@@ -101,6 +106,8 @@ _Oser dire bonjour à l’adulte, et entendre les premiers mots du mois._
   > bonjour, bonjour, et me voilà.
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `comptine-bonjour` — Le soleil qui se lève et deux mains qui se saluent (`public/media/illustrations/comptine-bonjour.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -352,6 +359,11 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Listen, then say the word with me. »
+- **Images montrées à l'enfant (2) :**
+
+  - `objet-table` — Une table (`public/media/objects/objet-table.svg`)
+  - `objet-chaise` — Une chaise (`public/media/objects/objet-chaise.svg`)
+
 - **Objectifs travaillés :** `LANG-S01-C01-O01` Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
 
 #### 3. Un, deux, trois, mes mains — 3 min, sans interaction écran (song-rhyme)
@@ -370,6 +382,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > je les cache… les voilà !
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains levées (`public/media/illustrations/comptine-mains.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -552,6 +566,11 @@ _Nommer son corps et se servir de ses sens._
 - **Matériel :** Aucun matériel
 - **Lexique visé :** la main _(the hand)_ · le pied _(the foot)_
 - **Aide en anglais (optionnelle) :** « Show me your hand. »
+- **Images montrées à l'enfant (2) :**
+
+  - `corps-main` — Une main ouverte (`public/media/objects/corps-main.svg`)
+  - `corps-pied` — Un pied (`public/media/objects/corps-pied.svg`)
+
 - **Objectifs travaillés :** `WORLD-S01-C02-O01` Nommer et représenter quelques parties du corps humain.
 
 **Réussites attendues — texte officiel pour la compétence « Découvrir le corps humain et la santé » (before-4) :**
@@ -640,6 +659,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Un seau posé sur une chaise (`public/media/illustrations/histoire-seau-lisa.svg`)
+
 - **Questions posées à l’enfant après l’écoute (1) :**
 
   1. Le seau était sur la table ou sur la chaise ?
@@ -660,6 +681,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > bonjour, bonjour, et me voilà.
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `comptine-bonjour` — Le soleil qui se lève et deux mains qui se saluent (`public/media/illustrations/comptine-bonjour.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (before-4) :**
 
@@ -930,6 +953,8 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
+- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains levées (`public/media/illustrations/comptine-mains.svg`)
+
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
 - Oser parler pour exprimer un besoin ou prendre part à la vie de la classe.
@@ -992,6 +1017,10 @@ _Compter, donner une petite quantité, ranger par forme._
 - **À défaut :** Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.
 - **⚠ Sécurité :** Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe.
 - **Aide en anglais (optionnelle) :** « How many are there? »
+- **Images montrées à l'enfant (1) :**
+
+  - `objet-cuillere` — Une cuillère (`public/media/objects/objet-cuillere.svg`)
+
 - **Objectifs travaillés :** `MATH-S01-C01-O03` Dénombrer une collection d’objets (jusqu’à trois, voire quatre).
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (before-4) :**
@@ -1115,6 +1144,8 @@ _Dire des comptines et laisser une trace._
   > je les cache… les voilà !
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains levées (`public/media/illustrations/comptine-mains.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Jouer avec sa voix et acquérir un répertoire de comptines et de chansons » (before-4) :**
 
