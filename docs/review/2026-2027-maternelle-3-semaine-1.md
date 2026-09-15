@@ -39,6 +39,23 @@ personne qui enseigne à cet âge. Les deux ne sont pas présentées comme équi
 Les objectifs et les « réussites attendues » sont cités mot pour mot du programme officiel ;
 les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
+## Relectures précédentes
+
+Cette semaine a déjà été relue 2 fois. Ce qui suit est l’historique, pour
+que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
+
+### 2026-09-14 — ChatGPT · `accepted-with-modifications` (ai-assisted)
+
+Première passe. 13 corrections demandées : le dossier ne montrait ni les histoires ni les comptines ni les questions de compréhension ; le rituel de lecture quotidien revendiquait « établir un lien entre la lecture effectuée et sa propre expérience » alors qu’il ne pose aucune question ; l’objectif d’endurance était revendiqué par une activité où l’on s’arrête au signal ; les extraits officiels étaient coupés à leur première ligne ; la bande des jours demandait de lire sept noms écrits ; les exemples de marché supposaient un jour fixe.
+
+**Suites données :** Toutes appliquées. L’objectif O15 a été déplacé vers les deux activités qui le travaillent vraiment, le rituel a pris LANG-S02-C03-O04, quatre revendications d’endurance ont été retirées, les 43 énoncés officiels multilignes ne sont plus tronqués, la bande des jours est préparée par l’adulte, et les exemples sont ceux de la famille.
+
+### 2026-09-15 — Teka Edu (conséquence d’autres relectures) · `accepted-with-modifications` (ai-assisted)
+
+Deux changements sont arrivés dans cette semaine depuis la première passe, sans relecture propre : ils viennent de corrections demandées ailleurs.
+
+**Suites données :** 1) Le matériel partagé « balle en papier froissé » ne propose plus de petit sac de graines — un contenant de petits objets s’ouvre — et porte une note de sécurité ; cela touche quatre activités de 3ème maternelle. 2) La progression est désormais calculée dans l’ordre où l’enfant rencontre le contenu, jour après jour et toutes pistes confondues, ce qui a corrigé les listes d’objectifs « enseignés » et « repris » au niveau des leçons, sans toucher au texte vu par l’enfant.
+
 ## Jour 1 — 2026-09-01
 
 **Durée totale : 35 min** · 4 séances · jour 1 du rythme

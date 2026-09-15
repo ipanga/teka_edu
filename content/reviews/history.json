@@ -1,0 +1,37 @@
+{
+  "reviews": [
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 1,
+      "reviewedOn": "2026-09-14",
+      "reviewKind": "ai-assisted",
+      "reviewer": "ChatGPT",
+      "outcome": "accepted-with-modifications",
+      "summary": "Première passe. 13 corrections demandées : le dossier ne montrait ni les histoires ni les comptines ni les questions de compréhension ; le rituel de lecture quotidien revendiquait « établir un lien entre la lecture effectuée et sa propre expérience » alors qu’il ne pose aucune question ; l’objectif d’endurance était revendiqué par une activité où l’on s’arrête au signal ; les extraits officiels étaient coupés à leur première ligne ; la bande des jours demandait de lire sept noms écrits ; les exemples de marché supposaient un jour fixe.",
+      "corrections": "Toutes appliquées. L’objectif O15 a été déplacé vers les deux activités qui le travaillent vraiment, le rituel a pris LANG-S02-C03-O04, quatre revendications d’endurance ont été retirées, les 43 énoncés officiels multilignes ne sont plus tronqués, la bande des jours est préparée par l’adulte, et les exemples sont ceux de la famille."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 1,
+      "reviewedOn": "2026-09-15",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Teka Edu (conséquence d’autres relectures)",
+      "outcome": "accepted-with-modifications",
+      "summary": "Deux changements sont arrivés dans cette semaine depuis la première passe, sans relecture propre : ils viennent de corrections demandées ailleurs.",
+      "corrections": "1) Le matériel partagé « balle en papier froissé » ne propose plus de petit sac de graines — un contenant de petits objets s’ouvre — et porte une note de sécurité ; cela touche quatre activités de 3ème maternelle. 2) La progression est désormais calculée dans l’ordre où l’enfant rencontre le contenu, jour après jour et toutes pistes confondues, ce qui a corrigé les listes d’objectifs « enseignés » et « repris » au niveau des leçons, sans toucher au texte vu par l’enfant."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 5,
+      "reviewedOn": "2026-09-15",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Teka Edu (conséquence d’une autre relecture)",
+      "outcome": "accepted-with-modifications",
+      "summary": "Changement arrivé dans cette semaine sans relecture propre.",
+      "corrections": "L’activité « Le mot coupé en morceaux » (jour 21) porte désormais aussi LANG-S02-C01-O13 — « augmenter sa mémoire auditive et sa capacité de concentration ». L’enfant y tenait déjà des syllabes en mémoire le temps d’une pause avant de reconstituer le mot ; c’est la revendication qui manquait, pas le travail."
+    }
+  ]
+}

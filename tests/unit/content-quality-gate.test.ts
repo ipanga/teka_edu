@@ -476,6 +476,36 @@ describe("human review package", () => {
     }
   });
 
+  /**
+   * A reviewer opening a package for the second time should be told what the first pass asked
+   * for, and what arrived since as a consequence of some other week's review — not sent to find
+   * a changelog. The history is canonical content, so the package renders it.
+   */
+  it("carries the review history of the week it covers", () => {
+    for (const week of REVIEW_PACKAGES) {
+      const document = readFileSync(path.join(ROOT, reviewPackagePath(week)), "utf8");
+      expect(document, `${week.levelId} s${week.week}`).toContain("## Relectures précédentes");
+      const entries = data.reviewHistory.filter(
+        (entry) =>
+          entry.levelId === week.levelId &&
+          entry.schoolYearId === week.schoolYearId &&
+          entry.week === week.week,
+      );
+      if (entries.length === 0) {
+        expect(document).toContain("n’a encore jamais été relue");
+        continue;
+      }
+      for (const entry of entries) {
+        expect(document, `${week.levelId} s${week.week}: ${entry.reviewedOn} missing`).toContain(
+          entry.reviewedOn,
+        );
+        expect(document, `${week.levelId} s${week.week}: corrections missing`).toContain(
+          entry.corrections,
+        );
+      }
+    }
+  });
+
   it("quotes the official expected outcomes in every package", () => {
     for (const week of REVIEW_PACKAGES) {
       const document = readFileSync(path.join(ROOT, reviewPackagePath(week)), "utf8");

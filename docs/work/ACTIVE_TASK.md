@@ -10,12 +10,13 @@
 
 ## Task
 
-Apply the 1ère maternelle Week 5 review corrections (5 items) and return the package for a
-short second pass.
+Approve 1ère maternelle Week 5, verify September at 88/88, and prepare 3ème maternelle
+Week 1 for its second review.
 
 ## Objective
 
-The last 1ère week corrected, with the 76 existing approvals untouched.
+1ère September complete; the 3ème package carries its own review history so a reviewer is not
+sent to find a changelog.
 
 ## Status
 
@@ -23,11 +24,11 @@ The last 1ère week corrected, with the 76 existing approvals untouched.
 
 ## Branch
 
-`fix/maternelle-1-week-5-review`
+`feat/approve-week-5-and-prepare-m3`
 
 ## Base Branch
 
-`develop` at `b951ef0`
+`develop` at `f3ce1af`
 
 ## Started
 
@@ -35,8 +36,8 @@ The last 1ère week corrected, with the 76 existing approvals untouched.
 
 ## Last Checkpoint
 
-2026-09-15 — 5 corrections applied to days 20-22 only, 76 approvals intact, full local suite
-green.
+2026-09-15 — Week 5 approved, 88/88 verified, review history made canonical and rendered
+into every package, full local suite green.
 
 ## Scope
 
@@ -84,7 +85,7 @@ To be filled in when the next task begins.
 
 ## Remaining
 
-- [ ] Return Week 5 for its second pass; then 3ème's five packages
+- [ ] Submit 3ème Week 1 — one package at a time
 
 ## Validation State
 
@@ -93,8 +94,8 @@ To be filled in when the next task begins.
 | format             | PASS    | working tree                      |
 | lint               | PASS    | working tree                      |
 | typecheck          | PASS    | working tree                      |
-| unit tests         | PASS    | working tree — 250 tests          |
-| content validation | PASS    | working tree — 30 files           |
+| unit tests         | PASS    | working tree — 251 tests          |
+| content validation | PASS    | working tree — 31 files           |
 | database tests     | PASS    | fresh reset — 152 assertions      |
 | build              | PASS    | working tree                      |
 | E2E                | PASS    | working tree — 28 tests           |

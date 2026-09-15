@@ -26,11 +26,11 @@ analytics are **out of scope** and must not delay the release.
 
 ## 1. Pedagogy
 
-**4 of 10 weekly packages accepted · 76 of 176 September lessons `approved`**, all
+**5 of 10 weekly packages accepted · 88 of 176 September lessons `approved`**, all
 `ai-assisted`, all `accepted`. No teacher has read any of it.
 
-1ère maternelle Weeks 1–4 are through the gate. **Week 5 is the last 1ère package**; all five
-3ème packages remain.
+**1ère maternelle September is complete — 88/88, all five weeks through the gate.** What remains
+for the Beta pedagogy gate is **3ème maternelle's five packages**, reviewed one week at a time.
 
 Getting here was not a straight line, and the record says so. Weeks 1–3 were approved, then their
 approvals lapsed when the Week 4 review found defects those weeks carried identically — and again
@@ -40,18 +40,18 @@ digests were allowed to fail rather than being re-stamped. The 31 occurrences we
 on a compact diff. The digest now covers the bytes of every referenced illustration, so a picture
 cannot be redrawn under an approval without it lapsing.
 
-| Item                                         | State    | Evidence                                                                                                            |
-| -------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------- |
-| 1ère September authored                      | **DONE** | 88 lessons, 132 activities, 22 days                                                                                 |
-| 1ère Week 1 reviewed                         | **TODO** | approved, then lapsed when a cross-week defect was corrected; **re-confirmation pending**                           |
-| 1ère Week 2 reviewed                         | **TODO** | approved, then lapsed; **re-confirmation pending**                                                                  |
-| 1ère Week 3 reviewed                         | **TODO** | approved, then lapsed; **re-confirmation pending**                                                                  |
-| 1ère Week 4 reviewed                         | **TODO** | 2 passes; **final targeted confirmation pending** (the Lisa picture)                                                |
-| 1ère Week 5 reviewed                         | **TODO** | pass 1 `accepted-with-modifications`, 5 corrections applied, **ready for a short second pass** — the last 1ère gate |
-| 3ème September authored                      | **DONE** | 88 lessons, 170 activities, 22 days                                                                                 |
-| 3ème Week 1 reviewed                         | **TODO** | pass 1 accepted-with-modifications, corrections applied, **re-review pending**                                      |
-| 3ème Weeks 2–5 reviewed                      | **TODO** | packages generated, not yet submitted                                                                               |
-| No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                                                     |
+| Item                                         | State    | Evidence                                                                       |
+| -------------------------------------------- | -------- | ------------------------------------------------------------------------------ |
+| 1ère September authored                      | **DONE** | 88 lessons, 132 activities, 22 days                                            |
+| 1ère Week 1 reviewed                         | **DONE** | 2 passes + reconfirmation; 16 lessons `approved`, `ai-assisted`                |
+| 1ère Week 2 reviewed                         | **DONE** | 2 passes + reconfirmation; 20 lessons `approved`                               |
+| 1ère Week 3 reviewed                         | **DONE** | 2 passes + reconfirmation; 20 lessons `approved`                               |
+| 1ère Week 4 reviewed                         | **DONE** | 2 passes; 20 lessons `approved`                                                |
+| 1ère Week 5 reviewed                         | **DONE** | 2 passes (accepted-with-modifications → accepted); 12 lessons `approved`       |
+| 3ème September authored                      | **DONE** | 88 lessons, 170 activities, 22 days                                            |
+| 3ème Week 1 reviewed                         | **TODO** | pass 1 accepted-with-modifications, corrections applied, **re-review pending** |
+| 3ème Weeks 2–5 reviewed                      | **TODO** | packages generated, not yet submitted                                          |
+| No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                |
 
 **The two 3ème gaps are resolved**, one by authoring and one by pacing. `LANG-S02-C01-O13`
 (auditory memory) now has a genuine second occurrence on day 21, where the child already had to
@@ -60,6 +60,18 @@ was missing. `ART-S02-C02-O08` (creating a soundscape) is a `periodic` objective
 day 13 and reinforced until day 58, so **one appearance inside September is what its pacing asks
 for**; a second soundscape was not invented to make a number larger. The day-21 change must be
 covered by 3ème's Week 5 review before release.
+
+### Pre-Beta consistency debt (non-blocking)
+
+**`Je trace`, days 5 and 12.** These two approved activities keep the older, less explicit
+graphic-practice wording — « Prends le crayon et trace avec moi », with no gesture named. The
+Week 5 version, which asks for vertical strokes from top to bottom and says that a scribble is
+not a failure, is now the preferred pattern.
+
+They were **not** changed: doing so would invalidate their approval digests and create
+re-confirmation work while the September gate is still being completed. **Before the public Beta,
+decide whether to normalise them** — and if changed, run the targeted re-confirmation of the
+affected approved lessons.
 
 ## 2. Technical
 

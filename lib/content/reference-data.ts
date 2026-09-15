@@ -34,6 +34,7 @@ import annualPlanMaternelle3 from "@/content/programmes/maternelle-cycle1-cd-202
 import programmeMaternelle1 from "@/content/programmes/maternelle-cycle1-cd-2026/maternelle-1.json";
 import programmeMaternelle3 from "@/content/programmes/maternelle-cycle1-cd-2026/maternelle-3.json";
 import mediaRegistry from "@/content/media/registry.json";
+import reviewHistory from "@/content/reviews/history.json";
 import textsMaternelle1 from "@/content/texts/maternelle-1.json";
 import textsMaternelle3 from "@/content/texts/maternelle-3.json";
 import nationalCalendar from "@/content/calendars/cd/national.json";
@@ -66,14 +67,15 @@ import { type AnnualPlan, checkAnnualPlan } from "@/domain/programme/annual-plan
 import { checkLessons, checkProgramme } from "@/domain/programme/validation";
 import type { LevelProgramme } from "@/domain/programme/types";
 import {
+  annualPlanFileSchema,
   domainObjectivesFileSchema,
   flattenObjectives,
   lessonsFileSchema,
   materialsFileSchema,
-  programmeFileSchema,
-  annualPlanFileSchema,
-  teachingTextsFileSchema,
   mediaRegistryFileSchema,
+  programmeFileSchema,
+  reviewHistoryFileSchema,
+  teachingTextsFileSchema,
 } from "./lesson-schemas";
 import {
   curriculumFileSchema,
@@ -101,6 +103,7 @@ export type ReferenceContentFile =
   | ContentFile<"programme", typeof programmeFileSchema>
   | ContentFile<"annual-plan", typeof annualPlanFileSchema>
   | ContentFile<"texts", typeof teachingTextsFileSchema>
+  | ContentFile<"review-history", typeof reviewHistoryFileSchema>
   | ContentFile<"media", typeof mediaRegistryFileSchema>;
 
 export const REFERENCE_CONTENT_FILES: readonly ReferenceContentFile[] = [
@@ -262,6 +265,12 @@ export const REFERENCE_CONTENT_FILES: readonly ReferenceContentFile[] = [
     data: annualPlanMaternelle1,
   },
   {
+    kind: "review-history",
+    path: "reviews/history.json",
+    schema: reviewHistoryFileSchema,
+    data: reviewHistory,
+  },
+  {
     kind: "texts",
     path: "texts/maternelle-1.json",
     schema: teachingTextsFileSchema,
@@ -305,6 +314,21 @@ export type ReferenceData = {
   media: readonly MediaAsset[];
   /** Recordings, where sound itself is the point (ADR-046). Empty until a voice exists. */
   audio: readonly AudioAsset[];
+  /** What each pedagogical review of a weekly batch decided, and what followed (ADR-047). */
+  reviewHistory: readonly ReviewHistoryEntry[];
+};
+
+/** One recorded pedagogical review of one weekly batch. */
+export type ReviewHistoryEntry = {
+  levelId: string;
+  schoolYearId: string;
+  week: number;
+  reviewedOn: string;
+  reviewKind: string;
+  reviewer: string;
+  outcome: string;
+  summary: string;
+  corrections: string;
 };
 
 export class ReferenceDataError extends Error {
@@ -380,6 +404,7 @@ export function parseReferenceData(files: readonly ReferenceContentFile[]): Refe
   const programmes: LevelProgramme[] = [];
   const annualPlans: AnnualPlan[] = [];
   const texts: TeachingText[] = [];
+  const reviewHistoryEntries: ReviewHistoryEntry[] = [];
   const media: MediaAsset[] = [];
   const audio: AudioAsset[] = [];
   const nationals: z.output<typeof nationalCalendarFileSchema>[] = [];
@@ -478,6 +503,11 @@ export function parseReferenceData(files: readonly ReferenceContentFile[]): Refe
         if (parsed) texts.push(...parsed.texts);
         break;
       }
+      case "review-history": {
+        const parsed = parse(file);
+        if (parsed) reviewHistoryEntries.push(...parsed.reviews);
+        break;
+      }
       case "media": {
         const parsed = parse(file);
         if (parsed) {
@@ -507,6 +537,7 @@ export function parseReferenceData(files: readonly ReferenceContentFile[]): Refe
     programmes,
     annualPlans,
     texts,
+    reviewHistory: reviewHistoryEntries,
     media,
     audio,
   };

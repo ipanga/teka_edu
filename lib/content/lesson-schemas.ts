@@ -113,6 +113,36 @@ export const materialsFileSchema = z.strictObject({
     .min(1),
 });
 
+// ---- content/reviews/history.json -------------------------------------------------------------
+
+/**
+ * What each pedagogical review of a weekly batch decided, and what followed from it.
+ *
+ * It is canonical content rather than prose in a document because the review package renders it:
+ * a reviewer opening week 1 for a second time needs to know what the first pass asked for without
+ * being told to go and read a changelog. Entries are append-only in practice — a review that
+ * happened does not stop having happened.
+ */
+export const reviewHistoryFileSchema = z.strictObject({
+  reviews: z
+    .array(
+      z.strictObject({
+        levelId: slug,
+        schoolYearId: slug,
+        week: positiveInt,
+        reviewedOn: z
+          .string()
+          .regex(/^\d{4}-\d{2}-\d{2}$/, { message: "must be a YYYY-MM-DD date" }),
+        reviewKind: z.enum(REVIEW_KINDS),
+        reviewer: text,
+        outcome: z.enum(REVIEW_OUTCOMES),
+        summary: french,
+        corrections: french,
+      }),
+    )
+    .min(1),
+});
+
 // ---- content/media/registry.json -------------------------------------------------------------
 
 export const mediaRegistryFileSchema = z.strictObject({

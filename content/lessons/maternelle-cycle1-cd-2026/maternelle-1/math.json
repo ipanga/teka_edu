@@ -1074,8 +1074,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "a68bd251f1565455",
+        "notes": "Semaine 5 : passe 1 acceptée avec modifications (5 points — le geste graphique à nommer, les quatre parties du corps, le matériel des mots du mois, la comptine orale confondue avec une collection, et la règle partagée du jeu choisi), passe 2 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-math-21",
@@ -1117,8 +1125,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "8fae49499b278715",
+        "notes": "Semaine 5 : passe 1 acceptée avec modifications (5 points — le geste graphique à nommer, les quatre parties du corps, le matériel des mots du mois, la comptine orale confondue avec une collection, et la règle partagée du jeu choisi), passe 2 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-math-22",
@@ -1161,8 +1177,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "c7dda6ec2a532c9a",
+        "notes": "Semaine 5 : passe 1 acceptée avec modifications (5 points — le geste graphique à nommer, les quatre parties du corps, le matériel des mots du mois, la comptine orale confondue avec une collection, et la règle partagée du jeu choisi), passe 2 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     }
   ]
 }

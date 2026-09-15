@@ -39,6 +39,10 @@ personne qui enseigne à cet âge. Les deux ne sont pas présentées comme équi
 Les objectifs et les « réussites attendues » sont cités mot pour mot du programme officiel ;
 les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
+## Relectures précédentes
+
+Aucune : cette semaine n’a encore jamais été relue.
+
 ## Jour 5 — 2026-09-07
 
 **Durée totale : 35 min** · 4 séances · jour 5 du rythme
