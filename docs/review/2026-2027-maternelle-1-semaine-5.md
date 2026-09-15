@@ -78,11 +78,12 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
 #### 2. Je trace — 4 min, sans interaction écran (graphic-practice)
 
-- **Consigne à l’enfant :** « Prends le crayon et trace avec moi. »
-- **Guidance adulte :** Posez la feuille bien en face de lui. Montrez le geste une fois, lentement, puis laissez-le faire. On ne cherche pas une belle forme : on cherche une main qui tient et un œil qui suit. Arrêtez dès qu’il lâche le crayon.
+- **Consigne à l’enfant :** « Fais des traits de haut en bas avec moi. Puis essaie tout seul. »
+- **Guidance adulte :** Posez la feuille bien en face de lui. Montrez lentement deux ou trois grands traits verticaux, de haut en bas. Laissez-le ensuite tracer comme il peut : il n’a pas à reproduire une forme parfaite. S’il transforme les traits en gribouillage, ce n’est pas un échec — c’est le geste et le contrôle de la main qu’on travaille, pas le dessin. Arrêtez dès qu’il ne veut plus tenir le crayon. Ni lettres ni chiffres ce mois-ci.
 - **Matériel :** Feuille de papier, Crayon
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
 - **À défaut :** Un crayon, un stylo, une craie ou un morceau de charbon conviennent.
+- **Aide en anglais (optionnelle) :** « Make lines from top to bottom with me. Then try on your own. »
 - **Objectifs travaillés :** `LANG-S03-C01-O01` Participer aux activités de motricité générale, de motricité fine et aux exercices de graphismes
 
 #### 3. La pluie tombe — 3 min, sans interaction écran (song-rhyme)
@@ -286,10 +287,10 @@ _Nommer son corps et se servir de ses sens._
 
 #### 1. Tout mon corps — 7 min, sans interaction écran (observation)
 
-- **Consigne à l’enfant :** « Montre-moi ta main. Montre-moi ton pied. Montre-moi ta tête. Montre-moi ton ventre. »
-- **Guidance adulte :** Nommez une partie et montrez-la sur vous, puis demandez-lui de la montrer sur lui. Deux parties par séance suffisent. Terminez toujours par une qu’il connaît déjà : on finit sur une réussite.
+- **Consigne à l’enfant :** « Montre-moi ce que je nomme sur toi. »
+- **Guidance adulte :** Nommez d’abord **deux** parties du corps et demandez-lui de les montrer sur lui. S’il reste disponible et intéressé, proposez les deux autres — sinon, deux suffisent et la séance est réussie. Il peut répondre uniquement en montrant : il n’est pas obligé de prononcer les quatre mots. Terminez par une partie qu’il reconnaît facilement.
 - **Matériel :** Aucun matériel
-- **Aide en anglais (optionnelle) :** « Show me your hand, your foot, your head, your tummy. »
+- **Aide en anglais (optionnelle) :** « Show me on you the one I name. »
 - **Images montrées à l'enfant (4) :**
 
   - `corps-main` — Une main ouverte (`public/media/objects/corps-main.svg`)
@@ -631,7 +632,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 - **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
   touche, choisit, compte sur l’appareil.
-- **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
+- **Temps où l’enfant regarde une image à l’écran : 2 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
 
@@ -639,7 +640,7 @@ _Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences di
 temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
 l’autre — l’appareil est alors le sien._
 
-**Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Gros objets à compter (cuillères, gobelets, chaussettes roulées), Objets de la maison (coussins, chaises, bâton, tissu), Deux choses à toucher, de surfaces différentes
+**Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Deux choses à toucher, de surfaces différentes
 
 ### Tout ce que je sais dire — Le développement et la structuration du langage oral et écrit (11 min)
 
@@ -664,14 +665,12 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
 #### 2. Tous les mots du mois — 5 min, sans interaction écran (vocabulary)
 
-- **Consigne à l’enfant :** « Montre-moi ce que je nomme. Puis dis avec moi un ou deux mots que tu veux. »
-- **Guidance adulte :** Ces mots-là, il les a déjà entendus : on les reconnaît, on n’en apprend pas de nouveaux.
-1. Posez ou montrez les quatre choses. 2. Nommez-en une et demandez-lui de la montrer — le doigt suffit, et suffit vraiment. 3. Nommez ce qui ne vient pas, sans le faire répéter. 4. À la fin seulement, proposez-lui de redire **un ou deux** mots, ceux qu’il choisit. On ne demande jamais les quatre à voix haute.
-- **Matériel :** Objets de la maison (coussins, chaises, bâton, tissu)
+- **Consigne à l’enfant :** « Montre-moi l’image que je nomme. Puis dis avec moi un ou deux mots que tu choisis. »
+- **Guidance adulte :** Aucun objet à préparer : les images suffisent.
+1. Montrez les quatre images une à une et nommez-les. 2. Nommez ensuite un mot et demandez-lui de montrer l’image correspondante — le doigt suffit, et suffit vraiment. 3. Pour « la main » et « la tête », il peut aussi montrer la partie sur son propre corps. Pour « la porte » et « le seau », servez-vous d’un objet réel seulement s’il est déjà à portée. 4. À la fin seulement, proposez-lui de redire **un ou deux** mots, ceux qu’il choisit. On ne demande jamais les quatre à voix haute.
+- **Matériel :** Aucun matériel
 - **Lexique visé :** la porte _(the door)_ · le seau _(the bucket)_ · la main _(the hand)_ · la tête _(the head)_
-- **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
-- **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
-- **Aide en anglais (optionnelle) :** « Show me the one I name. Then say one or two with me. »
+- **Aide en anglais (optionnelle) :** « Show me the picture I name. Then say one or two with me. »
 - **Images montrées à l'enfant (4) :**
 
   - `objet-porte` — Une porte (`public/media/objects/objet-porte.svg`)
@@ -772,15 +771,9 @@ _Compter, donner une petite quantité, ranger par forme._
 #### 1. Tout ce que je sais compter — 7 min, sans interaction écran (counting)
 
 - **Consigne à l’enfant :** « Compte avec moi : un, deux, trois, quatre, cinq, six. »
-- **Guidance adulte :** Comptez lentement en montrant un doigt à chaque nombre. Recommencez et arrêtez-vous à trois pour voir s’il continue. Ne dépassez jamais six ce mois-ci : la suite orale s’installe par la répétition, pas par la longueur.
-- **Matériel :** Gros objets à compter (cuillères, gobelets, chaussettes roulées)
-- **À défaut :** Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.
-- **⚠ Sécurité :** Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe.
+- **Guidance adulte :** Comptez lentement jusqu’à six. Vous pouvez lever un doigt à chaque mot-nombre pour accompagner le rythme — **sans** lui demander de dénombrer une collection de six objets : dire la suite des nombres et compter des choses sont deux apprentissages différents, et ce mois-ci on ne compte jamais plus de trois objets. Recommencez, puis arrêtez-vous à trois pour voir s’il poursuit tout seul. S’il ne continue pas, reprenez simplement avec lui. Ne dépassez pas six.
+- **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Count with me to six. »
-- **Images montrées à l'enfant (1) :**
-
-  - `objet-cuillere` — Une cuillère (`public/media/objects/objet-cuillere.svg`)
-
 - **Objectifs travaillés :** `MATH-S01-C01-O09` Connaitre la comptine numérique de un à six.
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (before-4) :**
@@ -845,12 +838,12 @@ _Bouger tous les jours, avec une règle simple et de la place._
 
 #### 1. Je choisis mon jeu — 6 min, sans interaction écran (movement)
 
-- **Consigne à l’enfant :** « Choisis ce que tu veux faire : courir, lancer, ou marcher sur la ligne. »
-- **Guidance adulte :** Laissez-le choisir parmi ce qu’il a fait ce mois-ci, et jouez-y avec lui. Choisir est un apprentissage ; c’est aussi la meilleure façon de savoir ce qui lui a plu.
+- **Consigne à l’enfant :** « Choisis ton jeu. Puis on joue ensemble, avec une règle. »
+- **Guidance adulte :** Laissez-le choisir : courir, lancer, ou marcher sur la ligne. **Avant** de commencer, annoncez une seule règle, adaptée au jeu choisi — attendre « vas-y » avant de partir, lancer chacun son tour, ou attendre que l’autre ait quitté la ligne. Jouez avec lui. Rappelez la règle une fois seulement si besoin. Il n’y a ni gagnant ni perdant : ce qu’on apprend ici, c’est de jouer ensemble en tenant une règle simple.
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
-- **Aide en anglais (optionnelle) :** « Choose what you want to do: run, throw, or walk the line. »
+- **Aide en anglais (optionnelle) :** « Choose your game. Then we play together, with one rule. »
 - **Objectifs travaillés :** `PHYS-S04-C01-O03` Éprouver le plaisir de jouer dans le respect des autres et des règles communes.
 
 **Réussites attendues — texte officiel pour la compétence « Coopérer, s’opposer, respecter » (before-4) :**

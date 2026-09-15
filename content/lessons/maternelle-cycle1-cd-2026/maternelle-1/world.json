@@ -244,8 +244,8 @@
           "position": 1,
           "type": "observation",
           "title": "Tout mon corps",
-          "childInstruction": "Montre-moi ta main. Montre-moi ton pied. Montre-moi ta tête. Montre-moi ton ventre.",
-          "adultGuidance": "Nommez une partie et montrez-la sur vous, puis demandez-lui de la montrer sur lui. Deux parties par séance suffisent. Terminez toujours par une qu’il connaît déjà : on finit sur une réussite.",
+          "childInstruction": "Montre-moi ce que je nomme sur toi.",
+          "adultGuidance": "Nommez d’abord **deux** parties du corps et demandez-lui de les montrer sur lui. S’il reste disponible et intéressé, proposez les deux autres — sinon, deux suffisent et la séance est réussie. Il peut répondre uniquement en montrant : il n’est pas obligé de prononcer les quatre mots. Terminez par une partie qu’il reconnaît facilement.",
           "minutes": 7,
           "mode": "off-screen",
           "role": "consolidation",
@@ -256,7 +256,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Show me your hand, your foot, your head, your tummy."
+              "childInstruction": "Show me on you the one I name."
             }
           ],
           "payload": {

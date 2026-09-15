@@ -391,6 +391,36 @@ describe("1ère maternelle safety (before-4)", () => {
     }
   });
 
+  /**
+   * Saying « un, deux, trois, quatre, cinq, six » and counting six things are different
+   * learnings, and September only does the first. An activity that works the oral sequence alone
+   * must not be dressed as a collection: no six objects to enumerate, and no picture of one.
+   */
+  it("never turns the number rhyme into a six-object collection", () => {
+    const oral = activities.filter(
+      (activity) =>
+        activity.objectiveCodes.includes("MATH-S01-C01-O09") &&
+        !activity.objectiveCodes.some(
+          (code) => code === "MATH-S01-C01-O03" || code === "MATH-S01-C01-O04",
+        ),
+    );
+    expect(oral.length, "no pure oral-sequence activity found").toBeGreaterThan(0);
+    for (const activity of oral) {
+      const upTo = activity.payload["upTo"];
+      if (typeof upTo === "number" && upTo > 3) {
+        // Reciting to six is fine; needing six things in front of the child is not.
+        expect(
+          activity.materialCodes,
+          `${activity.id}: asks for objects to recite to ${upTo}`,
+        ).toEqual(["aucun"]);
+        expect(
+          activity.mediaIds,
+          `${activity.id}: shows a collection for an oral task`,
+        ).toHaveLength(0);
+      }
+    }
+  });
+
   it("keeps concrete counting at three while the rhyme goes to six", () => {
     const maths = data.lessons.filter(
       (lesson) => lesson.levelIds.includes("maternelle-1") && lesson.domainCode === "MATH",

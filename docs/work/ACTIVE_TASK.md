@@ -10,12 +10,12 @@
 
 ## Task
 
-Clean the duplicated Tika guidance, make the approval digest cover the bytes of every picture
-a lesson shows, and record ChatGPT's approval of 1ère maternelle Weeks 1-4.
+Apply the 1ère maternelle Week 5 review corrections (5 items) and return the package for a
+short second pass.
 
 ## Objective
 
-76 lessons approved on a digest that can no longer miss a redrawn illustration.
+The last 1ère week corrected, with the 76 existing approvals untouched.
 
 ## Status
 
@@ -23,11 +23,11 @@ a lesson shows, and record ChatGPT's approval of 1ère maternelle Weeks 1-4.
 
 ## Branch
 
-`feat/media-fingerprint-and-approve`
+`fix/maternelle-1-week-5-review`
 
 ## Base Branch
 
-`develop` at `b5608e5`
+`develop` at `b951ef0`
 
 ## Started
 
@@ -35,7 +35,7 @@ a lesson shows, and record ChatGPT's approval of 1ère maternelle Weeks 1-4.
 
 ## Last Checkpoint
 
-2026-09-15 — media fingerprints implemented and tested, Weeks 1-4 approved, full local suite
+2026-09-15 — 5 corrections applied to days 20-22 only, 76 approvals intact, full local suite
 green.
 
 ## Scope
@@ -84,7 +84,7 @@ To be filled in when the next task begins.
 
 ## Remaining
 
-- [ ] Week 5 of 1ère, then 3ème — separate tasks
+- [ ] Return Week 5 for its second pass; then 3ème's five packages
 
 ## Validation State
 
@@ -93,7 +93,7 @@ To be filled in when the next task begins.
 | format             | PASS    | working tree                      |
 | lint               | PASS    | working tree                      |
 | typecheck          | PASS    | working tree                      |
-| unit tests         | PASS    | working tree — 249 tests          |
+| unit tests         | PASS    | working tree — 250 tests          |
 | content validation | PASS    | working tree — 30 files           |
 | database tests     | PASS    | fresh reset — 152 assertions      |
 | build              | PASS    | working tree                      |

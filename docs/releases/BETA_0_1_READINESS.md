@@ -40,18 +40,18 @@ digests were allowed to fail rather than being re-stamped. The 31 occurrences we
 on a compact diff. The digest now covers the bytes of every referenced illustration, so a picture
 cannot be redrawn under an approval without it lapsing.
 
-| Item                                         | State    | Evidence                                                                                  |
-| -------------------------------------------- | -------- | ----------------------------------------------------------------------------------------- |
-| 1ère September authored                      | **DONE** | 88 lessons, 132 activities, 22 days                                                       |
-| 1ère Week 1 reviewed                         | **TODO** | approved, then lapsed when a cross-week defect was corrected; **re-confirmation pending** |
-| 1ère Week 2 reviewed                         | **TODO** | approved, then lapsed; **re-confirmation pending**                                        |
-| 1ère Week 3 reviewed                         | **TODO** | approved, then lapsed; **re-confirmation pending**                                        |
-| 1ère Week 4 reviewed                         | **TODO** | 2 passes; **final targeted confirmation pending** (the Lisa picture)                      |
-| 1ère Week 5 reviewed                         | **TODO** | package generated, not yet submitted                                                      |
-| 3ème September authored                      | **DONE** | 88 lessons, 170 activities, 22 days                                                       |
-| 3ème Week 1 reviewed                         | **TODO** | pass 1 accepted-with-modifications, corrections applied, **re-review pending**            |
-| 3ème Weeks 2–5 reviewed                      | **TODO** | packages generated, not yet submitted                                                     |
-| No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                           |
+| Item                                         | State    | Evidence                                                                                                            |
+| -------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------- |
+| 1ère September authored                      | **DONE** | 88 lessons, 132 activities, 22 days                                                                                 |
+| 1ère Week 1 reviewed                         | **TODO** | approved, then lapsed when a cross-week defect was corrected; **re-confirmation pending**                           |
+| 1ère Week 2 reviewed                         | **TODO** | approved, then lapsed; **re-confirmation pending**                                                                  |
+| 1ère Week 3 reviewed                         | **TODO** | approved, then lapsed; **re-confirmation pending**                                                                  |
+| 1ère Week 4 reviewed                         | **TODO** | 2 passes; **final targeted confirmation pending** (the Lisa picture)                                                |
+| 1ère Week 5 reviewed                         | **TODO** | pass 1 `accepted-with-modifications`, 5 corrections applied, **ready for a short second pass** — the last 1ère gate |
+| 3ème September authored                      | **DONE** | 88 lessons, 170 activities, 22 days                                                                                 |
+| 3ème Week 1 reviewed                         | **TODO** | pass 1 accepted-with-modifications, corrections applied, **re-review pending**                                      |
+| 3ème Weeks 2–5 reviewed                      | **TODO** | packages generated, not yet submitted                                                                               |
+| No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                                                     |
 
 **The two 3ème gaps are resolved**, one by authoring and one by pacing. `LANG-S02-C01-O13`
 (auditory memory) now has a genuine second occurrence on day 21, where the child already had to

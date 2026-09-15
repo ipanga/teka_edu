@@ -34,13 +34,14 @@ Roles, kept distinct on purpose:
 | 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15 | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                | 8 items                        | **`approved`** — 20 lessons                                                                             |
 | 1ère maternelle, Week 3 (days 10–14) | 2026-09-15 | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                | 8 items                        | **`approved`** — 20 lessons                                                                             |
 | 1ère maternelle, Week 4 (days 15–19) | 2026-09-15 | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons                                                                             |
-| 1ère maternelle, Week 5              | —          | —                                                | not yet reviewed              | —                              | `review`                                                                                                |
+| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15 | AI-assisted (ChatGPT)                            | `accepted-with-modifications` | 5 items, all applied           | `review` — **ready for a short second pass**                                                            |
 
 **76 lessons are `approved`** — 1ère maternelle Weeks 1 to 4, all `ai-assisted`, all
 `accepted`. The other 100 September lessons remain at `review`: 12 in 1ère (Week 5) and all 88
 in 3ème. **No teacher has read any of it.**
 
-Progress against the Beta 0.1 gate: **4 of 10 weekly packages accepted**.
+Progress against the Beta 0.1 gate: **4 of 10 weekly packages accepted**. Week 5 has had its
+first pass and awaits a second; all five 3ème packages remain.
 
 **Who approved these.** The decision was ChatGPT's, on the regenerated packages and on a compact
 reconfirmation document; Claude Code authored the content and applied the corrections and may not
@@ -214,6 +215,32 @@ The pilot's day is language + mathematics + physical + one rotating domain, 40�
 > September programme runs at 35. The finding is kept as written because it is the record of
 > what was reviewed; the split-session recommendation was accepted and implemented as the plan's
 > pause point.
+
+## 1ère maternelle, Week 5 review, 2026-09-15 — accepted with modifications
+
+Five items, all applied, all confined to days 20–22. The week was already a true consolidation
+period — 0 new objectives, 15 revisited — and remains one.
+
+Two of the five are the same fault the month has produced repeatedly: **an instruction that does
+not say what to do.** « Prends le crayon et trace avec moi » never named a gesture, which is fine
+for a teacher and useless to a parent; it now asks for vertical strokes, top to bottom, and says
+that a scribble is not a failure. « Tous les mots du mois » declared cushions, a chair, a stick
+and a cloth as its material while reviewing _door, bucket, hand, head_ — the four pictures it
+already carried were the material all along.
+
+Two are contradictions between an activity and its own guidance: « Tout mon corps » asked for four
+body parts while the guidance said two are enough (now: two first, the other two only if the child
+is still with you), and « Tout ce que je sais compter » declared objects and showed a spoon for a
+task that is purely reciting to six. That last one matters beyond the activity: saying the number
+sequence and enumerating a collection are different learnings, September only does the first, and
+a test now refuses to let a pure oral-sequence activity be dressed as a six-object collection.
+
+The fifth is a genuine alignment question rather than a slip. « Je choisis mon jeu » claimed
+« éprouver le plaisir de jouer dans le respect des autres et des règles communes » while only
+offering a choice. **The objective was kept and the activity made to earn it**: the child chooses,
+then the adult announces one simple shared rule — wait for « vas-y », take turns throwing, wait
+until the line is clear — and plays along. No winner, no score. Remapping to a weaker objective
+would have been the easier fix and the less honest one.
 
 ## The approval digest now covers the picture itself, 2026-09-15
 
