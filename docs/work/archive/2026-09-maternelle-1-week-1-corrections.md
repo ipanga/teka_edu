@@ -10,31 +10,34 @@
 
 ## Task
 
-None in progress.
+Apply the 1ère maternelle Week 1 pedagogical review corrections (ChatGPT,
+`accepted-with-modifications`), regenerate the package, and return it for a second pass.
 
 ## Objective
 
-The 1ère maternelle Week 1 corrections are merged. No new task has been started.
+Correct the level/band template bug, the objective mismatch, the stale vocabulary, and three
+real safety defaults inherited from an older class.
 
 ## Status
 
-`planned`
+`completed`
 
 ## Branch
 
-`develop` — no feature branch open.
+`fix/maternelle-1-week-1-review`
 
 ## Base Branch
 
-`develop`
+`develop` at `baeebbc`
 
 ## Started
 
-—
+2026-09-15
 
 ## Last Checkpoint
 
-2026-09-15 — reset after PR #37 merged as `f974a83` and verified on live staging.
+2026-09-15 — PR #37 merged as `f974a83`; migration applied to Supabase DEV and 28 tests green
+against live staging.
 
 ## Scope
 
@@ -53,18 +56,15 @@ To be filled in when the next task begins.
 - French Cycle 1 is the curriculum; DRC calendar and context; PNEM as compatibility (ADR-037).
 - Level → band: 1ère `before-4` (116 objectives), 2ème `from-4` (139), 3ème `from-5` (162).
   `before-4` is the earliest band, so 1ère introduces everything it touches.
-- **An interaction pattern may be reused across levels; its assumptions about a child's body may
-  not.** Counting material, furniture handling and running targets are all age-specific, and are
-  now held by tests rather than by prose.
-- **Anything a generated document says about "the child" must be derived from the level.** A
-  fixed age string was right for one level and silently wrong for the next.
 - Media is repository SVG by stable id; reuse before creating (ADR-042).
 - The app opens on a class; a class with no lessons says so and borrows nothing (ADR-044).
 - Animation is decoration, always off under `prefers-reduced-motion` (ADR-045).
 - The parent is the voice; no synthesised speech for a word a child copies (ADR-046).
 - The pedagogical gate is an independent review, not necessarily a human one (ADR-047).
-- Never edit generated content by hand; fix the generator.
-- An activity claims only what it actually works.
+- **Never edit generated content by hand.** Fix the generator; a hand edit gets reverted
+  silently the next time anyone regenerates.
+- An activity claims only what it actually works; a mis-mapped ritual means auditing the month.
+- A reviewer must see what they are asked to judge.
 - Never claim the app observed what it cannot see.
 
 ## Completed
@@ -76,29 +76,26 @@ To be filled in when the next task begins.
 
 ## In Progress
 
-- [ ] Nothing.
+Nothing. The corrections are finished and archived.
 
 ## Remaining
 
-**Next task (not started):** submit the regenerated
-`docs/review/2026-2027-maternelle-1-semaine-1.md` for its **second** ChatGPT pass. 3ème Week 1
-also awaits re-review. Not October, not 2ème maternelle.
+The regenerated Week 1 package awaits its second ChatGPT pass — the next task.
 
 ## Validation State
 
-| Check              | Result | At                                         |
-| ------------------ | ------ | ------------------------------------------ |
-| format             | PASS   | working tree                               |
-| lint               | PASS   | working tree — 0 warnings                  |
-| typecheck          | PASS   | working tree                               |
-| unit tests         | PASS   | working tree — 207 tests                   |
-| content validation | PASS   | working tree — 21 files                    |
-| database tests     | PASS   | working tree — 144 pgTAP assertions        |
-| build              | PASS   | working tree                               |
-| E2E                | PASS   | working tree — 20 tests                    |
-| Docker             | PASS   | CI at `27e9054` — both images              |
-| secret scans       | PASS   | working tree — no leaks, 0 tracked `.env*` |
-| staging            | PASS   | `27e9054` deployed, 20 E2E against it      |
+| Check              | Result | At                                   |
+| ------------------ | ------ | ------------------------------------ |
+| format             | PASS   | CI on `f974a83`                      |
+| lint               | PASS   | CI on `f974a83`                      |
+| typecheck          | PASS   | CI on `f974a83`                      |
+| unit tests         | PASS   | CI on `f974a83` — 224 tests          |
+| content validation | PASS   | CI on `f974a83` — 30 files           |
+| database tests     | PASS   | CI on `f974a83` — 149 assertions     |
+| build              | PASS   | CI on `f974a83`                      |
+| E2E                | PASS   | live staging on `f974a83` — 28 tests |
+| Docker             | PASS   | CI on `f974a83`                      |
+| secret scans       | PASS   | CI on `f974a83`; 0 tracked `.env*`   |
 
 ## Database State
 
@@ -109,8 +106,8 @@ also awaits re-review. Not October, not 2ème maternelle.
 
 ## Deployment State
 
-- Staging: deployed at `27e9054`; 20 E2E tests passed against the live deployment.
-- Production: disabled; `main` at `1b95480`.
+Migration `20260915110000_maternelle_1_week_1_corrections.sql` applied to Supabase **DEV**.
+Staging redeployed from `develop` at `f974a83`. PROD untouched; `main` at `1b95480`.
 
 ## Git State
 
@@ -128,8 +125,7 @@ None.
 
 ## Exact Resume Point
 
-No task is in progress. When the next one starts: fill this file in, create the feature branch
-from `develop`, commit an initial checkpoint, and open a Draft PR before the long work begins.
+Finished. Next: submit the regenerated Week 1 package for its second pass.
 
 ## Resume Verification
 
