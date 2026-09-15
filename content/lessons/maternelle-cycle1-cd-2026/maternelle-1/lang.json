@@ -100,8 +100,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "cda01334f736d6b4",
+        "notes": "Semaine 1 : passe 1 acceptée avec modifications (9 points), passe 2 acceptée avec modifications (2 points), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-02",
@@ -200,8 +208,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "b440bef84235461e",
+        "notes": "Semaine 1 : passe 1 acceptée avec modifications (9 points), passe 2 acceptée avec modifications (2 points), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-03",
@@ -292,8 +308,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "3c8043c3b0ca8c53",
+        "notes": "Semaine 1 : passe 1 acceptée avec modifications (9 points), passe 2 acceptée avec modifications (2 points), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-04",
@@ -378,8 +402,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "cb55c9e543967c55",
+        "notes": "Semaine 1 : passe 1 acceptée avec modifications (9 points), passe 2 acceptée avec modifications (2 points), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-05",
@@ -464,8 +496,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "500300e8a06e9e7c",
+        "notes": "Semaine 2 : deux passes (6 puis 2 corrections), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-06",
@@ -577,8 +617,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "84ab4db6bcc1b564",
+        "notes": "Semaine 2 : deux passes (6 puis 2 corrections), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-07",
@@ -663,8 +711,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "3ab95f94ce013460",
+        "notes": "Semaine 2 : deux passes (6 puis 2 corrections), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-08",
@@ -754,8 +810,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "fd0640673d56d257",
+        "notes": "Semaine 2 : deux passes (6 puis 2 corrections), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-09",
@@ -806,7 +870,7 @@
           "type": "listening-story",
           "title": "Tika se lève",
           "childInstruction": "Écoute l’histoire de Tika. Après, je te poserai une petite question.",
-          "adultGuidance": "Lisez lentement, en montrant l’image. L’histoire est courte exprès.\nÀ la fin, **une seule question** : « Tika ferme les yeux le matin, ou le soir ? » Un doigt, un geste ou un mot suffisent — jamais une phrase entière. Si rien ne vient, répondez vous-même et passez à la suite : « Le soir. Bonne nuit, Tika. »\nUn doigt pointé, un geste, un seul mot ou un mot approximatif : tout cela répond. **Une phrase entière n’est jamais demandée.** Si rien ne vient, donnez la réponse vous-même et continuez — on ne repose pas la question, et on ne fait pas répéter.",
+          "adultGuidance": "Lisez lentement, en montrant l’image. L’histoire est courte exprès. À la fin, une seule question : « Tika ferme les yeux le matin, ou le soir ? » Un doigt pointé, un geste, un seul mot ou un mot approximatif suffit ; une phrase entière n’est jamais demandée. Si rien ne vient, donnez la réponse vous-même : « Le soir. Bonne nuit, Tika. » Puis continuez — on ne repose pas la question et on ne fait pas répéter.",
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
@@ -851,8 +915,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "08463cbd2a63eb35",
+        "notes": "Semaine 2 : deux passes (6 puis 2 corrections), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-10",
@@ -942,8 +1014,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "9780244964e2f781",
+        "notes": "Semaine 3 : passe 1 acceptée avec modifications (8 points), passe 2 acceptée, puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-11",
@@ -1047,8 +1127,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "3e38c8983d3e0224",
+        "notes": "Semaine 3 : passe 1 acceptée avec modifications (8 points), passe 2 acceptée, puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-12",
@@ -1138,8 +1226,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "f7da5775db945b75",
+        "notes": "Semaine 3 : passe 1 acceptée avec modifications (8 points), passe 2 acceptée, puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-13",
@@ -1243,8 +1339,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "49c1d9dc1859b994",
+        "notes": "Semaine 3 : passe 1 acceptée avec modifications (8 points), passe 2 acceptée, puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-14",
@@ -1334,8 +1438,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "89f985b3aac92f53",
+        "notes": "Semaine 3 : passe 1 acceptée avec modifications (8 points), passe 2 acceptée, puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-15",
@@ -1431,8 +1543,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "f8aa16cf1d1f8ef7",
+        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-16",
@@ -1527,8 +1647,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "6e09c0e71559022f",
+        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-17",
@@ -1618,8 +1746,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "d1f86da1442b7ce5",
+        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-18",
@@ -1731,8 +1867,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "b04f65948e259300",
+        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-19",
@@ -1822,8 +1966,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "f620916a3317f3d8",
+        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-20",

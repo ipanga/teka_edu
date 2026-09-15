@@ -4,6 +4,7 @@ import { lessonMinutes, lessonScreenMinutes } from "@/domain/lessons/types";
 import type { Lesson } from "@/domain/lessons/types";
 import { checkLessons } from "@/domain/programme/validation";
 import { getReferenceData, getSyllabus } from "@/lib/content/reference-data";
+import { mediaDigestSource } from "@/domain/media/types";
 import { lessonsFileSchema } from "@/lib/content/lesson-schemas";
 
 const data = getReferenceData();
@@ -15,6 +16,7 @@ const data = getReferenceData();
  */
 const lessonsOf = (levelId: string) => data.lessons.filter((l) => l.levelIds.includes(levelId));
 const m3 = lessonsOf("maternelle-3");
+const media = mediaDigestSource(data.media, data.texts);
 const syllabus = getSyllabus("maternelle-cycle1-cd-2026", data);
 const objectives = data.syllabi.flatMap((s) => s.objectives);
 const lesson = (id: string) => {
@@ -108,10 +110,12 @@ describe("September lessons (3ème maternelle)", () => {
 describe("lesson validation", () => {
   const base = lesson("m3-math-01");
   const check = (l: Lesson) =>
-    checkLessons([l], data.curricula, objectives, data.levels, data.materials);
+    checkLessons([l], data.curricula, objectives, data.levels, data.materials, media);
 
   it("accepts the September lessons", () => {
-    expect(checkLessons(m3, data.curricula, objectives, data.levels, data.materials)).toEqual([]);
+    expect(
+      checkLessons(m3, data.curricula, objectives, data.levels, data.materials, media),
+    ).toEqual([]);
   });
 
   it("rejects an activity objective that the lesson does not declare", () => {

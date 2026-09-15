@@ -10,13 +10,12 @@
 
 ## Task
 
-Fix the Week 4 Lisa picture, clear the known defects inside the approved Weeks 1-3, and
-produce a compact re-confirmation package.
+Clean the duplicated Tika guidance, make the approval digest cover the bytes of every picture
+a lesson shows, and record ChatGPT's approval of 1ère maternelle Weeks 1-4.
 
 ## Objective
 
-No known pedagogical defect ships in Beta 0.1, and no approval stands on a digest that
-ignored what the child sees.
+76 lessons approved on a digest that can no longer miss a redrawn illustration.
 
 ## Status
 
@@ -24,11 +23,11 @@ ignored what the child sees.
 
 ## Branch
 
-`fix/lisa-visual-and-approved-debt`
+`feat/media-fingerprint-and-approve`
 
 ## Base Branch
 
-`develop` at `af36c75`
+`develop` at `b5608e5`
 
 ## Started
 
@@ -36,8 +35,8 @@ ignored what the child sees.
 
 ## Last Checkpoint
 
-2026-09-15 — Lisa illustration redrawn, 31 debt occurrences corrected, 56 approvals lapsed
-cleanly, re-confirmation package generated, full local suite green.
+2026-09-15 — media fingerprints implemented and tested, Weeks 1-4 approved, full local suite
+green.
 
 ## Scope
 
@@ -85,7 +84,7 @@ To be filled in when the next task begins.
 
 ## Remaining
 
-- [ ] Return both reviewer documents for ChatGPT
+- [ ] Week 5 of 1ère, then 3ème — separate tasks
 
 ## Validation State
 
@@ -94,7 +93,7 @@ To be filled in when the next task begins.
 | format             | PASS    | working tree                      |
 | lint               | PASS    | working tree                      |
 | typecheck          | PASS    | working tree                      |
-| unit tests         | PASS    | working tree — 242 tests          |
+| unit tests         | PASS    | working tree — 249 tests          |
 | content validation | PASS    | working tree — 30 files           |
 | database tests     | PASS    | fresh reset — 152 assertions      |
 | build              | PASS    | working tree                      |

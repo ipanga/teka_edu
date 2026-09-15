@@ -1,5 +1,5 @@
 import type { Curriculum, LearningObjective, SchoolLevel } from "../curriculum/types";
-import { checkLessonReview } from "../lessons/review";
+import { type MediaDigestSource, checkLessonReview } from "../lessons/review";
 import { type Lesson, type Material, lessonMinutes } from "../lessons/types";
 import { planForInstructionalDay } from "./daily-plan";
 import { type LevelProgramme, SESSION_MINUTES_POLICY } from "./types";
@@ -17,6 +17,7 @@ export function checkLessons(
   objectives: readonly LearningObjective[],
   levels: readonly SchoolLevel[],
   materials: readonly Material[],
+  media: MediaDigestSource,
 ): string[] {
   const problems: string[] = [];
   const objectiveByCode = new Map(objectives.map((objective) => [objective.code, objective]));
@@ -31,7 +32,7 @@ export function checkLessons(
     seenLessonIds.add(lesson.id);
     // The quality gate: AI-drafted content never approves itself — an independent review does
     // (ADR-035, refined by ADR-047).
-    problems.push(...checkLessonReview(lesson));
+    problems.push(...checkLessonReview(lesson, media));
 
     const curriculum = curricula.find((c) => c.id === lesson.curriculumId);
     if (curriculum === undefined) {

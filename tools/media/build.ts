@@ -9,6 +9,7 @@
  * Style: flat, two-tone, no gradients, no faces, recognisable at arm's length on a phone. Colour
  * never carries meaning — the child is asked for *the square*, never for *the blue one*.
  */
+import { createHash } from "node:crypto";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
@@ -630,6 +631,12 @@ function main() {
     writeFileSync(target, svg(asset.body), "utf8");
   }
 
+  /** The bytes as written, so the hash is of the file a browser will actually fetch. */
+  const hashOf = (file: string): string =>
+    `sha256:${createHash("sha256")
+      .update(readFileSync(path.join(OUT, file)))
+      .digest("hex")}`;
+
   const registry = {
     // Audio is authored by hand, never generated: a recording needs a human voice (ADR-046).
     // The generator preserves whatever is already declared.
@@ -643,6 +650,7 @@ function main() {
       tags,
       origin: "teka-edu-created",
       provenance: "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      contentHash: hashOf(file),
     })),
   };
   writeFileSync(

@@ -6,6 +6,7 @@
  * 2. The registered data must satisfy every cross-file and business rule (school years,
  *    holidays, calendar exceptions, levels, curricula).
  */
+import { createHash } from "node:crypto";
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import {
@@ -51,6 +52,41 @@ async function main() {
       }
     } catch (error) {
       failures.push(`${relative}: ${(error as Error).message}`);
+    }
+  }
+
+  /**
+   * Every picture a lesson can show must exist and must still be the picture that was
+   * fingerprinted. An approval covers the bytes, so an asset that has drifted from its recorded
+   * hash — or that cannot be read at all — has to fail here rather than quietly weaken a digest.
+   */
+  if (failures.length === 0) {
+    const registryPath = path.join(CONTENT_DIR, "media/registry.json");
+    const registry = JSON.parse(await readFile(registryPath, "utf8")) as {
+      assets: { id: string; file: string; contentHash: string }[];
+    };
+    const mediaRoot = path.resolve(import.meta.dirname, "..", "public", "media");
+    for (const asset of registry.assets) {
+      const file = path.resolve(mediaRoot, asset.file);
+      // Never outside public/media/: a lesson must not reach into the rest of the repository.
+      if (file !== path.normalize(file) || !file.startsWith(`${mediaRoot}${path.sep}`)) {
+        failures.push(`media "${asset.id}": file escapes public/media/`);
+        continue;
+      }
+      try {
+        const actual = `sha256:${createHash("sha256")
+          .update(await readFile(file))
+          .digest("hex")}`;
+        if (actual !== asset.contentHash) {
+          failures.push(
+            `media "${asset.id}": ${asset.file} has changed since it was fingerprinted ` +
+              `(recorded ${asset.contentHash.slice(0, 19)}…, now ${actual.slice(0, 19)}…). ` +
+              `Run \`npx tsx tools/media/build.ts\`.`,
+          );
+        }
+      } catch {
+        failures.push(`media "${asset.id}": cannot read public/media/${asset.file}`);
+      }
     }
   }
 
