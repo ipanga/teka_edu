@@ -10,34 +10,31 @@
 
 ## Task
 
-Finish 1ère maternelle Week 1 (two progression-metadata corrections), record it as the first
-content through the AI-assisted gate, and open the Beta 0.1 readiness tracking.
+None in progress.
 
 ## Objective
 
-Week 1 approved honestly, progression derived rather than templated, and a release checklist
-that cannot be marked done before it is true.
+1ère maternelle Week 1 is finalised and merged. No new task has been started.
 
 ## Status
 
-`in_progress`
+`planned`
 
 ## Branch
 
-`fix/week-1-progression-metadata`
+`develop` — no feature branch open.
 
 ## Base Branch
 
-`develop` at `b3aacc6`
+`develop`
 
 ## Started
 
-2026-09-15
+—
 
 ## Last Checkpoint
 
-2026-09-15 — both corrections applied, Week 1 approved, readiness doc written, full local
-suite green.
+2026-09-15 — reset after PR #39 merged as `5899d94` and verified on live staging.
 
 ## Scope
 
@@ -46,63 +43,61 @@ To be filled in when the next task begins.
 ## Out of Scope
 
 - October, and 2ème maternelle content.
-- Marking any lesson `approved` before its batch has passed the review gate (ADR-047).
+- Production: `PRODUCTION_DEPLOY_ENABLED` stays off until both September gates are met
+  (`docs/releases/BETA_0_1_READINESS.md`).
+- Marking a week `approved` before it has passed the gate (ADR-047).
 - Claiming a human-teacher review: none has happened (ISSUE-017, open and non-blocking).
-- Paid anything; production; `main`.
+- Paid anything; `main`.
 
 ## Product Decisions
 
-- Parent-led after-school répétiteur; 30-45 minutes (1ère: about 30) (ADR-039).
-- French Cycle 1 is the curriculum; DRC calendar and context; PNEM as compatibility (ADR-037).
-- Level → band: 1ère `before-4` (116 objectives), 2ème `from-4` (139), 3ème `from-5` (162).
-  `before-4` is the earliest band, so 1ère introduces everything it touches.
-- **An interaction pattern may be reused across levels; its assumptions about a child's body may
-  not.** Counting material, furniture handling and running targets are all age-specific, and are
-  now held by tests rather than by prose.
-- **Anything a generated document says about "the child" must be derived from the level.** A
-  fixed age string was right for one level and silently wrong for the next.
+- **Beta 0.1** is the first public release: 1ère and 3ème September available, 2ème « en
+  préparation ». It ships when both classes' September passes the AI-assisted gate.
+  Previews stay protected; only the production domain becomes public.
+- Beta 0.1 stores **no personal data** and makes no client-side network write. Keep it that way.
+- Parent-led répétiteur; 30-45 minutes (1ère: about 30) (ADR-039).
+- Level → band: 1ère `before-4` (116), 2ème `from-4` (139), 3ème `from-5` (162).
+- **Progression follows the days a child lives, not the tracks.** A lesson may not claim an
+  objective no activity works, and nothing is « déjà vu » before something teaches it.
+- An interaction pattern may be reused across levels; its assumptions about a child's body may not.
+- Anything a generated document says about "the child" is derived from the level.
 - Media is repository SVG by stable id; reuse before creating (ADR-042).
-- The app opens on a class; a class with no lessons says so and borrows nothing (ADR-044).
-- Animation is decoration, always off under `prefers-reduced-motion` (ADR-045).
-- The parent is the voice; no synthesised speech for a word a child copies (ADR-046).
+- Animation is decoration (ADR-045); the parent is the voice (ADR-046).
 - The pedagogical gate is an independent review, not necessarily a human one (ADR-047).
 - Never edit generated content by hand; fix the generator.
-- An activity claims only what it actually works.
-- Never claim the app observed what it cannot see.
 
 ## Completed
 
-- [x] Day-2 stale TIME-SPACE claim removed; **a validator now refuses any lesson-level objective
-      no activity works** — it found 53 stale claims, 52 in 3ème, all metadata
-- [x] ART progression fixed at source: progression is derived from the order a child meets
-      content, day by day and across tracks, not per track in isolation
-- [x] **Child-facing content proved unchanged**, field by field, across both levels
-- [x] 1ère Week 1: **16 lessons `approved`**, `ai-assisted`, `accepted-with-modifications`
-- [x] `docs/releases/BETA_0_1_READINESS.md` opened; privacy audited (no personal data at all)
-- [x] `--timestamp=` on the migration generator, so a deliberate name can pass the ordering guard
+- [x] Phase 3A — September programme and the parent session (archived)
+- [x] Session duration policy and the resumable-work protocol (archived)
+- [x] Phase 3B — visuals, interaction and real-session testing (archived)
+- [x] Phase 3C — the session a parent and child can sit down and do (archived)
 
 ## In Progress
 
-- [ ] PR, CI, merge, staging
+- [ ] Nothing.
 
 ## Remaining
 
-- [ ] Submit 1ère Week 2 to the gate — the next task
+**Next task (not started):** submit `docs/review/2026-2027-maternelle-1-semaine-2.md` to the
+gate. Then Weeks 3-5, and 3ème's Week 1 re-review plus Weeks 2-5, in either order. Not October,
+not 2ème maternelle, no production.
 
 ## Validation State
 
-| Check              | Result  | At                                |
-| ------------------ | ------- | --------------------------------- |
-| format             | PASS    | working tree                      |
-| lint               | PASS    | working tree                      |
-| typecheck          | PASS    | working tree                      |
-| unit tests         | PASS    | working tree — 226 tests          |
-| content validation | PASS    | working tree — 30 files           |
-| database tests     | PASS    | fresh reset — 151 assertions      |
-| build              | PASS    | working tree                      |
-| E2E                | PASS    | working tree — 28 tests           |
-| Docker             | NOT RUN | left to CI                        |
-| secret scans       | PASS    | 0 tracked `.env*`; gitleaks in CI |
+| Check              | Result | At                                         |
+| ------------------ | ------ | ------------------------------------------ |
+| format             | PASS   | working tree                               |
+| lint               | PASS   | working tree — 0 warnings                  |
+| typecheck          | PASS   | working tree                               |
+| unit tests         | PASS   | working tree — 207 tests                   |
+| content validation | PASS   | working tree — 21 files                    |
+| database tests     | PASS   | working tree — 144 pgTAP assertions        |
+| build              | PASS   | working tree                               |
+| E2E                | PASS   | working tree — 20 tests                    |
+| Docker             | PASS   | CI at `27e9054` — both images              |
+| secret scans       | PASS   | working tree — no leaks, 0 tracked `.env*` |
+| staging            | PASS   | `27e9054` deployed, 20 E2E against it      |
 
 ## Database State
 
@@ -132,7 +127,8 @@ None.
 
 ## Exact Resume Point
 
-Open the PR into `develop`, wait for CI, squash-merge, verify staging.
+No task is in progress. When the next one starts: fill this file in, create the feature branch
+from `develop`, commit an initial checkpoint, and open a Draft PR before the long work begins.
 
 ## Resume Verification
 
