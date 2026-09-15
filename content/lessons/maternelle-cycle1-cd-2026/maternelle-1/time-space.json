@@ -22,8 +22,8 @@
           "position": 1,
           "type": "observation",
           "title": "Le moment de la journée",
-          "childInstruction": "C’est le matin, le midi, ou le soir ?",
-          "adultGuidance": "Dites le moment et ce qui va avec : « C’est le soir : on a mangé, bientôt on dort. » Puis demandez-lui. S’il se trompe, ne corrigez pas par non : redites simplement le bon moment avec son indice.",
+          "childInstruction": "C’est le matin, ou le soir ?",
+          "adultGuidance": "Deux moments seulement le premier jour : le matin et le soir. Dites celui qu’on vit et ce qui va avec : « C’est le soir : on a mangé, bientôt on dort. » Puis demandez-lui. S’il se trompe, ne dites pas non : redites simplement le bon moment avec son indice. « Midi » viendra quand cette première opposition sera installée.",
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
@@ -194,14 +194,14 @@
           "position": 1,
           "type": "manipulation",
           "title": "Sur, sous, dans",
-          "childInstruction": "Mets le caillou sur la table. Maintenant, sous la table.",
+          "childInstruction": "Mets la cuillère sur la table. Maintenant, sous la table.",
           "adultGuidance": "Trois mots seulement : sur, sous, dans. Dites-le et montrez-le en même temps, puis demandez sans montrer. S’il hésite, refaites le geste avec lui — c’est le corps qui apprend l’espace avant les mots.",
           "minutes": 7,
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S02-C01-O07"],
-          "materialCodes": ["petits-objets"],
+          "materialCodes": ["gros-objets"],
           "vocabulary": [],
           "scaffolds": [
             {
@@ -281,7 +281,7 @@
           "type": "observation",
           "title": "Le moment de la journée",
           "childInstruction": "C’est le matin, le midi, ou le soir ?",
-          "adultGuidance": "Dites le moment et ce qui va avec : « C’est le soir : on a mangé, bientôt on dort. » Puis demandez-lui. S’il se trompe, ne corrigez pas par non : redites simplement le bon moment avec son indice.",
+          "adultGuidance": "Le matin et le soir sont maintenant travaillés depuis trois semaines : ajoutez « midi » et faites choisir entre les trois. Dites le moment qu’on vit et ce qui va avec. S’il hésite entre midi et soir, revenez aux deux moments d’avant — on ne force pas le troisième.",
           "minutes": 7,
           "mode": "off-screen",
           "role": "consolidation",
@@ -292,7 +292,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Is it morning or evening?"
+              "childInstruction": "Is it morning, midday or evening?"
             }
           ],
           "payload": {
@@ -323,14 +323,14 @@
           "position": 1,
           "type": "manipulation",
           "title": "Sur, sous, dans",
-          "childInstruction": "Mets le caillou sur la table. Maintenant, sous la table.",
+          "childInstruction": "Mets la cuillère sur la table. Maintenant, sous la table.",
           "adultGuidance": "Trois mots seulement : sur, sous, dans. Dites-le et montrez-le en même temps, puis demandez sans montrer. S’il hésite, refaites le geste avec lui — c’est le corps qui apprend l’espace avant les mots.",
           "minutes": 7,
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S02-C01-O07"],
-          "materialCodes": ["petits-objets"],
+          "materialCodes": ["gros-objets"],
           "vocabulary": [],
           "scaffolds": [
             {

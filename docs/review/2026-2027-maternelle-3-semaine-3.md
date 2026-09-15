@@ -9,10 +9,14 @@
 
 ## Ce qu’on vous demande
 
-Vous lisez ici la première semaine de programme telle qu’un parent la recevrait. Pour chaque
-leçon, dites si elle convient à un enfant de 5 ans en RDC, et signalez ce qui vous gêne :
-une consigne trop longue, une durée irréaliste, un matériel introuvable, un exemple mal choisi,
-un objectif qui ne correspond pas à l’activité. Les tableaux de relecture sont là pour cela.
+Vous lisez ici une semaine de programme telle qu’un parent la recevrait. Pour chaque leçon,
+dites si elle convient à un enfant de 3ème maternelle (repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés ») en RDC, et signalez ce qui vous gêne : une consigne trop
+longue, une durée irréaliste, un matériel introuvable, un exemple mal choisi, un objectif qui
+ne correspond pas à l’activité. Les tableaux de relecture sont là pour cela.
+
+Les repères du programme sont **développementaux et non chronologiques** : ils sont formulés
+« ou dès que les apprentissages précédents ont pu être observés ». Jugez donc l’activité
+contre le repère, pas contre un âge exact.
 
 Une leçon ne pourra passer au statut « approuvé » qu’après votre accord explicite. Votre
 conclusion est enregistrée telle quelle — « accepté », « accepté avec modifications » ou
@@ -29,7 +33,7 @@ personne qui enseigne à cet âge. Les deux ne sont pas présentées comme équi
   deux moments plus courts, ou arrêtée avant la fin quand l’enfant fatigue. L’application
   propose « Faire une petite pause » et « Terminer pour aujourd’hui » à chaque activité, et
   reprend là où l’on s’était arrêté. Une séance écourtée est une séance normale : jugez les
-  activités, pas la capacité d’un enfant à tenir 35 minutes.
+  activités, pas la capacité d’un enfant à tenir la séance entière.
 - **Contenu relu ici :** 5 jours · 20 leçons · 38 activités
 
 Les objectifs et les « réussites attendues » sont cités mot pour mot du programme officiel ;
@@ -129,7 +133,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -218,7 +222,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -264,7 +268,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -325,7 +329,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -414,7 +418,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -506,7 +510,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -553,7 +557,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -608,7 +612,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -704,7 +708,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -796,7 +800,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -843,7 +847,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -903,7 +907,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -999,7 +1003,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -1091,7 +1095,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -1147,7 +1151,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -1207,7 +1211,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -1297,7 +1301,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -1389,7 +1393,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -1448,7 +1452,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -1507,7 +1511,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 | Critère | OK / à revoir | Commentaire |
 | --- | --- | --- |
 | L’activité travaille-t-elle réellement l’objectif annoncé ? |  |  |
-| Est-ce réaliste pour un enfant de 5 ans (3ème maternelle) ? |  |  |
+| Est-ce réaliste pour un enfant de 3ème maternelle relevant du repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés » ? |  |  |
 | La consigne enfant et la guidance adulte sont-elles claires ? |  |  |
 | La difficulté est-elle juste (ni trop facile, ni trop complexe) ? |  |  |
 | La durée annoncée est-elle réaliste ? |  |  |
@@ -1523,7 +1527,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 | Question | Réponse |
 | --- | --- |
-| La semaine est-elle adaptée à des enfants de 5 ans en RDC ? |  |
+| La semaine est-elle adaptée à un enfant de 3ème maternelle (repère « à partir de 5 ans ou dès que les apprentissages précédents ont pu être observés ») en RDC ? |  |
 | Le rythme quotidien (langage, mathématiques, activité physique, domaine tournant) convient-il ? |  |
 | La durée quotidienne est-elle réaliste à la maison ? |  |
 | L’aide en anglais est-elle utile, et assez discrète ? |  |

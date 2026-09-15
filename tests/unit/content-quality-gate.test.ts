@@ -301,6 +301,63 @@ describe("human review package", () => {
     }
   });
 
+  /**
+   * The age question was the literal string « un enfant de 5 ans (3ème maternelle) » — true of
+   * the only level that existed when it was written, and false the moment a second one did. It
+   * asked a reviewer of 1ère maternelle, sixteen times in one week, whether the work suited a
+   * five-year-old. The wording is now derived, and this test refuses to let it be pinned again.
+   */
+  it("asks the reviewer about the level in front of them, never another one", () => {
+    const named: Record<string, { name: string; band: RegExp; foreign: RegExp }> = {
+      "maternelle-1": {
+        name: "1ère maternelle",
+        band: /à aborder avant 4 ans/,
+        foreign: /3ème maternelle|2ème maternelle|enfant de 5 ans/,
+      },
+      "maternelle-3": {
+        name: "3ème maternelle",
+        band: /à partir de 5 ans/,
+        foreign: /1ère maternelle|2ème maternelle/,
+      },
+    };
+    for (const week of REVIEW_PACKAGES) {
+      const expected = named[week.levelId];
+      if (expected === undefined) continue;
+      const document = readFileSync(path.join(ROOT, reviewPackagePath(week)), "utf8");
+      expect(document, `${week.levelId} s${week.week}`).toContain(expected.name);
+      expect(document, `${week.levelId} s${week.week}: band wording`).toMatch(expected.band);
+      // No other level's name, and no chronological age the programme itself does not pin.
+      expect(document, `${week.levelId} s${week.week}: another level's wording`).not.toMatch(
+        expected.foreign,
+      );
+    }
+  });
+
+  /**
+   * A vocabulary activity's guidance must not name a word the activity does not teach. One did:
+   * it told the parent to say « la porte » while the child was learning « la table ».
+   */
+  it("never names a vocabulary word an activity does not actually teach", () => {
+    for (const lesson of data.lessons) {
+      for (const activity of lesson.activities) {
+        if (activity.type !== "vocabulary") continue;
+        const taught = activity.vocabulary.map((entry) => entry.fr);
+        const quoted = [...activity.adultGuidance.matchAll(/«\s*(l[ea’]\s?[^»]{2,20}?)\s*»/gi)].map(
+          (match) => match[1]!.trim(),
+        );
+        for (const word of quoted) {
+          const isTaught = taught.some(
+            (candidate) => candidate.toLowerCase() === word.toLowerCase(),
+          );
+          expect(
+            isTaught,
+            `${activity.id}: guidance quotes « ${word} », which it does not teach`,
+          ).toBe(true);
+        }
+      }
+    }
+  });
+
   it("tells the reviewer whose screen time is being counted, and that 35 min is not a target", () => {
     expect(committed).toContain("temps d’écran actif de l’enfant");
     expect(committed).toContain("Ce n’est pas un objectif à atteindre.");

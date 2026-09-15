@@ -235,3 +235,53 @@ describe("September content quality", () => {
     }
   });
 });
+
+/**
+ * Safety rules for the youngest band, made mechanical after the 1ère maternelle Week 1 review.
+ * Each one is here because it was actually written into the content and had to be corrected:
+ * a three-year-old asked to push a chair, a child told to run at a wall, and small objects
+ * offered as the default thing to count.
+ */
+describe("1ère maternelle safety (before-4)", () => {
+  const data = getReferenceData();
+  const lessons = data.lessons.filter((lesson) => lesson.levelIds.includes("maternelle-1"));
+  const activities = lessons.flatMap((lesson) => lesson.activities);
+
+  it("has content to check", () => {
+    expect(activities.length).toBeGreaterThan(100);
+  });
+
+  it("never asks the youngest child to move furniture", () => {
+    for (const activity of activities) {
+      const text = `${activity.childInstruction} ${activity.adultGuidance}`;
+      expect(text, `${activity.id}`).not.toMatch(
+        /(?:c’est lui qui|l’enfant) (?:pousse|déplace|écarte)[^.]*(?:chaise|meuble|table)/i,
+      );
+    }
+  });
+
+  it("never sends a running child at a wall, a door or a tree", () => {
+    for (const activity of activities) {
+      if (activity.type !== "movement") continue;
+      const text = `${activity.childInstruction} ${activity.adultGuidance}`;
+      expect(text, `${activity.id}`).not.toMatch(/cours jusqu’(?:au mur|à la porte|à l’arbre)/i);
+      expect(text, `${activity.id}`).not.toMatch(/but visible\s*:\s*le mur/i);
+    }
+  });
+
+  it("counts with objects too big to swallow, and keeps small ones supervised", () => {
+    const counting = activities.filter(
+      (activity) => activity.type === "counting" || activity.type === "manipulation",
+    );
+    expect(counting.length).toBeGreaterThan(0);
+    for (const activity of counting) {
+      // `petits-objets` is cailloux/capsules/haricots: never the default for this band.
+      expect(activity.materialCodes, `${activity.id}`).not.toContain("petits-objets");
+      if (/cailloux|capsules|haricots/i.test(activity.adultGuidance)) {
+        expect(activity.adultGuidance, `${activity.id}: small objects without supervision`).toMatch(
+          /surveillance/i,
+        );
+      }
+    }
+  });
+});

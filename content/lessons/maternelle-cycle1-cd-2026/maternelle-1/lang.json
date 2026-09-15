@@ -47,7 +47,7 @@
           "type": "vocabulary",
           "title": "Les mots de la maison",
           "childInstruction": "Écoute, puis dis le mot avec moi : la porte, le seau.",
-          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez-la lentement : « la porte ». 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez lentement l’objet que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
@@ -128,7 +128,7 @@
           "mode": "off-screen",
           "role": "retrieval",
           "mediaIds": [],
-          "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
+          "objectiveCodes": ["LANG-S01-C04-O01"],
           "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [
@@ -147,7 +147,7 @@
           "type": "vocabulary",
           "title": "Les mots de la maison",
           "childInstruction": "Écoute, puis dis le mot avec moi : la table, la chaise.",
-          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez-la lentement : « la porte ». 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez lentement l’objet que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
@@ -244,11 +244,11 @@
         {
           "id": "m1-lang-03-a2",
           "position": 2,
-          "type": "read-aloud",
+          "type": "listening-story",
           "title": "Le seau de Lisa",
-          "childInstruction": "Écoute l’histoire jusqu’au bout.",
-          "adultGuidance": "Lisez lentement, en montrant l’image. L’histoire est courte exprès : à trois ans, on écoute mieux deux minutes deux fois qu’une fois quatre minutes. S’il redemande la même histoire demain, c’est bon signe. Aujourd’hui, aucune question après : on écoute, c’est tout.",
-          "minutes": 4,
+          "childInstruction": "Écoute l’histoire. Après, tu me montreras où était le seau.",
+          "adultGuidance": "Lisez lentement, en montrant l’image. L’histoire est courte exprès : à trois ans, on écoute mieux deux minutes deux fois qu’une fois quatre minutes.\nÀ la fin, **une seule question, très légère** : « Le seau était sur la table ou sur la chaise ? » Un doigt pointé, un mot ou un geste suffisent — ce n’est pas une récitation, et on ne demande jamais une phrase entière. Si rien ne vient, donnez vous-même la réponse et passez à la suite : « Sur la chaise. Et Lisa a eu son eau. »",
+          "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
@@ -258,11 +258,12 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Listen to the story."
+              "childInstruction": "Listen to the story, then show me where the bucket was."
             }
           ],
           "payload": {
-            "textId": "histoire-le-seau-de-lisa"
+            "textId": "histoire-le-seau-de-lisa",
+            "questions": ["Le seau était sur la table ou sur la chaise ?"]
           }
         },
         {
@@ -510,7 +511,7 @@
           "type": "vocabulary",
           "title": "Les quatre mots de la maison",
           "childInstruction": "Écoute, puis dis le mot avec moi : la porte, le seau, la table, la chaise.",
-          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez-la lentement : « la porte ». 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez lentement l’objet que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
@@ -967,7 +968,7 @@
           "type": "vocabulary",
           "title": "Les mots de mon corps",
           "childInstruction": "Écoute, puis dis le mot avec moi : la main, le pied.",
-          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez-la lentement : « la porte ». 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez lentement l’objet que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
@@ -1153,7 +1154,7 @@
           "type": "vocabulary",
           "title": "Les mots de mon corps",
           "childInstruction": "Écoute, puis dis le mot avec moi : la tête, le ventre.",
-          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez-la lentement : « la porte ». 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez lentement l’objet que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
@@ -1603,7 +1604,7 @@
           "type": "vocabulary",
           "title": "Les quatre mots de mon corps",
           "childInstruction": "Écoute, puis dis le mot avec moi : la main, le pied, la tête, le ventre.",
-          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez-la lentement : « la porte ». 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez lentement l’objet que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
@@ -1975,7 +1976,7 @@
           "type": "vocabulary",
           "title": "Tous les mots du mois",
           "childInstruction": "Écoute, puis dis le mot avec moi : la porte, le seau, la main, la tête.",
-          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez-la lentement : « la porte ». 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez lentement l’objet que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
