@@ -15,7 +15,7 @@
       "stage": "discovery",
       "difficulty": 1,
       "themeId": null,
-      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.",
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
       "activities": [
         {
           "id": "m1-math-01-a1",
@@ -57,16 +57,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "e17c8fdcecd6b1a2",
-        "notes": "Semaine 1, deux passes (9 corrections pédagogiques et de sécurité, puis 2 corrections de progression). Approbation reconfirmée après régénération du moteur de progression : différence prouvée métadonnées seules, aucun contenu vu par l’enfant n’a changé. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-math-02",
@@ -80,7 +72,7 @@
       "stage": "discovery",
       "difficulty": 1,
       "themeId": null,
-      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.",
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
       "activities": [
         {
           "id": "m1-math-02-a1",
@@ -122,16 +114,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "21473177b7006abf",
-        "notes": "Semaine 1, deux passes (9 corrections pédagogiques et de sécurité, puis 2 corrections de progression). Approbation reconfirmée après régénération du moteur de progression : différence prouvée métadonnées seules, aucun contenu vu par l’enfant n’a changé. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-math-03",
@@ -145,7 +129,7 @@
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
-      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.",
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
       "activities": [
         {
           "id": "m1-math-03-a1",
@@ -187,16 +171,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "6f890ab386593453",
-        "notes": "Semaine 1, deux passes (9 corrections pédagogiques et de sécurité, puis 2 corrections de progression). Approbation reconfirmée après régénération du moteur de progression : différence prouvée métadonnées seules, aucun contenu vu par l’enfant n’a changé. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-math-04",
@@ -210,7 +186,7 @@
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
-      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.",
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
       "activities": [
         {
           "id": "m1-math-04-a1",
@@ -252,16 +228,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "092f2b0cb44c410a",
-        "notes": "Semaine 1, deux passes (9 corrections pédagogiques et de sécurité, puis 2 corrections de progression). Approbation reconfirmée après régénération du moteur de progression : différence prouvée métadonnées seules, aucun contenu vu par l’enfant n’a changé. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-math-05",
@@ -275,7 +243,7 @@
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
-      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.",
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
       "activities": [
         {
           "id": "m1-math-05-a1",
@@ -304,16 +272,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "9896cc3bc2a21223",
-        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-math-06",
@@ -327,7 +287,7 @@
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
-      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.",
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
       "activities": [
         {
           "id": "m1-math-06-a1",
@@ -355,16 +315,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "b9ce35996afa59c9",
-        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-math-07",
@@ -378,7 +330,7 @@
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
-      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.",
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
       "activities": [
         {
           "id": "m1-math-07-a1",
@@ -407,16 +359,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "3cc139f4a65161ec",
-        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-math-08",
@@ -430,7 +374,7 @@
       "stage": "discovery",
       "difficulty": 1,
       "themeId": null,
-      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.",
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
       "activities": [
         {
           "id": "m1-math-08-a1",
@@ -458,16 +402,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "7811a9bea9f9b50a",
-        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-math-09",
@@ -481,7 +417,7 @@
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
-      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.",
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
       "activities": [
         {
           "id": "m1-math-09-a1",
@@ -510,16 +446,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "1632e4ab53b69693",
-        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-math-10",
@@ -533,7 +461,7 @@
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
-      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.",
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
       "activities": [
         {
           "id": "m1-math-10-a1",
@@ -561,16 +489,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "156f8eee9b964d56",
-        "notes": "Semaine 3, deux passes. Passe 1 : accepté avec modifications — 8 corrections (quantité annoncée, vocabulaire du corps, portée du lexique, marqueurs spatiaux, étai anglais, activité sensorielle et son matériel, titre numérique). Passe 2 : accepté. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-math-11",
@@ -584,7 +504,7 @@
       "stage": "discovery",
       "difficulty": 1,
       "themeId": null,
-      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.",
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
       "activities": [
         {
           "id": "m1-math-11-a1",
@@ -612,16 +532,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "27f2535dded964fd",
-        "notes": "Semaine 3, deux passes. Passe 1 : accepté avec modifications — 8 corrections (quantité annoncée, vocabulaire du corps, portée du lexique, marqueurs spatiaux, étai anglais, activité sensorielle et son matériel, titre numérique). Passe 2 : accepté. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-math-12",
@@ -635,7 +547,7 @@
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
-      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.",
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
       "activities": [
         {
           "id": "m1-math-12-a1",
@@ -663,16 +575,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "5f29dab73ce5a03f",
-        "notes": "Semaine 3, deux passes. Passe 1 : accepté avec modifications — 8 corrections (quantité annoncée, vocabulaire du corps, portée du lexique, marqueurs spatiaux, étai anglais, activité sensorielle et son matériel, titre numérique). Passe 2 : accepté. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-math-13",
@@ -686,7 +590,7 @@
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
-      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.",
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
       "activities": [
         {
           "id": "m1-math-13-a1",
@@ -714,16 +618,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "25dc85c8ef4e322e",
-        "notes": "Semaine 3, deux passes. Passe 1 : accepté avec modifications — 8 corrections (quantité annoncée, vocabulaire du corps, portée du lexique, marqueurs spatiaux, étai anglais, activité sensorielle et son matériel, titre numérique). Passe 2 : accepté. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-math-14",
@@ -737,7 +633,7 @@
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
-      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.",
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
       "activities": [
         {
           "id": "m1-math-14-a1",
@@ -766,16 +662,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "b8b4354c5124aff8",
-        "notes": "Semaine 3, deux passes. Passe 1 : accepté avec modifications — 8 corrections (quantité annoncée, vocabulaire du corps, portée du lexique, marqueurs spatiaux, étai anglais, activité sensorielle et son matériel, titre numérique). Passe 2 : accepté. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-math-15",

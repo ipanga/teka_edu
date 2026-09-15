@@ -295,30 +295,10 @@ describe("September content quality", () => {
 describe("1ère maternelle safety (before-4)", () => {
   const data = getReferenceData();
   /**
-   * Activities that break a rule below and are **already approved**, so their text cannot be
-   * edited without invalidating a digest a reviewer signed (ADR-035). Every one is a defect the
-   * Week 4 review found in its own week and that the identical earlier activity still carries.
-   *
-   * They are listed rather than hidden, and the list may only shrink: fixing one means sending
-   * its week back for re-confirmation, which is the product owner's decision, not this file's.
+   * The allowlist that used to live here is gone: every defect it tracked has been corrected,
+   * and the approvals that covered the old text lapsed rather than being re-stamped. If one ever
+   * needs to come back, it means a known defect is shipping — say so here, and let it shrink.
    */
-  const APPROVED_DEBT = new Set([
-    // « Ferme les yeux » required rather than offered (Week 3, day 10).
-    "m1-lang-10-a2",
-    // Generic « Move with me. » where the French task is specific (Weeks 1-3).
-    "m1-phys-01-a1",
-    "m1-phys-02-a1",
-    "m1-phys-03-a1",
-    "m1-phys-04-a1",
-    "m1-phys-05-a1",
-    "m1-phys-06-a1",
-    "m1-phys-07-a1",
-    "m1-phys-08-a1",
-    "m1-phys-10-a1",
-    "m1-phys-11-a1",
-    "m1-phys-13-a1",
-    "m1-phys-14-a1",
-  ]);
   const lessons = data.lessons.filter((lesson) => lesson.levelIds.includes("maternelle-1"));
   const activities = lessons.flatMap((lesson) => lesson.activities);
 
@@ -343,7 +323,6 @@ describe("1ère maternelle safety (before-4)", () => {
    */
   it("invites closing the eyes, never requires it", () => {
     for (const activity of activities) {
-      if (APPROVED_DEBT.has(activity.id)) continue;
       if (!/ferme les yeux/i.test(activity.childInstruction)) continue;
       expect(
         /si tu veux|si tu le veux|tu peux/i.test(activity.childInstruction),
@@ -358,7 +337,6 @@ describe("1ère maternelle safety (before-4)", () => {
    */
   it("gives a physical activity an English scaffold about its own task", () => {
     for (const activity of activities) {
-      if (APPROVED_DEBT.has(activity.id)) continue;
       if (activity.type !== "movement") continue;
       const scaffold = activity.scaffolds.find((entry) => entry.language === "en");
       if (scaffold === undefined) continue;
@@ -366,6 +344,69 @@ describe("1ère maternelle safety (before-4)", () => {
         scaffold.childInstruction,
         `${activity.id}: generic scaffold for « ${activity.childInstruction} »`,
       ).not.toBe("Move with me.");
+    }
+  });
+
+  /**
+   * « Regarde l'image. Montre-moi Lisa. » was shipped against a drawing of a bucket — the task
+   * was impossible as authored, and nothing caught it until the review package began naming the
+   * picture. A deterministic check on the canonical content is enough here.
+   */
+  it("shows a picture containing Lisa when the child is asked to find her", () => {
+    const asking = activities.filter((activity) =>
+      /montre-moi lisa/i.test(activity.childInstruction),
+    );
+    expect(asking.length, "no Lisa-identification activity found").toBeGreaterThan(0);
+    for (const activity of asking) {
+      expect(activity.mediaIds, `${activity.id}: shows no picture`).not.toHaveLength(0);
+      for (const id of activity.mediaIds) {
+        const asset = data.media.find((candidate) => candidate.id === id)!;
+        expect(asset, `${activity.id}: ${id} is not in the registry`).toBeDefined();
+        expect(
+          asset.alt.toLowerCase(),
+          `${activity.id}: shows « ${asset.alt} », which does not contain Lisa`,
+        ).toContain("lisa");
+      }
+    }
+  });
+
+  it("says a fixed age nowhere the programme uses a developmental band", () => {
+    for (const activity of activities) {
+      expect(activity.adultGuidance, `${activity.id}`).not.toMatch(
+        /à (deux|trois|quatre|cinq) ans/,
+      );
+    }
+  });
+
+  it("tells the adult that a gesture answers a comprehension question", () => {
+    for (const activity of activities) {
+      if (!Array.isArray(activity.payload["questions"])) continue;
+      expect(activity.adultGuidance, `${activity.id}: no response rule`).toMatch(
+        /doigt pointé|geste/,
+      );
+      // Either phrasing is fine; what must be there is the rule.
+      expect(activity.adultGuidance, `${activity.id}: full sentence not excluded`).toMatch(
+        /jamais une phrase entière|phrase entière n’est jamais demandée/,
+      );
+    }
+  });
+
+  it("keeps concrete counting at three while the rhyme goes to six", () => {
+    const maths = data.lessons.filter(
+      (lesson) => lesson.levelIds.includes("maternelle-1") && lesson.domainCode === "MATH",
+    );
+    expect(maths.length).toBeGreaterThan(0);
+    for (const lesson of maths) {
+      expect(lesson.parentGuidance, `${lesson.id}`).toMatch(/jamais plus de trois objets/i);
+      expect(lesson.parentGuidance, `${lesson.id}`).toMatch(/jusqu’à six/i);
+    }
+    // And no activity asks the child to hand over more than three.
+    for (const activity of activities) {
+      const asked = activity.childInstruction.match(/donne-moi (un|deux|trois|quatre|cinq|six)/i);
+      if (asked === null) continue;
+      expect(["un", "deux", "trois"], `${activity.id}: asks for ${asked[1]}`).toContain(
+        asked[1]!.toLowerCase(),
+      );
     }
   });
 

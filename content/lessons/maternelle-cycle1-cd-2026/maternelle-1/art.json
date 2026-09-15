@@ -43,16 +43,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "f250c357e83e40b7",
-        "notes": "Semaine 1, deux passes (9 corrections pédagogiques et de sécurité, puis 2 corrections de progression). Approbation reconfirmée après régénération du moteur de progression : différence prouvée métadonnées seules, aucun contenu vu par l’enfant n’a changé. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-art-05",
@@ -94,16 +86,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "0c9d559f126579d7",
-        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-art-07",
@@ -145,16 +129,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "81dfad7d99e8ab21",
-        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-art-09",
@@ -196,16 +172,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "b0e3ccc6a3a045fc",
-        "notes": "Semaine 2, deux passes (6 corrections, puis 2 corrections ciblées : retrait du sac de graines et formulation sans notion d’échec sur la ligne d’équilibre). Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-art-11",
@@ -247,16 +215,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "31d46daf7f82ea1f",
-        "notes": "Semaine 3, deux passes. Passe 1 : accepté avec modifications — 8 corrections (quantité annoncée, vocabulaire du corps, portée du lexique, marqueurs spatiaux, étai anglais, activité sensorielle et son matériel, titre numérique). Passe 2 : accepté. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-art-14",
@@ -298,16 +258,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "cc3b04229c7a04d8",
-        "notes": "Semaine 3, deux passes. Passe 1 : accepté avec modifications — 8 corrections (quantité annoncée, vocabulaire du corps, portée du lexique, marqueurs spatiaux, étai anglais, activité sensorielle et son matériel, titre numérique). Passe 2 : accepté. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-art-17",

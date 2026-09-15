@@ -59,7 +59,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
   - `LANG-S02-C01-O01` — Identifier les sons de la langue, lors de situations d’écoute proposées par le professeur. _(source : programme-2024-langage)_
@@ -78,9 +78,10 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
 #### 2. J’écoute — 4 min, sans interaction écran (phonology)
 
-- **Consigne à l’enfant :** « Ferme les yeux. Qu’est-ce que tu entends ? »
-- **Guidance adulte :** Faites un bruit qu’il connaît : taper sur la table, froisser du papier, verser de l’eau. Demandez ce que c’est. Puis refaites-en deux et demandez lequel était le premier. Deux bruits suffisent.
+- **Consigne à l’enfant :** « Écoute bien. Qu’est-ce que tu entends ? Tu peux fermer les yeux si tu veux. »
+- **Guidance adulte :** Fermer les yeux aide à écouter, mais ne l’imposez pas : s’il préfère regarder, il écoute en regardant. Faites un bruit qu’il connaît : taper sur la table, froisser du papier, verser de l’eau. Demandez ce que c’est. Puis refaites-en deux et demandez lequel était le premier. Deux bruits suffisent.
 - **Matériel :** Aucun matériel
+- **Aide en anglais (optionnelle) :** « Listen. What can you hear? You may close your eyes if you want. »
 - **Objectifs travaillés :** `LANG-S02-C01-O01` Identifier les sons de la langue, lors de situations d’écoute proposées par le professeur.
 
 #### 3. La pluie tombe — 3 min, sans interaction écran (song-rhyme)
@@ -158,8 +159,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter, donner une petite quantité, ranger par forme._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
-- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O04` — Constituer une collection (jusqu’à trois, voire quatre objets) d’un cardinal donné.
@@ -232,7 +233,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -245,7 +246,7 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
-- **Aide en anglais (optionnelle) :** « Move with me. »
+- **Aide en anglais (optionnelle) :** « Run to the marker, then walk back. »
 - **Objectifs travaillés :** `PHYS-S01-C01-O02` Courir de manière variée et coordonnée.
 
 **Réussites attendues — texte officiel pour la compétence « Manipuler, courir, sauter, lancer, s’orienter » (before-4) :**
@@ -278,7 +279,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Repérer le moment, le début, la fin et où sont les choses._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Un court moment de repères : quand on est, et où sont les choses. Utilisez votre vraie journée, pas un exemple.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -338,7 +339,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -452,8 +453,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter, donner une petite quantité, ranger par forme._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
-- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
   - `MATH-S03-C01-O01` — Reconnaitre, trier et classer des objets selon leur forme. _(source : programme-2024-mathematiques)_
 
@@ -501,7 +502,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -515,7 +516,7 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **À défaut :** Une balle en papier froissé ou une chaussette roulée. Une petite balle souple convient aussi si la maison en a déjà une.
 - **⚠ Sécurité :** Rien de rempli de petits objets (sac de graines, de haricots) : cela s’ouvre. Une balle en papier ou une chaussette roulée ne blesse personne et ne coûte rien.
 - **À défaut :** Une boîte, un seau, une bassine, un panier ou un carton.
-- **Aide en anglais (optionnelle) :** « Move with me. »
+- **Aide en anglais (optionnelle) :** « Throw the ball into the bucket. »
 - **Objectifs travaillés :** `PHYS-S01-C01-O01` Manipuler et lancer des objets avec des intentions motrices différentes.
 
 **Réussites attendues — texte officiel pour la compétence « Manipuler, courir, sauter, lancer, s’orienter » (before-4) :**
@@ -548,7 +549,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dire des comptines et laisser une trace._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -618,7 +619,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -718,8 +719,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter, donner une petite quantité, ranger par forme._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
-- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O04` — Constituer une collection (jusqu’à trois, voire quatre objets) d’un cardinal donné.
@@ -788,7 +789,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -832,7 +833,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Repérer le moment, le début, la fin et où sont les choses._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Un court moment de repères : quand on est, et où sont les choses. Utilisez votre vraie journée, pas un exemple.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S02-C01-O07` — Acquérir les premiers marqueurs qui permettent de se repérer dans l’espace. _(source : programme-2026)_
@@ -897,7 +898,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1011,8 +1012,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter, donner une petite quantité, ranger par forme._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
-- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S03-C01-O01` — Reconnaitre, trier et classer des objets selon leur forme.
@@ -1061,7 +1062,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1074,7 +1075,7 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
-- **Aide en anglais (optionnelle) :** « Move with me. »
+- **Aide en anglais (optionnelle) :** « Move like me. Then move how you want. »
 - **Objectifs travaillés :** `PHYS-S03-C01-O01` Découvrir et explorer le mouvement comme vecteur d’expression.
 
 **Réussites attendues — texte officiel pour la compétence « Explorer, s’exprimer, danser, observer » (before-4) :**
@@ -1107,7 +1108,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Nommer son corps et se servir de ses sens._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Deux textures sûres suffisent. L’enfant touche, compare, et vous mettez des mots sur ce qu’il ressent. Rien à acheter.
 - **Objectifs enseignés :**
   - `WORLD-S01-C02-O02` — Découvrir les sens utilisés lors d’expériences sensorielles variées. _(source : programme-2026)_
@@ -1171,7 +1172,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1212,7 +1213,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Un seau posé sur une chaise (`public/media/illustrations/histoire-seau-lisa.svg`)
+- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Lisa, debout à côté d’une chaise, avec son seau posé dessus (`public/media/illustrations/histoire-seau-lisa.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -1261,8 +1262,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter, donner une petite quantité, ranger par forme._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
-- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O03` — Dénombrer une collection d’objets (jusqu’à trois, voire quatre).
@@ -1331,7 +1332,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1344,7 +1345,7 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
-- **Aide en anglais (optionnelle) :** « Move with me. »
+- **Aide en anglais (optionnelle) :** « Run to the marker, then walk back. »
 - **Objectifs travaillés :** `PHYS-S01-C01-O02` Courir de manière variée et coordonnée.
 
 **Réussites attendues — texte officiel pour la compétence « Manipuler, courir, sauter, lancer, s’orienter » (before-4) :**
@@ -1377,7 +1378,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dire des comptines et laisser une trace._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

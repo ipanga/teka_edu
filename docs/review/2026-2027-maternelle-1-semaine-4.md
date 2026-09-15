@@ -98,7 +98,7 @@ Un doigt pointé, un geste, un seul mot ou un mot approximatif : tout cela répo
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Un seau posé sur une chaise (`public/media/illustrations/histoire-seau-lisa.svg`)
+- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Lisa, debout à côté d’une chaise, avec son seau posé dessus (`public/media/illustrations/histoire-seau-lisa.svg`)
 
 - **Questions posées à l’enfant après l’écoute (2) :**
 
@@ -642,7 +642,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Matériel :** Aucun matériel
 - **Images montrées à l'enfant (1) :**
 
-  - `objet-seau` — Un seau (`public/media/objects/objet-seau.svg`)
+  - `histoire-seau-lisa` — Lisa, debout à côté d’une chaise, avec son seau posé dessus (`public/media/illustrations/histoire-seau-lisa.svg`)
 
 - **Objectifs travaillés :** `LANG-S02-C03-O03` Reconnaitre un personnage, le nommer et le situer dans les illustrations.
 
@@ -954,7 +954,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Un seau posé sur une chaise (`public/media/illustrations/histoire-seau-lisa.svg`)
+- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Lisa, debout à côté d’une chaise, avec son seau posé dessus (`public/media/illustrations/histoire-seau-lisa.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
