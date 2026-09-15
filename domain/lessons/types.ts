@@ -137,10 +137,40 @@ export function lessonMinutes(lesson: Lesson): number {
   return lesson.activities.reduce((total, activity) => total + activity.minutes, 0);
 }
 
+/**
+ * Minutes the child spends **doing something on the screen** — tapping, choosing, counting by
+ * touch. An off-screen activity contributes nothing even when the parent reads a prompt from the
+ * device, because the device is then the adult's.
+ */
 export function lessonScreenMinutes(lesson: Lesson): number {
   return lesson.activities
     .filter((activity) => activity.mode !== "off-screen")
     .reduce((total, activity) => total + activity.minutes, 0);
+}
+
+/**
+ * Minutes the child spends **looking at** something on the screen without acting on it: the
+ * picture of a story, the illustration in a naming activity.
+ *
+ * This exists because reporting « 0 min d'écran » for a day that shows a child four pictures is
+ * not true, and a reviewer judging screen exposure was being handed that figure. The two numbers
+ * answer different questions and are reported separately rather than added: an activity where a
+ * child taps shapes is not the same experience as one where they glance at a drawing while an
+ * adult reads.
+ *
+ * An off-screen activity that carries media is counted here. A minute is the unit even when the
+ * glance is shorter — the estimate should never flatter the product.
+ */
+export function lessonPictureMinutes(lesson: Lesson): number {
+  return lesson.activities
+    .filter((activity) => {
+      if (activity.mode !== "off-screen") return false;
+      // A story's picture hangs off the text, not the activity's own `mediaIds`, so counting
+      // only `mediaIds` reported zero for days that show a child an illustration for a whole
+      // story. Every text has a picture (a test enforces it), so naming a text shows one.
+      return activity.mediaIds.length > 0 || typeof activity.payload["textId"] === "string";
+    })
+    .reduce((total, activity) => total + Math.min(activity.minutes, 1), 0);
 }
 
 export function lessonMaterialCodes(lesson: Lesson): string[] {

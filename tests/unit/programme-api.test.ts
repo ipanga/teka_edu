@@ -34,8 +34,14 @@ describe("GET /api/programme/[schoolYear]/[level]/[day]", () => {
 
   it("says which official objectives the day works on, with their source and evidence", async () => {
     const body = await (await call("2026-2027", "maternelle-3", "2")).json();
+    // What the day *works on* is what it teaches plus what it brings back. Asserting only the
+    // taught list made this depend on how much of the day happened to be new, which changed the
+    // moment progression started counting first occurrences properly.
     const objectives = body.sessions.flatMap(
-      (session: { lesson: { objectives: unknown[] } }) => session.lesson.objectives,
+      (session: { lesson: { objectives: unknown[]; supportingObjectives: unknown[] } }) => [
+        ...session.lesson.objectives,
+        ...session.lesson.supportingObjectives,
+      ],
     );
     expect(objectives.length).toBeGreaterThan(3);
     for (const objective of objectives) {

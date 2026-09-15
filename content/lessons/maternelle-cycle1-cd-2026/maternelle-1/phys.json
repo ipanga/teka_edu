@@ -43,16 +43,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "35d915f43a09805e",
-        "notes": "Semaine 1, deux passes. Passe 1 : 9 corrections pédagogiques et de sécurité. Passe 2 : deux corrections de métadonnées de progression. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-phys-02",
@@ -94,16 +86,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "8397b7d2a6e53dfa",
-        "notes": "Semaine 1, deux passes. Passe 1 : 9 corrections pédagogiques et de sécurité. Passe 2 : deux corrections de métadonnées de progression. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-phys-03",
@@ -112,8 +96,8 @@
       "domainCode": "PHYS",
       "title": "Je cours",
       "summary": "Bouger tous les jours, avec une règle simple et de la place.",
-      "objectiveCodes": ["PHYS-S01-C01-O02"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O02"],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -145,16 +129,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "236c081d72a47835",
-        "notes": "Semaine 1, deux passes. Passe 1 : 9 corrections pédagogiques et de sécurité. Passe 2 : deux corrections de métadonnées de progression. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-phys-04",
@@ -196,16 +172,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted-with-modifications",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "af454539c4a8ecfd",
-        "notes": "Semaine 1, deux passes. Passe 1 : 9 corrections pédagogiques et de sécurité. Passe 2 : deux corrections de métadonnées de progression. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-phys-05",
@@ -214,8 +182,8 @@
       "domainCode": "PHYS",
       "title": "Je cours",
       "summary": "Bouger tous les jours, avec une règle simple et de la place.",
-      "objectiveCodes": ["PHYS-S01-C01-O02"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O02"],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -300,8 +268,8 @@
       "domainCode": "PHYS",
       "title": "Je bouge comme toi",
       "summary": "Bouger tous les jours, avec une règle simple et de la place.",
-      "objectiveCodes": ["PHYS-S03-C01-O01"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S03-C01-O01"],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -343,8 +311,8 @@
       "domainCode": "PHYS",
       "title": "Je lance",
       "summary": "Bouger tous les jours, avec une règle simple et de la place.",
-      "objectiveCodes": ["PHYS-S01-C01-O01"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O01"],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -398,8 +366,8 @@
           "position": 1,
           "type": "movement",
           "title": "Je marche sur la ligne",
-          "childInstruction": "Marche sur la ligne sans tomber.",
-          "adultGuidance": "Posez une ligne au sol — une corde, un bâton, du ruban. Tenez-lui la main au premier passage, puis lâchez. S’il tombe à côté, il recommence : c’est le jeu, pas une faute.",
+          "childInstruction": "Essaie de marcher sur la ligne.",
+          "adultGuidance": "Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, il repart du début : c’est le jeu, pas une faute. On cherche à explorer l’équilibre, pas à réussir un parcours.",
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
@@ -410,7 +378,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Move with me."
+              "childInstruction": "Try to walk along the line."
             }
           ],
           "payload": {
@@ -429,8 +397,8 @@
       "domainCode": "PHYS",
       "title": "Je cours",
       "summary": "Bouger tous les jours, avec une règle simple et de la place.",
-      "objectiveCodes": ["PHYS-S01-C01-O02"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O02"],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -472,8 +440,8 @@
       "domainCode": "PHYS",
       "title": "Je lance",
       "summary": "Bouger tous les jours, avec une règle simple et de la place.",
-      "objectiveCodes": ["PHYS-S01-C01-O01"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O01"],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -515,8 +483,8 @@
       "domainCode": "PHYS",
       "title": "Je marche sur la ligne",
       "summary": "Bouger tous les jours, avec une règle simple et de la place.",
-      "objectiveCodes": ["PHYS-S02-C01-O01"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O01"],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -527,8 +495,8 @@
           "position": 1,
           "type": "movement",
           "title": "Je marche sur la ligne",
-          "childInstruction": "Marche sur la ligne sans tomber.",
-          "adultGuidance": "Posez une ligne au sol — une corde, un bâton, du ruban. Tenez-lui la main au premier passage, puis lâchez. S’il tombe à côté, il recommence : c’est le jeu, pas une faute.",
+          "childInstruction": "Essaie de marcher sur la ligne.",
+          "adultGuidance": "Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, il repart du début : c’est le jeu, pas une faute. On cherche à explorer l’équilibre, pas à réussir un parcours.",
           "minutes": 6,
           "mode": "off-screen",
           "role": "consolidation",
@@ -539,7 +507,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Move with me."
+              "childInstruction": "Try to walk along the line."
             }
           ],
           "payload": {
@@ -558,8 +526,8 @@
       "domainCode": "PHYS",
       "title": "Je bouge comme toi",
       "summary": "Bouger tous les jours, avec une règle simple et de la place.",
-      "objectiveCodes": ["PHYS-S03-C01-O01"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S03-C01-O01"],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -601,8 +569,8 @@
       "domainCode": "PHYS",
       "title": "Je cours",
       "summary": "Bouger tous les jours, avec une règle simple et de la place.",
-      "objectiveCodes": ["PHYS-S01-C01-O02"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O02"],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -644,8 +612,8 @@
       "domainCode": "PHYS",
       "title": "Je lance",
       "summary": "Bouger tous les jours, avec une règle simple et de la place.",
-      "objectiveCodes": ["PHYS-S01-C01-O01"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O01"],
       "stage": "practice",
       "difficulty": 1,
       "themeId": null,
@@ -687,8 +655,8 @@
       "domainCode": "PHYS",
       "title": "Je marche sur la ligne",
       "summary": "Bouger tous les jours, avec une règle simple et de la place.",
-      "objectiveCodes": ["PHYS-S02-C01-O01"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O01"],
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
@@ -699,8 +667,8 @@
           "position": 1,
           "type": "movement",
           "title": "Je marche sur la ligne",
-          "childInstruction": "Marche sur la ligne sans tomber.",
-          "adultGuidance": "Posez une ligne au sol — une corde, un bâton, du ruban. Tenez-lui la main au premier passage, puis lâchez. S’il tombe à côté, il recommence : c’est le jeu, pas une faute.",
+          "childInstruction": "Essaie de marcher sur la ligne.",
+          "adultGuidance": "Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, il repart du début : c’est le jeu, pas une faute. On cherche à explorer l’équilibre, pas à réussir un parcours.",
           "minutes": 6,
           "mode": "off-screen",
           "role": "consolidation",
@@ -711,7 +679,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Move with me."
+              "childInstruction": "Try to walk along the line."
             }
           ],
           "payload": {
@@ -730,8 +698,8 @@
       "domainCode": "PHYS",
       "title": "Je bouge comme toi",
       "summary": "Bouger tous les jours, avec une règle simple et de la place.",
-      "objectiveCodes": ["PHYS-S03-C01-O01"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S03-C01-O01"],
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
@@ -773,8 +741,8 @@
       "domainCode": "PHYS",
       "title": "Je cours",
       "summary": "Bouger tous les jours, avec une règle simple et de la place.",
-      "objectiveCodes": ["PHYS-S01-C01-O02"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O02"],
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
@@ -816,8 +784,8 @@
       "domainCode": "PHYS",
       "title": "Je lance",
       "summary": "Bouger tous les jours, avec une règle simple et de la place.",
-      "objectiveCodes": ["PHYS-S01-C01-O01"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O01"],
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
@@ -859,8 +827,8 @@
       "domainCode": "PHYS",
       "title": "Je marche sur la ligne",
       "summary": "Bouger tous les jours, avec une règle simple et de la place.",
-      "objectiveCodes": ["PHYS-S02-C01-O01"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O01"],
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
@@ -871,8 +839,8 @@
           "position": 1,
           "type": "movement",
           "title": "Je marche sur la ligne",
-          "childInstruction": "Marche sur la ligne sans tomber.",
-          "adultGuidance": "Posez une ligne au sol — une corde, un bâton, du ruban. Tenez-lui la main au premier passage, puis lâchez. S’il tombe à côté, il recommence : c’est le jeu, pas une faute.",
+          "childInstruction": "Essaie de marcher sur la ligne.",
+          "adultGuidance": "Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, il repart du début : c’est le jeu, pas une faute. On cherche à explorer l’équilibre, pas à réussir un parcours.",
           "minutes": 6,
           "mode": "off-screen",
           "role": "consolidation",
@@ -883,7 +851,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Move with me."
+              "childInstruction": "Try to walk along the line."
             }
           ],
           "payload": {
@@ -902,8 +870,8 @@
       "domainCode": "PHYS",
       "title": "Je bouge comme toi",
       "summary": "Bouger tous les jours, avec une règle simple et de la place.",
-      "objectiveCodes": ["PHYS-S03-C01-O01"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S03-C01-O01"],
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
@@ -945,8 +913,8 @@
       "domainCode": "PHYS",
       "title": "Je choisis mon jeu",
       "summary": "Bouger tous les jours, avec une règle simple et de la place.",
-      "objectiveCodes": ["PHYS-S04-C01-O03"],
-      "supportingObjectiveCodes": [],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S04-C01-O03"],
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,

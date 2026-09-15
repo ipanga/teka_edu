@@ -26,19 +26,24 @@ analytics are **out of scope** and must not delay the release.
 
 ## 1. Pedagogy
 
-| Item                                         | State    | Evidence                                                                       |
-| -------------------------------------------- | -------- | ------------------------------------------------------------------------------ |
-| 1ère September authored                      | **DONE** | 88 lessons, 132 activities, 22 days                                            |
-| 1ère Week 1 reviewed                         | **DONE** | two AI-assisted passes, corrections applied, 16 lessons `approved`             |
-| 1ère Weeks 2–5 reviewed                      | **TODO** | packages generated, not yet submitted                                          |
-| 3ème September authored                      | **DONE** | 88 lessons, 170 activities, 22 days                                            |
-| 3ème Week 1 reviewed                         | **TODO** | pass 1 accepted-with-modifications, corrections applied, **re-review pending** |
-| 3ème Weeks 2–5 reviewed                      | **TODO** | packages generated, not yet submitted                                          |
-| No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                |
+| Item                                         | State    | Evidence                                                                                                           |
+| -------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------ |
+| 1ère September authored                      | **DONE** | 88 lessons, 132 activities, 22 days                                                                                |
+| 1ère Week 1 reviewed                         | **TODO** | two passes done; approval **lapsed** when the progression rule was corrected again — needs a short re-confirmation |
+| 1ère Week 2 reviewed                         | **TODO** | pass 1 `accepted-with-modifications`, 6 corrections applied, **ready for a second pass**                           |
+| 1ère Weeks 3–5 reviewed                      | **TODO** | packages generated, not yet submitted                                                                              |
+| 3ème September authored                      | **DONE** | 88 lessons, 170 activities, 22 days                                                                                |
+| 3ème Week 1 reviewed                         | **TODO** | pass 1 accepted-with-modifications, corrections applied, **re-review pending**                                     |
+| 3ème Weeks 2–5 reviewed                      | **TODO** | packages generated, not yet submitted                                                                              |
+| No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                                                    |
 
-**Two tracked content gaps in 3ème**, found when lesson metadata was re-derived from the
-activities that actually work each objective: `LANG-S02-C01-O13` and `ART-S02-C02-O08` are each
-worked by a single lesson in September. They belong to 3ème's own review.
+**The two 3ème gaps are resolved**, one by authoring and one by pacing. `LANG-S02-C01-O13`
+(auditory memory) now has a genuine second occurrence on day 21, where the child already had to
+hold syllables across a pause and rebuild the word — the work was happening and only the claim
+was missing. `ART-S02-C02-O08` (creating a soundscape) is a `periodic` objective introduced on
+day 13 and reinforced until day 58, so **one appearance inside September is what its pacing asks
+for**; a second soundscape was not invented to make a number larger. The day-21 change must be
+covered by 3ème's Week 5 review before release.
 
 ## 2. Technical
 
@@ -47,11 +52,11 @@ Every check must pass on the release commit. Current state on `develop`:
 | Check                                                      | State                                          |
 | ---------------------------------------------------------- | ---------------------------------------------- |
 | format · lint · typecheck                                  | **DONE**                                       |
-| unit tests                                                 | **DONE** (226)                                 |
+| unit tests                                                 | **DONE** (228)                                 |
 | content validation                                         | **DONE** (30 files)                            |
 | curriculum / annual-plan / progression validation          | **DONE**                                       |
 | review-package validation                                  | **DONE** (generation fails on missing content) |
-| database tests · pgTAP · RLS                               | **DONE** (151 assertions, fresh reset)         |
+| database tests · pgTAP · RLS                               | **DONE** (152 assertions, fresh reset)         |
 | build                                                      | **DONE**                                       |
 | E2E · responsive                                           | **DONE** (28)                                  |
 | Docker portable · Docker Vercel                            | **DONE** (CI)                                  |
@@ -88,16 +93,17 @@ for the public test. If that changes, stop before production and review.
 
 ## 5. Production configuration
 
-| Item                             | State                                    |
-| -------------------------------- | ---------------------------------------- |
-| `PRODUCTION_DEPLOY_ENABLED`      | **off — required until the gate is met** |
-| Production Vercel token          | **TODO**                                 |
-| Production environment variables | **TODO**                                 |
-| Public URL / domain              | **TODO** — decision needed               |
-| Deployment Protection            | **TODO** — see below                     |
-| PROD database migrated           | **TODO** — never touched so far          |
-| PROD content loaded              | **TODO** — only accepted content         |
-| Rollback procedure rehearsed     | **TODO**                                 |
+| Item                             | State                                                                                                                                                |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Beta feedback mechanism          | **DECIDED, not built** — reuse the local observation note, add a beta indicator and a copy button. No backend, no third party, **no new data flow**. |
+| `PRODUCTION_DEPLOY_ENABLED`      | **off — required until the gate is met**                                                                                                             |
+| Production Vercel token          | **TODO**                                                                                                                                             |
+| Production environment variables | **TODO**                                                                                                                                             |
+| Public URL / domain              | **TODO** — decision needed                                                                                                                           |
+| Deployment Protection            | **TODO** — see below                                                                                                                                 |
+| PROD database migrated           | **TODO** — never touched so far                                                                                                                      |
+| PROD content loaded              | **TODO** — only accepted content                                                                                                                     |
+| Rollback procedure rehearsed     | **TODO**                                                                                                                                             |
 
 ### Deployment Protection
 
@@ -134,8 +140,8 @@ first stored, which Beta 0.1 does not do.
 
 ## 8. Feedback during the beta
 
-**Proposed, not implemented — awaiting the product owner's decision.** The simplest option
-compatible with the current privacy model and $0:
+**Approved by the product owner (2026-09-15); not yet implemented.** The model, which adds
+**no data flow at all**:
 
 - The existing session-observation form already produces a Markdown note in the tester's own
   browser, with a copy button. Add a short beta banner explaining that this is a test release and

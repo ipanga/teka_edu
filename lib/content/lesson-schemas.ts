@@ -241,7 +241,13 @@ const lesson = z.strictObject({
   domainCode: code,
   title: french,
   summary: french,
-  objectiveCodes: z.array(objectiveCode).min(1),
+  /**
+   * What this lesson is the first to teach. It may be empty: a lesson that only revisits
+   * teaches nothing new, and saying otherwise put already-introduced objectives under
+   * « Objectifs enseignés » in the reviewer's document. The union with the revisited list is
+   * what must never be empty, and `checkLessons` enforces that.
+   */
+  objectiveCodes: z.array(objectiveCode),
   supportingObjectiveCodes: z.array(objectiveCode),
   stage: z.enum(PROGRESSION_STAGES),
   difficulty: z.number().int().min(1).max(3),

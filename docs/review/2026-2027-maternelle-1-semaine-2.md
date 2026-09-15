@@ -41,11 +41,17 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Jour 5 — 2026-09-07
 
-**Durée totale : 30 min** · **temps d’écran actif de l’enfant : 0 min** · 4 séances · jour 5 du rythme
+**Durée totale : 30 min** · 4 séances · jour 5 du rythme
 
-_L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus compte le temps
-pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de
-l’appareil._
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
+  touche, choisit, compte sur l’appareil.
+- **Temps où l’enfant regarde une image à l’écran : 1 min environ** —
+  l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
+  l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
+
+_Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences différentes. Le
+temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
+l’autre — l’appareil est alors le sien._
 
 **Matériel à préparer :** Aucun matériel, Crayon, Espace dégagé pour bouger (à l’intérieur ou dehors), Feuille de papier
 
@@ -56,9 +62,9 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
-  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève. _(source : programme-2024-langage)_
   - `LANG-S03-C01-O01` — Participer aux activités de motricité générale, de motricité fine et aux exercices de graphismes _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
+  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève.
   - `TIME-SPACE-S01-C01-O01` — Acquérir les premiers repères temporels.
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
@@ -96,15 +102,6 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-**Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
-
-- Oser parler pour exprimer un besoin ou prendre part à la vie de la classe.
-- S’exprimer lorsqu’on est sollicité.
-- Dire : « Moi, je fais du toboggan. J’ai joué à la balançoire et je vais faire du vélo. »
-- Participer à un moment collectif d’oralisation d’une comptine, d’une chanson, d’un court poème ou d’un bref extrait d’un album qui a été mémorisé.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
-
 **Réussites attendues — texte officiel pour la compétence « Apprendre le geste d’écriture » (before-4) :**
 
 - Exercer sa dextérité par des activités manuelles (reproduire des formes en pâte à modeler).
@@ -137,7 +134,8 @@ _Compter, donner une petite quantité, ranger par forme._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
-  - `MATH-S01-C01-O09` — Connaitre la comptine numérique de un à six. _(source : programme-2024-mathematiques)_
+- **Objectifs repris (déjà vus) :**
+  - `MATH-S01-C01-O09` — Connaitre la comptine numérique de un à six.
 
 #### 1. La comptine des nombres — 7 min, sans écran (counting)
 
@@ -146,39 +144,6 @@ _Compter, donner une petite quantité, ranger par forme._
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Count with me to six. »
 - **Objectifs travaillés :** `MATH-S01-C01-O09` Connaitre la comptine numérique de un à six.
-
-**Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (before-4) :**
-
-- Reconnaître puis réaliser des collections d’objets de même cardinal (d’abord deux objets, puis trois, voire quatre) mais de caractéristiques différentes (couleur, fonction et surtout taille).
-- Reconnaître puis réaliser des collections d’objets (d’abord deux, puis trois, voire quatre) de même cardinal, mais organisées de manières différentes dans l’espace.
-- Reconnaitre puis réaliser des collections d’objets dont le cardinal est donné par une représentation analogique ou par le nom d’un nombre.
-  Par exemple, l’élève est capable, pour des nombres allant de un à trois, de répondre à la consigne « Mets dans chaque boite autant de jetons qu’il y a de points ou de doigts indiqués sur la boite ».
-- Réaliser une collection contenant un objet de plus qu’une collection donnée (passer de un à deux, puis de deux à trois, voire de trois à quatre).
-  Par exemple, lorsque l’enseignant demande à l’élève « Peux-tu me donner une voiture ? » et que l’élève la lui a donnée, si l’enseignant lui dit : « Je me suis trompé. En fait, j’en voulais deux », l’élève est capable de donner une voiture supplémentaire
-- Nommer les nombres correspondant au cardinal d’une collection avant et après l’ajout d’un élément.
-- Percevoir globalement une petite quantité d’objets.
-- Dénombrer une collection d’objets en les déplaçant un à un pour construire le principe de cardinalité.
-- Utiliser ses doigts ou le nom d’un nombre pour indiquer la quantité d’objets d’une collection ou celle figurant sur une représentation analogique (constellation de points).
-  Par exemple, l’élève est capable de dénombrer la quantité de chaises autour d’une table (l’enseignant pourra varier l’organisation spatiale des chaises).
-  Ou encore, dans la situation du voyageur (un wagon contenant des sièges), l’élève est capable d’aller chercher juste ce qu’il faut de voyageurs pour qu’il y ait un voyageur sur chaque siège et qu’il n’y ait aucun voyageur sans siège ni aucun siège sans voyageur (d’abord sans limiter le nombre de trajets de l’élève, puis en un seul trajet).
-- Utiliser les compositions : « un et un, cela fait deux ; deux et un, cela fait trois ; un et deux, cela fait trois, etc. ».
-- Réaliser des collections de deux, trois, voire quatre objets :
-  • contenant la même quantité d’objets qu’une collection donnée ;
-  • contenant la même quantité d’objets qu’une représentation analogique donnée (doigts de la main, constellations de points) ;
-  • dont la quantité d’objets (jusqu’à trois, voire quatre) est énoncée oralement.
-  Par exemple, l’élève est capable de répondre à la demande : « Donne-moi trois voitures ».
-- Comparer globalement (sans dénombrer) des cardinaux de deux collections dont les quantités d’objets diffèrent d’un facteur au moins égal à deux et utiliser les locutions « plus que » et « moins que ». Ne pas se limiter aux petites collections.
-  Par exemple, l’élève est capable de comparer six crayons placés dans un pot transparent à deux crayons placés dans un autre.
-- Comparer par correspondance terme à terme les cardinaux de deux collections.
-- Mobiliser des compositions et des décompositions de nombres pour résoudre des problèmes.
-- Réaliser des compositions et des décompositions de nombres avec les doigts des deux mains.
-- Verbaliser les compositions de nombres sous la forme « un et un font deux ; deux et un font trois ; un et deux font trois, etc. ».
-- Verbaliser les décompositions de nombres sous la forme « deux, c’est un et un ; trois, c’est un et deux ; trois c’est deux et un ; trois, c’est un et un et encore un, etc. ».
-- Nommer le nombre (inférieur ou égal à trois, voire quatre) correspondant à une quantité d’objets ou à une représentation analogique et vice versa.
-- Représenter par une écriture chiffrée une quantité, une représentation analogique ou le nom d’un nombre et vice versa.
-- Réciter de façon ordonnée et segmentée la comptine jusqu’à six, en partant de un.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -204,7 +169,8 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
-  - `PHYS-S01-C01-O02` — Courir de manière variée et coordonnée. _(source : programme-2026)_
+- **Objectifs repris (déjà vus) :**
+  - `PHYS-S01-C01-O02` — Courir de manière variée et coordonnée.
 
 #### 1. Je cours — 6 min, sans écran (movement)
 
@@ -215,15 +181,6 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
 - **Aide en anglais (optionnelle) :** « Move with me. »
 - **Objectifs travaillés :** `PHYS-S01-C01-O02` Courir de manière variée et coordonnée.
-
-**Réussites attendues — texte officiel pour la compétence « Manipuler, courir, sauter, lancer, s’orienter » (before-4) :**
-
-- Attraper, lancer par-dessus, par en dessous, faire glisser, faire rouler au sol différents objets (balles, anneaux, cerceaux, etc.).
-- Courir en slalomant entre des objets.
-- Sauter sans élan un obstacle horizontal matérialisé par une latte (une rivière).
-- Trouver au moins deux éléments remarquables (banc, arbres, poteaux, etc.) dans la cour de récréation, repérables sur la photographie prise lors de la première séance.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -287,11 +244,17 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ## Jour 6 — 2026-09-08
 
-**Durée totale : 31 min** · **temps d’écran actif de l’enfant : 0 min** · 4 séances · jour 6 du rythme
+**Durée totale : 31 min** · 4 séances · jour 6 du rythme
 
-_L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus compte le temps
-pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de
-l’appareil._
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
+  touche, choisit, compte sur l’appareil.
+- **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
+  l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
+  l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
+
+_Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences différentes. Le
+temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
+l’autre — l’appareil est alors le sien._
 
 **Matériel à préparer :** Aucun matériel, Balle en papier froissé, Boîte, seau ou récipient, Gros objets à compter (cuillères, gobelets, chaussettes roulées), Objets de la maison (coussins, chaises, bâton, tissu)
 
@@ -302,10 +265,10 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
-  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève. _(source : programme-2024-langage)_
-  - `LANG-S01-C01-O01` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
+  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève.
   - `TIME-SPACE-S01-C01-O01` — Acquérir les premiers repères temporels.
+  - `LANG-S01-C01-O01` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
 #### 1. Bonjour, et on se souvient — 3 min, sans écran (conversation)
@@ -318,13 +281,14 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
 #### 2. Les quatre mots de la maison — 5 min, sans écran (vocabulary)
 
-- **Consigne à l’enfant :** « Écoute, puis dis le mot avec moi : la porte, le seau, la table, la chaise. »
-- **Guidance adulte :** 1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez lentement l’objet que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.
+- **Consigne à l’enfant :** « Montre-moi ce que je nomme. Puis dis avec moi un ou deux mots que tu veux. »
+- **Guidance adulte :** Ces mots-là, il les a déjà entendus : on les reconnaît, on n’en apprend pas de nouveaux.
+1. Posez ou montrez les quatre choses. 2. Nommez-en une et demandez-lui de la montrer — le doigt suffit, et suffit vraiment. 3. Nommez ce qui ne vient pas, sans le faire répéter. 4. À la fin seulement, proposez-lui de redire **un ou deux** mots, ceux qu’il choisit. On ne demande jamais les quatre à voix haute.
 - **Matériel :** Objets de la maison (coussins, chaises, bâton, tissu)
 - **Lexique visé :** la porte _(the door)_ · le seau _(the bucket)_ · la table _(the table)_ · la chaise _(the chair)_
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
-- **Aide en anglais (optionnelle) :** « Listen, then say the word with me. »
+- **Aide en anglais (optionnelle) :** « Show me the one I name. Then say one or two with me. »
 - **Objectifs travaillés :** `LANG-S01-C01-O01` Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
 
 #### 3. Le petit seau — 3 min, sans écran (song-rhyme)
@@ -343,31 +307,6 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > sur ma tête il y a ma main !
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
-
-**Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
-
-- Oser parler pour exprimer un besoin ou prendre part à la vie de la classe.
-- S’exprimer lorsqu’on est sollicité.
-- Dire : « Moi, je fais du toboggan. J’ai joué à la balançoire et je vais faire du vélo. »
-- Participer à un moment collectif d’oralisation d’une comptine, d’une chanson, d’un court poème ou d’un bref extrait d’un album qui a été mémorisé.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
-
-**Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (before-4) :**
-
-- Comprendre et utiliser les réseaux lexicaux :
-  • de la vie familiale ;
-  • des activités récurrentes dans la vie de la classe (ex. :verbes de mouvement en lien avec les activités de motricité) ;
-  • des relations avec les autres, des activités scolaires, des albums lus en classe.
-- Écouter et échanger avec le professeur qui commente ses actions en situation
-- Trouver un objet présent nommé par le professeur en contexte (ex. : Peux-tu me donner la colle ?).
-- Reconnaitre et nommer un objet présenté sous différentes formes.
-- Retrouver un mot jamais entendu
-- Retrouver un intrus.
-- Attribuer un objet à une catégorie.
-- Ranger des jeux familiers par catégorie (ex. : ranger par catégorie les couverts de la dinette).
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -393,7 +332,8 @@ _Compter, donner une petite quantité, ranger par forme._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
-  - `MATH-S01-C01-O03` — Dénombrer une collection d’objets (jusqu’à trois, voire quatre). _(source : programme-2024-mathematiques)_
+- **Objectifs repris (déjà vus) :**
+  - `MATH-S01-C01-O03` — Dénombrer une collection d’objets (jusqu’à trois, voire quatre).
 
 #### 1. Trois objets — 7 min, sans écran (manipulation)
 
@@ -404,39 +344,6 @@ _Compter, donner une petite quantité, ranger par forme._
 - **⚠ Sécurité :** Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe.
 - **Aide en anglais (optionnelle) :** « How many are there? »
 - **Objectifs travaillés :** `MATH-S01-C01-O03` Dénombrer une collection d’objets (jusqu’à trois, voire quatre).
-
-**Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (before-4) :**
-
-- Reconnaître puis réaliser des collections d’objets de même cardinal (d’abord deux objets, puis trois, voire quatre) mais de caractéristiques différentes (couleur, fonction et surtout taille).
-- Reconnaître puis réaliser des collections d’objets (d’abord deux, puis trois, voire quatre) de même cardinal, mais organisées de manières différentes dans l’espace.
-- Reconnaitre puis réaliser des collections d’objets dont le cardinal est donné par une représentation analogique ou par le nom d’un nombre.
-  Par exemple, l’élève est capable, pour des nombres allant de un à trois, de répondre à la consigne « Mets dans chaque boite autant de jetons qu’il y a de points ou de doigts indiqués sur la boite ».
-- Réaliser une collection contenant un objet de plus qu’une collection donnée (passer de un à deux, puis de deux à trois, voire de trois à quatre).
-  Par exemple, lorsque l’enseignant demande à l’élève « Peux-tu me donner une voiture ? » et que l’élève la lui a donnée, si l’enseignant lui dit : « Je me suis trompé. En fait, j’en voulais deux », l’élève est capable de donner une voiture supplémentaire
-- Nommer les nombres correspondant au cardinal d’une collection avant et après l’ajout d’un élément.
-- Percevoir globalement une petite quantité d’objets.
-- Dénombrer une collection d’objets en les déplaçant un à un pour construire le principe de cardinalité.
-- Utiliser ses doigts ou le nom d’un nombre pour indiquer la quantité d’objets d’une collection ou celle figurant sur une représentation analogique (constellation de points).
-  Par exemple, l’élève est capable de dénombrer la quantité de chaises autour d’une table (l’enseignant pourra varier l’organisation spatiale des chaises).
-  Ou encore, dans la situation du voyageur (un wagon contenant des sièges), l’élève est capable d’aller chercher juste ce qu’il faut de voyageurs pour qu’il y ait un voyageur sur chaque siège et qu’il n’y ait aucun voyageur sans siège ni aucun siège sans voyageur (d’abord sans limiter le nombre de trajets de l’élève, puis en un seul trajet).
-- Utiliser les compositions : « un et un, cela fait deux ; deux et un, cela fait trois ; un et deux, cela fait trois, etc. ».
-- Réaliser des collections de deux, trois, voire quatre objets :
-  • contenant la même quantité d’objets qu’une collection donnée ;
-  • contenant la même quantité d’objets qu’une représentation analogique donnée (doigts de la main, constellations de points) ;
-  • dont la quantité d’objets (jusqu’à trois, voire quatre) est énoncée oralement.
-  Par exemple, l’élève est capable de répondre à la demande : « Donne-moi trois voitures ».
-- Comparer globalement (sans dénombrer) des cardinaux de deux collections dont les quantités d’objets diffèrent d’un facteur au moins égal à deux et utiliser les locutions « plus que » et « moins que ». Ne pas se limiter aux petites collections.
-  Par exemple, l’élève est capable de comparer six crayons placés dans un pot transparent à deux crayons placés dans un autre.
-- Comparer par correspondance terme à terme les cardinaux de deux collections.
-- Mobiliser des compositions et des décompositions de nombres pour résoudre des problèmes.
-- Réaliser des compositions et des décompositions de nombres avec les doigts des deux mains.
-- Verbaliser les compositions de nombres sous la forme « un et un font deux ; deux et un font trois ; un et deux font trois, etc. ».
-- Verbaliser les décompositions de nombres sous la forme « deux, c’est un et un ; trois, c’est un et deux ; trois c’est deux et un ; trois, c’est un et un et encore un, etc. ».
-- Nommer le nombre (inférieur ou égal à trois, voire quatre) correspondant à une quantité d’objets ou à une représentation analogique et vice versa.
-- Représenter par une écriture chiffrée une quantité, une représentation analogique ou le nom d’un nombre et vice versa.
-- Réciter de façon ordonnée et segmentée la comptine jusqu’à six, en partant de un.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -544,11 +451,17 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ## Jour 7 — 2026-09-09
 
-**Durée totale : 30 min** · **temps d’écran actif de l’enfant : 0 min** · 4 séances · jour 7 du rythme
+**Durée totale : 30 min** · 4 séances · jour 7 du rythme
 
-_L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus compte le temps
-pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de
-l’appareil._
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
+  touche, choisit, compte sur l’appareil.
+- **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
+  l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
+  l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
+
+_Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences différentes. Le
+temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
+l’autre — l’appareil est alors le sien._
 
 **Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Gros objets à compter (cuillères, gobelets, chaussettes roulées)
 
@@ -559,9 +472,9 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
-  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève. _(source : programme-2024-langage)_
   - `LANG-S02-C03-O03` — Reconnaitre un personnage, le nommer et le situer dans les illustrations. _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
+  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève.
   - `TIME-SPACE-S01-C01-O01` — Acquérir les premiers repères temporels.
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
@@ -597,15 +510,6 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-**Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
-
-- Oser parler pour exprimer un besoin ou prendre part à la vie de la classe.
-- S’exprimer lorsqu’on est sollicité.
-- Dire : « Moi, je fais du toboggan. J’ai joué à la balançoire et je vais faire du vélo. »
-- Participer à un moment collectif d’oralisation d’une comptine, d’une chanson, d’un court poème ou d’un bref extrait d’un album qui a été mémorisé.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
-
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (before-4) :**
 
 - Identifier les livres dans lesquels se retrouve un même personnage.
@@ -637,7 +541,8 @@ _Compter, donner une petite quantité, ranger par forme._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
-  - `MATH-S01-C01-O03` — Dénombrer une collection d’objets (jusqu’à trois, voire quatre). _(source : programme-2024-mathematiques)_
+- **Objectifs repris (déjà vus) :**
+  - `MATH-S01-C01-O03` — Dénombrer une collection d’objets (jusqu’à trois, voire quatre).
 
 #### 1. Un, deux, trois — 7 min, sans écran (counting)
 
@@ -648,39 +553,6 @@ _Compter, donner une petite quantité, ranger par forme._
 - **⚠ Sécurité :** Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe.
 - **Aide en anglais (optionnelle) :** « How many are there? »
 - **Objectifs travaillés :** `MATH-S01-C01-O03` Dénombrer une collection d’objets (jusqu’à trois, voire quatre).
-
-**Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (before-4) :**
-
-- Reconnaître puis réaliser des collections d’objets de même cardinal (d’abord deux objets, puis trois, voire quatre) mais de caractéristiques différentes (couleur, fonction et surtout taille).
-- Reconnaître puis réaliser des collections d’objets (d’abord deux, puis trois, voire quatre) de même cardinal, mais organisées de manières différentes dans l’espace.
-- Reconnaitre puis réaliser des collections d’objets dont le cardinal est donné par une représentation analogique ou par le nom d’un nombre.
-  Par exemple, l’élève est capable, pour des nombres allant de un à trois, de répondre à la consigne « Mets dans chaque boite autant de jetons qu’il y a de points ou de doigts indiqués sur la boite ».
-- Réaliser une collection contenant un objet de plus qu’une collection donnée (passer de un à deux, puis de deux à trois, voire de trois à quatre).
-  Par exemple, lorsque l’enseignant demande à l’élève « Peux-tu me donner une voiture ? » et que l’élève la lui a donnée, si l’enseignant lui dit : « Je me suis trompé. En fait, j’en voulais deux », l’élève est capable de donner une voiture supplémentaire
-- Nommer les nombres correspondant au cardinal d’une collection avant et après l’ajout d’un élément.
-- Percevoir globalement une petite quantité d’objets.
-- Dénombrer une collection d’objets en les déplaçant un à un pour construire le principe de cardinalité.
-- Utiliser ses doigts ou le nom d’un nombre pour indiquer la quantité d’objets d’une collection ou celle figurant sur une représentation analogique (constellation de points).
-  Par exemple, l’élève est capable de dénombrer la quantité de chaises autour d’une table (l’enseignant pourra varier l’organisation spatiale des chaises).
-  Ou encore, dans la situation du voyageur (un wagon contenant des sièges), l’élève est capable d’aller chercher juste ce qu’il faut de voyageurs pour qu’il y ait un voyageur sur chaque siège et qu’il n’y ait aucun voyageur sans siège ni aucun siège sans voyageur (d’abord sans limiter le nombre de trajets de l’élève, puis en un seul trajet).
-- Utiliser les compositions : « un et un, cela fait deux ; deux et un, cela fait trois ; un et deux, cela fait trois, etc. ».
-- Réaliser des collections de deux, trois, voire quatre objets :
-  • contenant la même quantité d’objets qu’une collection donnée ;
-  • contenant la même quantité d’objets qu’une représentation analogique donnée (doigts de la main, constellations de points) ;
-  • dont la quantité d’objets (jusqu’à trois, voire quatre) est énoncée oralement.
-  Par exemple, l’élève est capable de répondre à la demande : « Donne-moi trois voitures ».
-- Comparer globalement (sans dénombrer) des cardinaux de deux collections dont les quantités d’objets diffèrent d’un facteur au moins égal à deux et utiliser les locutions « plus que » et « moins que ». Ne pas se limiter aux petites collections.
-  Par exemple, l’élève est capable de comparer six crayons placés dans un pot transparent à deux crayons placés dans un autre.
-- Comparer par correspondance terme à terme les cardinaux de deux collections.
-- Mobiliser des compositions et des décompositions de nombres pour résoudre des problèmes.
-- Réaliser des compositions et des décompositions de nombres avec les doigts des deux mains.
-- Verbaliser les compositions de nombres sous la forme « un et un font deux ; deux et un font trois ; un et deux font trois, etc. ».
-- Verbaliser les décompositions de nombres sous la forme « deux, c’est un et un ; trois, c’est un et deux ; trois c’est deux et un ; trois, c’est un et un et encore un, etc. ».
-- Nommer le nombre (inférieur ou égal à trois, voire quatre) correspondant à une quantité d’objets ou à une représentation analogique et vice versa.
-- Représenter par une écriture chiffrée une quantité, une représentation analogique ou le nom d’un nombre et vice versa.
-- Réciter de façon ordonnée et segmentée la comptine jusqu’à six, en partant de un.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -706,7 +578,8 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
-  - `PHYS-S03-C01-O01` — Découvrir et explorer le mouvement comme vecteur d’expression. _(source : programme-2026)_
+- **Objectifs repris (déjà vus) :**
+  - `PHYS-S03-C01-O01` — Découvrir et explorer le mouvement comme vecteur d’expression.
 
 #### 1. Je bouge comme toi — 6 min, sans écran (movement)
 
@@ -717,15 +590,6 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
 - **Aide en anglais (optionnelle) :** « Move with me. »
 - **Objectifs travaillés :** `PHYS-S03-C01-O01` Découvrir et explorer le mouvement comme vecteur d’expression.
-
-**Réussites attendues — texte officiel pour la compétence « Explorer, s’exprimer, danser, observer » (before-4) :**
-
-- Marcher à pas feutrés, ramper, s’immobiliser, mobiliser une partie du corps, tourner avec un carton ou un foulard, produire des mouvements lents, rapides, saccadés, etc.
-- Coordonner ses gestes et ses déplacements avec ceux des autres, lors de rondes et jeux chantés.
-- Évoluer dans l’espace sur de la musique ou sans musique au sein d’un petit groupe en variant les modes de déplacement.
-- Mimer un animal, un personnage de fiction, etc.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -751,7 +615,8 @@ _Dire des comptines et laisser une trace._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.
 - **Objectifs enseignés :**
-  - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines. _(source : programme-2026)_
+- **Objectifs repris (déjà vus) :**
+  - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
 #### 1. Ma comptine — 7 min, sans écran (song-rhyme)
 
@@ -769,14 +634,6 @@ _Dire des comptines et laisser une trace._
   > je les cache… les voilà !
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
-
-**Réussites attendues — texte officiel pour la compétence « Jouer avec sa voix et acquérir un répertoire de comptines et de chansons » (before-4) :**
-
-- Jouer avec sa voix pour reproduire des bruits d’animaux, d’objets et des onomatopées à partir d’images.
-- Dire ou chanter en articulant correctement le texte de manière audible pour faire deviner le titre de la comptine ou de la chanson.
-- Dire ou chanter une comptine, en même temps que les professeurs et en reproduisant la gestuelle (Toc, toc, toc Monsieur Pouce ; Petit escargot).
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -797,11 +654,17 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ## Jour 8 — 2026-09-10
 
-**Durée totale : 30 min** · **temps d’écran actif de l’enfant : 0 min** · 4 séances · jour 8 du rythme
+**Durée totale : 30 min** · 4 séances · jour 8 du rythme
 
-_L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus compte le temps
-pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de
-l’appareil._
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
+  touche, choisit, compte sur l’appareil.
+- **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
+  l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
+  l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
+
+_Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences différentes. Le
+temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
+l’autre — l’appareil est alors le sien._
 
 **Matériel à préparer :** Aucun matériel, Balle en papier froissé, Boîte, seau ou récipient, Gros objets à compter (cuillères, gobelets, chaussettes roulées)
 
@@ -812,10 +675,10 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
-  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève. _(source : programme-2024-langage)_
-  - `LANG-S01-C04-O02` — Dire ce qu’on fait. _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
+  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève.
   - `TIME-SPACE-S01-C01-O01` — Acquérir les premiers repères temporels.
+  - `LANG-S01-C04-O02` — Dire ce qu’on fait.
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
 #### 1. Bonjour, et on se souvient — 3 min, sans écran (conversation)
@@ -849,15 +712,6 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > sur ma tête il y a ma main !
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
-
-**Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
-
-- Oser parler pour exprimer un besoin ou prendre part à la vie de la classe.
-- S’exprimer lorsqu’on est sollicité.
-- Dire : « Moi, je fais du toboggan. J’ai joué à la balançoire et je vais faire du vélo. »
-- Participer à un moment collectif d’oralisation d’une comptine, d’une chanson, d’un court poème ou d’un bref extrait d’un album qui a été mémorisé.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -952,7 +806,8 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
-  - `PHYS-S01-C01-O01` — Manipuler et lancer des objets avec des intentions motrices différentes. _(source : programme-2026)_
+- **Objectifs repris (déjà vus) :**
+  - `PHYS-S01-C01-O01` — Manipuler et lancer des objets avec des intentions motrices différentes.
 
 #### 1. Je lance — 6 min, sans écran (movement)
 
@@ -963,15 +818,6 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **À défaut :** Une boîte, un seau, une bassine, un panier ou un carton.
 - **Aide en anglais (optionnelle) :** « Move with me. »
 - **Objectifs travaillés :** `PHYS-S01-C01-O01` Manipuler et lancer des objets avec des intentions motrices différentes.
-
-**Réussites attendues — texte officiel pour la compétence « Manipuler, courir, sauter, lancer, s’orienter » (before-4) :**
-
-- Attraper, lancer par-dessus, par en dessous, faire glisser, faire rouler au sol différents objets (balles, anneaux, cerceaux, etc.).
-- Courir en slalomant entre des objets.
-- Sauter sans élan un obstacle horizontal matérialisé par une latte (une rivière).
-- Trouver au moins deux éléments remarquables (banc, arbres, poteaux, etc.) dans la cour de récréation, repérables sur la photographie prise lors de la première séance.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -997,25 +843,17 @@ _Nommer son corps et se servir de ses sens._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.
 - **Objectifs enseignés :**
-  - `WORLD-S01-C02-O01` — Nommer et représenter quelques parties du corps humain. _(source : programme-2026)_
+- **Objectifs repris (déjà vus) :**
+  - `WORLD-S01-C02-O01` — Nommer et représenter quelques parties du corps humain.
 
 #### 1. Ma tête, mon ventre — 7 min, sans écran (observation)
 
-- **Consigne à l’enfant :** « Montre-moi ta main. Montre-moi ton pied. »
-- **Guidance adulte :** Nommez une partie et montrez-la sur vous, puis demandez-lui de la montrer sur lui. Deux parties par séance suffisent. Terminez toujours par une qu’il connaît déjà : on finit sur une réussite.
+- **Consigne à l’enfant :** « Montre-moi ta tête. Montre-moi ton ventre. »
+- **Guidance adulte :** Nommez une partie et montrez-la sur vous, puis demandez-lui de la montrer sur lui. Deux parties par séance suffisent : la tête, puis le ventre. Terminez par une qu’il connaît déjà — la main ou le pied — on finit sur une réussite.
 - **Matériel :** Aucun matériel
-- **Aide en anglais (optionnelle) :** « Show me your head. »
+- **Lexique visé :** la tête _(the head)_ · le ventre _(the tummy)_
+- **Aide en anglais (optionnelle) :** « Show me your head. Show me your tummy. »
 - **Objectifs travaillés :** `WORLD-S01-C02-O01` Nommer et représenter quelques parties du corps humain.
-
-**Réussites attendues — texte officiel pour la compétence « Découvrir le corps humain et la santé » (before-4) :**
-
-- Désigner différentes parties du corps de la poupée pendant l’activité de rangement de ses vêtements dans le coin d’imitation.
-- Évoluer dans la représentation du corps humain, vers un dessin plus complet et proportionné.
-- Identifier parmi d’autres un objet connu et caché dans un sac ou dans une boite par le toucher.
-- Demander de l’aide pour répondre à ses besoins physiologiques.
-- Se laver les mains après le passage aux toilettes, avant et après les repas, se moucher, etc. avec l’aide de l’adulte.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -1036,11 +874,17 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ## Jour 9 — 2026-09-11
 
-**Durée totale : 30 min** · **temps d’écran actif de l’enfant : 0 min** · 4 séances · jour 9 du rythme
+**Durée totale : 30 min** · 4 séances · jour 9 du rythme
 
-_L’adulte, lui, peut lire les consignes sur l’écran : le chiffre ci-dessus compte le temps
-pendant lequel **l’enfant** manipule ou regarde l’écran, pas le temps d’allumage de
-l’appareil._
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
+  touche, choisit, compte sur l’appareil.
+- **Temps où l’enfant regarde une image à l’écran : 2 min environ** —
+  l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
+  l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
+
+_Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences différentes. Le
+temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
+l’autre — l’appareil est alors le sien._
 
 **Matériel à préparer :** Aucun matériel, Crayon, Espace dégagé pour bouger (à l’intérieur ou dehors), Feuille de papier
 
@@ -1051,10 +895,10 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
-  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève. _(source : programme-2024-langage)_
-  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
+  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève.
   - `TIME-SPACE-S01-C01-O01` — Acquérir les premiers repères temporels.
+  - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
 #### 1. Bonjour, et on se souvient — 3 min, sans écran (conversation)
@@ -1065,12 +909,13 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Aide en anglais (optionnelle) :** « Say hello, then tell me what we did yesterday. »
 - **Objectifs travaillés :** `LANG-S01-C04-O01` Entrer en communication verbale avec un adulte ou un autre élève. ; `TIME-SPACE-S01-C01-O01` Acquérir les premiers repères temporels.
 
-#### 2. Tika se lève — 4 min, sans écran (read-aloud)
+#### 2. Tika se lève — 4 min, sans écran (listening-story)
 
-- **Consigne à l’enfant :** « Écoute l’histoire jusqu’au bout. »
-- **Guidance adulte :** Lisez lentement, en montrant l’image. L’histoire est courte exprès : à trois ans, on écoute mieux deux minutes deux fois qu’une fois quatre minutes. S’il redemande la même histoire demain, c’est bon signe. Aujourd’hui, aucune question après : on écoute, c’est tout.
+- **Consigne à l’enfant :** « Écoute l’histoire de Tika. Après, je te poserai une petite question. »
+- **Guidance adulte :** Lisez lentement, en montrant l’image. L’histoire est courte exprès.
+À la fin, **une seule question** : « Tika ferme les yeux le matin, ou le soir ? » Un doigt, un geste ou un mot suffisent — jamais une phrase entière. Si rien ne vient, répondez vous-même et passez à la suite : « Le soir. Bonne nuit, Tika. »
 - **Matériel :** Aucun matériel
-- **Aide en anglais (optionnelle) :** « Listen to the story. »
+- **Aide en anglais (optionnelle) :** « Listen to Tika's story. Then one little question. »
 - **Objectifs travaillés :** `LANG-S02-C03-O04` Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
 
 - **Histoire lue à l’enfant — « Tika se lève »** (2 min, `histoire-tika-se-leve`) :
@@ -1083,6 +928,10 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > Tika ferme les yeux. Bonne nuit, Tika.
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
+
+- **Questions posées à l’enfant après l’écoute (1) :**
+
+  1. Tika ferme les yeux le matin, ou le soir ?
 
 #### 3. La pluie tombe — 3 min, sans écran (song-rhyme)
 
@@ -1101,22 +950,6 @@ _Parler avec l’adulte, entendre des mots et les redire._
   > Et puis plus rien. Le soleil revient.
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
-
-**Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
-
-- Oser parler pour exprimer un besoin ou prendre part à la vie de la classe.
-- S’exprimer lorsqu’on est sollicité.
-- Dire : « Moi, je fais du toboggan. J’ai joué à la balançoire et je vais faire du vélo. »
-- Participer à un moment collectif d’oralisation d’une comptine, d’une chanson, d’un court poème ou d’un bref extrait d’un album qui a été mémorisé.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
-
-**Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (before-4) :**
-
-- Identifier les livres dans lesquels se retrouve un même personnage.
-- Utiliser une marotte et raconter ce que le personnage fait dans chacun des albums.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -1142,7 +975,8 @@ _Compter, donner une petite quantité, ranger par forme._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
-  - `MATH-S01-C01-O09` — Connaitre la comptine numérique de un à six. _(source : programme-2024-mathematiques)_
+- **Objectifs repris (déjà vus) :**
+  - `MATH-S01-C01-O09` — Connaitre la comptine numérique de un à six.
 
 #### 1. La comptine des nombres — 7 min, sans écran (counting)
 
@@ -1151,39 +985,6 @@ _Compter, donner une petite quantité, ranger par forme._
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Count with me to six. »
 - **Objectifs travaillés :** `MATH-S01-C01-O09` Connaitre la comptine numérique de un à six.
-
-**Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (before-4) :**
-
-- Reconnaître puis réaliser des collections d’objets de même cardinal (d’abord deux objets, puis trois, voire quatre) mais de caractéristiques différentes (couleur, fonction et surtout taille).
-- Reconnaître puis réaliser des collections d’objets (d’abord deux, puis trois, voire quatre) de même cardinal, mais organisées de manières différentes dans l’espace.
-- Reconnaitre puis réaliser des collections d’objets dont le cardinal est donné par une représentation analogique ou par le nom d’un nombre.
-  Par exemple, l’élève est capable, pour des nombres allant de un à trois, de répondre à la consigne « Mets dans chaque boite autant de jetons qu’il y a de points ou de doigts indiqués sur la boite ».
-- Réaliser une collection contenant un objet de plus qu’une collection donnée (passer de un à deux, puis de deux à trois, voire de trois à quatre).
-  Par exemple, lorsque l’enseignant demande à l’élève « Peux-tu me donner une voiture ? » et que l’élève la lui a donnée, si l’enseignant lui dit : « Je me suis trompé. En fait, j’en voulais deux », l’élève est capable de donner une voiture supplémentaire
-- Nommer les nombres correspondant au cardinal d’une collection avant et après l’ajout d’un élément.
-- Percevoir globalement une petite quantité d’objets.
-- Dénombrer une collection d’objets en les déplaçant un à un pour construire le principe de cardinalité.
-- Utiliser ses doigts ou le nom d’un nombre pour indiquer la quantité d’objets d’une collection ou celle figurant sur une représentation analogique (constellation de points).
-  Par exemple, l’élève est capable de dénombrer la quantité de chaises autour d’une table (l’enseignant pourra varier l’organisation spatiale des chaises).
-  Ou encore, dans la situation du voyageur (un wagon contenant des sièges), l’élève est capable d’aller chercher juste ce qu’il faut de voyageurs pour qu’il y ait un voyageur sur chaque siège et qu’il n’y ait aucun voyageur sans siège ni aucun siège sans voyageur (d’abord sans limiter le nombre de trajets de l’élève, puis en un seul trajet).
-- Utiliser les compositions : « un et un, cela fait deux ; deux et un, cela fait trois ; un et deux, cela fait trois, etc. ».
-- Réaliser des collections de deux, trois, voire quatre objets :
-  • contenant la même quantité d’objets qu’une collection donnée ;
-  • contenant la même quantité d’objets qu’une représentation analogique donnée (doigts de la main, constellations de points) ;
-  • dont la quantité d’objets (jusqu’à trois, voire quatre) est énoncée oralement.
-  Par exemple, l’élève est capable de répondre à la demande : « Donne-moi trois voitures ».
-- Comparer globalement (sans dénombrer) des cardinaux de deux collections dont les quantités d’objets diffèrent d’un facteur au moins égal à deux et utiliser les locutions « plus que » et « moins que ». Ne pas se limiter aux petites collections.
-  Par exemple, l’élève est capable de comparer six crayons placés dans un pot transparent à deux crayons placés dans un autre.
-- Comparer par correspondance terme à terme les cardinaux de deux collections.
-- Mobiliser des compositions et des décompositions de nombres pour résoudre des problèmes.
-- Réaliser des compositions et des décompositions de nombres avec les doigts des deux mains.
-- Verbaliser les compositions de nombres sous la forme « un et un font deux ; deux et un font trois ; un et deux font trois, etc. ».
-- Verbaliser les décompositions de nombres sous la forme « deux, c’est un et un ; trois, c’est un et deux ; trois c’est deux et un ; trois, c’est un et un et encore un, etc. ».
-- Nommer le nombre (inférieur ou égal à trois, voire quatre) correspondant à une quantité d’objets ou à une représentation analogique et vice versa.
-- Représenter par une écriture chiffrée une quantité, une représentation analogique ou le nom d’un nombre et vice versa.
-- Réciter de façon ordonnée et segmentée la comptine jusqu’à six, en partant de un.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 
@@ -1213,12 +1014,12 @@ _Bouger tous les jours, avec une règle simple et de la place._
 
 #### 1. Je marche sur la ligne — 6 min, sans écran (movement)
 
-- **Consigne à l’enfant :** « Marche sur la ligne sans tomber. »
-- **Guidance adulte :** Posez une ligne au sol — une corde, un bâton, du ruban. Tenez-lui la main au premier passage, puis lâchez. S’il tombe à côté, il recommence : c’est le jeu, pas une faute.
+- **Consigne à l’enfant :** « Essaie de marcher sur la ligne. »
+- **Guidance adulte :** Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, il repart du début : c’est le jeu, pas une faute. On cherche à explorer l’équilibre, pas à réussir un parcours.
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
-- **Aide en anglais (optionnelle) :** « Move with me. »
+- **Aide en anglais (optionnelle) :** « Try to walk along the line. »
 - **Objectifs travaillés :** `PHYS-S02-C01-O01` Développer de nouveaux équilibres par des modes de déplacement variés.
 
 **Réussites attendues — texte officiel pour la compétence « Tourner, se suspendre, se renverser, grimper, rouler, glisser, nager » (before-4) :**
@@ -1252,7 +1053,8 @@ _Dire des comptines et laisser une trace._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.
 - **Objectifs enseignés :**
-  - `ART-S01-C01-O01` — S’exercer au dessin pour développer son habileté motrice. _(source : programme-2026)_
+- **Objectifs repris (déjà vus) :**
+  - `ART-S01-C01-O01` — S’exercer au dessin pour développer son habileté motrice.
 
 #### 1. Je dessine — 7 min, sans écran (drawing)
 
@@ -1263,13 +1065,6 @@ _Dire des comptines et laisser une trace._
 - **À défaut :** Un crayon, un stylo, une craie ou un morceau de charbon conviennent.
 - **Aide en anglais (optionnelle) :** « Take the pencil and draw. »
 - **Objectifs travaillés :** `ART-S01-C01-O01` S’exercer au dessin pour développer son habileté motrice.
-
-**Réussites attendues — texte officiel pour la compétence « Dessiner » (before-4) :**
-
-- Dessiner avec des fusains, des craies grasses, des feutres sur des papiers de grand format sur un plan vertical, en commençant par des gestes amples.
-- Représenter par le dessin le doudou de la classe ou un membre de sa famille.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Avis du relecteur / de la relectrice :**
 

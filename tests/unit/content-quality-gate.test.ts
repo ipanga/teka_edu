@@ -359,7 +359,12 @@ describe("human review package", () => {
   });
 
   it("tells the reviewer whose screen time is being counted, and that 35 min is not a target", () => {
-    expect(committed).toContain("temps d’écran actif de l’enfant");
+    // Two honest numbers rather than one flattering one: what the child does on the screen, and
+    // what the child merely looks at on it. Reporting « 0 min » for a day that shows four
+    // pictures was not true.
+    expect(committed).toContain("Temps d’interaction de l’enfant avec l’écran");
+    expect(committed).toContain("Temps où l’enfant regarde une image à l’écran");
+    expect(committed).toContain("ne s’additionnent pas");
     expect(committed).toContain("Ce n’est pas un objectif à atteindre.");
     expect(committed).toContain("Une séance écourtée est une séance normale");
   });

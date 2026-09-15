@@ -10,31 +10,32 @@
 
 ## Task
 
-None in progress.
+Apply the 1ère maternelle Week 2 review corrections, resolve the two 3ème progression gaps,
+and record the Beta 0.1 feedback decision.
 
 ## Objective
 
-1ère maternelle Week 1 is finalised and merged. No new task has been started.
+Week 2 ready for a second pass, with progression and screen-time reported honestly.
 
 ## Status
 
-`planned`
+`in_progress`
 
 ## Branch
 
-`develop` — no feature branch open.
+`fix/maternelle-1-week-2-review`
 
 ## Base Branch
 
-`develop`
+`develop` at `0944291`
 
 ## Started
 
-—
+2026-09-15
 
 ## Last Checkpoint
 
-2026-09-15 — reset after PR #39 merged as `5899d94` and verified on live staging.
+2026-09-15 — all six Week 2 corrections applied, both 3ème gaps resolved, full local suite green.
 
 ## Scope
 
@@ -75,29 +76,26 @@ To be filled in when the next task begins.
 
 ## In Progress
 
-- [ ] Nothing.
+- [ ] PR, CI, merge, staging
 
 ## Remaining
 
-**Next task (not started):** submit `docs/review/2026-2027-maternelle-1-semaine-2.md` to the
-gate. Then Weeks 3-5, and 3ème's Week 1 re-review plus Weeks 2-5, in either order. Not October,
-not 2ème maternelle, no production.
+- [ ] Return Week 2 for its second pass; Week 1 needs a short re-confirmation
 
 ## Validation State
 
-| Check              | Result | At                                         |
-| ------------------ | ------ | ------------------------------------------ |
-| format             | PASS   | working tree                               |
-| lint               | PASS   | working tree — 0 warnings                  |
-| typecheck          | PASS   | working tree                               |
-| unit tests         | PASS   | working tree — 207 tests                   |
-| content validation | PASS   | working tree — 21 files                    |
-| database tests     | PASS   | working tree — 144 pgTAP assertions        |
-| build              | PASS   | working tree                               |
-| E2E                | PASS   | working tree — 20 tests                    |
-| Docker             | PASS   | CI at `27e9054` — both images              |
-| secret scans       | PASS   | working tree — no leaks, 0 tracked `.env*` |
-| staging            | PASS   | `27e9054` deployed, 20 E2E against it      |
+| Check              | Result  | At                                |
+| ------------------ | ------- | --------------------------------- |
+| format             | PASS    | working tree                      |
+| lint               | PASS    | working tree                      |
+| typecheck          | PASS    | working tree                      |
+| unit tests         | PASS    | working tree — 228 tests          |
+| content validation | PASS    | working tree — 30 files           |
+| database tests     | PASS    | fresh reset — 152 assertions      |
+| build              | PASS    | working tree                      |
+| E2E                | PASS    | working tree — 28 tests           |
+| Docker             | NOT RUN | left to CI                        |
+| secret scans       | PASS    | 0 tracked `.env*`; gitleaks in CI |
 
 ## Database State
 
@@ -127,8 +125,7 @@ None.
 
 ## Exact Resume Point
 
-No task is in progress. When the next one starts: fill this file in, create the feature branch
-from `develop`, commit an initial checkpoint, and open a Draft PR before the long work begins.
+Open the PR into `develop`, wait for CI, squash-merge, verify staging.
 
 ## Resume Verification
 
