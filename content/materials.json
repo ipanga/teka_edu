@@ -36,6 +36,13 @@
       "safetyNote": null
     },
     {
+      "code": "textures",
+      "name": "Deux choses à toucher, de surfaces différentes",
+      "category": "household",
+      "alternatives": "Un tissu doux et un morceau de carton ondulé ; ou une cuillère lisse et une serviette ; ou un objet en bois lisse et une éponge sèche. Deux surfaces bien différentes suffisent.",
+      "safetyNote": "Regardez les deux objets avant de les donner : rien de coupant, rien de brûlant, rien de cassable, rien d’assez petit pour être avalé. On cherche des surfaces à comparer, pas des sensations désagréables."
+    },
+    {
       "code": "gros-objets",
       "name": "Gros objets à compter (cuillères, gobelets, chaussettes roulées)",
       "category": "household",

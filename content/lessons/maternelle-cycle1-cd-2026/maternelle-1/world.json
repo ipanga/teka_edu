@@ -135,30 +135,30 @@
       "stage": "discovery",
       "difficulty": 1,
       "themeId": null,
-      "parentGuidance": "On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.",
+      "parentGuidance": "Deux textures sûres suffisent. L’enfant touche, compare, et vous mettez des mots sur ce qu’il ressent. Rien à acheter.",
       "activities": [
         {
           "id": "m1-world-13-a1",
           "position": 1,
           "type": "observation",
           "title": "Je touche",
-          "childInstruction": "Ferme les yeux. Touche. Qu’est-ce que c’est ?",
-          "adultGuidance": "Faites-lui toucher deux choses très différentes — une lisse, une rugueuse — les yeux fermés. Demandez ce qu’il sent, pas ce que c’est. Les mots viendront de vous : doux, piquant, froid.",
+          "childInstruction": "Touche doucement. C’est doux, ou c’est rugueux ?",
+          "adultGuidance": "Deux surfaces bien différentes suffisent — un tissu doux et un carton ondulé, par exemple. Regardez-les avant de les donner.\n1. Laissez-le toucher l’une, puis l’autre, sans rien demander d’abord. 2. Mettez des mots sur ce qu’il sent : « celui-là est doux », « celui-là est rugueux ». 3. Demandez lequel est doux — un doigt pointé suffit. **On ne demande jamais ce que c’est** : l’activité porte sur la sensation, pas sur la reconnaissance de l’objet.\nFermer les yeux est un jeu qu’on peut proposer, jamais une condition : s’il préfère regarder, il touche en regardant, ou vous cachez l’objet sous un tissu. Rien de piquant, rien de brûlant, rien de glacé.",
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
           "objectiveCodes": ["WORLD-S01-C02-O02"],
-          "materialCodes": ["aucun"],
+          "materialCodes": ["textures"],
           "vocabulary": [],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Close your eyes and touch."
+              "childInstruction": "Touch gently. Is it soft, or rough?"
             }
           ],
           "payload": {
-            "focus": "le corps et les sens"
+            "focus": "deux surfaces à comparer : douce et rugueuse"
           }
         }
       ],
@@ -178,30 +178,30 @@
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
-      "parentGuidance": "On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.",
+      "parentGuidance": "Deux textures sûres suffisent. L’enfant touche, compare, et vous mettez des mots sur ce qu’il ressent. Rien à acheter.",
       "activities": [
         {
           "id": "m1-world-16-a1",
           "position": 1,
           "type": "observation",
           "title": "Je touche",
-          "childInstruction": "Ferme les yeux. Touche. Qu’est-ce que c’est ?",
-          "adultGuidance": "Faites-lui toucher deux choses très différentes — une lisse, une rugueuse — les yeux fermés. Demandez ce qu’il sent, pas ce que c’est. Les mots viendront de vous : doux, piquant, froid.",
+          "childInstruction": "Touche doucement. C’est doux, ou c’est rugueux ?",
+          "adultGuidance": "Deux surfaces bien différentes suffisent — un tissu doux et un carton ondulé, par exemple. Regardez-les avant de les donner.\n1. Laissez-le toucher l’une, puis l’autre, sans rien demander d’abord. 2. Mettez des mots sur ce qu’il sent : « celui-là est doux », « celui-là est rugueux ». 3. Demandez lequel est doux — un doigt pointé suffit. **On ne demande jamais ce que c’est** : l’activité porte sur la sensation, pas sur la reconnaissance de l’objet.\nFermer les yeux est un jeu qu’on peut proposer, jamais une condition : s’il préfère regarder, il touche en regardant, ou vous cachez l’objet sous un tissu. Rien de piquant, rien de brûlant, rien de glacé.",
           "minutes": 7,
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
           "objectiveCodes": ["WORLD-S01-C02-O02"],
-          "materialCodes": ["aucun"],
+          "materialCodes": ["textures"],
           "vocabulary": [],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Close your eyes and touch."
+              "childInstruction": "Touch gently. Is it soft, or rough?"
             }
           ],
           "payload": {
-            "focus": "le corps et les sens"
+            "focus": "deux surfaces à comparer : douce et rugueuse"
           }
         }
       ],
@@ -264,30 +264,30 @@
       "stage": "consolidation",
       "difficulty": 1,
       "themeId": null,
-      "parentGuidance": "On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.",
+      "parentGuidance": "Deux textures sûres suffisent. L’enfant touche, compare, et vous mettez des mots sur ce qu’il ressent. Rien à acheter.",
       "activities": [
         {
           "id": "m1-world-22-a1",
           "position": 1,
           "type": "observation",
           "title": "Je touche et je dis",
-          "childInstruction": "Ferme les yeux. Touche. Qu’est-ce que c’est ?",
-          "adultGuidance": "Faites-lui toucher deux choses très différentes — une lisse, une rugueuse — les yeux fermés. Demandez ce qu’il sent, pas ce que c’est. Les mots viendront de vous : doux, piquant, froid.",
+          "childInstruction": "Touche doucement. C’est doux, ou c’est rugueux ?",
+          "adultGuidance": "Deux surfaces bien différentes suffisent — un tissu doux et un carton ondulé, par exemple. Regardez-les avant de les donner.\n1. Laissez-le toucher l’une, puis l’autre, sans rien demander d’abord. 2. Mettez des mots sur ce qu’il sent : « celui-là est doux », « celui-là est rugueux ». 3. Demandez lequel est doux — un doigt pointé suffit. **On ne demande jamais ce que c’est** : l’activité porte sur la sensation, pas sur la reconnaissance de l’objet.\nFermer les yeux est un jeu qu’on peut proposer, jamais une condition : s’il préfère regarder, il touche en regardant, ou vous cachez l’objet sous un tissu. Rien de piquant, rien de brûlant, rien de glacé.",
           "minutes": 7,
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
           "objectiveCodes": ["WORLD-S01-C02-O02"],
-          "materialCodes": ["aucun"],
+          "materialCodes": ["textures"],
           "vocabulary": [],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Close your eyes and touch."
+              "childInstruction": "Touch gently. Is it soft, or rough?"
             }
           ],
           "payload": {
-            "focus": "le corps et les sens"
+            "focus": "deux surfaces à comparer : douce et rugueuse"
           }
         }
       ],

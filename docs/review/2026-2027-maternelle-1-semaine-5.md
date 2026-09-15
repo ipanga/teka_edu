@@ -120,7 +120,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
 > Décision : ☐ accepté ☐ accepté avec modifications ☐ à refaire — _à remplir par la personne qui relit_
 
-### Un, deux, trois, quatre — L’acquisition des premiers outils mathématiques (7 min)
+### Un, deux, trois — L’acquisition des premiers outils mathématiques (7 min)
 
 _Compter, donner une petite quantité, ranger par forme._
 
@@ -130,7 +130,7 @@ _Compter, donner une petite quantité, ranger par forme._
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O03` — Dénombrer une collection d’objets (jusqu’à trois, voire quatre).
 
-#### 1. Un, deux, trois, quatre — 7 min, sans interaction écran (counting)
+#### 1. Un, deux, trois — 7 min, sans interaction écran (counting)
 
 - **Consigne à l’enfant :** « Combien il y en a ? Compte avec moi. »
 - **Guidance adulte :** Posez trois objets bien séparés — des cuillères, des gobelets, des chaussettes roulées : à cet âge, préférez ce qui ne tient pas dans une bouche. Touchez chaque objet en disant le nombre, une fois. Puis faites-le avec lui, sa main dans la vôtre s’il le veut. À la fin, redites le dernier nombre : « Trois. Il y en a trois. » C’est ce dernier mot qui dit la quantité.
@@ -243,7 +243,7 @@ _Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences di
 temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
 l’autre — l’appareil est alors le sien._
 
-**Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Gros objets à compter (cuillères, gobelets, chaussettes roulées)
+**Matériel à préparer :** Aucun matériel, Boîte, seau ou récipient, Espace dégagé pour bouger (à l’intérieur ou dehors), Gros objets à compter (cuillères, gobelets, chaussettes roulées)
 
 ### Encore Tika — Le développement et la structuration du langage oral et écrit (10 min)
 
@@ -336,7 +336,7 @@ _Compter, donner une petite quantité, ranger par forme._
 
 #### 1. Donne-moi trois — 7 min, sans interaction écran (manipulation)
 
-- **Consigne à l’enfant :** « Donne-moi deux cuillères. »
+- **Consigne à l’enfant :** « Donne-moi trois cuillères. »
 - **Guidance adulte :** Demandez une petite quantité — deux, puis trois — avec des objets assez gros pour être sans danger : cuillères, gobelets, blocs. Les petits objets (cailloux, capsules, haricots) restent possibles, mais seulement sous votre surveillance directe. S’il en donne trop, recomptez ensemble sans reprendre l’objet en trop : « Un, deux, trois… tu m’en as donné quatre. » Puis redemandez. Ne demandez jamais plus de trois ce mois-ci.
 - **Matériel :** Gros objets à compter (cuillères, gobelets, chaussettes roulées)
 - **À défaut :** Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.
@@ -410,12 +410,13 @@ _Repérer le moment, le début, la fin et où sont les choses._
 
 #### 1. Sur, sous, dans — 7 min, sans interaction écran (manipulation)
 
-- **Consigne à l’enfant :** « Mets la cuillère sur la table. Maintenant, sous la table. »
-- **Guidance adulte :** Trois mots seulement : sur, sous, dans. Dites-le et montrez-le en même temps, puis demandez sans montrer. S’il hésite, refaites le geste avec lui — c’est le corps qui apprend l’espace avant les mots.
-- **Matériel :** Gros objets à compter (cuillères, gobelets, chaussettes roulées)
+- **Consigne à l’enfant :** « Mets la cuillère sur la table. Puis sous la table. Puis dans le gobelet. »
+- **Guidance adulte :** Trois mots, et les trois sont faits : sur, sous, dans. Dites le mot et montrez le geste en même temps, puis redemandez sans montrer. S’il hésite, refaites le geste avec lui — c’est le corps qui apprend l’espace avant les mots. Un gobelet, un bol ou une boîte fera l’affaire pour « dans ».
+- **Matériel :** Gros objets à compter (cuillères, gobelets, chaussettes roulées), Boîte, seau ou récipient
 - **À défaut :** Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.
 - **⚠ Sécurité :** Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe.
-- **Aide en anglais (optionnelle) :** « Put the stone under the table. »
+- **À défaut :** Une boîte, un seau, une bassine, un panier ou un carton.
+- **Aide en anglais (optionnelle) :** « Put the spoon on the table. Then under the table. Then in the cup. »
 - **Objectifs travaillés :** `TIME-SPACE-S02-C01-O07` Acquérir les premiers marqueurs qui permettent de se repérer dans l’espace.
 
 **Avis du relecteur / de la relectrice :**
@@ -449,7 +450,7 @@ _Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences di
 temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
 l’autre — l’appareil est alors le sien._
 
-**Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Gros objets à compter (cuillères, gobelets, chaussettes roulées), Objets de la maison (coussins, chaises, bâton, tissu)
+**Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Gros objets à compter (cuillères, gobelets, chaussettes roulées), Objets de la maison (coussins, chaises, bâton, tissu), Deux choses à toucher, de surfaces différentes
 
 ### Tout ce que je sais dire — Le développement et la structuration du langage oral et écrit (11 min)
 
@@ -597,17 +598,21 @@ _Bouger tous les jours, avec une règle simple et de la place._
 _Nommer son corps et se servir de ses sens._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
-- **Conseil au parent :** On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.
+- **Conseil au parent :** Deux textures sûres suffisent. L’enfant touche, compare, et vous mettez des mots sur ce qu’il ressent. Rien à acheter.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `WORLD-S01-C02-O02` — Découvrir les sens utilisés lors d’expériences sensorielles variées.
 
 #### 1. Je touche et je dis — 7 min, sans interaction écran (observation)
 
-- **Consigne à l’enfant :** « Ferme les yeux. Touche. Qu’est-ce que c’est ? »
-- **Guidance adulte :** Faites-lui toucher deux choses très différentes — une lisse, une rugueuse — les yeux fermés. Demandez ce qu’il sent, pas ce que c’est. Les mots viendront de vous : doux, piquant, froid.
-- **Matériel :** Aucun matériel
-- **Aide en anglais (optionnelle) :** « Close your eyes and touch. »
+- **Consigne à l’enfant :** « Touche doucement. C’est doux, ou c’est rugueux ? »
+- **Guidance adulte :** Deux surfaces bien différentes suffisent — un tissu doux et un carton ondulé, par exemple. Regardez-les avant de les donner.
+1. Laissez-le toucher l’une, puis l’autre, sans rien demander d’abord. 2. Mettez des mots sur ce qu’il sent : « celui-là est doux », « celui-là est rugueux ». 3. Demandez lequel est doux — un doigt pointé suffit. **On ne demande jamais ce que c’est** : l’activité porte sur la sensation, pas sur la reconnaissance de l’objet.
+Fermer les yeux est un jeu qu’on peut proposer, jamais une condition : s’il préfère regarder, il touche en regardant, ou vous cachez l’objet sous un tissu. Rien de piquant, rien de brûlant, rien de glacé.
+- **Matériel :** Deux choses à toucher, de surfaces différentes
+- **À défaut :** Un tissu doux et un morceau de carton ondulé ; ou une cuillère lisse et une serviette ; ou un objet en bois lisse et une éponge sèche. Deux surfaces bien différentes suffisent.
+- **⚠ Sécurité :** Regardez les deux objets avant de les donner : rien de coupant, rien de brûlant, rien de cassable, rien d’assez petit pour être avalé. On cherche des surfaces à comparer, pas des sensations désagréables.
+- **Aide en anglais (optionnelle) :** « Touch gently. Is it soft, or rough? »
 - **Objectifs travaillés :** `WORLD-S01-C02-O02` Découvrir les sens utilisés lors d’expériences sensorielles variées.
 
 **Avis du relecteur / de la relectrice :**

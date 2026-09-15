@@ -26,13 +26,14 @@ Roles, kept distinct on purpose:
 
 ## Register of reviews
 
-| Batch                              | Date       | Kind                                              | Outcome                       | Corrections                                                                            | Status                                                                                                                                                                   |
-| ---------------------------------- | ---------- | ------------------------------------------------- | ----------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 3ème maternelle, Week 1 (days 1–5) | 2026-09-14 | AI-assisted (ChatGPT)                             | `accepted-with-modifications` | 13 items, all applied                                                                  | `review` — the corrections materially changed the pedagogy, so the regenerated package awaits re-review                                                                  |
-| 3ème maternelle, Weeks 2–5         | —          | —                                                 | not yet reviewed              | —                                                                                      | `review`                                                                                                                                                                 |
-| 1ère maternelle, Week 1 (days 1–4) | 2026-09-15 | AI-assisted (ChatGPT), 2 passes + re-confirmation | `accepted-with-modifications` | pass 1: 9 pedagogical and safety items · pass 2: 2 progression-metadata items          | **`approved`** — 16 lessons. The approval lapsed once when the progression engine changed; re-confirmed after a machine-proven metadata-only diff, with a **new** digest |
-| 1ère maternelle, Week 2 (days 5–9) | 2026-09-15 | AI-assisted (ChatGPT), 2 passes                   | `accepted-with-modifications` | pass 1: 6 items · pass 2: 2 items (seed-bag fallback, failure-neutral balance wording) | **`approved`** — 20 lessons                                                                                                                                              |
-| 1ère maternelle, Weeks 3–5         | —          | —                                                 | not yet reviewed              | —                                                                                      | `review`                                                                                                                                                                 |
+| Batch                                | Date       | Kind                                              | Outcome                       | Corrections                                                                            | Status                                                                                                                                                                   |
+| ------------------------------------ | ---------- | ------------------------------------------------- | ----------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 3ème maternelle, Week 1 (days 1–5)   | 2026-09-14 | AI-assisted (ChatGPT)                             | `accepted-with-modifications` | 13 items, all applied                                                                  | `review` — the corrections materially changed the pedagogy, so the regenerated package awaits re-review                                                                  |
+| 3ème maternelle, Weeks 2–5           | —          | —                                                 | not yet reviewed              | —                                                                                      | `review`                                                                                                                                                                 |
+| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15 | AI-assisted (ChatGPT), 2 passes + re-confirmation | `accepted-with-modifications` | pass 1: 9 pedagogical and safety items · pass 2: 2 progression-metadata items          | **`approved`** — 16 lessons. The approval lapsed once when the progression engine changed; re-confirmed after a machine-proven metadata-only diff, with a **new** digest |
+| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15 | AI-assisted (ChatGPT), 2 passes                   | `accepted-with-modifications` | pass 1: 6 items · pass 2: 2 items (seed-bag fallback, failure-neutral balance wording) | **`approved`** — 20 lessons                                                                                                                                              |
+| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15 | AI-assisted (ChatGPT)                             | `accepted-with-modifications` | 8 items, all applied                                                                   | `review` — **ready for a short second pass**                                                                                                                             |
+| 1ère maternelle, Weeks 4–5           | —          | —                                                 | not yet reviewed              | —                                                                                      | `review`                                                                                                                                                                 |
 
 **36 lessons are `approved`** — 1ère maternelle Weeks 1 and 2, all `ai-assisted`. The other 140
 September lessons remain at `review`. **No teacher has read any of it.**
@@ -204,6 +205,28 @@ The pilot's day is language + mathematics + physical + one rotating domain, 40�
 > September programme runs at 35. The finding is kept as written because it is the record of
 > what was reviewed; the split-session recommendation was accepted and implemented as the plan's
 > pause point.
+
+## 1ère maternelle, Week 3 review, 2026-09-15 — accepted with modifications
+
+Eight items, all applied. The pattern behind most of them is worth naming, because it will
+recur: **an activity was copied, its title changed, and its body left behind.** « Donne-moi
+trois » asked for two. « Un, deux, trois, quatre » counted three. « Sur, sous, dans » only did
+two of the three. « Ma tête, mon ventre » had inherited the household-object material of a lesson
+about doors and buckets, and had spread its target words onto a greeting ritual and a rhyme about
+hands and feet.
+
+The sensory activity had drifted differently: it told the child to close their eyes and say what
+the object _was_, while the guidance told the adult to ask what it _felt like_, and the lesson
+claimed no materials were needed while asking the child to touch two things. It now names two
+safe textures, asks « c'est doux, ou c'est rugueux ? », treats closed eyes as an optional game,
+and drops « piquant » — the objective is sensory vocabulary, not tolerating discomfort.
+
+Six general validators now hold these, written as rules rather than checks on particular lesson
+ids. Two of them had to be narrowed after they produced false positives on 3ème maternelle: a
+title may name a quantity that is not a request (« les quatre mots » reviews four words while
+asking the child to say one or two), and a lexicon is a _teaching target_, so « courir » may
+legitimately appear in an instruction as « cours ». The rule that matched the real defect is
+narrower: a sibling activity may not simply inherit the vocabulary activity's word list.
 
 ## 1ère maternelle, Week 1 — finalised 2026-09-15 after two passes
 

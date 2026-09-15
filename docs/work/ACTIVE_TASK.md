@@ -10,12 +10,12 @@
 
 ## Task
 
-Finalise 1ère maternelle Weeks 1 and 2: two micro-corrections, a machine-proven Week 1 diff,
-and approval of both weeks through the AI-assisted gate.
+Apply the 1ère maternelle Week 3 review corrections (8 items) and return the package for a
+short second pass.
 
 ## Objective
 
-36 lessons approved honestly, with the digest protection intact rather than bypassed.
+Close the copy-and-rename family of defects with general validators, not per-lesson checks.
 
 ## Status
 
@@ -23,11 +23,11 @@ and approval of both weeks through the AI-assisted gate.
 
 ## Branch
 
-`fix/weeks-1-2-final`
+`fix/maternelle-1-week-3-review`
 
 ## Base Branch
 
-`develop` at `d35a1b8`
+`develop` at `24d1619`
 
 ## Started
 
@@ -35,7 +35,7 @@ and approval of both weeks through the AI-assisted gate.
 
 ## Last Checkpoint
 
-2026-09-15 — both corrections applied, both weeks approved, full local suite green.
+2026-09-15 — all 8 corrections applied, 6 validators added, full local suite green.
 
 ## Scope
 
@@ -83,7 +83,7 @@ To be filled in when the next task begins.
 
 ## Remaining
 
-- [ ] Submit 1ère Week 3 to the gate — the next task
+- [ ] Return Week 3 for its short second pass
 
 ## Validation State
 
@@ -92,7 +92,7 @@ To be filled in when the next task begins.
 | format             | PASS    | working tree                      |
 | lint               | PASS    | working tree                      |
 | typecheck          | PASS    | working tree                      |
-| unit tests         | PASS    | working tree — 228 tests          |
+| unit tests         | PASS    | working tree — 234 tests          |
 | content validation | PASS    | working tree — 30 files           |
 | database tests     | PASS    | fresh reset — 152 assertions      |
 | build              | PASS    | working tree                      |
