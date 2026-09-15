@@ -69,7 +69,7 @@ _Comprendre ce que ressent un personnage et le comparer à ce qu’on a vécu so
   - `LANG-S02-C03-O15` — Établir un lien entre la lecture effectuée et sa propre expérience.
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
 
-#### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
+#### 1. Le rituel : la date et la révision — 2 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis la date. Puis frappe les syllabes de trois mots du marché. »
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes lundi 21 septembre 2026. » Puis frappez ensemble les syllabes de « to-mate », « ba-nane », « oi-gnon ».
@@ -77,7 +77,7 @@ _Comprendre ce que ressent un personnage et le comparer à ce qu’on a vécu so
 - **Aide en anglais (optionnelle) :** « Say the date, then clap the parts of three market words. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S02-C03-O14` Comprendre les émotions, les intentions et les sentiments qui animent les personnages.
 
-#### 2. Nsimba a peur, puis ça va mieux — 8 min, sans écran (listening-story)
+#### 2. Nsimba a peur, puis ça va mieux — 8 min, sans interaction écran (listening-story)
 
 - **Consigne à l’enfant :** « Écoute l’histoire de Nsimba. Après, tu me diras ce qu’il ressent au début et à la fin. »
 - **Guidance adulte :** 1. Lisez l’histoire. 2. Demandez comment Nsimba se sent au début, puis à la fin. 3. Demandez ce qui a changé. 4. Reliez : « Et toi, le premier jour, comment tu te sentais ? »
@@ -110,7 +110,7 @@ _Comprendre ce que ressent un personnage et le comparer à ce qu’on a vécu so
   2. Qu’est-ce qui l’aide à se sentir mieux ?
   3. Comment se sent-il le soir ?
 
-#### 3. Le temps de lecture — 3 min, sans écran (read-aloud)
+#### 3. Le temps de lecture — 3 min, sans interaction écran (read-aloud)
 
 - **Consigne à l’enfant :** « Écoute l’histoire jusqu’au bout. Aujourd’hui, il n’y a pas de question : on écoute pour le plaisir. »
 - **Guidance adulte :** Lisez l’histoire à voix haute, doucement. Ne posez aucune question après : ce moment quotidien sert au plaisir d’écouter. Si l’enfant redemande la même histoire un autre jour, c’est bon signe.
@@ -162,7 +162,7 @@ _Construire et lire une bande de nombres de un à dix._
 - **Objectifs enseignés :**
   - `MATH-S01-C02-O06` — Construire la bande numérique jusqu’à dix. _(source : programme-2024-mathematiques)_
 
-#### 1. Je fabrique ma bande des nombres — 5 min, sans écran (manipulation)
+#### 1. Je fabrique ma bande des nombres — 5 min, sans interaction écran (manipulation)
 
 - **Consigne à l’enfant :** « Aide-moi à écrire les nombres de un à dix sur la bande. »
 - **Guidance adulte :** 1. Découpez une bande de papier. 2. Écrivez les chiffres en les nommant ; laissez l’enfant en tracer quelques-uns. 3. Faites poser un objet sur chaque nombre. 4. Affichez la bande : elle resservira.
@@ -173,7 +173,7 @@ _Construire et lire une bande de nombres de un à dix._
 - **Aide en anglais (optionnelle) :** « Help me write the numbers from one to ten on the strip. »
 - **Objectifs travaillés :** `MATH-S01-C02-O06` Construire la bande numérique jusqu’à dix.
 
-#### 2. Je montre le nombre — 4 min, sans écran (counting)
+#### 2. Je montre le nombre — 4 min, sans interaction écran (counting)
 
 - **Consigne à l’enfant :** « Montre le nombre que je dis sur la bande. »
 - **Guidance adulte :** 1. Dites un nombre, l’enfant le montre. 2. Puis l’inverse : vous montrez, il nomme. 3. Demandez ce qui vient juste après, juste avant. 4. Gardez la bande à portée de main les jours suivants.
@@ -228,13 +228,14 @@ _Lancer loin, puis viser une cible plus éloignée._
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S01-C01-O09` — Lancer loin et avec précision différents objets.
 
-#### 1. Loin, puis juste — 6 min, sans écran (movement)
+#### 1. Loin, puis juste — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « D’abord, lance la balle le plus loin possible. Ensuite, vise le seau. »
 - **Guidance adulte :** 1. Faites lancer loin trois fois : on regarde où la balle tombe. 2. Puis placez le seau à trois pas. 3. Faites viser trois fois. 4. Demandez ce qui change entre les deux gestes.
 - **Matériel :** Balle en papier froissé, Boîte, seau ou récipient
 - **Lexique visé :** loin _(far)_ · la cible _(the target)_
-- **À défaut :** Une balle en papier froissé, une chaussette roulée ou un petit sac de graines.
+- **À défaut :** Une balle en papier froissé ou une chaussette roulée. Une petite balle souple convient aussi si la maison en a déjà une.
+- **⚠ Sécurité :** Rien de rempli de petits objets (sac de graines, de haricots) : cela s’ouvre. Une balle en papier ou une chaussette roulée ne blesse personne et ne coûte rien.
 - **À défaut :** Une boîte, un seau, une bassine, un panier ou un carton.
 - **Aide en anglais (optionnelle) :** « First throw the ball as far as you can, then aim at the bucket. »
 - **Objectifs travaillés :** `PHYS-S01-C01-O09` Lancer loin et avec précision différents objets.
@@ -266,7 +267,7 @@ _Comparer deux animaux et dire ce qui les distingue._
 - **Objectifs repris (déjà vus) :**
   - `WORLD-S01-C01-O08` — Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale.
 
-#### 1. Pareil ou différent ? — 4 min, sans écran (observation)
+#### 1. Pareil ou différent ? — 4 min, sans interaction écran (observation)
 
 - **Consigne à l’enfant :** « Compare deux animaux : qu’est-ce qui est pareil ? qu’est-ce qui est différent ? »
 - **Guidance adulte :** 1. Choisissez deux animaux connus : la poule et la chèvre. 2. Cherchez ce qui est pareil : des pattes, une tête, des yeux. 3. Puis ce qui diffère : les plumes et le poil, deux pattes et quatre pattes. 4. Faites dire une phrase complète pour chaque.
@@ -275,7 +276,7 @@ _Comparer deux animaux et dire ce qui les distingue._
 - **Aide en anglais (optionnelle) :** « Compare two animals: what is the same, what is different? »
 - **Objectifs travaillés :** `WORLD-S01-C01-O08` Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale.
 
-#### 2. Je dessine mon animal — 3 min, sans écran (drawing)
+#### 2. Je dessine mon animal — 3 min, sans interaction écran (drawing)
 
 - **Consigne à l’enfant :** « Dessine l’animal que tu préfères, avec toutes ses parties. »
 - **Guidance adulte :** 1. Laissez choisir l’animal. 2. Rappelez les parties à ne pas oublier. 3. Faites nommer chaque partie du dessin. 4. Gardez le dessin pour le jour 20.
@@ -331,7 +332,7 @@ _Entendre que deux mots finissent pareil._
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
 
-#### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
+#### 1. Le rituel : la date et la révision — 2 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis la date. Puis dis-moi ce qui se passe dans l’histoire de la pluie. »
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes mardi 22 septembre 2026. » Puis demandez de raconter l’histoire de la pluie en deux ou trois phrases.
@@ -339,7 +340,7 @@ _Entendre que deux mots finissent pareil._
 - **Aide en anglais (optionnelle) :** « Say the date, then tell me about the rain story. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S02-C01-O15` Repérer et produire des rimes et des assonances.
 
-#### 2. Ça finit pareil — 8 min, sans écran (phonology)
+#### 2. Ça finit pareil — 8 min, sans interaction écran (phonology)
 
 - **Consigne à l’enfant :** « Écoute les deux mots. Est-ce qu’ils finissent pareil ? »
 - **Guidance adulte :** 1. Dites deux mots qui riment : « chat, rat ». Insistez sur la fin. 2. Demandez : « Ça finit pareil ? » 3. Puis deux mots qui ne riment pas : « chat, banane ». 4. Alternez, sans piège : le but est d’entendre, pas de deviner.
@@ -348,7 +349,7 @@ _Entendre que deux mots finissent pareil._
 - **Aide en anglais (optionnelle) :** « Listen to the two words. Do they end the same way? »
 - **Objectifs travaillés :** `LANG-S02-C01-O15` Repérer et produire des rimes et des assonances.
 
-#### 3. Le temps de lecture — 3 min, sans écran (read-aloud)
+#### 3. Le temps de lecture — 3 min, sans interaction écran (read-aloud)
 
 - **Consigne à l’enfant :** « Écoute l’histoire jusqu’au bout. Aujourd’hui, il n’y a pas de question : on écoute pour le plaisir. »
 - **Guidance adulte :** Lisez l’histoire à voix haute, doucement. Ne posez aucune question après : ce moment quotidien sert au plaisir d’écouter. Si l’enfant redemande la même histoire un autre jour, c’est bon signe.
@@ -410,7 +411,7 @@ _Situer un nombre par rapport à ses voisins._
   - `MATH-S01-C02-O06` — Construire la bande numérique jusqu’à dix.
   - `MATH-S01-C01-O26` — Connaitre et utiliser la comptine numérique jusqu’à trente.
 
-#### 1. Le nombre caché — 5 min, sans écran (counting)
+#### 1. Le nombre caché — 5 min, sans interaction écran (counting)
 
 - **Consigne à l’enfant :** « Je cache un nombre sur la bande. Devine lequel. »
 - **Guidance adulte :** 1. Cachez un nombre avec le doigt. 2. Demandez lequel c’est. 3. Faites justifier : « Il est après le cinq. » 4. Recommencez avec un nombre plus grand.
@@ -420,7 +421,7 @@ _Situer un nombre par rapport à ses voisins._
 - **Aide en anglais (optionnelle) :** « I hide a number on the strip. Guess which one. »
 - **Objectifs travaillés :** `MATH-S01-C02-O06` Construire la bande numérique jusqu’à dix. ; `MATH-S01-C01-O26` Connaitre et utiliser la comptine numérique jusqu’à trente.
 
-#### 2. Je pose le bon nombre d’objets — 4 min, sans écran (manipulation)
+#### 2. Je pose le bon nombre d’objets — 4 min, sans interaction écran (manipulation)
 
 - **Consigne à l’enfant :** « Pose autant d’objets que le nombre que je montre. »
 - **Guidance adulte :** 1. Montrez un nombre sur la bande. 2. L’enfant pose autant d’objets. 3. Recomptez ensemble. 4. Variez entre petits et grands nombres.
@@ -459,7 +460,7 @@ _Varier les appuis en gardant l’équilibre._
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S02-C01-O05` — Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions.
 
-#### 1. Le jeu des appuis — 6 min, sans écran (movement)
+#### 1. Le jeu des appuis — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Tiens sur un pied pendant que je compte jusqu’à cinq. Puis change de pied. »
 - **Guidance adulte :** 1. Montrez d’abord. 2. Comptez jusqu’à cinq. 3. Changez de pied. 4. Ajoutez une difficulté seulement si c’est facile : les bras écartés, puis les yeux sur un point fixe.
@@ -496,7 +497,7 @@ _Repérer les étapes d’une activité vécue et les ordonner._
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C02-O08` — Repérer les différentes étapes d’un processus ou d’un évènement vécu et les ordonner. _(source : programme-2026)_
 
-#### 1. Les étapes, dans l’ordre — 4 min, sans écran (manipulation)
+#### 1. Les étapes, dans l’ordre — 4 min, sans interaction écran (manipulation)
 
 - **Consigne à l’enfant :** « Remets dans l’ordre les étapes : d’abord, ensuite, à la fin. »
 - **Guidance adulte :** 1. Choisissez une activité simple en trois étapes. 2. Dites-les dans le désordre. 3. Faites-les remettre en ordre. 4. Faites raconter l’activité entière avec « d’abord », « ensuite », « à la fin ».
@@ -507,7 +508,7 @@ _Repérer les étapes d’une activité vécue et les ordonner._
 - **Aide en anglais (optionnelle) :** « Put the steps in order: first, then, at the end. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C02-O08` Repérer les différentes étapes d’un processus ou d’un évènement vécu et les ordonner.
 
-#### 2. Qu’est-ce qui vient après ? — 3 min, sans écran (conversation)
+#### 2. Qu’est-ce qui vient après ? — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Je te dis une étape, tu me dis celle d’après. »
 - **Guidance adulte :** 1. Dites une étape. 2. Demandez la suivante. 3. Puis la précédente : « Et avant ? » 4. Terminez par la journée entière : le matin, l’école, le soir.
@@ -570,7 +571,7 @@ _Produire un mot qui rime, après l’avoir reconnu._
   - `LANG-S02-C01-O15` — Repérer et produire des rimes et des assonances.
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
 
-#### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
+#### 1. Le rituel : la date et la révision — 2 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis la date. Puis trouve un mot qui rime avec « chat ». »
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes mercredi 23 septembre 2026. » Puis reprenez les rimes d’hier. Donnez un exemple avant de demander : « chat… rat ! »
@@ -578,7 +579,7 @@ _Produire un mot qui rime, après l’avoir reconnu._
 - **Aide en anglais (optionnelle) :** « Say the date, then find a word that rhymes with chat. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S02-C01-O15` Repérer et produire des rimes et des assonances.
 
-#### 2. À toi de trouver — 8 min, sans écran (phonology)
+#### 2. À toi de trouver — 8 min, sans interaction écran (phonology)
 
 - **Consigne à l’enfant :** « Je dis un mot. Trouve un mot qui finit pareil. »
 - **Guidance adulte :** 1. Donnez le modèle : « maison… poisson ! » 2. Proposez un mot et attendez. 3. Si rien ne vient, donnez deux choix : « chapeau ou banane ? » 4. Acceptez les mots inventés et dites pourquoi ils marchent : « Oui, ça finit pareil. »
@@ -587,7 +588,7 @@ _Produire un mot qui rime, après l’avoir reconnu._
 - **Aide en anglais (optionnelle) :** « I say a word. Find a word that ends the same way. »
 - **Objectifs travaillés :** `LANG-S02-C01-O15` Repérer et produire des rimes et des assonances.
 
-#### 3. Le temps de lecture — 3 min, sans écran (read-aloud)
+#### 3. Le temps de lecture — 3 min, sans interaction écran (read-aloud)
 
 - **Consigne à l’enfant :** « Écoute l’histoire jusqu’au bout. Aujourd’hui, il n’y a pas de question : on écoute pour le plaisir. »
 - **Guidance adulte :** Lisez l’histoire à voix haute, doucement. Ne posez aucune question après : ce moment quotidien sert au plaisir d’écouter. Si l’enfant redemande la même histoire un autre jour, c’est bon signe.
@@ -640,7 +641,7 @@ _Trouver ce qu’il faut ajouter pour arriver à dix._
   - `MATH-S01-C01-O22` — Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà.
   - `MATH-S01-C01-O23` — Manipuler et verbaliser des compositions et des décompositions de nombres. Cela permet d’installer le fait que, dans une composition, l’ordre ne compte pas.
 
-#### 1. Il en manque combien ? — 5 min, sans écran (manipulation)
+#### 1. Il en manque combien ? — 5 min, sans interaction écran (manipulation)
 
 - **Consigne à l’enfant :** « J’ai mis quelques objets. Combien faut-il en ajouter pour arriver à dix ? »
 - **Guidance adulte :** 1. Posez six objets. 2. Comptez ensemble. 3. Demandez combien il en manque pour dix. 4. Ajoutez-les en comptant à voix haute : « Sept, huit, neuf, dix. Il en manquait quatre. »
@@ -651,7 +652,7 @@ _Trouver ce qu’il faut ajouter pour arriver à dix._
 - **Aide en anglais (optionnelle) :** « How many more do we need to reach ten? »
 - **Objectifs travaillés :** `MATH-S01-C01-O22` Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà. ; `MATH-S01-C01-O23` Manipuler et verbaliser des compositions et des décompositions de nombres. Cela permet d’installer le fait que, dans une composition, l’ordre ne compte pas.
 
-#### 2. Dix avec mes deux mains — 4 min, sans écran (counting)
+#### 2. Dix avec mes deux mains — 4 min, sans interaction écran (counting)
 
 - **Consigne à l’enfant :** « Montre-moi dix doigts, puis cache-en quelques-uns. »
 - **Guidance adulte :** 1. Levez dix doigts ensemble. 2. Repliez-en trois : « Combien en reste-t-il ? » 3. Faites dire la phrase : « Sept et trois font dix. » 4. Variez.
@@ -688,7 +689,7 @@ _S’immobiliser complètement au signal : contrôler son corps._
   - `PHYS-S02-C01-O05` — Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions.
   - `PHYS-S02-C01-O07` — Respecter les règles de sécurité pour soi et pour les autres.
 
-#### 1. Statue ! — 6 min, sans écran (movement)
+#### 1. Statue ! — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Bouge quand la musique est là. Quand je dis « statue », ne bouge plus du tout. »
 - **Guidance adulte :** 1. Chantez ou frappez un rythme. 2. Arrêtez net et dites « statue ». 3. Comptez trois secondes d’immobilité. 4. Inversez : c’est l’enfant qui donne le signal.
@@ -725,7 +726,7 @@ _Dessiner un personnage qui n’existe pas devant soi._
 - **Objectifs enseignés :**
   - `ART-S01-C01-O06` — Dessiner pour représenter un personnage ou un évènement fictif. _(source : programme-2026)_
 
-#### 1. Kumu tel que je l’imagine — 7 min, sans écran (drawing)
+#### 1. Kumu tel que je l’imagine — 7 min, sans interaction écran (drawing)
 
 - **Consigne à l’enfant :** « Dessine Kumu, le petit poussin, comme tu l’imagines. »
 - **Guidance adulte :** 1. Faites décrire Kumu avant de dessiner : sa taille, sa couleur, ce qu’il fait. 2. Laissez dessiner sans modèle. 3. Demandez d’ajouter un endroit de l’histoire : le poulailler, l’herbe. 4. Faites raconter le dessin.
@@ -791,7 +792,7 @@ _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les
   - `LANG-S01-C04-O11` — Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
 
-#### 1. Le rituel : la date et la révision — 2 min, sans écran (conversation)
+#### 1. Le rituel : la date et la révision — 2 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis la date. Puis dis-moi deux mots qui riment. »
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes jeudi 24 septembre 2026. » Puis demandez deux mots qui riment. Acceptez les mots inventés : ce qui compte est d’entendre la fin pareille.
@@ -799,7 +800,7 @@ _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les
 - **Aide en anglais (optionnelle) :** « Say the date, then give me two rhyming words. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C04-O11` Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
 
-#### 2. D’abord, ensuite, à la fin — 8 min, sans écran (conversation)
+#### 2. D’abord, ensuite, à la fin — 8 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Raconte l’histoire des trois cailloux : d’abord, ensuite, à la fin. »
 - **Guidance adulte :** 1. Rappelez les trois moments. 2. Demandez de raconter avec « d’abord », « ensuite », « à la fin ». 3. Si l’ordre est mélangé, ne dites pas « non » : redites la suite correcte et faites recommencer. 4. Refaites le même jeu avec sa propre journée.
@@ -808,7 +809,7 @@ _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les
 - **Aide en anglais (optionnelle) :** « Tell the story of the three stones: first, then, at the end. »
 - **Objectifs travaillés :** `LANG-S01-C04-O11` Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
 
-#### 3. Le temps de lecture — 3 min, sans écran (read-aloud)
+#### 3. Le temps de lecture — 3 min, sans interaction écran (read-aloud)
 
 - **Consigne à l’enfant :** « Écoute l’histoire jusqu’au bout. Aujourd’hui, il n’y a pas de question : on écoute pour le plaisir. »
 - **Guidance adulte :** Lisez l’histoire à voix haute, doucement. Ne posez aucune question après : ce moment quotidien sert au plaisir d’écouter. Si l’enfant redemande la même histoire un autre jour, c’est bon signe.
@@ -860,7 +861,7 @@ _Retrouver les formes planes sur les objets réels._
   - `MATH-S03-C01-O07` — Reconnaitre, trier et classer des formes géométriques planes, indépendamment d’autres critères comme la couleur, la taille, l’orientation.
   - `MATH-S03-C01-O08` — Décrire et nommer quelques figures géométriques simples : carré, rectangle, triangle, disque.
 
-#### 1. La forme et l’objet — 5 min, sans écran (matching)
+#### 1. La forme et l’objet — 5 min, sans interaction écran (matching)
 
 - **Consigne à l’enfant :** « Pose la forme en papier sur un objet qui a la même face. »
 - **Guidance adulte :** 1. Donnez une forme. 2. Cherchez ensemble un objet dont une face lui ressemble. 3. Posez la forme dessus pour vérifier. 4. Faites nommer : « La face du cahier est un rectangle. »
@@ -872,7 +873,7 @@ _Retrouver les formes planes sur les objets réels._
 - **Aide en anglais (optionnelle) :** « Put the paper shape on an object with the same face. »
 - **Objectifs travaillés :** `MATH-S03-C01-O07` Reconnaitre, trier et classer des formes géométriques planes, indépendamment d’autres critères comme la couleur, la taille, l’orientation. ; `MATH-S03-C01-O08` Décrire et nommer quelques figures géométriques simples : carré, rectangle, triangle, disque.
 
-#### 2. Je dessine avec des formes — 4 min, sans écran (drawing)
+#### 2. Je dessine avec des formes — 4 min, sans interaction écran (drawing)
 
 - **Consigne à l’enfant :** « Dessine une maison avec un carré et un triangle. »
 - **Guidance adulte :** 1. Montrez : un carré pour le mur, un triangle pour le toit. 2. Laissez dessiner. 3. Faites nommer les formes utilisées. 4. Ajoutez un disque pour le soleil.
@@ -910,7 +911,7 @@ _Suivre un parcours en nommant les formes rencontrées._
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S02-C01-O05` — Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions.
 
-#### 1. Marche sur les formes — 6 min, sans écran (movement)
+#### 1. Marche sur les formes — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Marche d’une forme à l’autre en disant son nom avant de poser le pied. »
 - **Guidance adulte :** 1. Posez les formes en papier au sol, espacées d’un pas. 2. L’enfant nomme puis avance. 3. Refaites à cloche-pied si c’est facile. 4. Terminez en revenant en arrière.
@@ -949,7 +950,7 @@ _Ordonner les moments d’une histoire connue._
 - **Objectifs repris (déjà vus) :**
   - `TIME-SPACE-S01-C02-O08` — Repérer les différentes étapes d’un processus ou d’un évènement vécu et les ordonner.
 
-#### 1. Je remets l’histoire en ordre — 4 min, sans écran (manipulation)
+#### 1. Je remets l’histoire en ordre — 4 min, sans interaction écran (manipulation)
 
 - **Consigne à l’enfant :** « Remets les trois moments de l’histoire dans l’ordre. »
 - **Guidance adulte :** 1. Rappelez les trois moments des Trois cailloux. 2. Dites-les dans le désordre. 3. Faites-les remettre en ordre, en les disant. 4. Faites raconter l’histoire entière.
@@ -960,7 +961,7 @@ _Ordonner les moments d’une histoire connue._
 - **Aide en anglais (optionnelle) :** « Put the three moments of the story in order. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C02-O08` Repérer les différentes étapes d’un processus ou d’un évènement vécu et les ordonner.
 
-#### 2. Et si on changeait la fin ? — 3 min, sans écran (conversation)
+#### 2. Et si on changeait la fin ? — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Raconte une autre fin pour l’histoire. »
 - **Guidance adulte :** 1. Demandez ce qui se passerait si la sœur ne rendait pas le caillou. 2. Laissez inventer. 3. Reformulez son idée en deux phrases. 4. Faites redire le début, puis sa nouvelle fin.
@@ -1015,7 +1016,7 @@ _Reprendre les familles de mots du mois et y ranger des mots nouveaux._
   - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
 
-#### 1. Le rituel : la date et la révision — 3 min, sans écran (conversation)
+#### 1. Le rituel : la date et la révision — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis la date. Puis raconte-moi ce que nous avons appris cette semaine. »
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes vendredi 25 septembre 2026. » Puis reprenez la semaine : les rimes, raconter dans l’ordre, les mots rangés par familles.
@@ -1023,7 +1024,7 @@ _Reprendre les familles de mots du mois et y ranger des mots nouveaux._
 - **Aide en anglais (optionnelle) :** « Say the date, then tell me what we learned this week. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C01-O02` Organiser les mots en catégorie et en réseau.
 
-#### 2. Trois familles de mots — 7 min, sans écran (sorting)
+#### 2. Trois familles de mots — 7 min, sans interaction écran (sorting)
 
 - **Consigne à l’enfant :** « Range ces mots : les mots de l’école, les mots de la maison, les mots du marché. »
 - **Guidance adulte :** 1. Dites un mot. 2. Demandez dans quelle famille il va. 3. Faites justifier à chaque fois. 4. Ajoutez un mot nouveau et voyez où l’enfant le met : c’est là que vous verrez s’il a compris la famille, et pas seulement la liste.
@@ -1032,7 +1033,7 @@ _Reprendre les familles de mots du mois et y ranger des mots nouveaux._
 - **Aide en anglais (optionnelle) :** « Sort the words: school words, home words, market words. »
 - **Objectifs travaillés :** `LANG-S01-C01-O02` Organiser les mots en catégorie et en réseau. ; `LANG-S01-C01-O03` Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
 
-#### 3. Le temps de lecture — 3 min, sans écran (read-aloud)
+#### 3. Le temps de lecture — 3 min, sans interaction écran (read-aloud)
 
 - **Consigne à l’enfant :** « Écoute l’histoire jusqu’au bout. Aujourd’hui, il n’y a pas de question : on écoute pour le plaisir. »
 - **Guidance adulte :** Lisez l’histoire à voix haute, doucement. Ne posez aucune question après : ce moment quotidien sert au plaisir d’écouter. Si l’enfant redemande la même histoire un autre jour, c’est bon signe.
@@ -1082,7 +1083,7 @@ _Aller au bout de la comptine numérique visée cette année._
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O26` — Connaitre et utiliser la comptine numérique jusqu’à trente.
 
-#### 1. De un à trente — 5 min, sans écran (counting)
+#### 1. De un à trente — 5 min, sans interaction écran (counting)
 
 - **Consigne à l’enfant :** « Compte le plus loin que tu peux, je t’aide si tu t’arrêtes. »
 - **Guidance adulte :** 1. Comptez ensemble jusqu’à vingt. 2. Continuez : vingt-et-un, vingt-deux… 3. Quand l’enfant hésite, donnez le nombre suivant et laissez-le reprendre. 4. Notez pour vous où il s’est arrêté : c’est de là qu’on repartira en octobre.
@@ -1091,7 +1092,7 @@ _Aller au bout de la comptine numérique visée cette année._
 - **Aide en anglais (optionnelle) :** « Count as far as you can. I will help if you stop. »
 - **Objectifs travaillés :** `MATH-S01-C01-O26` Connaitre et utiliser la comptine numérique jusqu’à trente.
 
-#### 2. Le tas de vingt — 4 min, sans écran (manipulation)
+#### 2. Le tas de vingt — 4 min, sans interaction écran (manipulation)
 
 - **Consigne à l’enfant :** « Fais un tas de vingt objets, par paquets de dix. »
 - **Guidance adulte :** 1. Faites un premier paquet de dix. 2. Puis un deuxième. 3. Comptez le tout. 4. Montrez : « Dix et dix, ça fait vingt. »
@@ -1129,7 +1130,7 @@ _Enchainer des déplacements variés sur une durée plus longue._
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S03-C01-O09` — Danser, seul ou à plusieurs, en créant et en reproduisant un ou plusieurs gestes et déplacements.
 
-#### 1. D’un animal à l’autre — 6 min, sans écran (movement)
+#### 1. D’un animal à l’autre — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Traverse la pièce comme la chèvre, reviens comme le lézard, repars comme le poussin. »
 - **Guidance adulte :** 1. Annoncez un animal par traversée. 2. Enchainez sans pause pendant une minute. 3. Laissez l’enfant choisir le dernier animal. 4. Finissez assis, en soufflant trois fois.
@@ -1167,7 +1168,7 @@ _Dire et faire ce qu’il faut pour qu’un être vivant aille bien._
 - **Objectifs repris (déjà vus) :**
   - `WORLD-S01-C01-O10` — Décrire les besoins essentiels de quelques animaux ou de végétaux.
 
-#### 1. Ce dont il a besoin — 4 min, sans écran (conversation)
+#### 1. Ce dont il a besoin — 4 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Choisis un animal ou une plante, et dis tout ce qu’il lui faut. »
 - **Guidance adulte :** 1. Laissez choisir. 2. Faites lister : manger, boire, un abri ou de la lumière. 3. Demandez ce qui arrive si un besoin manque. 4. Décidez ensemble d’un geste à faire ce soir.
@@ -1176,7 +1177,7 @@ _Dire et faire ce qu’il faut pour qu’un être vivant aille bien._
 - **Aide en anglais (optionnelle) :** « Choose an animal or a plant and say what it needs. »
 - **Objectifs travaillés :** `WORLD-S01-C01-O10` Décrire les besoins essentiels de quelques animaux ou de végétaux.
 
-#### 2. Je regarde et je raconte — 3 min, sans écran (observation)
+#### 2. Je regarde et je raconte — 3 min, sans interaction écran (observation)
 
 - **Consigne à l’enfant :** « Regarde-le bien et dis-moi ce que tu remarques aujourd’hui. »
 - **Guidance adulte :** 1. Observez ensemble une minute, en silence. 2. Demandez ce qu’il remarque. 3. Comparez avec la dernière fois. 4. Concluez : observer, c’est regarder longtemps.

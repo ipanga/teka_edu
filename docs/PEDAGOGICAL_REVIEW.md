@@ -26,15 +26,30 @@ Roles, kept distinct on purpose:
 
 ## Register of reviews
 
-| Batch                              | Date       | Kind                            | Outcome                       | Corrections                                                                   | Status                                                                                                                                                                                                           |
-| ---------------------------------- | ---------- | ------------------------------- | ----------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 3ème maternelle, Week 1 (days 1–5) | 2026-09-14 | AI-assisted (ChatGPT)           | `accepted-with-modifications` | 13 items, all applied                                                         | `review` — the corrections materially changed the pedagogy, so the regenerated package awaits re-review                                                                                                          |
-| 3ème maternelle, Weeks 2–5         | —          | —                               | not yet reviewed              | —                                                                             | `review`                                                                                                                                                                                                         |
-| 1ère maternelle, Week 1 (days 1–4) | 2026-09-15 | AI-assisted (ChatGPT), 2 passes | `accepted-with-modifications` | pass 1: 9 pedagogical and safety items · pass 2: 2 progression-metadata items | **`review` — approval lapsed.** The Week 2 review corrected the progression rule again, changing the objective metadata the digest covers (ADR-035). Needs a short re-confirmation; no child-facing text changed |
-| 1ère maternelle, Week 2 (days 5–9) | 2026-09-15 | AI-assisted (ChatGPT)           | `accepted-with-modifications` | 6 items, all applied                                                          | `review` — **ready for a second pass**                                                                                                                                                                           |
-| 1ère maternelle, Weeks 3–5         | —          | —                               | not yet reviewed              | —                                                                             | `review`                                                                                                                                                                                                         |
+| Batch                              | Date       | Kind                                              | Outcome                       | Corrections                                                                            | Status                                                                                                                                                                   |
+| ---------------------------------- | ---------- | ------------------------------------------------- | ----------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 3ème maternelle, Week 1 (days 1–5) | 2026-09-14 | AI-assisted (ChatGPT)                             | `accepted-with-modifications` | 13 items, all applied                                                                  | `review` — the corrections materially changed the pedagogy, so the regenerated package awaits re-review                                                                  |
+| 3ème maternelle, Weeks 2–5         | —          | —                                                 | not yet reviewed              | —                                                                                      | `review`                                                                                                                                                                 |
+| 1ère maternelle, Week 1 (days 1–4) | 2026-09-15 | AI-assisted (ChatGPT), 2 passes + re-confirmation | `accepted-with-modifications` | pass 1: 9 pedagogical and safety items · pass 2: 2 progression-metadata items          | **`approved`** — 16 lessons. The approval lapsed once when the progression engine changed; re-confirmed after a machine-proven metadata-only diff, with a **new** digest |
+| 1ère maternelle, Week 2 (days 5–9) | 2026-09-15 | AI-assisted (ChatGPT), 2 passes                   | `accepted-with-modifications` | pass 1: 6 items · pass 2: 2 items (seed-bag fallback, failure-neutral balance wording) | **`approved`** — 20 lessons                                                                                                                                              |
+| 1ère maternelle, Weeks 3–5         | —          | —                                                 | not yet reviewed              | —                                                                                      | `review`                                                                                                                                                                 |
 
-**No lesson is `approved`.** All 176 September lessons — 88 for each of 1ère and 3ème maternelle — remain at `review`.
+**36 lessons are `approved`** — 1ère maternelle Weeks 1 and 2, all `ai-assisted`. The other 140
+September lessons remain at `review`. **No teacher has read any of it.**
+
+### Why Week 1 could be re-confirmed without a third full reading
+
+Its approval lapsed because the progression engine changed the objective metadata the digest
+covers — the protection working exactly as ADR-035 intended. It was **not** re-stamped by
+weakening that protection. The re-confirmation rests on a machine-proven diff against the exact
+content that had been approved (commit `5899d94`): every lesson title, child instruction, parent
+guidance, story, rhyme, question, activity order, type, material, duration, difficulty,
+vocabulary, English scaffold, illustration and **activity-level objective** was compared, and
+**zero** had changed. Only the taught/revisited split, the stage, and the status moved. A fresh
+digest was generated; the old one was not reused.
+
+That distinction matters: an approval may only be carried forward when a machine can prove
+nothing a reviewer judged has changed. Anything else goes back for reading.
 
 ---
 

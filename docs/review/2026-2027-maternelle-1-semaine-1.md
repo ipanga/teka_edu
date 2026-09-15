@@ -59,14 +59,14 @@ l’autre — l’appareil est alors le sien._
 
 _Oser dire bonjour à l’adulte, et entendre les premiers mots du mois._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
   - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève. _(source : programme-2024-langage)_
   - `LANG-S01-C01-O01` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période). _(source : programme-2024-langage)_
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines. _(source : programme-2026)_
 
-#### 1. Bonjour ! — 3 min, sans écran (conversation)
+#### 1. Bonjour ! — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis bonjour avec moi. »
 - **Guidance adulte :** Mettez-vous à sa hauteur, regardez-le, et dites « Bonjour ! ». Attendez. S’il ne dit rien, dites-le pour lui, gaiement, et passez à la suite : le premier jour, être là suffit.
@@ -74,7 +74,7 @@ _Oser dire bonjour à l’adulte, et entendre les premiers mots du mois._
 - **Aide en anglais (optionnelle) :** « Say hello. »
 - **Objectifs travaillés :** `LANG-S01-C04-O01` Entrer en communication verbale avec un adulte ou un autre élève.
 
-#### 2. Les mots de la maison — 5 min, sans écran (vocabulary)
+#### 2. Les mots de la maison — 5 min, sans interaction écran (vocabulary)
 
 - **Consigne à l’enfant :** « Écoute, puis dis le mot avec moi : la porte, le seau. »
 - **Guidance adulte :** 1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez lentement l’objet que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.
@@ -85,7 +85,7 @@ _Oser dire bonjour à l’adulte, et entendre les premiers mots du mois._
 - **Aide en anglais (optionnelle) :** « Listen, then say the word with me. »
 - **Objectifs travaillés :** `LANG-S01-C01-O01` Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
 
-#### 3. Bonjour, petit — 3 min, sans écran (song-rhyme)
+#### 3. Bonjour, petit — 3 min, sans interaction écran (song-rhyme)
 
 - **Consigne à l’enfant :** « Dis la comptine avec moi. Tu peux faire les gestes. »
 - **Guidance adulte :** Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.
@@ -156,12 +156,12 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter, donner une petite quantité, ranger par forme._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O09` — Connaitre la comptine numérique de un à six. _(source : programme-2024-mathematiques)_
 
-#### 1. La comptine des nombres — 7 min, sans écran (counting)
+#### 1. La comptine des nombres — 7 min, sans interaction écran (counting)
 
 - **Consigne à l’enfant :** « Compte avec moi : un, deux, trois, quatre, cinq, six. »
 - **Guidance adulte :** Comptez lentement en montrant un doigt à chaque nombre. Recommencez et arrêtez-vous à trois pour voir s’il continue. Ne dépassez jamais six ce mois-ci : la suite orale s’installe par la répétition, pas par la longueur.
@@ -224,12 +224,12 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
   - `PHYS-S04-C01-O03` — Éprouver le plaisir de jouer dans le respect des autres et des règles communes. _(source : programme-2026)_
 
-#### 1. Le jeu et la règle — 6 min, sans écran (movement)
+#### 1. Le jeu et la règle — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « On joue ensemble : on écoute, et on s’arrête quand je dis stop. »
 - **Guidance adulte :** Dégagez l’espace vous-même : **c’est vous qui déplacez les chaises et les meubles**. L’enfant aide en portant ce qui est léger et sans risque — un coussin, un pagne, un jouet. Participer à la préparation compte ; soulever un meuble, non. Dites la règle : on part quand je tape, on s’arrête quand je dis stop. Jouez trente secondes, arrêtez, recommencez. La règle s’apprend en jouant, pas en l’écoutant.
@@ -268,12 +268,12 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Repérer le moment, le début, la fin et où sont les choses._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Un court moment de repères : quand on est, et où sont les choses. Utilisez votre vraie journée, pas un exemple.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C01-O01` — Acquérir les premiers repères temporels. _(source : programme-2026)_
 
-#### 1. Le moment de la journée — 7 min, sans écran (observation)
+#### 1. Le moment de la journée — 7 min, sans interaction écran (observation)
 
 - **Consigne à l’enfant :** « C’est le matin, ou le soir ? »
 - **Guidance adulte :** Deux moments seulement le premier jour : le matin et le soir. Dites celui qu’on vit et ce qui va avec : « C’est le soir : on a mangé, bientôt on dort. » Puis demandez-lui. S’il se trompe, ne dites pas non : redites simplement le bon moment avec son indice. « Midi » viendra quand cette première opposition sera installée.
@@ -327,7 +327,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -335,7 +335,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
   - `LANG-S01-C01-O01` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
-#### 1. Bonjour ! — 3 min, sans écran (conversation)
+#### 1. Bonjour ! — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis bonjour, puis montre-moi une chose que tu vois. »
 - **Guidance adulte :** Dites bonjour, puis : « Qu’est-ce que tu vois ? » Acceptez un doigt pointé sans mot. Nommez ce qu’il montre : « Oui, la porte. »
@@ -343,7 +343,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Aide en anglais (optionnelle) :** « Say hello. »
 - **Objectifs travaillés :** `LANG-S01-C04-O01` Entrer en communication verbale avec un adulte ou un autre élève.
 
-#### 2. Les mots de la maison — 5 min, sans écran (vocabulary)
+#### 2. Les mots de la maison — 5 min, sans interaction écran (vocabulary)
 
 - **Consigne à l’enfant :** « Écoute, puis dis le mot avec moi : la table, la chaise. »
 - **Guidance adulte :** 1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez lentement l’objet que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.
@@ -354,7 +354,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Aide en anglais (optionnelle) :** « Listen, then say the word with me. »
 - **Objectifs travaillés :** `LANG-S01-C01-O01` Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
 
-#### 3. Un, deux, trois, mes mains — 3 min, sans écran (song-rhyme)
+#### 3. Un, deux, trois, mes mains — 3 min, sans interaction écran (song-rhyme)
 
 - **Consigne à l’enfant :** « Dis la comptine avec moi. Tu peux faire les gestes. »
 - **Guidance adulte :** Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.
@@ -392,12 +392,12 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
 _Compter, donner une petite quantité, ranger par forme._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O03` — Dénombrer une collection d’objets (jusqu’à trois, voire quatre). _(source : programme-2024-mathematiques)_
 
-#### 1. Un, deux, trois — 7 min, sans écran (counting)
+#### 1. Un, deux, trois — 7 min, sans interaction écran (counting)
 
 - **Consigne à l’enfant :** « Combien il y en a ? Compte avec moi. »
 - **Guidance adulte :** Posez trois objets bien séparés — des cuillères, des gobelets, des chaussettes roulées : à cet âge, préférez ce qui ne tient pas dans une bouche. Touchez chaque objet en disant le nombre, une fois. Puis faites-le avec lui, sa main dans la vôtre s’il le veut. À la fin, redites le dernier nombre : « Trois. Il y en a trois. » C’est ce dernier mot qui dit la quantité.
@@ -462,12 +462,12 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
   - `PHYS-S01-C01-O02` — Courir de manière variée et coordonnée. _(source : programme-2026)_
 
-#### 1. Je cours — 6 min, sans écran (movement)
+#### 1. Je cours — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Cours jusqu’au repère, puis reviens en marchant. »
 - **Guidance adulte :** Posez un repère au sol, **bien avant tout obstacle** : un pagne, un coussin, une ligne tracée, un objet sans danger. Jamais un mur, une porte ni un arbre comme but — à cet âge on ne s’arrête pas toujours à temps. Faites-le courir, puis revenir doucement. Trois allers suffisent. À l’intérieur, remplacez la course par des pas rapides sur place.
@@ -507,12 +507,12 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Nommer son corps et se servir de ses sens._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.
 - **Objectifs enseignés :**
   - `WORLD-S01-C02-O01` — Nommer et représenter quelques parties du corps humain. _(source : programme-2026)_
 
-#### 1. Ma main, mon pied — 7 min, sans écran (observation)
+#### 1. Ma main, mon pied — 7 min, sans interaction écran (observation)
 
 - **Consigne à l’enfant :** « Montre-moi ta main. Montre-moi ton pied. »
 - **Guidance adulte :** Nommez une partie et montrez-la sur vous, puis demandez-lui de la montrer sur lui. Deux parties par séance suffisent. Terminez toujours par une qu’il connaît déjà : on finit sur une réussite.
@@ -568,7 +568,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
@@ -577,7 +577,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
   - `TIME-SPACE-S01-C01-O01` — Acquérir les premiers repères temporels.
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
-#### 1. Bonjour, et on se souvient — 3 min, sans écran (conversation)
+#### 1. Bonjour, et on se souvient — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis bonjour. Puis dis-moi ce que nous avons fait hier. »
 - **Guidance adulte :** Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.
@@ -585,7 +585,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Aide en anglais (optionnelle) :** « Say hello, then tell me what we did yesterday. »
 - **Objectifs travaillés :** `LANG-S01-C04-O01` Entrer en communication verbale avec un adulte ou un autre élève. ; `TIME-SPACE-S01-C01-O01` Acquérir les premiers repères temporels.
 
-#### 2. Le seau de Lisa — 5 min, sans écran (listening-story)
+#### 2. Le seau de Lisa — 5 min, sans interaction écran (listening-story)
 
 - **Consigne à l’enfant :** « Écoute l’histoire. Après, tu me montreras où était le seau. »
 - **Guidance adulte :** Lisez lentement, en montrant l’image. L’histoire est courte exprès : à trois ans, on écoute mieux deux minutes deux fois qu’une fois quatre minutes.
@@ -611,7 +611,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   1. Le seau était sur la table ou sur la chaise ?
 
-#### 3. Bonjour, petit — 3 min, sans écran (song-rhyme)
+#### 3. Bonjour, petit — 3 min, sans interaction écran (song-rhyme)
 
 - **Consigne à l’enfant :** « Dis la comptine avec moi. Tu peux faire les gestes. »
 - **Guidance adulte :** Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.
@@ -656,13 +656,13 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter, donner une petite quantité, ranger par forme._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O09` — Connaitre la comptine numérique de un à six.
 
-#### 1. La comptine des nombres — 7 min, sans écran (counting)
+#### 1. La comptine des nombres — 7 min, sans interaction écran (counting)
 
 - **Consigne à l’enfant :** « Compte avec moi : un, deux, trois, quatre, cinq, six. »
 - **Guidance adulte :** Comptez lentement en montrant un doigt à chaque nombre. Recommencez et arrêtez-vous à trois pour voir s’il continue. Ne dépassez jamais six ce mois-ci : la suite orale s’installe par la répétition, pas par la longueur.
@@ -692,13 +692,13 @@ _Compter, donner une petite quantité, ranger par forme._
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S01-C01-O02` — Courir de manière variée et coordonnée.
 
-#### 1. Je cours — 6 min, sans écran (movement)
+#### 1. Je cours — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Cours jusqu’au repère, puis reviens en marchant. »
 - **Guidance adulte :** Posez un repère au sol, **bien avant tout obstacle** : un pagne, un coussin, une ligne tracée, un objet sans danger. Jamais un mur, une porte ni un arbre comme but — à cet âge on ne s’arrête pas toujours à temps. Faites-le courir, puis revenir doucement. Trois allers suffisent. À l’intérieur, remplacez la course par des pas rapides sur place.
@@ -729,12 +729,12 @@ _Bouger tous les jours, avec une règle simple et de la place._
 
 _Repérer le moment, le début, la fin et où sont les choses._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Un court moment de repères : quand on est, et où sont les choses. Utilisez votre vraie journée, pas un exemple.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C01-O02` — Identifier les principaux moments d’une journée. _(source : programme-2026)_
 
-#### 1. Le matin et le soir — 7 min, sans écran (observation)
+#### 1. Le matin et le soir — 7 min, sans interaction écran (observation)
 
 - **Consigne à l’enfant :** « Montre-moi ce qu’on fait le matin. »
 - **Guidance adulte :** Nommez deux moments seulement — le matin et le soir — et ce qu’on y fait vraiment chez vous. Demandez-lui de mimer l’un des deux. Le repère se construit sur sa journée à lui, pas sur une journée modèle.
@@ -788,7 +788,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
   - `LANG-S01-C04-O02` — Dire ce qu’on fait. _(source : programme-2024-langage)_
@@ -797,7 +797,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
   - `TIME-SPACE-S01-C01-O01` — Acquérir les premiers repères temporels.
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
-#### 1. Bonjour, et on se souvient — 3 min, sans écran (conversation)
+#### 1. Bonjour, et on se souvient — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis bonjour. Puis dis-moi ce que nous avons fait hier. »
 - **Guidance adulte :** Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.
@@ -805,14 +805,14 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Aide en anglais (optionnelle) :** « Say hello, then tell me what we did yesterday. »
 - **Objectifs travaillés :** `LANG-S01-C04-O01` Entrer en communication verbale avec un adulte ou un autre élève. ; `TIME-SPACE-S01-C01-O01` Acquérir les premiers repères temporels.
 
-#### 2. Dis ce que tu fais — 4 min, sans écran (conversation)
+#### 2. Dis ce que tu fais — 4 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis-moi ce que tu fais, pendant que tu le fais. »
 - **Guidance adulte :** Pendant qu’il agit — il porte, il pose, il marche — dites ce qu’il fait : « Tu portes le seau. » Puis demandez-lui de le dire. Un mot compte. Deux mots, c’est beaucoup. Ne faites pas répéter une phrase entière.
 - **Matériel :** Aucun matériel
 - **Objectifs travaillés :** `LANG-S01-C04-O02` Dire ce qu’on fait.
 
-#### 3. Un, deux, trois, mes mains — 3 min, sans écran (song-rhyme)
+#### 3. Un, deux, trois, mes mains — 3 min, sans interaction écran (song-rhyme)
 
 - **Consigne à l’enfant :** « Dis la comptine avec moi. Tu peux faire les gestes. »
 - **Guidance adulte :** Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.
@@ -859,13 +859,13 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter, donner une petite quantité, ranger par forme._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O03` — Dénombrer une collection d’objets (jusqu’à trois, voire quatre).
 
-#### 1. Un, deux, trois — 7 min, sans écran (counting)
+#### 1. Un, deux, trois — 7 min, sans interaction écran (counting)
 
 - **Consigne à l’enfant :** « Combien il y en a ? Compte avec moi. »
 - **Guidance adulte :** Posez trois objets bien séparés — des cuillères, des gobelets, des chaussettes roulées : à cet âge, préférez ce qui ne tient pas dans une bouche. Touchez chaque objet en disant le nombre, une fois. Puis faites-le avec lui, sa main dans la vôtre s’il le veut. À la fin, redites le dernier nombre : « Trois. Il y en a trois. » C’est ce dernier mot qui dit la quantité.
@@ -897,12 +897,12 @@ _Compter, donner une petite quantité, ranger par forme._
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
   - `PHYS-S03-C01-O01` — Découvrir et explorer le mouvement comme vecteur d’expression. _(source : programme-2026)_
 
-#### 1. Je bouge comme toi — 6 min, sans écran (movement)
+#### 1. Je bouge comme toi — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Bouge comme moi. Puis bouge comme tu veux. »
 - **Guidance adulte :** Faites un mouvement simple et lent — lever les bras, tourner — et laissez-le imiter. Puis inversez : c’est lui qui montre, vous imitez. Être copié par un adulte vaut tous les encouragements.
@@ -942,13 +942,13 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dire des comptines et laisser une trace._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
-#### 1. Ma comptine — 7 min, sans écran (song-rhyme)
+#### 1. Ma comptine — 7 min, sans interaction écran (song-rhyme)
 
 - **Consigne à l’enfant :** « Dis la comptine avec moi, et fais les gestes. »
 - **Guidance adulte :** Choisissez une comptine déjà entendue cette semaine. Dites-la deux fois avec les mêmes gestes. Ce mois-ci, cinq comptines suffisent : c’est de les redire souvent, pas d’en apprendre beaucoup, qui construit le répertoire.

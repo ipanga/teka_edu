@@ -68,7 +68,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
-#### 1. Bonjour, et on se souvient — 3 min, sans écran (conversation)
+#### 1. Bonjour, et on se souvient — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis bonjour. Puis dis-moi ce que nous avons fait hier. »
 - **Guidance adulte :** Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.
@@ -76,7 +76,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Aide en anglais (optionnelle) :** « Say hello, then tell me what we did yesterday. »
 - **Objectifs travaillés :** `LANG-S01-C04-O01` Entrer en communication verbale avec un adulte ou un autre élève. ; `TIME-SPACE-S01-C01-O01` Acquérir les premiers repères temporels.
 
-#### 2. Le seau de Lisa — 4 min, sans écran (listening-story)
+#### 2. Le seau de Lisa — 4 min, sans interaction écran (listening-story)
 
 - **Consigne à l’enfant :** « Écoute l’histoire jusqu’au bout. »
 - **Guidance adulte :** Lisez lentement, en montrant l’image. L’histoire est courte exprès : à trois ans, on écoute mieux deux minutes deux fois qu’une fois quatre minutes. S’il redemande la même histoire demain, c’est bon signe.
@@ -102,7 +102,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
   1. Qu’est-ce que Lisa cherche ?
   2. Où est le seau ?
 
-#### 3. La pluie tombe — 3 min, sans écran (song-rhyme)
+#### 3. La pluie tombe — 3 min, sans interaction écran (song-rhyme)
 
 - **Consigne à l’enfant :** « Dis la comptine avec moi. Tu peux faire les gestes. »
 - **Guidance adulte :** Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.
@@ -147,7 +147,7 @@ _Compter, donner une petite quantité, ranger par forme._
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O04` — Constituer une collection (jusqu’à trois, voire quatre objets) d’un cardinal donné.
 
-#### 1. Donne-moi trois — 7 min, sans écran (manipulation)
+#### 1. Donne-moi trois — 7 min, sans interaction écran (manipulation)
 
 - **Consigne à l’enfant :** « Donne-moi deux cuillères. »
 - **Guidance adulte :** Demandez une petite quantité — deux, puis trois — avec des objets assez gros pour être sans danger : cuillères, gobelets, blocs. Les petits objets (cailloux, capsules, haricots) restent possibles, mais seulement sous votre surveillance directe. S’il en donne trop, recomptez ensemble sans reprendre l’objet en trop : « Un, deux, trois… tu m’en as donné quatre. » Puis redemandez. Ne demandez jamais plus de trois ce mois-ci.
@@ -184,12 +184,13 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S01-C01-O01` — Manipuler et lancer des objets avec des intentions motrices différentes.
 
-#### 1. Je lance — 6 min, sans écran (movement)
+#### 1. Je lance — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Lance la balle dans le seau. »
 - **Guidance adulte :** Une balle en papier froissé et un seau à deux pas. Montrez une fois. S’il rate, rapprochez le seau : on ne fait pas plus difficile, on fait réussi. Cinq lancers, pas plus.
 - **Matériel :** Balle en papier froissé, Boîte, seau ou récipient
-- **À défaut :** Une balle en papier froissé, une chaussette roulée ou un petit sac de graines.
+- **À défaut :** Une balle en papier froissé ou une chaussette roulée. Une petite balle souple convient aussi si la maison en a déjà une.
+- **⚠ Sécurité :** Rien de rempli de petits objets (sac de graines, de haricots) : cela s’ouvre. Une balle en papier ou une chaussette roulée ne blesse personne et ne coûte rien.
 - **À défaut :** Une boîte, un seau, une bassine, un panier ou un carton.
 - **Aide en anglais (optionnelle) :** « Move with me. »
 - **Objectifs travaillés :** `PHYS-S01-C01-O01` Manipuler et lancer des objets avec des intentions motrices différentes.
@@ -221,7 +222,7 @@ _Repérer le moment, le début, la fin et où sont les choses._
 - **Objectifs repris (déjà vus) :**
   - `TIME-SPACE-S01-C03-O02` — Repérer le début et la fin d’une activité.
 
-#### 1. On commence, c’est fini — 7 min, sans écran (observation)
+#### 1. On commence, c’est fini — 7 min, sans interaction écran (observation)
 
 - **Consigne à l’enfant :** « On commence… et maintenant, c’est fini. »
 - **Guidance adulte :** Annoncez le début : « On commence. » Faites une chose courte. Annoncez la fin : « C’est fini. » Puis demandez-lui de dire « fini » lui-même à la fin de la suivante. Savoir qu’une activité se termine calme beaucoup d’enfants.
@@ -275,7 +276,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
   - `LANG-S02-C01-O01` — Identifier les sons de la langue, lors de situations d’écoute proposées par le professeur.
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
-#### 1. Bonjour, et on se souvient — 3 min, sans écran (conversation)
+#### 1. Bonjour, et on se souvient — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis bonjour. Puis dis-moi ce que nous avons fait hier. »
 - **Guidance adulte :** Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.
@@ -283,14 +284,14 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Aide en anglais (optionnelle) :** « Say hello, then tell me what we did yesterday. »
 - **Objectifs travaillés :** `LANG-S01-C04-O01` Entrer en communication verbale avec un adulte ou un autre élève. ; `TIME-SPACE-S01-C01-O01` Acquérir les premiers repères temporels.
 
-#### 2. J’écoute — 4 min, sans écran (phonology)
+#### 2. J’écoute — 4 min, sans interaction écran (phonology)
 
 - **Consigne à l’enfant :** « Ferme les yeux. Qu’est-ce que tu entends ? »
 - **Guidance adulte :** Faites un bruit qu’il connaît : taper sur la table, froisser du papier, verser de l’eau. Demandez ce que c’est. Puis refaites-en deux et demandez lequel était le premier. Deux bruits suffisent.
 - **Matériel :** Aucun matériel
 - **Objectifs travaillés :** `LANG-S02-C01-O01` Identifier les sons de la langue, lors de situations d’écoute proposées par le professeur.
 
-#### 3. Un, deux, trois, mes mains — 3 min, sans écran (song-rhyme)
+#### 3. Un, deux, trois, mes mains — 3 min, sans interaction écran (song-rhyme)
 
 - **Consigne à l’enfant :** « Dis la comptine avec moi. Tu peux faire les gestes. »
 - **Guidance adulte :** Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.
@@ -334,7 +335,7 @@ _Compter, donner une petite quantité, ranger par forme._
 - **Objectifs repris (déjà vus) :**
   - `MATH-S03-C01-O01` — Reconnaitre, trier et classer des objets selon leur forme.
 
-#### 1. Les formes ensemble — 7 min, sans écran (sorting)
+#### 1. Les formes ensemble — 7 min, sans interaction écran (sorting)
 
 - **Consigne à l’enfant :** « Mets ensemble ce qui a la même forme. »
 - **Guidance adulte :** Donnez deux formes très différentes — des ronds et des carrés — et deux tas. Montrez un exemple de chaque, puis laissez-le faire. S’il trie par couleur, ce n’est pas une erreur : dites « Oui, tu as mis les rouges ensemble. Maintenant, essaie les ronds ensemble. »
@@ -370,10 +371,10 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S02-C01-O01` — Développer de nouveaux équilibres par des modes de déplacement variés.
 
-#### 1. Je marche sur la ligne — 6 min, sans écran (movement)
+#### 1. Je marche sur la ligne — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Essaie de marcher sur la ligne. »
-- **Guidance adulte :** Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, il repart du début : c’est le jeu, pas une faute. On cherche à explorer l’équilibre, pas à réussir un parcours.
+- **Guidance adulte :** Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, laissez-le continuer, ou recommencer s’il en a envie — c’est lui qui décide. On explore l’équilibre ; il n’y a pas de parcours à réussir ni de retour au départ à imposer.
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
@@ -407,7 +408,7 @@ _Nommer son corps et se servir de ses sens._
 - **Objectifs repris (déjà vus) :**
   - `WORLD-S01-C02-O02` — Découvrir les sens utilisés lors d’expériences sensorielles variées.
 
-#### 1. Je touche — 7 min, sans écran (observation)
+#### 1. Je touche — 7 min, sans interaction écran (observation)
 
 - **Consigne à l’enfant :** « Ferme les yeux. Touche. Qu’est-ce que c’est ? »
 - **Guidance adulte :** Faites-lui toucher deux choses très différentes — une lisse, une rugueuse — les yeux fermés. Demandez ce qu’il sent, pas ce que c’est. Les mots viendront de vous : doux, piquant, froid.
@@ -461,7 +462,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
   - `LANG-S02-C03-O03` — Reconnaitre un personnage, le nommer et le situer dans les illustrations.
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
-#### 1. Bonjour, et on se souvient — 3 min, sans écran (conversation)
+#### 1. Bonjour, et on se souvient — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis bonjour. Puis dis-moi ce que nous avons fait hier. »
 - **Guidance adulte :** Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.
@@ -469,14 +470,14 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Aide en anglais (optionnelle) :** « Say hello, then tell me what we did yesterday. »
 - **Objectifs travaillés :** `LANG-S01-C04-O01` Entrer en communication verbale avec un adulte ou un autre élève. ; `TIME-SPACE-S01-C01-O01` Acquérir les premiers repères temporels.
 
-#### 2. Qui est-ce ? — 4 min, sans écran (observation)
+#### 2. Qui est-ce ? — 4 min, sans interaction écran (observation)
 
 - **Consigne à l’enfant :** « Regarde l’image. Montre-moi Lisa. »
 - **Guidance adulte :** Montrez l’image de l’histoire. Demandez où est le personnage, puis son nom. Acceptez le doigt sans le mot, et nommez pour lui. C’est reconnaître qui compte, pas dire.
 - **Matériel :** Aucun matériel
 - **Objectifs travaillés :** `LANG-S02-C03-O03` Reconnaitre un personnage, le nommer et le situer dans les illustrations.
 
-#### 3. Je marche, je m’arrête — 3 min, sans écran (song-rhyme)
+#### 3. Je marche, je m’arrête — 3 min, sans interaction écran (song-rhyme)
 
 - **Consigne à l’enfant :** « Dis la comptine avec moi. Tu peux faire les gestes. »
 - **Guidance adulte :** Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.
@@ -520,7 +521,7 @@ _Compter, donner une petite quantité, ranger par forme._
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O09` — Connaitre la comptine numérique de un à six.
 
-#### 1. La comptine des nombres — 7 min, sans écran (counting)
+#### 1. La comptine des nombres — 7 min, sans interaction écran (counting)
 
 - **Consigne à l’enfant :** « Compte avec moi : un, deux, trois, quatre, cinq, six. »
 - **Guidance adulte :** Comptez lentement en montrant un doigt à chaque nombre. Recommencez et arrêtez-vous à trois pour voir s’il continue. Ne dépassez jamais six ce mois-ci : la suite orale s’installe par la répétition, pas par la longueur.
@@ -555,7 +556,7 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S03-C01-O01` — Découvrir et explorer le mouvement comme vecteur d’expression.
 
-#### 1. Je bouge comme toi — 6 min, sans écran (movement)
+#### 1. Je bouge comme toi — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Bouge comme moi. Puis bouge comme tu veux. »
 - **Guidance adulte :** Faites un mouvement simple et lent — lever les bras, tourner — et laissez-le imiter. Puis inversez : c’est lui qui montre, vous imitez. Être copié par un adulte vaut tous les encouragements.
@@ -592,7 +593,7 @@ _Dire des comptines et laisser une trace._
 - **Objectifs repris (déjà vus) :**
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
-#### 1. Ma comptine — 7 min, sans écran (song-rhyme)
+#### 1. Ma comptine — 7 min, sans interaction écran (song-rhyme)
 
 - **Consigne à l’enfant :** « Dis la comptine avec moi, et fais les gestes. »
 - **Guidance adulte :** Choisissez une comptine déjà entendue cette semaine. Dites-la deux fois avec les mêmes gestes. Ce mois-ci, cinq comptines suffisent : c’est de les redire souvent, pas d’en apprendre beaucoup, qui construit le répertoire.
@@ -655,7 +656,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
   - `LANG-S01-C01-O01` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
-#### 1. Bonjour, et on se souvient — 3 min, sans écran (conversation)
+#### 1. Bonjour, et on se souvient — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis bonjour. Puis dis-moi ce que nous avons fait hier. »
 - **Guidance adulte :** Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.
@@ -663,7 +664,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Aide en anglais (optionnelle) :** « Say hello, then tell me what we did yesterday. »
 - **Objectifs travaillés :** `LANG-S01-C04-O01` Entrer en communication verbale avec un adulte ou un autre élève. ; `TIME-SPACE-S01-C01-O01` Acquérir les premiers repères temporels.
 
-#### 2. Les quatre mots de mon corps — 5 min, sans écran (vocabulary)
+#### 2. Les quatre mots de mon corps — 5 min, sans interaction écran (vocabulary)
 
 - **Consigne à l’enfant :** « Montre-moi ce que je nomme. Puis dis avec moi un ou deux mots que tu veux. »
 - **Guidance adulte :** Ces mots-là, il les a déjà entendus : on les reconnaît, on n’en apprend pas de nouveaux.
@@ -675,7 +676,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Aide en anglais (optionnelle) :** « Show me the one I name. Then say one or two with me. »
 - **Objectifs travaillés :** `LANG-S01-C01-O01` Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
 
-#### 3. Le petit seau — 3 min, sans écran (song-rhyme)
+#### 3. Le petit seau — 3 min, sans interaction écran (song-rhyme)
 
 - **Consigne à l’enfant :** « Dis la comptine avec moi. Tu peux faire les gestes. »
 - **Guidance adulte :** Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.
@@ -719,7 +720,7 @@ _Compter, donner une petite quantité, ranger par forme._
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O04` — Constituer une collection (jusqu’à trois, voire quatre objets) d’un cardinal donné.
 
-#### 1. Donne-moi deux, puis trois — 7 min, sans écran (manipulation)
+#### 1. Donne-moi deux, puis trois — 7 min, sans interaction écran (manipulation)
 
 - **Consigne à l’enfant :** « Donne-moi deux cuillères. »
 - **Guidance adulte :** Demandez une petite quantité — deux, puis trois — avec des objets assez gros pour être sans danger : cuillères, gobelets, blocs. Les petits objets (cailloux, capsules, haricots) restent possibles, mais seulement sous votre surveillance directe. S’il en donne trop, recomptez ensemble sans reprendre l’objet en trop : « Un, deux, trois… tu m’en as donné quatre. » Puis redemandez. Ne demandez jamais plus de trois ce mois-ci.
@@ -756,7 +757,7 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S01-C01-O02` — Courir de manière variée et coordonnée.
 
-#### 1. Je cours — 6 min, sans écran (movement)
+#### 1. Je cours — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Cours jusqu’au repère, puis reviens en marchant. »
 - **Guidance adulte :** Posez un repère au sol, **bien avant tout obstacle** : un pagne, un coussin, une ligne tracée, un objet sans danger. Jamais un mur, une porte ni un arbre comme but — à cet âge on ne s’arrête pas toujours à temps. Faites-le courir, puis revenir doucement. Trois allers suffisent. À l’intérieur, remplacez la course par des pas rapides sur place.
@@ -793,7 +794,7 @@ _Repérer le moment, le début, la fin et où sont les choses._
 - **Objectifs repris (déjà vus) :**
   - `TIME-SPACE-S01-C01-O01` — Acquérir les premiers repères temporels.
 
-#### 1. Le moment de la journée — 7 min, sans écran (observation)
+#### 1. Le moment de la journée — 7 min, sans interaction écran (observation)
 
 - **Consigne à l’enfant :** « C’est le matin, le midi, ou le soir ? »
 - **Guidance adulte :** Le matin et le soir sont maintenant travaillés depuis trois semaines : ajoutez « midi » et faites choisir entre les trois. Dites le moment qu’on vit et ce qui va avec. S’il hésite entre midi et soir, revenez aux deux moments d’avant — on ne force pas le troisième.
@@ -847,7 +848,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
   - `LANG-S01-C04-O02` — Dire ce qu’on fait.
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
-#### 1. Bonjour, et on se souvient — 3 min, sans écran (conversation)
+#### 1. Bonjour, et on se souvient — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis bonjour. Puis dis-moi ce que nous avons fait hier. »
 - **Guidance adulte :** Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.
@@ -855,14 +856,14 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Aide en anglais (optionnelle) :** « Say hello, then tell me what we did yesterday. »
 - **Objectifs travaillés :** `LANG-S01-C04-O01` Entrer en communication verbale avec un adulte ou un autre élève. ; `TIME-SPACE-S01-C01-O01` Acquérir les premiers repères temporels.
 
-#### 2. Dis ce que tu fais — 4 min, sans écran (conversation)
+#### 2. Dis ce que tu fais — 4 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis-moi ce que tu fais, pendant que tu le fais. »
 - **Guidance adulte :** Pendant qu’il agit — il porte, il pose, il marche — dites ce qu’il fait : « Tu portes le seau. » Puis demandez-lui de le dire. Un mot compte. Deux mots, c’est beaucoup. Ne faites pas répéter une phrase entière.
 - **Matériel :** Aucun matériel
 - **Objectifs travaillés :** `LANG-S01-C04-O02` Dire ce qu’on fait.
 
-#### 3. Bonjour, petit — 3 min, sans écran (song-rhyme)
+#### 3. Bonjour, petit — 3 min, sans interaction écran (song-rhyme)
 
 - **Consigne à l’enfant :** « Dis la comptine avec moi. Tu peux faire les gestes. »
 - **Guidance adulte :** Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.
@@ -906,7 +907,7 @@ _Compter, donner une petite quantité, ranger par forme._
 - **Objectifs repris (déjà vus) :**
   - `MATH-S03-C01-O01` — Reconnaitre, trier et classer des objets selon leur forme.
 
-#### 1. Les formes ensemble — 7 min, sans écran (sorting)
+#### 1. Les formes ensemble — 7 min, sans interaction écran (sorting)
 
 - **Consigne à l’enfant :** « Mets ensemble ce qui a la même forme. »
 - **Guidance adulte :** Donnez deux formes très différentes — des ronds et des carrés — et deux tas. Montrez un exemple de chaque, puis laissez-le faire. S’il trie par couleur, ce n’est pas une erreur : dites « Oui, tu as mis les rouges ensemble. Maintenant, essaie les ronds ensemble. »
@@ -942,12 +943,13 @@ _Bouger tous les jours, avec une règle simple et de la place._
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S01-C01-O01` — Manipuler et lancer des objets avec des intentions motrices différentes.
 
-#### 1. Je lance — 6 min, sans écran (movement)
+#### 1. Je lance — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Lance la balle dans le seau. »
 - **Guidance adulte :** Une balle en papier froissé et un seau à deux pas. Montrez une fois. S’il rate, rapprochez le seau : on ne fait pas plus difficile, on fait réussi. Cinq lancers, pas plus.
 - **Matériel :** Balle en papier froissé, Boîte, seau ou récipient
-- **À défaut :** Une balle en papier froissé, une chaussette roulée ou un petit sac de graines.
+- **À défaut :** Une balle en papier froissé ou une chaussette roulée. Une petite balle souple convient aussi si la maison en a déjà une.
+- **⚠ Sécurité :** Rien de rempli de petits objets (sac de graines, de haricots) : cela s’ouvre. Une balle en papier ou une chaussette roulée ne blesse personne et ne coûte rien.
 - **À défaut :** Une boîte, un seau, une bassine, un panier ou un carton.
 - **Aide en anglais (optionnelle) :** « Move with me. »
 - **Objectifs travaillés :** `PHYS-S01-C01-O01` Manipuler et lancer des objets avec des intentions motrices différentes.
@@ -979,7 +981,7 @@ _Dire des comptines et laisser une trace._
 - **Objectifs repris (déjà vus) :**
   - `ART-S01-C01-O01` — S’exercer au dessin pour développer son habileté motrice.
 
-#### 1. Je dessine — 7 min, sans écran (drawing)
+#### 1. Je dessine — 7 min, sans interaction écran (drawing)
 
 - **Consigne à l’enfant :** « Prends le crayon et dessine. »
 - **Guidance adulte :** Donnez la feuille et un crayon, et laissez-le faire ce qu’il veut. Ne demandez pas ce que c’est, et ne dessinez pas à sa place. S’il vous montre sa feuille, dites ce que vous voyez vraiment : « Tu as fait beaucoup de traits, là. »

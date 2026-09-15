@@ -10,12 +10,12 @@
 
 ## Task
 
-Apply the 1ère maternelle Week 2 review corrections, resolve the two 3ème progression gaps,
-and record the Beta 0.1 feedback decision.
+Finalise 1ère maternelle Weeks 1 and 2: two micro-corrections, a machine-proven Week 1 diff,
+and approval of both weeks through the AI-assisted gate.
 
 ## Objective
 
-Week 2 ready for a second pass, with progression and screen-time reported honestly.
+36 lessons approved honestly, with the digest protection intact rather than bypassed.
 
 ## Status
 
@@ -23,11 +23,11 @@ Week 2 ready for a second pass, with progression and screen-time reported honest
 
 ## Branch
 
-`fix/maternelle-1-week-2-review`
+`fix/weeks-1-2-final`
 
 ## Base Branch
 
-`develop` at `0944291`
+`develop` at `d35a1b8`
 
 ## Started
 
@@ -35,7 +35,7 @@ Week 2 ready for a second pass, with progression and screen-time reported honest
 
 ## Last Checkpoint
 
-2026-09-15 — all six Week 2 corrections applied, both 3ème gaps resolved, full local suite green.
+2026-09-15 — both corrections applied, both weeks approved, full local suite green.
 
 ## Scope
 
@@ -69,10 +69,13 @@ To be filled in when the next task begins.
 
 ## Completed
 
-- [x] Phase 3A — September programme and the parent session (archived)
-- [x] Session duration policy and the resumable-work protocol (archived)
-- [x] Phase 3B — visuals, interaction and real-session testing (archived)
-- [x] Phase 3C — the session a parent and child can sit down and do (archived)
+- [x] Seed-bag fallback removed from the **shared** material definition, with a safety note
+      explaining why; affects 3ème's material text too, reported
+- [x] Line walking fully failure-neutral: the child chooses to continue or restart
+- [x] `sans écran` → `sans interaction écran`, and the parent screen no longer says « posez
+      l'écran » while showing a picture on it
+- [x] **Week 1 diff machine-proven against `5899d94`: 0 substantive child-facing changes**
+- [x] **36 lessons approved** — Weeks 1 and 2, `ai-assisted`, fresh digests, old ones not reused
 
 ## In Progress
 
@@ -80,7 +83,7 @@ To be filled in when the next task begins.
 
 ## Remaining
 
-- [ ] Return Week 2 for its second pass; Week 1 needs a short re-confirmation
+- [ ] Submit 1ère Week 3 to the gate — the next task
 
 ## Validation State
 

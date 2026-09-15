@@ -26,16 +26,16 @@ analytics are **out of scope** and must not delay the release.
 
 ## 1. Pedagogy
 
-| Item                                         | State    | Evidence                                                                                                           |
-| -------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------ |
-| 1ère September authored                      | **DONE** | 88 lessons, 132 activities, 22 days                                                                                |
-| 1ère Week 1 reviewed                         | **TODO** | two passes done; approval **lapsed** when the progression rule was corrected again — needs a short re-confirmation |
-| 1ère Week 2 reviewed                         | **TODO** | pass 1 `accepted-with-modifications`, 6 corrections applied, **ready for a second pass**                           |
-| 1ère Weeks 3–5 reviewed                      | **TODO** | packages generated, not yet submitted                                                                              |
-| 3ème September authored                      | **DONE** | 88 lessons, 170 activities, 22 days                                                                                |
-| 3ème Week 1 reviewed                         | **TODO** | pass 1 accepted-with-modifications, corrections applied, **re-review pending**                                     |
-| 3ème Weeks 2–5 reviewed                      | **TODO** | packages generated, not yet submitted                                                                              |
-| No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                                                    |
+| Item                                         | State    | Evidence                                                                                                   |
+| -------------------------------------------- | -------- | ---------------------------------------------------------------------------------------------------------- |
+| 1ère September authored                      | **DONE** | 88 lessons, 132 activities, 22 days                                                                        |
+| 1ère Week 1 reviewed                         | **DONE** | 2 passes + re-confirmation after a machine-proven metadata-only diff; 16 lessons `approved`, `ai-assisted` |
+| 1ère Week 2 reviewed                         | **DONE** | 2 passes; 20 lessons `approved`, `ai-assisted`                                                             |
+| 1ère Weeks 3–5 reviewed                      | **TODO** | packages generated, not yet submitted                                                                      |
+| 3ème September authored                      | **DONE** | 88 lessons, 170 activities, 22 days                                                                        |
+| 3ème Week 1 reviewed                         | **TODO** | pass 1 accepted-with-modifications, corrections applied, **re-review pending**                             |
+| 3ème Weeks 2–5 reviewed                      | **TODO** | packages generated, not yet submitted                                                                      |
+| No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                                            |
 
 **The two 3ème gaps are resolved**, one by authoring and one by pacing. `LANG-S02-C01-O13`
 (auditory memory) now has a genuine second occurrence on day 21, where the child already had to
