@@ -138,7 +138,7 @@ _Compter, donner une petite quantité, ranger par forme._
 
 #### 1. Donne-moi trois — 7 min, sans interaction écran (manipulation)
 
-- **Consigne à l’enfant :** « Donne-moi deux cuillères. »
+- **Consigne à l’enfant :** « Donne-moi trois cuillères. »
 - **Guidance adulte :** Demandez une petite quantité — deux, puis trois — avec des objets assez gros pour être sans danger : cuillères, gobelets, blocs. Les petits objets (cailloux, capsules, haricots) restent possibles, mais seulement sous votre surveillance directe. S’il en donne trop, recomptez ensemble sans reprendre l’objet en trop : « Un, deux, trois… tu m’en as donné quatre. » Puis redemandez. Ne demandez jamais plus de trois ce mois-ci.
 - **Matériel :** Gros objets à compter (cuillères, gobelets, chaussettes roulées)
 - **À défaut :** Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.
@@ -249,7 +249,7 @@ _Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences di
 temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
 l’autre — l’appareil est alors le sien._
 
-**Matériel à préparer :** Aucun matériel, Balle en papier froissé, Boîte, seau ou récipient, Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque), Objets de la maison (coussins, chaises, bâton, tissu)
+**Matériel à préparer :** Aucun matériel, Balle en papier froissé, Boîte, seau ou récipient, Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque)
 
 ### Ma main, mon pied — Le développement et la structuration du langage oral et écrit (11 min)
 
@@ -275,11 +275,10 @@ _Parler avec l’adulte, entendre des mots et les redire._
 #### 2. Les mots de mon corps — 5 min, sans interaction écran (vocabulary)
 
 - **Consigne à l’enfant :** « Écoute, puis dis le mot avec moi : la main, le pied. »
-- **Guidance adulte :** 1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez lentement l’objet que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.
-- **Matériel :** Objets de la maison (coussins, chaises, bâton, tissu)
+- **Guidance adulte :** Rien à préparer : le matériel, c’est vous et lui.
+1. Montrez la partie sur vous et nommez-la lentement, en entier et une seule fois. 2. Demandez-lui de la montrer sur lui — le geste suffit. 3. Laissez un silence : c’est là qu’il essaie de dire le mot. 4. Une approximation compte ; redites le mot correctement une fois, sans le faire répéter. Deux parties par séance suffisent.
+- **Matériel :** Aucun matériel
 - **Lexique visé :** la main _(the hand)_ · le pied _(the foot)_
-- **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
-- **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Listen, then say the word with me. »
 - **Objectifs travaillés :** `LANG-S01-C01-O01` Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
 
@@ -457,7 +456,7 @@ _Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences di
 temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
 l’autre — l’appareil est alors le sien._
 
-**Matériel à préparer :** Aucun matériel, Crayon, Espace dégagé pour bouger (à l’intérieur ou dehors), Gros objets à compter (cuillères, gobelets, chaussettes roulées), Feuille de papier
+**Matériel à préparer :** Aucun matériel, Boîte, seau ou récipient, Crayon, Espace dégagé pour bouger (à l’intérieur ou dehors), Gros objets à compter (cuillères, gobelets, chaussettes roulées), Feuille de papier
 
 ### Je trace encore — Le développement et la structuration du langage oral et écrit (10 min)
 
@@ -608,12 +607,13 @@ _Repérer le moment, le début, la fin et où sont les choses._
 
 #### 1. Sur, sous, dans — 7 min, sans interaction écran (manipulation)
 
-- **Consigne à l’enfant :** « Mets la cuillère sur la table. Maintenant, sous la table. »
-- **Guidance adulte :** Trois mots seulement : sur, sous, dans. Dites-le et montrez-le en même temps, puis demandez sans montrer. S’il hésite, refaites le geste avec lui — c’est le corps qui apprend l’espace avant les mots.
-- **Matériel :** Gros objets à compter (cuillères, gobelets, chaussettes roulées)
+- **Consigne à l’enfant :** « Mets la cuillère sur la table. Puis sous la table. Puis dans le gobelet. »
+- **Guidance adulte :** Trois mots, et les trois sont faits : sur, sous, dans. Dites le mot et montrez le geste en même temps, puis redemandez sans montrer. S’il hésite, refaites le geste avec lui — c’est le corps qui apprend l’espace avant les mots. Un gobelet, un bol ou une boîte fera l’affaire pour « dans ».
+- **Matériel :** Gros objets à compter (cuillères, gobelets, chaussettes roulées), Boîte, seau ou récipient
 - **À défaut :** Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.
 - **⚠ Sécurité :** Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe.
-- **Aide en anglais (optionnelle) :** « Put the stone on the table. »
+- **À défaut :** Une boîte, un seau, une bassine, un panier ou un carton.
+- **Aide en anglais (optionnelle) :** « Put the spoon on the table. Then under the table. Then in the cup. »
 - **Objectifs travaillés :** `TIME-SPACE-S02-C01-O07` Acquérir les premiers marqueurs qui permettent de se repérer dans l’espace.
 
 **Réussites attendues — texte officiel pour la compétence « Faire l’expérience de l’espace » (before-4) :**
@@ -659,7 +659,7 @@ _Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences di
 temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
 l’autre — l’appareil est alors le sien._
 
-**Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque), Objets de la maison (coussins, chaises, bâton, tissu)
+**Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque), Deux choses à toucher, de surfaces différentes
 
 ### Ma tête, mon ventre — Le développement et la structuration du langage oral et écrit (11 min)
 
@@ -679,18 +679,16 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Consigne à l’enfant :** « Dis bonjour. Puis dis-moi ce que nous avons fait hier. »
 - **Guidance adulte :** Dites bonjour et nommez le moment : « C’est le soir, nous jouons ensemble. » Puis : « Hier, tu te souviens ? » Un mot suffit. S’il ne vient pas, redites-le vous-même : se souvenir s’apprend en entendant se souvenir.
 - **Matériel :** Aucun matériel
-- **Lexique visé :** la tête _(the head)_ · le ventre _(the tummy)_
 - **Aide en anglais (optionnelle) :** « Say hello, then tell me what we did yesterday. »
 - **Objectifs travaillés :** `LANG-S01-C04-O01` Entrer en communication verbale avec un adulte ou un autre élève. ; `TIME-SPACE-S01-C01-O01` Acquérir les premiers repères temporels.
 
 #### 2. Les mots de mon corps — 5 min, sans interaction écran (vocabulary)
 
 - **Consigne à l’enfant :** « Écoute, puis dis le mot avec moi : la tête, le ventre. »
-- **Guidance adulte :** 1. Montrez la partie sur vous, puis sur lui. 2. Nommez lentement l’endroit que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.
-- **Matériel :** Objets de la maison (coussins, chaises, bâton, tissu)
+- **Guidance adulte :** Rien à préparer : le matériel, c’est vous et lui.
+1. Montrez la partie sur vous et nommez-la lentement, en entier et une seule fois. 2. Demandez-lui de la montrer sur lui — le geste suffit. 3. Laissez un silence : c’est là qu’il essaie de dire le mot. 4. Une approximation compte ; redites le mot correctement une fois, sans le faire répéter. Deux parties par séance suffisent.
+- **Matériel :** Aucun matériel
 - **Lexique visé :** la tête _(the head)_ · le ventre _(the tummy)_
-- **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
-- **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Listen, then say the word with me. »
 - **Objectifs travaillés :** `LANG-S01-C01-O01` Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
 
@@ -699,7 +697,6 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Consigne à l’enfant :** « Dis la comptine avec moi. Tu peux faire les gestes. »
 - **Guidance adulte :** Dites-la deux fois : la première pour écouter, la seconde pour essayer ensemble. Faites le geste à chaque fois de la même façon — c’est le geste qui rappelle les mots. Ne corrigez pas la prononciation.
 - **Matériel :** Aucun matériel
-- **Lexique visé :** la tête _(the head)_ · le ventre _(the tummy)_
 - **Aide en anglais (optionnelle) :** « Say the rhyme with me. »
 - **Objectifs travaillés :** `ART-S02-C01-O03` Dire ou chanter au moins cinq comptines.
 
@@ -807,16 +804,20 @@ _Bouger tous les jours, avec une règle simple et de la place._
 _Nommer son corps et se servir de ses sens._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
-- **Conseil au parent :** On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.
+- **Conseil au parent :** Deux textures sûres suffisent. L’enfant touche, compare, et vous mettez des mots sur ce qu’il ressent. Rien à acheter.
 - **Objectifs enseignés :**
   - `WORLD-S01-C02-O02` — Découvrir les sens utilisés lors d’expériences sensorielles variées. _(source : programme-2026)_
 
 #### 1. Je touche — 7 min, sans interaction écran (observation)
 
-- **Consigne à l’enfant :** « Ferme les yeux. Touche. Qu’est-ce que c’est ? »
-- **Guidance adulte :** Faites-lui toucher deux choses très différentes — une lisse, une rugueuse — les yeux fermés. Demandez ce qu’il sent, pas ce que c’est. Les mots viendront de vous : doux, piquant, froid.
-- **Matériel :** Aucun matériel
-- **Aide en anglais (optionnelle) :** « Close your eyes and touch. »
+- **Consigne à l’enfant :** « Touche doucement. C’est doux, ou c’est rugueux ? »
+- **Guidance adulte :** Deux surfaces bien différentes suffisent — un tissu doux et un carton ondulé, par exemple. Regardez-les avant de les donner.
+1. Laissez-le toucher l’une, puis l’autre, sans rien demander d’abord. 2. Mettez des mots sur ce qu’il sent : « celui-là est doux », « celui-là est rugueux ». 3. Demandez lequel est doux — un doigt pointé suffit. **On ne demande jamais ce que c’est** : l’activité porte sur la sensation, pas sur la reconnaissance de l’objet.
+Fermer les yeux est un jeu qu’on peut proposer, jamais une condition : s’il préfère regarder, il touche en regardant, ou vous cachez l’objet sous un tissu. Rien de piquant, rien de brûlant, rien de glacé.
+- **Matériel :** Deux choses à toucher, de surfaces différentes
+- **À défaut :** Un tissu doux et un morceau de carton ondulé ; ou une cuillère lisse et une serviette ; ou un objet en bois lisse et une éponge sèche. Deux surfaces bien différentes suffisent.
+- **⚠ Sécurité :** Regardez les deux objets avant de les donner : rien de coupant, rien de brûlant, rien de cassable, rien d’assez petit pour être avalé. On cherche des surfaces à comparer, pas des sensations désagréables.
+- **Aide en anglais (optionnelle) :** « Touch gently. Is it soft, or rough? »
 - **Objectifs travaillés :** `WORLD-S01-C02-O02` Découvrir les sens utilisés lors d’expériences sensorielles variées.
 
 **Réussites attendues — texte officiel pour la compétence « Découvrir le corps humain et la santé » (before-4) :**
@@ -924,7 +925,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
 > Décision : ☐ accepté ☐ accepté avec modifications ☐ à refaire — _à remplir par la personne qui relit_
 
-### Un, deux, trois, quatre — L’acquisition des premiers outils mathématiques (7 min)
+### Un, deux, trois — L’acquisition des premiers outils mathématiques (7 min)
 
 _Compter, donner une petite quantité, ranger par forme._
 
@@ -934,7 +935,7 @@ _Compter, donner une petite quantité, ranger par forme._
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O03` — Dénombrer une collection d’objets (jusqu’à trois, voire quatre).
 
-#### 1. Un, deux, trois, quatre — 7 min, sans interaction écran (counting)
+#### 1. Un, deux, trois — 7 min, sans interaction écran (counting)
 
 - **Consigne à l’enfant :** « Combien il y en a ? Compte avec moi. »
 - **Guidance adulte :** Posez trois objets bien séparés — des cuillères, des gobelets, des chaussettes roulées : à cet âge, préférez ce qui ne tient pas dans une bouche. Touchez chaque objet en disant le nombre, une fois. Puis faites-le avec lui, sa main dans la vôtre s’il le veut. À la fin, redites le dernier nombre : « Trois. Il y en a trois. » C’est ce dernier mot qui dit la quantité.

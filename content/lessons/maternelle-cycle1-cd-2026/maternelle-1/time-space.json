@@ -218,23 +218,23 @@
           "position": 1,
           "type": "manipulation",
           "title": "Sur, sous, dans",
-          "childInstruction": "Mets la cuillère sur la table. Maintenant, sous la table.",
-          "adultGuidance": "Trois mots seulement : sur, sous, dans. Dites-le et montrez-le en même temps, puis demandez sans montrer. S’il hésite, refaites le geste avec lui — c’est le corps qui apprend l’espace avant les mots.",
+          "childInstruction": "Mets la cuillère sur la table. Puis sous la table. Puis dans le gobelet.",
+          "adultGuidance": "Trois mots, et les trois sont faits : sur, sous, dans. Dites le mot et montrez le geste en même temps, puis redemandez sans montrer. S’il hésite, refaites le geste avec lui — c’est le corps qui apprend l’espace avant les mots. Un gobelet, un bol ou une boîte fera l’affaire pour « dans ».",
           "minutes": 7,
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S02-C01-O07"],
-          "materialCodes": ["gros-objets"],
+          "materialCodes": ["gros-objets", "boite"],
           "vocabulary": [],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Put the stone on the table."
+              "childInstruction": "Put the spoon on the table. Then under the table. Then in the cup."
             }
           ],
           "payload": {
-            "objects": "un caillou et une table"
+            "objects": "une cuillère, une table et un gobelet"
           }
         }
       ],
@@ -347,23 +347,23 @@
           "position": 1,
           "type": "manipulation",
           "title": "Sur, sous, dans",
-          "childInstruction": "Mets la cuillère sur la table. Maintenant, sous la table.",
-          "adultGuidance": "Trois mots seulement : sur, sous, dans. Dites-le et montrez-le en même temps, puis demandez sans montrer. S’il hésite, refaites le geste avec lui — c’est le corps qui apprend l’espace avant les mots.",
+          "childInstruction": "Mets la cuillère sur la table. Puis sous la table. Puis dans le gobelet.",
+          "adultGuidance": "Trois mots, et les trois sont faits : sur, sous, dans. Dites le mot et montrez le geste en même temps, puis redemandez sans montrer. S’il hésite, refaites le geste avec lui — c’est le corps qui apprend l’espace avant les mots. Un gobelet, un bol ou une boîte fera l’affaire pour « dans ».",
           "minutes": 7,
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
           "objectiveCodes": ["TIME-SPACE-S02-C01-O07"],
-          "materialCodes": ["gros-objets"],
+          "materialCodes": ["gros-objets", "boite"],
           "vocabulary": [],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Put the stone under the table."
+              "childInstruction": "Put the spoon on the table. Then under the table. Then in the cup."
             }
           ],
           "payload": {
-            "objects": "un caillou et une table"
+            "objects": "une cuillère, une table et un gobelet"
           }
         }
       ],

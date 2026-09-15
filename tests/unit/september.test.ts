@@ -384,3 +384,141 @@ describe("1ère maternelle safety (before-4)", () => {
     }
   });
 });
+
+/**
+ * Consistency rules, each written after a real contradiction reached a reviewer. They are
+ * deliberately general rather than keyed to lesson ids: the same copy-and-rename that produced
+ * « Donne-moi trois » asking for two will happen again in October.
+ */
+describe("an activity must be what it says it is", () => {
+  const data = getReferenceData();
+  const activities = data.lessons.flatMap((lesson) =>
+    lesson.activities.map((activity) => ({ lesson, activity })),
+  );
+  const NUMBERS: Record<string, number> = {
+    un: 1,
+    deux: 2,
+    trois: 3,
+    quatre: 4,
+    cinq: 5,
+    six: 6,
+  };
+  /** The largest number word in a piece of French text, or null. */
+  const largest = (text: string): number | null => {
+    const found = Object.entries(NUMBERS)
+      .filter(([word]) => new RegExp(`\\b${word}\\b`, "i").test(text))
+      .map(([, value]) => value);
+    return found.length > 0 ? Math.max(...found) : null;
+  };
+
+  /**
+   * Only where a quantity *is* the task. « Les quatre mots de la maison » counts the words
+   * reviewed, not a collection to hand over, and the child is deliberately asked to say one or
+   * two of them — the title is not lying there.
+   */
+  it("never promises a quantity in its title that the child is not asked for", () => {
+    for (const { activity } of activities) {
+      if (!/donne-moi/i.test(activity.childInstruction)) continue;
+      const promised = largest(activity.title);
+      if (promised === null) continue;
+      const asked = largest(activity.childInstruction);
+      if (asked === null) continue;
+      expect(asked, `${activity.id}: titled « ${activity.title} » but asks for ${asked}`).toBe(
+        promised,
+      );
+    }
+  });
+
+  it("makes the English scaffold ask for the same quantity as the French", () => {
+    const EN: Record<string, number> = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6 };
+    for (const { activity } of activities) {
+      const scaffold = activity.scaffolds.find((entry) => entry.language === "en");
+      if (scaffold === undefined) continue;
+      const french = largest(activity.childInstruction);
+      const english = Object.entries(EN)
+        .filter(([word]) => new RegExp(`\\b${word}\\b`, "i").test(scaffold.childInstruction))
+        .map(([, value]) => value);
+      if (french === null || english.length === 0) continue;
+      expect(
+        Math.max(...english),
+        `${activity.id}: French asks ${french}, English asks ${Math.max(...english)}`,
+      ).toBe(french);
+    }
+  });
+
+  it("teaches body words on a body, not with household objects", () => {
+    const BODY = new Set(["la main", "le pied", "la tête", "le ventre"]);
+    for (const { activity } of activities) {
+      if (activity.type !== "vocabulary") continue;
+      const words = activity.vocabulary.map((entry) => entry.fr);
+      if (words.length === 0 || !words.every((word) => BODY.has(word))) continue;
+      expect(activity.materialCodes, `${activity.id}: body words need no objects`).toEqual([
+        "aucun",
+      ]);
+      expect(activity.adultGuidance, `${activity.id}`).not.toMatch(/sinon l’image|la chose vraie/);
+    }
+  });
+
+  /**
+   * The real defect was copy-and-paste *inside a lesson*: « Ma tête, mon ventre » put its target
+   * words on the greeting ritual and on a rhyme about hands and feet, neither of which teaches
+   * them.
+   *
+   * Verbatim containment turned out to be the wrong test for this — a lexicon is a teaching
+   * target, and « courir » legitimately appears in an instruction as « cours ». So the rule is
+   * narrower and matches the fault: a sibling activity may not simply inherit the lesson's
+   * vocabulary activity's word list.
+   */
+  it("does not copy one activity's target lexicon onto its siblings", () => {
+    for (const lesson of data.lessons) {
+      const teacher = lesson.activities.find((activity) => activity.type === "vocabulary");
+      if (teacher === undefined || teacher.vocabulary.length === 0) continue;
+      const taught = new Set(teacher.vocabulary.map((entry) => entry.fr));
+      for (const activity of lesson.activities) {
+        if (activity.id === teacher.id || activity.vocabulary.length === 0) continue;
+        const inherited = activity.vocabulary.every((entry) => taught.has(entry.fr));
+        if (!inherited) continue;
+        // Inheriting is only honest when the sibling genuinely uses the words.
+        const text = `${activity.childInstruction} ${activity.adultGuidance}`.toLowerCase();
+        const uses = activity.vocabulary.some((entry) =>
+          text.includes(entry.fr.replace(/^(le|la|les|l’|un|une|des)\s*/i, "").toLowerCase()),
+        );
+        expect(
+          uses,
+          `${activity.id}: carries « ${teacher.title} »'s lexicon but never uses it`,
+        ).toBe(true);
+      }
+    }
+  });
+
+  it("exercises every spatial marker its title claims", () => {
+    for (const { activity } of activities) {
+      const markers = ["sur", "sous", "dans"].filter((word) =>
+        new RegExp(`\\b${word}\\b`, "i").test(activity.title),
+      );
+      if (markers.length < 2) continue;
+      for (const marker of markers) {
+        expect(
+          new RegExp(`\\b${marker}\\b`, "i").test(activity.childInstruction),
+          `${activity.id}: titled « ${activity.title} » but the child never does « ${marker} »`,
+        ).toBe(true);
+      }
+    }
+  });
+
+  it("never claims to need nothing while asking the child to handle something", () => {
+    for (const { activity } of activities) {
+      if (!activity.materialCodes.includes("aucun")) continue;
+      expect(activity.materialCodes, `${activity.id}`).toEqual(["aucun"]);
+      // "Touch", "give me", "put" all require an object in the child's hands.
+      const needsObject = /\btouche\b|\bdonne-moi\b|\bmets\b/i.test(activity.childInstruction);
+      const ownBody = /ta main|ton pied|ta tête|ton ventre|tes mains/i.test(
+        activity.childInstruction,
+      );
+      expect(
+        needsObject && !ownBody,
+        `${activity.id}: says « aucun matériel » but asks the child to handle something`,
+      ).toBe(false);
+    }
+  });
+});

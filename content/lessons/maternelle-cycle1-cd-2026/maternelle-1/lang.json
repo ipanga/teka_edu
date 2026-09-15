@@ -1061,13 +1061,13 @@
           "type": "vocabulary",
           "title": "Les mots de mon corps",
           "childInstruction": "Écoute, puis dis le mot avec moi : la main, le pied.",
-          "adultGuidance": "1. Montrez la chose vraie si vous l’avez, sinon l’image. 2. Nommez lentement l’objet que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "adultGuidance": "Rien à préparer : le matériel, c’est vous et lui.\n1. Montrez la partie sur vous et nommez-la lentement, en entier et une seule fois. 2. Demandez-lui de la montrer sur lui — le geste suffit. 3. Laissez un silence : c’est là qu’il essaie de dire le mot. 4. Une approximation compte ; redites le mot correctement une fois, sans le faire répéter. Deux parties par séance suffisent.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": ["corps-main", "corps-pied"],
           "objectiveCodes": ["LANG-S01-C01-O01"],
-          "materialCodes": ["objets-maison"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "la main",
@@ -1240,16 +1240,7 @@
           "mediaIds": [],
           "objectiveCodes": ["LANG-S01-C04-O01", "TIME-SPACE-S01-C01-O01"],
           "materialCodes": ["aucun"],
-          "vocabulary": [
-            {
-              "fr": "la tête",
-              "en": "the head"
-            },
-            {
-              "fr": "le ventre",
-              "en": "the tummy"
-            }
-          ],
+          "vocabulary": [],
           "scaffolds": [
             {
               "language": "en",
@@ -1266,13 +1257,13 @@
           "type": "vocabulary",
           "title": "Les mots de mon corps",
           "childInstruction": "Écoute, puis dis le mot avec moi : la tête, le ventre.",
-          "adultGuidance": "1. Montrez la partie sur vous, puis sur lui. 2. Nommez lentement l’endroit que vous montrez, en entier et une seule fois. 3. Laissez un silence : c’est dans ce silence qu’il essaie. 4. S’il répète à moitié, c’est réussi — redites le mot entier une fois, sans le faire recommencer. Deux mots par jour suffisent.",
+          "adultGuidance": "Rien à préparer : le matériel, c’est vous et lui.\n1. Montrez la partie sur vous et nommez-la lentement, en entier et une seule fois. 2. Demandez-lui de la montrer sur lui — le geste suffit. 3. Laissez un silence : c’est là qu’il essaie de dire le mot. 4. Une approximation compte ; redites le mot correctement une fois, sans le faire répéter. Deux parties par séance suffisent.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": ["corps-tete", "corps-ventre"],
           "objectiveCodes": ["LANG-S01-C01-O01"],
-          "materialCodes": ["objets-maison"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "la tête",
@@ -1306,16 +1297,7 @@
           "mediaIds": [],
           "objectiveCodes": ["ART-S02-C01-O03"],
           "materialCodes": ["aucun"],
-          "vocabulary": [
-            {
-              "fr": "la tête",
-              "en": "the head"
-            },
-            {
-              "fr": "le ventre",
-              "en": "the tummy"
-            }
-          ],
+          "vocabulary": [],
           "scaffolds": [
             {
               "language": "en",
@@ -1750,13 +1732,13 @@
           "type": "vocabulary",
           "title": "Les quatre mots de mon corps",
           "childInstruction": "Montre-moi ce que je nomme. Puis dis avec moi un ou deux mots que tu veux.",
-          "adultGuidance": "Ces mots-là, il les a déjà entendus : on les reconnaît, on n’en apprend pas de nouveaux.\n1. Posez ou montrez les quatre choses. 2. Nommez-en une et demandez-lui de la montrer — le doigt suffit, et suffit vraiment. 3. Nommez ce qui ne vient pas, sans le faire répéter. 4. À la fin seulement, proposez-lui de redire **un ou deux** mots, ceux qu’il choisit. On ne demande jamais les quatre à voix haute.",
+          "adultGuidance": "Rien à préparer : le matériel, c’est vous et lui.\n1. Montrez la partie sur vous et nommez-la lentement, en entier et une seule fois. 2. Demandez-lui de la montrer sur lui — le geste suffit. 3. Laissez un silence : c’est là qu’il essaie de dire le mot. 4. Une approximation compte ; redites le mot correctement une fois, sans le faire répéter. Deux parties par séance suffisent.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": ["corps-main", "corps-pied", "corps-tete", "corps-ventre"],
           "objectiveCodes": ["LANG-S01-C01-O01"],
-          "materialCodes": ["objets-maison"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "la main",
