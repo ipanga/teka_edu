@@ -12,7 +12,7 @@
       "summary": "Dire des comptines et laisser une trace.",
       "objectiveCodes": ["ART-S02-C01-O03"],
       "supportingObjectiveCodes": [],
-      "stage": "discovery",
+      "stage": "practice",
       "difficulty": 1,
       "themeId": null,
       "parentGuidance": "Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.",
@@ -43,8 +43,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted-with-modifications",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "bd4dd761cb489bcd",
+        "notes": "Semaine 1, deux passes. Passe 1 : 9 corrections pédagogiques et de sécurité. Passe 2 : deux corrections de métadonnées de progression. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-art-05",

@@ -2,7 +2,7 @@
 -- Every change is rolled back. Run with `npm run db:test`.
 begin;
 set constraints all immediate;
-select plan(42);
+select plan(44);
 
 -- ---- Imported official data ------------------------------------------------------------------
 
@@ -198,15 +198,27 @@ select throws_ok(
 
 -- ---- Content quality gate (Phase 2.5, ADR-035; review kinds, ADR-047) -------------------------
 
+-- 1ère maternelle Week 1 is the first content through the gate (ADR-047): 16 lessons, an
+-- AI-assisted review, two passes. Everything else is still waiting.
 select is(
-  (select count(*)::int from public.lessons where status <> 'review'),
-  0,
-  'every lesson is still waiting for a pedagogical review'
+  (select count(*)::int from public.lessons where status = 'approved'),
+  16,
+  'only the reviewed week is approved'
 );
 select is(
-  (select count(*)::int from public.lessons where reviewer is not null),
+  (select count(*)::int from public.lessons where status not in ('review', 'approved')),
   0,
-  'no lesson records a reviewer yet'
+  'every other lesson is still waiting for a pedagogical review'
+);
+select is(
+  (select count(*)::int from public.lessons where status = 'approved' and review_kind <> 'ai-assisted'),
+  0,
+  'no approval claims a review kind it did not have'
+);
+select is(
+  (select count(*)::int from public.lessons where reviewer is not null and status <> 'approved'),
+  0,
+  'no lesson records a reviewer without being approved'
 );
 select throws_ok(
   $$ update public.lessons set status = 'approved' where id = 'm3-lang-01' $$,

@@ -1,0 +1,167 @@
+# Teka Edu Beta 0.1 — release readiness
+
+The first public release. Its purpose is to let real families evaluate the lesson model, the
+parent guidance, the child experience, class selection and the September progression for
+**1ère and 3ème maternelle**.
+
+**Nothing here may be marked complete before it is true.** A row is `DONE` only when it has been
+verified, and the verification is named.
+
+- **Decision:** the product owner asked for a public release as soon as September is
+  pedagogically ready for both classes (2026-09-15).
+- **Gate:** both classes' September must pass the Teka Edu pedagogical review (ADR-047). Human
+  teacher review is **not** required and does not block (ISSUE-017).
+- **Production remains disabled until every gate below is `DONE`.**
+
+## Scope
+
+|                 | Beta 0.1                                                     |
+| --------------- | ------------------------------------------------------------ |
+| 1ère maternelle | September lessons available                                  |
+| 2ème maternelle | visible on Home, « En préparation », **no fallback content** |
+| 3ème maternelle | September lessons available                                  |
+
+October, 2ème content, paid audio, full illustration coverage, profiles, gamification and
+analytics are **out of scope** and must not delay the release.
+
+## 1. Pedagogy
+
+| Item                                         | State    | Evidence                                                                       |
+| -------------------------------------------- | -------- | ------------------------------------------------------------------------------ |
+| 1ère September authored                      | **DONE** | 88 lessons, 132 activities, 22 days                                            |
+| 1ère Week 1 reviewed                         | **DONE** | two AI-assisted passes, corrections applied, 16 lessons `approved`             |
+| 1ère Weeks 2–5 reviewed                      | **TODO** | packages generated, not yet submitted                                          |
+| 3ème September authored                      | **DONE** | 88 lessons, 170 activities, 22 days                                            |
+| 3ème Week 1 reviewed                         | **TODO** | pass 1 accepted-with-modifications, corrections applied, **re-review pending** |
+| 3ème Weeks 2–5 reviewed                      | **TODO** | packages generated, not yet submitted                                          |
+| No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                |
+
+**Two tracked content gaps in 3ème**, found when lesson metadata was re-derived from the
+activities that actually work each objective: `LANG-S02-C01-O13` and `ART-S02-C02-O08` are each
+worked by a single lesson in September. They belong to 3ème's own review.
+
+## 2. Technical
+
+Every check must pass on the release commit. Current state on `develop`:
+
+| Check                                                      | State                                          |
+| ---------------------------------------------------------- | ---------------------------------------------- |
+| format · lint · typecheck                                  | **DONE**                                       |
+| unit tests                                                 | **DONE** (226)                                 |
+| content validation                                         | **DONE** (30 files)                            |
+| curriculum / annual-plan / progression validation          | **DONE**                                       |
+| review-package validation                                  | **DONE** (generation fails on missing content) |
+| database tests · pgTAP · RLS                               | **DONE** (151 assertions, fresh reset)         |
+| build                                                      | **DONE**                                       |
+| E2E · responsive                                           | **DONE** (28)                                  |
+| Docker portable · Docker Vercel                            | **DONE** (CI)                                  |
+| client-bundle secret scan · gitleaks · tracked `.env*` = 0 | **DONE**                                       |
+
+## 3. Live staging validation
+
+To be re-run on the release candidate: Home · 1ère maternelle · 3ème maternelle · 2ème
+« En préparation » · calendar · daily lesson · parent view · child view · pause/resume ·
+navigation · illustrations · phone layout · desktop/TV-like layout.
+
+**State: DONE for the current `develop`** — the 28-test suite runs against the live staging
+deployment on every merge. It must be re-confirmed on whatever commit is promoted.
+
+## 4. Privacy
+
+Audited 2026-09-15. Beta 0.1 stores **no personal data of any kind**.
+
+| Asked about                                      | Stored? |
+| ------------------------------------------------ | ------- |
+| Child name, age, birth date, school              | **No**  |
+| Child profile or account                         | **No**  |
+| Learning results, scores, behaviour observations | **No**  |
+| Parent identity, email, device id                | **No**  |
+
+What exists: two `localStorage` keys per instructional day — the position reached in a session,
+and the session-observation note a tester writes about _the session_. Both live in that browser
+only. **The application makes no client-side network write at all**: no `fetch` POST, no
+Supabase write from the browser, no analytics. Supabase serves reference content and is written
+only by migrations.
+
+**This design is preserved for Beta 0.1.** No accounts, no profiles, no collection is to be added
+for the public test. If that changes, stop before production and review.
+
+## 5. Production configuration
+
+| Item                             | State                                    |
+| -------------------------------- | ---------------------------------------- |
+| `PRODUCTION_DEPLOY_ENABLED`      | **off — required until the gate is met** |
+| Production Vercel token          | **TODO**                                 |
+| Production environment variables | **TODO**                                 |
+| Public URL / domain              | **TODO** — decision needed               |
+| Deployment Protection            | **TODO** — see below                     |
+| PROD database migrated           | **TODO** — never touched so far          |
+| PROD content loaded              | **TODO** — only accepted content         |
+| Rollback procedure rehearsed     | **TODO**                                 |
+
+### Deployment Protection
+
+The intended model, and **not** a global disabling of protection:
+
+```text
+Preview / staging  → protected (unchanged)
+Production domain  → publicly reachable, no Vercel login
+```
+
+Vercel's standard setting for this is Deployment Protection scoped to preview deployments only.
+Turning protection off account-wide would expose every preview and is not acceptable.
+
+**Anonymous access test, required before the release is called public:** open the production
+domain in a genuinely signed-out private window and confirm it loads; in the same session
+confirm a preview URL still asks for a Vercel login. Expected: production **PUBLIC**, previews
+**PROTECTED**.
+
+## 6. Database rule for the release
+
+1. compare local migrations · 2. compare DEV · 3. verify PROD state · 4. write an explicit PROD
+   migration plan · 5. apply only reviewed migrations · 6. load only accepted content ·
+2. post-migration tests · 8. verify RLS · 9. verify project isolation.
+
+**Production never points at Supabase DEV, and staging never points at PROD.** `lib/env` enforces
+the separation and a test covers it.
+
+## 7. Backup
+
+**Beta 0.1 stores no user-generated data**, so there is nothing to lose if the database is reset:
+everything in Supabase is reference content regenerated from `content/` by migrations. The
+zero-cost export design in `FREE_TIER.md` becomes a prerequisite only when real user data is
+first stored, which Beta 0.1 does not do.
+
+## 8. Feedback during the beta
+
+**Proposed, not implemented — awaiting the product owner's decision.** The simplest option
+compatible with the current privacy model and $0:
+
+- The existing session-observation form already produces a Markdown note in the tester's own
+  browser, with a copy button. Add a short beta banner explaining that this is a test release and
+  inviting testers to send that note by whatever channel they already use.
+- **No new backend, no form service, no analytics, no email provider, no collection about
+  children.** Nothing leaves the tester's device unless they choose to send it.
+
+The alternative — a hosted form or an issue tracker — would collect data on a third-party service
+and is not proposed for a product used by families with small children.
+
+## 9. Cost
+
+Vercel **Hobby** · Supabase **Free** · existing GitHub plan · **$0/month**, unchanged.
+
+Free-tier risk to watch once the release is public: Vercel Hobby bandwidth and function
+invocations, and Supabase's free project pausing on inactivity. Neither is a problem at test
+scale. **No upgrade without the product owner's explicit approval**; if a limit becomes a real
+risk, report the exact limit and the expected impact rather than upgrading.
+
+## 10. Release workflow, when the gates are met
+
+```text
+develop → PR to main → required CI → Promotion source check
+  → product-owner production approval → merge to main
+  → controlled production deployment → production smoke tests
+  → anonymous public-access test → rollback readiness confirmed
+```
+
+No deployment from a feature branch; no bypass of the protected-branch model.

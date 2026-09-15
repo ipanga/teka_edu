@@ -94,6 +94,22 @@ export function checkLessons(
         problems.push(`${at}: objective "${code}" is both taught and supporting`);
       }
     }
+    /**
+     * A lesson may not claim an objective none of its activities works.
+     *
+     * The other direction was already checked, and the gap let stale template metadata survive:
+     * a day-2 lesson kept « acquérir les premiers repères temporels » in its revisited list long
+     * after the activity that supposedly carried it had been corrected. A reviewer reads the
+     * lesson header, so a claim there is a claim.
+     */
+    const worked = new Set(lesson.activities.flatMap((activity) => activity.objectiveCodes));
+    for (const code of [...lesson.objectiveCodes, ...lesson.supportingObjectiveCodes]) {
+      if (!worked.has(code)) {
+        problems.push(
+          `${at}: objective "${code}" is listed on the lesson but no activity works it`,
+        );
+      }
+    }
     const positions = lesson.activities.map((activity) => activity.position).sort((a, b) => a - b);
     positions.forEach((position, index) => {
       if (position !== index + 1) problems.push(`${at}: activity positions must be 1…n`);
@@ -219,51 +235,98 @@ export function checkProgramme(
         );
       }
     }
-    problems.push(...checkTrackProgression(at, track.id, track.lessonIds, byId));
   }
+  problems.push(...checkProgression(at, programme, byId));
   // The balance rules simulate real days, so they only run once every reference resolves.
   if (problems.length === 0) problems.push(...checkDailyBalance(programme, lessons));
   return problems;
 }
 
 /**
- * Progression inside a track: an objective is discovered once, and a lesson that practises,
- * consolidates or reviews builds on something taught earlier in the same track.
+ * Progression across the programme, in the order a child meets it.
+ *
+ * This used to run per track, which was wrong in a way the Week 1 review found: a rhyme sung in
+ * the language lesson on day 1 was the child's first exposure to « dire ou chanter au moins cinq
+ * comptines », but the arts track did not meet that objective until day 4 and so claimed to be
+ * introducing it — while day 1 had listed it as already seen. A child does not experience tracks;
+ * they experience days.
+ *
+ * So the sequence is the rhythm: day by day, and within a day slot by slot. An objective is
+ * introduced exactly once, by whichever lesson reaches it first, and a lesson that practises or
+ * consolidates must build on something an earlier lesson taught — in any track.
  */
-function checkTrackProgression(
+function checkProgression(
   at: string,
-  trackId: string,
-  lessonIds: readonly string[],
+  programme: LevelProgramme,
   byId: ReadonlyMap<string, Lesson>,
 ): string[] {
   const problems: string[] = [];
-  const discovered = new Set<string>();
+  const trackById = new Map(programme.tracks.map((track) => [track.id, track]));
+  /** Each track's lessons are consumed in order as the rhythm calls for that track. */
+  const nextIndex = new Map(programme.tracks.map((track) => [track.id, 0]));
+  const introduced = new Set<string>();
   const taught = new Set<string>();
-  for (const lessonId of lessonIds) {
-    const lesson = byId.get(lessonId);
-    if (lesson === undefined) continue;
-    if (lesson.stage !== "discovery") {
-      const builds = [...lesson.objectiveCodes, ...lesson.supportingObjectiveCodes].some((code) =>
-        taught.has(code),
-      );
-      if (!builds) {
-        problems.push(
-          `${at}, track "${trackId}": "${lessonId}" is a ${lesson.stage} lesson but works on no objective taught earlier in the track`,
+
+  // The rhythm is a repeating cycle, not one entry per day: day 11 of a ten-day rhythm is
+  // rhythm day 1 again, with each track continuing through its own list. Walk real days until
+  // every track's lessons are used, exactly as `generateDailyPlan` does.
+  const cycle = [...programme.rhythm].sort((a, b) => a.position - b.position);
+  const totalLessons = programme.tracks.reduce((sum, track) => sum + track.lessonIds.length, 0);
+  let placed = 0;
+  // Bounded on purpose: if a track holds lessons the rhythm never calls for, the walk would
+  // otherwise never finish. One day per lesson is always enough, and the leftovers are reported.
+  const maxDays = totalLessons + cycle.length;
+  let dayNumber = 0;
+  for (; cycle.length > 0 && placed < totalLessons && dayNumber < maxDays;) {
+    dayNumber += 1;
+    const day = cycle[(dayNumber - 1) % cycle.length]!;
+    for (const slot of [...day.slots].sort((a, b) => a.position - b.position)) {
+      const track = trackById.get(slot.trackId);
+      if (track === undefined) continue;
+      const index = nextIndex.get(slot.trackId) ?? 0;
+      const lessonId = track.lessonIds[index];
+      if (lessonId === undefined) continue;
+      nextIndex.set(slot.trackId, index + 1);
+      placed += 1;
+      const lesson = byId.get(lessonId);
+      if (lesson === undefined) continue;
+      const where = `${at}, jour ${dayNumber}, "${lessonId}"`;
+
+      if (lesson.stage !== "discovery") {
+        const builds = [...lesson.objectiveCodes, ...lesson.supportingObjectiveCodes].some((code) =>
+          taught.has(code),
         );
-      }
-    }
-    for (const code of lesson.supportingObjectiveCodes) taught.add(code);
-    for (const code of lesson.objectiveCodes) {
-      if (lesson.stage === "discovery") {
-        if (discovered.has(code)) {
+        if (!builds) {
           problems.push(
-            `${at}, track "${trackId}": objective "${code}" is discovered twice (use practice, consolidation or review)`,
+            `${where}: a ${lesson.stage} lesson must work on something taught on an earlier day`,
           );
         }
-        discovered.add(code);
       }
-      taught.add(code);
+      /**
+       * The introduction point is wherever the child actually meets the objective first. So the
+       * lesson that reaches it first must list it as taught; a lesson cannot describe as "already
+       * seen" something no earlier day has taught. This is the defect the Week 1 review found:
+       * day 1 sang a rhyme and filed the objective under « déjà vus », while day 4 claimed to
+       * introduce it.
+       */
+      for (const code of lesson.supportingObjectiveCodes) {
+        if (!taught.has(code)) {
+          problems.push(
+            `${where}: objective "${code}" is listed as already seen, but the child meets it here first — it belongs in the taught list`,
+          );
+        }
+      }
+      for (const code of lesson.objectiveCodes) {
+        if (!taught.has(code)) introduced.add(code);
+        taught.add(code);
+      }
+      for (const code of lesson.supportingObjectiveCodes) taught.add(code);
     }
+  }
+  if (placed < totalLessons) {
+    problems.push(
+      `${at}: ${totalLessons - placed} lesson(s) are listed in a track the rhythm never calls for`,
+    );
   }
   return problems;
 }

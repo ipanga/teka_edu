@@ -53,13 +53,12 @@ l’appareil._
 
 _Oser dire bonjour à l’adulte, et entendre les premiers mots du mois._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
   - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève. _(source : programme-2024-langage)_
   - `LANG-S01-C01-O01` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période). _(source : programme-2024-langage)_
-- **Objectifs repris (déjà vus) :**
-  - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
+  - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines. _(source : programme-2026)_
 
 #### 1. Bonjour ! — 3 min, sans écran (conversation)
 
@@ -122,6 +121,14 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
+**Réussites attendues — texte officiel pour la compétence « Jouer avec sa voix et acquérir un répertoire de comptines et de chansons » (before-4) :**
+
+- Jouer avec sa voix pour reproduire des bruits d’animaux, d’objets et des onomatopées à partir d’images.
+- Dire ou chanter en articulant correctement le texte de manière audible pour faire deviner le titre de la comptine ou de la chanson.
+- Dire ou chanter une comptine, en même temps que les professeurs et en reproduisant la gestuelle (Toc, toc, toc Monsieur Pouce ; Petit escargot).
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -143,7 +150,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter, donner une petite quantité, ranger par forme._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O09` — Connaitre la comptine numérique de un à six. _(source : programme-2024-mathematiques)_
@@ -211,7 +218,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
   - `PHYS-S04-C01-O03` — Éprouver le plaisir de jouer dans le respect des autres et des règles communes. _(source : programme-2026)_
@@ -255,7 +262,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Repérer le moment, le début, la fin et où sont les choses._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Un court moment de repères : quand on est, et où sont les choses. Utilisez votre vraie journée, pas un exemple.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C01-O01` — Acquérir les premiers repères temporels. _(source : programme-2026)_
@@ -308,13 +315,12 @@ l’appareil._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
+  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève. _(source : programme-2024-langage)_
   - `LANG-S01-C01-O01` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève.
-  - `TIME-SPACE-S01-C01-O01` — Acquérir les premiers repères temporels.
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
 #### 1. Bonjour ! — 3 min, sans écran (conversation)
@@ -353,6 +359,15 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
+**Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
+
+- Oser parler pour exprimer un besoin ou prendre part à la vie de la classe.
+- S’exprimer lorsqu’on est sollicité.
+- Dire : « Moi, je fais du toboggan. J’ai joué à la balançoire et je vais faire du vélo. »
+- Participer à un moment collectif d’oralisation d’une comptine, d’une chanson, d’un court poème ou d’un bref extrait d’un album qui a été mémorisé.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (before-4) :**
 
 - Comprendre et utiliser les réseaux lexicaux :
@@ -390,7 +405,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter, donner une petite quantité, ranger par forme._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O03` — Dénombrer une collection d’objets (jusqu’à trois, voire quatre). _(source : programme-2024-mathematiques)_
@@ -460,7 +475,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
   - `PHYS-S01-C01-O02` — Courir de manière variée et coordonnée. _(source : programme-2026)_
@@ -505,7 +520,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Nommer son corps et se servir de ses sens._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.
 - **Objectifs enseignés :**
   - `WORLD-S01-C02-O01` — Nommer et représenter quelques parties du corps humain. _(source : programme-2026)_
@@ -560,12 +575,12 @@ l’appareil._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
+  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève. _(source : programme-2024-langage)_
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève.
   - `TIME-SPACE-S01-C01-O01` — Acquérir les premiers repères temporels.
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
@@ -620,6 +635,15 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
+**Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
+
+- Oser parler pour exprimer un besoin ou prendre part à la vie de la classe.
+- S’exprimer lorsqu’on est sollicité.
+- Dire : « Moi, je fais du toboggan. J’ai joué à la balançoire et je vais faire du vélo. »
+- Participer à un moment collectif d’oralisation d’une comptine, d’une chanson, d’un court poème ou d’un bref extrait d’un album qui a été mémorisé.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (before-4) :**
 
 - Identifier les livres dans lesquels se retrouve un même personnage.
@@ -648,7 +672,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter, donner une petite quantité, ranger par forme._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O09` — Connaitre la comptine numérique de un à six. _(source : programme-2024-mathematiques)_
@@ -716,7 +740,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
   - `PHYS-S01-C01-O02` — Courir de manière variée et coordonnée. _(source : programme-2026)_
@@ -761,7 +785,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Repérer le moment, le début, la fin et où sont les choses._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Un court moment de repères : quand on est, et où sont les choses. Utilisez votre vraie journée, pas un exemple.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C01-O02` — Identifier les principaux moments d’une journée. _(source : programme-2026)_
@@ -814,12 +838,12 @@ l’appareil._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
+  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève. _(source : programme-2024-langage)_
   - `LANG-S01-C04-O02` — Dire ce qu’on fait. _(source : programme-2024-langage)_
 - **Objectifs repris (déjà vus) :**
-  - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève.
   - `TIME-SPACE-S01-C01-O01` — Acquérir les premiers repères temporels.
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines.
 
@@ -885,7 +909,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter, donner une petite quantité, ranger par forme._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Jamais plus de trois objets à compter ce mois-ci ; ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O03` — Dénombrer une collection d’objets (jusqu’à trois, voire quatre). _(source : programme-2024-mathematiques)_
@@ -955,7 +979,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
   - `PHYS-S03-C01-O01` — Découvrir et explorer le mouvement comme vecteur d’expression. _(source : programme-2026)_
@@ -1000,7 +1024,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dire des comptines et laisser une trace._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.
 - **Objectifs enseignés :**
   - `ART-S02-C01-O03` — Dire ou chanter au moins cinq comptines. _(source : programme-2026)_

@@ -10,31 +10,34 @@
 
 ## Task
 
-None in progress.
+Finish 1ère maternelle Week 1 (two progression-metadata corrections), record it as the first
+content through the AI-assisted gate, and open the Beta 0.1 readiness tracking.
 
 ## Objective
 
-The 1ère maternelle Week 1 corrections are merged. No new task has been started.
+Week 1 approved honestly, progression derived rather than templated, and a release checklist
+that cannot be marked done before it is true.
 
 ## Status
 
-`planned`
+`in_progress`
 
 ## Branch
 
-`develop` — no feature branch open.
+`fix/week-1-progression-metadata`
 
 ## Base Branch
 
-`develop`
+`develop` at `b3aacc6`
 
 ## Started
 
-—
+2026-09-15
 
 ## Last Checkpoint
 
-2026-09-15 — reset after PR #37 merged as `f974a83` and verified on live staging.
+2026-09-15 — both corrections applied, Week 1 approved, readiness doc written, full local
+suite green.
 
 ## Scope
 
@@ -69,36 +72,37 @@ To be filled in when the next task begins.
 
 ## Completed
 
-- [x] Phase 3A — September programme and the parent session (archived)
-- [x] Session duration policy and the resumable-work protocol (archived)
-- [x] Phase 3B — visuals, interaction and real-session testing (archived)
-- [x] Phase 3C — the session a parent and child can sit down and do (archived)
+- [x] Day-2 stale TIME-SPACE claim removed; **a validator now refuses any lesson-level objective
+      no activity works** — it found 53 stale claims, 52 in 3ème, all metadata
+- [x] ART progression fixed at source: progression is derived from the order a child meets
+      content, day by day and across tracks, not per track in isolation
+- [x] **Child-facing content proved unchanged**, field by field, across both levels
+- [x] 1ère Week 1: **16 lessons `approved`**, `ai-assisted`, `accepted-with-modifications`
+- [x] `docs/releases/BETA_0_1_READINESS.md` opened; privacy audited (no personal data at all)
+- [x] `--timestamp=` on the migration generator, so a deliberate name can pass the ordering guard
 
 ## In Progress
 
-- [ ] Nothing.
+- [ ] PR, CI, merge, staging
 
 ## Remaining
 
-**Next task (not started):** submit the regenerated
-`docs/review/2026-2027-maternelle-1-semaine-1.md` for its **second** ChatGPT pass. 3ème Week 1
-also awaits re-review. Not October, not 2ème maternelle.
+- [ ] Submit 1ère Week 2 to the gate — the next task
 
 ## Validation State
 
-| Check              | Result | At                                         |
-| ------------------ | ------ | ------------------------------------------ |
-| format             | PASS   | working tree                               |
-| lint               | PASS   | working tree — 0 warnings                  |
-| typecheck          | PASS   | working tree                               |
-| unit tests         | PASS   | working tree — 207 tests                   |
-| content validation | PASS   | working tree — 21 files                    |
-| database tests     | PASS   | working tree — 144 pgTAP assertions        |
-| build              | PASS   | working tree                               |
-| E2E                | PASS   | working tree — 20 tests                    |
-| Docker             | PASS   | CI at `27e9054` — both images              |
-| secret scans       | PASS   | working tree — no leaks, 0 tracked `.env*` |
-| staging            | PASS   | `27e9054` deployed, 20 E2E against it      |
+| Check              | Result  | At                                |
+| ------------------ | ------- | --------------------------------- |
+| format             | PASS    | working tree                      |
+| lint               | PASS    | working tree                      |
+| typecheck          | PASS    | working tree                      |
+| unit tests         | PASS    | working tree — 226 tests          |
+| content validation | PASS    | working tree — 30 files           |
+| database tests     | PASS    | fresh reset — 151 assertions      |
+| build              | PASS    | working tree                      |
+| E2E                | PASS    | working tree — 28 tests           |
+| Docker             | NOT RUN | left to CI                        |
+| secret scans       | PASS    | 0 tracked `.env*`; gitleaks in CI |
 
 ## Database State
 
@@ -128,8 +132,7 @@ None.
 
 ## Exact Resume Point
 
-No task is in progress. When the next one starts: fill this file in, create the feature branch
-from `develop`, commit an initial checkpoint, and open a Draft PR before the long work begins.
+Open the PR into `develop`, wait for CI, squash-merge, verify staging.
 
 ## Resume Verification
 

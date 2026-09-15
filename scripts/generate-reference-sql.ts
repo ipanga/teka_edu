@@ -42,7 +42,18 @@ async function main() {
     .filter((entry) => entry.endsWith(".sql"))
     .sort();
   const last = existing[existing.length - 1];
-  const stamp = migrationTimestamp(new Date());
+  // `--timestamp=` names the migration deliberately. It exists because an earlier migration was
+  // given a hand-picked future timestamp, after which every clock-derived name sorted before it
+  // and the guard below refused them all. Overriding the name is fine; overriding the ordering
+  // rule is not, so the check still runs on whatever is chosen.
+  const override = process.argv
+    .find((arg) => arg.startsWith("--timestamp="))
+    ?.slice("--timestamp=".length);
+  if (override !== undefined && !/^\d{14}$/.test(override)) {
+    console.error("--timestamp must be 14 digits: YYYYMMDDHHMMSS");
+    process.exit(1);
+  }
+  const stamp = override ?? migrationTimestamp(new Date());
   const file = `supabase/migrations/${stamp}_${name}.sql`;
   if (last !== undefined && `${stamp}_${name}.sql` < last) {
     console.error(
