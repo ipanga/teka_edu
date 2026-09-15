@@ -358,6 +358,23 @@ describe("human review package", () => {
     }
   });
 
+  /**
+   * The official « réussites attendues » are the yardstick a reviewer judges against. They
+   * vanished from weeks 4 and 5 once progression counted only first occurrences: those lessons
+   * teach nothing new, so looking at the taught list alone found no competency. A package with
+   * no official text is a package that cannot be reviewed.
+   */
+  it("quotes the official expected outcomes in every package", () => {
+    for (const week of REVIEW_PACKAGES) {
+      const document = readFileSync(path.join(ROOT, reviewPackagePath(week)), "utf8");
+      const blocks = document.match(/\*\*Réussites attendues — texte officiel/g) ?? [];
+      expect(
+        blocks.length,
+        `${week.levelId} semaine ${week.week}: no official expected outcomes`,
+      ).toBeGreaterThan(0);
+    }
+  });
+
   it("tells the reviewer whose screen time is being counted, and that 35 min is not a target", () => {
     // Two honest numbers rather than one flattering one: what the child does on the screen, and
     // what the child merely looks at on it. Reporting « 0 min » for a day that shows four
