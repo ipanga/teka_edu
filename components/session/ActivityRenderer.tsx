@@ -132,9 +132,19 @@ function ChooseOne({
     return labels?.[at] ?? labelOf(item);
   };
 
+  /**
+   * Two pictures can be the same thing: a square lying on its point is still a square, and
+   * MATH-S03-C01-O07 asks the child to recognise that. Matching on the asset id would call the
+   * tilted square a wrong answer and teach the prototype the objective exists to prevent, so the
+   * comparison is on what the picture *is* — its first tag — and falls back to the id when a
+   * picture has no tags.
+   */
+  const kindOf = (item: SessionMedia) => item.tags[0] ?? item.id;
+  const isSameKind = (a: SessionMedia, b: SessionMedia) => kindOf(a) === kindOf(b);
+
   const choose = (chosen: SessionMedia) => {
     if (state === "done") return;
-    if (chosen.id === wanted.id) {
+    if (isSameKind(chosen, wanted)) {
       setState("done");
       return;
     }
@@ -143,8 +153,15 @@ function ChooseOne({
     if (tries + 1 >= 2) setRevealed(true);
   };
 
+  /** Move on to a picture of a different thing, so the child is not asked the same one twice. */
   const next = () => {
-    setTarget((current) => (current + 1) % media.length);
+    setTarget((current) => {
+      for (let step = 1; step <= media.length; step++) {
+        const candidate = (current + step) % media.length;
+        if (!isSameKind(media[candidate]!, media[current]!)) return candidate;
+      }
+      return (current + 1) % media.length;
+    });
     setTries(0);
     setState("idle");
     setRevealed(false);
@@ -155,7 +172,7 @@ function ChooseOne({
       <Prompt>Montre : {nameOf(wanted)}</Prompt>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         {media.map((item) => {
-          const isAnswer = item.id === wanted.id;
+          const isAnswer = isSameKind(item, wanted);
           return (
             <button
               key={item.id}

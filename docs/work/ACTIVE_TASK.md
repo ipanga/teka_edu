@@ -10,13 +10,13 @@
 
 ## Task
 
-Approve 1ère maternelle Week 5, verify September at 88/88, and prepare 3ème maternelle
-Week 1 for its second review.
+Apply ChatGPT's second-pass corrections to 3ème maternelle September Week 1, and return the
+regenerated package for its short confirmation pass.
 
 ## Objective
 
-1ère September complete; the 3ème package carries its own review history so a reviewer is not
-sent to find a changelog.
+Every objective a Week 1 activity claims is one the child actually works, proved by rules rather
+than by reading.
 
 ## Status
 
@@ -24,99 +24,98 @@ sent to find a changelog.
 
 ## Branch
 
-`feat/approve-week-5-and-prepare-m3`
+`fix/maternelle-3-week-1-review`
 
 ## Base Branch
 
-`develop` at `f3ce1af`
+`develop` at `a4a014d`
 
 ## Started
 
-2026-09-15
+2026-09-16
 
 ## Last Checkpoint
 
-2026-09-15 — Week 5 approved, 88/88 verified, review history made canonical and rendered
-into every package, full local suite green.
+2026-09-16 — all six corrections applied, the four defect classes closed across September, seven
+regression rules written, generators fixed, full local suite green.
 
 ## Scope
 
-To be filled in when the next task begins.
+- The five objective-mapping corrections plus the geometry exemplars and the zero-screen wording.
+- Every other occurrence of the same defect classes, because the rules are written as rules.
+- Regeneration: media, 11 review packages, pgTAP reference test, data migration.
 
 ## Out of Scope
 
-- October, and 2ème maternelle content.
-- Production: `PRODUCTION_DEPLOY_ENABLED` stays off until both September gates are met
-  (`docs/releases/BETA_0_1_READINESS.md`).
-- Marking a week `approved` before it has passed the gate (ADR-047).
-- Claiming a human-teacher review: none has happened (ISSUE-017, open and non-blocking).
-- Paid anything; `main`.
+- Approving Week 1, or any 3ème lesson. All 88 stay `review`.
+- Reviewing Weeks 2–5. The mapping fixes there are forced by the rules, not a review.
+- October, 2ème maternelle, production, `main`, anything paid.
+- Re-mapping activities the rules did not force and ChatGPT has not read (`m3-math-06-a2`,
+  `m3-math-20-a1`/`-a2` — reported in `docs/PEDAGOGICAL_REVIEW.md`).
 
 ## Product Decisions
 
-- **Beta 0.1** is the first public release: 1ère and 3ème September available, 2ème « en
-  préparation ». It ships when both classes' September passes the AI-assisted gate.
-  Previews stay protected; only the production domain becomes public.
-- Beta 0.1 stores **no personal data** and makes no client-side network write. Keep it that way.
-- Parent-led répétiteur; 30-45 minutes (1ère: about 30) (ADR-039).
-- Level → band: 1ère `before-4` (116), 2ème `from-4` (139), 3ème `from-5` (162).
-- **Progression follows the days a child lives, not the tracks.** A lesson may not claim an
-  objective no activity works, and nothing is « déjà vu » before something teaches it.
-- An interaction pattern may be reused across levels; its assumptions about a child's body may not.
-- Anything a generated document says about "the child" is derived from the level.
-- Media is repository SVG by stable id; reuse before creating (ADR-042).
-- Animation is decoration (ADR-045); the parent is the voice (ADR-046).
 - The pedagogical gate is an independent review, not necessarily a human one (ADR-047).
-- Never edit generated content by hand; fix the generator.
+- A lesson's objective lists are **authored**; the validators force them to equal the union of the
+  activities' objectives, in both directions. There is no generator to run, and adding one would
+  replace a pedagogical judgement with a derivation.
+- A correction is applied everywhere its class occurs when doing so moves nothing else. Every one
+  here was free: the right activity was a sibling in the same lesson on the same day.
+- Never edit generated content by hand; fix the generator. Both generators now format their own
+  output, so regenerating no longer dirties the tree.
+- Colour never carries meaning: each new shape variant wears the colour of a different shape.
 
 ## Completed
 
-- [x] Seed-bag fallback removed from the **shared** material definition, with a safety note
-      explaining why; affects 3ème's material text too, reported
-- [x] Line walking fully failure-neutral: the child chooses to continue or restart
-- [x] `sans écran` → `sans interaction écran`, and the parent screen no longer says « posez
-      l'écran » while showing a picture on it
-- [x] **Week 1 diff machine-proven against `5899d94`: 0 substantive child-facing changes**
-- [x] **36 lessons approved** — Weeks 1 and 2, `ai-assisted`, fresh digests, old ones not reused
+- [x] Six corrections applied — `m3-math-01` a1/a2, `m3-world-01-a1`, `m3-math-03-a2`,
+      `m3-lang-04-a1`, `m3-math-04-a2`
+- [x] Geometry: preparation asks for 2–3 of each shape; 4 generated variants on screen
+- [x] `ChooseOne` now matches on what a picture **is**, so a tilted square is accepted
+- [x] Eleven further occurrences of the same four classes corrected in Weeks 2–5, ripple-free
+- [x] Seven regression rules, written against the official statements, not code lists
+- [x] Zero screen interaction no longer described as the child using the device
+- [x] `tools/media/build.ts` and `tools/annual-plan/build.ts` emit Prettier-formatted output
+- [x] `scripts/reconfirmation-package.ts` reports the real instructional day, not the track step
+- [x] Review history recorded for Week 1 and for each affected week 2–5
+- [x] 26 of 3,084 compared fields changed — machine-proved, nothing unintended
 
 ## In Progress
 
-- [ ] PR, CI, merge, staging
+- [ ] PR into `develop`, CI, squash-merge, staging verification
 
 ## Remaining
 
-- [ ] Submit 3ème Week 1 — one package at a time
+- [ ] Return `docs/review/2026-2027-maternelle-3-semaine-1.md` for ChatGPT's confirmation
 
 ## Validation State
 
-| Check              | Result  | At                                |
-| ------------------ | ------- | --------------------------------- |
-| format             | PASS    | working tree                      |
-| lint               | PASS    | working tree                      |
-| typecheck          | PASS    | working tree                      |
-| unit tests         | PASS    | working tree — 251 tests          |
-| content validation | PASS    | working tree — 31 files           |
-| database tests     | PASS    | fresh reset — 152 assertions      |
-| build              | PASS    | working tree                      |
-| E2E                | PASS    | working tree — 28 tests           |
-| Docker             | NOT RUN | left to CI                        |
-| secret scans       | PASS    | 0 tracked `.env*`; gitleaks in CI |
+| Check              | Result | At                                |
+| ------------------ | ------ | --------------------------------- |
+| format             | PASS   | working tree                      |
+| lint               | PASS   | working tree                      |
+| typecheck          | PASS   | working tree                      |
+| unit tests         | PASS   | working tree — 260 tests          |
+| content validation | PASS   | working tree — 31 files           |
+| database tests     | PASS   | fresh reset — 152 assertions      |
+| build              | PASS   | working tree                      |
+| E2E                | PASS   | working tree — 28 tests           |
+| Docker             | PASS   | both images, health + SIGTERM     |
+| secret scans       | PASS   | 0 tracked `.env*`; gitleaks in CI |
 
 ## Database State
 
-- Local: 12 migrations; `db reset` + 144 pgTAP assertions pass.
-- DEV: 12 migrations, local and remote identical; 38 media assets, 14 illustrated texts, 36
-  tables, 0 approved lessons; security advisors clean.
+- Local: 13 migrations; `db reset` + 152 pgTAP assertions pass.
+- DEV: not yet updated with `20260916183458_week1_review_corrections_m3.sql`.
 - PROD: untouched.
 
 ## Deployment State
 
-- Staging: deployed at `27e9054`; 20 E2E tests passed against the live deployment.
+- Staging: not yet redeployed with these corrections.
 - Production: disabled; `main` at `1b95480`.
 
 ## Git State
 
-- `develop` at `27e9054` plus this closing change. No feature branch, no open PR.
+- `fix/maternelle-3-week-1-review`, branched from `develop` at `a4a014d`. No PR open yet.
 
 ## Blockers
 
@@ -124,19 +123,17 @@ None.
 
 ## User Decisions Needed
 
-- Which task comes next. The recommendation is to run one real September session with a child,
-  following `docs/REAL_SESSION_TESTING.md`, before deciding between October, audio, or more
-  visuals.
+None outstanding. Week 1 goes back to ChatGPT; Weeks 2–5 still need their own first pass.
 
 ## Exact Resume Point
 
-Open the PR into `develop`, wait for CI, squash-merge, verify staging.
+Commit, open the PR into `develop`, wait for CI, squash-merge, verify staging.
 
 ## Resume Verification
 
-1. `git branch --show-current` is `feat/september-child-experience`;
-2. `git log -n 5 --oneline` — branch point is `ec4eb26`;
+1. `git branch --show-current` is `fix/maternelle-3-week-1-review`;
+2. `git log -n 5 --oneline` — branch point is `a4a014d`;
 3. `git status --short` — read uncommitted work before discarding it;
-4. `gh pr list --head feat/september-child-experience` — a Draft PR may exist;
-5. `npx supabase migration list --linked` only if a migration was in flight;
+4. `gh pr list --head fix/maternelle-3-week-1-review` — a PR may already exist;
+5. `npx supabase migration list --linked` before assuming DEV needs the migration;
 6. `gh run list --branch develop --limit 3` before assuming a deployment is needed.

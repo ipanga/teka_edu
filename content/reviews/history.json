@@ -32,6 +32,61 @@
       "outcome": "accepted-with-modifications",
       "summary": "Changement arrivé dans cette semaine sans relecture propre.",
       "corrections": "L’activité « Le mot coupé en morceaux » (jour 21) porte désormais aussi LANG-S02-C01-O13 — « augmenter sa mémoire auditive et sa capacité de concentration ». L’enfant y tenait déjà des syllabes en mémoire le temps d’une pause avant de reconstituer le mot ; c’est la revendication qui manquait, pas le travail."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 1,
+      "reviewedOn": "2026-09-16",
+      "reviewKind": "ai-assisted",
+      "reviewer": "ChatGPT",
+      "outcome": "accepted-with-modifications",
+      "summary": "Deuxième passe de fond. La structure, la durée, l’enchainement, les histoires, le niveau de langue, la sécurité et le modèle d’apprentissage à la maison sont acceptés et ne sont pas réécrits. Cinq objectifs étaient mal attribués : compter une collection déjà posée était présenté comme en constituer une ; le rituel du jour 4 revendiquait « scander les syllabes d’un mot » sans aucune tâche de syllabes ; « Où est-ce que ça plie ? » revendiquait « se représenter avec un corps articulé » alors que l’enfant ne représente rien ; « Je range les formes » ne revendiquait pas l’objectif de tri ; et « Le tas de dix » ne revendiquait que la comptine numérique. La leçon sur les formes ne proposait qu’un seul exemplaire par sorte, ce qui ne permet pas de classer indépendamment de la couleur, de la taille et de l’orientation. Enfin le dossier annonçait « 0 min d’interaction avec l’écran » tout en expliquant que l’enfant y touche et y compte.",
+      "corrections": "Toutes appliquées. Les objectifs suivent maintenant ce que chaque activité fait vraiment : O20 sur le dénombrement et O21 sur la collection demandée, O08 sur l’identification des articulations et O09 sur le seul dessin, O07 ajouté au tri des formes, O20 et O21 ajoutés au tas de dix à côté de la comptine, et l’objectif de syllabes retiré du rituel où il ne se passe rien de tel. La leçon des formes demande désormais deux ou trois exemplaires de chaque sorte, de tailles différentes et posés dans tous les sens, et l’écran montre un second exemplaire de chaque forme — un carré de biais, un rectangle debout, un triangle aux côtés inégaux, un petit disque — chacun de la couleur d’une autre forme, pour que la couleur ne puisse pas servir d’indice. Aucun mot technique n’est dit à l’enfant. Le générateur du dossier explique maintenant le chiffre qu’il annonce : à zéro, il dit qu’aucune activité ne demande de toucher l’appareil. Aucune leçon n’est approuvée : les 16 restent en relecture."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 2,
+      "reviewedOn": "2026-09-16",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Teka Edu (conséquence de la relecture de la semaine 1)",
+      "outcome": "accepted-with-modifications",
+      "summary": "Deux changements arrivés dans cette semaine sans relecture propre : ils viennent de corrections demandées sur la semaine 1.",
+      "corrections": "1) « Je range puis je compte » et « Donne-moi six » (jour 5) portaient les objectifs à l’envers, exactement comme le jour 1 : compter une ligne d’objets déjà posée était présenté comme constituer une collection d’un cardinal donné, et l’activité qui la constitue vraiment ne le revendiquait pas. Les deux sont remis dans le bon sens ; la leçon, elle, ne change pas. 2) Le rituel du jour 6 ne revendique plus LANG-S02-C01-O13, « augmenter sa mémoire auditive et sa capacité de concentration » : on y dit la date et on se souvient de la semaine, il n’y a pas de tâche d’écoute. L’objectif reste porté par « Le jeu des trois mots », dans la même leçon et le même jour, si bien que rien ne change ni pour la leçon ni pour la progression."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 3,
+      "reviewedOn": "2026-09-16",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Teka Edu (conséquence de la relecture de la semaine 1)",
+      "outcome": "accepted-with-modifications",
+      "summary": "Trois changements arrivés dans cette semaine sans relecture propre : ils viennent de corrections demandées sur la semaine 1.",
+      "corrections": "1) « Le tas de douze » (jour 10) porte désormais aussi « dénombrer une collection d’objets » et « constituer une collection d’un cardinal donné » : l’enfant construisait déjà une collection demandée, seule la revendication manquait. 2) « Se représenter avec un corps articulé en mouvement » quitte « Je nomme et je bouge » (jour 11), où l’enfant identifie et mobilise, pour « Le bonhomme qui plie », où il le dessine. 3) Le rituel du jour 14 ne revendique plus « scander les syllabes d’un mot » ; l’objectif reste sur « Combien de morceaux ? », dans la même leçon."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 4,
+      "reviewedOn": "2026-09-16",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Teka Edu (conséquence de la relecture de la semaine 1)",
+      "outcome": "accepted-with-modifications",
+      "summary": "Trois changements arrivés dans cette semaine sans relecture propre : ils viennent de corrections demandées sur la semaine 1.",
+      "corrections": "Les rituels des jours 16 et 17 ne revendiquent plus « repérer et produire des rimes et des assonances » : on y dit la date, on ne cherche pas de rimes. L’objectif reste porté par l’activité de rimes de chaque leçon. « Le tas de vingt » (jour 19) porte désormais aussi le dénombrement et la constitution d’une collection, à côté de la comptine numérique."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 5,
+      "reviewedOn": "2026-09-16",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Teka Edu (conséquence de la relecture de la semaine 1)",
+      "outcome": "accepted-with-modifications",
+      "summary": "Deux changements arrivés dans cette semaine sans relecture propre : ils viennent de corrections demandées sur la semaine 1.",
+      "corrections": "Le rituel du jour 21 ne revendique plus « repérer et produire des rimes et des assonances » ; l’objectif reste sur « Le mot coupé en morceaux », dans la même leçon. Et « Ce qui plie quand je bouge » (jour 21) revendique maintenant « identifier et nommer quelques articulations » au lieu de « se représenter avec un corps articulé » : l’enfant montre ce qui plie, il ne se représente pas. Le dessin de la même leçon porte toujours les deux."
     }
   ]
 }

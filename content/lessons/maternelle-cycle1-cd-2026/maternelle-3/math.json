@@ -28,7 +28,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": ["objet-caillou"],
-          "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
+          "objectiveCodes": ["MATH-S01-C01-O20"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
             {
@@ -62,7 +62,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["MATH-S01-C01-O20"],
+          "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
           "materialCodes": ["petits-objets", "boite"],
           "vocabulary": [
             {
@@ -183,7 +183,7 @@
       "stage": "discovery",
       "difficulty": 2,
       "themeId": "la-rentree",
-      "parentGuidance": "Préparez d’abord les formes : dessinez-les sur du papier et découpez-les si vous pouvez. On travaille sur des formes plates, pas sur des objets : un coussin n’est pas un carré, mais sa face l’est.",
+      "parentGuidance": "Préparez d’abord les formes : sur du papier, dessinez-en deux ou trois de chaque sorte, puis découpez-les si vous pouvez. Variez la taille, et posez-les dans tous les sens : un carré posé sur la pointe reste un carré. Si vous avez plusieurs crayons de couleur, variez aussi les couleurs ; un seul crayon suffit. On travaille sur des formes plates, pas sur des objets : un coussin n’est pas un carré, mais sa face l’est.",
       "activities": [
         {
           "id": "m3-math-03-a1",
@@ -191,11 +191,20 @@
           "type": "observation",
           "title": "Je nomme les formes",
           "childInstruction": "Regarde les formes. Nomme-les : le carré, le rectangle, le triangle, le disque.",
-          "adultGuidance": "1. Montrez chaque forme et nommez-la. 2. Faites répéter. 3. Faites suivre le contour avec le doigt en comptant les côtés : le carré en a quatre, le triangle trois, le disque aucun. 4. Demandez-lui de retrouver la même forme sur une face d’un objet de la maison.",
+          "adultGuidance": "1. Montrez chaque forme et nommez-la. 2. Faites répéter. 3. Faites suivre le contour avec le doigt en comptant les côtés : le carré en a quatre, le triangle trois, le disque aucun. 4. Montrez ensuite une autre forme de la même sorte, plus petite ou posée autrement, et faites-la nommer aussi. 5. Demandez-lui de retrouver la même forme sur une face d’un objet de la maison.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "mediaIds": ["forme-carre", "forme-rectangle", "forme-triangle", "forme-disque"],
+          "mediaIds": [
+            "forme-carre",
+            "forme-carre-penche",
+            "forme-rectangle",
+            "forme-rectangle-debout",
+            "forme-triangle",
+            "forme-triangle-quelconque",
+            "forme-disque",
+            "forme-disque-petit"
+          ],
           "objectiveCodes": ["MATH-S03-C01-O08", "MATH-S03-C01-O07"],
           "materialCodes": ["formes-papier"],
           "vocabulary": [
@@ -236,12 +245,21 @@
           "type": "sorting",
           "title": "Je range les formes",
           "childInstruction": "Mets ensemble les formes qui sont pareilles.",
-          "adultGuidance": "1. Mélangez les formes, de tailles et de couleurs différentes. 2. Demandez de faire des tas. 3. Faites dire pourquoi : « Tous ceux-là ont trois côtés. » 4. Montrez qu’un grand triangle et un petit triangle sont tous les deux des triangles.",
+          "adultGuidance": "1. Mélangez toutes les formes, grandes et petites, posées dans tous les sens. 2. Demandez de faire des tas : ensemble ce qui est pareil. 3. Faites dire pourquoi : « Tous ceux-là ont trois côtés. » 4. Si l’enfant sépare selon la couleur ou la taille, reprenez une pièce et comptez les côtés avec lui. 5. Montrez qu’un grand triangle et un petit triangle vont dans le même tas, et qu’un carré posé sur la pointe reste un carré.",
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "mediaIds": ["forme-carre", "forme-rectangle", "forme-triangle", "forme-disque"],
-          "objectiveCodes": ["MATH-S03-C01-O08"],
+          "mediaIds": [
+            "forme-carre",
+            "forme-triangle-quelconque",
+            "forme-disque",
+            "forme-rectangle-debout",
+            "forme-carre-penche",
+            "forme-rectangle",
+            "forme-disque-petit",
+            "forme-triangle"
+          ],
+          "objectiveCodes": ["MATH-S03-C01-O07", "MATH-S03-C01-O08"],
           "materialCodes": ["formes-papier"],
           "vocabulary": [
             {
@@ -276,7 +294,7 @@
       "title": "La comptine jusqu’à dix",
       "summary": "Dire la suite des nombres jusqu’à dix sans en oublier.",
       "objectiveCodes": ["MATH-S01-C01-O26"],
-      "supportingObjectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
       "stage": "discovery",
       "difficulty": 1,
       "themeId": "la-rentree",
@@ -323,7 +341,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": ["objet-caillou"],
-          "objectiveCodes": ["MATH-S01-C01-O26"],
+          "objectiveCodes": ["MATH-S01-C01-O26", "MATH-S01-C01-O20", "MATH-S01-C01-O21"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
             {
@@ -372,7 +390,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": ["objet-caillou"],
-          "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
+          "objectiveCodes": ["MATH-S01-C01-O20"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
             {
@@ -406,7 +424,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["MATH-S01-C01-O20"],
+          "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
             {
@@ -769,7 +787,7 @@
       "title": "La comptine jusqu’à vingt",
       "summary": "Étendre la suite des nombres de dix à vingt.",
       "objectiveCodes": [],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O26"],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O26", "MATH-S01-C01-O20", "MATH-S01-C01-O21"],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "objets-et-formes",
@@ -824,7 +842,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": ["objet-caillou"],
-          "objectiveCodes": ["MATH-S01-C01-O26"],
+          "objectiveCodes": ["MATH-S01-C01-O26", "MATH-S01-C01-O20", "MATH-S01-C01-O21"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
             {
@@ -1527,7 +1545,7 @@
       "title": "Je compte jusqu’à trente",
       "summary": "Aller au bout de la comptine numérique visée cette année.",
       "objectiveCodes": [],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O26"],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O26", "MATH-S01-C01-O20", "MATH-S01-C01-O21"],
       "stage": "consolidation",
       "difficulty": 3,
       "themeId": "au-marche",
@@ -1578,7 +1596,7 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": ["objet-caillou"],
-          "objectiveCodes": ["MATH-S01-C01-O26"],
+          "objectiveCodes": ["MATH-S01-C01-O26", "MATH-S01-C01-O20", "MATH-S01-C01-O21"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
             {

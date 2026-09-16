@@ -133,18 +133,22 @@ test.describe("parent session", () => {
     }
     await expect(page.getByText("Je nomme les formes")).toBeVisible();
 
-    // Four shapes, each a real button with an accessible name.
-    const shapes = page.getByRole("button", { name: /^Un (carré|rectangle|triangle|disque)/ });
-    await expect(shapes).toHaveCount(4);
-    await expect(page.getByText(/^Montre :/)).toBeVisible();
+    // Two exemplars of each of the four shapes, each a real button with an accessible name, so
+    // the child sees that a square on its point and a small disk are still a square and a disk.
+    const shapes = page.getByRole("button", {
+      name: /^Un (carré|rectangle|triangle|disque|petit disque)/,
+    });
+    await expect(shapes).toHaveCount(8);
+    await expect(page.getByText(/^Montre : carré/)).toBeVisible();
 
     // A wrong tap encourages another try; it never says the child is wrong.
-    await page.getByRole("button", { name: "Un triangle" }).click();
+    await page.getByRole("button", { name: "Un triangle", exact: true }).click();
     await expect(page.getByText(/Essaie encore/)).toBeVisible();
     const body = (await page.locator("body").textContent()) ?? "";
     expect(body).not.toMatch(/incorrect|faux|erreur/i);
 
-    await page.getByRole("button", { name: "Un carré" }).click();
+    // The tilted square is a square: it must be accepted, not corrected.
+    await page.getByRole("button", { name: "Un carré posé de biais, plus petit" }).click();
     await expect(page.getByText("Bravo !")).toBeVisible();
   });
 
@@ -275,7 +279,7 @@ test.describe("parent session", () => {
         .click();
     }
     // The interaction works identically with motion off: nothing waits for an animation.
-    await page.getByRole("button", { name: "Un carré" }).click();
+    await page.getByRole("button", { name: "Un carré", exact: true }).click();
     await expect(page.getByText("Bravo !")).toBeVisible();
     await context.close();
   });

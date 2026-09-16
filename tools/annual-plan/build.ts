@@ -32,6 +32,7 @@
  */
 import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
+import { format } from "prettier";
 import { generateSchoolDays } from "../../domain/calendar/school-days";
 import type { PublicHoliday, SchoolCalendar } from "../../domain/calendar/types";
 import type {
@@ -136,7 +137,7 @@ function objectivesOfBand(): ObjectiveRow[] {
   return rows;
 }
 
-function main() {
+async function main() {
   const { instructionalDays, phases, lastSeptemberDay } = calendarShape();
   const objectives = objectivesOfBand();
   const september = phases[0]!;
@@ -227,7 +228,15 @@ function main() {
     entries,
   };
   const out = `content/programmes/${CURRICULUM}/${LEVEL}-annual-plan.json`;
-  writeFileSync(path.join(ROOT, out), `${JSON.stringify(plan, null, 2)}\n`, "utf8");
+  // Formatted, for the same reason as tools/media/build.ts: otherwise the generator's output and
+  // the committed file differ by exactly one `prettier --write`, and a regeneration looks like a
+  // change that was never made.
+  const outPath = path.join(ROOT, out);
+  writeFileSync(
+    outPath,
+    await format(JSON.stringify(plan, null, 2), { filepath: outPath }),
+    "utf8",
+  );
   console.log(
     `Wrote ${out}: ${entries.length} objectives over ${instructionalDays} instructional days, ` +
       `${entries.filter((e) => e.introduceByDay <= september.toDay).length} in period 1, ` +
@@ -235,4 +244,4 @@ function main() {
   );
 }
 
-main();
+await main();

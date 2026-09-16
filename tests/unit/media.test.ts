@@ -79,8 +79,17 @@ describe("what September shows the child", () => {
     );
     expect(shapeActivities.length).toBeGreaterThan(0);
     for (const activity of shapeActivities) {
-      expect(activity.mediaIds, activity.id).toContain("forme-carre");
-      expect(activity.mediaIds.length, activity.id).toBe(4);
+      // Each of the four named shapes must be on screen. The count is a floor rather than an
+      // exact number because « Les formes autour de moi » now shows a second exemplar of each —
+      // a square on its point, a rectangle standing up — so that sorting can be independent of
+      // size and orientation, as MATH-S03-C01-O07 requires.
+      for (const shape of ["carré", "rectangle", "triangle", "disque"]) {
+        const shown = activity.mediaIds.filter((id) =>
+          findAsset(data.media, id)?.tags.includes(shape),
+        );
+        expect(shown.length, `${activity.id} → ${shape}`).toBeGreaterThanOrEqual(1);
+      }
+      expect(activity.mediaIds.length, activity.id).toBeGreaterThanOrEqual(4);
     }
   });
 

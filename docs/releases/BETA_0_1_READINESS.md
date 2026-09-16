@@ -40,18 +40,18 @@ digests were allowed to fail rather than being re-stamped. The 31 occurrences we
 on a compact diff. The digest now covers the bytes of every referenced illustration, so a picture
 cannot be redrawn under an approval without it lapsing.
 
-| Item                                         | State    | Evidence                                                                       |
-| -------------------------------------------- | -------- | ------------------------------------------------------------------------------ |
-| 1ère September authored                      | **DONE** | 88 lessons, 132 activities, 22 days                                            |
-| 1ère Week 1 reviewed                         | **DONE** | 2 passes + reconfirmation; 16 lessons `approved`, `ai-assisted`                |
-| 1ère Week 2 reviewed                         | **DONE** | 2 passes + reconfirmation; 20 lessons `approved`                               |
-| 1ère Week 3 reviewed                         | **DONE** | 2 passes + reconfirmation; 20 lessons `approved`                               |
-| 1ère Week 4 reviewed                         | **DONE** | 2 passes; 20 lessons `approved`                                                |
-| 1ère Week 5 reviewed                         | **DONE** | 2 passes (accepted-with-modifications → accepted); 12 lessons `approved`       |
-| 3ème September authored                      | **DONE** | 88 lessons, 170 activities, 22 days                                            |
-| 3ème Week 1 reviewed                         | **TODO** | pass 1 accepted-with-modifications, corrections applied, **re-review pending** |
-| 3ème Weeks 2–5 reviewed                      | **TODO** | packages generated, not yet submitted                                          |
-| No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                |
+| Item                                         | State    | Evidence                                                                                       |
+| -------------------------------------------- | -------- | ---------------------------------------------------------------------------------------------- |
+| 1ère September authored                      | **DONE** | 88 lessons, 132 activities, 22 days                                                            |
+| 1ère Week 1 reviewed                         | **DONE** | 2 passes + reconfirmation; 16 lessons `approved`, `ai-assisted`                                |
+| 1ère Week 2 reviewed                         | **DONE** | 2 passes + reconfirmation; 20 lessons `approved`                                               |
+| 1ère Week 3 reviewed                         | **DONE** | 2 passes + reconfirmation; 20 lessons `approved`                                               |
+| 1ère Week 4 reviewed                         | **DONE** | 2 passes; 20 lessons `approved`                                                                |
+| 1ère Week 5 reviewed                         | **DONE** | 2 passes (accepted-with-modifications → accepted); 12 lessons `approved`                       |
+| 3ème September authored                      | **DONE** | 88 lessons, 170 activities, 22 days                                                            |
+| 3ème Week 1 reviewed                         | **TODO** | 2 passes, both accepted-with-modifications; corrections applied, **confirmation pass pending** |
+| 3ème Weeks 2–5 reviewed                      | **TODO** | packages generated, not yet submitted                                                          |
+| No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                                |
 
 **The two 3ème gaps are resolved**, one by authoring and one by pacing. `LANG-S02-C01-O13`
 (auditory memory) now has a genuine second occurrence on day 21, where the child already had to
@@ -80,8 +80,8 @@ Every check must pass on the release commit. Current state on `develop`:
 | Check                                                      | State                                          |
 | ---------------------------------------------------------- | ---------------------------------------------- |
 | format · lint · typecheck                                  | **DONE**                                       |
-| unit tests                                                 | **DONE** (242)                                 |
-| content validation                                         | **DONE** (30 files)                            |
+| unit tests                                                 | **DONE** (260)                                 |
+| content validation                                         | **DONE** (31 files)                            |
 | curriculum / annual-plan / progression validation          | **DONE**                                       |
 | review-package validation                                  | **DONE** (generation fails on missing content) |
 | database tests · pgTAP · RLS                               | **DONE** (152 assertions, fresh reset)         |

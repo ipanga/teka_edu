@@ -10,6 +10,7 @@
  * never carries meaning — the child is asked for *the square*, never for *the blue one*.
  */
 import { createHash } from "node:crypto";
+import { format } from "prettier";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
@@ -68,6 +69,34 @@ const SHAPES: Asset[] = [
     "Un disque, tout rond",
     `<circle cx="100" cy="100" r="65" fill="${CLAY}" stroke="${INK}" stroke-width="6"/>`,
     ["disque", "rond", "cercle", "forme"],
+  ),
+  // A second exemplar of each shape, because MATH-S03-C01-O07 asks the child to classify
+  // « indépendamment d'autres critères comme la couleur, la taille, l'orientation » — and one
+  // canonical drawing per category teaches the prototype instead. Each variant deliberately
+  // wears the colour of a *different* shape above, so colour cannot become the cue.
+  shape(
+    "forme-carre-penche",
+    "Un carré posé de biais, plus petit",
+    `<rect x="62" y="62" width="76" height="76" rx="4" fill="${AMBER}" stroke="${INK}" stroke-width="6" transform="rotate(30 100 100)"/>`,
+    ["carré", "forme", "quatre côtés", "de biais"],
+  ),
+  shape(
+    "forme-rectangle-debout",
+    "Un rectangle debout, plus haut que large",
+    `<rect x="68" y="25" width="64" height="150" rx="4" fill="${CLAY}" stroke="${INK}" stroke-width="6"/>`,
+    ["rectangle", "forme", "quatre côtés", "debout"],
+  ),
+  shape(
+    "forme-triangle-quelconque",
+    "Un triangle aux trois côtés différents, posé de travers",
+    `<polygon points="45,40 175,95 80,170" fill="${BLUE}" stroke="${INK}" stroke-width="6" stroke-linejoin="round"/>`,
+    ["triangle", "forme", "trois côtés", "de biais"],
+  ),
+  shape(
+    "forme-disque-petit",
+    "Un petit disque, tout rond",
+    `<circle cx="100" cy="100" r="40" fill="${GREEN}" stroke="${INK}" stroke-width="6"/>`,
+    ["disque", "rond", "cercle", "forme", "petit"],
   ),
 ];
 
@@ -585,7 +614,7 @@ function svg(body: string): string {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${SIZE} ${SIZE}" width="${SIZE}" height="${SIZE}" role="img" fill="none">\n  ${body.trim()}\n</svg>\n`;
 }
 
-function main() {
+async function main() {
   const assets: Asset[] = [
     ...SHAPES,
     ...OBJECTS.map(([id, alt, tags, body]) => ({
@@ -653,12 +682,16 @@ function main() {
       contentHash: hashOf(file),
     })),
   };
+  // Formatted the way `npm run format:check` expects. Writing raw JSON.stringify output left the
+  // committed file and the generator's output permanently one `prettier --write` apart, so
+  // re-running the generator dirtied the tree and hand-formatting was reverted by the next run.
+  const registryPath = path.join(ROOT, "content/media/registry.json");
   writeFileSync(
-    path.join(ROOT, "content/media/registry.json"),
-    `${JSON.stringify(registry, null, 2)}\n`,
+    registryPath,
+    await format(JSON.stringify(registry, null, 2), { filepath: registryPath }),
     "utf8",
   );
   console.log(`Wrote ${assets.length} assets and content/media/registry.json`);
 }
 
-main();
+await main();

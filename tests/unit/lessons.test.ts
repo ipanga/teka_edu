@@ -140,9 +140,14 @@ describe("lesson validation", () => {
       /unknown objective/,
     );
     expect(check({ ...base, levelIds: ["maternelle-9"] })[0]).toMatch(/unknown level/);
+    // Keep every activity: dropping the others would leave the lesson declaring objectives that
+    // nothing works, and that error would arrive first and hide the one this test is about.
     const material: Lesson = {
       ...base,
-      activities: [{ ...base.activities[0]!, materialCodes: ["tableau-blanc"] }],
+      activities: [
+        { ...base.activities[0]!, materialCodes: ["tableau-blanc"] },
+        ...base.activities.slice(1),
+      ],
     };
     expect(check(material)[0]).toMatch(/unknown material/);
   });

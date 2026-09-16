@@ -26,15 +26,15 @@ Roles, kept distinct on purpose:
 
 ## Register of reviews
 
-| Batch                                | Date       | Kind                                             | Outcome                                                      | Corrections                    | Status                                                                                                  |
-| ------------------------------------ | ---------- | ------------------------------------------------ | ------------------------------------------------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------- |
-| 3ème maternelle, Week 1 (days 1–5)   | 2026-09-14 | AI-assisted (ChatGPT)                            | `accepted-with-modifications`                                | 13 items, all applied          | `review` — the corrections materially changed the pedagogy, so the regenerated package awaits re-review |
-| 3ème maternelle, Weeks 2–5           | —          | —                                                | not yet reviewed                                             | —                              | `review`                                                                                                |
-| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15 | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 11 items across the passes     | **`approved`** — 16 lessons                                                                             |
-| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15 | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 8 items                        | **`approved`** — 20 lessons                                                                             |
-| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15 | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 8 items                        | **`approved`** — 20 lessons                                                                             |
-| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15 | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                               | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons                                                                             |
-| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15 | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`** | 5 items                        | **`approved`** — 12 lessons                                                                             |
+| Batch                                | Date                   | Kind                                             | Outcome                                                      | Corrections                    | Status                                                                     |
+| ------------------------------------ | ---------------------- | ------------------------------------------------ | ------------------------------------------------------------ | ------------------------------ | -------------------------------------------------------------------------- |
+| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14, 2026-09-16 | AI-assisted (ChatGPT), 2 passes                  | `accepted-with-modifications` both times                     | 13 items, then 6               | `review` — awaiting the short confirmation pass on the regenerated package |
+| 3ème maternelle, Weeks 2–5           | —                      | —                                                | not yet reviewed                                             | mapping fixes only (see below) | `review`                                                                   |
+| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15             | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 11 items across the passes     | **`approved`** — 16 lessons                                                |
+| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15             | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 8 items                        | **`approved`** — 20 lessons                                                |
+| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15             | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 8 items                        | **`approved`** — 20 lessons                                                |
+| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15             | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                               | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons                                                |
+| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15             | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`** | 5 items                        | **`approved`** — 12 lessons                                                |
 
 **1ère maternelle September is complete: 88 of 88 lessons `approved`**, all `ai-assisted`, all
 `accepted`. The remaining 88 September lessons are 3ème maternelle's, all still at `review`.
@@ -42,6 +42,66 @@ Roles, kept distinct on purpose:
 
 Progress against the Beta 0.1 gate: **5 of 10 weekly packages accepted** — all five of 1ère
 maternelle. The five 3ème packages remain.
+
+## 3ème maternelle, Week 1 review, 2026-09-16 — accepted with modifications (pass 2)
+
+ChatGPT read the regenerated package and accepted the week again with modifications. The
+structure, the 35-minute day, the four-lesson rhythm, the stories, the rituals, the safety model
+and the home-learning model were **accepted and deliberately not rewritten**. What it found was
+five objectives attached to activities that do not work them, and one sentence the generator
+prints that contradicts its own number.
+
+| #   | Where                  | The claim                                              | Why it was wrong                                                                        |
+| --- | ---------------------- | ------------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| 1   | `m3-math-01-a1` day 1  | « Constituer une collection d’un cardinal donné »      | The child counts a set the adult has already laid out. Counting is not constituting.    |
+| 2   | `m3-math-01-a2` day 1  | only « Dénombrer une collection »                      | This is the activity that builds a requested quantity, and it did not say so.           |
+| 3   | `m3-world-01-a1` day 1 | « Se représenter avec un corps articulé en mouvement » | The child finds and moves their joints. Nothing is represented.                         |
+| 4   | `m3-math-03-a2` day 3  | only « Décrire et nommer »                             | Sorting is the classifying, and the classification objective was on the other activity. |
+| 5   | `m3-lang-04-a1` day 4  | « Scander les syllabes d’un mot »                      | The ritual says the date and recalls the week. There is no syllable task in it.         |
+| 6   | `m3-math-04-a2` day 4  | only « la comptine numérique »                         | « Le tas de dix » builds a collection of ten and counts it.                             |
+
+**The geometry lesson needed more than a remapping.** `MATH-S03-C01-O07` asks the child to
+classify plane shapes _« indépendamment d’autres critères comme la couleur, la taille,
+l’orientation »_, and the lesson offered one exemplar of each shape — one size, one colour, one
+orientation. That teaches the prototype the objective exists to prevent. The preparation now asks
+the adult for two or three of each shape, of different sizes and laid in different directions, and
+the screen shows a second exemplar of each: a square on its point, a rectangle standing up, a
+triangle with three unequal sides, a smaller disk. **Each variant wears the colour of a different
+shape**, so colour cannot become the cue. No technical vocabulary reaches the child.
+
+Fixing the pictures exposed a defect in the app itself: the « Montre : le carré » game compared the
+tapped picture's asset id with the wanted one, so the tilted square would have been called a wrong
+answer. It now compares what the picture _is_ — a tilted square is a square, and the child is told
+so.
+
+### The same five defects, elsewhere in September
+
+Each finding was a class, not a one-off, and the regression tests are written as rules, so every
+occurrence had to be corrected or the rules would not hold. **Eleven further activities** in
+Weeks 2–5 carried the identical mistake — six rituals claiming a phonological-awareness objective
+with no phonological task, three piles-of-N claiming only the counting rhyme, two more
+body-identification activities claiming representation, and the day-5 twin of the day-1 inversion.
+
+**Every one was free to correct**: in each case the right activity was a sibling in the _same
+lesson_ on the _same day_, so no lesson-level objective list, no first-taught day, no progression
+stage and no coverage figure moved. Machine-checked: 26 fields changed out of 3,084 compared
+across 88 lessons. **No approved 1ère maternelle lesson uses any of these objective codes**, so no
+approval digest lapsed.
+
+These are corrections forced by the rules, recorded in each week's review history. **They are not
+a review of those weeks** — Weeks 2–5 still await their own first pass.
+
+### Two mappings reported, deliberately not changed
+
+`m3-math-06-a2` (« Compte les miens, puis compte les tiens », day 6) and `m3-math-20-a1`
+(« Compte les objets… combien en ai-je enlevé ? », day 20) both claim « Constituer une collection
+d’un cardinal donné » while the child only counts. `m3-math-20-a2`, which does reconstitute the
+collection, claims it not at all — the same inversion again. They are **left as they are**: the
+rules did not force them, ChatGPT has not read those weeks, and guessing at a mapping it has not
+judged would be authoring a review rather than applying one. They belong to Weeks 2 and 4's own
+first pass.
+
+---
 
 ## Where the review history lives
 

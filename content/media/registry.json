@@ -42,6 +42,46 @@
       "contentHash": "sha256:979ad403ed9c1984aae9572befda615716b695f6f58f610de9e1aa20d609bc1e"
     },
     {
+      "id": "forme-carre-penche",
+      "kind": "shape",
+      "file": "shapes/forme-carre-penche.svg",
+      "alt": "Un carré posé de biais, plus petit",
+      "tags": ["carré", "forme", "quatre côtés", "de biais"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:12b3d9268bda66c8f8ad0b1177ef7fc66e67a8456aba6c2493f9a32751504d61"
+    },
+    {
+      "id": "forme-rectangle-debout",
+      "kind": "shape",
+      "file": "shapes/forme-rectangle-debout.svg",
+      "alt": "Un rectangle debout, plus haut que large",
+      "tags": ["rectangle", "forme", "quatre côtés", "debout"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:f9c78eeb8e0e717093688b8052fcf582ee3eca56974188ea3f3b14262dbc3b34"
+    },
+    {
+      "id": "forme-triangle-quelconque",
+      "kind": "shape",
+      "file": "shapes/forme-triangle-quelconque.svg",
+      "alt": "Un triangle aux trois côtés différents, posé de travers",
+      "tags": ["triangle", "forme", "trois côtés", "de biais"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:74a75a142e07a72b0030c91f80fa7786ee3001b5f09aec9afde544b7462f82c8"
+    },
+    {
+      "id": "forme-disque-petit",
+      "kind": "shape",
+      "file": "shapes/forme-disque-petit.svg",
+      "alt": "Un petit disque, tout rond",
+      "tags": ["disque", "rond", "cercle", "forme", "petit"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:fc8aed028ba040a9778e64dd63d8b338a8366b15a68fdec30780dc5dbca63dfb"
+    },
+    {
       "id": "objet-cuillere",
       "kind": "object",
       "file": "objects/objet-cuillere.svg",

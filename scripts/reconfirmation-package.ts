@@ -15,6 +15,10 @@
 import { execFileSync } from "node:child_process";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
+import { generateSchoolDays } from "@/domain/calendar/school-days";
+import { generateDailyPlan } from "@/domain/programme/daily-plan";
+import { REVIEW_PACKAGES } from "@/lib/content/review-packages";
+import { getProgramme, getReferenceData } from "@/lib/content/reference-data";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const args = new Map(
@@ -86,8 +90,38 @@ const show = (value: unknown): string => {
 
 const old = read(since);
 const now = read(null);
-const day = (id: string) => Number(id.match(/-(\d{2})/)?.[1] ?? 0);
-const week = (d: number) => (d <= 4 ? 1 : d <= 9 ? 2 : d <= 14 ? 3 : d <= 19 ? 4 : 5);
+/**
+ * The instructional day a lesson is actually taught on, read from the generated daily plans.
+ *
+ * It used to be parsed out of the lesson id — `m3-world-04` was reported as day 4. That is only
+ * true for the tracks that run every day: `monde`, `arts` and `temps-espace` come round every few
+ * days, so their fourth lesson is not the fourth day. « Mes articulations » was filed under day 4
+ * of week 1 when the child meets it on day 11, in week 3, which is also the wrong week to ask a
+ * reviewer to confirm.
+ */
+const dayOfLesson = new Map<string, number>();
+{
+  const data = getReferenceData();
+  const annual = data.annualPlans.find((p) => p.levelId === levelId);
+  const programme = annual && getProgramme(levelId, annual.schoolYearId, data);
+  const calendar = data.calendars.find((c) => c.schoolYear.id === annual?.schoolYearId);
+  if (annual === undefined || programme === undefined || calendar === undefined) {
+    throw new Error(`no programme, annual plan or calendar for ${levelId}`);
+  }
+  for (const schoolDay of generateSchoolDays(calendar, data.publicHolidays)) {
+    if (!schoolDay.instructional || schoolDay.instructionalDay === null) continue;
+    const daily = generateDailyPlan(schoolDay, programme, data.lessons);
+    if (daily.status === "no-content") continue;
+    for (const session of daily.sessions) {
+      if (session.lesson !== null) dayOfLesson.set(session.lesson.id, schoolDay.instructionalDay);
+    }
+  }
+}
+/** Activity ids are `<lessonId>-a<n>`, so both resolve through the lesson. */
+const day = (id: string) => dayOfLesson.get(id.replace(/-a\d+$/, "")) ?? 0;
+/** The weeks are the review packages themselves, so a row lands in the week a reviewer was sent. */
+const week = (d: number) =>
+  REVIEW_PACKAGES.find((p) => p.levelId === levelId && d >= p.fromDay && d <= p.toDay)?.week ?? 0;
 
 type Row = { week: number; day: number; id: string; field: string; before: string; after: string };
 const rows: Row[] = [];

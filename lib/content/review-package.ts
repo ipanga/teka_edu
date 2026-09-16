@@ -293,6 +293,45 @@ function lessonBlock(
   return lines;
 }
 
+/**
+ * The two screen-time figures, each explained by a sentence that matches its own value.
+ *
+ * Both sentences used to be unconditional, so a day with no screen interaction at all read
+ * « 0 min — l’enfant touche, choisit, compte sur l’appareil », which contradicts itself. Every
+ * September day is 0 min, so every package said it. The explanation has to follow the number.
+ */
+export function screenTimeLines(screenMinutes: number, pictureMinutes: number): string[] {
+  const screen =
+    screenMinutes === 0
+      ? [
+          `- **Temps d’interaction de l’enfant avec l’écran : ${screenMinutes} min** — aucune`,
+          "  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.",
+        ]
+      : [
+          `- **Temps d’interaction de l’enfant avec l’écran : ${screenMinutes} min** — l’enfant`,
+          "  touche, choisit, compte sur l’appareil.",
+        ];
+  const picture =
+    pictureMinutes === 0
+      ? [
+          `- **Temps où l’enfant regarde une image à l’écran : ${pictureMinutes} min** — rien n’est`,
+          "  montré à l’enfant sur l’appareil ce jour-là.",
+        ]
+      : [
+          `- **Temps où l’enfant regarde une image à l’écran : ${pictureMinutes} min environ** —`,
+          "  l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que",
+          "  l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.",
+        ];
+  return [
+    ...screen,
+    ...picture,
+    "",
+    "_Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences différentes. Le",
+    "temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans",
+    "l’autre — l’appareil est alors le sien._",
+  ];
+}
+
 function dayBlock(
   plan: DailyPlan,
   data: ReferenceData,
@@ -308,15 +347,7 @@ function dayBlock(
     "",
     `**Durée totale : ${plan.totalMinutes} min** · ${plan.sessions.length} séances · jour ${plan.rhythmDay} du rythme`,
     "",
-    `- **Temps d’interaction de l’enfant avec l’écran : ${plan.screenMinutes} min** — l’enfant`,
-    "  touche, choisit, compte sur l’appareil.",
-    `- **Temps où l’enfant regarde une image à l’écran : ${plan.pictureMinutes} min environ** —`,
-    "  l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que",
-    "  l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.",
-    "",
-    "_Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences différentes. Le",
-    "temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans",
-    "l’autre — l’appareil est alors le sien._",
+    ...screenTimeLines(plan.screenMinutes, plan.pictureMinutes),
     "",
     `**Matériel à préparer :** ${plan.materialCodes
       .map((code) => data.materials.find((m) => m.code === code)?.name ?? code)

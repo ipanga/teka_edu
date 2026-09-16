@@ -41,14 +41,21 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Aucune : cette semaine n’a encore jamais été relue.
+Cette semaine a déjà été relue 1 fois. Ce qui suit est l’historique, pour
+que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
+
+### 2026-09-16 — Teka Edu (conséquence de la relecture de la semaine 1) · `accepted-with-modifications` (ai-assisted)
+
+Deux changements arrivés dans cette semaine sans relecture propre : ils viennent de corrections demandées sur la semaine 1.
+
+**Suites données :** 1) « Je range puis je compte » et « Donne-moi six » (jour 5) portaient les objectifs à l’envers, exactement comme le jour 1 : compter une ligne d’objets déjà posée était présenté comme constituer une collection d’un cardinal donné, et l’activité qui la constitue vraiment ne le revendiquait pas. Les deux sont remis dans le bon sens ; la leçon, elle, ne change pas. 2) Le rituel du jour 6 ne revendique plus LANG-S02-C01-O13, « augmenter sa mémoire auditive et sa capacité de concentration » : on y dit la date et on se souvient de la semaine, il n’y a pas de tâche d’écoute. L’objectif reste porté par « Le jeu des trois mots », dans la même leçon et le même jour, si bien que rien ne change ni pour la leçon ni pour la progression.
 
 ## Jour 5 — 2026-09-07
 
 **Durée totale : 35 min** · 4 séances · jour 5 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -199,7 +206,7 @@ _Compter des collections un peu plus grandes, en les organisant._
 
   - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
 
-- **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). ; `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
+- **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
 
 #### 2. Donne-moi six — 4 min, sans interaction écran (manipulation)
 
@@ -210,7 +217,7 @@ _Compter des collections un peu plus grandes, en les organisant._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Give me six objects, exactly six. »
-- **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
+- **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). ; `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**
 
@@ -385,8 +392,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 35 min** · 4 séances · jour 6 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 1 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -415,7 +422,7 @@ _Écouter une suite de mots et la redire : la mémoire des sons se travaille com
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes mardi 8 septembre 2026. » Puis demandez ce qu’il a fait hier, et reformulez au passé : « Tu as mangé, puis tu as joué. »
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Say the date, then tell me what you did yesterday. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S02-C01-O13` Augmenter sa mémoire auditive et sa capacité de concentration.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date.
 
 #### 2. Le jeu des trois mots — 8 min, sans interaction écran (phonology)
 
@@ -698,8 +705,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 35 min** · 4 séances · jour 7 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -1022,8 +1029,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 35 min** · 4 séances · jour 8 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -1364,8 +1371,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 35 min** · 4 séances · jour 9 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 4 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
