@@ -41,14 +41,21 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Aucune : cette semaine n’a encore jamais été relue.
+Cette semaine a déjà été relue 1 fois. Ce qui suit est l’historique, pour
+que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
+
+### 2026-09-16 — Teka Edu (conséquence de la relecture de la semaine 1) · `accepted-with-modifications` (ai-assisted)
+
+Trois changements arrivés dans cette semaine sans relecture propre : ils viennent de corrections demandées sur la semaine 1.
+
+**Suites données :** 1) « Le tas de douze » (jour 10) porte désormais aussi « dénombrer une collection d’objets » et « constituer une collection d’un cardinal donné » : l’enfant construisait déjà une collection demandée, seule la revendication manquait. 2) « Se représenter avec un corps articulé en mouvement » quitte « Je nomme et je bouge » (jour 11), où l’enfant identifie et mobilise, pour « Le bonhomme qui plie », où il le dessine. 3) Le rituel du jour 14 ne revendique plus « scander les syllabes d’un mot » ; l’objectif reste sur « Combien de morceaux ? », dans la même leçon.
 
 ## Jour 10 — 2026-09-14
 
 **Durée totale : 35 min** · 4 séances · jour 10 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 2 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -185,6 +192,8 @@ _Étendre la suite des nombres de dix à vingt._
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O26` — Connaitre et utiliser la comptine numérique jusqu’à trente.
+  - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
+  - `MATH-S01-C01-O21` — Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
 #### 1. De dix à vingt — 5 min, sans interaction écran (counting)
 
@@ -208,7 +217,7 @@ _Étendre la suite des nombres de dix à vingt._
 
   - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
 
-- **Objectifs travaillés :** `MATH-S01-C01-O26` Connaitre et utiliser la comptine numérique jusqu’à trente.
+- **Objectifs travaillés :** `MATH-S01-C01-O26` Connaitre et utiliser la comptine numérique jusqu’à trente. ; `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). ; `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**
 
@@ -381,8 +390,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 35 min** · 4 séances · jour 1 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -652,7 +661,7 @@ _Retrouver et nommer les endroits du corps qui plient, et s’en servir._
 - **Matériel :** Aucun matériel
 - **Lexique visé :** le poignet _(the wrist)_ · le cou _(the neck)_ · plier _(to bend)_
 - **Aide en anglais (optionnelle) :** « I name a joint; you move only that one. »
-- **Objectifs travaillés :** `WORLD-S01-C02-O08` Identifier et nommer quelques articulations et la segmentation des membres. ; `WORLD-S01-C02-O09` Se représenter avec un corps articulé en mouvement.
+- **Objectifs travaillés :** `WORLD-S01-C02-O08` Identifier et nommer quelques articulations et la segmentation des membres.
 
 #### 2. Le bonhomme qui plie — 3 min, sans interaction écran (drawing)
 
@@ -667,7 +676,7 @@ _Retrouver et nommer les endroits du corps qui plient, et s’en servir._
 
   - `bonhomme-articule` — Un bonhomme dessiné avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
 
-- **Objectifs travaillés :** `WORLD-S01-C02-O08` Identifier et nommer quelques articulations et la segmentation des membres.
+- **Objectifs travaillés :** `WORLD-S01-C02-O08` Identifier et nommer quelques articulations et la segmentation des membres. ; `WORLD-S01-C02-O09` Se représenter avec un corps articulé en mouvement.
 
 **Réussites attendues — texte officiel pour la compétence « Découvrir le corps humain et la santé » (from-5) :**
 
@@ -698,8 +707,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 35 min** · 4 séances · jour 2 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -1023,8 +1032,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 35 min** · 4 séances · jour 3 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 2 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -1360,8 +1369,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 35 min** · 4 séances · jour 4 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 2 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -1390,7 +1399,7 @@ _Frapper les syllabes de mots plus longs et compter combien il y en a._
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes vendredi 18 septembre 2026. » Puis reprenez la semaine : les mots du marché, les mots qui vont ensemble, l’histoire. Faites parler l’enfant le plus possible.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Say the date, then tell me what we learned this week. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S02-C01-O03` Scander les syllabes d’un mot.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date.
 
 #### 2. Combien de morceaux ? — 7 min, sans interaction écran (phonology)
 

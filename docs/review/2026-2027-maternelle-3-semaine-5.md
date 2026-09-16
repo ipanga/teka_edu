@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 1 fois. Ce qui suit est l’historique, pour
+Cette semaine a déjà été relue 2 fois. Ce qui suit est l’historique, pour
 que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-15 — Teka Edu (conséquence d’une autre relecture) · `accepted-with-modifications` (ai-assisted)
@@ -50,12 +50,18 @@ Changement arrivé dans cette semaine sans relecture propre.
 
 **Suites données :** L’activité « Le mot coupé en morceaux » (jour 21) porte désormais aussi LANG-S02-C01-O13 — « augmenter sa mémoire auditive et sa capacité de concentration ». L’enfant y tenait déjà des syllabes en mémoire le temps d’une pause avant de reconstituer le mot ; c’est la revendication qui manquait, pas le travail.
 
+### 2026-09-16 — Teka Edu (conséquence de la relecture de la semaine 1) · `accepted-with-modifications` (ai-assisted)
+
+Deux changements arrivés dans cette semaine sans relecture propre : ils viennent de corrections demandées sur la semaine 1.
+
+**Suites données :** Le rituel du jour 21 ne revendique plus « repérer et produire des rimes et des assonances » ; l’objectif reste sur « Le mot coupé en morceaux », dans la même leçon. Et « Ce qui plie quand je bouge » (jour 21) revendique maintenant « identifier et nommer quelques articulations » au lieu de « se représenter avec un corps articulé » : l’enfant montre ce qui plie, il ne se représente pas. Le dessin de la même leçon porte toujours les deux.
+
 ## Jour 20 — 2026-09-28
 
 **Durée totale : 35 min** · 4 séances · jour 10 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 2 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -386,8 +392,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 35 min** · 4 séances · jour 1 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 1 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -418,7 +424,7 @@ _Reconnaitre un mot à partir de ses syllabes et de sa rime._
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes mardi 29 septembre 2026. » Puis faites compter jusqu’à dix, tranquillement, sans se presser.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Say the date, then count to ten for me. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S02-C01-O15` Repérer et produire des rimes et des assonances.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date.
 
 #### 2. Le mot coupé en morceaux — 8 min, sans interaction écran (phonology)
 
@@ -694,7 +700,7 @@ _Reprendre le corps, ses articulations et son mouvement._
 - **Matériel :** Aucun matériel
 - **Lexique visé :** le coude _(the elbow)_ · le genou _(the knee)_
 - **Aide en anglais (optionnelle) :** « Show me what bends when you do that movement. »
-- **Objectifs travaillés :** `WORLD-S01-C02-O09` Se représenter avec un corps articulé en mouvement.
+- **Objectifs travaillés :** `WORLD-S01-C02-O08` Identifier et nommer quelques articulations et la segmentation des membres.
 
 **Réussites attendues — texte officiel pour la compétence « Découvrir le corps humain et la santé » (from-5) :**
 
@@ -725,8 +731,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 35 min** · 4 séances · jour 2 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.

@@ -41,14 +41,21 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Aucune : cette semaine n’a encore jamais été relue.
+Cette semaine a déjà été relue 1 fois. Ce qui suit est l’historique, pour
+que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
+
+### 2026-09-16 — Teka Edu (conséquence de la relecture de la semaine 1) · `accepted-with-modifications` (ai-assisted)
+
+Trois changements arrivés dans cette semaine sans relecture propre : ils viennent de corrections demandées sur la semaine 1.
+
+**Suites données :** Les rituels des jours 16 et 17 ne revendiquent plus « repérer et produire des rimes et des assonances » : on y dit la date, on ne cherche pas de rimes. L’objectif reste porté par l’activité de rimes de chaque leçon. « Le tas de vingt » (jour 19) porte désormais aussi le dénombrement et la constitution d’une collection, à côté de la comptine numérique.
 
 ## Jour 15 — 2026-09-21
 
 **Durée totale : 35 min** · 4 séances · jour 5 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -371,8 +378,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 35 min** · 4 séances · jour 6 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 1 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -401,7 +408,7 @@ _Entendre que deux mots finissent pareil._
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes mardi 22 septembre 2026. » Puis demandez de raconter l’histoire de la pluie en deux ou trois phrases.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Say the date, then tell me about the rain story. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S02-C01-O15` Repérer et produire des rimes et des assonances.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date.
 
 #### 2. Ça finit pareil — 8 min, sans interaction écran (phonology)
 
@@ -699,8 +706,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 35 min** · 4 séances · jour 7 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 2 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -729,7 +736,7 @@ _Produire un mot qui rime, après l’avoir reconnu._
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes mercredi 23 septembre 2026. » Puis reprenez les rimes d’hier. Donnez un exemple avant de demander : « chat… rat ! »
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Say the date, then find a word that rhymes with chat. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S02-C01-O15` Repérer et produire des rimes et des assonances.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date.
 
 #### 2. À toi de trouver — 8 min, sans interaction écran (phonology)
 
@@ -1004,8 +1011,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 35 min** · 4 séances · jour 8 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -1301,8 +1308,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 35 min** · 4 séances · jour 9 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -1436,6 +1443,8 @@ _Aller au bout de la comptine numérique visée cette année._
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O26` — Connaitre et utiliser la comptine numérique jusqu’à trente.
+  - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
+  - `MATH-S01-C01-O21` — Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
 #### 1. De un à trente — 5 min, sans interaction écran (counting)
 
@@ -1459,7 +1468,7 @@ _Aller au bout de la comptine numérique visée cette année._
 
   - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
 
-- **Objectifs travaillés :** `MATH-S01-C01-O26` Connaitre et utiliser la comptine numérique jusqu’à trente.
+- **Objectifs travaillés :** `MATH-S01-C01-O26` Connaitre et utiliser la comptine numérique jusqu’à trente. ; `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). ; `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**
 

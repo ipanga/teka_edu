@@ -47,8 +47,8 @@ Aucune : cette semaine n’a encore jamais été relue.
 
 **Durée totale : 31 min** · 4 séances · jour 1 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 2 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -322,8 +322,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 31 min** · 4 séances · jour 2 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -608,8 +608,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 31 min** · 4 séances · jour 3 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 2 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -900,8 +900,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 30 min** · 4 séances · jour 4 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.

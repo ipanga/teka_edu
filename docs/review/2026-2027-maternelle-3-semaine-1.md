@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 2 fois. Ce qui suit est l’historique, pour
+Cette semaine a déjà été relue 3 fois. Ce qui suit est l’historique, pour
 que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-14 — ChatGPT · `accepted-with-modifications` (ai-assisted)
@@ -56,12 +56,18 @@ Deux changements sont arrivés dans cette semaine depuis la première passe, san
 
 **Suites données :** 1) Le matériel partagé « balle en papier froissé » ne propose plus de petit sac de graines — un contenant de petits objets s’ouvre — et porte une note de sécurité ; cela touche quatre activités de 3ème maternelle. 2) La progression est désormais calculée dans l’ordre où l’enfant rencontre le contenu, jour après jour et toutes pistes confondues, ce qui a corrigé les listes d’objectifs « enseignés » et « repris » au niveau des leçons, sans toucher au texte vu par l’enfant.
 
+### 2026-09-16 — ChatGPT · `accepted-with-modifications` (ai-assisted)
+
+Deuxième passe de fond. La structure, la durée, l’enchainement, les histoires, le niveau de langue, la sécurité et le modèle d’apprentissage à la maison sont acceptés et ne sont pas réécrits. Cinq objectifs étaient mal attribués : compter une collection déjà posée était présenté comme en constituer une ; le rituel du jour 4 revendiquait « scander les syllabes d’un mot » sans aucune tâche de syllabes ; « Où est-ce que ça plie ? » revendiquait « se représenter avec un corps articulé » alors que l’enfant ne représente rien ; « Je range les formes » ne revendiquait pas l’objectif de tri ; et « Le tas de dix » ne revendiquait que la comptine numérique. La leçon sur les formes ne proposait qu’un seul exemplaire par sorte, ce qui ne permet pas de classer indépendamment de la couleur, de la taille et de l’orientation. Enfin le dossier annonçait « 0 min d’interaction avec l’écran » tout en expliquant que l’enfant y touche et y compte.
+
+**Suites données :** Toutes appliquées. Les objectifs suivent maintenant ce que chaque activité fait vraiment : O20 sur le dénombrement et O21 sur la collection demandée, O08 sur l’identification des articulations et O09 sur le seul dessin, O07 ajouté au tri des formes, O20 et O21 ajoutés au tas de dix à côté de la comptine, et l’objectif de syllabes retiré du rituel où il ne se passe rien de tel. La leçon des formes demande désormais deux ou trois exemplaires de chaque sorte, de tailles différentes et posés dans tous les sens, et l’écran montre un second exemplaire de chaque forme — un carré de biais, un rectangle debout, un triangle aux côtés inégaux, un petit disque — chacun de la couleur d’une autre forme, pour que la couleur ne puisse pas servir d’indice. Aucun mot technique n’est dit à l’enfant. Le générateur du dossier explique maintenant le chiffre qu’il annonce : à zéro, il dit qu’aucune activité ne demande de toucher l’appareil. Aucune leçon n’est approuvée : les 16 restent en relecture.
+
 ## Jour 1 — 2026-09-01
 
 **Durée totale : 35 min** · 4 séances · jour 1 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -227,7 +233,7 @@ _Compter une petite collection en déplaçant les objets, puis en donner un nomb
 
   - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
 
-- **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). ; `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
+- **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
 
 #### 2. Donne-moi exactement quatre — 4 min, sans interaction écran (manipulation)
 
@@ -239,7 +245,7 @@ _Compter une petite collection en déplaçant les objets, puis en donner un nomb
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **À défaut :** Une boîte, un seau, une bassine, un panier ou un carton.
 - **Aide en anglais (optionnelle) :** « Give me exactly four objects. »
-- **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
+- **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). ; `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**
 
@@ -362,7 +368,7 @@ _Nommer les parties du corps qui plient, et se dessiner en mouvement._
 - **Matériel :** Aucun matériel
 - **Lexique visé :** le coude _(the elbow)_ · le genou _(the knee)_ · l’épaule _(the shoulder)_ · la cheville _(the ankle)_
 - **Aide en anglais (optionnelle) :** « Find the places on your body that bend, and move them. »
-- **Objectifs travaillés :** `WORLD-S01-C02-O08` Identifier et nommer quelques articulations et la segmentation des membres. ; `WORLD-S01-C02-O09` Se représenter avec un corps articulé en mouvement.
+- **Objectifs travaillés :** `WORLD-S01-C02-O08` Identifier et nommer quelques articulations et la segmentation des membres.
 
 #### 2. Je me dessine en train de bouger — 3 min, sans interaction écran (drawing)
 
@@ -408,8 +414,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 35 min** · 4 séances · jour 2 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -742,8 +748,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 35 min** · 4 séances · jour 3 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 4 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -904,7 +910,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 _Reconnaitre et nommer le carré, le rectangle, le triangle et le disque._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
-- **Conseil au parent :** Préparez d’abord les formes : dessinez-les sur du papier et découpez-les si vous pouvez. On travaille sur des formes plates, pas sur des objets : un coussin n’est pas un carré, mais sa face l’est.
+- **Conseil au parent :** Préparez d’abord les formes : sur du papier, dessinez-en deux ou trois de chaque sorte, puis découpez-les si vous pouvez. Variez la taille, et posez-les dans tous les sens : un carré posé sur la pointe reste un carré. Si vous avez plusieurs crayons de couleur, variez aussi les couleurs ; un seul crayon suffit. On travaille sur des formes plates, pas sur des objets : un coussin n’est pas un carré, mais sa face l’est.
 - **Objectifs enseignés :**
   - `MATH-S03-C01-O08` — Décrire et nommer quelques figures géométriques simples : carré, rectangle, triangle, disque. _(source : programme-2024-mathematiques)_
   - `MATH-S03-C01-O07` — Reconnaitre, trier et classer des formes géométriques planes, indépendamment d’autres critères comme la couleur, la taille, l’orientation. _(source : programme-2024-mathematiques)_
@@ -912,36 +918,44 @@ _Reconnaitre et nommer le carré, le rectangle, le triangle et le disque._
 #### 1. Je nomme les formes — 5 min, sans interaction écran (observation)
 
 - **Consigne à l’enfant :** « Regarde les formes. Nomme-les : le carré, le rectangle, le triangle, le disque. »
-- **Guidance adulte :** 1. Montrez chaque forme et nommez-la. 2. Faites répéter. 3. Faites suivre le contour avec le doigt en comptant les côtés : le carré en a quatre, le triangle trois, le disque aucun. 4. Demandez-lui de retrouver la même forme sur une face d’un objet de la maison.
+- **Guidance adulte :** 1. Montrez chaque forme et nommez-la. 2. Faites répéter. 3. Faites suivre le contour avec le doigt en comptant les côtés : le carré en a quatre, le triangle trois, le disque aucun. 4. Montrez ensuite une autre forme de la même sorte, plus petite ou posée autrement, et faites-la nommer aussi. 5. Demandez-lui de retrouver la même forme sur une face d’un objet de la maison.
 - **Matériel :** Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque)
 - **Lexique visé :** le carré _(the square)_ · le rectangle _(the rectangle)_ · le triangle _(the triangle)_ · le disque _(the circle)_ · le côté _(the side)_
 - **À défaut :** Dessinez les formes sur une feuille et découpez-les, ou tracez-les directement sur le sol ou sur le sable ; à défaut, servez-vous de morceaux de carton d’emballage.
 - **Aide en anglais (optionnelle) :** « Look at the shapes and name them. »
-- **Images montrées à l'enfant (4) :**
+- **Images montrées à l'enfant (8) :**
 
   - `forme-carre` — Un carré (`public/media/shapes/forme-carre.svg`)
+  - `forme-carre-penche` — Un carré posé de biais, plus petit (`public/media/shapes/forme-carre-penche.svg`)
   - `forme-rectangle` — Un rectangle (`public/media/shapes/forme-rectangle.svg`)
+  - `forme-rectangle-debout` — Un rectangle debout, plus haut que large (`public/media/shapes/forme-rectangle-debout.svg`)
   - `forme-triangle` — Un triangle (`public/media/shapes/forme-triangle.svg`)
+  - `forme-triangle-quelconque` — Un triangle aux trois côtés différents, posé de travers (`public/media/shapes/forme-triangle-quelconque.svg`)
   - `forme-disque` — Un disque, tout rond (`public/media/shapes/forme-disque.svg`)
+  - `forme-disque-petit` — Un petit disque, tout rond (`public/media/shapes/forme-disque-petit.svg`)
 
 - **Objectifs travaillés :** `MATH-S03-C01-O08` Décrire et nommer quelques figures géométriques simples : carré, rectangle, triangle, disque. ; `MATH-S03-C01-O07` Reconnaitre, trier et classer des formes géométriques planes, indépendamment d’autres critères comme la couleur, la taille, l’orientation.
 
 #### 2. Je range les formes — 4 min, sans interaction écran (sorting)
 
 - **Consigne à l’enfant :** « Mets ensemble les formes qui sont pareilles. »
-- **Guidance adulte :** 1. Mélangez les formes, de tailles et de couleurs différentes. 2. Demandez de faire des tas. 3. Faites dire pourquoi : « Tous ceux-là ont trois côtés. » 4. Montrez qu’un grand triangle et un petit triangle sont tous les deux des triangles.
+- **Guidance adulte :** 1. Mélangez toutes les formes, grandes et petites, posées dans tous les sens. 2. Demandez de faire des tas : ensemble ce qui est pareil. 3. Faites dire pourquoi : « Tous ceux-là ont trois côtés. » 4. Si l’enfant sépare selon la couleur ou la taille, reprenez une pièce et comptez les côtés avec lui. 5. Montrez qu’un grand triangle et un petit triangle vont dans le même tas, et qu’un carré posé sur la pointe reste un carré.
 - **Matériel :** Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque)
 - **Lexique visé :** pareil _(the same)_ · ranger _(to sort)_
 - **À défaut :** Dessinez les formes sur une feuille et découpez-les, ou tracez-les directement sur le sol ou sur le sable ; à défaut, servez-vous de morceaux de carton d’emballage.
 - **Aide en anglais (optionnelle) :** « Put the shapes that are the same together. »
-- **Images montrées à l'enfant (4) :**
+- **Images montrées à l'enfant (8) :**
 
   - `forme-carre` — Un carré (`public/media/shapes/forme-carre.svg`)
-  - `forme-rectangle` — Un rectangle (`public/media/shapes/forme-rectangle.svg`)
-  - `forme-triangle` — Un triangle (`public/media/shapes/forme-triangle.svg`)
+  - `forme-triangle-quelconque` — Un triangle aux trois côtés différents, posé de travers (`public/media/shapes/forme-triangle-quelconque.svg`)
   - `forme-disque` — Un disque, tout rond (`public/media/shapes/forme-disque.svg`)
+  - `forme-rectangle-debout` — Un rectangle debout, plus haut que large (`public/media/shapes/forme-rectangle-debout.svg`)
+  - `forme-carre-penche` — Un carré posé de biais, plus petit (`public/media/shapes/forme-carre-penche.svg`)
+  - `forme-rectangle` — Un rectangle (`public/media/shapes/forme-rectangle.svg`)
+  - `forme-disque-petit` — Un petit disque, tout rond (`public/media/shapes/forme-disque-petit.svg`)
+  - `forme-triangle` — Un triangle (`public/media/shapes/forme-triangle.svg`)
 
-- **Objectifs travaillés :** `MATH-S03-C01-O08` Décrire et nommer quelques figures géométriques simples : carré, rectangle, triangle, disque.
+- **Objectifs travaillés :** `MATH-S03-C01-O07` Reconnaitre, trier et classer des formes géométriques planes, indépendamment d’autres critères comme la couleur, la taille, l’orientation. ; `MATH-S03-C01-O08` Décrire et nommer quelques figures géométriques simples : carré, rectangle, triangle, disque.
 
 **Réussites attendues — texte officiel pour la compétence « Explorer les solides et les formes planes » (from-5) :**
 
@@ -1084,8 +1098,8 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 **Durée totale : 35 min** · 4 séances · jour 4 du rythme
 
-- **Temps d’interaction de l’enfant avec l’écran : 0 min** — l’enfant
-  touche, choisit, compte sur l’appareil.
+- **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
+  activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
 - **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
@@ -1114,7 +1128,7 @@ _Frapper les syllabes des prénoms de la maison : entendre que les mots sont fai
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes vendredi 4 septembre 2026. » Puis reprenez la semaine ensemble : se présenter, les objets de l’école, l’histoire de Kumu. Laissez l’enfant dire ce dont il se souvient avant de compléter. On ne corrige pas : on rappelle.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Say the date, then tell me what we did this week. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S02-C01-O03` Scander les syllabes d’un mot.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date.
 
 #### 2. Je frappe les syllabes — 7 min, sans interaction écran (phonology)
 
@@ -1205,6 +1219,9 @@ _Dire la suite des nombres jusqu’à dix sans en oublier._
 - **Conseil au parent :** La comptine est une chanson : on l’apprend en la disant souvent. Cette semaine, on va jusqu’à dix — pas plus loin. On ira à vingt, puis à trente, plus tard dans le mois.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O26` — Connaitre et utiliser la comptine numérique jusqu’à trente. _(source : programme-2024-mathematiques)_
+- **Objectifs repris (déjà vus) :**
+  - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
+  - `MATH-S01-C01-O21` — Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
 #### 1. Je dis les nombres jusqu’à dix — 5 min, sans interaction écran (counting)
 
@@ -1229,7 +1246,7 @@ _Dire la suite des nombres jusqu’à dix sans en oublier._
   - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
 
 - **Extension facultative (proposée seulement si l’enfant en redemande) :** Enlever un objet et redire combien il en reste — facultatif.
-- **Objectifs travaillés :** `MATH-S01-C01-O26` Connaitre et utiliser la comptine numérique jusqu’à trente.
+- **Objectifs travaillés :** `MATH-S01-C01-O26` Connaitre et utiliser la comptine numérique jusqu’à trente. ; `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). ; `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**
 

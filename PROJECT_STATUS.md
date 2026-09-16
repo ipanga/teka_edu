@@ -5,9 +5,9 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-09-15
-Branch:     feat/maternelle-1-annual-and-september
-Commit:     develop at ead8d8b; main at 1b95480
+Date:       2026-09-16
+Branch:     fix/maternelle-3-week-1-review
+Commit:     develop at a4a014d; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -457,11 +457,11 @@ GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891,
 
 ## Content Status
 
-| Class           | Curriculum mapping     | Week 1                                                                               | Week 2      | Full year   |
-| --------------- | ---------------------- | ------------------------------------------------------------------------------------ | ----------- | ----------- |
-| 1ère maternelle | DONE (band `before-4`) | Not started                                                                          | Not started | Not started |
-| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                          | Not started | Not started |
-| 3ème maternelle | DONE (band `from-5`)   | September written and corrected; **awaiting re-review** (88 lessons, 170 activities) | Not started | Not started |
+| Class           | Curriculum mapping     | Week 1                                                                                                    | Week 2      | Full year   |
+| --------------- | ---------------------- | --------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| 1ère maternelle | DONE (band `before-4`) | Not started                                                                                               | Not started | Not started |
+| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                                               | Not started | Not started |
+| 3ème maternelle | DONE (band `from-5`)   | September written; Week 1 through 2 review passes, **awaiting confirmation** (88 lessons, 170 activities) | Not started | Not started |
 
 DRC 2026–2027 calendar data: DONE (official MINEDU-NC calendar and Ordonnance n° 23/042; 189 instructional days).
 Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 official objectives and 529 success examples** imported with provenance.
@@ -528,27 +528,35 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  1ère maternelle: band verification, corpus audit, annual plan, September.
-            - before-4 confirmed for 1ère maternelle, and confirmed by arithmetic rather
-              than by trust: the same rule gives from-5 = 162, the number the 3ème plan was
-              built on. 116 objectives apply, provenance complete.
-            - before-4 is the earliest band, so this level has nothing earlier to reinvest
-              from. 116 objectives over 189 days is not a gap: the spare days buy repetition.
-            - The annual-plan builder became one engine with per-level judgement files.
-              That refactor caught a real defect — the Week 1 pacing fix had been made by
-              editing generated JSON, so the generator would have reverted it silently.
-            - September: 22 days, 88 lessons, 132 activities, 30-31 minutes, no screen.
-              24 objectives, the last introduced on day 13; the back half only returns.
-            - My first pass introduced 31 objectives in September, which contradicted the
-              principle I had just written down. Trimmed to 24.
-            - Validators caught two more of my mistakes: progression stages assigned by date
-              rather than by what a lesson introduces, and no lesson claiming to teach
-              "entrer en communication verbale avec un adulte" — the year's most foundational
-              objective, carried by every ritual and owned by nobody.
-            - Six new assets, everything else reused. Level isolation proved three ways.
-Validation: format, lint, typecheck, unit (218), content (30 files), pgTAP (149) on a fresh
-            reset, build, E2E (28).
+Completed:  3ème maternelle Week 1 — ChatGPT's second-pass corrections applied.
+            - Six objective mappings corrected. Counting a set already laid out no longer
+              claims to constitute a collection; finding your own joints no longer claims to
+              represent an articulated body; the sorting activity claims the sorting
+              objective; the day-4 ritual no longer claims to scan syllables it never asks
+              for; and « Le tas de dix » no longer claims only the counting rhyme.
+            - Each finding was a class, not a one-off. Written as rules, the regression tests
+              forced eleven more occurrences in Weeks 2-5 into the open. Every one was free to
+              fix: the right activity was always a sibling in the same lesson on the same day,
+              so no lesson list, no first-taught day, no stage and no coverage figure moved.
+              26 of 3,084 compared fields changed, machine-proved.
+            - The geometry lesson could not satisfy its own objective. « Classer indépendamment
+              de la couleur, de la taille, de l'orientation » with one drawing per shape
+              teaches the prototype instead. Preparation now asks for two or three of each, and
+              the screen shows a second exemplar of each — each wearing the colour of a
+              different shape, so colour cannot be the cue.
+            - That exposed a defect in the app: « Montre : le carré » compared asset ids, so
+              the tilted square would have been marked wrong. It now compares what a picture
+              is. The E2E test asserts the tilted square is accepted.
+            - Two generators wrote JSON that Prettier immediately reformatted, so regenerating
+              dirtied the tree and hand-formatting was silently reverted. Both now format their
+              own output; both round-trip clean.
+            - The reconfirmation document numbered days by track position. « Mes articulations »
+              was filed as day 4 of Week 1; the child meets it on day 11, in Week 3. It reads
+              the real day from the generated plans now.
+Validation: format, lint, typecheck, unit (260), content (31 files), pgTAP (152) on a fresh
+            reset, build, E2E (28), both Docker images, client-bundle scan.
 Cost:       $0.
-Not done:   No lesson approved. The five 1ère packages have not been reviewed; 3ème Week 1
-            awaits re-review. October not authored; 2ème maternelle not started.
+Not done:   No lesson approved — 3ème stays 0 of 88, Beta stays 5 of 10 weekly packages.
+            Weeks 2-5 have still never been reviewed; the fixes there are forced corrections,
+            not a review. Two further suspect mappings reported, deliberately not changed.
 ```

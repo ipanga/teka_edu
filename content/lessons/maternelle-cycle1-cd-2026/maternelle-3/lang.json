@@ -382,7 +382,7 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C01-O03"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12"],
           "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [
@@ -595,7 +595,7 @@
           "mode": "off-screen",
           "role": "retrieval",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C01-O13"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12"],
           "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [
@@ -1485,7 +1485,7 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C01-O03"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12"],
           "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [
@@ -1696,7 +1696,7 @@
           "mode": "off-screen",
           "role": "retrieval",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C01-O15"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12"],
           "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [
@@ -1800,7 +1800,7 @@
           "mode": "off-screen",
           "role": "retrieval",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C01-O15"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12"],
           "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [
@@ -2244,7 +2244,7 @@
           "mode": "off-screen",
           "role": "retrieval",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C01-O15"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12"],
           "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [
