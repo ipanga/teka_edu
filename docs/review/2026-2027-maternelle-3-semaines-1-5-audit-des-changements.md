@@ -1,24 +1,35 @@
-# Reconfirmation — maternelle-3, semaines 1, 2, 3, 4, 5
+# Audit des changements — maternelle-3, semaines 1, 2, 3, 4, 5
 
 > **Ce document est généré** (`npm run review:reconfirmation`). Il ne remplace pas une
-> relecture complète : il montre **uniquement ce qui a changé** depuis la version que vous
-> aviez acceptée, pour que vous puissiez confirmer que la correction connue a bien été
-> appliquée — et rien d’autre.
+> relecture complète : il montre **uniquement ce qui a changé**, champ par champ, pour que
+> vous puissiez vérifier que la correction connue a bien été appliquée — et rien d’autre.
+
+## Où en est chaque semaine
+
+- **Semaine 1 — relue, pas approuvée.** Dernière passe : 2026-09-17 (`accepted-with-modifications`, ai-assisted). Elle reste en `review` et **aucune leçon n’y est approuvée**. Ce document est un audit des changements depuis cette passe, pas une restitution d’approbation.
+
+- **Semaine 2 — jamais relue.** Aucune passe de relecture n’a porté sur cette semaine ; elle est en `review` et **aucune leçon n’y est approuvée**. Les changements ci-dessous y sont arrivés par une règle de correction partagée, pas par une lecture de cette semaine. **Les confirmer ne l’approuve pas** : ils seront portés à son dossier de relecture complet, à venir.
+
+- **Semaine 3 — jamais relue.** Aucune passe de relecture n’a porté sur cette semaine ; elle est en `review` et **aucune leçon n’y est approuvée**. Les changements ci-dessous y sont arrivés par une règle de correction partagée, pas par une lecture de cette semaine. **Les confirmer ne l’approuve pas** : ils seront portés à son dossier de relecture complet, à venir.
+
+- **Semaine 4 — jamais relue.** Aucune passe de relecture n’a porté sur cette semaine ; elle est en `review` et **aucune leçon n’y est approuvée**. Les changements ci-dessous y sont arrivés par une règle de correction partagée, pas par une lecture de cette semaine. **Les confirmer ne l’approuve pas** : ils seront portés à son dossier de relecture complet, à venir.
+
+- **Semaine 5 — jamais relue.** Aucune passe de relecture n’a porté sur cette semaine ; elle est en `review` et **aucune leçon n’y est approuvée**. Les changements ci-dessous y sont arrivés par une règle de correction partagée, pas par une lecture de cette semaine. **Les confirmer ne l’approuve pas** : ils seront portés à son dossier de relecture complet, à venir.
 
 ## Ce qui s’est passé
 
-Ces semaines avaient été acceptées (`ai-assisted`). La relecture de la semaine 4 a ensuite
-montré que plusieurs défauts corrigés dans cette semaine existaient **à l’identique** dans les
-semaines déjà acceptées : le même texte d’activité avait été écrit une fois puis réutilisé.
-
-Les corrections ont été appliquées. **Les approbations correspondantes ont été annulées**, et
-non pas re-tamponnées : c’est exactement ce que l’empreinte (`reviewedDigest`) doit produire
-quand le texte relu change.
-
-**26 champs ont changé, sur 3084 champs comparés dans 88 leçons.**
+**28 champs ont changé, sur 3084 champs comparés dans 88 leçons.**
 Tous les autres sont identiques, octet pour octet.
 
-## Semaine 1 — 12 changement(s)
+Ces changements viennent de règles de correction partagées : un défaut trouvé dans une
+semaine existait à l’identique ailleurs, et une règle ne tient que si toutes ses occurrences
+sont corrigées.
+
+**Les semaines 2, 3, 4 et 5 n’ont pas encore reçu leur relecture pédagogique complète.**
+Confirmer les changements de champs ci-dessous **ne vaut pas approbation** de ces semaines :
+elles garderont leur dossier de relecture complet, avec ces corrections déjà intégrées.
+
+## Semaine 1 — 14 changement(s)
 
 ### Jour 1 · `m3-math-01-a1` · `objectiveCodes` — lu par l’adulte
 
@@ -40,6 +51,16 @@ Tous les autres sont identiques, octet pour octet.
 
 > ["MATH-S01-C01-O20","MATH-S01-C01-O21"]
 
+### Jour 1 · `m3-phys-01-a1` · `adultGuidance` — lu par l’adulte
+
+**Avant :**
+
+> 1. Dégagez l’espace avec l’enfant : c’est lui qui écarte la chaise. 2. Dites les règles. 3. Tapez dans les mains pour partir, arrêtez pour stopper. 4. À l’intérieur, remplacez la course par des pas rapides sur place.
+
+**Après :**
+
+> 1. Dégagez l’espace vous-même : **c’est vous qui déplacez les chaises et les meubles**. L’enfant aide en portant ce qui est léger et sans risque — un coussin, un pagne, un jouet. 2. Dites les règles. 3. Tapez dans les mains pour partir, arrêtez pour stopper. 4. À l’intérieur, remplacez la course par des pas rapides sur place.
+
 ### Jour 1 · `m3-world-01-a1` · `objectiveCodes` — lu par l’adulte
 
 **Avant :**
@@ -49,6 +70,16 @@ Tous les autres sont identiques, octet pour octet.
 **Après :**
 
 > ["WORLD-S01-C02-O08"]
+
+### Jour 2 · `m3-phys-02-a1` · `adultGuidance` — lu par l’adulte
+
+**Avant :**
+
+> 1. Refaites l’espace dégagé **avec l’enfant**, comme hier : c’est lui qui écarte ce qui gêne. 2. Rappelez la règle d’arrêt. 3. Comptez lentement jusqu’à dix pendant qu’il court sans s’arrêter. 4. S’il s’arrête avant, comptez moins loin demain : on allonge peu à peu, on ne force pas.
+
+**Après :**
+
+> 1. Refaites l’espace dégagé comme hier : **c’est vous qui déplacez les chaises et les meubles**, l’enfant aide avec ce qui est léger — un coussin, un pagne. 2. Rappelez la règle d’arrêt. 3. Comptez lentement jusqu’à dix pendant qu’il court sans s’arrêter. 4. S’il s’arrête avant, comptez moins loin demain : on allonge peu à peu, on ne force pas.
 
 ### Jour 3 · `m3-math-03` · `lesson.parentGuidance` — lu par l’adulte
 
@@ -298,7 +329,9 @@ des comptines, questions de compréhension — sauf là où ils apparaissent ci-
 ## Ce qu’on vous demande
 
 Pour chaque changement : confirmez qu’il applique bien la correction demandée et qu’il
-n’introduit pas de pédagogie nouvelle. Si c’est le cas, ces semaines peuvent retrouver le
-statut `approved` avec `reviewKind: ai-assisted`. Aucune leçon n’est approuvée aujourd’hui.
+n’introduit pas de pédagogie nouvelle.
 
-**Décision :** ☐ reconfirmé ☐ reconfirmé avec modifications ☐ à revoir
+Pour les semaines qui ne sont pas approuvées, **cette confirmation ne change aucun statut** :
+elles restent en `review`, et c’est leur dossier de relecture complet qui décidera.
+
+**Décision :** ☐ changements confirmés ☐ confirmé avec modifications ☐ à revoir

@@ -26,15 +26,15 @@ Roles, kept distinct on purpose:
 
 ## Register of reviews
 
-| Batch                                | Date                   | Kind                                             | Outcome                                                      | Corrections                    | Status                                                                     |
-| ------------------------------------ | ---------------------- | ------------------------------------------------ | ------------------------------------------------------------ | ------------------------------ | -------------------------------------------------------------------------- |
-| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14, 2026-09-16 | AI-assisted (ChatGPT), 2 passes                  | `accepted-with-modifications` both times                     | 13 items, then 6               | `review` — awaiting the short confirmation pass on the regenerated package |
-| 3ème maternelle, Weeks 2–5           | —                      | —                                                | not yet reviewed                                             | mapping fixes only (see below) | `review`                                                                   |
-| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15             | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 11 items across the passes     | **`approved`** — 16 lessons                                                |
-| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15             | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 8 items                        | **`approved`** — 20 lessons                                                |
-| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15             | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 8 items                        | **`approved`** — 20 lessons                                                |
-| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15             | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                               | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons                                                |
-| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15             | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`** | 5 items                        | **`approved`** — 12 lessons                                                |
+| Batch                                | Date                 | Kind                                             | Outcome                                                      | Corrections                    | Status                                                                     |
+| ------------------------------------ | -------------------- | ------------------------------------------------ | ------------------------------------------------------------ | ------------------------------ | -------------------------------------------------------------------------- |
+| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14, -16, -17 | AI-assisted (ChatGPT), 3 passes                  | `accepted-with-modifications` all three                      | 13, then 6, then 2             | `review` — awaiting the final confirmation pass on the regenerated package |
+| 3ème maternelle, Weeks 2–5           | —                    | —                                                | not yet reviewed                                             | mapping fixes only (see below) | `review`                                                                   |
+| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15           | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 11 items across the passes     | **`approved`** — 16 lessons                                                |
+| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15           | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 8 items                        | **`approved`** — 20 lessons                                                |
+| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15           | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 8 items                        | **`approved`** — 20 lessons                                                |
+| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15           | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                               | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons                                                |
+| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15           | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`** | 5 items                        | **`approved`** — 12 lessons                                                |
 
 **1ère maternelle September is complete: 88 of 88 lessons `approved`**, all `ai-assisted`, all
 `accepted`. The remaining 88 September lessons are 3ème maternelle's, all still at `review`.
@@ -100,6 +100,64 @@ collection, claims it not at all — the same inversion again. They are **left a
 rules did not force them, ChatGPT has not read those weeks, and guessing at a mapping it has not
 judged would be authoring a review rather than applying one. They belong to Weeks 2 and 4's own
 first pass.
+
+---
+
+## 3ème maternelle, Week 1 review, 2026-09-17 — accepted with modifications (pass 3)
+
+ChatGPT confirmed that the five pedagogical corrections of pass 2 were correctly applied: the
+mathematics mappings, the identify-versus-represent split, the phonology ritual, the sorting
+objective and the screen-time wording. The week's structure, stories, durations, language level,
+English scaffolding, progression and home-learning model remain accepted and were not rewritten.
+Two narrow issues remained.
+
+### Who moves the furniture
+
+Two movement activities still told the adult to have the **child** clear the space:
+
+| Activity              | Was                                                                                            | Now                                                                                                                                                                                 |
+| --------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `m3-phys-01-a1` day 1 | « Dégagez l’espace avec l’enfant : c’est lui qui écarte la chaise. »                           | « Dégagez l’espace vous-même : **c’est vous qui déplacez les chaises et les meubles**. L’enfant aide en portant ce qui est léger et sans risque — un coussin, un pagne, un jouet. » |
+| `m3-phys-02-a1` day 2 | « Refaites l’espace dégagé **avec l’enfant**, comme hier : c’est lui qui écarte ce qui gêne. » | « Refaites l’espace dégagé comme hier : **c’est vous qui déplacez les chaises et les meubles**, l’enfant aide avec ce qui est léger — un coussin, un pagne. »                       |
+
+A chair is light in one home and heavy or unstable in another, and « ce qui gêne » is whatever
+happens to be there. A product used in homes it cannot see does not hand a five-year-old an
+object of unknown weight. The running, the stopping rule and the endurance work are unchanged;
+no fear-based language and no extra warnings were added.
+
+**Audited across all of September, 3ème maternelle.** Every occurrence of « écarte / déplace /
+dégage / meuble / chaise / obstacle » in a parent guidance, adult guidance or child instruction
+was inspected. **These two activities were the only ones affected**, both in Week 1. Deliberately
+left alone: `m3-phys-06` (the adult installs the course, the child passes _under_ a chair),
+`m3-phys-14` (the adult lays the cloths), `m3-time-01-a2` (the child moves a pebble marker),
+`m3-math-13` (the child counts chairs). So there is nothing for Weeks 2–5 to carry.
+
+### A document that offered an approval nobody had performed
+
+The cross-week document asserted that the weeks it covered « avaient été acceptées » and closed
+by offering to restore them to `approved`. That text was written while reconfirming 1ère
+maternelle, whose weeks really had been approved and really did lapse. Generated for 3ème
+maternelle it was false twice over: **no 3ème week has ever been approved, and four of them have
+never been read at all.**
+
+The generator now derives its wording from canonical state (`weekReviewState`, in
+`domain/lessons/review.ts`):
+
+| State            | What the document may say                                       |
+| ---------------- | --------------------------------------------------------------- |
+| `approved`       | approval lapsed; may be restored once the changes are confirmed |
+| `reviewed`       | a change audit since the last pass; no approval to restore      |
+| `never-reviewed` | never read; confirming these changes approves nothing           |
+| `draft`          | still being written; no decision asked                          |
+
+Telling a `full-review` from a `consequence` used to depend on reading the `reviewer` string, so
+four unread weeks looked reviewed. `scope` is now a field on every history entry, and the
+question is answered from data.
+
+The file is named for what it is: `…-audit-des-changements.md` when no week is approved,
+`…-reconfirmation.md` when one is. The misleading
+`2026-2027-maternelle-3-semaines-1-5-reconfirmation.md` was **removed**, not left beside its
+replacement.
 
 ---
 

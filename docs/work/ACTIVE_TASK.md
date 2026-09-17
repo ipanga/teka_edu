@@ -10,13 +10,13 @@
 
 ## Task
 
-Apply ChatGPT's second-pass corrections to 3ème maternelle September Week 1, and return the
-regenerated package for its short confirmation pass.
+Apply ChatGPT's confirmation-pass corrections to 3ème maternelle September Week 1: movement-space
+safety, and the review-state semantics of the cross-week document.
 
 ## Objective
 
-Every objective a Week 1 activity claims is one the child actually works, proved by rules rather
-than by reading.
+No activity asks a five-year-old to move furniture, and no generated document offers an approval
+nobody performed.
 
 ## Status
 
@@ -24,11 +24,11 @@ than by reading.
 
 ## Branch
 
-`fix/maternelle-3-week-1-review`
+`fix/maternelle-3-week-1-safety-and-review-state`
 
 ## Base Branch
 
-`develop` at `a4a014d`
+`develop` at `f2c018f`
 
 ## Started
 
@@ -36,8 +36,8 @@ than by reading.
 
 ## Last Checkpoint
 
-2026-09-16 — all six corrections applied, the four defect classes closed across September, seven
-regression rules written, generators fixed, full local suite green.
+2026-09-17 — safety normalisation applied and audited across September, the change-audit
+generator made state-aware, twelve new regression tests, full local suite green.
 
 ## Scope
 
@@ -67,17 +67,20 @@ regression rules written, generators fixed, full local suite green.
 
 ## Completed
 
-- [x] Six corrections applied — `m3-math-01` a1/a2, `m3-world-01-a1`, `m3-math-03-a2`,
-      `m3-lang-04-a1`, `m3-math-04-a2`
-- [x] Geometry: preparation asks for 2–3 of each shape; 4 generated variants on screen
-- [x] `ChooseOne` now matches on what a picture **is**, so a tilted square is accepted
-- [x] Eleven further occurrences of the same four classes corrected in Weeks 2–5, ripple-free
-- [x] Seven regression rules, written against the official statements, not code lists
-- [x] Zero screen interaction no longer described as the child using the device
-- [x] `tools/media/build.ts` and `tools/annual-plan/build.ts` emit Prettier-formatted output
-- [x] `scripts/reconfirmation-package.ts` reports the real instructional day, not the track step
-- [x] Review history recorded for Week 1 and for each affected week 2–5
-- [x] 26 of 3,084 compared fields changed — machine-proved, nothing unintended
+- [x] `m3-phys-01-a1` and `m3-phys-02-a1` — the adult moves the furniture; the child carries a
+      cushion, a pagne or a toy. The activity itself is unchanged
+- [x] September audited for the pattern: those two were the only occurrences, both in Week 1
+- [x] Four further matches inspected and deliberately left (adult-installed course, adult-laid
+      cloths, pebble marker, counting chairs)
+- [x] `scope` (`full-review` | `consequence`) added to every review-history entry, so "has this
+      week been read?" is data rather than a guess at the `reviewer` string
+- [x] `weekReviewState` in `domain/lessons/review.ts`: approved / reviewed / never-reviewed / draft
+- [x] The change-audit document says only what the state supports, and is named for what it is
+- [x] The misleading `…-semaines-1-5-reconfirmation.md` removed, not left beside its replacement
+- [x] Empty-diff bug fixed: the generator used to write « semaines-undefined-undefined »
+- [x] 12 new tests — four states, the consequence-vs-review distinction, the canonical state of
+      both levels, the audit's wording, and two movement-safety content rules
+- [x] Both safety tests proved to fail against the old wording before being kept
 
 ## In Progress
 
@@ -85,7 +88,7 @@ regression rules written, generators fixed, full local suite green.
 
 ## Remaining
 
-- [ ] Return `docs/review/2026-2027-maternelle-3-semaine-1.md` for ChatGPT's confirmation
+- [ ] Return the regenerated Week 1 package and the change audit for ChatGPT's final confirmation
 
 ## Validation State
 
@@ -94,7 +97,7 @@ regression rules written, generators fixed, full local suite green.
 | format             | PASS   | working tree                      |
 | lint               | PASS   | working tree                      |
 | typecheck          | PASS   | working tree                      |
-| unit tests         | PASS   | working tree — 260 tests          |
+| unit tests         | PASS   | working tree — 272 tests          |
 | content validation | PASS   | working tree — 31 files           |
 | database tests     | PASS   | fresh reset — 152 assertions      |
 | build              | PASS   | working tree                      |
@@ -104,8 +107,8 @@ regression rules written, generators fixed, full local suite green.
 
 ## Database State
 
-- Local: 13 migrations; `db reset` + 152 pgTAP assertions pass.
-- DEV: not yet updated with `20260916183458_week1_review_corrections_m3.sql`.
+- Local: 14 migrations; `db reset` + 152 pgTAP assertions pass.
+- DEV: not yet updated with `20260917132516_week1_safety_and_review_scope.sql`.
 - PROD: untouched.
 
 ## Deployment State
@@ -131,9 +134,9 @@ Commit, open the PR into `develop`, wait for CI, squash-merge, verify staging.
 
 ## Resume Verification
 
-1. `git branch --show-current` is `fix/maternelle-3-week-1-review`;
-2. `git log -n 5 --oneline` — branch point is `a4a014d`;
+1. `git branch --show-current` is `fix/maternelle-3-week-1-safety-and-review-state`;
+2. `git log -n 5 --oneline` — branch point is `f2c018f`;
 3. `git status --short` — read uncommitted work before discarding it;
-4. `gh pr list --head fix/maternelle-3-week-1-review` — a PR may already exist;
+4. `gh pr list --head fix/maternelle-3-week-1-safety-and-review-state` — a PR may already exist;
 5. `npx supabase migration list --linked` before assuming DEV needs the migration;
 6. `gh run list --branch develop --limit 3` before assuming a deployment is needed.

@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 3 fois. Ce qui suit est l’historique, pour
+Cette semaine a déjà été relue 4 fois. Ce qui suit est l’historique, pour
 que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-14 — ChatGPT · `accepted-with-modifications` (ai-assisted)
@@ -61,6 +61,12 @@ Deux changements sont arrivés dans cette semaine depuis la première passe, san
 Deuxième passe de fond. La structure, la durée, l’enchainement, les histoires, le niveau de langue, la sécurité et le modèle d’apprentissage à la maison sont acceptés et ne sont pas réécrits. Cinq objectifs étaient mal attribués : compter une collection déjà posée était présenté comme en constituer une ; le rituel du jour 4 revendiquait « scander les syllabes d’un mot » sans aucune tâche de syllabes ; « Où est-ce que ça plie ? » revendiquait « se représenter avec un corps articulé » alors que l’enfant ne représente rien ; « Je range les formes » ne revendiquait pas l’objectif de tri ; et « Le tas de dix » ne revendiquait que la comptine numérique. La leçon sur les formes ne proposait qu’un seul exemplaire par sorte, ce qui ne permet pas de classer indépendamment de la couleur, de la taille et de l’orientation. Enfin le dossier annonçait « 0 min d’interaction avec l’écran » tout en expliquant que l’enfant y touche et y compte.
 
 **Suites données :** Toutes appliquées. Les objectifs suivent maintenant ce que chaque activité fait vraiment : O20 sur le dénombrement et O21 sur la collection demandée, O08 sur l’identification des articulations et O09 sur le seul dessin, O07 ajouté au tri des formes, O20 et O21 ajoutés au tas de dix à côté de la comptine, et l’objectif de syllabes retiré du rituel où il ne se passe rien de tel. La leçon des formes demande désormais deux ou trois exemplaires de chaque sorte, de tailles différentes et posés dans tous les sens, et l’écran montre un second exemplaire de chaque forme — un carré de biais, un rectangle debout, un triangle aux côtés inégaux, un petit disque — chacun de la couleur d’une autre forme, pour que la couleur ne puisse pas servir d’indice. Aucun mot technique n’est dit à l’enfant. Le générateur du dossier explique maintenant le chiffre qu’il annonce : à zéro, il dit qu’aucune activité ne demande de toucher l’appareil. Aucune leçon n’est approuvée : les 16 restent en relecture.
+
+### 2026-09-17 — ChatGPT · `accepted-with-modifications` (ai-assisted)
+
+Passe de confirmation. Les cinq corrections demandées à la passe précédente sont vérifiées et jugées correctement appliquées : les objectifs de mathématiques, la distinction entre identifier ses articulations et se représenter, le rituel de phonologie, le tri des formes, et la phrase du dossier sur le temps d’écran. La structure de la semaine, les histoires, les durées, le niveau de langue, les étais en anglais, la progression et le modèle d’apprentissage à la maison restent acceptés et ne sont pas réécrits. Deux points seulement restaient : deux activités de mouvement demandaient encore à l’enfant d’écarter une chaise ou « ce qui gêne », ce qu’un produit universel ne peut pas demander à un enfant de cinq ans puisqu’une chaise est légère dans une maison et lourde ou instable dans une autre ; et le document de reconfirmation affirmait que ces semaines avaient été acceptées et pouvaient redevenir « approved », ce qui n’a jamais été vrai pour la 3ème maternelle.
+
+**Suites données :** Les deux activités de mouvement disent maintenant que c’est l’adulte qui déplace les chaises et les meubles, l’enfant n’aidant qu’avec un coussin, un pagne ou un autre objet léger et sans danger. L’activité physique elle-même n’est pas affaiblie et aucune formule anxiogène n’a été ajoutée. Tout le contenu de septembre a été audité pour ce motif : ces deux activités étaient les seules concernées. Le générateur du document de changements lit désormais l’état réel de chaque semaine et n’emploie le langage de reconfirmation que pour une semaine réellement approuvée. Aucune leçon n’est approuvée : les 16 restent en relecture en attendant votre confirmation.
 
 ## Jour 1 — 2026-09-01
 
@@ -317,7 +323,7 @@ _Courir puis s’arrêter net au signal, en respectant l’espace et les règles
 #### 1. Cours et arrête-toi — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Cours quand je tape dans les mains. Arrête-toi net quand je m’arrête. »
-- **Guidance adulte :** 1. Dégagez l’espace avec l’enfant : c’est lui qui écarte la chaise. 2. Dites les règles. 3. Tapez dans les mains pour partir, arrêtez pour stopper. 4. À l’intérieur, remplacez la course par des pas rapides sur place.
+- **Guidance adulte :** 1. Dégagez l’espace vous-même : **c’est vous qui déplacez les chaises et les meubles**. L’enfant aide en portant ce qui est léger et sans risque — un coussin, un pagne, un jouet. 2. Dites les règles. 3. Tapez dans les mains pour partir, arrêtez pour stopper. 4. À l’intérieur, remplacez la course par des pas rapides sur place.
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **Lexique visé :** courir _(to run)_ · s’arrêter _(to stop)_
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
@@ -660,7 +666,7 @@ _Courir sans s’arrêter un peu plus longtemps chaque fois._
 #### 1. Cours pendant que je compte — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Cours sans t’arrêter pendant que je compte jusqu’à dix. »
-- **Guidance adulte :** 1. Refaites l’espace dégagé **avec l’enfant**, comme hier : c’est lui qui écarte ce qui gêne. 2. Rappelez la règle d’arrêt. 3. Comptez lentement jusqu’à dix pendant qu’il court sans s’arrêter. 4. S’il s’arrête avant, comptez moins loin demain : on allonge peu à peu, on ne force pas.
+- **Guidance adulte :** 1. Refaites l’espace dégagé comme hier : **c’est vous qui déplacez les chaises et les meubles**, l’enfant aide avec ce qui est léger — un coussin, un pagne. 2. Rappelez la règle d’arrêt. 3. Comptez lentement jusqu’à dix pendant qu’il court sans s’arrêter. 4. S’il s’arrête avant, comptez moins loin demain : on allonge peu à peu, on ne force pas.
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **Lexique visé :** longtemps _(a long time)_ · souffler _(to catch your breath)_
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.

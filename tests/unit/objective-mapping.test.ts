@@ -136,3 +136,54 @@ describe("the review package explains the number it prints", () => {
     expect(none).not.toContain("il y regarde une illustration");
   });
 });
+
+describe("who moves the furniture", () => {
+  /**
+   * A movement lesson has to clear a space first, and that preparation is genuinely part of the
+   * activity — but the adult is the one who moves it.
+   *
+   * Two activities told the adult « c'est lui qui écarte la chaise » and « c'est lui qui écarte
+   * ce qui gêne ». A chair is light in one home and heavy or unstable in another, and « ce qui
+   * gêne » is whatever happens to be there. A product used in homes it cannot see does not hand
+   * a five-year-old an object of unknown weight.
+   */
+  const HEAVY = /(chaise|chaises|table|tables|meuble|meubles|banc|armoire|ce qui gêne|obstacle)/i;
+  /** « c'est lui/elle qui … » — the guidance assigning the job to the child. */
+  const CHILD_DOES = /c’est (lui|elle)\s+qui\s+(écarte|déplace|pousse|enlève|range|bouge)/i;
+
+  it("never tells the child to move furniture or an unnamed obstacle", () => {
+    const guidance = lessons.flatMap((lesson) => [
+      { id: lesson.id, text: lesson.parentGuidance },
+      ...lesson.activities.map((a) => ({ id: a.id, text: a.adultGuidance })),
+      ...lesson.activities.map((a) => ({ id: a.id, text: a.childInstruction })),
+    ]);
+    expect(guidance.length).toBeGreaterThan(0);
+    for (const { id, text } of guidance) {
+      const assigned = CHILD_DOES.exec(text);
+      if (assigned === null) continue;
+      // Whatever the child is given to move must be named, and must not be furniture.
+      const after = text.slice(assigned.index, assigned.index + 160);
+      expect(HEAVY.test(after), `${id}: the child is told to move « ${after.slice(0, 80)}… »`).toBe(
+        false,
+      );
+    }
+  });
+
+  it("says who clears the space wherever a movement lesson asks for one", () => {
+    const clearing = lessons.flatMap((lesson) =>
+      lesson.activities
+        .filter((a) => /dégagez l’espace|espace dégagé/i.test(a.adultGuidance))
+        .map((a) => ({ id: a.id, text: a.adultGuidance })),
+    );
+    expect(clearing.length).toBeGreaterThan(0);
+    for (const { id, text } of clearing) {
+      // The adult moves the furniture, and the child's share is named and light.
+      expect(text, `${id}: does not say the adult moves the furniture`).toMatch(
+        /c’est vous qui déplacez/i,
+      );
+      expect(text, `${id}: does not name what the child may carry`).toMatch(
+        /coussin|pagne|tissu|jouet/i,
+      );
+    }
+  });
+});

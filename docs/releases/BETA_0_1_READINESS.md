@@ -49,7 +49,7 @@ cannot be redrawn under an approval without it lapsing.
 | 1ère Week 4 reviewed                         | **DONE** | 2 passes; 20 lessons `approved`                                                                |
 | 1ère Week 5 reviewed                         | **DONE** | 2 passes (accepted-with-modifications → accepted); 12 lessons `approved`                       |
 | 3ème September authored                      | **DONE** | 88 lessons, 170 activities, 22 days                                                            |
-| 3ème Week 1 reviewed                         | **TODO** | 2 passes, both accepted-with-modifications; corrections applied, **confirmation pass pending** |
+| 3ème Week 1 reviewed                         | **TODO** | 3 passes, all accepted-with-modifications; corrections applied, **final confirmation pending** |
 | 3ème Weeks 2–5 reviewed                      | **TODO** | packages generated, not yet submitted                                                          |
 | No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                                |
 
@@ -80,7 +80,7 @@ Every check must pass on the release commit. Current state on `develop`:
 | Check                                                      | State                                          |
 | ---------------------------------------------------------- | ---------------------------------------------- |
 | format · lint · typecheck                                  | **DONE**                                       |
-| unit tests                                                 | **DONE** (260)                                 |
+| unit tests                                                 | **DONE** (272)                                 |
 | content validation                                         | **DONE** (31 files)                            |
 | curriculum / annual-plan / progression validation          | **DONE**                                       |
 | review-package validation                                  | **DONE** (generation fails on missing content) |

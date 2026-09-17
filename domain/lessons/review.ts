@@ -61,6 +61,49 @@ export type ReviewKind = (typeof REVIEW_KINDS)[number];
  */
 export const REVIEW_OUTCOMES = ["accepted", "accepted-with-modifications"] as const;
 export type ReviewOutcome = (typeof REVIEW_OUTCOMES)[number];
+
+/**
+ * Whether a recorded entry is a review of this week, or a change that reached it from somewhere
+ * else.
+ *
+ * A `full-review` is a pass where a reviewer read this week's package and concluded something.
+ * A `consequence` records a correction that arrived because another week was reviewed — the
+ * change is real and must be declared, but nobody read this week to produce it.
+ *
+ * The difference used to live only in how the `reviewer` field was worded, so a generated
+ * document had to guess at a string to answer "has this week been reviewed?". It answered wrong,
+ * and told a reviewer that weeks which had never been read could be restored to `approved`.
+ */
+export const REVIEW_SCOPES = ["full-review", "consequence"] as const;
+export type ReviewScope = (typeof REVIEW_SCOPES)[number];
+
+/**
+ * Where a batch of content stands, so a generated document can say the true thing about it.
+ *
+ * A change-audit document used to open by asserting that the weeks it covered « avaient été
+ * acceptées » and close by offering to restore them to `approved`. That was written while
+ * reconfirming 1ère maternelle, whose weeks really had been approved and really did lapse.
+ * Generated for a level whose weeks had never been approved — four of them never even read — it
+ * invited an approval nobody had performed. The wording has to be derived from the state, not
+ * from the first case that needed it.
+ */
+export type WeekReviewState = "approved" | "reviewed" | "never-reviewed" | "draft";
+
+export function weekReviewState(
+  lessonStatuses: readonly LessonStatus[],
+  reviews: readonly { scope: string; outcome: string }[],
+): WeekReviewState {
+  // Only a pass that read this batch counts. A `consequence` records a correction that arrived
+  // because some other batch was reviewed, which is not the same as having been reviewed.
+  const read = reviews.filter((r) => r.scope === "full-review");
+  if (lessonStatuses.includes("approved")) return "approved";
+  // An approval that has already lapsed leaves its lessons back at `review`, so the history is
+  // what remembers that this batch was once accepted outright and may be restored.
+  if (read.some((r) => r.outcome === "accepted")) return "approved";
+  if (read.length > 0) return "reviewed";
+  if (lessonStatuses.includes("draft")) return "draft";
+  return "never-reviewed";
+}
 export type LessonStatus = (typeof LESSON_STATUSES)[number];
 
 export type LessonReview = {
