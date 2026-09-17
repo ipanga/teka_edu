@@ -129,7 +129,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": ["animal-poule", "animal-chevre"],
-          "objectiveCodes": ["WORLD-S01-C01-O08", "WORLD-S01-C01-O10"],
+          "objectiveCodes": ["WORLD-S01-C01-O08"],
           "materialCodes": ["aucun"],
           "vocabulary": [
             {
@@ -165,25 +165,25 @@
           "type": "conversation",
           "title": "De quoi a-t-il besoin ?",
           "childInstruction": "Dis ce dont ton animal a besoin pour vivre.",
-          "adultGuidance": "1. Demandez ce que mange l’animal. 2. Demandez ce qu’il boit, où il dort. 3. Concluez les trois besoins : manger, boire, un abri. 4. Reliez à l’histoire de Bibi : « Et Bibi, de quoi avait-elle besoin ? »",
+          "adultGuidance": "1. Demandez ce que mange l’animal. 2. Demandez ce qu’il boit, et où il vit. 3. Concluez ce qu’il lui faut : de la nourriture, de l’eau, et un endroit où il peut vivre. 4. Reliez à l’histoire de Bibi : « Et Bibi, de quoi avait-elle besoin ? »",
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["WORLD-S01-C01-O08"],
+          "objectiveCodes": ["WORLD-S01-C01-O10"],
           "materialCodes": ["aucun"],
           "vocabulary": [
             {
-              "fr": "manger",
-              "en": "to eat"
+              "fr": "la nourriture",
+              "en": "food"
             },
             {
-              "fr": "boire",
-              "en": "to drink"
+              "fr": "l’eau",
+              "en": "water"
             },
             {
-              "fr": "l’abri",
-              "en": "the shelter"
+              "fr": "vivre",
+              "en": "to live"
             }
           ],
           "scaffolds": [
@@ -231,7 +231,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": ["plante-parties"],
-          "objectiveCodes": ["WORLD-S01-C01-O10", "WORLD-S01-C01-O08"],
+          "objectiveCodes": ["WORLD-S01-C01-O08"],
           "materialCodes": ["aucun"],
           "vocabulary": [
             {
@@ -263,7 +263,7 @@
           "type": "conversation",
           "title": "L’eau et la lumière",
           "childInstruction": "Dis ce qu’il faut à une plante pour vivre.",
-          "adultGuidance": "1. Demandez ce qui arrive à une plante qu’on n’arrose pas. 2. Amenez les trois besoins : l’eau, la lumière, la terre. 3. Comparez avec l’animal du jour 5 : tous deux ont besoin d’eau. 4. Proposez d’arroser une plante ensemble ce soir.",
+          "adultGuidance": "1. Demandez ce qui arrive à une plante qu’on n’arrose pas. 2. Amenez ce qu’il lui faut : de l’eau, de la lumière, et de l’air. 3. La plupart des plantes poussent dans la terre : elle les tient debout et garde l’eau. 4. Comparez avec l’animal du jour 5 : tous les deux ont besoin d’eau. 5. Proposez d’arroser une plante ensemble ce soir.",
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
@@ -278,6 +278,10 @@
             {
               "fr": "la lumière",
               "en": "light"
+            },
+            {
+              "fr": "l’air",
+              "en": "air"
             },
             {
               "fr": "arroser",

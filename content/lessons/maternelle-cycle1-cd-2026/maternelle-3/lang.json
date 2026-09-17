@@ -712,6 +712,7 @@
       "objectiveCodes": [],
       "supportingObjectiveCodes": [
         "TIME-SPACE-S01-C01-O12",
+        "LANG-S02-C01-O03",
         "LANG-S01-C01-O03",
         "LANG-S02-C03-O04"
       ],
@@ -731,7 +732,7 @@
           "mode": "off-screen",
           "role": "retrieval",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C01-O03"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C01-O03"],
           "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [
@@ -750,7 +751,7 @@
           "type": "vocabulary",
           "title": "Je nomme ce qu’il y a chez moi",
           "childInstruction": "Nomme ce que tu vois : la porte, la fenêtre, le lit, la marmite, le seau.",
-          "adultGuidance": "1. Montrez l’objet et nommez-le avec l’article. 2. Faites répéter. 3. Demandez à quoi il sert. 4. Finissez par un jeu : « Va toucher la fenêtre. » Adaptez la liste à ce que vous avez chez vous.",
+          "adultGuidance": "1. Montrez l’objet et nommez-le avec l’article. 2. Faites répéter. 3. Demandez à quoi il sert. 4. Finissez par un jeu : « Montre-moi la fenêtre du doigt. » On montre, on ne touche pas. Adaptez la liste à ce que vous avez chez vous.",
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
@@ -883,10 +884,6 @@
             {
               "fr": "elle",
               "en": "she"
-            },
-            {
-              "fr": "ils",
-              "en": "they"
             }
           ],
           "scaffolds": [
@@ -953,12 +950,12 @@
           "type": "conversation",
           "title": "Le rituel : la date et la révision",
           "childInstruction": "Dis la date. Puis raconte-moi ce que nous avons appris cette semaine.",
-          "adultGuidance": "Dites la date : « Aujourd’hui, nous sommes {{date}}. » Puis reprenez la semaine : les mots de la maison, « il » et « elle », l’histoire de Bibi. Faites redire une phrase entière pour chaque.",
+          "adultGuidance": "Dites la date : « Aujourd’hui, nous sommes {{date}}. » Puis reprenez la semaine : les mots de la maison, « il » et « elle », l’histoire de Bibi. Laissez l’enfant dire ce dont il se souvient, avec ses mots ; reformulez une fois en phrase entière, sans faire répéter.",
           "minutes": 3,
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C03-O14"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12"],
           "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [
@@ -1623,7 +1620,7 @@
           "mode": "off-screen",
           "role": "retrieval",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C03-O14"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12"],
           "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [

@@ -269,7 +269,7 @@
           "role": "teach",
           "mediaIds": [],
           "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
-          "materialCodes": ["espace-degage", "objets-maison"],
+          "materialCodes": ["repere-sol", "espace-degage"],
           "vocabulary": [
             {
               "fr": "l’équilibre",
@@ -307,21 +307,21 @@
       "stage": "practice",
       "difficulty": 2,
       "themeId": "ma-maison",
-      "parentGuidance": "Construisez le parcours avec l’enfant : passer sous, contourner, enjamber. Vérifiez qu’il n’y a rien de fragile ni de coupant sur le trajet.",
+      "parentGuidance": "Installez le parcours vous-même : tout doit être souple et posé au sol. L’enfant peut aider en apportant un coussin ou un tissu. Si un meuble gêne, c’est vous qui le déplacez. Vérifiez qu’il n’y a rien de fragile ni de coupant sur le trajet.",
       "activities": [
         {
           "id": "m3-phys-06-a1",
           "position": 1,
           "type": "movement",
           "title": "Mon parcours",
-          "childInstruction": "Fais le parcours : passe sous la chaise, contourne le coussin, enjambe le bâton.",
-          "adultGuidance": "1. Installez trois étapes seulement. 2. Montrez le parcours une fois. 3. Laissez-le faire à son rythme. 4. Refaites-le en disant à voix haute ce qu’il fait : « Tu passes sous… »",
+          "childInstruction": "Fais le parcours : passe sous le tissu, contourne le coussin, enjambe la bande posée au sol.",
+          "adultGuidance": "1. Installez trois étapes, toutes souples : vous tenez un tissu tendu pour le passage dessous, un coussin à contourner, une bande de tissu ou une corde posée à plat à enjamber. Rien de dur, rien à escalader. 2. Montrez le parcours une fois. 3. Restez à côté et laissez-le faire à son rythme. 4. Refaites-le en disant à voix haute ce qu’il fait : « Tu passes sous… »",
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
           "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
-          "materialCodes": ["objets-maison", "espace-degage"],
+          "materialCodes": ["tissu", "coussin", "repere-sol", "espace-degage"],
           "vocabulary": [
             {
               "fr": "sous",
@@ -335,7 +335,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Do the course: under the chair, around the cushion, over the stick."
+              "childInstruction": "Go under the cloth, around the cushion, over the strip on the floor."
             }
           ],
           "payload": {
@@ -422,8 +422,8 @@
           "position": 1,
           "type": "movement",
           "title": "Chat et souris",
-          "childInstruction": "Quand je dis « chat », tu me sauves. Quand je dis « souris », c’est toi qui me cherches.",
-          "adultGuidance": "1. Délimitez l’espace et une zone refuge. 2. Jouez un tour comme chat. 3. Inversez les rôles. 4. À l’intérieur, jouez en marchant vite au lieu de courir.",
+          "childInstruction": "Quand tu es la souris, éloigne-toi du chat. Quand tu es le chat, essaie de toucher la souris. Ensuite, on change de rôle.",
+          "adultGuidance": "1. Délimitez l’espace et une zone refuge. 2. Dites qui commence : « Je suis le chat, tu es la souris. » 3. Jouez un tour, puis annoncez le changement : « Maintenant, c’est toi le chat. » 4. À l’intérieur, jouez en marchant vite au lieu de courir.",
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
@@ -443,7 +443,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "When I say cat, run away. When I say mouse, you chase me."
+              "childInstruction": "When you are the mouse, move away from the cat. When you are the cat, try to touch the mouse. Then you swap."
             }
           ],
           "payload": {

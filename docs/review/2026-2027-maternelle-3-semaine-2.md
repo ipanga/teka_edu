@@ -41,16 +41,20 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-**Cette semaine n’a encore jamais été relue.** Ce qui suit n’est donc pas
-l’historique de ses relectures : ce sont des corrections qui lui sont arrivées
-parce qu’un défaut trouvé dans une autre semaine existait ici à l’identique.
-Elles sont déjà appliquées au contenu que vous lisez ci-dessous.
+Cette semaine a déjà été relue 1 fois. Ce qui suit est l’historique,
+pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
 
 Deux changements arrivés dans cette semaine sans relecture propre : ils viennent de corrections demandées sur la semaine 1.
 
 **Suites données :** 1) « Je range puis je compte » et « Donne-moi six » (jour 5) portaient les objectifs à l’envers, exactement comme le jour 1 : compter une ligne d’objets déjà posée était présenté comme constituer une collection d’un cardinal donné, et l’activité qui la constitue vraiment ne le revendiquait pas. Les deux sont remis dans le bon sens ; la leçon, elle, ne change pas. 2) Le rituel du jour 6 ne revendique plus LANG-S02-C01-O13, « augmenter sa mémoire auditive et sa capacité de concentration » : on y dit la date et on se souvient de la semaine, il n’y a pas de tâche d’écoute. L’objectif reste porté par « Le jeu des trois mots », dans la même leçon et le même jour, si bien que rien ne change ni pour la leçon ni pour la progression.
+
+### 2026-09-17 — ChatGPT · `accepted-with-modifications` (ai-assisted)
+
+Première relecture pédagogique complète de la semaine 2. La semaine est structurellement saine et n’a pas besoin d’être réécrite : le rythme, les durées, les histoires, la progression et le modèle d’apprentissage à la maison sont acceptés. Quatorze points ont été demandés. Plusieurs objectifs étaient portés par l’activité voisine plutôt que par celle qui fait le travail : les parties de l’animal revendiquaient aussi les besoins, les parties de la plante aussi, le rituel du jour 7 revendiquait du vocabulaire alors qu’on y frappe des syllabes, et le rituel du jour 9 revendiquait la compréhension des émotions sans qu’aucune émotion y soit demandée. Deux activités de comparaison ne revendiquaient pas « comparer des quantités ». La leçon sur les formes annonçait qu’une forme reste la même quelle que soit sa taille ou son sens, mais l’écran ne montrait que les quatre formes prototypiques. Côté sécurité et langage : le parcours demandait de passer sous une chaise et d’enjamber un bâton, une activité de vocabulaire envoyait toucher la fenêtre, le jeu du chat ne disait pas clairement qui poursuit qui, la consigne sur les jours de la semaine annonçait les sept jours alors qu’on en travaille un seul, la tâche spatiale exigeait la phrase entière, l’histoire de Tito énonçait une soustraction et une addition formelles, et les besoins du vivant étaient présentés par des formules trop absolues.
+
+**Suites données :** Toutes appliquées. Les objectifs suivent maintenant ce que chaque activité fait : morphologie d’un côté, besoins de l’autre ; le rituel du jour 7 porte « scander les syllabes d’un mot » ; le rituel du jour 9 ne porte plus les émotions, qui restent sur « Comment se sent Bibi ? » ; « Vérifions en comptant » et « Plus, moins, autant » portent « comparer des quantités ». « La même forme » montre les huit exemplaires de la semaine 1, et la guidance dit que ni la couleur, ni la taille, ni le sens ne disent quelle forme c’est. Le parcours est devenu souple : on passe sous un tissu tenu par l’adulte, on contourne un coussin, on enjambe une bande posée au sol ; le matériel de « Sur une ligne » se limite à un repère plat. On montre la fenêtre du doigt au lieu de la toucher. Les rôles du chat et de la souris sont nommés et échangés. On travaille un jour à la fois. On invite une phrase, on accepte la réponse et on reformule une fois, sans faire répéter ; « à sa droite » est retiré d’une leçon qui n’enseigne pas la droite. L’histoire de Tito garde le raisonnement sur les quantités sans énoncer d’opération. Les besoins sont dits simplement : de la nourriture, de l’eau, un endroit où vivre ; de l’eau, de la lumière, de l’air, la terre n’étant que le support habituel. Et « ils » est retiré du lexique d’une activité qui ne sollicite que « il » et « elle ». Aucune leçon n’est approuvée : les 20 restent en relecture en attendant votre seconde passe.
 
 ## Jour 5 — 2026-09-07
 
@@ -66,7 +70,7 @@ _Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences di
 temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
 l’autre — l’appareil est alors le sien._
 
-**Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Objets de la maison (coussins, chaises, bâton, tissu), Petits objets à compter (cailloux, capsules, haricots)
+**Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Petits objets à compter (cailloux, capsules, haricots), Un repère plat posé au sol (corde, bande de tissu ou trait tracé)
 
 ### Je raconte ma journée — Le développement et la structuration du langage oral et écrit (13 min)
 
@@ -294,12 +298,11 @@ _Tenir en équilibre en combinant appuis et déplacements._
 
 - **Consigne à l’enfant :** « Marche sur la ligne sans poser le pied à côté. Puis arrête-toi sur un pied. »
 - **Guidance adulte :** 1. Tracez une ligne au sol (une corde, un trait de craie, une bande de tissu). 2. Faites marcher dessus. 3. Demandez de s’arrêter sur un pied, en comptant jusqu’à trois. 4. Tenez-lui la main au début si besoin.
-- **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors), Objets de la maison (coussins, chaises, bâton, tissu)
+- **Matériel :** Un repère plat posé au sol (corde, bande de tissu ou trait tracé), Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **Lexique visé :** l’équilibre _(balance)_ · le pied _(the foot)_
+- **À défaut :** Une corde posée à plat, une bande de tissu, un trait de craie ou une ligne tracée dans le sable. Rien de dur ni de surélevé.
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
-- **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
-- **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Walk on the line without stepping off. »
 - **Objectifs travaillés :** `PHYS-S02-C01-O05` Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions. ; `PHYS-S02-C01-O07` Respecter les règles de sécurité pour soi et pour les autres.
 
@@ -351,16 +354,16 @@ _Nommer les parties d’un animal et dire ce dont il a besoin pour vivre._
   - `animal-poule` — Une poule (`public/media/animals/animal-poule.svg`)
   - `animal-chevre` — Une chèvre (`public/media/animals/animal-chevre.svg`)
 
-- **Objectifs travaillés :** `WORLD-S01-C01-O08` Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale. ; `WORLD-S01-C01-O10` Décrire les besoins essentiels de quelques animaux ou de végétaux.
+- **Objectifs travaillés :** `WORLD-S01-C01-O08` Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale.
 
 #### 2. De quoi a-t-il besoin ? — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis ce dont ton animal a besoin pour vivre. »
-- **Guidance adulte :** 1. Demandez ce que mange l’animal. 2. Demandez ce qu’il boit, où il dort. 3. Concluez les trois besoins : manger, boire, un abri. 4. Reliez à l’histoire de Bibi : « Et Bibi, de quoi avait-elle besoin ? »
+- **Guidance adulte :** 1. Demandez ce que mange l’animal. 2. Demandez ce qu’il boit, et où il vit. 3. Concluez ce qu’il lui faut : de la nourriture, de l’eau, et un endroit où il peut vivre. 4. Reliez à l’histoire de Bibi : « Et Bibi, de quoi avait-elle besoin ? »
 - **Matériel :** Aucun matériel
-- **Lexique visé :** manger _(to eat)_ · boire _(to drink)_ · l’abri _(the shelter)_
+- **Lexique visé :** la nourriture _(food)_ · l’eau _(water)_ · vivre _(to live)_
 - **Aide en anglais (optionnelle) :** « Say what your animal needs to live. »
-- **Objectifs travaillés :** `WORLD-S01-C01-O08` Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale.
+- **Objectifs travaillés :** `WORLD-S01-C01-O10` Décrire les besoins essentiels de quelques animaux ou de végétaux.
 
 **Réussites attendues — texte officiel pour la compétence « Découvrir les animaux et les végétaux » (from-5) :**
 
@@ -404,7 +407,7 @@ _Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences di
 temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
 l’autre — l’appareil est alors le sien._
 
-**Matériel à préparer :** Aucun matériel, Espace dégagé pour bouger (à l’intérieur ou dehors), Objets de la maison (coussins, chaises, bâton, tissu), Feuille de papier, Petits objets à compter (cailloux, capsules, haricots)
+**Matériel à préparer :** Aucun matériel, Un coussin, Espace dégagé pour bouger (à l’intérieur ou dehors), Feuille de papier, Petits objets à compter (cailloux, capsules, haricots), Un repère plat posé au sol (corde, bande de tissu ou trait tracé), Un grand tissu (pagne, drap ou serviette)
 
 ### Écoute bien ! — Le développement et la structuration du langage oral et écrit (13 min)
 
@@ -513,6 +516,7 @@ _Construire une collection qui en vaut une autre._
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O21` — Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
   - `MATH-S01-C01-O05` — Comparer des quantités.
+  - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
 
 #### 1. Un pour un — 5 min, sans interaction écran (manipulation)
 
@@ -534,7 +538,7 @@ _Construire une collection qui en vaut une autre._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Count mine, then count yours. »
-- **Objectifs travaillés :** `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
+- **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). ; `MATH-S01-C01-O05` Comparer des quantités.
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**
 
@@ -599,7 +603,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 _Enchainer plusieurs actions dans un parcours, en respectant les règles._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
-- **Conseil au parent :** Construisez le parcours avec l’enfant : passer sous, contourner, enjamber. Vérifiez qu’il n’y a rien de fragile ni de coupant sur le trajet.
+- **Conseil au parent :** Installez le parcours vous-même : tout doit être souple et posé au sol. L’enfant peut aider en apportant un coussin ou un tissu. Si un meuble gêne, c’est vous qui le déplacez. Vérifiez qu’il n’y a rien de fragile ni de coupant sur le trajet.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S02-C01-O05` — Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions.
@@ -607,15 +611,17 @@ _Enchainer plusieurs actions dans un parcours, en respectant les règles._
 
 #### 1. Mon parcours — 6 min, sans interaction écran (movement)
 
-- **Consigne à l’enfant :** « Fais le parcours : passe sous la chaise, contourne le coussin, enjambe le bâton. »
-- **Guidance adulte :** 1. Installez trois étapes seulement. 2. Montrez le parcours une fois. 3. Laissez-le faire à son rythme. 4. Refaites-le en disant à voix haute ce qu’il fait : « Tu passes sous… »
-- **Matériel :** Objets de la maison (coussins, chaises, bâton, tissu), Espace dégagé pour bouger (à l’intérieur ou dehors)
+- **Consigne à l’enfant :** « Fais le parcours : passe sous le tissu, contourne le coussin, enjambe la bande posée au sol. »
+- **Guidance adulte :** 1. Installez trois étapes, toutes souples : vous tenez un tissu tendu pour le passage dessous, un coussin à contourner, une bande de tissu ou une corde posée à plat à enjamber. Rien de dur, rien à escalader. 2. Montrez le parcours une fois. 3. Restez à côté et laissez-le faire à son rythme. 4. Refaites-le en disant à voix haute ce qu’il fait : « Tu passes sous… »
+- **Matériel :** Un grand tissu (pagne, drap ou serviette), Un coussin, Un repère plat posé au sol (corde, bande de tissu ou trait tracé), Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **Lexique visé :** sous _(under)_ · autour _(around)_
-- **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
-- **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
+- **À défaut :** Un pagne, un drap, une grande serviette ou un rideau : tout tissu assez grand pour être tenu à deux mains.
+- **⚠ Sécurité :** C’est l’adulte qui tient le tissu, sans jamais l’enrouler autour de l’enfant.
+- **À défaut :** Un coussin, un vêtement roulé, un sac souple ou un pagne plié.
+- **À défaut :** Une corde posée à plat, une bande de tissu, un trait de craie ou une ligne tracée dans le sable. Rien de dur ni de surélevé.
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
-- **Aide en anglais (optionnelle) :** « Do the course: under the chair, around the cushion, over the stick. »
+- **Aide en anglais (optionnelle) :** « Go under the cloth, around the cushion, over the strip on the floor. »
 - **Objectifs travaillés :** `PHYS-S02-C01-O05` Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions. ; `PHYS-S02-C01-O07` Respecter les règles de sécurité pour soi et pour les autres.
 
 **Réussites attendues — texte officiel pour la compétence « Tourner, se suspendre, se renverser, grimper, rouler, glisser, nager » (from-5) :**
@@ -657,12 +663,12 @@ _Situer un évènement dans la semaine._
 
 #### 1. Le jour de quoi ? — 4 min, sans interaction écran (conversation)
 
-- **Consigne à l’enfant :** « Dis-moi ce que tu fais chaque jour de la semaine. »
+- **Consigne à l’enfant :** « Je te montre un jour. Dis-moi ce que tu fais ce jour-là. »
 - **Guidance adulte :** 1. Montrez un jour sur la bande. 2. Demandez ce qui se passe ce jour-là. 3. Faites une phrase entière avec un repère de **votre** semaine : « Le samedi, nous… » — ce qui est vrai chez vous, pas un exemple appris. 4. Demandez quels jours il va à l’école.
 - **Matériel :** Feuille de papier
 - **Lexique visé :** le jour _(the day)_ · la semaine _(the week)_
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
-- **Aide en anglais (optionnelle) :** « Tell me what you do on each day of the week. »
+- **Aide en anglais (optionnelle) :** « I show you a day. Tell me what you do on that day. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C01-O10` Situer un évènement dans la semaine. ; `TIME-SPACE-S01-C01-O12` Énoncer la date.
 
 #### 2. Hier et demain — 3 min, sans interaction écran (manipulation)
@@ -728,6 +734,7 @@ _Deuxième corpus de mots : nommer les objets et les pièces de la maison._
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
+  - `LANG-S02-C01-O03` — Scander les syllabes d’un mot.
   - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
 
@@ -737,12 +744,12 @@ _Deuxième corpus de mots : nommer les objets et les pièces de la maison._
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes mercredi 9 septembre 2026. » Puis refaites ensemble le jeu des syllabes du prénom, une frappe par syllabe.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Say the date, then clap the parts of your name. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C01-O03` Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S02-C01-O03` Scander les syllabes d’un mot.
 
 #### 2. Je nomme ce qu’il y a chez moi — 8 min, sans interaction écran (vocabulary)
 
 - **Consigne à l’enfant :** « Nomme ce que tu vois : la porte, la fenêtre, le lit, la marmite, le seau. »
-- **Guidance adulte :** 1. Montrez l’objet et nommez-le avec l’article. 2. Faites répéter. 3. Demandez à quoi il sert. 4. Finissez par un jeu : « Va toucher la fenêtre. » Adaptez la liste à ce que vous avez chez vous.
+- **Guidance adulte :** 1. Montrez l’objet et nommez-le avec l’article. 2. Faites répéter. 3. Demandez à quoi il sert. 4. Finissez par un jeu : « Montre-moi la fenêtre du doigt. » On montre, on ne touche pas. Adaptez la liste à ce que vous avez chez vous.
 - **Matériel :** Objets de la maison (coussins, chaises, bâton, tissu)
 - **Lexique visé :** la porte _(the door)_ · la fenêtre _(the window)_ · le lit _(the bed)_ · la marmite _(the cooking pot)_ · le seau _(the bucket)_
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
@@ -793,6 +800,15 @@ _Deuxième corpus de mots : nommer les objets et les pièces de la maison._
 - Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
 - Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
 - Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Acquérir les habiletés phonologiques et le principe alphabétique » (from-5) :**
+
+- Fusionner les syllabes d’attaque de POISSON et la syllabe finale de SOURIS pour obtenir un pseudo-mot POIRIS.
+- Trouver le son /f/ dans une liste de mots.
+- Trouver l’intrus à l’initiale entre sac/Sacha/cartable
+- Localiser un phonème dans un mot.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -1070,7 +1086,7 @@ _Employer « il » et « elle » pour parler de quelqu’un d’autre._
 - **Consigne à l’enfant :** « Regarde autour de toi et dis-moi ce que fait quelqu’un : « Il… » ou « Elle… » »
 - **Guidance adulte :** 1. Montrez le modèle : « Regarde, elle balaie. » 2. Demandez à l’enfant de dire à son tour. 3. S’il dit « balaie », redites la phrase entière : « Oui, elle balaie. » 4. Parlez ensuite de personnes absentes : « Et ton voisin, que fait-il le matin ? »
 - **Matériel :** Aucun matériel
-- **Lexique visé :** il _(he)_ · elle _(she)_ · ils _(they)_
+- **Lexique visé :** il _(he)_ · elle _(she)_
 - **Aide en anglais (optionnelle) :** « Look around and say what someone is doing: he… or she… »
 - **Objectifs travaillés :** `LANG-S01-C02-O01` Diversifier les pronoms employés. ; `LANG-S01-C04-O11` Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
 
@@ -1094,7 +1110,7 @@ _Employer « il » et « elle » pour parler de quelqu’un d’autre._
   > « Et qu’est-ce qui manque ? »
   > Tito regarde bien. Le rond est là. Le plat est là. « Le pointu ! »
   > Sa sœur ouvre la main : c’est bien le caillou pointu.
-  > Trois cailloux, moins un, ça fait deux. Et deux, plus un, ça refait trois.
+  > Il y avait trois cailloux. Sa sœur en cache un : il en reste deux. Quand elle le remet, les trois sont de nouveau là.
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
@@ -1188,17 +1204,21 @@ _Retrouver une forme quelle que soit sa taille ou sa position._
 #### 1. La même forme — 5 min, sans interaction écran (matching)
 
 - **Consigne à l’enfant :** « Trouve la forme qui va avec celle-ci. »
-- **Guidance adulte :** 1. Montrez un carré et demandez de trouver l’autre carré, plus grand ou plus petit. 2. Tournez un triangle sur la pointe et redemandez. 3. Faites dire pourquoi : « Il a toujours trois côtés. » 4. Terminez par les disques.
+- **Guidance adulte :** 1. Montrez un carré et demandez de trouver l’autre carré : il est plus petit et posé de biais, c’est quand même un carré. 2. Faites de même avec le rectangle, debout puis couché. 3. Montrez le triangle posé sur la pointe, aux côtés inégaux, et redemandez. 4. Faites dire pourquoi : « Il a toujours trois côtés. » 5. Terminez par les disques, un grand et un petit. Sur papier comme à l’écran, ni la couleur, ni la taille, ni le sens ne disent quelle forme c’est.
 - **Matériel :** Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque)
 - **Lexique visé :** la taille _(the size)_ · tourner _(to turn)_
 - **À défaut :** Dessinez les formes sur une feuille et découpez-les, ou tracez-les directement sur le sol ou sur le sable ; à défaut, servez-vous de morceaux de carton d’emballage.
 - **Aide en anglais (optionnelle) :** « Find the shape that goes with this one. »
-- **Images montrées à l'enfant (4) :**
+- **Images montrées à l'enfant (8) :**
 
   - `forme-carre` — Un carré (`public/media/shapes/forme-carre.svg`)
+  - `forme-carre-penche` — Un carré posé de biais, plus petit (`public/media/shapes/forme-carre-penche.svg`)
   - `forme-rectangle` — Un rectangle (`public/media/shapes/forme-rectangle.svg`)
+  - `forme-rectangle-debout` — Un rectangle debout, plus haut que large (`public/media/shapes/forme-rectangle-debout.svg`)
   - `forme-triangle` — Un triangle (`public/media/shapes/forme-triangle.svg`)
+  - `forme-triangle-quelconque` — Un triangle aux trois côtés différents, posé de travers (`public/media/shapes/forme-triangle-quelconque.svg`)
   - `forme-disque` — Un disque, tout rond (`public/media/shapes/forme-disque.svg`)
+  - `forme-disque-petit` — Un petit disque, tout rond (`public/media/shapes/forme-disque-petit.svg`)
 
 - **Objectifs travaillés :** `MATH-S03-C01-O07` Reconnaitre, trier et classer des formes géométriques planes, indépendamment d’autres critères comme la couleur, la taille, l’orientation. ; `MATH-S03-C01-O08` Décrire et nommer quelques figures géométriques simples : carré, rectangle, triangle, disque.
 
@@ -1262,13 +1282,13 @@ _Jouer à deux, en tenant un rôle et en respectant la règle._
 
 #### 1. Chat et souris — 6 min, sans interaction écran (movement)
 
-- **Consigne à l’enfant :** « Quand je dis « chat », tu me sauves. Quand je dis « souris », c’est toi qui me cherches. »
-- **Guidance adulte :** 1. Délimitez l’espace et une zone refuge. 2. Jouez un tour comme chat. 3. Inversez les rôles. 4. À l’intérieur, jouez en marchant vite au lieu de courir.
+- **Consigne à l’enfant :** « Quand tu es la souris, éloigne-toi du chat. Quand tu es le chat, essaie de toucher la souris. Ensuite, on change de rôle. »
+- **Guidance adulte :** 1. Délimitez l’espace et une zone refuge. 2. Dites qui commence : « Je suis le chat, tu es la souris. » 3. Jouez un tour, puis annoncez le changement : « Maintenant, c’est toi le chat. » 4. À l’intérieur, jouez en marchant vite au lieu de courir.
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **Lexique visé :** le chat _(the cat)_ · la souris _(the mouse)_
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
-- **Aide en anglais (optionnelle) :** « When I say cat, run away. When I say mouse, you chase me. »
+- **Aide en anglais (optionnelle) :** « When you are the mouse, move away from the cat. When you are the cat, try to touch the mouse. Then you swap. »
 - **Objectifs travaillés :** `PHYS-S04-C01-O09` Éprouver le plaisir de coopérer et de s’opposer dans le respect des autres et des règles communes. ; `PHYS-S02-C01-O07` Respecter les règles de sécurité pour soi et pour les autres.
 
 **Réussites attendues — texte officiel pour la compétence « Coopérer, s’opposer, respecter » (from-5) :**
@@ -1311,7 +1331,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 _Situer les objets par rapport à soi._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
-- **Conseil au parent :** Tout se dit par rapport au corps de l’enfant : devant lui, derrière lui, à sa droite. Faites-le bouger plutôt que de déplacer les objets.
+- **Conseil au parent :** Tout se dit par rapport au corps de l’enfant : devant lui, derrière lui, à côté de lui. Faites-le bouger plutôt que de déplacer les objets.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S02-C01-O16` — Situer des objets par rapport à soi, construire une image orientée de son corps. _(source : programme-2026)_
 
@@ -1329,7 +1349,7 @@ _Situer les objets par rapport à soi._
 #### 2. Je dis où c’est — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis-moi où est l’objet, sans le montrer du doigt. »
-- **Guidance adulte :** 1. Posez l’objet quelque part. 2. Demandez où il est, sans le doigt. 3. Exigez la phrase entière : « Il est derrière la chaise. » 4. Inversez les rôles.
+- **Guidance adulte :** 1. Posez l’objet quelque part. 2. Demandez où il est, sans le doigt. 3. Invitez-le à répondre par une phrase. S’il dit seulement « derrière », acceptez sa réponse et reformulez une fois : « Oui, il est derrière la chaise. » Ne le faites pas répéter. 4. Inversez les rôles.
 - **Matériel :** Objets de la maison (coussins, chaises, bâton, tissu)
 - **Lexique visé :** derrière _(behind)_ · devant _(in front of)_
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
@@ -1401,10 +1421,10 @@ _Comprendre ce que ressent un personnage, et le dire._
 #### 1. Le rituel : la date et la révision — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis la date. Puis raconte-moi ce que nous avons appris cette semaine. »
-- **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes vendredi 11 septembre 2026. » Puis reprenez la semaine : les mots de la maison, « il » et « elle », l’histoire de Bibi. Faites redire une phrase entière pour chaque.
+- **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes vendredi 11 septembre 2026. » Puis reprenez la semaine : les mots de la maison, « il » et « elle », l’histoire de Bibi. Laissez l’enfant dire ce dont il se souvient, avec ses mots ; reformulez une fois en phrase entière, sans faire répéter.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Say the date, then tell me what we learned this week. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S02-C03-O14` Comprendre les émotions, les intentions et les sentiments qui animent les personnages.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date.
 
 #### 2. Comment se sent Bibi ? — 7 min, sans interaction écran (listening-story)
 
@@ -1542,7 +1562,7 @@ _Reprendre le comptage et la comparaison de la semaine._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Make a pile with more objects than mine. »
-- **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
+- **Objectifs travaillés :** `MATH-S01-C01-O05` Comparer des quantités. ; `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**
 
@@ -1682,14 +1702,14 @@ _Découvrir les besoins d’un végétal, et les comparer à ceux d’un animal.
 
   - `plante-parties` — Une plante avec ses feuilles, sa tige et ses racines sous la terre (`public/media/illustrations/plante-parties.svg`)
 
-- **Objectifs travaillés :** `WORLD-S01-C01-O10` Décrire les besoins essentiels de quelques animaux ou de végétaux. ; `WORLD-S01-C01-O08` Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale.
+- **Objectifs travaillés :** `WORLD-S01-C01-O08` Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale.
 
 #### 2. L’eau et la lumière — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis ce qu’il faut à une plante pour vivre. »
-- **Guidance adulte :** 1. Demandez ce qui arrive à une plante qu’on n’arrose pas. 2. Amenez les trois besoins : l’eau, la lumière, la terre. 3. Comparez avec l’animal du jour 5 : tous deux ont besoin d’eau. 4. Proposez d’arroser une plante ensemble ce soir.
+- **Guidance adulte :** 1. Demandez ce qui arrive à une plante qu’on n’arrose pas. 2. Amenez ce qu’il lui faut : de l’eau, de la lumière, et de l’air. 3. La plupart des plantes poussent dans la terre : elle les tient debout et garde l’eau. 4. Comparez avec l’animal du jour 5 : tous les deux ont besoin d’eau. 5. Proposez d’arroser une plante ensemble ce soir.
 - **Matériel :** Aucun matériel
-- **Lexique visé :** l’eau _(water)_ · la lumière _(light)_ · arroser _(to water)_
+- **Lexique visé :** l’eau _(water)_ · la lumière _(light)_ · l’air _(air)_ · arroser _(to water)_
 - **Aide en anglais (optionnelle) :** « Say what a plant needs to live. »
 - **Objectifs travaillés :** `WORLD-S01-C01-O10` Décrire les besoins essentiels de quelques animaux ou de végétaux.
 

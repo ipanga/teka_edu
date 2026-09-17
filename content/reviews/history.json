@@ -119,6 +119,42 @@
       "outcome": "accepted",
       "summary": "Confirmation finale, contre le programme officiel Cycle 1 applicable en 2026-2027 (arrêté du 16 avril 2026, et arrêtés du 22 octobre 2024 pour le langage et les mathématiques). Les deux corrections de sécurité sont jugées satisfaisantes : dans « Cours et arrête-toi » et « Cours pendant que je compte », c’est l’adulte qui déplace les chaises et les meubles, et l’enfant n’aide qu’avec un objet léger et sans danger. L’activité physique voulue est préservée et aucune nouvelle passe n’est nécessaire. Toutes les corrections demandées aux passes précédentes sont vérifiées présentes : la distinction entre dénombrer et constituer une collection, celle entre identifier ses articulations et se représenter, les objectifs de phonologie retirés des rituels de la date, le tri des formes qui porte enfin l’objectif de tri, les huit exemplaires de formes qui varient d’orientation, de taille et de couleur, la reprise de O20 et O21 dans « Le tas de dix », et la phrase exacte sur le temps d’écran.",
       "corrections": "Aucune. La semaine est acceptée. Les 16 leçons passent de « en relecture » à « approuvée », avec une empreinte recalculée sous la définition courante, empreintes des images comprises. L’historique est conservé tel quel : les passes précédentes restent « acceptée avec modifications », et cette relecture reste assistée par IA — aucune personne qui enseigne à cet âge n’a lu ce contenu."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 2,
+      "reviewedOn": "2026-09-17",
+      "reviewKind": "ai-assisted",
+      "reviewer": "ChatGPT",
+      "scope": "full-review",
+      "outcome": "accepted-with-modifications",
+      "summary": "Première relecture pédagogique complète de la semaine 2. La semaine est structurellement saine et n’a pas besoin d’être réécrite : le rythme, les durées, les histoires, la progression et le modèle d’apprentissage à la maison sont acceptés. Quatorze points ont été demandés. Plusieurs objectifs étaient portés par l’activité voisine plutôt que par celle qui fait le travail : les parties de l’animal revendiquaient aussi les besoins, les parties de la plante aussi, le rituel du jour 7 revendiquait du vocabulaire alors qu’on y frappe des syllabes, et le rituel du jour 9 revendiquait la compréhension des émotions sans qu’aucune émotion y soit demandée. Deux activités de comparaison ne revendiquaient pas « comparer des quantités ». La leçon sur les formes annonçait qu’une forme reste la même quelle que soit sa taille ou son sens, mais l’écran ne montrait que les quatre formes prototypiques. Côté sécurité et langage : le parcours demandait de passer sous une chaise et d’enjamber un bâton, une activité de vocabulaire envoyait toucher la fenêtre, le jeu du chat ne disait pas clairement qui poursuit qui, la consigne sur les jours de la semaine annonçait les sept jours alors qu’on en travaille un seul, la tâche spatiale exigeait la phrase entière, l’histoire de Tito énonçait une soustraction et une addition formelles, et les besoins du vivant étaient présentés par des formules trop absolues.",
+      "corrections": "Toutes appliquées. Les objectifs suivent maintenant ce que chaque activité fait : morphologie d’un côté, besoins de l’autre ; le rituel du jour 7 porte « scander les syllabes d’un mot » ; le rituel du jour 9 ne porte plus les émotions, qui restent sur « Comment se sent Bibi ? » ; « Vérifions en comptant » et « Plus, moins, autant » portent « comparer des quantités ». « La même forme » montre les huit exemplaires de la semaine 1, et la guidance dit que ni la couleur, ni la taille, ni le sens ne disent quelle forme c’est. Le parcours est devenu souple : on passe sous un tissu tenu par l’adulte, on contourne un coussin, on enjambe une bande posée au sol ; le matériel de « Sur une ligne » se limite à un repère plat. On montre la fenêtre du doigt au lieu de la toucher. Les rôles du chat et de la souris sont nommés et échangés. On travaille un jour à la fois. On invite une phrase, on accepte la réponse et on reformule une fois, sans faire répéter ; « à sa droite » est retiré d’une leçon qui n’enseigne pas la droite. L’histoire de Tito garde le raisonnement sur les quantités sans énoncer d’opération. Les besoins sont dits simplement : de la nourriture, de l’eau, un endroit où vivre ; de l’eau, de la lumière, de l’air, la terre n’étant que le support habituel. Et « ils » est retiré du lexique d’une activité qui ne sollicite que « il » et « elle ». Aucune leçon n’est approuvée : les 20 restent en relecture en attendant votre seconde passe."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 3,
+      "reviewedOn": "2026-09-17",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Teka Edu (conséquence de la relecture de la semaine 2)",
+      "scope": "consequence",
+      "outcome": "accepted-with-modifications",
+      "summary": "Changement arrivé dans cette semaine sans relecture propre : il vient d’une correction demandée sur la semaine 2.",
+      "corrections": "L’histoire « Les trois cailloux de Tito », lue aussi le jour 14, ne se termine plus par « Trois cailloux, moins un, ça fait deux. Et deux, plus un, ça refait trois. » Le raisonnement sur les quantités est gardé, mais l’opération n’est plus énoncée : une lecture à voix haute n’a pas à enseigner l’addition et la soustraction formelles."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 4,
+      "reviewedOn": "2026-09-17",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Teka Edu (conséquence de la relecture de la semaine 2)",
+      "scope": "consequence",
+      "outcome": "accepted-with-modifications",
+      "summary": "Deux changements arrivés dans cette semaine sans relecture propre : ils viennent de corrections demandées sur la semaine 2.",
+      "corrections": "1) L’histoire « Les trois cailloux de Tito », lue aussi le jour 18, n’énonce plus de soustraction ni d’addition formelles ; le raisonnement sur les quantités est gardé. 2) Le rituel du jour 15 ne revendique plus « comprendre les émotions, les intentions et les sentiments qui animent les personnages » : on y dit la date et on frappe des syllabes. L’objectif reste porté par « Nsimba a peur, puis ça va mieux », dans la même leçon et le même jour."
     }
   ]
 }

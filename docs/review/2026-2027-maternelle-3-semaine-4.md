@@ -52,6 +52,12 @@ Trois changements arrivés dans cette semaine sans relecture propre : ils vienne
 
 **Suites données :** Les rituels des jours 16 et 17 ne revendiquent plus « repérer et produire des rimes et des assonances » : on y dit la date, on ne cherche pas de rimes. L’objectif reste porté par l’activité de rimes de chaque leçon. « Le tas de vingt » (jour 19) porte désormais aussi le dénombrement et la constitution d’une collection, à côté de la comptine numérique.
 
+### 2026-09-17 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
+
+Deux changements arrivés dans cette semaine sans relecture propre : ils viennent de corrections demandées sur la semaine 2.
+
+**Suites données :** 1) L’histoire « Les trois cailloux de Tito », lue aussi le jour 18, n’énonce plus de soustraction ni d’addition formelles ; le raisonnement sur les quantités est gardé. 2) Le rituel du jour 15 ne revendique plus « comprendre les émotions, les intentions et les sentiments qui animent les personnages » : on y dit la date et on frappe des syllabes. L’objectif reste porté par « Nsimba a peur, puis ça va mieux », dans la même leçon et le même jour.
+
 ## Jour 15 — 2026-09-21
 
 **Durée totale : 35 min** · 4 séances · jour 5 du rythme
@@ -88,7 +94,7 @@ _Comprendre ce que ressent un personnage et le comparer à ce qu’on a vécu so
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes lundi 21 septembre 2026. » Puis frappez ensemble les syllabes de « to-mate », « ba-nane », « oi-gnon ».
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Say the date, then clap the parts of three market words. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S02-C03-O14` Comprendre les émotions, les intentions et les sentiments qui animent les personnages.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date.
 
 #### 2. Nsimba a peur, puis ça va mieux — 8 min, sans interaction écran (listening-story)
 
@@ -1074,7 +1080,7 @@ _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les
   > « Et qu’est-ce qui manque ? »
   > Tito regarde bien. Le rond est là. Le plat est là. « Le pointu ! »
   > Sa sœur ouvre la main : c’est bien le caillou pointu.
-  > Trois cailloux, moins un, ça fait deux. Et deux, plus un, ça refait trois.
+  > Il y avait trois cailloux. Sa sœur en cache un : il en reste deux. Quand elle le remet, les trois sont de nouveau là.
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 

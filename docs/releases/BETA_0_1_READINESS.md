@@ -51,7 +51,8 @@ cannot be redrawn under an approval without it lapsing.
 | 1ère Week 5 reviewed                         | **DONE** | 2 passes (accepted-with-modifications → accepted); 12 lessons `approved`                  |
 | 3ème September authored                      | **DONE** | 88 lessons, 170 activities, 22 days                                                       |
 | 3ème Week 1 reviewed                         | **DONE** | 4 passes (3 accepted-with-modifications → accepted); 16 lessons `approved`, `ai-assisted` |
-| 3ème Weeks 2–5 reviewed                      | **TODO** | packages generated, not yet submitted                                                     |
+| 3ème Week 2 reviewed                         | **TODO** | pass 1 accepted-with-modifications, 14 corrections applied, **second pass pending**       |
+| 3ème Weeks 3–5 reviewed                      | **TODO** | packages generated, not yet submitted                                                     |
 | No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                           |
 
 **The two 3ème gaps are resolved**, one by authoring and one by pacing. `LANG-S02-C01-O13`
@@ -81,7 +82,7 @@ Every check must pass on the release commit. Current state on `develop`:
 | Check                                                      | State                                          |
 | ---------------------------------------------------------- | ---------------------------------------------- |
 | format · lint · typecheck                                  | **DONE**                                       |
-| unit tests                                                 | **DONE** (283)                                 |
+| unit tests                                                 | **DONE** (291)                                 |
 | content validation                                         | **DONE** (31 files)                            |
 | curriculum / annual-plan / progression validation          | **DONE**                                       |
 | review-package validation                                  | **DONE** (generation fails on missing content) |

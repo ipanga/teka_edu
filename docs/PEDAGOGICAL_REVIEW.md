@@ -26,18 +26,19 @@ Roles, kept distinct on purpose:
 
 ## Register of reviews
 
-| Batch                                | Date             | Kind                                             | Outcome                                                        | Corrections                    | Status                      |
-| ------------------------------------ | ---------------- | ------------------------------------------------ | -------------------------------------------------------------- | ------------------------------ | --------------------------- |
-| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 13, then 6, then 2             | **`approved`** — 16 lessons |
-| 3ème maternelle, Weeks 2–5           | —                | —                                                | not yet reviewed                                               | inherited mapping fixes only   | `review` — 0 approved       |
-| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                 | 11 items across the passes     | **`approved`** — 16 lessons |
-| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                 | 8 items                        | **`approved`** — 20 lessons |
-| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                 | 8 items                        | **`approved`** — 20 lessons |
-| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                                 | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons |
-| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`**   | 5 items                        | **`approved`** — 12 lessons |
+| Batch                                | Date             | Kind                                             | Outcome                                                        | Corrections                    | Status                            |
+| ------------------------------------ | ---------------- | ------------------------------------------------ | -------------------------------------------------------------- | ------------------------------ | --------------------------------- |
+| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 13, then 6, then 2             | **`approved`** — 16 lessons       |
+| 3ème maternelle, Week 2 (days 5–9)   | 2026-09-17       | AI-assisted (ChatGPT), 1 pass                    | `accepted-with-modifications`                                  | 14 items, all applied          | `review` — awaiting a second pass |
+| 3ème maternelle, Weeks 3–5           | —                | —                                                | not yet reviewed                                               | inherited corrections only     | `review` — 0 approved             |
+| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                 | 11 items across the passes     | **`approved`** — 16 lessons       |
+| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                 | 8 items                        | **`approved`** — 20 lessons       |
+| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                 | 8 items                        | **`approved`** — 20 lessons       |
+| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                                 | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons       |
+| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`**   | 5 items                        | **`approved`** — 12 lessons       |
 
 **1ère maternelle September is complete: 88 of 88 lessons `approved`.** 3ème maternelle's Week 1
-is now `approved` too — **16 of 88** — leaving Weeks 2–5 (72 lessons) at `review`. Every approval
+is `approved` — **16 of 88** — and Week 2 has had its first full review, leaving Weeks 2–5 (72 lessons) at `review`. Every approval
 is `ai-assisted` and `accepted`. **No teacher has read any of it.**
 
 Progress against the Beta 0.1 gate: **6 of 10 weekly packages accepted** — all five of 1ère
@@ -199,6 +200,65 @@ lesson that could not legally be approved. Once Week 1 was approved the constrai
 firing and the four passed vacuously — measuring the content rather than the constraint. The
 block now resets its subject inside its own transaction, so it says the same thing whatever has
 been approved since.
+
+---
+
+## 3ème maternelle, Week 2 review, 2026-09-17 — accepted with modifications (first pass)
+
+The week's first complete pedagogical review. **Structurally sound, no rewrite**: rhythm,
+durations, stories, progression and the home-learning model are accepted. Fourteen corrections
+were asked for, and all were applied. **The 20 lessons stay `review`; none is approved.**
+
+### Objectives carried by the wrong activity
+
+The recurring shape of it: one lesson, two activities, and the objective list copied across both.
+
+| Activity                                    | Was                             | Now                                                     |
+| ------------------------------------------- | ------------------------------- | ------------------------------------------------------- |
+| `m3-world-02-a1` _Les parties de l'animal_  | `O08 + O10`                     | `O08` — morphology only                                 |
+| `m3-world-02-a2` _De quoi a-t-il besoin ?_  | `O08`                           | `O10` — needs only                                      |
+| `m3-world-03-a1` _Les parties de la plante_ | `O10 + O08`                     | `O08`                                                   |
+| `m3-lang-07-a1` ritual (claps syllables)    | `LANG-S01-C01-O03` (vocabulary) | `LANG-S02-C01-O03` (syllables)                          |
+| `m3-lang-09-a1` ritual                      | `+ LANG-S02-C03-O14` (emotions) | date only — O14 stays on _Comment se sent Bibi ?_       |
+| `m3-math-06-a2` _Vérifions en comptant_     | `O21`                           | `O20 + O05` — it counts both rows and compares          |
+| `m3-math-09-a2` _Plus, moins, autant_       | `O20`                           | `O05 + O20` — comparison is the work; counting verifies |
+
+### Safety, clarity and language
+
+- **The obstacle course is soft now.** `m3-phys-06-a1` no longer sends the child under a chair or
+  over a stick: they pass under a cloth the adult holds, round a cushion, over a strip laid flat.
+  If furniture is in the way, the adult moves it. `m3-phys-05-a1` asks only for a floor marker
+  instead of the household-objects box, which is where the chairs and the stick live.
+- **« Va toucher la fenêtre » became « Montre-moi la fenêtre du doigt ».** The work is naming, not
+  contact with glass or a cooking pot.
+- **The cat game names its roles.** « Tu me sauves / tu me cherches » was ambiguous about who
+  chases whom; the rule now says who is the cat, who is the mouse, and when they swap. No score,
+  no winner.
+- **One day at a time.** « Dis-moi ce que tu fais chaque jour de la semaine » sounded like all
+  seven; the guidance always worked one.
+- **Forced repetition replaced by reformulation.** « Exigez la phrase entière » becomes: invite a
+  sentence, accept what comes, reformulate once, do not make the child repeat. « à sa droite »
+  left the guidance of a lesson that does not teach left and right.
+- **No formal arithmetic in a story.** _Les trois cailloux de Tito_ kept its reasoning about
+  quantities and lost « moins un, ça fait deux ».
+- **Biological needs stated carefully**: food, water and somewhere to live; water, light and air,
+  with soil as the usual support rather than a fourth universal need.
+- **Shape invariance on screen as well as on paper**: _La même forme_ shows the eight Week 1
+  exemplars, and says that neither colour nor size nor orientation tells you which shape it is.
+- **`ils` left a lexicon** that only ever asks for `il` and `elle`.
+
+### Two occurrences outside Week 2
+
+`m3-lang-15-a1` (day 15) claimed the emotions objective on a ritual that claps syllables — the
+same defect as `m3-lang-09-a1`. Corrected: the objective stays on _Nsimba a peur, puis ça va
+mieux_, in the same lesson. Nothing else moved. The Tito story is also read on days 14 and 18, so
+Weeks 3 and 4 carry that change too. Both are recorded as `consequence` entries. **They are not
+reviews of those weeks.**
+
+**Reported, deliberately not changed:** `m3-world-06-a2` (« Regarde-le bien et dis-moi ce que tu
+remarques ») claims the biological-needs objective while asking only for observation. Removing it
+would leave the activity with no objective at all, and choosing its replacement is a pedagogical
+judgement about a week ChatGPT has not read. It belongs to that week's own first pass.
 
 ---
 
