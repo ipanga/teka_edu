@@ -26,13 +26,25 @@ const lesson = (id: string) => {
 };
 
 describe("September lessons (3ème maternelle)", () => {
-  it("has one lesson per track slot of September, all authored by Teka Edu and marked for review", () => {
+  it("has one lesson per track slot of September, all authored by Teka Edu", () => {
     expect(m3).toHaveLength(88);
     for (const l of m3) {
       expect(l.origin).toBe("teka-edu-created");
-      expect(l.status).toBe("review");
       expect(l.levelIds).toEqual(["maternelle-3"]);
       expect(l.curriculumId).toBe("maternelle-cycle1-cd-2026");
+      // Approved only where a full review concluded `accepted`; everything else waits.
+      expect(["review", "approved"], l.id).toContain(l.status);
+    }
+  });
+
+  it("has approved exactly the week that passed its review, and nothing else", () => {
+    // Week 1 is days 1-4; the other 72 lessons have not been through a full review.
+    const approved = m3.filter((l) => l.status === "approved");
+    expect(approved).toHaveLength(16);
+    expect(m3.filter((l) => l.status === "review")).toHaveLength(72);
+    for (const l of approved) {
+      expect(l.review?.reviewKind, l.id).toBe("ai-assisted");
+      expect(l.review?.outcome, l.id).toBe("accepted");
     }
   });
 
@@ -108,7 +120,10 @@ describe("September lessons (3ème maternelle)", () => {
 });
 
 describe("lesson validation", () => {
-  const base = lesson("m3-math-01");
+  // Perturbed copies are made from a lesson that carries no approval, so the assertions here are
+  // about objectives, levels and materials. Breaking an approved lesson trips the digest check
+  // first — which is correct, and is tested where it belongs, in content-quality-gate.test.ts.
+  const base: Lesson = { ...lesson("m3-math-01"), status: "review", review: null };
   const check = (l: Lesson) =>
     checkLessons([l], data.curricula, objectives, data.levels, data.materials, media);
 

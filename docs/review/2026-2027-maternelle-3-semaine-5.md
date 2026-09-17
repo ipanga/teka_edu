@@ -41,16 +41,18 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 2 fois. Ce qui suit est l’historique, pour
-que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
+**Cette semaine n’a encore jamais été relue.** Ce qui suit n’est donc pas
+l’historique de ses relectures : ce sont des corrections qui lui sont arrivées
+parce qu’un défaut trouvé dans une autre semaine existait ici à l’identique.
+Elles sont déjà appliquées au contenu que vous lisez ci-dessous.
 
-### 2026-09-15 — Teka Edu (conséquence d’une autre relecture) · `accepted-with-modifications` (ai-assisted)
+### 2026-09-15 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
 
 Changement arrivé dans cette semaine sans relecture propre.
 
 **Suites données :** L’activité « Le mot coupé en morceaux » (jour 21) porte désormais aussi LANG-S02-C01-O13 — « augmenter sa mémoire auditive et sa capacité de concentration ». L’enfant y tenait déjà des syllabes en mémoire le temps d’une pause avant de reconstituer le mot ; c’est la revendication qui manquait, pas le travail.
 
-### 2026-09-16 — Teka Edu (conséquence de la relecture de la semaine 1) · `accepted-with-modifications` (ai-assisted)
+### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
 
 Deux changements arrivés dans cette semaine sans relecture propre : ils viennent de corrections demandées sur la semaine 1.
 

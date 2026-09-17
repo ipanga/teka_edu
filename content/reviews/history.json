@@ -107,6 +107,18 @@
       "outcome": "accepted-with-modifications",
       "summary": "Passe de confirmation. Les cinq corrections demandées à la passe précédente sont vérifiées et jugées correctement appliquées : les objectifs de mathématiques, la distinction entre identifier ses articulations et se représenter, le rituel de phonologie, le tri des formes, et la phrase du dossier sur le temps d’écran. La structure de la semaine, les histoires, les durées, le niveau de langue, les étais en anglais, la progression et le modèle d’apprentissage à la maison restent acceptés et ne sont pas réécrits. Deux points seulement restaient : deux activités de mouvement demandaient encore à l’enfant d’écarter une chaise ou « ce qui gêne », ce qu’un produit universel ne peut pas demander à un enfant de cinq ans puisqu’une chaise est légère dans une maison et lourde ou instable dans une autre ; et le document de reconfirmation affirmait que ces semaines avaient été acceptées et pouvaient redevenir « approved », ce qui n’a jamais été vrai pour la 3ème maternelle.",
       "corrections": "Les deux activités de mouvement disent maintenant que c’est l’adulte qui déplace les chaises et les meubles, l’enfant n’aidant qu’avec un coussin, un pagne ou un autre objet léger et sans danger. L’activité physique elle-même n’est pas affaiblie et aucune formule anxiogène n’a été ajoutée. Tout le contenu de septembre a été audité pour ce motif : ces deux activités étaient les seules concernées. Le générateur du document de changements lit désormais l’état réel de chaque semaine et n’emploie le langage de reconfirmation que pour une semaine réellement approuvée. Aucune leçon n’est approuvée : les 16 restent en relecture en attendant votre confirmation."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 1,
+      "reviewedOn": "2026-09-17",
+      "reviewKind": "ai-assisted",
+      "reviewer": "ChatGPT",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Confirmation finale, contre le programme officiel Cycle 1 applicable en 2026-2027 (arrêté du 16 avril 2026, et arrêtés du 22 octobre 2024 pour le langage et les mathématiques). Les deux corrections de sécurité sont jugées satisfaisantes : dans « Cours et arrête-toi » et « Cours pendant que je compte », c’est l’adulte qui déplace les chaises et les meubles, et l’enfant n’aide qu’avec un objet léger et sans danger. L’activité physique voulue est préservée et aucune nouvelle passe n’est nécessaire. Toutes les corrections demandées aux passes précédentes sont vérifiées présentes : la distinction entre dénombrer et constituer une collection, celle entre identifier ses articulations et se représenter, les objectifs de phonologie retirés des rituels de la date, le tri des formes qui porte enfin l’objectif de tri, les huit exemplaires de formes qui varient d’orientation, de taille et de couleur, la reprise de O20 et O21 dans « Le tas de dix », et la phrase exacte sur le temps d’écran.",
+      "corrections": "Aucune. La semaine est acceptée. Les 16 leçons passent de « en relecture » à « approuvée », avec une empreinte recalculée sous la définition courante, empreintes des images comprises. L’historique est conservé tel quel : les passes précédentes restent « acceptée avec modifications », et cette relecture reste assistée par IA — aucune personne qui enseigne à cet âge n’a lu ce contenu."
     }
   ]
 }
