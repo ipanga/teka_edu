@@ -16,6 +16,8 @@ import { execFileSync } from "node:child_process";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { generateSchoolDays } from "@/domain/calendar/school-days";
+import { weekReviewState } from "@/domain/lessons/review";
+import type { WeekReviewState } from "@/domain/lessons/review";
 import { generateDailyPlan } from "@/domain/programme/daily-plan";
 import { REVIEW_PACKAGES } from "@/lib/content/review-packages";
 import { getProgramme, getReferenceData } from "@/lib/content/reference-data";
@@ -100,8 +102,8 @@ const now = read(null);
  * reviewer to confirm.
  */
 const dayOfLesson = new Map<string, number>();
+const data = getReferenceData();
 {
-  const data = getReferenceData();
   const annual = data.annualPlans.find((p) => p.levelId === levelId);
   const programme = annual && getProgramme(levelId, annual.schoolYearId, data);
   const calendar = data.calendars.find((c) => c.schoolYear.id === annual?.schoolYearId);
@@ -122,6 +124,31 @@ const day = (id: string) => dayOfLesson.get(id.replace(/-a\d+$/, "")) ?? 0;
 /** The weeks are the review packages themselves, so a row lands in the week a reviewer was sent. */
 const week = (d: number) =>
   REVIEW_PACKAGES.find((p) => p.levelId === levelId && d >= p.fromDay && d <= p.toDay)?.week ?? 0;
+
+/**
+ * What a week's content has actually been through, read from canonical data rather than assumed.
+ *
+ * This document used to open by stating that the weeks it covers « avaient été acceptées » and to
+ * close by offering to restore them to `approved`. That was written for 1ère maternelle, whose
+ * weeks really had been approved and really did lapse. Generated for 3ème maternelle it was
+ * simply false: those weeks have never been approved, and four of them have never been read at
+ * all. A document that tells a reviewer they are confirming a restoration invites an approval
+ * nobody performed.
+ */
+type WeekState = WeekReviewState;
+
+const lessonsOfWeek = (w: number) =>
+  data.lessons.filter((l) => l.levelIds.includes(levelId) && week(day(l.id)) === w);
+const fullReviewsOfWeek = (w: number) =>
+  data.reviewHistory.filter(
+    (r) => r.levelId === levelId && r.week === w && r.scope === "full-review",
+  );
+
+const stateOfWeek = (w: number): WeekState =>
+  weekReviewState(
+    lessonsOfWeek(w).map((l) => l.status),
+    data.reviewHistory.filter((r) => r.levelId === levelId && r.week === w),
+  );
 
 type Row = { week: number; day: number; id: string; field: string; before: string; after: string };
 const rows: Row[] = [];
@@ -168,29 +195,89 @@ for (const [id, before] of old) {
 
 rows.sort((a, b) => a.day - b.day || a.id.localeCompare(b.id) || a.field.localeCompare(b.field));
 
-const weeks = [...new Set(rows.map((row) => row.week))].sort();
+const weeks = [...new Set(rows.map((row) => row.week))].sort((a, b) => a - b);
+if (weeks.length === 0) {
+  // Nothing changed, so there is nothing to confirm. Writing a document anyway produced a file
+  // named « semaines-undefined-undefined » that asked a reviewer to confirm an empty list.
+  console.log(
+    `No change in ${levelId} since ${since}: ${comparedFields} fields compared across ${comparedLessons} lessons, all identical. No document written.`,
+  );
+  process.exit(0);
+}
+const states = new Map(weeks.map((w) => [w, stateOfWeek(w)] as const));
+const weeksIn = (state: WeekState) => weeks.filter((w) => states.get(w) === state);
+const list = (ws: number[]) =>
+  ws.length === 1
+    ? `la semaine ${ws[0]}`
+    : `les semaines ${ws.slice(0, -1).join(", ")} et ${ws.at(-1)}`;
+
+/**
+ * A reconfirmation only exists where there is an approval to restore. Everywhere else this is an
+ * audit of what changed, and the closing question has to be the one the state can answer.
+ */
+const isReconfirmation = weeksIn("approved").length > 0;
+const title = isReconfirmation ? "Reconfirmation" : "Audit des changements";
+
 const lines: string[] = [
-  `# Reconfirmation — ${levelId}, semaines ${weeks.join(", ")}`,
+  `# ${title} — ${levelId}, semaines ${weeks.join(", ")}`,
   "",
   "> **Ce document est généré** (`npm run review:reconfirmation`). Il ne remplace pas une",
-  "> relecture complète : il montre **uniquement ce qui a changé** depuis la version que vous",
-  "> aviez acceptée, pour que vous puissiez confirmer que la correction connue a bien été",
-  "> appliquée — et rien d’autre.",
+  "> relecture complète : il montre **uniquement ce qui a changé**, champ par champ, pour que",
+  "> vous puissiez vérifier que la correction connue a bien été appliquée — et rien d’autre.",
   "",
+  "## Où en est chaque semaine",
+  "",
+];
+
+for (const w of weeks) {
+  const state = states.get(w)!;
+  const lessons = lessonsOfWeek(w);
+  const approved = lessons.filter((l) => l.status === "approved").length;
+  const last = fullReviewsOfWeek(w).at(-1);
+  const said: Record<WeekState, string> = {
+    approved: `**Semaine ${w} — approuvée** (${approved} leçon(s) \`approved\`). Si l’empreinte du texte relu a changé, l’approbation tombe : elle peut être rétablie une fois les changements ci-dessous confirmés.`,
+    reviewed: `**Semaine ${w} — relue, pas approuvée.** Dernière passe : ${last?.reviewedOn} (\`${last?.outcome}\`, ${last?.reviewKind}). Elle reste en \`review\` et **aucune leçon n’y est approuvée**. Ce document est un audit des changements depuis cette passe, pas une restitution d’approbation.`,
+    "never-reviewed": `**Semaine ${w} — jamais relue.** Aucune passe de relecture n’a porté sur cette semaine ; elle est en \`review\` et **aucune leçon n’y est approuvée**. Les changements ci-dessous y sont arrivés par une règle de correction partagée, pas par une lecture de cette semaine. **Les confirmer ne l’approuve pas** : ils seront portés à son dossier de relecture complet, à venir.`,
+    draft: `**Semaine ${w} — en cours d’écriture** (\`draft\`). Rien n’y est relu ni approuvé, et ce document ne demande aucune décision à son sujet.`,
+  };
+  lines.push(`- ${said[state]}`, "");
+}
+
+lines.push(
   "## Ce qui s’est passé",
-  "",
-  "Ces semaines avaient été acceptées (`ai-assisted`). La relecture de la semaine 4 a ensuite",
-  "montré que plusieurs défauts corrigés dans cette semaine existaient **à l’identique** dans les",
-  "semaines déjà acceptées : le même texte d’activité avait été écrit une fois puis réutilisé.",
-  "",
-  "Les corrections ont été appliquées. **Les approbations correspondantes ont été annulées**, et",
-  "non pas re-tamponnées : c’est exactement ce que l’empreinte (`reviewedDigest`) doit produire",
-  "quand le texte relu change.",
   "",
   `**${rows.length} champs ont changé, sur ${comparedFields} champs comparés dans ${comparedLessons} leçons.**`,
   "Tous les autres sont identiques, octet pour octet.",
   "",
-];
+);
+
+if (weeksIn("approved").length > 0) {
+  lines.push(
+    `Pour ${list(weeksIn("approved"))} : les corrections ont été appliquées et **les approbations`,
+    "correspondantes ont été annulées**, et non pas re-tamponnées — c’est exactement ce que",
+    "l’empreinte (`reviewedDigest`) doit produire quand le texte relu change.",
+    "",
+  );
+}
+if (weeksIn("reviewed").length > 0 || weeksIn("never-reviewed").length > 0) {
+  const unreviewed = weeksIn("never-reviewed");
+  lines.push(
+    "Ces changements viennent de règles de correction partagées : un défaut trouvé dans une",
+    "semaine existait à l’identique ailleurs, et une règle ne tient que si toutes ses occurrences",
+    "sont corrigées.",
+    "",
+  );
+  if (unreviewed.length > 0) {
+    const many = unreviewed.length > 1;
+    const subject = `${list(unreviewed).charAt(0).toUpperCase()}${list(unreviewed).slice(1)}`;
+    lines.push(
+      `**${subject} ${many ? "n’ont pas encore reçu leur" : "n’a pas encore reçu sa"} relecture pédagogique complète.**`,
+      `Confirmer les changements de champs ci-dessous **ne vaut pas approbation** de ${many ? "ces semaines" : "cette semaine"} :`,
+      `${many ? "elles garderont leur dossier" : "elle gardera son dossier"} de relecture complet, avec ces corrections déjà intégrées.`,
+      "",
+    );
+  }
+}
 
 for (const w of weeks) {
   const inWeek = rows.filter((row) => row.week === w);
@@ -225,14 +312,32 @@ lines.push(
   "## Ce qu’on vous demande",
   "",
   "Pour chaque changement : confirmez qu’il applique bien la correction demandée et qu’il",
-  "n’introduit pas de pédagogie nouvelle. Si c’est le cas, ces semaines peuvent retrouver le",
-  "statut `approved` avec `reviewKind: ai-assisted`. Aucune leçon n’est approuvée aujourd’hui.",
+  "n’introduit pas de pédagogie nouvelle.",
   "",
-  "**Décision :** ☐ reconfirmé ☐ reconfirmé avec modifications ☐ à revoir",
+);
+if (weeksIn("approved").length > 0) {
+  lines.push(
+    `Si c’est le cas, ${list(weeksIn("approved"))} peut retrouver le statut \`approved\` avec`,
+    "`reviewKind: ai-assisted`. Aucune leçon n’est approuvée aujourd’hui.",
+    "",
+  );
+}
+if (weeksIn("reviewed").length > 0 || weeksIn("never-reviewed").length > 0) {
+  lines.push(
+    "Pour les semaines qui ne sont pas approuvées, **cette confirmation ne change aucun statut** :",
+    "elles restent en `review`, et c’est leur dossier de relecture complet qui décidera.",
+    "",
+  );
+}
+lines.push(
+  `**Décision :** ☐ ${isReconfirmation ? "reconfirmé" : "changements confirmés"} ☐ confirmé avec modifications ☐ à revoir`,
   "",
 );
 
-const out = `docs/review/2026-2027-${levelId}-semaines-${weeks[0]}-${weeks[weeks.length - 1]}-reconfirmation.md`;
+// The filename says what the document is. Calling an audit of never-approved weeks a
+// « reconfirmation » is the same false claim as the wording, one directory listing earlier.
+const suffix = isReconfirmation ? "reconfirmation" : "audit-des-changements";
+const out = `docs/review/2026-2027-${levelId}-semaines-${weeks[0]}-${weeks[weeks.length - 1]}-${suffix}.md`;
 mkdirSync(path.join(ROOT, "docs/review"), { recursive: true });
 writeFileSync(path.join(ROOT, out), lines.join("\n"), "utf8");
 console.log(`Wrote ${out}: ${rows.length} change(s) across ${comparedLessons} lessons.`);

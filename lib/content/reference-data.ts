@@ -326,6 +326,8 @@ export type ReviewHistoryEntry = {
   reviewedOn: string;
   reviewKind: string;
   reviewer: string;
+  /** `full-review` = this week was read. `consequence` = a change arrived from another week. */
+  scope: string;
   outcome: string;
   summary: string;
   corrections: string;

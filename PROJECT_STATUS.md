@@ -5,9 +5,9 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-09-16
-Branch:     fix/maternelle-3-week-1-review
-Commit:     develop at a4a014d; main at 1b95480
+Date:       2026-09-17
+Branch:     fix/maternelle-3-week-1-safety-and-review-state
+Commit:     develop at f2c018f; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -528,35 +528,36 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  3ème maternelle Week 1 — ChatGPT's second-pass corrections applied.
-            - Six objective mappings corrected. Counting a set already laid out no longer
-              claims to constitute a collection; finding your own joints no longer claims to
-              represent an articulated body; the sorting activity claims the sorting
-              objective; the day-4 ritual no longer claims to scan syllables it never asks
-              for; and « Le tas de dix » no longer claims only the counting rhyme.
-            - Each finding was a class, not a one-off. Written as rules, the regression tests
-              forced eleven more occurrences in Weeks 2-5 into the open. Every one was free to
-              fix: the right activity was always a sibling in the same lesson on the same day,
-              so no lesson list, no first-taught day, no stage and no coverage figure moved.
-              26 of 3,084 compared fields changed, machine-proved.
-            - The geometry lesson could not satisfy its own objective. « Classer indépendamment
-              de la couleur, de la taille, de l'orientation » with one drawing per shape
-              teaches the prototype instead. Preparation now asks for two or three of each, and
-              the screen shows a second exemplar of each — each wearing the colour of a
-              different shape, so colour cannot be the cue.
-            - That exposed a defect in the app: « Montre : le carré » compared asset ids, so
-              the tilted square would have been marked wrong. It now compares what a picture
-              is. The E2E test asserts the tilted square is accepted.
-            - Two generators wrote JSON that Prettier immediately reformatted, so regenerating
-              dirtied the tree and hand-formatting was silently reverted. Both now format their
-              own output; both round-trip clean.
-            - The reconfirmation document numbered days by track position. « Mes articulations »
-              was filed as day 4 of Week 1; the child meets it on day 11, in Week 3. It reads
-              the real day from the generated plans now.
-Validation: format, lint, typecheck, unit (260), content (31 files), pgTAP (152) on a fresh
+Completed:  3ème maternelle Week 1 — ChatGPT's confirmation pass applied.
+            - The five pedagogical corrections of the previous pass were confirmed correct and
+              left alone. Two narrow issues remained.
+            - Two movement activities still told the adult that the child clears the space:
+              « c'est lui qui écarte la chaise » and « c'est lui qui écarte ce qui gêne ».
+              A chair is light in one home and heavy in another, and « ce qui gêne » is
+              whatever happens to be there. The adult moves furniture now; the child carries a
+              cushion, a pagne or a toy. The running, the stop rule and the endurance work are
+              untouched, and nothing anxious was added.
+            - All of September was audited for that pattern. Those two activities were the only
+              ones affected, both in Week 1 — so Weeks 2-5 have nothing to carry. Four other
+              matches were inspected and deliberately left: the adult installs the obstacle
+              course, the adult lays the cloths, the child moves a pebble, the child counts
+              chairs.
+            - The cross-week document claimed these weeks « avaient été acceptées » and offered
+              to restore them to `approved`. That was written for 1ère maternelle, whose weeks
+              really had been approved. For 3ème it was false twice: no week has ever been
+              approved, and four have never been read. A document that offers a restoration
+              invites an approval nobody performed.
+            - The generator reads canonical state now and distinguishes approved /
+              reviewed-not-approved / never-reviewed / draft. Telling a real review from an
+              inherited change used to mean sniffing the `reviewer` string, so unread weeks
+              looked reviewed; `scope` is a field on every history entry now.
+            - The document is named for what it is. The misleading `-reconfirmation.md` was
+              removed rather than left beside its replacement.
+            - A pre-existing bug surfaced on the way: with zero changes the generator wrote
+              « semaines-undefined-undefined ». It now reports and writes nothing.
+Validation: format, lint, typecheck, unit (272), content (31 files), pgTAP (152) on a fresh
             reset, build, E2E (28), both Docker images, client-bundle scan.
 Cost:       $0.
 Not done:   No lesson approved — 3ème stays 0 of 88, Beta stays 5 of 10 weekly packages.
-            Weeks 2-5 have still never been reviewed; the fixes there are forced corrections,
-            not a review. Two further suspect mappings reported, deliberately not changed.
+            Weeks 2-5 have still never been reviewed. Week 1 awaits ChatGPT's final word.
 ```
