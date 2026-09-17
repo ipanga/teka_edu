@@ -468,17 +468,35 @@ export function buildReviewPackage(
         entry.week === options.week,
     )
     .sort((a, b) => a.reviewedOn.localeCompare(b.reviewedOn));
+  /**
+   * Only the passes that actually read this week. A week can carry entries without ever having
+   * been examined: a defect found in one week often exists identically in another, and the
+   * change has to be declared where it landed. Counting those as readings would tell this
+   * reviewer their week had already been looked at.
+   */
+  const reads = history.filter((entry) => entry.scope === "full-review");
   const historyBlock =
     history.length === 0
       ? ["## Relectures précédentes", "", "Aucune : cette semaine n’a encore jamais été relue.", ""]
       : [
           "## Relectures précédentes",
           "",
-          `Cette semaine a déjà été relue ${history.length} fois. Ce qui suit est l’historique, pour`,
-          "que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.",
+          ...(reads.length > 0
+            ? [
+                `Cette semaine a déjà été relue ${reads.length} fois. Ce qui suit est l’historique,`,
+                "pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.",
+              ]
+            : [
+                "**Cette semaine n’a encore jamais été relue.** Ce qui suit n’est donc pas",
+                "l’historique de ses relectures : ce sont des corrections qui lui sont arrivées",
+                "parce qu’un défaut trouvé dans une autre semaine existait ici à l’identique.",
+                "Elles sont déjà appliquées au contenu que vous lisez ci-dessous.",
+              ]),
           "",
           ...history.flatMap((entry) => [
-            `### ${entry.reviewedOn} — ${entry.reviewer} · \`${entry.outcome}\` (${entry.reviewKind})`,
+            entry.scope === "consequence"
+              ? `### ${entry.reviewedOn} — correction héritée d’une autre semaine (pas une relecture de celle-ci)`
+              : `### ${entry.reviewedOn} — ${entry.reviewer} · \`${entry.outcome}\` (${entry.reviewKind})`,
             "",
             entry.summary,
             "",

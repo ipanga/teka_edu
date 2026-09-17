@@ -238,6 +238,16 @@ select is(
   0,
   'no lesson records a reviewer without being approved'
 );
+-- These checks need a lesson that is *not* approved, and they used to assume `m3-lang-01` was
+-- one. When Week 1 was approved the constraint stopped firing and four assertions started
+-- passing vacuously — the test was measuring the content, not the constraint. The subject is
+-- put back to a clean unapproved state first, inside this transaction, so the block says the
+-- same thing whatever has been approved since.
+update public.lessons
+   set status = 'review', reviewer = null, reviewer_role = null, reviewed_on = null,
+       reviewed_digest = null, review_kind = null, review_outcome = null, review_notes = null
+ where id = 'm3-lang-01';
+
 select throws_ok(
   $$ update public.lessons set status = 'approved' where id = 'm3-lang-01' $$,
   '23514', null, 'a lesson cannot become approved without a named reviewer'

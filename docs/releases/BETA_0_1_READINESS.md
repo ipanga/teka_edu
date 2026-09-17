@@ -26,11 +26,12 @@ analytics are **out of scope** and must not delay the release.
 
 ## 1. Pedagogy
 
-**5 of 10 weekly packages accepted · 88 of 176 September lessons `approved`**, all
+**6 of 10 weekly packages accepted · 104 of 176 September lessons `approved`**, all
 `ai-assisted`, all `accepted`. No teacher has read any of it.
 
-**1ère maternelle September is complete — 88/88, all five weeks through the gate.** What remains
-for the Beta pedagogy gate is **3ème maternelle's five packages**, reviewed one week at a time.
+**1ère maternelle September is complete — 88/88.** **3ème maternelle Week 1 is approved — 16/16.**
+What remains for the Beta pedagogy gate is **3ème maternelle Weeks 2–5**, reviewed one week at a
+time.
 
 Getting here was not a straight line, and the record says so. Weeks 1–3 were approved, then their
 approvals lapsed when the Week 4 review found defects those weeks carried identically — and again
@@ -40,18 +41,18 @@ digests were allowed to fail rather than being re-stamped. The 31 occurrences we
 on a compact diff. The digest now covers the bytes of every referenced illustration, so a picture
 cannot be redrawn under an approval without it lapsing.
 
-| Item                                         | State    | Evidence                                                                                       |
-| -------------------------------------------- | -------- | ---------------------------------------------------------------------------------------------- |
-| 1ère September authored                      | **DONE** | 88 lessons, 132 activities, 22 days                                                            |
-| 1ère Week 1 reviewed                         | **DONE** | 2 passes + reconfirmation; 16 lessons `approved`, `ai-assisted`                                |
-| 1ère Week 2 reviewed                         | **DONE** | 2 passes + reconfirmation; 20 lessons `approved`                                               |
-| 1ère Week 3 reviewed                         | **DONE** | 2 passes + reconfirmation; 20 lessons `approved`                                               |
-| 1ère Week 4 reviewed                         | **DONE** | 2 passes; 20 lessons `approved`                                                                |
-| 1ère Week 5 reviewed                         | **DONE** | 2 passes (accepted-with-modifications → accepted); 12 lessons `approved`                       |
-| 3ème September authored                      | **DONE** | 88 lessons, 170 activities, 22 days                                                            |
-| 3ème Week 1 reviewed                         | **TODO** | 3 passes, all accepted-with-modifications; corrections applied, **final confirmation pending** |
-| 3ème Weeks 2–5 reviewed                      | **TODO** | packages generated, not yet submitted                                                          |
-| No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                                |
+| Item                                         | State    | Evidence                                                                                  |
+| -------------------------------------------- | -------- | ----------------------------------------------------------------------------------------- |
+| 1ère September authored                      | **DONE** | 88 lessons, 132 activities, 22 days                                                       |
+| 1ère Week 1 reviewed                         | **DONE** | 2 passes + reconfirmation; 16 lessons `approved`, `ai-assisted`                           |
+| 1ère Week 2 reviewed                         | **DONE** | 2 passes + reconfirmation; 20 lessons `approved`                                          |
+| 1ère Week 3 reviewed                         | **DONE** | 2 passes + reconfirmation; 20 lessons `approved`                                          |
+| 1ère Week 4 reviewed                         | **DONE** | 2 passes; 20 lessons `approved`                                                           |
+| 1ère Week 5 reviewed                         | **DONE** | 2 passes (accepted-with-modifications → accepted); 12 lessons `approved`                  |
+| 3ème September authored                      | **DONE** | 88 lessons, 170 activities, 22 days                                                       |
+| 3ème Week 1 reviewed                         | **DONE** | 4 passes (3 accepted-with-modifications → accepted); 16 lessons `approved`, `ai-assisted` |
+| 3ème Weeks 2–5 reviewed                      | **TODO** | packages generated, not yet submitted                                                     |
+| No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                           |
 
 **The two 3ème gaps are resolved**, one by authoring and one by pacing. `LANG-S02-C01-O13`
 (auditory memory) now has a genuine second occurrence on day 21, where the child already had to
@@ -80,7 +81,7 @@ Every check must pass on the release commit. Current state on `develop`:
 | Check                                                      | State                                          |
 | ---------------------------------------------------------- | ---------------------------------------------- |
 | format · lint · typecheck                                  | **DONE**                                       |
-| unit tests                                                 | **DONE** (272)                                 |
+| unit tests                                                 | **DONE** (283)                                 |
 | content validation                                         | **DONE** (31 files)                            |
 | curriculum / annual-plan / progression validation          | **DONE**                                       |
 | review-package validation                                  | **DONE** (generation fails on missing content) |

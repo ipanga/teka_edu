@@ -1,7 +1,8 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { weekReviewState } from "@/domain/lessons/review";
+import { checkLessonReview, lessonDigest, weekReviewState } from "@/domain/lessons/review";
+import { mediaDigestSource } from "@/domain/media/types";
 import { getReferenceData } from "@/lib/content/reference-data";
 
 const ROOT = process.cwd();
@@ -61,8 +62,8 @@ describe("what a batch of content has actually been through", () => {
       );
     // 1ère maternelle is approved; nothing here may quietly change that.
     expect(stateOf("maternelle-1", 1, ["m1-lang-01"])).toBe("approved");
-    // 3ème Week 1 has been read twice and accepted with modifications both times.
-    expect(stateOf("maternelle-3", 1, ["m3-math-01"])).toBe("reviewed");
+    // 3ème Week 1 has now been read three times and finally accepted.
+    expect(stateOf("maternelle-3", 1, ["m3-math-01"])).toBe("approved");
     // 3ème Weeks 2-5 carry only inherited corrections, so they have never been reviewed.
     for (const [week, id] of [
       [2, "m3-math-05"],
@@ -95,5 +96,120 @@ describe("the generated change audit says only what the state supports", () => {
 
   it("is named for what it is, not for a reconfirmation", () => {
     expect(audit.startsWith("# Audit des changements")).toBe(true);
+  });
+});
+
+describe("an approval can only come from a full review that accepted the week", () => {
+  const data = getReferenceData();
+  const m3 = data.lessons.filter((l) => l.levelIds.includes("maternelle-3"));
+  const historyOf = (week: number) =>
+    data.reviewHistory.filter((r) => r.levelId === "maternelle-3" && r.week === week);
+
+  it("approved Week 1 and left Weeks 2-5 entirely unapproved", () => {
+    expect(m3.filter((l) => l.status === "approved")).toHaveLength(16);
+    expect(m3.filter((l) => l.status === "review")).toHaveLength(72);
+  });
+
+  it("holds a full review that concluded accepted for every approved lesson's week", () => {
+    // Week 1 is the only 3ème week with one, and it is the only approved week.
+    const accepted = (week: number) =>
+      historyOf(week).some((r) => r.scope === "full-review" && r.outcome === "accepted");
+    expect(accepted(1)).toBe(true);
+    for (const week of [2, 3, 4, 5]) expect(accepted(week), `week ${week}`).toBe(false);
+  });
+
+  it("does not let an inherited correction stand in for a review", () => {
+    // Weeks 2-5 each carry consequence entries. They are changes, not readings, and they must
+    // not be enough to approve anything.
+    for (const week of [2, 3, 4, 5]) {
+      const entries = historyOf(week);
+      expect(entries.length, `week ${week} has no recorded change`).toBeGreaterThan(0);
+      expect(
+        entries.every((r) => r.scope === "consequence"),
+        `week ${week}`,
+      ).toBe(true);
+      expect(weekReviewState(["review"], entries), `week ${week}`).toBe("never-reviewed");
+    }
+  });
+
+  it("refuses to treat accepted-with-modifications as an approval", () => {
+    expect(weekReviewState(["review"], [full("accepted-with-modifications")])).toBe("reviewed");
+  });
+
+  it("records every approval as AI-assisted, and never as a teacher's", () => {
+    for (const l of m3.filter((x) => x.status === "approved")) {
+      expect(l.review?.reviewKind, l.id).toBe("ai-assisted");
+      expect(l.review?.reviewerRole ?? "", l.id).not.toMatch(/enseignant|professeur|teacher/i);
+    }
+  });
+});
+
+describe("the approvals granted to 3ème maternelle Week 1 are protected", () => {
+  const data = getReferenceData();
+  const media = mediaDigestSource(data.media, data.texts);
+  const approved = data.lessons.filter(
+    (l) => l.levelIds.includes("maternelle-3") && l.status === "approved",
+  );
+
+  it("recomputes every stored digest exactly, so none was copied or forged", () => {
+    expect(approved).toHaveLength(16);
+    const seen = new Set<string>();
+    for (const lesson of approved) {
+      expect(lessonDigest(lesson, media), lesson.id).toBe(lesson.review?.reviewedDigest);
+      seen.add(lesson.review?.reviewedDigest ?? "");
+    }
+    // Sixteen different lessons, sixteen different digests: nothing was reused.
+    expect(seen.size).toBe(16);
+  });
+
+  it("lapses when adult guidance changes", () => {
+    const lesson = approved.find((l) => l.id === "m3-phys-01")!;
+    const before = lessonDigest(lesson, media);
+    const edited = {
+      ...lesson,
+      activities: lesson.activities.map((a, i) =>
+        i === 0 ? { ...a, adultGuidance: `${a.adultGuidance} Et déplacez la chaise.` } : a,
+      ),
+    };
+    expect(lessonDigest(edited, media)).not.toBe(before);
+    expect(checkLessonReview(edited, media).join("\n")).toMatch(/changed since it was approved/);
+  });
+
+  it("lapses when the child's own instruction changes", () => {
+    const lesson = approved.find((l) => l.id === "m3-math-01")!;
+    const before = lessonDigest(lesson, media);
+    const edited = {
+      ...lesson,
+      activities: lesson.activities.map((a, i) =>
+        i === 0 ? { ...a, childInstruction: "Compte jusqu’à vingt." } : a,
+      ),
+    };
+    expect(lessonDigest(edited, media)).not.toBe(before);
+    expect(checkLessonReview(edited, media).join("\n")).toMatch(/changed since it was approved/);
+  });
+
+  it("lapses when the bytes of a picture the child is shown change", () => {
+    // The geometry lesson's eight shape exemplars are the whole point of its correction.
+    const lesson = approved.find((l) => l.id === "m3-math-03")!;
+    const before = lessonDigest(lesson, media);
+    const poisoned = {
+      fingerprint: (id: string) =>
+        id === "forme-carre-penche"
+          ? `shape|Un carré|sha256:${"0".repeat(64)}`
+          : media.fingerprint(id),
+      illustrationOf: (id: string) => media.illustrationOf(id),
+    };
+    expect(lessonDigest(lesson, poisoned)).not.toBe(before);
+  });
+
+  it("leaves every Week 2-5 lesson without a review record at all", () => {
+    const unapproved = data.lessons.filter(
+      (l) => l.levelIds.includes("maternelle-3") && l.status !== "approved",
+    );
+    expect(unapproved).toHaveLength(72);
+    for (const lesson of unapproved) {
+      expect(lesson.status, lesson.id).toBe("review");
+      expect(lesson.review, lesson.id).toBeNull();
+    }
   });
 });

@@ -41,10 +41,12 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 1 fois. Ce qui suit est l’historique, pour
-que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
+**Cette semaine n’a encore jamais été relue.** Ce qui suit n’est donc pas
+l’historique de ses relectures : ce sont des corrections qui lui sont arrivées
+parce qu’un défaut trouvé dans une autre semaine existait ici à l’identique.
+Elles sont déjà appliquées au contenu que vous lisez ci-dessous.
 
-### 2026-09-16 — Teka Edu (conséquence de la relecture de la semaine 1) · `accepted-with-modifications` (ai-assisted)
+### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
 
 Deux changements arrivés dans cette semaine sans relecture propre : ils viennent de corrections demandées sur la semaine 1.
 

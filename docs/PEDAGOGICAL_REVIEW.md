@@ -26,22 +26,22 @@ Roles, kept distinct on purpose:
 
 ## Register of reviews
 
-| Batch                                | Date                 | Kind                                             | Outcome                                                      | Corrections                    | Status                                                                     |
-| ------------------------------------ | -------------------- | ------------------------------------------------ | ------------------------------------------------------------ | ------------------------------ | -------------------------------------------------------------------------- |
-| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14, -16, -17 | AI-assisted (ChatGPT), 3 passes                  | `accepted-with-modifications` all three                      | 13, then 6, then 2             | `review` — awaiting the final confirmation pass on the regenerated package |
-| 3ème maternelle, Weeks 2–5           | —                    | —                                                | not yet reviewed                                             | mapping fixes only (see below) | `review`                                                                   |
-| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15           | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 11 items across the passes     | **`approved`** — 16 lessons                                                |
-| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15           | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 8 items                        | **`approved`** — 20 lessons                                                |
-| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15           | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                               | 8 items                        | **`approved`** — 20 lessons                                                |
-| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15           | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                               | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons                                                |
-| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15           | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`** | 5 items                        | **`approved`** — 12 lessons                                                |
+| Batch                                | Date             | Kind                                             | Outcome                                                        | Corrections                    | Status                      |
+| ------------------------------------ | ---------------- | ------------------------------------------------ | -------------------------------------------------------------- | ------------------------------ | --------------------------- |
+| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 13, then 6, then 2             | **`approved`** — 16 lessons |
+| 3ème maternelle, Weeks 2–5           | —                | —                                                | not yet reviewed                                               | inherited mapping fixes only   | `review` — 0 approved       |
+| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                 | 11 items across the passes     | **`approved`** — 16 lessons |
+| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                 | 8 items                        | **`approved`** — 20 lessons |
+| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                 | 8 items                        | **`approved`** — 20 lessons |
+| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                                 | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons |
+| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`**   | 5 items                        | **`approved`** — 12 lessons |
 
-**1ère maternelle September is complete: 88 of 88 lessons `approved`**, all `ai-assisted`, all
-`accepted`. The remaining 88 September lessons are 3ème maternelle's, all still at `review`.
-**No teacher has read any of it.**
+**1ère maternelle September is complete: 88 of 88 lessons `approved`.** 3ème maternelle's Week 1
+is now `approved` too — **16 of 88** — leaving Weeks 2–5 (72 lessons) at `review`. Every approval
+is `ai-assisted` and `accepted`. **No teacher has read any of it.**
 
-Progress against the Beta 0.1 gate: **5 of 10 weekly packages accepted** — all five of 1ère
-maternelle. The five 3ème packages remain.
+Progress against the Beta 0.1 gate: **6 of 10 weekly packages accepted** — all five of 1ère
+maternelle, plus 3ème Week 1. **3ème maternelle Weeks 2–5 are the remaining pedagogical gate.**
 
 ## 3ème maternelle, Week 1 review, 2026-09-16 — accepted with modifications (pass 2)
 
@@ -158,6 +158,47 @@ The file is named for what it is: `…-audit-des-changements.md` when no week is
 `…-reconfirmation.md` when one is. The misleading
 `2026-2027-maternelle-3-semaines-1-5-reconfirmation.md` was **removed**, not left beside its
 replacement.
+
+---
+
+## 3ème maternelle, Week 1 — approved 2026-09-17 after four passes
+
+ChatGPT's final confirmation, against the Cycle 1 programme applicable in 2026–2027 (arrêté du
+16 avril 2026, with the arrêtés du 22 octobre 2024 for language and mathematics), concluded
+**`accepted`**. The two safety corrections were judged satisfactory and required no further pass.
+**The 16 lessons of Week 1 are now `approved`.**
+
+The history is kept as it happened: passes 1–3 were `accepted-with-modifications`, and only the
+fourth accepted. Nothing was rewritten to make the earlier passes look cleaner, and the review
+stays `ai-assisted` — **no teacher has read this content** (ISSUE-017).
+
+**The promotion is reproducible from canonical content.** `scripts/approve-week.ts` refuses more
+than it does:
+
+- it approves only a week whose history holds a **`full-review` that concluded `accepted`**. A
+  `consequence` entry — a correction inherited from another week — never qualifies, and neither
+  does `accepted-with-modifications`. Run against Weeks 2–5 it refuses all four;
+- every `reviewedDigest` is **computed** by `lessonDigest`, including the fingerprint of every
+  picture the lesson shows. The 16 digests are distinct, none is shared with 1ère maternelle, and
+  each recomputes exactly from the content;
+- it refuses a week that is not entirely at `review`, so it cannot silently re-stamp.
+
+That matters because the five weeks approved before it existed were promoted by hand, which is
+how an approval twice came to sit on lessons whose reviewed text had since changed.
+
+### What the audit did not do
+
+The 28-field cross-week change audit is **confirmed as a change audit**. It approves nothing.
+Weeks 2–5 keep their inherited corrections and their history entries, have **no `accepted`
+full-review entry, no approval digest and no approved lesson**, and their own complete review
+packages — which already carry those corrections and say plainly that the week has never been
+read — remain to be done.
+
+A pgTAP fixture had to be repaired on the way: four constraint assertions used `m3-lang-01` as a
+lesson that could not legally be approved. Once Week 1 was approved the constraint stopped
+firing and the four passed vacuously — measuring the content rather than the constraint. The
+block now resets its subject inside its own transaction, so it says the same thing whatever has
+been approved since.
 
 ---
 

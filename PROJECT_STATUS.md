@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-17
-Branch:     fix/maternelle-3-week-1-safety-and-review-state
-Commit:     develop at f2c018f; main at 1b95480
+Branch:     feat/approve-maternelle-3-week-1
+Commit:     develop at 21076a6; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -457,11 +457,11 @@ GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891,
 
 ## Content Status
 
-| Class           | Curriculum mapping     | Week 1                                                                                                    | Week 2      | Full year   |
-| --------------- | ---------------------- | --------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| 1ère maternelle | DONE (band `before-4`) | Not started                                                                                               | Not started | Not started |
-| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                                               | Not started | Not started |
-| 3ème maternelle | DONE (band `from-5`)   | September written; Week 1 through 2 review passes, **awaiting confirmation** (88 lessons, 170 activities) | Not started | Not started |
+| Class           | Curriculum mapping     | Week 1                                                                             | Week 2      | Full year   |
+| --------------- | ---------------------- | ---------------------------------------------------------------------------------- | ----------- | ----------- |
+| 1ère maternelle | DONE (band `before-4`) | Not started                                                                        | Not started | Not started |
+| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                        | Not started | Not started |
+| 3ème maternelle | DONE (band `from-5`)   | Week 1 **approved** (16 lessons); Weeks 2–5 written, not yet reviewed (72 lessons) | Not started | Not started |
 
 DRC 2026–2027 calendar data: DONE (official MINEDU-NC calendar and Ordonnance n° 23/042; 189 instructional days).
 Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 official objectives and 529 success examples** imported with provenance.
@@ -528,36 +528,31 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  3ème maternelle Week 1 — ChatGPT's confirmation pass applied.
-            - The five pedagogical corrections of the previous pass were confirmed correct and
-              left alone. Two narrow issues remained.
-            - Two movement activities still told the adult that the child clears the space:
-              « c'est lui qui écarte la chaise » and « c'est lui qui écarte ce qui gêne ».
-              A chair is light in one home and heavy in another, and « ce qui gêne » is
-              whatever happens to be there. The adult moves furniture now; the child carries a
-              cushion, a pagne or a toy. The running, the stop rule and the endurance work are
-              untouched, and nothing anxious was added.
-            - All of September was audited for that pattern. Those two activities were the only
-              ones affected, both in Week 1 — so Weeks 2-5 have nothing to carry. Four other
-              matches were inspected and deliberately left: the adult installs the obstacle
-              course, the adult lays the cloths, the child moves a pebble, the child counts
-              chairs.
-            - The cross-week document claimed these weeks « avaient été acceptées » and offered
-              to restore them to `approved`. That was written for 1ère maternelle, whose weeks
-              really had been approved. For 3ème it was false twice: no week has ever been
-              approved, and four have never been read. A document that offers a restoration
-              invites an approval nobody performed.
-            - The generator reads canonical state now and distinguishes approved /
-              reviewed-not-approved / never-reviewed / draft. Telling a real review from an
-              inherited change used to mean sniffing the `reviewer` string, so unread weeks
-              looked reviewed; `scope` is a field on every history entry now.
-            - The document is named for what it is. The misleading `-reconfirmation.md` was
-              removed rather than left beside its replacement.
-            - A pre-existing bug surfaced on the way: with zero changes the generator wrote
-              « semaines-undefined-undefined ». It now reports and writes nothing.
-Validation: format, lint, typecheck, unit (272), content (31 files), pgTAP (152) on a fresh
+Completed:  3ème maternelle Week 1 is approved — 16 of 88.
+            - ChatGPT's fourth pass concluded `accepted`. The history is kept as it happened:
+              passes 1-3 were `accepted-with-modifications`, and only the fourth accepted.
+              Nothing was rewritten to make the earlier passes look cleaner, and the review
+              stays ai-assisted: no teacher has read any of this.
+            - Before approving, all thirteen previously requested corrections were verified
+              still present. None had regressed.
+            - The promotion is a generator, not an edit. scripts/approve-week.ts approves only
+              a week whose history holds a full-review that concluded `accepted` — run against
+              Weeks 2-5 it refuses all four — computes every digest with lessonDigest including
+              media fingerprints, and refuses a week that is not entirely at `review`. The
+              sixteen digests are distinct and each recomputes exactly.
+              That matters: the five weeks approved before it existed were promoted by hand,
+              which is how an approval twice sat on text that had since changed.
+            - The cross-week audit stays an audit. Weeks 2-5 keep their inherited corrections
+              and history entries and have no accepted full-review entry, no approval digest
+              and no approved lesson.
+            - A review package for a week that has never been read now says so, and labels an
+              inherited correction as what it is rather than as a reading of that week.
+            - A pgTAP fixture was repaired: four constraint assertions used a lesson that could
+              not legally be approved, so once Week 1 was approved they passed vacuously. The
+              block resets its own subject now, and fails again when it should.
+Validation: format, lint, typecheck, unit (283), content (31 files), pgTAP (152) on a fresh
             reset, build, E2E (28), both Docker images, client-bundle scan.
 Cost:       $0.
-Not done:   No lesson approved — 3ème stays 0 of 88, Beta stays 5 of 10 weekly packages.
-            Weeks 2-5 have still never been reviewed. Week 1 awaits ChatGPT's final word.
+Not done:   3ème Weeks 2-5 have never been reviewed — 72 lessons at `review`, 0 approved.
+            Beta 0.1 gate: 6 of 10 weekly packages. October and 2ème maternelle not started.
 ```

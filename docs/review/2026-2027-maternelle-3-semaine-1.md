@@ -41,8 +41,8 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 4 fois. Ce qui suit est l’historique, pour
-que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
+Cette semaine a déjà été relue 4 fois. Ce qui suit est l’historique,
+pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-14 — ChatGPT · `accepted-with-modifications` (ai-assisted)
 
@@ -50,7 +50,7 @@ Première passe. 13 corrections demandées : le dossier ne montrait ni les histo
 
 **Suites données :** Toutes appliquées. L’objectif O15 a été déplacé vers les deux activités qui le travaillent vraiment, le rituel a pris LANG-S02-C03-O04, quatre revendications d’endurance ont été retirées, les 43 énoncés officiels multilignes ne sont plus tronqués, la bande des jours est préparée par l’adulte, et les exemples sont ceux de la famille.
 
-### 2026-09-15 — Teka Edu (conséquence d’autres relectures) · `accepted-with-modifications` (ai-assisted)
+### 2026-09-15 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
 
 Deux changements sont arrivés dans cette semaine depuis la première passe, sans relecture propre : ils viennent de corrections demandées ailleurs.
 
@@ -67,6 +67,12 @@ Deuxième passe de fond. La structure, la durée, l’enchainement, les histoire
 Passe de confirmation. Les cinq corrections demandées à la passe précédente sont vérifiées et jugées correctement appliquées : les objectifs de mathématiques, la distinction entre identifier ses articulations et se représenter, le rituel de phonologie, le tri des formes, et la phrase du dossier sur le temps d’écran. La structure de la semaine, les histoires, les durées, le niveau de langue, les étais en anglais, la progression et le modèle d’apprentissage à la maison restent acceptés et ne sont pas réécrits. Deux points seulement restaient : deux activités de mouvement demandaient encore à l’enfant d’écarter une chaise ou « ce qui gêne », ce qu’un produit universel ne peut pas demander à un enfant de cinq ans puisqu’une chaise est légère dans une maison et lourde ou instable dans une autre ; et le document de reconfirmation affirmait que ces semaines avaient été acceptées et pouvaient redevenir « approved », ce qui n’a jamais été vrai pour la 3ème maternelle.
 
 **Suites données :** Les deux activités de mouvement disent maintenant que c’est l’adulte qui déplace les chaises et les meubles, l’enfant n’aidant qu’avec un coussin, un pagne ou un autre objet léger et sans danger. L’activité physique elle-même n’est pas affaiblie et aucune formule anxiogène n’a été ajoutée. Tout le contenu de septembre a été audité pour ce motif : ces deux activités étaient les seules concernées. Le générateur du document de changements lit désormais l’état réel de chaque semaine et n’emploie le langage de reconfirmation que pour une semaine réellement approuvée. Aucune leçon n’est approuvée : les 16 restent en relecture en attendant votre confirmation.
+
+### 2026-09-17 — ChatGPT · `accepted` (ai-assisted)
+
+Confirmation finale, contre le programme officiel Cycle 1 applicable en 2026-2027 (arrêté du 16 avril 2026, et arrêtés du 22 octobre 2024 pour le langage et les mathématiques). Les deux corrections de sécurité sont jugées satisfaisantes : dans « Cours et arrête-toi » et « Cours pendant que je compte », c’est l’adulte qui déplace les chaises et les meubles, et l’enfant n’aide qu’avec un objet léger et sans danger. L’activité physique voulue est préservée et aucune nouvelle passe n’est nécessaire. Toutes les corrections demandées aux passes précédentes sont vérifiées présentes : la distinction entre dénombrer et constituer une collection, celle entre identifier ses articulations et se représenter, les objectifs de phonologie retirés des rituels de la date, le tri des formes qui porte enfin l’objectif de tri, les huit exemplaires de formes qui varient d’orientation, de taille et de couleur, la reprise de O20 et O21 dans « Le tas de dix », et la phrase exacte sur le temps d’écran.
+
+**Suites données :** Aucune. La semaine est acceptée. Les 16 leçons passent de « en relecture » à « approuvée », avec une empreinte recalculée sous la définition courante, empreintes des images comprises. L’historique est conservé tel quel : les passes précédentes restent « acceptée avec modifications », et cette relecture reste assistée par IA — aucune personne qui enseigne à cet âge n’a lu ce contenu.
 
 ## Jour 1 — 2026-09-01
 
@@ -88,7 +94,7 @@ l’autre — l’appareil est alors le sien._
 
 _L’enfant salue, dit son nom et son âge, et parle des personnes qui vivent avec lui._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Installez-vous face à l’enfant, au calme. Montrez d’abord vous-même : « Bonjour, je m’appelle… » Laissez un vrai temps de réponse. Reformulez au lieu de corriger.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date. _(source : programme-2026)_
@@ -220,7 +226,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter une petite collection en déplaçant les objets, puis en donner un nombre demandé._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Le comptage se fait en déplaçant chaque objet : c’est ce qui empêche d’en compter un deux fois. Redemandez toujours « Alors, combien y en a-t-il en tout ? » : c’est le dernier mot dit qui donne la quantité.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). _(source : programme-2024-mathematiques)_
@@ -315,7 +321,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Courir puis s’arrêter net au signal, en respectant l’espace et les règles._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Avant de bouger, dégagez l’espace ensemble et dites les deux règles : on ne pousse pas, on s’arrête au signal.
 - **Objectifs enseignés :**
   - `PHYS-S02-C01-O07` — Respecter les règles de sécurité pour soi et pour les autres. _(source : programme-2026)_
@@ -361,7 +367,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Nommer les parties du corps qui plient, et se dessiner en mouvement._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** On cherche les endroits où le corps plie : ce sont les articulations. Faites-les bouger avant de les nommer.
 - **Objectifs enseignés :**
   - `WORLD-S01-C02-O08` — Identifier et nommer quelques articulations et la segmentation des membres. _(source : programme-2026)_
@@ -436,7 +442,7 @@ l’autre — l’appareil est alors le sien._
 
 _Premier corpus de mots : nommer et ranger les objets de l’école._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Posez devant l’enfant les objets que vous avez : un cahier, un crayon, un sac. Nommez chaque objet avec son article, faites répéter, puis employez le mot dans une phrase.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -565,7 +571,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Comparer deux collections sans compter, puis en comptant._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** On compare d’abord en regardant, puis en comptant pour vérifier. Les trois mots à installer sont « plus que », « moins que », « autant que ».
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O05` — Comparer des quantités. _(source : programme-2024-mathematiques)_
@@ -658,7 +664,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Courir sans s’arrêter un peu plus longtemps chaque fois._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** On allonge le temps de course, pas la vitesse. Comptez à voix haute : l’enfant entend ses progrès.
 - **Objectifs enseignés :**
   - `PHYS-S01-C01-O10` — Courir de plus en plus longtemps sans s’arrêter. _(source : programme-2026)_
@@ -705,7 +711,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dessiner en regardant un objet réel posé devant soi._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Posez un seul objet devant l’enfant. Le travail est de regarder puis de dessiner, en allant et venant entre l’objet et la feuille.
 - **Objectifs enseignés :**
   - `ART-S01-C01-O05` — Dessiner pour représenter sur la base d’un modèle. _(source : programme-2026)_
@@ -770,7 +776,7 @@ l’autre — l’appareil est alors le sien._
 
 _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre expérience._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Lisez l’histoire d’une traite, sans vous interrompre. Posez les questions seulement à la fin. Il n’y a pas de mauvaise réponse : l’enfant peut redire l’histoire avec ses mots.
 - **Objectifs enseignés :**
   - `LANG-S02-C03-O09` — Comprendre des histoires dont les actions sont organisées autour d’une structure répétitive (rencontres successives) et commencer à comprendre les informations implicites (émotions, états et sentiments des personnages). _(source : programme-2024-langage)_
@@ -915,7 +921,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Reconnaitre et nommer le carré, le rectangle, le triangle et le disque._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Préparez d’abord les formes : sur du papier, dessinez-en deux ou trois de chaque sorte, puis découpez-les si vous pouvez. Variez la taille, et posez-les dans tous les sens : un carré posé sur la pointe reste un carré. Si vous avez plusieurs crayons de couleur, variez aussi les couleurs ; un seul crayon suffit. On travaille sur des formes plates, pas sur des objets : un coussin n’est pas un carré, mais sa face l’est.
 - **Objectifs enseignés :**
   - `MATH-S03-C01-O08` — Décrire et nommer quelques figures géométriques simples : carré, rectangle, triangle, disque. _(source : programme-2024-mathematiques)_
@@ -996,7 +1002,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Reproduire et inventer des gestes dansés avec un objet léger._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Un pagne, un foulard ou même une feuille de papier suffit. Dansez d’abord vous-même : l’enfant imite mieux qu’il n’invente, au début.
 - **Objectifs enseignés :**
   - `PHYS-S03-C01-O09` — Danser, seul ou à plusieurs, en créant et en reproduisant un ou plusieurs gestes et déplacements. _(source : programme-2026)_
@@ -1043,7 +1049,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Nommer les jours et situer aujourd’hui, hier et demain._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Fabriquez une petite bande des sept jours avec l’enfant : elle servira tous les jours du mois.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C01-O10` — Situer un évènement dans la semaine. _(source : programme-2026)_
@@ -1120,7 +1126,7 @@ l’autre — l’appareil est alors le sien._
 
 _Frapper les syllabes des prénoms de la maison : entendre que les mots sont faits de morceaux._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** C’est un jeu d’oreille, pas de lecture. On tape dans les mains en même temps qu’on dit le mot. Ne montrez aucune lettre écrite : tout se joue par l’écoute.
 - **Objectifs enseignés :**
   - `LANG-S02-C01-O03` — Scander les syllabes d’un mot. _(source : programme-2024-langage)_
@@ -1221,7 +1227,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dire la suite des nombres jusqu’à dix sans en oublier._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** La comptine est une chanson : on l’apprend en la disant souvent. Cette semaine, on va jusqu’à dix — pas plus loin. On ira à vingt, puis à trente, plus tard dans le mois.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O26` — Connaitre et utiliser la comptine numérique jusqu’à trente. _(source : programme-2024-mathematiques)_
@@ -1316,7 +1322,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Lancer avec précision vers une cible._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Une balle de papier froissé et un seau suffisent. Commencez très près : la réussite d’abord, la distance ensuite.
 - **Objectifs enseignés :**
   - `PHYS-S01-C01-O09` — Lancer loin et avec précision différents objets. _(source : programme-2026)_
@@ -1364,7 +1370,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Apprendre une comptine par cœur et la dire en rythme._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** La comptine s’apprend par morceaux : deux vers à la fois, répétés. C’est la première du répertoire de l’année ; il en faudra au moins dix.
 - **Objectifs enseignés :**
   - `ART-S02-C01-O09` — Dire ou chanter au moins dix comptines ou chants, en réinvestissant ceux appris les années antérieures. _(source : programme-2026)_
