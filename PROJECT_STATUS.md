@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-17
-Branch:     feat/approve-maternelle-3-week-1
-Commit:     develop at 21076a6; main at 1b95480
+Branch:     fix/maternelle-3-week-2-review
+Commit:     develop at b5def49; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -353,6 +353,30 @@ Category: **future external pedagogical assurance** · Severity: Desirable befor
 
 Recommended action: none required to continue. When a teacher becomes available, hand them `docs/review/2026-2027-maternelle-3-semaine-1.md`; a `human-teacher` review is recorded as a strictly stronger claim than the AI-assisted one (`reviewKind`).
 
+### ISSUE-026 — An approval does not cover the words of the story it had read to it
+
+Severity: **Medium (integrity of the quality gate)** · Status: Open, found 2026-09-17
+
+Description: `lessonDigest` covers the words a child hears _in the activity_, the adult guidance,
+the objectives, the durations, the materials and the **bytes of every picture**. It does **not**
+cover the lines of a story or rhyme the activity reads: the digest includes the activity payload,
+which holds only the `textId`, and the media fingerprint of the text's illustration. Proved by
+rewriting a story's lines and recomputing: the digest of an approved lesson that reads it does not
+move.
+
+**52 lessons read a text, and 31 of them are approved.** A story could therefore be rewritten
+under an approval without the approval lapsing — the same class of hole that was closed for
+pictures in PR #47, where an illustration could be swapped under an approval.
+
+Nothing is wrong in the repository today: the one story changed this session (_Les trois cailloux
+de Tito_) is read only on days 8, 14 and 18, all of them unapproved.
+
+Recommended action: extend `lessonDigest` to fold in the text a `textId` resolves to, the way it
+already folds in the illustration. **Doing so recomputes every digest and lapses all 104
+approvals**, so it is an owner's decision, not a side effect of a content task: it would need a
+re-confirmation round for 1ère maternelle's five weeks and 3ème Week 1. Until then, treat a change
+to `content/texts/` as a change to every approved lesson that reads it, and re-confirm by hand.
+
 ### ISSUE-019 — The daily comprehension read-aloud is not yet daily
 
 Severity: Medium (content calibration) · Status: Open
@@ -457,11 +481,11 @@ GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891,
 
 ## Content Status
 
-| Class           | Curriculum mapping     | Week 1                                                                             | Week 2      | Full year   |
-| --------------- | ---------------------- | ---------------------------------------------------------------------------------- | ----------- | ----------- |
-| 1ère maternelle | DONE (band `before-4`) | Not started                                                                        | Not started | Not started |
-| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                        | Not started | Not started |
-| 3ème maternelle | DONE (band `from-5`)   | Week 1 **approved** (16 lessons); Weeks 2–5 written, not yet reviewed (72 lessons) | Not started | Not started |
+| Class           | Curriculum mapping     | Week 1                                                                                                      | Week 2      | Full year   |
+| --------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| 1ère maternelle | DONE (band `before-4`) | Not started                                                                                                 | Not started | Not started |
+| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                                                 | Not started | Not started |
+| 3ème maternelle | DONE (band `from-5`)   | Week 1 **approved** (16); Week 2 reviewed once, corrected, awaiting pass 2 (20); Weeks 3–5 not yet reviewed | Not started | Not started |
 
 DRC 2026–2027 calendar data: DONE (official MINEDU-NC calendar and Ordonnance n° 23/042; 189 instructional days).
 Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 official objectives and 529 success examples** imported with provenance.
@@ -528,31 +552,33 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  3ème maternelle Week 1 is approved — 16 of 88.
-            - ChatGPT's fourth pass concluded `accepted`. The history is kept as it happened:
-              passes 1-3 were `accepted-with-modifications`, and only the fourth accepted.
-              Nothing was rewritten to make the earlier passes look cleaner, and the review
-              stays ai-assisted: no teacher has read any of this.
-            - Before approving, all thirteen previously requested corrections were verified
-              still present. None had regressed.
-            - The promotion is a generator, not an edit. scripts/approve-week.ts approves only
-              a week whose history holds a full-review that concluded `accepted` — run against
-              Weeks 2-5 it refuses all four — computes every digest with lessonDigest including
-              media fingerprints, and refuses a week that is not entirely at `review`. The
-              sixteen digests are distinct and each recomputes exactly.
-              That matters: the five weeks approved before it existed were promoted by hand,
-              which is how an approval twice sat on text that had since changed.
-            - The cross-week audit stays an audit. Weeks 2-5 keep their inherited corrections
-              and history entries and have no accepted full-review entry, no approval digest
-              and no approved lesson.
-            - A review package for a week that has never been read now says so, and labels an
-              inherited correction as what it is rather than as a reading of that week.
-            - A pgTAP fixture was repaired: four constraint assertions used a lesson that could
-              not legally be approved, so once Week 1 was approved they passed vacuously. The
-              block resets its own subject now, and fails again when it should.
-Validation: format, lint, typecheck, unit (283), content (31 files), pgTAP (152) on a fresh
+Completed:  3ème maternelle Week 2 — first full pedagogical review, 14 corrections applied.
+            - The recurring shape was one lesson, two activities, and an objective list copied
+              across both: the morphology activity claiming the biological needs, the needs
+              activity claiming morphology, a recap ritual claiming the emotions the story
+              activity earns, a syllable ritual filed as vocabulary. Each activity now stands
+              on its own text.
+            - Two comparison activities did not claim "comparer des quantités" — the thing
+              they spend their whole time doing.
+            - Safety: the obstacle course no longer sends a child under a chair or over a
+              stick. They pass under a cloth the adult holds, round a cushion, over a strip
+              laid flat; the adult moves any furniture. The balance activity asks for a floor
+              marker instead of the box that contains the chairs and the stick. "Va toucher la
+              fenêtre" became "Montre-moi la fenêtre du doigt".
+            - The cat game named its roles; it had said "tu me sauves" and "tu me cherches"
+              without saying who chases whom.
+            - "Exigez la phrase entière" became invite, accept, reformulate once. A French
+              sentence is the model, not the toll.
+            - The story of Tito kept its reasoning about quantities and lost the formal
+              subtraction and addition a read-aloud has no business teaching.
+            - Three new material codes rather than editing the shared household-objects entry,
+              which three approved 1ère lessons depend on. No approval lapsed: all 104 approved
+              lessons verified intact.
+            - Found and reported, not fixed: an approval does not cover the words of the story
+              read to the child (ISSUE-026). 31 approved lessons read a text. Closing it lapses
+              all 104 approvals, so it is the owner's call.
+Validation: format, lint, typecheck, unit (291), content (31 files), pgTAP (152) on a fresh
             reset, build, E2E (28), both Docker images, client-bundle scan.
 Cost:       $0.
-Not done:   3ème Weeks 2-5 have never been reviewed — 72 lessons at `review`, 0 approved.
-            Beta 0.1 gate: 6 of 10 weekly packages. October and 2ème maternelle not started.
+Not done:   Week 2 is not approved — 0 of 20. Weeks 3-5 never reviewed. Beta gate 6 of 10.
 ```

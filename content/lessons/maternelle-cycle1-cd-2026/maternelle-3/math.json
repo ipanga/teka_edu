@@ -487,7 +487,7 @@
       "title": "Autant que, pas plus",
       "summary": "Construire une collection qui en vaut une autre.",
       "objectiveCodes": [],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O21", "MATH-S01-C01-O05"],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O21", "MATH-S01-C01-O05", "MATH-S01-C01-O20"],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "ma-maison",
@@ -537,7 +537,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["MATH-S01-C01-O21"],
+          "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O05"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
             {
@@ -663,11 +663,20 @@
           "type": "matching",
           "title": "La même forme",
           "childInstruction": "Trouve la forme qui va avec celle-ci.",
-          "adultGuidance": "1. Montrez un carré et demandez de trouver l’autre carré, plus grand ou plus petit. 2. Tournez un triangle sur la pointe et redemandez. 3. Faites dire pourquoi : « Il a toujours trois côtés. » 4. Terminez par les disques.",
+          "adultGuidance": "1. Montrez un carré et demandez de trouver l’autre carré : il est plus petit et posé de biais, c’est quand même un carré. 2. Faites de même avec le rectangle, debout puis couché. 3. Montrez le triangle posé sur la pointe, aux côtés inégaux, et redemandez. 4. Faites dire pourquoi : « Il a toujours trois côtés. » 5. Terminez par les disques, un grand et un petit. Sur papier comme à l’écran, ni la couleur, ni la taille, ni le sens ne disent quelle forme c’est.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
-          "mediaIds": ["forme-carre", "forme-rectangle", "forme-triangle", "forme-disque"],
+          "mediaIds": [
+            "forme-carre",
+            "forme-carre-penche",
+            "forme-rectangle",
+            "forme-rectangle-debout",
+            "forme-triangle",
+            "forme-triangle-quelconque",
+            "forme-disque",
+            "forme-disque-petit"
+          ],
           "objectiveCodes": ["MATH-S03-C01-O07", "MATH-S03-C01-O08"],
           "materialCodes": ["formes-papier"],
           "vocabulary": [
@@ -784,7 +793,7 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": ["MATH-S01-C01-O20"],
+          "objectiveCodes": ["MATH-S01-C01-O05", "MATH-S01-C01-O20"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
             {

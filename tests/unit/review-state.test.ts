@@ -64,9 +64,11 @@ describe("what a batch of content has actually been through", () => {
     expect(stateOf("maternelle-1", 1, ["m1-lang-01"])).toBe("approved");
     // 3ème Week 1 has now been read three times and finally accepted.
     expect(stateOf("maternelle-3", 1, ["m3-math-01"])).toBe("approved");
-    // 3ème Weeks 2-5 carry only inherited corrections, so they have never been reviewed.
+    // 3ème Week 2 has had its first full review, which accepted it with modifications: read,
+    // and still not approved.
+    expect(stateOf("maternelle-3", 2, ["m3-math-05"])).toBe("reviewed");
+    // Weeks 3-5 carry only inherited corrections, so they have never been reviewed.
     for (const [week, id] of [
-      [2, "m3-math-05"],
       [3, "m3-math-10"],
       [4, "m3-lang-16"],
       [5, "m3-lang-21"],
@@ -119,9 +121,10 @@ describe("an approval can only come from a full review that accepted the week", 
   });
 
   it("does not let an inherited correction stand in for a review", () => {
-    // Weeks 2-5 each carry consequence entries. They are changes, not readings, and they must
-    // not be enough to approve anything.
-    for (const week of [2, 3, 4, 5]) {
+    // Weeks 3-5 carry consequence entries only. They are changes, not readings, and they must
+    // not be enough to approve anything. Week 2 has since had a real first reading, so it is
+    // excluded here and checked below instead.
+    for (const week of [3, 4, 5]) {
       const entries = historyOf(week);
       expect(entries.length, `week ${week} has no recorded change`).toBeGreaterThan(0);
       expect(
@@ -130,6 +133,16 @@ describe("an approval can only come from a full review that accepted the week", 
       ).toBe(true);
       expect(weekReviewState(["review"], entries), `week ${week}`).toBe("never-reviewed");
     }
+  });
+
+  it("leaves Week 2 read but unapproved after its first full review", () => {
+    const entries = historyOf(2);
+    const reads = entries.filter((r) => r.scope === "full-review");
+    expect(reads).toHaveLength(1);
+    expect(reads[0]?.outcome).toBe("accepted-with-modifications");
+    expect(reads[0]?.reviewKind).toBe("ai-assisted");
+    // Read is not approved: nothing in Week 2 may carry an approval.
+    expect(weekReviewState(["review"], entries)).toBe("reviewed");
   });
 
   it("refuses to treat accepted-with-modifications as an approval", () => {

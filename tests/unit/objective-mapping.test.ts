@@ -75,12 +75,20 @@ describe("an activity claims only the objectives it actually works", () => {
   it("only claims a phonological-awareness objective where there is a phonological task", () => {
     // Six daily rituals — « Dis la date, puis raconte-moi ce que nous avons fait » — claimed
     // scanning syllables, producing rhymes, or auditory memory. None of them asks for any of it.
+    //
+    // The test is on the task, not on the declared type. A ritual that really does clap the
+    // syllables of a name is doing phonological work while staying a `conversation`, and an
+    // earlier version of this rule — "the type must be `phonology`" — would have refused it and
+    // pushed the objective off an activity that genuinely earns it.
+    const phonologicalTask = /\b(syllabes?|morceaux?|rime|riment|rimes)\b/i;
     const phonological = activities.filter((a) =>
       claims(a, /\b(syllabes?|rimes?|assonances?|mémoire auditive)\b/i),
     );
     expect(phonological.length).toBeGreaterThan(0);
     for (const activity of phonological) {
-      expect(activity.type, activity.id).toBe("phonology");
+      const works =
+        activity.type === "phonology" || phonologicalTask.test(activity.childInstruction);
+      expect(works, `${activity.id}: claims phonology but asks for none`).toBe(true);
     }
   });
 
@@ -184,6 +192,123 @@ describe("who moves the furniture", () => {
       expect(text, `${id}: does not name what the child may carry`).toMatch(
         /coussin|pagne|tissu|jouet/i,
       );
+    }
+  });
+});
+
+describe("an activity does not inherit what its sibling works", () => {
+  /**
+   * The defect this describes is one lesson, two activities, and an objective list copied across
+   * both: the morphology activity claiming the biological-needs objective, the needs activity
+   * claiming morphology, a recap ritual claiming the comprehension objective the story activity
+   * earns. Each activity has to stand on its own text.
+   */
+  const text = (a: Activity) => `${a.childInstruction} ${a.adultGuidance}`;
+  const namesParts =
+    /\b(partie|parties|tête|patte|pattes|queue|plume|plumes|poil|feuille|tige|racine|fleur)\b/i;
+  const asksAboutNeeds =
+    /\b(besoin|besoins|pour vivre|il lui faut|arros|mange|boit|nourriture)\w*/i;
+
+  it("keeps morphology and biological needs on the activity that does each", () => {
+    // Scoped to the lessons that teach both, which is where the two can be confused.
+    const both = lessons.filter((lesson) => {
+      const all = [...lesson.objectiveCodes, ...lesson.supportingObjectiveCodes];
+      return all.includes("WORLD-S01-C01-O08") && all.includes("WORLD-S01-C01-O10");
+    });
+    expect(both.length).toBeGreaterThan(0);
+    for (const lesson of both) {
+      for (const activity of lesson.activities) {
+        const codes = activity.objectiveCodes;
+        expect(
+          codes.includes("WORLD-S01-C01-O08") && codes.includes("WORLD-S01-C01-O10"),
+          `${activity.id}: claims morphology and needs at once`,
+        ).toBe(false);
+        if (codes.includes("WORLD-S01-C01-O08")) {
+          expect(namesParts.test(text(activity)), `${activity.id}: claims morphology`).toBe(true);
+        }
+        if (codes.includes("WORLD-S01-C01-O10")) {
+          expect(asksAboutNeeds.test(text(activity)), `${activity.id}: claims needs`).toBe(true);
+        }
+      }
+    }
+  });
+
+  it("only claims the comprehension-of-feelings objective where a feeling is asked about", () => {
+    // « Dis la date, puis raconte-moi ce que nous avons appris » interprets nobody's emotions.
+    const feelings = /\b(sent|ressent|sentiment|émotion|content|triste|fâché|peur|gêné)\w*/i;
+    const claiming = activities.filter((a) => a.objectiveCodes.includes("LANG-S02-C03-O14"));
+    expect(claiming.length).toBeGreaterThan(0);
+    for (const activity of claiming) {
+      expect(feelings.test(text(activity)), `${activity.id}: claims feelings, asks none`).toBe(
+        true,
+      );
+    }
+  });
+
+  it("claims the comparison objective wherever two collections are compared", () => {
+    // « Fais un tas qui a plus d'objets que le mien » and « Comparez les deux nombres » are
+    // comparison work, and both had been filed as counting or as constituting a collection.
+    const comparesTwoCollections = /que (le mien|les miens|la mienne)|compar\w+ les deux/i;
+    const comparing = activities.filter((a) => comparesTwoCollections.test(text(a)));
+    expect(comparing.length).toBeGreaterThan(0);
+    for (const activity of comparing) {
+      expect(
+        activity.objectiveCodes.includes("MATH-S01-C01-O05"),
+        `${activity.id}: compares two collections without claiming it`,
+      ).toBe(true);
+    }
+  });
+});
+
+describe("a home movement course stays soft and at floor level", () => {
+  it("never asks the child to pass under or climb household furniture", () => {
+    const course = lessons.flatMap((l) => l.activities).filter((a) => a.type === "movement");
+    expect(course.length).toBeGreaterThan(0);
+    const underFurniture = /\b(sous|sur) (la chaise|la table|le meuble|le banc|le lit)\b/i;
+    const climbs = /\b(monte|grimpe|escalade)\b/i;
+    for (const activity of course) {
+      // The child's own instruction, not the adult's: an adult may legitimately drum « sur la
+      // table » to give a rhythm, which is not the child going on or under the furniture.
+      const t = activity.childInstruction;
+      expect(underFurniture.test(t), `${activity.id}: sends the child under furniture`).toBe(false);
+      expect(climbs.test(t), `${activity.id}: asks the child to climb`).toBe(false);
+    }
+  });
+
+  it("does not ask a balance activity to bring out furniture it never uses", () => {
+    // « Sur une ligne » needs a line on the floor, and declared the household-objects box —
+    // which is where the chairs and the stick live.
+    const line = lessons
+      .flatMap((l) => l.activities)
+      .filter((a) => /marche sur la ligne|sur une ligne/i.test(a.childInstruction));
+    expect(line.length).toBeGreaterThan(0);
+    for (const activity of line) {
+      expect(activity.materialCodes, activity.id).toContain("repere-sol");
+      expect(activity.materialCodes, activity.id).not.toContain("objets-maison");
+    }
+  });
+});
+
+describe("the child is told to look, not to touch what may be hot or sharp", () => {
+  it("never sends the child to touch a window, a pot or an unnamed surface", () => {
+    const risky = /va toucher (la fenêtre|la marmite|le verre|la vitre)/i;
+    for (const lesson of lessons) {
+      for (const activity of lesson.activities) {
+        const t = `${activity.childInstruction} ${activity.adultGuidance}`;
+        expect(risky.test(t), `${activity.id}: sends the child to touch it`).toBe(false);
+      }
+    }
+  });
+});
+
+describe("a read-aloud does not smuggle in a later objective", () => {
+  it("states no formal arithmetic in a story a language lesson reads", () => {
+    // « Trois cailloux, moins un, ça fait deux » is an addition and a subtraction stated as
+    // operations, in a listening activity whose work is comprehension.
+    const formal = /\bmoins un, ça fait\b|\bplus un, ça (re)?fait\b|\bégale\b/i;
+    for (const story of data.texts) {
+      const joined = story.lines.join(" ");
+      expect(formal.test(joined), `${story.id}: states a formal operation`).toBe(false);
     }
   });
 });

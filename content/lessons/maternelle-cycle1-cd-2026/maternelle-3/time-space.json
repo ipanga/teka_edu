@@ -132,7 +132,7 @@
           "position": 1,
           "type": "conversation",
           "title": "Le jour de quoi ?",
-          "childInstruction": "Dis-moi ce que tu fais chaque jour de la semaine.",
+          "childInstruction": "Je te montre un jour. Dis-moi ce que tu fais ce jour-là.",
           "adultGuidance": "1. Montrez un jour sur la bande. 2. Demandez ce qui se passe ce jour-là. 3. Faites une phrase entière avec un repère de **votre** semaine : « Le samedi, nous… » — ce qui est vrai chez vous, pas un exemple appris. 4. Demandez quels jours il va à l’école.",
           "minutes": 4,
           "mode": "off-screen",
@@ -153,7 +153,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Tell me what you do on each day of the week."
+              "childInstruction": "I show you a day. Tell me what you do on that day."
             }
           ],
           "payload": {
@@ -215,7 +215,7 @@
       "stage": "discovery",
       "difficulty": 2,
       "themeId": "ma-maison",
-      "parentGuidance": "Tout se dit par rapport au corps de l’enfant : devant lui, derrière lui, à sa droite. Faites-le bouger plutôt que de déplacer les objets.",
+      "parentGuidance": "Tout se dit par rapport au corps de l’enfant : devant lui, derrière lui, à côté de lui. Faites-le bouger plutôt que de déplacer les objets.",
       "activities": [
         {
           "id": "m3-time-03-a1",
@@ -264,7 +264,7 @@
           "type": "conversation",
           "title": "Je dis où c’est",
           "childInstruction": "Dis-moi où est l’objet, sans le montrer du doigt.",
-          "adultGuidance": "1. Posez l’objet quelque part. 2. Demandez où il est, sans le doigt. 3. Exigez la phrase entière : « Il est derrière la chaise. » 4. Inversez les rôles.",
+          "adultGuidance": "1. Posez l’objet quelque part. 2. Demandez où il est, sans le doigt. 3. Invitez-le à répondre par une phrase. S’il dit seulement « derrière », acceptez sa réponse et reformulez une fois : « Oui, il est derrière la chaise. » Ne le faites pas répéter. 4. Inversez les rôles.",
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",

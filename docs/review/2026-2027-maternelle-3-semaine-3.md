@@ -52,6 +52,12 @@ Trois changements arrivés dans cette semaine sans relecture propre : ils vienne
 
 **Suites données :** 1) « Le tas de douze » (jour 10) porte désormais aussi « dénombrer une collection d’objets » et « constituer une collection d’un cardinal donné » : l’enfant construisait déjà une collection demandée, seule la revendication manquait. 2) « Se représenter avec un corps articulé en mouvement » quitte « Je nomme et je bouge » (jour 11), où l’enfant identifie et mobilise, pour « Le bonhomme qui plie », où il le dessine. 3) Le rituel du jour 14 ne revendique plus « scander les syllabes d’un mot » ; l’objectif reste sur « Combien de morceaux ? », dans la même leçon.
 
+### 2026-09-17 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
+
+Changement arrivé dans cette semaine sans relecture propre : il vient d’une correction demandée sur la semaine 2.
+
+**Suites données :** L’histoire « Les trois cailloux de Tito », lue aussi le jour 14, ne se termine plus par « Trois cailloux, moins un, ça fait deux. Et deux, plus un, ça refait trois. » Le raisonnement sur les quantités est gardé, mais l’opération n’est plus énoncée : une lecture à voix haute n’a pas à enseigner l’addition et la soustraction formelles.
+
 ## Jour 10 — 2026-09-14
 
 **Durée totale : 35 min** · 4 séances · jour 10 du rythme
@@ -1432,7 +1438,7 @@ _Frapper les syllabes de mots plus longs et compter combien il y en a._
   > « Et qu’est-ce qui manque ? »
   > Tito regarde bien. Le rond est là. Le plat est là. « Le pointu ! »
   > Sa sœur ouvre la main : c’est bien le caillou pointu.
-  > Trois cailloux, moins un, ça fait deux. Et deux, plus un, ça refait trois.
+  > Il y avait trois cailloux. Sa sœur en cache un : il en reste deux. Quand elle le remet, les trois sont de nouveau là.
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
