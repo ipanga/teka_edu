@@ -312,3 +312,59 @@ describe("a read-aloud does not smuggle in a later objective", () => {
     }
   });
 });
+
+describe("a ritual claims the date, and only what else it really does", () => {
+  const text = (a: Activity) => `${a.childInstruction} ${a.adultGuidance}`;
+  /** Stating today's date, however the instruction words it. */
+  const asksTheDate =
+    /la date|quel jour (sommes-nous|nous sommes|c’est)|jour d’aujourd’hui|aujourd’hui, nous sommes/i;
+
+  it("ties « énoncer la date » to the activities that ask for it, both ways", () => {
+    const claiming = activities.filter((a) => a.objectiveCodes.includes("TIME-SPACE-S01-C01-O12"));
+    expect(claiming.length).toBeGreaterThan(0);
+    for (const activity of claiming) {
+      expect(asksTheDate.test(text(activity)), `${activity.id}: claims the date, asks none`).toBe(
+        true,
+      );
+    }
+    // And the other direction: an activity that does ask for the date must say so.
+    for (const activity of activities) {
+      if (!asksTheDate.test(activity.childInstruction)) continue;
+      expect(
+        activity.objectiveCodes.includes("TIME-SPACE-S01-C01-O12"),
+        `${activity.id}: asks for the date without claiming it`,
+      ).toBe(true);
+    }
+  });
+
+  it("claims « décrire et nommer » wherever the child names a shape", () => {
+    const namesAShape = /dis son nom|nomme-les|nomme la forme|nomme les formes/i;
+    const naming = activities.filter(
+      (a) => namesAShape.test(a.childInstruction) && /forme/i.test(text(a)),
+    );
+    expect(naming.length).toBeGreaterThan(0);
+    for (const activity of naming) {
+      expect(
+        activity.objectiveCodes.includes("MATH-S03-C01-O08"),
+        `${activity.id}: the child says the shape's name without the naming objective`,
+      ).toBe(true);
+    }
+  });
+
+  /**
+   * Pinned rather than stated as a rule, deliberately.
+   *
+   * « Participer à une conversation … et reformuler son propos s'il n'a pas été compris » is real
+   * work in a describing game and in talking about what a character feels, and it is not real
+   * work in « dis la date, puis nomme un animal ». No keyword separates those reliably: every
+   * predicate tried either cleared the ritual or condemned four legitimate activities. So this
+   * one stays a targeted check on the case a reviewer actually found.
+   */
+  it("does not let the day-5 recap ritual claim an extended conversation", () => {
+    const ritual = activities.find((a) => a.id === "m3-lang-05-a1")!;
+    expect(ritual.objectiveCodes).not.toContain("LANG-S01-C04-O11");
+    // It stays where the child really tells a story about their day.
+    const telling = activities.find((a) => a.id === "m3-lang-05-a2")!;
+    expect(telling.objectiveCodes).toContain("LANG-S01-C04-O11");
+  });
+});

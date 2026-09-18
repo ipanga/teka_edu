@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 1 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 2 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -55,6 +55,12 @@ Deux changements arrivés dans cette semaine sans relecture propre : ils viennen
 Première relecture pédagogique complète de la semaine 2. La semaine est structurellement saine et n’a pas besoin d’être réécrite : le rythme, les durées, les histoires, la progression et le modèle d’apprentissage à la maison sont acceptés. Quatorze points ont été demandés. Plusieurs objectifs étaient portés par l’activité voisine plutôt que par celle qui fait le travail : les parties de l’animal revendiquaient aussi les besoins, les parties de la plante aussi, le rituel du jour 7 revendiquait du vocabulaire alors qu’on y frappe des syllabes, et le rituel du jour 9 revendiquait la compréhension des émotions sans qu’aucune émotion y soit demandée. Deux activités de comparaison ne revendiquaient pas « comparer des quantités ». La leçon sur les formes annonçait qu’une forme reste la même quelle que soit sa taille ou son sens, mais l’écran ne montrait que les quatre formes prototypiques. Côté sécurité et langage : le parcours demandait de passer sous une chaise et d’enjamber un bâton, une activité de vocabulaire envoyait toucher la fenêtre, le jeu du chat ne disait pas clairement qui poursuit qui, la consigne sur les jours de la semaine annonçait les sept jours alors qu’on en travaille un seul, la tâche spatiale exigeait la phrase entière, l’histoire de Tito énonçait une soustraction et une addition formelles, et les besoins du vivant étaient présentés par des formules trop absolues.
 
 **Suites données :** Toutes appliquées. Les objectifs suivent maintenant ce que chaque activité fait : morphologie d’un côté, besoins de l’autre ; le rituel du jour 7 porte « scander les syllabes d’un mot » ; le rituel du jour 9 ne porte plus les émotions, qui restent sur « Comment se sent Bibi ? » ; « Vérifions en comptant » et « Plus, moins, autant » portent « comparer des quantités ». « La même forme » montre les huit exemplaires de la semaine 1, et la guidance dit que ni la couleur, ni la taille, ni le sens ne disent quelle forme c’est. Le parcours est devenu souple : on passe sous un tissu tenu par l’adulte, on contourne un coussin, on enjambe une bande posée au sol ; le matériel de « Sur une ligne » se limite à un repère plat. On montre la fenêtre du doigt au lieu de la toucher. Les rôles du chat et de la souris sont nommés et échangés. On travaille un jour à la fois. On invite une phrase, on accepte la réponse et on reformule une fois, sans faire répéter ; « à sa droite » est retiré d’une leçon qui n’enseigne pas la droite. L’histoire de Tito garde le raisonnement sur les quantités sans énoncer d’opération. Les besoins sont dits simplement : de la nourriture, de l’eau, un endroit où vivre ; de l’eau, de la lumière, de l’air, la terre n’étant que le support habituel. Et « ils » est retiré du lexique d’une activité qui ne sollicite que « il » et « elle ». Aucune leçon n’est approuvée : les 20 restent en relecture en attendant votre seconde passe.
+
+### 2026-09-18 — ChatGPT · `accepted-with-modifications` (ai-assisted)
+
+Deuxième passe. Les corrections de la première passe sont vérifiées et jugées matériellement correctes. Quatre petits défauts d’attribution subsistaient, tous de la même famille : une activité portait un objectif que sa voisine travaille. Le rituel du jour 5 revendiquait « participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris » alors qu’il demande la date et le nom d’un animal. « Le jour de quoi ? » revendiquait « énoncer la date » alors qu’on y situe un évènement dans la semaine. « Des formes dans la maison » demande à l’enfant de dire le nom de la forme sans revendiquer « décrire et nommer quelques figures géométriques simples ». Et « Le jeu du combien » revendiquait « comparer des quantités » alors qu’on y dénombre sans comparer.
+
+**Suites données :** Les quatre sont corrigées, et rien n’a été déplacé pour préserver un compte : l’objectif de conversation reste sur « D’abord, ensuite, après », celui de comparaison sur « Plus, moins, autant ». Retirer « énoncer la date » de « Le jour de quoi ? » a laissé la leçon sans activité pour cet objectif : il quitte aussi la liste de la leçon, plutôt que d’être recollé ailleurs. La validation réutilisable a été renforcée pour cette famille de défauts. Aucune leçon n’est approuvée : les 20 restent en relecture en attendant votre confirmation finale.
 
 ## Jour 5 — 2026-09-07
 
@@ -91,7 +97,7 @@ _Dire ce qu’on a fait, dans l’ordre, en phrases entières._
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes lundi 7 septembre 2026. » Puis : « Dans l’histoire de Kumu, quels animaux as-tu entendus ? » (le lézard, la chèvre, la poule).
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Say the date, then name an animal from Kumu’s story. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C04-O11` Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date.
 
 #### 2. D’abord, ensuite, après — 8 min, sans interaction écran (conversation)
 
@@ -659,7 +665,6 @@ _Situer un évènement dans la semaine._
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `TIME-SPACE-S01-C01-O10` — Situer un évènement dans la semaine.
-  - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le jour de quoi ? — 4 min, sans interaction écran (conversation)
 
@@ -669,7 +674,7 @@ _Situer un évènement dans la semaine._
 - **Lexique visé :** le jour _(the day)_ · la semaine _(the week)_
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
 - **Aide en anglais (optionnelle) :** « I show you a day. Tell me what you do on that day. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O10` Situer un évènement dans la semaine. ; `TIME-SPACE-S01-C01-O12` Énoncer la date.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O10` Situer un évènement dans la semaine.
 
 #### 2. Hier et demain — 3 min, sans interaction écran (manipulation)
 
@@ -1238,7 +1243,7 @@ _Retrouver une forme quelle que soit sa taille ou sa position._
   - `forme-triangle` — Un triangle (`public/media/shapes/forme-triangle.svg`)
   - `forme-disque` — Un disque, tout rond (`public/media/shapes/forme-disque.svg`)
 
-- **Objectifs travaillés :** `MATH-S03-C01-O07` Reconnaitre, trier et classer des formes géométriques planes, indépendamment d’autres critères comme la couleur, la taille, l’orientation.
+- **Objectifs travaillés :** `MATH-S03-C01-O07` Reconnaitre, trier et classer des formes géométriques planes, indépendamment d’autres critères comme la couleur, la taille, l’orientation. ; `MATH-S03-C01-O08` Décrire et nommer quelques figures géométriques simples : carré, rectangle, triangle, disque.
 
 **Réussites attendues — texte officiel pour la compétence « Explorer les solides et les formes planes » (from-5) :**
 
@@ -1551,7 +1556,7 @@ _Reprendre le comptage et la comparaison de la semaine._
 
   - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
 
-- **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). ; `MATH-S01-C01-O05` Comparer des quantités.
+- **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
 
 #### 2. Plus, moins, autant — 4 min, sans interaction écran (manipulation)
 

@@ -121,7 +121,7 @@
       "title": "Quel jour sommes-nous ?",
       "summary": "Situer un évènement dans la semaine.",
       "objectiveCodes": [],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
+      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O10"],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "ma-maison",
@@ -138,7 +138,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O10"],
           "materialCodes": ["papier"],
           "vocabulary": [
             {

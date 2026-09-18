@@ -155,6 +155,90 @@
       "outcome": "accepted-with-modifications",
       "summary": "Deux changements arrivés dans cette semaine sans relecture propre : ils viennent de corrections demandées sur la semaine 2.",
       "corrections": "1) L’histoire « Les trois cailloux de Tito », lue aussi le jour 18, n’énonce plus de soustraction ni d’addition formelles ; le raisonnement sur les quantités est gardé. 2) Le rituel du jour 15 ne revendique plus « comprendre les émotions, les intentions et les sentiments qui animent les personnages » : on y dit la date et on frappe des syllabes. L’objectif reste porté par « Nsimba a peur, puis ça va mieux », dans la même leçon et le même jour."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 2,
+      "reviewedOn": "2026-09-18",
+      "reviewKind": "ai-assisted",
+      "reviewer": "ChatGPT",
+      "scope": "full-review",
+      "outcome": "accepted-with-modifications",
+      "summary": "Deuxième passe. Les corrections de la première passe sont vérifiées et jugées matériellement correctes. Quatre petits défauts d’attribution subsistaient, tous de la même famille : une activité portait un objectif que sa voisine travaille. Le rituel du jour 5 revendiquait « participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris » alors qu’il demande la date et le nom d’un animal. « Le jour de quoi ? » revendiquait « énoncer la date » alors qu’on y situe un évènement dans la semaine. « Des formes dans la maison » demande à l’enfant de dire le nom de la forme sans revendiquer « décrire et nommer quelques figures géométriques simples ». Et « Le jeu du combien » revendiquait « comparer des quantités » alors qu’on y dénombre sans comparer.",
+      "corrections": "Les quatre sont corrigées, et rien n’a été déplacé pour préserver un compte : l’objectif de conversation reste sur « D’abord, ensuite, après », celui de comparaison sur « Plus, moins, autant ». Retirer « énoncer la date » de « Le jour de quoi ? » a laissé la leçon sans activité pour cet objectif : il quitte aussi la liste de la leçon, plutôt que d’être recollé ailleurs. La validation réutilisable a été renforcée pour cette famille de défauts. Aucune leçon n’est approuvée : les 20 restent en relecture en attendant votre confirmation finale."
+    },
+    {
+      "levelId": "maternelle-1",
+      "schoolYearId": "2026-2027",
+      "week": 1,
+      "reviewedOn": "2026-09-18",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Teka Edu (conséquence d’un changement d’empreinte)",
+      "scope": "consequence",
+      "outcome": "accepted-with-modifications",
+      "summary": "Aucune relecture pédagogique n’a eu lieu pour cette semaine à cette date.",
+      "corrections": "Conséquence d’un changement de définition de l’empreinte d’approbation, pas d’une nouvelle relecture. ISSUE-026 : l’empreinte couvrait l’identifiant de l’histoire lue, pas ses mots, si bien qu’un texte pouvait être réécrit sous une approbation sans la faire tomber. L’empreinte couvre désormais le genre, le titre et les lignes du texte résolu. Les approbations concernées sont d’abord tombées, puis ont été rétablies après vérification, champ par champ et contre la révision d’approbation elle-même, que le contenu relu est identique à celui qui avait été approuvé. Le sens de la décision, la personne qui l’a prise et sa date sont inchangés."
+    },
+    {
+      "levelId": "maternelle-1",
+      "schoolYearId": "2026-2027",
+      "week": 2,
+      "reviewedOn": "2026-09-18",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Teka Edu (conséquence d’un changement d’empreinte)",
+      "scope": "consequence",
+      "outcome": "accepted-with-modifications",
+      "summary": "Aucune relecture pédagogique n’a eu lieu pour cette semaine à cette date.",
+      "corrections": "Conséquence d’un changement de définition de l’empreinte d’approbation, pas d’une nouvelle relecture. ISSUE-026 : l’empreinte couvrait l’identifiant de l’histoire lue, pas ses mots, si bien qu’un texte pouvait être réécrit sous une approbation sans la faire tomber. L’empreinte couvre désormais le genre, le titre et les lignes du texte résolu. Les approbations concernées sont d’abord tombées, puis ont été rétablies après vérification, champ par champ et contre la révision d’approbation elle-même, que le contenu relu est identique à celui qui avait été approuvé. Le sens de la décision, la personne qui l’a prise et sa date sont inchangés."
+    },
+    {
+      "levelId": "maternelle-1",
+      "schoolYearId": "2026-2027",
+      "week": 3,
+      "reviewedOn": "2026-09-18",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Teka Edu (conséquence d’un changement d’empreinte)",
+      "scope": "consequence",
+      "outcome": "accepted-with-modifications",
+      "summary": "Aucune relecture pédagogique n’a eu lieu pour cette semaine à cette date.",
+      "corrections": "Conséquence d’un changement de définition de l’empreinte d’approbation, pas d’une nouvelle relecture. ISSUE-026 : l’empreinte couvrait l’identifiant de l’histoire lue, pas ses mots, si bien qu’un texte pouvait être réécrit sous une approbation sans la faire tomber. L’empreinte couvre désormais le genre, le titre et les lignes du texte résolu. Les approbations concernées sont d’abord tombées, puis ont été rétablies après vérification, champ par champ et contre la révision d’approbation elle-même, que le contenu relu est identique à celui qui avait été approuvé. Le sens de la décision, la personne qui l’a prise et sa date sont inchangés."
+    },
+    {
+      "levelId": "maternelle-1",
+      "schoolYearId": "2026-2027",
+      "week": 4,
+      "reviewedOn": "2026-09-18",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Teka Edu (conséquence d’un changement d’empreinte)",
+      "scope": "consequence",
+      "outcome": "accepted-with-modifications",
+      "summary": "Aucune relecture pédagogique n’a eu lieu pour cette semaine à cette date.",
+      "corrections": "Conséquence d’un changement de définition de l’empreinte d’approbation, pas d’une nouvelle relecture. ISSUE-026 : l’empreinte couvrait l’identifiant de l’histoire lue, pas ses mots, si bien qu’un texte pouvait être réécrit sous une approbation sans la faire tomber. L’empreinte couvre désormais le genre, le titre et les lignes du texte résolu. Les approbations concernées sont d’abord tombées, puis ont été rétablies après vérification, champ par champ et contre la révision d’approbation elle-même, que le contenu relu est identique à celui qui avait été approuvé. Le sens de la décision, la personne qui l’a prise et sa date sont inchangés."
+    },
+    {
+      "levelId": "maternelle-1",
+      "schoolYearId": "2026-2027",
+      "week": 5,
+      "reviewedOn": "2026-09-18",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Teka Edu (conséquence d’un changement d’empreinte)",
+      "scope": "consequence",
+      "outcome": "accepted-with-modifications",
+      "summary": "Aucune relecture pédagogique n’a eu lieu pour cette semaine à cette date.",
+      "corrections": "Conséquence d’un changement de définition de l’empreinte d’approbation, pas d’une nouvelle relecture. ISSUE-026 : l’empreinte couvrait l’identifiant de l’histoire lue, pas ses mots, si bien qu’un texte pouvait être réécrit sous une approbation sans la faire tomber. L’empreinte couvre désormais le genre, le titre et les lignes du texte résolu. Les approbations concernées sont d’abord tombées, puis ont été rétablies après vérification, champ par champ et contre la révision d’approbation elle-même, que le contenu relu est identique à celui qui avait été approuvé. Le sens de la décision, la personne qui l’a prise et sa date sont inchangés."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 1,
+      "reviewedOn": "2026-09-18",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Teka Edu (conséquence d’un changement d’empreinte)",
+      "scope": "consequence",
+      "outcome": "accepted-with-modifications",
+      "summary": "Aucune relecture pédagogique n’a eu lieu pour cette semaine à cette date.",
+      "corrections": "Conséquence d’un changement de définition de l’empreinte d’approbation, pas d’une nouvelle relecture. ISSUE-026 : l’empreinte couvrait l’identifiant de l’histoire lue, pas ses mots, si bien qu’un texte pouvait être réécrit sous une approbation sans la faire tomber. L’empreinte couvre désormais le genre, le titre et les lignes du texte résolu. Les approbations concernées sont d’abord tombées, puis ont été rétablies après vérification, champ par champ et contre la révision d’approbation elle-même, que le contenu relu est identique à celui qui avait été approuvé. Le sens de la décision, la personne qui l’a prise et sa date sont inchangés."
     }
   ]
 }

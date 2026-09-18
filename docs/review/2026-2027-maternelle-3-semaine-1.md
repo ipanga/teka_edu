@@ -74,6 +74,12 @@ Confirmation finale, contre le programme officiel Cycle 1 applicable en 2026-202
 
 **Suites données :** Aucune. La semaine est acceptée. Les 16 leçons passent de « en relecture » à « approuvée », avec une empreinte recalculée sous la définition courante, empreintes des images comprises. L’historique est conservé tel quel : les passes précédentes restent « acceptée avec modifications », et cette relecture reste assistée par IA — aucune personne qui enseigne à cet âge n’a lu ce contenu.
 
+### 2026-09-18 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
+
+Aucune relecture pédagogique n’a eu lieu pour cette semaine à cette date.
+
+**Suites données :** Conséquence d’un changement de définition de l’empreinte d’approbation, pas d’une nouvelle relecture. ISSUE-026 : l’empreinte couvrait l’identifiant de l’histoire lue, pas ses mots, si bien qu’un texte pouvait être réécrit sous une approbation sans la faire tomber. L’empreinte couvre désormais le genre, le titre et les lignes du texte résolu. Les approbations concernées sont d’abord tombées, puis ont été rétablies après vérification, champ par champ et contre la révision d’approbation elle-même, que le contenu relu est identique à celui qui avait été approuvé. Le sens de la décision, la personne qui l’a prise et sa date sont inchangés.
+
 ## Jour 1 — 2026-09-01
 
 **Durée totale : 35 min** · 4 séances · jour 1 du rythme

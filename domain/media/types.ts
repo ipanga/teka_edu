@@ -39,13 +39,20 @@ export type MediaAsset = {
  */
 export function mediaDigestSource(
   assets: readonly MediaAsset[],
-  texts: readonly { id: string; illustrationId: string | null }[],
+  texts: readonly {
+    id: string;
+    kind: string;
+    title: string;
+    lines: readonly string[];
+    illustrationId: string | null;
+  }[],
 ): {
   fingerprint(mediaId: string): string | undefined;
   illustrationOf(textId: string): string | null;
+  textFingerprint(textId: string): string | undefined;
 } {
   const byId = new Map(assets.map((asset) => [asset.id, asset]));
-  const illustrations = new Map(texts.map((text) => [text.id, text.illustrationId]));
+  const byTextId = new Map(texts.map((text) => [text.id, text]));
   return {
     fingerprint(mediaId) {
       const asset = byId.get(mediaId);
@@ -54,7 +61,27 @@ export function mediaDigestSource(
       return asset === undefined ? undefined : `${asset.kind}|${asset.alt}|${asset.contentHash}`;
     },
     illustrationOf(textId) {
-      return illustrations.get(textId) ?? null;
+      return byTextId.get(textId)?.illustrationId ?? null;
+    },
+    /**
+     * The story or rhyme itself — the words a child actually hears (ISSUE-026).
+     *
+     * An activity names a text by id and the digest used to stop there, so the body behind a
+     * stable id could be rewritten under an approval without the approval lapsing. That is the
+     * same hole that was closed for pictures, left open for the thing the lesson spends most of
+     * its minutes on.
+     *
+     * The fingerprint is a canonical string of what a reviewer judges: the kind, the title and
+     * every line, in order. It is built only from canonical content — never from a path, an
+     * mtime, the Git state or the machine — so the same story fingerprints identically
+     * everywhere. Compression is left to `lessonDigest`, which hashes the whole canonical
+     * serialisation anyway.
+     */
+    textFingerprint(textId) {
+      const text = byTextId.get(textId);
+      if (text === undefined) return undefined;
+      // U+241F separates lines so that moving a line break cannot leave the body unchanged.
+      return `${text.kind}|${text.title}|${text.lines.join("\u241f")}`;
     },
   };
 }

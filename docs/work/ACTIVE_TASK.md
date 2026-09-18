@@ -10,13 +10,13 @@
 
 ## Task
 
-Apply ChatGPT's first-pass corrections to 3ème maternelle September Week 2 and return it for a second
-pass.
+Apply ChatGPT's second-pass corrections to 3ème maternelle Week 2, and close the ISSUE-026 approval
+integrity gap before any further approval.
 
 ## Objective
 
-Every Week 2 activity claims only what its own text supports, and nothing a child is asked to do
-requires furniture, contact with glass, or an ambiguous rule.
+An approval covers the words the child hears, and every approval standing today is proven to be
+bound to the content its reviewer actually read.
 
 ## Status
 
@@ -24,11 +24,11 @@ requires furniture, contact with glass, or an ambiguous rule.
 
 ## Branch
 
-`fix/maternelle-3-week-2-review`
+`fix/week2-second-review-and-text-digest`
 
 ## Base Branch
 
-`develop` at `b5def49`
+`develop` at `7fa2159`
 
 ## Started
 
@@ -36,8 +36,8 @@ requires furniture, contact with glass, or an ambiguous rule.
 
 ## Last Checkpoint
 
-2026-09-17 — 14 Week 2 corrections applied, 8 new rule-shaped tests, 0 approvals lapsed,
-full local suite green.
+2026-09-18 — 4 mapping corrections, ISSUE-026 closed, 31 approvals lapsed and all 31 restored on
+proven identity, full local suite green.
 
 ## Scope
 
@@ -67,22 +67,19 @@ full local suite green.
 
 ## Completed
 
-- [x] 14 corrections applied across 6 lessons, 3 domains and one story
-- [x] Objective mappings split so no activity carries what its sibling works
-- [x] Obstacle course made soft: cloth held by the adult, cushion, flat strip — no furniture
-- [x] Balance activity's material narrowed to a floor marker
-- [x] « Va toucher la fenêtre » → « Montre-moi la fenêtre du doigt »
-- [x] Cat game's roles named and swapped; weekday task works one day at a time
-- [x] Forced repetition replaced by invite-accept-reformulate; « à sa droite » removed
-- [x] Tito's story keeps the quantity reasoning, loses the formal operation
-- [x] Biological needs reworded; `ils` removed from a lexicon that never asks for it
-- [x] Three **new** material codes rather than editing the shared entry 3 approved 1ère lessons use
-- [x] **0 of 104 approvals lapsed** — verified with `checkLessonReview` across both levels
-- [x] Two occurrences outside Week 2 corrected (day 15 ritual, Tito on days 14 and 18), recorded
-      as `consequence` — not as reviews of those weeks
-- [x] 8 new rule-shaped tests, each proved to fail against the old content before being kept
-- [x] Existing phonology rule refined: it tested the declared type, and would have rejected a
-      ritual that genuinely claps syllables
+- [x] Four mapping corrections; nothing moved to preserve a count. Removing the date objective
+      left a lesson claiming what nothing worked, so it left the lesson list too
+- [x] **ISSUE-026 closed**: the digest covers the kind, title and lines of every story a lesson
+      reads, and fails closed when a text cannot be resolved
+- [x] Proved against the old implementation — the old digest did not move when a story was
+      rewritten; the new one does
+- [x] **31 of 104 approvals lapsed** (exactly those that read a text); **all 31 restored**
+- [x] `scripts/restamp-digests.ts` re-stamps only on proven identity against the approval commit,
+      and was tested by rewriting a story and confirming it refuses
+- [x] **104 of 104 proven identical**, 0 held back, 0 requiring re-review
+- [x] Two rules made reusable (date objective both ways, shape naming); the conversation
+      objective stays a targeted test because no predicate separated it honestly
+- [x] Supabase PROD pause documented as expected behaviour — no upgrade, no keep-alive job
 
 ## In Progress
 
@@ -100,7 +97,7 @@ full local suite green.
 | format             | PASS   | working tree                      |
 | lint               | PASS   | working tree                      |
 | typecheck          | PASS   | working tree                      |
-| unit tests         | PASS   | working tree — 291 tests          |
+| unit tests         | PASS   | working tree — 305 tests          |
 | content validation | PASS   | working tree — 31 files           |
 | database tests     | PASS   | fresh reset — 152 assertions      |
 | build              | PASS   | working tree                      |
@@ -110,8 +107,8 @@ full local suite green.
 
 ## Database State
 
-- Local: 16 migrations; `db reset` + 152 pgTAP assertions pass.
-- DEV: not yet updated with `20260917205257_week2_review_corrections.sql`.
+- Local: 17 migrations; `db reset` + 152 pgTAP assertions pass.
+- DEV: not yet updated with `20260918173226_week2_second_review_and_text_digest.sql`.
 - PROD: untouched.
 
 ## Deployment State
@@ -137,9 +134,9 @@ Commit, open the PR into `develop`, wait for CI, squash-merge, verify staging.
 
 ## Resume Verification
 
-1. `git branch --show-current` is `fix/maternelle-3-week-2-review`;
-2. `git log -n 5 --oneline` — branch point is `b5def49`;
+1. `git branch --show-current` is `fix/week2-second-review-and-text-digest`;
+2. `git log -n 5 --oneline` — branch point is `7fa2159`;
 3. `git status --short` — read uncommitted work before discarding it;
-4. `gh pr list --head fix/maternelle-3-week-2-review` — a PR may already exist;
+4. `gh pr list --head fix/week2-second-review-and-text-digest` — a PR may already exist;
 5. `npx supabase migration list --linked` before assuming DEV needs the migration;
 6. `gh run list --branch develop --limit 3` before assuming a deployment is needed.

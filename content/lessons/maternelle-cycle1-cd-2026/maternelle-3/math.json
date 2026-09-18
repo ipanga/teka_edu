@@ -715,7 +715,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": ["forme-carre", "forme-rectangle", "forme-triangle", "forme-disque"],
-          "objectiveCodes": ["MATH-S03-C01-O07"],
+          "objectiveCodes": ["MATH-S03-C01-O07", "MATH-S03-C01-O08"],
           "materialCodes": ["objets-maison"],
           "vocabulary": [
             {
@@ -763,7 +763,7 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": ["objet-caillou"],
-          "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O05"],
+          "objectiveCodes": ["MATH-S01-C01-O20"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
             {

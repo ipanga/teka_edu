@@ -41,19 +41,19 @@ digests were allowed to fail rather than being re-stamped. The 31 occurrences we
 on a compact diff. The digest now covers the bytes of every referenced illustration, so a picture
 cannot be redrawn under an approval without it lapsing.
 
-| Item                                         | State    | Evidence                                                                                  |
-| -------------------------------------------- | -------- | ----------------------------------------------------------------------------------------- |
-| 1ère September authored                      | **DONE** | 88 lessons, 132 activities, 22 days                                                       |
-| 1ère Week 1 reviewed                         | **DONE** | 2 passes + reconfirmation; 16 lessons `approved`, `ai-assisted`                           |
-| 1ère Week 2 reviewed                         | **DONE** | 2 passes + reconfirmation; 20 lessons `approved`                                          |
-| 1ère Week 3 reviewed                         | **DONE** | 2 passes + reconfirmation; 20 lessons `approved`                                          |
-| 1ère Week 4 reviewed                         | **DONE** | 2 passes; 20 lessons `approved`                                                           |
-| 1ère Week 5 reviewed                         | **DONE** | 2 passes (accepted-with-modifications → accepted); 12 lessons `approved`                  |
-| 3ème September authored                      | **DONE** | 88 lessons, 170 activities, 22 days                                                       |
-| 3ème Week 1 reviewed                         | **DONE** | 4 passes (3 accepted-with-modifications → accepted); 16 lessons `approved`, `ai-assisted` |
-| 3ème Week 2 reviewed                         | **TODO** | pass 1 accepted-with-modifications, 14 corrections applied, **second pass pending**       |
-| 3ème Weeks 3–5 reviewed                      | **TODO** | packages generated, not yet submitted                                                     |
-| No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                           |
+| Item                                         | State    | Evidence                                                                                        |
+| -------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------- |
+| 1ère September authored                      | **DONE** | 88 lessons, 132 activities, 22 days                                                             |
+| 1ère Week 1 reviewed                         | **DONE** | 2 passes + reconfirmation; 16 lessons `approved`, `ai-assisted`                                 |
+| 1ère Week 2 reviewed                         | **DONE** | 2 passes + reconfirmation; 20 lessons `approved`                                                |
+| 1ère Week 3 reviewed                         | **DONE** | 2 passes + reconfirmation; 20 lessons `approved`                                                |
+| 1ère Week 4 reviewed                         | **DONE** | 2 passes; 20 lessons `approved`                                                                 |
+| 1ère Week 5 reviewed                         | **DONE** | 2 passes (accepted-with-modifications → accepted); 12 lessons `approved`                        |
+| 3ème September authored                      | **DONE** | 88 lessons, 170 activities, 22 days                                                             |
+| 3ème Week 1 reviewed                         | **DONE** | 4 passes (3 accepted-with-modifications → accepted); 16 lessons `approved`, `ai-assisted`       |
+| 3ème Week 2 reviewed                         | **TODO** | 2 passes, both accepted-with-modifications; corrections applied, **final confirmation pending** |
+| 3ème Weeks 3–5 reviewed                      | **TODO** | packages generated, not yet submitted                                                           |
+| No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                                 |
 
 **The two 3ème gaps are resolved**, one by authoring and one by pacing. `LANG-S02-C01-O13`
 (auditory memory) now has a genuine second occurrence on day 21, where the child already had to
@@ -82,7 +82,7 @@ Every check must pass on the release commit. Current state on `develop`:
 | Check                                                      | State                                          |
 | ---------------------------------------------------------- | ---------------------------------------------- |
 | format · lint · typecheck                                  | **DONE**                                       |
-| unit tests                                                 | **DONE** (291)                                 |
+| unit tests                                                 | **DONE** (305)                                 |
 | content validation                                         | **DONE** (31 files)                            |
 | curriculum / annual-plan / progression validation          | **DONE**                                       |
 | review-package validation                                  | **DONE** (generation fails on missing content) |
@@ -100,6 +100,21 @@ navigation · illustrations · phone layout · desktop/TV-like layout.
 
 **State: DONE for the current `develop`** — the 28-test suite runs against the live staging
 deployment on every merge. It must be re-confirmed on whatever commit is promoted.
+
+## 3b. Production preconditions
+
+Production stays closed (ADR-027), and these must be true **before** it is opened:
+
+| Precondition                                    | Why                                                                                                                                                                                       |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `teka-edu-prod` is `ACTIVE_HEALTHY`, not paused | Supabase Free pauses an inactive project, and PROD is deliberately inactive. An inactivity warning arrived on 2026-09-18. A migration against a paused project fails partway (ISSUE-012). |
+| The production `VERCEL_TOKEN` exists            | There is none today, by design.                                                                                                                                                           |
+| `PRODUCTION_DEPLOY_ENABLED` is set              | Unset today, at both repository and environment level.                                                                                                                                    |
+| `NEXT_PUBLIC_APP_URL` and a domain are decided  | PD-012.                                                                                                                                                                                   |
+| The zero-cost backup design is implemented      | No backups on Free (ISSUE-009).                                                                                                                                                           |
+
+Resuming a paused project is done by the owner in the Supabase dashboard and costs nothing. **No
+keep-alive job is created**: it would add fake activity to a database that is meant to be empty.
 
 ## 4. Privacy
 

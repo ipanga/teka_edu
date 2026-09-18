@@ -244,6 +244,7 @@ describe("an approval covers the picture, not just its name", () => {
     fingerprint: (id: string) =>
       id in overrides ? overrides[id] : mediaDigestSource(data.media, data.texts).fingerprint(id),
     illustrationOf: (id: string) => mediaDigestSource(data.media, data.texts).illustrationOf(id),
+    textFingerprint: (id: string) => mediaDigestSource(data.media, data.texts).textFingerprint(id),
   });
 
   it("is stable while the asset is unchanged", () => {
