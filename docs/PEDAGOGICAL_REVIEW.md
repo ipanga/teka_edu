@@ -26,16 +26,16 @@ Roles, kept distinct on purpose:
 
 ## Register of reviews
 
-| Batch                                | Date             | Kind                                             | Outcome                                                        | Corrections                    | Status                            |
-| ------------------------------------ | ---------------- | ------------------------------------------------ | -------------------------------------------------------------- | ------------------------------ | --------------------------------- |
-| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 13, then 6, then 2             | **`approved`** — 16 lessons       |
-| 3ème maternelle, Week 2 (days 5–9)   | 2026-09-17       | AI-assisted (ChatGPT), 1 pass                    | `accepted-with-modifications`                                  | 14 items, all applied          | `review` — awaiting a second pass |
-| 3ème maternelle, Weeks 3–5           | —                | —                                                | not yet reviewed                                               | inherited corrections only     | `review` — 0 approved             |
-| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                 | 11 items across the passes     | **`approved`** — 16 lessons       |
-| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                 | 8 items                        | **`approved`** — 20 lessons       |
-| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                 | 8 items                        | **`approved`** — 20 lessons       |
-| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                                 | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons       |
-| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`**   | 5 items                        | **`approved`** — 12 lessons       |
+| Batch                                | Date             | Kind                                             | Outcome                                                        | Corrections                    | Status                                 |
+| ------------------------------------ | ---------------- | ------------------------------------------------ | -------------------------------------------------------------- | ------------------------------ | -------------------------------------- |
+| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 13, then 6, then 2             | **`approved`** — 16 lessons            |
+| 3ème maternelle, Week 2 (days 5–9)   | 2026-09-17, -18  | AI-assisted (ChatGPT), 2 passes                  | `accepted-with-modifications` both                             | 14, then 4                     | `review` — awaiting final confirmation |
+| 3ème maternelle, Weeks 3–5           | —                | —                                                | not yet reviewed                                               | inherited corrections only     | `review` — 0 approved                  |
+| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                 | 11 items across the passes     | **`approved`** — 16 lessons            |
+| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                 | 8 items                        | **`approved`** — 20 lessons            |
+| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                 | 8 items                        | **`approved`** — 20 lessons            |
+| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                                 | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons            |
+| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`**   | 5 items                        | **`approved`** — 12 lessons            |
 
 **1ère maternelle September is complete: 88 of 88 lessons `approved`.** 3ème maternelle's Week 1
 is `approved` — **16 of 88** — and Week 2 has had its first full review, leaving Weeks 2–5 (72 lessons) at `review`. Every approval
@@ -259,6 +259,65 @@ reviews of those weeks.**
 remarques ») claims the biological-needs objective while asking only for observation. Removing it
 would leave the activity with no objective at all, and choosing its replacement is a pedagogical
 judgement about a week ChatGPT has not read. It belongs to that week's own first pass.
+
+---
+
+## 3ème maternelle, Week 2 review, 2026-09-18 — accepted with modifications (pass 2)
+
+The first-pass corrections were verified as materially correct. Four small mapping defects
+remained, all the same family: **an activity carrying an objective its neighbour works.**
+
+| Activity                                    | Was                  | Now                                                               |
+| ------------------------------------------- | -------------------- | ----------------------------------------------------------------- |
+| `m3-lang-05-a1` day-5 ritual                | `+ LANG-S01-C04-O11` | date only — O11 stays on _D'abord, ensuite, après_                |
+| `m3-time-02-a1` _Le jour de quoi ?_         | `+ TIME-SPACE-O12`   | `O10` only — the child situates an event, does not state the date |
+| `m3-math-08-a2` _Des formes dans la maison_ | `MATH-O07`           | **`O07 + O08`** — the child says the shape's name                 |
+| `m3-math-09-a1` _Le jeu du combien_         | `+ MATH-O05`         | `O20` only — it counts, it does not compare                       |
+
+**Nothing was moved to preserve a count.** Removing the date objective from `m3-time-02-a1` left
+its lesson claiming an objective no activity worked, so it left the lesson's list too rather than
+being recollected onto the neighbouring activity. The validator caught that immediately.
+
+### What became a rule, and what stayed a pinned test
+
+Two of the four generalise cleanly and are now corpus rules: **« énoncer la date »** is tied to
+the activities that ask for it _in both directions_ (25 activities, 0 exceptions), and **naming a
+shape** requires the naming objective.
+
+The conversation objective does not. « Participer à une conversation … et reformuler son propos »
+is real work in a describing game and in talking about what a character feels, and not real work
+in « dis la date, puis nomme un animal ». Every predicate tried either cleared the ritual or
+condemned four legitimate activities. **It stays a targeted test on the case the reviewer found**,
+because a rule that is wrong four times out of five is worse than no rule.
+
+---
+
+## The approval digest now covers the story, 2026-09-18 (ISSUE-026)
+
+An activity names a story by id. The digest covered the id, and the bytes of the picture the story
+carries — but not the story. **A story could be rewritten under a standing approval and nothing
+would object**: the lesson was byte-identical and the reviewer's digest still matched.
+
+Proved against the old implementation: rewriting a story left the old digest unchanged at
+`f376980e96ef6e90`, and moves the new one from `364846d9fa84c689` to `42c0708ec69e1f2e`.
+
+**31 of 104 approvals lapsed** — exactly the approved lessons that read a text. The other 73 were
+untouched, because they read nothing.
+
+**None was rubber-stamped.** `scripts/restamp-digests.ts` answers, per lesson, which of the two
+changed — the definition or the content:
+
+- it finds the commit that wrote the lesson's stored digest, which is the revision the reviewer's
+  decision was recorded against;
+- it compares every approval-relevant field at that revision with the content now, plus the kind,
+  description and bytes of every picture, plus the kind, title and lines of every story;
+- it re-stamps **only** on proven identity, and reports anything else for re-review.
+
+**104 of 104 proven identical. 0 held back.** The tool was tested by rewriting an approved
+lesson's story and confirming it refuses to re-stamp. The pedagogical decision — who reviewed,
+what they concluded, when — is carried over untouched, because no new reading happened: only the
+definition of what an approval covers got stronger. Recorded as `consequence` entries for 1ère
+Weeks 1–5 and 3ème Week 1, never as new readings.
 
 ---
 

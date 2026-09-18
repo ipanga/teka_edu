@@ -41,7 +41,16 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Aucune : cette semaine n’a encore jamais été relue.
+**Cette semaine n’a encore jamais été relue.** Ce qui suit n’est donc pas
+l’historique de ses relectures : ce sont des corrections qui lui sont arrivées
+parce qu’un défaut trouvé dans une autre semaine existait ici à l’identique.
+Elles sont déjà appliquées au contenu que vous lisez ci-dessous.
+
+### 2026-09-18 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
+
+Aucune relecture pédagogique n’a eu lieu pour cette semaine à cette date.
+
+**Suites données :** Conséquence d’un changement de définition de l’empreinte d’approbation, pas d’une nouvelle relecture. ISSUE-026 : l’empreinte couvrait l’identifiant de l’histoire lue, pas ses mots, si bien qu’un texte pouvait être réécrit sous une approbation sans la faire tomber. L’empreinte couvre désormais le genre, le titre et les lignes du texte résolu. Les approbations concernées sont d’abord tombées, puis ont été rétablies après vérification, champ par champ et contre la révision d’approbation elle-même, que le contenu relu est identique à celui qui avait été approuvé. Le sens de la décision, la personne qui l’a prise et sa date sont inchangés.
 
 ## Jour 15 — 2026-09-21
 

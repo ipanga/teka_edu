@@ -135,13 +135,15 @@ describe("an approval can only come from a full review that accepted the week", 
     }
   });
 
-  it("leaves Week 2 read but unapproved after its first full review", () => {
+  it("leaves Week 2 read twice and still unapproved", () => {
     const entries = historyOf(2);
     const reads = entries.filter((r) => r.scope === "full-review");
-    expect(reads).toHaveLength(1);
-    expect(reads[0]?.outcome).toBe("accepted-with-modifications");
-    expect(reads[0]?.reviewKind).toBe("ai-assisted");
-    // Read is not approved: nothing in Week 2 may carry an approval.
+    expect(reads).toHaveLength(2);
+    for (const read of reads) {
+      expect(read.outcome).toBe("accepted-with-modifications");
+      expect(read.reviewKind).toBe("ai-assisted");
+    }
+    // Read twice is still not approved: nothing in Week 2 may carry an approval.
     expect(weekReviewState(["review"], entries)).toBe("reviewed");
   });
 
@@ -211,6 +213,7 @@ describe("the approvals granted to 3ème maternelle Week 1 are protected", () =>
           ? `shape|Un carré|sha256:${"0".repeat(64)}`
           : media.fingerprint(id),
       illustrationOf: (id: string) => media.illustrationOf(id),
+      textFingerprint: (id: string) => media.textFingerprint(id),
     };
     expect(lessonDigest(lesson, poisoned)).not.toBe(before);
   });

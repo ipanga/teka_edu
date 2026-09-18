@@ -122,8 +122,8 @@
         "reviewer": "ChatGPT",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
         "reviewedOn": "2026-09-17",
-        "reviewedDigest": "aa7bf413de334ce3",
-        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedDigest": "b345a3b0eb63aa66",
+        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017). Empreinte recalculée le 2026-09-18 pour ISSUE-026 : elle couvre désormais le texte de l’histoire ou de la comptine lue, et plus seulement son identifiant. Le contenu relu est identique à celui qui avait été approuvé, vérifié champ par champ contre la révision d’approbation. Aucune nouvelle relecture n’a eu lieu."
       }
     },
     {
@@ -255,8 +255,8 @@
         "reviewer": "ChatGPT",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
         "reviewedOn": "2026-09-17",
-        "reviewedDigest": "e0d624ae621fee82",
-        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedDigest": "049fa026e2f793b6",
+        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017). Empreinte recalculée le 2026-09-18 pour ISSUE-026 : elle couvre désormais le texte de l’histoire ou de la comptine lue, et plus seulement son identifiant. Le contenu relu est identique à celui qui avait été approuvé, vérifié champ par champ contre la révision d’approbation. Aucune nouvelle relecture n’a eu lieu."
       }
     },
     {
@@ -377,8 +377,8 @@
         "reviewer": "ChatGPT",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
         "reviewedOn": "2026-09-17",
-        "reviewedDigest": "b75c0a03aaf80c03",
-        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedDigest": "9801edca58ae64c0",
+        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017). Empreinte recalculée le 2026-09-18 pour ISSUE-026 : elle couvre désormais le texte de l’histoire ou de la comptine lue, et plus seulement son identifiant. Le contenu relu est identique à celui qui avait été approuvé, vérifié champ par champ contre la révision d’approbation. Aucune nouvelle relecture n’a eu lieu."
       }
     },
     {
@@ -481,8 +481,8 @@
         "reviewer": "ChatGPT",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
         "reviewedOn": "2026-09-17",
-        "reviewedDigest": "27bac1f8f60c686a",
-        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedDigest": "c5efb9013a6ad995",
+        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017). Empreinte recalculée le 2026-09-18 pour ISSUE-026 : elle couvre désormais le texte de l’histoire ou de la comptine lue, et plus seulement son identifiant. Le contenu relu est identique à celui qui avait été approuvé, vérifié champ par champ contre la révision d’approbation. Aucune nouvelle relecture n’a eu lieu."
       }
     },
     {
@@ -515,7 +515,7 @@
           "mode": "off-screen",
           "role": "retrieval",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C04-O11"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12"],
           "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [

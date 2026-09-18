@@ -314,9 +314,28 @@ Recommended action: when about 40 are reached, prune old images that no retained
 
 ### ISSUE-012 — Supabase Free projects pause after about 7 days of low activity
 
-Severity: Low (Monitor) · Status: Open
-Description: DEV is touched by each staging deploy (migration steps). PROD is empty and will pause, which is harmless now. Restore from the dashboard at no cost (window 90 days to 1 year).
-Recommended action: restore DEV if a staging deploy fails on a paused project. Restore PROD only when production is prepared.
+Severity: Low (Monitor) · Status: Open · **Observed on `teka-edu-prod` 2026-09-18**
+
+Description: DEV is touched by each staging deploy (migration steps). PROD is empty and will
+pause, which is harmless now. Restore from the dashboard at no cost (window 90 days to 1 year).
+
+**The owner received an inactivity warning for `teka-edu-prod` on 2026-09-18.** This is the
+expected consequence of ADR-027: production is deliberately unused, so the project is
+deliberately inactive. Nothing in the repository should prevent it. In particular this is **not**
+solved by upgrading the plan, by enabling production deployment, by migrating or seeding PROD, or
+by a synthetic keep-alive job — all of which would cost money, open production, or put activity
+into a database that is supposed to be empty. **No keep-alive mechanism is created at this
+stage.** The owner handles any dashboard activity separately, outside this repository.
+
+**Before any production deployment**, the production-readiness checklist must verify that
+`teka-edu-prod` is `ACTIVE_HEALTHY`. If it is paused it must be resumed through the Supabase
+dashboard **before** migration or deployment: no production workflow may run against a paused
+project, because a migration step would fail partway and leave the schema in an unknown state.
+The production smoke test already asserts `EXPECTED_SUPABASE_PROJECT_REF`, so it will refuse a
+deployment wired to the wrong project once production is enabled.
+
+Recommended action: restore DEV if a staging deploy fails on a paused project. Restore PROD only
+when production is prepared, as the first step of that preparation.
 
 ### ISSUE-013 — Supabase built-in auth email: 2 emails per hour, only to team addresses
 
@@ -353,29 +372,34 @@ Category: **future external pedagogical assurance** · Severity: Desirable befor
 
 Recommended action: none required to continue. When a teacher becomes available, hand them `docs/review/2026-2027-maternelle-3-semaine-1.md`; a `human-teacher` review is recorded as a strictly stronger claim than the AI-assisted one (`reviewKind`).
 
-### ISSUE-026 — An approval does not cover the words of the story it had read to it
+### ISSUE-026 — An approval did not cover the words of the story read to the child
 
-Severity: **Medium (integrity of the quality gate)** · Status: Open, found 2026-09-17
+Severity: Medium (integrity of the quality gate) · Status: **Resolved 2026-09-18**
 
-Description: `lessonDigest` covers the words a child hears _in the activity_, the adult guidance,
-the objectives, the durations, the materials and the **bytes of every picture**. It does **not**
-cover the lines of a story or rhyme the activity reads: the digest includes the activity payload,
-which holds only the `textId`, and the media fingerprint of the text's illustration. Proved by
-rewriting a story's lines and recomputing: the digest of an approved lesson that reads it does not
-move.
+Description: `lessonDigest` covered the words a child hears in the activity, the adult guidance,
+the objectives, the durations, the materials and the **bytes of every picture** — but not the
+lines of a story or rhyme the activity reads. The digest held the `textId` and the fingerprint of
+the text's illustration, never the text. A story could therefore be rewritten under a standing
+approval without the approval lapsing: the lesson was byte-identical and its digest still matched.
+The same hole that was closed for pictures in PR #47, left open for the thing a read-aloud lesson
+spends most of its minutes on.
 
-**52 lessons read a text, and 31 of them are approved.** A story could therefore be rewritten
-under an approval without the approval lapsing — the same class of hole that was closed for
-pictures in PR #47, where an illustration could be swapped under an approval.
+Resolution: `MediaDigestSource` gained `textFingerprint(textId)`, a canonical string of the text's
+kind, title and every line in order, built only from canonical content — no path, no mtime, no Git
+state, no iteration order, so it is identical on every machine. `lessonDigest` folds it in and
+**fails closed**: a lesson that reads a text nobody can resolve throws rather than falling back to
+hashing the id.
 
-Nothing is wrong in the repository today: the one story changed this session (_Les trois cailloux
-de Tito_) is read only on days 8, 14 and 18, all of them unapproved.
+Proved against the old implementation: rewriting a story left the old digest at
+`f376980e96ef6e90` before and after, and moves the new one from `364846d9fa84c689` to
+`42c0708ec69e1f2e`.
 
-Recommended action: extend `lessonDigest` to fold in the text a `textId` resolves to, the way it
-already folds in the illustration. **Doing so recomputes every digest and lapses all 104
-approvals**, so it is an owner's decision, not a side effect of a content task: it would need a
-re-confirmation round for 1ère maternelle's five weeks and 3ème Week 1. Until then, treat a change
-to `content/texts/` as a change to every approved lesson that reads it, and re-confirm by hand.
+**31 of 104 approvals lapsed** — exactly the approved lessons that read a text. All 31 were
+restored, and none was rubber-stamped: `scripts/restamp-digests.ts` finds the commit that wrote
+each stored digest, compares every approval-relevant field, every picture's kind, description and
+bytes, and every resolved story at that revision against the content now, and re-stamps only on
+proven identity. 104 of 104 were proven identical; 0 were held back. Recorded as `consequence`
+entries, not as new readings.
 
 ### ISSUE-019 — The daily comprehension read-aloud is not yet daily
 
@@ -552,32 +576,31 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  3ème maternelle Week 2 — first full pedagogical review, 14 corrections applied.
-            - The recurring shape was one lesson, two activities, and an objective list copied
-              across both: the morphology activity claiming the biological needs, the needs
-              activity claiming morphology, a recap ritual claiming the emotions the story
-              activity earns, a syllable ritual filed as vocabulary. Each activity now stands
-              on its own text.
-            - Two comparison activities did not claim "comparer des quantités" — the thing
-              they spend their whole time doing.
-            - Safety: the obstacle course no longer sends a child under a chair or over a
-              stick. They pass under a cloth the adult holds, round a cushion, over a strip
-              laid flat; the adult moves any furniture. The balance activity asks for a floor
-              marker instead of the box that contains the chairs and the stick. "Va toucher la
-              fenêtre" became "Montre-moi la fenêtre du doigt".
-            - The cat game named its roles; it had said "tu me sauves" and "tu me cherches"
-              without saying who chases whom.
-            - "Exigez la phrase entière" became invite, accept, reformulate once. A French
-              sentence is the model, not the toll.
-            - The story of Tito kept its reasoning about quantities and lost the formal
-              subtraction and addition a read-aloud has no business teaching.
-            - Three new material codes rather than editing the shared household-objects entry,
-              which three approved 1ère lessons depend on. No approval lapsed: all 104 approved
-              lessons verified intact.
-            - Found and reported, not fixed: an approval does not cover the words of the story
-              read to the child (ISSUE-026). 31 approved lessons read a text. Closing it lapses
-              all 104 approvals, so it is the owner's call.
-Validation: format, lint, typecheck, unit (291), content (31 files), pgTAP (152) on a fresh
+Completed:  3ème Week 2 second pass, and the approval-integrity gap closed.
+            - Four more objectives sat on the activity next door: a recap ritual claiming an
+              extended conversation, a weekday activity claiming "énoncer la date", a shape
+              activity that names shapes without the naming objective, and a counting game
+              claiming comparison. All four corrected; nothing moved to preserve a count.
+              Removing the date objective left one lesson with no activity working it, so it
+              left the lesson list too rather than being recollected elsewhere.
+            - ISSUE-026 closed. The digest covered the id of the story and the bytes of its
+              picture, but not the story. A rewritten story slipped under a standing approval.
+              It now covers the kind, the title and every line, and fails closed when a text
+              cannot be resolved. Proved against the old implementation: the old digest did
+              not move when a story was rewritten; the new one does.
+            - 31 of 104 approvals lapsed — exactly those that read a text. None was
+              rubber-stamped. A tool finds the commit that wrote each stored digest and
+              compares every reviewed field, every picture and every resolved story at that
+              revision with the content now; it re-stamps only on proven identity and reports
+              anything else. 104 of 104 proven identical, 0 held back. It was tested by
+              rewriting a story and confirming it refuses.
+            - Two rules made reusable (the date objective, both directions across 25
+              activities; the shape-naming objective). The conversation objective resisted
+              every predicate tried, so it stays a targeted test rather than a bad rule.
+            - Supabase warned that teka-edu-prod may pause. That is ADR-027 working, not a
+              fault: production is deliberately unused. No plan upgrade, no keep-alive job.
+              The readiness checklist now requires PROD to be ACTIVE before any deployment.
+Validation: format, lint, typecheck, unit (305), content (31 files), pgTAP (152) on a fresh
             reset, build, E2E (28), both Docker images, client-bundle scan.
 Cost:       $0.
 Not done:   Week 2 is not approved — 0 of 20. Weeks 3-5 never reviewed. Beta gate 6 of 10.

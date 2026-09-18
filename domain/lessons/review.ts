@@ -16,6 +16,12 @@ export type MediaDigestSource = {
   fingerprint(mediaId: string): string | undefined;
   /** The picture a teaching text carries, so a story's illustration is covered too. */
   illustrationOf(textId: string): string | null;
+  /**
+   * The words of the story or rhyme behind a `textId` (ISSUE-026). `undefined` when the text
+   * cannot be resolved, which the digest treats as an error: a lesson that reads something
+   * nobody can find must not be approvable.
+   */
+  textFingerprint(textId: string): string | undefined;
 };
 
 /**
@@ -144,19 +150,32 @@ export function lessonDigest(lesson: Lesson, media: MediaDigestSource): string {
   const fingerprints = (activity: Lesson["activities"][number]): string[] => {
     const ids = [...activity.mediaIds];
     const textId = activity.payload["textId"];
+    const covered: string[] = [];
     if (typeof textId === "string") {
       const illustration = media.illustrationOf(textId);
       if (illustration !== null) ids.push(illustration);
-    }
-    return [...new Set(ids)].sort().map((id) => {
-      const fingerprint = media.fingerprint(id);
-      if (fingerprint === undefined) {
+      // The story itself, not just its id. Without this a rewritten story slips under a standing
+      // approval, because the lesson that reads it is byte-identical (ISSUE-026).
+      const text = media.textFingerprint(textId);
+      if (text === undefined) {
         throw new RangeError(
-          `lesson "${lesson.id}", activity "${activity.id}": media "${id}" cannot be fingerprinted`,
+          `lesson "${lesson.id}", activity "${activity.id}": text "${textId}" cannot be resolved`,
         );
       }
-      return `${id}=${fingerprint}`;
-    });
+      covered.push(`text:${textId}=${text}`);
+    }
+    return [
+      ...covered,
+      ...[...new Set(ids)].sort().map((id) => {
+        const fingerprint = media.fingerprint(id);
+        if (fingerprint === undefined) {
+          throw new RangeError(
+            `lesson "${lesson.id}", activity "${activity.id}": media "${id}" cannot be fingerprinted`,
+          );
+        }
+        return `${id}=${fingerprint}`;
+      }),
+    ];
   };
   const canonical = JSON.stringify([
     lesson.id,
