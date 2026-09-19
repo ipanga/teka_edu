@@ -518,7 +518,7 @@
       "stage": "consolidation",
       "difficulty": 2,
       "themeId": "au-marche",
-      "parentGuidance": "On passe du savoir à l’acte : arroser, nourrir, donner de l’eau. Quelque chose de vrai, même tout petit.",
+      "parentGuidance": "Un animal et une plante n’ont pas les mêmes besoins : ne les mélangez pas. Vous n’avez besoin ni d’un animal ni d’une plante à la maison — une plante du chemin, un animal du quartier vu de loin, ou l’image du dossier suffisent. L’enfant ne touche ni ne nourrit un animal qu’il ne connait pas, et ne manipule pas une plante inconnue : tout geste de soin est choisi et surveillé par l’adulte.",
       "activities": [
         {
           "id": "m3-world-06-a1",
@@ -526,7 +526,7 @@
           "type": "conversation",
           "title": "Ce dont il a besoin",
           "childInstruction": "Choisis un animal ou une plante, et dis tout ce qu’il lui faut.",
-          "adultGuidance": "1. Laissez choisir. 2. Faites lister : manger, boire, un abri ou de la lumière. 3. Demandez ce qui arrive si un besoin manque. 4. Décidez ensemble d’un geste à faire ce soir.",
+          "adultGuidance": "1. Laissez choisir un animal **ou** une plante. 2. **Si c’est un animal** : de la nourriture qui lui convient, de l’eau, un endroit sûr où dormir, et les soins propres à cet animal — tous ne mangent pas la même chose. 3. **Si c’est une plante** : de l’eau, la lumière qui lui convient, et de la terre ou un endroit où pousser. Une plante ne mange pas comme un animal. 4. Demandez ce qui arrive si un besoin manque. 5. Décidez ensemble d’un geste à faire ce soir — c’est vous qui le choisissez et qui l’accompagnez.",
           "minutes": 4,
           "mode": "off-screen",
           "role": "consolidation",
@@ -566,12 +566,12 @@
           "position": 2,
           "type": "observation",
           "title": "Je regarde et je raconte",
-          "childInstruction": "Regarde-le bien et dis-moi ce que tu remarques aujourd’hui.",
-          "adultGuidance": "1. Observez ensemble une minute, en silence. 2. Demandez ce qu’il remarque. 3. Comparez avec la dernière fois. 4. Concluez : observer, c’est regarder longtemps.",
+          "childInstruction": "Regarde-le bien : est-ce qu’il a ce qu’il lui faut aujourd’hui ?",
+          "adultGuidance": "1. Observez ensemble une minute, en silence — de loin s’il s’agit d’un animal. 2. Demandez ce qu’il remarque. 3. Reliez à ce qui lui faut : « Est-ce que la terre est sèche ? » « Est-ce qu’il lui reste de l’eau ? » 4. Comparez avec la dernière fois. 5. Si vous n’avez ni plante ni animal sous la main, servez-vous de l’image : on regarde, on dit ce qu’on voit, on dit ce qu’il lui faudrait.",
           "minutes": 3,
           "mode": "off-screen",
           "role": "consolidation",
-          "mediaIds": [],
+          "mediaIds": ["plante-parties", "animal-chevre"],
           "objectiveCodes": ["WORLD-S01-C01-O10"],
           "materialCodes": ["aucun"],
           "vocabulary": [
@@ -583,7 +583,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Look closely and tell me what you notice today."
+              "childInstruction": "Look closely: does it have what it needs today?"
             }
           ],
           "payload": {

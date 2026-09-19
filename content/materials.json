@@ -78,6 +78,13 @@
       "safetyNote": null
     },
     {
+      "code": "objets-faces-planes",
+      "name": "Objets de la maison à faces planes (cahier, boite en carton, assiette, couvercle)",
+      "category": "household",
+      "alternatives": "Un cahier, un livre, une boite en carton, une assiette, un couvercle rond, un emballage : tout objet du quotidien dont une face est bien plate.",
+      "safetyNote": null
+    },
+    {
       "code": "objets-maison",
       "name": "Objets de la maison (coussins, chaises, bâton, tissu)",
       "category": "household",

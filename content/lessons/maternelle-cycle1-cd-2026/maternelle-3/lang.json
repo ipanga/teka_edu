@@ -1931,7 +1931,7 @@
           "type": "phonology",
           "title": "À toi de trouver",
           "childInstruction": "Je dis un mot. Trouve un mot qui finit pareil.",
-          "adultGuidance": "1. Donnez le modèle : « maison… poisson ! » 2. Proposez un mot et attendez. 3. Si rien ne vient, donnez deux choix : « chapeau ou banane ? » 4. Acceptez les mots inventés et dites pourquoi ils marchent : « Oui, ça finit pareil. »",
+          "adultGuidance": "1. Donnez le modèle : « maison… poisson ! » 2. Proposez un mot et attendez. 3. Si rien ne vient, redites le mot cible et donnez deux choix dont un seul rime : pour « bateau », « chapeau ou banane ? » ; pour « chat », « rat ou maison ? » 4. Acceptez les mots inventés et dites pourquoi ils marchent : « Oui, ça finit pareil. » On écoute la fin du mot, on n’écrit rien.",
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
@@ -1994,10 +1994,10 @@
       "domainCode": "LANG",
       "title": "Je raconte dans l’ordre",
       "summary": "Remettre les moments d’une histoire ou d’une journée dans l’ordre et les dire.",
-      "objectiveCodes": [],
+      "objectiveCodes": ["TIME-SPACE-S01-C02-O06"],
       "supportingObjectiveCodes": [
         "TIME-SPACE-S01-C01-O12",
-        "LANG-S01-C04-O11",
+        "LANG-S02-C01-O15",
         "LANG-S02-C03-O04"
       ],
       "stage": "consolidation",
@@ -2016,7 +2016,7 @@
           "mode": "off-screen",
           "role": "retrieval",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C04-O11"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C01-O15"],
           "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [
@@ -2040,7 +2040,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["LANG-S01-C04-O11"],
+          "objectiveCodes": ["TIME-SPACE-S01-C02-O06"],
           "materialCodes": ["aucun"],
           "vocabulary": [
             {

@@ -525,3 +525,140 @@ describe("« lancer loin » is earned by distance, not by any throw", () => {
     }
   });
 });
+
+describe("a physical objective describes the body work that happens", () => {
+  const text = (a: Activity) => `${a.childInstruction} ${a.adultGuidance}`;
+
+  it("only claims equilibrium-through-displacement where the child moves", () => {
+    // « Le jeu des appuis » stood on one foot and counted to five, and claimed « construire de
+    // nouveaux équilibres par des déplacements impliquant une combinaison d'actions ». Standing
+    // still is balance; it is not balance built by moving.
+    const moves =
+      /march\w*|avanc\w*|déplac\w*|travers\w*|saut\w*|\bpas\b|parcours|recul\w*|cours|bouge/i;
+    const claiming = activities.filter((a) => a.objectiveCodes.includes("PHYS-S02-C01-O05"));
+    expect(claiming.length).toBeGreaterThan(0);
+    for (const activity of claiming) {
+      expect(moves.test(text(activity)), `${activity.id}: claims balance through movement`).toBe(
+        true,
+      );
+    }
+  });
+
+  it("only claims the dance objective where a movement is invented or reproduced", () => {
+    // « D'un animal à l'autre » crossed the room three ways and claimed « danser … en créant et
+    // en reproduisant un ou plusieurs gestes ». It is continuous locomotion, not expression.
+    const expressive = /dans\w+|invent\w+|imit\w+|reproduis\w+|geste/i;
+    const claiming = activities.filter((a) => a.objectiveCodes.includes("PHYS-S03-C01-O09"));
+    expect(claiming.length).toBeGreaterThan(0);
+    for (const activity of claiming) {
+      expect(expressive.test(text(activity)), `${activity.id}: claims dance, invents nothing`).toBe(
+        true,
+      );
+    }
+  });
+
+  it("never asks the child to step or hop on a loose sheet of paper", () => {
+    // Paper shapes laid on the floor slide under a foot. They are chalked or taped down now, and
+    // hopping on a loose sheet is ruled out explicitly.
+    const loosePaper =
+      /(pose|posez)[^.]{0,40}(feuille|forme)s? en papier[^.]{0,60}(au sol|par terre)/i;
+    const secured = /fix\w+|craie|trac\w+|ruban|à côté/i;
+    for (const activity of activities) {
+      const t = text(activity);
+      if (!loosePaper.test(t)) continue;
+      expect(secured.test(t), `${activity.id}: loose paper underfoot`).toBe(true);
+    }
+  });
+});
+
+describe("what a lesson says a living thing needs", () => {
+  it("never gives one list of needs for animals and plants together", () => {
+    // « manger, boire, un abri ou de la lumière » in a single breath teaches that a plant eats.
+    const collapsed = /manger,? (et )?boire[^.]{0,40}(lumière|terre)|abri ou de la lumière/i;
+    for (const lesson of lessons) {
+      for (const activity of lesson.activities) {
+        expect(
+          collapsed.test(`${activity.childInstruction} ${activity.adultGuidance}`),
+          `${activity.id}: one list for animals and plants`,
+        ).toBe(false);
+      }
+    }
+  });
+});
+
+describe("naming a number, ordering a story, and a rhyme that names its target", () => {
+  const text = (a: Activity) => `${a.childInstruction} ${a.adultGuidance}`;
+
+  it("claims the quantity/numeral link wherever the child builds what a written number says", () => {
+    // « Je pose le bon nombre d'objets » claimed only « construire la bande numérique ». The
+    // child reads a written number and makes that many: that is the association objective.
+    // The number has to be *written* somewhere the child reads it — on the strip, in figures.
+    // An adult saying a number aloud while demonstrating is not a numeral the child reads.
+    const readsANumeral =
+      /(montre\w*|pointe\w*|désigne\w*)[^.]{0,30}(un nombre|le nombre|le chiffre)[^.]{0,30}(sur la bande|écrit|en chiffre)/i;
+    const building = activities.filter(
+      (a) => readsANumeral.test(text(a)) && /pose|autant|objets/i.test(a.childInstruction),
+    );
+    expect(building.length).toBeGreaterThan(0);
+    for (const activity of building) {
+      expect(
+        activity.objectiveCodes.includes("MATH-S01-C01-O08"),
+        `${activity.id}: reads a numeral and builds the quantity without claiming it`,
+      ).toBe(true);
+    }
+  });
+
+  it("makes a chronology activity actually order or locate events", () => {
+    // « Et si on changeait la fin ? » invented an ending under an objective about ordering the
+    // steps of an event. Inventing is not ordering.
+    const orders = /ordre|avant|après|d’abord|ensuite|à la fin|suivant|précéd/i;
+    const claiming = activities.filter((a) =>
+      a.objectiveCodes.some((c) =>
+        /^Repérer les différentes étapes|^Restituer la chronologie/i.test(statementOf(c)),
+      ),
+    );
+    expect(claiming.length).toBeGreaterThan(0);
+    for (const activity of claiming) {
+      expect(orders.test(text(activity)), `${activity.id}: claims ordering, orders nothing`).toBe(
+        true,
+      );
+    }
+  });
+
+  it("names the target word whenever a rhyme activity offers a choice", () => {
+    // « donnez deux choix : chapeau ou banane ? » never said which word they had to rhyme with,
+    // so the adult could not know which answer was right either.
+    const offersAChoice = /deux choix|\w+ ou \w+\s*\?/i;
+    const rhyming = activities.filter(
+      (a) => a.type === "phonology" && /rime/i.test(text(a)) && offersAChoice.test(a.adultGuidance),
+    );
+    expect(rhyming.length).toBeGreaterThan(0);
+    for (const activity of rhyming) {
+      expect(
+        /pour «\s*\w+\s*»|avec «\s*\w+\s*»|mot cible/i.test(activity.adultGuidance),
+        `${activity.id}: offers a choice without naming the target word`,
+      ).toBe(true);
+    }
+  });
+});
+
+describe("an adult's safety note is not the child's learning", () => {
+  /**
+   * Pinned, and the reason is worth writing down.
+   *
+   * « Statue ! » claimed « respecter les règles de sécurité pour soi et pour les autres » on the
+   * strength of an adult-facing note about clearing the room. A note to the parent is not work
+   * the child did, so the objective came off.
+   *
+   * It is *not* stated as a corpus rule, because three already-approved lessons — `m3-phys-05`,
+   * `m3-phys-06` and `m3-phys-08` — carry the same claim on adult-facing safety text alone.
+   * Turning this into a rule would lapse three approvals that nobody has re-reviewed, which is
+   * exactly the thing the approval gate exists to prevent. The occurrences are reported in
+   * docs/PEDAGOGICAL_REVIEW.md for their own weeks to decide.
+   */
+  it("keeps the safety objective off the activity that only freezes on a signal", () => {
+    const statue = activities.find((a) => a.id === "m3-phys-17-a1")!;
+    expect(statue.objectiveCodes).not.toContain("PHYS-S02-C01-O07");
+    expect(statue.objectiveCodes).toContain("PHYS-S02-C01-O05");
+  });
+});
