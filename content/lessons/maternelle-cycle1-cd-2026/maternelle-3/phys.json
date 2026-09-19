@@ -709,7 +709,7 @@
       "levelIds": ["maternelle-3"],
       "domainCode": "PHYS",
       "title": "Je passe le ballon",
-      "summary": "Coopérer à deux pour réussir un nombre de passes.",
+      "summary": "Coopérer à deux pour réussir des passes, de plus en plus loin.",
       "objectiveCodes": [],
       "supportingObjectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S01-C01-O09"],
       "stage": "practice",
@@ -722,8 +722,8 @@
           "position": 1,
           "type": "movement",
           "title": "Dix passes ensemble",
-          "childInstruction": "On essaie de faire dix passes sans faire tomber la balle.",
-          "adultGuidance": "1. Comptez chaque passe réussie à voix haute. 2. Si la balle tombe, on repart de zéro sans reproche. 3. Essayez trois fois. 4. Fêtez le meilleur score, même s’il est de quatre.",
+          "childInstruction": "On se fait des passes sans faire tomber la balle. Quand ça marche bien, on recule chacun d’un pas.",
+          "adultGuidance": "1. Placez-vous assez près pour que les passes réussissent facilement. 2. Comptez les passes réussies à voix haute ; si la balle tombe, continuez à compter, ne repartez pas de zéro. 3. Après plusieurs passes réussies, reculez chacun d’un petit pas : il faut lancer un peu plus loin et viser un peu mieux. 4. Dès que la balle tombe souvent, rapprochez-vous et restez-y. 5. Ce n’est pas un match : le but est commun, il n’y a ni gagnant ni récompense.",
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
@@ -738,12 +738,16 @@
             {
               "fr": "ensemble",
               "en": "together"
+            },
+            {
+              "fr": "reculer",
+              "en": "to step back"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Let us try ten passes without dropping the ball."
+              "childInstruction": "We pass the ball without dropping it. When it goes well, we each take a step back."
             }
           ],
           "payload": {

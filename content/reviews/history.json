@@ -287,6 +287,30 @@
       "outcome": "accepted-with-modifications",
       "summary": "Changement arrivé dans cette semaine sans relecture propre : il vient d’une correction demandée sur la semaine 3.",
       "corrections": "Le rituel du jour 19 ne revendique plus « organiser les mots en catégorie et en réseau » : on y dit la date et on se rappelle la semaine, on n’y range aucun mot. L’objectif reste porté par « Trois familles de mots », dans la même leçon et le même jour, si bien que rien ne change ni pour la leçon ni pour la progression. À signaler pour la relecture complète de cette semaine, sans correction ici : cette activité parle encore de « famille de mots » là où il s’agit d’une catégorie sémantique, le même point que la semaine 3 a fait corriger au jour 12."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 3,
+      "reviewedOn": "2026-09-19",
+      "reviewKind": "ai-assisted",
+      "reviewer": "ChatGPT",
+      "scope": "full-review",
+      "outcome": "accepted-with-modifications",
+      "summary": "Deuxième passe. Les corrections de la première sont confirmées et ne sont pas rouvertes. Trois points seulement restaient. 1) Le contenu de l’activité disait bien « groupe » et « catégorie », mais le résumé de la leçon et le titre de l’activité parlaient encore de « familles » : il s’agit d’une catégorie sémantique, pas d’une famille de mots au sens morphologique. 2) « Mets la table » demandait, dans sa guidance, de la vaisselle incassable, mais son matériel déclaré renvoyait aux « objets de la maison (coussins, chaises, bâton, tissu) » : la liste de préparation et le remplacement proposé ne correspondaient pas à la tâche. 3) « Dix passes ensemble » revendiquait « lancer loin et avec précision » sans jamais faire varier la distance, et repartait de zéro à chaque balle tombée.",
+      "corrections": "Le résumé et le titre disent « catégories ». Un matériel étroit a été ajouté plutôt que d’élargir celui des objets de la maison, dont dépendent dix leçons déjà approuvées : « vaisselle incassable (assiettes en plastique, gobelets, cuillères) », avec des remplacements sûrs et une note qui exclut le verre, la céramique et tout ustensile pointu. « Je passe le ballon » garde les deux objectifs : on commence assez près pour réussir, on recule chacun d’un petit pas quand les passes passent bien, on se rapproche dès que la balle tombe souvent, et on ne repart plus de zéro. La distance et la précision sont donc réellement travaillées, sans match ni gagnant. Aucune leçon n’est approuvée : les 20 restent en relecture."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 4,
+      "reviewedOn": "2026-09-19",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Teka Edu (conséquence de la relecture de la semaine 3)",
+      "scope": "consequence",
+      "outcome": "accepted-with-modifications",
+      "summary": "Changement arrivé dans cette semaine sans relecture propre : il vient d’une correction demandée sur la semaine 3.",
+      "corrections": "« Trois familles de mots » (jour 19) devient « Trois catégories de mots », et le résumé, la guidance et le lexique disent « catégorie » au lieu de « famille de mots ». C’est le même point de vocabulaire que la semaine 3 a fait corriger au jour 12 : la tâche range des mots par catégorie sémantique, pas par famille morphologique. La procédure de tri, l’objectif, la durée et la progression ne changent pas. Cette semaine n’a toujours pas reçu sa relecture pédagogique complète."
     }
   ]
 }
