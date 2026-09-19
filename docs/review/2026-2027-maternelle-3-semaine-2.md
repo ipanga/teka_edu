@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 2 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 3 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -61,6 +61,12 @@ Première relecture pédagogique complète de la semaine 2. La semaine est struc
 Deuxième passe. Les corrections de la première passe sont vérifiées et jugées matériellement correctes. Quatre petits défauts d’attribution subsistaient, tous de la même famille : une activité portait un objectif que sa voisine travaille. Le rituel du jour 5 revendiquait « participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris » alors qu’il demande la date et le nom d’un animal. « Le jour de quoi ? » revendiquait « énoncer la date » alors qu’on y situe un évènement dans la semaine. « Des formes dans la maison » demande à l’enfant de dire le nom de la forme sans revendiquer « décrire et nommer quelques figures géométriques simples ». Et « Le jeu du combien » revendiquait « comparer des quantités » alors qu’on y dénombre sans comparer.
 
 **Suites données :** Les quatre sont corrigées, et rien n’a été déplacé pour préserver un compte : l’objectif de conversation reste sur « D’abord, ensuite, après », celui de comparaison sur « Plus, moins, autant ». Retirer « énoncer la date » de « Le jour de quoi ? » a laissé la leçon sans activité pour cet objectif : il quitte aussi la liste de la leçon, plutôt que d’être recollé ailleurs. La validation réutilisable a été renforcée pour cette famille de défauts. Aucune leçon n’est approuvée : les 20 restent en relecture en attendant votre confirmation finale.
+
+### 2026-09-19 — ChatGPT · `accepted-with-modifications` (ai-assisted)
+
+Passe de confirmation. Les quatre corrections d’attribution de la passe précédente sont vérifiées et jugées correctes. Le renforcement de l’empreinte d’approbation (ISSUE-026) est relu et accepté dans son principe : le texte résolu de l’histoire ou de la comptine est désormais empreint, un texte introuvable fait échouer le calcul, un texte réécrit fait bouger l’empreinte, un texte étranger à la leçon ne la fait pas bouger, l’empreinte des images reste active, et le rétablissement des approbations anciennes s’est appuyé sur une identité historique prouvée plutôt que sur une recopie d’empreintes. Deux incohérences subsistaient. 1) Dans « Je dis où c’est », le repère glissait de l’enfant vers les objets : on posait l’objet « quelque part » et on reformulait « il est derrière la chaise », alors que la leçon, son résumé et sa première activité situent tout par rapport au corps de l’enfant, ce que demande l’objectif revendiqué. 2) Dans « Comment se sent Bibi ? », la guidance adulte ne décrivait qu’une seule des trois questions que l’activité pose réellement, puis passait directement au vécu de l’enfant.
+
+**Suites données :** Les deux sont corrigées. « Je dis où c’est » reste au corps de l’enfant : l’adulte pose l’objet devant lui, derrière lui, à côté de lui, une réponse courte comme « Derrière moi » suffit, et l’adulte reformule une fois « Oui, il est derrière toi » sans faire répéter. Ni la droite ni la gauche n’apparaissent, et aucun objectif n’est ajouté. La guidance de Bibi décrit maintenant les trois questions dans l’ordre de l’histoire, accepte un mot, un geste ou une réponse courte, reformule sans faire répéter, et ne relie au vécu de l’enfant qu’ensuite. Les trois questions, l’histoire et la durée sont inchangées. Aucune leçon n’est approuvée : les 20 restent en relecture en attendant votre confirmation finale.
 
 ## Jour 5 — 2026-09-07
 
@@ -1353,13 +1359,13 @@ _Situer les objets par rapport à soi._
 
 #### 2. Je dis où c’est — 3 min, sans interaction écran (conversation)
 
-- **Consigne à l’enfant :** « Dis-moi où est l’objet, sans le montrer du doigt. »
-- **Guidance adulte :** 1. Posez l’objet quelque part. 2. Demandez où il est, sans le doigt. 3. Invitez-le à répondre par une phrase. S’il dit seulement « derrière », acceptez sa réponse et reformulez une fois : « Oui, il est derrière la chaise. » Ne le faites pas répéter. 4. Inversez les rôles.
+- **Consigne à l’enfant :** « Dis-moi où est l’objet par rapport à toi, sans le montrer du doigt. »
+- **Guidance adulte :** 1. Posez l’objet devant l’enfant, puis derrière lui, puis à côté de lui. 2. Demandez chaque fois où il est, sans le doigt. 3. Une réponse courte suffit : s’il dit « Derrière moi », c’est une bonne réponse. Reformulez une fois — « Oui, il est derrière toi » — et ne le faites pas répéter. 4. Inversez les rôles : c’est lui qui pose l’objet, et vous dites où il est par rapport à lui.
 - **Matériel :** Objets de la maison (coussins, chaises, bâton, tissu)
 - **Lexique visé :** derrière _(behind)_ · devant _(in front of)_
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
-- **Aide en anglais (optionnelle) :** « Tell me where the object is, without pointing. »
+- **Aide en anglais (optionnelle) :** « Tell me where the object is compared to you, without pointing. »
 - **Objectifs travaillés :** `TIME-SPACE-S02-C01-O16` Situer des objets par rapport à soi, construire une image orientée de son corps.
 
 **Réussites attendues — texte officiel pour la compétence « Faire l’expérience de l’espace » (from-5) :**
@@ -1434,7 +1440,7 @@ _Comprendre ce que ressent un personnage, et le dire._
 #### 2. Comment se sent Bibi ? — 7 min, sans interaction écran (listening-story)
 
 - **Consigne à l’enfant :** « Écoute l’histoire de Bibi. Après, tu me diras comment elle se sent. »
-- **Guidance adulte :** 1. Lisez l’histoire en entier. 2. Demandez : « Comment se sent Bibi quand mama Lelo arrive ? » 3. Acceptez un seul mot, puis complétez : « Oui, elle est gênée : elle sait qu’elle a fait une bêtise. » 4. Reliez à l’enfant : « Et toi, quand te sens-tu comme ça ? »
+- **Guidance adulte :** 1. Lisez l’histoire en entier. 2. Posez les trois questions dans l’ordre de l’histoire : quand Bibi découvre le jardin, quand mama Lelo arrive, et à la fin. 3. Un mot, un geste ou une réponse courte suffisent à chaque fois ; reformulez simplement — « Oui, elle est gênée : elle sait qu’elle a fait une bêtise » — sans faire répéter. 4. Ensuite seulement, reliez une de ces émotions à l’enfant : « Et toi, quand te sens-tu comme ça ? »
 - **Matériel :** Aucun matériel
 - **Lexique visé :** content _(happy)_ · triste _(sad)_ · fâché _(angry)_ · curieux _(curious)_
 - **Aide en anglais (optionnelle) :** « Listen to Bibi’s story, then tell me how she feels. »

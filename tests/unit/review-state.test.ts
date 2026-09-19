@@ -135,15 +135,17 @@ describe("an approval can only come from a full review that accepted the week", 
     }
   });
 
-  it("leaves Week 2 read twice and still unapproved", () => {
+  it("leaves Week 2 read and still unapproved, however many passes it takes", () => {
+    // The count is deliberately not pinned: a week may need one pass or four, and a test that
+    // has to be edited after every reading stops being a check and becomes paperwork. What must
+    // hold is that no reading has concluded `accepted`, so nothing here may be approved.
     const entries = historyOf(2);
     const reads = entries.filter((r) => r.scope === "full-review");
-    expect(reads).toHaveLength(2);
+    expect(reads.length).toBeGreaterThanOrEqual(2);
     for (const read of reads) {
-      expect(read.outcome).toBe("accepted-with-modifications");
-      expect(read.reviewKind).toBe("ai-assisted");
+      expect(read.outcome, read.reviewedOn).toBe("accepted-with-modifications");
+      expect(read.reviewKind, read.reviewedOn).toBe("ai-assisted");
     }
-    // Read twice is still not approved: nothing in Week 2 may carry an approval.
     expect(weekReviewState(["review"], entries)).toBe("reviewed");
   });
 

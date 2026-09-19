@@ -263,8 +263,8 @@
           "position": 2,
           "type": "conversation",
           "title": "Je dis où c’est",
-          "childInstruction": "Dis-moi où est l’objet, sans le montrer du doigt.",
-          "adultGuidance": "1. Posez l’objet quelque part. 2. Demandez où il est, sans le doigt. 3. Invitez-le à répondre par une phrase. S’il dit seulement « derrière », acceptez sa réponse et reformulez une fois : « Oui, il est derrière la chaise. » Ne le faites pas répéter. 4. Inversez les rôles.",
+          "childInstruction": "Dis-moi où est l’objet par rapport à toi, sans le montrer du doigt.",
+          "adultGuidance": "1. Posez l’objet devant l’enfant, puis derrière lui, puis à côté de lui. 2. Demandez chaque fois où il est, sans le doigt. 3. Une réponse courte suffit : s’il dit « Derrière moi », c’est une bonne réponse. Reformulez une fois — « Oui, il est derrière toi » — et ne le faites pas répéter. 4. Inversez les rôles : c’est lui qui pose l’objet, et vous dites où il est par rapport à lui.",
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
@@ -284,7 +284,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Tell me where the object is, without pointing."
+              "childInstruction": "Tell me where the object is compared to you, without pointing."
             }
           ],
           "payload": {

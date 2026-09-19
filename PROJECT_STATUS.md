@@ -5,9 +5,9 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-09-17
-Branch:     fix/maternelle-3-week-2-review
-Commit:     develop at b5def49; main at 1b95480
+Date:       2026-09-19
+Branch:     fix/week2-final-corrections
+Commit:     develop at 3783f10; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -576,30 +576,28 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  3ème Week 2 second pass, and the approval-integrity gap closed.
-            - Four more objectives sat on the activity next door: a recap ritual claiming an
-              extended conversation, a weekday activity claiming "énoncer la date", a shape
-              activity that names shapes without the naming objective, and a counting game
-              claiming comparison. All four corrected; nothing moved to preserve a count.
-              Removing the date objective left one lesson with no activity working it, so it
-              left the lesson list too rather than being recollected elsewhere.
-            - ISSUE-026 closed. The digest covered the id of the story and the bytes of its
-              picture, but not the story. A rewritten story slipped under a standing approval.
-              It now covers the kind, the title and every line, and fails closed when a text
-              cannot be resolved. Proved against the old implementation: the old digest did
-              not move when a story was rewritten; the new one does.
-            - 31 of 104 approvals lapsed — exactly those that read a text. None was
-              rubber-stamped. A tool finds the commit that wrote each stored digest and
-              compares every reviewed field, every picture and every resolved story at that
-              revision with the content now; it re-stamps only on proven identity and reports
-              anything else. 104 of 104 proven identical, 0 held back. It was tested by
-              rewriting a story and confirming it refuses.
-            - Two rules made reusable (the date objective, both directions across 25
-              activities; the shape-naming objective). The conversation objective resisted
-              every predicate tried, so it stays a targeted test rather than a bad rule.
-            - Supabase warned that teka-edu-prod may pause. That is ADR-027 working, not a
-              fault: production is deliberately unused. No plan upgrade, no keep-alive job.
-              The readiness checklist now requires PROD to be ACTIVE before any deployment.
+Completed:  3ème Week 2 — the last two inconsistencies, both a lesson saying one thing and
+            its activity doing another.
+            - « Je dis où c'est » claims "situer des objets par rapport à soi", and its
+              summary, its parent guidance and its first activity all do that. The second
+              had drifted: the adult put the object "quelque part" and reformulated "il est
+              derrière la chaise". The frame is the child's body again — in front of, behind
+              and beside the child, and "Derrière moi" is a good answer. No left or right,
+              no new objective.
+            - Bibi's guidance walked through one of the three questions the activity
+              actually asks, then jumped to the child's own experience. It names the three
+              in story order now, accepts a word or a gesture, reformulates without asking
+              for repetition, and connects to the child only afterwards. Story, questions
+              and duration unchanged.
+            - The semantic-diff gate: 4 changed fields out of 3,084 compared across 88
+              lessons, all in the two intended activities. Nothing else moved.
+            - Both lessons' digests moved, as they must. No standing approval lapsed: 104 of
+              104 still verify. The text fingerprint still reaches Bibi — rewriting her
+              story moves the lesson's digest.
+            - One test was made robust rather than re-pinned: it asserted Week 2 had been
+              read exactly twice, which needed editing after every pass. It now asserts what
+              actually matters — no reading has concluded `accepted`, so nothing is
+              approvable — and survives the next one.
 Validation: format, lint, typecheck, unit (305), content (31 files), pgTAP (152) on a fresh
             reset, build, E2E (28), both Docker images, client-bundle scan.
 Cost:       $0.

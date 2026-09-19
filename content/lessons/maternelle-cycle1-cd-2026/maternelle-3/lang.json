@@ -974,7 +974,7 @@
           "type": "listening-story",
           "title": "Comment se sent Bibi ?",
           "childInstruction": "Écoute l’histoire de Bibi. Après, tu me diras comment elle se sent.",
-          "adultGuidance": "1. Lisez l’histoire en entier. 2. Demandez : « Comment se sent Bibi quand mama Lelo arrive ? » 3. Acceptez un seul mot, puis complétez : « Oui, elle est gênée : elle sait qu’elle a fait une bêtise. » 4. Reliez à l’enfant : « Et toi, quand te sens-tu comme ça ? »",
+          "adultGuidance": "1. Lisez l’histoire en entier. 2. Posez les trois questions dans l’ordre de l’histoire : quand Bibi découvre le jardin, quand mama Lelo arrive, et à la fin. 3. Un mot, un geste ou une réponse courte suffisent à chaque fois ; reformulez simplement — « Oui, elle est gênée : elle sait qu’elle a fait une bêtise » — sans faire répéter. 4. Ensuite seulement, reliez une de ces émotions à l’enfant : « Et toi, quand te sens-tu comme ça ? »",
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",

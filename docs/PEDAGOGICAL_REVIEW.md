@@ -29,7 +29,7 @@ Roles, kept distinct on purpose:
 | Batch                                | Date             | Kind                                             | Outcome                                                        | Corrections                    | Status                                 |
 | ------------------------------------ | ---------------- | ------------------------------------------------ | -------------------------------------------------------------- | ------------------------------ | -------------------------------------- |
 | 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 13, then 6, then 2             | **`approved`** — 16 lessons            |
-| 3ème maternelle, Week 2 (days 5–9)   | 2026-09-17, -18  | AI-assisted (ChatGPT), 2 passes                  | `accepted-with-modifications` both                             | 14, then 4                     | `review` — awaiting final confirmation |
+| 3ème maternelle, Week 2 (days 5–9)   | 2026-09-17 → -19 | AI-assisted (ChatGPT), 3 passes                  | `accepted-with-modifications` all three                        | 14, then 4, then 2             | `review` — awaiting final confirmation |
 | 3ème maternelle, Weeks 3–5           | —                | —                                                | not yet reviewed                                               | inherited corrections only     | `review` — 0 approved                  |
 | 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                 | 11 items across the passes     | **`approved`** — 16 lessons            |
 | 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                 | 8 items                        | **`approved`** — 20 lessons            |
@@ -318,6 +318,43 @@ lesson's story and confirming it refuses to re-stamp. The pedagogical decision �
 what they concluded, when — is carried over untouched, because no new reading happened: only the
 definition of what an approval covers got stronger. Recorded as `consequence` entries for 1ère
 Weeks 1–5 and 3ème Week 1, never as new readings.
+
+---
+
+## 3ème maternelle, Week 2 review, 2026-09-19 — accepted with modifications (pass 3)
+
+The four mapping corrections of pass 2 were confirmed, and the ISSUE-026 approval-integrity work
+was reviewed and accepted in principle. Two inconsistencies remained, both about a lesson saying
+one thing and its activity doing another.
+
+**The reference frame drifted.** `m3-time-03` claims _« Situer des objets par rapport à soi »_,
+its summary and parent guidance say everything is said relative to the child's body, and its
+first activity does exactly that. The second had slipped to object-to-object: the adult put the
+object « quelque part » and reformulated « il est derrière **la chaise** ». It is now the child's
+body again — the adult places the object in front of, behind and beside the child, and reformulates
+« Oui, il est derrière **toi** ».
+
+|       | Was                                                                                              | Now                                                                                                                                                         |
+| ----- | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Child | « Dis-moi où est l'objet, sans le montrer du doigt. »                                            | « Dis-moi où est l'objet **par rapport à toi**, sans le montrer du doigt. »                                                                                 |
+| Adult | places the object « quelque part »; invites a full sentence; reformulates « derrière la chaise » | places it in front of / behind / beside **the child**; « Derrière moi » is a good answer; reformulates once « Oui, il est derrière **toi** », no repetition |
+
+No left or right, no new objective: `TIME-SPACE-S02-C01-O16` stands.
+
+**The guidance described one question of three.** `m3-lang-09-a2` asks three emotion questions —
+when Bibi finds the garden, when mama Lelo arrives, and at the end — but the adult guidance walked
+through only the middle one and then jumped to the child's own experience. It now names the three
+in story order, accepts a word, a gesture or a short answer, reformulates without asking for
+repetition, and connects to the child only afterwards. **The story, the three questions and the
+seven minutes are unchanged.**
+
+### The gate that proved nothing else moved
+
+Regenerating and diffing against the package ChatGPT reviewed: **4 changed fields out of 3,084
+compared across 88 lessons** — three on `m3-time-03-a2` (child instruction, adult guidance,
+English scaffold) and one on `m3-lang-09-a2` (adult guidance). Nothing else, child-facing or
+otherwise. Both lessons' digests moved, as they must; **no standing approval lapsed**, because
+neither lesson is approved and nothing they depend on changed for anyone else.
 
 ---
 
