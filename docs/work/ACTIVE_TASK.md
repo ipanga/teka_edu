@@ -10,12 +10,12 @@
 
 ## Task
 
-Apply ChatGPT's second-pass corrections to 3ème maternelle Week 3 and return it for final
-confirmation.
+Approve 3ème maternelle Week 3 after ChatGPT's final `accepted`, and prepare Week 4's package.
 
 ## Objective
 
-A lesson's wording, its declared material and its conduct all match the work it actually sets.
+Week 3 is approved through a gate that still refuses every week nobody has read, and the
+approval changes state and nothing else.
 
 ## Status
 
@@ -23,11 +23,11 @@ A lesson's wording, its declared material and its conduct all match the work it 
 
 ## Branch
 
-`fix/maternelle-3-week-3-second-review`
+`feat/approve-maternelle-3-week-3`
 
 ## Base Branch
 
-`develop` at `3113a95`
+`develop` at `b6f6e6e`
 
 ## Started
 
@@ -35,8 +35,8 @@ A lesson's wording, its declared material and its conduct all match the work it 
 
 ## Last Checkpoint
 
-2026-09-19 — 3 residual corrections (13 of 3,084 fields), 3 reusable rules, 0 approvals lapsed,
-full local suite green.
+2026-09-19 — Week 3 approved (20 lessons), 0 content changes, 144 approved, Week 4 package
+prepared, full local suite green.
 
 ## Scope
 
@@ -66,15 +66,15 @@ full local suite green.
 
 ## Completed
 
-- [x] « Familles » → « catégories » in the Week 3 lesson summary and activity title
-- [x] `vaisselle-incassable` added — a **new narrow material**, because ten approved lessons
-      depend on the household-objects entry it would otherwise have widened
-- [x] `PHYS-S01-C01-O09` **kept, not removed**: the passing game now steps back when it goes
-      well and closer when the ball drops, so it earns « lancer loin et avec précision »
-- [x] Week 4's identical wording corrected as a `consequence`; that week still unread
-- [x] **3 reusable rules**, each proved against the old content; two narrowed after they flagged
-      a ritual that only names a plate and a counting box that lists a cup
-- [x] **13 of 3,084 fields changed**; 124 approved lessons, **0 lapsed**
+- [x] Final `accepted` recorded; the two earlier passes left exactly as they were
+- [x] **Week 3 approved — 20 lessons**, through `scripts/approve-week.ts`
+- [x] Gate tested again: **Weeks 4 and 5 still refused**, neither has an accepted full review
+- [x] **144 approved**, 144 distinct digests, **0 lapsed**, none copied
+- [x] Approval changed state only — **3,084 fields compared, all identical**
+- [x] 3ème **56 / 88** · September **144 / 176** · Beta packages **8 / 10**
+- [x] Re-dated a review I had stamped 2026-09-20 against a clock reading the 19th, and re-ran
+      the approval so the digests and the recorded date agree
+- [x] Week 4 package prepared — unreviewed, unapproved
 
 ## In Progress
 
@@ -82,8 +82,8 @@ full local suite green.
 
 ## Remaining
 
-- [ ] Hand the regenerated `docs/review/2026-2027-maternelle-3-semaine-3.md` back to ChatGPT
-      for its second pass. Do not review or approve it here.
+- [ ] Hand `docs/review/2026-2027-maternelle-3-semaine-4.md` to ChatGPT. Do not review or
+      approve it here.
 
 ## Validation State
 
@@ -102,8 +102,8 @@ full local suite green.
 
 ## Database State
 
-- Local: 21 migrations; `db reset` + 152 pgTAP assertions pass.
-- DEV: not yet updated with `20260919174810_week3_second_review.sql`.
+- Local: 22 migrations; `db reset` + 152 pgTAP assertions pass.
+- DEV: not yet updated with `20260919182510_approve_maternelle_3_week_3.sql`.
 - PROD: untouched.
 
 ## Deployment State
@@ -129,9 +129,9 @@ Commit, open the PR into `develop`, wait for CI, squash-merge, verify staging.
 
 ## Resume Verification
 
-1. `git branch --show-current` is `fix/maternelle-3-week-3-second-review`;
-2. `git log -n 5 --oneline` — branch point is `3113a95`;
+1. `git branch --show-current` is `feat/approve-maternelle-3-week-3`;
+2. `git log -n 5 --oneline` — branch point is `b6f6e6e`;
 3. `git status --short` — read uncommitted work before discarding it;
-4. `gh pr list --head fix/maternelle-3-week-3-second-review` — a PR may already exist;
+4. `gh pr list --head feat/approve-maternelle-3-week-3` — a PR may already exist;
 5. `npx supabase migration list --linked` before assuming DEV needs the migration;
 6. `gh run list --branch develop --limit 3` before assuming a deployment is needed.
