@@ -671,9 +671,9 @@
           "id": "m3-time-07-a2",
           "position": 2,
           "type": "conversation",
-          "title": "Et si on changeait la fin ?",
-          "childInstruction": "Raconte une autre fin pour l’histoire.",
-          "adultGuidance": "1. Demandez ce qui se passerait si la sœur ne rendait pas le caillou. 2. Laissez inventer. 3. Reformulez son idée en deux phrases. 4. Faites redire le début, puis sa nouvelle fin.",
+          "title": "Juste avant, juste après",
+          "childInstruction": "Je te dis un moment de l’histoire. Dis-moi ce qui vient juste avant, puis juste après.",
+          "adultGuidance": "1. Nommez un moment de l’histoire. 2. Demandez ce qui vient juste avant. 3. Puis ce qui vient juste après. 4. Recommencez avec un autre moment. 5. Terminez en lui faisant redire les trois moments dans l’ordre, avec « d’abord », « ensuite », « à la fin ».",
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
@@ -682,25 +682,25 @@
           "materialCodes": ["aucun"],
           "vocabulary": [
             {
-              "fr": "inventer",
-              "en": "to make up"
+              "fr": "juste avant",
+              "en": "just before"
             },
             {
-              "fr": "la fin",
-              "en": "the ending"
+              "fr": "juste après",
+              "en": "just after"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Tell me a different ending for the story."
+              "childInstruction": "I name a moment of the story. Tell me what comes just before, then just after."
             }
           ],
           "payload": {
             "prompts": [
-              "Et si la sœur gardait le caillou ?",
-              "Que ferait Tito ?",
-              "Comment ça finirait ?"
+              "Tito pose ses trois cailloux sur la table. Qu’est-ce qui vient juste avant ?",
+              "Et juste après ?",
+              "Maintenant, redis les trois moments dans l’ordre."
             ]
           }
         }

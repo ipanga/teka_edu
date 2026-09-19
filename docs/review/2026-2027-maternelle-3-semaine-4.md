@@ -41,10 +41,8 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-**Cette semaine n’a encore jamais été relue.** Ce qui suit n’est donc pas
-l’historique de ses relectures : ce sont des corrections qui lui sont arrivées
-parce qu’un défaut trouvé dans une autre semaine existait ici à l’identique.
-Elles sont déjà appliquées au contenu que vous lisez ci-dessous.
+Cette semaine a déjà été relue 1 fois. Ce qui suit est l’historique,
+pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
 
@@ -69,6 +67,12 @@ Changement arrivé dans cette semaine sans relecture propre : il vient d’une c
 Changement arrivé dans cette semaine sans relecture propre : il vient d’une correction demandée sur la semaine 3.
 
 **Suites données :** « Trois familles de mots » (jour 19) devient « Trois catégories de mots », et le résumé, la guidance et le lexique disent « catégorie » au lieu de « famille de mots ». C’est le même point de vocabulaire que la semaine 3 a fait corriger au jour 12 : la tâche range des mots par catégorie sémantique, pas par famille morphologique. La procédure de tri, l’objectif, la durée et la progression ne changent pas. Cette semaine n’a toujours pas reçu sa relecture pédagogique complète.
+
+### 2026-09-19 — ChatGPT · `accepted-with-modifications` (ai-assisted)
+
+Première vraie relecture pédagogique complète de la semaine 4. Les entrées précédentes de cette semaine ne sont pas des relectures : ce sont des corrections héritées des semaines 1 à 3. La structure est acceptée. Dix points ont été demandés. Objectifs mal attribués : « Je pose le bon nombre d’objets » ne revendiquait que la construction de la bande numérique alors que l’enfant lit un nombre écrit et constitue la collection correspondante ; « Le jeu des appuis » revendiquait des équilibres construits par des déplacements alors qu’on y reste immobile ; « Statue ! » revendiquait le respect des règles de sécurité, que l’enfant n’y travaille pas ; « D’abord, ensuite, à la fin » s’appuyait sur la conversation alors que l’enfant remet une histoire dans l’ordre ; le rituel du jour 18 demandait des rimes et revendiquait la conversation ; « Je dessine avec des formes » revendiquait le tri sans rien trier ; « Et si on changeait la fin ? » inventait une fin dans une leçon de chronologie ; et « D’un animal à l’autre » revendiquait la danse alors que la leçon, son résumé et sa guidance parlent d’endurance. Conduite et sécurité : le repli de l’activité de rimes proposait deux choix sans dire de quel mot il s’agissait ; le parcours des formes faisait marcher, et sauter à cloche-pied, sur des feuilles libres qui glissent ; le matériel de « La forme et l’objet » ne fournissait pas de faces planes utilisables ; et les besoins d’un animal et d’une plante étaient donnés dans la même liste.
+
+**Suites données :** Toutes appliquées, avec des objectifs officiels existants uniquement. « Je pose le bon nombre d’objets » porte « associer une quantité, le nom d’un nombre et une écriture chiffrée », dont la fenêtre du plan annuel s’ouvre au jour 15, et reprend « constituer une collection d’un cardinal donné ». « Le jeu des appuis » marche trois pas, s’arrête en équilibre, repart et change de pied : l’objectif est désormais gagné, et tout reste au sol. « Statue ! » ne revendique plus la sécurité — une note destinée à l’adulte ne prouve pas un apprentissage de l’enfant. « D’abord, ensuite, à la fin » porte « restituer la chronologie des actions majeures d’une histoire simple », et le rituel du jour 18 porte les rimes qu’il demande vraiment. « Je dessine avec des formes » porte « décrire et nommer ». « Et si on changeait la fin ? » devient « Juste avant, juste après », qui travaille l’ordre. « D’un animal à l’autre » porte « courir de plus en plus longtemps sans s’arrêter » : c’est ce que la leçon fait déjà, et la danse reste travaillée cinq autres jours du mois. Le repli des rimes nomme la cible et les deux choix. Les formes du parcours sont tracées à la craie ou fixées, et le cloche-pied est interdit sur une feuille libre. Un matériel étroit a été ajouté — des objets de la maison à faces planes — plutôt que d’élargir celui des objets de la maison, dont dépendent des leçons approuvées. Et les besoins sont séparés : nourriture, eau et abri pour l’animal ; eau, lumière et terre pour la plante, qui ne mange pas. L’activité fonctionne sans animal ni plante à la maison, et l’enfant ne touche ni ne nourrit un animal ou une plante qu’il ne connait pas. Aucune leçon n’est approuvée : les 20 restent en relecture.
 
 ## Jour 15 — 2026-09-21
 
@@ -518,9 +522,11 @@ _Situer un nombre par rapport à ses voisins._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Servez-vous de la bande fabriquée hier. « Avant » et « après » se montrent avec le doigt avant de se dire.
 - **Objectifs enseignés :**
+  - `MATH-S01-C01-O08` — Associer une quantité, le nom d’un nombre et une écriture chiffrée. _(source : programme-2024-mathematiques)_
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C02-O06` — Construire la bande numérique jusqu’à dix.
   - `MATH-S01-C01-O26` — Connaitre et utiliser la comptine numérique jusqu’à trente.
+  - `MATH-S01-C01-O21` — Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
 #### 1. Le nombre caché — 5 min, sans interaction écran (counting)
 
@@ -542,25 +548,7 @@ _Situer un nombre par rapport à ses voisins._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Put as many objects as the number I point to. »
-- **Objectifs travaillés :** `MATH-S01-C02-O06` Construire la bande numérique jusqu’à dix.
-
-**Réussites attendues — texte officiel pour la compétence « Exprimer un rang ou une position par un nombre » (from-5) :**
-
-- Repérer par perception visuelle le premier, le dernier, le deuxième et l’avant-dernier des éléments d’une suite ordonnée.
-- Repérer à l’aide d’une procédure de comptage le rang d’un élément d’une suite ordonnée comportant au plus dix éléments.
-- Déterminer un rang dans une suite ordonnée (contenant jusqu’à dix objets) dont on a changé le point de départ ou le sens du parcours.
-  Par exemple, si l’enseignant aligne dix cartes identiques sur une table, qu’à l’une des extrémités il positionne un disque bleu, à l’autre un disque rouge et qu’il cache sous l’une des cartes un dessin d’escargot, l’élève est capable de décrire oralement la position de celui-ci. Différentes verbalisations sont possibles. Par exemple : « Je pars du disque rouge et je compte neuf cartes », « je compte les cartes en partant du disque rouge, quand je suis arrivé à neuf, c’est la bonne carte », « l’escargot est sous la sixième carte en partant du disque bleu », « l’escargot est sous la neuvième carte en partant du disque rouge ».
-  Ou encore, si l’enseignant présente au tableau un modèle de suite orientée (un train, une chainette, etc.) contenant des symboles et fournit à l’élève une feuille représentant le même dispositif, mais vide, l’élève est capable de positionner dans le dispositif, au même endroit que sur le modèle, un symbole qu’il a tiré au hasard. Différentes variantes organisationnelles peuvent être progressivement proposées :
-  • modèle visible ;
-  • modèle caché mais accessible en se déplaçant (pour travailler la mémoire des positions) ;
-  • un élève ayant connaissance du modèle doit communiquer les informations aux autres pour qu’ils le reproduisent.
-- Verbaliser la procédure permettant de déterminer la position résultant d’un avancement ou d’un recul à partir d’une position initiale.
-- Exploiter les compositions et les décompositions des nombres jusqu’à dix.
-- Positionner des représentations (constellation du dé, doigts, écriture chiffrée, représentation verticale de la quantité associée) des nombres inférieurs ou égaux à dix dans les premières cases de la bande numérique.
-- Placer un objet dans une case correspondant à une position donnée.
-- Compléter une bande numérique lacunaire.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+- **Objectifs travaillés :** `MATH-S01-C01-O08` Associer une quantité, le nom d’un nombre et une écriture chiffrée. ; `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**
 
@@ -603,6 +591,24 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
+**Réussites attendues — texte officiel pour la compétence « Exprimer un rang ou une position par un nombre » (from-5) :**
+
+- Repérer par perception visuelle le premier, le dernier, le deuxième et l’avant-dernier des éléments d’une suite ordonnée.
+- Repérer à l’aide d’une procédure de comptage le rang d’un élément d’une suite ordonnée comportant au plus dix éléments.
+- Déterminer un rang dans une suite ordonnée (contenant jusqu’à dix objets) dont on a changé le point de départ ou le sens du parcours.
+  Par exemple, si l’enseignant aligne dix cartes identiques sur une table, qu’à l’une des extrémités il positionne un disque bleu, à l’autre un disque rouge et qu’il cache sous l’une des cartes un dessin d’escargot, l’élève est capable de décrire oralement la position de celui-ci. Différentes verbalisations sont possibles. Par exemple : « Je pars du disque rouge et je compte neuf cartes », « je compte les cartes en partant du disque rouge, quand je suis arrivé à neuf, c’est la bonne carte », « l’escargot est sous la sixième carte en partant du disque bleu », « l’escargot est sous la neuvième carte en partant du disque rouge ».
+  Ou encore, si l’enseignant présente au tableau un modèle de suite orientée (un train, une chainette, etc.) contenant des symboles et fournit à l’élève une feuille représentant le même dispositif, mais vide, l’élève est capable de positionner dans le dispositif, au même endroit que sur le modèle, un symbole qu’il a tiré au hasard. Différentes variantes organisationnelles peuvent être progressivement proposées :
+  • modèle visible ;
+  • modèle caché mais accessible en se déplaçant (pour travailler la mémoire des positions) ;
+  • un élève ayant connaissance du modèle doit communiquer les informations aux autres pour qu’ils le reproduisent.
+- Verbaliser la procédure permettant de déterminer la position résultant d’un avancement ou d’un recul à partir d’une position initiale.
+- Exploiter les compositions et les décompositions des nombres jusqu’à dix.
+- Positionner des représentations (constellation du dé, doigts, écriture chiffrée, représentation verticale de la quantité associée) des nombres inférieurs ou égaux à dix dans les premières cases de la bande numérique.
+- Placer un objet dans une case correspondant à une position donnée.
+- Compléter une bande numérique lacunaire.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -622,7 +628,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ### Un pied, deux pieds — Agir, s’exprimer, comprendre à travers les activités physiques (6 min)
 
-_Varier les appuis en gardant l’équilibre._
+_Marcher, s’arrêter en équilibre sur un pied, et repartir._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Restez tout près. Comptez à voix haute pendant qu’il tient : cela l’aide à durer.
@@ -632,13 +638,13 @@ _Varier les appuis en gardant l’équilibre._
 
 #### 1. Le jeu des appuis — 6 min, sans interaction écran (movement)
 
-- **Consigne à l’enfant :** « Tiens sur un pied pendant que je compte jusqu’à cinq. Puis change de pied. »
-- **Guidance adulte :** 1. Montrez d’abord. 2. Comptez jusqu’à cinq. 3. Changez de pied. 4. Ajoutez une difficulté seulement si c’est facile : les bras écartés, puis les yeux sur un point fixe.
+- **Consigne à l’enfant :** « Marche trois pas, arrête-toi sur un pied, puis repars. Recommence sur l’autre pied. »
+- **Guidance adulte :** 1. Montrez d’abord : trois ou quatre pas, puis un arrêt sur un pied. 2. Comptez jusqu’à trois pendant qu’il tient, puis dites « repars ». 3. Au prochain arrêt, l’autre pied. 4. Restez tout près, prêt à lui donner la main. 5. Si c’est facile, posez un tissu à plat au sol à enjamber juste avant l’arrêt. Rien de haut, rien à escalader : tout se passe au sol.
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **Lexique visé :** l’équilibre _(balance)_ · changer _(to change)_
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
-- **Aide en anglais (optionnelle) :** « Stand on one foot while I count to five, then change feet. »
+- **Aide en anglais (optionnelle) :** « Walk three steps, stop and balance on one foot, then walk on. Do it again on the other foot. »
 - **Objectifs travaillés :** `PHYS-S02-C01-O05` Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions.
 
 **Réussites attendues — texte officiel pour la compétence « Tourner, se suspendre, se renverser, grimper, rouler, glisser, nager » (from-5) :**
@@ -761,7 +767,7 @@ _Produire un mot qui rime, après l’avoir reconnu._
 #### 2. À toi de trouver — 8 min, sans interaction écran (phonology)
 
 - **Consigne à l’enfant :** « Je dis un mot. Trouve un mot qui finit pareil. »
-- **Guidance adulte :** 1. Donnez le modèle : « maison… poisson ! » 2. Proposez un mot et attendez. 3. Si rien ne vient, donnez deux choix : « chapeau ou banane ? » 4. Acceptez les mots inventés et dites pourquoi ils marchent : « Oui, ça finit pareil. »
+- **Guidance adulte :** 1. Donnez le modèle : « maison… poisson ! » 2. Proposez un mot et attendez. 3. Si rien ne vient, redites le mot cible et donnez deux choix dont un seul rime : pour « bateau », « chapeau ou banane ? » ; pour « chat », « rat ou maison ? » 4. Acceptez les mots inventés et dites pourquoi ils marchent : « Oui, ça finit pareil. » On écoute la fin du mot, on n’écrit rien.
 - **Matériel :** Aucun matériel
 - **Lexique visé :** trouver _(to find)_ · la rime _(the rhyme)_
 - **Aide en anglais (optionnelle) :** « I say a word. Find a word that ends the same way. »
@@ -941,7 +947,6 @@ _S’immobiliser complètement au signal : contrôler son corps._
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S02-C01-O05` — Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions.
-  - `PHYS-S02-C01-O07` — Respecter les règles de sécurité pour soi et pour les autres.
 
 #### 1. Statue ! — 6 min, sans interaction écran (movement)
 
@@ -952,7 +957,7 @@ _S’immobiliser complètement au signal : contrôler son corps._
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
 - **Aide en anglais (optionnelle) :** « Move while there is music. When I say statue, freeze. »
-- **Objectifs travaillés :** `PHYS-S02-C01-O05` Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions. ; `PHYS-S02-C01-O07` Respecter les règles de sécurité pour soi et pour les autres.
+- **Objectifs travaillés :** `PHYS-S02-C01-O05` Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions.
 
 **Réussites attendues — texte officiel pour la compétence « Tourner, se suspendre, se renverser, grimper, rouler, glisser, nager » (from-5) :**
 
@@ -1041,7 +1046,7 @@ _Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences di
 temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
 l’autre — l’appareil est alors le sien._
 
-**Matériel à préparer :** Aucun matériel, Crayon, Espace dégagé pour bouger (à l’intérieur ou dehors), Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque), Objets de la maison (coussins, chaises, bâton, tissu), Feuille de papier
+**Matériel à préparer :** Aucun matériel, Crayon, Espace dégagé pour bouger (à l’intérieur ou dehors), Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque), Objets de la maison à faces planes (cahier, boite en carton, assiette, couvercle), Feuille de papier
 
 ### Je raconte dans l’ordre — Le développement et la structuration du langage oral et écrit (13 min)
 
@@ -1050,9 +1055,10 @@ _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Servez-vous des mots de l’ordre : d’abord, ensuite, puis, à la fin. Ce sont eux qui structurent le récit.
 - **Objectifs enseignés :**
+  - `TIME-SPACE-S01-C02-O06` — Restituer la chronologie des actions majeures d’une histoire simple. _(source : programme-2026)_
 - **Objectifs repris (déjà vus) :**
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
-  - `LANG-S01-C04-O11` — Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
+  - `LANG-S02-C01-O15` — Repérer et produire des rimes et des assonances.
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
 
 #### 1. Le rituel : la date et la révision — 2 min, sans interaction écran (conversation)
@@ -1061,7 +1067,7 @@ _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes jeudi 24 septembre 2026. » Puis demandez deux mots qui riment. Acceptez les mots inventés : ce qui compte est d’entendre la fin pareille.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Say the date, then give me two rhyming words. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C04-O11` Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S02-C01-O15` Repérer et produire des rimes et des assonances.
 
 #### 2. D’abord, ensuite, à la fin — 8 min, sans interaction écran (conversation)
 
@@ -1070,7 +1076,7 @@ _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les
 - **Matériel :** Aucun matériel
 - **Lexique visé :** d’abord _(first)_ · ensuite _(then)_ · à la fin _(at the end)_
 - **Aide en anglais (optionnelle) :** « Tell the story of the three stones: first, then, at the end. »
-- **Objectifs travaillés :** `LANG-S01-C04-O11` Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C02-O06` Restituer la chronologie des actions majeures d’une histoire simple.
 
 #### 3. Le temps de lecture — 3 min, sans interaction écran (read-aloud)
 
@@ -1098,6 +1104,15 @@ _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les
 
 - **Image montrée pendant la lecture :** `histoire-cailloux` — Trois cailloux : un rond, un plat et un pointu (`public/media/illustrations/histoire-cailloux.svg`)
 
+**Réussites attendues — texte officiel pour la compétence « S’approprier la notion de chronologie » (from-5) :**
+
+- Établir la liste des différentes étapes d’une construction ou d’une fabrication en utilisant les mots : d’abord, ensuite, puis, après, enfin, à la fin.
+- Reconstruire oralement la structure d’une histoire : « Le Petit Poucet marchait derrière ses parents dans la forêt, il avait pris des petits cailloux avant de partir pour les semer. Il allait pouvoir ainsi retrouver son chemin. »
+- Évoquer la succession des évènements importants pour la classe les uns par rapport aux autres : « En novembre, on est allé à la ferme et l’anniversaire de Camille c’était après les vacances de Noël. »
+- Participer à l’invention d’une histoire en utilisant les temps du présent, du passé et du futur ainsi que les termes : avant, après, pendant, bien avant, bien après, en même temps, soudain, immédiatement, de temps en temps, tôt, tard, autrefois, aussitôt, etc.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
 - Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
@@ -1109,12 +1124,12 @@ _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
-**Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (from-5) :**
+**Réussites attendues — texte officiel pour la compétence « Acquérir les habiletés phonologiques et le principe alphabétique » (from-5) :**
 
-- Dire : « Pour acheter les fruits du gouter, il faudrait compter les élèves de la classe. »
-- Dire : « Si on voulait de la peinture verte, il faudrait mélanger du jaune avec du bleu. »
-- Dire : « Peut-être que Corentin a mis la peinture avant de dessiner avec les feutres. »
-- Suffisamment se décentrer et identifier les informations qu’on doit communiquer pour qu’un interlocuteur qui n’a pas vécu la situation évoquée puisse la comprendre.
+- Fusionner les syllabes d’attaque de POISSON et la syllabe finale de SOURIS pour obtenir un pseudo-mot POIRIS.
+- Trouver le son /f/ dans une liste de mots.
+- Trouver l’intrus à l’initiale entre sac/Sacha/cartable
+- Localiser un phonème dans un mot.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -1158,11 +1173,10 @@ _Retrouver les formes planes sur les objets réels._
 
 - **Consigne à l’enfant :** « Pose la forme en papier sur un objet qui a la même face. »
 - **Guidance adulte :** 1. Donnez une forme. 2. Cherchez ensemble un objet dont une face lui ressemble. 3. Posez la forme dessus pour vérifier. 4. Faites nommer : « La face du cahier est un rectangle. »
-- **Matériel :** Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque), Objets de la maison (coussins, chaises, bâton, tissu)
+- **Matériel :** Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque), Objets de la maison à faces planes (cahier, boite en carton, assiette, couvercle)
 - **Lexique visé :** la face _(the face)_ · poser _(to place)_
 - **À défaut :** Dessinez les formes sur une feuille et découpez-les, ou tracez-les directement sur le sol ou sur le sable ; à défaut, servez-vous de morceaux de carton d’emballage.
-- **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
-- **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
+- **À défaut :** Un cahier, un livre, une boite en carton, une assiette, un couvercle rond, un emballage : tout objet du quotidien dont une face est bien plate.
 - **Aide en anglais (optionnelle) :** « Put the paper shape on an object with the same face. »
 - **Images montrées à l'enfant (4) :**
 
@@ -1189,7 +1203,7 @@ _Retrouver les formes planes sur les objets réels._
   - `forme-triangle` — Un triangle (`public/media/shapes/forme-triangle.svg`)
   - `forme-disque` — Un disque, tout rond (`public/media/shapes/forme-disque.svg`)
 
-- **Objectifs travaillés :** `MATH-S03-C01-O07` Reconnaitre, trier et classer des formes géométriques planes, indépendamment d’autres critères comme la couleur, la taille, l’orientation.
+- **Objectifs travaillés :** `MATH-S03-C01-O08` Décrire et nommer quelques figures géométriques simples : carré, rectangle, triangle, disque.
 
 **Réussites attendues — texte officiel pour la compétence « Explorer les solides et les formes planes » (from-5) :**
 
@@ -1225,7 +1239,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 _Suivre un parcours en nommant les formes rencontrées._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
-- **Conseil au parent :** On relie le mouvement et les formes du mois : l’enfant nomme avant de passer.
+- **Conseil au parent :** On relie le mouvement et les formes du mois : l’enfant nomme avant de passer. Les formes doivent être tracées au sol ou bien fixées : une feuille qui glisse sous le pied fait tomber.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S02-C01-O05` — Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions.
@@ -1233,7 +1247,7 @@ _Suivre un parcours en nommant les formes rencontrées._
 #### 1. Marche sur les formes — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Marche d’une forme à l’autre en disant son nom avant de poser le pied. »
-- **Guidance adulte :** 1. Posez les formes en papier au sol, espacées d’un pas. 2. L’enfant nomme puis avance. 3. Refaites à cloche-pied si c’est facile. 4. Terminez en revenant en arrière.
+- **Guidance adulte :** 1. Tracez les formes à la craie au sol, ou fixez bien les formes en papier avec du ruban — une feuille libre glisse sous le pied. 2. Espacez-les d’un pas. 3. L’enfant nomme la forme, puis avance dessus. 4. Terminez en revenant en arrière. 5. Si les formes ne sont pas fixées, posez-les **à côté** des endroits où il pose le pied, et ne faites jamais de cloche-pied sur une feuille.
 - **Matériel :** Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque), Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **Lexique visé :** le pas _(the step)_ · la forme _(the shape)_
 - **À défaut :** Dessinez les formes sur une feuille et découpez-les, ou tracez-les directement sur le sol ou sur le sable ; à défaut, servez-vous de morceaux de carton d’emballage.
@@ -1289,13 +1303,13 @@ _Ordonner les moments d’une histoire connue._
 - **Aide en anglais (optionnelle) :** « Put the three moments of the story in order. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C02-O08` Repérer les différentes étapes d’un processus ou d’un évènement vécu et les ordonner.
 
-#### 2. Et si on changeait la fin ? — 3 min, sans interaction écran (conversation)
+#### 2. Juste avant, juste après — 3 min, sans interaction écran (conversation)
 
-- **Consigne à l’enfant :** « Raconte une autre fin pour l’histoire. »
-- **Guidance adulte :** 1. Demandez ce qui se passerait si la sœur ne rendait pas le caillou. 2. Laissez inventer. 3. Reformulez son idée en deux phrases. 4. Faites redire le début, puis sa nouvelle fin.
+- **Consigne à l’enfant :** « Je te dis un moment de l’histoire. Dis-moi ce qui vient juste avant, puis juste après. »
+- **Guidance adulte :** 1. Nommez un moment de l’histoire. 2. Demandez ce qui vient juste avant. 3. Puis ce qui vient juste après. 4. Recommencez avec un autre moment. 5. Terminez en lui faisant redire les trois moments dans l’ordre, avec « d’abord », « ensuite », « à la fin ».
 - **Matériel :** Aucun matériel
-- **Lexique visé :** inventer _(to make up)_ · la fin _(the ending)_
-- **Aide en anglais (optionnelle) :** « Tell me a different ending for the story. »
+- **Lexique visé :** juste avant _(just before)_ · juste après _(just after)_
+- **Aide en anglais (optionnelle) :** « I name a moment of the story. Tell me what comes just before, then just after. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C02-O08` Repérer les différentes étapes d’un processus ou d’un évènement vécu et les ordonner.
 
 **Réussites attendues — texte officiel pour la compétence « S’approprier la notion de chronologie » (from-5) :**
@@ -1330,7 +1344,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 - **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
   activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
-- **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
+- **Temps où l’enfant regarde une image à l’écran : 4 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
 
@@ -1556,7 +1570,7 @@ _Enchainer des déplacements variés sur une durée plus longue._
 - **Conseil au parent :** Reprise des déplacements du mois, en jeu. On ne cherche pas la performance mais l’endurance et le plaisir.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
-  - `PHYS-S03-C01-O09` — Danser, seul ou à plusieurs, en créant et en reproduisant un ou plusieurs gestes et déplacements.
+  - `PHYS-S01-C01-O10` — Courir de plus en plus longtemps sans s’arrêter.
 
 #### 1. D’un animal à l’autre — 6 min, sans interaction écran (movement)
 
@@ -1567,15 +1581,15 @@ _Enchainer des déplacements variés sur une durée plus longue._
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
 - **Aide en anglais (optionnelle) :** « Cross the room like the goat, come back like the lizard. »
-- **Objectifs travaillés :** `PHYS-S03-C01-O09` Danser, seul ou à plusieurs, en créant et en reproduisant un ou plusieurs gestes et déplacements.
+- **Objectifs travaillés :** `PHYS-S01-C01-O10` Courir de plus en plus longtemps sans s’arrêter.
 
-**Réussites attendues — texte officiel pour la compétence « Explorer, s’exprimer, danser, observer » (from-5) :**
+**Réussites attendues — texte officiel pour la compétence « Manipuler, courir, sauter, lancer, s’orienter » (from-5) :**
 
-- Danser « grand » (le corps étiré) ou danser « petit » (le corps resserré), jongler avec deux foulards, s’équilibrer sur un rolla bolla, etc.
-- Reproduire un mouvement très lent ou très rapide, de façon continue, fluide, discontinue, saccadée sur une musique en utilisant l’espace scénique.
-- Danser en miroir, en parallèle, en contact, en prenant appui sur son partenaire, etc.
-- Danser par deux, en demi-groupe, en groupe, en respectant une chorégraphie simple (une entrée en scène, un développement, une fin marquée).
-- Observer ses camarades danser puis exprimer verbalement une émotion et formuler un conseil pour les faire progresser.
+- Lancer une balle lestée, un anneau, un cerceau, un petit javelot avec élan (quelques pas de déplacement), pour atteindre une zone de plus en plus éloignée.
+- Courir en limitant les arrêts sur une durée d’effort matérialisée par un support musical ou un sablier.
+- Courir vite et franchir une rivière matérialisée avec des lattes sans ralentir.
+- Courir puis sauter haut ou loin après une impulsion sur un pied pour franchir un obstacle et se réceptionner sur deux pieds.
+- Trouver au moins cinq éléments remarquables et repérables sur plusieurs photographies prises par les professeurs dans un lieu extérieur à l’école (cour de récréation, terrain de sport, stade, parc…), en l’absence des élèves ou lors d’une séance précédente.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -1601,7 +1615,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 _Dire et faire ce qu’il faut pour qu’un être vivant aille bien._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
-- **Conseil au parent :** On passe du savoir à l’acte : arroser, nourrir, donner de l’eau. Quelque chose de vrai, même tout petit.
+- **Conseil au parent :** Un animal et une plante n’ont pas les mêmes besoins : ne les mélangez pas. Vous n’avez besoin ni d’un animal ni d’une plante à la maison — une plante du chemin, un animal du quartier vu de loin, ou l’image du dossier suffisent. L’enfant ne touche ni ne nourrit un animal qu’il ne connait pas, et ne manipule pas une plante inconnue : tout geste de soin est choisi et surveillé par l’adulte.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `WORLD-S01-C01-O10` — Décrire les besoins essentiels de quelques animaux ou de végétaux.
@@ -1609,7 +1623,7 @@ _Dire et faire ce qu’il faut pour qu’un être vivant aille bien._
 #### 1. Ce dont il a besoin — 4 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Choisis un animal ou une plante, et dis tout ce qu’il lui faut. »
-- **Guidance adulte :** 1. Laissez choisir. 2. Faites lister : manger, boire, un abri ou de la lumière. 3. Demandez ce qui arrive si un besoin manque. 4. Décidez ensemble d’un geste à faire ce soir.
+- **Guidance adulte :** 1. Laissez choisir un animal **ou** une plante. 2. **Si c’est un animal** : de la nourriture qui lui convient, de l’eau, un endroit sûr où dormir, et les soins propres à cet animal — tous ne mangent pas la même chose. 3. **Si c’est une plante** : de l’eau, la lumière qui lui convient, et de la terre ou un endroit où pousser. Une plante ne mange pas comme un animal. 4. Demandez ce qui arrive si un besoin manque. 5. Décidez ensemble d’un geste à faire ce soir — c’est vous qui le choisissez et qui l’accompagnez.
 - **Matériel :** Aucun matériel
 - **Lexique visé :** prendre soin _(to take care)_ · nourrir _(to feed)_ · arroser _(to water)_
 - **Aide en anglais (optionnelle) :** « Choose an animal or a plant and say what it needs. »
@@ -1617,11 +1631,16 @@ _Dire et faire ce qu’il faut pour qu’un être vivant aille bien._
 
 #### 2. Je regarde et je raconte — 3 min, sans interaction écran (observation)
 
-- **Consigne à l’enfant :** « Regarde-le bien et dis-moi ce que tu remarques aujourd’hui. »
-- **Guidance adulte :** 1. Observez ensemble une minute, en silence. 2. Demandez ce qu’il remarque. 3. Comparez avec la dernière fois. 4. Concluez : observer, c’est regarder longtemps.
+- **Consigne à l’enfant :** « Regarde-le bien : est-ce qu’il a ce qu’il lui faut aujourd’hui ? »
+- **Guidance adulte :** 1. Observez ensemble une minute, en silence — de loin s’il s’agit d’un animal. 2. Demandez ce qu’il remarque. 3. Reliez à ce qui lui faut : « Est-ce que la terre est sèche ? » « Est-ce qu’il lui reste de l’eau ? » 4. Comparez avec la dernière fois. 5. Si vous n’avez ni plante ni animal sous la main, servez-vous de l’image : on regarde, on dit ce qu’on voit, on dit ce qu’il lui faudrait.
 - **Matériel :** Aucun matériel
 - **Lexique visé :** remarquer _(to notice)_
-- **Aide en anglais (optionnelle) :** « Look closely and tell me what you notice today. »
+- **Aide en anglais (optionnelle) :** « Look closely: does it have what it needs today? »
+- **Images montrées à l'enfant (2) :**
+
+  - `plante-parties` — Une plante avec ses feuilles, sa tige et ses racines sous la terre (`public/media/illustrations/plante-parties.svg`)
+  - `animal-chevre` — Une chèvre (`public/media/animals/animal-chevre.svg`)
+
 - **Objectifs travaillés :** `WORLD-S01-C01-O10` Décrire les besoins essentiels de quelques animaux ou de végétaux.
 
 **Réussites attendues — texte officiel pour la compétence « Découvrir les animaux et les végétaux » (from-5) :**

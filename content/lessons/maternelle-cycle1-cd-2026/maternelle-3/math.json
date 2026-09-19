@@ -1412,8 +1412,8 @@
       "domainCode": "MATH",
       "title": "Avant et après sur la bande",
       "summary": "Situer un nombre par rapport à ses voisins.",
-      "objectiveCodes": [],
-      "supportingObjectiveCodes": ["MATH-S01-C02-O06", "MATH-S01-C01-O26"],
+      "objectiveCodes": ["MATH-S01-C01-O08"],
+      "supportingObjectiveCodes": ["MATH-S01-C02-O06", "MATH-S01-C01-O26", "MATH-S01-C01-O21"],
       "stage": "consolidation",
       "difficulty": 3,
       "themeId": "au-marche",
@@ -1464,7 +1464,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["MATH-S01-C02-O06"],
+          "objectiveCodes": ["MATH-S01-C01-O08", "MATH-S01-C01-O21"],
           "materialCodes": ["papier", "petits-objets"],
           "vocabulary": [
             {
@@ -1599,7 +1599,7 @@
           "role": "teach",
           "mediaIds": ["forme-carre", "forme-rectangle", "forme-triangle", "forme-disque"],
           "objectiveCodes": ["MATH-S03-C01-O07", "MATH-S03-C01-O08"],
-          "materialCodes": ["formes-papier", "objets-maison"],
+          "materialCodes": ["formes-papier", "objets-faces-planes"],
           "vocabulary": [
             {
               "fr": "la face",
@@ -1636,7 +1636,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": ["forme-carre", "forme-rectangle", "forme-triangle", "forme-disque"],
-          "objectiveCodes": ["MATH-S03-C01-O07"],
+          "objectiveCodes": ["MATH-S03-C01-O08"],
           "materialCodes": ["papier", "crayon"],
           "vocabulary": [
             {

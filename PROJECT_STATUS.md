@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-19
-Branch:     feat/approve-maternelle-3-week-3
-Commit:     develop at b6f6e6e; main at 1b95480
+Branch:     fix/maternelle-3-week-4-first-review
+Commit:     develop at c15d535; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -505,11 +505,11 @@ GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891,
 
 ## Content Status
 
-| Class           | Curriculum mapping     | Week 1                                                                        | Week 2      | Full year   |
-| --------------- | ---------------------- | ----------------------------------------------------------------------------- | ----------- | ----------- |
-| 1ère maternelle | DONE (band `before-4`) | Not started                                                                   | Not started | Not started |
-| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                   | Not started | Not started |
-| 3ème maternelle | DONE (band `from-5`)   | Weeks 1–3 **approved** (56 lessons); Weeks 4–5 written, not yet reviewed (32) | Not started | Not started |
+| Class           | Curriculum mapping     | Week 1                                                                                             | Week 2      | Full year   |
+| --------------- | ---------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| 1ère maternelle | DONE (band `before-4`) | Not started                                                                                        | Not started | Not started |
+| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                                        | Not started | Not started |
+| 3ème maternelle | DONE (band `from-5`)   | Weeks 1–3 **approved** (56); Week 4 reviewed once and corrected (20); Week 5 not yet reviewed (12) | Not started | Not started |
 
 DRC 2026–2027 calendar data: DONE (official MINEDU-NC calendar and Ordonnance n° 23/042; 189 instructional days).
 Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 official objectives and 529 success examples** imported with provenance.
@@ -576,25 +576,36 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  3ème maternelle Week 3 is approved — 56 of 88, September at 144 of 176.
-            - ChatGPT's third pass concluded `accepted` with nothing further to correct. The
-              history keeps all three: two accepted-with-modifications, then accepted, plus
-              two inherited consequence entries that are not readings of this week.
-            - Approved through the same gate as Weeks 1 and 2, which was tested again and
-              still refuses Weeks 4 and 5 because neither has an accepted full review.
-            - 144 approved lessons, 144 distinct digests, 0 lapsed, none copied.
-            - The approval changed state and nothing else: the field-by-field diff against
-              the confirmed revision reports 3,084 fields compared, all identical. No
-              child-facing, adult-guidance, material, objective or story change.
-            - One thing I got wrong and fixed: I dated the review 2026-09-20 when the clock
-              said the 19th. Rather than leave a review dated in the future, I re-dated the
-              entry, put the twenty lessons back to `review`, and re-ran the approval so the
-              digests and the recorded date agree.
-            - Beta weekly packages: 8 of 10. The remaining gate is 3ème Weeks 4 and 5.
-Validation: format, lint, typecheck, unit (314), content (31 files), pgTAP (152) on a fresh
-            reset (DB shows 144 approved / 32 review), build, E2E (28), both Docker images,
-            client-bundle scan.
+Completed:  3ème maternelle Week 4 — its first actual full review, 10 corrections applied.
+            - Its four earlier history entries were inherited corrections from Weeks 1-3, not
+              readings. This is the first time anyone has read the week.
+            - Seven objectives did not match their task: a numeral-to-quantity activity filed
+              as building the number strip, a static balance claiming equilibrium through
+              displacement, a freeze game claiming safety rules, a rhyme ritual claiming
+              conversation, story-ordering claiming reformulation, drawing claiming sorting,
+              and varied running claiming dance.
+            - On the dance one I took the alternative rather than the preferred direction.
+              The lesson is called "La course des animaux", its summary says "sur une durée
+              plus longue" and its guidance says endurance. Rewriting it into a dance to fit
+              a code would have changed a lesson the review otherwise accepted; the content
+              already earns "courir de plus en plus longtemps", and dance is worked on five
+              other days.
+            - The rhyme fallback offered two choices without saying which word to rhyme with,
+              so the adult could not know the answer either. It names the target now.
+            - The shape pathway had a child walking, and hopping, on loose sheets of paper.
+              They are chalked or taped down, and hopping on a loose sheet is ruled out.
+            - A narrow material was added for objects with flat faces rather than widening the
+              generic household box, which approved lessons depend on.
+            - Animal and plant needs were one list — which teaches that a plant eats. They
+              branch now, and the activity works with no pet and no houseplant.
+            - Reported and NOT changed: three approved lessons claim the safety objective on
+              adult-facing text alone, the same defect that came off "Statue !". Correcting
+              them would lapse three approvals nobody has re-reviewed, so the safety check is
+              a pinned test rather than a corpus rule, and the occurrences are recorded for
+              their own weeks to decide.
+            - 33 of 3,084 fields changed, all in Week 4. 144 approved lessons, 0 lapsed.
+Validation: format, lint, typecheck, unit (322), content (31 files), pgTAP (152) on a fresh
+            reset, build, E2E (28), both Docker images, client-bundle scan.
 Cost:       $0.
-Not done:   Weeks 4-5 never reviewed — 32 lessons at review, 0 approved. Beta is NOT ready.
-            Week 4's package is prepared; it has not been reviewed here.
+Not done:   Week 4 is not approved — 0 of 20. Week 5 never reviewed. Beta gate 8 of 10.
 ```

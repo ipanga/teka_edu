@@ -26,17 +26,18 @@ Roles, kept distinct on purpose:
 
 ## Register of reviews
 
-| Batch                                | Date             | Kind                                             | Outcome                                                          | Corrections                    | Status                      |
-| ------------------------------------ | ---------------- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------------------------ | --------------------------- |
-| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`**   | 13, then 6, then 2             | **`approved`** — 16 lessons |
-| 3ème maternelle, Week 2 (days 5–9)   | 2026-09-17 → -19 | AI-assisted (ChatGPT), 4 passes                  | passes 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 14, then 4, then 2, then 1     | **`approved`** — 20 lessons |
-| 3ème maternelle, Week 3 (days 10–14) | 2026-09-19       | AI-assisted (ChatGPT), 3 passes                  | passes 1-2 `accepted-with-modifications` → pass 3 **`accepted`** | 13, then 3, then 0             | **`approved`** — 20 lessons |
-| 3ème maternelle, Weeks 4–5           | —                | —                                                | not yet reviewed                                                 | inherited corrections only     | `review` — 0 approved       |
-| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 11 items across the passes     | **`approved`** — 16 lessons |
-| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons |
-| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons |
-| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                                   | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons |
-| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`**     | 5 items                        | **`approved`** — 12 lessons |
+| Batch                                | Date             | Kind                                             | Outcome                                                          | Corrections                    | Status                            |
+| ------------------------------------ | ---------------- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------------------------ | --------------------------------- |
+| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`**   | 13, then 6, then 2             | **`approved`** — 16 lessons       |
+| 3ème maternelle, Week 2 (days 5–9)   | 2026-09-17 → -19 | AI-assisted (ChatGPT), 4 passes                  | passes 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 14, then 4, then 2, then 1     | **`approved`** — 20 lessons       |
+| 3ème maternelle, Week 3 (days 10–14) | 2026-09-19       | AI-assisted (ChatGPT), 3 passes                  | passes 1-2 `accepted-with-modifications` → pass 3 **`accepted`** | 13, then 3, then 0             | **`approved`** — 20 lessons       |
+| 3ème maternelle, Week 4 (days 15–19) | 2026-09-19       | AI-assisted (ChatGPT), 1 pass                    | `accepted-with-modifications`                                    | 10 items, all applied          | `review` — awaiting a second pass |
+| 3ème maternelle, Week 5 (days 20–22) | —                | —                                                | not yet reviewed                                                 | inherited corrections only     | `review` — 0 approved             |
+| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 11 items across the passes     | **`approved`** — 16 lessons       |
+| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons       |
+| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons       |
+| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                                   | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons       |
+| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`**     | 5 items                        | **`approved`** — 12 lessons       |
 
 **1ère maternelle September is complete: 88 of 88 lessons `approved`.** 3ème maternelle's Week 1
 has Weeks 1, 2 and 3 `approved` — **56 of 88** — leaving Weeks 4–5 (32 lessons) at `review`. Every approval
@@ -514,6 +515,57 @@ neither has a full review that concluded `accepted` — tested again here rather
 **144 approved lessons, 144 distinct digests, 0 lapsed, none copied.** The approval changed state
 and nothing else: the field-by-field diff against the confirmed revision reports **3,084 fields
 compared, all identical** — no child-facing, adult-guidance, material, objective or story change.
+
+---
+
+## 3ème maternelle, Week 4 review, 2026-09-19 — accepted with modifications (first pass)
+
+**Week 4's first actual reading.** Its four earlier history entries are inherited corrections from
+the reviews of Weeks 1–3 and are not readings of this week. The structure is accepted; ten
+corrections were asked for.
+
+### Objectives that did not match the task
+
+| Activity                                         | Claimed                                | Now                                                                                    |
+| ------------------------------------------------ | -------------------------------------- | -------------------------------------------------------------------------------------- |
+| `m3-math-16-a2` _Je pose le bon nombre d'objets_ | `MATH-S01-C02-O06` construire la bande | **`MATH-S01-C01-O08` + `O21`** — the child reads a written number and builds that many |
+| `m3-phys-16-a1` _Le jeu des appuis_              | equilibrium **through displacement**   | kept — the activity now walks, stops on one foot, and walks on                         |
+| `m3-phys-17-a1` _Statue !_                       | `+ PHYS-S02-C01-O07` safety rules      | dropped                                                                                |
+| `m3-lang-18-a1` ritual (asks for rhymes)         | `+ LANG-S01-C04-O11` conversation      | **`LANG-S02-C01-O15`** rhymes                                                          |
+| `m3-lang-18-a2` _D'abord, ensuite, à la fin_     | `LANG-S01-C04-O11`                     | **`TIME-SPACE-S01-C02-O06`** restituer la chronologie d'une histoire                   |
+| `m3-math-18-a2` _Je dessine avec des formes_     | `MATH-S03-C01-O07` trier               | **`O08`** décrire et nommer                                                            |
+| `m3-phys-19-a1` _D'un animal à l'autre_          | `PHYS-S03-C01-O09` danser              | **`PHYS-S01-C01-O10`** courir de plus en plus longtemps                                |
+
+**On the dance activity the alternative was taken, not the preferred direction.** The lesson is
+called _La course des animaux_, its summary says « sur une durée plus longue » and its parent
+guidance says « l'endurance et le plaisir ». Turning it into a dance would have rewritten a lesson
+the review otherwise accepted, to fit a code — when the content already earns the endurance
+objective exactly, and dance is genuinely worked on five other days of the month.
+
+### Conduct, material and safety
+
+- **The rhyme fallback names its target.** « donnez deux choix : chapeau ou banane ? » never said
+  which word to rhyme with, so the adult could not know the right answer either. It now gives
+  target and choices together: for « bateau », « chapeau ou banane ? ».
+- **Nothing is stepped on that slides.** The shape pathway chalks the shapes or tapes them down,
+  and hopping on a loose sheet is ruled out explicitly.
+- **A narrow material** — household objects with flat faces (a notebook, a box, a plate, a lid) —
+  replaces the generic household box, which offered a cushion and a stick for finding square and
+  rectangular faces. Added rather than widened: approved lessons depend on the generic one.
+- **Chronology stays chronology.** _Et si on changeait la fin ?_ invented an ending under an
+  objective about ordering. It is now _Juste avant, juste après_.
+- **Animal and plant needs are separated.** « manger, boire, un abri ou de la lumière » in one
+  breath teaches that a plant eats. The guidance branches, and the activity works with no pet and
+  no houseplant: a plant on the path, an animal seen from a distance, or the package's own
+  picture. The child does not touch or feed an animal or plant they do not know.
+
+### Reported, deliberately not changed — three approved lessons
+
+`m3-phys-05`, `m3-phys-06` and `m3-phys-08` claim `PHYS-S02-C01-O07` on **adult-facing safety text
+alone**, exactly the defect that came off _Statue !_. All three are **approved**. Correcting them
+would lapse three approvals nobody has re-reviewed, so the safety check is a **pinned test on the
+corrected activity rather than a corpus rule**, and the three occurrences are recorded here for
+their own weeks to decide. A rule that forces a silent re-approval is worse than a rule that waits.
 
 ---
 
