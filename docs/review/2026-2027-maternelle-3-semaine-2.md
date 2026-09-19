@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 3 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 4 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -68,6 +68,12 @@ Passe de confirmation. Les quatre corrections d’attribution de la passe préc�
 
 **Suites données :** Les deux sont corrigées. « Je dis où c’est » reste au corps de l’enfant : l’adulte pose l’objet devant lui, derrière lui, à côté de lui, une réponse courte comme « Derrière moi » suffit, et l’adulte reformule une fois « Oui, il est derrière toi » sans faire répéter. Ni la droite ni la gauche n’apparaissent, et aucun objectif n’est ajouté. La guidance de Bibi décrit maintenant les trois questions dans l’ordre de l’histoire, accepte un mot, un geste ou une réponse courte, reformule sans faire répéter, et ne relie au vécu de l’enfant qu’ensuite. Les trois questions, l’histoire et la durée sont inchangées. Aucune leçon n’est approuvée : les 20 restent en relecture en attendant votre confirmation finale.
 
+### 2026-09-19 — ChatGPT · `accepted` (ai-assisted)
+
+Relecture finale. Les deux corrections de la passe précédente sont vérifiées et acceptées : « Je dis où c’est » garde bien le repère sur le corps de l’enfant — l’adulte pose l’objet devant lui, derrière lui, à côté de lui, et reformule « Oui, il est derrière toi » — et la guidance de « Comment se sent Bibi ? » décrit bien les trois questions de l’histoire avant de relier une émotion au vécu de l’enfant. Aucun défaut pédagogique de fond ne subsiste. Une seule correction rédactionnelle restait, sur l’étai en anglais de « Je dis où c’est » : « compared to you » sonne faux et reste ambigu pour une relation spatiale.
+
+**Suites données :** L’étai en anglais devient « Tell me where the object is: in front of you, behind you, or beside you. Don’t point. », qui reprend directement la consigne française et se comprend sans détour. Ce changement est rédactionnel : il ne touche ni la consigne française, ni la guidance adulte, ni l’objectif, ni la durée, ni le matériel, ni le lexique. La semaine est acceptée et ses 20 leçons passent en « approuvée ».
+
 ## Jour 5 — 2026-09-07
 
 **Durée totale : 35 min** · 4 séances · jour 5 du rythme
@@ -88,7 +94,7 @@ l’autre — l’appareil est alors le sien._
 
 _Dire ce qu’on a fait, dans l’ordre, en phrases entières._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** L’enfant raconte, vous reformulez. Utilisez « d’abord », « ensuite », « après » pour l’aider à mettre de l’ordre. Ne demandez pas plus de trois moments.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -204,7 +210,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter des collections un peu plus grandes, en les organisant._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Six objets en tas se comptent mal. Montrez comment les aligner d’abord : organiser sa collection est déjà une stratégie de mathématicien.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -299,7 +305,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Tenir en équilibre en combinant appuis et déplacements._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Restez à côté de l’enfant, prêt à le rattraper. Rien de haut : tout se fait au sol.
 - **Objectifs enseignés :**
   - `PHYS-S02-C01-O05` — Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions. _(source : programme-2026)_
@@ -348,7 +354,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Nommer les parties d’un animal et dire ce dont il a besoin pour vivre._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Partez d’un animal que l’enfant connait vraiment : une poule, une chèvre, un chien du quartier.
 - **Objectifs enseignés :**
   - `WORLD-S01-C01-O08` — Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale. _(source : programme-2026)_
@@ -425,7 +431,7 @@ l’autre — l’appareil est alors le sien._
 
 _Écouter une suite de mots et la redire : la mémoire des sons se travaille comme un muscle._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Dites les mots lentement, une seule fois, puis attendez. Commencez par deux mots. N’allez à quatre que si l’enfant réussit trois sans effort.
 - **Objectifs enseignés :**
   - `LANG-S02-C01-O13` — Augmenter sa mémoire auditive et sa capacité de concentration. _(source : programme-2024-langage)_
@@ -522,7 +528,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Construire une collection qui en vaut une autre._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Faire « autant que » sans compter, en associant un objet à un objet, puis vérifier en comptant.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -614,7 +620,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Enchainer plusieurs actions dans un parcours, en respectant les règles._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Installez le parcours vous-même : tout doit être souple et posé au sol. L’enfant peut aider en apportant un coussin ou un tissu. Si un meuble gêne, c’est vous qui le déplacez. Vérifiez qu’il n’y a rien de fragile ni de coupant sur le trajet.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -666,7 +672,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Situer un évènement dans la semaine._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Reprenez la bande des jours. Reliez chaque jour à quelque chose de réel dans la vie de la famille.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -740,7 +746,7 @@ l’autre — l’appareil est alors le sien._
 
 _Deuxième corpus de mots : nommer les objets et les pièces de la maison._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Faites le tour de la maison en nommant. Chaque mot est dit avec son article, répété, puis employé dans une phrase courte.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -866,7 +872,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Passer une seule fois par chaque objet d’une collection._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
 - **Conseil au parent :** C’est la difficulté la plus courante : recompter un objet, ou en sauter un. La solution est de les déplacer au fur et à mesure, d’un tas vers un autre.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O19` — Poursuivre les stratégies de parcours d’une collection en passant une et une seule fois par chacun de ses éléments. _(source : programme-2024-mathematiques)_
@@ -960,7 +966,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Inventer des gestes dansés à partir d’une image._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Nommez l’animal, laissez l’enfant trouver le geste. Ne montrez qu’en dernier recours.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1008,7 +1014,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Regarder un modèle et le reproduire de mieux en mieux._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Deuxième dessin d’observation. Cette fois, faites décrire avant et après : le vocabulaire du dessin s’installe.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1074,7 +1080,7 @@ l’autre — l’appareil est alors le sien._
 
 _Employer « il » et « elle » pour parler de quelqu’un d’autre._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** L’enfant dit facilement « je ». Le travail du jour est de parler de quelqu’un d’autre : « il » ou « elle ». Donnez toujours le modèle avant de demander.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1205,7 +1211,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Retrouver une forme quelle que soit sa taille ou sa position._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Un triangle posé sur la pointe reste un triangle. C’est exactement ce que l’enfant doit comprendre aujourd’hui.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1284,7 +1290,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Jouer à deux, en tenant un rôle et en respectant la règle._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Jeu à deux : vous jouez avec lui. Rappelez la règle avant de commencer et tenez-la, même en riant.
 - **Objectifs enseignés :**
   - `PHYS-S04-C01-O09` — Éprouver le plaisir de coopérer et de s’opposer dans le respect des autres et des règles communes. _(source : programme-2026)_
@@ -1341,7 +1347,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Situer les objets par rapport à soi._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Tout se dit par rapport au corps de l’enfant : devant lui, derrière lui, à côté de lui. Faites-le bouger plutôt que de déplacer les objets.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S02-C01-O16` — Situer des objets par rapport à soi, construire une image orientée de son corps. _(source : programme-2026)_
@@ -1365,7 +1371,7 @@ _Situer les objets par rapport à soi._
 - **Lexique visé :** derrière _(behind)_ · devant _(in front of)_
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
-- **Aide en anglais (optionnelle) :** « Tell me where the object is compared to you, without pointing. »
+- **Aide en anglais (optionnelle) :** « Tell me where the object is: in front of you, behind you, or beside you. Don't point. »
 - **Objectifs travaillés :** `TIME-SPACE-S02-C01-O16` Situer des objets par rapport à soi, construire une image orientée de son corps.
 
 **Réussites attendues — texte officiel pour la compétence « Faire l’expérience de l’espace » (from-5) :**
@@ -1420,7 +1426,7 @@ l’autre — l’appareil est alors le sien._
 
 _Comprendre ce que ressent un personnage, et le dire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Le but n’est pas de résumer l’histoire mais de parler de ce que ressent Bibi. Nommez les émotions vous-même : content, triste, fâché, curieux.
 - **Objectifs enseignés :**
   - `LANG-S02-C03-O14` — Comprendre les émotions, les intentions et les sentiments qui animent les personnages. _(source : programme-2024-langage)_
@@ -1542,7 +1548,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Reprendre le comptage et la comparaison de la semaine._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Reprise de la semaine, en jeu. Rien de nouveau : l’enfant montre ce qu’il sait faire.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1637,7 +1643,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Lancer vers quelqu’un et rattraper à deux mains._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Lancez doucement, à hauteur de poitrine. Rapprochez-vous jusqu’à ce que l’enfant attrape : la réussite d’abord.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1695,7 +1701,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Découvrir les besoins d’un végétal, et les comparer à ceux d’un animal._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Si vous avez une plante, un plant ou même une herbe dans un pot, servez-vous-en. Sinon, observez une plante dehors, sur le chemin.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

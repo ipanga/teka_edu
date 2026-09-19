@@ -251,6 +251,18 @@
       "outcome": "accepted-with-modifications",
       "summary": "Passe de confirmation. Les quatre corrections d’attribution de la passe précédente sont vérifiées et jugées correctes. Le renforcement de l’empreinte d’approbation (ISSUE-026) est relu et accepté dans son principe : le texte résolu de l’histoire ou de la comptine est désormais empreint, un texte introuvable fait échouer le calcul, un texte réécrit fait bouger l’empreinte, un texte étranger à la leçon ne la fait pas bouger, l’empreinte des images reste active, et le rétablissement des approbations anciennes s’est appuyé sur une identité historique prouvée plutôt que sur une recopie d’empreintes. Deux incohérences subsistaient. 1) Dans « Je dis où c’est », le repère glissait de l’enfant vers les objets : on posait l’objet « quelque part » et on reformulait « il est derrière la chaise », alors que la leçon, son résumé et sa première activité situent tout par rapport au corps de l’enfant, ce que demande l’objectif revendiqué. 2) Dans « Comment se sent Bibi ? », la guidance adulte ne décrivait qu’une seule des trois questions que l’activité pose réellement, puis passait directement au vécu de l’enfant.",
       "corrections": "Les deux sont corrigées. « Je dis où c’est » reste au corps de l’enfant : l’adulte pose l’objet devant lui, derrière lui, à côté de lui, une réponse courte comme « Derrière moi » suffit, et l’adulte reformule une fois « Oui, il est derrière toi » sans faire répéter. Ni la droite ni la gauche n’apparaissent, et aucun objectif n’est ajouté. La guidance de Bibi décrit maintenant les trois questions dans l’ordre de l’histoire, accepte un mot, un geste ou une réponse courte, reformule sans faire répéter, et ne relie au vécu de l’enfant qu’ensuite. Les trois questions, l’histoire et la durée sont inchangées. Aucune leçon n’est approuvée : les 20 restent en relecture en attendant votre confirmation finale."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 2,
+      "reviewedOn": "2026-09-19",
+      "reviewKind": "ai-assisted",
+      "reviewer": "ChatGPT",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Relecture finale. Les deux corrections de la passe précédente sont vérifiées et acceptées : « Je dis où c’est » garde bien le repère sur le corps de l’enfant — l’adulte pose l’objet devant lui, derrière lui, à côté de lui, et reformule « Oui, il est derrière toi » — et la guidance de « Comment se sent Bibi ? » décrit bien les trois questions de l’histoire avant de relier une émotion au vécu de l’enfant. Aucun défaut pédagogique de fond ne subsiste. Une seule correction rédactionnelle restait, sur l’étai en anglais de « Je dis où c’est » : « compared to you » sonne faux et reste ambigu pour une relation spatiale.",
+      "corrections": "L’étai en anglais devient « Tell me where the object is: in front of you, behind you, or beside you. Don’t point. », qui reprend directement la consigne française et se comprend sans détour. Ce changement est rédactionnel : il ne touche ni la consigne française, ni la guidance adulte, ni l’objectif, ni la durée, ni le matériel, ni le lexique. La semaine est acceptée et ses 20 leçons passent en « approuvée »."
     }
   ]
 }

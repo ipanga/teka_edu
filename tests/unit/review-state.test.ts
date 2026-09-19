@@ -64,9 +64,8 @@ describe("what a batch of content has actually been through", () => {
     expect(stateOf("maternelle-1", 1, ["m1-lang-01"])).toBe("approved");
     // 3ème Week 1 has now been read three times and finally accepted.
     expect(stateOf("maternelle-3", 1, ["m3-math-01"])).toBe("approved");
-    // 3ème Week 2 has had its first full review, which accepted it with modifications: read,
-    // and still not approved.
-    expect(stateOf("maternelle-3", 2, ["m3-math-05"])).toBe("reviewed");
+    // 3ème Week 2 is approved too, after four passes.
+    expect(stateOf("maternelle-3", 2, ["m3-math-05"])).toBe("approved");
     // Weeks 3-5 carry only inherited corrections, so they have never been reviewed.
     for (const [week, id] of [
       [3, "m3-math-10"],
@@ -106,24 +105,46 @@ describe("an approval can only come from a full review that accepted the week", 
   const m3 = data.lessons.filter((l) => l.levelIds.includes("maternelle-3"));
   const historyOf = (week: number) =>
     data.reviewHistory.filter((r) => r.levelId === "maternelle-3" && r.week === week);
+  /** Week 1 is days 1-4, then five days a week; lesson ids carry their track step, so map by id. */
+  const WEEK_LESSONS: Record<number, string[]> = {
+    1: ["m3-math-01", "m3-lang-01"],
+    2: ["m3-math-05", "m3-lang-05"],
+    3: ["m3-math-10", "m3-lang-10"],
+    4: ["m3-lang-16", "m3-math-16"],
+    5: ["m3-lang-21", "m3-math-21"],
+  };
+  const lessonsOfWeek = (week: number) =>
+    WEEK_LESSONS[week]!.map((id) => m3.find((l) => l.id === id)!);
 
-  it("approved Week 1 and left Weeks 2-5 entirely unapproved", () => {
-    expect(m3.filter((l) => l.status === "approved")).toHaveLength(16);
-    expect(m3.filter((l) => l.status === "review")).toHaveLength(72);
+  it("splits every lesson between approved and review, and nothing else", () => {
+    const approved = m3.filter((l) => l.status === "approved").length;
+    const review = m3.filter((l) => l.status === "review").length;
+    expect(approved).toBeGreaterThan(0);
+    expect(approved + review).toBe(m3.length);
   });
 
-  it("holds a full review that concluded accepted for every approved lesson's week", () => {
-    // Week 1 is the only 3ème week with one, and it is the only approved week.
+  it("holds an accepted full review for exactly the weeks that are approved", () => {
+    // Stated as an equivalence rather than a list of week numbers, so it keeps meaning as the
+    // weeks are approved one by one.
     const accepted = (week: number) =>
       historyOf(week).some((r) => r.scope === "full-review" && r.outcome === "accepted");
-    expect(accepted(1)).toBe(true);
-    for (const week of [2, 3, 4, 5]) expect(accepted(week), `week ${week}`).toBe(false);
+    for (const week of [1, 2, 3, 4, 5]) {
+      const lessons = lessonsOfWeek(week);
+      expect(lessons.length, `week ${week} has no lessons`).toBeGreaterThan(0);
+      const isApproved = lessons.some((l) => l.status === "approved");
+      expect(accepted(week), `week ${week}: approved=${isApproved}`).toBe(isApproved);
+      // A week is approved wholly or not at all.
+      if (isApproved)
+        expect(
+          lessons.every((l) => l.status === "approved"),
+          `week ${week}`,
+        ).toBe(true);
+    }
   });
 
   it("does not let an inherited correction stand in for a review", () => {
-    // Weeks 3-5 carry consequence entries only. They are changes, not readings, and they must
-    // not be enough to approve anything. Week 2 has since had a real first reading, so it is
-    // excluded here and checked below instead.
+    // Weeks that carry consequence entries only: changes, not readings, and never enough to
+    // approve anything.
     for (const week of [3, 4, 5]) {
       const entries = historyOf(week);
       expect(entries.length, `week ${week} has no recorded change`).toBeGreaterThan(0);
@@ -135,18 +156,16 @@ describe("an approval can only come from a full review that accepted the week", 
     }
   });
 
-  it("leaves Week 2 read and still unapproved, however many passes it takes", () => {
-    // The count is deliberately not pinned: a week may need one pass or four, and a test that
-    // has to be edited after every reading stops being a check and becomes paperwork. What must
-    // hold is that no reading has concluded `accepted`, so nothing here may be approved.
-    const entries = historyOf(2);
-    const reads = entries.filter((r) => r.scope === "full-review");
+  it("keeps the whole history of a week that took several passes to accept", () => {
+    // Week 2 was read four times: three concluded `accepted-with-modifications`, the fourth
+    // `accepted`. The earlier passes are not rewritten to look cleaner than they were.
+    const reads = historyOf(2).filter((r) => r.scope === "full-review");
     expect(reads.length).toBeGreaterThanOrEqual(2);
-    for (const read of reads) {
-      expect(read.outcome, read.reviewedOn).toBe("accepted-with-modifications");
-      expect(read.reviewKind, read.reviewedOn).toBe("ai-assisted");
-    }
-    expect(weekReviewState(["review"], entries)).toBe("reviewed");
+    expect(reads.filter((r) => r.outcome === "accepted-with-modifications").length).toBeGreaterThan(
+      0,
+    );
+    expect(reads.at(-1)?.outcome).toBe("accepted");
+    for (const read of reads) expect(read.reviewKind, read.reviewedOn).toBe("ai-assisted");
   });
 
   it("refuses to treat accepted-with-modifications as an approval", () => {
@@ -169,14 +188,14 @@ describe("the approvals granted to 3ème maternelle Week 1 are protected", () =>
   );
 
   it("recomputes every stored digest exactly, so none was copied or forged", () => {
-    expect(approved).toHaveLength(16);
+    expect(approved.length).toBeGreaterThan(0);
     const seen = new Set<string>();
     for (const lesson of approved) {
       expect(lessonDigest(lesson, media), lesson.id).toBe(lesson.review?.reviewedDigest);
       seen.add(lesson.review?.reviewedDigest ?? "");
     }
-    // Sixteen different lessons, sixteen different digests: nothing was reused.
-    expect(seen.size).toBe(16);
+    // One digest per lesson, all different: nothing was reused.
+    expect(seen.size).toBe(approved.length);
   });
 
   it("lapses when adult guidance changes", () => {
@@ -220,11 +239,11 @@ describe("the approvals granted to 3ème maternelle Week 1 are protected", () =>
     expect(lessonDigest(lesson, poisoned)).not.toBe(before);
   });
 
-  it("leaves every Week 2-5 lesson without a review record at all", () => {
+  it("leaves every unapproved lesson without a review record at all", () => {
     const unapproved = data.lessons.filter(
       (l) => l.levelIds.includes("maternelle-3") && l.status !== "approved",
     );
-    expect(unapproved).toHaveLength(72);
+    expect(unapproved.length).toBeGreaterThan(0);
     for (const lesson of unapproved) {
       expect(lesson.status, lesson.id).toBe("review");
       expect(lesson.review, lesson.id).toBeNull();
