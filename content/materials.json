@@ -118,6 +118,13 @@
       "category": "household",
       "alternatives": "Un pagne, un drap, une grande serviette ou un rideau : tout tissu assez grand pour être tenu à deux mains.",
       "safetyNote": "C’est l’adulte qui tient le tissu, sans jamais l’enrouler autour de l’enfant."
+    },
+    {
+      "code": "vaisselle-incassable",
+      "name": "Vaisselle incassable (assiettes en plastique, gobelets, cuillères)",
+      "category": "household",
+      "alternatives": "Des assiettes en plastique ou en métal, des gobelets, des bols, des cuillères — ou, à défaut, autant de petits objets identiques que de personnes.",
+      "safetyNote": "Rien en verre ni en céramique, aucun couteau ni ustensile pointu : l’enfant porte la vaisselle lui-même."
     }
   ]
 }
