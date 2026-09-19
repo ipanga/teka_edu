@@ -26,16 +26,17 @@ Roles, kept distinct on purpose:
 
 ## Register of reviews
 
-| Batch                                | Date             | Kind                                             | Outcome                                                          | Corrections                    | Status                      |
-| ------------------------------------ | ---------------- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------------------------ | --------------------------- |
-| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`**   | 13, then 6, then 2             | **`approved`** — 16 lessons |
-| 3ème maternelle, Week 2 (days 5–9)   | 2026-09-17 → -19 | AI-assisted (ChatGPT), 4 passes                  | passes 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 14, then 4, then 2, then 1     | **`approved`** — 20 lessons |
-| 3ème maternelle, Weeks 3–5           | —                | —                                                | not yet reviewed                                                 | inherited corrections only     | `review` — 0 approved       |
-| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 11 items across the passes     | **`approved`** — 16 lessons |
-| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons |
-| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons |
-| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                                   | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons |
-| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`**     | 5 items                        | **`approved`** — 12 lessons |
+| Batch                                | Date             | Kind                                             | Outcome                                                          | Corrections                    | Status                            |
+| ------------------------------------ | ---------------- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------------------------ | --------------------------------- |
+| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`**   | 13, then 6, then 2             | **`approved`** — 16 lessons       |
+| 3ème maternelle, Week 2 (days 5–9)   | 2026-09-17 → -19 | AI-assisted (ChatGPT), 4 passes                  | passes 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 14, then 4, then 2, then 1     | **`approved`** — 20 lessons       |
+| 3ème maternelle, Week 3 (days 10–14) | 2026-09-19       | AI-assisted (ChatGPT), 1 pass                    | `accepted-with-modifications`                                    | 13 items, all applied          | `review` — awaiting a second pass |
+| 3ème maternelle, Weeks 4–5           | —                | —                                                | not yet reviewed                                                 | inherited corrections only     | `review` — 0 approved             |
+| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 11 items across the passes     | **`approved`** — 16 lessons       |
+| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons       |
+| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons       |
+| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                                   | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons       |
+| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`**     | 5 items                        | **`approved`** — 12 lessons       |
 
 **1ère maternelle September is complete: 88 of 88 lessons `approved`.** 3ème maternelle's Week 1
 has Weeks 1 and 2 `approved` — **36 of 88** — leaving Weeks 3–5 (52 lessons) at `review`. Every approval
@@ -392,6 +393,63 @@ Since ISSUE-026 those digests cover the words of the story a lesson reads as wel
 its pictures, and both fail closed. Verified again here: changing the English scaffold moved
 `m3-time-03`'s digest; rewriting Bibi's story moves `m3-lang-09`'s and leaves `m3-time-03` alone;
 an unresolvable text or picture throws rather than degrading.
+
+---
+
+## 3ème maternelle, Week 3 review, 2026-09-19 — accepted with modifications (first pass)
+
+The week's first complete review. **The structure is accepted** — five days, 20 lessons, 38
+activities, ~35 minutes, the four-track rhythm, low screen dependence, optional English. Thirteen
+corrections, and almost all of them one family again: **an objective sitting on an activity that
+does not do it.**
+
+| Where                                                    | Claimed                           | Now                                                                |
+| -------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------------ |
+| `m3-lang-10-a1` ritual (« Il… » / « Elle… »)             | conversation & reformulation      | **`LANG-S01-C02-O01`** diversifier les pronoms                     |
+| `m3-lang-11-a2` _C'est toi qui racontes_                 | conversation & reformulation      | **`LANG-S02-C03-O09`** — the repetitive-structure story it retells |
+| `m3-lang-12-a1` ritual                                   | categorising words                | date only                                                          |
+| `m3-lang-13-a1` ritual (« deux mots qui vont ensemble ») | vocabulary corpus                 | **`LANG-S01-C01-O02`** categorising                                |
+| `m3-math-13-a1` (« laquelle en a le plus »)              | —                                 | **`+ MATH-S01-C01-O05`** comparison                                |
+| `m3-math-13-a2` _Mets la table_                          | traversal only                    | **`+ MATH-S01-C01-O21`** a collection of a given cardinal          |
+| `m3-phys-14-a1` _Saute la rivière_                       | « lancer loin et avec précision » | **`PHYS-S01-C01-O03`** sauter sans élan un obstacle                |
+| `m3-time-04-a1` _Cache et retrouve_                      | par rapport à soi                 | **`TIME-SPACE-S02-C01-O09`** situer des objets entre eux           |
+
+### Three objectives considered and rejected
+
+`TIME-SPACE-S02-C01-O17` (réaliser un trajet, day 101), `TIME-SPACE-S02-C02-O09` (restituer
+oralement un déplacement, day 133) and `TIME-SPACE-S02-C01-O20` (lexique de l'espace, day 108) all
+describe what _Le chemin pour y aller_ does — and the annual plan does not open any of them until
+the third term. Using one on day 10 would have been exactly the premature acceleration ADR-038
+forbids. **The activity was narrowed instead**: the child now starts from their own place and says
+what is in front of and behind them, so it genuinely earns the objective it already claimed.
+`TIME-SPACE-S02-C01-O16` also had to stay somewhere — it is taught on day 8 and appears in only
+two lessons, so removing it here would have left it taught once and never returned to.
+
+### Conduct of the activities
+
+- **Day 10 no longer leaks into day 11.** « Ce qu'il faut ajouter pour arriver à quinze » is the
+  complement, which day 11 introduces. The child is now asked for fifteen objects and recounts.
+- **« La main qui cache » was a memory game.** The child watched the two objects go under the
+  hand. They close their eyes now, and the total is restated before the question.
+- **La hanche replaces le cou** in the articulation list, matching the official expected outcomes,
+  and an articulation no longer moves by itself: « montre-la, puis fais bouger ton corps à cet
+  endroit ».
+- **« Famille de mots » became « catégorie »** — the concept is semantic, not morphological — and
+  the sorting is spoken, so it needs no material.
+- « Ce qu'on achète au marché » became « les mots du marché »: a basket and change are market
+  words, not purchases.
+- « L'école, c'est avant ou après ? » had no second event. The adult now names two moments from
+  the child's real week.
+- **« to-ma-te » is not a safe three-syllable oral model** — it became « a-na-nas ».
+- Global comparison starts at **three against seven**, not two nearly equal heaps, and « autant »
+  is set out one-for-one before anyone counts.
+
+### One occurrence in Week 4
+
+`m3-lang-19-a1` — the same ritual claiming the categorisation objective — was found by the rule
+and corrected, recorded as a `consequence`. Its sibling still earns the objective, so nothing else
+moved. **Reported and deliberately not changed there:** that lesson still says « famille de mots »,
+the same wording Week 3 had corrected. It belongs to Week 4's own reading.
 
 ---
 

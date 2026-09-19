@@ -10,11 +10,12 @@
 
 ## Task
 
-Apply the final editorial fix, approve 3ème maternelle Week 2, and prepare Week 3 for review.
+Apply ChatGPT's first-pass corrections to 3ème maternelle Week 3 and return it for a second pass.
 
 ## Objective
 
-Week 2 is approved through a gate that still refuses every week nobody has read.
+Every Week 3 objective sits on the activity that earns it, using only targets the annual plan
+has already opened.
 
 ## Status
 
@@ -22,11 +23,11 @@ Week 2 is approved through a gate that still refuses every week nobody has read.
 
 ## Branch
 
-`feat/approve-maternelle-3-week-2`
+`fix/maternelle-3-week-3-review`
 
 ## Base Branch
 
-`develop` at `036a782`
+`develop` at `a9fc156`
 
 ## Started
 
@@ -34,8 +35,8 @@ Week 2 is approved through a gate that still refuses every week nobody has read.
 
 ## Last Checkpoint
 
-2026-09-19 — one scaffold fix (1 of 3,084 fields), Week 2 approved (20 lessons), Week 3 package
-prepared, full local suite green.
+2026-09-19 — 13 Week 3 corrections (40 of 3,084 fields), 6 reusable rules, 0 approvals lapsed,
+full local suite green.
 
 ## Scope
 
@@ -65,20 +66,16 @@ prepared, full local suite green.
 
 ## Completed
 
-- [x] One editorial change: the English scaffold on `m3-time-03-a2` now mirrors the French
-      consigne instead of saying « compared to you »
-- [x] **Semantic-diff gate: 1 of 3,084 fields changed**, and it was the permitted one
-- [x] Final ChatGPT pass recorded as `accepted`; all four passes preserved unrewritten
-- [x] **Week 2 approved — 20 lessons**, through `scripts/approve-week.ts`, which still refuses
-      Weeks 3, 4 and 5
-- [x] 3ème **36 / 88** · 1ère **88 / 88** · total **124 approved**, 124 distinct digests, 0 lapsed
-- [x] Beta weekly packages **7 / 10**, computed from canonical data
-- [x] ISSUE-026 re-verified live: scaffold change moves the digest, a rewritten story moves only
-      its own lesson, missing text or media fails closed
-- [x] Eight count-pinned tests made state-derived — a week is approved **iff** its history holds
-      an accepted full review, and wholly or not at all. Proved by forging a valid-digest
-      approval on an unreviewed week and watching the rule catch it
-- [x] Week 3 package prepared, unreviewed and unapproved
+- [x] 13 corrections across 8 lessons and 4 domains
+- [x] Objectives moved onto the activity that earns them, using only existing official targets
+- [x] Three spatial objectives **considered and rejected** — the plan opens none before day 101;
+      the activity was narrowed instead of accelerating the curriculum
+- [x] Day 10's leak into day 11's complement work removed; « La main qui cache » no longer lets
+      the child watch; la hanche replaces le cou; « catégorie » replaces « famille de mots »
+- [x] Comparison starts at three against seven, not two near-equal heaps
+- [x] One Week 4 occurrence corrected as a `consequence`; its wording reported, not changed
+- [x] **6 reusable rules**, each proved against the old mappings before being kept
+- [x] **40 of 3,084 fields changed**; 124 approved lessons, **0 lapsed**
 
 ## In Progress
 
@@ -86,8 +83,8 @@ prepared, full local suite green.
 
 ## Remaining
 
-- [ ] Hand `docs/review/2026-2027-maternelle-3-semaine-3.md` to ChatGPT. Do not review or
-      approve it here.
+- [ ] Hand the regenerated `docs/review/2026-2027-maternelle-3-semaine-3.md` back to ChatGPT
+      for its second pass. Do not review or approve it here.
 
 ## Validation State
 
@@ -96,7 +93,7 @@ prepared, full local suite green.
 | format             | PASS   | working tree                      |
 | lint               | PASS   | working tree                      |
 | typecheck          | PASS   | working tree                      |
-| unit tests         | PASS   | working tree — 305 tests          |
+| unit tests         | PASS   | working tree — 310 tests          |
 | content validation | PASS   | working tree — 31 files           |
 | database tests     | PASS   | fresh reset — 152 assertions      |
 | build              | PASS   | working tree                      |
@@ -106,8 +103,8 @@ prepared, full local suite green.
 
 ## Database State
 
-- Local: 19 migrations; `db reset` + 152 pgTAP assertions pass.
-- DEV: not yet updated with `20260919122247_approve_maternelle_3_week_2.sql`.
+- Local: 20 migrations; `db reset` + 152 pgTAP assertions pass.
+- DEV: not yet updated with `20260919130752_week3_review_corrections.sql`.
 - PROD: untouched.
 
 ## Deployment State
@@ -133,9 +130,9 @@ Commit, open the PR into `develop`, wait for CI, squash-merge, verify staging.
 
 ## Resume Verification
 
-1. `git branch --show-current` is `feat/approve-maternelle-3-week-2`;
-2. `git log -n 5 --oneline` — branch point is `036a782`;
+1. `git branch --show-current` is `fix/maternelle-3-week-3-review`;
+2. `git log -n 5 --oneline` — branch point is `a9fc156`;
 3. `git status --short` — read uncommitted work before discarding it;
-4. `gh pr list --head feat/approve-maternelle-3-week-2` — a PR may already exist;
+4. `gh pr list --head fix/maternelle-3-week-3-review` — a PR may already exist;
 5. `npx supabase migration list --linked` before assuming DEV needs the migration;
 6. `gh run list --branch develop --limit 3` before assuming a deployment is needed.

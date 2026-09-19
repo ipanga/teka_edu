@@ -343,8 +343,8 @@
           "position": 1,
           "type": "observation",
           "title": "Je nomme et je bouge",
-          "childInstruction": "Je dis une articulation, tu la fais bouger toute seule.",
-          "adultGuidance": "1. Nommez : le coude, le genou, le poignet, la cheville, l’épaule, le cou. 2. L’enfant bouge seulement celle-là. 3. Inversez. 4. Terminez par : « Qu’est-ce qui bouge quand tu marches ? »",
+          "childInstruction": "Je nomme une articulation : montre-la, puis fais bouger ton corps à cet endroit.",
+          "adultGuidance": "1. Nommez : le coude, le genou, le poignet, la cheville, l’épaule, la hanche. 2. L’enfant la montre, puis bouge son corps à cet endroit. 3. Inversez. 4. Terminez par : « Qu’est-ce qui plie quand tu marches ? »",
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
@@ -357,8 +357,8 @@
               "en": "the wrist"
             },
             {
-              "fr": "le cou",
-              "en": "the neck"
+              "fr": "la hanche",
+              "en": "the hip"
             },
             {
               "fr": "plier",
@@ -368,7 +368,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "I name a joint; you move only that one."
+              "childInstruction": "I name a joint: show it, then move your body there."
             }
           ],
           "payload": {

@@ -762,8 +762,8 @@
       "domainCode": "PHYS",
       "title": "Je saute par-dessus",
       "summary": "Sauter pieds joints par-dessus un obstacle bas.",
-      "objectiveCodes": [],
-      "supportingObjectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S01-C01-O09"],
+      "objectiveCodes": ["PHYS-S01-C01-O03"],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O05"],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "objets-et-formes",
@@ -780,7 +780,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S01-C01-O09"],
+          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S01-C01-O03"],
           "materialCodes": ["objets-maison", "espace-degage"],
           "vocabulary": [
             {
