@@ -446,3 +446,82 @@ describe("a recap ritual claims only what it asks for", () => {
     }
   });
 });
+
+describe("the words a lesson uses match the work it sets", () => {
+  it("never calls a semantic category a « famille de mots »", () => {
+    // The activity content had been corrected to « catégorie » while the lesson summary and the
+    // activity title still said « familles ». A word family is a morphological thing — chanter,
+    // chanteur, chanson — and this task groups words by meaning.
+    const wordFamily = /famille[s]?\s+de\s+mots|(?:par|en)\s+familles?\b/i;
+    for (const lesson of lessons) {
+      const sorts = lesson.activities.some(
+        (a) => a.type === "sorting" || a.objectiveCodes.includes("LANG-S01-C01-O02"),
+      );
+      if (!sorts) continue;
+      const surfaces = [
+        lesson.summary,
+        lesson.parentGuidance,
+        ...lesson.activities.flatMap((a) => [
+          a.title,
+          a.childInstruction,
+          a.adultGuidance,
+          ...a.vocabulary.map((v) => v.fr),
+        ]),
+      ];
+      for (const surface of surfaces) {
+        expect(wordFamily.test(surface), `${lesson.id}: « ${surface.slice(0, 60)} »`).toBe(false);
+      }
+    }
+  });
+});
+
+describe("what an activity declares is what it asks the adult to fetch", () => {
+  it("declares tableware wherever the guidance asks for plates", () => {
+    // « Mets la table » asked for unbreakable plates while declaring the household-objects box,
+    // so the parent's preparation list offered cushions, a chair, a stick and a cloth.
+    // Only where the child is told to *fetch or carry* tableware. Counting the plates already on
+    // the shelf, or naming « l'assiette » as a word to sort, needs nothing brought out.
+    const needsTableware = /assiette|gobelet|couvert|vaisselle/i;
+    const carriesTableware =
+      /\b(prends|pose|apporte|mets)\b[^.]{0,40}(assiette|gobelet|couvert|vaisselle)/i;
+    const asking = lessons
+      .flatMap((l) => l.activities)
+      .filter((a) => carriesTableware.test(a.childInstruction));
+    expect(asking.length).toBeGreaterThan(0);
+    for (const activity of asking) {
+      const declared = activity.materialCodes
+        .map((code) => data.materials.find((m) => m.code === code))
+        .filter((m) => m !== undefined);
+      expect(
+        declared.some((m) => needsTableware.test(`${m!.name} ${m!.alternatives}`)),
+        `${activity.id}: asks for plates, declares ${activity.materialCodes.join(", ")}`,
+      ).toBe(true);
+    }
+  });
+
+  it("never sends a child to carry glass or a sharp utensil", () => {
+    // The tableware class itself — not a counting box that happens to list a cup among its
+    // suggestions, where nothing is carried to a table.
+    for (const material of data.materials) {
+      if (!/vaisselle/i.test(material.name)) continue;
+      expect(material.name, material.code).not.toMatch(/verre|céramique|couteau/i);
+      expect(material.safetyNote ?? "", material.code).toMatch(/verre|céramique|pointu/i);
+    }
+  });
+});
+
+describe("« lancer loin » is earned by distance, not by any throw", () => {
+  it("makes every activity claiming it vary the distance", () => {
+    // « Dix passes ensemble » passed a ball back and forth at one fixed distance and claimed
+    // « lancer loin et avec précision ». Passing is throwing; it was not throwing *far*.
+    const varies = /recul\w+|plus loin|le plus loin|d’un (petit )?pas|rapproch\w+/i;
+    const claiming = activities.filter((a) => a.objectiveCodes.includes("PHYS-S01-C01-O09"));
+    expect(claiming.length).toBeGreaterThan(0);
+    for (const activity of claiming) {
+      expect(
+        varies.test(`${activity.childInstruction} ${activity.adultGuidance}`),
+        `${activity.id}: claims throwing far, never changes the distance`,
+      ).toBe(true);
+    }
+  });
+});

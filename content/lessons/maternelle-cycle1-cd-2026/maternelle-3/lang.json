@@ -1317,7 +1317,7 @@
       "levelIds": ["maternelle-3"],
       "domainCode": "LANG",
       "title": "Les mots qui vont ensemble",
-      "summary": "Ranger les mots par familles : ce qui se mange, ce qui sert à écrire, ce qui se porte.",
+      "summary": "Ranger les mots par catégories : ce qui se mange, ce qui sert à écrire, ce qui se porte.",
       "objectiveCodes": ["LANG-S01-C01-O02"],
       "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C03-O04"],
       "stage": "discovery",
@@ -1353,7 +1353,7 @@
           "id": "m3-lang-12-a2",
           "position": 2,
           "type": "sorting",
-          "title": "Je range les mots par familles",
+          "title": "Je range les mots par catégories",
           "childInstruction": "Range ces mots en trois groupes : ce qui se mange, ce qui sert à écrire, ce qui se porte.",
           "adultGuidance": "1. Dites les mots un par un ; posez un objet seulement si vous en avez un sous la main. 2. Demandez : « Où va celui-là ? » 3. Faites justifier : « Pourquoi avec celui-là ? » 4. Terminez en nommant la catégorie : « Tout ça, ce sont des aliments : ce sont des mots de la même catégorie. »",
           "minutes": 8,
@@ -2066,7 +2066,7 @@
       "levelIds": ["maternelle-3"],
       "domainCode": "LANG",
       "title": "Je range les mots",
-      "summary": "Reprendre les familles de mots du mois et y ranger des mots nouveaux.",
+      "summary": "Reprendre les catégories de mots du mois et y ranger des mots nouveaux.",
       "objectiveCodes": [],
       "supportingObjectiveCodes": [
         "TIME-SPACE-S01-C01-O12",
@@ -2085,7 +2085,7 @@
           "type": "conversation",
           "title": "Le rituel : la date et la révision",
           "childInstruction": "Dis la date. Puis raconte-moi ce que nous avons appris cette semaine.",
-          "adultGuidance": "Dites la date : « Aujourd’hui, nous sommes {{date}}. » Puis reprenez la semaine : les rimes, raconter dans l’ordre, les mots rangés par familles.",
+          "adultGuidance": "Dites la date : « Aujourd’hui, nous sommes {{date}}. » Puis reprenez la semaine : les rimes, raconter dans l’ordre, les mots rangés par catégories.",
           "minutes": 3,
           "mode": "off-screen",
           "role": "consolidation",
@@ -2107,9 +2107,9 @@
           "id": "m3-lang-19-a2",
           "position": 2,
           "type": "sorting",
-          "title": "Trois familles de mots",
+          "title": "Trois catégories de mots",
           "childInstruction": "Range ces mots : les mots de l’école, les mots de la maison, les mots du marché.",
-          "adultGuidance": "1. Dites un mot. 2. Demandez dans quelle famille il va. 3. Faites justifier à chaque fois. 4. Ajoutez un mot nouveau et voyez où l’enfant le met : c’est là que vous verrez s’il a compris la famille, et pas seulement la liste.",
+          "adultGuidance": "1. Dites un mot. 2. Demandez dans quelle catégorie il va. 3. Faites justifier à chaque fois. 4. Ajoutez un mot nouveau et voyez où l’enfant le met : c’est là que vous verrez s’il a compris la catégorie, et pas seulement la liste.",
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
@@ -2129,8 +2129,8 @@
               "en": "to sort"
             },
             {
-              "fr": "la famille de mots",
-              "en": "the word family"
+              "fr": "la catégorie",
+              "en": "the category"
             }
           ],
           "scaffolds": [

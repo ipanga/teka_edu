@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 1 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 2 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -61,6 +61,12 @@ Changement arrivé dans cette semaine sans relecture propre : il vient d’une c
 Première relecture pédagogique complète de la semaine 3. La structure est acceptée : cinq jours, vingt leçons, trente-huit activités, environ trente-cinq minutes par jour, le rythme langage / mathématiques / mouvement / domaine tournant, la faible dépendance à l’écran et les étais en anglais facultatifs. Treize points ont été demandés, presque tous de la même famille : un objectif porté par une activité qui ne le travaille pas. Le rituel du jour 10 fait employer « il » et « elle » mais revendiquait la conversation ; « C’est toi qui racontes » fait redire une histoire entière et ne revendiquait que la reformulation ; le rituel du jour 12 ne range aucun mot mais revendiquait la catégorisation ; celui du jour 13 la fait et ne la revendiquait pas ; « Je compte dans la maison » compare deux collections sans le dire ; « Mets la table » constitue une collection d’un cardinal donné sans le dire ; et « Saute la rivière » revendiquait « lancer loin et avec précision » alors que personne n’y lance rien. Deux leçons de repérage dans l’espace revendiquaient « situer des objets par rapport à soi » alors qu’elles situaient les objets les uns par rapport aux autres. Côté conduite des activités : le jour 10 demandait déjà le complément de douze à quinze, que le jour 11 introduit seulement ; « La main qui cache » laissait voir ce qu’on cachait, ce qui en faisait un exercice de mémoire immédiate ; la liste des articulations contenait le cou à la place de la hanche ; « famille de mots » désignait une catégorie sémantique ; le matériel demandé ne contenait pas les objets à trier ; « ce qu’on achète au marché » incluait le panier et la monnaie ; « L’école, c’est avant ou après ? » n’avait pas de second repère ; « to-ma-te » n’est pas un modèle oral sûr de trois syllabes ; et la comparaison globale se faisait entre deux tas presque égaux.
 
 **Suites données :** Toutes appliquées, en n’utilisant que des objectifs officiels existants. Le rituel du jour 10 porte « diversifier les pronoms employés », introduit le jour 2. Le récit de Kumu porte la compréhension des histoires à structure répétitive, déjà travaillée le jour 3. La catégorisation quitte le rituel du jour 12 et rejoint celui du jour 13, qui la fait vraiment. « Je compte dans la maison » porte la comparaison des quantités et « Mets la table » la constitution d’une collection d’un cardinal donné, toutes deux déjà introduites. « Saute la rivière » porte « sauter sans élan un obstacle » à la place de l’objectif de lancer. Pour l’espace, « Cache et retrouve » porte « situer des objets entre eux » ; « Le chemin pour y aller » repart du corps de l’enfant — ce qu’il a devant lui, derrière lui — et garde donc l’objectif qu’il revendiquait. Trois objectifs ont été examinés puis écartés parce que le plan annuel ne les ouvre qu’au troisième trimestre : réaliser un trajet dans un environnement connu, restituer oralement un déplacement mémorisé, et enrichir le lexique de l’espace ; les employer ici aurait été de l’accélération. Le jour 10 ne demande plus le complément : on redemande quinze objets et on recompte. « La main qui cache » fait fermer les yeux. La hanche remplace le cou. On dit « la catégorie » et le tri se fait à l’oral, sans matériel. On nomme « les mots du marché ». L’enfant compare deux moments de sa propre semaine. « a-na-nas » remplace « to-ma-te ». Et la première comparaison se fait entre trois et sept, avant de compter. Aucune leçon n’est approuvée : les 20 restent en relecture.
+
+### 2026-09-19 — ChatGPT · `accepted-with-modifications` (ai-assisted)
+
+Deuxième passe. Les corrections de la première sont confirmées et ne sont pas rouvertes. Trois points seulement restaient. 1) Le contenu de l’activité disait bien « groupe » et « catégorie », mais le résumé de la leçon et le titre de l’activité parlaient encore de « familles » : il s’agit d’une catégorie sémantique, pas d’une famille de mots au sens morphologique. 2) « Mets la table » demandait, dans sa guidance, de la vaisselle incassable, mais son matériel déclaré renvoyait aux « objets de la maison (coussins, chaises, bâton, tissu) » : la liste de préparation et le remplacement proposé ne correspondaient pas à la tâche. 3) « Dix passes ensemble » revendiquait « lancer loin et avec précision » sans jamais faire varier la distance, et repartait de zéro à chaque balle tombée.
+
+**Suites données :** Le résumé et le titre disent « catégories ». Un matériel étroit a été ajouté plutôt que d’élargir celui des objets de la maison, dont dépendent dix leçons déjà approuvées : « vaisselle incassable (assiettes en plastique, gobelets, cuillères) », avec des remplacements sûrs et une note qui exclut le verre, la céramique et tout ustensile pointu. « Je passe le ballon » garde les deux objectifs : on commence assez près pour réussir, on recule chacun d’un petit pas quand les passes passent bien, on se rapproche dès que la balle tombe souvent, et on ne repart plus de zéro. La distance et la précision sont donc réellement travaillées, sans match ni gagnant. Aucune leçon n’est approuvée : les 20 restent en relecture.
 
 ## Jour 10 — 2026-09-14
 
@@ -751,7 +757,7 @@ l’autre — l’appareil est alors le sien._
 
 ### Les mots qui vont ensemble — Le développement et la structuration du langage oral et écrit (13 min)
 
-_Ranger les mots par familles : ce qui se mange, ce qui sert à écrire, ce qui se porte._
+_Ranger les mots par catégories : ce qui se mange, ce qui sert à écrire, ce qui se porte._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Ranger des mots par catégories est difficile et très utile : c’est ce qui fait qu’un mot nouveau trouve sa place. Dites toujours pourquoi deux mots vont ensemble.
@@ -769,7 +775,7 @@ _Ranger les mots par familles : ce qui se mange, ce qui sert à écrire, ce qui 
 - **Aide en anglais (optionnelle) :** « Say the date, then tell me the end of Kumu’s story. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date.
 
-#### 2. Je range les mots par familles — 8 min, sans interaction écran (sorting)
+#### 2. Je range les mots par catégories — 8 min, sans interaction écran (sorting)
 
 - **Consigne à l’enfant :** « Range ces mots en trois groupes : ce qui se mange, ce qui sert à écrire, ce qui se porte. »
 - **Guidance adulte :** 1. Dites les mots un par un ; posez un objet seulement si vous en avez un sous la main. 2. Demandez : « Où va celui-là ? » 3. Faites justifier : « Pourquoi avec celui-là ? » 4. Terminez en nommant la catégorie : « Tout ça, ce sont des aliments : ce sont des mots de la même catégorie. »
@@ -1070,7 +1076,7 @@ _Les deux chiffres ne s’additionnent pas : ils décrivent deux expériences di
 temps pendant lequel l’adulte lit une consigne sur l’écran n’est compté ni dans l’un ni dans
 l’autre — l’appareil est alors le sien._
 
-**Matériel à préparer :** Aucun matériel, Balle en papier froissé, Crayon, Objets de la maison (coussins, chaises, bâton, tissu), Feuille de papier
+**Matériel à préparer :** Aucun matériel, Balle en papier froissé, Crayon, Objets de la maison (coussins, chaises, bâton, tissu), Feuille de papier, Vaisselle incassable (assiettes en plastique, gobelets, cuillères)
 
 ### Les mots du marché — Le développement et la structuration du langage oral et écrit (13 min)
 
@@ -1214,10 +1220,10 @@ _Compter des collections organisées, sans en oublier._
 
 - **Consigne à l’enfant :** « Prends exactement ce qu’il faut d’assiettes pour tout le monde. »
 - **Guidance adulte :** 1. Demandez combien de personnes mangent. 2. Faites chercher le bon nombre d’assiettes — des assiettes incassables ou en plastique si vous en avez, sinon des gobelets ou des cuillères. 3. Vérifiez en posant une assiette par personne. 4. C’est un vrai problème : autant d’assiettes que de personnes.
-- **Matériel :** Objets de la maison (coussins, chaises, bâton, tissu)
+- **Matériel :** Vaisselle incassable (assiettes en plastique, gobelets, cuillères)
 - **Lexique visé :** chacun _(each)_
-- **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
-- **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
+- **À défaut :** Des assiettes en plastique ou en métal, des gobelets, des bols, des cuillères — ou, à défaut, autant de petits objets identiques que de personnes.
+- **⚠ Sécurité :** Rien en verre ni en céramique, aucun couteau ni ustensile pointu : l’enfant porte la vaisselle lui-même.
 - **Aide en anglais (optionnelle) :** « Take exactly enough plates for everyone. »
 - **Objectifs travaillés :** `MATH-S01-C01-O19` Poursuivre les stratégies de parcours d’une collection en passant une et une seule fois par chacun de ses éléments. ; `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
@@ -1281,7 +1287,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ### Je passe le ballon — Agir, s’exprimer, comprendre à travers les activités physiques (6 min)
 
-_Coopérer à deux pour réussir un nombre de passes._
+_Coopérer à deux pour réussir des passes, de plus en plus loin._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Ce n’est pas un match : on compte les passes réussies ensemble. Le but est commun.
@@ -1292,13 +1298,13 @@ _Coopérer à deux pour réussir un nombre de passes._
 
 #### 1. Dix passes ensemble — 6 min, sans interaction écran (movement)
 
-- **Consigne à l’enfant :** « On essaie de faire dix passes sans faire tomber la balle. »
-- **Guidance adulte :** 1. Comptez chaque passe réussie à voix haute. 2. Si la balle tombe, on repart de zéro sans reproche. 3. Essayez trois fois. 4. Fêtez le meilleur score, même s’il est de quatre.
+- **Consigne à l’enfant :** « On se fait des passes sans faire tomber la balle. Quand ça marche bien, on recule chacun d’un pas. »
+- **Guidance adulte :** 1. Placez-vous assez près pour que les passes réussissent facilement. 2. Comptez les passes réussies à voix haute ; si la balle tombe, continuez à compter, ne repartez pas de zéro. 3. Après plusieurs passes réussies, reculez chacun d’un petit pas : il faut lancer un peu plus loin et viser un peu mieux. 4. Dès que la balle tombe souvent, rapprochez-vous et restez-y. 5. Ce n’est pas un match : le but est commun, il n’y a ni gagnant ni récompense.
 - **Matériel :** Balle en papier froissé
-- **Lexique visé :** la passe _(the pass)_ · ensemble _(together)_
+- **Lexique visé :** la passe _(the pass)_ · ensemble _(together)_ · reculer _(to step back)_
 - **À défaut :** Une balle en papier froissé ou une chaussette roulée. Une petite balle souple convient aussi si la maison en a déjà une.
 - **⚠ Sécurité :** Rien de rempli de petits objets (sac de graines, de haricots) : cela s’ouvre. Une balle en papier ou une chaussette roulée ne blesse personne et ne coûte rien.
-- **Aide en anglais (optionnelle) :** « Let us try ten passes without dropping the ball. »
+- **Aide en anglais (optionnelle) :** « We pass the ball without dropping it. When it goes well, we each take a step back. »
 - **Objectifs travaillés :** `PHYS-S04-C01-O09` Éprouver le plaisir de coopérer et de s’opposer dans le respect des autres et des règles communes. ; `PHYS-S01-C01-O09` Lancer loin et avec précision différents objets.
 
 **Réussites attendues — texte officiel pour la compétence « Coopérer, s’opposer, respecter » (from-5) :**

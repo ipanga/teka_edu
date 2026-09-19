@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-19
-Branch:     fix/maternelle-3-week-3-review
-Commit:     develop at a9fc156; main at 1b95480
+Branch:     fix/maternelle-3-week-3-second-review
+Commit:     develop at 3113a95; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -576,31 +576,31 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  3ème maternelle Week 3 — first full review, 13 corrections applied.
-            - Almost every finding was the same family again: an objective sitting on an
-              activity that does not do it. A ritual that makes the child say "il" and "elle"
-              claimed conversation; retelling Kumu from start to finish claimed only
-              reformulation; one ritual claimed categorising and the next day's, which really
-              categorises, did not; "Mets la table" constitutes a collection of a given
-              cardinal without saying so; and "Saute la rivière" claimed "lancer loin et avec
-              précision" although nobody throws anything.
-            - Three spatial objectives describe the route activity exactly, and the annual
-              plan opens none of them before day 101. Using one would have been the premature
-              acceleration ADR-038 forbids, so the activity was narrowed instead: the child
-              starts from their own place and says what is in front of and behind them.
-            - The objective it kept had to stay for another reason too: it is taught on day 8
-              and appears in only two lessons, so removing it would have left it taught once
-              and never returned to.
-            - Day 10 was asking for the complement from twelve to fifteen, which day 11
-              introduces. "La main qui cache" let the child watch the objects being hidden,
-              which made it a memory game. La hanche replaced le cou. "Famille de mots"
-              became "catégorie". "to-ma-te" is not a safe three-syllable oral model.
-              Comparison now starts at three against seven rather than two near-equal heaps.
-            - One occurrence in Week 4 found by the new rule and corrected as a consequence;
-              its "famille de mots" wording reported, not changed, for that week's own pass.
-            - Six reusable rules added, each proved against the old mappings first.
-            - 40 of 3,084 fields changed. 124 approved lessons, 0 lapsed.
-Validation: format, lint, typecheck, unit (310), content (31 files), pgTAP (152) on a fresh
+Completed:  3ème maternelle Week 3 — second pass, three residual corrections.
+            - Each was a case of wording, metadata or conduct lagging behind a correction the
+              content had already taken.
+            - "Familles" survived in the lesson summary and the activity title after the
+              activity itself had been corrected to "catégorie". A word family is
+              morphological; this task groups words by meaning. Both now say catégories.
+            - "Mets la table" told the adult to use unbreakable plates and declared the
+              household-objects box — cushions, chairs, a stick, a cloth. The parent's
+              preparation list offered a cushion for setting a table. A narrow material was
+              added rather than widening the shared one, which ten approved lessons depend
+              on: vaisselle incassable, with safe substitutes and a note excluding glass,
+              ceramic and anything sharp.
+            - "Dix passes ensemble" claimed "lancer loin et avec précision" while passing at
+              one fixed distance, and reset to zero on every drop. The objective was kept
+              rather than removed, because the activity can earn it: the pair starts close,
+              steps back when it goes well, moves closer when the ball drops, and no longer
+              restarts. Still no opponent, no winner, no reward.
+            - The same "famille de mots" wording in Week 4 — reported last round — is now
+              corrected as a consequence, because the new rule forces it. That week still
+              has not been read.
+            - Three reusable rules, each proved against the old content first. Two had to be
+              narrowed: the first draft flagged a ritual that merely names a plate as a word
+              to sort, and a counting box that lists a cup among its suggestions.
+            - 13 of 3,084 fields changed. 124 approved lessons, 0 lapsed.
+Validation: format, lint, typecheck, unit (314), content (31 files), pgTAP (152) on a fresh
             reset, build, E2E (28), both Docker images, client-bundle scan.
 Cost:       $0.
 Not done:   Week 3 is not approved — 0 of 20. Weeks 4-5 never reviewed. Beta gate 7 of 10.

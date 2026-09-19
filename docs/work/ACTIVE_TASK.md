@@ -10,12 +10,12 @@
 
 ## Task
 
-Apply ChatGPT's first-pass corrections to 3ème maternelle Week 3 and return it for a second pass.
+Apply ChatGPT's second-pass corrections to 3ème maternelle Week 3 and return it for final
+confirmation.
 
 ## Objective
 
-Every Week 3 objective sits on the activity that earns it, using only targets the annual plan
-has already opened.
+A lesson's wording, its declared material and its conduct all match the work it actually sets.
 
 ## Status
 
@@ -23,11 +23,11 @@ has already opened.
 
 ## Branch
 
-`fix/maternelle-3-week-3-review`
+`fix/maternelle-3-week-3-second-review`
 
 ## Base Branch
 
-`develop` at `a9fc156`
+`develop` at `3113a95`
 
 ## Started
 
@@ -35,7 +35,7 @@ has already opened.
 
 ## Last Checkpoint
 
-2026-09-19 — 13 Week 3 corrections (40 of 3,084 fields), 6 reusable rules, 0 approvals lapsed,
+2026-09-19 — 3 residual corrections (13 of 3,084 fields), 3 reusable rules, 0 approvals lapsed,
 full local suite green.
 
 ## Scope
@@ -66,16 +66,15 @@ full local suite green.
 
 ## Completed
 
-- [x] 13 corrections across 8 lessons and 4 domains
-- [x] Objectives moved onto the activity that earns them, using only existing official targets
-- [x] Three spatial objectives **considered and rejected** — the plan opens none before day 101;
-      the activity was narrowed instead of accelerating the curriculum
-- [x] Day 10's leak into day 11's complement work removed; « La main qui cache » no longer lets
-      the child watch; la hanche replaces le cou; « catégorie » replaces « famille de mots »
-- [x] Comparison starts at three against seven, not two near-equal heaps
-- [x] One Week 4 occurrence corrected as a `consequence`; its wording reported, not changed
-- [x] **6 reusable rules**, each proved against the old mappings before being kept
-- [x] **40 of 3,084 fields changed**; 124 approved lessons, **0 lapsed**
+- [x] « Familles » → « catégories » in the Week 3 lesson summary and activity title
+- [x] `vaisselle-incassable` added — a **new narrow material**, because ten approved lessons
+      depend on the household-objects entry it would otherwise have widened
+- [x] `PHYS-S01-C01-O09` **kept, not removed**: the passing game now steps back when it goes
+      well and closer when the ball drops, so it earns « lancer loin et avec précision »
+- [x] Week 4's identical wording corrected as a `consequence`; that week still unread
+- [x] **3 reusable rules**, each proved against the old content; two narrowed after they flagged
+      a ritual that only names a plate and a counting box that lists a cup
+- [x] **13 of 3,084 fields changed**; 124 approved lessons, **0 lapsed**
 
 ## In Progress
 
@@ -93,7 +92,7 @@ full local suite green.
 | format             | PASS   | working tree                      |
 | lint               | PASS   | working tree                      |
 | typecheck          | PASS   | working tree                      |
-| unit tests         | PASS   | working tree — 310 tests          |
+| unit tests         | PASS   | working tree — 314 tests          |
 | content validation | PASS   | working tree — 31 files           |
 | database tests     | PASS   | fresh reset — 152 assertions      |
 | build              | PASS   | working tree                      |
@@ -103,8 +102,8 @@ full local suite green.
 
 ## Database State
 
-- Local: 20 migrations; `db reset` + 152 pgTAP assertions pass.
-- DEV: not yet updated with `20260919130752_week3_review_corrections.sql`.
+- Local: 21 migrations; `db reset` + 152 pgTAP assertions pass.
+- DEV: not yet updated with `20260919174810_week3_second_review.sql`.
 - PROD: untouched.
 
 ## Deployment State
@@ -130,9 +129,9 @@ Commit, open the PR into `develop`, wait for CI, squash-merge, verify staging.
 
 ## Resume Verification
 
-1. `git branch --show-current` is `fix/maternelle-3-week-3-review`;
-2. `git log -n 5 --oneline` — branch point is `a9fc156`;
+1. `git branch --show-current` is `fix/maternelle-3-week-3-second-review`;
+2. `git log -n 5 --oneline` — branch point is `3113a95`;
 3. `git status --short` — read uncommitted work before discarding it;
-4. `gh pr list --head fix/maternelle-3-week-3-review` — a PR may already exist;
+4. `gh pr list --head fix/maternelle-3-week-3-second-review` — a PR may already exist;
 5. `npx supabase migration list --linked` before assuming DEV needs the migration;
 6. `gh run list --branch develop --limit 3` before assuming a deployment is needed.

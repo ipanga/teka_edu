@@ -64,6 +64,12 @@ Changement arrivé dans cette semaine sans relecture propre : il vient d’une c
 
 **Suites données :** Le rituel du jour 19 ne revendique plus « organiser les mots en catégorie et en réseau » : on y dit la date et on se rappelle la semaine, on n’y range aucun mot. L’objectif reste porté par « Trois familles de mots », dans la même leçon et le même jour, si bien que rien ne change ni pour la leçon ni pour la progression. À signaler pour la relecture complète de cette semaine, sans correction ici : cette activité parle encore de « famille de mots » là où il s’agit d’une catégorie sémantique, le même point que la semaine 3 a fait corriger au jour 12.
 
+### 2026-09-19 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
+
+Changement arrivé dans cette semaine sans relecture propre : il vient d’une correction demandée sur la semaine 3.
+
+**Suites données :** « Trois familles de mots » (jour 19) devient « Trois catégories de mots », et le résumé, la guidance et le lexique disent « catégorie » au lieu de « famille de mots ». C’est le même point de vocabulaire que la semaine 3 a fait corriger au jour 12 : la tâche range des mots par catégorie sémantique, pas par famille morphologique. La procédure de tri, l’objectif, la durée et la progression ne changent pas. Cette semaine n’a toujours pas reçu sa relecture pédagogique complète.
+
 ## Jour 15 — 2026-09-21
 
 **Durée totale : 35 min** · 4 séances · jour 5 du rythme
@@ -1336,7 +1342,7 @@ l’autre — l’appareil est alors le sien._
 
 ### Je range les mots — Le développement et la structuration du langage oral et écrit (13 min)
 
-_Reprendre les familles de mots du mois et y ranger des mots nouveaux._
+_Reprendre les catégories de mots du mois et y ranger des mots nouveaux._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Reprise des trois corpus du mois : l’école, la maison, le marché. L’enfant range, et surtout explique pourquoi.
@@ -1350,17 +1356,17 @@ _Reprendre les familles de mots du mois et y ranger des mots nouveaux._
 #### 1. Le rituel : la date et la révision — 3 min, sans interaction écran (conversation)
 
 - **Consigne à l’enfant :** « Dis la date. Puis raconte-moi ce que nous avons appris cette semaine. »
-- **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes vendredi 25 septembre 2026. » Puis reprenez la semaine : les rimes, raconter dans l’ordre, les mots rangés par familles.
+- **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes vendredi 25 septembre 2026. » Puis reprenez la semaine : les rimes, raconter dans l’ordre, les mots rangés par catégories.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Say the date, then tell me what we learned this week. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date.
 
-#### 2. Trois familles de mots — 7 min, sans interaction écran (sorting)
+#### 2. Trois catégories de mots — 7 min, sans interaction écran (sorting)
 
 - **Consigne à l’enfant :** « Range ces mots : les mots de l’école, les mots de la maison, les mots du marché. »
-- **Guidance adulte :** 1. Dites un mot. 2. Demandez dans quelle famille il va. 3. Faites justifier à chaque fois. 4. Ajoutez un mot nouveau et voyez où l’enfant le met : c’est là que vous verrez s’il a compris la famille, et pas seulement la liste.
+- **Guidance adulte :** 1. Dites un mot. 2. Demandez dans quelle catégorie il va. 3. Faites justifier à chaque fois. 4. Ajoutez un mot nouveau et voyez où l’enfant le met : c’est là que vous verrez s’il a compris la catégorie, et pas seulement la liste.
 - **Matériel :** Aucun matériel
-- **Lexique visé :** ranger _(to sort)_ · la famille de mots _(the word family)_
+- **Lexique visé :** ranger _(to sort)_ · la catégorie _(the category)_
 - **Aide en anglais (optionnelle) :** « Sort the words: school words, home words, market words. »
 - **Images montrées à l'enfant (6) :**
 

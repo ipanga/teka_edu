@@ -26,17 +26,17 @@ Roles, kept distinct on purpose:
 
 ## Register of reviews
 
-| Batch                                | Date             | Kind                                             | Outcome                                                          | Corrections                    | Status                            |
-| ------------------------------------ | ---------------- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------------------------ | --------------------------------- |
-| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`**   | 13, then 6, then 2             | **`approved`** — 16 lessons       |
-| 3ème maternelle, Week 2 (days 5–9)   | 2026-09-17 → -19 | AI-assisted (ChatGPT), 4 passes                  | passes 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 14, then 4, then 2, then 1     | **`approved`** — 20 lessons       |
-| 3ème maternelle, Week 3 (days 10–14) | 2026-09-19       | AI-assisted (ChatGPT), 1 pass                    | `accepted-with-modifications`                                    | 13 items, all applied          | `review` — awaiting a second pass |
-| 3ème maternelle, Weeks 4–5           | —                | —                                                | not yet reviewed                                                 | inherited corrections only     | `review` — 0 approved             |
-| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 11 items across the passes     | **`approved`** — 16 lessons       |
-| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons       |
-| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons       |
-| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                                   | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons       |
-| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`**     | 5 items                        | **`approved`** — 12 lessons       |
+| Batch                                | Date             | Kind                                             | Outcome                                                          | Corrections                    | Status                                 |
+| ------------------------------------ | ---------------- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------------------------ | -------------------------------------- |
+| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`**   | 13, then 6, then 2             | **`approved`** — 16 lessons            |
+| 3ème maternelle, Week 2 (days 5–9)   | 2026-09-17 → -19 | AI-assisted (ChatGPT), 4 passes                  | passes 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 14, then 4, then 2, then 1     | **`approved`** — 20 lessons            |
+| 3ème maternelle, Week 3 (days 10–14) | 2026-09-19       | AI-assisted (ChatGPT), 2 passes                  | `accepted-with-modifications` both                               | 13, then 3                     | `review` — awaiting final confirmation |
+| 3ème maternelle, Weeks 4–5           | —                | —                                                | not yet reviewed                                                 | inherited corrections only     | `review` — 0 approved                  |
+| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 11 items across the passes     | **`approved`** — 16 lessons            |
+| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons            |
+| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons            |
+| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                                   | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons            |
+| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`**     | 5 items                        | **`approved`** — 12 lessons            |
 
 **1ère maternelle September is complete: 88 of 88 lessons `approved`.** 3ème maternelle's Week 1
 has Weeks 1 and 2 `approved` — **36 of 88** — leaving Weeks 3–5 (52 lessons) at `review`. Every approval
@@ -450,6 +450,43 @@ two lessons, so removing it here would have left it taught once and never return
 and corrected, recorded as a `consequence`. Its sibling still earns the objective, so nothing else
 moved. **Reported and deliberately not changed there:** that lesson still says « famille de mots »,
 the same wording Week 3 had corrected. It belongs to Week 4's own reading.
+
+---
+
+## 3ème maternelle, Week 3 review, 2026-09-19 — accepted with modifications (pass 2)
+
+The first-pass corrections were confirmed and not reopened. Three residual points remained, each
+a case of a lesson's **wording, metadata or conduct** lagging behind a correction its content had
+already taken.
+
+**« Familles » survived in two places.** The activity itself had been corrected to « groupe » and
+« catégorie », but the lesson summary and the activity's own title still said « familles ». A word
+family is morphological — _chanter, chanteur, chanson_ — and this task groups words by meaning.
+Both now say « catégories ».
+
+**The material metadata contradicted the guidance.** _Mets la table_ tells the adult to use
+unbreakable plates, cups or spoons, and declared `objets-maison` — « coussins, chaises, bâton,
+tissu ». The parent's preparation list and substitution offered a cushion and a stick for setting
+a table. A **new narrow material** was added rather than widening the household-objects entry,
+which **ten approved lessons** depend on:
+
+> `vaisselle-incassable` — « Vaisselle incassable (assiettes en plastique, gobelets, cuillères) »,
+> with safe substitutes, and a safety note excluding glass, ceramic and anything sharp.
+
+**« Dix passes ensemble » had not earned « lancer loin et avec précision ».** It passed a ball at
+one fixed distance and reset the count to zero on every drop. **`PHYS-S01-C01-O09` was kept, not
+removed**, because the activity can earn it honestly and the cooperation objective needs the same
+game: the pair now starts close enough to succeed, steps back a pace when the passes go well,
+moves closer as soon as the ball starts dropping, and no longer restarts from zero. Distance and
+precision are genuinely worked, and it is still no one's match — no opponent, no winner, no
+reward.
+
+### One occurrence in Week 4
+
+The same « famille de mots » wording sat in day 19 — reported last round, and now corrected as a
+`consequence` because the new rule forces it. Title, summary, guidance and lexicon say
+« catégorie »; the sorting procedure, the objective, the duration and the progression are
+untouched. **Week 4 still has not been read.**
 
 ---
 

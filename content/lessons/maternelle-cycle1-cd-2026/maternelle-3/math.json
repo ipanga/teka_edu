@@ -1175,7 +1175,7 @@
           "role": "teach",
           "mediaIds": [],
           "objectiveCodes": ["MATH-S01-C01-O19", "MATH-S01-C01-O21"],
-          "materialCodes": ["objets-maison"],
+          "materialCodes": ["vaisselle-incassable"],
           "vocabulary": [
             {
               "fr": "chacun",
