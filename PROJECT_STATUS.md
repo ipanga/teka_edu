@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-19
-Branch:     fix/week2-final-corrections
-Commit:     develop at 3783f10; main at 1b95480
+Branch:     feat/approve-maternelle-3-week-2
+Commit:     develop at 036a782; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -505,11 +505,11 @@ GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891,
 
 ## Content Status
 
-| Class           | Curriculum mapping     | Week 1                                                                                                      | Week 2      | Full year   |
-| --------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| 1ère maternelle | DONE (band `before-4`) | Not started                                                                                                 | Not started | Not started |
-| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                                                 | Not started | Not started |
-| 3ème maternelle | DONE (band `from-5`)   | Week 1 **approved** (16); Week 2 reviewed once, corrected, awaiting pass 2 (20); Weeks 3–5 not yet reviewed | Not started | Not started |
+| Class           | Curriculum mapping     | Week 1                                                                        | Week 2      | Full year   |
+| --------------- | ---------------------- | ----------------------------------------------------------------------------- | ----------- | ----------- |
+| 1ère maternelle | DONE (band `before-4`) | Not started                                                                   | Not started | Not started |
+| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                   | Not started | Not started |
+| 3ème maternelle | DONE (band `from-5`)   | Weeks 1–2 **approved** (36 lessons); Weeks 3–5 written, not yet reviewed (52) | Not started | Not started |
 
 DRC 2026–2027 calendar data: DONE (official MINEDU-NC calendar and Ordonnance n° 23/042; 189 instructional days).
 Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 official objectives and 529 success examples** imported with provenance.
@@ -576,30 +576,29 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  3ème Week 2 — the last two inconsistencies, both a lesson saying one thing and
-            its activity doing another.
-            - « Je dis où c'est » claims "situer des objets par rapport à soi", and its
-              summary, its parent guidance and its first activity all do that. The second
-              had drifted: the adult put the object "quelque part" and reformulated "il est
-              derrière la chaise". The frame is the child's body again — in front of, behind
-              and beside the child, and "Derrière moi" is a good answer. No left or right,
-              no new objective.
-            - Bibi's guidance walked through one of the three questions the activity
-              actually asks, then jumped to the child's own experience. It names the three
-              in story order now, accepts a word or a gesture, reformulates without asking
-              for repetition, and connects to the child only afterwards. Story, questions
-              and duration unchanged.
-            - The semantic-diff gate: 4 changed fields out of 3,084 compared across 88
-              lessons, all in the two intended activities. Nothing else moved.
-            - Both lessons' digests moved, as they must. No standing approval lapsed: 104 of
-              104 still verify. The text fingerprint still reaches Bibi — rewriting her
-              story moves the lesson's digest.
-            - One test was made robust rather than re-pinned: it asserted Week 2 had been
-              read exactly twice, which needed editing after every pass. It now asserts what
-              actually matters — no reading has concluded `accepted`, so nothing is
-              approvable — and survives the next one.
+Completed:  3ème maternelle Week 2 is approved — 36 of 88.
+            - One editorial change was all that remained. The English scaffold said "Tell me
+              where the object is compared to you" — not how anyone says it, and ambiguous
+              for a spatial relation. It now says "in front of you, behind you, or beside
+              you", which is what the French consigne says.
+            - The semantic-diff gate held: 1 changed field out of 3,084 compared across 88
+              lessons, and it was the permitted one.
+            - ChatGPT's fourth pass concluded `accepted`. The history keeps all four: three
+              accepted-with-modifications, then accepted. Nothing rewritten to look cleaner.
+            - Approved through the same gate as Week 1, which still refuses Weeks 3, 4 and 5
+              because none has an accepted full review. 124 approved lessons, 124 distinct
+              digests, 0 lapsed, none copied.
+            - ISSUE-026 protections re-verified live: the scaffold change moved the lesson's
+              digest; rewriting Bibi's story moves hers and leaves the spatial lesson alone;
+              an unresolvable text or picture still throws.
+            - Eight tests had pinned the pre-approval counts and would need editing after
+              every future approval. They are state-derived now and say something stronger:
+              a week is approved if and only if its history holds an accepted full review,
+              and a week is approved wholly or not at all. Proved by forging an approval
+              with a genuine digest on an unreviewed week — the rule catches it.
 Validation: format, lint, typecheck, unit (305), content (31 files), pgTAP (152) on a fresh
             reset, build, E2E (28), both Docker images, client-bundle scan.
 Cost:       $0.
-Not done:   Week 2 is not approved — 0 of 20. Weeks 3-5 never reviewed. Beta gate 6 of 10.
+Not done:   Weeks 3-5 never reviewed — 52 lessons at review. Beta gate 7 of 10.
+            Week 3's package is prepared but not reviewed and not approved.
 ```

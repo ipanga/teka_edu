@@ -10,12 +10,11 @@
 
 ## Task
 
-Apply ChatGPT's final two corrections to 3ème maternelle Week 2 and return it for confirmation.
+Apply the final editorial fix, approve 3ème maternelle Week 2, and prepare Week 3 for review.
 
 ## Objective
 
-A lesson's activities do what the lesson says they do — the spatial frame and the emotion
-questions match their own claims.
+Week 2 is approved through a gate that still refuses every week nobody has read.
 
 ## Status
 
@@ -23,11 +22,11 @@ questions match their own claims.
 
 ## Branch
 
-`fix/week2-final-corrections`
+`feat/approve-maternelle-3-week-2`
 
 ## Base Branch
 
-`develop` at `3783f10`
+`develop` at `036a782`
 
 ## Started
 
@@ -35,8 +34,8 @@ questions match their own claims.
 
 ## Last Checkpoint
 
-2026-09-19 — two corrections, 4 of 3,084 fields changed, 0 approvals lapsed, full local suite
-green.
+2026-09-19 — one scaffold fix (1 of 3,084 fields), Week 2 approved (20 lessons), Week 3 package
+prepared, full local suite green.
 
 ## Scope
 
@@ -66,16 +65,20 @@ green.
 
 ## Completed
 
-- [x] `m3-time-03-a2` kept relative to the child's body: the adult places the object in front of,
-      behind and beside the child; « Derrière moi » is a good answer; one reformulation, no
-      repetition. No left/right, no new objective
-- [x] `m3-lang-09-a2` guidance now describes the three questions the activity actually asks, in
-      story order. Story, questions and duration unchanged
-- [x] **Semantic-diff gate: 4 of 3,084 fields changed**, all in the two intended activities
-- [x] Both lessons' digests moved; **104 of 104 approvals still verify**, 0 lapsed
-- [x] Text fingerprinting still reaches Bibi — rewriting her story moves the digest
-- [x] A brittle test made robust: it pinned the number of review passes and needed editing after
-      each one; it now asserts the invariant that matters
+- [x] One editorial change: the English scaffold on `m3-time-03-a2` now mirrors the French
+      consigne instead of saying « compared to you »
+- [x] **Semantic-diff gate: 1 of 3,084 fields changed**, and it was the permitted one
+- [x] Final ChatGPT pass recorded as `accepted`; all four passes preserved unrewritten
+- [x] **Week 2 approved — 20 lessons**, through `scripts/approve-week.ts`, which still refuses
+      Weeks 3, 4 and 5
+- [x] 3ème **36 / 88** · 1ère **88 / 88** · total **124 approved**, 124 distinct digests, 0 lapsed
+- [x] Beta weekly packages **7 / 10**, computed from canonical data
+- [x] ISSUE-026 re-verified live: scaffold change moves the digest, a rewritten story moves only
+      its own lesson, missing text or media fails closed
+- [x] Eight count-pinned tests made state-derived — a week is approved **iff** its history holds
+      an accepted full review, and wholly or not at all. Proved by forging a valid-digest
+      approval on an unreviewed week and watching the rule catch it
+- [x] Week 3 package prepared, unreviewed and unapproved
 
 ## In Progress
 
@@ -83,8 +86,8 @@ green.
 
 ## Remaining
 
-- [ ] Hand the regenerated `docs/review/2026-2027-maternelle-3-semaine-2.md` back to ChatGPT for
-      its second pass. Do not review or approve it here.
+- [ ] Hand `docs/review/2026-2027-maternelle-3-semaine-3.md` to ChatGPT. Do not review or
+      approve it here.
 
 ## Validation State
 
@@ -103,8 +106,8 @@ green.
 
 ## Database State
 
-- Local: 18 migrations; `db reset` + 152 pgTAP assertions pass.
-- DEV: not yet updated with `20260919114821_week2_final_corrections.sql`.
+- Local: 19 migrations; `db reset` + 152 pgTAP assertions pass.
+- DEV: not yet updated with `20260919122247_approve_maternelle_3_week_2.sql`.
 - PROD: untouched.
 
 ## Deployment State
@@ -130,9 +133,9 @@ Commit, open the PR into `develop`, wait for CI, squash-merge, verify staging.
 
 ## Resume Verification
 
-1. `git branch --show-current` is `fix/week2-final-corrections`;
-2. `git log -n 5 --oneline` — branch point is `3783f10`;
+1. `git branch --show-current` is `feat/approve-maternelle-3-week-2`;
+2. `git log -n 5 --oneline` — branch point is `036a782`;
 3. `git status --short` — read uncommitted work before discarding it;
-4. `gh pr list --head fix/week2-final-corrections` — a PR may already exist;
+4. `gh pr list --head feat/approve-maternelle-3-week-2` — a PR may already exist;
 5. `npx supabase migration list --linked` before assuming DEV needs the migration;
 6. `gh run list --branch develop --limit 3` before assuming a deployment is needed.

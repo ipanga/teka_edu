@@ -37,14 +37,21 @@ describe("September lessons (3ème maternelle)", () => {
     }
   });
 
-  it("has approved exactly the week that passed its review, and nothing else", () => {
-    // Week 1 is days 1-4; the other 72 lessons have not been through a full review.
+  it("approves only through a full review that accepted the week", () => {
+    // The counts are deliberately not pinned: weeks get approved one at a time, and a test that
+    // must be edited after each one stops being a check. What has to hold is that every approval
+    // is attributable and none of them is anything but an accepted AI-assisted review.
     const approved = m3.filter((l) => l.status === "approved");
-    expect(approved).toHaveLength(16);
-    expect(m3.filter((l) => l.status === "review")).toHaveLength(72);
+    expect(approved.length).toBeGreaterThan(0);
+    expect(approved.length + m3.filter((l) => l.status === "review").length).toBe(m3.length);
     for (const l of approved) {
       expect(l.review?.reviewKind, l.id).toBe("ai-assisted");
       expect(l.review?.outcome, l.id).toBe("accepted");
+    }
+    // Anything not approved carries no review record at all.
+    for (const l of m3.filter((x) => x.status !== "approved")) {
+      expect(l.status, l.id).toBe("review");
+      expect(l.review, l.id).toBeNull();
     }
   });
 
