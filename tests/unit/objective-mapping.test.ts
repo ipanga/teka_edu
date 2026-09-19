@@ -368,3 +368,81 @@ describe("a ritual claims the date, and only what else it really does", () => {
     expect(telling.objectiveCodes).toContain("LANG-S01-C04-O11");
   });
 });
+
+describe("a movement objective describes the movement that happens", () => {
+  const text = (a: Activity) => `${a.childInstruction} ${a.adultGuidance}`;
+
+  it("only claims « lancer » where something is actually sent", () => {
+    // « Saute la rivière » claimed « lancer loin et avec précision différents objets ». Nobody
+    // throws anything in it: the child jumps over a cloth on the floor.
+    const throwing = /\b(lanc\w*|vise\w*|jett\w*|envoi\w*|passes?)\b/i;
+    const claiming = activities.filter((a) => a.objectiveCodes.includes("PHYS-S01-C01-O09"));
+    expect(claiming.length).toBeGreaterThan(0);
+    for (const activity of claiming) {
+      expect(throwing.test(text(activity)), `${activity.id}: claims throwing, throws nothing`).toBe(
+        true,
+      );
+    }
+  });
+
+  it("claims a jumping objective wherever the child jumps over something", () => {
+    const jumps = /\bsaut\w*\b.{0,40}\b(par-dessus|obstacle|rivière)\b/i;
+    const jumping = activities.filter((a) => jumps.test(a.childInstruction));
+    expect(jumping.length).toBeGreaterThan(0);
+    for (const activity of jumping) {
+      const claimsJump = activity.objectiveCodes.some((code) =>
+        /^Sauter sans élan|sauter haut ou loin/i.test(statementOf(code)),
+      );
+      expect(claimsJump, `${activity.id}: the child jumps an obstacle without claiming it`).toBe(
+        true,
+      );
+    }
+  });
+});
+
+describe("a spatial objective names the frame it is judged against", () => {
+  const text = (a: Activity) => `${a.childInstruction} ${a.adultGuidance}`;
+
+  it("only claims « par rapport à soi » where the child's body is the reference", () => {
+    // Two activities situated objects against landmarks — « derrière la chaise », « près de la
+    // porte » — while claiming the objective about building an oriented image of one's own body.
+    const ownBody =
+      /\btoi\b|\bmoi\b|ton corps|devant (lui|elle)|derrière (lui|elle)|à côté de (lui|elle)|par rapport à (toi|lui|elle|soi)/i;
+    const claiming = activities.filter((a) => a.objectiveCodes.includes("TIME-SPACE-S02-C01-O16"));
+    expect(claiming.length).toBeGreaterThan(0);
+    for (const activity of claiming) {
+      expect(ownBody.test(text(activity)), `${activity.id}: claims « par rapport à soi »`).toBe(
+        true,
+      );
+    }
+  });
+});
+
+describe("a recap ritual claims only what it asks for", () => {
+  const text = (a: Activity) => `${a.childInstruction} ${a.adultGuidance}`;
+
+  it("only claims « organiser les mots en catégorie » where words are grouped", () => {
+    // Two rituals — « raconte-moi ce que nous avons appris cette semaine » — claimed the
+    // categorisation objective that the sorting activity beside them earns.
+    const groups = /catégorie|group\w*|\bensemble\b|\brange\b|\btri\w*|vont ensemble/i;
+    const claiming = activities.filter((a) => a.objectiveCodes.includes("LANG-S01-C01-O02"));
+    expect(claiming.length).toBeGreaterThan(0);
+    for (const activity of claiming) {
+      expect(
+        groups.test(text(activity)),
+        `${activity.id}: claims categorising, groups nothing`,
+      ).toBe(true);
+    }
+  });
+
+  it("only claims « diversifier les pronoms » where a pronoun is elicited", () => {
+    const pronoun = /«\s*(il|elle|ils|elles)\s*»|\b(il|elle)\b\s*…/i;
+    const claiming = activities.filter((a) => a.objectiveCodes.includes("LANG-S01-C02-O01"));
+    expect(claiming.length).toBeGreaterThan(0);
+    for (const activity of claiming) {
+      expect(pronoun.test(text(activity)), `${activity.id}: claims pronouns, elicits none`).toBe(
+        true,
+      );
+    }
+  });
+});

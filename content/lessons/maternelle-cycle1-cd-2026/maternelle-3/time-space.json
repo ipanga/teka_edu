@@ -318,8 +318,8 @@
       "levelIds": ["maternelle-3"],
       "domainCode": "TIME-SPACE",
       "title": "Où est l’objet ?",
-      "summary": "Situer un objet par rapport à un autre, et dire le trajet pour y aller.",
-      "objectiveCodes": [],
+      "summary": "Situer un objet par rapport à un autre, et dire le chemin en partant de soi.",
+      "objectiveCodes": ["TIME-SPACE-S02-C01-O09"],
       "supportingObjectiveCodes": ["TIME-SPACE-S02-C01-O16"],
       "stage": "practice",
       "difficulty": 2,
@@ -337,7 +337,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S02-C01-O16"],
+          "objectiveCodes": ["TIME-SPACE-S02-C01-O09"],
           "materialCodes": ["objets-maison"],
           "vocabulary": [
             {
@@ -372,8 +372,8 @@
           "position": 2,
           "type": "conversation",
           "title": "Le chemin pour y aller",
-          "childInstruction": "Explique-moi comment aller de la porte jusqu’à ta place.",
-          "adultGuidance": "1. Demandez le trajet en mots. 2. Faites employer « d’abord », « ensuite ». 3. Suivez ses indications à la lettre : s’il manque une étape, cela se verra. 4. Recommencez avec un autre trajet.",
+          "childInstruction": "Depuis ta place, dis-moi le chemin jusqu’à la porte : ce que tu as devant toi, ce que tu laisses derrière toi.",
+          "adultGuidance": "1. Laissez-le d’abord à sa place, sans bouger. 2. Demandez ce qu’il a devant lui, derrière lui, à côté de lui. 3. Puis faites dire le chemin en gardant ce repère : « J’avance vers la fenêtre qui est devant moi, je laisse la table derrière moi. » 4. Suivez ses indications à la lettre : s’il manque une étape, cela se verra. 5. Recommencez depuis un autre endroit de la pièce — « devant » n’est plus la même chose.",
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
@@ -386,14 +386,18 @@
               "en": "the way"
             },
             {
-              "fr": "tourner",
-              "en": "to turn"
+              "fr": "devant moi",
+              "en": "in front of me"
+            },
+            {
+              "fr": "derrière moi",
+              "en": "behind me"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Tell me how to go from the door to your place."
+              "childInstruction": "From your place, tell me the way to the door: what is in front of you, and what you leave behind you."
             }
           ],
           "payload": {
@@ -466,7 +470,7 @@
           "position": 2,
           "type": "conversation",
           "title": "Avant ou après ?",
-          "childInstruction": "L’école, c’est avant ou après ?",
+          "childInstruction": "Je vais te dire deux moments de ta semaine. Dis-moi lequel vient avant.",
           "adultGuidance": "Choisissez deux moments que l’enfant vit vraiment dans la semaine (l’école, le marché, la visite de quelqu’un, le jour sans école). Demandez lequel vient avant. Si votre semaine ne contient pas ces repères, prenez-en deux autres : l’important est qu’ils soient réels.",
           "minutes": 3,
           "mode": "off-screen",
@@ -487,7 +491,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Is school before or after the market?"
+              "childInstruction": "I will name two things from your week. Tell me which one comes first."
             }
           ],
           "payload": {

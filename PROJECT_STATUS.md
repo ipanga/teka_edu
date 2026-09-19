@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-19
-Branch:     feat/approve-maternelle-3-week-2
-Commit:     develop at 036a782; main at 1b95480
+Branch:     fix/maternelle-3-week-3-review
+Commit:     develop at a9fc156; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -505,11 +505,11 @@ GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891,
 
 ## Content Status
 
-| Class           | Curriculum mapping     | Week 1                                                                        | Week 2      | Full year   |
-| --------------- | ---------------------- | ----------------------------------------------------------------------------- | ----------- | ----------- |
-| 1ère maternelle | DONE (band `before-4`) | Not started                                                                   | Not started | Not started |
-| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                   | Not started | Not started |
-| 3ème maternelle | DONE (band `from-5`)   | Weeks 1–2 **approved** (36 lessons); Weeks 3–5 written, not yet reviewed (52) | Not started | Not started |
+| Class           | Curriculum mapping     | Week 1                                                                                                | Week 2      | Full year   |
+| --------------- | ---------------------- | ----------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| 1ère maternelle | DONE (band `before-4`) | Not started                                                                                           | Not started | Not started |
+| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                                           | Not started | Not started |
+| 3ème maternelle | DONE (band `from-5`)   | Weeks 1–2 **approved** (36); Week 3 reviewed once and corrected (20); Weeks 4–5 not yet reviewed (32) | Not started | Not started |
 
 DRC 2026–2027 calendar data: DONE (official MINEDU-NC calendar and Ordonnance n° 23/042; 189 instructional days).
 Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 official objectives and 529 success examples** imported with provenance.
@@ -576,29 +576,32 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  3ème maternelle Week 2 is approved — 36 of 88.
-            - One editorial change was all that remained. The English scaffold said "Tell me
-              where the object is compared to you" — not how anyone says it, and ambiguous
-              for a spatial relation. It now says "in front of you, behind you, or beside
-              you", which is what the French consigne says.
-            - The semantic-diff gate held: 1 changed field out of 3,084 compared across 88
-              lessons, and it was the permitted one.
-            - ChatGPT's fourth pass concluded `accepted`. The history keeps all four: three
-              accepted-with-modifications, then accepted. Nothing rewritten to look cleaner.
-            - Approved through the same gate as Week 1, which still refuses Weeks 3, 4 and 5
-              because none has an accepted full review. 124 approved lessons, 124 distinct
-              digests, 0 lapsed, none copied.
-            - ISSUE-026 protections re-verified live: the scaffold change moved the lesson's
-              digest; rewriting Bibi's story moves hers and leaves the spatial lesson alone;
-              an unresolvable text or picture still throws.
-            - Eight tests had pinned the pre-approval counts and would need editing after
-              every future approval. They are state-derived now and say something stronger:
-              a week is approved if and only if its history holds an accepted full review,
-              and a week is approved wholly or not at all. Proved by forging an approval
-              with a genuine digest on an unreviewed week — the rule catches it.
-Validation: format, lint, typecheck, unit (305), content (31 files), pgTAP (152) on a fresh
+Completed:  3ème maternelle Week 3 — first full review, 13 corrections applied.
+            - Almost every finding was the same family again: an objective sitting on an
+              activity that does not do it. A ritual that makes the child say "il" and "elle"
+              claimed conversation; retelling Kumu from start to finish claimed only
+              reformulation; one ritual claimed categorising and the next day's, which really
+              categorises, did not; "Mets la table" constitutes a collection of a given
+              cardinal without saying so; and "Saute la rivière" claimed "lancer loin et avec
+              précision" although nobody throws anything.
+            - Three spatial objectives describe the route activity exactly, and the annual
+              plan opens none of them before day 101. Using one would have been the premature
+              acceleration ADR-038 forbids, so the activity was narrowed instead: the child
+              starts from their own place and says what is in front of and behind them.
+            - The objective it kept had to stay for another reason too: it is taught on day 8
+              and appears in only two lessons, so removing it would have left it taught once
+              and never returned to.
+            - Day 10 was asking for the complement from twelve to fifteen, which day 11
+              introduces. "La main qui cache" let the child watch the objects being hidden,
+              which made it a memory game. La hanche replaced le cou. "Famille de mots"
+              became "catégorie". "to-ma-te" is not a safe three-syllable oral model.
+              Comparison now starts at three against seven rather than two near-equal heaps.
+            - One occurrence in Week 4 found by the new rule and corrected as a consequence;
+              its "famille de mots" wording reported, not changed, for that week's own pass.
+            - Six reusable rules added, each proved against the old mappings first.
+            - 40 of 3,084 fields changed. 124 approved lessons, 0 lapsed.
+Validation: format, lint, typecheck, unit (310), content (31 files), pgTAP (152) on a fresh
             reset, build, E2E (28), both Docker images, client-bundle scan.
 Cost:       $0.
-Not done:   Weeks 3-5 never reviewed — 52 lessons at review. Beta gate 7 of 10.
-            Week 3's package is prepared but not reviewed and not approved.
+Not done:   Week 3 is not approved — 0 of 20. Weeks 4-5 never reviewed. Beta gate 7 of 10.
 ```

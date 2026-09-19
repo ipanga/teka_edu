@@ -58,6 +58,12 @@ Deux changements arrivés dans cette semaine sans relecture propre : ils viennen
 
 **Suites données :** 1) L’histoire « Les trois cailloux de Tito », lue aussi le jour 18, n’énonce plus de soustraction ni d’addition formelles ; le raisonnement sur les quantités est gardé. 2) Le rituel du jour 15 ne revendique plus « comprendre les émotions, les intentions et les sentiments qui animent les personnages » : on y dit la date et on frappe des syllabes. L’objectif reste porté par « Nsimba a peur, puis ça va mieux », dans la même leçon et le même jour.
 
+### 2026-09-19 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
+
+Changement arrivé dans cette semaine sans relecture propre : il vient d’une correction demandée sur la semaine 3.
+
+**Suites données :** Le rituel du jour 19 ne revendique plus « organiser les mots en catégorie et en réseau » : on y dit la date et on se rappelle la semaine, on n’y range aucun mot. L’objectif reste porté par « Trois familles de mots », dans la même leçon et le même jour, si bien que rien ne change ni pour la leçon ni pour la progression. À signaler pour la relecture complète de cette semaine, sans correction ici : cette activité parle encore de « famille de mots » là où il s’agit d’une catégorie sémantique, le même point que la semaine 3 a fait corriger au jour 12.
+
 ## Jour 15 — 2026-09-21
 
 **Durée totale : 35 min** · 4 séances · jour 5 du rythme
@@ -1347,7 +1353,7 @@ _Reprendre les familles de mots du mois et y ranger des mots nouveaux._
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes vendredi 25 septembre 2026. » Puis reprenez la semaine : les rimes, raconter dans l’ordre, les mots rangés par familles.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Say the date, then tell me what we learned this week. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C01-O02` Organiser les mots en catégorie et en réseau.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date.
 
 #### 2. Trois familles de mots — 7 min, sans interaction écran (sorting)
 

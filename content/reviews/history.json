@@ -263,6 +263,30 @@
       "outcome": "accepted",
       "summary": "Relecture finale. Les deux corrections de la passe précédente sont vérifiées et acceptées : « Je dis où c’est » garde bien le repère sur le corps de l’enfant — l’adulte pose l’objet devant lui, derrière lui, à côté de lui, et reformule « Oui, il est derrière toi » — et la guidance de « Comment se sent Bibi ? » décrit bien les trois questions de l’histoire avant de relier une émotion au vécu de l’enfant. Aucun défaut pédagogique de fond ne subsiste. Une seule correction rédactionnelle restait, sur l’étai en anglais de « Je dis où c’est » : « compared to you » sonne faux et reste ambigu pour une relation spatiale.",
       "corrections": "L’étai en anglais devient « Tell me where the object is: in front of you, behind you, or beside you. Don’t point. », qui reprend directement la consigne française et se comprend sans détour. Ce changement est rédactionnel : il ne touche ni la consigne française, ni la guidance adulte, ni l’objectif, ni la durée, ni le matériel, ni le lexique. La semaine est acceptée et ses 20 leçons passent en « approuvée »."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 3,
+      "reviewedOn": "2026-09-19",
+      "reviewKind": "ai-assisted",
+      "reviewer": "ChatGPT",
+      "scope": "full-review",
+      "outcome": "accepted-with-modifications",
+      "summary": "Première relecture pédagogique complète de la semaine 3. La structure est acceptée : cinq jours, vingt leçons, trente-huit activités, environ trente-cinq minutes par jour, le rythme langage / mathématiques / mouvement / domaine tournant, la faible dépendance à l’écran et les étais en anglais facultatifs. Treize points ont été demandés, presque tous de la même famille : un objectif porté par une activité qui ne le travaille pas. Le rituel du jour 10 fait employer « il » et « elle » mais revendiquait la conversation ; « C’est toi qui racontes » fait redire une histoire entière et ne revendiquait que la reformulation ; le rituel du jour 12 ne range aucun mot mais revendiquait la catégorisation ; celui du jour 13 la fait et ne la revendiquait pas ; « Je compte dans la maison » compare deux collections sans le dire ; « Mets la table » constitue une collection d’un cardinal donné sans le dire ; et « Saute la rivière » revendiquait « lancer loin et avec précision » alors que personne n’y lance rien. Deux leçons de repérage dans l’espace revendiquaient « situer des objets par rapport à soi » alors qu’elles situaient les objets les uns par rapport aux autres. Côté conduite des activités : le jour 10 demandait déjà le complément de douze à quinze, que le jour 11 introduit seulement ; « La main qui cache » laissait voir ce qu’on cachait, ce qui en faisait un exercice de mémoire immédiate ; la liste des articulations contenait le cou à la place de la hanche ; « famille de mots » désignait une catégorie sémantique ; le matériel demandé ne contenait pas les objets à trier ; « ce qu’on achète au marché » incluait le panier et la monnaie ; « L’école, c’est avant ou après ? » n’avait pas de second repère ; « to-ma-te » n’est pas un modèle oral sûr de trois syllabes ; et la comparaison globale se faisait entre deux tas presque égaux.",
+      "corrections": "Toutes appliquées, en n’utilisant que des objectifs officiels existants. Le rituel du jour 10 porte « diversifier les pronoms employés », introduit le jour 2. Le récit de Kumu porte la compréhension des histoires à structure répétitive, déjà travaillée le jour 3. La catégorisation quitte le rituel du jour 12 et rejoint celui du jour 13, qui la fait vraiment. « Je compte dans la maison » porte la comparaison des quantités et « Mets la table » la constitution d’une collection d’un cardinal donné, toutes deux déjà introduites. « Saute la rivière » porte « sauter sans élan un obstacle » à la place de l’objectif de lancer. Pour l’espace, « Cache et retrouve » porte « situer des objets entre eux » ; « Le chemin pour y aller » repart du corps de l’enfant — ce qu’il a devant lui, derrière lui — et garde donc l’objectif qu’il revendiquait. Trois objectifs ont été examinés puis écartés parce que le plan annuel ne les ouvre qu’au troisième trimestre : réaliser un trajet dans un environnement connu, restituer oralement un déplacement mémorisé, et enrichir le lexique de l’espace ; les employer ici aurait été de l’accélération. Le jour 10 ne demande plus le complément : on redemande quinze objets et on recompte. « La main qui cache » fait fermer les yeux. La hanche remplace le cou. On dit « la catégorie » et le tri se fait à l’oral, sans matériel. On nomme « les mots du marché ». L’enfant compare deux moments de sa propre semaine. « a-na-nas » remplace « to-ma-te ». Et la première comparaison se fait entre trois et sept, avant de compter. Aucune leçon n’est approuvée : les 20 restent en relecture."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 4,
+      "reviewedOn": "2026-09-19",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Teka Edu (conséquence de la relecture de la semaine 3)",
+      "scope": "consequence",
+      "outcome": "accepted-with-modifications",
+      "summary": "Changement arrivé dans cette semaine sans relecture propre : il vient d’une correction demandée sur la semaine 3.",
+      "corrections": "Le rituel du jour 19 ne revendique plus « organiser les mots en catégorie et en réseau » : on y dit la date et on se rappelle la semaine, on n’y range aucun mot. L’objectif reste porté par « Trois familles de mots », dans la même leçon et le même jour, si bien que rien ne change ni pour la leçon ni pour la progression. À signaler pour la relecture complète de cette semaine, sans correction ici : cette activité parle encore de « famille de mots » là où il s’agit d’une catégorie sémantique, le même point que la semaine 3 a fait corriger au jour 12."
     }
   ]
 }

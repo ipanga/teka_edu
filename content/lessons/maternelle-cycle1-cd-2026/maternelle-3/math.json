@@ -918,7 +918,7 @@
           "type": "manipulation",
           "title": "Douze cailloux",
           "childInstruction": "Fais un tas de douze objets.",
-          "adultGuidance": "1. Demandez douze objets. 2. Proposez de faire d’abord dix, puis d’ajouter. 3. Recomptez ensemble. 4. Demandez ce qu’il faut ajouter pour arriver à quinze.",
+          "adultGuidance": "1. Demandez douze objets. 2. Proposez de faire d’abord dix, puis d’ajouter. 3. Recomptez ensemble. 4. Puis demandez quinze objets : laissez l’enfant ajouter des objets et recompter jusqu’à quinze.",
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
@@ -965,8 +965,8 @@
           "position": 1,
           "type": "manipulation",
           "title": "La main qui cache",
-          "childInstruction": "Regarde les cinq objets. J’en cache, tu devines combien sont cachés.",
-          "adultGuidance": "1. Montrez cinq objets, comptez-les ensemble. 2. Cachez-en deux sous votre main. 3. Demandez combien sont cachés. 4. Ouvrez la main et vérifiez : « Trois et deux, ça fait cinq. »",
+          "childInstruction": "Compte les cinq objets. Ferme les yeux. J’en cache ; devine combien sont cachés.",
+          "adultGuidance": "1. Comptez les cinq objets ensemble. 2. Demandez à l’enfant de fermer les yeux un instant. 3. Cachez-en une partie sous votre main ; laissez les autres bien visibles. 4. Il rouvre les yeux. Rappelez : « Il y en avait cinq en tout. » 5. Demandez combien sont cachés. 6. Ouvrez la main et vérifiez en comptant : « Trois et deux, ça fait cinq. » 7. Recommencez avec un autre partage.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
@@ -986,7 +986,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Look at the five objects. I hide some; guess how many are hidden."
+              "childInstruction": "Count the five objects. Close your eyes. I hide some; guess how many are hidden."
             }
           ],
           "payload": {
@@ -1122,7 +1122,12 @@
       "title": "Compter ce qui est rangé",
       "summary": "Compter des collections organisées, sans en oublier.",
       "objectiveCodes": [],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O19", "MATH-S01-C01-O20"],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O19",
+        "MATH-S01-C01-O20",
+        "MATH-S01-C01-O05",
+        "MATH-S01-C01-O21"
+      ],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "objets-et-formes",
@@ -1139,7 +1144,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["MATH-S01-C01-O19", "MATH-S01-C01-O20"],
+          "objectiveCodes": ["MATH-S01-C01-O19", "MATH-S01-C01-O20", "MATH-S01-C01-O05"],
           "materialCodes": ["objets-maison"],
           "vocabulary": [
             {
@@ -1164,12 +1169,12 @@
           "type": "manipulation",
           "title": "Mets la table",
           "childInstruction": "Prends exactement ce qu’il faut d’assiettes pour tout le monde.",
-          "adultGuidance": "1. Demandez combien de personnes mangent. 2. Faites chercher le bon nombre d’assiettes. 3. Vérifiez en posant une assiette par personne. 4. C’est un vrai problème : autant d’assiettes que de personnes.",
+          "adultGuidance": "1. Demandez combien de personnes mangent. 2. Faites chercher le bon nombre d’assiettes — des assiettes incassables ou en plastique si vous en avez, sinon des gobelets ou des cuillères. 3. Vérifiez en posant une assiette par personne. 4. C’est un vrai problème : autant d’assiettes que de personnes.",
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["MATH-S01-C01-O19"],
+          "objectiveCodes": ["MATH-S01-C01-O19", "MATH-S01-C01-O21"],
           "materialCodes": ["objets-maison"],
           "vocabulary": [
             {
@@ -1212,7 +1217,7 @@
           "type": "manipulation",
           "title": "Le jeu des deux tas",
           "childInstruction": "Regarde les deux tas et dis lequel en a le plus.",
-          "adultGuidance": "1. Faites deux tas. 2. Demandez sans compter. 3. Vérifiez en comptant. 4. Variez en faisant des tas égaux : l’enfant doit oser dire « autant ».",
+          "adultGuidance": "1. Faites deux tas nettement différents : trois objets d’un côté, sept de l’autre. 2. Demandez sans compter : la différence doit se voir. 3. Vérifiez en comptant. 4. Pour « autant », posez les deux tas en face à face, un objet devant un objet : on le voit avant de compter. 5. Ne faites jamais deviner entre deux tas presque égaux en désordre.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "consolidation",

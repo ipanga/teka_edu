@@ -1093,6 +1093,7 @@
       "objectiveCodes": [],
       "supportingObjectiveCodes": [
         "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C02-O01",
         "LANG-S01-C04-O11",
         "LANG-S01-C01-O03",
         "LANG-S02-C03-O04"
@@ -1113,7 +1114,7 @@
           "mode": "off-screen",
           "role": "retrieval",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C04-O11"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C02-O01"],
           "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [
@@ -1211,7 +1212,8 @@
       "supportingObjectiveCodes": [
         "TIME-SPACE-S01-C01-O12",
         "LANG-S01-C04-O11",
-        "LANG-S02-C03-O04"
+        "LANG-S02-C03-O04",
+        "LANG-S02-C03-O09"
       ],
       "stage": "practice",
       "difficulty": 2,
@@ -1253,7 +1255,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["LANG-S01-C04-O11"],
+          "objectiveCodes": ["LANG-S02-C03-O09"],
           "materialCodes": ["aucun"],
           "vocabulary": [
             {
@@ -1334,7 +1336,7 @@
           "mode": "off-screen",
           "role": "retrieval",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C01-O02"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12"],
           "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [
@@ -1352,18 +1354,18 @@
           "position": 2,
           "type": "sorting",
           "title": "Je range les mots par familles",
-          "childInstruction": "Range ces mots en trois tas : ce qui se mange, ce qui sert à écrire, ce qui se porte.",
-          "adultGuidance": "1. Posez les objets ou dites les mots un par un. 2. Demandez : « Où va celui-là ? » 3. Faites justifier : « Pourquoi avec celui-là ? » 4. Terminez en nommant la famille : « Tout ça, ce sont des choses qui se mangent. »",
+          "childInstruction": "Range ces mots en trois groupes : ce qui se mange, ce qui sert à écrire, ce qui se porte.",
+          "adultGuidance": "1. Dites les mots un par un ; posez un objet seulement si vous en avez un sous la main. 2. Demandez : « Où va celui-là ? » 3. Faites justifier : « Pourquoi avec celui-là ? » 4. Terminez en nommant la catégorie : « Tout ça, ce sont des aliments : ce sont des mots de la même catégorie. »",
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
           "objectiveCodes": ["LANG-S01-C01-O02"],
-          "materialCodes": ["objets-maison"],
+          "materialCodes": ["aucun"],
           "vocabulary": [
             {
-              "fr": "la famille de mots",
-              "en": "the word family"
+              "fr": "la catégorie",
+              "en": "the category"
             },
             {
               "fr": "ensemble",
@@ -1419,6 +1421,7 @@
       "objectiveCodes": [],
       "supportingObjectiveCodes": [
         "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C01-O02",
         "LANG-S01-C01-O03",
         "LANG-S02-C03-O04"
       ],
@@ -1438,7 +1441,7 @@
           "mode": "off-screen",
           "role": "retrieval",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C01-O03"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C01-O02"],
           "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [
@@ -1456,7 +1459,7 @@
           "position": 2,
           "type": "vocabulary",
           "title": "Au marché",
-          "childInstruction": "Nomme ce qu’on achète au marché : la tomate, la banane, l’oignon, le panier, la monnaie.",
+          "childInstruction": "Nomme les mots du marché : la tomate, la banane, l’oignon, le panier, la monnaie.",
           "adultGuidance": "1. Nommez chaque mot avec l’article. 2. Faites répéter. 3. Jouez au marché : l’enfant commande, vous vendez. 4. Faites employer un nombre : « Je voudrais deux bananes. »",
           "minutes": 8,
           "mode": "off-screen",
@@ -1489,7 +1492,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Name what we buy at the market: tomato, banana, onion, basket, change."
+              "childInstruction": "Name the market words: tomato, banana, onion, basket, change."
             }
           ],
           "payload": {
@@ -1573,7 +1576,7 @@
           "type": "phonology",
           "title": "Combien de morceaux ?",
           "childInstruction": "Frappe les morceaux du mot, puis dis combien il y en a.",
-          "adultGuidance": "1. Dites le mot lentement en frappant. 2. Faites refaire. 3. Demandez le nombre de coups. 4. Comparez : « ba-nane, deux coups ; to-ma-te, trois coups. Lequel est le plus long ? »",
+          "adultGuidance": "1. Dites le mot lentement en frappant. 2. Faites refaire. 3. Demandez le nombre de coups. 4. Comparez : « ba-nane, deux coups ; a-na-nas, trois coups. Lequel est le plus long ? »",
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
@@ -2087,7 +2090,7 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C01-O02"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12"],
           "materialCodes": ["aucun"],
           "vocabulary": [],
           "scaffolds": [

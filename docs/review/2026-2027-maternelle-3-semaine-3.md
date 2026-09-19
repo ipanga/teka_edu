@@ -41,10 +41,8 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-**Cette semaine n’a encore jamais été relue.** Ce qui suit n’est donc pas
-l’historique de ses relectures : ce sont des corrections qui lui sont arrivées
-parce qu’un défaut trouvé dans une autre semaine existait ici à l’identique.
-Elles sont déjà appliquées au contenu que vous lisez ci-dessous.
+Cette semaine a déjà été relue 1 fois. Ce qui suit est l’historique,
+pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
 
@@ -57,6 +55,12 @@ Trois changements arrivés dans cette semaine sans relecture propre : ils vienne
 Changement arrivé dans cette semaine sans relecture propre : il vient d’une correction demandée sur la semaine 2.
 
 **Suites données :** L’histoire « Les trois cailloux de Tito », lue aussi le jour 14, ne se termine plus par « Trois cailloux, moins un, ça fait deux. Et deux, plus un, ça refait trois. » Le raisonnement sur les quantités est gardé, mais l’opération n’est plus énoncée : une lecture à voix haute n’a pas à enseigner l’addition et la soustraction formelles.
+
+### 2026-09-19 — ChatGPT · `accepted-with-modifications` (ai-assisted)
+
+Première relecture pédagogique complète de la semaine 3. La structure est acceptée : cinq jours, vingt leçons, trente-huit activités, environ trente-cinq minutes par jour, le rythme langage / mathématiques / mouvement / domaine tournant, la faible dépendance à l’écran et les étais en anglais facultatifs. Treize points ont été demandés, presque tous de la même famille : un objectif porté par une activité qui ne le travaille pas. Le rituel du jour 10 fait employer « il » et « elle » mais revendiquait la conversation ; « C’est toi qui racontes » fait redire une histoire entière et ne revendiquait que la reformulation ; le rituel du jour 12 ne range aucun mot mais revendiquait la catégorisation ; celui du jour 13 la fait et ne la revendiquait pas ; « Je compte dans la maison » compare deux collections sans le dire ; « Mets la table » constitue une collection d’un cardinal donné sans le dire ; et « Saute la rivière » revendiquait « lancer loin et avec précision » alors que personne n’y lance rien. Deux leçons de repérage dans l’espace revendiquaient « situer des objets par rapport à soi » alors qu’elles situaient les objets les uns par rapport aux autres. Côté conduite des activités : le jour 10 demandait déjà le complément de douze à quinze, que le jour 11 introduit seulement ; « La main qui cache » laissait voir ce qu’on cachait, ce qui en faisait un exercice de mémoire immédiate ; la liste des articulations contenait le cou à la place de la hanche ; « famille de mots » désignait une catégorie sémantique ; le matériel demandé ne contenait pas les objets à trier ; « ce qu’on achète au marché » incluait le panier et la monnaie ; « L’école, c’est avant ou après ? » n’avait pas de second repère ; « to-ma-te » n’est pas un modèle oral sûr de trois syllabes ; et la comparaison globale se faisait entre deux tas presque égaux.
+
+**Suites données :** Toutes appliquées, en n’utilisant que des objectifs officiels existants. Le rituel du jour 10 porte « diversifier les pronoms employés », introduit le jour 2. Le récit de Kumu porte la compréhension des histoires à structure répétitive, déjà travaillée le jour 3. La catégorisation quitte le rituel du jour 12 et rejoint celui du jour 13, qui la fait vraiment. « Je compte dans la maison » porte la comparaison des quantités et « Mets la table » la constitution d’une collection d’un cardinal donné, toutes deux déjà introduites. « Saute la rivière » porte « sauter sans élan un obstacle » à la place de l’objectif de lancer. Pour l’espace, « Cache et retrouve » porte « situer des objets entre eux » ; « Le chemin pour y aller » repart du corps de l’enfant — ce qu’il a devant lui, derrière lui — et garde donc l’objectif qu’il revendiquait. Trois objectifs ont été examinés puis écartés parce que le plan annuel ne les ouvre qu’au troisième trimestre : réaliser un trajet dans un environnement connu, restituer oralement un déplacement mémorisé, et enrichir le lexique de l’espace ; les employer ici aurait été de l’accélération. Le jour 10 ne demande plus le complément : on redemande quinze objets et on recompte. « La main qui cache » fait fermer les yeux. La hanche remplace le cou. On dit « la catégorie » et le tri se fait à l’oral, sans matériel. On nomme « les mots du marché ». L’enfant compare deux moments de sa propre semaine. « a-na-nas » remplace « to-ma-te ». Et la première comparaison se fait entre trois et sept, avant de compter. Aucune leçon n’est approuvée : les 20 restent en relecture.
 
 ## Jour 10 — 2026-09-14
 
@@ -83,6 +87,7 @@ _Dire ce qu’on voit avec assez de mots pour être compris sans montrer du doig
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
+  - `LANG-S01-C02-O01` — Diversifier les pronoms employés.
   - `LANG-S01-C04-O11` — Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
   - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
@@ -93,7 +98,7 @@ _Dire ce qu’on voit avec assez de mots pour être compris sans montrer du doig
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes lundi 14 septembre 2026. » Puis faites employer « il » et « elle » à propos d’une personne connue : « Elle porte le seau. »
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Say the date, then tell me what someone does, using he or she. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C04-O11` Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C02-O01` Diversifier les pronoms employés.
 
 #### 2. Devine ce que je regarde — 8 min, sans interaction écran (conversation)
 
@@ -140,6 +145,21 @@ _Dire ce qu’on voit avec assez de mots pour être compris sans montrer du doig
 - Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
 - Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
 - Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Développer sa syntaxe » (from-5) :**
+
+- Utiliser les pronoms nous et vous : « Avec les CP, nous avons mangé un gâteau », « Vous, vous mangez un gâteau et pas nous. »
+- Utiliser :
+  • un système à trois temps : imparfait/plus-que-parfait/imparfait à valeur de futur dans le passé (aller) « Moi, j’étais sur un toboggan. J’avais fait de la balançoire et j’allais faire du vélo » ;
+  • le futur simple : « Quand on écrira aux correspondants » ;
+  • un système à deux temps : futur/futur antérieur : « Quand on ira chez les correspondants, on aura déjà été au spectacle et on pourra leur raconter l’histoire. »
+- Utiliser de nouveaux introducteurs de complexité : où/quand/pour que/si/comme, etc. :
+  • « Là, c’est la maison où le loup a mangé le petit chaperon rouge. »
+  • « Le chevreau s’est caché dans l’horloge pour que le loup ne le voie pas. »
+  • « Quand je vais à la boulangerie, la boulangère me donne un bonbon. »
+  • « Comme il fait chaud, elle va boire de l’eau. »
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -215,7 +235,7 @@ _Étendre la suite des nombres de dix à vingt._
 #### 2. Douze cailloux — 4 min, sans interaction écran (manipulation)
 
 - **Consigne à l’enfant :** « Fais un tas de douze objets. »
-- **Guidance adulte :** 1. Demandez douze objets. 2. Proposez de faire d’abord dix, puis d’ajouter. 3. Recomptez ensemble. 4. Demandez ce qu’il faut ajouter pour arriver à quinze.
+- **Guidance adulte :** 1. Demandez douze objets. 2. Proposez de faire d’abord dix, puis d’ajouter. 3. Recomptez ensemble. 4. Puis demandez quinze objets : laissez l’enfant ajouter des objets et recompter jusqu’à quinze.
 - **Matériel :** Petits objets à compter (cailloux, capsules, haricots)
 - **Lexique visé :** ajouter _(to add)_
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
@@ -334,11 +354,12 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ### Où est l’objet ? — Se repérer dans le temps et l’espace (7 min)
 
-_Situer un objet par rapport à un autre, et dire le trajet pour y aller._
+_Situer un objet par rapport à un autre, et dire le chemin en partant de soi._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** On passe de « par rapport à moi » à « par rapport à un autre objet ». C’est plus difficile : gardez des repères très visibles.
 - **Objectifs enseignés :**
+  - `TIME-SPACE-S02-C01-O09` — Situer des objets entre eux. _(source : programme-2026)_
 - **Objectifs repris (déjà vus) :**
   - `TIME-SPACE-S02-C01-O16` — Situer des objets par rapport à soi, construire une image orientée de son corps.
 
@@ -351,15 +372,15 @@ _Situer un objet par rapport à un autre, et dire le trajet pour y aller._
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Close your eyes. I hide the object; find it using my words. »
-- **Objectifs travaillés :** `TIME-SPACE-S02-C01-O16` Situer des objets par rapport à soi, construire une image orientée de son corps.
+- **Objectifs travaillés :** `TIME-SPACE-S02-C01-O09` Situer des objets entre eux.
 
 #### 2. Le chemin pour y aller — 3 min, sans interaction écran (conversation)
 
-- **Consigne à l’enfant :** « Explique-moi comment aller de la porte jusqu’à ta place. »
-- **Guidance adulte :** 1. Demandez le trajet en mots. 2. Faites employer « d’abord », « ensuite ». 3. Suivez ses indications à la lettre : s’il manque une étape, cela se verra. 4. Recommencez avec un autre trajet.
+- **Consigne à l’enfant :** « Depuis ta place, dis-moi le chemin jusqu’à la porte : ce que tu as devant toi, ce que tu laisses derrière toi. »
+- **Guidance adulte :** 1. Laissez-le d’abord à sa place, sans bouger. 2. Demandez ce qu’il a devant lui, derrière lui, à côté de lui. 3. Puis faites dire le chemin en gardant ce repère : « J’avance vers la fenêtre qui est devant moi, je laisse la table derrière moi. » 4. Suivez ses indications à la lettre : s’il manque une étape, cela se verra. 5. Recommencez depuis un autre endroit de la pièce — « devant » n’est plus la même chose.
 - **Matériel :** Aucun matériel
-- **Lexique visé :** le chemin _(the way)_ · tourner _(to turn)_
-- **Aide en anglais (optionnelle) :** « Tell me how to go from the door to your place. »
+- **Lexique visé :** le chemin _(the way)_ · devant moi _(in front of me)_ · derrière moi _(behind me)_
+- **Aide en anglais (optionnelle) :** « From your place, tell me the way to the door: what is in front of you, and what you leave behind you. »
 - **Objectifs travaillés :** `TIME-SPACE-S02-C01-O16` Situer des objets par rapport à soi, construire une image orientée de son corps.
 
 **Réussites attendues — texte officiel pour la compétence « Faire l’expérience de l’espace » (from-5) :**
@@ -421,6 +442,7 @@ _Redire une histoire connue dans l’ordre, avec ses propres mots._
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
   - `LANG-S01-C04-O11` — Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
+  - `LANG-S02-C03-O09` — Comprendre des histoires dont les actions sont organisées autour d’une structure répétitive (rencontres successives) et commencer à comprendre les informations implicites (émotions, états et sentiments des personnages).
 
 #### 1. Le rituel : la date et la révision — 2 min, sans interaction écran (conversation)
 
@@ -437,7 +459,7 @@ _Redire une histoire connue dans l’ordre, avec ses propres mots._
 - **Matériel :** Aucun matériel
 - **Lexique visé :** le début _(the beginning)_ · la fin _(the end)_
 - **Aide en anglais (optionnelle) :** « Tell me Kumu’s story from the beginning to the end. »
-- **Objectifs travaillés :** `LANG-S01-C04-O11` Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
+- **Objectifs travaillés :** `LANG-S02-C03-O09` Comprendre des histoires dont les actions sont organisées autour d’une structure répétitive (rencontres successives) et commencer à comprendre les informations implicites (émotions, états et sentiments des personnages).
 
 #### 3. Le temps de lecture — 3 min, sans interaction écran (read-aloud)
 
@@ -521,13 +543,13 @@ _Décomposer un petit nombre en deux parties._
 
 #### 1. La main qui cache — 5 min, sans interaction écran (manipulation)
 
-- **Consigne à l’enfant :** « Regarde les cinq objets. J’en cache, tu devines combien sont cachés. »
-- **Guidance adulte :** 1. Montrez cinq objets, comptez-les ensemble. 2. Cachez-en deux sous votre main. 3. Demandez combien sont cachés. 4. Ouvrez la main et vérifiez : « Trois et deux, ça fait cinq. »
+- **Consigne à l’enfant :** « Compte les cinq objets. Ferme les yeux. J’en cache ; devine combien sont cachés. »
+- **Guidance adulte :** 1. Comptez les cinq objets ensemble. 2. Demandez à l’enfant de fermer les yeux un instant. 3. Cachez-en une partie sous votre main ; laissez les autres bien visibles. 4. Il rouvre les yeux. Rappelez : « Il y en avait cinq en tout. » 5. Demandez combien sont cachés. 6. Ouvrez la main et vérifiez en comptant : « Trois et deux, ça fait cinq. » 7. Recommencez avec un autre partage.
 - **Matériel :** Petits objets à compter (cailloux, capsules, haricots)
 - **Lexique visé :** cacher _(to hide)_ · deviner _(to guess)_
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
-- **Aide en anglais (optionnelle) :** « Look at the five objects. I hide some; guess how many are hidden. »
+- **Aide en anglais (optionnelle) :** « Count the five objects. Close your eyes. I hide some; guess how many are hidden. »
 - **Images montrées à l'enfant (1) :**
 
   - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
@@ -664,11 +686,11 @@ _Retrouver et nommer les endroits du corps qui plient, et s’en servir._
 
 #### 1. Je nomme et je bouge — 4 min, sans interaction écran (observation)
 
-- **Consigne à l’enfant :** « Je dis une articulation, tu la fais bouger toute seule. »
-- **Guidance adulte :** 1. Nommez : le coude, le genou, le poignet, la cheville, l’épaule, le cou. 2. L’enfant bouge seulement celle-là. 3. Inversez. 4. Terminez par : « Qu’est-ce qui bouge quand tu marches ? »
+- **Consigne à l’enfant :** « Je nomme une articulation : montre-la, puis fais bouger ton corps à cet endroit. »
+- **Guidance adulte :** 1. Nommez : le coude, le genou, le poignet, la cheville, l’épaule, la hanche. 2. L’enfant la montre, puis bouge son corps à cet endroit. 3. Inversez. 4. Terminez par : « Qu’est-ce qui plie quand tu marches ? »
 - **Matériel :** Aucun matériel
-- **Lexique visé :** le poignet _(the wrist)_ · le cou _(the neck)_ · plier _(to bend)_
-- **Aide en anglais (optionnelle) :** « I name a joint; you move only that one. »
+- **Lexique visé :** le poignet _(the wrist)_ · la hanche _(the hip)_ · plier _(to bend)_
+- **Aide en anglais (optionnelle) :** « I name a joint: show it, then move your body there. »
 - **Objectifs travaillés :** `WORLD-S01-C02-O08` Identifier et nommer quelques articulations et la segmentation des membres.
 
 #### 2. Le bonhomme qui plie — 3 min, sans interaction écran (drawing)
@@ -745,16 +767,14 @@ _Ranger les mots par familles : ce qui se mange, ce qui sert à écrire, ce qui 
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes mercredi 16 septembre 2026. » Puis demandez la fin de l’histoire. S’il bloque, donnez le début de la phrase : « Kumu ferme les yeux et il… »
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Say the date, then tell me the end of Kumu’s story. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C01-O02` Organiser les mots en catégorie et en réseau.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date.
 
 #### 2. Je range les mots par familles — 8 min, sans interaction écran (sorting)
 
-- **Consigne à l’enfant :** « Range ces mots en trois tas : ce qui se mange, ce qui sert à écrire, ce qui se porte. »
-- **Guidance adulte :** 1. Posez les objets ou dites les mots un par un. 2. Demandez : « Où va celui-là ? » 3. Faites justifier : « Pourquoi avec celui-là ? » 4. Terminez en nommant la famille : « Tout ça, ce sont des choses qui se mangent. »
-- **Matériel :** Objets de la maison (coussins, chaises, bâton, tissu)
-- **Lexique visé :** la famille de mots _(the word family)_ · ensemble _(together)_
-- **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
-- **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
+- **Consigne à l’enfant :** « Range ces mots en trois groupes : ce qui se mange, ce qui sert à écrire, ce qui se porte. »
+- **Guidance adulte :** 1. Dites les mots un par un ; posez un objet seulement si vous en avez un sous la main. 2. Demandez : « Où va celui-là ? » 3. Faites justifier : « Pourquoi avec celui-là ? » 4. Terminez en nommant la catégorie : « Tout ça, ce sont des aliments : ce sont des mots de la même catégorie. »
+- **Matériel :** Aucun matériel
+- **Lexique visé :** la catégorie _(the category)_ · ensemble _(together)_
 - **Aide en anglais (optionnelle) :** « Sort the words into three groups: food, writing things, clothes. »
 - **Objectifs travaillés :** `LANG-S01-C01-O02` Organiser les mots en catégorie et en réseau.
 
@@ -1061,6 +1081,7 @@ _Troisième corpus de mots : le marché, les fruits, les légumes, les quantité
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
+  - `LANG-S01-C01-O02` — Organiser les mots en catégorie et en réseau.
   - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
 
@@ -1070,15 +1091,15 @@ _Troisième corpus de mots : le marché, les fruits, les légumes, les quantité
 - **Guidance adulte :** Dites la date : « Aujourd’hui, nous sommes jeudi 17 septembre 2026. » Puis reprenez le tri d’hier : « La cuillère et l’assiette vont ensemble. Pourquoi ? »
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Say the date, then tell me two words that go together. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C01-O03` Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C01-O02` Organiser les mots en catégorie et en réseau.
 
 #### 2. Au marché — 8 min, sans interaction écran (vocabulary)
 
-- **Consigne à l’enfant :** « Nomme ce qu’on achète au marché : la tomate, la banane, l’oignon, le panier, la monnaie. »
+- **Consigne à l’enfant :** « Nomme les mots du marché : la tomate, la banane, l’oignon, le panier, la monnaie. »
 - **Guidance adulte :** 1. Nommez chaque mot avec l’article. 2. Faites répéter. 3. Jouez au marché : l’enfant commande, vous vendez. 4. Faites employer un nombre : « Je voudrais deux bananes. »
 - **Matériel :** Aucun matériel
 - **Lexique visé :** la tomate _(the tomato)_ · la banane _(the banana)_ · l’oignon _(the onion)_ · le panier _(the basket)_ · la monnaie _(the change)_
-- **Aide en anglais (optionnelle) :** « Name what we buy at the market: tomato, banana, onion, basket, change. »
+- **Aide en anglais (optionnelle) :** « Name the market words: tomato, banana, onion, basket, change. »
 - **Images montrées à l'enfant (4) :**
 
   - `objet-tomate` — Une tomate (`public/media/objects/objet-tomate.svg`)
@@ -1175,6 +1196,8 @@ _Compter des collections organisées, sans en oublier._
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O19` — Poursuivre les stratégies de parcours d’une collection en passant une et une seule fois par chacun de ses éléments.
   - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
+  - `MATH-S01-C01-O05` — Comparer des quantités.
+  - `MATH-S01-C01-O21` — Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
 #### 1. Je compte dans la maison — 5 min, sans interaction écran (counting)
 
@@ -1185,18 +1208,18 @@ _Compter des collections organisées, sans en oublier._
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Count the chairs, then the plates. »
-- **Objectifs travaillés :** `MATH-S01-C01-O19` Poursuivre les stratégies de parcours d’une collection en passant une et une seule fois par chacun de ses éléments. ; `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
+- **Objectifs travaillés :** `MATH-S01-C01-O19` Poursuivre les stratégies de parcours d’une collection en passant une et une seule fois par chacun de ses éléments. ; `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). ; `MATH-S01-C01-O05` Comparer des quantités.
 
 #### 2. Mets la table — 4 min, sans interaction écran (manipulation)
 
 - **Consigne à l’enfant :** « Prends exactement ce qu’il faut d’assiettes pour tout le monde. »
-- **Guidance adulte :** 1. Demandez combien de personnes mangent. 2. Faites chercher le bon nombre d’assiettes. 3. Vérifiez en posant une assiette par personne. 4. C’est un vrai problème : autant d’assiettes que de personnes.
+- **Guidance adulte :** 1. Demandez combien de personnes mangent. 2. Faites chercher le bon nombre d’assiettes — des assiettes incassables ou en plastique si vous en avez, sinon des gobelets ou des cuillères. 3. Vérifiez en posant une assiette par personne. 4. C’est un vrai problème : autant d’assiettes que de personnes.
 - **Matériel :** Objets de la maison (coussins, chaises, bâton, tissu)
 - **Lexique visé :** chacun _(each)_
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Take exactly enough plates for everyone. »
-- **Objectifs travaillés :** `MATH-S01-C01-O19` Poursuivre les stratégies de parcours d’une collection en passant une et une seule fois par chacun de ses éléments.
+- **Objectifs travaillés :** `MATH-S01-C01-O19` Poursuivre les stratégies de parcours d’une collection en passant une et une seule fois par chacun de ses éléments. ; `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**
 
@@ -1337,12 +1360,12 @@ _Situer les évènements de sa semaine et les mettre en ordre._
 
 #### 2. Avant ou après ? — 3 min, sans interaction écran (conversation)
 
-- **Consigne à l’enfant :** « L’école, c’est avant ou après ? »
+- **Consigne à l’enfant :** « Je vais te dire deux moments de ta semaine. Dis-moi lequel vient avant. »
 - **Guidance adulte :** Choisissez deux moments que l’enfant vit vraiment dans la semaine (l’école, le marché, la visite de quelqu’un, le jour sans école). Demandez lequel vient avant. Si votre semaine ne contient pas ces repères, prenez-en deux autres : l’important est qu’ils soient réels.
 - **Matériel :** Feuille de papier
 - **Lexique visé :** avant _(before)_ · après _(after)_
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
-- **Aide en anglais (optionnelle) :** « Is school before or after the market? »
+- **Aide en anglais (optionnelle) :** « I will name two things from your week. Tell me which one comes first. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C01-O10` Situer un évènement dans la semaine.
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
@@ -1412,7 +1435,7 @@ _Frapper les syllabes de mots plus longs et compter combien il y en a._
 #### 2. Combien de morceaux ? — 7 min, sans interaction écran (phonology)
 
 - **Consigne à l’enfant :** « Frappe les morceaux du mot, puis dis combien il y en a. »
-- **Guidance adulte :** 1. Dites le mot lentement en frappant. 2. Faites refaire. 3. Demandez le nombre de coups. 4. Comparez : « ba-nane, deux coups ; to-ma-te, trois coups. Lequel est le plus long ? »
+- **Guidance adulte :** 1. Dites le mot lentement en frappant. 2. Faites refaire. 3. Demandez le nombre de coups. 4. Comparez : « ba-nane, deux coups ; a-na-nas, trois coups. Lequel est le plus long ? »
 - **Matériel :** Aucun matériel
 - **Lexique visé :** la syllabe _(the syllable)_ · compter _(to count)_
 - **Aide en anglais (optionnelle) :** « Clap the parts of the word, then say how many. »
@@ -1502,7 +1525,7 @@ _Reprendre la comparaison des quantités de la semaine._
 #### 1. Le jeu des deux tas — 5 min, sans interaction écran (manipulation)
 
 - **Consigne à l’enfant :** « Regarde les deux tas et dis lequel en a le plus. »
-- **Guidance adulte :** 1. Faites deux tas. 2. Demandez sans compter. 3. Vérifiez en comptant. 4. Variez en faisant des tas égaux : l’enfant doit oser dire « autant ».
+- **Guidance adulte :** 1. Faites deux tas nettement différents : trois objets d’un côté, sept de l’autre. 2. Demandez sans compter : la différence doit se voir. 3. Vérifiez en comptant. 4. Pour « autant », posez les deux tas en face à face, un objet devant un objet : on le voit avant de compter. 5. Ne faites jamais deviner entre deux tas presque égaux en désordre.
 - **Matériel :** Petits objets à compter (cailloux, capsules, haricots)
 - **Lexique visé :** plus que _(more than)_ · autant que _(as many as)_
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
@@ -1586,9 +1609,9 @@ _Sauter pieds joints par-dessus un obstacle bas._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Obstacle très bas : une corde posée au sol, un tissu plié. Rien de dur ni de haut.
 - **Objectifs enseignés :**
+  - `PHYS-S01-C01-O03` — Sauter sans élan un obstacle. _(source : programme-2026)_
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S02-C01-O05` — Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions.
-  - `PHYS-S01-C01-O09` — Lancer loin et avec précision différents objets.
 
 #### 1. Saute la rivière — 6 min, sans interaction écran (movement)
 
@@ -1601,16 +1624,7 @@ _Sauter pieds joints par-dessus un obstacle bas._
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
 - **Aide en anglais (optionnelle) :** « Jump over the river with both feet together. »
-- **Objectifs travaillés :** `PHYS-S02-C01-O05` Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions. ; `PHYS-S01-C01-O09` Lancer loin et avec précision différents objets.
-
-**Réussites attendues — texte officiel pour la compétence « Tourner, se suspendre, se renverser, grimper, rouler, glisser, nager » (from-5) :**
-
-- Sauter puis se déplacer en quadrupédie, se suspendre, se balancer et se lâcher, etc.
-- Se déplacer sans tomber et en maitrisant ses trajectoires sur des patins à glace ou à roulettes, sur des skis, sur un vélo à deux roues, etc.
-- Entrer et sortir seul de l’eau, se déplacer avec les épaules immergées, immerger complètement la tête pendant plusieurs secondes.
-- Aider ses camarades avec les professeurs pour assurer leur sécurité (guide et parade).
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+- **Objectifs travaillés :** `PHYS-S02-C01-O05` Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions. ; `PHYS-S01-C01-O03` Sauter sans élan un obstacle.
 
 **Réussites attendues — texte officiel pour la compétence « Manipuler, courir, sauter, lancer, s’orienter » (from-5) :**
 
@@ -1619,6 +1633,15 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 - Courir vite et franchir une rivière matérialisée avec des lattes sans ralentir.
 - Courir puis sauter haut ou loin après une impulsion sur un pied pour franchir un obstacle et se réceptionner sur deux pieds.
 - Trouver au moins cinq éléments remarquables et repérables sur plusieurs photographies prises par les professeurs dans un lieu extérieur à l’école (cour de récréation, terrain de sport, stade, parc…), en l’absence des élèves ou lors d’une séance précédente.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Tourner, se suspendre, se renverser, grimper, rouler, glisser, nager » (from-5) :**
+
+- Sauter puis se déplacer en quadrupédie, se suspendre, se balancer et se lâcher, etc.
+- Se déplacer sans tomber et en maitrisant ses trajectoires sur des patins à glace ou à roulettes, sur des skis, sur un vélo à deux roues, etc.
+- Entrer et sortir seul de l’eau, se déplacer avec les épaules immergées, immerger complètement la tête pendant plusieurs secondes.
+- Aider ses camarades avec les professeurs pour assurer leur sécurité (guide et parade).
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
