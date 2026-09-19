@@ -19,7 +19,7 @@ slides.
 
 ## Status
 
-`in_progress`
+`completed`
 
 ## Branch
 
@@ -35,8 +35,9 @@ slides.
 
 ## Last Checkpoint
 
-2026-09-19 — 10 Week 4 corrections (33 of 3,084 fields), 8 reusable rules, 0 approvals lapsed,
-full local suite green.
+2026-09-19 — merged as `dcfdb62` (PR #60) and verified live on staging. ISSUE-011 fired on the
+way: the container registry was full at 50 images; 15 were pruned with the owner's approval and
+the deploy re-run.
 
 ## Scope
 
@@ -81,12 +82,13 @@ full local suite green.
 
 ## In Progress
 
-- [ ] PR into `develop`, CI, squash-merge, staging verification
+None. The task is finished.
 
 ## Remaining
 
 - [ ] Hand the regenerated `docs/review/2026-2027-maternelle-3-semaine-4.md` back to ChatGPT
-      for its second pass. Do not review or approve it here.
+      for its second pass. Do not review or approve it here. **This is the owner's action, not
+      a step this repository can take.**
 
 ## Validation State
 
@@ -106,17 +108,20 @@ full local suite green.
 ## Database State
 
 - Local: 23 migrations; `db reset` + 152 pgTAP assertions pass.
-- DEV: not yet updated with `20260919194738_week4_review_corrections.sql`.
+- DEV: `20260919194738_week4_review_corrections.sql` applied.
 - PROD: untouched.
 
 ## Deployment State
 
-- Staging: not yet redeployed with these corrections.
+- Staging: live at `dcfdb62` (run 35465869484, deployment `teka-blkd7cw9e`, alias moved).
+  `/api/health` reports `staging` and the DEV Supabase ref; 28 E2E green against it.
+- Container registry: 36 of 50 images after the prune. Watch it before the next merge.
 - Production: disabled; `main` at `1b95480`.
 
 ## Git State
 
-- `fix/maternelle-3-week-1-review`, branched from `develop` at `a4a014d`. No PR open yet.
+- PR #60 squash-merged into `develop` as `dcfdb62`; the branch is deleted. Working tree carries
+  only this checkpoint and the ISSUE-011 record.
 
 ## Blockers
 
@@ -128,7 +133,7 @@ None outstanding. Week 1 goes back to ChatGPT; Weeks 2–5 still need their own 
 
 ## Exact Resume Point
 
-Commit, open the PR into `develop`, wait for CI, squash-merge, verify staging.
+Nothing to resume. The next task begins when ChatGPT returns its second pass on Week 4.
 
 ## Resume Verification
 

@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-19
-Branch:     fix/maternelle-3-week-4-first-review
-Commit:     develop at c15d535; main at 1b95480
+Branch:     develop
+Commit:     develop at dcfdb62; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -253,7 +253,8 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 ### P1 — Soon
 
 1. Official Cycle 1 curriculum source, then the competency catalogue (PD-004), needed for Task 7 content.
-2. Monitor the container registry image count (50 per repository on Hobby, ISSUE-011).
+2. Monitor the container registry image count (50 per repository on Hobby, ISSUE-011 — the cap
+   was reached on 2026-09-19 and pruned back to 35; it is at 36).
 3. Optional hardening: disable the unused legacy `anon` / `service_role` keys on both Supabase projects.
 
 ### P2 — Later
@@ -308,9 +309,26 @@ Recommended action: for IPv4 tooling use the session pooler (pooler host, port 5
 
 ### ISSUE-011 — Container registry: 50 images per repository on Hobby
 
-Severity: Medium (Monitor) · Status: Open
-Description: Every staging deployment pushes one image (about 73 MB) to the registry repository `dockerfile`. Hobby allows 50 images per repository, and no automatic cleanup is documented. There were 4 images on 2026-09-11.
-Recommended action: when about 40 are reached, prune old images that no retained deployment or alias uses (`vercel vcr image ls/rm`). This is a deletion, so it needs owner approval. Optionally skip staging deploys for documentation-only merges.
+Severity: Medium (Monitor) · Status: Open · **Fired on 2026-09-19, pruned with owner approval**
+
+Description: Every staging deployment pushes one image (about 73 MB) to the registry repository
+`dockerfile`. Hobby allows 50 images per repository, and no automatic cleanup is documented. There
+were 4 images on 2026-09-11.
+
+**On 2026-09-19 the cap was reached.** The Week 4 staging deploy (run `35465869484`, commit
+`dcfdb62`) failed while pushing its image:
+`denied: repository has reached the maximum allowed number of images`. The registry held exactly 50. The prediction below was correct in every part except the threshold: the count went from 4 to
+50 in eight days, so «about 40» was never observed — the monitoring was manual and nobody looked.
+
+Resolution: the owner approved the deletion, and the **15 oldest images (7–8 days old, every one
+from a superseded commit) were removed** with `vercel vcr image rm dockerfile <id> --project
+teka-edu`. The image behind the live staging deployment and its alias was verified untouched first.
+The registry went 50 → 35, the deploy was re-run and succeeded, and it now sits at 36.
+
+Recommended action: prune when the count passes about 40, and check it **before** a merge rather
+than after a failure. A deletion still needs owner approval. Note the real cost of hitting the cap:
+`develop` is blocked, because every subsequent merge re-triggers the same failing deploy.
+Optionally skip staging deploys for documentation-only merges.
 
 ### ISSUE-012 — Supabase Free projects pause after about 7 days of low activity
 
@@ -604,8 +622,14 @@ Completed:  3ème maternelle Week 4 — its first actual full review, 10 correct
               a pinned test rather than a corpus rule, and the occurrences are recorded for
               their own weeks to decide.
             - 33 of 3,084 fields changed, all in Week 4. 144 approved lessons, 0 lapsed.
+            - ISSUE-011 fired: the first staging deploy failed because the Vercel container
+              registry held its full 50 images. With the owner's approval the 15 oldest
+              (7-8 days, all superseded) were deleted, 50 -> 35, and the deploy re-run.
 Validation: format, lint, typecheck, unit (322), content (31 files), pgTAP (152) on a fresh
             reset, build, E2E (28), both Docker images, client-bundle scan.
+Deployed:   PR #60 squash-merged as dcfdb62. Staging live on run 35465869484: environment
+            staging, Supabase DEV ref, commit dcfdb62, 28 E2E green, alias moved to
+            teka-blkd7cw9e. DEV migrated. main and PROD untouched.
 Cost:       $0.
 Not done:   Week 4 is not approved — 0 of 20. Week 5 never reviewed. Beta gate 8 of 10.
 ```
