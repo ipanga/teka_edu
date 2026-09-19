@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-19
-Branch:     fix/maternelle-3-week-3-second-review
-Commit:     develop at 3113a95; main at 1b95480
+Branch:     feat/approve-maternelle-3-week-3
+Commit:     develop at b6f6e6e; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -505,11 +505,11 @@ GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891,
 
 ## Content Status
 
-| Class           | Curriculum mapping     | Week 1                                                                                                | Week 2      | Full year   |
-| --------------- | ---------------------- | ----------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| 1ère maternelle | DONE (band `before-4`) | Not started                                                                                           | Not started | Not started |
-| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                                           | Not started | Not started |
-| 3ème maternelle | DONE (band `from-5`)   | Weeks 1–2 **approved** (36); Week 3 reviewed once and corrected (20); Weeks 4–5 not yet reviewed (32) | Not started | Not started |
+| Class           | Curriculum mapping     | Week 1                                                                        | Week 2      | Full year   |
+| --------------- | ---------------------- | ----------------------------------------------------------------------------- | ----------- | ----------- |
+| 1ère maternelle | DONE (band `before-4`) | Not started                                                                   | Not started | Not started |
+| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                   | Not started | Not started |
+| 3ème maternelle | DONE (band `from-5`)   | Weeks 1–3 **approved** (56 lessons); Weeks 4–5 written, not yet reviewed (32) | Not started | Not started |
 
 DRC 2026–2027 calendar data: DONE (official MINEDU-NC calendar and Ordonnance n° 23/042; 189 instructional days).
 Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 official objectives and 529 success examples** imported with provenance.
@@ -576,32 +576,25 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  3ème maternelle Week 3 — second pass, three residual corrections.
-            - Each was a case of wording, metadata or conduct lagging behind a correction the
-              content had already taken.
-            - "Familles" survived in the lesson summary and the activity title after the
-              activity itself had been corrected to "catégorie". A word family is
-              morphological; this task groups words by meaning. Both now say catégories.
-            - "Mets la table" told the adult to use unbreakable plates and declared the
-              household-objects box — cushions, chairs, a stick, a cloth. The parent's
-              preparation list offered a cushion for setting a table. A narrow material was
-              added rather than widening the shared one, which ten approved lessons depend
-              on: vaisselle incassable, with safe substitutes and a note excluding glass,
-              ceramic and anything sharp.
-            - "Dix passes ensemble" claimed "lancer loin et avec précision" while passing at
-              one fixed distance, and reset to zero on every drop. The objective was kept
-              rather than removed, because the activity can earn it: the pair starts close,
-              steps back when it goes well, moves closer when the ball drops, and no longer
-              restarts. Still no opponent, no winner, no reward.
-            - The same "famille de mots" wording in Week 4 — reported last round — is now
-              corrected as a consequence, because the new rule forces it. That week still
-              has not been read.
-            - Three reusable rules, each proved against the old content first. Two had to be
-              narrowed: the first draft flagged a ritual that merely names a plate as a word
-              to sort, and a counting box that lists a cup among its suggestions.
-            - 13 of 3,084 fields changed. 124 approved lessons, 0 lapsed.
+Completed:  3ème maternelle Week 3 is approved — 56 of 88, September at 144 of 176.
+            - ChatGPT's third pass concluded `accepted` with nothing further to correct. The
+              history keeps all three: two accepted-with-modifications, then accepted, plus
+              two inherited consequence entries that are not readings of this week.
+            - Approved through the same gate as Weeks 1 and 2, which was tested again and
+              still refuses Weeks 4 and 5 because neither has an accepted full review.
+            - 144 approved lessons, 144 distinct digests, 0 lapsed, none copied.
+            - The approval changed state and nothing else: the field-by-field diff against
+              the confirmed revision reports 3,084 fields compared, all identical. No
+              child-facing, adult-guidance, material, objective or story change.
+            - One thing I got wrong and fixed: I dated the review 2026-09-20 when the clock
+              said the 19th. Rather than leave a review dated in the future, I re-dated the
+              entry, put the twenty lessons back to `review`, and re-ran the approval so the
+              digests and the recorded date agree.
+            - Beta weekly packages: 8 of 10. The remaining gate is 3ème Weeks 4 and 5.
 Validation: format, lint, typecheck, unit (314), content (31 files), pgTAP (152) on a fresh
-            reset, build, E2E (28), both Docker images, client-bundle scan.
+            reset (DB shows 144 approved / 32 review), build, E2E (28), both Docker images,
+            client-bundle scan.
 Cost:       $0.
-Not done:   Week 3 is not approved — 0 of 20. Weeks 4-5 never reviewed. Beta gate 7 of 10.
+Not done:   Weeks 4-5 never reviewed — 32 lessons at review, 0 approved. Beta is NOT ready.
+            Week 4's package is prepared; it has not been reviewed here.
 ```

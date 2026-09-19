@@ -26,24 +26,24 @@ Roles, kept distinct on purpose:
 
 ## Register of reviews
 
-| Batch                                | Date             | Kind                                             | Outcome                                                          | Corrections                    | Status                                 |
-| ------------------------------------ | ---------------- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------------------------ | -------------------------------------- |
-| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`**   | 13, then 6, then 2             | **`approved`** — 16 lessons            |
-| 3ème maternelle, Week 2 (days 5–9)   | 2026-09-17 → -19 | AI-assisted (ChatGPT), 4 passes                  | passes 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 14, then 4, then 2, then 1     | **`approved`** — 20 lessons            |
-| 3ème maternelle, Week 3 (days 10–14) | 2026-09-19       | AI-assisted (ChatGPT), 2 passes                  | `accepted-with-modifications` both                               | 13, then 3                     | `review` — awaiting final confirmation |
-| 3ème maternelle, Weeks 4–5           | —                | —                                                | not yet reviewed                                                 | inherited corrections only     | `review` — 0 approved                  |
-| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 11 items across the passes     | **`approved`** — 16 lessons            |
-| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons            |
-| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons            |
-| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                                   | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons            |
-| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`**     | 5 items                        | **`approved`** — 12 lessons            |
+| Batch                                | Date             | Kind                                             | Outcome                                                          | Corrections                    | Status                      |
+| ------------------------------------ | ---------------- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------------------------ | --------------------------- |
+| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`**   | 13, then 6, then 2             | **`approved`** — 16 lessons |
+| 3ème maternelle, Week 2 (days 5–9)   | 2026-09-17 → -19 | AI-assisted (ChatGPT), 4 passes                  | passes 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 14, then 4, then 2, then 1     | **`approved`** — 20 lessons |
+| 3ème maternelle, Week 3 (days 10–14) | 2026-09-19       | AI-assisted (ChatGPT), 3 passes                  | passes 1-2 `accepted-with-modifications` → pass 3 **`accepted`** | 13, then 3, then 0             | **`approved`** — 20 lessons |
+| 3ème maternelle, Weeks 4–5           | —                | —                                                | not yet reviewed                                                 | inherited corrections only     | `review` — 0 approved       |
+| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 11 items across the passes     | **`approved`** — 16 lessons |
+| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons |
+| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons |
+| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                                   | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons |
+| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`**     | 5 items                        | **`approved`** — 12 lessons |
 
 **1ère maternelle September is complete: 88 of 88 lessons `approved`.** 3ème maternelle's Week 1
-has Weeks 1 and 2 `approved` — **36 of 88** — leaving Weeks 3–5 (52 lessons) at `review`. Every approval
+has Weeks 1, 2 and 3 `approved` — **56 of 88** — leaving Weeks 4–5 (32 lessons) at `review`. Every approval
 is `ai-assisted` and `accepted`. **No teacher has read any of it.**
 
-Progress against the Beta 0.1 gate: **7 of 10 weekly packages accepted** — all five of 1ère
-maternelle, plus 3ème Weeks 1 and 2. **3ème maternelle Weeks 3–5 are the remaining gate.**
+Progress against the Beta 0.1 gate: **8 of 10 weekly packages accepted** — all five of 1ère
+maternelle, plus 3ème Weeks 1, 2 and 3. **3ème maternelle Weeks 4–5 are the remaining gate.**
 
 ## 3ème maternelle, Week 1 review, 2026-09-16 — accepted with modifications (pass 2)
 
@@ -487,6 +487,33 @@ The same « famille de mots » wording sat in day 19 — reported last round, an
 `consequence` because the new rule forces it. Title, summary, guidance and lexicon say
 « catégorie »; the sorting procedure, the objective, the duration and the progression are
 untouched. **Week 4 still has not been read.**
+
+---
+
+## 3ème maternelle, Week 3 — approved 2026-09-19 after three passes
+
+ChatGPT's final confirmation concluded **`accepted`**, with no further correction. **The 20 lessons
+of Week 3 are now `approved`**, bringing 3ème maternelle to **56 of 88** and September to
+**144 of 176**.
+
+| Pass | Outcome                       | Asked for                                                                                                                                                   |
+| ---- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | `accepted-with-modifications` | 13 items — objectives on activities that did not do them, a progression leak, the hide-and-guess procedure, la hanche, the syllable example, the comparison |
+| 2    | `accepted-with-modifications` | 3 items — « familles » in the summary and title, the tableware metadata, the passing distance                                                               |
+| 3    | **`accepted`**                | nothing                                                                                                                                                     |
+
+Two inherited `consequence` entries (09-16, 09-17) sit alongside them and are **not** readings of
+this week. The history is kept exactly as it happened, and the review stays `ai-assisted`: **no
+teacher has read any of this** (ISSUE-017).
+
+### The approval
+
+Promoted by `scripts/approve-week.ts`. **Run against Weeks 4 and 5 it still refuses both**, because
+neither has a full review that concluded `accepted` — tested again here rather than assumed.
+
+**144 approved lessons, 144 distinct digests, 0 lapsed, none copied.** The approval changed state
+and nothing else: the field-by-field diff against the confirmed revision reports **3,084 fields
+compared, all identical** — no child-facing, adult-guidance, material, objective or story change.
 
 ---
 
