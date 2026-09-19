@@ -10,13 +10,12 @@
 
 ## Task
 
-Apply ChatGPT's second-pass corrections to 3ème maternelle Week 2, and close the ISSUE-026 approval
-integrity gap before any further approval.
+Apply ChatGPT's final two corrections to 3ème maternelle Week 2 and return it for confirmation.
 
 ## Objective
 
-An approval covers the words the child hears, and every approval standing today is proven to be
-bound to the content its reviewer actually read.
+A lesson's activities do what the lesson says they do — the spatial frame and the emotion
+questions match their own claims.
 
 ## Status
 
@@ -24,11 +23,11 @@ bound to the content its reviewer actually read.
 
 ## Branch
 
-`fix/week2-second-review-and-text-digest`
+`fix/week2-final-corrections`
 
 ## Base Branch
 
-`develop` at `7fa2159`
+`develop` at `3783f10`
 
 ## Started
 
@@ -36,8 +35,8 @@ bound to the content its reviewer actually read.
 
 ## Last Checkpoint
 
-2026-09-18 — 4 mapping corrections, ISSUE-026 closed, 31 approvals lapsed and all 31 restored on
-proven identity, full local suite green.
+2026-09-19 — two corrections, 4 of 3,084 fields changed, 0 approvals lapsed, full local suite
+green.
 
 ## Scope
 
@@ -67,19 +66,16 @@ proven identity, full local suite green.
 
 ## Completed
 
-- [x] Four mapping corrections; nothing moved to preserve a count. Removing the date objective
-      left a lesson claiming what nothing worked, so it left the lesson list too
-- [x] **ISSUE-026 closed**: the digest covers the kind, title and lines of every story a lesson
-      reads, and fails closed when a text cannot be resolved
-- [x] Proved against the old implementation — the old digest did not move when a story was
-      rewritten; the new one does
-- [x] **31 of 104 approvals lapsed** (exactly those that read a text); **all 31 restored**
-- [x] `scripts/restamp-digests.ts` re-stamps only on proven identity against the approval commit,
-      and was tested by rewriting a story and confirming it refuses
-- [x] **104 of 104 proven identical**, 0 held back, 0 requiring re-review
-- [x] Two rules made reusable (date objective both ways, shape naming); the conversation
-      objective stays a targeted test because no predicate separated it honestly
-- [x] Supabase PROD pause documented as expected behaviour — no upgrade, no keep-alive job
+- [x] `m3-time-03-a2` kept relative to the child's body: the adult places the object in front of,
+      behind and beside the child; « Derrière moi » is a good answer; one reformulation, no
+      repetition. No left/right, no new objective
+- [x] `m3-lang-09-a2` guidance now describes the three questions the activity actually asks, in
+      story order. Story, questions and duration unchanged
+- [x] **Semantic-diff gate: 4 of 3,084 fields changed**, all in the two intended activities
+- [x] Both lessons' digests moved; **104 of 104 approvals still verify**, 0 lapsed
+- [x] Text fingerprinting still reaches Bibi — rewriting her story moves the digest
+- [x] A brittle test made robust: it pinned the number of review passes and needed editing after
+      each one; it now asserts the invariant that matters
 
 ## In Progress
 
@@ -107,8 +103,8 @@ proven identity, full local suite green.
 
 ## Database State
 
-- Local: 17 migrations; `db reset` + 152 pgTAP assertions pass.
-- DEV: not yet updated with `20260918173226_week2_second_review_and_text_digest.sql`.
+- Local: 18 migrations; `db reset` + 152 pgTAP assertions pass.
+- DEV: not yet updated with `20260919114821_week2_final_corrections.sql`.
 - PROD: untouched.
 
 ## Deployment State
@@ -134,9 +130,9 @@ Commit, open the PR into `develop`, wait for CI, squash-merge, verify staging.
 
 ## Resume Verification
 
-1. `git branch --show-current` is `fix/week2-second-review-and-text-digest`;
-2. `git log -n 5 --oneline` — branch point is `7fa2159`;
+1. `git branch --show-current` is `fix/week2-final-corrections`;
+2. `git log -n 5 --oneline` — branch point is `3783f10`;
 3. `git status --short` — read uncommitted work before discarding it;
-4. `gh pr list --head fix/week2-second-review-and-text-digest` — a PR may already exist;
+4. `gh pr list --head fix/week2-final-corrections` — a PR may already exist;
 5. `npx supabase migration list --linked` before assuming DEV needs the migration;
 6. `gh run list --branch develop --limit 3` before assuming a deployment is needed.
