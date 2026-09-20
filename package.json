@@ -21,6 +21,7 @@
     "content:validate": "tsx scripts/validate-content.ts",
     "check:client-bundle": "tsx scripts/check-client-bundle.ts",
     "registry:prune": "tsx scripts/prune-registry.ts",
+    "test:e2e:public": "playwright test production-public",
     "db:start": "supabase start",
     "db:stop": "supabase stop",
     "db:status": "supabase status",

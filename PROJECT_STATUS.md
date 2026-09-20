@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-20
-Branch:     feat/approve-maternelle-3-week-5
-Commit:     develop at dd1d2fe; main at 1b95480
+Branch:     chore/beta-0.1-production-readiness
+Commit:     develop at 6d61299; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -716,32 +716,42 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  3ème maternelle Week 5 is approved — 12/12. September is complete.
-            - ChatGPT's final pass found nothing: the eight first-pass corrections held.
-              Recorded as a fifth Week 5 entry, full-review / accepted, with the four before
-              it left as written — three inherited corrections and one pass that asked for
-              changes.
-            - Approved through scripts/approve-week.ts, which refused the week until the
-              accepted entry existed. All 12 digests computed fresh; none carried forward.
-            - Before approving, all 19 corrected items were re-verified in canonical content:
-              the six objective mappings, the rhyme that now works a rhyme, the day cards that
-              may be read aloud, the movement chain that ends held still, the rhyme choice
-              that is a real choice, and the absent duplicate label.
-            SEPTEMBER PEDAGOGY GATE CLOSED.
-            - 1ère 88/88, 3ème 88/88, total 176/176 approved on 176 distinct digests.
-            - 10 of 10 weekly packages accepted. 0 lessons remain in review.
-            - 0 lapsed digests, 0 recompute mismatches, 0 copied digests.
-            - It closes the pedagogy gate and nothing else: production is still unconfigured
-              and undeployed, and no teacher has read any of the 176 (ISSUE-017).
-            ISSUE-011: the registry was pruned by hand, with the repository's own policy
-            choosing the images and the Vercel CLI deleting them.
-            - 45 -> 35. The 10 oldest, all 6-8 days old. The live staging image and the 20
-              newest were protected and verified present afterwards.
-            - Still not automated: CI cannot read the registry, so the issue stays open as
-              implemented / blocked on platform access.
+Completed:  Beta 0.1 production-readiness audit. Nothing was deployed and nothing was
+            migrated; the point was to find out what is actually true.
+            Verified against the services, not the documents:
+            - Supabase teka-edu-prod is INACTIVE — paused, as ISSUE-012 predicted. Every PROD
+              check below it (advisors, RLS, migration history, emptiness) is unanswerable
+              until the owner resumes it, so none of them is claimed.
+            - Vercel ssoProtection is "all_except_custom_domains" and there are 0 custom
+              domains, so production would be behind the Vercel login too. A public beta is
+              impossible as configured. The fix is "Only Preview Deployments", not disabling
+              protection.
+            - NEXT_PUBLIC_APP_URL is missing from the Vercel Production environment. It is
+              not cosmetic: it defaults to localhost, lib/env rejects that outside local, and
+              the container would throw on boot. Proved by parsing the exact production shape.
+            - The production VERCEL_TOKEN does not exist; PRODUCTION_DEPLOY_ENABLED is unset.
+            - Migrations: 41 in the repository, 41 on DEV, 0 on PROD. All additive and
+              environment-neutral; the data migrations delete only rows no longer in content/,
+              scoped by "not in", which are no-ops on an empty database.
+            - Privacy: zero network calls in application code, no Supabase client instantiated
+              at all, localStorage only. No personal-data tables exist in any migration.
+            - The feedback note has no copy button and no beta indicator. The readiness
+              document claimed a copy button; it was wrong and has been corrected.
+            Built:
+            - tests/e2e/production-public.spec.ts — the public release check. It opens its own
+              context with no bypass, no cookie, no stored state, and asks what a stranger
+              sees. 8 cases; skips unless PRODUCTION_PUBLIC_URL is set. Proved against the
+              local build: 7 pass and the one that must fail there is the production
+              environment assertion.
+            - Documented the Deployment Protection model, the four production failure points
+              and what is true after each, and the limitation that there is no DB rollback.
 Validation: format, lint, typecheck, unit (355), content (31 files), pgTAP (152) on a fresh
-            reset, build, E2E (28), both Docker images, client-bundle scan, 0 tracked .env*.
+            reset, build, E2E (28 + 8 skipped), both Docker images, client-bundle scan,
+            0 tracked .env*.
 Cost:       $0.
-Next:       The remaining Beta 0.1 gates are all production configuration — none of them
-            pedagogical. See docs/releases/BETA_0_1_READINESS.md section 5.
+Not done:   Production is NOT ready. Six gates are open and five are a single owner action
+            each: resume Supabase PROD, set NEXT_PUBLIC_APP_URL, create the production
+            VERCEL_TOKEN, switch Deployment Protection to preview-only, set
+            PRODUCTION_DEPLOY_ENABLED. The sixth, the beta indicator and copy button, is a
+            small build proposed as its own task.
 ```

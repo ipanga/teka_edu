@@ -189,6 +189,55 @@ Rules (ADR-017):
 - Vercel Deployment Protection is bypassed with the `x-vercel-protection-bypass` header when `VERCEL_AUTOMATION_BYPASS_SECRET` is configured.
 - A failed smoke test turns the job red, and the job summary marks the deployment **unhealthy**. Investigate before promoting, and consider rolling back production.
 
+### The public release check (`tests/e2e/production-public.spec.ts`)
+
+The smoke test above reaches a protected deployment with `x-vercel-protection-bypass`. That is
+correct for staging, and it is exactly why it cannot answer the release-day question: **a
+production deployment that still required a Vercel login would pass every smoke test above.**
+
+So there is a second suite that opens its own browser context with no bypass header, no
+protection cookie and no stored state, and checks what a stranger sees: the home page answers
+200 without a redirect to a login, both written classes are reachable, 2ème maternelle says it
+is in preparation, a session opens, the story illustration loads, no page mentions a
+non-production environment, `/api/health` reports `production` and never the DEV Supabase ref,
+and nothing scrolls sideways at 360px.
+
+```bash
+PRODUCTION_PUBLIC_URL=https://teka-edu-teka10.vercel.app npm run test:e2e:public
+# optionally, to pin the database as well:
+EXPECTED_PRODUCTION_SUPABASE_REF=<prod-ref> PRODUCTION_PUBLIC_URL=... npm run test:e2e:public
+```
+
+Without `PRODUCTION_PUBLIC_URL` every case skips, so it never reddens the staging pipeline for
+being honest about a deployment that does not exist yet. **It is deliberately not wired into
+`deploy-production.yml`:** it cannot pass until Deployment Protection is changed, and failing it
+_after_ `supabase db push` has already migrated PROD would be the worst possible moment. Run it
+by hand immediately after the first production deployment; wire it into the workflow once
+production is confirmed public.
+
+### Deployment Protection: the model Beta 0.1 needs
+
+Verified 2026-09-20: the project's `ssoProtection` is **`all_except_custom_domains`** and there
+is **no custom domain**, so _every_ deployment is behind the Vercel login — production included.
+A public beta is impossible in that configuration.
+
+The fix is **not** to disable protection. Vercel scopes it:
+
+| Setting                               | Previews / staging | Production                      |
+| ------------------------------------- | ------------------ | ------------------------------- |
+| `all_except_custom_domains` (today)   | protected          | **protected** — blocks the beta |
+| **Only Preview Deployments** (wanted) | protected          | **public**                      |
+| Disabled                              | **exposed**        | public — never do this          |
+
+Staging is a _Preview_ deployment (`target=preview`) aliased to `teka-edu-staging.vercel.app`, so
+"Only Preview Deployments" keeps it protected while the production domain becomes public.
+
+**Owner action:** Vercel → project `teka-edu` → Settings → Deployment Protection → Vercel
+Authentication → **Only Preview Deployments** → Save. Then confirm
+`https://teka-edu-staging.vercel.app` still answers `302` and the production domain answers `200`
+to a logged-out browser. Leave the protection-bypass secret in place: the staging smoke test uses
+it.
+
 ## Rollback
 
 ### Application rollback
@@ -208,6 +257,23 @@ vercel promote <deployment-url-or-id> --token ...       # re-enable normal promo
 - **Code rollback:** revert the faulty commit on `develop` → staging → `main`. The normal pipeline redeploys.
   - Re-running an **old** deployment workflow run is not a rollback. Its `supabase db push` fails if the remote database already has newer migrations.
 - **Other OCI hosts:** redeploy the previous image, built from the previous commit with `Dockerfile`.
+
+### Where a production release can fail, and what is true afterwards
+
+The pipeline is ordered migration → deploy → verify → smoke, so each failure point leaves a known
+state rather than a half-applied one.
+
+| Fails at                                        | What has happened                                                                                                                                                     | What to do                                                                                                                                        |
+| ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CI, secret check, or `db push --dry-run`        | **Nothing.** No schema change, no deployment.                                                                                                                         | Fix and re-run. Production is untouched.                                                                                                          |
+| `supabase db push` (migration)                  | Migrations up to the failing one are applied; the job stops **before** any deployment, so the live application is still the previous one against the previous schema. | Forward-fix with a new migration. Because migrations are additive and expand/contract, the running application keeps working meanwhile.           |
+| After migration, before the deployment is READY | Schema is new, application is old. This is exactly the case expand/contract exists for: the old application does not use the new columns.                             | Re-run the deploy. No schema rollback.                                                                                                            |
+| Deployment READY but smoke test red             | A bad application is live on the new schema.                                                                                                                          | `vercel rollback` to the previous production deployment — seconds, no rebuild. The schema stays; the previous application tolerates it by design. |
+
+**The limitation, stated plainly:** there is no database rollback. Additive migrations and an
+application rollback cover every case above, and that is the whole of the guarantee. A migration
+that dropped or rewrote data would break it, which is why none does — see the audit in
+`docs/releases/BETA_0_1_READINESS.md` §0.
 
 ### Database rollback and recovery
 
