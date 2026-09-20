@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   HOBBY_REGISTRY_RETENTION,
+  isDangerous,
   planRegistryPrune,
   RegistryRetentionError,
   type RegistryImage,
@@ -144,7 +145,55 @@ describe("pruning the container registry before the push (ISSUE-011)", () => {
   it("keeps the policy inside what the Hobby plan actually allows", () => {
     const p = HOBBY_REGISTRY_RETENTION;
     expect(p.targetCount).toBeLessThan(p.pruneAbove);
-    expect(p.pruneAbove).toBeLessThan(p.hardCap);
+    expect(p.pruneAbove).toBeLessThan(p.dangerAt);
+    expect(p.dangerAt).toBeLessThan(p.hardCap);
     expect(p.keepNewest).toBeLessThanOrEqual(p.targetCount);
+  });
+});
+
+/**
+ * The two-stage failure policy.
+ *
+ * A prune that cannot run means opposite things at 39 images and at 47. The first costs nothing
+ * and must not stop a deploy — failing there is how a transient read error became an outage on
+ * 2026-09-20. The second is five merges from a broken `develop`, and the failure it leads to is
+ * an image push rejected after the migration has already been applied.
+ */
+describe("when a prune that cannot run should stop the deploy", () => {
+  it("leaves a registry with headroom alone, however loudly it complains", () => {
+    for (const count of [0, 12, 35, 40, 44]) {
+      expect(isDangerous(count), `${count} images`).toBe(false);
+    }
+  });
+
+  it("treats the last five slots as dangerous", () => {
+    for (const count of [45, 46, 49, 50, 51]) {
+      expect(isDangerous(count), `${count} images`).toBe(true);
+    }
+  });
+
+  it("puts the danger line above the pruning threshold, not at it", () => {
+    // Otherwise the first deploy that crosses 40 with a broken credential blocks develop,
+    // which is the failure mode this whole policy exists to avoid.
+    const p = HOBBY_REGISTRY_RETENTION;
+    expect(isDangerous(p.pruneAbove)).toBe(false);
+    expect(isDangerous(p.pruneAbove + 1)).toBe(false);
+    expect(p.dangerAt - p.pruneAbove).toBeGreaterThanOrEqual(5);
+  });
+
+  it("leaves room to recover: the danger line is below the cap", () => {
+    // Deploys stop while pruning is still possible, not once the push is already doomed.
+    const p = HOBBY_REGISTRY_RETENTION;
+    expect(p.hardCap - p.dangerAt).toBeGreaterThanOrEqual(5);
+    expect(isDangerous(p.hardCap - 1)).toBe(true);
+  });
+
+  it("still prunes normally in the dangerous band when the credential works", () => {
+    // Dangerous is about a prune that *cannot* run. One that can should simply do its job.
+    const plan = planRegistryPrune({
+      images: registry(47),
+      protectedTags: ["c0mm1t000000"],
+    });
+    expect(plan.delete).toHaveLength(47 - HOBBY_REGISTRY_RETENTION.targetCount);
   });
 });

@@ -33,6 +33,11 @@ export type RetentionPolicy = {
   targetCount: number;
   /** Never delete this many newest images, whatever the protected set says. */
   keepNewest: number;
+  /**
+   * At or above this count, a prune that cannot run is a hard failure: the deploy stops before
+   * the push rather than after it. See `isDangerous`.
+   */
+  dangerAt: number;
   /** What the registry itself enforces; reaching it is what breaks the push. */
   hardCap: number;
 };
@@ -48,8 +53,29 @@ export const HOBBY_REGISTRY_RETENTION: RetentionPolicy = {
   pruneAbove: 40,
   targetCount: 35,
   keepNewest: 20,
+  dangerAt: 45,
   hardCap: 50,
 };
+
+/**
+ * Is the registry close enough to the cap that a prune which cannot run should stop the deploy?
+ *
+ * Two stages, because the two situations deserve opposite answers.
+ *
+ * With headroom — say 39 of 50 — a prune that cannot run has cost nothing: ten more merges will
+ * fit. Failing the deploy there converts a transient read error into an outage, which is what
+ * happened on 2026-09-20 and is strictly worse than having no prune at all.
+ *
+ * At 45 of 50 the same failure is five merges from a broken `develop`, and the failure it leads
+ * to is a rejected image push: it happens after the migration has already been applied, and its
+ * message is about a registry rather than about anything the reader can act on. Stopping first,
+ * with a message that names the credential, is the kinder of the two failures.
+ *
+ * 45 is five slots of headroom — roughly a day at the rate September merged.
+ */
+export function isDangerous(count: number, policy: RetentionPolicy = HOBBY_REGISTRY_RETENTION) {
+  return count >= policy.dangerAt;
+}
 
 export type PrunePlan = {
   /** Oldest first: the images that may be deleted. */

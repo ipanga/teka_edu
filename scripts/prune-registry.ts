@@ -23,8 +23,10 @@
  */
 import {
   HOBBY_REGISTRY_RETENTION,
+  isDangerous,
   planRegistryPrune,
   type RegistryImage,
+  type RetentionPolicy,
 } from "../lib/deploy/registry-retention";
 
 const REPOSITORY = "dockerfile";
@@ -40,7 +42,18 @@ function required(name: string): string {
   return value;
 }
 
-const token = required("VERCEL_TOKEN");
+/**
+ * A credential of its own (ISSUE-011).
+ *
+ * The deploy token is project-scoped and the registry endpoint answers 404 under it, so pruning
+ * needs access the deploy does not. Rather than widen `VERCEL_TOKEN` — which every deploy uses,
+ * and which should stay as narrow as it is — the prune reads `VERCEL_VCR_TOKEN` when it exists
+ * and falls back to the deploy token when it does not, so nothing breaks while the dedicated
+ * secret is still being created.
+ */
+const vcrToken = process.env.VERCEL_VCR_TOKEN;
+const usingDedicatedToken = vcrToken !== undefined && vcrToken !== "";
+const token = usingDedicatedToken ? vcrToken : required("VERCEL_TOKEN");
 const project = required("VERCEL_PROJECT_ID");
 const team = required("VERCEL_ORG_ID");
 const commit = required("GITHUB_SHA");
@@ -142,6 +155,27 @@ async function liveCommit(): Promise<string | null> {
  * rehearsed on a registry that is nowhere near full. Only ever a *lower* threshold, and only
  * when nothing is going to be deleted.
  */
+/**
+ * Dry runs may also lower the near-cap line, so the hard-failure branch can be exercised on a
+ * registry that is not actually near its cap. Only ever lower, and only in a dry run.
+ */
+function rehearsalDangerAt(): number | null {
+  const flag = process.argv.find((a) => a.startsWith("--danger-at="));
+  if (flag === undefined) return null;
+  if (!dryRun) {
+    console.error("::error::--danger-at is only allowed together with --dry-run.");
+    process.exit(1);
+  }
+  const value = Number(flag.slice("--danger-at=".length));
+  if (!Number.isInteger(value) || value < 0 || value >= HOBBY_REGISTRY_RETENTION.dangerAt) {
+    console.error(
+      `::error::--danger-at must be an integer below ${HOBBY_REGISTRY_RETENTION.dangerAt}.`,
+    );
+    process.exit(1);
+  }
+  return value;
+}
+
 function rehearsalThreshold(): number | null {
   const flag = process.argv.find((a) => a.startsWith("--prune-above="));
   if (flag === undefined) return null;
@@ -170,34 +204,63 @@ function rehearsalThreshold(): number | null {
  * is touched, the reason is printed as a warning, and the deploy carries on. The backstop if the
  * registry really is full is the push itself, which fails with a clear message of its own.
  */
+const rehearsal = rehearsalThreshold();
+const danger = rehearsalDangerAt();
+const policy: RetentionPolicy = {
+  ...HOBBY_REGISTRY_RETENTION,
+  ...(rehearsal === null
+    ? {}
+    : {
+        pruneAbove: rehearsal,
+        targetCount: Math.min(HOBBY_REGISTRY_RETENTION.targetCount, rehearsal),
+      }),
+  ...(danger === null ? {} : { dangerAt: danger }),
+};
+
+let knownCount: number | null = null;
+
 function giveUp(reason: string): never {
-  console.log(`::warning::Container registry not pruned: ${reason}`);
+  const where =
+    knownCount === null
+      ? "the image count could not be read, so the near-cap check could not run"
+      : `${knownCount} of ${HOBBY_REGISTRY_RETENTION.hardCap} image(s)`;
+
+  if (knownCount !== null && isDangerous(knownCount, policy)) {
+    console.log(
+      `::error::Container registry not pruned and close to its cap (${where}): ${reason}. ` +
+        "Stopping before the image push, which would otherwise be rejected mid-deploy with " +
+        "the migration already applied. Repair the pruning credential " +
+        "(VERCEL_VCR_TOKEN in the staging environment) or prune by hand; " +
+        "see docs/DEPLOYMENT.md and ISSUE-011.",
+    );
+    process.exit(1);
+  }
+
+  console.log(`::warning::Container registry not pruned (${where}): ${reason}`);
   console.log(
-    "No image was deleted. If the registry is at its cap the push below will fail; see " +
+    "No image was deleted, and there is still headroom, so the deploy continues. See " +
       "docs/DEPLOYMENT.md and ISSUE-011.",
   );
   process.exit(0);
 }
 
-const rehearsal = rehearsalThreshold();
 let images: RegistryImage[];
 try {
   images = await listImages();
+  knownCount = images.length;
 } catch (error) {
-  giveUp(`the registry could not be listed (${error instanceof Error ? error.message : error})`);
+  giveUp(
+    `the registry could not be listed with the ${
+      usingDedicatedToken ? "dedicated VERCEL_VCR_TOKEN" : "deploy token (no VERCEL_VCR_TOKEN set)"
+    } (${error instanceof Error ? error.message : error})`,
+  );
 }
-const policy =
-  rehearsal === null
-    ? HOBBY_REGISTRY_RETENTION
-    : {
-        ...HOBBY_REGISTRY_RETENTION,
-        pruneAbove: rehearsal,
-        targetCount: Math.min(HOBBY_REGISTRY_RETENTION.targetCount, rehearsal),
-      };
 
 console.log(
   `Container registry "${REPOSITORY}": ${images.length} image(s); ` +
-    `threshold ${policy.pruneAbove}, target ${policy.targetCount}, cap ${policy.hardCap}.`,
+    `threshold ${policy.pruneAbove}, target ${policy.targetCount}, ` +
+    `near-cap ${policy.dangerAt}, cap ${policy.hardCap}. ` +
+    `Credential: ${usingDedicatedToken ? "VERCEL_VCR_TOKEN" : "VERCEL_TOKEN (fallback)"}.`,
 );
 
 // Below the threshold nothing is fetched and nothing is risked: the common case costs one call.
