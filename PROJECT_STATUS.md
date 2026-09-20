@@ -339,7 +339,13 @@ that sits between the deployment-count guard and `vercel deploy`:
   unit tests (`tests/unit/registry-retention.test.ts`), because a deletion cannot be rehearsed
   against a real registry without deleting something.
 - `scripts/prune-registry.ts` (`npm run registry:prune`, `--dry-run` to rehearse) supplies the
-  registry contents and the commits that must survive.
+  registry contents and the commits that must survive. It calls the REST API directly
+  (`/v1/vcr/repository/dockerfile/images`), **not** `vercel vcr`: the CLI resolves its scope
+  through `/v2/user` and `/v1/teams`, which a project-scoped deploy token may not read, so it
+  exits with `User not found` before reaching the registry. The first attempt used the CLI and
+  failed in CI for exactly that reason (run `35500428674`) — the same constraint already recorded
+  for `vercel inspect` and `vercel alias`. It works from a developer machine, where the CLI is
+  authenticated as a user, which is why a local rehearsal did not catch it.
 - Thresholds, in one place and used by both the deploy and the tests: prune above **40**, down to
   **35**, never touching the **20** newest. That leaves about 15 merges of headroom.
 - Protected without exception: the commit being deployed, and the commit `/api/health` reports the
