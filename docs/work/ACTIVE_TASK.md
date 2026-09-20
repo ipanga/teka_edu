@@ -92,6 +92,7 @@ registry (404). Deletion switch deliberately left unset. Registry at 43 of 50.
 | typecheck          | PASS   | working tree                      |
 | unit tests         | PASS   | working tree — 347 tests          |
 | content validation | PASS   | working tree — 31 files           |
+| database tests     | PASS   | CI on every PR — 152 assertions   |
 | build              | PASS   | CI on every PR                    |
 | E2E                | PASS   | CI — 28 local, 28 live            |
 | Docker             | PASS   | CI — both images                  |
