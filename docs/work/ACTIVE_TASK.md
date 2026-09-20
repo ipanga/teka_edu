@@ -20,7 +20,7 @@ can no longer block `develop`.
 
 ## Status
 
-`in_progress`
+`completed`
 
 ## Branch
 
@@ -79,10 +79,12 @@ the real registry, 0 approvals lapsed.
 - [x] **ISSUE-011 prevented**, not just recovered: prune before the push, thresholds in code,
       14 unit tests, both refusal paths exercised against the real registry in `--dry-run`
 - [x] **35 of 3,084 fields changed**; 144 approved lessons, **0 lapsed**, 0 digest mismatches
+- [x] Merged as `90e18d4` (PR #62) and live on staging at `e94a98f` after two follow-up fixes to
+      the prune step (PR #63, PR #64)
 
 ## In Progress
 
-- [ ] PR into `develop`, CI, squash-merge, staging verification
+None. The task is finished.
 
 ## Remaining
 
@@ -113,25 +115,33 @@ the real registry, 0 approvals lapsed.
 
 ## Deployment State
 
-- Staging: at `e60eaa3`; not yet redeployed with these corrections.
-- Container registry: 37 of 50 images. The next deploy prunes by itself above 40.
+- Staging: live at `e94a98f` (run 35501251469, deployment `teka-nj6vfw28a`, alias moved);
+  environment `staging`, DEV Supabase ref, 28 E2E green.
+- Container registry: **38 of 50**, and the automatic prune is **inert**: the endpoint answers 404
+  under the project-scoped deploy token. It warns and never blocks. Watch the count by hand until
+  the owner issues a token that can read `/v1/vcr/repository/*`.
 - Production: disabled; `main` at `1b95480`.
 
 ## Git State
 
-- `fix/maternelle-3-week-4-second-review`, branched from `develop` at `e60eaa3`.
+- PRs #62, #63 and #64 squash-merged into `develop`; `develop` at `e94a98f`, branches deleted.
 
 ## Blockers
 
-None.
+None for the content. One open item for the infrastructure: the registry prune cannot run in CI
+until a token with registry scope exists. It fails safe — warns, deletes nothing, blocks nothing.
 
 ## User Decisions Needed
 
-None outstanding. Week 4 goes back to ChatGPT for its final pass; Week 5 still needs its first.
+**One.** Issue a Vercel token whose scope can read `/v1/vcr/repository/*` for `teka-edu` and store
+it in the `staging` GitHub environment, so the registry prune stops being inert. Cost $0; creating
+a token is an owner action.
+
+Otherwise: Week 4 goes back to ChatGPT for its final pass; Week 5 still needs its first.
 
 ## Exact Resume Point
 
-Commit, open the PR into `develop`, wait for CI, squash-merge, verify staging.
+Nothing to resume. The next task begins when ChatGPT returns its final pass on Week 4.
 
 ## Resume Verification
 

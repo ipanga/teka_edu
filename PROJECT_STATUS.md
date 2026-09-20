@@ -361,6 +361,23 @@ that sits between the deployment-count guard and `vercel deploy`:
 - Rehearsed on 2026-09-20 against the real 37-image registry: the listing, the health probe, the
   selection and both refusal paths were exercised in `--dry-run`, and nothing was deleted.
 
+**It is not yet effective in CI, and this is the honest state.** On run `35501251469` the step
+warned instead of pruning: the registry endpoint answers **404 `VCR Repository not found`** under
+the deploy token, for every way of addressing it that was tried (`projectId` alone, and
+`teamId` + `projectId`). The identical request against the identical project returns **200** with
+a user-scoped token, so the cause is the token's scope, not the URL — the `VERCEL_TOKEN` in the
+`staging` GitHub environment is project-scoped and registry management appears to sit outside it.
+
+So today the mechanism is **built, tested and safe, but inert**: it never deletes and never blocks,
+and every deploy logs one warning saying so. The count is back to growing unattended, which is
+exactly the condition that produced the outage.
+
+**Owner decision needed (PD, cost $0):** issue a Vercel token whose scope can read
+`/v1/vcr/repository/*` for the `teka-edu` project and store it in the `staging` environment —
+either as `VERCEL_TOKEN` or as a separate secret the prune step prefers. Creating a token is an
+owner action (CLAUDE.md), so it is not done here. Until then the registry must be watched by hand;
+it stands at **38 of 50** on 2026-09-20.
+
 Recommended action: none routine — the deploy handles it. A deletion outside the workflow still
 needs owner approval. Note the real cost of hitting the cap: `develop` is blocked, because every
 subsequent merge re-triggers the same failing deploy.
