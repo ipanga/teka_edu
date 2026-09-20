@@ -105,15 +105,28 @@ jobs:
       # merge re-triggers this same deploy. Prune before pushing, never after (ISSUE-011).
       # The policy and its safety rules live in lib/deploy/registry-retention.ts and are unit
       # tested; this step only supplies the registry contents and what must survive.
-      - name: Prune superseded container images
-        env:
+      # Read-only, every deploy, whatever the switch below says. It proves the credential
+      # reaches the right team and project, prints the count, and shows exactly which images a
+      # prune would choose and which it would protect — so the decision can be read before it is
+      # ever acted on. It deletes nothing.
+      - name: Verify container registry access (read-only)
+        env: &vcr
           # A credential of its own: the deploy token is project-scoped and the registry endpoint
-          # answers 404 under it. The script falls back to VERCEL_TOKEN while this secret does
-          # not exist yet, so the step degrades to a warning rather than breaking.
+          # answers 404 under it. The script falls back to VERCEL_TOKEN when this secret is
+          # absent, so the step degrades to a warning rather than breaking.
           VERCEL_VCR_TOKEN: ${{ secrets.VERCEL_VCR_TOKEN }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           STAGING_URL: ${{ vars.STAGING_DOMAIN != '' && format('https://{0}', vars.STAGING_DOMAIN) || '' }}
           VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
+        run: npm run registry:prune -- --dry-run
+      # The deletion, behind a switch, like every other outward action in this repository
+      # (STAGING_DEPLOY_ENABLED, PRODUCTION_DEPLOY_ENABLED). Set the repository variable
+      # REGISTRY_PRUNE_ENABLED=true to arm it. While it is off the step above still reports, so
+      # the count is never unobserved — but nothing is deleted and the near-cap guard does not
+      # fire, which means the registry becomes the owner's to watch. See ISSUE-011.
+      - name: Prune superseded container images
+        if: vars.REGISTRY_PRUNE_ENABLED == 'true'
+        env: *vcr
         run: npm run registry:prune
       - name: Deploy to Vercel (staging)
         id: deploy
