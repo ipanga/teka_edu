@@ -471,7 +471,7 @@ _Premier corpus de mots : nommer et ranger les objets de l’école._
 - **Guidance adulte :** 1. Montrez un objet et nommez-le : « le crayon ». 2. Faites répéter. 3. Demandez : « À quoi sert le crayon ? » et attendez une phrase avec « il » ou « elle » : « Il sert à écrire. » Si l’enfant répond « à écrire », reprenez la phrase entière une fois, sans le faire répéter : « Oui, il sert à écrire. » 4. Terminez en rangeant : « Donne-moi ce qui sert à écrire. » Si vous n’avez pas l’objet, dessinez-le ou montrez-le du doigt dans la maison.
 - **Matériel :** Objets de l’école (cahier, crayon, cartable)
 - **Lexique visé :** le cahier _(the notebook)_ · le crayon _(the pencil)_ · le sac _(the bag)_ · la table _(the table)_ · la chaise _(the chair)_ · il sert à _(it is for)_ · elle sert à _(it is for)_
-- **À défaut :** À défaut de vrai matériel scolaire : une feuille pliée en guise de cahier, un sac, une craie.
+- **À défaut :** Une feuille pliée en guise de cahier, un sac, une craie, quand le vrai matériel scolaire manque.
 - **Aide en anglais (optionnelle) :** « Name the school things, then say what each one is for: “It is for…”. »
 - **Images montrées à l'enfant (5) :**
 

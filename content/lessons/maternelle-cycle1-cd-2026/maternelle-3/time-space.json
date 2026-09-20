@@ -737,7 +737,7 @@
       "stage": "consolidation",
       "difficulty": 2,
       "themeId": "je-montre-ce-que-je-sais",
-      "parentGuidance": "Reprise de tout ce qui touche au temps ce mois-ci : la date, les jours, l’ordre. L’enfant dit, vous vérifiez.",
+      "parentGuidance": "Reprise de tout ce qui touche au temps ce mois-ci : la date, les jours, l’ordre. L’enfant dit, vous vérifiez. Savoir lire les jours n’est pas demandé : lisez-les-lui.",
       "activities": [
         {
           "id": "m3-time-08-a1",
@@ -783,7 +783,7 @@
           "type": "manipulation",
           "title": "Ma semaine en ordre",
           "childInstruction": "Remets les jours de la semaine dans l’ordre, sans modèle.",
-          "adultGuidance": "1. Mélangez les sept papiers. 2. Laissez ranger sans la bande sous les yeux. 3. Vérifiez ensemble avec la bande. 4. Félicitez ce qui est juste avant de corriger le reste.",
+          "adultGuidance": "1. Préparez sept papiers, un par jour de la semaine, écrits en gros. 2. Mélangez-les. 3. Laissez ranger sans la bande sous les yeux, et lisez les noms à voix haute autant de fois qu’il le faut : ce qu’on regarde ici est l’ordre des jours, pas la lecture. 4. Vérifiez ensemble avec la bande. 5. Félicitez ce qui est juste avant de corriger le reste.",
           "minutes": 3,
           "mode": "off-screen",
           "role": "consolidation",

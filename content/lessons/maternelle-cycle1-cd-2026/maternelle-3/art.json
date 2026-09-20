@@ -387,7 +387,7 @@
       "stage": "consolidation",
       "difficulty": 2,
       "themeId": "je-montre-ce-que-je-sais",
-      "parentGuidance": "Dernière séance du mois. L’enfant choisit sa comptine et dessine ce qu’elle raconte.",
+      "parentGuidance": "Dernière séance du mois. L’enfant choisit sa comptine — celle qu’il veut — et dessine ce qu’elle raconte. La comptine imprimée ci-dessous n’est là que s’il n’arrive pas à choisir.",
       "activities": [
         {
           "id": "m3-art-07-a1",
@@ -395,12 +395,12 @@
           "type": "song-rhyme",
           "title": "Ma comptine préférée",
           "childInstruction": "Choisis ta comptine préférée du mois et dis-la-moi.",
-          "adultGuidance": "1. Rappelez les comptines apprises. 2. Laissez choisir et dire seul. 3. Frappez le rythme avec lui. 4. Dites-lui combien il en connait maintenant : c’est le début du répertoire de l’année.",
+          "adultGuidance": "1. Rappelez les comptines apprises ce mois-ci. 2. Laissez choisir et dire seul : c’est sa comptine, n’importe laquelle du mois convient. 3. S’il ne sait pas laquelle prendre, proposez-lui « Les formes qui dansent », qui est imprimée plus bas — c’est un dépannage, pas une consigne. 4. Frappez le rythme avec lui. 5. Dites-lui combien il en connait maintenant : c’est le début du répertoire de l’année.",
           "minutes": 4,
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": ["ART-S02-C01-O09", "ART-S01-C01-O06"],
+          "objectiveCodes": ["ART-S02-C01-O09"],
           "materialCodes": ["aucun"],
           "vocabulary": [
             {
@@ -433,7 +433,7 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": ["ART-S02-C01-O09"],
+          "objectiveCodes": ["ART-S01-C01-O06"],
           "materialCodes": ["papier", "crayons-couleur"],
           "vocabulary": [
             {

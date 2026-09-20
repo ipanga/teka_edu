@@ -755,6 +755,130 @@ describe("the task proves the objective, not the other way round", () => {
   });
 });
 
+describe("a consolidation week still has to do the work it claims", () => {
+  const text = (a: Activity) => `${a.childInstruction} ${a.adultGuidance}`;
+  const claiming = (matcher: RegExp) =>
+    activities.filter((a) => a.objectiveCodes.some((c) => matcher.test(statementOf(c))));
+
+  it("only claims « constituer une collection » where a collection is actually produced", () => {
+    // The other direction of the rule above, and the one Week 5 needed. « J'en ai enlevé »
+    // counted eight, had two taken away and worked out how many were gone: that is decomposing
+    // a known whole, and nothing in it asks the child to produce a quantity. Its sibling
+    // « Je refais le tas » rebuilds the original eight, and that is the one that constitutes.
+    // « Un pour un » produces a matching collection without ever naming a number — one object
+    // facing each of the adult's — so the rule asks for a collection to appear, not for a
+    // cardinal to be spoken.
+    const produces =
+      /donne-moi|donne-m’en|fais un tas|pose autant|pose (deux|trois|quatre|cinq|six|sept|huit|neuf|dix)|prends|apporte|remets|reconstitu\w*|\bautant\b|devant chacun|en face de chacun/i;
+    const constituting = claiming(/^Constituer une collection/i);
+    expect(constituting.length).toBeGreaterThan(0);
+    for (const activity of constituting) {
+      expect(
+        produces.test(text(activity)),
+        `${activity.id}: claims constituting a collection, produces none`,
+      ).toBe(true);
+    }
+  });
+
+  it("only claims composing and decomposing where a whole is split or rebuilt", () => {
+    // « Le grand jeu du comptage » counted three collections and claimed composition as well.
+    // Counting a set says how many there are; it does not break it into parts.
+    // Two approved activities decompose without ever using the word: « La main qui cache »
+    // hides part of a known five, and « Combien dans l'autre main ? » names six in two hands
+    // and shows one. What they share is a stated whole with a part missing, so that is what
+    // the rule looks for rather than any particular verb.
+    const partsAndWhole =
+      /décompos\w*|compos\w*|enlev\w*|manqu\w*|cach\w*|partage\w*|deux tas|en deux|ajout\w*|retir\w*|reste|\bfont\b|ça fait|\ben tout\b|l’autre main/i;
+    const composing = claiming(/^Composer et décomposer/i);
+    expect(composing.length).toBeGreaterThan(0);
+    for (const activity of composing) {
+      expect(
+        partsAndWhole.test(text(activity)),
+        `${activity.id}: claims composing, splits nothing`,
+      ).toBe(true);
+    }
+  });
+
+  it("only claims rhyme and assonance where a rhyme is actually heard", () => {
+    // « Devine le mot » cut words into syllables and claimed « repérer et produire des rimes ».
+    // Syllable work and rhyme work are separate learning in the programme, and the activity did
+    // neither of the second.
+    const rhymes = /rime\w*|riment|assonance\w*|finit pareil|finissent pareil|fin pareille/i;
+    const claimingRhyme = claiming(/^Repérer et produire des rimes/i);
+    expect(claimingRhyme.length).toBeGreaterThan(0);
+    for (const activity of claimingRhyme) {
+      expect(rhymes.test(text(activity)), `${activity.id}: claims rhyme, asks for none`).toBe(true);
+    }
+  });
+
+  it("puts the drawing objective on the activity that draws", () => {
+    // In « Je chante et je dessine » the two activities had swapped objectives: the song
+    // carried the drawing one and the drawing carried the song one. A lesson may work both;
+    // an activity may only claim the one it does.
+    const drawing = claiming(/^Dessiner pour représenter/i);
+    expect(drawing.length).toBeGreaterThan(0);
+    for (const activity of drawing) {
+      expect(activity.type, `${activity.id}: claims drawing`).toBe("drawing");
+    }
+  });
+
+  it("puts the rhyme-repertoire objective where the rhyme is said or sung", () => {
+    // The other half of the same swap, and it needs to be stated as sharply as the drawing
+    // rule. Looking for the word « comptine » was not enough: « Dessine ce que raconte ta
+    // comptine » mentions one without ever saying it, and that is precisely the activity that
+    // should not carry this objective.
+    const repertoire = claiming(/^Dire ou chanter au moins dix comptines/i);
+    expect(repertoire.length).toBeGreaterThan(0);
+    for (const activity of repertoire) {
+      expect(activity.type, `${activity.id}: claims the repertoire`).toBe("song-rhyme");
+    }
+  });
+
+  it("never makes ordering the days of the week depend on reading them", () => {
+    // « Ma semaine en ordre » mixed seven written papers and left the adult no instruction, so
+    // a child who cannot yet decode « jeudi » fails a temporal task for a reading reason.
+    const ordersWrittenDays =
+      /(jours de la semaine|sept papiers)[^.]{0,60}(ordre|ranger)|(ordre|ranger)[^.]{0,60}(jours de la semaine|sept papiers)/i;
+    const readsAloud = /lis(ez|e)\b|à voix haute|lecture n’est pas|pas la lecture/i;
+    const ordering = activities.filter((a) => ordersWrittenDays.test(text(a)));
+    expect(ordering.length).toBeGreaterThan(0);
+    for (const activity of ordering) {
+      expect(
+        readsAloud.test(activity.adultGuidance),
+        `${activity.id}: orders written days without offering to read them aloud`,
+      ).toBe(true);
+    }
+  });
+
+  it("makes a free choice of movements end up as one sequence", () => {
+    // « Tous les mouvements du mois » let the child pick three movements and show them, and
+    // claimed « construire de nouveaux équilibres par des déplacements impliquant une
+    // combinaison d'actions ». Three movements performed one after another are three
+    // movements; the objective asks for them to be combined.
+    const choosesMovements = /chois\w*[^.]{0,40}mouvements/i;
+    const links =
+      /enchaîn\w*|enchain\w*|à la suite|l’un après l’autre|une suite|sans t’arrêter|sans s’arrêter/i;
+    const choosing = activities.filter((a) => choosesMovements.test(a.childInstruction));
+    expect(choosing.length).toBeGreaterThan(0);
+    for (const activity of choosing) {
+      expect(
+        links.test(text(activity)),
+        `${activity.id}: lets the child pick movements without linking them`,
+      ).toBe(true);
+    }
+  });
+});
+
+describe("a material describes itself, and lets the renderer do the labelling", () => {
+  it("never restates the « À défaut » label inside the alternative it offers", () => {
+    // The package renders « **À défaut :** » in front of this field, and two materials began
+    // with the same words, so four weekly packages read « À défaut : À défaut : … ».
+    for (const material of data.materials) {
+      expect(material.alternatives ?? "", material.code).not.toMatch(/^À défaut/i);
+    }
+  });
+});
+
 describe("an adult's safety note is not the child's learning", () => {
   /**
    * Pinned, and the reason is worth writing down.

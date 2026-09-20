@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-20
-Branch:     feat/approve-maternelle-3-week-4
-Commit:     develop at d7b8a01; main at 1b95480
+Branch:     fix/maternelle-3-week-5-first-review
+Commit:     develop at 5ff352b; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -709,25 +709,34 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  3ème maternelle Week 4 is approved — 20/20, after three passes.
-            - ChatGPT's final pass found nothing: the four second-pass corrections held, and
-              the safety refinement held with them. Recorded as a seventh Week 4 entry,
-              `full-review` / `accepted`, with the six before it left exactly as written —
-              four inherited corrections and two passes that asked for changes.
-            - Approved through scripts/approve-week.ts, never by hand. The gate refused the
-              week until the accepted entry existed, which is the check working.
-            - All 20 digests computed fresh under the current definition. None carried
-              forward. 164 approvals now stand on 164 distinct digests, 0 lapses,
-              0 recompute mismatches.
-            - 3ème is 76/88; September overall 164/176; 12 lessons remain in review, all of
-              them Week 5, which has still never been read.
-            - Fixed on the way: approve-week.ts wrote unformatted JSON, so approving a week
-              dirtied six content files beyond the approval itself. It formats its own output
-              now, like the media and annual-plan generators.
-            - Week 5's package was regenerated mechanically. It was not reviewed.
-Validation: format, lint, typecheck, unit (342), content (31 files), pgTAP (152) on a fresh
+Completed:  3ème maternelle Week 5 — its first real reading, 8 corrections applied.
+            - Its three earlier history entries were inherited corrections from Weeks 1 and 4,
+              not readings. The structure is accepted; the week stays in review.
+            - Six of the eight were one fault: the objective was plausible and the activity did
+              not prove it. Three pairs of sibling activities had objectives on the wrong one,
+              and « Je chante et je dessine » had simply swapped them — the song carrying the
+              drawing objective and the drawing carrying the song one. The lesson-level pair
+              looked right the whole time, which is how it survived.
+            - « Devine le mot » claimed rhyme and assonance while only cutting words into
+              syllables. The objective stays, because the lesson summary already promised it,
+              and the task now ends with two pairs built from words the month already used.
+            - « Ma semaine en ordre » risked failing a child on reading for a task about the
+              order of the days. The adult prepares the cards and reads them aloud now.
+            - « Tous les mouvements du mois » let the child show three movements and claimed a
+              combination of actions. They are chained now, and the chain ends held still.
+            - The child's choice of rhyme was contradicted by a printed one. Any rhyme of the
+              month counts; the printed one is offered only if the child cannot decide.
+            - Two materials restated the « À défaut » label the document already adds, so four
+              weekly packages read « À défaut : À défaut : ». Fixed in the data. No approval
+              lapsed: the digest covers material codes, not their prose.
+            - 20 of 3,084 fields changed, all in Week 5; 2 child-facing. 1ère maternelle:
+              2,552 fields compared, all identical. 164 approvals, 0 lapsed, 0 mismatches.
+            - 8 reusable rules, each proved against the pre-correction content. Two were
+              widened first: approved lessons constitute a collection without naming a number,
+              and decompose without using the word.
+Validation: format, lint, typecheck, unit (355), content (31 files), pgTAP (152) on a fresh
             reset, build, E2E (28), both Docker images, client-bundle scan, 0 tracked .env*.
 Cost:       $0.
-Not done:   Week 5 never reviewed — 0 of 12. Beta gate 9 of 10. No teacher has read any of
+Not done:   Week 5 is not approved — 0 of 12. Beta gate 9 of 10. No teacher has read any of
             September (ISSUE-017). ISSUE-011 pruning still cannot authenticate in CI.
 ```

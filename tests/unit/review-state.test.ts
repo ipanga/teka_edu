@@ -70,8 +70,11 @@ describe("what a batch of content has actually been through", () => {
     expect(stateOf("maternelle-3", 3, ["m3-math-10"])).toBe("approved");
     // 3ème Week 4 is approved too, after three passes.
     expect(stateOf("maternelle-3", 4, ["m3-lang-16"])).toBe("approved");
-    // Week 5 carries only inherited corrections, so it has never been reviewed.
-    expect(stateOf("maternelle-3", 5, ["m3-lang-21"])).toBe("never-reviewed");
+    // 3ème Week 5 has now had its first full reading, which accepted it with modifications.
+    // It is reviewed and not approved, which are different things.
+    const week5 = stateOf("maternelle-3", 5, ["m3-lang-21"]);
+    expect(week5).toBe("reviewed");
+    expect(week5).not.toBe("approved");
   });
 });
 
@@ -141,16 +144,17 @@ describe("an approval can only come from a full review that accepted the week", 
   });
 
   it("does not let an inherited correction stand in for a review", () => {
-    // Week 5 carries consequence entries only: changes, not readings, and never enough to
-    // approve anything. Week 4 has since had a real first reading, so it is excluded.
-    for (const week of [5]) {
-      const entries = historyOf(week);
-      expect(entries.length, `week ${week} has no recorded change`).toBeGreaterThan(0);
+    // Every 3ème week has now been read at least once, so there is no week left whose history
+    // is corrections alone. The rule is what mattered, not the example: stated against the
+    // recorded consequence entries themselves, it keeps its meaning after the last week is
+    // read, and after the next level starts producing them.
+    const inherited = data.reviewHistory.filter((r) => r.scope === "consequence");
+    expect(inherited.length, "no consequence entry recorded anywhere").toBeGreaterThan(0);
+    for (const entry of inherited) {
       expect(
-        entries.every((r) => r.scope === "consequence"),
-        `week ${week}`,
-      ).toBe(true);
-      expect(weekReviewState(["review"], entries), `week ${week}`).toBe("never-reviewed");
+        weekReviewState(["review"], [entry]),
+        `${entry.levelId} week ${entry.week}, ${entry.reviewedOn}`,
+      ).toBe("never-reviewed");
     }
   });
 

@@ -1810,7 +1810,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": ["objet-caillou"],
-          "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O21"],
+          "objectiveCodes": ["MATH-S01-C01-O22"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
             {
@@ -1843,7 +1843,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["MATH-S01-C01-O22"],
+          "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O21"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
             {
@@ -1974,7 +1974,7 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": ["objet-caillou"],
-          "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O22"],
+          "objectiveCodes": ["MATH-S01-C01-O20"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
             {
@@ -2004,7 +2004,7 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": ["MATH-S01-C01-O20"],
+          "objectiveCodes": ["MATH-S01-C01-O22"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
             {

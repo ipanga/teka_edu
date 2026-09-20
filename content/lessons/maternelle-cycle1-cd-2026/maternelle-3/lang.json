@@ -2371,7 +2371,7 @@
       "levelIds": ["maternelle-3"],
       "domainCode": "LANG",
       "title": "Devine le mot",
-      "summary": "Reconnaitre un mot à partir de ses syllabes et de sa rime.",
+      "summary": "Reconnaitre un mot à partir de ses syllabes, puis repérer une rime.",
       "objectiveCodes": [],
       "supportingObjectiveCodes": [
         "TIME-SPACE-S01-C01-O12",
@@ -2414,8 +2414,8 @@
           "position": 2,
           "type": "phonology",
           "title": "Le mot coupé en morceaux",
-          "childInstruction": "J’ai coupé un mot en morceaux. Écoute et devine quel mot c’est.",
-          "adultGuidance": "1. Dites le mot syllabe par syllabe, avec un temps entre : « ba… nane ». 2. Laissez deviner. 3. Commencez par deux syllabes, puis trois. 4. Inversez : c’est l’enfant qui coupe un mot et vous devinez.",
+          "childInstruction": "J’ai coupé un mot en morceaux. Écoute et devine quel mot c’est. À la fin, on écoutera deux mots qui finissent pareil.",
+          "adultGuidance": "1. Dites le mot syllabe par syllabe, avec un temps entre : « ba… nane ». 2. Laissez deviner. 3. Commencez par deux syllabes, puis trois. 4. Inversez : c’est l’enfant qui coupe un mot et vous devinez. 5. Terminez par deux paires, pas plus : « chapeau… gâteau », « tomate… patate ». Demandez à chaque fois si ça finit pareil. On écoute la fin du mot ; on ne cherche aucune lettre.",
           "minutes": 8,
           "mode": "off-screen",
           "role": "teach",
@@ -2435,7 +2435,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "I cut a word into pieces. Listen and guess the word."
+              "childInstruction": "I cut a word into pieces. Listen and guess the word. Then we listen for two words that end the same."
             }
           ],
           "payload": {
