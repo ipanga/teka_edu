@@ -26,12 +26,14 @@ analytics are **out of scope** and must not delay the release.
 
 ## 1. Pedagogy
 
-**9 of 10 weekly packages accepted · 164 of 176 September lessons `approved`**, all
-`ai-assisted`, all `accepted`. No teacher has read any of it.
+**September pedagogy: COMPLETE. 10 of 10 weekly packages accepted · 176 of 176 September
+lessons `approved`**, all `ai-assisted`, all `accepted`. **No teacher has read any of it.**
 
-**1ère maternelle September is complete — 88/88.** **3ème maternelle Weeks 1 to 4 are
-approved — 76/88.** What remains for the Beta pedagogy gate is **3ème maternelle Week 5**, the
-last 12 lessons, never yet read.
+**1ère maternelle September: 88/88. 3ème maternelle September: 88/88.** Nothing remains in
+`review`. This gate is closed.
+
+It is the _pedagogy_ gate that is closed, and nothing more: production is not configured, not
+deployed, and deliberately so. The items below Pedagogy are the release.
 
 Getting here was not a straight line, and the record says so. Weeks 1–3 were approved, then their
 approvals lapsed when the Week 4 review found defects those weeks carried identically — and again
@@ -54,7 +56,7 @@ cannot be redrawn under an approval without it lapsing.
 | 3ème Week 2 reviewed                         | **DONE** | 4 passes (3 accepted-with-modifications → accepted); 20 lessons `approved`, `ai-assisted` |
 | 3ème Week 3 reviewed                         | **DONE** | 3 passes (2 accepted-with-modifications → accepted); 20 lessons `approved`, `ai-assisted` |
 | 3ème Week 4 reviewed                         | **DONE** | 3 passes; 14 corrections applied; 20 lessons `approved`                                   |
-| 3ème Week 5 reviewed                         | **TODO** | pass 1 accepted-with-modifications; 8 corrections applied, **final pass pending**         |
+| 3ème Week 5 reviewed                         | **DONE** | 2 passes; 8 corrections applied; 12 lessons `approved`                                    |
 | No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                           |
 
 **The two 3ème gaps are resolved**, one by authoring and one by pacing. `LANG-S02-C01-O13`
