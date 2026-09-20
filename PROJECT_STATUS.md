@@ -351,10 +351,13 @@ that sits between the deployment-count guard and `vercel deploy`:
 - Protected without exception: the commit being deployed, and the commit `/api/health` reports the
   staging alias is actually serving — the running application, rather than a deployment field that
   a project with no Git connection never fills in.
-- It refuses rather than guesses. Below 40 it does not even look. Above 40, if the live commit
-  cannot be read it deletes nothing and fails the run with the reason. If the registry is at the
-  cap and every image is protected, it says the next push will be rejected instead of reporting
-  "0 deleted" and letting the push fail later.
+- It refuses rather than guesses, and **reports rather than blocks**. Below 40 it does not even
+  look. Above 40, if the live commit cannot be read, or the registry cannot be listed, or nothing
+  may safely go, it deletes nothing, prints a `::warning::` saying why, and lets the deploy
+  continue. The first two attempts failed the whole staging job over the shape of an API call on
+  a registry holding 37 of 50 — strictly worse than not having the step. A preventive measure
+  must never be the reason a deploy that would otherwise succeed does not happen; if the registry
+  really is full, the push itself fails with a clear message of its own.
 - Rehearsed on 2026-09-20 against the real 37-image registry: the listing, the health probe, the
   selection and both refusal paths were exercised in `--dry-run`, and nothing was deleted.
 
