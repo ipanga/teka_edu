@@ -5,9 +5,9 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-09-19
-Branch:     develop
-Commit:     develop at dcfdb62; main at 1b95480
+Date:       2026-09-20
+Branch:     fix/maternelle-3-week-4-second-review
+Commit:     develop at e60eaa3; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -325,10 +325,36 @@ from a superseded commit) were removed** with `vercel vcr image rm dockerfile <i
 teka-edu`. The image behind the live staging deployment and its alias was verified untouched first.
 The registry went 50 → 35, the deploy was re-run and succeeded, and it now sits at 36.
 
-Recommended action: prune when the count passes about 40, and check it **before** a merge rather
-than after a failure. A deletion still needs owner approval. Note the real cost of hitting the cap:
-`develop` is blocked, because every subsequent merge re-triggers the same failing deploy.
-Optionally skip staging deploys for documentation-only merges.
+**Why the intended pruning never happened (2026-09-20).** There was nothing to happen. "Prune
+around 40" was a sentence in this file, not a mechanism: no step measured the count, no run could
+fail because of it, and no one owned the check. One image goes in per merge into `develop`, and
+September merged often enough to go from 4 images to 50 in eight days — so the registry passed 40
+and reached 50 between two glances at a document nobody had reason to open. A threshold that is
+only written down is not a threshold.
+
+**Preventive fix (2026-09-20).** The staging workflow now prunes **before** it pushes, in a step
+that sits between the deployment-count guard and `vercel deploy`:
+
+- `lib/deploy/registry-retention.ts` decides _which_ images may go. It is a pure function with 14
+  unit tests (`tests/unit/registry-retention.test.ts`), because a deletion cannot be rehearsed
+  against a real registry without deleting something.
+- `scripts/prune-registry.ts` (`npm run registry:prune`, `--dry-run` to rehearse) supplies the
+  registry contents and the commits that must survive.
+- Thresholds, in one place and used by both the deploy and the tests: prune above **40**, down to
+  **35**, never touching the **20** newest. That leaves about 15 merges of headroom.
+- Protected without exception: the commit being deployed, and the commit `/api/health` reports the
+  staging alias is actually serving — the running application, rather than a deployment field that
+  a project with no Git connection never fills in.
+- It refuses rather than guesses. Below 40 it does not even look. Above 40, if the live commit
+  cannot be read it deletes nothing and fails the run with the reason. If the registry is at the
+  cap and every image is protected, it says the next push will be rejected instead of reporting
+  "0 deleted" and letting the push fail later.
+- Rehearsed on 2026-09-20 against the real 37-image registry: the listing, the health probe, the
+  selection and both refusal paths were exercised in `--dry-run`, and nothing was deleted.
+
+Recommended action: none routine — the deploy handles it. A deletion outside the workflow still
+needs owner approval. Note the real cost of hitting the cap: `develop` is blocked, because every
+subsequent merge re-triggers the same failing deploy.
 
 ### ISSUE-012 — Supabase Free projects pause after about 7 days of low activity
 
@@ -594,42 +620,47 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  3ème maternelle Week 4 — its first actual full review, 10 corrections applied.
-            - Its four earlier history entries were inherited corrections from Weeks 1-3, not
-              readings. This is the first time anyone has read the week.
-            - Seven objectives did not match their task: a numeral-to-quantity activity filed
-              as building the number strip, a static balance claiming equilibrium through
-              displacement, a freeze game claiming safety rules, a rhyme ritual claiming
-              conversation, story-ordering claiming reformulation, drawing claiming sorting,
-              and varied running claiming dance.
-            - On the dance one I took the alternative rather than the preferred direction.
-              The lesson is called "La course des animaux", its summary says "sur une durée
-              plus longue" and its guidance says endurance. Rewriting it into a dance to fit
-              a code would have changed a lesson the review otherwise accepted; the content
-              already earns "courir de plus en plus longtemps", and dance is worked on five
-              other days.
-            - The rhyme fallback offered two choices without saying which word to rhyme with,
-              so the adult could not know the answer either. It names the target now.
-            - The shape pathway had a child walking, and hopping, on loose sheets of paper.
-              They are chalked or taped down, and hopping on a loose sheet is ruled out.
-            - A narrow material was added for objects with flat faces rather than widening the
-              generic household box, which approved lessons depend on.
-            - Animal and plant needs were one list — which teaches that a plant eats. They
-              branch now, and the activity works with no pet and no houseplant.
-            - Reported and NOT changed: three approved lessons claim the safety objective on
-              adult-facing text alone, the same defect that came off "Statue !". Correcting
-              them would lapse three approvals nobody has re-reviewed, so the safety check is
-              a pinned test rather than a corpus rule, and the occurrences are recorded for
-              their own weeks to decide.
-            - 33 of 3,084 fields changed, all in Week 4. 144 approved lessons, 0 lapsed.
-            - ISSUE-011 fired: the first staging deploy failed because the Vercel container
-              registry held its full 50 images. With the owner's approval the 15 oldest
-              (7-8 days, all superseded) were deleted, 50 -> 35, and the deploy re-run.
-Validation: format, lint, typecheck, unit (322), content (31 files), pgTAP (152) on a fresh
-            reset, build, E2E (28), both Docker images, client-bundle scan.
-Deployed:   PR #60 squash-merged as dcfdb62. Staging live on run 35465869484: environment
-            staging, Supabase DEV ref, commit dcfdb62, 28 E2E green, alias moved to
-            teka-blkd7cw9e. DEV migrated. main and PROD untouched.
+Completed:  3ème maternelle Week 4 — second pedagogical pass, four corrections.
+            - All four were one fault: the objective was plausible and the task did not
+              prove it.
+            - « Les étapes de l'histoire » ordered a story under the objective for a process
+              the child had lived. Both its activities now carry the story-chronology
+              objective. The lived-process objective is not lost: day 16 introduces it on an
+              activity that really is lived — preparing a meal, washing, dressing — two days
+              inside its window. The cost is visible: it now appears once in September
+              instead of three times, and the coverage report says so.
+            - « D'un animal à l'autre » kept the endurance objective and finally earns it.
+              The old task crossed the room « comme le lézard », which is done on the floor,
+              and its own move list still said « ramper ». Goat, chick and heron all run
+              upright now, the cue changes without stopping, and there is no speed, no race,
+              no stopwatch.
+            - Two number-strip mappings were broader than the task. « Je montre le nombre »
+              no longer claims to build the strip: the child hears the number, finds the
+              written numeral and shows the quantity on their fingers, which is the whole of
+              the association objective whose window opens that very day. « Le nombre caché »
+              loses the count-to-thirty rhyme it never performed and keeps the strip
+              objective, which the task now proves by completing the strip.
+            - « Marche sur les formes » walked and named; walking is not a new balance. It
+              stops under control, changes direction and alternates a long step with a side
+              step. The 19 September safety correction is kept word for word.
+            - The optional cloth in the stepping path of « Un pied, deux pieds » is gone: a
+              chalk line, a taped line or a line pointed out.
+            - One occurrence in Week 5: « Je range les tas » claimed strip construction for
+              ranking three piles. Corrected as a consequence and recorded as one. Week 5
+              still has not been read.
+            - 35 of 3,084 fields changed — 33 in Week 4, 2 in Week 5. 7 child-facing.
+              144 approved lessons, 0 lapsed, 0 digest mismatches.
+            ISSUE-011 prevented rather than recovered.
+            - Why the "prune around 40" advice never fired: nothing measured the count and
+              nobody owned the check. A threshold that is only written down is not one.
+            - The staging workflow now prunes before it pushes. The policy is a pure function
+              with 14 unit tests, because a deletion cannot be rehearsed against a real
+              registry. It protects the deploying commit and the commit /api/health says
+              staging is serving, keeps the 20 newest, and refuses rather than guesses.
+            - Rehearsed against the real 37-image registry in --dry-run: listing, health
+              probe, selection and both refusal paths. Nothing was deleted.
+Validation: format, lint, typecheck, unit (342), content (31 files), pgTAP (152) on a fresh
+            reset, build, E2E (28), both Docker images, client-bundle scan, 0 tracked .env*.
 Cost:       $0.
 Not done:   Week 4 is not approved — 0 of 20. Week 5 never reviewed. Beta gate 8 of 10.
 ```

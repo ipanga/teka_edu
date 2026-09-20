@@ -85,6 +85,8 @@ jobs:
           cache: npm
       - name: Install Vercel CLI
         run: npm install --global "vercel@${VERCEL_CLI_VERSION}"
+      # Before the deploy, not after it: the registry prune below runs from this checkout.
+      - run: npm ci
       # Vercel makes the FIRST deployment of a new project a production deployment even
       # without --prod (docs: /docs/cli/deploy#prod). Staging must never be that deployment.
       - name: Refuse to deploy into a project without any deployment
@@ -98,6 +100,17 @@ jobs:
             echo "::error::The Vercel project has no deployment yet: Vercel would make this one production. Create the first (production) deployment deliberately first; see docs/DEPLOYMENT.md."
             exit 1
           fi
+      # The container registry holds 50 images on Hobby and deletes none of them, so it fills up
+      # and then the *push* below is rejected — which blocks develop, because every following
+      # merge re-triggers this same deploy. Prune before pushing, never after (ISSUE-011).
+      # The policy and its safety rules live in lib/deploy/registry-retention.ts and are unit
+      # tested; this step only supplies the registry contents and what must survive.
+      - name: Prune superseded container images
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          STAGING_URL: ${{ vars.STAGING_DOMAIN != '' && format('https://{0}', vars.STAGING_DOMAIN) || '' }}
+          VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
+        run: npm run registry:prune
       - name: Deploy to Vercel (staging)
         id: deploy
         env:
@@ -148,7 +161,6 @@ jobs:
             | jq -r '"Aliased \(.alias) -> \(.deploymentId // "deployment")"'
 
       # ---- 3. Smoke tests against the exact deployment ---------------------------------
-      - run: npm ci
       - name: Install Playwright browser
         run: npx playwright install --with-deps chromium
       - name: Smoke tests

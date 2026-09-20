@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 1 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 2 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -73,6 +73,12 @@ Changement arrivé dans cette semaine sans relecture propre : il vient d’une c
 Première vraie relecture pédagogique complète de la semaine 4. Les entrées précédentes de cette semaine ne sont pas des relectures : ce sont des corrections héritées des semaines 1 à 3. La structure est acceptée. Dix points ont été demandés. Objectifs mal attribués : « Je pose le bon nombre d’objets » ne revendiquait que la construction de la bande numérique alors que l’enfant lit un nombre écrit et constitue la collection correspondante ; « Le jeu des appuis » revendiquait des équilibres construits par des déplacements alors qu’on y reste immobile ; « Statue ! » revendiquait le respect des règles de sécurité, que l’enfant n’y travaille pas ; « D’abord, ensuite, à la fin » s’appuyait sur la conversation alors que l’enfant remet une histoire dans l’ordre ; le rituel du jour 18 demandait des rimes et revendiquait la conversation ; « Je dessine avec des formes » revendiquait le tri sans rien trier ; « Et si on changeait la fin ? » inventait une fin dans une leçon de chronologie ; et « D’un animal à l’autre » revendiquait la danse alors que la leçon, son résumé et sa guidance parlent d’endurance. Conduite et sécurité : le repli de l’activité de rimes proposait deux choix sans dire de quel mot il s’agissait ; le parcours des formes faisait marcher, et sauter à cloche-pied, sur des feuilles libres qui glissent ; le matériel de « La forme et l’objet » ne fournissait pas de faces planes utilisables ; et les besoins d’un animal et d’une plante étaient donnés dans la même liste.
 
 **Suites données :** Toutes appliquées, avec des objectifs officiels existants uniquement. « Je pose le bon nombre d’objets » porte « associer une quantité, le nom d’un nombre et une écriture chiffrée », dont la fenêtre du plan annuel s’ouvre au jour 15, et reprend « constituer une collection d’un cardinal donné ». « Le jeu des appuis » marche trois pas, s’arrête en équilibre, repart et change de pied : l’objectif est désormais gagné, et tout reste au sol. « Statue ! » ne revendique plus la sécurité — une note destinée à l’adulte ne prouve pas un apprentissage de l’enfant. « D’abord, ensuite, à la fin » porte « restituer la chronologie des actions majeures d’une histoire simple », et le rituel du jour 18 porte les rimes qu’il demande vraiment. « Je dessine avec des formes » porte « décrire et nommer ». « Et si on changeait la fin ? » devient « Juste avant, juste après », qui travaille l’ordre. « D’un animal à l’autre » porte « courir de plus en plus longtemps sans s’arrêter » : c’est ce que la leçon fait déjà, et la danse reste travaillée cinq autres jours du mois. Le repli des rimes nomme la cible et les deux choix. Les formes du parcours sont tracées à la craie ou fixées, et le cloche-pied est interdit sur une feuille libre. Un matériel étroit a été ajouté — des objets de la maison à faces planes — plutôt que d’élargir celui des objets de la maison, dont dépendent des leçons approuvées. Et les besoins sont séparés : nourriture, eau et abri pour l’animal ; eau, lumière et terre pour la plante, qui ne mange pas. L’activité fonctionne sans animal ni plante à la maison, et l’enfant ne touche ni ne nourrit un animal ou une plante qu’il ne connait pas. Aucune leçon n’est approuvée : les 20 restent en relecture.
+
+### 2026-09-20 — ChatGPT · `accepted-with-modifications` (ai-assisted)
+
+Deuxième relecture pédagogique complète de la semaine 4, sur le paquet corrigé du 19 septembre. La semaine est proche de l’approbation, mais quatre points restent à régler, tous du même genre : l’objectif est plausible, la tâche ne le prouve pas. 1) « Les étapes de l’histoire » (jour 18) portait « repérer les différentes étapes d’un processus ou d’un évènement vécu », qui parle de ce que l’enfant a vécu ; ses deux activités travaillent une histoire connue. 2) « D’un animal à l’autre » (jour 19) portait bien « courir de plus en plus longtemps sans s’arrêter », mais la consigne faisait traverser « comme le lézard », ce qui se fait à plat ventre : rien ne garantissait une course. 3) Deux attributions autour de la bande numérique restaient plus larges que la tâche : « Je montre le nombre » (jour 15) ne construisait plus la bande, il la lisait ; « Le nombre caché » (jour 16) revendiquait la comptine jusqu’à trente pour nommer un nombre inférieur à dix. 4) « Marche sur les formes » (jour 18) portait les équilibres construits par une combinaison d’actions alors que l’enfant marchait et nommait. Un point de sécurité a été signalé en plus : l’extension facultative du « Jeu des appuis » faisait enjamber un tissu libre posé dans le passage.
+
+**Suites données :** Toutes appliquées, avec des objectifs officiels existants uniquement, et sans ouvrir un objectif avant sa fenêtre du plan annuel. 1) Les deux activités des « Étapes de l’histoire » portent « restituer la chronologie des actions majeures d’une histoire simple », l’objectif que la semaine emploie déjà pour « D’abord, ensuite, à la fin » le même jour. L’objectif du processus vécu n’est pas perdu : « Avant, pendant, après » (jour 16) le porte toujours, sur une activité que l’enfant fait vraiment — préparer le repas, se laver, s’habiller — et l’introduit au jour 16, dans sa fenêtre qui se ferme au jour 18. 2) « D’un animal à l’autre » garde l’objectif d’endurance et devient une vraie course : on trottine sans s’arrêter, l’animal change en courant, et les trois animaux se courent debout. Ni vitesse, ni concours, ni chrono ; une minute si c’est confortable, et on s’arrête avant d’être essoufflé. 3) « Je montre le nombre » porte « associer une quantité, le nom d’un nombre et une écriture chiffrée », dont la fenêtre s’ouvre au jour 15 : l’enfant entend le nombre, montre le chiffre écrit et lève autant de doigts — les trois côtés de l’objectif. « Le nombre caché » perd la comptine jusqu’à trente et garde la construction de la bande, que la tâche prouve maintenant : un nombre est couvert, l’enfant le retrouve et complète la bande avant de recommencer. 4) « Marche sur les formes » garde son objectif et gagne une vraie combinaison d’actions : marcher jusqu’à la forme, s’y arrêter une seconde sans bouger, changer de direction, alterner un grand pas et un pas de côté, faire demi-tour. La correction de sécurité du 19 septembre est conservée mot pour mot : formes tracées ou fixées, jamais de cloche-pied sur une feuille libre. 5) L’extension du « Jeu des appuis » n’emploie plus de tissu libre : un trait de craie, un ruban bien collé ou une ligne montrée du doigt. Aucune leçon n’est approuvée : les 20 restent en relecture.
 
 ## Jour 15 — 2026-09-21
 
@@ -222,12 +228,13 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ### La bande numérique jusqu’à dix — L’acquisition des premiers outils mathématiques (9 min)
 
-_Construire et lire une bande de nombres de un à dix._
+_Construire une bande de nombres de un à dix, puis y lire les nombres._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
 - **Conseil au parent :** Écrivez les chiffres de 1 à 10 sur une bande de papier, avec l’enfant. Elle servira tout le mois : gardez-la.
 - **Objectifs enseignés :**
   - `MATH-S01-C02-O06` — Construire la bande numérique jusqu’à dix. _(source : programme-2024-mathematiques)_
+  - `MATH-S01-C01-O08` — Associer une quantité, le nom d’un nombre et une écriture chiffrée. _(source : programme-2024-mathematiques)_
 
 #### 1. Je fabrique ma bande des nombres — 5 min, sans interaction écran (manipulation)
 
@@ -242,13 +249,13 @@ _Construire et lire une bande de nombres de un à dix._
 
 #### 2. Je montre le nombre — 4 min, sans interaction écran (counting)
 
-- **Consigne à l’enfant :** « Montre le nombre que je dis sur la bande. »
-- **Guidance adulte :** 1. Dites un nombre, l’enfant le montre. 2. Puis l’inverse : vous montrez, il nomme. 3. Demandez ce qui vient juste après, juste avant. 4. Gardez la bande à portée de main les jours suivants.
+- **Consigne à l’enfant :** « Montre le nombre que je dis sur la bande, puis montre-le avec tes doigts. »
+- **Guidance adulte :** 1. Dites un nombre : l’enfant le montre sur la bande, puis lève autant de doigts. 2. Puis l’inverse : vous montrez un nombre écrit, il le nomme et lève autant de doigts. 3. Demandez ce qui vient juste après, juste avant. 4. Gardez la bande à portée de main les jours suivants.
 - **Matériel :** Feuille de papier
-- **Lexique visé :** avant _(before)_ · après _(after)_
+- **Lexique visé :** le doigt _(the finger)_ · autant _(as many)_
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
-- **Aide en anglais (optionnelle) :** « Show me the number I say on the strip. »
-- **Objectifs travaillés :** `MATH-S01-C02-O06` Construire la bande numérique jusqu’à dix.
+- **Aide en anglais (optionnelle) :** « Show me the number I say on the strip, then show it with your fingers. »
+- **Objectifs travaillés :** `MATH-S01-C01-O08` Associer une quantité, le nom d’un nombre et une écriture chiffrée.
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer un rang ou une position par un nombre » (from-5) :**
 
@@ -265,6 +272,47 @@ _Construire et lire une bande de nombres de un à dix._
 - Positionner des représentations (constellation du dé, doigts, écriture chiffrée, représentation verticale de la quantité associée) des nombres inférieurs ou égaux à dix dans les premières cases de la bande numérique.
 - Placer un objet dans une case correspondant à une position donnée.
 - Compléter une bande numérique lacunaire.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**
+
+- Reconnaître et réaliser des collections d’objets de même cardinal (jusqu’à dix, voire au-delà) mais de caractéristiques différentes (couleur, fonction et surtout taille).
+- Reconnaître et réaliser des collections d’objets (jusqu’à dix, voire au-delà) de même cardinal mais organisées de manières différentes dans l’espace.
+- Reconnaitre et réaliser des collections d’objets dont le cardinal (jusqu’à dix, voire au-delà) est donné par une représentation analogique, par le nom du nombre ou par son écriture chiffrée.
+- Réaliser une collection contenant un objet de plus qu’une collection donnée.
+- Réaliser une collection contenant un objet de moins qu’une collection donnée.
+- Nommer les nombres correspondant au cardinal d’une collection avant et après l’ajout ou le retrait d’un élément.
+- Séparer les éléments déjà pointés de ceux qui ne le sont pas encore.
+- Pointer du doigt ou marquer les éléments déjà parcourus (le nombre d’objets peut être supérieur à dix).
+- Créer un parcours passant une et une seule fois par chaque élément.
+- Utiliser le principe de cardinalité pour dénombrer une collection par énumération. Utiliser des compositions et des décompositions pour dénombrer.
+  Par exemple, si l’enseignant positionne huit objets en les organisant en deux constellations de quatre et demande de dénombrer la collection, l’élève est capable de :
+  • compter de un en un ;
+  • « mettre quatre dans sa tête », surcompter en utilisant ses doigts : « cinq, six, sept, huit » et annoncer qu’il y a huit objets
+- utiliser la connaissance d’une composition et verbaliser « ça fait huit parce que quatre et quatre font huit ».
+- Réaliser une collection :
+  • contenant la même quantité d’objets qu’une collection donnée ;
+  • contenant la même quantité d’objets qu’une représentation analogique donnée (doigts des deux mains, constellations de points) ;
+  • dont la quantité d’objets est énoncée oralement ;
+  • dont la quantité d’objets est représentée par son écriture chiffrée. Réaliser une collection (jusqu’à dix, voire au-delà) en réunissant des collections plus petites.
+- Comparer globalement (sans dénombrer) les cardinaux de deux collections dont les quantités d’objets diffèrent d’un facteur au moins égal à deux et utiliser les locutions « plus que », « moins que », « autant que ». On ne se limite pas aux petites collections.
+- Comparer par correspondance terme à terme les cardinaux de deux collections.
+- Comparer les cardinaux de deux collections en dénombrant chacune d’elles.
+- Comparer des quantités données par leur écriture chiffrée ou par le nom des nombres.
+- Mobiliser des compositions et des décompositions de nombres pour résoudre des problèmes.
+- Réaliser des compositions et des décompositions de nombres avec les doigts des deux mains.
+- Verbaliser les compositions de nombres. Parmi elles, figurent les doubles : « deux et deux font quatre », « deux fois deux font quatre », « trois et trois font six », « deux fois trois font six », « quatre et quatre font huit », « deux fois quatre font huit », « cinq et cinq font dix », « deux fois cinq font dix ».
+- Verbaliser les décompositions des nombres compris entre deux et dix.
+- Pour ajouter deux nombres, surcompter à partir du plus grand. Exemple de verbalisation par un élève : « Pour ajouter quatre et cinq, je mets cinq dans ma tête et je compte quatre sur mes doigts à partir de cinq : six, sept, huit, neuf. Donc quatre et cinq font neuf ».
+- Nommer le nombre (jusqu’à dix, voire au-delà) correspondant à une quantité d’objets ou à une représentation analogique et vice versa.
+- Représenter par une écriture chiffrée une quantité, une représentation analogique, le nom d’un nombre et vice versa.
+- Écrire des nombres dans des situations de communication.
+- Réciter la comptine numérique de un à trente de façon ordonnée et segmentée.
+- Réciter la comptine numérique jusqu’à un nombre donné.
+- Réciter la comptine numérique jusqu’à trente en partant d’un nombre autre que un (en vue du surcomptage).
+- Réciter la comptine numérique à rebours de dix à un (en vue du décomptage).
+- Réciter les comptines numériques (jusqu’à vingt) de deux en deux en partant de un et en partant de deux.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -522,21 +570,21 @@ _Situer un nombre par rapport à ses voisins._
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Servez-vous de la bande fabriquée hier. « Avant » et « après » se montrent avec le doigt avant de se dire.
 - **Objectifs enseignés :**
-  - `MATH-S01-C01-O08` — Associer une quantité, le nom d’un nombre et une écriture chiffrée. _(source : programme-2024-mathematiques)_
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C02-O06` — Construire la bande numérique jusqu’à dix.
-  - `MATH-S01-C01-O26` — Connaitre et utiliser la comptine numérique jusqu’à trente.
+  - `MATH-S01-C01-O08` — Associer une quantité, le nom d’un nombre et une écriture chiffrée.
   - `MATH-S01-C01-O21` — Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
 #### 1. Le nombre caché — 5 min, sans interaction écran (counting)
 
-- **Consigne à l’enfant :** « Je cache un nombre sur la bande. Devine lequel. »
-- **Guidance adulte :** 1. Cachez un nombre avec le doigt. 2. Demandez lequel c’est. 3. Faites justifier : « Il est après le cinq. » 4. Recommencez avec un nombre plus grand.
-- **Matériel :** Feuille de papier
+- **Consigne à l’enfant :** « Je cache un nombre sur la bande. Devine lequel, puis remets-le à sa place. »
+- **Guidance adulte :** 1. Couvrez un nombre avec un petit papier : il manque maintenant un nombre à la bande. 2. Demandez lequel est caché. 3. Faites justifier : « Il est juste après le cinq. » 4. Faites compléter la bande : l’enfant écrit le nombre manquant sur le papier qui le cache, ou le trace dessus avec le doigt s’il préfère. 5. Vérifiez ensemble que la bande est complète, puis recommencez avec un nombre plus grand.
+- **Matériel :** Feuille de papier, Crayon
 - **Lexique visé :** caché _(hidden)_ · juste après _(right after)_
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
-- **Aide en anglais (optionnelle) :** « I hide a number on the strip. Guess which one. »
-- **Objectifs travaillés :** `MATH-S01-C02-O06` Construire la bande numérique jusqu’à dix. ; `MATH-S01-C01-O26` Connaitre et utiliser la comptine numérique jusqu’à trente.
+- **À défaut :** Un crayon, un stylo, une craie ou un morceau de charbon conviennent.
+- **Aide en anglais (optionnelle) :** « I hide a number on the strip. Guess which one, then put it back. »
+- **Objectifs travaillés :** `MATH-S01-C02-O06` Construire la bande numérique jusqu’à dix.
 
 #### 2. Je pose le bon nombre d’objets — 4 min, sans interaction écran (manipulation)
 
@@ -549,6 +597,24 @@ _Situer un nombre par rapport à ses voisins._
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Put as many objects as the number I point to. »
 - **Objectifs travaillés :** `MATH-S01-C01-O08` Associer une quantité, le nom d’un nombre et une écriture chiffrée. ; `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
+
+**Réussites attendues — texte officiel pour la compétence « Exprimer un rang ou une position par un nombre » (from-5) :**
+
+- Repérer par perception visuelle le premier, le dernier, le deuxième et l’avant-dernier des éléments d’une suite ordonnée.
+- Repérer à l’aide d’une procédure de comptage le rang d’un élément d’une suite ordonnée comportant au plus dix éléments.
+- Déterminer un rang dans une suite ordonnée (contenant jusqu’à dix objets) dont on a changé le point de départ ou le sens du parcours.
+  Par exemple, si l’enseignant aligne dix cartes identiques sur une table, qu’à l’une des extrémités il positionne un disque bleu, à l’autre un disque rouge et qu’il cache sous l’une des cartes un dessin d’escargot, l’élève est capable de décrire oralement la position de celui-ci. Différentes verbalisations sont possibles. Par exemple : « Je pars du disque rouge et je compte neuf cartes », « je compte les cartes en partant du disque rouge, quand je suis arrivé à neuf, c’est la bonne carte », « l’escargot est sous la sixième carte en partant du disque bleu », « l’escargot est sous la neuvième carte en partant du disque rouge ».
+  Ou encore, si l’enseignant présente au tableau un modèle de suite orientée (un train, une chainette, etc.) contenant des symboles et fournit à l’élève une feuille représentant le même dispositif, mais vide, l’élève est capable de positionner dans le dispositif, au même endroit que sur le modèle, un symbole qu’il a tiré au hasard. Différentes variantes organisationnelles peuvent être progressivement proposées :
+  • modèle visible ;
+  • modèle caché mais accessible en se déplaçant (pour travailler la mémoire des positions) ;
+  • un élève ayant connaissance du modèle doit communiquer les informations aux autres pour qu’ils le reproduisent.
+- Verbaliser la procédure permettant de déterminer la position résultant d’un avancement ou d’un recul à partir d’une position initiale.
+- Exploiter les compositions et les décompositions des nombres jusqu’à dix.
+- Positionner des représentations (constellation du dé, doigts, écriture chiffrée, représentation verticale de la quantité associée) des nombres inférieurs ou égaux à dix dans les premières cases de la bande numérique.
+- Placer un objet dans une case correspondant à une position donnée.
+- Compléter une bande numérique lacunaire.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**
 
@@ -591,24 +657,6 @@ _Situer un nombre par rapport à ses voisins._
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
-**Réussites attendues — texte officiel pour la compétence « Exprimer un rang ou une position par un nombre » (from-5) :**
-
-- Repérer par perception visuelle le premier, le dernier, le deuxième et l’avant-dernier des éléments d’une suite ordonnée.
-- Repérer à l’aide d’une procédure de comptage le rang d’un élément d’une suite ordonnée comportant au plus dix éléments.
-- Déterminer un rang dans une suite ordonnée (contenant jusqu’à dix objets) dont on a changé le point de départ ou le sens du parcours.
-  Par exemple, si l’enseignant aligne dix cartes identiques sur une table, qu’à l’une des extrémités il positionne un disque bleu, à l’autre un disque rouge et qu’il cache sous l’une des cartes un dessin d’escargot, l’élève est capable de décrire oralement la position de celui-ci. Différentes verbalisations sont possibles. Par exemple : « Je pars du disque rouge et je compte neuf cartes », « je compte les cartes en partant du disque rouge, quand je suis arrivé à neuf, c’est la bonne carte », « l’escargot est sous la sixième carte en partant du disque bleu », « l’escargot est sous la neuvième carte en partant du disque rouge ».
-  Ou encore, si l’enseignant présente au tableau un modèle de suite orientée (un train, une chainette, etc.) contenant des symboles et fournit à l’élève une feuille représentant le même dispositif, mais vide, l’élève est capable de positionner dans le dispositif, au même endroit que sur le modèle, un symbole qu’il a tiré au hasard. Différentes variantes organisationnelles peuvent être progressivement proposées :
-  • modèle visible ;
-  • modèle caché mais accessible en se déplaçant (pour travailler la mémoire des positions) ;
-  • un élève ayant connaissance du modèle doit communiquer les informations aux autres pour qu’ils le reproduisent.
-- Verbaliser la procédure permettant de déterminer la position résultant d’un avancement ou d’un recul à partir d’une position initiale.
-- Exploiter les compositions et les décompositions des nombres jusqu’à dix.
-- Positionner des représentations (constellation du dé, doigts, écriture chiffrée, représentation verticale de la quantité associée) des nombres inférieurs ou égaux à dix dans les premières cases de la bande numérique.
-- Placer un objet dans une case correspondant à une position donnée.
-- Compléter une bande numérique lacunaire.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
-
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -639,7 +687,7 @@ _Marcher, s’arrêter en équilibre sur un pied, et repartir._
 #### 1. Le jeu des appuis — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Marche trois pas, arrête-toi sur un pied, puis repars. Recommence sur l’autre pied. »
-- **Guidance adulte :** 1. Montrez d’abord : trois ou quatre pas, puis un arrêt sur un pied. 2. Comptez jusqu’à trois pendant qu’il tient, puis dites « repars ». 3. Au prochain arrêt, l’autre pied. 4. Restez tout près, prêt à lui donner la main. 5. Si c’est facile, posez un tissu à plat au sol à enjamber juste avant l’arrêt. Rien de haut, rien à escalader : tout se passe au sol.
+- **Guidance adulte :** 1. Montrez d’abord : trois ou quatre pas, puis un arrêt sur un pied. 2. Comptez jusqu’à trois pendant qu’il tient, puis dites « repars ». 3. Au prochain arrêt, l’autre pied. 4. Restez tout près, prêt à lui donner la main. 5. Si c’est facile, tracez un trait à la craie au sol — ou un ruban bien collé, ou une ligne que vous montrez du doigt — à enjamber juste avant l’arrêt. Pas de tissu libre dans le passage : cela glisse sous le pied. Rien de haut, rien à escalader : tout se passe au sol.
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **Lexique visé :** l’équilibre _(balance)_ · changer _(to change)_
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
@@ -1236,24 +1284,24 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ### Le parcours des formes — Agir, s’exprimer, comprendre à travers les activités physiques (6 min)
 
-_Suivre un parcours en nommant les formes rencontrées._
+_Enchainer marche, arrêt et changement de direction en nommant les formes._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
-- **Conseil au parent :** On relie le mouvement et les formes du mois : l’enfant nomme avant de passer. Les formes doivent être tracées au sol ou bien fixées : une feuille qui glisse sous le pied fait tomber.
+- **Conseil au parent :** On relie le mouvement et les formes du mois : l’enfant nomme avant de passer, s’arrête sur la forme, puis change de direction. Les formes doivent être tracées au sol ou bien fixées : une feuille qui glisse sous le pied fait tomber.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S02-C01-O05` — Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions.
 
 #### 1. Marche sur les formes — 6 min, sans interaction écran (movement)
 
-- **Consigne à l’enfant :** « Marche d’une forme à l’autre en disant son nom avant de poser le pied. »
-- **Guidance adulte :** 1. Tracez les formes à la craie au sol, ou fixez bien les formes en papier avec du ruban — une feuille libre glisse sous le pied. 2. Espacez-les d’un pas. 3. L’enfant nomme la forme, puis avance dessus. 4. Terminez en revenant en arrière. 5. Si les formes ne sont pas fixées, posez-les **à côté** des endroits où il pose le pied, et ne faites jamais de cloche-pied sur une feuille.
+- **Consigne à l’enfant :** « Dis le nom de la forme, marche jusqu’à elle, arrête-toi une seconde sans bouger, puis repars vers la suivante. »
+- **Guidance adulte :** 1. Tracez les formes à la craie au sol, ou fixez bien les formes en papier avec du ruban — une feuille libre glisse sous le pied. 2. Espacez-les d’un pas. 3. L’enfant nomme la forme, marche jusqu’à elle, s’arrête dessus une seconde sans bouger, puis repart. 4. Variez le trajet : un grand pas pour aller à l’une, un pas de côté pour la suivante, puis un demi-tour et le retour en arrière. 5. Tout reste au sol : rien de surélevé, rien à escalader. 6. Si les formes ne sont pas fixées, posez-les **à côté** des endroits où il pose le pied, et ne faites jamais de cloche-pied sur une feuille.
 - **Matériel :** Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque), Espace dégagé pour bouger (à l’intérieur ou dehors)
-- **Lexique visé :** le pas _(the step)_ · la forme _(the shape)_
+- **Lexique visé :** le pas _(the step)_ · le demi-tour _(the turn-around)_
 - **À défaut :** Dessinez les formes sur une feuille et découpez-les, ou tracez-les directement sur le sol ou sur le sable ; à défaut, servez-vous de morceaux de carton d’emballage.
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
-- **Aide en anglais (optionnelle) :** « Step from shape to shape, saying its name before you step. »
+- **Aide en anglais (optionnelle) :** « Say the shape's name, walk to it, stop still for a second, then move on to the next one. »
 - **Objectifs travaillés :** `PHYS-S02-C01-O05` Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions.
 
 **Réussites attendues — texte officiel pour la compétence « Tourner, se suspendre, se renverser, grimper, rouler, glisser, nager » (from-5) :**
@@ -1284,13 +1332,13 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ### Les étapes de l’histoire — Se repérer dans le temps et l’espace (7 min)
 
-_Ordonner les moments d’une histoire connue._
+_Restituer dans l’ordre les moments d’une histoire connue._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** On applique l’ordre à une histoire du mois. L’enfant connait l’histoire : la difficulté est l’ordre, pas le souvenir.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
-  - `TIME-SPACE-S01-C02-O08` — Repérer les différentes étapes d’un processus ou d’un évènement vécu et les ordonner.
+  - `TIME-SPACE-S01-C02-O06` — Restituer la chronologie des actions majeures d’une histoire simple.
 
 #### 1. Je remets l’histoire en ordre — 4 min, sans interaction écran (manipulation)
 
@@ -1301,7 +1349,7 @@ _Ordonner les moments d’une histoire connue._
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
 - **À défaut :** Un crayon, un stylo, une craie ou un morceau de charbon conviennent.
 - **Aide en anglais (optionnelle) :** « Put the three moments of the story in order. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C02-O08` Repérer les différentes étapes d’un processus ou d’un évènement vécu et les ordonner.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C02-O06` Restituer la chronologie des actions majeures d’une histoire simple.
 
 #### 2. Juste avant, juste après — 3 min, sans interaction écran (conversation)
 
@@ -1310,7 +1358,7 @@ _Ordonner les moments d’une histoire connue._
 - **Matériel :** Aucun matériel
 - **Lexique visé :** juste avant _(just before)_ · juste après _(just after)_
 - **Aide en anglais (optionnelle) :** « I name a moment of the story. Tell me what comes just before, then just after. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C02-O08` Repérer les différentes étapes d’un processus ou d’un évènement vécu et les ordonner.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C02-O06` Restituer la chronologie des actions majeures d’une histoire simple.
 
 **Réussites attendues — texte officiel pour la compétence « S’approprier la notion de chronologie » (from-5) :**
 
@@ -1564,23 +1612,23 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ### La course des animaux — Agir, s’exprimer, comprendre à travers les activités physiques (6 min)
 
-_Enchainer des déplacements variés sur une durée plus longue._
+_Trottiner sans s’arrêter, de plus en plus longtemps._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
-- **Conseil au parent :** Reprise des déplacements du mois, en jeu. On ne cherche pas la performance mais l’endurance et le plaisir.
+- **Conseil au parent :** L’animal change, mais la course ne s’arrête pas : on reste debout et on trottine. On ne cherche pas la vitesse, mais la durée et le plaisir.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S01-C01-O10` — Courir de plus en plus longtemps sans s’arrêter.
 
 #### 1. D’un animal à l’autre — 6 min, sans interaction écran (movement)
 
-- **Consigne à l’enfant :** « Traverse la pièce comme la chèvre, reviens comme le lézard, repars comme le poussin. »
-- **Guidance adulte :** 1. Annoncez un animal par traversée. 2. Enchainez sans pause pendant une minute. 3. Laissez l’enfant choisir le dernier animal. 4. Finissez assis, en soufflant trois fois.
+- **Consigne à l’enfant :** « Trottine sans t’arrêter : comme la chèvre, puis comme le poussin, puis comme le héron. »
+- **Guidance adulte :** 1. Dites « on trottine comme la chèvre » et trottinez avec lui, tout doucement. 2. Changez d’animal sans vous arrêter : « continue sans t’arrêter, maintenant comme le poussin » — des petits pas rapides ; puis « comme le héron » — de grandes enjambées, genoux hauts. 3. Ces trois animaux se courent debout : on ne se met ni à quatre pattes ni au sol. 4. Visez une minute si c’est confortable, moins si l’enfant fatigue : on s’arrête avant d’être essoufflé. 5. Ni vitesse, ni concours, ni chrono — ce qui compte est de ne pas s’arrêter. 6. Finissez assis, en soufflant trois fois.
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors)
-- **Lexique visé :** traverser _(to cross)_ · revenir _(to come back)_
+- **Lexique visé :** trottiner _(to trot)_ · sans s’arrêter _(without stopping)_
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
-- **Aide en anglais (optionnelle) :** « Cross the room like the goat, come back like the lizard. »
+- **Aide en anglais (optionnelle) :** « Trot without stopping: like the goat, then like the chick, then like the heron. »
 - **Objectifs travaillés :** `PHYS-S01-C01-O10` Courir de plus en plus longtemps sans s’arrêter.
 
 **Réussites attendues — texte officiel pour la compétence « Manipuler, courir, sauter, lancer, s’orienter » (from-5) :**

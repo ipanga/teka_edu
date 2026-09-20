@@ -1325,8 +1325,8 @@
       "levelIds": ["maternelle-3"],
       "domainCode": "MATH",
       "title": "La bande numérique jusqu’à dix",
-      "summary": "Construire et lire une bande de nombres de un à dix.",
-      "objectiveCodes": ["MATH-S01-C02-O06"],
+      "summary": "Construire une bande de nombres de un à dix, puis y lire les nombres.",
+      "objectiveCodes": ["MATH-S01-C02-O06", "MATH-S01-C01-O08"],
       "supportingObjectiveCodes": [],
       "stage": "discovery",
       "difficulty": 3,
@@ -1371,28 +1371,28 @@
           "position": 2,
           "type": "counting",
           "title": "Je montre le nombre",
-          "childInstruction": "Montre le nombre que je dis sur la bande.",
-          "adultGuidance": "1. Dites un nombre, l’enfant le montre. 2. Puis l’inverse : vous montrez, il nomme. 3. Demandez ce qui vient juste après, juste avant. 4. Gardez la bande à portée de main les jours suivants.",
+          "childInstruction": "Montre le nombre que je dis sur la bande, puis montre-le avec tes doigts.",
+          "adultGuidance": "1. Dites un nombre : l’enfant le montre sur la bande, puis lève autant de doigts. 2. Puis l’inverse : vous montrez un nombre écrit, il le nomme et lève autant de doigts. 3. Demandez ce qui vient juste après, juste avant. 4. Gardez la bande à portée de main les jours suivants.",
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["MATH-S01-C02-O06"],
+          "objectiveCodes": ["MATH-S01-C01-O08"],
           "materialCodes": ["papier"],
           "vocabulary": [
             {
-              "fr": "avant",
-              "en": "before"
+              "fr": "le doigt",
+              "en": "the finger"
             },
             {
-              "fr": "après",
-              "en": "after"
+              "fr": "autant",
+              "en": "as many"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Show me the number I say on the strip."
+              "childInstruction": "Show me the number I say on the strip, then show it with your fingers."
             }
           ],
           "payload": {
@@ -1412,8 +1412,8 @@
       "domainCode": "MATH",
       "title": "Avant et après sur la bande",
       "summary": "Situer un nombre par rapport à ses voisins.",
-      "objectiveCodes": ["MATH-S01-C01-O08"],
-      "supportingObjectiveCodes": ["MATH-S01-C02-O06", "MATH-S01-C01-O26", "MATH-S01-C01-O21"],
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C02-O06", "MATH-S01-C01-O08", "MATH-S01-C01-O21"],
       "stage": "consolidation",
       "difficulty": 3,
       "themeId": "au-marche",
@@ -1424,14 +1424,14 @@
           "position": 1,
           "type": "counting",
           "title": "Le nombre caché",
-          "childInstruction": "Je cache un nombre sur la bande. Devine lequel.",
-          "adultGuidance": "1. Cachez un nombre avec le doigt. 2. Demandez lequel c’est. 3. Faites justifier : « Il est après le cinq. » 4. Recommencez avec un nombre plus grand.",
+          "childInstruction": "Je cache un nombre sur la bande. Devine lequel, puis remets-le à sa place.",
+          "adultGuidance": "1. Couvrez un nombre avec un petit papier : il manque maintenant un nombre à la bande. 2. Demandez lequel est caché. 3. Faites justifier : « Il est juste après le cinq. » 4. Faites compléter la bande : l’enfant écrit le nombre manquant sur le papier qui le cache, ou le trace dessus avec le doigt s’il préfère. 5. Vérifiez ensemble que la bande est complète, puis recommencez avec un nombre plus grand.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["MATH-S01-C02-O06", "MATH-S01-C01-O26"],
-          "materialCodes": ["papier"],
+          "objectiveCodes": ["MATH-S01-C02-O06"],
+          "materialCodes": ["papier", "crayon"],
           "vocabulary": [
             {
               "fr": "caché",
@@ -1445,7 +1445,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "I hide a number on the strip. Guess which one."
+              "childInstruction": "I hide a number on the strip. Guess which one, then put it back."
             }
           ],
           "payload": {
@@ -1835,7 +1835,7 @@
       "title": "Du plus petit au plus grand",
       "summary": "Ranger des collections de la plus petite à la plus grande.",
       "objectiveCodes": [],
-      "supportingObjectiveCodes": ["MATH-S01-C01-O05", "MATH-S01-C02-O06"],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O05"],
       "stage": "consolidation",
       "difficulty": 3,
       "themeId": "je-montre-ce-que-je-sais",
@@ -1852,7 +1852,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["MATH-S01-C01-O05", "MATH-S01-C02-O06"],
+          "objectiveCodes": ["MATH-S01-C01-O05"],
           "materialCodes": ["petits-objets"],
           "vocabulary": [
             {

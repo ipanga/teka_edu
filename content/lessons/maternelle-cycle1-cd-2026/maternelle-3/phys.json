@@ -923,7 +923,7 @@
           "type": "movement",
           "title": "Le jeu des appuis",
           "childInstruction": "Marche trois pas, arrête-toi sur un pied, puis repars. Recommence sur l’autre pied.",
-          "adultGuidance": "1. Montrez d’abord : trois ou quatre pas, puis un arrêt sur un pied. 2. Comptez jusqu’à trois pendant qu’il tient, puis dites « repars ». 3. Au prochain arrêt, l’autre pied. 4. Restez tout près, prêt à lui donner la main. 5. Si c’est facile, posez un tissu à plat au sol à enjamber juste avant l’arrêt. Rien de haut, rien à escalader : tout se passe au sol.",
+          "adultGuidance": "1. Montrez d’abord : trois ou quatre pas, puis un arrêt sur un pied. 2. Comptez jusqu’à trois pendant qu’il tient, puis dites « repars ». 3. Au prochain arrêt, l’autre pied. 4. Restez tout près, prêt à lui donner la main. 5. Si c’est facile, tracez un trait à la craie au sol — ou un ruban bien collé, ou une ligne que vous montrez du doigt — à enjamber juste avant l’arrêt. Pas de tissu libre dans le passage : cela glisse sous le pied. Rien de haut, rien à escalader : tout se passe au sol.",
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
@@ -1013,21 +1013,21 @@
       "levelIds": ["maternelle-3"],
       "domainCode": "PHYS",
       "title": "Le parcours des formes",
-      "summary": "Suivre un parcours en nommant les formes rencontrées.",
+      "summary": "Enchainer marche, arrêt et changement de direction en nommant les formes.",
       "objectiveCodes": [],
       "supportingObjectiveCodes": ["PHYS-S02-C01-O05"],
       "stage": "consolidation",
       "difficulty": 2,
       "themeId": "au-marche",
-      "parentGuidance": "On relie le mouvement et les formes du mois : l’enfant nomme avant de passer. Les formes doivent être tracées au sol ou bien fixées : une feuille qui glisse sous le pied fait tomber.",
+      "parentGuidance": "On relie le mouvement et les formes du mois : l’enfant nomme avant de passer, s’arrête sur la forme, puis change de direction. Les formes doivent être tracées au sol ou bien fixées : une feuille qui glisse sous le pied fait tomber.",
       "activities": [
         {
           "id": "m3-phys-18-a1",
           "position": 1,
           "type": "movement",
           "title": "Marche sur les formes",
-          "childInstruction": "Marche d’une forme à l’autre en disant son nom avant de poser le pied.",
-          "adultGuidance": "1. Tracez les formes à la craie au sol, ou fixez bien les formes en papier avec du ruban — une feuille libre glisse sous le pied. 2. Espacez-les d’un pas. 3. L’enfant nomme la forme, puis avance dessus. 4. Terminez en revenant en arrière. 5. Si les formes ne sont pas fixées, posez-les **à côté** des endroits où il pose le pied, et ne faites jamais de cloche-pied sur une feuille.",
+          "childInstruction": "Dis le nom de la forme, marche jusqu’à elle, arrête-toi une seconde sans bouger, puis repars vers la suivante.",
+          "adultGuidance": "1. Tracez les formes à la craie au sol, ou fixez bien les formes en papier avec du ruban — une feuille libre glisse sous le pied. 2. Espacez-les d’un pas. 3. L’enfant nomme la forme, marche jusqu’à elle, s’arrête dessus une seconde sans bouger, puis repart. 4. Variez le trajet : un grand pas pour aller à l’une, un pas de côté pour la suivante, puis un demi-tour et le retour en arrière. 5. Tout reste au sol : rien de surélevé, rien à escalader. 6. Si les formes ne sont pas fixées, posez-les **à côté** des endroits où il pose le pied, et ne faites jamais de cloche-pied sur une feuille.",
           "minutes": 6,
           "mode": "off-screen",
           "role": "teach",
@@ -1040,18 +1040,24 @@
               "en": "the step"
             },
             {
-              "fr": "la forme",
-              "en": "the shape"
+              "fr": "le demi-tour",
+              "en": "the turn-around"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Step from shape to shape, saying its name before you step."
+              "childInstruction": "Say the shape's name, walk to it, stop still for a second, then move on to the next one."
             }
           ],
           "payload": {
-            "moves": ["avancer d’un pas", "nommer la forme", "revenir"]
+            "moves": [
+              "nommer la forme",
+              "marcher jusqu’à la forme",
+              "s’arrêter une seconde",
+              "grand pas ou pas de côté",
+              "demi-tour et retour"
+            ]
           }
         }
       ],
@@ -1065,21 +1071,21 @@
       "levelIds": ["maternelle-3"],
       "domainCode": "PHYS",
       "title": "La course des animaux",
-      "summary": "Enchainer des déplacements variés sur une durée plus longue.",
+      "summary": "Trottiner sans s’arrêter, de plus en plus longtemps.",
       "objectiveCodes": [],
       "supportingObjectiveCodes": ["PHYS-S01-C01-O10"],
       "stage": "consolidation",
       "difficulty": 2,
       "themeId": "au-marche",
-      "parentGuidance": "Reprise des déplacements du mois, en jeu. On ne cherche pas la performance mais l’endurance et le plaisir.",
+      "parentGuidance": "L’animal change, mais la course ne s’arrête pas : on reste debout et on trottine. On ne cherche pas la vitesse, mais la durée et le plaisir.",
       "activities": [
         {
           "id": "m3-phys-19-a1",
           "position": 1,
           "type": "movement",
           "title": "D’un animal à l’autre",
-          "childInstruction": "Traverse la pièce comme la chèvre, reviens comme le lézard, repars comme le poussin.",
-          "adultGuidance": "1. Annoncez un animal par traversée. 2. Enchainez sans pause pendant une minute. 3. Laissez l’enfant choisir le dernier animal. 4. Finissez assis, en soufflant trois fois.",
+          "childInstruction": "Trottine sans t’arrêter : comme la chèvre, puis comme le poussin, puis comme le héron.",
+          "adultGuidance": "1. Dites « on trottine comme la chèvre » et trottinez avec lui, tout doucement. 2. Changez d’animal sans vous arrêter : « continue sans t’arrêter, maintenant comme le poussin » — des petits pas rapides ; puis « comme le héron » — de grandes enjambées, genoux hauts. 3. Ces trois animaux se courent debout : on ne se met ni à quatre pattes ni au sol. 4. Visez une minute si c’est confortable, moins si l’enfant fatigue : on s’arrête avant d’être essoufflé. 5. Ni vitesse, ni concours, ni chrono — ce qui compte est de ne pas s’arrêter. 6. Finissez assis, en soufflant trois fois.",
           "minutes": 6,
           "mode": "off-screen",
           "role": "consolidation",
@@ -1088,22 +1094,22 @@
           "materialCodes": ["espace-degage"],
           "vocabulary": [
             {
-              "fr": "traverser",
-              "en": "to cross"
+              "fr": "trottiner",
+              "en": "to trot"
             },
             {
-              "fr": "revenir",
-              "en": "to come back"
+              "fr": "sans s’arrêter",
+              "en": "without stopping"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Cross the room like the goat, come back like the lizard."
+              "childInstruction": "Trot without stopping: like the goat, then like the chick, then like the heron."
             }
           ],
           "payload": {
-            "moves": ["sauter", "ramper", "trottiner", "souffler"]
+            "moves": ["trottiner", "petits pas rapides", "grandes enjambées", "souffler"]
           }
         }
       ],
