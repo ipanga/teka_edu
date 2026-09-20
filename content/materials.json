@@ -39,7 +39,7 @@
       "code": "crayons-couleur",
       "name": "Crayons de couleur",
       "category": "writing",
-      "alternatives": "À défaut : un seul crayon, des craies de couleur ou des morceaux de charbon et de brique.",
+      "alternatives": "Un seul crayon, des craies de couleur ou des morceaux de charbon et de brique.",
       "safetyNote": null
     },
     {
@@ -74,7 +74,7 @@
       "code": "objets-ecole",
       "name": "Objets de l’école (cahier, crayon, cartable)",
       "category": "household",
-      "alternatives": "À défaut de vrai matériel scolaire : une feuille pliée en guise de cahier, un sac, une craie.",
+      "alternatives": "Une feuille pliée en guise de cahier, un sac, une craie, quand le vrai matériel scolaire manque.",
       "safetyNote": null
     },
     {

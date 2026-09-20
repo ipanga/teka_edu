@@ -1027,7 +1027,7 @@ _Regarder un modèle et le reproduire de mieux en mieux._
 - **Matériel :** Feuille de papier, Crayons de couleur, Objets de la maison (coussins, chaises, bâton, tissu)
 - **Lexique visé :** la forme _(the shape)_ · la couleur _(the colour)_ · le trait _(the line)_
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
-- **À défaut :** À défaut : un seul crayon, des craies de couleur ou des morceaux de charbon et de brique.
+- **À défaut :** Un seul crayon, des craies de couleur ou des morceaux de charbon et de brique.
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Look at the object, describe it, then draw it. »

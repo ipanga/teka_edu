@@ -54,7 +54,7 @@ cannot be redrawn under an approval without it lapsing.
 | 3ème Week 2 reviewed                         | **DONE** | 4 passes (3 accepted-with-modifications → accepted); 20 lessons `approved`, `ai-assisted` |
 | 3ème Week 3 reviewed                         | **DONE** | 3 passes (2 accepted-with-modifications → accepted); 20 lessons `approved`, `ai-assisted` |
 | 3ème Week 4 reviewed                         | **DONE** | 3 passes; 14 corrections applied; 20 lessons `approved`                                   |
-| 3ème Week 5 reviewed                         | **TODO** | package generated, not yet submitted                                                      |
+| 3ème Week 5 reviewed                         | **TODO** | pass 1 accepted-with-modifications; 8 corrections applied, **final pass pending**         |
 | No content falsely labelled teacher-approved | **DONE** | `reviewKind` on every approval; tests forbid it                                           |
 
 **The two 3ème gaps are resolved**, one by authoring and one by pacing. `LANG-S02-C01-O13`

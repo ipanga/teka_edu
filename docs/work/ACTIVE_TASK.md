@@ -10,24 +10,24 @@
 
 ## Task
 
-Finish ISSUE-011: make the container-registry prune work now that `VERCEL_VCR_TOKEN` exists.
+Apply ChatGPT's first-pass corrections to 3ème maternelle Week 5 and return it for a final pass.
 
 ## Objective
 
-A deploy prunes the registry by itself — or the reason it cannot is written down precisely enough
-that nobody has to rediscover it.
+Every Week 5 objective is proved by the task the child actually performs, and nothing the review
+accepted is disturbed.
 
 ## Status
 
-`blocked`
+`in_progress`
 
 ## Branch
 
-`docs/issue-011-vcr-api-not-reachable`
+`fix/maternelle-3-week-5-first-review`
 
 ## Base Branch
 
-`develop` at `d066db5`
+`develop` at `5ff352b`
 
 ## Started
 
@@ -35,42 +35,45 @@ that nobody has to rediscover it.
 
 ## Last Checkpoint
 
-2026-09-20 — credential verified read-only in CI: it reaches the project (HTTP 200) and not the
-registry (404). Deletion switch deliberately left unset. Registry at 43 of 50.
+2026-09-20 — 8 Week 5 corrections (20 of 3,084 fields), 8 reusable rules each proved against the
+pre-correction content, 164 approvals untouched, full local suite green.
 
 ## Scope
 
-- Verify `VERCEL_VCR_TOKEN` read-only before anything can delete.
-- Run the dry run against the real registry and read what it would do.
-- Prune for real only if the credential works and the threshold justifies it.
+- The eight corrections ChatGPT asked for, and every other occurrence the new rules force.
+- The shared material-label defect, fixed in the data rather than in four generated documents.
+- Regeneration: 11 review packages, the change audit, pgTAP reference test, data migration.
 
 ## Out of Scope
 
-- Pedagogical review of Week 5, or any content change.
-- Pruning with the owner's local CLI credential. It works, and using it would hide the fact that
-  the automation does not.
-- Creating another Vercel token. The diagnostic proves scope is not the problem.
+- Approving Week 5. All 12 stay `review`.
+- Anything the review accepted: the read-aloud-for-pleasure design, the English-scaffold policy,
+  pause and early-stop behaviour, durations, screen-time policy, small-object safety notes.
+- ISSUE-011, which is a separate infrastructure blocker.
 - October, 2ème maternelle, production, `main`, anything paid.
 
 ## Product Decisions
 
-- The registry check is read-only on **every** deploy, and the deletion sits behind
-  `REGISTRY_PRUNE_ENABLED` — the same kind of switch that already gates staging and production
-  deploys. A deletion running on every merge should have a kill switch.
-- The failure diagnostic prints HTTP statuses only. A 404 from the registry reads identically
-  whether the scope is wrong or the API is out of reach, and those need opposite fixes.
+- Where an objective sat on the wrong sibling, the objective moved. Where the task genuinely did
+  not do the work — rhyme, the day cards, the movement chain — the task changed instead.
+- « Deux tas pour faire dix » claims only the decomposition. The counting that confirms each pile
+  is the adult's check, not the child's task, so it under-claims rather than over-claims.
+- The « À défaut » label belongs to the renderer and the content to the data. Fixing the data
+  changed four approved weeks' _packages_ and no approved _lesson_: the digest covers material
+  codes, not their prose.
+- Two rules were widened, not the content narrowed, when they fired on approved lessons that do
+  the work without the obvious words.
 
 ## Completed
 
-- [x] `staging / VERCEL_VCR_TOKEN` confirmed to exist; value never read, printed or stored
-- [x] Read-only verification step added and run in CI **before** anything could delete
-- [x] Deletion moved behind `REGISTRY_PRUNE_ENABLED`, left **unset**
-- [x] Credential diagnosed in CI: reads the project **200**, `/v2/user` 404 (team-scoped, as
-      intended), registry **404**
-- [x] Established that the Vercel CLI's _user session_ gets **200** on the identical request, so
-      the difference is the credential kind, not the URL or the scope
-- [x] Finding recorded in `PROJECT_STATUS.md` and `docs/DEPLOYMENT.md` with the manual prune
-      command
+- [x] Week 5's **first actual full review** recorded; its three inherited entries left as
+      `consequence`, not relabelled as readings
+- [x] 8 corrections — six objective mappings, the rhyme that had to become a rhyme, the day
+      cards that must not test reading, the movement chain, the contradicted choice, the label
+- [x] **8 reusable rules**, each proved against the pre-correction content, each naming exactly
+      the activity the review flagged
+- [x] **20 of 3,084 fields changed**, all Week 5, 2 child-facing; 1ère maternelle byte-identical
+      across 2,552 fields; **164 approvals, 0 lapsed, 0 mismatches**
 
 ## In Progress
 
@@ -78,10 +81,10 @@ registry (404). Deletion switch deliberately left unset. Registry at 43 of 50.
 
 ## Remaining
 
-- [ ] **Owner: prune by hand before 50.** 43 of 50, no automated warning is possible.
-- [ ] **Owner: ask Vercel** whether `/v1/vcr/repository/*` is usable with an access token. If it
-      is, the automation needs nothing but the credential.
-- [ ] Then: hand `docs/review/2026-2027-maternelle-3-semaine-5.md` to ChatGPT for its first pass.
+- [ ] Hand the regenerated `docs/review/2026-2027-maternelle-3-semaine-5.md` back to ChatGPT for
+      its final pass. **The owner's action, not a step this repository can take.**
+- [ ] ISSUE-011: prune the registry by hand before it reaches 50, and ask Vercel whether the
+      registry API accepts an access token. **The owner's action.**
 
 ## Validation State
 
@@ -90,57 +93,49 @@ registry (404). Deletion switch deliberately left unset. Registry at 43 of 50.
 | format             | PASS   | working tree                      |
 | lint               | PASS   | working tree                      |
 | typecheck          | PASS   | working tree                      |
-| unit tests         | PASS   | working tree — 347 tests          |
+| unit tests         | PASS   | working tree — 355 tests          |
 | content validation | PASS   | working tree — 31 files           |
-| database tests     | PASS   | CI on every PR — 152 assertions   |
-| build              | PASS   | CI on every PR                    |
-| E2E                | PASS   | CI — 28 local, 28 live            |
-| Docker             | PASS   | CI — both images                  |
+| database tests     | PASS   | fresh reset — 152 assertions      |
+| build              | PASS   | working tree                      |
+| E2E                | PASS   | working tree — 28 tests           |
+| Docker             | PASS   | both images, health + SIGTERM     |
 | secret scans       | PASS   | 0 tracked `.env*`; gitleaks in CI |
 
 ## Database State
 
-- Local: 25 migrations; last fresh reset + 152 pgTAP assertions passed.
-- DEV: up to date; no migration in this round (no content changed).
+- Local: 26 migrations; `db reset` + 152 pgTAP assertions pass.
+- DEV: not yet updated with `20260920200532_week5_review_corrections.sql`.
 - PROD: untouched.
 
 ## Deployment State
 
-- Staging: green on every merge this round; alias moved each time; 28 live E2E each time.
-- Container registry: **43 of 50**, unreadable from CI, pruned only by hand.
+- Staging: at `5ff352b`; not yet redeployed with these corrections.
+- Container registry: **44 of 50**, unreadable from CI, pruned only by hand (ISSUE-011).
 - Production: disabled; `main` at `1b95480`.
 
 ## Git State
 
-- PRs #68 and #69 merged into `develop`. `docs/issue-011-vcr-api-not-reachable` open.
+- `fix/maternelle-3-week-5-first-review`, branched from `develop` at `5ff352b`.
 
 ## Blockers
 
-**ISSUE-011 is blocked on platform access, not on a credential.** `VERCEL_VCR_TOKEN` exists and is
-scoped correctly — CI shows it reading the project with HTTP 200 — but `/v1/vcr/repository/*`
-answers 404 for it and for the deploy token, while the CLI's user session gets 200 on the
-identical request. A third token would not help.
-
-The registry is at 43 of 50 and CI cannot read the count, so nothing will warn before the cap
-blocks `develop`.
+None for the content. ISSUE-011 remains blocked on platform access and is tracked separately.
 
 ## User Decisions Needed
 
-1. **Prune by hand, soon.** `vercel vcr image ls dockerfile --project teka-edu --scope teka10`,
-   then `… image rm … <id>` oldest first, never the image behind the live deployment.
-2. **Ask Vercel** whether `/v1/vcr/repository/*` can be used with an access token, and under
-   which scope.
+1. **Week 5 goes back to ChatGPT** for its final pass. If it passes, September closes for both
+   levels and the Beta 0.1 pedagogy gate reaches 10 of 10.
+2. **Prune the registry by hand** before it reaches 50, and ask Vercel whether
+   `/v1/vcr/repository/*` accepts an access token (ISSUE-011).
 
 ## Exact Resume Point
 
-Merge the documentation PR, then stop. The next pedagogical task is ChatGPT's first pass on
-Week 5; it does not depend on ISSUE-011.
+Commit, open the PR into `develop`, wait for CI, squash-merge, verify staging.
 
 ## Resume Verification
 
 1. `git branch --show-current`;
 2. `git log -n 5 --oneline`;
 3. `git status --short` — read uncommitted work before discarding it;
-4. `vercel vcr image ls dockerfile --project teka-edu --scope teka10 | grep -c image_` — the
-   count moves with every merge, so re-read it rather than trusting this file;
+4. `gh pr list --head fix/maternelle-3-week-5-first-review` — a PR may already exist;
 5. `gh run list --branch develop --limit 3` before assuming a deployment is needed.

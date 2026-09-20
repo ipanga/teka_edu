@@ -41,10 +41,8 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-**Cette semaine n’a encore jamais été relue.** Ce qui suit n’est donc pas
-l’historique de ses relectures : ce sont des corrections qui lui sont arrivées
-parce qu’un défaut trouvé dans une autre semaine existait ici à l’identique.
-Elles sont déjà appliquées au contenu que vous lisez ci-dessous.
+Cette semaine a déjà été relue 1 fois. Ce qui suit est l’historique,
+pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-15 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
 
@@ -63,6 +61,12 @@ Deux changements arrivés dans cette semaine sans relecture propre : ils viennen
 Changement arrivé dans cette semaine sans relecture propre : il vient d’une correction demandée sur la semaine 4.
 
 **Suites données :** « Je range les tas » (jour 21) ne revendique plus « construire la bande numérique jusqu’à dix » : l’enfant y range trois tas du plus petit au plus grand, il ne construit aucune bande. C’est exactement le défaut que la semaine 4 a fait corriger deux fois, aux jours 15 et 16, et la règle écrite à cette occasion le signale ici aussi. L’objectif de comparaison des quantités, que la tâche travaille réellement, reste porté par l’activité et par sa voisine « Où est-il sur la bande ? ». La construction de la bande reste introduite au jour 15 et reprise au jour 16, donc le plan annuel ne bouge pas. Cette semaine n’a toujours pas reçu sa relecture pédagogique complète.
+
+### 2026-09-20 — ChatGPT · `accepted-with-modifications` (ai-assisted)
+
+Première vraie relecture pédagogique complète de la semaine 5. Les trois entrées précédentes ne sont pas des relectures : ce sont des corrections héritées des semaines 1 et 4. La structure est acceptée — trois jours, douze leçons, vingt-quatre activités, environ 35 minutes, une semaine de consolidation de fin de mois. Huit points ont été demandés, presque tous de la même famille : l’objectif était plausible et l’activité ne le prouvait pas. 1) Jour 20, « Combien manque-t-il ? » : « J’en ai enlevé » revendiquait la constitution d’une collection alors qu’on y décompose un tout connu, et « Je refais le tas », qui reconstitue vraiment la collection de départ, ne la revendiquait pas. 2) Jour 21, « Devine le mot » revendiquait les rimes et les assonances alors que l’activité ne faisait que découper des mots en syllabes. 3) Jour 20, « Ma semaine en ordre » risquait d’évaluer la lecture plutôt que l’ordre des jours : l’adulte mélangeait sept papiers écrits sans autre consigne. 4) Jour 22, « Le grand jeu du comptage » revendiquait la composition sans rien décomposer, et « Deux tas pour faire dix », qui est exactement une décomposition, ne la revendiquait pas. 5) Jour 22, « Tous les mouvements du mois » revendiquait des équilibres construits par une combinaison d’actions alors que l’enfant pouvait montrer trois mouvements sans rien combiner. 6) Jour 22, « Je chante et je dessine » : les deux activités avaient échangé leurs objectifs, la comptine portant le dessin et le dessin portant la comptine. 7) La même leçon demandait à l’enfant de choisir sa comptine préférée tout en lui en imprimant une. 8) Enfin, deux matériels répétaient l’étiquette « À défaut » que le document ajoute déjà, si bien que quatre paquets hebdomadaires lisaient « À défaut : À défaut : ».
+
+**Suites données :** Toutes appliquées, avec des objectifs officiels existants uniquement et sans ouvrir un objectif avant sa fenêtre du plan annuel. 1) « J’en ai enlevé » ne porte plus que la composition-décomposition ; « Je refais le tas » porte en plus la constitution d’une collection, qu’il fait réellement. 2) « Devine le mot » garde les rimes, que le résumé de la leçon promettait déjà, et les travaille pour de bon : deux paires à la fin, « chapeau… gâteau » et « tomate… patate », construites sur des mots que le mois a déjà employés. Rien à lire, aucune lettre, et la durée ne bouge pas. 3) « Ma semaine en ordre » précise que l’adulte prépare les sept papiers et lit les noms à voix haute autant de fois qu’il le faut : ce qu’on regarde est l’ordre des jours, pas la lecture. 4) « Le grand jeu du comptage » ne porte plus que le dénombrement ; « Deux tas pour faire dix » porte la composition-décomposition. Le dénombrement n’y est pas revendiqué : le comptage qui vérifie chaque tas est la vérification de l’adulte, pas la tâche de l’enfant. 5) « Tous les mouvements du mois » demande maintenant deux ou trois mouvements, d’abord séparément, puis enchaînés sans s’arrêter et terminés immobile, le temps de compter jusqu’à trois. Ni vitesse, ni concours, ni point ; tout reste au sol, et s’il faut écarter quelque chose, c’est l’adulte qui le déplace. 6) La comptine porte « dire ou chanter au moins dix comptines » et le dessin porte « dessiner pour représenter un personnage ou un évènement fictif ». La leçon continue de porter les deux, parce qu’elle fait les deux. 7) Le choix de l’enfant est préservé : n’importe quelle comptine du mois convient, et « Les formes qui dansent » n’est proposée que s’il n’arrive pas à choisir. 8) L’étiquette « À défaut » est retirée des deux matériels : elle appartient au document, pas à la donnée. Aucune leçon approuvée n’a changé : 164 approbations tiennent, 0 empreinte caduque. Aucune leçon n’est approuvée ici : les 12 restent en relecture.
 
 ## Jour 20 — 2026-09-28
 
@@ -221,7 +225,7 @@ _Retrouver ce qui a été enlevé d’une collection._
 
   - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
 
-- **Objectifs travaillés :** `MATH-S01-C01-O22` Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà. ; `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
+- **Objectifs travaillés :** `MATH-S01-C01-O22` Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà.
 
 #### 2. Je refais le tas — 4 min, sans interaction écran (counting)
 
@@ -232,7 +236,7 @@ _Retrouver ce qui a été enlevé d’une collection._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Put back exactly the number of objects there were. »
-- **Objectifs travaillés :** `MATH-S01-C01-O22` Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà.
+- **Objectifs travaillés :** `MATH-S01-C01-O22` Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà. ; `MATH-S01-C01-O21` Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà).
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**
 
@@ -343,7 +347,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 _Dire la date du jour et situer la journée dans la semaine._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
-- **Conseil au parent :** Reprise de tout ce qui touche au temps ce mois-ci : la date, les jours, l’ordre. L’enfant dit, vous vérifiez.
+- **Conseil au parent :** Reprise de tout ce qui touche au temps ce mois-ci : la date, les jours, l’ordre. L’enfant dit, vous vérifiez. Savoir lire les jours n’est pas demandé : lisez-les-lui.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `TIME-SPACE-S01-C01-O10` — Situer un évènement dans la semaine.
@@ -361,7 +365,7 @@ _Dire la date du jour et situer la journée dans la semaine._
 #### 2. Ma semaine en ordre — 3 min, sans interaction écran (manipulation)
 
 - **Consigne à l’enfant :** « Remets les jours de la semaine dans l’ordre, sans modèle. »
-- **Guidance adulte :** 1. Mélangez les sept papiers. 2. Laissez ranger sans la bande sous les yeux. 3. Vérifiez ensemble avec la bande. 4. Félicitez ce qui est juste avant de corriger le reste.
+- **Guidance adulte :** 1. Préparez sept papiers, un par jour de la semaine, écrits en gros. 2. Mélangez-les. 3. Laissez ranger sans la bande sous les yeux, et lisez les noms à voix haute autant de fois qu’il le faut : ce qu’on regarde ici est l’ordre des jours, pas la lecture. 4. Vérifiez ensemble avec la bande. 5. Félicitez ce qui est juste avant de corriger le reste.
 - **Matériel :** Feuille de papier
 - **Lexique visé :** l’ordre _(the order)_
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
@@ -414,7 +418,7 @@ l’autre — l’appareil est alors le sien._
 
 ### Devine le mot — Le développement et la structuration du langage oral et écrit (13 min)
 
-_Reconnaitre un mot à partir de ses syllabes et de sa rime._
+_Reconnaitre un mot à partir de ses syllabes, puis repérer une rime._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Jeu d’écoute pur. Dites les syllabes séparées et laissez l’enfant recoller le mot.
@@ -436,11 +440,11 @@ _Reconnaitre un mot à partir de ses syllabes et de sa rime._
 
 #### 2. Le mot coupé en morceaux — 8 min, sans interaction écran (phonology)
 
-- **Consigne à l’enfant :** « J’ai coupé un mot en morceaux. Écoute et devine quel mot c’est. »
-- **Guidance adulte :** 1. Dites le mot syllabe par syllabe, avec un temps entre : « ba… nane ». 2. Laissez deviner. 3. Commencez par deux syllabes, puis trois. 4. Inversez : c’est l’enfant qui coupe un mot et vous devinez.
+- **Consigne à l’enfant :** « J’ai coupé un mot en morceaux. Écoute et devine quel mot c’est. À la fin, on écoutera deux mots qui finissent pareil. »
+- **Guidance adulte :** 1. Dites le mot syllabe par syllabe, avec un temps entre : « ba… nane ». 2. Laissez deviner. 3. Commencez par deux syllabes, puis trois. 4. Inversez : c’est l’enfant qui coupe un mot et vous devinez. 5. Terminez par deux paires, pas plus : « chapeau… gâteau », « tomate… patate ». Demandez à chaque fois si ça finit pareil. On écoute la fin du mot ; on ne cherche aucune lettre.
 - **Matériel :** Aucun matériel
 - **Lexique visé :** deviner _(to guess)_ · le morceau _(the piece)_
-- **Aide en anglais (optionnelle) :** « I cut a word into pieces. Listen and guess the word. »
+- **Aide en anglais (optionnelle) :** « I cut a word into pieces. Listen and guess the word. Then we listen for two words that end the same. »
 - **Objectifs travaillés :** `LANG-S02-C01-O15` Repérer et produire des rimes et des assonances. ; `LANG-S02-C01-O03` Scander les syllabes d’un mot. ; `LANG-S02-C01-O13` Augmenter sa mémoire auditive et sa capacité de concentration.
 
 #### 3. Le temps de lecture — 3 min, sans interaction écran (read-aloud)
@@ -678,7 +682,7 @@ _Reprendre le corps, ses articulations et son mouvement._
 - **Matériel :** Feuille de papier, Crayons de couleur
 - **Lexique visé :** le mouvement _(the movement)_ · plier _(to bend)_
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
-- **À défaut :** À défaut : un seul crayon, des craies de couleur ou des morceaux de charbon et de brique.
+- **À défaut :** Un seul crayon, des craies de couleur ou des morceaux de charbon et de brique.
 - **Aide en anglais (optionnelle) :** « Draw yourself doing your favourite movement of the month. »
 - **Objectifs travaillés :** `WORLD-S01-C02-O09` Se représenter avec un corps articulé en mouvement. ; `WORLD-S01-C02-O08` Identifier et nommer quelques articulations et la segmentation des membres.
 
@@ -870,7 +874,7 @@ _Reprendre en jeu les mathématiques du mois._
 
   - `objet-caillou` — Un caillou (`public/media/objects/objet-caillou.svg`)
 
-- **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). ; `MATH-S01-C01-O22` Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà.
+- **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
 
 #### 2. Deux tas pour faire dix — 4 min, sans interaction écran (manipulation)
 
@@ -881,7 +885,7 @@ _Reprendre en jeu les mathématiques du mois._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Make two piles that make ten together. »
-- **Objectifs travaillés :** `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
+- **Objectifs travaillés :** `MATH-S01-C01-O22` Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà.
 
 **Réussites attendues — texte officiel pour la compétence « Exprimer une quantité par un nombre » (from-5) :**
 
@@ -943,10 +947,10 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 ### Tous les mouvements du mois — Agir, s’exprimer, comprendre à travers les activités physiques (6 min)
 
-_Reprendre les actions apprises en septembre._
+_Relier en une suite les actions apprises en septembre._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
-- **Conseil au parent :** Dernière séance du mois : l’enfant choisit. Laissez-le mener, vous suivez.
+- **Conseil au parent :** Dernière séance du mois : l’enfant choisit, vous suivez. Ce qui est nouveau n’est pas le mouvement, c’est de le relier au suivant sans s’arrêter.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `PHYS-S02-C01-O05` — Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions.
@@ -954,13 +958,13 @@ _Reprendre les actions apprises en septembre._
 
 #### 1. Tu choisis — 6 min, sans interaction écran (movement)
 
-- **Consigne à l’enfant :** « Choisis trois mouvements que tu as aimés ce mois-ci, et montre-les-moi. »
-- **Guidance adulte :** 1. Rappelez ce qui a été fait : courir, lancer, sauter, danser, l’équilibre. 2. Laissez choisir trois mouvements. 3. Faites-les avec lui. 4. Dites ce qu’il sait faire maintenant et qu’il ne savait pas au début.
+- **Consigne à l’enfant :** « Choisis deux ou trois mouvements que tu as aimés ce mois-ci. Montre-les-moi, puis enchaîne-les sans t’arrêter et finis en équilibre. »
+- **Guidance adulte :** 1. Rappelez ce qui a été fait : courir, lancer, sauter, danser, l’équilibre. 2. Laissez choisir deux ou trois mouvements, et faites-les d’abord séparément. 3. Puis demandez de les enchaîner sans s’arrêter entre les deux, et de finir immobile, le temps de compter jusqu’à trois. 4. Refaites la suite avec lui, dans le même ordre : c’est lui qui mène. 5. Ni vitesse, ni concours, ni point : on cherche à relier, pas à réussir mieux. 6. Tout se passe au sol, dans l’espace déjà dégagé ; s’il faut écarter quelque chose, c’est vous qui le déplacez, pas lui.
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors)
 - **Lexique visé :** choisir _(to choose)_ · montrer _(to show)_
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
 - **⚠ Sécurité :** Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité.
-- **Aide en anglais (optionnelle) :** « Choose three moves you liked this month and show me. »
+- **Aide en anglais (optionnelle) :** « Pick two or three movements you liked this month. Show me, then link them without stopping and finish balanced. »
 - **Objectifs travaillés :** `PHYS-S02-C01-O05` Construire de nouveaux équilibres par des déplacements impliquant une combinaison d’actions. ; `PHYS-S04-C01-O09` Éprouver le plaisir de coopérer et de s’opposer dans le respect des autres et des règles communes.
 
 **Réussites attendues — texte officiel pour la compétence « Tourner, se suspendre, se renverser, grimper, rouler, glisser, nager » (from-5) :**
@@ -1003,7 +1007,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 _Reprendre le répertoire de comptines et le dessin du mois._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
-- **Conseil au parent :** Dernière séance du mois. L’enfant choisit sa comptine et dessine ce qu’elle raconte.
+- **Conseil au parent :** Dernière séance du mois. L’enfant choisit sa comptine — celle qu’il veut — et dessine ce qu’elle raconte. La comptine imprimée ci-dessous n’est là que s’il n’arrive pas à choisir.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `ART-S02-C01-O09` — Dire ou chanter au moins dix comptines ou chants, en réinvestissant ceux appris les années antérieures.
@@ -1012,11 +1016,11 @@ _Reprendre le répertoire de comptines et le dessin du mois._
 #### 1. Ma comptine préférée — 4 min, sans interaction écran (song-rhyme)
 
 - **Consigne à l’enfant :** « Choisis ta comptine préférée du mois et dis-la-moi. »
-- **Guidance adulte :** 1. Rappelez les comptines apprises. 2. Laissez choisir et dire seul. 3. Frappez le rythme avec lui. 4. Dites-lui combien il en connait maintenant : c’est le début du répertoire de l’année.
+- **Guidance adulte :** 1. Rappelez les comptines apprises ce mois-ci. 2. Laissez choisir et dire seul : c’est sa comptine, n’importe laquelle du mois convient. 3. S’il ne sait pas laquelle prendre, proposez-lui « Les formes qui dansent », qui est imprimée plus bas — c’est un dépannage, pas une consigne. 4. Frappez le rythme avec lui. 5. Dites-lui combien il en connait maintenant : c’est le début du répertoire de l’année.
 - **Matériel :** Aucun matériel
 - **Lexique visé :** préférée _(favourite)_ · par cœur _(by heart)_
 - **Aide en anglais (optionnelle) :** « Choose your favourite rhyme of the month and say it to me. »
-- **Objectifs travaillés :** `ART-S02-C01-O09` Dire ou chanter au moins dix comptines ou chants, en réinvestissant ceux appris les années antérieures. ; `ART-S01-C01-O06` Dessiner pour représenter un personnage ou un évènement fictif.
+- **Objectifs travaillés :** `ART-S02-C01-O09` Dire ou chanter au moins dix comptines ou chants, en réinvestissant ceux appris les années antérieures.
 
 - **Comptine lue à l’enfant — « Les formes qui dansent »** (2 min, `les-formes-qui-dansent`) :
 
@@ -1040,9 +1044,9 @@ _Reprendre le répertoire de comptines et le dessin du mois._
 - **Matériel :** Feuille de papier, Crayons de couleur
 - **Lexique visé :** raconter _(to tell)_
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
-- **À défaut :** À défaut : un seul crayon, des craies de couleur ou des morceaux de charbon et de brique.
+- **À défaut :** Un seul crayon, des craies de couleur ou des morceaux de charbon et de brique.
 - **Aide en anglais (optionnelle) :** « Draw what your rhyme is about. »
-- **Objectifs travaillés :** `ART-S02-C01-O09` Dire ou chanter au moins dix comptines ou chants, en réinvestissant ceux appris les années antérieures.
+- **Objectifs travaillés :** `ART-S01-C01-O06` Dessiner pour représenter un personnage ou un évènement fictif.
 
 **Réussites attendues — texte officiel pour la compétence « Jouer avec sa voix et acquérir un répertoire de comptines et de chansons » (from-5) :**
 

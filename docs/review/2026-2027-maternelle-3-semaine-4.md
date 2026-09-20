@@ -420,7 +420,7 @@ _Comparer deux animaux et dire ce qui les distingue._
 - **Matériel :** Feuille de papier, Crayons de couleur
 - **Lexique visé :** dessiner _(to draw)_
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
-- **À défaut :** À défaut : un seul crayon, des craies de couleur ou des morceaux de charbon et de brique.
+- **À défaut :** Un seul crayon, des craies de couleur ou des morceaux de charbon et de brique.
 - **Aide en anglais (optionnelle) :** « Draw your favourite animal with all its parts. »
 - **Objectifs travaillés :** `WORLD-S01-C01-O08` Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale.
 
@@ -1055,7 +1055,7 @@ _Dessiner un personnage qui n’existe pas devant soi._
 - **Matériel :** Feuille de papier, Crayons de couleur
 - **Lexique visé :** imaginer _(to imagine)_ · le personnage _(the character)_
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
-- **À défaut :** À défaut : un seul crayon, des craies de couleur ou des morceaux de charbon et de brique.
+- **À défaut :** Un seul crayon, des craies de couleur ou des morceaux de charbon et de brique.
 - **Aide en anglais (optionnelle) :** « Draw Kumu the chick as you imagine him. »
 - **Objectifs travaillés :** `ART-S01-C01-O06` Dessiner pour représenter un personnage ou un évènement fictif.
 

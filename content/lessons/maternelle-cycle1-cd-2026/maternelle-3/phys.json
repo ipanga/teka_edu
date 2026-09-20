@@ -1267,21 +1267,21 @@
       "levelIds": ["maternelle-3"],
       "domainCode": "PHYS",
       "title": "Tous les mouvements du mois",
-      "summary": "Reprendre les actions apprises en septembre.",
+      "summary": "Relier en une suite les actions apprises en septembre.",
       "objectiveCodes": [],
       "supportingObjectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S04-C01-O09"],
       "stage": "consolidation",
       "difficulty": 2,
       "themeId": "je-montre-ce-que-je-sais",
-      "parentGuidance": "Dernière séance du mois : l’enfant choisit. Laissez-le mener, vous suivez.",
+      "parentGuidance": "Dernière séance du mois : l’enfant choisit, vous suivez. Ce qui est nouveau n’est pas le mouvement, c’est de le relier au suivant sans s’arrêter.",
       "activities": [
         {
           "id": "m3-phys-22-a1",
           "position": 1,
           "type": "movement",
           "title": "Tu choisis",
-          "childInstruction": "Choisis trois mouvements que tu as aimés ce mois-ci, et montre-les-moi.",
-          "adultGuidance": "1. Rappelez ce qui a été fait : courir, lancer, sauter, danser, l’équilibre. 2. Laissez choisir trois mouvements. 3. Faites-les avec lui. 4. Dites ce qu’il sait faire maintenant et qu’il ne savait pas au début.",
+          "childInstruction": "Choisis deux ou trois mouvements que tu as aimés ce mois-ci. Montre-les-moi, puis enchaîne-les sans t’arrêter et finis en équilibre.",
+          "adultGuidance": "1. Rappelez ce qui a été fait : courir, lancer, sauter, danser, l’équilibre. 2. Laissez choisir deux ou trois mouvements, et faites-les d’abord séparément. 3. Puis demandez de les enchaîner sans s’arrêter entre les deux, et de finir immobile, le temps de compter jusqu’à trois. 4. Refaites la suite avec lui, dans le même ordre : c’est lui qui mène. 5. Ni vitesse, ni concours, ni point : on cherche à relier, pas à réussir mieux. 6. Tout se passe au sol, dans l’espace déjà dégagé ; s’il faut écarter quelque chose, c’est vous qui le déplacez, pas lui.",
           "minutes": 6,
           "mode": "off-screen",
           "role": "consolidation",
@@ -1301,11 +1301,16 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Choose three moves you liked this month and show me."
+              "childInstruction": "Pick two or three movements you liked this month. Show me, then link them without stopping and finish balanced."
             }
           ],
           "payload": {
-            "moves": ["choisir", "montrer", "refaire ensemble"]
+            "moves": [
+              "choisir deux ou trois mouvements",
+              "les montrer séparément",
+              "les enchaîner sans s’arrêter",
+              "finir immobile, en équilibre"
+            ]
           }
         }
       ],

@@ -26,18 +26,18 @@ Roles, kept distinct on purpose:
 
 ## Register of reviews
 
-| Batch                                | Date             | Kind                                             | Outcome                                                          | Corrections                    | Status                      |
-| ------------------------------------ | ---------------- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------------------------ | --------------------------- |
-| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`**   | 13, then 6, then 2             | **`approved`** — 16 lessons |
-| 3ème maternelle, Week 2 (days 5–9)   | 2026-09-17 → -19 | AI-assisted (ChatGPT), 4 passes                  | passes 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 14, then 4, then 2, then 1     | **`approved`** — 20 lessons |
-| 3ème maternelle, Week 3 (days 10–14) | 2026-09-19       | AI-assisted (ChatGPT), 3 passes                  | passes 1-2 `accepted-with-modifications` → pass 3 **`accepted`** | 13, then 3, then 0             | **`approved`** — 20 lessons |
-| 3ème maternelle, Week 4 (days 15–19) | 2026-09-20       | AI-assisted (ChatGPT), 3 passes                  | passes 1-2 `accepted-with-modifications` → pass 3 **`accepted`** | 10, then 4, then 0             | **`approved`** — 20 lessons |
-| 3ème maternelle, Week 5 (days 20–22) | —                | —                                                | not yet reviewed                                                 | inherited corrections only     | `review` — 0 approved       |
-| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 11 items across the passes     | **`approved`** — 16 lessons |
-| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons |
-| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons |
-| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                                   | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons |
-| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`**     | 5 items                        | **`approved`** — 12 lessons |
+| Batch                                | Date             | Kind                                             | Outcome                                                          | Corrections                    | Status                           |
+| ------------------------------------ | ---------------- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------------------------ | -------------------------------- |
+| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`**   | 13, then 6, then 2             | **`approved`** — 16 lessons      |
+| 3ème maternelle, Week 2 (days 5–9)   | 2026-09-17 → -19 | AI-assisted (ChatGPT), 4 passes                  | passes 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 14, then 4, then 2, then 1     | **`approved`** — 20 lessons      |
+| 3ème maternelle, Week 3 (days 10–14) | 2026-09-19       | AI-assisted (ChatGPT), 3 passes                  | passes 1-2 `accepted-with-modifications` → pass 3 **`accepted`** | 13, then 3, then 0             | **`approved`** — 20 lessons      |
+| 3ème maternelle, Week 4 (days 15–19) | 2026-09-20       | AI-assisted (ChatGPT), 3 passes                  | passes 1-2 `accepted-with-modifications` → pass 3 **`accepted`** | 10, then 4, then 0             | **`approved`** — 20 lessons      |
+| 3ème maternelle, Week 5 (days 20–22) | 2026-09-20       | AI-assisted (ChatGPT), 1 pass                    | `accepted-with-modifications`                                    | 8 items, all applied           | `review` — awaiting a final pass |
+| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 11 items across the passes     | **`approved`** — 16 lessons      |
+| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons      |
+| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons      |
+| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                                   | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons      |
+| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`**     | 5 items                        | **`approved`** — 12 lessons      |
 
 **1ère maternelle September is complete: 88 of 88 lessons `approved`.** 3ème maternelle's Week 1
 has Weeks 1, 2 and 3 `approved` — **56 of 88** — leaving Weeks 4–5 (32 lessons) at `review`. Every approval
@@ -668,6 +668,69 @@ someone who teaches this age has not happened. The lesson notes say so in French
 approved lesson.
 
 Remaining: **3ème maternelle Week 5**, 12 lessons, never read.
+
+---
+
+## 3ème maternelle, Week 5 review, 2026-09-20 — accepted with modifications (first pass)
+
+**Week 5's first actual reading.** Its three earlier history entries are corrections inherited
+from Weeks 1 and 4. The structure is accepted — three days, 12 lessons, 24 activities, a genuine
+end-of-month consolidation. Eight items, and six of them are one fault: the objective was
+plausible and the activity did not prove it.
+
+### Objectives that sat on the wrong activity
+
+| Activity                                   | Claimed                           | Now                                          |
+| ------------------------------------------ | --------------------------------- | -------------------------------------------- |
+| `m3-math-20-a1` _J'en ai enlevé_           | `+ O21` constituer une collection | dropped — it decomposes a known whole        |
+| `m3-math-20-a2` _Je refais le tas_         | `O22` only                        | **`+ O21`** — it rebuilds the original eight |
+| `m3-math-22-a1` _Le grand jeu du comptage_ | `+ O22` composer                  | dropped — counting is not splitting          |
+| `m3-math-22-a2` _Deux tas pour faire dix_  | `O20` dénombrer                   | **`O22`** — it is exactly a decomposition    |
+| `m3-art-07-a1` _Ma comptine préférée_      | `+ ART-S01-C01-O06` dessiner      | dropped                                      |
+| `m3-art-07-a2` _Je dessine ma comptine_    | `ART-S02-C01-O09` comptines       | **`ART-S01-C01-O06`** dessiner               |
+
+The art lesson is the clearest case: its two activities had **swapped** objectives. The song
+carried the drawing one and the drawing carried the song one, and the lesson-level pair looked
+right the whole time — which is how it survived.
+
+### Three that needed the task changed, not the code
+
+**Rhyme.** `Devine le mot` claimed « repérer et produire des rimes et des assonances » while only
+cutting words into syllables. The programme treats those as separate work. The objective stays —
+the lesson's own summary already promised a rhyme — and the task now ends with two pairs built
+from words the month has already used: « chapeau… gâteau », « tomate… patate ». Nothing to read,
+no letters, same eight minutes.
+
+**Reading, where reading was not the point.** `Ma semaine en ordre` mixed seven written papers and
+left the adult no instruction, so a child who cannot yet decode « jeudi » would fail a _temporal_
+task for a _reading_ reason. The adult now prepares the cards and reads them aloud as often as
+needed, and the guidance says plainly what is being looked at.
+
+**A combination that never combined.** `Tous les mouvements du mois` let the child show three
+movements and claimed « construire de nouveaux équilibres par des déplacements impliquant une
+combinaison d'actions ». Three movements in a row are three movements. They are chained now,
+without stopping between them, and the chain ends held still for a count of three.
+
+### Choice that was not a choice
+
+The same art lesson told the child to pick their favourite rhyme of the month and then printed one
+for them. The choice is real now: any rhyme of the month counts, and _Les formes qui dansent_ is
+offered only if the child cannot decide.
+
+### A label the data should not have carried
+
+Two materials began with « À défaut », and the package renders « **À défaut :** » in front of that
+field — so four weekly packages read « À défaut : À défaut : ». Fixed in the data, where the
+content belongs, rather than in the four generated documents. **No approval lapsed:** the digest
+covers material _codes_, not their prose.
+
+### What this pass added to the suite
+
+Eight rules, each proved against the pre-correction content, each naming exactly the activity the
+review flagged. Two of them had to be widened first, because approved lessons do these things
+without using the obvious words: `Un pour un` constitutes a collection with no number spoken, and
+`La main qui cache` and `Combien dans l'autre main ?` decompose without the word. The rules look
+for the shape — a collection appearing, a stated whole with a part missing — not for a verb.
 
 ---
 
