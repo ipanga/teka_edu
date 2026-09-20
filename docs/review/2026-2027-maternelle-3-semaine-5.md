@@ -58,6 +58,12 @@ Deux changements arrivés dans cette semaine sans relecture propre : ils viennen
 
 **Suites données :** Le rituel du jour 21 ne revendique plus « repérer et produire des rimes et des assonances » ; l’objectif reste sur « Le mot coupé en morceaux », dans la même leçon. Et « Ce qui plie quand je bouge » (jour 21) revendique maintenant « identifier et nommer quelques articulations » au lieu de « se représenter avec un corps articulé » : l’enfant montre ce qui plie, il ne se représente pas. Le dessin de la même leçon porte toujours les deux.
 
+### 2026-09-20 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
+
+Changement arrivé dans cette semaine sans relecture propre : il vient d’une correction demandée sur la semaine 4.
+
+**Suites données :** « Je range les tas » (jour 21) ne revendique plus « construire la bande numérique jusqu’à dix » : l’enfant y range trois tas du plus petit au plus grand, il ne construit aucune bande. C’est exactement le défaut que la semaine 4 a fait corriger deux fois, aux jours 15 et 16, et la règle écrite à cette occasion le signale ici aussi. L’objectif de comparaison des quantités, que la tâche travaille réellement, reste porté par l’activité et par sa voisine « Où est-il sur la bande ? ». La construction de la bande reste introduite au jour 15 et reprise au jour 16, donc le plan annuel ne bouge pas. Cette semaine n’a toujours pas reçu sa relecture pédagogique complète.
+
 ## Jour 20 — 2026-09-28
 
 **Durée totale : 35 min** · 4 séances · jour 10 du rythme
@@ -516,7 +522,6 @@ _Ranger des collections de la plus petite à la plus grande._
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O05` — Comparer des quantités.
-  - `MATH-S01-C02-O06` — Construire la bande numérique jusqu’à dix.
 
 #### 1. Je range les tas — 5 min, sans interaction écran (sorting)
 
@@ -527,7 +532,7 @@ _Ranger des collections de la plus petite à la plus grande._
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
 - **Aide en anglais (optionnelle) :** « Put the three piles in order, from smallest to biggest. »
-- **Objectifs travaillés :** `MATH-S01-C01-O05` Comparer des quantités. ; `MATH-S01-C02-O06` Construire la bande numérique jusqu’à dix.
+- **Objectifs travaillés :** `MATH-S01-C01-O05` Comparer des quantités.
 
 #### 2. Où est-il sur la bande ? — 4 min, sans interaction écran (counting)
 
@@ -579,24 +584,6 @@ _Ranger des collections de la plus petite à la plus grande._
 - Réciter la comptine numérique jusqu’à trente en partant d’un nombre autre que un (en vue du surcomptage).
 - Réciter la comptine numérique à rebours de dix à un (en vue du décomptage).
 - Réciter les comptines numériques (jusqu’à vingt) de deux en deux en partant de un et en partant de deux.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
-
-**Réussites attendues — texte officiel pour la compétence « Exprimer un rang ou une position par un nombre » (from-5) :**
-
-- Repérer par perception visuelle le premier, le dernier, le deuxième et l’avant-dernier des éléments d’une suite ordonnée.
-- Repérer à l’aide d’une procédure de comptage le rang d’un élément d’une suite ordonnée comportant au plus dix éléments.
-- Déterminer un rang dans une suite ordonnée (contenant jusqu’à dix objets) dont on a changé le point de départ ou le sens du parcours.
-  Par exemple, si l’enseignant aligne dix cartes identiques sur une table, qu’à l’une des extrémités il positionne un disque bleu, à l’autre un disque rouge et qu’il cache sous l’une des cartes un dessin d’escargot, l’élève est capable de décrire oralement la position de celui-ci. Différentes verbalisations sont possibles. Par exemple : « Je pars du disque rouge et je compte neuf cartes », « je compte les cartes en partant du disque rouge, quand je suis arrivé à neuf, c’est la bonne carte », « l’escargot est sous la sixième carte en partant du disque bleu », « l’escargot est sous la neuvième carte en partant du disque rouge ».
-  Ou encore, si l’enseignant présente au tableau un modèle de suite orientée (un train, une chainette, etc.) contenant des symboles et fournit à l’élève une feuille représentant le même dispositif, mais vide, l’élève est capable de positionner dans le dispositif, au même endroit que sur le modèle, un symbole qu’il a tiré au hasard. Différentes variantes organisationnelles peuvent être progressivement proposées :
-  • modèle visible ;
-  • modèle caché mais accessible en se déplaçant (pour travailler la mémoire des positions) ;
-  • un élève ayant connaissance du modèle doit communiquer les informations aux autres pour qu’ils le reproduisent.
-- Verbaliser la procédure permettant de déterminer la position résultant d’un avancement ou d’un recul à partir d’une position initiale.
-- Exploiter les compositions et les décompositions des nombres jusqu’à dix.
-- Positionner des représentations (constellation du dé, doigts, écriture chiffrée, représentation verticale de la quantité associée) des nombres inférieurs ou égaux à dix dans les premières cases de la bande numérique.
-- Placer un objet dans une case correspondant à une position donnée.
-- Compléter une bande numérique lacunaire.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 

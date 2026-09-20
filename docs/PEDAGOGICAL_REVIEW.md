@@ -26,18 +26,18 @@ Roles, kept distinct on purpose:
 
 ## Register of reviews
 
-| Batch                                | Date             | Kind                                             | Outcome                                                          | Corrections                    | Status                            |
-| ------------------------------------ | ---------------- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------------------------ | --------------------------------- |
-| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`**   | 13, then 6, then 2             | **`approved`** — 16 lessons       |
-| 3ème maternelle, Week 2 (days 5–9)   | 2026-09-17 → -19 | AI-assisted (ChatGPT), 4 passes                  | passes 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 14, then 4, then 2, then 1     | **`approved`** — 20 lessons       |
-| 3ème maternelle, Week 3 (days 10–14) | 2026-09-19       | AI-assisted (ChatGPT), 3 passes                  | passes 1-2 `accepted-with-modifications` → pass 3 **`accepted`** | 13, then 3, then 0             | **`approved`** — 20 lessons       |
-| 3ème maternelle, Week 4 (days 15–19) | 2026-09-19       | AI-assisted (ChatGPT), 1 pass                    | `accepted-with-modifications`                                    | 10 items, all applied          | `review` — awaiting a second pass |
-| 3ème maternelle, Week 5 (days 20–22) | —                | —                                                | not yet reviewed                                                 | inherited corrections only     | `review` — 0 approved             |
-| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 11 items across the passes     | **`approved`** — 16 lessons       |
-| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons       |
-| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons       |
-| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                                   | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons       |
-| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`**     | 5 items                        | **`approved`** — 12 lessons       |
+| Batch                                | Date             | Kind                                             | Outcome                                                          | Corrections                    | Status                           |
+| ------------------------------------ | ---------------- | ------------------------------------------------ | ---------------------------------------------------------------- | ------------------------------ | -------------------------------- |
+| 3ème maternelle, Week 1 (days 1–4)   | 2026-09-14 → -17 | AI-assisted (ChatGPT), 4 passes                  | pass 1-3 `accepted-with-modifications` → pass 4 **`accepted`**   | 13, then 6, then 2             | **`approved`** — 16 lessons      |
+| 3ème maternelle, Week 2 (days 5–9)   | 2026-09-17 → -19 | AI-assisted (ChatGPT), 4 passes                  | passes 1-3 `accepted-with-modifications` → pass 4 **`accepted`** | 14, then 4, then 2, then 1     | **`approved`** — 20 lessons      |
+| 3ème maternelle, Week 3 (days 10–14) | 2026-09-19       | AI-assisted (ChatGPT), 3 passes                  | passes 1-2 `accepted-with-modifications` → pass 3 **`accepted`** | 13, then 3, then 0             | **`approved`** — 20 lessons      |
+| 3ème maternelle, Week 4 (days 15–19) | 2026-09-20       | AI-assisted (ChatGPT), 2 passes                  | `accepted-with-modifications`                                    | 10 items, then 4, all applied  | `review` — awaiting a final pass |
+| 3ème maternelle, Week 5 (days 20–22) | —                | —                                                | not yet reviewed                                                 | inherited corrections only     | `review` — 0 approved            |
+| 1ère maternelle, Week 1 (days 1–4)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 11 items across the passes     | **`approved`** — 16 lessons      |
+| 1ère maternelle, Week 2 (days 5–9)   | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons      |
+| 1ère maternelle, Week 3 (days 10–14) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes + reconfirmation | **`accepted`**                                                   | 8 items                        | **`approved`** — 20 lessons      |
+| 1ère maternelle, Week 4 (days 15–19) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | **`accepted`**                                                   | 8 items (7 + the Lisa picture) | **`approved`** — 20 lessons      |
+| 1ère maternelle, Week 5 (days 20–22) | 2026-09-15       | AI-assisted (ChatGPT), 2 passes                  | pass 1 `accepted-with-modifications` → pass 2 **`accepted`**     | 5 items                        | **`approved`** — 12 lessons      |
 
 **1ère maternelle September is complete: 88 of 88 lessons `approved`.** 3ème maternelle's Week 1
 has Weeks 1, 2 and 3 `approved` — **56 of 88** — leaving Weeks 4–5 (32 lessons) at `review`. Every approval
@@ -566,6 +566,81 @@ alone**, exactly the defect that came off _Statue !_. All three are **approved**
 would lapse three approvals nobody has re-reviewed, so the safety check is a **pinned test on the
 corrected activity rather than a corpus rule**, and the three occurrences are recorded here for
 their own weeks to decide. A rule that forces a silent re-approval is worse than a rule that waits.
+
+---
+
+## 3ème maternelle, Week 4 review, 2026-09-20 — accepted with modifications (pass 2)
+
+Four corrections, all of one kind: **the objective was plausible and the task did not prove it.**
+The week is close to approval and is not approved here.
+
+### Objectives that did not match the task
+
+| Activity                                           | Claimed                                             | Now                                                                                      |
+| -------------------------------------------------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `m3-time-07-a1` / `-a2` _Les étapes de l'histoire_ | `TIME-SPACE-S01-C02-O08` un évènement **vécu**      | **`TIME-SPACE-S01-C02-O06`** la chronologie d'une **histoire**                           |
+| `m3-math-15-a2` _Je montre le nombre_              | `MATH-S01-C02-O06` **construire** la bande          | **`MATH-S01-C01-O08`** quantité ↔ nom ↔ écriture chiffrée (the task now shows all three) |
+| `m3-math-16-a1` _Le nombre caché_                  | `+ MATH-S01-C01-O26` la comptine jusqu'à **trente** | dropped; `O06` kept, and the task now completes the strip                                |
+| `m3-phys-19-a1` _D'un animal à l'autre_            | `PHYS-S01-C01-O10` courir — but the task crawled    | kept, and the task now trots continuously, upright                                       |
+| `m3-phys-18-a1` _Marche sur les formes_            | `PHYS-S02-C01-O05` équilibres par déplacement       | kept, and the task now stops, turns and changes step                                     |
+
+### The one that could not simply be remapped
+
+`TIME-SPACE-S01-C02-O08` is a **`from-5`** objective the annual plan requires to be introduced
+**by day 18**, and `Les étapes de l'histoire` is day 18. Moving both its activities to `O06` looked
+like it would drop the objective out of its window.
+
+It does not, and the reason is worth recording: `Avant, pendant, après` on **day 16** already
+carries `O08`, on an activity that is genuinely about something lived — « préparer le repas, se
+laver, s'habiller ». The window is met two days early by the lesson that always deserved it, and
+the story lesson stops borrowing it. `O06` is `from-4`, an earlier band, so it is free
+reinvestment and outside the plan; the same lesson already introduces it on day 18 through
+`D'abord, ensuite, à la fin`, four slots earlier in the day, so it is correctly « déjà vu ».
+
+The cost is visible and accepted: `O08` now appears **once** in September instead of three times.
+Its plan entry allows reinforcement to day 63 and September ends at day 22, so nothing is missed —
+but `npm run coverage:report` lists it under « vus une seule fois », and that is the honest state.
+
+### Why the running activity was rewritten rather than remapped again
+
+The previous pass moved _D'un animal à l'autre_ off the dance objective and onto « courir de plus
+en plus longtemps sans s'arrêter ». That was the right destination and the task never caught up:
+the child was told to cross the room « comme le lézard », which is done on the floor, and the
+activity's own move list still said « ramper ». An endurance objective earned by crawling is not
+earned.
+
+`PHYS-S01-C01-O02` « courir de manière variée et coordonnée » would have fitted the old task
+exactly — but it is `before-4`, two bands down, and the lesson is a consolidation day whose whole
+point is duration. Under-claiming that far to avoid rewriting three sentences would have made the
+week honest and pointless. The animals are now a goat, a chick and a heron, all run upright, the
+cue changes without stopping, and there is no speed, no race and no stopwatch.
+
+### One occurrence in Week 5
+
+`m3-math-21-a1` _Je range les tas_ (day 21) claimed « construire la bande numérique jusqu'à dix »
+for ranking three piles smallest to largest. It is exactly the defect corrected twice in Week 4,
+so the rule written here names it too. The objective came off; « comparer des quantités », which
+the task really works, stays. **Week 5 still has not been read.**
+
+### What this pass added to the suite
+
+Six rules, each proved against the pre-correction content, where each one named precisely the
+activity the review had flagged:
+
+| Rule                                                          | Caught          |
+| ------------------------------------------------------------- | --------------- |
+| a story is not ordered under the lived-process objective      | `m3-time-07-a1` |
+| whatever orders a story claims the story-chronology objective | `m3-time-07-a1` |
+| a running objective needs a run, and an upright one           | `m3-phys-19-a1` |
+| « construire la bande numérique » needs the strip to be built | `m3-math-15-a2` |
+| the count-to-thirty rhyme needs an actual count               | `m3-math-16-a1` |
+| equilibrium needs the balance at stake, not only a walk       | `m3-phys-18-a1` |
+
+The equilibrium rule is the sharpest of the six. The suite already required _movement_ for that
+objective, and `Marche sur les formes` satisfied it by walking. Walking between two points is one
+continuous action; the objective asks for a combination. The rule now looks for the balance being
+put at stake — a controlled stop, one foot, feet together, tiptoe, a line crossed, a freeze — which
+every other carrier already had and that activity did not.
 
 ---
 

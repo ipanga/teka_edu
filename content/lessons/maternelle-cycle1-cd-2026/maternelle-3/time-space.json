@@ -626,9 +626,9 @@
       "levelIds": ["maternelle-3"],
       "domainCode": "TIME-SPACE",
       "title": "Les étapes de l’histoire",
-      "summary": "Ordonner les moments d’une histoire connue.",
+      "summary": "Restituer dans l’ordre les moments d’une histoire connue.",
       "objectiveCodes": [],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C02-O08"],
+      "supportingObjectiveCodes": ["TIME-SPACE-S01-C02-O06"],
       "stage": "consolidation",
       "difficulty": 3,
       "themeId": "au-marche",
@@ -645,7 +645,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
+          "objectiveCodes": ["TIME-SPACE-S01-C02-O06"],
           "materialCodes": ["papier", "crayon"],
           "vocabulary": [
             {
@@ -678,7 +678,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C02-O08"],
+          "objectiveCodes": ["TIME-SPACE-S01-C02-O06"],
           "materialCodes": ["aucun"],
           "vocabulary": [
             {

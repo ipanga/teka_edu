@@ -642,6 +642,119 @@ describe("naming a number, ordering a story, and a rhyme that names its target",
   });
 });
 
+describe("the task proves the objective, not the other way round", () => {
+  const text = (a: Activity) => `${a.childInstruction} ${a.adultGuidance}`;
+  /** Movement activities carry their own move list, and it is part of what the child does. */
+  const withMoves = (a: Activity) => {
+    const moves = (a.payload as { moves?: readonly string[] } | undefined)?.moves ?? [];
+    return `${text(a)} ${moves.join(" ")}`;
+  };
+  const claiming = (matcher: RegExp) =>
+    activities.filter((a) => a.objectiveCodes.some((c) => matcher.test(statementOf(c))));
+
+  const LIVED = /processus ou d’un évènement vécu/;
+  const STORY_CHRONOLOGY = /chronologie des actions majeures d’une histoire/;
+  const A_STORY = /\bhistoire\b|\bconte\b/i;
+  const ORDERS = /dans l’ordre|d’abord|juste avant|juste après|ce qui vient|celle d’après/i;
+
+  it("does not order a story under the objective about a process the child lived", () => {
+    // « Les étapes de l'histoire » ordered « Les trois cailloux de Tito » while claiming
+    // « repérer les différentes étapes d'un processus ou d'un évènement vécu ». A story is not
+    // something the child lived, and the programme has a separate objective for it.
+    const lived = claiming(LIVED);
+    expect(lived.length).toBeGreaterThan(0);
+    for (const activity of lived) {
+      expect(
+        A_STORY.test(text(activity)),
+        `${activity.id}: claims the lived-process objective but works on a story`,
+      ).toBe(false);
+    }
+  });
+
+  it("orders a story under the story-chronology objective", () => {
+    // The other direction, so the pair cannot drift apart: whatever puts the moments of a story
+    // in order claims the objective written for exactly that.
+    const ordersAStory = activities.filter(
+      (a) => A_STORY.test(a.childInstruction) && ORDERS.test(a.childInstruction),
+    );
+    expect(ordersAStory.length).toBeGreaterThan(0);
+    for (const activity of ordersAStory) {
+      expect(
+        activity.objectiveCodes.some((c) => STORY_CHRONOLOGY.test(statementOf(c))),
+        `${activity.id}: orders a story without claiming the story-chronology objective`,
+      ).toBe(true);
+    }
+  });
+
+  it("only claims a running objective where the child actually runs, and runs upright", () => {
+    // « D'un animal à l'autre » claimed « courir de plus en plus longtemps sans s'arrêter »
+    // while telling the child to cross the room « comme le lézard » — on all fours. Crossing a
+    // room is not running, and a lizard does not run.
+    const runs = /cours|court|courir|courent|trottin|galop/i;
+    const onAllFours = /à quatre pattes|ramp\w*|à plat ventre/i;
+    const running = claiming(/^Courir/);
+    expect(running.length).toBeGreaterThan(0);
+    for (const activity of running) {
+      const body = withMoves(activity);
+      expect(runs.test(body), `${activity.id}: claims running, names no run`).toBe(true);
+      // « on ne se met ni à quatre pattes ni au sol » rules it out; it does not ask for it.
+      const asksForIt = new RegExp(`(?<!ni |pas )${onAllFours.source}`, "i");
+      expect(
+        asksForIt.test(body.replace(/ne se met ni à quatre pattes[^.]*/i, "")),
+        `${activity.id}: claims running while the child is on the floor`,
+      ).toBe(false);
+    }
+  });
+
+  it("only claims building the number strip where the strip is actually built", () => {
+    // Two activities used « construire la bande numérique jusqu'à dix » as a label for anything
+    // involving the strip: one pointed at a number on it, another ranked three piles beside it.
+    // Reading a strip someone else built is not building one.
+    const builds =
+      /fabriqu\w*|écri\w*|trac\w*|découp\w*|complèt\w*|complét\w*|manqu\w*|remets?\b|remettre/i;
+    const building = claiming(/^Construire la bande numérique/);
+    expect(building.length).toBeGreaterThan(0);
+    for (const activity of building) {
+      expect(
+        builds.test(text(activity)),
+        `${activity.id}: claims building the strip, builds nothing`,
+      ).toBe(true);
+    }
+  });
+
+  it("only claims the counting rhyme where the child actually counts", () => {
+    // « Le nombre caché » claimed « connaitre et utiliser la comptine numérique jusqu'à trente »
+    // for naming one number below ten. Knowing which number is hidden uses the order; it does
+    // not recite the sequence.
+    const counts = /compt\w*|comptine|récit\w*/i;
+    const reciting = claiming(/^Connaitre et utiliser la comptine numérique/);
+    expect(reciting.length).toBeGreaterThan(0);
+    for (const activity of reciting) {
+      expect(
+        counts.test(text(activity)),
+        `${activity.id}: claims the counting rhyme, counts nothing`,
+      ).toBe(true);
+    }
+  });
+
+  it("only claims equilibrium where the body actually has to hold one", () => {
+    // Stronger than « the child moves », which « Marche sur les formes » already satisfied by
+    // walking. « Construire de nouveaux équilibres par des déplacements impliquant une
+    // combinaison d'actions » needs the displacement to put the balance at stake: a controlled
+    // stop, one foot, feet together, tiptoe, a line crossed, a freeze.
+    const atStake =
+      /arrêt\w*|arrête\w*|\bstop\b|immobile|statue|sur un pied|pieds joints|pointe des pieds|équilibre|enjamb\w*|par-dessus|sans bouger|tient\b/i;
+    const balancing = claiming(/^Construire de nouveaux équilibres/);
+    expect(balancing.length).toBeGreaterThan(0);
+    for (const activity of balancing) {
+      expect(
+        atStake.test(withMoves(activity)),
+        `${activity.id}: claims equilibrium, only walks`,
+      ).toBe(true);
+    }
+  });
+});
+
 describe("an adult's safety note is not the child's learning", () => {
   /**
    * Pinned, and the reason is worth writing down.

@@ -10,85 +10,85 @@
 
 ## Task
 
-Apply ChatGPT's first-pass corrections to 3ème maternelle Week 4 and return it for a second pass.
+Apply ChatGPT's second-pass corrections to 3ème maternelle Week 4, and stop the container
+registry from filling up again (ISSUE-011).
 
 ## Objective
 
-Every Week 4 objective describes the work its own activity sets, and nothing a child steps on
-slides.
+Every Week 4 objective is proved by the task the child actually performs, and a full registry
+can no longer block `develop`.
 
 ## Status
 
-`completed`
+`in_progress`
 
 ## Branch
 
-`fix/maternelle-3-week-4-first-review`
+`fix/maternelle-3-week-4-second-review`
 
 ## Base Branch
 
-`develop` at `c15d535`
+`develop` at `e60eaa3`
 
 ## Started
 
-2026-09-16
+2026-09-20
 
 ## Last Checkpoint
 
-2026-09-19 — merged as `dcfdb62` (PR #60) and verified live on staging. ISSUE-011 fired on the
-way: the container registry was full at 50 images; 15 were pruned with the owner's approval and
-the deploy re-run.
+2026-09-20 — 4 corrections + 1 safety refinement (35 of 3,084 fields), 6 reusable rules each
+proved against the pre-correction content, the registry prune automated and rehearsed against
+the real registry, 0 approvals lapsed.
 
 ## Scope
 
-- The five objective-mapping corrections plus the geometry exemplars and the zero-screen wording.
-- Every other occurrence of the same defect classes, because the rules are written as rules.
-- Regeneration: media, 11 review packages, pgTAP reference test, data migration.
+- The four second-pass corrections, the cloth-in-the-path safety refinement, and every other
+  occurrence the new rules force.
+- ISSUE-011: why the ~40 threshold never fired, and the smallest preventive fix.
+- Regeneration: 11 review packages, the change audit, pgTAP reference test, data migration.
 
 ## Out of Scope
 
-- Approving Week 1, or any 3ème lesson. All 88 stay `review`.
-- Reviewing Weeks 2–5. The mapping fixes there are forced by the rules, not a review.
+- Approving Week 4, or any 3ème lesson. All 32 remaining stay `review`.
+- Reading Week 5. Its one change is forced by a rule, not by a review.
 - October, 2ème maternelle, production, `main`, anything paid.
-- Re-mapping activities the rules did not force and ChatGPT has not read (`m3-math-06-a2`,
-  `m3-math-20-a1`/`-a2` — reported in `docs/PEDAGOGICAL_REVIEW.md`).
 
 ## Product Decisions
 
-- The pedagogical gate is an independent review, not necessarily a human one (ADR-047).
-- A lesson's objective lists are **authored**; the validators force them to equal the union of the
-  activities' objectives, in both directions. There is no generator to run, and adding one would
-  replace a pedagogical judgement with a derivation.
-- A correction is applied everywhere its class occurs when doing so moves nothing else. Every one
-  here was free: the right activity was a sibling in the same lesson on the same day.
-- Never edit generated content by hand; fix the generator. Both generators now format their own
-  output, so regenerating no longer dirties the tree.
-- Colour never carries meaning: each new shape variant wears the colour of a different shape.
+- `TIME-SPACE-S01-C02-O08` stays in its plan window because day 16 introduces it honestly; the
+  story lesson stops borrowing it. September now shows it once, which the coverage report says
+  plainly rather than hides.
+- The running activity was rewritten rather than remapped down two age bands. Under-claiming to
+  `before-4` would have been honest and pointless on a consolidation day about duration.
+- The registry policy is a pure function with its own tests, because a deletion cannot be
+  rehearsed against a real registry without deleting something.
+- The live commit comes from `/api/health`, not from a Vercel deployment field: a project with
+  no Git connection never fills that field in.
 
 ## Completed
 
-- [x] Week 4's **first actual full review** recorded; its four inherited entries left as
-      `consequence`, not relabelled as readings
-- [x] 10 corrections — seven objective mappings, the rhyme fallback, the shape-pathway safety,
-      the branching of animal and plant needs
-- [x] The dance activity took the **alternative** direction: mapped to the endurance objective it
-      already earns, rather than rewritten into a dance to fit a code
-- [x] `objets-faces-planes` added — a **new narrow material**, not a widening of the generic one
-- [x] **8 reusable rules**, each proved against the pre-correction content; two narrowed after
-      over-firing on approved lessons
-- [x] **Reported, not changed:** three approved lessons claim the safety objective on adult-facing
-      text alone. The safety check is a pinned test, not a corpus rule, so no approval lapses
-- [x] **33 of 3,084 fields changed**, all Week 4; 144 approved lessons, **0 lapsed**
+- [x] Week 4's **second full review** recorded; the first pass and the four inherited
+      `consequence` entries left exactly as they were
+- [x] 4 corrections — story chronology, the run that had to become a run, the two number-strip
+      mappings, the walk that had to put a balance at stake
+- [x] The optional cloth in the stepping path replaced by a chalk, taped or pointed-out line
+- [x] **6 reusable rules**, each proved against the pre-correction content, each naming exactly
+      the activity the review had flagged
+- [x] **One occurrence in Week 5** (`m3-math-21-a1`), corrected as a consequence and recorded
+      as one; Week 5 still unread
+- [x] **ISSUE-011 prevented**, not just recovered: prune before the push, thresholds in code,
+      14 unit tests, both refusal paths exercised against the real registry in `--dry-run`
+- [x] **35 of 3,084 fields changed**; 144 approved lessons, **0 lapsed**, 0 digest mismatches
 
 ## In Progress
 
-None. The task is finished.
+- [ ] PR into `develop`, CI, squash-merge, staging verification
 
 ## Remaining
 
-- [ ] Hand the regenerated `docs/review/2026-2027-maternelle-3-semaine-4.md` back to ChatGPT
-      for its second pass. Do not review or approve it here. **This is the owner's action, not
-      a step this repository can take.**
+- [ ] Hand the regenerated `docs/review/2026-2027-maternelle-3-semaine-4.md` back to ChatGPT for
+      its final confirmation pass. **This is the owner's action, not a step this repository can
+      take.**
 
 ## Validation State
 
@@ -97,7 +97,7 @@ None. The task is finished.
 | format             | PASS   | working tree                      |
 | lint               | PASS   | working tree                      |
 | typecheck          | PASS   | working tree                      |
-| unit tests         | PASS   | working tree — 322 tests          |
+| unit tests         | PASS   | working tree — 342 tests          |
 | content validation | PASS   | working tree — 31 files           |
 | database tests     | PASS   | fresh reset — 152 assertions      |
 | build              | PASS   | working tree                      |
@@ -107,21 +107,19 @@ None. The task is finished.
 
 ## Database State
 
-- Local: 23 migrations; `db reset` + 152 pgTAP assertions pass.
-- DEV: `20260919194738_week4_review_corrections.sql` applied.
+- Local: 24 migrations; `db reset` + 152 pgTAP assertions pass.
+- DEV: not yet updated with `20260920083109_week4_second_review_corrections.sql`.
 - PROD: untouched.
 
 ## Deployment State
 
-- Staging: live at `dcfdb62` (run 35465869484, deployment `teka-blkd7cw9e`, alias moved).
-  `/api/health` reports `staging` and the DEV Supabase ref; 28 E2E green against it.
-- Container registry: 36 of 50 images after the prune. Watch it before the next merge.
+- Staging: at `e60eaa3`; not yet redeployed with these corrections.
+- Container registry: 37 of 50 images. The next deploy prunes by itself above 40.
 - Production: disabled; `main` at `1b95480`.
 
 ## Git State
 
-- PR #60 squash-merged into `develop` as `dcfdb62`; the branch is deleted. Working tree carries
-  only this checkpoint and the ISSUE-011 record.
+- `fix/maternelle-3-week-4-second-review`, branched from `develop` at `e60eaa3`.
 
 ## Blockers
 
@@ -129,17 +127,17 @@ None.
 
 ## User Decisions Needed
 
-None outstanding. Week 1 goes back to ChatGPT; Weeks 2–5 still need their own first pass.
+None outstanding. Week 4 goes back to ChatGPT for its final pass; Week 5 still needs its first.
 
 ## Exact Resume Point
 
-Nothing to resume. The next task begins when ChatGPT returns its second pass on Week 4.
+Commit, open the PR into `develop`, wait for CI, squash-merge, verify staging.
 
 ## Resume Verification
 
-1. `git branch --show-current` is `fix/maternelle-3-week-4-first-review`;
-2. `git log -n 5 --oneline` — branch point is `c15d535`;
+1. `git branch --show-current` is `fix/maternelle-3-week-4-second-review`;
+2. `git log -n 5 --oneline` — branch point is `e60eaa3`;
 3. `git status --short` — read uncommitted work before discarding it;
-4. `gh pr list --head fix/maternelle-3-week-4-first-review` — a PR may already exist;
+4. `gh pr list --head fix/maternelle-3-week-4-second-review` — a PR may already exist;
 5. `npx supabase migration list --linked` before assuming DEV needs the migration;
 6. `gh run list --branch develop --limit 3` before assuming a deployment is needed.
