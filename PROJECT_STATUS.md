@@ -309,7 +309,7 @@ Recommended action: for IPv4 tooling use the session pooler (pooler host, port 5
 
 ### ISSUE-011 — Container registry: 50 images per repository on Hobby
 
-Severity: Medium (Monitor) · Status: Open · **Fired on 2026-09-19, pruned with owner approval**
+Severity: Medium (Monitor) · Status: **Implemented / awaiting credential** — fired 2026-09-19, pruned once with owner approval, prevention built 2026-09-20 and not yet able to authenticate
 
 Description: Every staging deployment pushes one image (about 73 MB) to the registry repository
 `dockerfile`. Hobby allows 50 images per repository, and no automatic cleanup is documented. There
@@ -361,26 +361,51 @@ that sits between the deployment-count guard and `vercel deploy`:
 - Rehearsed on 2026-09-20 against the real 37-image registry: the listing, the health probe, the
   selection and both refusal paths were exercised in `--dry-run`, and nothing was deleted.
 
-**It is not yet effective in CI, and this is the honest state.** On run `35501251469` the step
-warned instead of pruning: the registry endpoint answers **404 `VCR Repository not found`** under
-the deploy token, for every way of addressing it that was tried (`projectId` alone, and
-`teamId` + `projectId`). The identical request against the identical project returns **200** with
-a user-scoped token, so the cause is the token's scope, not the URL — the `VERCEL_TOKEN` in the
-`staging` GitHub environment is project-scoped and registry management appears to sit outside it.
+**It cannot authenticate in CI, and that is the whole of what remains.** The registry endpoint
+answers **404 `VCR Repository not found`** under the deploy token, for every way of addressing it
+that was tried (`projectId` alone, and `teamId` + `projectId`). The identical request against the
+identical project returns **200** with a user-scoped token, so the cause is the token's scope, not
+the URL: `VERCEL_TOKEN` in the `staging` environment is project-scoped and registry management
+sits outside it.
 
-So today the mechanism is **built, tested and safe, but inert**: it never deletes and never blocks,
-and every deploy logs one warning saying so. The count is back to growing unattended, which is
-exactly the condition that produced the outage.
+**A credential of its own (2026-09-20).** Rather than widen `VERCEL_TOKEN`, which every deploy
+uses and which should stay as narrow as it is, the prune reads **`VERCEL_VCR_TOKEN`** when it
+exists and falls back to the deploy token when it does not — so the step degrades to a warning
+instead of breaking while the secret is still being created. The step logs which credential it
+used.
 
-**Owner decision needed (PD, cost $0):** issue a Vercel token whose scope can read
-`/v1/vcr/repository/*` for the `teka-edu` project and store it in the `staging` environment —
-either as `VERCEL_TOKEN` or as a separate secret the prune step prefers. Creating a token is an
-owner action (CLAUDE.md), so it is not done here. Until then the registry must be watched by hand;
-it stands at **38 of 50** on 2026-09-20.
+**Two-stage failure policy (2026-09-20), and why these numbers.**
 
-Recommended action: none routine — the deploy handles it. A deletion outside the workflow still
-needs owner approval. Note the real cost of hitting the cap: `develop` is blocked, because every
-subsequent merge re-triggers the same failing deploy.
+| Registry                    | A prune that cannot run                             |
+| --------------------------- | --------------------------------------------------- |
+| ≤ 44 of 50                  | `::warning::`, deploy continues                     |
+| ≥ **45** of 50 (`dangerAt`) | `::error::`, deploy stops **before** the image push |
+
+The two situations deserve opposite answers. With headroom, a prune that cannot run has cost
+nothing and failing the deploy turns a transient read error into an outage — which is exactly what
+happened twice on 2026-09-20 and is worse than having no prune at all. At 45 the same failure is
+five merges from a blocked `develop`, and the failure it leads to is an image push rejected
+_after_ the migration has been applied, with a message about a registry rather than about anything
+the reader can act on. Stopping first, naming the credential, is the kinder failure. 45 leaves
+five slots — roughly a day at the rate September merged — and sits five above the pruning
+threshold, so the first deploy to cross 40 with a broken credential does not block anything.
+
+**Proven on 2026-09-20 against the real 40-image registry, deleting nothing:** listing with a
+dedicated token (**200**), the health probe, candidate selection (10 oldest chosen, 20 newest and
+the live commit protected), the warning path below 45, and the hard-failure path at or above it.
+19 unit tests cover the policy.
+
+**What is still missing is only the secret.** Owner action, cost $0: create a Vercel access token
+scoped to the TEKA team and store it as `VERCEL_VCR_TOKEN` in the GitHub `staging` environment.
+Creating a token is an owner action (CLAUDE.md), so it is not done here. Until then the registry
+is watched by hand; it stands at **40 of 50** on 2026-09-20.
+
+**This issue is not resolved.** It is `implemented / awaiting credential`: no real pruning cycle
+has ever run automatically, and it will not be called resolved until one has.
+
+Recommended action: create `VERCEL_VCR_TOKEN`, then watch one deploy cross 40 and prune itself.
+A deletion outside the workflow still needs owner approval. Note the real cost of hitting the cap:
+`develop` is blocked, because every subsequent merge re-triggers the same failing deploy.
 
 ### ISSUE-012 — Supabase Free projects pause after about 7 days of low activity
 

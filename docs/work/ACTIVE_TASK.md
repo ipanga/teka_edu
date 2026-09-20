@@ -71,6 +71,10 @@ says the week took three passes.
 - [x] Re-running the approval is refused — it will not re-stamp an approved week
 - [x] `approve-week.ts` formats its own output; the week-state test follows the real state
 - [x] Week 5's package regenerated mechanically, **not reviewed**
+- [x] ISSUE-011 given a credential of its own (`VERCEL_VCR_TOKEN`, falling back to the deploy
+      token) and a two-stage failure policy: warn below 45 of 50, fail before the push at or
+      above it. 19 tests; all four paths proven against the real 40-image registry, deleting
+      nothing.
 
 ## In Progress
 
@@ -78,8 +82,9 @@ says the week took three passes.
 
 ## Remaining
 
-- [ ] ISSUE-011: the registry prune still cannot authenticate in CI. Needs a dedicated
-      `VERCEL_VCR_TOKEN` in the `staging` environment — **the owner's action**.
+- [ ] ISSUE-011: create `VERCEL_VCR_TOKEN` in the GitHub `staging` environment — **the owner's
+      action**. Everything else is built, tested and proven against the real registry; the secret
+      is all that is missing, and until it exists no automatic prune has ever run.
 - [ ] Hand `docs/review/2026-2027-maternelle-3-semaine-5.md` to ChatGPT for its first pass.
       **The owner's action, not a step this repository can take.**
 
@@ -90,7 +95,7 @@ says the week took three passes.
 | format             | PASS   | working tree                      |
 | lint               | PASS   | working tree                      |
 | typecheck          | PASS   | working tree                      |
-| unit tests         | PASS   | working tree — 342 tests          |
+| unit tests         | PASS   | working tree — 347 tests          |
 | content validation | PASS   | working tree — 31 files           |
 | database tests     | PASS   | fresh reset — 152 assertions      |
 | build              | PASS   | working tree                      |
