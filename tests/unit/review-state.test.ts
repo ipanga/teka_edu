@@ -68,8 +68,8 @@ describe("what a batch of content has actually been through", () => {
     expect(stateOf("maternelle-3", 2, ["m3-math-05"])).toBe("approved");
     // 3ème Week 3 is approved too, after three passes.
     expect(stateOf("maternelle-3", 3, ["m3-math-10"])).toBe("approved");
-    // 3ème Week 4 has had its first full review, which accepted it with modifications.
-    expect(stateOf("maternelle-3", 4, ["m3-lang-16"])).toBe("reviewed");
+    // 3ème Week 4 is approved too, after three passes.
+    expect(stateOf("maternelle-3", 4, ["m3-lang-16"])).toBe("approved");
     // Week 5 carries only inherited corrections, so it has never been reviewed.
     expect(stateOf("maternelle-3", 5, ["m3-lang-21"])).toBe("never-reviewed");
   });
@@ -155,9 +155,10 @@ describe("an approval can only come from a full review that accepted the week", 
   });
 
   it("keeps the whole history of a week that took several passes to accept", () => {
-    // Week 2 was read four times and Week 3 three times; each ended `accepted` only at the last
-    // pass. The earlier passes are not rewritten to look cleaner than they were.
-    for (const week of [2, 3]) {
+    // Week 2 was read four times, Week 3 three times and Week 4 three times; each ended
+    // `accepted` only at the last pass. The earlier passes are not rewritten to look cleaner
+    // than they were, and Week 4's four inherited corrections stay labelled as corrections.
+    for (const week of [2, 3, 4]) {
       const passes = historyOf(week).filter((r) => r.scope === "full-review");
       expect(
         passes.filter((r) => r.outcome === "accepted-with-modifications").length,

@@ -10,25 +10,24 @@
 
 ## Task
 
-Apply ChatGPT's second-pass corrections to 3ème maternelle Week 4, and stop the container
-registry from filling up again (ISSUE-011).
+Approve 3ème maternelle Week 4 on ChatGPT's final pass, and prepare Week 5 without reviewing it.
 
 ## Objective
 
-Every Week 4 objective is proved by the task the child actually performs, and a full registry
-can no longer block `develop`.
+Week 4 is approved on digests computed from the exact text that was read, and the history still
+says the week took three passes.
 
 ## Status
 
-`completed`
+`in_progress`
 
 ## Branch
 
-`fix/maternelle-3-week-4-second-review`
+`feat/approve-maternelle-3-week-4`
 
 ## Base Branch
 
-`develop` at `e60eaa3`
+`develop` at `d7b8a01`
 
 ## Started
 
@@ -36,61 +35,53 @@ can no longer block `develop`.
 
 ## Last Checkpoint
 
-2026-09-20 — 4 corrections + 1 safety refinement (35 of 3,084 fields), 6 reusable rules each
-proved against the pre-correction content, the registry prune automated and rehearsed against
-the real registry, 0 approvals lapsed.
+2026-09-20 — Week 4 approved 20/20 through the gate, 164 approvals on 164 distinct digests,
+0 lapses, full local suite green.
 
 ## Scope
 
-- The four second-pass corrections, the cloth-in-the-path safety refinement, and every other
-  occurrence the new rules force.
-- ISSUE-011: why the ~40 threshold never fired, and the smallest preventive fix.
-- Regeneration: 11 review packages, the change audit, pgTAP reference test, data migration.
+- Record the final `accepted` pass and approve Week 4 through `scripts/approve-week.ts`.
+- Regenerate the 11 packages, the pgTAP reference test and the data migration.
+- Regenerate Week 5's package mechanically.
 
 ## Out of Scope
 
-- Approving Week 4, or any 3ème lesson. All 32 remaining stay `review`.
-- Reading Week 5. Its one change is forced by a rule, not by a review.
+- Reviewing Week 5. Its package is regenerated, not read.
+- Changing any Week 4 content: the week was approved as it stood.
 - October, 2ème maternelle, production, `main`, anything paid.
+- ISSUE-011 pruning, which is blocked on a credential and tracked separately.
 
 ## Product Decisions
 
-- `TIME-SPACE-S01-C02-O08` stays in its plan window because day 16 introduces it honestly; the
-  story lesson stops borrowing it. September now shows it once, which the coverage report says
-  plainly rather than hides.
-- The running activity was rewritten rather than remapped down two age bands. Under-claiming to
-  `before-4` would have been honest and pointless on a consolidation day about duration.
-- The registry policy is a pure function with its own tests, because a deletion cannot be
-  rehearsed against a real registry without deleting something.
-- The live commit comes from `/api/health`, not from a Vercel deployment field: a project with
-  no Git connection never fills that field in.
+- The approval gate is the only way a week may be approved. It refused Week 4 until the
+  `accepted` entry existed, and that refusal is the feature.
+- The six earlier Week 4 entries are left exactly as written. Four are inherited corrections and
+  two are passes that asked for changes; squashing them would make the week look cleaner than it
+  was.
+- `scripts/approve-week.ts` now formats its own output, like the media and annual-plan
+  generators. Approving a week should touch the approval, not six files' worth of whitespace.
 
 ## Completed
 
-- [x] Week 4's **second full review** recorded; the first pass and the four inherited
-      `consequence` entries left exactly as they were
-- [x] 4 corrections — story chronology, the run that had to become a run, the two number-strip
-      mappings, the walk that had to put a balance at stake
-- [x] The optional cloth in the stepping path replaced by a chalk, taped or pointed-out line
-- [x] **6 reusable rules**, each proved against the pre-correction content, each naming exactly
-      the activity the review had flagged
-- [x] **One occurrence in Week 5** (`m3-math-21-a1`), corrected as a consequence and recorded
-      as one; Week 5 still unread
-- [x] **ISSUE-011 prevented**, not just recovered: prune before the push, thresholds in code,
-      14 unit tests, both refusal paths exercised against the real registry in `--dry-run`
-- [x] **35 of 3,084 fields changed**; 144 approved lessons, **0 lapsed**, 0 digest mismatches
-- [x] Merged as `90e18d4` (PR #62) and live on staging at `e94a98f` after two follow-up fixes to
-      the prune step (PR #63, PR #64)
+- [x] Seventh Week 4 history entry: `full-review` / `accepted`, 2026-09-20, ChatGPT, ai-assisted
+- [x] **Week 4 approved 20/20** through `scripts/approve-week.ts`; the gate refused it first
+- [x] All 20 digests computed fresh; **none carried forward**
+- [x] 1ère 88 · W1 16 · W2 20 · W3 20 · W4 20 · W5 0 · **164 of 176**, 12 remaining
+- [x] **164 distinct digests, 0 lapses, 0 recompute mismatches**
+- [x] Re-running the approval is refused — it will not re-stamp an approved week
+- [x] `approve-week.ts` formats its own output; the week-state test follows the real state
+- [x] Week 5's package regenerated mechanically, **not reviewed**
 
 ## In Progress
 
-None. The task is finished.
+- [ ] PR into `develop`, CI, squash-merge, staging verification
 
 ## Remaining
 
-- [ ] Hand the regenerated `docs/review/2026-2027-maternelle-3-semaine-4.md` back to ChatGPT for
-      its final confirmation pass. **This is the owner's action, not a step this repository can
-      take.**
+- [ ] ISSUE-011: the registry prune still cannot authenticate in CI. Needs a dedicated
+      `VERCEL_VCR_TOKEN` in the `staging` environment — **the owner's action**.
+- [ ] Hand `docs/review/2026-2027-maternelle-3-semaine-5.md` to ChatGPT for its first pass.
+      **The owner's action, not a step this repository can take.**
 
 ## Validation State
 
@@ -109,45 +100,40 @@ None. The task is finished.
 
 ## Database State
 
-- Local: 24 migrations; `db reset` + 152 pgTAP assertions pass.
-- DEV: not yet updated with `20260920083109_week4_second_review_corrections.sql`.
+- Local: 25 migrations; `db reset` + 152 pgTAP assertions pass.
+- DEV: not yet updated with `20260920134804_approve_maternelle_3_week_4.sql`.
 - PROD: untouched.
 
 ## Deployment State
 
-- Staging: live at `e94a98f` (run 35501251469, deployment `teka-nj6vfw28a`, alias moved);
-  environment `staging`, DEV Supabase ref, 28 E2E green.
-- Container registry: **38 of 50**, and the automatic prune is **inert**: the endpoint answers 404
-  under the project-scoped deploy token. It warns and never blocks. Watch the count by hand until
-  the owner issues a token that can read `/v1/vcr/repository/*`.
+- Staging: at `d7b8a01`; not yet redeployed with the approval.
+- Container registry: ~39 of 50. The automatic prune is **inert** — it warns and never blocks,
+  because the deploy token cannot read the registry endpoint.
 - Production: disabled; `main` at `1b95480`.
 
 ## Git State
 
-- PRs #62, #63 and #64 squash-merged into `develop`; `develop` at `e94a98f`, branches deleted.
+- `feat/approve-maternelle-3-week-4`, branched from `develop` at `d7b8a01`.
 
 ## Blockers
 
-None for the content. One open item for the infrastructure: the registry prune cannot run in CI
-until a token with registry scope exists. It fails safe — warns, deletes nothing, blocks nothing.
+None for the content. ISSUE-011 is blocked on a credential the owner must create.
 
 ## User Decisions Needed
 
-**One.** Issue a Vercel token whose scope can read `/v1/vcr/repository/*` for `teka-edu` and store
-it in the `staging` GitHub environment, so the registry prune stops being inert. Cost $0; creating
-a token is an owner action.
-
-Otherwise: Week 4 goes back to ChatGPT for its final pass; Week 5 still needs its first.
+**One, unchanged.** Create a Vercel access token scoped to the TEKA team and store it as the
+`VERCEL_VCR_TOKEN` secret in the GitHub `staging` environment, so the registry prune stops being
+inert. Cost $0. Creating a token is an owner action (CLAUDE.md).
 
 ## Exact Resume Point
 
-Nothing to resume. The next task begins when ChatGPT returns its final pass on Week 4.
+Commit, open the PR into `develop`, wait for CI, squash-merge, verify staging.
 
 ## Resume Verification
 
-1. `git branch --show-current` is `fix/maternelle-3-week-4-second-review`;
-2. `git log -n 5 --oneline` — branch point is `e60eaa3`;
+1. `git branch --show-current` is `feat/approve-maternelle-3-week-4`;
+2. `git log -n 5 --oneline` — branch point is `d7b8a01`;
 3. `git status --short` — read uncommitted work before discarding it;
-4. `gh pr list --head fix/maternelle-3-week-4-second-review` — a PR may already exist;
+4. `gh pr list --head feat/approve-maternelle-3-week-4` — a PR may already exist;
 5. `npx supabase migration list --linked` before assuming DEV needs the migration;
 6. `gh run list --branch develop --limit 3` before assuming a deployment is needed.
