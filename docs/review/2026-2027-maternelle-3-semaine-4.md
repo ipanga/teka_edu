@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 2 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 3 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -80,6 +80,12 @@ Deuxième relecture pédagogique complète de la semaine 4, sur le paquet corrig
 
 **Suites données :** Toutes appliquées, avec des objectifs officiels existants uniquement, et sans ouvrir un objectif avant sa fenêtre du plan annuel. 1) Les deux activités des « Étapes de l’histoire » portent « restituer la chronologie des actions majeures d’une histoire simple », l’objectif que la semaine emploie déjà pour « D’abord, ensuite, à la fin » le même jour. L’objectif du processus vécu n’est pas perdu : « Avant, pendant, après » (jour 16) le porte toujours, sur une activité que l’enfant fait vraiment — préparer le repas, se laver, s’habiller — et l’introduit au jour 16, dans sa fenêtre qui se ferme au jour 18. 2) « D’un animal à l’autre » garde l’objectif d’endurance et devient une vraie course : on trottine sans s’arrêter, l’animal change en courant, et les trois animaux se courent debout. Ni vitesse, ni concours, ni chrono ; une minute si c’est confortable, et on s’arrête avant d’être essoufflé. 3) « Je montre le nombre » porte « associer une quantité, le nom d’un nombre et une écriture chiffrée », dont la fenêtre s’ouvre au jour 15 : l’enfant entend le nombre, montre le chiffre écrit et lève autant de doigts — les trois côtés de l’objectif. « Le nombre caché » perd la comptine jusqu’à trente et garde la construction de la bande, que la tâche prouve maintenant : un nombre est couvert, l’enfant le retrouve et complète la bande avant de recommencer. 4) « Marche sur les formes » garde son objectif et gagne une vraie combinaison d’actions : marcher jusqu’à la forme, s’y arrêter une seconde sans bouger, changer de direction, alterner un grand pas et un pas de côté, faire demi-tour. La correction de sécurité du 19 septembre est conservée mot pour mot : formes tracées ou fixées, jamais de cloche-pied sur une feuille libre. 5) L’extension du « Jeu des appuis » n’emploie plus de tissu libre : un trait de craie, un ruban bien collé ou une ligne montrée du doigt. Aucune leçon n’est approuvée : les 20 restent en relecture.
 
+### 2026-09-20 — ChatGPT · `accepted` (ai-assisted)
+
+Passe de confirmation finale de la semaine 4, sur le paquet canonique régénéré après les corrections du deuxième passage. Les quatre corrections demandées au deuxième passage ont été revérifiées une à une : la chronologie de l’histoire porte désormais l’objectif écrit pour une histoire ; les deux attributions autour de la bande numérique décrivent la tâche que l’enfant fait réellement ; « Marche sur les formes » gagne vraiment son objectif d’équilibres construits par une combinaison d’actions ; et « D’un animal à l’autre » est devenu une course continue, debout. Le point de sécurité du « Jeu des appuis » — plus de tissu libre dans le passage — est accepté lui aussi. Les corrections du premier passage ont été revérifiées dans le même mouvement. Aucun nouveau défaut pédagogique n’a été trouvé. La semaine 4 est autorisée à l’approbation.
+
+**Suites données :** Aucune. La semaine est acceptée telle quelle. Les vingt leçons passent de « review » à « approved », avec des empreintes calculées à neuf sur le texte exact que cette passe a lu ; aucune empreinte n’est reprise d’une passe précédente. Les entrées antérieures de cette semaine — quatre corrections héritées des semaines 1 à 3, puis deux relectures complètes conclues « accepted-with-modifications » — sont conservées telles qu’elles ont été écrites : cette semaine a demandé trois lectures, et l’historique le dit.
+
 ## Jour 15 — 2026-09-21
 
 **Durée totale : 35 min** · 4 séances · jour 5 du rythme
@@ -100,7 +106,7 @@ l’autre — l’appareil est alors le sien._
 
 _Comprendre ce que ressent un personnage et le comparer à ce qu’on a vécu soi-même._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** L’enfant a vécu sa propre rentrée ce mois-ci. C’est le moment de relier l’histoire à son expérience : c’est exactement ce que le programme demande.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -230,7 +236,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Construire une bande de nombres de un à dix, puis y lire les nombres._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
 - **Conseil au parent :** Écrivez les chiffres de 1 à 10 sur une bande de papier, avec l’enfant. Elle servira tout le mois : gardez-la.
 - **Objectifs enseignés :**
   - `MATH-S01-C02-O06` — Construire la bande numérique jusqu’à dix. _(source : programme-2024-mathematiques)_
@@ -337,7 +343,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Lancer loin, puis viser une cible plus éloignée._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 3/3
 - **Conseil au parent :** Deux gestes différents : lancer loin (tout le bras) et viser (regarder la cible). Nommez-les.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -386,7 +392,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Comparer deux animaux et dire ce qui les distingue._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Comparer, c’est trouver ce qui est pareil et ce qui est différent. Prenez deux animaux bien distincts.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -466,7 +472,7 @@ l’autre — l’appareil est alors le sien._
 
 _Entendre que deux mots finissent pareil._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
 - **Conseil au parent :** La rime s’entend à la fin du mot. Exagérez la fin en parlant : « chaaa-TON, maiii-SON. » L’enfant doit d’abord reconnaitre, avant d’inventer.
 - **Objectifs enseignés :**
   - `LANG-S02-C01-O15` — Repérer et produire des rimes et des assonances. _(source : programme-2024-langage)_
@@ -567,7 +573,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Situer un nombre par rapport à ses voisins._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Servez-vous de la bande fabriquée hier. « Avant » et « après » se montrent avec le doigt avant de se dire.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -678,7 +684,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Marcher, s’arrêter en équilibre sur un pied, et repartir._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Restez tout près. Comptez à voix haute pendant qu’il tient : cela l’aide à durer.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -725,7 +731,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Repérer les étapes d’une activité vécue et les ordonner._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
 - **Conseil au parent :** Prenez une activité que l’enfant fait vraiment : préparer le repas, se laver, s’habiller. On cherche les étapes, dans l’ordre.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C02-O08` — Repérer les différentes étapes d’un processus ou d’un évènement vécu et les ordonner. _(source : programme-2026)_
@@ -796,7 +802,7 @@ l’autre — l’appareil est alors le sien._
 
 _Produire un mot qui rime, après l’avoir reconnu._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Aujourd’hui, l’enfant produit. Les mots inventés sont acceptés : « chat, bat, gat » montre qu’il a compris la rime. Ne corrigez pas l’invention.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -897,7 +903,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Trouver ce qu’il faut ajouter pour arriver à dix._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Dix est le nombre le plus utile à décomposer. Servez-vous des deux mains : cinq et cinq.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -990,7 +996,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _S’immobiliser complètement au signal : contrôler son corps._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Jeu calme, parfait le soir. L’immobilité complète est plus difficile qu’elle n’en a l’air.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1037,7 +1043,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dessiner un personnage qui n’existe pas devant soi._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
 - **Conseil au parent :** Cette fois, il n’y a pas de modèle : le personnage est dans l’histoire, donc dans sa tête. Faites-le décrire avant de dessiner.
 - **Objectifs enseignés :**
   - `ART-S01-C01-O06` — Dessiner pour représenter un personnage ou un évènement fictif. _(source : programme-2026)_
@@ -1100,7 +1106,7 @@ l’autre — l’appareil est alors le sien._
 
 _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les dire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Servez-vous des mots de l’ordre : d’abord, ensuite, puis, à la fin. Ce sont eux qui structurent le récit.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C02-O06` — Restituer la chronologie des actions majeures d’une histoire simple. _(source : programme-2026)_
@@ -1210,7 +1216,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Retrouver les formes planes sur les objets réels._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** On repart des formes en papier, puis on les compare aux faces des objets. Dites toujours « la face de la boite est un carré », jamais « la boite est un carré ».
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1286,7 +1292,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Enchainer marche, arrêt et changement de direction en nommant les formes._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** On relie le mouvement et les formes du mois : l’enfant nomme avant de passer, s’arrête sur la forme, puis change de direction. Les formes doivent être tracées au sol ou bien fixées : une feuille qui glisse sous le pied fait tomber.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1334,7 +1340,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Restituer dans l’ordre les moments d’une histoire connue._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** On applique l’ordre à une histoire du mois. L’enfant connait l’histoire : la difficulté est l’ordre, pas le souvenir.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1406,7 +1412,7 @@ l’autre — l’appareil est alors le sien._
 
 _Reprendre les catégories de mots du mois et y ranger des mots nouveaux._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Reprise des trois corpus du mois : l’école, la maison, le marché. L’enfant range, et surtout explique pourquoi.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1520,7 +1526,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Aller au bout de la comptine numérique visée cette année._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Dernière étape de la progression du mois : dix, puis vingt, aujourd’hui trente. Si l’enfant s’arrête à seize, ce n’est pas un échec : on reprend là où ça s’arrête, sans le dire comme une faute.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1614,7 +1620,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Trottiner sans s’arrêter, de plus en plus longtemps._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** L’animal change, mais la course ne s’arrête pas : on reste debout et on trottine. On ne cherche pas la vitesse, mais la durée et le plaisir.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1662,7 +1668,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dire et faire ce qu’il faut pour qu’un être vivant aille bien._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Un animal et une plante n’ont pas les mêmes besoins : ne les mélangez pas. Vous n’avez besoin ni d’un animal ni d’une plante à la maison — une plante du chemin, un animal du quartier vu de loin, ou l’image du dossier suffisent. L’enfant ne touche ni ne nourrit un animal qu’il ne connait pas, et ne manipule pas une plante inconnue : tout geste de soin est choisi et surveillé par l’adulte.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

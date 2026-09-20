@@ -359,6 +359,18 @@
       "outcome": "accepted-with-modifications",
       "summary": "Changement arrivé dans cette semaine sans relecture propre : il vient d’une correction demandée sur la semaine 4.",
       "corrections": "« Je range les tas » (jour 21) ne revendique plus « construire la bande numérique jusqu’à dix » : l’enfant y range trois tas du plus petit au plus grand, il ne construit aucune bande. C’est exactement le défaut que la semaine 4 a fait corriger deux fois, aux jours 15 et 16, et la règle écrite à cette occasion le signale ici aussi. L’objectif de comparaison des quantités, que la tâche travaille réellement, reste porté par l’activité et par sa voisine « Où est-il sur la bande ? ». La construction de la bande reste introduite au jour 15 et reprise au jour 16, donc le plan annuel ne bouge pas. Cette semaine n’a toujours pas reçu sa relecture pédagogique complète."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 4,
+      "reviewedOn": "2026-09-20",
+      "reviewKind": "ai-assisted",
+      "reviewer": "ChatGPT",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Passe de confirmation finale de la semaine 4, sur le paquet canonique régénéré après les corrections du deuxième passage. Les quatre corrections demandées au deuxième passage ont été revérifiées une à une : la chronologie de l’histoire porte désormais l’objectif écrit pour une histoire ; les deux attributions autour de la bande numérique décrivent la tâche que l’enfant fait réellement ; « Marche sur les formes » gagne vraiment son objectif d’équilibres construits par une combinaison d’actions ; et « D’un animal à l’autre » est devenu une course continue, debout. Le point de sécurité du « Jeu des appuis » — plus de tissu libre dans le passage — est accepté lui aussi. Les corrections du premier passage ont été revérifiées dans le même mouvement. Aucun nouveau défaut pédagogique n’a été trouvé. La semaine 4 est autorisée à l’approbation.",
+      "corrections": "Aucune. La semaine est acceptée telle quelle. Les vingt leçons passent de « review » à « approved », avec des empreintes calculées à neuf sur le texte exact que cette passe a lu ; aucune empreinte n’est reprise d’une passe précédente. Les entrées antérieures de cette semaine — quatre corrections héritées des semaines 1 à 3, puis deux relectures complètes conclues « accepted-with-modifications » — sont conservées telles qu’elles ont été écrites : cette semaine a demandé trois lectures, et l’historique le dit."
     }
   ]
 }

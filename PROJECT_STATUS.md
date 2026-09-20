@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-20
-Branch:     fix/maternelle-3-week-4-second-review
-Commit:     develop at e60eaa3; main at 1b95480
+Branch:     feat/approve-maternelle-3-week-4
+Commit:     develop at d7b8a01; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -575,11 +575,11 @@ GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891,
 
 ## Content Status
 
-| Class           | Curriculum mapping     | Week 1                                                                                             | Week 2      | Full year   |
-| --------------- | ---------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| 1ère maternelle | DONE (band `before-4`) | Not started                                                                                        | Not started | Not started |
-| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                                        | Not started | Not started |
-| 3ème maternelle | DONE (band `from-5`)   | Weeks 1–3 **approved** (56); Week 4 reviewed once and corrected (20); Week 5 not yet reviewed (12) | Not started | Not started |
+| Class           | Curriculum mapping     | Week 1                                                    | Week 2      | Full year   |
+| --------------- | ---------------------- | --------------------------------------------------------- | ----------- | ----------- |
+| 1ère maternelle | DONE (band `before-4`) | Not started                                               | Not started | Not started |
+| 2ème maternelle | DONE (band `from-4`)   | Not started                                               | Not started | Not started |
+| 3ème maternelle | DONE (band `from-5`)   | Weeks 1–4 **approved** (76); Week 5 not yet reviewed (12) | Not started | Not started |
 
 DRC 2026–2027 calendar data: DONE (official MINEDU-NC calendar and Ordonnance n° 23/042; 189 instructional days).
 Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 official objectives and 529 success examples** imported with provenance.
@@ -646,47 +646,25 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  3ème maternelle Week 4 — second pedagogical pass, four corrections.
-            - All four were one fault: the objective was plausible and the task did not
-              prove it.
-            - « Les étapes de l'histoire » ordered a story under the objective for a process
-              the child had lived. Both its activities now carry the story-chronology
-              objective. The lived-process objective is not lost: day 16 introduces it on an
-              activity that really is lived — preparing a meal, washing, dressing — two days
-              inside its window. The cost is visible: it now appears once in September
-              instead of three times, and the coverage report says so.
-            - « D'un animal à l'autre » kept the endurance objective and finally earns it.
-              The old task crossed the room « comme le lézard », which is done on the floor,
-              and its own move list still said « ramper ». Goat, chick and heron all run
-              upright now, the cue changes without stopping, and there is no speed, no race,
-              no stopwatch.
-            - Two number-strip mappings were broader than the task. « Je montre le nombre »
-              no longer claims to build the strip: the child hears the number, finds the
-              written numeral and shows the quantity on their fingers, which is the whole of
-              the association objective whose window opens that very day. « Le nombre caché »
-              loses the count-to-thirty rhyme it never performed and keeps the strip
-              objective, which the task now proves by completing the strip.
-            - « Marche sur les formes » walked and named; walking is not a new balance. It
-              stops under control, changes direction and alternates a long step with a side
-              step. The 19 September safety correction is kept word for word.
-            - The optional cloth in the stepping path of « Un pied, deux pieds » is gone: a
-              chalk line, a taped line or a line pointed out.
-            - One occurrence in Week 5: « Je range les tas » claimed strip construction for
-              ranking three piles. Corrected as a consequence and recorded as one. Week 5
-              still has not been read.
-            - 35 of 3,084 fields changed — 33 in Week 4, 2 in Week 5. 7 child-facing.
-              144 approved lessons, 0 lapsed, 0 digest mismatches.
-            ISSUE-011 prevented rather than recovered.
-            - Why the "prune around 40" advice never fired: nothing measured the count and
-              nobody owned the check. A threshold that is only written down is not one.
-            - The staging workflow now prunes before it pushes. The policy is a pure function
-              with 14 unit tests, because a deletion cannot be rehearsed against a real
-              registry. It protects the deploying commit and the commit /api/health says
-              staging is serving, keeps the 20 newest, and refuses rather than guesses.
-            - Rehearsed against the real 37-image registry in --dry-run: listing, health
-              probe, selection and both refusal paths. Nothing was deleted.
+Completed:  3ème maternelle Week 4 is approved — 20/20, after three passes.
+            - ChatGPT's final pass found nothing: the four second-pass corrections held, and
+              the safety refinement held with them. Recorded as a seventh Week 4 entry,
+              `full-review` / `accepted`, with the six before it left exactly as written —
+              four inherited corrections and two passes that asked for changes.
+            - Approved through scripts/approve-week.ts, never by hand. The gate refused the
+              week until the accepted entry existed, which is the check working.
+            - All 20 digests computed fresh under the current definition. None carried
+              forward. 164 approvals now stand on 164 distinct digests, 0 lapses,
+              0 recompute mismatches.
+            - 3ème is 76/88; September overall 164/176; 12 lessons remain in review, all of
+              them Week 5, which has still never been read.
+            - Fixed on the way: approve-week.ts wrote unformatted JSON, so approving a week
+              dirtied six content files beyond the approval itself. It formats its own output
+              now, like the media and annual-plan generators.
+            - Week 5's package was regenerated mechanically. It was not reviewed.
 Validation: format, lint, typecheck, unit (342), content (31 files), pgTAP (152) on a fresh
             reset, build, E2E (28), both Docker images, client-bundle scan, 0 tracked .env*.
 Cost:       $0.
-Not done:   Week 4 is not approved — 0 of 20. Week 5 never reviewed. Beta gate 8 of 10.
+Not done:   Week 5 never reviewed — 0 of 12. Beta gate 9 of 10. No teacher has read any of
+            September (ISSUE-017). ISSUE-011 pruning still cannot authenticate in CI.
 ```

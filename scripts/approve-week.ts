@@ -19,6 +19,7 @@
  */
 import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
+import { format } from "prettier";
 import { generateSchoolDays } from "@/domain/calendar/school-days";
 import { lessonDigest } from "@/domain/lessons/review";
 import { generateDailyPlan } from "@/domain/programme/daily-plan";
@@ -123,7 +124,11 @@ for (const domain of DOMAINS) {
     touched = true;
   }
   if (touched && !dryRun) {
-    writeFileSync(path.join(ROOT, file), `${JSON.stringify(parsed, null, 2)}\n`, "utf8");
+    // Formatted the way `npm run format:check` expects, like the other generators. Raw
+    // JSON.stringify output left the committed file and this script's output one
+    // `prettier --write` apart, so approving a week dirtied six files beyond the approval.
+    const full = path.join(ROOT, file);
+    writeFileSync(full, await format(JSON.stringify(parsed, null, 2), { filepath: full }), "utf8");
   }
 }
 
