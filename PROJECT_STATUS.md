@@ -253,8 +253,8 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 ### P1 — Soon
 
 1. Official Cycle 1 curriculum source, then the competency catalogue (PD-004), needed for Task 7 content.
-2. Monitor the container registry image count (50 per repository on Hobby, ISSUE-011 — the cap
-   was reached on 2026-09-19 and pruned back to 35; it is at 36).
+2. **Prune the container registry by hand before it reaches 50** (ISSUE-011). It is at **43**
+   on 2026-09-20, CI cannot read the count, and the cap blocks `develop` when it is hit.
 3. Optional hardening: disable the unused legacy `anon` / `service_role` keys on both Supabase projects.
 
 ### P2 — Later
@@ -309,7 +309,7 @@ Recommended action: for IPv4 tooling use the session pooler (pooler host, port 5
 
 ### ISSUE-011 — Container registry: 50 images per repository on Hobby
 
-Severity: Medium (Monitor) · Status: **Implemented / awaiting credential** — fired 2026-09-19, pruned once with owner approval, prevention built 2026-09-20 and not yet able to authenticate
+Severity: **High (act before ~50)** · Status: **Implemented / blocked on platform access** — fired 2026-09-19, pruned once by hand, prevention built and proven 2026-09-20, and the registry API turns out not to be reachable by a Vercel access token at all
 
 Description: Every staging deployment pushes one image (about 73 MB) to the registry repository
 `dockerfile`. Hobby allows 50 images per repository, and no automatic cleanup is documented. There
@@ -395,17 +395,55 @@ dedicated token (**200**), the health probe, candidate selection (10 oldest chos
 the live commit protected), the warning path below 45, and the hard-failure path at or above it.
 19 unit tests cover the policy.
 
-**What is still missing is only the secret.** Owner action, cost $0: create a Vercel access token
-scoped to the TEKA team and store it as `VERCEL_VCR_TOKEN` in the GitHub `staging` environment.
-Creating a token is an owner action (CLAUDE.md), so it is not done here. Until then the registry
-is watched by hand; it stands at **40 of 50** on 2026-09-20.
+**The secret now exists, and it is not enough (2026-09-20).** `VERCEL_VCR_TOKEN` was created
+scoped to the TEKA team and stored in the GitHub `staging` environment. The registry endpoint
+still answers **404 `VCR Repository not found`**.
 
-**This issue is not resolved.** It is `implemented / awaiting credential`: no real pruning cycle
-has ever run automatically, and it will not be called resolved until one has.
+The deploy's own diagnostic narrows it down, and the answer is not the one that was expected:
 
-Recommended action: create `VERCEL_VCR_TOKEN`, then watch one deploy cross 40 and prune itself.
-A deletion outside the workflow still needs owner approval. Note the real cost of hitting the cap:
-`develop` is blocked, because every subsequent merge re-triggers the same failing deploy.
+| probe, with `VERCEL_VCR_TOKEN`             | result                                                         |
+| ------------------------------------------ | -------------------------------------------------------------- |
+| `GET /v9/projects/{teka-edu}?teamId=…`     | **200** — the token reaches the right team and project         |
+| `GET /v2/user`                             | 404 — it is a team-scoped token, not a user token, as intended |
+| `GET /v1/vcr/repository/dockerfile/images` | **404 `VCR Repository not found`**                             |
+
+So the scope is correct. The same request from the Vercel CLI, authenticated as a _user session_,
+returns **200** and lists all 43 images. Two different access tokens — one project-scoped, one
+team-scoped — both get 404 where a user session gets 200.
+
+**The reading: `/v1/vcr/*` appears not to be reachable by a Vercel access token at all.** It is
+undocumented, the CLI reaches it through a user session, and "not found" rather than "forbidden"
+is what an endpoint returns when it resolves scope differently for tokens. Creating a third token
+would not change this, which is why none was created.
+
+**Consequences, stated plainly.**
+
+- The count **cannot be read in CI**, so the near-cap guard cannot fire either. The registry is
+  back to filling unobserved, one image per merge into `develop`.
+- It stands at **43 of 50** on 2026-09-20. That is about **seven merges** of headroom.
+- `REGISTRY_PRUNE_ENABLED` is deliberately left unset. Arming it would change nothing, because
+  the listing fails before any deletion is considered.
+
+**Until the platform question is answered, pruning is manual.** The owner is authenticated in the
+Vercel CLI and can prune in one command; the images to remove are the oldest that no retained
+deployment or alias uses:
+
+```sh
+vercel vcr image ls dockerfile --project teka-edu --scope teka10     # count and ages
+vercel vcr image rm dockerfile <image-id> --project teka-edu --scope teka10
+```
+
+**Worth asking Vercel:** whether `/v1/vcr/repository/*` can be used with an access token, and if
+so under which scope. If the answer is yes, the automation needs no change beyond the credential:
+everything else is built, tested and proven.
+
+**This issue is not resolved.** It is `implemented / blocked on platform access`: no automatic
+pruning cycle has ever run, and it will not be called resolved until one has.
+
+Recommended action: prune by hand before the count reaches 50, and ask Vercel whether the
+registry API can be used with an access token. A deletion still needs owner approval. Note the
+real cost of hitting the cap: `develop` is blocked, because every subsequent merge re-triggers the
+same failing deploy.
 
 ### ISSUE-012 — Supabase Free projects pause after about 7 days of low activity
 
