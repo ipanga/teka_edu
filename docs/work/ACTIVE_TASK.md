@@ -10,12 +10,13 @@
 
 ## Task
 
-Apply ChatGPT's first-pass corrections to 3ème maternelle Week 5 and return it for a final pass.
+Approve 3ème maternelle Week 5, close the September pedagogy gate, and clear the registry
+near-cap first.
 
 ## Objective
 
-Every Week 5 objective is proved by the task the child actually performs, and nothing the review
-accepted is disturbed.
+September is approved in full on digests computed from the exact text that was read, and the
+registry has room again before another image is pushed.
 
 ## Status
 
@@ -23,11 +24,11 @@ accepted is disturbed.
 
 ## Branch
 
-`fix/maternelle-3-week-5-first-review`
+`feat/approve-maternelle-3-week-5`
 
 ## Base Branch
 
-`develop` at `5ff352b`
+`develop` at `dd1d2fe`
 
 ## Started
 
@@ -35,45 +36,43 @@ accepted is disturbed.
 
 ## Last Checkpoint
 
-2026-09-20 — 8 Week 5 corrections (20 of 3,084 fields), 8 reusable rules each proved against the
-pre-correction content, 164 approvals untouched, full local suite green.
+2026-09-20 — registry 45 → 35 by hand; Week 5 approved 12/12 through the gate; September
+176/176 on 176 distinct digests, 0 lapses; full local suite green.
 
 ## Scope
 
-- The eight corrections ChatGPT asked for, and every other occurrence the new rules force.
-- The shared material-label defect, fixed in the data rather than in four generated documents.
-- Regeneration: 11 review packages, the change audit, pgTAP reference test, data migration.
+- Clear the registry near-cap before creating another deployment image.
+- Record the final `accepted` pass and approve Week 5 through `scripts/approve-week.ts`.
+- Regenerate the 11 packages, the pgTAP reference test and the data migration.
 
 ## Out of Scope
 
-- Approving Week 5. All 12 stay `review`.
-- Anything the review accepted: the read-aloud-for-pleasure design, the English-scaffold policy,
-  pause and early-stop behaviour, durations, screen-time policy, small-object safety notes.
-- ISSUE-011, which is a separate infrastructure blocker.
-- October, 2ème maternelle, production, `main`, anything paid.
+- October and 2ème maternelle. September closing does not start them.
+- Production: still unconfigured, still undeployed, deliberately.
+- Creating another Vercel token, or arming `REGISTRY_PRUNE_ENABLED` while CI cannot read the
+  registry.
 
 ## Product Decisions
 
-- Where an objective sat on the wrong sibling, the objective moved. Where the task genuinely did
-  not do the work — rhyme, the day cards, the movement chain — the task changed instead.
-- « Deux tas pour faire dix » claims only the decomposition. The counting that confirms each pile
-  is the adult's check, not the child's task, so it under-claims rather than over-claims.
-- The « À défaut » label belongs to the renderer and the content to the data. Fixing the data
-  changed four approved weeks' _packages_ and no approved _lesson_: the digest covers material
-  codes, not their prose.
-- Two rules were widened, not the content narrowed, when they fired on approved lessons that do
-  the work without the obvious words.
+- The prune used the repository's tested policy to **choose** and the CLI to **delete**. The
+  choice is the dangerous half, and it should not be improvised just because the deletion has
+  to be manual.
+- The approval gate remains the only way a week may be approved. It refused Week 5 until the
+  final entry existed.
+- Two state tests were restated rather than relaxed. « every unapproved lesson has no review
+  record » was guarded by « there is at least one », and September leaves none — so it is now
+  stated in both directions, which holds on real data today and revives when October is
+  authored.
 
 ## Completed
 
-- [x] Week 5's **first actual full review** recorded; its three inherited entries left as
-      `consequence`, not relabelled as readings
-- [x] 8 corrections — six objective mappings, the rhyme that had to become a rhyme, the day
-      cards that must not test reading, the movement chain, the contradicted choice, the label
-- [x] **8 reusable rules**, each proved against the pre-correction content, each naming exactly
-      the activity the review flagged
-- [x] **20 of 3,084 fields changed**, all Week 5, 2 child-facing; 1ère maternelle byte-identical
-      across 2,552 fields; **164 approvals, 0 lapsed, 0 mismatches**
+- [x] Registry **45 → 35** by hand: the 10 oldest, 6–8 days old; live staging image and the 20
+      newest protected, and the live image verified present afterwards
+- [x] All 19 corrected Week 5 items re-verified in canonical content before approving
+- [x] Fifth Week 5 history entry: `full-review` / `accepted`, 2026-09-20, ChatGPT, ai-assisted
+- [x] **Week 5 approved 12/12**; the gate refused it first; all 12 digests computed fresh
+- [x] **September complete: 176/176 approved, 176 distinct digests, 0 lapses, 0 mismatches**
+- [x] **10 of 10 weekly packages accepted**; 0 lessons left in `review`
 
 ## In Progress
 
@@ -81,10 +80,9 @@ pre-correction content, 164 approvals untouched, full local suite green.
 
 ## Remaining
 
-- [ ] Hand the regenerated `docs/review/2026-2027-maternelle-3-semaine-5.md` back to ChatGPT for
-      its final pass. **The owner's action, not a step this repository can take.**
-- [ ] ISSUE-011: prune the registry by hand before it reaches 50, and ask Vercel whether the
-      registry API accepts an access token. **The owner's action.**
+- [ ] The remaining Beta 0.1 gates are all production configuration — none pedagogical.
+      See `docs/releases/BETA_0_1_READINESS.md` section 5. **Owner decisions.**
+- [ ] ISSUE-011 stays open: CI still cannot read the registry.
 
 ## Validation State
 
@@ -103,19 +101,19 @@ pre-correction content, 164 approvals untouched, full local suite green.
 
 ## Database State
 
-- Local: 26 migrations; `db reset` + 152 pgTAP assertions pass.
-- DEV: not yet updated with `20260920200532_week5_review_corrections.sql`.
+- Local: 27 migrations; `db reset` + 152 pgTAP assertions pass.
+- DEV: not yet updated with `20260920204404_approve_maternelle_3_week_5.sql`.
 - PROD: untouched.
 
 ## Deployment State
 
-- Staging: at `5ff352b`; not yet redeployed with these corrections.
-- Container registry: **44 of 50**, unreadable from CI, pruned only by hand (ISSUE-011).
+- Staging: at `dd1d2fe`; not yet redeployed with the approval.
+- Container registry: **35 of 50** after the manual prune.
 - Production: disabled; `main` at `1b95480`.
 
 ## Git State
 
-- `fix/maternelle-3-week-5-first-review`, branched from `develop` at `5ff352b`.
+- `feat/approve-maternelle-3-week-5`, branched from `develop` at `dd1d2fe`.
 
 ## Blockers
 
@@ -123,10 +121,11 @@ None for the content. ISSUE-011 remains blocked on platform access and is tracke
 
 ## User Decisions Needed
 
-1. **Week 5 goes back to ChatGPT** for its final pass. If it passes, September closes for both
-   levels and the Beta 0.1 pedagogy gate reaches 10 of 10.
-2. **Prune the registry by hand** before it reaches 50, and ask Vercel whether
-   `/v1/vcr/repository/*` accepts an access token (ISSUE-011).
+**The next gate is yours, and it is no longer pedagogical.** Everything remaining in
+`docs/releases/BETA_0_1_READINESS.md` section 5 is production configuration: the production
+Vercel token, the production environment variables, the public URL, the Deployment Protection
+model, migrating PROD, loading content into PROD, and rehearsing the rollback. None of it is
+started, and none of it should be until you decide to open production.
 
 ## Exact Resume Point
 
@@ -134,8 +133,9 @@ Commit, open the PR into `develop`, wait for CI, squash-merge, verify staging.
 
 ## Resume Verification
 
-1. `git branch --show-current`;
-2. `git log -n 5 --oneline`;
+1. `git branch --show-current` is `feat/approve-maternelle-3-week-5`;
+2. `git log -n 5 --oneline` — branch point is `dd1d2fe`;
 3. `git status --short` — read uncommitted work before discarding it;
-4. `gh pr list --head fix/maternelle-3-week-5-first-review` — a PR may already exist;
-5. `gh run list --branch develop --limit 3` before assuming a deployment is needed.
+4. `gh pr list --head feat/approve-maternelle-3-week-5` — a PR may already exist;
+5. `npx supabase migration list --linked` before assuming DEV needs the migration;
+6. `gh run list --branch develop --limit 3` before assuming a deployment is needed.

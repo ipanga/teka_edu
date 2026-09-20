@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 1 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 2 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-15 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -68,6 +68,12 @@ Première vraie relecture pédagogique complète de la semaine 5. Les trois entr
 
 **Suites données :** Toutes appliquées, avec des objectifs officiels existants uniquement et sans ouvrir un objectif avant sa fenêtre du plan annuel. 1) « J’en ai enlevé » ne porte plus que la composition-décomposition ; « Je refais le tas » porte en plus la constitution d’une collection, qu’il fait réellement. 2) « Devine le mot » garde les rimes, que le résumé de la leçon promettait déjà, et les travaille pour de bon : deux paires à la fin, « chapeau… gâteau » et « tomate… patate », construites sur des mots que le mois a déjà employés. Rien à lire, aucune lettre, et la durée ne bouge pas. 3) « Ma semaine en ordre » précise que l’adulte prépare les sept papiers et lit les noms à voix haute autant de fois qu’il le faut : ce qu’on regarde est l’ordre des jours, pas la lecture. 4) « Le grand jeu du comptage » ne porte plus que le dénombrement ; « Deux tas pour faire dix » porte la composition-décomposition. Le dénombrement n’y est pas revendiqué : le comptage qui vérifie chaque tas est la vérification de l’adulte, pas la tâche de l’enfant. 5) « Tous les mouvements du mois » demande maintenant deux ou trois mouvements, d’abord séparément, puis enchaînés sans s’arrêter et terminés immobile, le temps de compter jusqu’à trois. Ni vitesse, ni concours, ni point ; tout reste au sol, et s’il faut écarter quelque chose, c’est l’adulte qui le déplace. 6) La comptine porte « dire ou chanter au moins dix comptines » et le dessin porte « dessiner pour représenter un personnage ou un évènement fictif ». La leçon continue de porter les deux, parce qu’elle fait les deux. 7) Le choix de l’enfant est préservé : n’importe quelle comptine du mois convient, et « Les formes qui dansent » n’est proposée que s’il n’arrive pas à choisir. 8) L’étiquette « À défaut » est retirée des deux matériels : elle appartient au document, pas à la donnée. Aucune leçon approuvée n’a changé : 164 approbations tiennent, 0 empreinte caduque. Aucune leçon n’est approuvée ici : les 12 restent en relecture.
 
+### 2026-09-20 — ChatGPT · `accepted` (ai-assisted)
+
+Passe de confirmation finale de la semaine 5, sur le paquet canonique régénéré après la passe « accepted-with-modifications » du même jour. Les huit corrections demandées ont été revérifiées une à une dans le paquet régénéré et elles y sont : les objectifs de « Combien manque-t-il ? » et de « Tout ce que je sais compter » décrivent maintenant l’activité qui les porte ; « Devine le mot » travaille vraiment une rime, avec deux paires orales construites sur des mots du mois ; « Ma semaine en ordre » dit que l’adulte lit les jours à voix haute et que ce qu’on regarde est l’ordre, pas la lecture ; « Tous les mouvements du mois » enchaîne deux ou trois mouvements et finit immobile ; « Je chante et je dessine » a rendu à chaque activité son objectif, la comptine au chant et le dessin au dessin ; le choix de la comptine est redevenu un choix ; et l’étiquette « À défaut » n’est plus répétée. Aucun nouveau défaut pédagogique n’a été trouvé. La semaine 5 est autorisée à l’approbation.
+
+**Suites données :** Aucune. La semaine est acceptée telle quelle. Les douze leçons passent de « review » à « approved », avec des empreintes calculées à neuf sur le texte exact que cette passe a lu ; aucune empreinte n’est reprise d’une passe précédente. Les entrées antérieures de cette semaine — trois corrections héritées des semaines 1 et 4, puis la première relecture complète conclue « accepted-with-modifications » — sont conservées telles qu’elles ont été écrites. Avec cette approbation, septembre est relu et accepté en entier pour la 1ère et la 3ème maternelle.
+
 ## Jour 20 — 2026-09-28
 
 **Durée totale : 35 min** · 4 séances · jour 10 du rythme
@@ -88,7 +94,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler de ce qu’on a fait à quelqu’un qui ne l’a pas vu._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** L’enfant présente son dessin comme à quelqu’un qui ne sait rien. C’est ce qui l’oblige à employer des phrases complètes.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -205,7 +211,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Retrouver ce qui a été enlevé d’une collection._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** L’enfant connait le tout, voit une partie, cherche l’autre. Laissez-lui le temps : ce n’est pas un jeu de rapidité.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -300,7 +306,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Danser en isolant une partie du corps._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Danse assise possible : parfaite quand il n’y a pas de place ou qu’il est tard.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -346,7 +352,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dire la date du jour et situer la journée dans la semaine._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Reprise de tout ce qui touche au temps ce mois-ci : la date, les jours, l’ordre. L’enfant dit, vous vérifiez. Savoir lire les jours n’est pas demandé : lisez-les-lui.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -420,7 +426,7 @@ l’autre — l’appareil est alors le sien._
 
 _Reconnaitre un mot à partir de ses syllabes, puis repérer une rime._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Jeu d’écoute pur. Dites les syllabes séparées et laissez l’enfant recoller le mot.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -521,7 +527,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Ranger des collections de la plus petite à la plus grande._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Ranger trois tas dans l’ordre demande de comparer deux à deux. Faites compter chaque tas avant de ranger.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -612,7 +618,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Reproduire exactement le geste de quelqu’un d’autre._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Face à face, lentement. C’est un jeu de coopération : si l’autre ne suit pas, c’est qu’on va trop vite.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -668,7 +674,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Reprendre le corps, ses articulations et son mouvement._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Dernière séance du mois sur le corps. Comparez avec le dessin du jour 1 si vous l’avez gardé : c’est le meilleur moyen de lui montrer ses progrès.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -740,7 +746,7 @@ l’autre — l’appareil est alors le sien._
 
 _Reprendre, en parlant, ce que le mois a apporté._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Dernière séance du mois. Rien de nouveau : l’enfant montre ce qu’il sait faire. Terminez en lui disant précisément ce qu’il sait dire maintenant.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -854,7 +860,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Reprendre en jeu les mathématiques du mois._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Dernière séance du mois : uniquement des choses déjà faites. Terminez en nommant ce que l’enfant sait faire.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -949,7 +955,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Relier en une suite les actions apprises en septembre._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Dernière séance du mois : l’enfant choisit, vous suivez. Ce qui est nouveau n’est pas le mouvement, c’est de le relier au suivant sans s’arrêter.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1006,7 +1012,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Reprendre le répertoire de comptines et le dessin du mois._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Dernière séance du mois. L’enfant choisit sa comptine — celle qu’il veut — et dessine ce qu’elle raconte. La comptine imprimée ci-dessous n’est là que s’il n’arrive pas à choisir.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

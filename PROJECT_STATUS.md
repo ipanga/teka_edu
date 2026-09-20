@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-20
-Branch:     fix/maternelle-3-week-5-first-review
-Commit:     develop at 5ff352b; main at 1b95480
+Branch:     feat/approve-maternelle-3-week-5
+Commit:     develop at dd1d2fe; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -253,8 +253,8 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 ### P1 — Soon
 
 1. Official Cycle 1 curriculum source, then the competency catalogue (PD-004), needed for Task 7 content.
-2. **Prune the container registry by hand before it reaches 50** (ISSUE-011). It is at **43**
-   on 2026-09-20, CI cannot read the count, and the cap blocks `develop` when it is hit.
+2. **Prune the container registry by hand before it reaches 50** (ISSUE-011). Pruned to **35**
+   on 2026-09-20; CI still cannot read the count, and the cap blocks `develop` when it is hit.
 3. Optional hardening: disable the unused legacy `anon` / `service_role` keys on both Supabase projects.
 
 ### P2 — Later
@@ -331,6 +331,13 @@ fail because of it, and no one owned the check. One image goes in per merge into
 September merged often enough to go from 4 images to 50 in eight days — so the registry passed 40
 and reached 50 between two glances at a document nobody had reason to open. A threshold that is
 only written down is not a threshold.
+
+**Pruned again by hand, 2026-09-20.** The registry reached **45 of 50**, the configured near-cap
+line, and the guard that should have stopped the deploy could not fire because CI cannot read the
+count. With the owner's approval the repository's own policy chose the images — the 10 oldest,
+6–8 days old, with the live staging image and the 20 newest protected — and the Vercel CLI
+deleted them. **45 → 35**, live image verified present afterwards, staging alias unchanged and
+alive. This is the second manual prune; it is what the automation exists to replace.
 
 **Preventive fix (2026-09-20).** The staging workflow now prunes **before** it pushes, in a step
 that sits between the deployment-count guard and `vercel deploy`:
@@ -638,11 +645,11 @@ GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891,
 
 ## Content Status
 
-| Class           | Curriculum mapping     | Week 1                                                    | Week 2      | Full year   |
-| --------------- | ---------------------- | --------------------------------------------------------- | ----------- | ----------- |
-| 1ère maternelle | DONE (band `before-4`) | Not started                                               | Not started | Not started |
-| 2ème maternelle | DONE (band `from-4`)   | Not started                                               | Not started | Not started |
-| 3ème maternelle | DONE (band `from-5`)   | Weeks 1–4 **approved** (76); Week 5 not yet reviewed (12) | Not started | Not started |
+| Class           | Curriculum mapping     | Week 1                                                             | Week 2      | Full year   |
+| --------------- | ---------------------- | ------------------------------------------------------------------ | ----------- | ----------- |
+| 1ère maternelle | DONE (band `before-4`) | Not started                                                        | Not started | Not started |
+| 2ème maternelle | DONE (band `from-4`)   | Not started                                                        | Not started | Not started |
+| 3ème maternelle | DONE (band `from-5`)   | September **approved in full** — 88/88, 5 weekly packages accepted | Not started | Not started |
 
 DRC 2026–2027 calendar data: DONE (official MINEDU-NC calendar and Ordonnance n° 23/042; 189 instructional days).
 Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 official objectives and 529 success examples** imported with provenance.
@@ -709,34 +716,32 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  3ème maternelle Week 5 — its first real reading, 8 corrections applied.
-            - Its three earlier history entries were inherited corrections from Weeks 1 and 4,
-              not readings. The structure is accepted; the week stays in review.
-            - Six of the eight were one fault: the objective was plausible and the activity did
-              not prove it. Three pairs of sibling activities had objectives on the wrong one,
-              and « Je chante et je dessine » had simply swapped them — the song carrying the
-              drawing objective and the drawing carrying the song one. The lesson-level pair
-              looked right the whole time, which is how it survived.
-            - « Devine le mot » claimed rhyme and assonance while only cutting words into
-              syllables. The objective stays, because the lesson summary already promised it,
-              and the task now ends with two pairs built from words the month already used.
-            - « Ma semaine en ordre » risked failing a child on reading for a task about the
-              order of the days. The adult prepares the cards and reads them aloud now.
-            - « Tous les mouvements du mois » let the child show three movements and claimed a
-              combination of actions. They are chained now, and the chain ends held still.
-            - The child's choice of rhyme was contradicted by a printed one. Any rhyme of the
-              month counts; the printed one is offered only if the child cannot decide.
-            - Two materials restated the « À défaut » label the document already adds, so four
-              weekly packages read « À défaut : À défaut : ». Fixed in the data. No approval
-              lapsed: the digest covers material codes, not their prose.
-            - 20 of 3,084 fields changed, all in Week 5; 2 child-facing. 1ère maternelle:
-              2,552 fields compared, all identical. 164 approvals, 0 lapsed, 0 mismatches.
-            - 8 reusable rules, each proved against the pre-correction content. Two were
-              widened first: approved lessons constitute a collection without naming a number,
-              and decompose without using the word.
+Completed:  3ème maternelle Week 5 is approved — 12/12. September is complete.
+            - ChatGPT's final pass found nothing: the eight first-pass corrections held.
+              Recorded as a fifth Week 5 entry, full-review / accepted, with the four before
+              it left as written — three inherited corrections and one pass that asked for
+              changes.
+            - Approved through scripts/approve-week.ts, which refused the week until the
+              accepted entry existed. All 12 digests computed fresh; none carried forward.
+            - Before approving, all 19 corrected items were re-verified in canonical content:
+              the six objective mappings, the rhyme that now works a rhyme, the day cards that
+              may be read aloud, the movement chain that ends held still, the rhyme choice
+              that is a real choice, and the absent duplicate label.
+            SEPTEMBER PEDAGOGY GATE CLOSED.
+            - 1ère 88/88, 3ème 88/88, total 176/176 approved on 176 distinct digests.
+            - 10 of 10 weekly packages accepted. 0 lessons remain in review.
+            - 0 lapsed digests, 0 recompute mismatches, 0 copied digests.
+            - It closes the pedagogy gate and nothing else: production is still unconfigured
+              and undeployed, and no teacher has read any of the 176 (ISSUE-017).
+            ISSUE-011: the registry was pruned by hand, with the repository's own policy
+            choosing the images and the Vercel CLI deleting them.
+            - 45 -> 35. The 10 oldest, all 6-8 days old. The live staging image and the 20
+              newest were protected and verified present afterwards.
+            - Still not automated: CI cannot read the registry, so the issue stays open as
+              implemented / blocked on platform access.
 Validation: format, lint, typecheck, unit (355), content (31 files), pgTAP (152) on a fresh
             reset, build, E2E (28), both Docker images, client-bundle scan, 0 tracked .env*.
 Cost:       $0.
-Not done:   Week 5 is not approved — 0 of 12. Beta gate 9 of 10. No teacher has read any of
-            September (ISSUE-017). ISSUE-011 pruning still cannot authenticate in CI.
+Next:       The remaining Beta 0.1 gates are all production configuration — none of them
+            pedagogical. See docs/releases/BETA_0_1_READINESS.md section 5.
 ```

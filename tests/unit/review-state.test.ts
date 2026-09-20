@@ -70,11 +70,10 @@ describe("what a batch of content has actually been through", () => {
     expect(stateOf("maternelle-3", 3, ["m3-math-10"])).toBe("approved");
     // 3ème Week 4 is approved too, after three passes.
     expect(stateOf("maternelle-3", 4, ["m3-lang-16"])).toBe("approved");
-    // 3ème Week 5 has now had its first full reading, which accepted it with modifications.
-    // It is reviewed and not approved, which are different things.
-    const week5 = stateOf("maternelle-3", 5, ["m3-lang-21"]);
-    expect(week5).toBe("reviewed");
-    expect(week5).not.toBe("approved");
+    // 3ème Week 5 is approved too, after two passes. September is now complete for both
+    // levels, so every week in this list is approved — which is exactly why the rules below
+    // are stated as equivalences rather than as counts.
+    expect(stateOf("maternelle-3", 5, ["m3-lang-21"])).toBe("approved");
   });
 });
 
@@ -250,14 +249,21 @@ describe("the approvals granted to 3ème maternelle Week 1 are protected", () =>
     expect(lessonDigest(lesson, poisoned)).not.toBe(before);
   });
 
-  it("leaves every unapproved lesson without a review record at all", () => {
-    const unapproved = data.lessons.filter(
-      (l) => l.levelIds.includes("maternelle-3") && l.status !== "approved",
-    );
-    expect(unapproved.length).toBeGreaterThan(0);
-    for (const lesson of unapproved) {
-      expect(lesson.status, lesson.id).toBe("review");
-      expect(lesson.review, lesson.id).toBeNull();
+  it("gives a review record to approved lessons, and to nothing else", () => {
+    // This used to be stated over the unapproved lessons, guarded by « there is at least one ».
+    // September is now complete, so there are none left and that guard would have had to be
+    // deleted — which would have left the rule passing over an empty list for the rest of the
+    // year. Stated in both directions it holds on real data today, and it comes back to life
+    // on its own as soon as October is authored.
+    const lessons = data.lessons.filter((l) => l.levelIds.includes("maternelle-3"));
+    expect(lessons.length).toBeGreaterThan(0);
+    for (const lesson of lessons) {
+      if (lesson.status === "approved") {
+        expect(lesson.review, lesson.id).not.toBeNull();
+      } else {
+        expect(lesson.status, lesson.id).toBe("review");
+        expect(lesson.review, lesson.id).toBeNull();
+      }
     }
   });
 });
