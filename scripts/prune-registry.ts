@@ -105,6 +105,49 @@ async function listImagesResponse(): Promise<Response> {
   throw last instanceof Error ? last : new Error(String(last));
 }
 
+/**
+ * When the registry cannot be listed, say which of the two causes it is.
+ *
+ * A 404 from the registry endpoint reads the same whether the token is scoped to the wrong
+ * account entirely or reaches the project and simply may not manage its registry — and those need
+ * opposite fixes. Two harmless reads separate them, and only HTTP statuses are printed: no
+ * response body, no token, nothing that could carry a secret.
+ */
+async function explainFailure(): Promise<void> {
+  const probes: [string, string][] = [
+    [
+      "the project",
+      `/v9/projects/${encodeURIComponent(project)}?teamId=${encodeURIComponent(team)}`,
+    ],
+    ["a user account", "/v2/user"],
+  ];
+  const seen: Record<string, number> = {};
+  for (const [label, path] of probes) {
+    try {
+      const response = await fetch(`${API}${path}`, {
+        headers: { Authorization: `Bearer ${token}` },
+        signal: AbortSignal.timeout(30_000),
+      });
+      seen[label] = response.status;
+      console.log(`  can it read ${label}? HTTP ${response.status}`);
+    } catch {
+      console.log(`  can it read ${label}? request failed`);
+    }
+  }
+  if (seen["the project"] === 200) {
+    console.log(
+      "  → The credential reaches this project, so its scope is right and the registry API is " +
+        "what it may not use. Recreating the token will not help; the access it needs is the " +
+        "one that can manage the project's container registry.",
+    );
+  } else if (seen["the project"] !== undefined) {
+    console.log(
+      "  → The credential cannot even read this project, so it is scoped to the wrong account " +
+        "or team. Recreate it scoped to the team that owns this project, not a personal account.",
+    );
+  }
+}
+
 async function listImages(): Promise<RegistryImage[]> {
   const response = await listImagesResponse();
   const parsed: unknown = await response.json();
@@ -249,10 +292,15 @@ try {
   images = await listImages();
   knownCount = images.length;
 } catch (error) {
+  const which = usingDedicatedToken
+    ? "dedicated VERCEL_VCR_TOKEN"
+    : "deploy token (no VERCEL_VCR_TOKEN set)";
+  console.log(`The registry could not be listed with the ${which}. Narrowing it down:`);
+  await explainFailure();
   giveUp(
-    `the registry could not be listed with the ${
-      usingDedicatedToken ? "dedicated VERCEL_VCR_TOKEN" : "deploy token (no VERCEL_VCR_TOKEN set)"
-    } (${error instanceof Error ? error.message : error})`,
+    `the registry could not be listed with the ${which} (${
+      error instanceof Error ? error.message : error
+    })`,
   );
 }
 
