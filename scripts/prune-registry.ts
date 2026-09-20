@@ -21,17 +21,14 @@
  * Environment: VERCEL_TOKEN, VERCEL_PROJECT_ID, VERCEL_ORG_ID, GITHUB_SHA, and STAGING_URL
  * (with VERCEL_AUTOMATION_BYPASS_SECRET when the deployment is protection-gated).
  */
-import { execFile } from "node:child_process";
-import { promisify } from "node:util";
 import {
   HOBBY_REGISTRY_RETENTION,
   planRegistryPrune,
   type RegistryImage,
 } from "../lib/deploy/registry-retention";
 
-const run = promisify(execFile);
-
 const REPOSITORY = "dockerfile";
+const API = "https://api.vercel.com";
 const dryRun = process.argv.includes("--dry-run");
 
 function required(name: string): string {
@@ -45,23 +42,40 @@ function required(name: string): string {
 
 const token = required("VERCEL_TOKEN");
 const project = required("VERCEL_PROJECT_ID");
+const team = required("VERCEL_ORG_ID");
 const commit = required("GITHUB_SHA");
 
-/** The CLI writes progress to stderr and the JSON document to stdout. */
-async function vercel(args: readonly string[]): Promise<string> {
-  const { stdout } = await run("vercel", [...args, `--token=${token}`], {
-    maxBuffer: 32 * 1024 * 1024,
-    env: { ...process.env, VERCEL_TELEMETRY_DISABLED: "1" },
+/**
+ * The REST API, not the CLI.
+ *
+ * `vercel vcr …` also calls `/v2/user` and `/v1/teams` to resolve the scope, and the deploy token
+ * is project-scoped: those user-level endpoints answer "User not found" and the command exits 1
+ * before it ever reaches the registry. The rest of this workflow avoids `vercel inspect` and
+ * `vercel alias` for exactly the same reason. The registry endpoints themselves take teamId and
+ * projectId explicitly, so nothing needs resolving.
+ */
+const scope = `teamId=${encodeURIComponent(team)}&projectId=${encodeURIComponent(project)}`;
+
+async function api(path: string, init: RequestInit = {}): Promise<Response> {
+  const response = await fetch(`${API}${path}`, {
+    ...init,
+    headers: { ...init.headers, Authorization: `Bearer ${token}` },
+    signal: AbortSignal.timeout(60_000),
   });
-  return stdout;
+  if (!response.ok) {
+    throw new Error(
+      `${init.method ?? "GET"} ${path} -> ${response.status} ${await response.text()}`,
+    );
+  }
+  return response;
 }
 
 async function listImages(): Promise<RegistryImage[]> {
-  const stdout = await vercel(["vcr", "image", "ls", REPOSITORY, "--project", project, "--json"]);
-  const parsed: unknown = JSON.parse(stdout);
+  const response = await api(`/v1/vcr/repository/${REPOSITORY}/images?${scope}`);
+  const parsed: unknown = await response.json();
   const images = (parsed as { images?: unknown }).images;
   if (!Array.isArray(images)) {
-    throw new Error(`unexpected output from \`vercel vcr image ls\`: no images array`);
+    throw new Error("unexpected response from the registry API: no images array");
   }
   return images.map((raw) => {
     const image = raw as { id?: unknown; createdAt?: unknown; tags?: unknown };
@@ -173,7 +187,9 @@ for (const image of plan.delete) {
     console.log(`would delete ${label}`);
     continue;
   }
-  await vercel(["vcr", "image", "rm", REPOSITORY, image.id, "--project", project, "--yes"]);
+  await api(`/v1/vcr/repository/${REPOSITORY}/images/${encodeURIComponent(image.id)}?${scope}`, {
+    method: "DELETE",
+  });
   console.log(`deleted ${label}`);
 }
 
