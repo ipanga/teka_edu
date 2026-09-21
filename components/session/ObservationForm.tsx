@@ -89,6 +89,7 @@ export function ObservationForm({
   const [technical, setTechnical] = useState("");
   const [notes, setNotes] = useState("");
   const [saved, setSaved] = useState(false);
+  const [copied, setCopied] = useState<"" | "done" | "failed">("");
 
   const report = [
     `# Séance testée — jour ${day}, ${dateLabel}`,
@@ -117,6 +118,22 @@ export function ObservationForm({
     "",
     "_Test d’usage. Ce n’est pas une relecture pédagogique._",
   ].join("\n");
+
+  /**
+   * Copy the note out in one press.
+   *
+   * `navigator.clipboard` needs a secure context and a permission that a browser may refuse, so
+   * the textarea below stays exactly where it was: if this fails, the tester selects the text as
+   * before and nothing is lost. The button says which of the two happened rather than pretending.
+   */
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(report);
+      setCopied("done");
+    } catch {
+      setCopied("failed");
+    }
+  };
 
   const save = () => {
     try {
@@ -254,6 +271,25 @@ export function ObservationForm({
         <p className="text-base text-stone-600">
           Copiez ce texte dans le dépôt ou dans un message : c’est la trace du test.
         </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <button
+            type="button"
+            onClick={copy}
+            className="rounded-2xl border-2 border-emerald-700 px-6 py-3 text-lg font-semibold text-emerald-800"
+          >
+            Copier le compte rendu
+          </button>
+          {copied === "done" && (
+            <span role="status" className="text-base font-medium text-emerald-800">
+              Copié.
+            </span>
+          )}
+          {copied === "failed" && (
+            <span role="status" className="text-base font-medium text-stone-700">
+              La copie automatique n’a pas fonctionné : sélectionnez le texte ci-dessous.
+            </span>
+          )}
+        </div>
         <textarea
           readOnly
           value={report}

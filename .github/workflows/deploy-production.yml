@@ -57,6 +57,55 @@ jobs:
           done
           exit "$missing"
 
+      # ---- 0. Preflight: prove the credentials and the targets before changing anything -
+      # Both checks are read-only and both run *before* `supabase db push`. The release must
+      # not discover a wrong token, a wrong project or a paused database after it has already
+      # migrated production.
+      - name: Preflight — the deploy token reaches the intended Vercel project
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          project="$(curl -sS -o /tmp/project.json -w '%{http_code}' \
+            -H "Authorization: Bearer $VERCEL_TOKEN" \
+            "https://api.vercel.com/v9/projects/${VERCEL_PROJECT_ID}?teamId=${VERCEL_ORG_ID}")"
+          if [[ "$project" != "200" ]]; then
+            echo "::error::The production Vercel token could not read the configured project (HTTP $project). Check that it is scoped to the team that owns teka-edu, and that VERCEL_PROJECT_ID and VERCEL_ORG_ID are the production values."
+            exit 1
+          fi
+          name="$(jq -r '.name' /tmp/project.json)"
+          echo "Vercel project reached: $name"
+          if [[ "$name" != "teka-edu" ]]; then
+            echo "::error::The production secrets point at Vercel project '$name', not 'teka-edu'. Refusing to deploy."
+            exit 1
+          fi
+
+      - name: Preflight — Supabase PROD is healthy and is not the DEV project
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_ID }}
+        run: |
+          code="$(curl -sS -o /tmp/supabase.json -w '%{http_code}' \
+            -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" \
+            "https://api.supabase.com/v1/projects/${PROJECT_REF}")"
+          if [[ "$code" != "200" ]]; then
+            echo "::error::Could not read the Supabase project named by SUPABASE_PROJECT_ID (HTTP $code)."
+            exit 1
+          fi
+          name="$(jq -r '.name' /tmp/supabase.json)"
+          status="$(jq -r '.status' /tmp/supabase.json)"
+          echo "Supabase project: $name ($status)"
+          # Free-plan projects pause when unused, and a migration against a paused project
+          # fails partway. Stopping here leaves the database exactly as it was (ISSUE-012).
+          if [[ "$status" != "ACTIVE_HEALTHY" ]]; then
+            echo "::error::Supabase '$name' is '$status', not ACTIVE_HEALTHY. Resume it from the Supabase dashboard and re-run; nothing has been changed."
+            exit 1
+          fi
+          # The one mistake that would be silent and serious: production wired to development.
+          if [[ "$name" != "teka-edu-prod" ]]; then
+            echo "::error::The production secrets point at Supabase project '$name', not 'teka-edu-prod'. Refusing to migrate."
+            exit 1
+          fi
+
       # ---- 1. Database: must succeed before any application deployment ----------------
       - uses: supabase/setup-cli@v3
       - name: Link Supabase PROD project

@@ -258,6 +258,17 @@ vercel promote <deployment-url-or-id> --token ...       # re-enable normal promo
   - Re-running an **old** deployment workflow run is not a rollback. Its `supabase db push` fails if the remote database already has newer migrations.
 - **Other OCI hosts:** redeploy the previous image, built from the previous commit with `Dockerfile`.
 
+### Preflight: what the production job proves before it changes anything
+
+Two read-only checks run at the very start of the production deploy, before `supabase db push`:
+
+| Preflight                                                               | Passes when                                                         | Why it is first                                                                                                                                                                                                                                       |
+| ----------------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GET /v9/projects/{VERCEL_PROJECT_ID}` with the production token        | HTTP 200 and the project is named `teka-edu`                        | The deploy token can only be exercised from `main` — the `production` environment is restricted to it — so a release is the first time it is used. Finding out it is scoped to the wrong team _after_ migrating production would be the worst moment. |
+| `GET /v1/projects/{SUPABASE_PROJECT_ID}` with the Supabase access token | project is named `teka-edu-prod` **and** status is `ACTIVE_HEALTHY` | A Free-plan project pauses when unused, and `db push` against a paused project fails partway. It also catches the one silent, serious mistake: production wired to the development database.                                                          |
+
+Both fail closed with a message naming the fix, and neither changes anything.
+
 ### Where a production release can fail, and what is true afterwards
 
 The pipeline is ordered migration → deploy → verify → smoke, so each failure point leaves a known

@@ -198,6 +198,20 @@ test.describe("parent session", () => {
     await expect(page.getByText("Questions, après la lecture")).toHaveCount(0);
   });
 
+  test("the observation note can be copied out in one press", async ({ page, context }) => {
+    // The feedback path for the beta: the note is produced locally and leaves only when the
+    // tester decides. A button beats asking a parent to select sixteen rows of text by hand.
+    await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+    await page.goto("/maternelle/3/seance/1/observation");
+    await page.getByRole("button", { name: "Copier le compte rendu" }).click();
+    await expect(page.getByText("Copié.")).toBeVisible();
+
+    const clipboard = await page.evaluate(() => navigator.clipboard.readText());
+    expect(clipboard).toContain("## Enfant");
+    // What it must never carry: anything identifying the child (ADR-006).
+    expect(clipboard).not.toMatch(/nom de l’enfant|prénom|âge de l’enfant/i);
+  });
+
   test("the observation form records the session, never the child", async ({ page }) => {
     await page.goto("/maternelle/3/seance/1/observation");
     await expect(page.getByRole("heading", { name: /Comment ça s’est passé/ })).toBeVisible();
