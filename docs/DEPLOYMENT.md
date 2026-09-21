@@ -215,48 +215,46 @@ _after_ `supabase db push` has already migrated PROD would be the worst possible
 by hand immediately after the first production deployment; wire it into the workflow once
 production is confirmed public.
 
-### Deployment Protection: the model Beta 0.1 needs
+### Deployment Protection: the model Beta 0.1 needs, and already has
 
-Verified 2026-09-20: the project's `ssoProtection` is **`all_except_custom_domains`** and there
-is **no custom domain**, so _every_ deployment is behind the Vercel login — production included.
-A public beta is impossible in that configuration.
+**Corrected 2026-09-21.** An earlier audit here claimed that production would be behind the Vercel
+login because the project has no custom domain. That was wrong, and the mistake is worth keeping
+visible: it was inferred from the _name_ of an API value rather than from what the setting does.
 
-The fix is **not** to disable protection. Vercel scopes it:
+The project reports `ssoProtection.deploymentType = "all_except_custom_domains"`. That string is
+the legacy identifier for what the dashboard calls **Standard Protection**, and what the API
+documents today as `prod_deployment_urls_and_all_previews`. The newer name says what it protects:
+**production deployment URLs and all previews** — and _not_ the production domain.
 
-| Setting                               | Previews / staging | Production                      |
-| ------------------------------------- | ------------------ | ------------------------------- |
-| `all_except_custom_domains` (today)   | protected          | **protected** — blocks the beta |
-| **Only Preview Deployments** (wanted) | protected          | **public**                      |
-| Disabled                              | **exposed**        | public — never do this          |
+| Vercel Authentication             | Previews    | Generated production URL | Production domain |
+| --------------------------------- | ----------- | ------------------------ | ----------------- |
+| **Standard Protection** (current) | protected   | protected                | **public**        |
+| All Deployments                   | protected   | protected                | protected         |
+| Only Preview Deployments          | protected   | public                   | public            |
+| Disabled                          | **exposed** | exposed                  | public            |
 
-Staging is a _Preview_ deployment (`target=preview`) aliased to `teka-edu-staging.vercel.app`, so
-"Only Preview Deployments" keeps it protected while the production domain becomes public.
+So the configuration Beta 0.1 needs is the one already saved. **Nothing has to change, and
+nothing should be disabled.**
 
-**Owner action:** Vercel → project `teka-edu` → Settings → Deployment Protection → Vercel
-Authentication → **Only Preview Deployments** → Save. Then confirm
-`https://teka-edu-staging.vercel.app` still answers `302` and the production domain answers `200`
-to a logged-out browser. Leave the protection-bypass secret in place: the staging smoke test uses
-it.
+The evidence, all three pointing the same way:
 
-## Rollback
+- the dashboard's own wording — _Standard Protection: protect all except production domains for
+  the project_;
+- the API's current name for the same mode, `prod_deployment_urls_and_all_previews`;
+- the live behaviour: an anonymous request to the production domain answers `404
+DEPLOYMENT_NOT_FOUND` — resolved, not intercepted — while the same client on the preview alias
+  is redirected to `vercel.com/sso-api` with an SSO nonce cookie.
 
-### Application rollback
+**One consequence to expect on release day.** The _generated_ production deployment URL
+(`teka-edu-<hash>.vercel.app`) stays protected under Standard Protection. That is correct and is
+not a failure:
 
-The fastest option is Vercel's instant rollback. It re-points the domain without rebuilding. Run it from a checkout linked with `vercel link`, or with `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID` exported.
-
-```bash
-vercel rollback --token "$VERCEL_TOKEN"                 # previous production deployment
-vercel rollback <deployment-url-or-id> --token ...      # a specific one (Pro/Enterprise)
-vercel rollback status --token ...
-vercel promote <deployment-url-or-id> --token ...       # re-enable normal promotion afterwards
-```
-
-- On **Hobby** (the current plan), only the previous production deployment is available. On **Pro/Enterprise**, any earlier production deployment is.
-- **Staging** uses Preview deployments. To roll staging back, re-point the alias: `vercel alias set <older-deployment-url> teka-edu-staging.vercel.app --scope teka10`.
-- After a rollback, automatic promotion of new production deployments is paused until `vercel promote` is run.
-- **Code rollback:** revert the faulty commit on `develop` → staging → `main`. The normal pipeline redeploys.
-  - Re-running an **old** deployment workflow run is not a rollback. Its `supabase db push` fails if the remote database already has newer migrations.
-- **Other OCI hosts:** redeploy the previous image, built from the previous commit with `Dockerfile`.
+- the in-workflow smoke test targets that generated URL and carries
+  `VERCEL_AUTOMATION_BYPASS_SECRET`, so it passes;
+- the **public** check must target the production **domain**,
+  `https://teka-edu-teka10.vercel.app`. Pointing it at a generated URL would fail for the wrong
+  reason, so `tests/e2e/production-public.spec.ts` refuses such a URL rather than reporting a
+  protection failure that is not one.
 
 ### Preflight: what the production job proves before it changes anything
 

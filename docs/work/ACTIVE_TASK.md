@@ -10,7 +10,7 @@
 
 ## Task
 
-Verify the new production deploy token and close every Beta 0.1 gate that can close without opening production.
+Re-check the Deployment Protection blocker, and bring Beta 0.1 to the point where only the owner's authorisation remains.
 
 ## Objective
 
@@ -23,11 +23,11 @@ deployment?" — and for every no, the exact action that fixes it.
 
 ## Branch
 
-`chore/beta-0.1-production-preflight`
+`fix/deployment-protection-standard-is-correct`
 
 ## Base Branch
 
-`develop` at `58b9146`
+`develop` at `16883b9`
 
 ## Started
 
@@ -35,42 +35,40 @@ deployment?" — and for every no, the exact action that fixes it.
 
 ## Last Checkpoint
 
-2026-09-21 — four gates closed, one left. Production still disabled, PROD still unmigrated.
+2026-09-21 — every technical gate met. Production still undeployed and still disabled.
 
 ## Scope
 
-- Verify the production deploy token, Supabase PROD, and the Vercel production variables.
-- Build the beta indicator and the copy action.
-- Harden the production job with read-only preflights.
+- Re-check the Deployment Protection assumption against what the setting actually does.
+- Re-verify every production prerequisite, read-only.
+- Correct the documentation where the earlier audit was wrong.
 
 ## Out of Scope
 
 - Deploying production, migrating PROD, touching `main`, setting `PRODUCTION_DEPLOY_ENABLED`.
-- Changing Deployment Protection: it is the owner's call and the last gate.
+- Changing anything in the Vercel dashboard: the configuration was already right.
 - Any change to approved September content.
 
 ## Product Decisions
 
-- The deploy token is **not** exercised from anywhere but a real release. The `production`
-  environment is restricted to `main`, and loosening that to test a credential would trade a
-  real protection for a convenience.
-- What replaces that test is two read-only preflights at the start of the production job, so the
-  first use of the token happens **before** `supabase db push`, not after.
-- The beta indicator is parent-facing only and collects nothing. A badge and a sentence are
-  enough to tell a tester they are testing; anything more would be a notice, not a product.
+- Standard Protection is the model Beta 0.1 wants and already has. Previews and generated
+  production URLs stay protected; the production domain is public.
+- The public release check must target the production **domain**. A generated deployment URL is
+  _meant_ to stay protected, so the spec refuses one rather than blaming the configuration for
+  doing its job.
 
 ## Completed
 
-- [x] Production deploy token **present** in the `production` GitHub environment, scoped there;
-      staging keeps its own, separate one
-- [x] `teka-edu-prod` **ACTIVE_HEALTHY** — resumed; ref, region and plan confirmed; still
-      0 migrations, still untouched
-- [x] Vercel Production variables: **11 derived checks pass**, no value printed, no DEV ref, no
-      secret in a `NEXT_PUBLIC_*`, and the pulled file deleted
-- [x] **Two read-only preflights** added before any production change: the Vercel project must be
-      `teka-edu`, and Supabase must be `teka-edu-prod` and `ACTIVE_HEALTHY`
-- [x] **Beta feedback built**: badge + sentence on the front door, copy button on the note, both
-      tested — including that the badge never reaches the child's screen
+- [x] **Corrected my own blocker.** `all_except_custom_domains` is the legacy name for Standard
+      Protection (`prod_deployment_urls_and_all_previews`), which leaves the production domain
+      public. The earlier audit read the identifier instead of the behaviour.
+- [x] Evidence recorded three ways: the dashboard wording, the API's current name, and the live
+      404 `DEPLOYMENT_NOT_FOUND` on the production domain versus the SSO redirect on the preview
+      alias
+- [x] Guard added: the public spec refuses a generated deployment URL, with the reason
+- [x] Re-verified read-only — PROD `ACTIVE_HEALTHY` and untouched, seven production secrets,
+      five Vercel production variables, no DEV reference, `main` at `1b95480`, zero production
+      deployments, `PRODUCTION_DEPLOY_ENABLED` unset, 176/176 and 10/10 unchanged
 
 ## In Progress
 
@@ -78,8 +76,7 @@ deployment?" — and for every no, the exact action that fixes it.
 
 ## Remaining
 
-- [ ] **Deployment Protection** — the last technical gate. Owner action.
-- [ ] Then, deliberately: `PRODUCTION_DEPLOY_ENABLED=true` and the first release.
+- [ ] **Nothing technical.** The first production release is the owner's decision.
 
 ## Validation State
 
@@ -92,7 +89,7 @@ deployment?" — and for every no, the exact action that fixes it.
 | content validation | PASS   | working tree — 31 files           |
 | database tests     | PASS   | fresh reset — 152 assertions      |
 | build              | PASS   | working tree                      |
-| E2E                | PASS   | 30 passed, 8 skipped (no prod)    |
+| E2E                | PASS   | 30 passed, 9 skipped (no prod)    |
 | Docker             | PASS   | both images, health + SIGTERM     |
 | secret scans       | PASS   | 0 tracked `.env*`; gitleaks in CI |
 
@@ -114,17 +111,25 @@ deployment?" — and for every no, the exact action that fixes it.
 
 ## Blockers
 
-**One.** Vercel Deployment Protection still covers production, so a public beta is impossible
-until it is scoped to previews.
+**None.** Every technical gate is met.
 
 ## User Decisions Needed
 
-1. **Deployment Protection** — Vercel → `teka-edu` → Settings → Deployment Protection → Vercel
-   Authentication → **Only Preview Deployments** → Save. Then check, logged out, that
-   `https://teka-edu-staging.vercel.app` still answers `302` and the production domain no longer
-   redirects to a login. Do not disable protection.
-2. **Then, and only then:** authorise the release. Setting `PRODUCTION_DEPLOY_ENABLED=true` and
-   promoting `develop` → `main` is the deliberate final action, and it is yours.
+**One, and it is a decision rather than a fix: authorise the first production release.** When you
+choose to:
+
+1. set the repository variable `PRODUCTION_DEPLOY_ENABLED=true`;
+2. open a PR `develop` → `main` and merge it with a merge commit;
+3. approve the `production` environment when GitHub asks;
+4. let the workflow run: CI → secret check → the two preflights → migrate PROD → deploy →
+   verify the target is production → smoke test;
+5. then confirm anonymously, in a logged-out browser:
+   `PRODUCTION_PUBLIC_URL=https://teka-edu-teka10.vercel.app npm run test:e2e:public`, and that
+   `https://teka-edu-staging.vercel.app` still redirects to the Vercel login.
+
+If the production **domain** redirects to Vercel Authentication after that deployment, the release
+is not successful and must not be called one. The generated `teka-edu-<hash>.vercel.app` URL
+redirecting is expected and is not that.
 
 ## Exact Resume Point
 

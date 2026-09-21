@@ -25,6 +25,14 @@ import { expect, test, type APIResponse, type Browser } from "@playwright/test";
  */
 const PRODUCTION_URL = process.env.PRODUCTION_PUBLIC_URL;
 
+/**
+ * Under Standard Protection the *generated* production deployment URL stays behind Vercel
+ * Authentication; only the production **domain** is public. Pointing this suite at a generated
+ * URL would fail on the very first assertion and look exactly like a protection misconfiguration,
+ * so it is refused with the reason instead.
+ */
+const GENERATED_DEPLOYMENT_URL = /^https?:\/\/[a-z0-9-]+-[a-z0-9]{9,}-[a-z0-9-]+\.vercel\.app/i;
+
 /** The Supabase project ref production must be wired to, when the runner is told which it is. */
 const EXPECTED_PROD_REF = process.env.EXPECTED_PRODUCTION_SUPABASE_REF;
 
@@ -33,6 +41,17 @@ test.describe("Teka Edu in production, seen by someone with no account", () => {
     PRODUCTION_URL === undefined || PRODUCTION_URL === "",
     "Set PRODUCTION_PUBLIC_URL to run the public release check.",
   );
+
+  test("is pointed at the production domain, not a generated deployment URL", () => {
+    // Guard rather than assertion: a generated URL is *meant* to stay protected, so failing the
+    // suite against one would blame the configuration for doing its job.
+    expect(
+      GENERATED_DEPLOYMENT_URL.test(PRODUCTION_URL ?? ""),
+      `PRODUCTION_PUBLIC_URL is a generated deployment URL (${PRODUCTION_URL}). Those stay ` +
+        "protected under Standard Protection. Use the production domain, e.g. " +
+        "https://teka-edu-teka10.vercel.app.",
+    ).toBe(false);
+  });
 
   /**
    * A context with nothing in it. `storageState: undefined` and an explicit empty header map
