@@ -5,9 +5,9 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-09-20
-Branch:     chore/beta-0.1-production-readiness
-Commit:     develop at 6d61299; main at 1b95480
+Date:       2026-09-21
+Branch:     chore/beta-0.1-production-preflight
+Commit:     develop at 58b9146; main at 1b95480
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -716,42 +716,41 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  Beta 0.1 production-readiness audit. Nothing was deployed and nothing was
-            migrated; the point was to find out what is actually true.
-            Verified against the services, not the documents:
-            - Supabase teka-edu-prod is INACTIVE — paused, as ISSUE-012 predicted. Every PROD
-              check below it (advisors, RLS, migration history, emptiness) is unanswerable
-              until the owner resumes it, so none of them is claimed.
-            - Vercel ssoProtection is "all_except_custom_domains" and there are 0 custom
-              domains, so production would be behind the Vercel login too. A public beta is
-              impossible as configured. The fix is "Only Preview Deployments", not disabling
-              protection.
-            - NEXT_PUBLIC_APP_URL is missing from the Vercel Production environment. It is
-              not cosmetic: it defaults to localhost, lib/env rejects that outside local, and
-              the container would throw on boot. Proved by parsing the exact production shape.
-            - The production VERCEL_TOKEN does not exist; PRODUCTION_DEPLOY_ENABLED is unset.
-            - Migrations: 41 in the repository, 41 on DEV, 0 on PROD. All additive and
-              environment-neutral; the data migrations delete only rows no longer in content/,
-              scoped by "not in", which are no-ops on an empty database.
-            - Privacy: zero network calls in application code, no Supabase client instantiated
-              at all, localStorage only. No personal-data tables exist in any migration.
-            - The feedback note has no copy button and no beta indicator. The readiness
-              document claimed a copy button; it was wrong and has been corrected.
-            Built:
-            - tests/e2e/production-public.spec.ts — the public release check. It opens its own
-              context with no bypass, no cookie, no stored state, and asks what a stranger
-              sees. 8 cases; skips unless PRODUCTION_PUBLIC_URL is set. Proved against the
-              local build: 7 pass and the one that must fail there is the production
-              environment assertion.
-            - Documented the Deployment Protection model, the four production failure points
-              and what is true after each, and the limitation that there is no DB rollback.
+Completed:  Four of the six Beta 0.1 production gates closed. Production stays disabled.
+            Verified against the live services:
+            - teka-edu-prod is now ACTIVE_HEALTHY (the owner resumed it). Ref, region and
+              plan confirmed; still 0 migrations applied, still untouched.
+            - The production deploy token exists in the production GitHub environment,
+              scoped to that environment. Staging keeps its own, separate one.
+            - Vercel Production now has all five variables. Eleven derived checks pass:
+              APP_URL is the production domain and not localhost, the Supabase URL points at
+              PROD and nowhere in production is there a DEV ref, the publishable key is
+              publishable, no secret hides in a NEXT_PUBLIC_* variable, and no server-only
+              secret exists in Vercel at all. No value was printed; the pulled file was
+              deleted and never lived in the repository.
+            - Deployment Protection is unchanged and is now the LAST technical gate:
+              ssoProtection is all_except_custom_domains with no custom domain, so production
+              would be behind the Vercel login too.
+            The token could not be exercised, and that is the protection working: the
+            production GitHub environment is restricted to main, so nothing outside a real
+            release may use it. Two read-only preflights now run at the start of the
+            production job instead — the token must reach the Vercel project teka-edu, and
+            Supabase must report teka-edu-prod as ACTIVE_HEALTHY — both before db push
+            changes anything. They fail closed and name the fix.
+            Built the beta feedback mechanism, the smallest version that is honest:
+            - a small Beta badge beside the product name on the front door, and one sentence
+              saying a note can be copied and sent, that nothing is sent automatically, and
+              that nothing about the child is stored;
+            - a "Copier le compte rendu" button on the observation note, which says so when a
+              browser refuses clipboard access rather than pretending;
+            - the badge is parent-facing only. A test asserts it never appears once the
+              child's screen starts, and another asserts the copied note carries no
+              identifying field. No backend, no analytics, no account, no new data flow.
 Validation: format, lint, typecheck, unit (355), content (31 files), pgTAP (152) on a fresh
-            reset, build, E2E (28 + 8 skipped), both Docker images, client-bundle scan,
+            reset, build, E2E (30 + 8 skipped), both Docker images, client-bundle scan,
             0 tracked .env*.
 Cost:       $0.
-Not done:   Production is NOT ready. Six gates are open and five are a single owner action
-            each: resume Supabase PROD, set NEXT_PUBLIC_APP_URL, create the production
-            VERCEL_TOKEN, switch Deployment Protection to preview-only, set
-            PRODUCTION_DEPLOY_ENABLED. The sixth, the beta indicator and copy button, is a
-            small build proposed as its own task.
+Not done:   Production is NOT deployed and PRODUCTION_DEPLOY_ENABLED stays unset. One
+            technical gate remains: switch Vercel Authentication to preview-only so
+            production is public while staging stays protected.
 ```

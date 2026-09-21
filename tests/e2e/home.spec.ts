@@ -12,6 +12,21 @@ test.describe("home and class selection", () => {
     }
   });
 
+  test("says it is a beta, to the adult and nowhere else", async ({ page }) => {
+    // A tester who does not know they are testing gives no useful silence. One badge and one
+    // sentence, on the front door — and nothing that collects anything.
+    await page.goto("/");
+    await expect(page.getByText("Beta", { exact: true })).toBeVisible();
+    await expect(page.getByText(/Version d’essai/)).toBeVisible();
+    // It invites a note and promises nothing is sent: that is the whole feedback mechanism.
+    await expect(page.getByText(/Rien n’est envoyé automatiquement/)).toBeVisible();
+
+    // The child's screen is the lesson and nothing else (ADR-043): no badge follows it there.
+    await page.goto("/maternelle/3/seance/1");
+    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await expect(page.getByText("Beta", { exact: true })).toHaveCount(0);
+  });
+
   test("only the classes that have lessons can be opened", async ({ page }) => {
     await page.goto("/");
     // 1ère and 3ème are authored; 2ème is honest about being unwritten.

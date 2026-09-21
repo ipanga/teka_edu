@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BetaBadge, BetaNote } from "@/components/BetaBadge";
 import { levelAvailability } from "@/lib/programme/session-view";
 
 // The front door: a parent picks the class, and nothing else competes for attention (ADR-044).
@@ -9,10 +10,14 @@ export default function HomePage() {
   return (
     <main className="mx-auto flex w-full max-w-4xl flex-1 flex-col gap-10 px-5 py-10">
       <header className="flex flex-col gap-2 text-center">
-        <h1 className="text-4xl font-bold sm:text-5xl">Teka Edu</h1>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <h1 className="text-4xl font-bold sm:text-5xl">Teka Edu</h1>
+          <BetaBadge />
+        </div>
         <p className="text-xl text-stone-600">
           Une séance d’apprentissage par jour d’école, à faire ensemble à la maison.
         </p>
+        <BetaNote />
       </header>
 
       <section className="flex flex-col gap-4" aria-labelledby="classes">
