@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-22
-Branch:     fix/production-domain-is-protected
-Commit:     develop at 35e7056; main at a729722 (first promotion)
+Branch:     feat/beta-0.1-released
+Commit:     develop at 9b45733; main at a729722 (Beta 0.1, live)
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -120,24 +120,24 @@ Objective: A verified year for the youngest class, then one month, then the revi
 
 Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED`.
 
-| Area                            | Status                                           | Evidence / remaining                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Git repository                  | **VERIFIED**                                     | Initialised 2026-09-11 with no force push (the remote was empty beforehand). `origin/main` = `1b95480`, a merge commit of `3df64bf` + `4abe26e`; `origin/develop` = `4abe26e`. Both branches have identical trees.                                                                                                                                                                                                                         |
-| Docker                          | **VERIFIED**                                     | Both images build, report healthy, run as user `node`, and exit on SIGTERM with code 143, both locally (arm64) and on GitHub runners (x86_64).                                                                                                                                                                                                                                                                                             |
-| GitHub Actions                  | **VERIFIED**                                     | Push-triggered CI: VERIFIED (runs 34610713969, 34610729923, 34611359891, 34612999684, 34617650743 on the promotion merge; deploy jobs skipped as designed). PR-triggered CI: VERIFIED (PR #1, run 34612652962, Linux x86_64). No GitHub environments exist yet.                                                                                                                                                                            |
-| Branch protection               | **VERIFIED**                                     | GitHub Rulesets active for `develop` and `main` (re-verified after the promotion; `main` accepted PR #5 only with all 5 checks green, merge commit only): PR required, 0 approvals, conversations resolved, 4 quality checks required (+ `Promotion source` on `main`), force push and deletion blocked, no bypass actors. A direct push to `develop` was rejected (GH013). Details: `docs/DEPLOYMENT.md`, ADR-022.                        |
-| Supabase local                  | **VERIFIED**                                     | `db start` / `db reset` / `test db` (PASS) / `stop` all work. Full `supabase start` confirmed `sb_publishable_…` / `sb_secret_…` local keys, and the env validation accepts them.                                                                                                                                                                                                                                                          |
-| Supabase DEV (`teka-edu-dev`)   | **VERIFIED**                                     | Ref `quyhkkizsmosybavoewd`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Working copy linked. `db push` up to date (no migrations), remote pgTAP RLS test PASS, 0 public tables without RLS, security advisors clean. Pooled `DATABASE_URL` connects. CI secrets are in GitHub `staging`; runtime values are in the owner's Keychain.                                                                                                     |
-| Supabase PROD (`teka-edu-prod`) | **VERIFIED**                                     | Ref `eganrivpkjhozkkahyxy`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Read-only checks only: migration list empty, 0 public tables without RLS, security advisors clean; pooled `DATABASE_URL` connects. Nothing pushed or seeded. CI secrets are in GitHub `production`; runtime values are in the owner's Keychain.                                                                                                                  |
-| GitHub environments             | **CONFIGURED**                                   | `staging` (branch `develop`): Supabase + Vercel secrets (incl. the project-scoped `VERCEL_TOKEN`) and `STAGING_DOMAIN`. `production` (branch `main`, required reviewer): Supabase secrets, `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` / bypass secret, **no `VERCEL_TOKEN`**.                                                                                                                                                                   |
-| Database migrations             | **VERIFIED**                                     | Six migrations (Phase 1 schema + data, Phase 2 schema + data, Phase 2.5 quality gate + data). Local: `db reset` + 128 pgTAP assertions pass. DEV: all six migrations applied and local/remote lists match; row counts checked read-only (20 lessons, all `review`, 0 approved; 398 objectives; 529 success examples). Security and performance advisors: no issues. PROD: untouched.                                                       |
-| Vercel staging                  | **VERIFIED**                                     | Project `teka-edu` (Hobby, `container` preset, `cdg1`, no Git link). First verified deployment: run 34635262697, `dpl_99QEWbwtBTV53u5HzdudDaKndjgy` (Preview, READY, commit `e2f8f69`), alias https://teka-edu-staging.vercel.app. `/api/health` reports `staging` and the DEV ref; region `cdg1` confirmed by `x-vercel-id`. Protection returns 302 without auth. Browser bundle and logs are secret-free. `STAGING_DEPLOY_ENABLED=true`. |
-| Vercel production               | **CONFIGURED (not deployed; deferred, ADR-027)** | Production scope has the PROD Supabase URL and publishable key, `NEXT_PUBLIC_APP_ENV=production` and `PORT=3000`. `NEXT_PUBLIC_APP_URL` is intentionally unset. There is no production `VERCEL_TOKEN`, and `PRODUCTION_DEPLOY_ENABLED` is unset. The only production deployment is the failed first one (never served).                                                                                                                    |
-| Environment variables           | **CONFIGURED**                                   | Validation and Markdown inventory complete. Environment-file cleanup is VERIFIED on both `develop` and `main`: no `.env*` file in either tree, and the public default branch shows none (ADR-023). No hosted values exist yet.                                                                                                                                                                                                             |
-| develop → main promotion        | **VERIFIED**                                     | PR #5, merged 2026-09-11 as merge commit `1b95480`. `Promotion source` passed on a real event ("'develop' from ipanga/teka_edu may be promoted to main", run 34617296272), and all 4 quality checks passed. The merge-triggered `Deploy production` run 34617650743 skipped its deploy job. There are no GitHub deployments or environments.                                                                                               |
-| Repository security             | **VERIFIED**                                     | No real secret in the full Git history (gitleaks, all refs + pattern scan). Secret scanning and push protection enabled (no alerts). Fork PR workflows need owner approval for all external contributors. `Promotion source` checks the repository identity.                                                                                                                                                                               |
-| Free-tier compliance            | **VERIFIED**                                     | Vercel Hobby with no payment method on file (no billing possible); Supabase DEV and PROD on Free; no add-ons. Platform cost **$0/month**. Limits and classification: `docs/FREE_TIER.md`.                                                                                                                                                                                                                                                  |
-| Deployment documentation        | **CONFIGURED**                                   | Written. Must be re-checked against the first real staging and production deployments.                                                                                                                                                                                                                                                                                                                                                     |
+| Area                            | Status                          | Evidence / remaining                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Git repository                  | **VERIFIED**                    | Initialised 2026-09-11 with no force push (the remote was empty beforehand). `origin/main` = `1b95480`, a merge commit of `3df64bf` + `4abe26e`; `origin/develop` = `4abe26e`. Both branches have identical trees.                                                                                                                                                                                                                         |
+| Docker                          | **VERIFIED**                    | Both images build, report healthy, run as user `node`, and exit on SIGTERM with code 143, both locally (arm64) and on GitHub runners (x86_64).                                                                                                                                                                                                                                                                                             |
+| GitHub Actions                  | **VERIFIED**                    | Push-triggered CI: VERIFIED (runs 34610713969, 34610729923, 34611359891, 34612999684, 34617650743 on the promotion merge; deploy jobs skipped as designed). PR-triggered CI: VERIFIED (PR #1, run 34612652962, Linux x86_64). No GitHub environments exist yet.                                                                                                                                                                            |
+| Branch protection               | **VERIFIED**                    | GitHub Rulesets active for `develop` and `main` (re-verified after the promotion; `main` accepted PR #5 only with all 5 checks green, merge commit only): PR required, 0 approvals, conversations resolved, 4 quality checks required (+ `Promotion source` on `main`), force push and deletion blocked, no bypass actors. A direct push to `develop` was rejected (GH013). Details: `docs/DEPLOYMENT.md`, ADR-022.                        |
+| Supabase local                  | **VERIFIED**                    | `db start` / `db reset` / `test db` (PASS) / `stop` all work. Full `supabase start` confirmed `sb_publishable_…` / `sb_secret_…` local keys, and the env validation accepts them.                                                                                                                                                                                                                                                          |
+| Supabase DEV (`teka-edu-dev`)   | **VERIFIED**                    | Ref `quyhkkizsmosybavoewd`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Working copy linked. `db push` up to date (no migrations), remote pgTAP RLS test PASS, 0 public tables without RLS, security advisors clean. Pooled `DATABASE_URL` connects. CI secrets are in GitHub `staging`; runtime values are in the owner's Keychain.                                                                                                     |
+| Supabase PROD (`teka-edu-prod`) | **VERIFIED**                    | Ref `eganrivpkjhozkkahyxy`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Read-only checks only: migration list empty, 0 public tables without RLS, security advisors clean; pooled `DATABASE_URL` connects. Nothing pushed or seeded. CI secrets are in GitHub `production`; runtime values are in the owner's Keychain.                                                                                                                  |
+| GitHub environments             | **CONFIGURED**                  | `staging` (branch `develop`): Supabase + Vercel secrets (incl. the project-scoped `VERCEL_TOKEN`) and `STAGING_DOMAIN`. `production` (branch `main`, required reviewer): Supabase secrets, `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` / bypass secret, **no `VERCEL_TOKEN`**.                                                                                                                                                                   |
+| Database migrations             | **VERIFIED**                    | Six migrations (Phase 1 schema + data, Phase 2 schema + data, Phase 2.5 quality gate + data). Local: `db reset` + 128 pgTAP assertions pass. DEV: all six migrations applied and local/remote lists match; row counts checked read-only (20 lessons, all `review`, 0 approved; 398 objectives; 529 success examples). Security and performance advisors: no issues. PROD: untouched.                                                       |
+| Vercel staging                  | **VERIFIED**                    | Project `teka-edu` (Hobby, `container` preset, `cdg1`, no Git link). First verified deployment: run 34635262697, `dpl_99QEWbwtBTV53u5HzdudDaKndjgy` (Preview, READY, commit `e2f8f69`), alias https://teka-edu-staging.vercel.app. `/api/health` reports `staging` and the DEV ref; region `cdg1` confirmed by `x-vercel-id`. Protection returns 302 without auth. Browser bundle and logs are secret-free. `STAGING_DEPLOY_ENABLED=true`. |
+| Vercel production               | **LIVE (Beta 0.1, 2026-09-22)** | Public at https://teka-edu.vercel.app, deployment `dpl_2midgBHcdVDbF8uz57U18MKPmX8P`, commit `a729722`, Supabase PROD. Standard Protection keeps the team-scoped alias, generated URLs and staging behind Vercel Authentication. `PRODUCTION_DEPLOY_ENABLED=true`. Anonymous public check 9/9.                                                                                                                                             |
+| Environment variables           | **CONFIGURED**                  | Validation and Markdown inventory complete. Environment-file cleanup is VERIFIED on both `develop` and `main`: no `.env*` file in either tree, and the public default branch shows none (ADR-023). No hosted values exist yet.                                                                                                                                                                                                             |
+| develop → main promotion        | **VERIFIED**                    | PR #5, merged 2026-09-11 as merge commit `1b95480`. `Promotion source` passed on a real event ("'develop' from ipanga/teka_edu may be promoted to main", run 34617296272), and all 4 quality checks passed. The merge-triggered `Deploy production` run 34617650743 skipped its deploy job. There are no GitHub deployments or environments.                                                                                               |
+| Repository security             | **VERIFIED**                    | No real secret in the full Git history (gitleaks, all refs + pattern scan). Secret scanning and push protection enabled (no alerts). Fork PR workflows need owner approval for all external contributors. `Promotion source` checks the repository identity.                                                                                                                                                                               |
+| Free-tier compliance            | **VERIFIED**                    | Vercel Hobby with no payment method on file (no billing possible); Supabase DEV and PROD on Free; no add-ons. Platform cost **$0/month**. Limits and classification: `docs/FREE_TIER.md`.                                                                                                                                                                                                                                                  |
+| Deployment documentation        | **CONFIGURED**                  | Written. Must be re-checked against the first real staging and production deployments.                                                                                                                                                                                                                                                                                                                                                     |
 
 ## In Progress
 
@@ -660,12 +660,13 @@ Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 off
 Local:      Runs: npm run dev, npm run start (standalone), Docker image
 Docker:     Verified locally (arm64) and in GitHub CI (x86_64), both Dockerfiles
 Staging:    LIVE https://teka-edu-staging.vercel.app (Vercel Preview, container, cdg1, Supabase DEV); auto-deploys from develop
-Production: DEFERRED (ADR-027). Supabase PROD empty; Vercel Production scope prepared; switch off, no token
+Production: LIVE https://teka-edu.vercel.app (Beta 0.1, 2026-09-22; container, cdg1, Supabase PROD).
+            The team-scoped alias teka-edu-teka10.vercel.app and all generated URLs stay protected
 CI:         Verified on GitHub for push and pull_request events; required by the develop/main rulesets;
             first production promotion PR #5 green
-CD:         STAGING_DEPLOY_ENABLED=true (verified run 34635262697); PRODUCTION_DEPLOY_ENABLED unset
-Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge of develop 4abe26e);
-            develop = 4abe26e. Same tree; develop lacks only the merge commit, which is expected (ADR-022)
+CD:         STAGING_DEPLOY_ENABLED=true; PRODUCTION_DEPLOY_ENABLED=true (set 2026-09-22 for the release)
+Remote:     github.com/ipanga/teka_edu (public). main (default) = a729722 (merge of develop 35e7056,
+            promotion PR #76); develop continues ahead of it, which is expected (ADR-022)
 ```
 
 ## Deviations From the Infrastructure Spec (documented)
@@ -716,37 +717,31 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  The first production release ran, and stopped one step short of being a release.
-            Everything mechanical worked, first time:
-            - Promotion develop -> main through the protected PR (#76), merge commit a729722,
-              promotion-source check passed. One workflow run, no duplicates.
-            - The production environment paused for the owner's review, as designed, and
-              resumed on approval.
-            - Both preflights passed: "Vercel project reached: teka-edu" and "Supabase
-              project: teka-edu-prod (ACTIVE_HEALTHY)".
-            - Supabase PROD migrated 0 -> 41, starting from the very first migration, which
-              confirms it began empty.
-            - Vercel deployed a729722 as target=production, dpl_2midgBHcdVDbF8uz57U18MKPmX8P,
-              READY, aliased to teka-edu.vercel.app and teka-edu-teka10.vercel.app.
-            - The in-workflow smoke test passed 30/30 against the generated URL.
-            And then the check that decides it failed:
-            - Anonymously, the production domain answers 302 -> vercel.com/sso-api. An
-              ordinary parent meets a Vercel login, so this is not a public beta.
-            - The anonymous suite failed 6 of 9, which is what it was written to catch.
-            The cause is a documentation error of mine, now corrected:
-            - The first audit called Deployment Protection a blocker and was right. A second
-              audit "corrected" it to wrong, leaning on the dashboard wording, the API's
-              modern naming, and an anonymous 404 DEPLOYMENT_NOT_FOUND on the production
-              domain. That 404 meant nothing is deployed here, not this is public: Vercel
-              resolves the domain and answers before protection applies. Only a real
-              deployment could settle it, and it did.
-            - all_except_custom_domains is a legacy mode: everything except CUSTOM domains is
-              protected, and this project has none.
-            Not rolled back, deliberately: the deployment is healthy, there is no earlier
-            production deployment to return to, and the fault is access configuration rather
-            than the build. The 41 migrations stay applied and are forward-safe.
-Validation: format, lint, typecheck, unit (355), content (31 files), CI green on main.
-Cost:       $0. Hobby and Free throughout.
-Not done:   Beta 0.1 is NOT released. One owner action remains: set Vercel Authentication to
-            Only Preview Deployments, then re-run the anonymous public check.
+Completed:  TEKA EDU BETA 0.1 IS LIVE.
+            Public at https://teka-edu.vercel.app — commit a729722, Supabase PROD,
+            deployment dpl_2midgBHcdVDbF8uz57U18MKPmX8P, READY. The anonymous suite passes
+            9 of 9 with no login, no bypass and no cookie.
+            The release never actually failed; my verification did.
+            - A production deployment here carries two .vercel.app aliases: the canonical
+              teka-edu.vercel.app and the team-scoped teka-edu-teka10.vercel.app.
+            - Standard Protection exempts the canonical domain and protects everything else.
+              Measured: canonical 200; team alias 302; generated URL 302; staging 302.
+            - I pointed the final check at the team-scoped alias, which is protected by
+              design, and declared the release failed. The owner opened the canonical URL in
+              a private window and it had been public the whole time.
+            - The root cause is the same one twice: I read a URL that had been copied into a
+              document instead of the alias list the platform returns. targets.production
+              .alias lists both, canonical first.
+            - The earlier "failed" report is kept in the record rather than rewritten.
+            Corrected NEXT_PUBLIC_APP_URL to the canonical URL. Nothing renders from it — it
+            is validation only — so no redeployment was forced to change a release status.
+            Verified unchanged: 88/88, 88/88, 176/176 on 176 distinct digests, 10/10
+            packages, 0 lapsed, 0 mismatches, all ai-assisted, no teacher claim anywhere;
+            PROD 41/41; staging still protected; 0 tracked .env*; Hobby and Free.
+Validation: format, lint, typecheck, unit (355), content (31 files), anonymous production
+            E2E (9/9), CI green on main.
+Cost:       $0.
+Not done:   ISSUE-011 (CI cannot list the container registry; manual pruning is the proven
+            fallback) and ISSUE-017 (no teacher has read the 176 lessons). Both non-blocking
+            and both documented. October and 2ème maternelle are not started.
 ```

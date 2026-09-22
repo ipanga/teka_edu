@@ -215,52 +215,45 @@ _after_ `supabase db push` has already migrated PROD would be the worst possible
 by hand immediately after the first production deployment; wire it into the workflow once
 production is confirmed public.
 
-### Deployment Protection: what the first release proved
+### Deployment Protection, and the two production URLs
 
-**Settled 2026-09-22, by deploying.** This section was wrong twice before that, in opposite
-directions, and the sequence is worth keeping because the second mistake looked like diligence.
+**Settled 2026-09-22 by deploying, then by reading the alias list properly.**
 
-1. The first audit read `ssoProtection.deploymentType = "all_except_custom_domains"`, reasoned
-   that a project with no custom domain therefore has a protected production domain, and called
-   it a blocker. **Correct.**
-2. The second audit called that wrong. It leaned on the dashboard's wording for _Standard
-   Protection_, on the API's modern name `prod_deployment_urls_and_all_previews`, and on an
-   anonymous request to the production domain that answered `404 DEPLOYMENT_NOT_FOUND` rather
-   than redirecting to a login. **Wrong.**
-3. The first production deployment settled it. With a production deployment actually in place,
-   the same anonymous request answers `302 → vercel.com/sso-api`.
+A production deployment on this project carries **two** `.vercel.app` aliases, and they do not
+behave the same way:
 
-**The 404 was the trap.** With no production deployment, Vercel's edge resolves the domain, finds
-nothing and answers 404 _before_ protection is applied. That silence read like "not protected"
-and it was only "nothing there yet". No amount of probing an empty production domain can tell you
-how a deployed one will behave — only a deployment can.
+| URL                             | What it is                           | Anonymous result           |
+| ------------------------------- | ------------------------------------ | -------------------------- |
+| `teka-edu.vercel.app`           | the **canonical production domain**  | **200 — public**           |
+| `teka-edu-teka10.vercel.app`    | the **team-scoped** production alias | 302 → `vercel.com/sso-api` |
+| `teka-<hash>-teka10.vercel.app` | the generated deployment URL         | 302 → `vercel.com/sso-api` |
+| `teka-edu-staging.vercel.app`   | the staging (Preview) alias          | 302 → `vercel.com/sso-api` |
 
-**What the stored value actually means.** `all_except_custom_domains` is a _legacy_ protection
-mode and is not one of the three the API documents today (`all`,
-`prod_deployment_urls_and_all_previews`, `preview`). It protects everything except **custom**
-domains — and a project with no custom domain has none, so the auto-assigned production alias is
-protected like everything else. The dashboard may still render it as "Standard Protection", which
-is how a correctly-saved-looking setting produced legacy behaviour.
+So **Standard Protection does exactly what it says**: the canonical production domain is public,
+and everything else — team-scoped alias, generated URLs, previews — stays behind Vercel
+Authentication. That is the model Beta 0.1 wants, and it needed no change.
 
-Measured on 2026-09-22, anonymously, with a production deployment live:
+**The canonical production URL is `https://teka-edu.vercel.app`.** It is what
+`NEXT_PUBLIC_APP_URL` names, what the public release check must target, and what a parent is
+given.
 
-| URL                                                           | Result                         |
-| ------------------------------------------------------------- | ------------------------------ |
-| `teka-edu-teka10.vercel.app` (production domain)              | **302 → `vercel.com/sso-api`** |
-| `teka-7ip54y856-teka10.vercel.app` (generated production URL) | 302 → `vercel.com/sso-api`     |
-| `teka-edu-staging.vercel.app` (preview alias)                 | 302 → `vercel.com/sso-api`     |
+#### How the first release was wrongly called a failure
 
-**The fix, and it is the owner's.** Select **Only Preview Deployments** in Vercel →
-`teka-edu` → Settings → Deployment Protection → Vercel Authentication, and Save. Staging is a
-_Preview_ deployment, so it stays protected; the production domain becomes public. Re-saving
-"Standard Protection" may also rewrite the legacy value to the modern one, but that is a guess and
-this setting has already cost one failed release — pick the mode whose name says what it does.
+Worth keeping, because the mistake was cheap to make and expensive to repeat.
 
-The trade-off, stated: under _Only Preview Deployments_ the generated production deployment URLs
-become public too. For a beta that is acceptable. The alternative is a custom domain, which costs
-money, and cost is not something this project spends without asking.
+1. An early audit read `ssoProtection = "all_except_custom_domains"`, reasoned that a project
+   with no custom domain has no exemption, and called protection a blocker.
+2. A later audit called that wrong, partly on an anonymous `404 DEPLOYMENT_NOT_FOUND` against
+   `teka-edu-teka10.vercel.app` — which meant _nothing is deployed here_, not _this is public_.
+3. The release then deployed successfully, and the final anonymous check was pointed at
+   `teka-edu-teka10.vercel.app` — **the team-scoped alias** — which is protected. The release was
+   reported as failed.
+4. The owner opened `teka-edu.vercel.app` in a private window. It was public all along.
 
-**Do not disable Vercel Authentication.** That would expose every preview.
+**The deployment never failed.** The verification targeted the wrong one of two production
+aliases. `targets.production.alias` lists both; the canonical domain is the one without the team
+slug, and it is listed first. Reading only the value that had been copied into a document, rather
+than the list the platform returns, is what produced two wrong conclusions in a row.
 
 ### Preflight: what the production job proves before it changes anything
 
