@@ -14,20 +14,19 @@ Release Teka Edu Beta 0.1 to production.
 
 ## Objective
 
-An ordinary parent can open `https://teka-edu-teka10.vercel.app` and start a lesson, without a
-Vercel account.
+An ordinary parent can open Teka Edu and start a lesson, without a Vercel account.
 
 ## Status
 
-`blocked`
+`completed`
 
 ## Branch
 
-`fix/production-domain-is-protected`
+`feat/beta-0.1-released`
 
 ## Base Branch
 
-`develop` at `35e7056`
+`develop` at `9b45733`
 
 ## Started
 
@@ -35,111 +34,96 @@ Vercel account.
 
 ## Last Checkpoint
 
-2026-09-22 — production is deployed, migrated and healthy, and is **not public**. One owner
-action remains.
+2026-09-22 — **Beta 0.1 is live and public at https://teka-edu.vercel.app.** Anonymous check
+9/9. Staging still protected.
 
 ## Scope
 
 - Promote `develop` → `main`, migrate PROD, deploy production, verify anonymously.
+- Correct the release record after the first verification was pointed at the wrong alias.
 
 ## Out of Scope
 
-- Changing Vercel Deployment Protection myself. It is security-sensitive and it is the owner's.
-- Rolling back: the deployment is healthy and there is nothing earlier to return to.
-- Any change to approved September content.
+- Changing Vercel Deployment Protection. It was correct all along.
+- Redeploying to change a release status.
+- October, 2ème maternelle, and any change to approved September content.
 
 ## Product Decisions
 
-- The release is **not** called successful, because the anonymous check failed. The in-workflow
-  smoke test passing does not count: it carries the protection bypass, which is precisely why it
-  cannot answer this question.
-- No rollback. The fault is access configuration, not the build, and rolling back would leave
-  production with nothing while changing nothing about the cause.
-- The 41 migrations stay applied. They are additive and forward-safe, and the database holds only
-  reference content regenerated from `content/`.
+- The canonical production URL is **`https://teka-edu.vercel.app`**. The team-scoped alias
+  `teka-edu-teka10.vercel.app` is protected by design and is not the public URL.
+- `NEXT_PUBLIC_APP_URL` corrected to the canonical URL. Nothing renders from it — it is
+  validation only — so no redeployment was forced.
+- The "release failed" report is kept in the record. It was wrong, and the reasoning that
+  produced it is more useful than a tidy history.
 
 ## Completed
 
-- [x] `PRODUCTION_DEPLOY_ENABLED=true` (the one authorised change)
-- [x] Promotion PR **#76** merged into `main` as **`a729722`**, merge commit, promotion-source
-      check passed; exactly one production workflow run
-- [x] Environment review requested and approved; the same run resumed
-- [x] Preflights passed — _Vercel project reached: teka-edu_; _Supabase project: teka-edu-prod
-      (ACTIVE_HEALTHY)_
-- [x] **Supabase PROD migrated 0 → 41**, from the first migration, confirming it began empty
-- [x] Deployed `a729722`, `target=production`, **`dpl_2midgBHcdVDbF8uz57U18MKPmX8P`**, READY,
-      aliased to `teka-edu.vercel.app` and `teka-edu-teka10.vercel.app`
-- [x] In-workflow smoke test 30/30 (with bypass, against the generated URL)
-- [x] **Anonymous check FAILED** — the production domain answers `302 → vercel.com/sso-api`
-- [x] Documentation corrected: the earlier "Standard Protection is fine" conclusion was wrong,
-      and the reasoning that produced it is recorded so it is not repeated
+- [x] `PRODUCTION_DEPLOY_ENABLED=true`; promotion PR **#76** merged as **`a729722`**
+- [x] Environment review approved; the same run resumed; preflights passed
+- [x] **Supabase PROD 0 → 41**; **`dpl_2midgBHcdVDbF8uz57U18MKPmX8P`** READY, `target=production`
+- [x] **Anonymous public check 9/9** against `https://teka-edu.vercel.app`
+- [x] Staging still protected (302); team alias and generated URLs still protected
+- [x] `NEXT_PUBLIC_APP_URL` corrected to the canonical URL
+- [x] Records corrected without erasing the failed first verification
 
 ## In Progress
 
-- [ ] PR into `develop` with the corrections; then the owner's protection change.
+None.
 
 ## Remaining
 
-- [ ] **Owner:** Vercel → `teka-edu` → Settings → Deployment Protection → Vercel Authentication
-      → **Only Preview Deployments** → Save.
-- [ ] Then re-run `PRODUCTION_PUBLIC_URL=https://teka-edu-teka10.vercel.app npm run test:e2e:public`
-      and confirm staging still redirects to the Vercel login.
+- [ ] Promote these corrections to `main` at the next convenient release.
 
 ## Validation State
 
-| Check              | Result | At                                |
-| ------------------ | ------ | --------------------------------- |
-| format             | PASS   | working tree                      |
-| lint               | PASS   | working tree                      |
-| typecheck          | PASS   | working tree                      |
-| unit tests         | PASS   | working tree — 355 tests          |
-| content validation | PASS   | working tree — 31 files           |
-| database tests     | PASS   | CI on `main` — 152 assertions     |
-| build              | PASS   | CI on `main`                      |
-| E2E                | FAIL   | anonymous public check — 6 of 9   |
-| Docker             | PASS   | CI on `main` — both images        |
-| secret scans       | PASS   | 0 tracked `.env*`; gitleaks in CI |
+| Check              | Result | At                                  |
+| ------------------ | ------ | ----------------------------------- |
+| format             | PASS   | working tree                        |
+| lint               | PASS   | working tree                        |
+| typecheck          | PASS   | working tree                        |
+| unit tests         | PASS   | working tree — 355 tests            |
+| content validation | PASS   | working tree — 31 files             |
+| database tests     | PASS   | CI on `main` — 152 assertions       |
+| build              | PASS   | CI on `main`                        |
+| E2E                | PASS   | 30 local · **9/9 anonymous public** |
+| Docker             | PASS   | CI on `main` — both images          |
+| secret scans       | PASS   | 0 tracked `.env*`; gitleaks in CI   |
 
 ## Database State
 
 - Local: 41 migrations; `db reset` + 152 pgTAP assertions pass.
 - DEV: 41 applied.
-- PROD: **41 applied**, `ACTIVE_HEALTHY`. Reference content only; no user data exists anywhere.
+- PROD: **41 applied**, `ACTIVE_HEALTHY`. Reference content only; no user data exists.
 
 ## Deployment State
 
-- Production: **deployed and healthy, but not public.** `dpl_2midgBHcdVDbF8uz57U18MKPmX8P`,
-  `a729722`, READY. The domain redirects to Vercel Authentication.
+- Production: **LIVE and public** — https://teka-edu.vercel.app, `a729722`, Supabase PROD.
 - Staging: protected, healthy, on `develop`.
 - Container registry: ~38 of 50.
 
 ## Git State
 
-- `main` at `a729722`, `develop` at `35e7056`. `fix/production-domain-is-protected` open.
+- `main` at `a729722` (Beta 0.1), `develop` at `9b45733`, `feat/beta-0.1-released` open.
 
 ## Blockers
 
-**One, and it is the last one.** Vercel Authentication is in the legacy
-`all_except_custom_domains` mode: everything except _custom_ domains is protected, and this
-project has none, so the production domain is protected too.
+None.
 
 ## User Decisions Needed
 
-**Set Vercel Authentication to _Only Preview Deployments_.** Staging is a Preview deployment and
-stays protected; the production domain becomes public. Do not disable Vercel Authentication —
-that would expose every preview.
-
-Trade-off worth knowing: under that mode the generated production deployment URLs become public
-as well. The alternative, a custom domain, costs money.
+None. Two non-blocking items remain open and documented: **ISSUE-011** (CI cannot list the
+container registry; manual pruning is the proven fallback) and **ISSUE-017** (no teacher has read
+the 176 lessons; every approval says `ai-assisted`).
 
 ## Exact Resume Point
 
-After the protection change: re-run the anonymous public check, confirm staging still redirects,
-then update the documentation and declare the release.
+Beta 0.1 is released. The next work is whatever the owner chooses: October, 2ème maternelle, or
+the open issues.
 
 ## Resume Verification
 
-1. `curl -sSI https://teka-edu-teka10.vercel.app/ | head -1` — 200 means public, 302 means not;
+1. `curl -sS https://teka-edu.vercel.app/api/health` — `production`, PROD ref, commit `a729722`;
 2. `curl -sSI https://teka-edu-staging.vercel.app/ | head -1` — must still be 302;
-3. `PRODUCTION_PUBLIC_URL=https://teka-edu-teka10.vercel.app npm run test:e2e:public`;
+3. `git log -n 3 --oneline`;
 4. `git status --short` — read uncommitted work before discarding it.
