@@ -39,7 +39,8 @@
     "media:report": "tsx scripts/media-report.ts",
     "review:package": "tsx scripts/review-package.ts",
     "plan:report": "tsx scripts/plan-report.ts",
-    "review:reconfirmation": "tsx scripts/reconfirmation-package.ts"
+    "review:reconfirmation": "tsx scripts/reconfirmation-package.ts",
+    "visual:audit": "tsx scripts/visual-audit.ts"
   },
   "dependencies": {
     "next": "16.3.4",
