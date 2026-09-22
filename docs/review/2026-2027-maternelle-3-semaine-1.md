@@ -82,9 +82,9 @@ Aucune relecture pédagogique n’a eu lieu pour cette semaine à cette date.
 
 ### 2026-09-22 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
 
-Mise à niveau visuelle de septembre (ADR-048) : des images ont été redessinées (comptine-mains, corps-main, corps-pied, corps-tete, corps-ventre, comptine-bonjour, comptine-compter, histoire-seau-lisa, histoire-tika, histoire-pluie, bonhomme-articule, objet-cuillere, objet-porte, objet-seau, objet-table, objet-chaise, animal-poussin, animal-poule, animal-chevre, histoire-kumu, histoire-nsimba, histoire-mangue, histoire-bibi, histoire-marche, histoire-cailloux, histoire-malo, comptine-formes, comptine-semaine, comptine-cabri, plante-parties). L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 6 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-art-02, m3-lang-01, m3-lang-02, m3-lang-03, m3-lang-04, m3-world-01.
+Mise à niveau visuelle de septembre (ADR-048) : 41 images ont été redessinées ou affinées (objet-cuillere, objet-crayon, objet-cahier, objet-sac, objet-table, objet-chaise, objet-porte, objet-fenetre, objet-lit, objet-marmite, objet-seau, objet-panier, objet-tomate, objet-banane, objet-oignon, objet-caillou, corps-main, corps-pied, corps-tete, corps-ventre, animal-poule, animal-poussin, animal-chevre, histoire-seau-lisa, histoire-tika, histoire-kumu, histoire-nsimba, histoire-mangue, histoire-bibi, histoire-marche, histoire-pluie, histoire-cailloux, histoire-malo, comptine-compter, comptine-bonjour, comptine-mains, comptine-semaine, comptine-cabri, comptine-formes, plante-parties, bonhomme-articule) ; les huit formes n’ont pas bougé. L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 9 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-art-02, m3-lang-01, m3-lang-02, m3-lang-03, m3-lang-04, m3-math-01, m3-math-02, m3-math-04, m3-world-01.
 
-**Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (npm run review:visual, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
+**Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (docs/review/2026-2027-<classe>-reconfirmation-visuelle.md, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
 
 ## Jour 1 — 2026-09-01
 
@@ -238,7 +238,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter une petite collection en déplaçant les objets, puis en donner un nombre demandé._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Le comptage se fait en déplaçant chaque objet : c’est ce qui empêche d’en compter un deux fois. Redemandez toujours « Alors, combien y en a-t-il en tout ? » : c’est le dernier mot dit qui donne la quantité.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). _(source : programme-2024-mathematiques)_
@@ -583,7 +583,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Comparer deux collections sans compter, puis en comptant._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** On compare d’abord en regardant, puis en comptant pour vérifier. Les trois mots à installer sont « plus que », « moins que », « autant que ».
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O05` — Comparer des quantités. _(source : programme-2024-mathematiques)_
@@ -1239,7 +1239,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dire la suite des nombres jusqu’à dix sans en oublier._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** La comptine est une chanson : on l’apprend en la disant souvent. Cette semaine, on va jusqu’à dix — pas plus loin. On ira à vingt, puis à trente, plus tard dans le mois.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O26` — Connaitre et utiliser la comptine numérique jusqu’à trente. _(source : programme-2024-mathematiques)_

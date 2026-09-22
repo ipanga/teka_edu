@@ -99,7 +99,7 @@
       "tags": ["crayon", "école", "écrire"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:44639e40462c742c3d03bc0cb0189478cdd622ff54fdba29756596563a4b0977"
+      "contentHash": "sha256:4e7e6fcde76ccaa85ce468b7d0156c0a72cfcec00d1595df9b83d4da2739d782"
     },
     {
       "id": "objet-cahier",
@@ -109,7 +109,7 @@
       "tags": ["cahier", "école"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:3ea07cf1a9323fbf038e4549729b1d55988704a97e61bddaaf3a2af7f1159a6d"
+      "contentHash": "sha256:66778d5feb533391c02eb640b39b88ce462b7a1e5ec5cb88f58c1e34d68deecd"
     },
     {
       "id": "objet-sac",
@@ -119,7 +119,7 @@
       "tags": ["sac", "cartable", "école"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:5374cbc67b63849b1647a74ef2cb297215bedc4ae46b7515c50d1e2715af70bd"
+      "contentHash": "sha256:1d9ecb68ad9677eefe572d009df7c5b1cbe17e0e01d0655ffb9f5e3ad1c77a8d"
     },
     {
       "id": "objet-table",
@@ -159,7 +159,7 @@
       "tags": ["fenêtre", "maison"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:27e0083280252576a86ad160b4039ed94cdf5f8786d28d852242bdf33b09dcbe"
+      "contentHash": "sha256:ebab789795a79bfb2c6b7c8a1b80be8cd616c56928fdb6336781dca2d67de823"
     },
     {
       "id": "objet-lit",
@@ -169,7 +169,7 @@
       "tags": ["lit", "maison", "dormir"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:940132c489f71fe5e55fab085a3dd1de6364ba2422a65135d811645fc8ef655a"
+      "contentHash": "sha256:be1fa2a2b1dd7341e4c7d181d726a9126c6294db281d5275c8fe6799f0fc1bce"
     },
     {
       "id": "objet-marmite",
@@ -179,7 +179,7 @@
       "tags": ["marmite", "maison", "cuisine"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:624bada299e4776b0570e8be1b578cc4e9c41ba9f5abcb457c942a11ef29e3ee"
+      "contentHash": "sha256:8a74ce5826a7815b1198e95241bda1cb69ac628b528f9ea1f54b3ef5eac63ffd"
     },
     {
       "id": "objet-seau",
@@ -199,7 +199,7 @@
       "tags": ["panier", "marché"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:4bde6a79211a101948048e804f61c36f0aa7a26ea4380ce911545a04ec0c06d0"
+      "contentHash": "sha256:370951e6875d48b92f1f1941a5a11ff4378dbb5cf1ff0661559f80673c38bafc"
     },
     {
       "id": "objet-tomate",
@@ -209,7 +209,7 @@
       "tags": ["tomate", "marché", "manger"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:c8dc26f182944020a2893947f37f28b3ddfdc6e6a312778d1eeb21df054195d5"
+      "contentHash": "sha256:1640e1af16df12c4ace21c8a28d00a6eecd1cddb51569cc6359f92a5dd16064b"
     },
     {
       "id": "objet-banane",
@@ -219,7 +219,7 @@
       "tags": ["banane", "marché", "manger"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:3a2bcb5f71dd7b28847c8232b4de9d7ebdb9e9288268a5c191b63e50c5eb2c52"
+      "contentHash": "sha256:611a92eea6ab28d5b145a798226696ecc735a2d276f85a18ea533d5d7d6e82ab"
     },
     {
       "id": "objet-oignon",
@@ -229,7 +229,7 @@
       "tags": ["oignon", "marché", "manger"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:fb5b1a17c85c4a4ae288a9c223b15237bdf68775d3f08f082808e9695f4ec3a1"
+      "contentHash": "sha256:f0b5cc0a9bec9d829cc136aac563b5255f0a781d24cade4ff2fcece49e07ccd8"
     },
     {
       "id": "objet-caillou",
@@ -239,7 +239,7 @@
       "tags": ["caillou", "compter", "petit objet"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:4048c95b6d2c053f4338a4f3d4f21bdbb5ccfb292e34898fa07b29e015ef3855"
+      "contentHash": "sha256:2fdff74f58b431b31c5d0afbe660e80121c2af196cbfe28ca7ca68ec940632f9"
     },
     {
       "id": "corps-main",

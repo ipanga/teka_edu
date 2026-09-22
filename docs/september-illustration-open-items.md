@@ -8,12 +8,18 @@ to the bottom with their resolution.
 ### OI-001 — When to submit the visual reconfirmation package
 
 Redrawing a picture lapses the approval of every lesson that shows it (ADR-048; `lessonDigest`
-covers picture bytes since ISSUE-026). After B2–B4, the lessons of both classes that show a
-changed picture are at `review`, and `npm run review:visual` generates one package per level
-with a before/after contact sheet. The owner submits it to the AI-assisted reviewer, records the
+covers picture bytes since ISSUE-026). **80 lessons are at `review`** (35 in 1ère, 45 in 3ème),
+and the packages are ready: `docs/review/2026-2027-maternelle-1-reconfirmation-visuelle.md`,
+`docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md`, with
+`docs/review/media/septembre-avant-apres.png`. The owner submits it to the AI-assisted reviewer, records the
 outcome in `content/reviews/history.json` (one `full-review` entry per week, scope and wording
 as in the package), and runs `scripts/approve-week.ts` per week. Until then the product keeps
 serving the lessons; only the status differs.
+
+Restoration, per level: one `full-review` entry per week (1 to 5) in
+`content/reviews/history.json` with `outcome: "accepted"`, then
+`npx tsx scripts/approve-week.ts --level=<id> --week=<n>` for each, then
+`npm run review:package`, `npm run db:reference -- --new-migration <name>`, and the usual PR.
 
 **Merge order is the owner's call**: `feat/september-visual-ux` can merge at once (no content
 change); `feat/september-illustrations` can merge before or after the reconfirmation, since the

@@ -82,6 +82,11 @@ npx tsx tools/media/build.ts     # rewrites public/media/**, then re-validate co
 The SVGs are committed. The generator exists for consistency and audit, exactly like
 `tools/annual-plan/build.ts`; it is not run at build time.
 
+`npm run media:sheet` renders a before/after contact sheet of every picture that changed since a
+Git revision, at the three sizes the product uses (72, 128 and 256 px), with the same Chromium
+the E2E tests use. It is how a redraw is looked at before it ships, and what the reviewer judges
+when approvals lapse for it (ADR-048, `npm run review:visual`).
+
 ## Visual style
 
 The illustration system — one ink, flat fills with a single shade, a warm brown skin for people

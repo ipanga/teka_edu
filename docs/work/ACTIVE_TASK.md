@@ -24,7 +24,7 @@ all of it is tracked so the work survives an interruption.
 
 ## Status
 
-`in_progress`
+`awaiting_review`
 
 ## Branch
 
@@ -43,9 +43,9 @@ Decisions).
 
 ## Last Checkpoint
 
-2026-09-22 — **B3 done** on `feat/september-illustrations` (PR #80, stacked on #79): 30
-pictures redrawn so far, 67 approvals lapsed and recorded per week. Next: B4 — the 11 remaining
-objects, the reviewer's sheet, the visual reconfirmation package, the data migration, QA.
+2026-09-23 — **All batches done (B0–B4, QA).** Two draft PRs: #79 (UX, motion, audio plumbing;
+no content change) and #80 (41 pictures, 80 lapses recorded, two visual reconfirmation packages,
+data migration). Awaiting the owner's visual reconfirmation review.
 
 ## Scope
 
@@ -87,52 +87,46 @@ objects, the reviewer's sheet, the visual reconfirmation package, the data migra
 
 ## Completed
 
-- [x] Previous task archived; branch created from `develop` at `087fc06`.
-- [x] B0 — tracking system: state file, audit generator, plan, progress, open items, docs table
-      (`6d04196`).
-- [x] B1 — UX frame: picture stage, word cards, rhyme/story layout, off-screen frame, child
-      screen, motion (staggered entrances, page turn), pronunciation plumbing + tests, ADR-048.
-
-- [x] B2 — illustrations, 1ère set: 16 pictures, `media:sheet`, `review:lapse`, 44 lapses
-      recorded as `consequence` entries, 1ère full reviews transcribed into the history.
-
-- [x] B3 — illustrations, 3ème set: 14 pictures (animals, seven stories, three rhymes, the
-      plant); 67 lapses in total, all recorded.
+- [x] B0 — tracking system, audit generator, plan (`6d04196`).
+- [x] B1 — UX frame, motion, audio plumbing, ADR-048 (`9b8d6ff`, PR #79).
+- [x] B2 — the 1ère set, 16 pictures; lapses recorded; 1ère reviews transcribed (PR #80).
+- [x] B3 — the 3ème set, 14 pictures (`8f7d0ff`).
+- [x] B4 — 11 objects; `review:visual` packages; sheet; migration
+      `20260922220249_september_visual_upgrade`; 152 pgTAP PASS.
+- [x] QA — build, 66 screenshots, E2E 30, media report 0 gaps.
 
 ## In Progress
 
-- [ ] B4 — objects (crayon, cahier, sac, fenêtre, lit, marmite, panier, tomate, banane,
-      oignon, caillou), `docs/review/media/` sheet, `npm run review:visual`, data migration,
-      review packages, QA in the app.
+None.
 
 ## Remaining
 
-- [ ] B4 — objects refined (shade + ground), contact sheet, visual reconfirmation package,
-      lapses, data migration, review packages regenerated.
-- [ ] QA — screenshots at phone/tablet/desktop, reduced motion, E2E, Docker not needed.
-- [ ] Final report in `docs/september-illustration-progress.md`.
+- [ ] Owner: merge #79; submit the two reconfirmation packages; record `full-review accepted`
+      per week; `scripts/approve-week.ts` × 10; regenerate packages and a data migration; merge
+      #80 (before or after — the runtime does not gate on status).
+- [ ] Owner: decide who records the audio (OI-002).
 
 ## Validation State
 
-| Check              | Result | At                        |
-| ------------------ | ------ | ------------------------- |
-| format             | PASS   | working tree, B1          |
-| lint               | PASS   | working tree, B1          |
-| typecheck          | PASS   | working tree, B1          |
-| unit tests         | PASS   | working tree, B1 — 374    |
-| content validation | PASS   | working tree, B1 — 31     |
-| database tests     | N/A    | no schema change in B0–B1 |
-| build              | PASS   | working tree, B1          |
-| E2E                | PASS   | working tree, B1 — 30     |
-| Docker             | N/A    | no Dockerfile change      |
-| secret scans       | N/A    | no secret touched         |
+| Check              | Result | At                                |
+| ------------------ | ------ | --------------------------------- |
+| format             | PASS   | working tree, B4 + QA             |
+| lint               | PASS   | working tree, B4 + QA             |
+| typecheck          | PASS   | working tree, B4 + QA             |
+| unit tests         | PASS   | working tree, B4 + QA — 374       |
+| content validation | PASS   | working tree, B4 + QA — 31 files  |
+| database tests     | PASS   | local `db reset` — 152 assertions |
+| build              | PASS   | working tree, B4                  |
+| E2E                | PASS   | working tree, B4 — 30 (9 skipped) |
+| Docker             | N/A    | no Dockerfile change              |
+| secret scans       | N/A    | no secret touched; gitleaks in CI |
 
 ## Database State
 
-- Local / DEV / PROD: 41 migrations, unchanged. **B4 must add one data migration** (media
-  registry hashes and alts, lesson statuses and review blocks, review history) with
-  `npm run db:reference -- --new-migration september_visual_upgrade`; until then the pgTAP
-  reference test (regenerated) does not match the applied migrations.
+- Local: 42 migrations, `db reset` + 152 pgTAP assertions PASS.
+- DEV / PROD: 41 applied. Migration `20260922220249_september_visual_upgrade.sql` (registry
+  hashes and alts, lesson statuses and review blocks, review history) is applied to DEV by the
+  staging deploy when #80 merges; PROD at the next promotion.
 
 ## Deployment State
 
@@ -140,9 +134,8 @@ objects, the reviewer's sheet, the visual reconfirmation package, the data migra
 
 ## Git State
 
-- `feat/september-visual-ux` from `develop` at `087fc06`: B0 `6d04196`, B1 `9b8d6ff`; pushed;
-  Draft PR #79.
-- `feat/september-illustrations` from `9b8d6ff`: B2 pushed, Draft PR #80; B3 committed next.
+- `feat/september-visual-ux` (PR #79, draft): `6d04196`, `9b8d6ff`.
+- `feat/september-illustrations` (PR #80, draft, base #79): B2, `8f7d0ff`, B4 committed next.
 
 ## Blockers
 
@@ -150,25 +143,16 @@ None.
 
 ## User Decisions Needed
 
-None to start. Two will be needed later and are listed in
-`docs/september-illustration-open-items.md`: who records the pronunciation audio, and when the
-visual reconfirmation package is submitted.
+- OI-001: submit the visual reconfirmation packages and decide the merge order.
+- OI-002: who records the pronunciation audio.
 
 ## Exact Resume Point
 
-Batch B4 on `feat/september-illustrations`. (1) In `tools/media/build.ts` refine the eleven
-remaining objects with the new palette (shade band, ground, fuller canvas): `objet-crayon`,
-`objet-cahier`, `objet-sac`, `objet-fenetre`, `objet-lit`, `objet-marmite`, `objet-panier`,
-`objet-tomate`, `objet-banane`, `objet-oignon`, `objet-caillou` — then the legacy constants can
-go. (2) `npx tsx tools/media/build.ts`; look at `npm run media:sheet -- --scale=2 --out=<scratch>`.
-(3) `npm run review:lapse`; recompute the lapsed set from `git diff develop` and update the ten
-2026-09-22 `consequence` entries in `content/reviews/history.json`. (4) Write
-`scripts/visual-reconfirmation.ts` (`npm run review:visual`): one Markdown per level in
-`docs/review/`, listing changed assets with old/new alt and hash, the lapsed lessons per week,
-and embedding the sheet `docs/review/media/septembre-avant-apres.png`. (5)
-`npm run review:package`, `npm run db:reference -- --new-migration september_visual_upgrade`,
-`npm run db:start && npm run db:reset && npm run db:test` if Docker is available. (6) Build,
-screenshots of the same seven activities, E2E. (7) State, audit, log, checkpoint, commit.
+Nothing is in progress. If the reviewer returns `accepted-with-modifications` naming a picture:
+redraw it in `tools/media/build.ts`, `npx tsx tools/media/build.ts`, `npm run review:visual`,
+`npm run review:package`, `npm run db:reference -- --new-migration <name>`, `npm run visual:audit`,
+commit on `feat/september-illustrations`. If `accepted`: follow OI-001 in
+`docs/september-illustration-open-items.md`.
 
 ## Resume Verification
 

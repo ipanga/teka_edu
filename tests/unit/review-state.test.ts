@@ -231,7 +231,10 @@ describe("the approvals granted to 3ème maternelle Week 1 are protected", () =>
   });
 
   it("lapses when the child's own instruction changes", () => {
-    const lesson = approved.find((l) => l.id === "m3-math-01")!;
+    // Any approved lesson will do: the one this test named first (m3-math-01) has since had its
+    // approval lapse for a redrawn picture (ADR-048), which is the mechanism working, not a
+    // reason to pin the test to a lesson that may lapse again.
+    const lesson = approved.find((l) => l.activities.length > 0)!;
     const before = lessonDigest(lesson, media);
     const edited = {
       ...lesson,

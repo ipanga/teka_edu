@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" fill="none">
-  <g stroke="#1f2937" stroke-width="6" stroke-linejoin="round">
-      <path d="M100 65 q55 30 40 70 q-15 40 -40 40 q-25 0 -40 -40 q-15 -40 40 -70 z" fill="#b9b2a6"/>
-      <path d="M100 65 l-14 -22 M100 65 l14 -22" fill="none" stroke="#79b98a" stroke-width="7"/>
-    </g>
+  <ellipse cx="100" cy="182" rx="54" ry="7" fill="#efe9dc"/>
+      <path d="M100 60 q58 30 42 78 q-14 40 -42 40 q-28 0 -42 -40 q-16 -48 42 -78 z" fill="#c9c2b4" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M100 72 q30 34 22 82 M100 72 q-30 34 -22 82" fill="none" stroke="#a49c8e" stroke-width="4" stroke-linecap="round"/>
+      <path d="M100 60 l-14 -26 M100 60 l14 -26 M100 60 v-30" fill="none" stroke="#86c692" stroke-width="7" stroke-linecap="round"/>
+      <path d="M90 176 l-4 10 M100 178 v10 M110 176 l4 10" fill="none" stroke="#a49c8e" stroke-width="4" stroke-linecap="round"/>
 </svg>

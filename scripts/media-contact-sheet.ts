@@ -11,7 +11,7 @@
  * SVGs by the same Chromium the E2E tests use, so what the reviewer sees is what a browser draws.
  */
 import { execFileSync } from "node:child_process";
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { chromium } from "@playwright/test";
 

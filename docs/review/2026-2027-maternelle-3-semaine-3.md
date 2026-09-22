@@ -76,9 +76,9 @@ Confirmation finale. La première relecture complète avait demandé les correct
 
 ### 2026-09-22 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
 
-Mise à niveau visuelle de septembre (ADR-048) : des images ont été redessinées (comptine-mains, corps-main, corps-pied, corps-tete, corps-ventre, comptine-bonjour, comptine-compter, histoire-seau-lisa, histoire-tika, histoire-pluie, bonhomme-articule, objet-cuillere, objet-porte, objet-seau, objet-table, objet-chaise, animal-poussin, animal-poule, animal-chevre, histoire-kumu, histoire-nsimba, histoire-mangue, histoire-bibi, histoire-marche, histoire-cailloux, histoire-malo, comptine-formes, comptine-semaine, comptine-cabri, plante-parties). L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 8 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-art-04, m3-art-05, m3-lang-10, m3-lang-11, m3-lang-12, m3-lang-13, m3-lang-14, m3-world-04.
+Mise à niveau visuelle de septembre (ADR-048) : 41 images ont été redessinées ou affinées (objet-cuillere, objet-crayon, objet-cahier, objet-sac, objet-table, objet-chaise, objet-porte, objet-fenetre, objet-lit, objet-marmite, objet-seau, objet-panier, objet-tomate, objet-banane, objet-oignon, objet-caillou, corps-main, corps-pied, corps-tete, corps-ventre, animal-poule, animal-poussin, animal-chevre, histoire-seau-lisa, histoire-tika, histoire-kumu, histoire-nsimba, histoire-mangue, histoire-bibi, histoire-marche, histoire-pluie, histoire-cailloux, histoire-malo, comptine-compter, comptine-bonjour, comptine-mains, comptine-semaine, comptine-cabri, comptine-formes, plante-parties, bonhomme-articule) ; les huit formes n’ont pas bougé. L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 11 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-art-04, m3-art-05, m3-lang-10, m3-lang-11, m3-lang-12, m3-lang-13, m3-lang-14, m3-math-10, m3-math-11, m3-math-12, m3-world-04.
 
-**Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (npm run review:visual, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
+**Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (docs/review/2026-2027-<classe>-reconfirmation-visuelle.md, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
 
 ## Jour 10 — 2026-09-14
 
@@ -233,7 +233,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Étendre la suite des nombres de dix à vingt._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** On connait dix. On ajoute la deuxième dizaine, qui est régulière à partir de dix-sept. Onze, douze, treize s’apprennent par cœur : dites-les souvent.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -553,7 +553,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Décomposer un petit nombre en deux parties._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
 - **Conseil au parent :** On cache une partie sous la main : l’enfant voit une partie et doit dire l’autre. C’est le début du calcul.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O22` — Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà. _(source : programme-2024-mathematiques)_
@@ -875,7 +875,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Trouver plusieurs façons de faire six._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 3/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 3/3
 - **Conseil au parent :** Même jeu qu’hier, avec six. L’enfant doit verbaliser : c’est le fait de dire « quatre et deux » qui installe la décomposition.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

@@ -82,16 +82,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-17",
-        "reviewedDigest": "6db7e1726307321c",
-        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m3-math-02",
@@ -176,16 +168,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-17",
-        "reviewedDigest": "d0e74b0f9641da17",
-        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m3-math-03",
@@ -386,16 +370,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-17",
-        "reviewedDigest": "9374f9f0ccdcd1dc",
-        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m3-math-05",
@@ -476,16 +452,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-19",
-        "reviewedDigest": "a8b3ddbfe55af947",
-        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m3-math-06",
@@ -656,16 +624,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-19",
-        "reviewedDigest": "3674d655fe5579b9",
-        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m3-math-08",
@@ -849,16 +809,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-19",
-        "reviewedDigest": "5bc68d7bbdfc21d3",
-        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m3-math-10",
@@ -943,16 +895,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-19",
-        "reviewedDigest": "89bc52bc37f75e64",
-        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m3-math-11",
@@ -1037,16 +981,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-19",
-        "reviewedDigest": "82414b30cb3443ac",
-        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m3-math-12",
@@ -1127,16 +1063,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-19",
-        "reviewedDigest": "d7c18714c1224dc8",
-        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m3-math-13",
@@ -1586,16 +1514,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-20",
-        "reviewedDigest": "a32267ccaad677fe",
-        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m3-math-18",
@@ -1774,16 +1694,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-20",
-        "reviewedDigest": "eaca49de53be84aa",
-        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m3-math-20",
@@ -1864,16 +1776,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-20",
-        "reviewedDigest": "8658a891227fb745",
-        "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m3-math-21",
@@ -2040,16 +1944,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-20",
-        "reviewedDigest": "5959f8bf0006a577",
-        "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     }
   ]
 }

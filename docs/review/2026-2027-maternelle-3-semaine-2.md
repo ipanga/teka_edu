@@ -76,9 +76,9 @@ Relecture finale. Les deux corrections de la passe précédente sont vérifiées
 
 ### 2026-09-22 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
 
-Mise à niveau visuelle de septembre (ADR-048) : des images ont été redessinées (comptine-mains, corps-main, corps-pied, corps-tete, corps-ventre, comptine-bonjour, comptine-compter, histoire-seau-lisa, histoire-tika, histoire-pluie, bonhomme-articule, objet-cuillere, objet-porte, objet-seau, objet-table, objet-chaise, animal-poussin, animal-poule, animal-chevre, histoire-kumu, histoire-nsimba, histoire-mangue, histoire-bibi, histoire-marche, histoire-cailloux, histoire-malo, comptine-formes, comptine-semaine, comptine-cabri, plante-parties). L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 7 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-lang-05, m3-lang-06, m3-lang-07, m3-lang-08, m3-lang-09, m3-world-02, m3-world-03.
+Mise à niveau visuelle de septembre (ADR-048) : 41 images ont été redessinées ou affinées (objet-cuillere, objet-crayon, objet-cahier, objet-sac, objet-table, objet-chaise, objet-porte, objet-fenetre, objet-lit, objet-marmite, objet-seau, objet-panier, objet-tomate, objet-banane, objet-oignon, objet-caillou, corps-main, corps-pied, corps-tete, corps-ventre, animal-poule, animal-poussin, animal-chevre, histoire-seau-lisa, histoire-tika, histoire-kumu, histoire-nsimba, histoire-mangue, histoire-bibi, histoire-marche, histoire-pluie, histoire-cailloux, histoire-malo, comptine-compter, comptine-bonjour, comptine-mains, comptine-semaine, comptine-cabri, comptine-formes, plante-parties, bonhomme-articule) ; les huit formes n’ont pas bougé. L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 10 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-lang-05, m3-lang-06, m3-lang-07, m3-lang-08, m3-lang-09, m3-math-05, m3-math-07, m3-math-09, m3-world-02, m3-world-03.
 
-**Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (npm run review:visual, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
+**Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (docs/review/2026-2027-<classe>-reconfirmation-visuelle.md, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
 
 ## Jour 5 — 2026-09-07
 
@@ -216,7 +216,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter des collections un peu plus grandes, en les organisant._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Six objets en tas se comptent mal. Montrez comment les aligner d’abord : organiser sa collection est déjà une stratégie de mathématicien.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -878,7 +878,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Passer une seule fois par chaque objet d’une collection._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
 - **Conseil au parent :** C’est la difficulté la plus courante : recompter un objet, ou en sauter un. La solution est de les déplacer au fur et à mesure, d’un tas vers un autre.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O19` — Poursuivre les stratégies de parcours d’une collection en passant une et une seule fois par chacun de ses éléments. _(source : programme-2024-mathematiques)_
@@ -1554,7 +1554,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Reprendre le comptage et la comparaison de la semaine._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Reprise de la semaine, en jeu. Rien de nouveau : l’enfant montre ce qu’il sait faire.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

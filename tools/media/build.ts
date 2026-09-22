@@ -6,8 +6,10 @@
  * The SVGs are committed; this exists so the set stays consistent and can be regenerated and
  * reviewed as a whole, like tools/annual-plan/build.ts. It is not run at build time.
  *
- * Style: flat, two-tone, no gradients, no faces, recognisable at arm's length on a phone. Colour
- * never carries meaning — the child is asked for *the square*, never for *the blue one*.
+ * Style (docs/september-illustration-upgrade-plan.md): one ink, flat fills with a single shade,
+ * a warm brown skin for people and body parts, a soft ground, faces on people and animals only,
+ * recognisable at arm's length on a phone. Colour never carries meaning — the child is asked for
+ * *the square*, never for *the blue one*. The shapes keep the original constants on purpose.
  */
 import { createHash } from "node:crypto";
 import { format } from "prettier";
@@ -18,13 +20,12 @@ const ROOT = path.resolve(import.meta.dirname, "../..");
 const OUT = path.join(ROOT, "public/media");
 const SIZE = 200;
 
+// The original palette, kept only for the eight shapes, which are byte-identical (ADR-048).
 const INK = "#1f2937";
-const PAPER = "#fffdf7";
 const BLUE = "#6aa9d8";
 const GREEN = "#79b98a";
 const AMBER = "#e9b96e";
 const CLAY = "#c9785f";
-const STONE = "#b9b2a6";
 
 // ---- the September illustration system (docs/september-illustration-upgrade-plan.md) ----------
 //
@@ -294,33 +295,35 @@ const OBJECTS: [id: string, alt: string, tags: string[], body: string][] = [
     "objet-crayon",
     "Un crayon",
     ["crayon", "école", "écrire"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <rect x="70" y="45" width="60" height="90" fill="${AMBER}"/>
-      <polygon points="70,135 130,135 100,175" fill="${PAPER}"/>
-      <rect x="70" y="30" width="60" height="18" fill="${CLAY}"/>
-    </g>`,
+    `${ground(100, 184, 40, 6)}
+      <rect x="82" y="14" width="36" height="16" rx="4" fill="${base("berry")}" ${OUTLINE}/>
+      <rect x="78" y="28" width="44" height="14" fill="${base("stone")}" ${OUTLINE}/>
+      <rect x="78" y="42" width="44" height="98" fill="${base("sun")}" ${OUTLINE}/>
+      <rect x="108" y="45" width="11" height="92" fill="${shade("sun")}"/>
+      <polygon points="78,140 122,140 100,178" fill="${base("paper")}" ${OUTLINE}/>
+      <polygon points="93,166 107,166 100,178" fill="${LINE}"/>`,
   ],
   [
     "objet-cahier",
     "Un cahier",
     ["cahier", "école"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <rect x="45" y="35" width="110" height="140" rx="6" fill="${BLUE}"/>
-      <line x1="70" y1="35" x2="70" y2="175"/>
-      <line x1="90" y1="75" x2="135" y2="75"/>
-      <line x1="90" y1="105" x2="135" y2="105"/>
-      <line x1="90" y1="135" x2="135" y2="135"/>
-    </g>`,
+    `${ground(100, 184, 60, 6)}
+      <rect x="44" y="26" width="112" height="150" rx="6" fill="${base("sky")}" ${OUTLINE}/>
+      <rect x="44" y="26" width="22" height="150" rx="6" fill="${shade("sky")}" ${OUTLINE}/>
+      <rect x="86" y="50" width="52" height="30" rx="3" fill="${base("paper")}" stroke="${LINE}" stroke-width="4"/>
+      <line x1="94" y1="62" x2="130" y2="62" stroke="${base("stone")}" stroke-width="3" stroke-linecap="round"/>
+      <line x1="94" y1="70" x2="120" y2="70" stroke="${base("stone")}" stroke-width="3" stroke-linecap="round"/>`,
   ],
   [
     "objet-sac",
     "Un sac d’école",
     ["sac", "cartable", "école"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <path d="M70 80 a30 30 0 0 1 60 0" fill="none"/>
-      <rect x="45" y="80" width="110" height="90" rx="12" fill="${GREEN}"/>
-      <rect x="45" y="80" width="110" height="30" rx="10" fill="${AMBER}"/>
-    </g>`,
+    `${ground(100, 184, 64, 6)}
+      <path d="M70 72 a30 30 0 0 1 60 0" fill="none" ${OUTLINE}/>
+      <rect x="42" y="66" width="116" height="110" rx="16" fill="${base("leaf")}" ${OUTLINE}/>
+      <rect x="42" y="66" width="116" height="34" rx="14" fill="${shade("leaf")}" ${OUTLINE}/>
+      <rect x="74" y="114" width="52" height="44" rx="8" fill="${base("sun")}" ${OUTLINE}/>
+      <circle cx="100" cy="100" r="6" fill="${base("sun")}" stroke="${LINE}" stroke-width="4"/>`,
   ],
   [
     "objet-table",
@@ -364,33 +367,41 @@ const OBJECTS: [id: string, alt: string, tags: string[], body: string][] = [
     "objet-fenetre",
     "Une fenêtre",
     ["fenêtre", "maison"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <rect x="40" y="45" width="120" height="110" rx="6" fill="${BLUE}"/>
-      <line x1="100" y1="45" x2="100" y2="155"/>
-      <line x1="40" y1="100" x2="160" y2="100"/>
-    </g>`,
+    `${ground(100, 184, 76, 6)}
+      <rect x="34" y="28" width="132" height="140" rx="4" fill="${base("sun")}" ${OUTLINE}/>
+      <rect x="46" y="40" width="50" height="54" fill="${base("sky")}" ${OUTLINE}/>
+      <rect x="104" y="40" width="50" height="54" fill="${base("sky")}" ${OUTLINE}/>
+      <rect x="46" y="102" width="50" height="54" fill="${base("sky")}" ${OUTLINE}/>
+      <rect x="104" y="102" width="50" height="54" fill="${base("sky")}" ${OUTLINE}/>
+      <circle cx="129" cy="66" r="13" fill="${base("sun")}" stroke="${LINE}" stroke-width="4"/>
+      <rect x="28" y="166" width="144" height="12" rx="3" fill="${shade("stone")}" ${OUTLINE}/>`,
   ],
   [
     "objet-lit",
     "Un lit",
     ["lit", "maison", "dormir"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <rect x="30" y="95" width="140" height="45" rx="8" fill="${GREEN}"/>
-      <rect x="42" y="78" width="45" height="28" rx="8" fill="${PAPER}"/>
-      <line x1="30" y1="140" x2="30" y2="165"/>
-      <line x1="170" y1="140" x2="170" y2="165"/>
-    </g>`,
+    `${ground(100, 184, 88, 6)}
+      <rect x="28" y="150" width="10" height="26" fill="${shade("clay")}" ${OUTLINE}/>
+      <rect x="162" y="150" width="10" height="26" fill="${shade("clay")}" ${OUTLINE}/>
+      <rect x="20" y="56" width="24" height="98" rx="6" fill="${base("clay")}" ${OUTLINE}/>
+      <rect x="156" y="88" width="24" height="66" rx="6" fill="${base("clay")}" ${OUTLINE}/>
+      <rect x="34" y="112" width="136" height="40" rx="8" fill="${base("paper")}" ${OUTLINE}/>
+      <rect x="46" y="98" width="44" height="22" rx="8" fill="${base("paper")}" ${OUTLINE}/>
+      <rect x="92" y="112" width="78" height="40" rx="8" fill="${base("leaf")}" ${OUTLINE}/>
+      <line x1="104" y1="128" x2="158" y2="128" stroke="${shade("leaf")}" stroke-width="4" stroke-linecap="round"/>`,
   ],
   [
     "objet-marmite",
     "Une marmite",
     ["marmite", "maison", "cuisine"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <path d="M50 85 h100 l-10 80 h-80 z" fill="${STONE}"/>
-      <rect x="40" y="70" width="120" height="16" rx="8" fill="${INK}"/>
-      <line x1="40" y1="95" x2="22" y2="112"/>
-      <line x1="160" y1="95" x2="178" y2="112"/>
-    </g>`,
+    `${ground(100, 184, 76, 6)}
+      <rect x="22" y="94" width="26" height="14" rx="6" fill="${shade("stone")}" ${OUTLINE}/>
+      <rect x="152" y="94" width="26" height="14" rx="6" fill="${shade("stone")}" ${OUTLINE}/>
+      <path d="M46 86 h108 l-10 88 h-88 z" fill="${base("stone")}" ${OUTLINE}/>
+      <path d="M124 90 h22 l-8 80 h-20 z" fill="${shade("stone")}"/>
+      <rect x="38" y="76" width="124" height="14" rx="6" fill="${shade("stone")}" ${OUTLINE}/>
+      <ellipse cx="100" cy="74" rx="52" ry="11" fill="${base("stone")}" ${OUTLINE}/>
+      <circle cx="100" cy="58" r="8" fill="${base("sun")}" ${OUTLINE}/>`,
   ],
   [
     "objet-seau",
@@ -406,42 +417,51 @@ const OBJECTS: [id: string, alt: string, tags: string[], body: string][] = [
     "objet-panier",
     "Un panier",
     ["panier", "marché"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <path d="M45 90 h110 l-14 80 h-82 z" fill="${AMBER}"/>
-      <path d="M70 88 a30 28 0 0 1 60 0" fill="none"/>
-      <line x1="72" y1="110" x2="64" y2="165"/>
-      <line x1="128" y1="110" x2="136" y2="165"/>
-    </g>`,
+    `${ground(100, 184, 72, 6)}
+      <path d="M66 94 a34 30 0 0 1 68 0" fill="none" ${OUTLINE}/>
+      <path d="M40 98 h120 l-14 76 h-92 z" fill="${base("sun")}" ${OUTLINE}/>
+      <path d="M66 102 l-6 68 M100 102 l0 68 M134 102 l6 68 M46 128 h108 M50 152 h100" fill="none" stroke="${shade("sun")}" stroke-width="4" stroke-linecap="round"/>
+      <rect x="34" y="90" width="132" height="12" rx="4" fill="${shade("sun")}" ${OUTLINE}/>`,
   ],
   [
     "objet-tomate",
     "Une tomate",
     ["tomate", "marché", "manger"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <circle cx="100" cy="115" r="55" fill="${CLAY}"/>
-      <path d="M100 60 l-22 -18 M100 60 l22 -18 M100 60 v-22" fill="none" stroke="${GREEN}" stroke-width="8"/>
-    </g>`,
+    `${ground(100, 182, 60, 7)}
+      <circle cx="100" cy="118" r="56" fill="${shade("berry")}" ${OUTLINE}/>
+      <circle cx="100" cy="112" r="50" fill="${base("berry")}"/>
+      <ellipse cx="78" cy="92" rx="8" ry="12" transform="rotate(30 78 92)" fill="${base("paper")}"/>
+      <path d="M100 66 l-26 -12 M100 66 l26 -12 M100 66 v-24 M100 66 l-12 -22 M100 66 l12 -22" fill="none" stroke="${base("leaf")}" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="100" cy="66" r="5" fill="${shade("leaf")}"/>`,
   ],
   [
     "objet-banane",
     "Une banane",
     ["banane", "marché", "manger"],
-    `<path d="M45 70 q10 85 105 85 q-55 -20 -75 -95 z" fill="${AMBER}" stroke="${INK}" stroke-width="6" stroke-linejoin="round"/>`,
+    `${ground(100, 182, 64, 7)}
+      <path d="M45 70 q10 85 105 85 q-55 -20 -75 -95 z" fill="${base("sun")}" ${OUTLINE}/>
+      <path d="M62 84 q18 56 78 66 q-42 -22 -62 -72 z" fill="${shade("sun")}"/>
+      <rect x="38" y="58" width="14" height="18" rx="4" fill="${base("stone")}" ${OUTLINE}/>
+      <circle cx="150" cy="154" r="5" fill="${LINE}"/>`,
   ],
   [
     "objet-oignon",
     "Un oignon",
     ["oignon", "marché", "manger"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <path d="M100 65 q55 30 40 70 q-15 40 -40 40 q-25 0 -40 -40 q-15 -40 40 -70 z" fill="${STONE}"/>
-      <path d="M100 65 l-14 -22 M100 65 l14 -22" fill="none" stroke="${GREEN}" stroke-width="7"/>
-    </g>`,
+    `${ground(100, 182, 54, 7)}
+      <path d="M100 60 q58 30 42 78 q-14 40 -42 40 q-28 0 -42 -40 q-16 -48 42 -78 z" fill="${base("stone")}" ${OUTLINE}/>
+      <path d="M100 72 q30 34 22 82 M100 72 q-30 34 -22 82" fill="none" stroke="${shade("stone")}" stroke-width="4" stroke-linecap="round"/>
+      <path d="M100 60 l-14 -26 M100 60 l14 -26 M100 60 v-30" fill="none" stroke="${base("leaf")}" stroke-width="7" stroke-linecap="round"/>
+      <path d="M90 176 l-4 10 M100 178 v10 M110 176 l4 10" fill="none" stroke="${shade("stone")}" stroke-width="4" stroke-linecap="round"/>`,
   ],
   [
     "objet-caillou",
     "Un caillou",
     ["caillou", "compter", "petit objet"],
-    `<path d="M60 120 q-8 -35 30 -45 q45 -12 55 20 q12 38 -25 48 q-48 12 -60 -23 z" fill="${STONE}" stroke="${INK}" stroke-width="6" stroke-linejoin="round"/>`,
+    `${ground(100, 172, 60, 8)}
+      <path d="M50 122 q-10 -46 38 -58 q56 -14 68 26 q14 48 -32 60 q-60 14 -74 -28 z" fill="${shade("stone")}" ${OUTLINE}/>
+      <path d="M56 114 q-6 -38 34 -48 q48 -12 58 22 q10 36 -28 46 q-52 12 -64 -20 z" fill="${base("stone")}"/>
+      <ellipse cx="78" cy="88" rx="12" ry="7" transform="rotate(-20 78 88)" fill="${base("paper")}"/>`,
   ],
 ];
 

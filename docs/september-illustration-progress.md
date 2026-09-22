@@ -132,3 +132,106 @@ migration), QA of the redraws.
 
 **Remains** — B4: the 11 remaining objects, the reviewer's contact sheet in
 `docs/review/media/`, `npm run review:visual`, the data migration, QA in the running app.
+
+### 2026-09-23 — B4 objects, reviewer's sheet, reconfirmation packages, migration (done)
+
+**Completed**
+
+- **11 objects refined** with the new palette (`crayon`, `cahier`, `sac`, `fenêtre`, `lit`,
+  `marmite`, `panier`, `tomate`, `banane`, `oignon`, `caillou`): a shade band, a ground, a
+  fuller canvas, a highlight on the tomato and the stone. The legacy constants now serve the
+  eight shapes only. **41 of 49 pictures changed; 8 shapes byte-identical.**
+- **13 more approvals lapsed — 80 in total**: 35 in 1ère, 45 in 3ème. Every `consequence`
+  entry of 2026-09-22 names all 41 pictures and its week's lessons.
+- `npm run review:visual` writes `docs/review/2026-2027-maternelle-1-reconfirmation-visuelle.md`
+  (35 lessons, 15 pictures) and `…-maternelle-3-reconfirmation-visuelle.md` (45 lessons, 30
+  pictures), and renders `docs/review/media/septembre-avant-apres.png` (41 pictures at 72, 128,
+  256 px). The script **verifies before writing** that no reviewable field of any lesson and no
+  text changed since `develop`, and refuses to write otherwise.
+- Data migration `supabase/migrations/20260922220249_september_visual_upgrade.sql`; local
+  `db reset` + **152 pgTAP assertions PASS**.
+
+### 2026-09-23 — QA (done)
+
+- Build with the new pictures; 66 screenshots (11 activities × 3 widths × parent and child
+  views) inspected for the two screenshot cases of the brief, the body cards, the shape game,
+  counting, the Kumu story and a movement activity.
+- E2E: 30 passed (9 skipped: the production-public suite), including reduced motion.
+- `npm run media:report`: 0 screens with nothing to show, both classes.
+- Unit 374, content validation 31 files, format, lint, typecheck: PASS.
+
+## Final report
+
+### 1. Summary
+
+Every September activity of 1ère and 3ème maternelle was audited (302 activities, 176 lessons,
+49 assets). The child's screen got a frame — a stage under every picture, cards, rhyme lines and
+steps arriving in sequence, a page turn, a calmer off-screen panel, a bigger child view — with no
+content change. 41 of the 49 pictures were redrawn or refined under one illustration system; the
+8 shapes were deliberately left alone. Audio got its per-activity decision, the plumbing that
+lights a recorded word up on every card that teaches it, and a recording brief — and no
+synthetic voice. The approvals of 80 lessons lapsed because the pictures they cover changed; the
+lapse is recorded per week, two reconfirmation packages with a before/after sheet are ready for
+the reviewer, and the live product is unaffected.
+
+### 2. Audit coverage
+
+176 / 176 lessons, 302 / 302 activities, 49 / 49 assets — generated and freshness-tested
+(`docs/september-illustration-audit.md`).
+
+### 3. Illustration improvements completed
+
+41 pictures: 23 redrawn (body parts, hands, animals, all ten story pictures, six rhyme
+pictures), 18 refined (17 objects, the plant). Unchanged by decision: the 8 shapes. Contact sheet:
+`docs/review/media/septembre-avant-apres.png`.
+
+### 4. Audio additions completed
+
+Zero recordings, by ADR-046 (no synthetic voice for a word the child copies; no paid service).
+Delivered instead: the decision per activity (48 recommended, 29 optional, 225 unnecessary, 0
+required), `pronunciationFor()` matching a `pronunciation` asset by transcript so a recorded word
+appears on every card that teaches it with no content change, listen controls on word cards and
+rhymes that render only when a recording exists, and the recording brief in
+`docs/AUDIO_GUIDELINES.md` (both classes' words, the seven rhymes, the stories).
+
+### 5. Animation improvements completed
+
+Staggered entrances (`teka-stagger`, a delayed `teka-rise`, capped at 600 ms) on word cards,
+rhyme lines, prompts, movement steps, counters and choices; a page turn that rises once. Still
+four keyframes; all off under `prefers-reduced-motion`, proved by E2E.
+
+### 6. UX / UI improvements completed
+
+The stage; word cards with a larger word; rhymes in a larger size on one page; stories three
+lines a page; the off-screen frame as a soft panel whose label no longer says "look at the image"
+when there is none; the child's screen grows pictures one step and centres counting; choice tiles
+taller on the child's screen; sort groups as filled panels; feedback unchanged.
+
+### 7. Files changed
+
+- UX branch (`feat/september-visual-ux`, PR #79): `components/session/ActivityRenderer.tsx`,
+  `components/session/SessionRunner.tsx`, `app/globals.css`, `lib/programme/session-view.ts`,
+  `domain/media/types.ts`, `lib/content/visual-audit.ts`, `scripts/visual-audit.ts`, tests,
+  `DECISIONS.md` (ADR-048), docs.
+- Illustration branch (`feat/september-illustrations`, PR #80): `tools/media/build.ts`,
+  `public/media/**` (41 files), `content/media/registry.json`, `content/lessons/**` (statuses),
+  `content/reviews/history.json`, `scripts/media-contact-sheet.ts`, `scripts/lapse-approvals.ts`,
+  `scripts/visual-reconfirmation.ts`, `docs/review/**`, `supabase/migrations/20260922220249_…`,
+  `supabase/tests/database/reference_data.test.sql`, tests, docs.
+
+### 8. Tests / validation
+
+Both branches: format, lint, typecheck, unit (374), content validation (31 files), build, E2E
+(30) PASS. Illustration branch additionally: 152 pgTAP assertions PASS on a local `db reset`.
+
+### 9. Open items
+
+`docs/september-illustration-open-items.md`: the owner submits the two visual reconfirmation
+packages (OI-001) and decides who records the audio (OI-002). Deferred: shapes untouched, a
+display font, sequenced motion.
+
+### 10. Exact resume point
+
+`docs/work/ACTIVE_TASK.md`. The work is complete on both branches; what remains is the owner's:
+merge #79, submit the reconfirmation packages, record the outcome, run `approve-week` per
+week, merge #80.
