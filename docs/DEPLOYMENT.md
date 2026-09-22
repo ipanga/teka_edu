@@ -215,46 +215,52 @@ _after_ `supabase db push` has already migrated PROD would be the worst possible
 by hand immediately after the first production deployment; wire it into the workflow once
 production is confirmed public.
 
-### Deployment Protection: the model Beta 0.1 needs, and already has
+### Deployment Protection: what the first release proved
 
-**Corrected 2026-09-21.** An earlier audit here claimed that production would be behind the Vercel
-login because the project has no custom domain. That was wrong, and the mistake is worth keeping
-visible: it was inferred from the _name_ of an API value rather than from what the setting does.
+**Settled 2026-09-22, by deploying.** This section was wrong twice before that, in opposite
+directions, and the sequence is worth keeping because the second mistake looked like diligence.
 
-The project reports `ssoProtection.deploymentType = "all_except_custom_domains"`. That string is
-the legacy identifier for what the dashboard calls **Standard Protection**, and what the API
-documents today as `prod_deployment_urls_and_all_previews`. The newer name says what it protects:
-**production deployment URLs and all previews** — and _not_ the production domain.
+1. The first audit read `ssoProtection.deploymentType = "all_except_custom_domains"`, reasoned
+   that a project with no custom domain therefore has a protected production domain, and called
+   it a blocker. **Correct.**
+2. The second audit called that wrong. It leaned on the dashboard's wording for _Standard
+   Protection_, on the API's modern name `prod_deployment_urls_and_all_previews`, and on an
+   anonymous request to the production domain that answered `404 DEPLOYMENT_NOT_FOUND` rather
+   than redirecting to a login. **Wrong.**
+3. The first production deployment settled it. With a production deployment actually in place,
+   the same anonymous request answers `302 → vercel.com/sso-api`.
 
-| Vercel Authentication             | Previews    | Generated production URL | Production domain |
-| --------------------------------- | ----------- | ------------------------ | ----------------- |
-| **Standard Protection** (current) | protected   | protected                | **public**        |
-| All Deployments                   | protected   | protected                | protected         |
-| Only Preview Deployments          | protected   | public                   | public            |
-| Disabled                          | **exposed** | exposed                  | public            |
+**The 404 was the trap.** With no production deployment, Vercel's edge resolves the domain, finds
+nothing and answers 404 _before_ protection is applied. That silence read like "not protected"
+and it was only "nothing there yet". No amount of probing an empty production domain can tell you
+how a deployed one will behave — only a deployment can.
 
-So the configuration Beta 0.1 needs is the one already saved. **Nothing has to change, and
-nothing should be disabled.**
+**What the stored value actually means.** `all_except_custom_domains` is a _legacy_ protection
+mode and is not one of the three the API documents today (`all`,
+`prod_deployment_urls_and_all_previews`, `preview`). It protects everything except **custom**
+domains — and a project with no custom domain has none, so the auto-assigned production alias is
+protected like everything else. The dashboard may still render it as "Standard Protection", which
+is how a correctly-saved-looking setting produced legacy behaviour.
 
-The evidence, all three pointing the same way:
+Measured on 2026-09-22, anonymously, with a production deployment live:
 
-- the dashboard's own wording — _Standard Protection: protect all except production domains for
-  the project_;
-- the API's current name for the same mode, `prod_deployment_urls_and_all_previews`;
-- the live behaviour: an anonymous request to the production domain answers `404
-DEPLOYMENT_NOT_FOUND` — resolved, not intercepted — while the same client on the preview alias
-  is redirected to `vercel.com/sso-api` with an SSO nonce cookie.
+| URL                                                           | Result                         |
+| ------------------------------------------------------------- | ------------------------------ |
+| `teka-edu-teka10.vercel.app` (production domain)              | **302 → `vercel.com/sso-api`** |
+| `teka-7ip54y856-teka10.vercel.app` (generated production URL) | 302 → `vercel.com/sso-api`     |
+| `teka-edu-staging.vercel.app` (preview alias)                 | 302 → `vercel.com/sso-api`     |
 
-**One consequence to expect on release day.** The _generated_ production deployment URL
-(`teka-edu-<hash>.vercel.app`) stays protected under Standard Protection. That is correct and is
-not a failure:
+**The fix, and it is the owner's.** Select **Only Preview Deployments** in Vercel →
+`teka-edu` → Settings → Deployment Protection → Vercel Authentication, and Save. Staging is a
+_Preview_ deployment, so it stays protected; the production domain becomes public. Re-saving
+"Standard Protection" may also rewrite the legacy value to the modern one, but that is a guess and
+this setting has already cost one failed release — pick the mode whose name says what it does.
 
-- the in-workflow smoke test targets that generated URL and carries
-  `VERCEL_AUTOMATION_BYPASS_SECRET`, so it passes;
-- the **public** check must target the production **domain**,
-  `https://teka-edu-teka10.vercel.app`. Pointing it at a generated URL would fail for the wrong
-  reason, so `tests/e2e/production-public.spec.ts` refuses such a URL rather than reporting a
-  protection failure that is not one.
+The trade-off, stated: under _Only Preview Deployments_ the generated production deployment URLs
+become public too. For a beta that is acceptable. The alternative is a custom domain, which costs
+money, and cost is not something this project spends without asking.
+
+**Do not disable Vercel Authentication.** That would expose every preview.
 
 ### Preflight: what the production job proves before it changes anything
 
