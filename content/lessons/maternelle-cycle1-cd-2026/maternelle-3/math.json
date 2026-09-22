@@ -1,0 +1,2055 @@
+{
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "levelId": "maternelle-3",
+  "domainCode": "MATH",
+  "lessons": [
+    {
+      "id": "m3-math-01",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Je compte jusqu’à cinq",
+      "summary": "Compter une petite collection en déplaçant les objets, puis en donner un nombre demandé.",
+      "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": "la-rentree",
+      "parentGuidance": "Le comptage se fait en déplaçant chaque objet : c’est ce qui empêche d’en compter un deux fois. Redemandez toujours « Alors, combien y en a-t-il en tout ? » : c’est le dernier mot dit qui donne la quantité.",
+      "activities": [
+        {
+          "id": "m3-math-01-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Je compte les objets",
+          "childInstruction": "Compte les objets un par un, en les déplaçant. Dis combien il y en a en tout.",
+          "adultGuidance": "1. Posez cinq objets en ligne. 2. Comptez le premier ensemble en le déplaçant. 3. Laissez continuer seul. 4. Demandez le total. S’il recompte tout, c’est normal à cet âge.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-caillou"],
+          "objectiveCodes": ["MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "combien",
+              "en": "how many"
+            },
+            {
+              "fr": "en tout",
+              "en": "altogether"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count the objects one by one, then say how many."
+            }
+          ],
+          "payload": {
+            "upTo": 5,
+            "objects": "petits objets de la maison"
+          }
+        },
+        {
+          "id": "m3-math-01-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Donne-moi exactement quatre",
+          "childInstruction": "Donne-moi exactement quatre objets, pas un de plus, pas un de moins.",
+          "adultGuidance": "1. Demandez quatre objets. 2. Laissez compter en donnant. 3. Vérifiez ensemble en recomptant. 4. Recommencez avec trois, puis cinq.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
+          "materialCodes": ["petits-objets", "boite"],
+          "vocabulary": [
+            {
+              "fr": "exactement",
+              "en": "exactly"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Give me exactly four objects."
+            }
+          ],
+          "payload": {
+            "objects": "petits objets de la maison"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-17",
+        "reviewedDigest": "6db7e1726307321c",
+        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-02",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Plus que, moins que, autant que",
+      "summary": "Comparer deux collections sans compter, puis en comptant.",
+      "objectiveCodes": ["MATH-S01-C01-O05"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "la-rentree",
+      "parentGuidance": "On compare d’abord en regardant, puis en comptant pour vérifier. Les trois mots à installer sont « plus que », « moins que », « autant que ».",
+      "activities": [
+        {
+          "id": "m3-math-02-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Qui en a le plus ?",
+          "childInstruction": "Regarde les deux tas. Lequel en a le plus ?",
+          "adultGuidance": "1. Faites deux tas très différents (2 et 6). 2. Demandez lequel a le plus. 3. Vérifiez en comptant. 4. Refaites avec des tas proches (4 et 5) : là, il faudra compter.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-caillou"],
+          "objectiveCodes": ["MATH-S01-C01-O05"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "plus que",
+              "en": "more than"
+            },
+            {
+              "fr": "moins que",
+              "en": "fewer than"
+            },
+            {
+              "fr": "autant que",
+              "en": "as many as"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Look at the two piles. Which one has more?"
+            }
+          ],
+          "payload": {
+            "objects": "deux tas de petits objets"
+          }
+        },
+        {
+          "id": "m3-math-02-a2",
+          "position": 2,
+          "type": "counting",
+          "title": "J’en mets autant",
+          "childInstruction": "Fais un tas avec autant d’objets que le mien.",
+          "adultGuidance": "1. Faites un tas de quatre. 2. Demandez d’en faire autant. 3. Faites vérifier en associant un objet à un objet. 4. Dites le mot : « Tu en as autant que moi. »",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O05"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "autant",
+              "en": "as many"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Make a pile with as many objects as mine."
+            }
+          ],
+          "payload": {
+            "upTo": 6,
+            "objects": "petits objets"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-17",
+        "reviewedDigest": "d0e74b0f9641da17",
+        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-03",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Les formes autour de moi",
+      "summary": "Reconnaitre et nommer le carré, le rectangle, le triangle et le disque.",
+      "objectiveCodes": ["MATH-S03-C01-O08", "MATH-S03-C01-O07"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "la-rentree",
+      "parentGuidance": "Préparez d’abord les formes : sur du papier, dessinez-en deux ou trois de chaque sorte, puis découpez-les si vous pouvez. Variez la taille, et posez-les dans tous les sens : un carré posé sur la pointe reste un carré. Si vous avez plusieurs crayons de couleur, variez aussi les couleurs ; un seul crayon suffit. On travaille sur des formes plates, pas sur des objets : un coussin n’est pas un carré, mais sa face l’est.",
+      "activities": [
+        {
+          "id": "m3-math-03-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Je nomme les formes",
+          "childInstruction": "Regarde les formes. Nomme-les : le carré, le rectangle, le triangle, le disque.",
+          "adultGuidance": "1. Montrez chaque forme et nommez-la. 2. Faites répéter. 3. Faites suivre le contour avec le doigt en comptant les côtés : le carré en a quatre, le triangle trois, le disque aucun. 4. Montrez ensuite une autre forme de la même sorte, plus petite ou posée autrement, et faites-la nommer aussi. 5. Demandez-lui de retrouver la même forme sur une face d’un objet de la maison.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [
+            "forme-carre",
+            "forme-carre-penche",
+            "forme-rectangle",
+            "forme-rectangle-debout",
+            "forme-triangle",
+            "forme-triangle-quelconque",
+            "forme-disque",
+            "forme-disque-petit"
+          ],
+          "objectiveCodes": ["MATH-S03-C01-O08", "MATH-S03-C01-O07"],
+          "materialCodes": ["formes-papier"],
+          "vocabulary": [
+            {
+              "fr": "le carré",
+              "en": "the square"
+            },
+            {
+              "fr": "le rectangle",
+              "en": "the rectangle"
+            },
+            {
+              "fr": "le triangle",
+              "en": "the triangle"
+            },
+            {
+              "fr": "le disque",
+              "en": "the circle"
+            },
+            {
+              "fr": "le côté",
+              "en": "the side"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Look at the shapes and name them."
+            }
+          ],
+          "payload": {
+            "focus": "le carré, le rectangle, le triangle et le disque"
+          }
+        },
+        {
+          "id": "m3-math-03-a2",
+          "position": 2,
+          "type": "sorting",
+          "title": "Je range les formes",
+          "childInstruction": "Mets ensemble les formes qui sont pareilles.",
+          "adultGuidance": "1. Mélangez toutes les formes, grandes et petites, posées dans tous les sens. 2. Demandez de faire des tas : ensemble ce qui est pareil. 3. Faites dire pourquoi : « Tous ceux-là ont trois côtés. » 4. Si l’enfant sépare selon la couleur ou la taille, reprenez une pièce et comptez les côtés avec lui. 5. Montrez qu’un grand triangle et un petit triangle vont dans le même tas, et qu’un carré posé sur la pointe reste un carré.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [
+            "forme-carre",
+            "forme-triangle-quelconque",
+            "forme-disque",
+            "forme-rectangle-debout",
+            "forme-carre-penche",
+            "forme-rectangle",
+            "forme-disque-petit",
+            "forme-triangle"
+          ],
+          "objectiveCodes": ["MATH-S03-C01-O07", "MATH-S03-C01-O08"],
+          "materialCodes": ["formes-papier"],
+          "vocabulary": [
+            {
+              "fr": "pareil",
+              "en": "the same"
+            },
+            {
+              "fr": "ranger",
+              "en": "to sort"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put the shapes that are the same together."
+            }
+          ],
+          "payload": {
+            "categories": ["les carrés", "les rectangles", "les triangles", "les disques"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-17",
+        "reviewedDigest": "1b9c53a093a9662e",
+        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-04",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "La comptine jusqu’à dix",
+      "summary": "Dire la suite des nombres jusqu’à dix sans en oublier.",
+      "objectiveCodes": ["MATH-S01-C01-O26"],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": "la-rentree",
+      "parentGuidance": "La comptine est une chanson : on l’apprend en la disant souvent. Cette semaine, on va jusqu’à dix — pas plus loin. On ira à vingt, puis à trente, plus tard dans le mois.",
+      "activities": [
+        {
+          "id": "m3-math-04-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Je dis les nombres jusqu’à dix",
+          "childInstruction": "Compte avec moi jusqu’à dix, en montrant un doigt à chaque nombre.",
+          "adultGuidance": "1. Comptez ensemble jusqu’à dix, un doigt par nombre. 2. Recommencez en laissant l’enfant seul. 3. Arrêtez-vous en route : « Après six, il y a… ? » 4. Ne dépassez pas dix aujourd’hui.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O26"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "la comptine",
+              "en": "the counting rhyme"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count to ten with me, one finger for each number."
+            }
+          ],
+          "payload": {
+            "upTo": 10,
+            "objects": "les doigts"
+          }
+        },
+        {
+          "id": "m3-math-04-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Le tas de dix",
+          "childInstruction": "Fais un tas de dix objets, en comptant à voix haute.",
+          "adultGuidance": "1. Demandez dix objets. 2. Faites compter à voix haute en les posant. 3. Recomptez ensemble pour vérifier. 4. **Si l’enfant en redemande**, et seulement dans ce cas : « Et si j’en enlève un, il en reste combien ? » Ce n’est pas attendu ce mois-ci ; n’insistez pas et ne recommencez pas si la réponse ne vient pas.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-caillou"],
+          "objectiveCodes": ["MATH-S01-C01-O26", "MATH-S01-C01-O20", "MATH-S01-C01-O21"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "dix",
+              "en": "ten"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Make a pile of ten objects, counting out loud."
+            }
+          ],
+          "payload": {
+            "objects": "petits objets",
+            "extension": "Enlever un objet et redire combien il en reste — facultatif."
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-17",
+        "reviewedDigest": "9374f9f0ccdcd1dc",
+        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-05",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Je compte jusqu’à six",
+      "summary": "Compter des collections un peu plus grandes, en les organisant.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "ma-maison",
+      "parentGuidance": "Six objets en tas se comptent mal. Montrez comment les aligner d’abord : organiser sa collection est déjà une stratégie de mathématicien.",
+      "activities": [
+        {
+          "id": "m3-math-05-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Je range puis je compte",
+          "childInstruction": "Mets les objets en ligne, puis compte-les.",
+          "adultGuidance": "1. Donnez six objets en tas. 2. Demandez de les aligner avant de compter. 3. Faites compter en touchant. 4. Demandez le total.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-caillou"],
+          "objectiveCodes": ["MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "la ligne",
+              "en": "the line"
+            },
+            {
+              "fr": "ranger",
+              "en": "to line up"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put the objects in a line, then count them."
+            }
+          ],
+          "payload": {
+            "upTo": 6,
+            "objects": "petits objets"
+          }
+        },
+        {
+          "id": "m3-math-05-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Donne-moi six",
+          "childInstruction": "Donne-moi six objets, exactement six.",
+          "adultGuidance": "1. Demandez six. 2. Laissez compter. 3. Vérifiez ensemble. 4. Puis demandez cinq, puis sept : le nombre change, la façon de faire reste la même.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "exactement",
+              "en": "exactly"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Give me six objects, exactly six."
+            }
+          ],
+          "payload": {
+            "objects": "petits objets"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "a8b3ddbfe55af947",
+        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-06",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Autant que, pas plus",
+      "summary": "Construire une collection qui en vaut une autre.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O21", "MATH-S01-C01-O05", "MATH-S01-C01-O20"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "ma-maison",
+      "parentGuidance": "Faire « autant que » sans compter, en associant un objet à un objet, puis vérifier en comptant.",
+      "activities": [
+        {
+          "id": "m3-math-06-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Un pour un",
+          "childInstruction": "Mets un objet devant chacun des miens.",
+          "adultGuidance": "1. Alignez cinq objets. 2. Demandez d’en poser un en face de chacun. 3. Faites constater : « Il y en a autant. » 4. Enlevez-en un des vôtres et redemandez : « Et maintenant ? »",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O21", "MATH-S01-C01-O05"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "autant que",
+              "en": "as many as"
+            },
+            {
+              "fr": "chacun",
+              "en": "each one"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put one object in front of each of mine."
+            }
+          ],
+          "payload": {
+            "objects": "deux séries de petits objets"
+          }
+        },
+        {
+          "id": "m3-math-06-a2",
+          "position": 2,
+          "type": "counting",
+          "title": "Vérifions en comptant",
+          "childInstruction": "Compte les miens, puis compte les tiens.",
+          "adultGuidance": "1. Comptez votre rangée. 2. Faites compter la sienne. 3. Comparez les deux nombres. 4. Concluez avec le mot juste : « autant », « plus », « moins ».",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O05"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "vérifier",
+              "en": "to check"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count mine, then count yours."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "petits objets"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "c75d8b8686a8e956",
+        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-07",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Compter sans rien oublier",
+      "summary": "Passer une seule fois par chaque objet d’une collection.",
+      "objectiveCodes": ["MATH-S01-C01-O19"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 3,
+      "themeId": "ma-maison",
+      "parentGuidance": "C’est la difficulté la plus courante : recompter un objet, ou en sauter un. La solution est de les déplacer au fur et à mesure, d’un tas vers un autre.",
+      "activities": [
+        {
+          "id": "m3-math-07-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Je déplace pour ne pas me tromper",
+          "childInstruction": "Compte les objets en les faisant passer dans la boite, un par un.",
+          "adultGuidance": "1. Posez huit objets en tas. 2. Montrez : on dit le nombre et on met l’objet dans la boite. 3. Laissez faire seul. 4. Si le compte est faux, ne dites pas « non » : recommencez ensemble, lentement.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-caillou"],
+          "objectiveCodes": ["MATH-S01-C01-O19"],
+          "materialCodes": ["petits-objets", "boite"],
+          "vocabulary": [
+            {
+              "fr": "un par un",
+              "en": "one by one"
+            },
+            {
+              "fr": "oublier",
+              "en": "to forget"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count the objects by dropping them into the box one by one."
+            }
+          ],
+          "payload": {
+            "objects": "petits objets et une boite"
+          }
+        },
+        {
+          "id": "m3-math-07-a2",
+          "position": 2,
+          "type": "counting",
+          "title": "Compter en rond",
+          "childInstruction": "Compte ces objets posés en rond.",
+          "adultGuidance": "1. Posez six objets en cercle. 2. Demandez comment faire pour ne pas se tromper. 3. Proposez de marquer le premier avec le doigt. 4. Comptez ensemble en partant du repère.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O19"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "le repère",
+              "en": "the marker"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count these objects arranged in a circle."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "petits objets en cercle"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "3674d655fe5579b9",
+        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-08",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Les formes qui se ressemblent",
+      "summary": "Retrouver une forme quelle que soit sa taille ou sa position.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S03-C01-O07", "MATH-S03-C01-O08"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "ma-maison",
+      "parentGuidance": "Un triangle posé sur la pointe reste un triangle. C’est exactement ce que l’enfant doit comprendre aujourd’hui.",
+      "activities": [
+        {
+          "id": "m3-math-08-a1",
+          "position": 1,
+          "type": "matching",
+          "title": "La même forme",
+          "childInstruction": "Trouve la forme qui va avec celle-ci.",
+          "adultGuidance": "1. Montrez un carré et demandez de trouver l’autre carré : il est plus petit et posé de biais, c’est quand même un carré. 2. Faites de même avec le rectangle, debout puis couché. 3. Montrez le triangle posé sur la pointe, aux côtés inégaux, et redemandez. 4. Faites dire pourquoi : « Il a toujours trois côtés. » 5. Terminez par les disques, un grand et un petit. Sur papier comme à l’écran, ni la couleur, ni la taille, ni le sens ne disent quelle forme c’est.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [
+            "forme-carre",
+            "forme-carre-penche",
+            "forme-rectangle",
+            "forme-rectangle-debout",
+            "forme-triangle",
+            "forme-triangle-quelconque",
+            "forme-disque",
+            "forme-disque-petit"
+          ],
+          "objectiveCodes": ["MATH-S03-C01-O07", "MATH-S03-C01-O08"],
+          "materialCodes": ["formes-papier"],
+          "vocabulary": [
+            {
+              "fr": "la taille",
+              "en": "the size"
+            },
+            {
+              "fr": "tourner",
+              "en": "to turn"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Find the shape that goes with this one."
+            }
+          ],
+          "payload": {
+            "pairs": [
+              ["le carré", "un autre carré, plus grand"],
+              ["le triangle", "un triangle posé sur la pointe"],
+              ["le disque", "un disque plus petit"],
+              ["le rectangle", "un rectangle plus long"]
+            ]
+          }
+        },
+        {
+          "id": "m3-math-08-a2",
+          "position": 2,
+          "type": "observation",
+          "title": "Des formes dans la maison",
+          "childInstruction": "Cherche une forme autour de toi et dis son nom.",
+          "adultGuidance": "1. Cherchez ensemble une face carrée, une face rectangulaire. 2. Faites suivre le contour du doigt. 3. Faites nommer la forme, pas l’objet : « La porte, sa face est un rectangle. »",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["forme-carre", "forme-rectangle", "forme-triangle", "forme-disque"],
+          "objectiveCodes": ["MATH-S03-C01-O07", "MATH-S03-C01-O08"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "la face",
+              "en": "the face"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Find a shape around you and say its name."
+            }
+          ],
+          "payload": {
+            "focus": "les faces plates des objets de la maison"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "4bf87075b927f17d",
+        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-09",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Combien en tout ?",
+      "summary": "Reprendre le comptage et la comparaison de la semaine.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O05"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "ma-maison",
+      "parentGuidance": "Reprise de la semaine, en jeu. Rien de nouveau : l’enfant montre ce qu’il sait faire.",
+      "activities": [
+        {
+          "id": "m3-math-09-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Le jeu du combien",
+          "childInstruction": "Compte ce que je te montre, et dis combien il y en a.",
+          "adultGuidance": "1. Montrez des collections de 3 à 8 objets. 2. Laissez compter seul. 3. Variez : en ligne, en tas, en rond. 4. Félicitez la méthode, pas seulement le résultat : « Tu les as déplacés, c’est malin. »",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": ["objet-caillou"],
+          "objectiveCodes": ["MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "en tout",
+              "en": "altogether"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count what I show you and say how many."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "petits objets"
+          }
+        },
+        {
+          "id": "m3-math-09-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Plus, moins, autant",
+          "childInstruction": "Fais un tas qui a plus d’objets que le mien.",
+          "adultGuidance": "1. Faites un tas de quatre. 2. Demandez plus, puis moins, puis autant. 3. Vérifiez en comptant à chaque fois. 4. Terminez sur une réussite.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O05", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "plus",
+              "en": "more"
+            },
+            {
+              "fr": "moins",
+              "en": "fewer"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Make a pile with more objects than mine."
+            }
+          ],
+          "payload": {
+            "objects": "petits objets"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "5bc68d7bbdfc21d3",
+        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-10",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "La comptine jusqu’à vingt",
+      "summary": "Étendre la suite des nombres de dix à vingt.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O26", "MATH-S01-C01-O20", "MATH-S01-C01-O21"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "On connait dix. On ajoute la deuxième dizaine, qui est régulière à partir de dix-sept. Onze, douze, treize s’apprennent par cœur : dites-les souvent.",
+      "activities": [
+        {
+          "id": "m3-math-10-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "De dix à vingt",
+          "childInstruction": "Compte avec moi de dix jusqu’à vingt.",
+          "adultGuidance": "1. Comptez ensemble de un à dix. 2. Continuez lentement : onze, douze, treize… 3. Recommencez en vous arrêtant : « Après quatorze ? » 4. Ne dépassez pas vingt aujourd’hui.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O26"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "onze",
+              "en": "eleven"
+            },
+            {
+              "fr": "douze",
+              "en": "twelve"
+            },
+            {
+              "fr": "vingt",
+              "en": "twenty"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count from ten to twenty with me."
+            }
+          ],
+          "payload": {
+            "upTo": 20,
+            "objects": "les doigts et les mots"
+          }
+        },
+        {
+          "id": "m3-math-10-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Douze cailloux",
+          "childInstruction": "Fais un tas de douze objets.",
+          "adultGuidance": "1. Demandez douze objets. 2. Proposez de faire d’abord dix, puis d’ajouter. 3. Recomptez ensemble. 4. Puis demandez quinze objets : laissez l’enfant ajouter des objets et recompter jusqu’à quinze.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-caillou"],
+          "objectiveCodes": ["MATH-S01-C01-O26", "MATH-S01-C01-O20", "MATH-S01-C01-O21"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "ajouter",
+              "en": "to add"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Make a pile of twelve objects."
+            }
+          ],
+          "payload": {
+            "objects": "petits objets"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "89bc52bc37f75e64",
+        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-11",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Trois et deux font cinq",
+      "summary": "Décomposer un petit nombre en deux parties.",
+      "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O23"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 3,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "On cache une partie sous la main : l’enfant voit une partie et doit dire l’autre. C’est le début du calcul.",
+      "activities": [
+        {
+          "id": "m3-math-11-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "La main qui cache",
+          "childInstruction": "Compte les cinq objets. Ferme les yeux. J’en cache ; devine combien sont cachés.",
+          "adultGuidance": "1. Comptez les cinq objets ensemble. 2. Demandez à l’enfant de fermer les yeux un instant. 3. Cachez-en une partie sous votre main ; laissez les autres bien visibles. 4. Il rouvre les yeux. Rappelez : « Il y en avait cinq en tout. » 5. Demandez combien sont cachés. 6. Ouvrez la main et vérifiez en comptant : « Trois et deux, ça fait cinq. » 7. Recommencez avec un autre partage.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-caillou"],
+          "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O23"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "cacher",
+              "en": "to hide"
+            },
+            {
+              "fr": "deviner",
+              "en": "to guess"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count the five objects. Close your eyes. I hide some; guess how many are hidden."
+            }
+          ],
+          "payload": {
+            "objects": "cinq petits objets"
+          }
+        },
+        {
+          "id": "m3-math-11-a2",
+          "position": 2,
+          "type": "counting",
+          "title": "Deux façons de faire cinq",
+          "childInstruction": "Partage les cinq objets en deux tas. Puis fais-le autrement.",
+          "adultGuidance": "1. Laissez partager librement. 2. Faites dire : « Quatre et un. » 3. Demandez une autre façon. 4. Dites toutes celles trouvées : « Cinq, c’est quatre et un, mais aussi trois et deux. »",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O22"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "partager",
+              "en": "to split"
+            },
+            {
+              "fr": "la part",
+              "en": "the part"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Split the five objects into two piles, then do it a different way."
+            }
+          ],
+          "payload": {
+            "upTo": 5,
+            "objects": "petits objets"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "82414b30cb3443ac",
+        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-12",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Décomposer six",
+      "summary": "Trouver plusieurs façons de faire six.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O23"],
+      "stage": "practice",
+      "difficulty": 3,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "Même jeu qu’hier, avec six. L’enfant doit verbaliser : c’est le fait de dire « quatre et deux » qui installe la décomposition.",
+      "activities": [
+        {
+          "id": "m3-math-12-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Six en deux tas",
+          "childInstruction": "Partage six objets en deux tas, puis dis ce que tu as fait.",
+          "adultGuidance": "1. Donnez six objets. 2. Laissez partager. 3. Faites dire la phrase entière : « Quatre et deux font six. » 4. Cherchez-en d’autres ensemble et redites-les toutes à la fin.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-caillou"],
+          "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O23"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "faire",
+              "en": "to make"
+            },
+            {
+              "fr": "deux tas",
+              "en": "two piles"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Split six objects into two piles, then tell me what you did."
+            }
+          ],
+          "payload": {
+            "objects": "six petits objets"
+          }
+        },
+        {
+          "id": "m3-math-12-a2",
+          "position": 2,
+          "type": "counting",
+          "title": "Combien dans l’autre main ?",
+          "childInstruction": "J’ai six objets dans mes deux mains. Tu en vois deux : combien dans l’autre main ?",
+          "adultGuidance": "1. Montrez deux objets dans une main, fermez l’autre. 2. Rappelez qu’il y en a six en tout. 3. Laissez chercher. 4. Ouvrez pour vérifier.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O22"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "l’autre",
+              "en": "the other one"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "I have six in my two hands. You see two: how many in the other hand?"
+            }
+          ],
+          "payload": {
+            "upTo": 6,
+            "objects": "petits objets"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "d7c18714c1224dc8",
+        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-13",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Compter ce qui est rangé",
+      "summary": "Compter des collections organisées, sans en oublier.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O19",
+        "MATH-S01-C01-O20",
+        "MATH-S01-C01-O05",
+        "MATH-S01-C01-O21"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "On compte ce qui est déjà rangé dans la maison : les assiettes, les chaises, les fruits. Compter sert à quelque chose de vrai.",
+      "activities": [
+        {
+          "id": "m3-math-13-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Je compte dans la maison",
+          "childInstruction": "Compte les chaises, puis les assiettes.",
+          "adultGuidance": "1. Choisissez deux collections réelles. 2. Faites compter en touchant chaque objet. 3. Demandez laquelle en a le plus. 4. Faites dire le total à chaque fois.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O19", "MATH-S01-C01-O20", "MATH-S01-C01-O05"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "compter",
+              "en": "to count"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count the chairs, then the plates."
+            }
+          ],
+          "payload": {
+            "upTo": 10,
+            "objects": "les objets de la maison"
+          }
+        },
+        {
+          "id": "m3-math-13-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Mets la table",
+          "childInstruction": "Prends exactement ce qu’il faut d’assiettes pour tout le monde.",
+          "adultGuidance": "1. Demandez combien de personnes mangent. 2. Faites chercher le bon nombre d’assiettes — des assiettes incassables ou en plastique si vous en avez, sinon des gobelets ou des cuillères. 3. Vérifiez en posant une assiette par personne. 4. C’est un vrai problème : autant d’assiettes que de personnes.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O19", "MATH-S01-C01-O21"],
+          "materialCodes": ["vaisselle-incassable"],
+          "vocabulary": [
+            {
+              "fr": "chacun",
+              "en": "each"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Take exactly enough plates for everyone."
+            }
+          ],
+          "payload": {
+            "objects": "des assiettes ou des objets qui les remplacent"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "cbc022ad14671995",
+        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-14",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Plus, moins, autant",
+      "summary": "Reprendre la comparaison des quantités de la semaine.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O05"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "Reprise en jeu. Faites dire les mots exacts : « plus que », « moins que », « autant que ».",
+      "activities": [
+        {
+          "id": "m3-math-14-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Le jeu des deux tas",
+          "childInstruction": "Regarde les deux tas et dis lequel en a le plus.",
+          "adultGuidance": "1. Faites deux tas nettement différents : trois objets d’un côté, sept de l’autre. 2. Demandez sans compter : la différence doit se voir. 3. Vérifiez en comptant. 4. Pour « autant », posez les deux tas en face à face, un objet devant un objet : on le voit avant de compter. 5. Ne faites jamais deviner entre deux tas presque égaux en désordre.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O05"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "plus que",
+              "en": "more than"
+            },
+            {
+              "fr": "autant que",
+              "en": "as many as"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Look at the two piles and say which has more."
+            }
+          ],
+          "payload": {
+            "objects": "deux tas de petits objets"
+          }
+        },
+        {
+          "id": "m3-math-14-a2",
+          "position": 2,
+          "type": "counting",
+          "title": "Fais-en autant",
+          "childInstruction": "Fais un tas avec autant d’objets que le mien, puis compte les deux.",
+          "adultGuidance": "1. Faites un tas de sept. 2. Demandez autant. 3. Faites compter les deux. 4. Concluez : « Sept et sept, c’est autant. »",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O05"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "autant",
+              "en": "as many"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Make a pile with as many as mine, then count both."
+            }
+          ],
+          "payload": {
+            "upTo": 10,
+            "objects": "petits objets"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "a159388b9418b3e3",
+        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-15",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "La bande numérique jusqu’à dix",
+      "summary": "Construire une bande de nombres de un à dix, puis y lire les nombres.",
+      "objectiveCodes": ["MATH-S01-C02-O06", "MATH-S01-C01-O08"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 3,
+      "themeId": "au-marche",
+      "parentGuidance": "Écrivez les chiffres de 1 à 10 sur une bande de papier, avec l’enfant. Elle servira tout le mois : gardez-la.",
+      "activities": [
+        {
+          "id": "m3-math-15-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Je fabrique ma bande des nombres",
+          "childInstruction": "Aide-moi à écrire les nombres de un à dix sur la bande.",
+          "adultGuidance": "1. Découpez une bande de papier. 2. Écrivez les chiffres en les nommant ; laissez l’enfant en tracer quelques-uns. 3. Faites poser un objet sur chaque nombre. 4. Affichez la bande : elle resservira.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C02-O06"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [
+            {
+              "fr": "la bande",
+              "en": "the strip"
+            },
+            {
+              "fr": "le nombre",
+              "en": "the number"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Help me write the numbers from one to ten on the strip."
+            }
+          ],
+          "payload": {
+            "objects": "une bande de papier et un crayon"
+          }
+        },
+        {
+          "id": "m3-math-15-a2",
+          "position": 2,
+          "type": "counting",
+          "title": "Je montre le nombre",
+          "childInstruction": "Montre le nombre que je dis sur la bande, puis montre-le avec tes doigts.",
+          "adultGuidance": "1. Dites un nombre : l’enfant le montre sur la bande, puis lève autant de doigts. 2. Puis l’inverse : vous montrez un nombre écrit, il le nomme et lève autant de doigts. 3. Demandez ce qui vient juste après, juste avant. 4. Gardez la bande à portée de main les jours suivants.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O08"],
+          "materialCodes": ["papier"],
+          "vocabulary": [
+            {
+              "fr": "le doigt",
+              "en": "the finger"
+            },
+            {
+              "fr": "autant",
+              "en": "as many"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Show me the number I say on the strip, then show it with your fingers."
+            }
+          ],
+          "payload": {
+            "upTo": 10,
+            "objects": "la bande des nombres"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-20",
+        "reviewedDigest": "5bddd774ca85c25e",
+        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-16",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Avant et après sur la bande",
+      "summary": "Situer un nombre par rapport à ses voisins.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C02-O06", "MATH-S01-C01-O08", "MATH-S01-C01-O21"],
+      "stage": "consolidation",
+      "difficulty": 3,
+      "themeId": "au-marche",
+      "parentGuidance": "Servez-vous de la bande fabriquée hier. « Avant » et « après » se montrent avec le doigt avant de se dire.",
+      "activities": [
+        {
+          "id": "m3-math-16-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Le nombre caché",
+          "childInstruction": "Je cache un nombre sur la bande. Devine lequel, puis remets-le à sa place.",
+          "adultGuidance": "1. Couvrez un nombre avec un petit papier : il manque maintenant un nombre à la bande. 2. Demandez lequel est caché. 3. Faites justifier : « Il est juste après le cinq. » 4. Faites compléter la bande : l’enfant écrit le nombre manquant sur le papier qui le cache, ou le trace dessus avec le doigt s’il préfère. 5. Vérifiez ensemble que la bande est complète, puis recommencez avec un nombre plus grand.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C02-O06"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [
+            {
+              "fr": "caché",
+              "en": "hidden"
+            },
+            {
+              "fr": "juste après",
+              "en": "right after"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "I hide a number on the strip. Guess which one, then put it back."
+            }
+          ],
+          "payload": {
+            "upTo": 10,
+            "objects": "la bande des nombres"
+          }
+        },
+        {
+          "id": "m3-math-16-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Je pose le bon nombre d’objets",
+          "childInstruction": "Pose autant d’objets que le nombre que je montre.",
+          "adultGuidance": "1. Montrez un nombre sur la bande. 2. L’enfant pose autant d’objets. 3. Recomptez ensemble. 4. Variez entre petits et grands nombres.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O08", "MATH-S01-C01-O21"],
+          "materialCodes": ["papier", "petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "poser",
+              "en": "to put down"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put as many objects as the number I point to."
+            }
+          ],
+          "payload": {
+            "objects": "la bande et des petits objets"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-20",
+        "reviewedDigest": "56f1dd6f8dc9c107",
+        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-17",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Composer dix",
+      "summary": "Trouver ce qu’il faut ajouter pour arriver à dix.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O23"],
+      "stage": "consolidation",
+      "difficulty": 3,
+      "themeId": "au-marche",
+      "parentGuidance": "Dix est le nombre le plus utile à décomposer. Servez-vous des deux mains : cinq et cinq.",
+      "activities": [
+        {
+          "id": "m3-math-17-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Il en manque combien ?",
+          "childInstruction": "J’ai mis quelques objets. Combien faut-il en ajouter pour arriver à dix ?",
+          "adultGuidance": "1. Posez six objets. 2. Comptez ensemble. 3. Demandez combien il en manque pour dix. 4. Ajoutez-les en comptant à voix haute : « Sept, huit, neuf, dix. Il en manquait quatre. »",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-caillou"],
+          "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O23"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "manquer",
+              "en": "to be missing"
+            },
+            {
+              "fr": "ajouter",
+              "en": "to add"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "How many more do we need to reach ten?"
+            }
+          ],
+          "payload": {
+            "objects": "dix petits objets"
+          }
+        },
+        {
+          "id": "m3-math-17-a2",
+          "position": 2,
+          "type": "counting",
+          "title": "Dix avec mes deux mains",
+          "childInstruction": "Montre-moi dix doigts, puis cache-en quelques-uns.",
+          "adultGuidance": "1. Levez dix doigts ensemble. 2. Repliez-en trois : « Combien en reste-t-il ? » 3. Faites dire la phrase : « Sept et trois font dix. » 4. Variez.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O22"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "le doigt",
+              "en": "the finger"
+            },
+            {
+              "fr": "rester",
+              "en": "to be left"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Show me ten fingers, then hide some."
+            }
+          ],
+          "payload": {
+            "upTo": 10,
+            "objects": "les doigts"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-20",
+        "reviewedDigest": "a32267ccaad677fe",
+        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-18",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Les formes dans ma maison",
+      "summary": "Retrouver les formes planes sur les objets réels.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S03-C01-O07", "MATH-S03-C01-O08"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "au-marche",
+      "parentGuidance": "On repart des formes en papier, puis on les compare aux faces des objets. Dites toujours « la face de la boite est un carré », jamais « la boite est un carré ».",
+      "activities": [
+        {
+          "id": "m3-math-18-a1",
+          "position": 1,
+          "type": "matching",
+          "title": "La forme et l’objet",
+          "childInstruction": "Pose la forme en papier sur un objet qui a la même face.",
+          "adultGuidance": "1. Donnez une forme. 2. Cherchez ensemble un objet dont une face lui ressemble. 3. Posez la forme dessus pour vérifier. 4. Faites nommer : « La face du cahier est un rectangle. »",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["forme-carre", "forme-rectangle", "forme-triangle", "forme-disque"],
+          "objectiveCodes": ["MATH-S03-C01-O07", "MATH-S03-C01-O08"],
+          "materialCodes": ["formes-papier", "objets-faces-planes"],
+          "vocabulary": [
+            {
+              "fr": "la face",
+              "en": "the face"
+            },
+            {
+              "fr": "poser",
+              "en": "to place"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put the paper shape on an object with the same face."
+            }
+          ],
+          "payload": {
+            "pairs": [
+              ["le rectangle", "la face du cahier"],
+              ["le carré", "la face de la boite"],
+              ["le disque", "le fond du seau"],
+              ["le triangle", "un morceau de tissu plié"]
+            ]
+          }
+        },
+        {
+          "id": "m3-math-18-a2",
+          "position": 2,
+          "type": "drawing",
+          "title": "Je dessine avec des formes",
+          "childInstruction": "Dessine une maison avec un carré et un triangle.",
+          "adultGuidance": "1. Montrez : un carré pour le mur, un triangle pour le toit. 2. Laissez dessiner. 3. Faites nommer les formes utilisées. 4. Ajoutez un disque pour le soleil.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["forme-carre", "forme-rectangle", "forme-triangle", "forme-disque"],
+          "objectiveCodes": ["MATH-S03-C01-O08"],
+          "materialCodes": ["papier", "crayon"],
+          "vocabulary": [
+            {
+              "fr": "le toit",
+              "en": "the roof"
+            },
+            {
+              "fr": "le mur",
+              "en": "the wall"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Draw a house with a square and a triangle."
+            }
+          ],
+          "payload": {
+            "subject": "une maison faite de formes simples"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-20",
+        "reviewedDigest": "e5d1f8ce7a53270e",
+        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-19",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Je compte jusqu’à trente",
+      "summary": "Aller au bout de la comptine numérique visée cette année.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O26", "MATH-S01-C01-O20", "MATH-S01-C01-O21"],
+      "stage": "consolidation",
+      "difficulty": 3,
+      "themeId": "au-marche",
+      "parentGuidance": "Dernière étape de la progression du mois : dix, puis vingt, aujourd’hui trente. Si l’enfant s’arrête à seize, ce n’est pas un échec : on reprend là où ça s’arrête, sans le dire comme une faute.",
+      "activities": [
+        {
+          "id": "m3-math-19-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "De un à trente",
+          "childInstruction": "Compte le plus loin que tu peux, je t’aide si tu t’arrêtes.",
+          "adultGuidance": "1. Comptez ensemble jusqu’à vingt. 2. Continuez : vingt-et-un, vingt-deux… 3. Quand l’enfant hésite, donnez le nombre suivant et laissez-le reprendre. 4. Notez pour vous où il s’est arrêté : c’est de là qu’on repartira en octobre.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O26"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "vingt",
+              "en": "twenty"
+            },
+            {
+              "fr": "trente",
+              "en": "thirty"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count as far as you can. I will help if you stop."
+            }
+          ],
+          "payload": {
+            "upTo": 30,
+            "objects": "les mots des nombres"
+          }
+        },
+        {
+          "id": "m3-math-19-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Le tas de vingt",
+          "childInstruction": "Fais un tas de vingt objets, par paquets de dix.",
+          "adultGuidance": "1. Faites un premier paquet de dix. 2. Puis un deuxième. 3. Comptez le tout. 4. Montrez : « Dix et dix, ça fait vingt. »",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": ["objet-caillou"],
+          "objectiveCodes": ["MATH-S01-C01-O26", "MATH-S01-C01-O20", "MATH-S01-C01-O21"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "le paquet",
+              "en": "the bundle"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Make a pile of twenty, in bundles of ten."
+            }
+          ],
+          "payload": {
+            "objects": "vingt petits objets"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-20",
+        "reviewedDigest": "eaca49de53be84aa",
+        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-20",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Combien manque-t-il ?",
+      "summary": "Retrouver ce qui a été enlevé d’une collection.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O21"],
+      "stage": "consolidation",
+      "difficulty": 3,
+      "themeId": "je-montre-ce-que-je-sais",
+      "parentGuidance": "L’enfant connait le tout, voit une partie, cherche l’autre. Laissez-lui le temps : ce n’est pas un jeu de rapidité.",
+      "activities": [
+        {
+          "id": "m3-math-20-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "J’en ai enlevé",
+          "childInstruction": "Compte les objets. Ferme les yeux. Maintenant, combien en ai-je enlevé ?",
+          "adultGuidance": "1. Posez huit objets et comptez-les ensemble. 2. Faites fermer les yeux, retirez-en deux. 3. Demandez combien il en manque. 4. Vérifiez en remettant les objets un par un.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-caillou"],
+          "objectiveCodes": ["MATH-S01-C01-O22"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "enlever",
+              "en": "to take away"
+            },
+            {
+              "fr": "manquer",
+              "en": "to be missing"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count the objects. Close your eyes. How many did I take away?"
+            }
+          ],
+          "payload": {
+            "objects": "huit petits objets"
+          }
+        },
+        {
+          "id": "m3-math-20-a2",
+          "position": 2,
+          "type": "counting",
+          "title": "Je refais le tas",
+          "childInstruction": "Remets exactement le nombre d’objets qu’il y avait.",
+          "adultGuidance": "1. Demandez de reconstituer la collection de départ. 2. Faites compter pour vérifier. 3. Dites la phrase : « Six et deux font huit. »",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O22", "MATH-S01-C01-O21"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "remettre",
+              "en": "to put back"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put back exactly the number of objects there were."
+            }
+          ],
+          "payload": {
+            "upTo": 10,
+            "objects": "petits objets"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-20",
+        "reviewedDigest": "8658a891227fb745",
+        "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-21",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Du plus petit au plus grand",
+      "summary": "Ranger des collections de la plus petite à la plus grande.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O05"],
+      "stage": "consolidation",
+      "difficulty": 3,
+      "themeId": "je-montre-ce-que-je-sais",
+      "parentGuidance": "Ranger trois tas dans l’ordre demande de comparer deux à deux. Faites compter chaque tas avant de ranger.",
+      "activities": [
+        {
+          "id": "m3-math-21-a1",
+          "position": 1,
+          "type": "sorting",
+          "title": "Je range les tas",
+          "childInstruction": "Range les trois tas, du plus petit au plus grand.",
+          "adultGuidance": "1. Faites trois tas (2, 5, 8). 2. Faites compter chacun. 3. Demandez de les ranger. 4. Faites dire : « Deux, c’est moins que cinq ; cinq, c’est moins que huit. »",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O05"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "le plus petit",
+              "en": "the smallest"
+            },
+            {
+              "fr": "le plus grand",
+              "en": "the biggest"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put the three piles in order, from smallest to biggest."
+            }
+          ],
+          "payload": {
+            "categories": ["le plus petit", "celui du milieu", "le plus grand"]
+          }
+        },
+        {
+          "id": "m3-math-21-a2",
+          "position": 2,
+          "type": "counting",
+          "title": "Où est-il sur la bande ?",
+          "childInstruction": "Montre sur la bande le nombre de chaque tas.",
+          "adultGuidance": "1. Reprenez la bande des nombres. 2. Pour chaque tas, faites montrer le nombre. 3. Faites constater que l’ordre des tas est l’ordre de la bande.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O05"],
+          "materialCodes": ["papier", "petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "l’ordre",
+              "en": "the order"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Show each pile’s number on the strip."
+            }
+          ],
+          "payload": {
+            "upTo": 10,
+            "objects": "la bande des nombres"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-20",
+        "reviewedDigest": "7ee784400ff7a7c0",
+        "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-math-22",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Tout ce que je sais compter",
+      "summary": "Reprendre en jeu les mathématiques du mois.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O22"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "je-montre-ce-que-je-sais",
+      "parentGuidance": "Dernière séance du mois : uniquement des choses déjà faites. Terminez en nommant ce que l’enfant sait faire.",
+      "activities": [
+        {
+          "id": "m3-math-22-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Le grand jeu du comptage",
+          "childInstruction": "Compte ce que je te montre, aussi vite ou aussi lentement que tu veux.",
+          "adultGuidance": "1. Proposez trois collections différentes. 2. Laissez compter seul, sans aide. 3. Demandez le total à chaque fois. 4. Dites-lui ce qu’il sait faire : « Au début du mois tu comptais jusqu’à cinq. »",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": ["objet-caillou"],
+          "objectiveCodes": ["MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "en tout",
+              "en": "altogether"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count what I show you, fast or slow, as you like."
+            }
+          ],
+          "payload": {
+            "upTo": 10,
+            "objects": "petits objets"
+          }
+        },
+        {
+          "id": "m3-math-22-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Deux tas pour faire dix",
+          "childInstruction": "Fais deux tas qui font dix ensemble.",
+          "adultGuidance": "1. Donnez dix objets. 2. Demandez deux tas. 3. Faites dire la phrase : « Six et quatre font dix. » 4. Cherchez une autre façon.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O22"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "ensemble",
+              "en": "together"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Make two piles that make ten together."
+            }
+          ],
+          "payload": {
+            "objects": "dix petits objets"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-20",
+        "reviewedDigest": "5959f8bf0006a577",
+        "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    }
+  ]
+}

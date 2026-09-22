@@ -96,10 +96,18 @@ function checkEnvironmentIsolation(
     });
   }
   const owner = knownProjectEnvironmentIn(url, refs);
+  const expectedRef = refs[appEnv];
   if (owner !== undefined && owner !== appEnv) {
     issues.push({
       path: name,
       message: `points at the ${owner} Supabase project but NEXT_PUBLIC_APP_ENV=${appEnv}`,
+    });
+  } else if (expectedRef !== null && !url.includes(expectedRef)) {
+    // Allowlist, not just denylist: once an environment's project is known, nothing else
+    // (for example a third, unrelated project) is accepted.
+    issues.push({
+      path: name,
+      message: `must use the ${appEnv} Supabase project (${expectedRef})`,
     });
   }
 }
@@ -119,7 +127,6 @@ const publicEnvSchema = z.object({
   NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: fromEnv(z.string().optional()),
   NEXT_PUBLIC_ENABLE_ENGLISH_SCAFFOLDING: flag(true),
   NEXT_PUBLIC_ENABLE_CLOUD_SYNC: flag(false),
-  NEXT_PUBLIC_APP_VERSION: fromEnv(z.string().optional()),
   NEXT_PUBLIC_GIT_SHA: fromEnv(
     z
       .string()

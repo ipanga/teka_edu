@@ -10,6 +10,7 @@ This guide takes the project owner step by step through configuring every enviro
 - Never paste a real key, token or password into a file in this repository, into an issue, or into chat. Values go only into Vercel, GitHub secrets or your password manager.
 - Keep DEV and PROD values separate. A staging or local setup that reaches the PROD database is a high-severity defect.
 - Never change the PROD database schema from the Supabase dashboard. Schema changes are migrations only (ADR-017).
+- **Free tiers only** in the current phase (ADR-027). Never upgrade, buy add-ons or enter billing details. See [FREE_TIER.md](FREE_TIER.md).
 
 ---
 
@@ -73,84 +74,98 @@ npx supabase status -o env \
 
 ---
 
-## 2. Supabase DEV project (`teka-edu-dev`)
+## 2. Supabase projects (done 2026-09-11)
 
-1. [ ] In https://supabase.com/dashboard create a project named **`teka-edu-dev`**.
-   - Choose the region (see the pending decision on regions in `PROJECT_STATUS.md`; use the same region for DEV and PROD).
-   - Generate a strong **database password** and store it as `DEV SUPABASE_DB_PASSWORD`.
-2. [ ] Check the Postgres major version (Settings → Infrastructure). It should match `[db] major_version` in `supabase/config.toml` (currently 17).
-3. [ ] **Project ref:** it's in the dashboard URL `https://supabase.com/dashboard/project/<ref>` (also under Settings → General). Store it as `DEV SUPABASE_PROJECT_ID`. The project URL is `https://<ref>.supabase.co`.
-4. [ ] **API keys:** Settings → **API Keys** → "Publishable and secret API keys".
-   - Publishable key (`sb_publishable_…`) → `DEV NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
-   - Secret key (`sb_secret_…`) → `DEV SUPABASE_SECRET_KEY`. Treat it like a password.
-   - Do not build on the legacy `anon` / `service_role` keys.
-5. [ ] **Connection strings:** use the **Connect** button at the top of the dashboard.
-   - Transaction pooler (port 6543, recommended for serverless/Vercel) → `DEV DATABASE_URL`
-   - Direct connection (port 5432) → `DEV DIRECT_DATABASE_URL`. This is IPv6 unless the IPv4 add-on is enabled.
-6. [ ] Leave the schema alone: CI applies the migrations in `supabase/migrations/`.
+Both projects exist in the organization **TEKA** (Free plan), region **Paris `eu-west-3`**, PostgreSQL 17 (ADR-024). They were created with the CLI; each has its own randomly generated database password.
 
-## 3. Supabase PROD project (`teka-edu-prod`)
+|                                     | DEV                                        | PROD                                       |
+| ----------------------------------- | ------------------------------------------ | ------------------------------------------ |
+| Project name                        | `teka-edu-dev`                             | `teka-edu-prod`                            |
+| Project ref (`SUPABASE_PROJECT_ID`) | `quyhkkizsmosybavoewd`                     | `eganrivpkjhozkkahyxy`                     |
+| Project URL                         | `https://quyhkkizsmosybavoewd.supabase.co` | `https://eganrivpkjhozkkahyxy.supabase.co` |
+| Used by                             | staging (`develop`)                        | production (`main`)                        |
+| GitHub environment                  | `staging`                                  | `production`                               |
 
-Repeat section 2 with **`teka-edu-prod`**, storing every value under a `PROD …` label. Use a **different** database password.
+Project refs and URLs are public identifiers, not secrets (they are also in `lib/env/supabase-projects.ts` for the environment guard).
 
-- [ ] Record the backup / point-in-time-recovery capability of the chosen plan (Database → Backups). This determines the database rollback options in [DEPLOYMENT.md](DEPLOYMENT.md#database-rollback-and-recovery).
+**Where the secret values are.** On the owner's Mac, they are in the **macOS login Keychain**: one generic-password item per value, with the project name as the account and the variable name as the service. They were fetched directly from Supabase (dashboard **Connect** / **API Keys** equivalents) and are never written to files or chat:
 
-## 4. Supabase access token (for CI)
+| Keychain service                                  | Content                                                                              |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| `supabase-db-password`                            | database password (`SUPABASE_DB_PASSWORD`)                                           |
+| `SUPABASE_PROJECT_ID`, `NEXT_PUBLIC_SUPABASE_URL` | project ref / URL                                                                    |
+| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`            | `sb_publishable_…`                                                                   |
+| `SUPABASE_SECRET_KEY`                             | `sb_secret_…`                                                                        |
+| `DATABASE_URL`                                    | transaction pooler, `aws-1-eu-west-3.pooler.supabase.com:6543` (serverless / Vercel) |
+| `DIRECT_DATABASE_URL`                             | direct `db.<ref>.supabase.co:5432`, **IPv6 only** (see below)                        |
 
-- [ ] Create a personal access token at https://supabase.com/dashboard/account/tokens (name it e.g. `github-actions-teka-edu`). Store it as `SUPABASE_ACCESS_TOKEN`.
+To read one without displaying it, pipe it into the next tool, for example `security find-generic-password -a teka-edu-dev -s DATABASE_URL -w | pbcopy`. Keep a copy in your password manager if you want a second place. The values can also be re-read at any time from the Supabase dashboard (API Keys, Connect), or with `npx supabase projects api-keys --project-ref <ref> --reveal`.
 
-## 5. Environment guard (recommended)
+Notes:
 
-- [ ] Put the two project refs (not secret: they appear in every Supabase URL) into `lib/env/supabase-projects.ts`, `staging: "<DEV ref>"` and `production: "<PROD ref>"`, and commit that through a normal PR. The app will then refuse to start or build if staging points at PROD or production points at DEV.
+- **Legacy keys:** both projects still have the legacy JWT `anon` / `service_role` keys. Nothing uses them. Optionally disable them under Settings → API Keys → Legacy API keys, once you have confirmed nothing depends on them.
+- **Direct connection:** `DIRECT_DATABASE_URL` resolves to IPv6 only. It is unreachable from IPv4-only networks, including this Mac's network (tested 2026-09-11) and Vercel. Use the pooler URLs. For direct-style tooling over IPv4, use the **session pooler** (same pooler host, port 5432). The CLI and CI already connect through the pooler.
+- **Free plan limits:** an inactive project is **paused after about a week** (restore it from the dashboard), and there are **no downloadable backups or point-in-time recovery**. Before real child data lands in PROD, upgrade PROD or schedule `supabase db dump` exports ([DEPLOYMENT.md](DEPLOYMENT.md#database-rollback-and-recovery)).
+- **Local CLI link:** this working copy is linked to **DEV** (`npx supabase link --project-ref quyhkkizsmosybavoewd`, state in the ignored `supabase/.temp/`). Never link a working copy to PROD. PROD is reached only by CI, or by explicit read-only commands with `--project-ref`.
+- **Schema changes:** leave the schema alone. CI applies `supabase/migrations/` (ADR-017).
+
+## 3. Verification performed (2026-09-11)
+
+- DEV: `link`, `migration list`, `db push --dry-run` then `db push` ("Remote database is up to date": there are no migrations yet), `test db --linked` (pgTAP RLS guard **PASS**), 0 public tables without RLS, security advisors: no issues.
+- PROD (read-only): `migration list` (empty), 0 public tables without RLS, security advisors: no issues. Nothing was pushed or seeded.
+- The pooled `DATABASE_URL` connects for DEV and PROD. `DIRECT_DATABASE_URL` is refused over this IPv4 network, as expected.
+- The env validation accepts DEV values under `staging` and PROD values under `production`. It refuses them swapped, and it refuses any hosted value under `local`.
+
+## 4. Supabase access token (for CI) (done)
+
+- [x] The owner created a personal access token (`github-actions-teka-edu`) and stored it as `SUPABASE_ACCESS_TOKEN` in both GitHub environments. To rotate it: create a new token, run `gh secret set SUPABASE_ACCESS_TOKEN --env staging -R ipanga/teka_edu` (and `--env production`), then revoke the old token.
+
+## 5. Environment guard (done)
+
+- [x] `lib/env/supabase-projects.ts` records `staging: "quyhkkizsmosybavoewd"` and `production: "eganrivpkjhozkkahyxy"`. The app refuses to build or start if staging points at PROD or production points at DEV.
 
 ---
 
-## 6. Vercel project
+## 6. Vercel project (done 2026-09-11)
 
-1. [ ] Create **one** Vercel project for the repository, either:
-   - through the dashboard ("Add New… → Project", import `ipanga/teka_edu`), or
-   - from a machine where you are logged in: `npx vercel@59.16.0 link` (creates `.vercel/project.json`, which is Git-ignored).
-2. [ ] Git auto-deployments are disabled by `vercel.json` (`"git": { "deploymentEnabled": false }`). GitHub Actions is the only deployer (ADR-016). Do not re-enable them in the dashboard.
-3. [ ] **IDs:**
-   - `VERCEL_PROJECT_ID`: Project → Settings → General → Project ID
-   - `VERCEL_ORG_ID`: Team Settings → General → Team ID (or `orgId` in `.vercel/project.json`)
-4. [ ] **Token:** Account Settings → Tokens → create a token scoped to the team, e.g. `github-actions-teka-edu`. Store it as `VERCEL_TOKEN`.
-5. [ ] **Container deployment:** `Dockerfile.vercel` at the repository root makes Vercel build and run the app as a container. After the first deployment, confirm in the deployment details that it was built from the Dockerfile.
-6. [ ] **Deployment Protection** (Settings → Deployment Protection): keep Standard Protection on for previews. Create a **Protection Bypass for Automation** secret and store it as `VERCEL_AUTOMATION_BYPASS_SECRET`, which lets the CI smoke tests reach protected deployments.
-7. [ ] **Staging target:**
-   - On the Pro plan, you can create a Custom Environment named `staging` (Settings → Environments), then set the GitHub variable `VERCEL_STAGING_TARGET=staging`.
-   - On Hobby, staging uses Preview deployments. Optionally set `STAGING_DOMAIN` so each staging deployment gets a stable alias.
+|                       |                                                                                                                                                                                 |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Team                  | **TEKA** (`teka10`, `team_kWKStcZKtcLOayvPFJbLIixQ`), **Hobby plan** (free; no charges possible; non-commercial use only)                                                       |
+| Project               | **`teka-edu`** (`prj_cJcoXbMF0fi3Uf4SejFnRH6uCmph`), created with `vercel project add`                                                                                          |
+| Framework preset      | **`container`**. `Dockerfile.vercel` is built with buildah and pushed to Vercel Container Registry (10 GB/month included on Hobby). The preset is also pinned in `vercel.json`. |
+| Function region       | **Paris `cdg1`** (project default and `vercel.json` `regions`). Verified from the `x-vercel-id` header: `…::cdg1::…`. Builds run on Vercel's build machines (`iad1`).           |
+| Git connection        | **None** (`vercel.json` also sets `git.deploymentEnabled: false`). GitHub Actions is the only deployer (ADR-016). Do not connect Git in the dashboard.                          |
+| Deployment Protection | Vercel Authentication, all deployments except custom domains. Unauthenticated requests get a 302 to Vercel sign-in. CI uses the Protection Bypass for Automation secret.        |
+| Staging URL           | **https://teka-edu-staging.vercel.app**, an alias assigned by the staging workflow to each new staging deployment                                                               |
+| Production domain     | `teka-edu.vercel.app` (Vercel default). It is **not deployed**: it holds only the failed first deployment (see below).                                                          |
 
-## 7. Vercel Preview/Staging variables
+Notes:
 
-In Project → Settings → **Environment Variables**, scope each variable to **Preview**, or to the `staging` Custom Environment if you created one. Use the DEV values. Mark every secret as **Sensitive**.
+- **First deployment:** Vercel makes the first deployment of a new project a production deployment, even without `--prod`. The first staging attempt therefore became a failed production deployment. Nothing was served, because the env guard refused the build. It is **kept on purpose**, so that later non-`--prod` deployments are Preview. The staging workflow refuses to deploy into a project with no deployment.
+- **Tokens:** the CLI's own login cannot create tokens (`403 Cannot create tokens for this app`), so CI tokens are created by the owner in the dashboard.
+  - Staging token: `github-actions-teka-edu-staging`, scoped to TEKA / `teka-edu`. It is stored as the GitHub `staging` secret `VERCEL_TOKEN`; record its expiry date when renewing.
+  - A production token has **not** been created yet.
+- **Checking a protected deployment yourself:** `vercel curl https://teka-edu-staging.vercel.app/api/health --scope teka10` uses your CLI login. No bypass secret is needed.
 
-- [ ] `NEXT_PUBLIC_APP_NAME` = `Teka Edu`
-- [ ] `NEXT_PUBLIC_DEFAULT_LOCALE` = `fr`
-- [ ] `NEXT_PUBLIC_DEFAULT_COUNTRY` = `CD`
-- [ ] `NEXT_PUBLIC_APP_ENV` = `staging`
-- [ ] `NEXT_PUBLIC_APP_URL` = the staging URL (the `STAGING_DOMAIN`, or the preview URL pattern you use)
-- [ ] `NEXT_PUBLIC_SUPABASE_URL` = `https://<DEV ref>.supabase.co`
-- [ ] `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` = DEV publishable key
-- [ ] `SUPABASE_SECRET_KEY` = DEV secret key (**Sensitive**)
-- [ ] `DATABASE_URL` = DEV transaction pooler URL (**Sensitive**)
-- [ ] `DIRECT_DATABASE_URL` = DEV direct URL (**Sensitive**)
-- [ ] `NEXT_PUBLIC_ENABLE_ENGLISH_SCAFFOLDING` = `true`
-- [ ] `NEXT_PUBLIC_ENABLE_CLOUD_SYNC` = `false` (switch to `true` only when cloud sync is implemented)
-- [ ] `AI_ENABLED` = `false`
-- [ ] `PORT` = `3000` (**required**: the container listens on 3000, and Vercel routes to `PORT`, which defaults to 80)
+## 7. Vercel Preview (= staging) variables (done)
 
-The Supabase variables can stay unset while cloud sync is off, but if you set one of them you must set both.
+Only `develop` is ever deployed to Preview, so Preview **is** staging. The values are read by the container **at runtime** (ADR-025). They were set through the Vercel API from the Keychain (account `teka-edu-dev`), and the values were verified to equal the DEV values and not the PROD ones.
+
+- [x] `NEXT_PUBLIC_APP_ENV` = `staging`
+- [x] `NEXT_PUBLIC_APP_URL` = `https://teka-edu-staging.vercel.app`
+- [x] `NEXT_PUBLIC_SUPABASE_URL` = `https://quyhkkizsmosybavoewd.supabase.co` (DEV)
+- [x] `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` = DEV publishable key
+- [x] `PORT` = `3000` (required: Vercel routes to `PORT`, default 80; the non-root container listens on 3000)
+- Not set, because no code uses them yet (defaults apply): `SUPABASE_SECRET_KEY`, `DATABASE_URL`, `DIRECT_DATABASE_URL`, `NEXT_PUBLIC_APP_NAME`, `NEXT_PUBLIC_DEFAULT_LOCALE`, `NEXT_PUBLIC_DEFAULT_COUNTRY`, the feature flags, `AI_ENABLED`. When a feature needs a server secret, add it to Preview (and Production) as **Sensitive**.
 
 **Never** add `VERCEL_TOKEN`, `SUPABASE_ACCESS_TOKEN`, `SUPABASE_DB_PASSWORD` or any other CI credential to Vercel.
 
-## 8. Vercel Production variables
+## 8. Vercel Production variables (prepared, not deployed)
 
-Scope to **Production**. Use the PROD values:
-
-- [ ] same list as section 7, except `NEXT_PUBLIC_APP_ENV` = `production`, `NEXT_PUBLIC_APP_URL` = the production domain, and all Supabase values from **`teka-edu-prod`**
-- [ ] `PORT` = `3000`
+- [x] `NEXT_PUBLIC_APP_ENV` = `production`, `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` = **PROD** (`teka-edu-prod`), `PORT` = `3000`
+- [ ] `NEXT_PUBLIC_APP_URL` = the production domain. This is **intentionally unset** until the domain is decided (PD-012). Without it, a production container refuses to start (env guard), which is a safe failure.
 - [ ] Add the production domain under Project → Settings → Domains.
+- [ ] Before a public launch, decide on the Vercel plan. Hobby allows only non-commercial use and cannot protect the production domain.
 
 ---
 
@@ -164,22 +179,24 @@ Scope to **Production**. Use the PROD values:
 
 ## 10. GitHub `staging` environment
 
-Settings → Environments → **New environment** → `staging`:
+Settings → Environments → `staging` (created 2026-09-11):
 
-- [ ] Deployment branches and tags: **Selected branches** → `develop`
-- [ ] Environment secrets, with **DEV** values:
-  - `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`
-  - `SUPABASE_ACCESS_TOKEN`, `SUPABASE_PROJECT_ID` (DEV ref), `SUPABASE_DB_PASSWORD` (DEV)
-  - `VERCEL_AUTOMATION_BYPASS_SECRET` (if Deployment Protection is on)
+- [x] Deployment branches and tags: **Selected branches** → `develop`
+- [x] Supabase secrets (DEV values): `SUPABASE_ACCESS_TOKEN`, `SUPABASE_PROJECT_ID` (`quyhkkizsmosybavoewd`), `SUPABASE_DB_PASSWORD` (DEV)
+- [x] Vercel secrets: `VERCEL_TOKEN` (project-scoped staging token, added by the owner), `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`, `VERCEL_AUTOMATION_BYPASS_SECRET`
+- [x] Environment variable: `STAGING_DOMAIN` = `teka-edu-staging.vercel.app` (`VERCEL_STAGING_TARGET` unset, so Preview is used)
+- Runtime values (Supabase URL, keys, database URLs) are **not** GitHub secrets: the workflows do not read them. They go into Vercel.
 - [ ] Environment variables (optional): `VERCEL_STAGING_TARGET`, `STAGING_DOMAIN`
 
 ## 11. GitHub `production` environment
 
-Settings → Environments → `production`:
+Settings → Environments → `production` (created 2026-09-11):
 
-- [ ] Deployment branches: **Selected branches** → `main`
-- [ ] Environment secrets, with the **same names** and **PROD** values: `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`, `SUPABASE_ACCESS_TOKEN`, `SUPABASE_PROJECT_ID` (PROD ref), `SUPABASE_DB_PASSWORD` (PROD), `VERCEL_AUTOMATION_BYPASS_SECRET`
-- [ ] Optional but recommended once the team grows: **Required reviewers** (manual approval before each production deployment) and "Prevent self-review".
+- [x] Deployment branches: **Selected branches** → `main`
+- [x] Supabase secrets with the **same names** and **PROD** values: `SUPABASE_ACCESS_TOKEN`, `SUPABASE_PROJECT_ID` (`eganrivpkjhozkkahyxy`), `SUPABASE_DB_PASSWORD` (PROD)
+- [x] `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`, `VERCEL_AUTOMATION_BYPASS_SECRET`
+- [ ] `VERCEL_TOKEN`: **not created yet**. Without it, the production deploy job would stop at its secret check. Create `github-actions-teka-edu-production` (same scope) when production is prepared.
+- [x] **Required reviewers:** `ipanga`, with "Prevent self-review" **off**, so the single maintainer can approve their own production deployments. Turn self-review prevention on once a second maintainer exists.
 
 Environment-scoped secrets are only available to jobs that run in that environment, and only on the allowed branch. That is why the deployment credentials are not repository-wide secrets.
 
@@ -187,7 +204,7 @@ Environment-scoped secrets are only available to jobs that run in that environme
 
 Settings → Secrets and variables → Actions → **Variables** (repository):
 
-- [ ] `STAGING_DEPLOY_ENABLED` = `true` once sections 2, 4, 6, 7 and 10 are complete
+- [x] `STAGING_DEPLOY_ENABLED` = `true`, enabled 2026-09-11 after the first verified staging deployment (run 34635262697)
 - [ ] `PRODUCTION_DEPLOY_ENABLED` = `true` once sections 3, 8 and 11 are complete, and staging has deployed successfully at least once
 
 Until these are set, pushes to `develop` / `main` still run the full CI, but the deploy jobs are skipped.
@@ -208,42 +225,12 @@ Until these are set, pushes to `develop` / `main` still run the full CI, but the
 
 ## Values still required from the owner
 
-Nothing below exists yet. Claude Code has no access to these values and must never invent them.
+Supabase (section 2) and Vercel staging (sections 6, 7 and 10) are complete. Claude Code has no access to these values and must never invent them.
 
-**Vercel (shared by both GitHub environments):**
+**Before production** (not now: production is disabled in the current phase):
 
-- [ ] `VERCEL_TOKEN`
-- [ ] `VERCEL_ORG_ID`
-- [ ] `VERCEL_PROJECT_ID`
-- [ ] `VERCEL_AUTOMATION_BYPASS_SECRET` (if Deployment Protection is on)
-
-**Supabase DEV (`teka-edu-dev`):**
-
-- [ ] `NEXT_PUBLIC_SUPABASE_URL`
-- [ ] `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
-- [ ] `SUPABASE_SECRET_KEY`
-- [ ] `DATABASE_URL` (transaction pooler)
-- [ ] `DIRECT_DATABASE_URL`
-- [ ] `SUPABASE_PROJECT_ID` (project ref)
-- [ ] `SUPABASE_DB_PASSWORD`
-
-**Supabase PROD (`teka-edu-prod`):**
-
-- [ ] `NEXT_PUBLIC_SUPABASE_URL`
-- [ ] `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
-- [ ] `SUPABASE_SECRET_KEY`
-- [ ] `DATABASE_URL` (transaction pooler)
-- [ ] `DIRECT_DATABASE_URL`
-- [ ] `SUPABASE_PROJECT_ID` (project ref)
-- [ ] `SUPABASE_DB_PASSWORD`
-
-**Shared CI:**
-
-- [ ] `SUPABASE_ACCESS_TOKEN`
-
-**Domains and plan decisions:**
-
-- [ ] staging URL/domain (`NEXT_PUBLIC_APP_URL` for staging; optional `STAGING_DOMAIN`)
-- [ ] production domain
-- [ ] Vercel plan (Hobby: Preview + alias for staging, rollback only to the previous deployment; Pro: `staging` Custom Environment, rollback to any earlier production deployment)
-- [ ] Supabase region (same for DEV and PROD, near the users and the Vercel function region)
+- [ ] `VERCEL_TOKEN` for the GitHub `production` environment (a project-scoped token, created in the dashboard)
+- [ ] Production domain, which is then set as `NEXT_PUBLIC_APP_URL` in the Vercel Production scope and added to the project domains
+- [ ] Vercel plan decision at launch time only. The current phase stays on Hobby (ADR-027); Hobby is for non-commercial use only.
+- [ ] Supabase PROD backup strategy (upgrade or scheduled exports) before real child data (ISSUE-009)
+- [x] Regions: Supabase Paris `eu-west-3`, Vercel function region Paris `cdg1`

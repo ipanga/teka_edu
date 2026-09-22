@@ -1,0 +1,137 @@
+{
+  "materials": [
+    {
+      "code": "aucun",
+      "name": "Aucun matériel",
+      "category": "none",
+      "alternatives": null,
+      "safetyNote": null
+    },
+    {
+      "code": "balle-papier",
+      "name": "Balle en papier froissé",
+      "category": "toy",
+      "alternatives": "Une balle en papier froissé ou une chaussette roulée. Une petite balle souple convient aussi si la maison en a déjà une.",
+      "safetyNote": "Rien de rempli de petits objets (sac de graines, de haricots) : cela s’ouvre. Une balle en papier ou une chaussette roulée ne blesse personne et ne coûte rien."
+    },
+    {
+      "code": "boite",
+      "name": "Boîte, seau ou récipient",
+      "category": "household",
+      "alternatives": "Une boîte, un seau, une bassine, un panier ou un carton.",
+      "safetyNote": null
+    },
+    {
+      "code": "coussin",
+      "name": "Un coussin",
+      "category": "household",
+      "alternatives": "Un coussin, un vêtement roulé, un sac souple ou un pagne plié.",
+      "safetyNote": null
+    },
+    {
+      "code": "crayon",
+      "name": "Crayon",
+      "category": "writing",
+      "alternatives": "Un crayon, un stylo, une craie ou un morceau de charbon conviennent.",
+      "safetyNote": null
+    },
+    {
+      "code": "crayons-couleur",
+      "name": "Crayons de couleur",
+      "category": "writing",
+      "alternatives": "Un seul crayon, des craies de couleur ou des morceaux de charbon et de brique.",
+      "safetyNote": null
+    },
+    {
+      "code": "ecran",
+      "name": "Écran (téléphone, tablette ou ordinateur)",
+      "category": "screen",
+      "alternatives": "Facultatif : l’adulte peut lire la consigne et montrer les objets réels.",
+      "safetyNote": null
+    },
+    {
+      "code": "espace-degage",
+      "name": "Espace dégagé pour bouger (à l’intérieur ou dehors)",
+      "category": "outdoor",
+      "alternatives": "Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.",
+      "safetyNote": "Regardez l’espace avant de jouer : pas de véhicule, de feu, d’eau ni d’objet coupant à proximité."
+    },
+    {
+      "code": "formes-papier",
+      "name": "Formes découpées ou dessinées sur papier (carré, rectangle, triangle, disque)",
+      "category": "paper",
+      "alternatives": "Dessinez les formes sur une feuille et découpez-les, ou tracez-les directement sur le sol ou sur le sable ; à défaut, servez-vous de morceaux de carton d’emballage.",
+      "safetyNote": null
+    },
+    {
+      "code": "gros-objets",
+      "name": "Gros objets à compter (cuillères, gobelets, chaussettes roulées)",
+      "category": "household",
+      "alternatives": "Cuillères, gobelets, chaussettes roulées, blocs, grosses pièces de jeu, petits jouets assez volumineux : tout ce qui ne tient pas dans une bouche.",
+      "safetyNote": "Pour les plus jeunes, préférez ces objets aux cailloux, capsules et haricots, qui peuvent être avalés. Les petits objets restent possibles, mais seulement sous votre surveillance directe."
+    },
+    {
+      "code": "objets-ecole",
+      "name": "Objets de l’école (cahier, crayon, cartable)",
+      "category": "household",
+      "alternatives": "Une feuille pliée en guise de cahier, un sac, une craie, quand le vrai matériel scolaire manque.",
+      "safetyNote": null
+    },
+    {
+      "code": "objets-faces-planes",
+      "name": "Objets de la maison à faces planes (cahier, boite en carton, assiette, couvercle)",
+      "category": "household",
+      "alternatives": "Un cahier, un livre, une boite en carton, une assiette, un couvercle rond, un emballage : tout objet du quotidien dont une face est bien plate.",
+      "safetyNote": null
+    },
+    {
+      "code": "objets-maison",
+      "name": "Objets de la maison (coussins, chaises, bâton, tissu)",
+      "category": "household",
+      "alternatives": "Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.",
+      "safetyNote": "Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer."
+    },
+    {
+      "code": "papier",
+      "name": "Feuille de papier",
+      "category": "paper",
+      "alternatives": "Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.",
+      "safetyNote": null
+    },
+    {
+      "code": "petits-objets",
+      "name": "Petits objets à compter (cailloux, capsules, haricots)",
+      "category": "household",
+      "alternatives": "Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.",
+      "safetyNote": "Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans."
+    },
+    {
+      "code": "repere-sol",
+      "name": "Un repère plat posé au sol (corde, bande de tissu ou trait tracé)",
+      "category": "outdoor",
+      "alternatives": "Une corde posée à plat, une bande de tissu, un trait de craie ou une ligne tracée dans le sable. Rien de dur ni de surélevé.",
+      "safetyNote": null
+    },
+    {
+      "code": "textures",
+      "name": "Deux choses à toucher, de surfaces différentes",
+      "category": "household",
+      "alternatives": "Un tissu doux et un morceau de carton ondulé ; ou une cuillère lisse et une serviette ; ou un objet en bois lisse et une éponge sèche. Deux surfaces bien différentes suffisent.",
+      "safetyNote": "Regardez les deux objets avant de les donner : rien de coupant, rien de brûlant, rien de cassable, rien d’assez petit pour être avalé. On cherche des surfaces à comparer, pas des sensations désagréables."
+    },
+    {
+      "code": "tissu",
+      "name": "Un grand tissu (pagne, drap ou serviette)",
+      "category": "household",
+      "alternatives": "Un pagne, un drap, une grande serviette ou un rideau : tout tissu assez grand pour être tenu à deux mains.",
+      "safetyNote": "C’est l’adulte qui tient le tissu, sans jamais l’enrouler autour de l’enfant."
+    },
+    {
+      "code": "vaisselle-incassable",
+      "name": "Vaisselle incassable (assiettes en plastique, gobelets, cuillères)",
+      "category": "household",
+      "alternatives": "Des assiettes en plastique ou en métal, des gobelets, des bols, des cuillères — ou, à défaut, autant de petits objets identiques que de personnes.",
+      "safetyNote": "Rien en verre ni en céramique, aucun couteau ni ustensile pointu : l’enfant porte la vaisselle lui-même."
+    }
+  ]
+}

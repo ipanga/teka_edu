@@ -1,5 +1,28 @@
 # Teka Edu — Project Plan for Claude Code
 
+> ## Amendement — état courant et décisions qui prévalent (12 septembre 2026)
+>
+> **Ce plan reste le document d'origine du propriétaire et n'a pas été réécrit.** Les décisions
+> ci-dessous ont été prises après sa rédaction et **priment sur lui** en cas de divergence ; le
+> détail est dans `DECISIONS.md`, l'état réel dans `PROJECT_STATUS.md`.
+>
+> | Sujet | Décision qui prévaut |
+> | --- | --- |
+> | Nature du produit | **Répétiteur numérique guidé par le parent** : l'enfant va à l'école, le parent conduit ensuite une séance de renforcement (ADR-039). Ce n'est pas un remplacement de l'école, et rien ne prétend savoir ce que la classe a fait le jour même. |
+> | Durée d'une séance | **30 à 45 minutes** par jour d'instruction, environ 35. La fourchette est une souplesse, pas une cible à atteindre (ADR-039). |
+> | Curriculum | **Cycle 1 français** comme programme ; le **PNEM** de la RDC comme référence de compatibilité, de contexte et d'enrichissement — jamais un second programme (ADR-037). |
+> | Calendrier | **Calendrier scolaire de la RDC** ; la progression est indexée sur le numéro de jour d'instruction, pas sur la date (ADR-004, ADR-029). |
+> | Langue | **Français d'abord** ; l'anglais est une aide facultative, masquée par défaut (ADR-001). |
+> | Portée actuelle | **3ème maternelle uniquement**, **septembre 2026 uniquement** : 22 jours, 88 leçons, 170 activités. Octobre n'est pas écrit ; 1ère et 2ème maternelle n'ont que la structure. |
+> | Méthode | **Le rythme annuel avant le mois** (ADR-040) : 162 objectifs répartis sur 189 jours, puis le mois écrit contre ce plan. |
+> | Images | **SVG dans le dépôt**, identifiants stables, aucun service payant (ADR-042). |
+> | Relecture | Aucune leçon n'est `approved`. La relecture pédagogique humaine reste requise (ADR-035, ISSUE-017). |
+> | Travail long | Toute tâche substantielle est reprenable depuis le dépôt (ADR-041, `docs/RESUMABLE_WORKFLOW.md`). |
+>
+> Les sections qui suivent décrivent l'intention initiale. Là où elles annoncent des durées, des
+> portées ou des priorités différentes, ce sont les décisions ci-dessus qui s'appliquent.
+
+
 ## 1. Project Overview
 
 **Project name:** Teka Edu  

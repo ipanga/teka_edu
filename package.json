@@ -20,6 +20,8 @@
     "test:e2e": "playwright test",
     "content:validate": "tsx scripts/validate-content.ts",
     "check:client-bundle": "tsx scripts/check-client-bundle.ts",
+    "registry:prune": "tsx scripts/prune-registry.ts",
+    "test:e2e:public": "playwright test production-public",
     "db:start": "supabase start",
     "db:stop": "supabase stop",
     "db:status": "supabase status",
@@ -29,7 +31,15 @@
     "docker:build": "docker build -t teka-edu:local .",
     "docker:run": "docker run --rm -p 3000:3000 --name teka-edu-local teka-edu:local",
     "verify": "npm run format:check && npm run lint && npm run typecheck && npm run test && npm run content:validate && npm run build",
-    "docker:smoke": "bash scripts/docker-smoke.sh teka-edu:local"
+    "docker:smoke": "bash scripts/docker-smoke.sh teka-edu:local",
+    "db:reference": "tsx scripts/generate-reference-sql.ts",
+    "calendar:report": "tsx scripts/calendar-report.ts",
+    "programme:report": "tsx scripts/programme-report.ts",
+    "coverage:report": "tsx scripts/coverage-report.ts",
+    "media:report": "tsx scripts/media-report.ts",
+    "review:package": "tsx scripts/review-package.ts",
+    "plan:report": "tsx scripts/plan-report.ts",
+    "review:reconfirmation": "tsx scripts/reconfirmation-package.ts"
   },
   "dependencies": {
     "next": "16.3.4",

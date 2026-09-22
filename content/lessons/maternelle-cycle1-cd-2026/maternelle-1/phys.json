@@ -1,0 +1,1129 @@
+{
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "levelId": "maternelle-1",
+  "domainCode": "PHYS",
+  "lessons": [
+    {
+      "id": "m1-phys-01",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Le jeu et la règle",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S04-C01-O03"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-01-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Le jeu et la règle",
+          "childInstruction": "On joue ensemble : on écoute, et on s’arrête quand je dis stop.",
+          "adultGuidance": "Dégagez l’espace vous-même : **c’est vous qui déplacez les chaises et les meubles**. L’enfant aide en portant ce qui est léger et sans risque — un coussin, un pagne, un jouet. Participer à la préparation compte ; soulever un meuble, non. Dites la règle : on part quand je tape, on s’arrête quand je dis stop. Jouez trente secondes, arrêtez, recommencez. La règle s’apprend en jouant, pas en l’écoutant.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S04-C01-O03"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "We play together: listen, and stop when I say stop."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "6cccc6de1581a42e",
+        "notes": "Semaine 1 : passe 1 acceptée avec modifications (9 points), passe 2 acceptée avec modifications (2 points), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-02",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je cours",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S01-C01-O02"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-02-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je cours",
+          "childInstruction": "Cours jusqu’au repère, puis reviens en marchant.",
+          "adultGuidance": "Posez un repère au sol, **bien avant tout obstacle** : un pagne, un coussin, une ligne tracée, un objet sans danger. Jamais un mur, une porte ni un arbre comme but — à cet âge on ne s’arrête pas toujours à temps. Faites-le courir, puis revenir doucement. Trois allers suffisent. À l’intérieur, remplacez la course par des pas rapides sur place.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O02"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Run to the marker, then walk back."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "070bbe0aedee29e2",
+        "notes": "Semaine 1 : passe 1 acceptée avec modifications (9 points), passe 2 acceptée avec modifications (2 points), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-03",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je cours",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O02"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-03-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je cours",
+          "childInstruction": "Cours jusqu’au repère, puis reviens en marchant.",
+          "adultGuidance": "Posez un repère au sol, **bien avant tout obstacle** : un pagne, un coussin, une ligne tracée, un objet sans danger. Jamais un mur, une porte ni un arbre comme but — à cet âge on ne s’arrête pas toujours à temps. Faites-le courir, puis revenir doucement. Trois allers suffisent. À l’intérieur, remplacez la course par des pas rapides sur place.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O02"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Run to the marker, then walk back."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "1650cad1dfb7c8d5",
+        "notes": "Semaine 1 : passe 1 acceptée avec modifications (9 points), passe 2 acceptée avec modifications (2 points), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-04",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je bouge comme toi",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S03-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-04-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je bouge comme toi",
+          "childInstruction": "Bouge comme moi. Puis bouge comme tu veux.",
+          "adultGuidance": "Faites un mouvement simple et lent — lever les bras, tourner — et laissez-le imiter. Puis inversez : c’est lui qui montre, vous imitez. Être copié par un adulte vaut tous les encouragements.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S03-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move like me. Then move how you want."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "0f061f6c2df8d2ce",
+        "notes": "Semaine 1 : passe 1 acceptée avec modifications (9 points), passe 2 acceptée avec modifications (2 points), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-05",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je cours",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O02"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-05-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je cours",
+          "childInstruction": "Cours jusqu’au repère, puis reviens en marchant.",
+          "adultGuidance": "Posez un repère au sol, **bien avant tout obstacle** : un pagne, un coussin, une ligne tracée, un objet sans danger. Jamais un mur, une porte ni un arbre comme but — à cet âge on ne s’arrête pas toujours à temps. Faites-le courir, puis revenir doucement. Trois allers suffisent. À l’intérieur, remplacez la course par des pas rapides sur place.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O02"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Run to the marker, then walk back."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "4876f8d5c08fe3d1",
+        "notes": "Semaine 2 : deux passes (6 puis 2 corrections), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-06",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je lance",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S01-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-06-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je lance",
+          "childInstruction": "Lance la balle dans le seau.",
+          "adultGuidance": "Une balle en papier froissé et un seau à deux pas. Montrez une fois. S’il rate, rapprochez le seau : on ne fait pas plus difficile, on fait réussi. Cinq lancers, pas plus.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O01"],
+          "materialCodes": ["balle-papier", "boite"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Throw the ball into the bucket."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "c0d7e8d0e9d070da",
+        "notes": "Semaine 2 : deux passes (6 puis 2 corrections), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-07",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je bouge comme toi",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S03-C01-O01"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-07-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je bouge comme toi",
+          "childInstruction": "Bouge comme moi. Puis bouge comme tu veux.",
+          "adultGuidance": "Faites un mouvement simple et lent — lever les bras, tourner — et laissez-le imiter. Puis inversez : c’est lui qui montre, vous imitez. Être copié par un adulte vaut tous les encouragements.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S03-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move like me. Then move how you want."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "57e08d076efdcfaf",
+        "notes": "Semaine 2 : deux passes (6 puis 2 corrections), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-08",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je lance",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O01"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-08-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je lance",
+          "childInstruction": "Lance la balle dans le seau.",
+          "adultGuidance": "Une balle en papier froissé et un seau à deux pas. Montrez une fois. S’il rate, rapprochez le seau : on ne fait pas plus difficile, on fait réussi. Cinq lancers, pas plus.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O01"],
+          "materialCodes": ["balle-papier", "boite"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Throw the ball into the bucket."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "368f690b06a2e5eb",
+        "notes": "Semaine 2 : deux passes (6 puis 2 corrections), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-09",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je marche sur la ligne",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": ["PHYS-S02-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-09-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je marche sur la ligne",
+          "childInstruction": "Essaie de marcher sur la ligne.",
+          "adultGuidance": "Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, laissez-le continuer, ou recommencer s’il en a envie — c’est lui qui décide. On explore l’équilibre ; il n’y a pas de parcours à réussir ni de retour au départ à imposer.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Try to walk along the line."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "2c0c1df6137e349e",
+        "notes": "Semaine 2 : deux passes (6 puis 2 corrections), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-10",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je cours",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O02"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-10-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je cours",
+          "childInstruction": "Cours jusqu’au repère, puis reviens en marchant.",
+          "adultGuidance": "Posez un repère au sol, **bien avant tout obstacle** : un pagne, un coussin, une ligne tracée, un objet sans danger. Jamais un mur, une porte ni un arbre comme but — à cet âge on ne s’arrête pas toujours à temps. Faites-le courir, puis revenir doucement. Trois allers suffisent. À l’intérieur, remplacez la course par des pas rapides sur place.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O02"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Run to the marker, then walk back."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "e5ca525846e24f72",
+        "notes": "Semaine 3 : passe 1 acceptée avec modifications (8 points), passe 2 acceptée, puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-11",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je lance",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O01"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-11-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je lance",
+          "childInstruction": "Lance la balle dans le seau.",
+          "adultGuidance": "Une balle en papier froissé et un seau à deux pas. Montrez une fois. S’il rate, rapprochez le seau : on ne fait pas plus difficile, on fait réussi. Cinq lancers, pas plus.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O01"],
+          "materialCodes": ["balle-papier", "boite"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Throw the ball into the bucket."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "83dd807a21bdc69e",
+        "notes": "Semaine 3 : passe 1 acceptée avec modifications (8 points), passe 2 acceptée, puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-12",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je marche sur la ligne",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O01"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-12-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je marche sur la ligne",
+          "childInstruction": "Essaie de marcher sur la ligne.",
+          "adultGuidance": "Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, laissez-le continuer, ou recommencer s’il en a envie — c’est lui qui décide. On explore l’équilibre ; il n’y a pas de parcours à réussir ni de retour au départ à imposer.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Try to walk along the line."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "2e2ed7c89bff07b2",
+        "notes": "Semaine 3 : passe 1 acceptée avec modifications (8 points), passe 2 acceptée, puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-13",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je bouge comme toi",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S03-C01-O01"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-13-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je bouge comme toi",
+          "childInstruction": "Bouge comme moi. Puis bouge comme tu veux.",
+          "adultGuidance": "Faites un mouvement simple et lent — lever les bras, tourner — et laissez-le imiter. Puis inversez : c’est lui qui montre, vous imitez. Être copié par un adulte vaut tous les encouragements.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S03-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move like me. Then move how you want."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "3563841c80dd168c",
+        "notes": "Semaine 3 : passe 1 acceptée avec modifications (8 points), passe 2 acceptée, puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-14",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je cours",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O02"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-14-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je cours",
+          "childInstruction": "Cours jusqu’au repère, puis reviens en marchant.",
+          "adultGuidance": "Posez un repère au sol, **bien avant tout obstacle** : un pagne, un coussin, une ligne tracée, un objet sans danger. Jamais un mur, une porte ni un arbre comme but — à cet âge on ne s’arrête pas toujours à temps. Faites-le courir, puis revenir doucement. Trois allers suffisent. À l’intérieur, remplacez la course par des pas rapides sur place.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O02"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Run to the marker, then walk back."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "3f09acd0d76a1152",
+        "notes": "Semaine 3 : passe 1 acceptée avec modifications (8 points), passe 2 acceptée, puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-15",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je lance",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O01"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-15-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je lance",
+          "childInstruction": "Lance la balle dans le seau.",
+          "adultGuidance": "Une balle en papier froissé et un seau à deux pas. Montrez une fois. S’il rate, rapprochez le seau : on ne fait pas plus difficile, on fait réussi. Cinq lancers, pas plus.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O01"],
+          "materialCodes": ["balle-papier", "boite"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Throw the ball into the bucket."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "33f010d2947c4116",
+        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-16",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je marche sur la ligne",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O01"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-16-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je marche sur la ligne",
+          "childInstruction": "Essaie de marcher sur la ligne.",
+          "adultGuidance": "Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, laissez-le continuer, ou recommencer s’il en a envie — c’est lui qui décide. On explore l’équilibre ; il n’y a pas de parcours à réussir ni de retour au départ à imposer.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Try to walk along the line."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "7be8dcf3d0680aa3",
+        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-17",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je bouge comme toi",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S03-C01-O01"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-17-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je bouge comme toi",
+          "childInstruction": "Bouge comme moi. Puis bouge comme tu veux.",
+          "adultGuidance": "Faites un mouvement simple et lent — lever les bras, tourner — et laissez-le imiter. Puis inversez : c’est lui qui montre, vous imitez. Être copié par un adulte vaut tous les encouragements.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S03-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move like me. Then move how you want."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "0cc389173b6d53bf",
+        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-18",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je cours",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O02"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-18-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je cours",
+          "childInstruction": "Cours jusqu’au repère, puis reviens en marchant.",
+          "adultGuidance": "Posez un repère au sol, **bien avant tout obstacle** : un pagne, un coussin, une ligne tracée, un objet sans danger. Jamais un mur, une porte ni un arbre comme but — à cet âge on ne s’arrête pas toujours à temps. Faites-le courir, puis revenir doucement. Trois allers suffisent. À l’intérieur, remplacez la course par des pas rapides sur place.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O02"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Run to the marker, then walk back."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "4ea3157f08fa4037",
+        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-19",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je lance",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O01"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-19-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je lance",
+          "childInstruction": "Lance la balle dans le seau.",
+          "adultGuidance": "Une balle en papier froissé et un seau à deux pas. Montrez une fois. S’il rate, rapprochez le seau : on ne fait pas plus difficile, on fait réussi. Cinq lancers, pas plus.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O01"],
+          "materialCodes": ["balle-papier", "boite"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Throw the ball into the bucket."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "56f5c1d52db059d5",
+        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-20",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je marche sur la ligne",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O01"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-20-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je marche sur la ligne",
+          "childInstruction": "Essaie de marcher sur la ligne.",
+          "adultGuidance": "Posez une ligne **bien à plat** au sol : du ruban adhésif, un trait à la craie, une bande de tissu, une corde posée à plat, ou simplement une ligne du carrelage. Jamais un bâton ni rien qui dépasse — on marche dessus, on ne doit pas s’y prendre le pied. Tenez-lui la main au premier passage, puis lâchez. S’il sort de la ligne, laissez-le continuer, ou recommencer s’il en a envie — c’est lui qui décide. On explore l’équilibre ; il n’y a pas de parcours à réussir ni de retour au départ à imposer.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Try to walk along the line."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "1451929196bfd88d",
+        "notes": "Semaine 5 : passe 1 acceptée avec modifications (5 points — le geste graphique à nommer, les quatre parties du corps, le matériel des mots du mois, la comptine orale confondue avec une collection, et la règle partagée du jeu choisi), passe 2 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-21",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je bouge comme toi",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S03-C01-O01"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-21-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je bouge comme toi",
+          "childInstruction": "Bouge comme moi. Puis bouge comme tu veux.",
+          "adultGuidance": "Faites un mouvement simple et lent — lever les bras, tourner — et laissez-le imiter. Puis inversez : c’est lui qui montre, vous imitez. Être copié par un adulte vaut tous les encouragements.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S03-C01-O01"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move like me. Then move how you want."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "e2e1eb715f6900dd",
+        "notes": "Semaine 5 : passe 1 acceptée avec modifications (5 points — le geste graphique à nommer, les quatre parties du corps, le matériel des mots du mois, la comptine orale confondue avec une collection, et la règle partagée du jeu choisi), passe 2 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-phys-22",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "PHYS",
+      "title": "Je choisis mon jeu",
+      "summary": "Bouger tous les jours, avec une règle simple et de la place.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S04-C01-O03"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.",
+      "activities": [
+        {
+          "id": "m1-phys-22-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je choisis mon jeu",
+          "childInstruction": "Choisis ton jeu. Puis on joue ensemble, avec une règle.",
+          "adultGuidance": "Laissez-le choisir : courir, lancer, ou marcher sur la ligne. **Avant** de commencer, annoncez une seule règle, adaptée au jeu choisi — attendre « vas-y » avant de partir, lancer chacun son tour, ou attendre que l’autre ait quitté la ligne. Jouez avec lui. Rappelez la règle une fois seulement si besoin. Il n’y a ni gagnant ni perdant : ce qu’on apprend ici, c’est de jouer ensemble en tenant une règle simple.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S04-C01-O03"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Choose your game. Then we play together, with one rule."
+            }
+          ],
+          "payload": {
+            "moves": ["choisir son jeu", "écouter la règle", "jouer chacun son tour"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "21b1d5f00040376a",
+        "notes": "Semaine 5 : passe 1 acceptée avec modifications (5 points — le geste graphique à nommer, les quatre parties du corps, le matériel des mots du mois, la comptine orale confondue avec une collection, et la règle partagée du jeu choisi), passe 2 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    }
+  ]
+}

@@ -85,6 +85,49 @@ jobs:
           cache: npm
       - name: Install Vercel CLI
         run: npm install --global "vercel@${VERCEL_CLI_VERSION}"
+      # Before the deploy, not after it: the registry prune below runs from this checkout.
+      - run: npm ci
+      # Vercel makes the FIRST deployment of a new project a production deployment even
+      # without --prod (docs: /docs/cli/deploy#prod). Staging must never be that deployment.
+      - name: Refuse to deploy into a project without any deployment
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          count="$(curl -fsS -H "Authorization: Bearer $VERCEL_TOKEN" \
+            "https://api.vercel.com/v6/deployments?projectId=${VERCEL_PROJECT_ID}&teamId=${VERCEL_ORG_ID}&limit=1" \
+            | jq '.deployments | length')"
+          if [[ "$count" -lt 1 ]]; then
+            echo "::error::The Vercel project has no deployment yet: Vercel would make this one production. Create the first (production) deployment deliberately first; see docs/DEPLOYMENT.md."
+            exit 1
+          fi
+      # The container registry holds 50 images on Hobby and deletes none of them, so it fills up
+      # and then the *push* below is rejected — which blocks develop, because every following
+      # merge re-triggers this same deploy. Prune before pushing, never after (ISSUE-011).
+      # The policy and its safety rules live in lib/deploy/registry-retention.ts and are unit
+      # tested; this step only supplies the registry contents and what must survive.
+      # Read-only, every deploy, whatever the switch below says. It proves the credential
+      # reaches the right team and project, prints the count, and shows exactly which images a
+      # prune would choose and which it would protect — so the decision can be read before it is
+      # ever acted on. It deletes nothing.
+      - name: Verify container registry access (read-only)
+        env: &vcr
+          # A credential of its own: the deploy token is project-scoped and the registry endpoint
+          # answers 404 under it. The script falls back to VERCEL_TOKEN when this secret is
+          # absent, so the step degrades to a warning rather than breaking.
+          VERCEL_VCR_TOKEN: ${{ secrets.VERCEL_VCR_TOKEN }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          STAGING_URL: ${{ vars.STAGING_DOMAIN != '' && format('https://{0}', vars.STAGING_DOMAIN) || '' }}
+          VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
+        run: npm run registry:prune -- --dry-run
+      # The deletion, behind a switch, like every other outward action in this repository
+      # (STAGING_DEPLOY_ENABLED, PRODUCTION_DEPLOY_ENABLED). Set the repository variable
+      # REGISTRY_PRUNE_ENABLED=true to arm it. While it is off the step above still reports, so
+      # the count is never unobserved — but nothing is deleted and the near-cap guard does not
+      # fire, which means the registry becomes the owner's to watch. See ISSUE-011.
+      - name: Prune superseded container images
+        if: vars.REGISTRY_PRUNE_ENABLED == 'true'
+        env: *vcr
+        run: npm run registry:prune
       - name: Deploy to Vercel (staging)
         id: deploy
         env:
@@ -92,25 +135,49 @@ jobs:
           # "staging" when a Vercel Custom Environment exists (Pro plan); empty = Preview.
           VERCEL_TARGET: ${{ vars.VERCEL_STAGING_TARGET }}
         run: |
-          target_args=()
-          if [[ -n "$VERCEL_TARGET" && "$VERCEL_TARGET" != "preview" ]]; then
-            target_args=(--target="$VERCEL_TARGET")
+          target="${VERCEL_TARGET:-preview}"
+          if [[ "$target" == "production" ]]; then
+            echo "::error::The staging workflow must never deploy to production."
+            exit 1
           fi
-          url="$(vercel deploy --yes "${target_args[@]}" \
-            --build-env NEXT_PUBLIC_GIT_SHA="$GITHUB_SHA" \
+          url="$(vercel deploy --yes --target="$target" \
+            --env NEXT_PUBLIC_GIT_SHA="$GITHUB_SHA" \
             --token="$VERCEL_TOKEN")"
           echo "url=$url" >> "$GITHUB_OUTPUT"
           echo "Deployed $GITHUB_SHA to $url"
+      # REST API rather than `vercel inspect` / `vercel alias`: those CLI commands also call
+      # user-level endpoints that a project-scoped token may not use ("User not found").
+      - name: Verify the deployment target is not production
+        id: target
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          DEPLOY_URL: ${{ steps.deploy.outputs.url }}
+          VERCEL_TARGET: ${{ vars.VERCEL_STAGING_TARGET }}
+        run: |
+          dep="$(curl -sS --fail-with-body -H "Authorization: Bearer $VERCEL_TOKEN" \
+            "https://api.vercel.com/v13/deployments/${DEPLOY_URL#https://}?teamId=${VERCEL_ORG_ID}")"
+          actual="$(jq -r '.target // "preview"' <<<"$dep")"   # preview deployments have target null
+          expected="${VERCEL_TARGET:-preview}"
+          echo "Vercel deployment $(jq -r .id <<<"$dep"): target=$actual (expected: $expected), state=$(jq -r .readyState <<<"$dep")"
+          if [[ "$actual" != "$expected" ]]; then
+            echo "::error::Vercel created a '$actual' deployment from the staging workflow. Stop and investigate (docs/DEPLOYMENT.md)."
+            exit 1
+          fi
+          echo "id=$(jq -r .id <<<"$dep")" >> "$GITHUB_OUTPUT"
       - name: Assign stable staging domain
         if: vars.STAGING_DOMAIN != ''
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          DEPLOY_URL: ${{ steps.deploy.outputs.url }}
+          DEPLOYMENT_ID: ${{ steps.target.outputs.id }}
           STAGING_DOMAIN: ${{ vars.STAGING_DOMAIN }}
-        run: vercel alias set "$DEPLOY_URL" "$STAGING_DOMAIN" --token="$VERCEL_TOKEN"
+        run: |
+          curl -sS --fail-with-body -X POST -H "Authorization: Bearer $VERCEL_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "{\"alias\":\"${STAGING_DOMAIN}\"}" \
+            "https://api.vercel.com/v2/deployments/${DEPLOYMENT_ID}/aliases?teamId=${VERCEL_ORG_ID}" \
+            | jq -r '"Aliased \(.alias) -> \(.deploymentId // "deployment")"'
 
       # ---- 3. Smoke tests against the exact deployment ---------------------------------
-      - run: npm ci
       - name: Install Playwright browser
         run: npx playwright install --with-deps chromium
       - name: Smoke tests
@@ -118,6 +185,8 @@ jobs:
           PLAYWRIGHT_BASE_URL: ${{ steps.deploy.outputs.url }}
           EXPECTED_GIT_SHA: ${{ github.sha }}
           EXPECTED_APP_ENV: staging
+          # The environment's own Supabase project ref (DEV for staging, PROD for production).
+          EXPECTED_SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_ID }}
           VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
         run: npm run test:e2e
 

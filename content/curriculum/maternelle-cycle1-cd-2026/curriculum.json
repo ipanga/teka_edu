@@ -1,0 +1,126 @@
+{
+  "id": "maternelle-cycle1-cd-2026",
+  "stageId": "maternelle",
+  "name": "Teka Edu Maternelle — Cycle 1 adapté pour la RDC",
+  "version": "2026",
+  "status": "active",
+  "reference": {
+    "title": "Programme d’enseignement de l’école maternelle (cycle 1)",
+    "publisher": "Ministère de l’Éducation nationale (France)",
+    "citation": "Arrêté du 16 avril 2026 fixant le programme d’enseignement de l’école maternelle (cycle 1), NOR MENE2608627A, BO n° 19 du 7 mai 2026, applicable from the 2026-2027 school year. Domains 1 and 4: annexes 1 and 2 of the arrêté du 22 octobre 2024, NOR MENE2415135A, BO n° 41 du 31 octobre 2024.",
+    "url": "https://www.education.gouv.fr/bo/2026/Hebdo19/MENE2608627A",
+    "verification": "verified"
+  },
+  "sources": [
+    {
+      "id": "programme-2026",
+      "title": "Programme d’enseignement de l’école maternelle (cycle 1)",
+      "citation": "Arrêté du 16 avril 2026 (NOR MENE2608627A), annexe, BO n° 19 du 7 mai 2026",
+      "url": "https://www.education.gouv.fr/sites/default/files/document/annexe-programme-d-enseignement-de-l-ecole-maternelle-cycle-1-516107.pdf",
+      "publishedOn": "2026-05-07",
+      "sha256": "d4ef177c83542c287cd61b1be35b8cec2416b4a21e9396361623482e42905237",
+      "covers": ["PHYS", "ART", "TIME-SPACE", "WORLD"],
+      "verification": "verified"
+    },
+    {
+      "id": "programme-2024-langage",
+      "title": "Programme d’enseignement pour le développement et la structuration du langage oral et écrit du cycle 1",
+      "citation": "Arrêté du 22 octobre 2024 (NOR MENE2415135A), annexe 1, BO n° 41 du 31 octobre 2024",
+      "url": "https://www.education.gouv.fr/sites/default/files/document/Annexe%201%20%E2%80%93%20Programme%20d%E2%80%98enseignement%20pour%20le%20d%C3%A9veloppement%20et%20la%20structuration%20du%20langage%20oral%20et%20%C3%A9crit%20du%20cycle%201-403812.pdf",
+      "publishedOn": "2024-10-31",
+      "sha256": "83321493e74b07cc4827aba17a1cd213e2de09fa3955ebea87148b7ae8aafa09",
+      "covers": ["LANG"],
+      "verification": "verified"
+    },
+    {
+      "id": "programme-2024-mathematiques",
+      "title": "Programme d’enseignement pour l’acquisition des premiers outils mathématiques du cycle 1",
+      "citation": "Arrêté du 22 octobre 2024 (NOR MENE2415135A), annexe 2, BO n° 41 du 31 octobre 2024",
+      "url": "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20d%E2%80%99enseignement%20pour%20l%E2%80%99acquisition%20des%20premiers%20outils%20math%C3%A9matiques%20du%20cycle%201-403815.pdf",
+      "publishedOn": "2024-10-31",
+      "sha256": "d1473025200ad2f5380d8c196b3099bf9d851f3d0eddaee1c0b2344a708c48fa",
+      "covers": ["MATH"],
+      "verification": "verified"
+    }
+  ],
+  "ageBands": [
+    {
+      "code": "before-4",
+      "position": 1,
+      "label": "À aborder avant 4 ans"
+    },
+    {
+      "code": "from-4",
+      "position": 2,
+      "label": "À partir de 4 ans ou dès que les apprentissages précédents ont pu être observés"
+    },
+    {
+      "code": "from-5",
+      "position": 3,
+      "label": "À partir de 5 ans ou dès que les apprentissages précédents ont pu être observés"
+    }
+  ],
+  "adaptationNote": "Teka Edu adaptation for the DRC (Teka Edu decision, not an official DRC programme): DRC school calendar and holidays, Congolese or universal examples, French-first with optional English scaffolding. The 2026 French programme states objectives by age band (before 4, from 4, from 5); Teka Edu maps its classes to the French sections PS, MS and GS.",
+  "schoolYearIds": ["2026-2027"],
+  "levels": [
+    {
+      "levelId": "maternelle-1",
+      "referenceSection": "PS",
+      "ageBandCode": "before-4"
+    },
+    {
+      "levelId": "maternelle-2",
+      "referenceSection": "MS",
+      "ageBandCode": "from-4"
+    },
+    {
+      "levelId": "maternelle-3",
+      "referenceSection": "GS",
+      "ageBandCode": "from-5"
+    }
+  ],
+  "domains": [
+    {
+      "code": "LANG",
+      "kind": "learning-domain",
+      "position": 1,
+      "title": "Le développement et la structuration du langage oral et écrit",
+      "active": true
+    },
+    {
+      "code": "PHYS",
+      "kind": "learning-domain",
+      "position": 2,
+      "title": "Agir, s’exprimer, comprendre à travers les activités physiques",
+      "active": true
+    },
+    {
+      "code": "ART",
+      "kind": "learning-domain",
+      "position": 3,
+      "title": "Agir, s’exprimer, comprendre à travers les activités artistiques",
+      "active": true
+    },
+    {
+      "code": "MATH",
+      "kind": "learning-domain",
+      "position": 4,
+      "title": "L’acquisition des premiers outils mathématiques",
+      "active": true
+    },
+    {
+      "code": "TIME-SPACE",
+      "kind": "learning-domain",
+      "position": 5,
+      "title": "Se repérer dans le temps et l’espace",
+      "active": true
+    },
+    {
+      "code": "WORLD",
+      "kind": "learning-domain",
+      "position": 6,
+      "title": "Découvrir le monde du vivant, de la matière et des objets",
+      "active": true
+    }
+  ]
+}

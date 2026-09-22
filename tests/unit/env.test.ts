@@ -73,7 +73,7 @@ describe("parsePublicEnv", () => {
       const env = parsePublicEnv({
         ...production,
         NEXT_PUBLIC_ENABLE_CLOUD_SYNC: "true",
-        NEXT_PUBLIC_SUPABASE_URL: "https://abcdefghijklmnop.supabase.co",
+        NEXT_PUBLIC_SUPABASE_URL: "https://eganrivpkjhozkkahyxy.supabase.co",
         NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: PUBLISHABLE,
       });
       expect(env.NEXT_PUBLIC_ENABLE_CLOUD_SYNC).toBe(true);
@@ -154,6 +154,29 @@ describe("parsePublicEnv", () => {
         refs,
       );
       expect(env.NEXT_PUBLIC_APP_ENV).toBe("staging");
+    });
+
+    it("refuses an unrelated third project once the environment's own project is known", () => {
+      expectEnvError(
+        () =>
+          parsePublicEnv(
+            { ...staging, NEXT_PUBLIC_SUPABASE_URL: "https://zzzzzzzzzzzzzzzzzzzz.supabase.co" },
+            refs,
+          ),
+        /must use the staging Supabase project \(devrefdevrefdevref\)/,
+      );
+      expectEnvError(
+        () =>
+          parseServerEnv(
+            {
+              DATABASE_URL:
+                "postgresql://postgres.zzzzzzzzzzzzzzzzzzzz:pw@aws-0-eu-west-3.pooler.supabase.com:6543/postgres",
+            },
+            "production",
+            refs,
+          ),
+        /DATABASE_URL: must use the production Supabase project/,
+      );
     });
 
     it("refuses a production server connecting to the DEV database", () => {

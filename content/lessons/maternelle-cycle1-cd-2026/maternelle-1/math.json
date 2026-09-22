@@ -1,0 +1,1192 @@
+{
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "levelId": "maternelle-1",
+  "domainCode": "MATH",
+  "lessons": [
+    {
+      "id": "m1-math-01",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "La comptine des nombres",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": ["MATH-S01-C01-O09"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-01-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "La comptine des nombres",
+          "childInstruction": "Compte avec moi : un, deux, trois, quatre, cinq, six.",
+          "adultGuidance": "Comptez lentement en montrant un doigt à chaque nombre. Recommencez et arrêtez-vous à trois pour voir s’il continue. Ne dépassez jamais six ce mois-ci : la suite orale s’installe par la répétition, pas par la longueur.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "un",
+              "en": "one"
+            },
+            {
+              "fr": "deux",
+              "en": "two"
+            },
+            {
+              "fr": "trois",
+              "en": "three"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count with me to six."
+            }
+          ],
+          "payload": {
+            "upTo": 6,
+            "objects": "les doigts"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "709ae009f964a6e9",
+        "notes": "Semaine 1 : passe 1 acceptée avec modifications (9 points), passe 2 acceptée avec modifications (2 points), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-02",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "Un, deux, trois",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": ["MATH-S01-C01-O03"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-02-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Un, deux, trois",
+          "childInstruction": "Combien il y en a ? Compte avec moi.",
+          "adultGuidance": "Posez trois objets bien séparés — des cuillères, des gobelets, des chaussettes roulées : à cet âge, préférez ce qui ne tient pas dans une bouche. Touchez chaque objet en disant le nombre, une fois. Puis faites-le avec lui, sa main dans la vôtre s’il le veut. À la fin, redites le dernier nombre : « Trois. Il y en a trois. » C’est ce dernier mot qui dit la quantité.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O03"],
+          "materialCodes": ["gros-objets"],
+          "vocabulary": [
+            {
+              "fr": "un",
+              "en": "one"
+            },
+            {
+              "fr": "deux",
+              "en": "two"
+            },
+            {
+              "fr": "trois",
+              "en": "three"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "How many are there?"
+            }
+          ],
+          "payload": {
+            "upTo": 6,
+            "objects": "les doigts"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "cfb42e22212d2160",
+        "notes": "Semaine 1 : passe 1 acceptée avec modifications (9 points), passe 2 acceptée avec modifications (2 points), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-03",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "La comptine des nombres",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O09"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-03-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "La comptine des nombres",
+          "childInstruction": "Compte avec moi : un, deux, trois, quatre, cinq, six.",
+          "adultGuidance": "Comptez lentement en montrant un doigt à chaque nombre. Recommencez et arrêtez-vous à trois pour voir s’il continue. Ne dépassez jamais six ce mois-ci : la suite orale s’installe par la répétition, pas par la longueur.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "un",
+              "en": "one"
+            },
+            {
+              "fr": "deux",
+              "en": "two"
+            },
+            {
+              "fr": "trois",
+              "en": "three"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count with me to six."
+            }
+          ],
+          "payload": {
+            "upTo": 6,
+            "objects": "les doigts"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "7e145704f03b98ee",
+        "notes": "Semaine 1 : passe 1 acceptée avec modifications (9 points), passe 2 acceptée avec modifications (2 points), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-04",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "Un, deux, trois",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O03"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-04-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Un, deux, trois",
+          "childInstruction": "Combien il y en a ? Compte avec moi.",
+          "adultGuidance": "Posez trois objets bien séparés — des cuillères, des gobelets, des chaussettes roulées : à cet âge, préférez ce qui ne tient pas dans une bouche. Touchez chaque objet en disant le nombre, une fois. Puis faites-le avec lui, sa main dans la vôtre s’il le veut. À la fin, redites le dernier nombre : « Trois. Il y en a trois. » C’est ce dernier mot qui dit la quantité.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-cuillere"],
+          "objectiveCodes": ["MATH-S01-C01-O03"],
+          "materialCodes": ["gros-objets"],
+          "vocabulary": [
+            {
+              "fr": "un",
+              "en": "one"
+            },
+            {
+              "fr": "deux",
+              "en": "two"
+            },
+            {
+              "fr": "trois",
+              "en": "three"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "How many are there?"
+            }
+          ],
+          "payload": {
+            "upTo": 6,
+            "objects": "les doigts"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "6fe0482ff70a61df",
+        "notes": "Semaine 1 : passe 1 acceptée avec modifications (9 points), passe 2 acceptée avec modifications (2 points), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-05",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "La comptine des nombres",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O09"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-05-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "La comptine des nombres",
+          "childInstruction": "Compte avec moi : un, deux, trois, quatre, cinq, six.",
+          "adultGuidance": "Comptez lentement en montrant un doigt à chaque nombre. Recommencez et arrêtez-vous à trois pour voir s’il continue. Ne dépassez jamais six ce mois-ci : la suite orale s’installe par la répétition, pas par la longueur.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count with me to six."
+            }
+          ],
+          "payload": {
+            "upTo": 6,
+            "objects": "les doigts"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "7ea72ef2861d37ae",
+        "notes": "Semaine 2 : deux passes (6 puis 2 corrections), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-06",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "Trois objets",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O03"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-06-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Trois objets",
+          "childInstruction": "Combien il y en a ? Compte avec moi.",
+          "adultGuidance": "Posez trois objets bien séparés — des cuillères, des gobelets, des chaussettes roulées : à cet âge, préférez ce qui ne tient pas dans une bouche. Touchez chaque objet en disant le nombre, une fois. Puis faites-le avec lui, sa main dans la vôtre s’il le veut. À la fin, redites le dernier nombre : « Trois. Il y en a trois. » C’est ce dernier mot qui dit la quantité.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-cuillere"],
+          "objectiveCodes": ["MATH-S01-C01-O03"],
+          "materialCodes": ["gros-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "How many are there?"
+            }
+          ],
+          "payload": {
+            "objects": "de petits objets à compter"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "164c82e2641bf15e",
+        "notes": "Semaine 2 : deux passes (6 puis 2 corrections), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-07",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "Un, deux, trois",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O03"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-07-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Un, deux, trois",
+          "childInstruction": "Combien il y en a ? Compte avec moi.",
+          "adultGuidance": "Posez trois objets bien séparés — des cuillères, des gobelets, des chaussettes roulées : à cet âge, préférez ce qui ne tient pas dans une bouche. Touchez chaque objet en disant le nombre, une fois. Puis faites-le avec lui, sa main dans la vôtre s’il le veut. À la fin, redites le dernier nombre : « Trois. Il y en a trois. » C’est ce dernier mot qui dit la quantité.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O03"],
+          "materialCodes": ["gros-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "How many are there?"
+            }
+          ],
+          "payload": {
+            "upTo": 6,
+            "objects": "les doigts"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "2d34a515e18b9bfd",
+        "notes": "Semaine 2 : deux passes (6 puis 2 corrections), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-08",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "Donne-moi deux",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": ["MATH-S01-C01-O04"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-08-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Donne-moi deux",
+          "childInstruction": "Donne-moi deux cuillères.",
+          "adultGuidance": "Demandez une petite quantité — deux, puis trois — avec des objets assez gros pour être sans danger : cuillères, gobelets, blocs. Les petits objets (cailloux, capsules, haricots) restent possibles, mais seulement sous votre surveillance directe. S’il en donne trop, recomptez ensemble sans reprendre l’objet en trop : « Un, deux, trois… tu m’en as donné quatre. » Puis redemandez. Ne demandez jamais plus de trois ce mois-ci.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-cuillere"],
+          "objectiveCodes": ["MATH-S01-C01-O04"],
+          "materialCodes": ["gros-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Give me two."
+            }
+          ],
+          "payload": {
+            "objects": "de petits objets à compter"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "05394369aaf49861",
+        "notes": "Semaine 2 : deux passes (6 puis 2 corrections), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-09",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "La comptine des nombres",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O09"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-09-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "La comptine des nombres",
+          "childInstruction": "Compte avec moi : un, deux, trois, quatre, cinq, six.",
+          "adultGuidance": "Comptez lentement en montrant un doigt à chaque nombre. Recommencez et arrêtez-vous à trois pour voir s’il continue. Ne dépassez jamais six ce mois-ci : la suite orale s’installe par la répétition, pas par la longueur.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count with me to six."
+            }
+          ],
+          "payload": {
+            "upTo": 6,
+            "objects": "les doigts"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "ad3767427d746456",
+        "notes": "Semaine 2 : deux passes (6 puis 2 corrections), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-10",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "Donne-moi trois",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O04"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-10-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Donne-moi trois",
+          "childInstruction": "Donne-moi trois cuillères.",
+          "adultGuidance": "Demandez une petite quantité — deux, puis trois — avec des objets assez gros pour être sans danger : cuillères, gobelets, blocs. Les petits objets (cailloux, capsules, haricots) restent possibles, mais seulement sous votre surveillance directe. S’il en donne trop, recomptez ensemble sans reprendre l’objet en trop : « Un, deux, trois… tu m’en as donné quatre. » Puis redemandez. Ne demandez jamais plus de trois ce mois-ci.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-cuillere"],
+          "objectiveCodes": ["MATH-S01-C01-O04"],
+          "materialCodes": ["gros-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Give me three."
+            }
+          ],
+          "payload": {
+            "objects": "de petits objets à compter"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "24ace43dd97aba15",
+        "notes": "Semaine 3 : passe 1 acceptée avec modifications (8 points), passe 2 acceptée, puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-11",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "Les formes ensemble",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": ["MATH-S03-C01-O01"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-11-a1",
+          "position": 1,
+          "type": "sorting",
+          "title": "Les formes ensemble",
+          "childInstruction": "Mets ensemble ce qui a la même forme.",
+          "adultGuidance": "Donnez deux formes très différentes — des ronds et des carrés — et deux tas. Montrez un exemple de chaque, puis laissez-le faire. S’il trie par couleur, ce n’est pas une erreur : dites « Oui, tu as mis les rouges ensemble. Maintenant, essaie les ronds ensemble. »",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["forme-disque", "forme-carre"],
+          "objectiveCodes": ["MATH-S03-C01-O01"],
+          "materialCodes": ["formes-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put the same shapes together."
+            }
+          ],
+          "payload": {
+            "categories": ["les ronds", "les carrés"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "fb322463a784221b",
+        "notes": "Semaine 3 : passe 1 acceptée avec modifications (8 points), passe 2 acceptée, puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-12",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "Donne-moi deux",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O04"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-12-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Donne-moi deux",
+          "childInstruction": "Donne-moi deux cuillères.",
+          "adultGuidance": "Demandez une petite quantité — deux, puis trois — avec des objets assez gros pour être sans danger : cuillères, gobelets, blocs. Les petits objets (cailloux, capsules, haricots) restent possibles, mais seulement sous votre surveillance directe. S’il en donne trop, recomptez ensemble sans reprendre l’objet en trop : « Un, deux, trois… tu m’en as donné quatre. » Puis redemandez. Ne demandez jamais plus de trois ce mois-ci.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O04"],
+          "materialCodes": ["gros-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Give me two."
+            }
+          ],
+          "payload": {
+            "objects": "de petits objets à compter"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "ab31130b00e1dceb",
+        "notes": "Semaine 3 : passe 1 acceptée avec modifications (8 points), passe 2 acceptée, puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-13",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "Les formes ensemble",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S03-C01-O01"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-13-a1",
+          "position": 1,
+          "type": "sorting",
+          "title": "Les formes ensemble",
+          "childInstruction": "Mets ensemble ce qui a la même forme.",
+          "adultGuidance": "Donnez deux formes très différentes — des ronds et des carrés — et deux tas. Montrez un exemple de chaque, puis laissez-le faire. S’il trie par couleur, ce n’est pas une erreur : dites « Oui, tu as mis les rouges ensemble. Maintenant, essaie les ronds ensemble. »",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": ["forme-disque", "forme-carre"],
+          "objectiveCodes": ["MATH-S03-C01-O01"],
+          "materialCodes": ["formes-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put the same shapes together."
+            }
+          ],
+          "payload": {
+            "categories": ["les ronds", "les carrés"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "95d764f1a231b955",
+        "notes": "Semaine 3 : passe 1 acceptée avec modifications (8 points), passe 2 acceptée, puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-14",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "Un, deux, trois",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O03"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-14-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Un, deux, trois",
+          "childInstruction": "Combien il y en a ? Compte avec moi.",
+          "adultGuidance": "Posez trois objets bien séparés — des cuillères, des gobelets, des chaussettes roulées : à cet âge, préférez ce qui ne tient pas dans une bouche. Touchez chaque objet en disant le nombre, une fois. Puis faites-le avec lui, sa main dans la vôtre s’il le veut. À la fin, redites le dernier nombre : « Trois. Il y en a trois. » C’est ce dernier mot qui dit la quantité.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O03"],
+          "materialCodes": ["gros-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "How many are there?"
+            }
+          ],
+          "payload": {
+            "upTo": 6,
+            "objects": "les doigts"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "1a9fe9f08d08a7ce",
+        "notes": "Semaine 3 : passe 1 acceptée avec modifications (8 points), passe 2 acceptée, puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-15",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "Donne-moi trois",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O04"],
+      "stage": "practice",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-15-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Donne-moi trois",
+          "childInstruction": "Donne-moi trois cuillères.",
+          "adultGuidance": "Demandez une petite quantité — deux, puis trois — avec des objets assez gros pour être sans danger : cuillères, gobelets, blocs. Les petits objets (cailloux, capsules, haricots) restent possibles, mais seulement sous votre surveillance directe. S’il en donne trop, recomptez ensemble sans reprendre l’objet en trop : « Un, deux, trois… tu m’en as donné quatre. » Puis redemandez. Ne demandez jamais plus de trois ce mois-ci.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": ["objet-cuillere"],
+          "objectiveCodes": ["MATH-S01-C01-O04"],
+          "materialCodes": ["gros-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Give me three."
+            }
+          ],
+          "payload": {
+            "objects": "de petits objets à compter"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "ab98c17628f05bf8",
+        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-16",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "Les formes ensemble",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S03-C01-O01"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-16-a1",
+          "position": 1,
+          "type": "sorting",
+          "title": "Les formes ensemble",
+          "childInstruction": "Mets ensemble ce qui a la même forme.",
+          "adultGuidance": "Donnez deux formes très différentes — des ronds et des carrés — et deux tas. Montrez un exemple de chaque, puis laissez-le faire. S’il trie par couleur, ce n’est pas une erreur : dites « Oui, tu as mis les rouges ensemble. Maintenant, essaie les ronds ensemble. »",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": ["forme-disque", "forme-carre", "forme-triangle"],
+          "objectiveCodes": ["MATH-S03-C01-O01"],
+          "materialCodes": ["formes-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put the same shapes together."
+            }
+          ],
+          "payload": {
+            "categories": ["les ronds", "les carrés"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "ceeb99989e33c974",
+        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-17",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "La comptine des nombres",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O09"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-17-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "La comptine des nombres",
+          "childInstruction": "Compte avec moi : un, deux, trois, quatre, cinq, six.",
+          "adultGuidance": "Comptez lentement en montrant un doigt à chaque nombre. Recommencez et arrêtez-vous à trois pour voir s’il continue. Ne dépassez jamais six ce mois-ci : la suite orale s’installe par la répétition, pas par la longueur.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count with me to six."
+            }
+          ],
+          "payload": {
+            "upTo": 6,
+            "objects": "les doigts"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "b2817ea0c83929e2",
+        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-18",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "Donne-moi deux, puis trois",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O04"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-18-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Donne-moi deux, puis trois",
+          "childInstruction": "Donne-moi deux cuillères. Puis donne-m’en trois.",
+          "adultGuidance": "Demandez une petite quantité — deux, puis trois — avec des objets assez gros pour être sans danger : cuillères, gobelets, blocs. Les petits objets (cailloux, capsules, haricots) restent possibles, mais seulement sous votre surveillance directe. S’il en donne trop, recomptez ensemble sans reprendre l’objet en trop : « Un, deux, trois… tu m’en as donné quatre. » Puis redemandez. Ne demandez jamais plus de trois ce mois-ci.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O04"],
+          "materialCodes": ["gros-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Give me two. Then give me three."
+            }
+          ],
+          "payload": {
+            "objects": "de petits objets à compter"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "f8885998981a48b4",
+        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-19",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "Les formes ensemble",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S03-C01-O01"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-19-a1",
+          "position": 1,
+          "type": "sorting",
+          "title": "Les formes ensemble",
+          "childInstruction": "Mets ensemble ce qui a la même forme.",
+          "adultGuidance": "Donnez deux formes très différentes — des ronds et des carrés — et deux tas. Montrez un exemple de chaque, puis laissez-le faire. S’il trie par couleur, ce n’est pas une erreur : dites « Oui, tu as mis les rouges ensemble. Maintenant, essaie les ronds ensemble. »",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": ["forme-disque", "forme-carre", "forme-triangle"],
+          "objectiveCodes": ["MATH-S03-C01-O01"],
+          "materialCodes": ["formes-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put the same shapes together."
+            }
+          ],
+          "payload": {
+            "categories": ["les ronds", "les carrés"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "bdc85728e0fc65f4",
+        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-20",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "Un, deux, trois",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O03"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-20-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Un, deux, trois",
+          "childInstruction": "Combien il y en a ? Compte avec moi.",
+          "adultGuidance": "Posez trois objets bien séparés — des cuillères, des gobelets, des chaussettes roulées : à cet âge, préférez ce qui ne tient pas dans une bouche. Touchez chaque objet en disant le nombre, une fois. Puis faites-le avec lui, sa main dans la vôtre s’il le veut. À la fin, redites le dernier nombre : « Trois. Il y en a trois. » C’est ce dernier mot qui dit la quantité.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": ["objet-cuillere"],
+          "objectiveCodes": ["MATH-S01-C01-O03"],
+          "materialCodes": ["gros-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "How many are there?"
+            }
+          ],
+          "payload": {
+            "upTo": 6,
+            "objects": "les doigts"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "a68bd251f1565455",
+        "notes": "Semaine 5 : passe 1 acceptée avec modifications (5 points — le geste graphique à nommer, les quatre parties du corps, le matériel des mots du mois, la comptine orale confondue avec une collection, et la règle partagée du jeu choisi), passe 2 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-21",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "Donne-moi trois",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O04"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-21-a1",
+          "position": 1,
+          "type": "manipulation",
+          "title": "Donne-moi trois",
+          "childInstruction": "Donne-moi trois cuillères.",
+          "adultGuidance": "Demandez une petite quantité — deux, puis trois — avec des objets assez gros pour être sans danger : cuillères, gobelets, blocs. Les petits objets (cailloux, capsules, haricots) restent possibles, mais seulement sous votre surveillance directe. S’il en donne trop, recomptez ensemble sans reprendre l’objet en trop : « Un, deux, trois… tu m’en as donné quatre. » Puis redemandez. Ne demandez jamais plus de trois ce mois-ci.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O04"],
+          "materialCodes": ["gros-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Give me three."
+            }
+          ],
+          "payload": {
+            "objects": "de petits objets à compter"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "8fae49499b278715",
+        "notes": "Semaine 5 : passe 1 acceptée avec modifications (5 points — le geste graphique à nommer, les quatre parties du corps, le matériel des mots du mois, la comptine orale confondue avec une collection, et la règle partagée du jeu choisi), passe 2 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m1-math-22",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-1"],
+      "domainCode": "MATH",
+      "title": "Tout ce que je sais compter",
+      "summary": "Compter, donner une petite quantité, ranger par forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O09"],
+      "stage": "consolidation",
+      "difficulty": 1,
+      "themeId": null,
+      "parentGuidance": "Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.",
+      "activities": [
+        {
+          "id": "m1-math-22-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Tout ce que je sais compter",
+          "childInstruction": "Compte avec moi : un, deux, trois, quatre, cinq, six.",
+          "adultGuidance": "Comptez lentement jusqu’à six. Vous pouvez lever un doigt à chaque mot-nombre pour accompagner le rythme — **sans** lui demander de dénombrer une collection de six objets : dire la suite des nombres et compter des choses sont deux apprentissages différents, et ce mois-ci on ne compte jamais plus de trois objets. Recommencez, puis arrêtez-vous à trois pour voir s’il poursuit tout seul. S’il ne continue pas, reprenez simplement avec lui. Ne dépassez pas six.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count with me to six."
+            }
+          ],
+          "payload": {
+            "upTo": 6,
+            "objects": "les doigts"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-15",
+        "reviewedDigest": "c7dda6ec2a532c9a",
+        "notes": "Semaine 5 : passe 1 acceptée avec modifications (5 points — le geste graphique à nommer, les quatre parties du corps, le matériel des mots du mois, la comptine orale confondue avec une collection, et la règle partagée du jeu choisi), passe 2 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    }
+  ]
+}

@@ -6,12 +6,12 @@
  * instrumentation.ts also validates them at server start so misconfiguration fails fast.
  */
 import "server-only";
-import { publicEnv } from "./public";
+import { getPublicEnv } from "./public";
 import { parseServerEnv, type ServerEnv } from "./schema";
 
 let cached: ServerEnv | undefined;
 
 export function getServerEnv(): ServerEnv {
-  cached ??= parseServerEnv(process.env, publicEnv.NEXT_PUBLIC_APP_ENV);
+  cached ??= parseServerEnv(process.env, getPublicEnv().NEXT_PUBLIC_APP_ENV);
   return cached;
 }

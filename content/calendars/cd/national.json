@@ -1,0 +1,126 @@
+{
+  "countryCode": "CD",
+  "defaultTimeZone": "Africa/Kinshasa",
+  "publicHolidays": [
+    {
+      "id": "nouvel-an",
+      "name": "Nouvel an",
+      "month": 1,
+      "day": 1,
+      "validFrom": null,
+      "validUntil": null,
+      "authority": "law",
+      "verification": "verified",
+      "source": "Ordonnance n° 23/042 du 30 mars 2023 fixant la liste des jours fériés légaux en République démocratique du Congo, art. 1",
+      "notes": null
+    },
+    {
+      "id": "martyrs-independance",
+      "name": "Journée des Martyrs de l’indépendance",
+      "month": 1,
+      "day": 4,
+      "validFrom": null,
+      "validUntil": null,
+      "authority": "law",
+      "verification": "verified",
+      "source": "Ordonnance n° 23/042 du 30 mars 2023 fixant la liste des jours fériés légaux en République démocratique du Congo, art. 1",
+      "notes": null
+    },
+    {
+      "id": "heros-national-kabila",
+      "name": "Journée du héros national Laurent Désiré Kabila",
+      "month": 1,
+      "day": 16,
+      "validFrom": null,
+      "validUntil": null,
+      "authority": "law",
+      "verification": "verified",
+      "source": "Ordonnance n° 23/042 du 30 mars 2023 fixant la liste des jours fériés légaux en République démocratique du Congo, art. 1",
+      "notes": null
+    },
+    {
+      "id": "heros-national-lumumba",
+      "name": "Journée du héros national Patrice Emery Lumumba",
+      "month": 1,
+      "day": 17,
+      "validFrom": null,
+      "validUntil": null,
+      "authority": "law",
+      "verification": "verified",
+      "source": "Ordonnance n° 23/042 du 30 mars 2023 fixant la liste des jours fériés légaux en République démocratique du Congo, art. 1",
+      "notes": null
+    },
+    {
+      "id": "combat-simon-kimbangu",
+      "name": "Journée du combat de Simon Kimbangu et de la conscience africaine",
+      "month": 4,
+      "day": 6,
+      "validFrom": null,
+      "validUntil": null,
+      "authority": "law",
+      "verification": "verified",
+      "source": "Ordonnance n° 23/042 du 30 mars 2023 fixant la liste des jours fériés légaux en République démocratique du Congo, art. 1",
+      "notes": "Added to the legal list by Ordonnance n° 23/042 (2023)."
+    },
+    {
+      "id": "fete-du-travail",
+      "name": "Fête du travail",
+      "month": 5,
+      "day": 1,
+      "validFrom": null,
+      "validUntil": null,
+      "authority": "law",
+      "verification": "verified",
+      "source": "Ordonnance n° 23/042 du 30 mars 2023 fixant la liste des jours fériés légaux en République démocratique du Congo, art. 1",
+      "notes": null
+    },
+    {
+      "id": "forces-armees",
+      "name": "Journée des Forces armées",
+      "month": 5,
+      "day": 17,
+      "validFrom": null,
+      "validUntil": null,
+      "authority": "law",
+      "verification": "verified",
+      "source": "Ordonnance n° 23/042 du 30 mars 2023 fixant la liste des jours fériés légaux en République démocratique du Congo, art. 1",
+      "notes": "Also called « Journée de la Révolution et des Forces armées » or « Journée des FARDC » in official communications; the name here is the ordinance's."
+    },
+    {
+      "id": "independance",
+      "name": "Journée de l’indépendance",
+      "month": 6,
+      "day": 30,
+      "validFrom": null,
+      "validUntil": null,
+      "authority": "law",
+      "verification": "verified",
+      "source": "Ordonnance n° 23/042 du 30 mars 2023 fixant la liste des jours fériés légaux en République démocratique du Congo, art. 1",
+      "notes": null
+    },
+    {
+      "id": "fete-des-parents",
+      "name": "Fête des parents",
+      "month": 8,
+      "day": 1,
+      "validFrom": null,
+      "validUntil": null,
+      "authority": "law",
+      "verification": "verified",
+      "source": "Ordonnance n° 23/042 du 30 mars 2023 fixant la liste des jours fériés légaux en République démocratique du Congo, art. 1",
+      "notes": null
+    },
+    {
+      "id": "noel",
+      "name": "Noël",
+      "month": 12,
+      "day": 25,
+      "validFrom": null,
+      "validUntil": null,
+      "authority": "law",
+      "verification": "verified",
+      "source": "Ordonnance n° 23/042 du 30 mars 2023 fixant la liste des jours fériés légaux en République démocratique du Congo, art. 1",
+      "notes": null
+    }
+  ]
+}

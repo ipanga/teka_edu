@@ -1,0 +1,1346 @@
+{
+  "curriculumId": "maternelle-cycle1-cd-2026",
+  "levelId": "maternelle-3",
+  "domainCode": "PHYS",
+  "lessons": [
+    {
+      "id": "m3-phys-01",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je cours, je m’arrête",
+      "summary": "Courir puis s’arrêter net au signal, en respectant l’espace et les règles.",
+      "objectiveCodes": ["PHYS-S02-C01-O07"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 1,
+      "themeId": "la-rentree",
+      "parentGuidance": "Avant de bouger, dégagez l’espace ensemble et dites les deux règles : on ne pousse pas, on s’arrête au signal.",
+      "activities": [
+        {
+          "id": "m3-phys-01-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Cours et arrête-toi",
+          "childInstruction": "Cours quand je tape dans les mains. Arrête-toi net quand je m’arrête.",
+          "adultGuidance": "1. Dégagez l’espace vous-même : **c’est vous qui déplacez les chaises et les meubles**. L’enfant aide en portant ce qui est léger et sans risque — un coussin, un pagne, un jouet. 2. Dites les règles. 3. Tapez dans les mains pour partir, arrêtez pour stopper. 4. À l’intérieur, remplacez la course par des pas rapides sur place.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "courir",
+              "en": "to run"
+            },
+            {
+              "fr": "s’arrêter",
+              "en": "to stop"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Run when I clap. Stop when I stop."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "s’arrêter net", "repartir"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-17",
+        "reviewedDigest": "576f9edfc6e20b5f",
+        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-02",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je cours plus longtemps",
+      "summary": "Courir sans s’arrêter un peu plus longtemps chaque fois.",
+      "objectiveCodes": ["PHYS-S01-C01-O10"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "la-rentree",
+      "parentGuidance": "On allonge le temps de course, pas la vitesse. Comptez à voix haute : l’enfant entend ses progrès.",
+      "activities": [
+        {
+          "id": "m3-phys-02-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Cours pendant que je compte",
+          "childInstruction": "Cours sans t’arrêter pendant que je compte jusqu’à dix.",
+          "adultGuidance": "1. Refaites l’espace dégagé comme hier : **c’est vous qui déplacez les chaises et les meubles**, l’enfant aide avec ce qui est léger — un coussin, un pagne. 2. Rappelez la règle d’arrêt. 3. Comptez lentement jusqu’à dix pendant qu’il court sans s’arrêter. 4. S’il s’arrête avant, comptez moins loin demain : on allonge peu à peu, on ne force pas.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O10"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "longtemps",
+              "en": "a long time"
+            },
+            {
+              "fr": "souffler",
+              "en": "to catch your breath"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Run without stopping while I count to ten."
+            }
+          ],
+          "payload": {
+            "moves": ["courir sans s’arrêter", "souffler", "repartir"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-17",
+        "reviewedDigest": "df8ab05d48abd5f1",
+        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-03",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je danse avec un tissu",
+      "summary": "Reproduire et inventer des gestes dansés avec un objet léger.",
+      "objectiveCodes": ["PHYS-S03-C01-O09"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "la-rentree",
+      "parentGuidance": "Un pagne, un foulard ou même une feuille de papier suffit. Dansez d’abord vous-même : l’enfant imite mieux qu’il n’invente, au début.",
+      "activities": [
+        {
+          "id": "m3-phys-03-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "La danse du tissu",
+          "childInstruction": "Fais danser le tissu : en haut, en bas, autour de toi. Puis invente un geste à toi.",
+          "adultGuidance": "1. Montrez trois gestes simples. 2. Faites-les ensemble. 3. Demandez un geste inventé par l’enfant et copiez-le. 4. Terminez par la suite complète : vos trois gestes plus le sien.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S03-C01-O09"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "danser",
+              "en": "to dance"
+            },
+            {
+              "fr": "tourner",
+              "en": "to turn"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Make the cloth dance: up, down, around you."
+            }
+          ],
+          "payload": {
+            "moves": ["lever le tissu", "le faire tourner", "le poser doucement"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-17",
+        "reviewedDigest": "3c6813a8eb37c29e",
+        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-04",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je vise le panier",
+      "summary": "Lancer avec précision vers une cible.",
+      "objectiveCodes": ["PHYS-S01-C01-O09"],
+      "supportingObjectiveCodes": [],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "la-rentree",
+      "parentGuidance": "Une balle de papier froissé et un seau suffisent. Commencez très près : la réussite d’abord, la distance ensuite.",
+      "activities": [
+        {
+          "id": "m3-phys-04-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Vise et lance",
+          "childInstruction": "Lance la balle dans le seau. Puis recule d’un pas et recommence.",
+          "adultGuidance": "1. Placez le seau à deux pas. 2. Laissez lancer trois fois. 3. Reculez d’un pas à chaque réussite. 4. Si trois essais échouent, rapprochez-vous : on termine toujours sur une réussite.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O09"],
+          "materialCodes": ["balle-papier", "boite"],
+          "vocabulary": [
+            {
+              "fr": "viser",
+              "en": "to aim"
+            },
+            {
+              "fr": "lancer",
+              "en": "to throw"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Throw the ball into the bucket, then step back."
+            }
+          ],
+          "payload": {
+            "moves": ["viser", "lancer", "reculer d’un pas"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-17",
+        "reviewedDigest": "b72b1eff3462ee5f",
+        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-05",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "En équilibre",
+      "summary": "Tenir en équilibre en combinant appuis et déplacements.",
+      "objectiveCodes": ["PHYS-S02-C01-O05"],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O07"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "ma-maison",
+      "parentGuidance": "Restez à côté de l’enfant, prêt à le rattraper. Rien de haut : tout se fait au sol.",
+      "activities": [
+        {
+          "id": "m3-phys-05-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Sur une ligne",
+          "childInstruction": "Marche sur la ligne sans poser le pied à côté. Puis arrête-toi sur un pied.",
+          "adultGuidance": "1. Tracez une ligne au sol (une corde, un trait de craie, une bande de tissu). 2. Faites marcher dessus. 3. Demandez de s’arrêter sur un pied, en comptant jusqu’à trois. 4. Tenez-lui la main au début si besoin.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
+          "materialCodes": ["repere-sol", "espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "l’équilibre",
+              "en": "balance"
+            },
+            {
+              "fr": "le pied",
+              "en": "the foot"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Walk on the line without stepping off."
+            }
+          ],
+          "payload": {
+            "moves": ["marcher sur la ligne", "tenir sur un pied", "repartir"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "2b7f6ea4c0500650",
+        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-06",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Le parcours de la maison",
+      "summary": "Enchainer plusieurs actions dans un parcours, en respectant les règles.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "ma-maison",
+      "parentGuidance": "Installez le parcours vous-même : tout doit être souple et posé au sol. L’enfant peut aider en apportant un coussin ou un tissu. Si un meuble gêne, c’est vous qui le déplacez. Vérifiez qu’il n’y a rien de fragile ni de coupant sur le trajet.",
+      "activities": [
+        {
+          "id": "m3-phys-06-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Mon parcours",
+          "childInstruction": "Fais le parcours : passe sous le tissu, contourne le coussin, enjambe la bande posée au sol.",
+          "adultGuidance": "1. Installez trois étapes, toutes souples : vous tenez un tissu tendu pour le passage dessous, un coussin à contourner, une bande de tissu ou une corde posée à plat à enjamber. Rien de dur, rien à escalader. 2. Montrez le parcours une fois. 3. Restez à côté et laissez-le faire à son rythme. 4. Refaites-le en disant à voix haute ce qu’il fait : « Tu passes sous… »",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S02-C01-O07"],
+          "materialCodes": ["tissu", "coussin", "repere-sol", "espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "sous",
+              "en": "under"
+            },
+            {
+              "fr": "autour",
+              "en": "around"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Go under the cloth, around the cushion, over the strip on the floor."
+            }
+          ],
+          "payload": {
+            "moves": ["passer sous", "contourner", "enjamber"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "72777ab87674f976",
+        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-07",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je danse comme les animaux",
+      "summary": "Inventer des gestes dansés à partir d’une image.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S03-C01-O09"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "ma-maison",
+      "parentGuidance": "Nommez l’animal, laissez l’enfant trouver le geste. Ne montrez qu’en dernier recours.",
+      "activities": [
+        {
+          "id": "m3-phys-07-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "La danse des animaux",
+          "childInstruction": "Bouge comme la chèvre, puis comme le poussin, puis comme le lézard.",
+          "adultGuidance": "1. Nommez un animal. 2. Laissez inventer le déplacement. 3. Imitez-le à votre tour : il verra que son idée compte. 4. Enchainez les trois animaux comme une petite danse.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S03-C01-O09"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "sauter",
+              "en": "to jump"
+            },
+            {
+              "fr": "ramper",
+              "en": "to crawl"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move like the goat, then the chick, then the lizard."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "sauter comme la chèvre",
+              "trottiner comme le poussin",
+              "ramper comme le lézard"
+            ]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "8a3b95f2a9b2ac1c",
+        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-08",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Le jeu du chat",
+      "summary": "Jouer à deux, en tenant un rôle et en respectant la règle.",
+      "objectiveCodes": ["PHYS-S04-C01-O09"],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O07"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "ma-maison",
+      "parentGuidance": "Jeu à deux : vous jouez avec lui. Rappelez la règle avant de commencer et tenez-la, même en riant.",
+      "activities": [
+        {
+          "id": "m3-phys-08-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Chat et souris",
+          "childInstruction": "Quand tu es la souris, éloigne-toi du chat. Quand tu es le chat, essaie de toucher la souris. Ensuite, on change de rôle.",
+          "adultGuidance": "1. Délimitez l’espace et une zone refuge. 2. Dites qui commence : « Je suis le chat, tu es la souris. » 3. Jouez un tour, puis annoncez le changement : « Maintenant, c’est toi le chat. » 4. À l’intérieur, jouez en marchant vite au lieu de courir.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "le chat",
+              "en": "the cat"
+            },
+            {
+              "fr": "la souris",
+              "en": "the mouse"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "When you are the mouse, move away from the cat. When you are the cat, try to touch the mouse. Then you swap."
+            }
+          ],
+          "payload": {
+            "moves": ["s’échapper", "attraper", "changer de rôle"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "5241bf114d4ec429",
+        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-09",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Lancer et attraper",
+      "summary": "Lancer vers quelqu’un et rattraper à deux mains.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O09", "PHYS-S04-C01-O09"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "ma-maison",
+      "parentGuidance": "Lancez doucement, à hauteur de poitrine. Rapprochez-vous jusqu’à ce que l’enfant attrape : la réussite d’abord.",
+      "activities": [
+        {
+          "id": "m3-phys-09-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "La balle qui va et vient",
+          "childInstruction": "Attrape la balle à deux mains, puis renvoie-la-moi.",
+          "adultGuidance": "1. Placez-vous à deux pas. 2. Lancez doucement, en annonçant : « Attention, j’envoie ! » 3. Comptez les réussites ensemble. 4. Reculez d’un pas quand cinq passes de suite réussissent.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O09", "PHYS-S04-C01-O09"],
+          "materialCodes": ["balle-papier"],
+          "vocabulary": [
+            {
+              "fr": "attraper",
+              "en": "to catch"
+            },
+            {
+              "fr": "envoyer",
+              "en": "to send"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Catch the ball with both hands, then send it back."
+            }
+          ],
+          "payload": {
+            "moves": ["attraper à deux mains", "renvoyer", "compter les passes"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "791eda72ffc43b3a",
+        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-10",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Marcher, s’arrêter, repartir",
+      "summary": "Contrôler son déplacement : vite, lentement, à l’arrêt.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O05"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "Le travail du jour est le contrôle, pas la vitesse. Variez les consignes lentement.",
+      "activities": [
+        {
+          "id": "m3-phys-10-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Vite, doucement, stop",
+          "childInstruction": "Marche vite. Marche doucement. Stop ! Puis repars.",
+          "adultGuidance": "1. Donnez une consigne à la fois. 2. Laissez trois secondes entre chaque. 3. Ajoutez « à reculons », puis « sur la pointe des pieds ». 4. Terminez par un arrêt complet et trois respirations.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O05"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "vite",
+              "en": "fast"
+            },
+            {
+              "fr": "doucement",
+              "en": "slowly"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Walk fast. Walk slowly. Stop. Then go again."
+            }
+          ],
+          "payload": {
+            "moves": ["marcher vite", "marcher doucement", "s’arrêter", "repartir"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "85719bbdd0ec7419",
+        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-11",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je cours et je compte",
+      "summary": "Courir plus longtemps, en mesurant avec les nombres du jour.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O10"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "On relie la course et le comptage : l’enfant entend la comptine numérique pendant l’effort.",
+      "activities": [
+        {
+          "id": "m3-phys-11-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Cours jusqu’à vingt",
+          "childInstruction": "Cours pendant que je compte jusqu’à vingt, sans t’arrêter.",
+          "adultGuidance": "1. Comptez à voix haute pendant qu’il court. 2. Faites une pause franche. 3. Recommencez une fois. 4. À l’intérieur : sur place, genoux hauts.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O10"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "compter",
+              "en": "to count"
+            },
+            {
+              "fr": "s’arrêter",
+              "en": "to stop"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Run while I count to twenty, without stopping."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "compter en courant", "souffler"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "a1e7d83440539328",
+        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-12",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je danse la pluie",
+      "summary": "Traduire un paysage sonore en gestes dansés.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S03-C01-O09"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "Servez-vous des bruits de l’histoire de la pluie : gouttes lentes, puis averse, puis calme.",
+      "activities": [
+        {
+          "id": "m3-phys-12-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "La danse de la pluie",
+          "childInstruction": "Danse comme les gouttes : d’abord lentes, puis très vite, puis plus rien.",
+          "adultGuidance": "1. Frappez lentement sur la table : l’enfant bouge lentement. 2. Accélérez. 3. Arrêtez net : il s’immobilise. 4. Recommencez en inversant les rôles : c’est lui qui fait la pluie.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S03-C01-O09"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "la goutte",
+              "en": "the drop"
+            },
+            {
+              "fr": "vite",
+              "en": "fast"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Dance like raindrops: slow, then fast, then nothing."
+            }
+          ],
+          "payload": {
+            "moves": ["bouger lentement", "bouger vite", "s’immobiliser"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "3b4aa658826ab78c",
+        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-13",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je passe le ballon",
+      "summary": "Coopérer à deux pour réussir des passes, de plus en plus loin.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S01-C01-O09"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "Ce n’est pas un match : on compte les passes réussies ensemble. Le but est commun.",
+      "activities": [
+        {
+          "id": "m3-phys-13-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Dix passes ensemble",
+          "childInstruction": "On se fait des passes sans faire tomber la balle. Quand ça marche bien, on recule chacun d’un pas.",
+          "adultGuidance": "1. Placez-vous assez près pour que les passes réussissent facilement. 2. Comptez les passes réussies à voix haute ; si la balle tombe, continuez à compter, ne repartez pas de zéro. 3. Après plusieurs passes réussies, reculez chacun d’un petit pas : il faut lancer un peu plus loin et viser un peu mieux. 4. Dès que la balle tombe souvent, rapprochez-vous et restez-y. 5. Ce n’est pas un match : le but est commun, il n’y a ni gagnant ni récompense.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S01-C01-O09"],
+          "materialCodes": ["balle-papier"],
+          "vocabulary": [
+            {
+              "fr": "la passe",
+              "en": "the pass"
+            },
+            {
+              "fr": "ensemble",
+              "en": "together"
+            },
+            {
+              "fr": "reculer",
+              "en": "to step back"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "We pass the ball without dropping it. When it goes well, we each take a step back."
+            }
+          ],
+          "payload": {
+            "moves": ["passer", "attraper", "compter ensemble"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "242673941c82a666",
+        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-14",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je saute par-dessus",
+      "summary": "Sauter pieds joints par-dessus un obstacle bas.",
+      "objectiveCodes": ["PHYS-S01-C01-O03"],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O05"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "objets-et-formes",
+      "parentGuidance": "Obstacle très bas : une corde posée au sol, un tissu plié. Rien de dur ni de haut.",
+      "activities": [
+        {
+          "id": "m3-phys-14-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Saute la rivière",
+          "childInstruction": "Saute par-dessus la rivière, pieds joints, sans marcher dedans.",
+          "adultGuidance": "1. Posez deux tissus au sol pour figurer la rivière. 2. Faites sauter pieds joints. 3. Élargissez d’une main à chaque réussite. 4. Rétrécissez dès qu’il échoue deux fois.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S01-C01-O03"],
+          "materialCodes": ["objets-maison", "espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "sauter",
+              "en": "to jump"
+            },
+            {
+              "fr": "par-dessus",
+              "en": "over"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Jump over the river with both feet together."
+            }
+          ],
+          "payload": {
+            "moves": ["sauter pieds joints", "atterrir en souplesse", "recommencer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-19",
+        "reviewedDigest": "a38a1b591d92daa1",
+        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-15",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je vise plus loin",
+      "summary": "Lancer loin, puis viser une cible plus éloignée.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O09"],
+      "stage": "practice",
+      "difficulty": 3,
+      "themeId": "au-marche",
+      "parentGuidance": "Deux gestes différents : lancer loin (tout le bras) et viser (regarder la cible). Nommez-les.",
+      "activities": [
+        {
+          "id": "m3-phys-15-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Loin, puis juste",
+          "childInstruction": "D’abord, lance la balle le plus loin possible. Ensuite, vise le seau.",
+          "adultGuidance": "1. Faites lancer loin trois fois : on regarde où la balle tombe. 2. Puis placez le seau à trois pas. 3. Faites viser trois fois. 4. Demandez ce qui change entre les deux gestes.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O09"],
+          "materialCodes": ["balle-papier", "boite"],
+          "vocabulary": [
+            {
+              "fr": "loin",
+              "en": "far"
+            },
+            {
+              "fr": "la cible",
+              "en": "the target"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "First throw the ball as far as you can, then aim at the bucket."
+            }
+          ],
+          "payload": {
+            "moves": ["lancer loin", "viser", "regarder la cible"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-20",
+        "reviewedDigest": "9a2bb1bfa2de6cb7",
+        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-16",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Un pied, deux pieds",
+      "summary": "Marcher, s’arrêter en équilibre sur un pied, et repartir.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O05"],
+      "stage": "consolidation",
+      "difficulty": 3,
+      "themeId": "au-marche",
+      "parentGuidance": "Restez tout près. Comptez à voix haute pendant qu’il tient : cela l’aide à durer.",
+      "activities": [
+        {
+          "id": "m3-phys-16-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Le jeu des appuis",
+          "childInstruction": "Marche trois pas, arrête-toi sur un pied, puis repars. Recommence sur l’autre pied.",
+          "adultGuidance": "1. Montrez d’abord : trois ou quatre pas, puis un arrêt sur un pied. 2. Comptez jusqu’à trois pendant qu’il tient, puis dites « repars ». 3. Au prochain arrêt, l’autre pied. 4. Restez tout près, prêt à lui donner la main. 5. Si c’est facile, tracez un trait à la craie au sol — ou un ruban bien collé, ou une ligne que vous montrez du doigt — à enjamber juste avant l’arrêt. Pas de tissu libre dans le passage : cela glisse sous le pied. Rien de haut, rien à escalader : tout se passe au sol.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O05"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "l’équilibre",
+              "en": "balance"
+            },
+            {
+              "fr": "changer",
+              "en": "to change"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Walk three steps, stop and balance on one foot, then walk on. Do it again on the other foot."
+            }
+          ],
+          "payload": {
+            "moves": ["marcher trois pas", "s’arrêter sur un pied", "repartir", "changer de pied"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-20",
+        "reviewedDigest": "bcc7a4d798bfab4f",
+        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-17",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "La statue",
+      "summary": "S’immobiliser complètement au signal : contrôler son corps.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O05"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "au-marche",
+      "parentGuidance": "Jeu calme, parfait le soir. L’immobilité complète est plus difficile qu’elle n’en a l’air.",
+      "activities": [
+        {
+          "id": "m3-phys-17-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Statue !",
+          "childInstruction": "Bouge quand la musique est là. Quand je dis « statue », ne bouge plus du tout.",
+          "adultGuidance": "1. Chantez ou frappez un rythme. 2. Arrêtez net et dites « statue ». 3. Comptez trois secondes d’immobilité. 4. Inversez : c’est l’enfant qui donne le signal.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O05"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "la statue",
+              "en": "the statue"
+            },
+            {
+              "fr": "bouger",
+              "en": "to move"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move while there is music. When I say statue, freeze."
+            }
+          ],
+          "payload": {
+            "moves": ["bouger", "s’immobiliser", "tenir la pose"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-20",
+        "reviewedDigest": "2aa3c08fdf77b1a7",
+        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-18",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Le parcours des formes",
+      "summary": "Enchainer marche, arrêt et changement de direction en nommant les formes.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O05"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "au-marche",
+      "parentGuidance": "On relie le mouvement et les formes du mois : l’enfant nomme avant de passer, s’arrête sur la forme, puis change de direction. Les formes doivent être tracées au sol ou bien fixées : une feuille qui glisse sous le pied fait tomber.",
+      "activities": [
+        {
+          "id": "m3-phys-18-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Marche sur les formes",
+          "childInstruction": "Dis le nom de la forme, marche jusqu’à elle, arrête-toi une seconde sans bouger, puis repars vers la suivante.",
+          "adultGuidance": "1. Tracez les formes à la craie au sol, ou fixez bien les formes en papier avec du ruban — une feuille libre glisse sous le pied. 2. Espacez-les d’un pas. 3. L’enfant nomme la forme, marche jusqu’à elle, s’arrête dessus une seconde sans bouger, puis repart. 4. Variez le trajet : un grand pas pour aller à l’une, un pas de côté pour la suivante, puis un demi-tour et le retour en arrière. 5. Tout reste au sol : rien de surélevé, rien à escalader. 6. Si les formes ne sont pas fixées, posez-les **à côté** des endroits où il pose le pied, et ne faites jamais de cloche-pied sur une feuille.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O05"],
+          "materialCodes": ["formes-papier", "espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "le pas",
+              "en": "the step"
+            },
+            {
+              "fr": "le demi-tour",
+              "en": "the turn-around"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the shape's name, walk to it, stop still for a second, then move on to the next one."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "nommer la forme",
+              "marcher jusqu’à la forme",
+              "s’arrêter une seconde",
+              "grand pas ou pas de côté",
+              "demi-tour et retour"
+            ]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-20",
+        "reviewedDigest": "3490eb8ba559cfeb",
+        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-19",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "La course des animaux",
+      "summary": "Trottiner sans s’arrêter, de plus en plus longtemps.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O10"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "au-marche",
+      "parentGuidance": "L’animal change, mais la course ne s’arrête pas : on reste debout et on trottine. On ne cherche pas la vitesse, mais la durée et le plaisir.",
+      "activities": [
+        {
+          "id": "m3-phys-19-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "D’un animal à l’autre",
+          "childInstruction": "Trottine sans t’arrêter : comme la chèvre, puis comme le poussin, puis comme le héron.",
+          "adultGuidance": "1. Dites « on trottine comme la chèvre » et trottinez avec lui, tout doucement. 2. Changez d’animal sans vous arrêter : « continue sans t’arrêter, maintenant comme le poussin » — des petits pas rapides ; puis « comme le héron » — de grandes enjambées, genoux hauts. 3. Ces trois animaux se courent debout : on ne se met ni à quatre pattes ni au sol. 4. Visez une minute si c’est confortable, moins si l’enfant fatigue : on s’arrête avant d’être essoufflé. 5. Ni vitesse, ni concours, ni chrono — ce qui compte est de ne pas s’arrêter. 6. Finissez assis, en soufflant trois fois.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O10"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "trottiner",
+              "en": "to trot"
+            },
+            {
+              "fr": "sans s’arrêter",
+              "en": "without stopping"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Trot without stopping: like the goat, then like the chick, then like the heron."
+            }
+          ],
+          "payload": {
+            "moves": ["trottiner", "petits pas rapides", "grandes enjambées", "souffler"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-20",
+        "reviewedDigest": "6ec7e8af54f6c267",
+        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-20",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je danse avec mes mains",
+      "summary": "Danser en isolant une partie du corps.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S03-C01-O09"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "je-montre-ce-que-je-sais",
+      "parentGuidance": "Danse assise possible : parfaite quand il n’y a pas de place ou qu’il est tard.",
+      "activities": [
+        {
+          "id": "m3-phys-20-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "La danse des mains",
+          "childInstruction": "Fais danser seulement tes mains : en haut, sur les côtés, devant toi.",
+          "adultGuidance": "1. Montrez trois gestes de mains. 2. Faites-les ensemble en rythme. 3. Ajoutez les épaules, puis la tête. 4. Terminez par un geste inventé par l’enfant, que vous copiez.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S03-C01-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "la main",
+              "en": "the hand"
+            },
+            {
+              "fr": "l’épaule",
+              "en": "the shoulder"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Make only your hands dance: up, to the sides, in front."
+            }
+          ],
+          "payload": {
+            "moves": ["lever les mains", "tourner les poignets", "bouger les épaules"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-20",
+        "reviewedDigest": "c83eb5d81da150c4",
+        "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-21",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Le jeu du miroir",
+      "summary": "Reproduire exactement le geste de quelqu’un d’autre.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S03-C01-O09"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "je-montre-ce-que-je-sais",
+      "parentGuidance": "Face à face, lentement. C’est un jeu de coopération : si l’autre ne suit pas, c’est qu’on va trop vite.",
+      "activities": [
+        {
+          "id": "m3-phys-21-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Fais comme moi",
+          "childInstruction": "Regarde-moi et fais exactement le même geste, en même temps que moi.",
+          "adultGuidance": "1. Faites un geste très lent. 2. Attendez qu’il suive. 3. Inversez : c’est lui le modèle. 4. Terminez en essayant de bouger ensemble sans meneur.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S04-C01-O09", "PHYS-S03-C01-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "le miroir",
+              "en": "the mirror"
+            },
+            {
+              "fr": "pareil",
+              "en": "the same"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Look at me and make exactly the same move at the same time."
+            }
+          ],
+          "payload": {
+            "moves": ["copier le geste", "aller lentement", "changer de rôle"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-20",
+        "reviewedDigest": "b203e35f7bc45b5f",
+        "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-22",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Tous les mouvements du mois",
+      "summary": "Relier en une suite les actions apprises en septembre.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S04-C01-O09"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "je-montre-ce-que-je-sais",
+      "parentGuidance": "Dernière séance du mois : l’enfant choisit, vous suivez. Ce qui est nouveau n’est pas le mouvement, c’est de le relier au suivant sans s’arrêter.",
+      "activities": [
+        {
+          "id": "m3-phys-22-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Tu choisis",
+          "childInstruction": "Choisis deux ou trois mouvements que tu as aimés ce mois-ci. Montre-les-moi, puis enchaîne-les sans t’arrêter et finis en équilibre.",
+          "adultGuidance": "1. Rappelez ce qui a été fait : courir, lancer, sauter, danser, l’équilibre. 2. Laissez choisir deux ou trois mouvements, et faites-les d’abord séparément. 3. Puis demandez de les enchaîner sans s’arrêter entre les deux, et de finir immobile, le temps de compter jusqu’à trois. 4. Refaites la suite avec lui, dans le même ordre : c’est lui qui mène. 5. Ni vitesse, ni concours, ni point : on cherche à relier, pas à réussir mieux. 6. Tout se passe au sol, dans l’espace déjà dégagé ; s’il faut écarter quelque chose, c’est vous qui le déplacez, pas lui.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O05", "PHYS-S04-C01-O09"],
+          "materialCodes": ["espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "choisir",
+              "en": "to choose"
+            },
+            {
+              "fr": "montrer",
+              "en": "to show"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Pick two or three movements you liked this month. Show me, then link them without stopping and finish balanced."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "choisir deux ou trois mouvements",
+              "les montrer séparément",
+              "les enchaîner sans s’arrêter",
+              "finir immobile, en équilibre"
+            ]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-20",
+        "reviewedDigest": "a21f1b73ac9d0f73",
+        "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    }
+  ]
+}
