@@ -5,9 +5,9 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-09-21
-Branch:     fix/deployment-protection-standard-is-correct
-Commit:     develop at 16883b9; main at 1b95480
+Date:       2026-09-22
+Branch:     fix/production-domain-is-protected
+Commit:     develop at 35e7056; main at a729722 (first promotion)
 Updated by: Claude Code (claude-opus-5)
 ```
 
@@ -716,37 +716,37 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = 1b95480 (merge
 ## Last Session Summary
 
 ```text
-Completed:  The last Beta 0.1 blocker turned out not to be one, and the mistake was mine.
-            - I had recorded Deployment Protection as blocking, reasoning that
-              ssoProtection = "all_except_custom_domains" plus no custom domain meant
-              production would sit behind the Vercel login. That was inferred from the name
-              of an API value rather than from what the setting does, and it was wrong.
-            - "all_except_custom_domains" is the legacy identifier for Standard Protection,
-              which Vercel's API now calls "prod_deployment_urls_and_all_previews": it
-              protects production deployment URLs and all previews, and leaves the production
-              domain public. The owner had it configured correctly all along.
-            - Three independent lines agree: the dashboard wording the owner read, the API's
-              current name for the same mode, and the live behaviour — an anonymous request
-              to the production domain answers 404 DEPLOYMENT_NOT_FOUND (resolved, not
-              intercepted) while the same client on the preview alias is redirected to
-              vercel.com/sso-api with an SSO nonce.
-            - Documented the consequence that matters on release day: the generated
-              production deployment URL stays protected, which is correct and not a failure.
-              The in-workflow smoke test targets it with the bypass; the public check must
-              target the production domain. The public spec now refuses a generated URL with
-              that explanation rather than reporting a protection failure that is not one.
-            Re-verified, read-only, nothing changed:
-            - teka-edu-prod ACTIVE_HEALTHY, ref and region correct, 0 migrations, untouched.
-            - All seven production GitHub secrets present, environment-scoped.
-            - Vercel Production has all five variables; no DEV reference anywhere.
-            - main at 1b95480, zero production deployments ever, PRODUCTION_DEPLOY_ENABLED
-              unset, 0 tracked .env*, Hobby and Free throughout.
-            - Pedagogy unchanged: 88/88, 88/88, 176/176 on 176 distinct digests, 10/10
-              packages, 0 lapsed, all ai-assisted.
-Validation: format, lint, typecheck, unit (355), content (31 files), pgTAP (152) on a fresh
-            reset, build, E2E (30 + 9 skipped), both Docker images, client-bundle scan,
-            0 tracked .env*.
-Cost:       $0.
-Not done:   Production is NOT deployed. Every technical gate is now met; what remains is the
-            owner's decision to authorise the first release.
+Completed:  The first production release ran, and stopped one step short of being a release.
+            Everything mechanical worked, first time:
+            - Promotion develop -> main through the protected PR (#76), merge commit a729722,
+              promotion-source check passed. One workflow run, no duplicates.
+            - The production environment paused for the owner's review, as designed, and
+              resumed on approval.
+            - Both preflights passed: "Vercel project reached: teka-edu" and "Supabase
+              project: teka-edu-prod (ACTIVE_HEALTHY)".
+            - Supabase PROD migrated 0 -> 41, starting from the very first migration, which
+              confirms it began empty.
+            - Vercel deployed a729722 as target=production, dpl_2midgBHcdVDbF8uz57U18MKPmX8P,
+              READY, aliased to teka-edu.vercel.app and teka-edu-teka10.vercel.app.
+            - The in-workflow smoke test passed 30/30 against the generated URL.
+            And then the check that decides it failed:
+            - Anonymously, the production domain answers 302 -> vercel.com/sso-api. An
+              ordinary parent meets a Vercel login, so this is not a public beta.
+            - The anonymous suite failed 6 of 9, which is what it was written to catch.
+            The cause is a documentation error of mine, now corrected:
+            - The first audit called Deployment Protection a blocker and was right. A second
+              audit "corrected" it to wrong, leaning on the dashboard wording, the API's
+              modern naming, and an anonymous 404 DEPLOYMENT_NOT_FOUND on the production
+              domain. That 404 meant nothing is deployed here, not this is public: Vercel
+              resolves the domain and answers before protection applies. Only a real
+              deployment could settle it, and it did.
+            - all_except_custom_domains is a legacy mode: everything except CUSTOM domains is
+              protected, and this project has none.
+            Not rolled back, deliberately: the deployment is healthy, there is no earlier
+            production deployment to return to, and the fault is access configuration rather
+            than the build. The 41 migrations stay applied and are forward-safe.
+Validation: format, lint, typecheck, unit (355), content (31 files), CI green on main.
+Cost:       $0. Hobby and Free throughout.
+Not done:   Beta 0.1 is NOT released. One owner action remains: set Vercel Authentication to
+            Only Preview Deployments, then re-run the anonymous public check.
 ```

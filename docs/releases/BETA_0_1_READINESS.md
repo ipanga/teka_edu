@@ -18,44 +18,46 @@ verified, and the verification is named.
 Every row below was checked against the repository and the live services, not against this
 document. Where a row says NO, the reason is a fact someone can re-verify.
 
-| Area                       | Required                        | Verified state (2026-09-20)                                                                      | Ready   |
-| -------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------ | ------- |
-| Pedagogy                   | 176/176 · 10/10                 | 176/176 approved, 176 distinct digests, 0 lapsed, 10/10 packages                                 | **YES** |
-| Application tests          | green                           | unit 355 · content 31 · E2E 28 · Docker ×2 · pgTAP 152 on a fresh reset                          | **YES** |
-| Security / RLS             | green                           | RLS asserted for every public table by pgTAP; secret scanning + push protection enabled          | **YES** |
-| Privacy                    | reviewed                        | **zero** network calls in app code, no Supabase client, `localStorage` only                      | **YES** |
-| Feedback mechanism         | suitable for beta               | **built 2026-09-21**: a Beta badge and one sentence on the front door, a copy button on the note | **YES** |
-| Production Supabase        | active + configured             | `teka-edu-prod` **ACTIVE_HEALTHY** (resumed 2026-09-21); ref, region and plan confirmed          | **YES** |
-| Production DB migrations   | ready, not applied              | 41 in repo, 41 on DEV, **0 on PROD**; additive, environment-neutral, scoped deletes              | **YES** |
-| Production Vercel env      | configured                      | all five present; 11 derived checks pass, no DEV ref, no secret in a `NEXT_PUBLIC_*`             | **YES** |
-| Public production URL      | decided                         | `https://teka-edu-teka10.vercel.app` — the project's own domain, set and verified                | **YES** |
-| Deployment Protection      | previews protected, prod public | **Standard Protection** — previews and generated URLs protected, production domain public        | **YES** |
-| Production deploy workflow | ready                           | deploy token present (2026-09-21); two read-only preflights added before any change              | **YES** |
-| Rollback                   | documented                      | documented in `docs/DEPLOYMENT.md` (application rollback + the four failure points)              | **YES** |
-| Anonymous smoke test       | defined                         | `tests/e2e/production-public.spec.ts`, 8 cases, no bypass; `npm run test:e2e:public`             | **YES** |
-| VCR headroom               | safe                            | 36/50 after the manual prune; ISSUE-011 automation still blocked                                 | **YES** |
-| Monitoring / health        | sufficient for beta             | `/api/health` reports status, environment, version, commit, Supabase ref                         | **YES** |
-| Cost                       | $0                              | Hobby + Free, nothing added                                                                      | **YES** |
+| Area                       | Required                        | Verified state (2026-09-20)                                                                                   | Ready   |
+| -------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------- |
+| Pedagogy                   | 176/176 · 10/10                 | 176/176 approved, 176 distinct digests, 0 lapsed, 10/10 packages                                              | **YES** |
+| Application tests          | green                           | unit 355 · content 31 · E2E 28 · Docker ×2 · pgTAP 152 on a fresh reset                                       | **YES** |
+| Security / RLS             | green                           | RLS asserted for every public table by pgTAP; secret scanning + push protection enabled                       | **YES** |
+| Privacy                    | reviewed                        | **zero** network calls in app code, no Supabase client, `localStorage` only                                   | **YES** |
+| Feedback mechanism         | suitable for beta               | **built 2026-09-21**: a Beta badge and one sentence on the front door, a copy button on the note              | **YES** |
+| Production Supabase        | active + configured             | `teka-edu-prod` **ACTIVE_HEALTHY** (resumed 2026-09-21); ref, region and plan confirmed                       | **YES** |
+| Production DB migrations   | ready, not applied              | 41 in repo, 41 on DEV, **0 on PROD**; additive, environment-neutral, scoped deletes                           | **YES** |
+| Production Vercel env      | configured                      | all five present; 11 derived checks pass, no DEV ref, no secret in a `NEXT_PUBLIC_*`                          | **YES** |
+| Public production URL      | decided                         | `https://teka-edu-teka10.vercel.app` — the project's own domain, set and verified                             | **YES** |
+| Deployment Protection      | previews protected, prod public | **production domain is protected too** — proved by the 2026-09-22 release; legacy `all_except_custom_domains` | **NO**  |
+| Production deploy workflow | ready                           | deploy token present (2026-09-21); two read-only preflights added before any change                           | **YES** |
+| Rollback                   | documented                      | documented in `docs/DEPLOYMENT.md` (application rollback + the four failure points)                           | **YES** |
+| Anonymous smoke test       | defined                         | `tests/e2e/production-public.spec.ts`, 8 cases, no bypass; `npm run test:e2e:public`                          | **YES** |
+| VCR headroom               | safe                            | 36/50 after the manual prune; ISSUE-011 automation still blocked                                              | **YES** |
+| Monitoring / health        | sufficient for beta             | `/api/health` reports status, environment, version, commit, Supabase ref                                      | **YES** |
+| Cost                       | $0                              | Hobby + Free, nothing added                                                                                   | **YES** |
 
-**Updated 2026-09-21: every technical row is YES.** All of them were verified against the live
-services rather than assumed.
+**Updated 2026-09-22, by releasing.** Every row above is YES except one, and that one was
+discovered the hard way.
 
-**One correction, and it was mine.** The previous audit recorded Deployment Protection as a
-blocker, reasoning that `all_except_custom_domains` plus no custom domain meant production would
-be behind the Vercel login. That was inferred from the _name_ of an API value instead of from what
-the setting does, and it was wrong. `all_except_custom_domains` is the legacy identifier for
-**Standard Protection**, which the API now calls `prod_deployment_urls_and_all_previews` —
-production deployment URLs and all previews are protected, and the **production domain is not**.
-The configuration the beta needs was already saved; nothing had to change. The reasoning and the
-evidence are in `docs/DEPLOYMENT.md`.
+**Deployment Protection is a real blocker, and the documentation said otherwise until the release
+disproved it.** The first audit had it right; a second audit "corrected" it to wrong on the
+strength of the dashboard wording, the API's modern naming, and an anonymous `404
+DEPLOYMENT_NOT_FOUND` on the production domain. That 404 meant _nothing is deployed here_, not
+_this is public_ — Vercel resolves the domain and answers before protection applies. With a
+production deployment live, the same request answers `302 → vercel.com/sso-api`.
 
-The production deploy token could not be _exercised_ here, and that is the protection working
-rather than a gap: the `production` GitHub environment is restricted to `main`, so nothing outside
-a real release may use it. Instead, two read-only preflights run at the very start of the
-production job — the token must reach the Vercel project `teka-edu`, and Supabase must report
-`teka-edu-prod` as `ACTIVE_HEALTHY` — both **before** `supabase db push` changes anything.
+The stored value `all_except_custom_domains` is a legacy mode: everything except **custom**
+domains is protected, and this project has no custom domain. The reasoning and the measurements
+are in `docs/DEPLOYMENT.md`.
 
-**What remains is not a technical gate. It is the owner's decision to release.**
+**Everything else worked.** The promotion, the preflights, the migration 0 → 41, the production
+deployment and the in-workflow smoke test all succeeded on the first attempt. The release is
+incomplete for one reason: an ordinary parent meets a Vercel login.
+
+**Owner action:** Vercel → `teka-edu` → Settings → Deployment Protection → Vercel Authentication →
+**Only Preview Deployments** → Save. Then re-run
+`PRODUCTION_PUBLIC_URL=https://teka-edu-teka10.vercel.app npm run test:e2e:public`.
 
 ## Scope
 
@@ -153,14 +155,14 @@ deployment on every merge. It must be re-confirmed on whatever commit is promote
 
 Production stays closed (ADR-027), and these must be true **before** it is opened:
 
-| Precondition                                    | Why                                                                                                                                                                                                                            |
-| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `teka-edu-prod` is `ACTIVE_HEALTHY`, not paused | **Met 2026-09-21** — resumed by the owner and confirmed `ACTIVE_HEALTHY`. It may pause again if left unused, so the production job now refuses to migrate a project that is not healthy (ISSUE-012).                           |
-| The production deploy token exists              | **Met 2026-09-21** — added to the `production` GitHub environment, scoped to that environment only. Staging keeps its own, separate one.                                                                                       |
-| `PRODUCTION_DEPLOY_ENABLED` is set              | **Confirmed unset on 2026-09-20**, so the deploy job is skipped entirely.                                                                                                                                                      |
-| `NEXT_PUBLIC_APP_URL` and a domain are decided  | **Met 2026-09-21** — `https://teka-edu-teka10.vercel.app`, the project's own production domain. No domain was bought, and none is needed for the beta. PD-012.                                                                 |
-| Deployment Protection lets the public in        | **Met — and was never actually blocking.** Standard Protection leaves the production domain public while protecting previews and generated production URLs. Corrected 2026-09-21 after a misreading; see `docs/DEPLOYMENT.md`. |
-| The zero-cost backup design is implemented      | No backups on Free (ISSUE-009). **Not a blocker for Beta 0.1**: §7 — the database holds only reference content regenerated from `content/`, and no user data exists to lose.                                                   |
+| Precondition                                    | Why                                                                                                                                                                                                                                                     |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `teka-edu-prod` is `ACTIVE_HEALTHY`, not paused | **Met 2026-09-21** — resumed by the owner and confirmed `ACTIVE_HEALTHY`. It may pause again if left unused, so the production job now refuses to migrate a project that is not healthy (ISSUE-012).                                                    |
+| The production deploy token exists              | **Met 2026-09-21** — added to the `production` GitHub environment, scoped to that environment only. Staging keeps its own, separate one.                                                                                                                |
+| `PRODUCTION_DEPLOY_ENABLED` is set              | **Confirmed unset on 2026-09-20**, so the deploy job is skipped entirely.                                                                                                                                                                               |
+| `NEXT_PUBLIC_APP_URL` and a domain are decided  | **Met 2026-09-21** — `https://teka-edu-teka10.vercel.app`, the project's own production domain. No domain was bought, and none is needed for the beta. PD-012.                                                                                          |
+| Deployment Protection lets the public in        | **NOT MET.** Proved by the 2026-09-22 release: with a production deployment live, the production domain answers `302 → vercel.com/sso-api`. The legacy `all_except_custom_domains` mode protects everything except _custom_ domains, and there is none. |
+| The zero-cost backup design is implemented      | No backups on Free (ISSUE-009). **Not a blocker for Beta 0.1**: §7 — the database holds only reference content regenerated from `content/`, and no user data exists to lose.                                                                            |
 
 Resuming a paused project is done by the owner in the Supabase dashboard and costs nothing. **No
 keep-alive job is created**: it would add fake activity to a database that is meant to be empty.
