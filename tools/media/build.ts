@@ -26,6 +26,101 @@ const AMBER = "#e9b96e";
 const CLAY = "#c9785f";
 const STONE = "#b9b2a6";
 
+// ---- the September illustration system (docs/september-illustration-upgrade-plan.md) ----------
+//
+// One ink, flat fills with a single shade, a warm brown skin for people and body parts, a soft
+// ground under things, faces on people and animals only. The legacy constants above stay for the
+// shapes, which are deliberately unchanged (ADR-048); everything else moves to this palette.
+const LINE = "#2b2a33";
+const GROUND = "#efe9dc";
+const P = {
+  paper: ["#fffdf7", "#efe9dc"],
+  sky: ["#7cbbe6", "#5395c4"],
+  leaf: ["#86c692", "#5fa46e"],
+  sun: ["#f3c86d", "#d9a63f"],
+  clay: ["#e08d6a", "#bf6a4b"],
+  stone: ["#c9c2b4", "#a49c8e"],
+  skin: ["#9a6540", "#7a4c2e"],
+  berry: ["#d8626b", "#b34650"],
+  night: ["#3f4c7a", "#2d3759"],
+} as const;
+type Tone = keyof typeof P;
+const base = (tone: Tone): string => P[tone][0];
+const shade = (tone: Tone): string => P[tone][1];
+
+/** The outline every drawing shares. */
+const OUTLINE = `stroke="${LINE}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"`;
+
+/** The soft ellipse a thing stands on. No outline: it is a shadow, not an object. */
+const ground = (cx = 100, cy = 176, rx = 66, ry = 9): string =>
+  `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="${GROUND}"/>`;
+
+/** Two dot eyes and a small smile. People and animals only; never on an object or a shape. */
+const face = (cx: number, cy: number, spread = 16, r = 4.5, mouth: "smile" | "o" = "smile") =>
+  `<circle cx="${cx - spread / 2}" cy="${cy}" r="${r}" fill="${LINE}"/>` +
+  `<circle cx="${cx + spread / 2}" cy="${cy}" r="${r}" fill="${LINE}"/>` +
+  (mouth === "o"
+    ? `<circle cx="${cx}" cy="${cy + 14}" r="4" fill="${LINE}"/>`
+    : `<path d="M${cx - 9} ${cy + 12} q9 9 18 0" fill="none" ${OUTLINE}/>`);
+
+/** A capsule — a finger, an arm, a leg: an ink line with a fill line on top, 6 px of outline. */
+const capsule = (x1: number, y1: number, x2: number, y2: number, width: number, fill: string) =>
+  `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${LINE}" stroke-width="${width + 12}" stroke-linecap="round"/>` +
+  `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${fill}" stroke-width="${width}" stroke-linecap="round"/>`;
+
+/**
+ * An open hand, palm out. `thumb` says which side the thumb is on (+1: to the right), so a pair of
+ * hands has its thumbs facing each other, as real raised hands do. Finger heights run from the
+ * little finger to the index; a folded finger is a short bump, and a folded thumb lies across the
+ * palm — which is how « trois doigts » is shown.
+ */
+function hand(o: {
+  cx: number;
+  top: number;
+  thumb: 1 | -1;
+  scale?: number;
+  heights?: readonly number[];
+  folded?: readonly boolean[];
+  thumbFolded?: boolean;
+}): string {
+  const s = o.scale ?? 1;
+  const { cx, top, thumb } = o;
+  const w = 52 * s;
+  const h = 54 * s;
+  const spacing = 13 * s;
+  const finger = 11 * s;
+  const heights = (o.heights ?? [32, 44, 50, 46]).map((v) => v * s);
+  const folded = o.folded ?? [false, false, false, false];
+  const skin = base("skin");
+  const parts: string[] = [];
+  // Wrist first, so the palm sits on it.
+  parts.push(
+    `<rect x="${cx - 14 * s}" y="${top + h - 8 * s}" width="${28 * s}" height="${30 * s}" rx="${8 * s}" fill="${shade("skin")}" ${OUTLINE}/>`,
+  );
+  // Fingers, little finger on the side away from the thumb.
+  [-1.5, -0.5, 0.5, 1.5].forEach((k, i) => {
+    const fx = cx + thumb * k * spacing;
+    const rise = folded[i] ? 10 * s : heights[i]!;
+    parts.push(capsule(fx, top + 8 * s, fx, top + 8 * s - rise, finger, skin));
+  });
+  // Thumb, reaching outward and up on its own side.
+  if (!o.thumbFolded) {
+    const tx = cx + thumb * (w / 2 - 4 * s);
+    const ty = top + 24 * s;
+    parts.push(capsule(tx, ty, tx + thumb * 16 * s, ty - 22 * s, finger, skin));
+  }
+  // Palm: the shade carries the outline; the base sits inside it, a little higher.
+  parts.push(
+    `<rect x="${cx - w / 2}" y="${top}" width="${w}" height="${h}" rx="${18 * s}" fill="${shade("skin")}" ${OUTLINE}/>`,
+    `<rect x="${cx - w / 2 + 3}" y="${top + 3}" width="${w - 6}" height="${h - 14 * s}" rx="${16 * s}" fill="${skin}"/>`,
+  );
+  if (o.thumbFolded) {
+    const tx = cx + thumb * (w / 2 - 6 * s);
+    parts.push(capsule(tx, top + 20 * s, cx + thumb * 4 * s, top + 34 * s, finger, skin));
+  }
+  return parts.join("\n      ");
+}
+
 type Asset = {
   id: string;
   kind: "shape" | "object" | "animal" | "illustration";
@@ -106,10 +201,11 @@ const OBJECTS: [id: string, alt: string, tags: string[], body: string][] = [
     "objet-cuillere",
     "Une cuillère",
     ["cuillère", "maison", "compter"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
-      <ellipse cx="100" cy="66" rx="26" ry="32" fill="${STONE}"/>
-      <rect x="92" y="94" width="16" height="70" rx="8" fill="${STONE}"/>
-    </g>`,
+    `${ground(100, 184, 44, 6)}
+      <path d="M92 100 h16 l-3 70 q-5 8 -10 0 z" fill="${base("stone")}" ${OUTLINE}/>
+      <ellipse cx="100" cy="66" rx="30" ry="38" fill="${base("stone")}" ${OUTLINE}/>
+      <ellipse cx="100" cy="68" rx="19" ry="26" fill="${shade("stone")}"/>
+      <ellipse cx="92" cy="54" rx="5" ry="9" fill="${base("paper")}"/>`,
   ],
   [
     "objet-crayon",
@@ -147,31 +243,39 @@ const OBJECTS: [id: string, alt: string, tags: string[], body: string][] = [
     "objet-table",
     "Une table",
     ["table", "maison", "école"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linecap="round">
-      <rect x="25" y="70" width="150" height="20" rx="6" fill="${AMBER}"/>
-      <line x1="45" y1="90" x2="45" y2="165"/>
-      <line x1="155" y1="90" x2="155" y2="165"/>
-    </g>`,
+    `${ground(100, 184, 84, 7)}
+      <rect x="52" y="90" width="10" height="64" fill="${shade("sun")}" stroke="${LINE}" stroke-width="5"/>
+      <rect x="138" y="90" width="10" height="64" fill="${shade("sun")}" stroke="${LINE}" stroke-width="5"/>
+      <rect x="32" y="92" width="12" height="78" fill="${base("sun")}" ${OUTLINE}/>
+      <rect x="156" y="92" width="12" height="78" fill="${base("sun")}" ${OUTLINE}/>
+      <rect x="20" y="66" width="160" height="24" rx="6" fill="${base("sun")}" ${OUTLINE}/>
+      <rect x="24" y="80" width="152" height="7" fill="${shade("sun")}"/>`,
   ],
   [
     "objet-chaise",
     "Une chaise",
     ["chaise", "maison", "école"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linecap="round">
-      <rect x="65" y="35" width="18" height="95" fill="${CLAY}"/>
-      <rect x="65" y="105" width="80" height="18" fill="${AMBER}"/>
-      <line x1="75" y1="123" x2="75" y2="170"/>
-      <line x1="137" y1="123" x2="137" y2="170"/>
-    </g>`,
+    `${ground(100, 184, 60, 7)}
+      <rect x="72" y="126" width="9" height="40" fill="${shade("sun")}" stroke="${LINE}" stroke-width="5"/>
+      <rect x="119" y="126" width="9" height="40" fill="${shade("sun")}" stroke="${LINE}" stroke-width="5"/>
+      <rect x="58" y="128" width="11" height="48" fill="${base("sun")}" ${OUTLINE}/>
+      <rect x="131" y="128" width="11" height="48" fill="${base("sun")}" ${OUTLINE}/>
+      <rect x="58" y="24" width="11" height="104" fill="${base("sun")}" ${OUTLINE}/>
+      <rect x="131" y="24" width="11" height="104" fill="${base("sun")}" ${OUTLINE}/>
+      <rect x="69" y="40" width="62" height="10" fill="${shade("sun")}" stroke="${LINE}" stroke-width="5"/>
+      <rect x="69" y="62" width="62" height="10" fill="${shade("sun")}" stroke="${LINE}" stroke-width="5"/>
+      <rect x="52" y="112" width="96" height="18" rx="6" fill="${base("sun")}" ${OUTLINE}/>`,
   ],
   [
     "objet-porte",
     "Une porte",
     ["porte", "maison"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <rect x="55" y="30" width="90" height="145" rx="6" fill="${CLAY}"/>
-      <circle cx="128" cy="105" r="7" fill="${PAPER}"/>
-    </g>`,
+    `${ground(100, 184, 72, 7)}
+      <rect x="42" y="20" width="116" height="162" rx="6" fill="${shade("stone")}" ${OUTLINE}/>
+      <rect x="54" y="32" width="92" height="150" fill="${base("clay")}" ${OUTLINE}/>
+      <rect x="64" y="44" width="72" height="52" rx="4" fill="${shade("clay")}" stroke="${LINE}" stroke-width="4"/>
+      <rect x="64" y="108" width="72" height="60" rx="4" fill="${shade("clay")}" stroke="${LINE}" stroke-width="4"/>
+      <circle cx="128" cy="104" r="6" fill="${base("sun")}" stroke="${LINE}" stroke-width="4"/>`,
   ],
   [
     "objet-fenetre",
@@ -209,10 +313,11 @@ const OBJECTS: [id: string, alt: string, tags: string[], body: string][] = [
     "objet-seau",
     "Un seau",
     ["seau", "maison", "eau"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <path d="M55 75 h90 l-12 95 h-66 z" fill="${BLUE}"/>
-      <path d="M62 72 a38 30 0 0 1 76 0" fill="none"/>
-    </g>`,
+    `${ground(100, 182, 60, 7)}
+      <path d="M54 80 h92 l-12 92 h-68 z" fill="${base("sky")}" ${OUTLINE}/>
+      <path d="M124 84 h16 l-10 82 h-14 z" fill="${shade("sky")}"/>
+      <ellipse cx="100" cy="80" rx="46" ry="9" fill="${shade("sky")}" ${OUTLINE}/>
+      <path d="M58 76 q42 -60 84 0" fill="none" ${OUTLINE}/>`,
   ],
   [
     "objet-panier",
@@ -266,52 +371,48 @@ const OBJECTS: [id: string, alt: string, tags: string[], body: string][] = [
 const BODY: [id: string, alt: string, tags: string[], body: string][] = [
   [
     "corps-main",
-    "Une main ouverte",
+    "Une main ouverte, les cinq doigts écartés",
     ["main", "corps"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" fill="${AMBER}">
-      <rect x="72" y="92" width="56" height="62" rx="14"/>
-      <rect x="72" y="46" width="13" height="52" rx="6"/>
-      <rect x="90" y="36" width="13" height="62" rx="6"/>
-      <rect x="108" y="44" width="13" height="54" rx="6"/>
-      <rect x="124" y="58" width="13" height="42" rx="6"/>
-      <rect x="52" y="96" width="24" height="13" rx="6"/>
-    </g>`,
+    `${ground(100, 180, 56, 8)}
+      ${hand({ cx: 100, top: 92, thumb: 1, scale: 1.15 })}`,
   ],
   [
     "corps-pied",
-    "Un pied",
+    "Un pied nu, vu de dessus, avec ses cinq orteils",
     ["pied", "corps"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" fill="${AMBER}">
-      <path d="M78 46 q26 0 30 26 l6 52 q4 30 -26 30 q-28 0 -28 -28 l0 -54 q0 -26 18 -26 z"/>
-      <circle cx="122" cy="70" r="9"/>
-      <circle cx="134" cy="84" r="8"/>
-      <circle cx="141" cy="100" r="7"/>
-      <circle cx="144" cy="116" r="6"/>
-    </g>`,
+    `${ground(100, 186, 60, 6)}
+      <rect x="84" y="140" width="40" height="46" rx="10" fill="${shade("skin")}" ${OUTLINE}/>
+      <path d="M58 72 q-14 44 8 82 q12 22 36 22 q28 0 38 -24 q10 -32 6 -70 q-2 -12 -16 -12 h-58 q-12 0 -14 8 z" fill="${base("skin")}" ${OUTLINE}/>
+      <circle cx="64" cy="60" r="15" fill="${base("skin")}" ${OUTLINE}/>
+      <circle cx="92" cy="52" r="11" fill="${base("skin")}" ${OUTLINE}/>
+      <circle cx="114" cy="54" r="10" fill="${base("skin")}" ${OUTLINE}/>
+      <circle cx="133" cy="60" r="9" fill="${base("skin")}" ${OUTLINE}/>
+      <circle cx="149" cy="70" r="8" fill="${base("skin")}" ${OUTLINE}/>`,
   ],
   [
     "corps-tete",
-    "Une tête",
+    "La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire",
     ["tête", "corps", "visage"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
-      <circle cx="100" cy="98" r="52" fill="${AMBER}"/>
-      <circle cx="82" cy="90" r="6" fill="${INK}" stroke="none"/>
-      <circle cx="118" cy="90" r="6" fill="${INK}" stroke="none"/>
-      <path d="M82 118 q18 14 36 0" fill="none"/>
-      <path d="M48 92 q-12 0 -12 12 q0 12 12 12" fill="${AMBER}"/>
-      <path d="M152 92 q12 0 12 12 q0 12 -12 12" fill="${AMBER}"/>
-    </g>`,
+    `<path d="M22 200 q78 -66 156 0 z" fill="${base("sky")}" ${OUTLINE}/>
+      <rect x="86" y="130" width="28" height="30" rx="6" fill="${shade("skin")}" ${OUTLINE}/>
+      <circle cx="48" cy="96" r="10" fill="${base("skin")}" ${OUTLINE}/>
+      <circle cx="152" cy="96" r="10" fill="${base("skin")}" ${OUTLINE}/>
+      <circle cx="100" cy="88" r="52" fill="${base("skin")}" ${OUTLINE}/>
+      <path d="M48 88 a52 52 0 0 1 104 0 q-52 -24 -104 0 z" fill="${LINE}"/>
+      ${face(100, 96, 32, 5)}`,
   ],
   [
     "corps-ventre",
-    "Le ventre",
+    "Le ventre d’un enfant, avec le nombril, entre le tee-shirt et le short",
     ["ventre", "corps"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
-      <path d="M62 52 q38 -12 76 0 l0 96 q-38 12 -76 0 z" fill="${BLUE}"/>
-      <circle cx="100" cy="104" r="7" fill="${INK}" stroke="none"/>
-      <path d="M62 52 q-16 10 -18 34" fill="none"/>
-      <path d="M138 52 q16 10 18 34" fill="none"/>
-    </g>`,
+    `<rect x="52" y="146" width="96" height="42" rx="8" fill="${base("leaf")}" ${OUTLINE}/>
+      <path d="M54 80 q46 -16 92 0 q8 34 0 68 q-46 16 -92 0 q-8 -34 0 -68 z" fill="${base("skin")}" ${OUTLINE}/>
+      <ellipse cx="100" cy="140" rx="34" ry="6" fill="${shade("skin")}"/>
+      <rect x="26" y="26" width="24" height="34" rx="8" fill="${shade("sky")}" ${OUTLINE}/>
+      <rect x="150" y="26" width="24" height="34" rx="8" fill="${shade("sky")}" ${OUTLINE}/>
+      <circle cx="100" cy="122" r="5" fill="${LINE}"/>
+      <path d="M40 20 h120 v50 q-60 16 -120 0 z" fill="${base("sky")}" ${OUTLINE}/>
+      <path d="M46 60 q54 14 108 0 v6 q-54 16 -108 0 z" fill="${shade("sky")}"/>`,
   ],
 ];
 
@@ -367,42 +468,53 @@ const ANIMALS: [id: string, alt: string, tags: string[], body: string][] = [
 const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] = [
   [
     "histoire-seau-lisa",
-    "Lisa, debout à côté d’une chaise, avec son seau posé dessus",
+    "Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus",
     ["histoire", "lisa", "seau", "chaise", "personnage"],
-    // The story is Lisa looking for her bucket, and a later activity asks the child to point at
-    // her — so she has to be in the picture. She is the only figure, and she is clearly the
-    // largest thing in it: a three-year-old should find her without being told where to look.
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
-      <rect x="112" y="118" width="62" height="8" fill="${AMBER}"/>
-      <rect x="116" y="126" width="8" height="44" fill="${AMBER}"/>
-      <rect x="162" y="126" width="8" height="44" fill="${AMBER}"/>
-      <rect x="162" y="74" width="8" height="48" fill="${AMBER}"/>
-      <path d="M124 78 l34 0 l-6 38 l-22 0 z" fill="${BLUE}"/>
-      <path d="M126 78 q15 -18 30 0" fill="none"/>
-      <circle cx="62" cy="62" r="22" fill="${CLAY}"/>
-      <circle cx="55" cy="58" r="3.5" fill="${INK}" stroke="none"/>
-      <circle cx="69" cy="58" r="3.5" fill="${INK}" stroke="none"/>
-      <path d="M55 70 q7 6 14 0" fill="none"/>
-      <path d="M62 84 l0 46" fill="none"/>
-      <path d="M62 96 l-22 16" fill="none"/>
-      <path d="M62 96 l26 10" fill="none"/>
-      <path d="M62 130 l-16 34" fill="none"/>
-      <path d="M62 130 l16 34" fill="none"/>
-    </g>`,
+    `${ground(100, 178, 86, 8)}
+      <rect x="116" y="132" width="10" height="42" fill="${base("sun")}" ${OUTLINE}/>
+      <rect x="162" y="132" width="10" height="42" fill="${base("sun")}" ${OUTLINE}/>
+      <rect x="160" y="70" width="12" height="100" rx="4" fill="${base("sun")}" ${OUTLINE}/>
+      <rect x="112" y="120" width="64" height="12" rx="4" fill="${base("sun")}" ${OUTLINE}/>
+      <path d="M124 86 h36 l-5 34 h-26 z" fill="${base("sky")}" ${OUTLINE}/>
+      <rect x="121" y="80" width="42" height="9" rx="3" fill="${shade("sky")}" ${OUTLINE}/>
+      <path d="M127 82 q15 -26 30 0" fill="none" ${OUTLINE}/>
+      ${capsule(58, 132, 52, 170, 12, base("skin"))}
+      ${capsule(74, 132, 80, 170, 12, base("skin"))}
+      <ellipse cx="50" cy="174" rx="10" ry="5" fill="${shade("stone")}" ${OUTLINE}/>
+      <ellipse cx="82" cy="174" rx="10" ry="5" fill="${shade("stone")}" ${OUTLINE}/>
+      <rect x="60" y="72" width="12" height="14" fill="${shade("skin")}" ${OUTLINE}/>
+      ${capsule(48, 90, 30, 120, 10, base("skin"))}
+      ${capsule(84, 90, 106, 114, 10, base("skin"))}
+      <path d="M48 84 h36 l12 56 h-60 z" fill="${base("berry")}" ${OUTLINE}/>
+      <rect x="42" y="128" width="50" height="8" fill="${shade("berry")}"/>
+      <circle cx="66" cy="54" r="22" fill="${base("skin")}" ${OUTLINE}/>
+      <path d="M44 54 a22 22 0 0 1 44 0 q-22 -10 -44 0 z" fill="${LINE}"/>
+      <circle cx="50" cy="38" r="10" fill="${LINE}"/>
+      <circle cx="82" cy="38" r="10" fill="${LINE}"/>
+      ${face(66, 58, 16, 4)}`,
   ],
   [
     "histoire-tika",
-    "Un enfant qui se lève de son lit, le soleil à la fenêtre",
+    "Un enfant qui s’étire dans son lit, le soleil à la fenêtre",
     ["histoire", "matin", "lit"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
-      <circle cx="150" cy="56" r="20" fill="${AMBER}"/>
-      <rect x="30" y="110" width="96" height="10" fill="${CLAY}"/>
-      <rect x="30" y="120" width="10" height="40" fill="${CLAY}"/>
-      <rect x="116" y="120" width="10" height="40" fill="${CLAY}"/>
-      <rect x="34" y="92" width="26" height="20" rx="6" fill="${PAPER}"/>
-      <circle cx="84" cy="82" r="16" fill="${AMBER}"/>
-      <path d="M84 98 l0 14" fill="none"/>
-    </g>`,
+    `<rect x="138" y="18" width="48" height="48" rx="6" fill="${base("sky")}" ${OUTLINE}/>
+      <circle cx="162" cy="42" r="13" fill="${base("sun")}" ${OUTLINE}/>
+      <rect x="134" y="64" width="56" height="8" rx="2" fill="${shade("stone")}" ${OUTLINE}/>
+      ${ground(100, 182, 88, 7)}
+      <rect x="40" y="154" width="10" height="22" fill="${shade("clay")}" ${OUTLINE}/>
+      <rect x="166" y="154" width="10" height="22" fill="${shade("clay")}" ${OUTLINE}/>
+      <rect x="22" y="78" width="22" height="80" rx="6" fill="${base("clay")}" ${OUTLINE}/>
+      <rect x="34" y="124" width="146" height="34" rx="8" fill="${base("paper")}" ${OUTLINE}/>
+      <rect x="44" y="110" width="40" height="22" rx="8" fill="${base("paper")}" ${OUTLINE}/>
+      ${capsule(98, 94, 78, 58, 10, base("skin"))}
+      ${capsule(134, 94, 154, 58, 10, base("skin"))}
+      <rect x="110" y="80" width="12" height="12" fill="${shade("skin")}" ${OUTLINE}/>
+      <rect x="96" y="88" width="40" height="44" rx="10" fill="${base("sky")}" ${OUTLINE}/>
+      <circle cx="116" cy="64" r="20" fill="${base("skin")}" ${OUTLINE}/>
+      <path d="M96 64 a20 20 0 0 1 40 0 q-20 -10 -40 0 z" fill="${LINE}"/>
+      ${face(116, 68, 16, 4, "o")}
+      <rect x="88" y="128" width="92" height="26" rx="8" fill="${base("leaf")}" ${OUTLINE}/>
+      <line x1="100" y1="141" x2="170" y2="141" stroke="${shade("leaf")}" stroke-width="4" stroke-linecap="round"/>`,
   ],
   [
     "histoire-kumu",
@@ -474,15 +586,23 @@ const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] =
   ],
   [
     "histoire-pluie",
-    "La pluie qui tombe sur un toit",
+    "La pluie qui tombe d’un nuage sur le toit d’une maison",
     ["pluie", "toit", "histoire"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <polygon points="100,58 178,110 22,110" fill="${CLAY}"/>
-      <rect x="46" y="110" width="108" height="58" fill="${PAPER}"/>
-      <path d="M58 26 q8 14 0 18 q-8 -4 0 -18 z" fill="${BLUE}"/>
-      <path d="M100 16 q8 14 0 18 q-8 -4 0 -18 z" fill="${BLUE}"/>
-      <path d="M142 26 q8 14 0 18 q-8 -4 0 -18 z" fill="${BLUE}"/>
-    </g>`,
+    `<circle cx="72" cy="40" r="16" fill="${base("stone")}" ${OUTLINE}/>
+      <circle cx="100" cy="30" r="22" fill="${base("stone")}" ${OUTLINE}/>
+      <circle cx="130" cy="40" r="16" fill="${base("stone")}" ${OUTLINE}/>
+      <rect x="60" y="40" width="80" height="16" rx="8" fill="${base("stone")}" ${OUTLINE}/>
+      <circle cx="72" cy="40" r="16" fill="${base("stone")}"/>
+      <circle cx="100" cy="30" r="22" fill="${base("stone")}"/>
+      <circle cx="130" cy="40" r="16" fill="${base("stone")}"/>
+      <rect x="60" y="40" width="80" height="16" rx="8" fill="${base("stone")}"/>
+      ${[24, 44, 64, 84, 104, 124, 144, 164, 184].map((x) => `<line x1="${x}" y1="70" x2="${x - 5}" y2="90" stroke="${shade("sky")}" stroke-width="5" stroke-linecap="round"/>`).join("")}
+      <rect x="46" y="110" width="108" height="58" fill="${base("paper")}" ${OUTLINE}/>
+      <rect x="88" y="132" width="24" height="36" rx="3" fill="${shade("clay")}" ${OUTLINE}/>
+      <polygon points="28,110 100,58 172,110" fill="${base("clay")}" ${OUTLINE}/>
+      <ellipse cx="100" cy="182" rx="66" ry="6" fill="${base("sky")}"/>
+      <circle cx="36" cy="174" r="4" fill="${base("sky")}"/>
+      <circle cx="164" cy="174" r="4" fill="${base("sky")}"/>`,
   ],
   [
     "histoire-cailloux",
@@ -510,39 +630,30 @@ const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] =
     "comptine-compter",
     "Une main qui montre trois doigts",
     ["compter", "comptine", "doigts"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <rect x="66" y="58" width="18" height="60" rx="9" fill="${PAPER}"/>
-      <rect x="90" y="44" width="18" height="74" rx="9" fill="${PAPER}"/>
-      <rect x="114" y="58" width="18" height="60" rx="9" fill="${PAPER}"/>
-      <path d="M58 110 h84 v28 a42 42 0 0 1 -84 0 z" fill="${PAPER}"/>
-    </g>`,
+    `${ground(100, 180, 56, 8)}
+      ${hand({ cx: 100, top: 96, thumb: 1, scale: 1.1, folded: [true, false, false, false], thumbFolded: true })}`,
   ],
   [
     "comptine-bonjour",
-    "Le soleil qui se lève et deux mains qui se saluent",
+    "Le soleil qui se lève derrière la colline, et deux mains qui font bonjour",
     ["bonjour", "soleil", "comptine"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <circle cx="100" cy="76" r="30" fill="${AMBER}"/>
-      <line x1="100" y1="26" x2="100" y2="38"/>
-      <line x1="56" y1="40" x2="64" y2="50"/>
-      <line x1="144" y1="40" x2="136" y2="50"/>
-      <path d="M40 148 q22 -22 44 0" fill="${PAPER}"/>
-      <path d="M116 148 q22 -22 44 0" fill="${PAPER}"/>
-      <line x1="30" y1="150" x2="170" y2="150"/>
-    </g>`,
+    `<circle cx="100" cy="100" r="40" fill="${base("sun")}" ${OUTLINE}/>
+      <line x1="100" y1="32" x2="100" y2="46" ${OUTLINE}/>
+      <line x1="58" y1="54" x2="68" y2="64" ${OUTLINE}/>
+      <line x1="142" y1="54" x2="132" y2="64" ${OUTLINE}/>
+      <line x1="143" y1="84" x2="155" y2="80" ${OUTLINE}/>
+      <line x1="57" y1="84" x2="45" y2="80" ${OUTLINE}/>
+      <path d="M-10 200 q110 -120 220 0 z" fill="${base("leaf")}" ${OUTLINE}/>
+      ${hand({ cx: 34, top: 126, thumb: 1, scale: 0.7 })}
+      ${hand({ cx: 166, top: 126, thumb: -1, scale: 0.7 })}`,
   ],
   [
     "comptine-mains",
-    "Deux mains levées",
+    "Deux mains ouvertes, levées, paumes vers toi",
     ["mains", "corps", "comptine"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <path d="M44 96 h44 v44 a22 22 0 0 1 -44 0 z" fill="${PAPER}"/>
-      <rect x="46" y="56" width="14" height="46" rx="7" fill="${PAPER}"/>
-      <rect x="64" y="46" width="14" height="56" rx="7" fill="${PAPER}"/>
-      <path d="M112 96 h44 v44 a22 22 0 0 1 -44 0 z" fill="${PAPER}"/>
-      <rect x="122" y="46" width="14" height="56" rx="7" fill="${PAPER}"/>
-      <rect x="140" y="56" width="14" height="46" rx="7" fill="${PAPER}"/>
-    </g>`,
+    `${ground(100, 182, 82, 8)}
+      ${hand({ cx: 52, top: 90, thumb: 1, scale: 0.92 })}
+      ${hand({ cx: 148, top: 90, thumb: -1, scale: 0.92 })}`,
   ],
   [
     "comptine-semaine",
@@ -597,16 +708,30 @@ const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] =
   ],
   [
     "bonhomme-articule",
-    "Un bonhomme dessiné avec les bras et les jambes pliés",
+    "Un bonhomme dessiné au crayon sur une feuille, avec les bras et les jambes pliés",
     ["bonhomme", "corps", "articulation", "dessin"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round" fill="none">
-      <circle cx="100" cy="46" r="22" fill="${PAPER}"/>
-      <line x1="100" y1="68" x2="100" y2="122"/>
-      <path d="M100 82 l-30 14 l-8 30"/>
-      <path d="M100 82 l30 14 l8 30"/>
-      <path d="M100 122 l-22 26 l4 30"/>
-      <path d="M100 122 l22 26 l-4 30"/>
-    </g>`,
+    `<rect x="34" y="12" width="132" height="176" rx="4" fill="${base("paper")}" stroke="${shade("stone")}" stroke-width="4"/>
+      <g fill="none" stroke="${LINE}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="100" cy="52" r="18"/>
+        <line x1="100" y1="70" x2="100" y2="118"/>
+        <polyline points="100,84 72,100 66,128"/>
+        <polyline points="100,84 128,100 134,128"/>
+        <polyline points="100,118 80,146 84,176"/>
+        <polyline points="100,118 120,146 116,176"/>
+      </g>
+      ${[
+        [100, 84],
+        [72, 100],
+        [128, 100],
+        [100, 118],
+        [80, 146],
+        [120, 146],
+      ]
+        .map(
+          ([x, y]) =>
+            `<circle cx="${x}" cy="${y}" r="5" fill="${base("sun")}" stroke="${LINE}" stroke-width="4"/>`,
+        )
+        .join("")}`,
   ],
 ];
 

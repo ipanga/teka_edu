@@ -132,13 +132,22 @@ describe("an approval can only come from a full review that accepted the week", 
       const lessons = lessonsOfWeek(week);
       expect(lessons.length, `week ${week} has no lessons`).toBeGreaterThan(0);
       const isApproved = lessons.some((l) => l.status === "approved");
-      expect(accepted(week), `week ${week}: approved=${isApproved}`).toBe(isApproved);
-      // A week is approved wholly or not at all.
-      if (isApproved)
+      // No approval without an accepted full review, ever.
+      if (isApproved) expect(accepted(week), `week ${week}`).toBe(true);
+      // An accepted week whose lessons are back at `review` is a *lapse*, and a lapse is never
+      // silent: a `consequence` entry dated on or after the accepting pass says what changed
+      // (ADR-048: a redrawn picture lapses the approval of every lesson that shows it).
+      if (accepted(week) && !isApproved) {
+        const acceptedOn = historyOf(week)
+          .filter((r) => r.scope === "full-review" && r.outcome === "accepted")
+          .map((r) => r.reviewedOn)
+          .sort()
+          .at(-1)!;
         expect(
-          lessons.every((l) => l.status === "approved"),
-          `week ${week}`,
+          historyOf(week).some((r) => r.scope === "consequence" && r.reviewedOn >= acceptedOn),
+          `week ${week}: accepted, not approved, and no consequence entry explains the lapse`,
         ).toBe(true);
+      }
     }
   });
 

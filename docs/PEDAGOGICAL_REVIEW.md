@@ -294,6 +294,28 @@ because a rule that is wrong four times out of five is worse than no rule.
 
 ---
 
+## Pictures redrawn, approvals lapsed, 2026-09-22 (ADR-048)
+
+The September visual upgrade (`docs/september-illustration-upgrade-plan.md`) redraws the
+pictures a child looks at. Since ISSUE-026 the approval digest covers the bytes of every picture
+a lesson shows, so **every redraw lapses the approvals of the lessons that show it** — and that is
+honoured rather than bypassed. The lessons go back to `review` (`npm run review:lapse`), the lapse
+is recorded as a `consequence` entry per affected week naming the pictures and the lessons, and a
+visual reconfirmation package with a before/after contact sheet (`npm run media:sheet`,
+`npm run review:visual`) is generated for the AI-assisted reviewer. Restoration is the ordinary
+path: a `full-review` `accepted` entry per week, then `scripts/approve-week.ts`.
+
+**A record gap closed on the way.** The five 1ère maternelle reviews of 2026-09-15 existed only in
+the lesson `review` blocks; the history file held `consequence` entries for that class and no
+full pass. Lapsing would have erased the only record. They are now transcribed into
+`content/reviews/history.json` as `full-review` entries, word for word from the blocks, and say
+that they are transcriptions.
+
+Progress by batch is in `docs/september-illustration-progress.md`; the final count of lapsed
+lessons and the packages are recorded there when the last batch lands.
+
+---
+
 ## The approval digest now covers the story, 2026-09-18 (ISSUE-026)
 
 An activity names a story by id. The digest covered the id, and the bytes of the picture the story

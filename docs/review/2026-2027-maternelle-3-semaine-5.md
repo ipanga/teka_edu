@@ -74,6 +74,12 @@ Passe de confirmation finale de la semaine 5, sur le paquet canonique régénér
 
 **Suites données :** Aucune. La semaine est acceptée telle quelle. Les douze leçons passent de « review » à « approved », avec des empreintes calculées à neuf sur le texte exact que cette passe a lu ; aucune empreinte n’est reprise d’une passe précédente. Les entrées antérieures de cette semaine — trois corrections héritées des semaines 1 et 4, puis la première relecture complète conclue « accepted-with-modifications » — sont conservées telles qu’elles ont été écrites. Avec cette approbation, septembre est relu et accepté en entier pour la 1ère et la 3ème maternelle.
 
+### 2026-09-22 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
+
+Mise à niveau visuelle de septembre (ADR-048) : des images ont été redessinées (comptine-mains, corps-main, corps-pied, corps-tete, corps-ventre, comptine-bonjour, comptine-compter, histoire-seau-lisa, histoire-tika, histoire-pluie, bonhomme-articule, objet-cuillere, objet-porte, objet-seau, objet-table, objet-chaise). L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 1 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-lang-21.
+
+**Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (npm run review:visual, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
+
 ## Jour 20 — 2026-09-28
 
 **Durée totale : 35 min** · 4 séances · jour 10 du rythme
@@ -426,7 +432,7 @@ l’autre — l’appareil est alors le sien._
 
 _Reconnaitre un mot à partir de ses syllabes, puis repérer une rime._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Jeu d’écoute pur. Dites les syllabes séparées et laissez l’enfant recoller le mot.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -476,7 +482,7 @@ _Reconnaitre un mot à partir de ses syllabes, puis repérer une rime._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe sur un toit (`public/media/illustrations/histoire-pluie.svg`)
+- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe d’un nuage sur le toit d’une maison (`public/media/illustrations/histoire-pluie.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 

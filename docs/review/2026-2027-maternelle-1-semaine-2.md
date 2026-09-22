@@ -41,16 +41,26 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-**Cette semaine n’a encore jamais été relue.** Ce qui suit n’est donc pas
-l’historique de ses relectures : ce sont des corrections qui lui sont arrivées
-parce qu’un défaut trouvé dans une autre semaine existait ici à l’identique.
-Elles sont déjà appliquées au contenu que vous lisez ci-dessous.
+Cette semaine a déjà été relue 1 fois. Ce qui suit est l’historique,
+pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
+
+### 2026-09-15 — ChatGPT · `accepted` (ai-assisted)
+
+Semaine 2 : deux passes (6 puis 2 corrections), puis reconfirmation après correction d’un défaut commun à plusieurs semaines. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017). Empreinte recalculée le 2026-09-18 pour ISSUE-026 : elle couvre désormais le texte de l’histoire ou de la comptine lue, et plus seulement son identifiant. Le contenu relu est identique à celui qui avait été approuvé, vérifié champ par champ contre la révision d’approbation. Aucune nouvelle relecture n’a eu lieu.
+
+**Suites données :** Voir le registre, docs/PEDAGOGICAL_REVIEW.md (1ère maternelle, 2026-09-15). Entrée transcrite le 2026-09-22 depuis les blocs « review » des douze à vingt leçons de la semaine, identiques mot pour mot : l’historique ne portait aucune passe complète pour cette classe, et l’annulation des approbations décidée par ADR-048 efface ces blocs. Aucune nouvelle relecture n’a eu lieu ce jour-là.
 
 ### 2026-09-18 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
 
 Aucune relecture pédagogique n’a eu lieu pour cette semaine à cette date.
 
 **Suites données :** Conséquence d’un changement de définition de l’empreinte d’approbation, pas d’une nouvelle relecture. ISSUE-026 : l’empreinte couvrait l’identifiant de l’histoire lue, pas ses mots, si bien qu’un texte pouvait être réécrit sous une approbation sans la faire tomber. L’empreinte couvre désormais le genre, le titre et les lignes du texte résolu. Les approbations concernées sont d’abord tombées, puis ont été rétablies après vérification, champ par champ et contre la révision d’approbation elle-même, que le contenu relu est identique à celui qui avait été approuvé. Le sens de la décision, la personne qui l’a prise et sa date sont inchangés.
+
+### 2026-09-22 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
+
+Mise à niveau visuelle de septembre (ADR-048) : des images ont été redessinées (comptine-mains, corps-main, corps-pied, corps-tete, corps-ventre, comptine-bonjour, comptine-compter, histoire-seau-lisa, histoire-tika, histoire-pluie, bonhomme-articule, objet-cuillere, objet-porte, objet-seau, objet-table, objet-chaise). L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 9 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m1-lang-05, m1-lang-06, m1-lang-07, m1-lang-08, m1-lang-09, m1-math-06, m1-math-08, m1-art-07, m1-world-08.
+
+**Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (npm run review:visual, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
 
 ## Jour 5 — 2026-09-07
 
@@ -72,7 +82,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
   - `LANG-S03-C01-O01` — Participer aux activités de motricité générale, de motricité fine et aux exercices de graphismes _(source : programme-2024-langage)_
@@ -115,7 +125,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `bonhomme-articule` — Un bonhomme dessiné avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
+- **Image montrée pendant la lecture :** `bonhomme-articule` — Un bonhomme dessiné au crayon sur une feuille, avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Apprendre le geste d’écriture » (before-4) :**
 
@@ -345,7 +355,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -398,7 +408,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Lisa, debout à côté d’une chaise, avec son seau posé dessus (`public/media/illustrations/histoire-seau-lisa.svg`)
+- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus (`public/media/illustrations/histoire-seau-lisa.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -463,7 +473,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter, donner une petite quantité, ranger par forme._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -641,7 +651,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
   - `LANG-S02-C03-O03` — Reconnaitre un personnage, le nommer et le situer dans les illustrations. _(source : programme-2024-langage)_
@@ -665,7 +675,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Matériel :** Aucun matériel
 - **Images montrées à l'enfant (1) :**
 
-  - `histoire-seau-lisa` — Lisa, debout à côté d’une chaise, avec son seau posé dessus (`public/media/illustrations/histoire-seau-lisa.svg`)
+  - `histoire-seau-lisa` — Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus (`public/media/illustrations/histoire-seau-lisa.svg`)
 
 - **Objectifs travaillés :** `LANG-S02-C03-O03` Reconnaitre un personnage, le nommer et le situer dans les illustrations.
 
@@ -686,7 +696,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `bonhomme-articule` — Un bonhomme dessiné avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
+- **Image montrée pendant la lecture :** `bonhomme-articule` — Un bonhomme dessiné au crayon sur une feuille, avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (before-4) :**
 
@@ -858,7 +868,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dire des comptines et laisser une trace._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -881,7 +891,7 @@ _Dire des comptines et laisser une trace._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains levées (`public/media/illustrations/comptine-mains.svg`)
+- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains ouvertes, levées, paumes vers toi (`public/media/illustrations/comptine-mains.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Jouer avec sa voix et acquérir un répertoire de comptines et de chansons » (before-4) :**
 
@@ -928,7 +938,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -969,7 +979,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Lisa, debout à côté d’une chaise, avec son seau posé dessus (`public/media/illustrations/histoire-seau-lisa.svg`)
+- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus (`public/media/illustrations/histoire-seau-lisa.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -1018,7 +1028,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter, donner une petite quantité, ranger par forme._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O04` — Constituer une collection (jusqu’à trois, voire quatre objets) d’un cardinal donné. _(source : programme-2024-mathematiques)_
@@ -1138,7 +1148,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Nommer son corps et se servir de ses sens._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1153,8 +1163,8 @@ _Nommer son corps et se servir de ses sens._
 - **Aide en anglais (optionnelle) :** « Show me your head. Show me your tummy. »
 - **Images montrées à l'enfant (2) :**
 
-  - `corps-tete` — Une tête (`public/media/objects/corps-tete.svg`)
-  - `corps-ventre` — Le ventre (`public/media/objects/corps-ventre.svg`)
+  - `corps-tete` — La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire (`public/media/objects/corps-tete.svg`)
+  - `corps-ventre` — Le ventre d’un enfant, avec le nombril, entre le tee-shirt et le short (`public/media/objects/corps-ventre.svg`)
 
 - **Objectifs travaillés :** `WORLD-S01-C02-O01` Nommer et représenter quelques parties du corps humain.
 
@@ -1205,7 +1215,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1241,7 +1251,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-tika` — Un enfant qui se lève de son lit, le soleil à la fenêtre (`public/media/illustrations/histoire-tika.svg`)
+- **Image montrée pendant la lecture :** `histoire-tika` — Un enfant qui s’étire dans son lit, le soleil à la fenêtre (`public/media/illustrations/histoire-tika.svg`)
 
 - **Questions posées à l’enfant après l’écoute (1) :**
 
@@ -1265,7 +1275,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe sur un toit (`public/media/illustrations/histoire-pluie.svg`)
+- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe d’un nuage sur le toit d’une maison (`public/media/illustrations/histoire-pluie.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 

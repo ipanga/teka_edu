@@ -86,6 +86,12 @@ Passe de confirmation finale de la semaine 4, sur le paquet canonique régénér
 
 **Suites données :** Aucune. La semaine est acceptée telle quelle. Les vingt leçons passent de « review » à « approved », avec des empreintes calculées à neuf sur le texte exact que cette passe a lu ; aucune empreinte n’est reprise d’une passe précédente. Les entrées antérieures de cette semaine — quatre corrections héritées des semaines 1 à 3, puis deux relectures complètes conclues « accepted-with-modifications » — sont conservées telles qu’elles ont été écrites : cette semaine a demandé trois lectures, et l’historique le dit.
 
+### 2026-09-22 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
+
+Mise à niveau visuelle de septembre (ADR-048) : des images ont été redessinées (comptine-mains, corps-main, corps-pied, corps-tete, corps-ventre, comptine-bonjour, comptine-compter, histoire-seau-lisa, histoire-tika, histoire-pluie, bonhomme-articule, objet-cuillere, objet-porte, objet-seau, objet-table, objet-chaise). L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 1 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-lang-19.
+
+**Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (npm run review:visual, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
+
 ## Jour 15 — 2026-09-21
 
 **Durée totale : 35 min** · 4 séances · jour 5 du rythme
@@ -1412,7 +1418,7 @@ l’autre — l’appareil est alors le sien._
 
 _Reprendre les catégories de mots du mois et y ranger des mots nouveaux._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Reprise des trois corpus du mois : l’école, la maison, le marché. L’enfant range, et surtout explique pourquoi.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

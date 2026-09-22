@@ -72,3 +72,38 @@ use only half their canvas, the hands and body parts read as icons.
 
 **Remains** — B2 (1ère set), B3 (3ème set), B4 (objects, contact sheet, reconfirmation, lapses,
 migration), QA of the redraws.
+
+### 2026-09-22 — B2 illustrations, the 1ère maternelle set (done)
+
+**Completed** — on `feat/september-illustrations`, stacked on the UX branch.
+
+- `tools/media/build.ts` gained the illustration system: the palette with a shade per tone,
+  `ground()`, `face()`, `capsule()` and a parametric `hand()` (thumb side, folded fingers, a
+  folded thumb for « trois doigts »). The legacy constants stay for the eight shapes, which are
+  byte-identical (`git diff public/media/shapes` is empty).
+- **16 pictures redrawn or refined**: `comptine-mains` (two open hands, palms out, thumbs facing
+  each other), `corps-main`, `corps-pied`, `corps-tete`, `corps-ventre` (all in a warm brown
+  skin), `comptine-compter`, `comptine-bonjour` (sun behind a hill, two waving hands),
+  `histoire-seau-lisa` (Lisa in a red dress beside the chair with her blue bucket, still the
+  largest thing), `histoire-tika` (a child stretching in bed, sun in the window),
+  `histoire-pluie`, `bonhomme-articule` (a crayon figure on a sheet, joints marked), and the
+  objects `cuillere`, `porte`, `seau`, `table`, `chaise` (shade, ground, fuller canvas).
+- `npm run media:sheet` renders the before/after contact sheet at 72, 128 and 256 px with
+  Chromium; the close-ups were reviewed at 2× and two drawings corrected (the foot's heel, the
+  belly's shape).
+- **44 approvals lapsed, as ADR-048 requires** — 35 in 1ère, 9 in 3ème (the lessons that show
+  `histoire-pluie`, `bonhomme-articule` or a refined object). `npm run review:lapse` sets them to
+  `review`; it re-stamps nothing.
+- **Two gaps found and closed on the way.** The 1ère reviews of 2026-09-15 lived only in the
+  lesson `review` blocks, which the lapse deletes: they are now transcribed as `full-review`
+  entries in `content/reviews/history.json`, word for word, marked as a transcription. And the
+  lapse itself is recorded as one `consequence` entry per affected week, naming the pictures and
+  the lessons, so no week can look "never reviewed" because its pictures improved.
+- The review-state test now states the rule ADR-048 creates: an accepted week whose lessons are
+  at `review` must carry a consequence entry dated on or after the accepting pass.
+- Review packages and the pgTAP reference test regenerated. The data migration waits for B4 so
+  one migration carries the whole set.
+
+**Checks** — content validation, unit (374) PASS on the working tree.
+
+**Remains** — B3 (3ème set), B4, QA.

@@ -74,6 +74,12 @@ Relecture finale. Les deux corrections de la passe précédente sont vérifiées
 
 **Suites données :** L’étai en anglais devient « Tell me where the object is: in front of you, behind you, or beside you. Don’t point. », qui reprend directement la consigne française et se comprend sans détour. Ce changement est rédactionnel : il ne touche ni la consigne française, ni la guidance adulte, ni l’objectif, ni la durée, ni le matériel, ni le lexique. La semaine est acceptée et ses 20 leçons passent en « approuvée ».
 
+### 2026-09-22 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
+
+Mise à niveau visuelle de septembre (ADR-048) : des images ont été redessinées (comptine-mains, corps-main, corps-pied, corps-tete, corps-ventre, comptine-bonjour, comptine-compter, histoire-seau-lisa, histoire-tika, histoire-pluie, bonhomme-articule, objet-cuillere, objet-porte, objet-seau, objet-table, objet-chaise). L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 1 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-lang-07.
+
+**Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (npm run review:visual, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
+
 ## Jour 5 — 2026-09-07
 
 **Durée totale : 35 min** · 4 séances · jour 5 du rythme
@@ -746,7 +752,7 @@ l’autre — l’appareil est alors le sien._
 
 _Deuxième corpus de mots : nommer les objets et les pièces de la maison._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Faites le tour de la maison en nommant. Chaque mot est dit avec son article, répété, puis employé dans une phrase courte.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

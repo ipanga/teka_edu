@@ -1,10 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" fill="none">
-  <g stroke="#1f2937" stroke-width="6" stroke-linejoin="round">
-      <path d="M44 96 h44 v44 a22 22 0 0 1 -44 0 z" fill="#fffdf7"/>
-      <rect x="46" y="56" width="14" height="46" rx="7" fill="#fffdf7"/>
-      <rect x="64" y="46" width="14" height="56" rx="7" fill="#fffdf7"/>
-      <path d="M112 96 h44 v44 a22 22 0 0 1 -44 0 z" fill="#fffdf7"/>
-      <rect x="122" y="46" width="14" height="56" rx="7" fill="#fffdf7"/>
-      <rect x="140" y="56" width="14" height="46" rx="7" fill="#fffdf7"/>
-    </g>
+  <ellipse cx="100" cy="182" rx="82" ry="8" fill="#efe9dc"/>
+      <rect x="39.12" y="132.32" width="25.76" height="27.6" rx="7.36" fill="#7a4c2e" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <line x1="34.06" y1="97.36" x2="34.06" y2="67.92" stroke="#2b2a33" stroke-width="22.12" stroke-linecap="round"/><line x1="34.06" y1="97.36" x2="34.06" y2="67.92" stroke="#9a6540" stroke-width="10.120000000000001" stroke-linecap="round"/>
+      <line x1="46.019999999999996" y1="97.36" x2="46.019999999999996" y2="56.879999999999995" stroke="#2b2a33" stroke-width="22.12" stroke-linecap="round"/><line x1="46.019999999999996" y1="97.36" x2="46.019999999999996" y2="56.879999999999995" stroke="#9a6540" stroke-width="10.120000000000001" stroke-linecap="round"/>
+      <line x1="57.980000000000004" y1="97.36" x2="57.980000000000004" y2="51.36" stroke="#2b2a33" stroke-width="22.12" stroke-linecap="round"/><line x1="57.980000000000004" y1="97.36" x2="57.980000000000004" y2="51.36" stroke="#9a6540" stroke-width="10.120000000000001" stroke-linecap="round"/>
+      <line x1="69.94" y1="97.36" x2="69.94" y2="55.04" stroke="#2b2a33" stroke-width="22.12" stroke-linecap="round"/><line x1="69.94" y1="97.36" x2="69.94" y2="55.04" stroke="#9a6540" stroke-width="10.120000000000001" stroke-linecap="round"/>
+      <line x1="72.24000000000001" y1="112.08" x2="86.96000000000001" y2="91.84" stroke="#2b2a33" stroke-width="22.12" stroke-linecap="round"/><line x1="72.24000000000001" y1="112.08" x2="86.96000000000001" y2="91.84" stroke="#9a6540" stroke-width="10.120000000000001" stroke-linecap="round"/>
+      <rect x="28.08" y="90" width="47.84" height="49.68" rx="16.560000000000002" fill="#7a4c2e" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <rect x="31.08" y="93" width="41.84" height="36.8" rx="14.72" fill="#9a6540"/>
+      <rect x="135.12" y="132.32" width="25.76" height="27.6" rx="7.36" fill="#7a4c2e" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <line x1="165.94" y1="97.36" x2="165.94" y2="67.92" stroke="#2b2a33" stroke-width="22.12" stroke-linecap="round"/><line x1="165.94" y1="97.36" x2="165.94" y2="67.92" stroke="#9a6540" stroke-width="10.120000000000001" stroke-linecap="round"/>
+      <line x1="153.98" y1="97.36" x2="153.98" y2="56.879999999999995" stroke="#2b2a33" stroke-width="22.12" stroke-linecap="round"/><line x1="153.98" y1="97.36" x2="153.98" y2="56.879999999999995" stroke="#9a6540" stroke-width="10.120000000000001" stroke-linecap="round"/>
+      <line x1="142.02" y1="97.36" x2="142.02" y2="51.36" stroke="#2b2a33" stroke-width="22.12" stroke-linecap="round"/><line x1="142.02" y1="97.36" x2="142.02" y2="51.36" stroke="#9a6540" stroke-width="10.120000000000001" stroke-linecap="round"/>
+      <line x1="130.06" y1="97.36" x2="130.06" y2="55.04" stroke="#2b2a33" stroke-width="22.12" stroke-linecap="round"/><line x1="130.06" y1="97.36" x2="130.06" y2="55.04" stroke="#9a6540" stroke-width="10.120000000000001" stroke-linecap="round"/>
+      <line x1="127.75999999999999" y1="112.08" x2="113.03999999999999" y2="91.84" stroke="#2b2a33" stroke-width="22.12" stroke-linecap="round"/><line x1="127.75999999999999" y1="112.08" x2="113.03999999999999" y2="91.84" stroke="#9a6540" stroke-width="10.120000000000001" stroke-linecap="round"/>
+      <rect x="124.08" y="90" width="47.84" height="49.68" rx="16.560000000000002" fill="#7a4c2e" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <rect x="127.08" y="93" width="41.84" height="36.8" rx="14.72" fill="#9a6540"/>
 </svg>

@@ -74,6 +74,12 @@ Confirmation finale. La première relecture complète avait demandé les correct
 
 **Suites données :** Aucune. La semaine est acceptée. Les 20 leçons passent de « en relecture » à « approuvée », avec une empreinte recalculée sous la définition courante — contenu de la leçon et des activités, consignes, guidance, étais en anglais, matériel, empreintes des images et du texte résolu des histoires. L’historique est conservé tel quel : les deux passes précédentes restent « acceptée avec modifications », et cette relecture reste assistée par IA — aucune personne qui enseigne à cet âge n’a lu ce contenu.
 
+### 2026-09-22 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
+
+Mise à niveau visuelle de septembre (ADR-048) : des images ont été redessinées (comptine-mains, corps-main, corps-pied, corps-tete, corps-ventre, comptine-bonjour, comptine-compter, histoire-seau-lisa, histoire-tika, histoire-pluie, bonhomme-articule, objet-cuillere, objet-porte, objet-seau, objet-table, objet-chaise). L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 2 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-art-04, m3-world-04.
+
+**Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (npm run review:visual, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
+
 ## Jour 10 — 2026-09-14
 
 **Durée totale : 35 min** · 4 séances · jour 10 du rythme
@@ -689,7 +695,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Retrouver et nommer les endroits du corps qui plient, et s’en servir._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Reprise du jour 1, avec plus de précision. On nomme, puis on bouge seulement la partie nommée.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -716,7 +722,7 @@ _Retrouver et nommer les endroits du corps qui plient, et s’en servir._
 - **Aide en anglais (optionnelle) :** « Draw a person with bent arms. »
 - **Images montrées à l'enfant (1) :**
 
-  - `bonhomme-articule` — Un bonhomme dessiné avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
+  - `bonhomme-articule` — Un bonhomme dessiné au crayon sur une feuille, avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
 
 - **Objectifs travaillés :** `WORLD-S01-C02-O08` Identifier et nommer quelques articulations et la segmentation des membres. ; `WORLD-S01-C02-O09` Se représenter avec un corps articulé en mouvement.
 
@@ -1012,7 +1018,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Fabriquer des sons avec son corps et des objets, et les organiser._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** On fabrique la pluie avec les mains et les objets de la maison. Cherchez les sons avant de les organiser.
 - **Objectifs enseignés :**
   - `ART-S02-C02-O08` — Créer un paysage sonore en répondant à une consigne simple avec son corps, des objets ou des instruments. _(source : programme-2026)_
