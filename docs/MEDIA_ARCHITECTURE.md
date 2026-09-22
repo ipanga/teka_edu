@@ -84,6 +84,11 @@ The SVGs are committed. The generator exists for consistency and audit, exactly 
 
 ## Visual style
 
+The illustration system — one ink, flat fills with a single shade, a warm brown skin for people
+and body parts, a soft ground under objects, faces on people and animals only, and the palette —
+is defined in [`september-illustration-upgrade-plan.md`](september-illustration-upgrade-plan.md)
+and applied by `tools/media/build.ts`. The rules that predate it still hold:
+
 Flat, simple, high-contrast, uncluttered: a shape is a shape, an object is recognisable in one
 glance at arm's length on a phone. A single restrained palette, no gradients, no faces on
 objects, no clutter that competes with the learning target. Culturally neutral or DRC-relevant —
@@ -120,7 +125,8 @@ only route, and never autoplaying.
 
 Pictures do not move. The four animations the product allows are CSS keyframes in
 `app/globals.css`, all switched off by `prefers-reduced-motion`, and none of them attaches to
-media (ADR-045).
+media (ADR-045). A gallery of pictures arrives one after another (`teka-stagger`), which is the
+rise with a delay per item, not a fifth effect.
 
 ## Cost
 

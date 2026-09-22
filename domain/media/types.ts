@@ -165,6 +165,30 @@ export function findAudio(assets: readonly AudioAsset[], id: string): AudioAsset
   return assets.find((asset) => asset.id === id);
 }
 
+/**
+ * The recording of one taught word, found by what it says rather than by an id.
+ *
+ * A vocabulary entry is `{ fr, en }` in the content, and the content is approved text: adding an
+ * `audioId` to every entry would change the digest of every approved lesson to attach a sound
+ * that does not exist yet. So a `pronunciation` asset is matched on its transcript instead — the
+ * exact word, compared without case, surrounding space or the article's typographic apostrophe.
+ * When the word is recorded, it lights up in every lesson that teaches it, with no content change
+ * (ADR-046).
+ */
+export function pronunciationFor(
+  word: string,
+  assets: readonly AudioAsset[],
+): AudioAsset | undefined {
+  const wanted = canonicalWord(word);
+  return assets.find(
+    (asset) => asset.kind === "pronunciation" && canonicalWord(asset.transcript) === wanted,
+  );
+}
+
+function canonicalWord(word: string): string {
+  return word.trim().toLocaleLowerCase("fr").replaceAll("’", "'").replace(/\s+/g, " ");
+}
+
 /** Ids are unique, nothing is silent, and every id a text names exists. */
 export function checkAudio(
   assets: readonly AudioAsset[],

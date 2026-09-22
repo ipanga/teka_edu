@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { SessionDay } from "@/lib/programme/session-view";
-import { ActivityRenderer } from "./ActivityRenderer";
+import { ActivityRenderer, ChildViewContext } from "./ActivityRenderer";
 
 /**
  * The parent runs the session from here: prepare, then one activity at a time, with a break when
@@ -375,16 +375,18 @@ export function SessionRunner({ session, levelSlug }: { session: SessionDay; lev
       </h2>
 
       {/* ---- the child's part ---------------------------------------------------------------- */}
-      <div className="teka-rise flex flex-col gap-4 rounded-3xl bg-white px-5 py-5 shadow-sm">
+      <div className="teka-rise flex flex-col gap-4 rounded-3xl bg-white px-5 py-5 shadow-sm sm:px-6">
         <p className="text-sm font-semibold tracking-wide text-emerald-800 uppercase">
           La part de l’enfant
         </p>
-        <blockquote className="text-xl leading-relaxed">« {activity.childInstruction} »</blockquote>
+        <blockquote className="text-xl leading-relaxed sm:text-2xl">
+          « {activity.childInstruction} »
+        </blockquote>
         <ActivityRenderer activity={activity} />
         <button
           type="button"
           onClick={() => setChildView(true)}
-          className="w-fit rounded-xl border-2 border-emerald-700 px-4 py-2 text-base font-medium text-emerald-800"
+          className="w-fit rounded-xl border-2 border-emerald-700 px-4 py-2 text-base font-medium text-emerald-800 transition hover:bg-emerald-50"
         >
           Montrer à l’enfant
         </button>
@@ -524,7 +526,10 @@ function ChildScreen({
           <p className="text-center text-2xl leading-relaxed font-semibold sm:text-3xl lg:text-4xl">
             « {activity.childInstruction} »
           </p>
-          <div className="flex-1">{open && <ActivityRenderer activity={activity} />}</div>
+          {/* Pictures grow one step on the child's own surface (ChildViewContext). */}
+          <ChildViewContext.Provider value={true}>
+            <div className="flex-1">{open && <ActivityRenderer activity={activity} />}</div>
+          </ChildViewContext.Provider>
         </div>
         <button
           type="button"

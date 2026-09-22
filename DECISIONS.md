@@ -1361,3 +1361,47 @@ re-examine content the AI review already corrected, but it may.
 What this does **not** change: no LLM enters the Teka Edu runtime (ADR-002). The review happens
 outside the running product, on a document, and the application stays deterministic with no AI
 SDK, endpoint or credential.
+
+---
+
+## ADR-048 — A redrawn picture lapses approvals, and the lapse is reconfirmed rather than bypassed
+
+**Status:** Accepted · **Date:** 2026-09-22 · **Extends:** ADR-042, ADR-047 · **Context:** the September visual upgrade (`docs/september-illustration-upgrade-plan.md`)
+
+**Context:** Every September lesson of 1ère and 3ème maternelle is `approved`, and since ISSUE-026
+an approval's digest covers the kind, the description and the **bytes** of every picture the
+lesson shows. That was deliberate: `histoire-seau-lisa` once kept its id while the drawing changed
+what a child was asked to find. The owner now asks for the pictures themselves to be redrawn —
+warmer, clearer, professionally consistent — without touching the pedagogy. Any redraw therefore
+lapses the approval of every lesson that shows it: 39 lessons in 1ère, 48 in 3ème.
+
+Three ways out were considered. Taking picture bytes back out of the digest would reopen the
+exact hole ISSUE-026 closed. Re-stamping the digests on the grounds that "only the style changed"
+would be a rubber stamp the mechanism exists to prevent: the digest cannot tell a restyle from a
+change of subject, and neither can a script. Leaving the pictures alone would leave the product
+with the drawings the owner has seen and found wanting.
+
+**Decision:** honour the lapse, and make the reconfirmation cheap.
+
+- **A redraw goes back to `review` in the same commit** that changes the bytes. Content
+  validation forces this; nothing is done to avoid it.
+- **The runtime does not gate on status** — `isTeachable` exists and is unused, and the daily
+  plan schedules every authored lesson — so the live product keeps serving the lessons with the
+  new pictures. What lapses is the claim, not the session.
+- **A visual reconfirmation package** (`npm run review:visual`) is generated per level: the
+  changed assets with their old and new description, a before/after contact sheet rendered from
+  the SVGs at 72, 128 and 256 px, and the list of lessons whose approval lapsed. It is submitted
+  to the same AI-assisted reviewer as every other package (ADR-047).
+- **Restoration is the existing path.** The owner records the outcome in
+  `content/reviews/history.json` as a `full-review` per week, and `scripts/approve-week.ts`
+  recomputes every digest — never copies one — under the current definition.
+- **Shapes are not redrawn.** The eight shape assets are already right, and re-inking them for
+  consistency would lapse lessons for no pedagogical gain.
+- **UX, motion and audio plumbing change no content** and live on their own branch, so they can
+  merge without waiting for anyone.
+
+**Consequences:** for a while the record says `review` on lessons a reviewer accepted and whose
+words did not move, and the review history says why. That is the honest state: the child sees a
+different picture than the reviewer saw. The cost is one review round per level, with a contact
+sheet a reviewer can judge in minutes. The benefit is that the gate keeps meaning what ADR-035
+said it means.

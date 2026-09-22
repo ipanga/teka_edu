@@ -43,8 +43,9 @@ Decisions).
 
 ## Last Checkpoint
 
-2026-09-22 — B0 started: previous task archived to `docs/work/archive/2026-09-beta-0-1-release.md`;
-tracking system being written (state file, audit generator, plan, progress, open items).
+2026-09-22 — **B0 and B1 done** on `feat/september-visual-ux`: tracking system, audit, UX
+frame (stage, cards, rhymes, stories, off-screen panel, child screen), motion, audio plumbing,
+ADR-048, docs. All checks green. Next: B2 on `feat/september-illustrations`.
 
 ## Scope
 
@@ -87,16 +88,17 @@ tracking system being written (state file, audit generator, plan, progress, open
 ## Completed
 
 - [x] Previous task archived; branch created from `develop` at `087fc06`.
+- [x] B0 — tracking system: state file, audit generator, plan, progress, open items, docs table
+      (`6d04196`).
+- [x] B1 — UX frame: picture stage, word cards, rhyme/story layout, off-screen frame, child
+      screen, motion (staggered entrances, page turn), pronunciation plumbing + tests, ADR-048.
 
 ## In Progress
 
-- [ ] B0 — tracking system: state file, audit generator, plan, progress, open items, docs table.
+- [ ] B2 — illustrations, 1ère set, on `feat/september-illustrations` (not yet created).
 
 ## Remaining
 
-- [ ] B1 — UX frame: picture stage, word cards, rhyme/story layout, off-screen frame, child
-      screen, motion (staggered entrances, page turn), pronunciation plumbing + tests.
-- [ ] B2 — illustrations, 1ère set: body parts, hands, the five 1ère rhymes and two stories.
 - [ ] B3 — illustrations, 3ème set: stories, rhymes, animals, plant.
 - [ ] B4 — objects refined (shade + ground), contact sheet, visual reconfirmation package,
       lapses, data migration, review packages regenerated.
@@ -105,18 +107,18 @@ tracking system being written (state file, audit generator, plan, progress, open
 
 ## Validation State
 
-| Check              | Result  | At                        |
-| ------------------ | ------- | ------------------------- |
-| format             | NOT RUN |                           |
-| lint               | NOT RUN |                           |
-| typecheck          | NOT RUN |                           |
-| unit tests         | PASS    | `087fc06` — baseline only |
-| content validation | NOT RUN |                           |
-| database tests     | N/A     | no schema change in B0–B1 |
-| build              | NOT RUN |                           |
-| E2E                | NOT RUN |                           |
-| Docker             | N/A     | no Dockerfile change      |
-| secret scans       | N/A     | no secret touched         |
+| Check              | Result | At                        |
+| ------------------ | ------ | ------------------------- |
+| format             | PASS   | working tree, B1          |
+| lint               | PASS   | working tree, B1          |
+| typecheck          | PASS   | working tree, B1          |
+| unit tests         | PASS   | working tree, B1 — 374    |
+| content validation | PASS   | working tree, B1 — 31     |
+| database tests     | N/A    | no schema change in B0–B1 |
+| build              | PASS   | working tree, B1          |
+| E2E                | PASS   | working tree, B1 — 30     |
+| Docker             | N/A    | no Dockerfile change      |
+| secret scans       | N/A    | no secret touched         |
 
 ## Database State
 
@@ -129,7 +131,8 @@ tracking system being written (state file, audit generator, plan, progress, open
 
 ## Git State
 
-- `feat/september-visual-ux` created from `develop` at `087fc06`; nothing committed yet.
+- `feat/september-visual-ux` from `develop` at `087fc06`: B0 at `6d04196`, B1 committed next;
+  pushed, Draft PR open (see `gh pr list`).
 
 ## Blockers
 
@@ -143,10 +146,15 @@ visual reconfirmation package is submitted.
 
 ## Exact Resume Point
 
-Batch B0. Write `docs/september-illustration-state.json` and `scripts/visual-audit.ts`, run
-`npm run visual:audit`, then write the plan, progress and open-items documents. Next action after
-B0: commit `chore: september visual upgrade — tracking system and audit`, then start B1 in
-`components/session/ActivityRenderer.tsx`.
+Batch B2. Create `feat/september-illustrations` from `feat/september-visual-ux`. In
+`tools/media/build.ts`, introduce the style primitives (palette with shades, `ground()`,
+`face()`, a skin tone) and redraw the 1ère set in this order: `comptine-mains`, `corps-main`,
+`corps-pied`, `corps-tete`, `corps-ventre`, `comptine-bonjour`, `histoire-seau-lisa`,
+`histoire-tika`, `histoire-pluie`, `bonhomme-articule`, then refine `objet-cuillere`,
+`objet-porte`, `objet-seau`, `objet-table`, `objet-chaise`. Run `npx tsx tools/media/build.ts`,
+render a contact sheet, look at it, then `npm run content:validate` — it will list the lapsed
+lessons; set those to `review` with `review: null`, regenerate `npm run review:package`, record
+each asset in `decisions.progress.assetsDone`, `npm run visual:audit`, commit.
 
 ## Resume Verification
 

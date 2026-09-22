@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { createContext, useContext, useRef, useState } from "react";
 import type { RendererFamily } from "@/domain/lessons/renderers";
-import type { SessionActivity, SessionMedia, SessionText } from "@/lib/programme/session-view";
+import type { SessionActivity, SessionAudio, SessionMedia } from "@/lib/programme/session-view";
 
 /**
  * One component per renderer family, not one per activity kind (ADR-036): fifteen kinds share ten
@@ -18,15 +18,35 @@ import type { SessionActivity, SessionMedia, SessionText } from "@/lib/programme
  *
  * Interaction exists only where tapping genuinely teaches: choosing the named shape, showing a
  * quantity, pairing, sorting. Nothing here scores a child; a wrong tap invites another try.
+ *
+ * Visual patterns (docs/september-illustration-upgrade-plan.md): every picture sits on a tinted
+ * **stage**, so a card with one picture is furnished rather than empty; lists of cards, lines and
+ * steps arrive once, in sequence; a page turn rises once. All of it is off under
+ * `prefers-reduced-motion` (ADR-045). A recording, where one exists, is offered behind a tap and
+ * never plays on its own (ADR-046).
  */
 
 // ---- shared pieces ---------------------------------------------------------------------------
 
-function Picture({ media, size = "md" }: { media: SessionMedia; size?: "sm" | "md" | "lg" }) {
-  const px = size === "lg" ? 192 : size === "md" ? 128 : 72;
-  // Grows with the screen: the same picture should be readable on a phone and across a room.
-  const width =
-    size === "lg" ? "max-w-48 sm:max-w-64" : size === "md" ? "max-w-32 sm:max-w-40" : "max-w-20";
+/**
+ * True inside « Montrer à l'enfant », where the device is the child's and pictures grow one step.
+ * A context rather than a prop threaded through ten families: the size is a property of the
+ * surface, not of any one activity.
+ */
+export const ChildViewContext = createContext(false);
+
+type PictureSize = "sm" | "md" | "lg";
+
+/** Pixel hints and the width classes that let a picture grow with the screen. */
+const PICTURE: Record<PictureSize, { px: number; parent: string; child: string }> = {
+  sm: { px: 80, parent: "max-w-20 sm:max-w-24", child: "max-w-24 sm:max-w-28" },
+  md: { px: 144, parent: "max-w-36 sm:max-w-44", child: "max-w-44 sm:max-w-52" },
+  lg: { px: 256, parent: "max-w-60 sm:max-w-72", child: "max-w-72 sm:max-w-96" },
+};
+
+function Picture({ media, size = "md" }: { media: SessionMedia; size?: PictureSize }) {
+  const childView = useContext(ChildViewContext);
+  const { px, parent, child } = PICTURE[size];
   return (
     // eslint-disable-next-line @next/next/no-img-element -- SVG from public/, no optimisation needed
     <img
@@ -36,8 +56,51 @@ function Picture({ media, size = "md" }: { media: SessionMedia; size?: "sm" | "m
       height={px}
       loading="lazy"
       decoding="async"
-      className={`h-auto w-full ${width}`}
+      className={`h-auto w-full ${childView ? child : parent}`}
     />
+  );
+}
+
+/**
+ * The tinted panel a picture sits on. It takes the picture's width and adds a little air, so the
+ * same component frames a 80 px counter and a 384 px story picture without knowing which.
+ */
+function Stage({
+  children,
+  size = "md",
+  className = "",
+}: {
+  children: React.ReactNode;
+  size?: PictureSize;
+  className?: string;
+}) {
+  const padding = size === "lg" ? "p-5 sm:p-7" : size === "md" ? "p-4" : "p-2";
+  return <div className={`teka-stage ${padding} ${className}`}>{children}</div>;
+}
+
+/** One picture, centred on a large stage: the story picture, the thing to look at. */
+function Showcase({ media }: { media: SessionMedia }) {
+  return (
+    <div className="flex justify-center">
+      <Stage size="lg" className="w-full max-w-md">
+        <Picture media={media} size="lg" />
+      </Stage>
+    </div>
+  );
+}
+
+/** Several pictures, each on its own small stage, arriving in sequence. */
+function Gallery({ media, size = "md" }: { media: readonly SessionMedia[]; size?: PictureSize }) {
+  return (
+    <ul className="flex flex-wrap justify-center gap-3" aria-label="Images">
+      {media.map((item, index) => (
+        <li key={item.id} className="teka-stagger" style={{ "--i": index } as React.CSSProperties}>
+          <Stage size={size}>
+            <Picture media={item} size={size} />
+          </Stage>
+        </li>
+      ))}
+    </ul>
   );
 }
 
@@ -67,26 +130,35 @@ function Feedback({ state, hint }: { state: "idle" | "retry" | "done"; hint: str
 
 /**
  * Says, plainly, that this activity happens away from the screen. When there is nothing to put
- * inside it, it is a single line rather than an empty dashed box: an empty frame looks broken,
- * and a parent should not wonder whether something failed to load.
+ * inside it, it is a single line rather than an empty box: an empty frame looks broken, and a
+ * parent should not wonder whether something failed to load.
  *
  * When there *is* something inside — a picture to look at while the adult reads — the label says
  * so instead of telling the parent to put down a device it is about to ask them to hold up. The
  * activity is still off-screen in the sense that matters: the child does nothing on it.
+ *
+ * A soft, filled panel rather than a dashed outline: the dashes read as "failed to load".
  */
-function OffScreen({ children }: { children?: React.ReactNode }) {
+function OffScreen({
+  children,
+  withPicture = false,
+}: {
+  children?: React.ReactNode;
+  /** The frame holds a picture to look at together, not just the parent's aide-mémoire. */
+  withPicture?: boolean;
+}) {
   const empty = children === null || children === undefined || children === false;
   const label = (
     <p className="text-sm font-semibold tracking-wide text-stone-500 uppercase">
-      {empty
-        ? "Posez l’écran : cette activité se fait sans lui"
-        : "Regardez l’image ensemble ; l’enfant n’a rien à faire sur l’écran"}
+      {withPicture && !empty
+        ? "Regardez l’image ensemble ; l’enfant n’a rien à faire sur l’écran"
+        : "Posez l’écran : cette activité se fait sans lui"}
     </p>
   );
   if (empty) return label;
   return (
-    <div className="rounded-2xl border-2 border-dashed border-stone-300 px-5 py-4">
-      <div className="mb-2">{label}</div>
+    <div className="rounded-2xl bg-quiet px-5 py-4">
+      <div className="mb-3">{label}</div>
       {children}
     </div>
   );
@@ -95,10 +167,15 @@ function OffScreen({ children }: { children?: React.ReactNode }) {
 const asStrings = (value: unknown): string[] =>
   Array.isArray(value) ? value.filter((item): item is string => typeof item === "string") : [];
 
+/** A list of things to say or do, arriving one after another. */
 const list = (items: readonly string[]) => (
   <ul className="flex flex-col gap-2">
-    {items.map((item) => (
-      <li key={item} className="rounded-xl bg-white/70 px-4 py-3 text-lg shadow-sm">
+    {items.map((item, index) => (
+      <li
+        key={item}
+        className="teka-stagger rounded-xl bg-white px-4 py-3 text-lg shadow-sm"
+        style={{ "--i": index } as React.CSSProperties}
+      >
         {item}
       </li>
     ))}
@@ -107,6 +184,67 @@ const list = (items: readonly string[]) => (
 
 /** The word a picture is for: the first tag a lesson would use, e.g. "carré". */
 const labelOf = (media: SessionMedia) => media.tags[0] ?? media.alt;
+
+/**
+ * A recording, offered and never forced: it plays on a tap, never on arrival, and the words are
+ * on the page anyway. Nothing here is the only route to the content (ADR-046). The control
+ * exists only when the asset does, so there is never a button that does nothing.
+ */
+function Listen({
+  audio,
+  label,
+  compact = false,
+}: {
+  audio: SessionAudio;
+  /** What the button says: « Écouter l’histoire », « Écouter le mot »… */
+  label: string;
+  /** A small control beside a word, rather than a full-width one under a story. */
+  compact?: boolean;
+}) {
+  const [playing, setPlaying] = useState(false);
+  const element = useRef<HTMLAudioElement | null>(null);
+
+  const toggle = () => {
+    const player = element.current;
+    if (player === null) return;
+    if (playing) {
+      player.pause();
+      player.currentTime = 0;
+      setPlaying(false);
+      return;
+    }
+    void player.play().then(
+      () => setPlaying(true),
+      // A browser that refuses to play is not an error the child should see.
+      () => setPlaying(false),
+    );
+  };
+
+  return (
+    <span className="inline-flex items-center gap-2">
+      <button
+        type="button"
+        onClick={toggle}
+        aria-pressed={playing}
+        className={
+          compact
+            ? "rounded-full border-2 border-stone-300 px-3 py-1 text-sm font-medium text-stone-700"
+            : "rounded-xl border-2 border-stone-300 px-4 py-2 text-base font-medium"
+        }
+      >
+        {playing ? "Arrêter" : label}
+      </button>
+      {/* No autoplay, no loop: the parent decides when sound happens. */}
+      <audio
+        ref={element}
+        src={audio.url}
+        preload="none"
+        onEnded={() => setPlaying(false)}
+        aria-label={audio.transcript.slice(0, 80)}
+      />
+    </span>
+  );
+}
 
 // ---- interactions ----------------------------------------------------------------------------
 
@@ -139,6 +277,7 @@ function ChooseOne({
    * comparison is on what the picture *is* — its first tag — and falls back to the id when a
    * picture has no tags.
    */
+  const childView = useContext(ChildViewContext);
   const kindOf = (item: SessionMedia) => item.tags[0] ?? item.id;
   const isSameKind = (a: SessionMedia, b: SessionMedia) => kindOf(a) === kindOf(b);
 
@@ -171,7 +310,7 @@ function ChooseOne({
     <div className="flex flex-col gap-4">
       <Prompt>Montre : {nameOf(wanted)}</Prompt>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        {media.map((item) => {
+        {media.map((item, index) => {
           const isAnswer = isSameKind(item, wanted);
           return (
             <button
@@ -179,12 +318,15 @@ function ChooseOne({
               type="button"
               onClick={() => choose(item)}
               aria-label={item.alt}
-              className={`flex min-h-32 items-center justify-center rounded-2xl border-4 bg-white p-3 transition sm:min-h-40 ${
+              style={{ "--i": index } as React.CSSProperties}
+              className={`teka-stagger flex items-center justify-center rounded-3xl border-4 bg-stage p-3 transition ${
+                childView ? "min-h-40 sm:min-h-52" : "min-h-32 sm:min-h-40"
+              } ${
                 state === "done" && isAnswer
                   ? "teka-pop border-emerald-600"
                   : revealed && isAnswer
                     ? "teka-attention border-amber-500"
-                    : "border-stone-200 hover:border-stone-300"
+                    : "border-transparent hover:border-stone-300"
               }`}
             >
               <Picture media={item} />
@@ -219,11 +361,18 @@ function ChooseOne({
  */
 function CountTogether({ upTo, media }: { upTo: number; media: SessionMedia | undefined }) {
   const [counted, setCounted] = useState(0);
+  const childView = useContext(ChildViewContext);
   const total = Math.min(Math.max(upTo, 1), 20);
+  // On the child's own surface the tiles are the whole screen: bigger, and centred.
+  const tile = childView ? "h-24 w-24 sm:h-32 sm:w-32" : "h-20 w-20 sm:h-24 sm:w-24";
   return (
-    <div className="flex flex-col gap-4">
+    <div className={`flex flex-col gap-4 ${childView ? "items-center text-center" : ""}`}>
       <Prompt>Touche chaque objet en comptant à voix haute.</Prompt>
-      <div className="flex flex-wrap gap-2" aria-label={`${total} objets à compter`} role="group">
+      <div
+        className={`flex flex-wrap gap-2 rounded-3xl bg-stage p-3 ${childView ? "justify-center" : ""}`}
+        aria-label={`${total} objets à compter`}
+        role="group"
+      >
         {Array.from({ length: total }, (_, index) => {
           const done = index < counted;
           return (
@@ -232,8 +381,9 @@ function CountTogether({ upTo, media }: { upTo: number; media: SessionMedia | un
               type="button"
               onClick={() => setCounted(index + 1)}
               aria-label={`Objet ${index + 1}`}
-              className={`flex h-20 w-20 items-center justify-center rounded-2xl border-4 transition sm:h-24 sm:w-24 ${
-                done ? "teka-pop border-emerald-600 bg-emerald-50" : "border-stone-200 bg-white"
+              style={{ "--i": index } as React.CSSProperties}
+              className={`teka-stagger flex items-center justify-center rounded-2xl border-4 transition ${tile} ${
+                done ? "teka-pop border-emerald-600 bg-emerald-50" : "border-transparent bg-white"
               }`}
             >
               {media ? (
@@ -250,7 +400,7 @@ function CountTogether({ upTo, media }: { upTo: number; media: SessionMedia | un
       <p
         role="status"
         key={counted}
-        className={`text-3xl font-bold ${counted > 0 ? "teka-pop" : ""}`}
+        className={`font-bold ${childView ? "text-5xl sm:text-6xl" : "text-4xl"} ${counted > 0 ? "teka-pop" : ""}`}
       >
         {counted === 0 ? "…" : counted === total ? `${counted} en tout. Bravo !` : counted}
       </p>
@@ -288,15 +438,16 @@ function SortIntoGroups({
       </Prompt>
       {remaining.length > 0 ? (
         <div className="flex flex-wrap gap-3">
-          {remaining.map((item) => (
+          {remaining.map((item, index) => (
             <button
               key={item.id}
               type="button"
               onClick={() => setPicked(item.id)}
               aria-label={item.alt}
               aria-pressed={picked === item.id}
-              className={`rounded-2xl border-4 bg-white p-2 ${
-                picked === item.id ? "border-emerald-600" : "border-stone-200"
+              style={{ "--i": index } as React.CSSProperties}
+              className={`teka-stagger rounded-2xl border-4 bg-stage p-2 ${
+                picked === item.id ? "border-emerald-600" : "border-transparent"
               }`}
             >
               <Picture media={item} size="sm" />
@@ -304,7 +455,7 @@ function SortIntoGroups({
           ))}
         </div>
       ) : (
-        <p role="status" className="text-lg font-semibold">
+        <p role="status" className="teka-pop text-lg font-semibold">
           Tout est rangé. Bravo !
         </p>
       )}
@@ -321,12 +472,12 @@ function SortIntoGroups({
                 setPlaced((current) => ({ ...current, [picked]: category }));
                 setPicked(null);
               }}
-              className="flex min-h-28 flex-col items-center justify-start gap-2 rounded-2xl border-2 border-dashed border-stone-300 px-3 py-3 text-center disabled:opacity-60"
+              className="flex min-h-28 flex-col items-center justify-start gap-2 rounded-2xl border-2 border-stone-200 bg-quiet px-3 py-3 text-center transition enabled:hover:border-emerald-600 disabled:opacity-60"
             >
               <span className="text-base font-medium">{category}</span>
               <span className="flex flex-wrap justify-center gap-1">
                 {inside.map((item) => (
-                  <span key={item.id} className="w-10">
+                  <span key={item.id} className="teka-pop w-10">
                     <Picture media={item} size="sm" />
                   </span>
                 ))}
@@ -348,6 +499,7 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
   const family: RendererFamily = activity.renderer;
   const media = activity.media;
   const offScreen = activity.mode === "off-screen";
+  const childView = useContext(ChildViewContext);
 
   switch (family) {
     case "audio-narrative":
@@ -361,12 +513,10 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
       const hasBody = media.length > 0 || prompts.length > 0;
       const body = hasBody ? (
         <div className="flex flex-col gap-3">
-          {media.length > 0 && (
-            <div className="flex flex-wrap gap-3">
-              {media.map((item) => (
-                <Picture key={item.id} media={item} />
-              ))}
-            </div>
+          {media.length === 1 ? (
+            <Showcase media={media[0]!} />
+          ) : (
+            media.length > 1 && <Gallery media={media} />
           )}
           {prompts.length > 0 && (
             <>
@@ -376,7 +526,7 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
           )}
         </div>
       ) : null;
-      return offScreen ? <OffScreen>{body}</OffScreen> : body;
+      return offScreen ? <OffScreen withPicture={media.length > 0}>{body}</OffScreen> : body;
     }
 
     case "word-cards":
@@ -386,13 +536,17 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
       const words = asStrings(activity.payload["words"]);
       return (
         <OffScreen>
-          <div className="flex flex-wrap gap-2">
-            {words.map((word) => (
-              <span key={word} className="rounded-xl bg-sky-100 px-4 py-3 text-xl font-medium">
+          <ul className="flex flex-wrap gap-2" aria-label="Mots à jouer">
+            {words.map((word, index) => (
+              <li
+                key={word}
+                className="teka-stagger rounded-xl bg-sky-100 px-4 py-3 text-xl font-medium"
+                style={{ "--i": index } as React.CSSProperties}
+              >
                 {word}
-              </span>
+              </li>
             ))}
-          </div>
+          </ul>
         </OffScreen>
       );
     }
@@ -401,7 +555,7 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
       const upTo = activity.payload["upTo"];
       const objects = activity.payload["objects"];
       return (
-        <div className="flex flex-col gap-3">
+        <div className={`flex flex-col gap-3 ${childView ? "items-center text-center" : ""}`}>
           {typeof objects === "string" && (
             <p className="text-base text-stone-600">Avec : {objects}</p>
           )}
@@ -421,10 +575,11 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
         return (
           <OffScreen>
             <div className="grid gap-2 sm:grid-cols-3">
-              {categories.map((category) => (
+              {categories.map((category, index) => (
                 <div
                   key={category}
-                  className="rounded-2xl border-2 border-dashed border-stone-300 px-4 py-6 text-center text-lg"
+                  className="teka-stagger rounded-2xl bg-white px-4 py-6 text-center text-lg shadow-sm"
+                  style={{ "--i": index } as React.CSSProperties}
                 >
                   {category}
                 </div>
@@ -437,7 +592,11 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
         <OffScreen>
           <ul className="flex flex-col gap-2">
             {pairs.map((pair, index) => (
-              <li key={index} className="rounded-xl bg-white/70 px-4 py-3 text-lg shadow-sm">
+              <li
+                key={index}
+                className="teka-stagger rounded-xl bg-white px-4 py-3 text-lg shadow-sm"
+                style={{ "--i": index } as React.CSSProperties}
+              >
                 {asStrings(pair).join("  →  ")}
               </li>
             ))}
@@ -451,9 +610,7 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
       if (media.length > 1) return <ChooseOne media={media} />;
       return (
         <div className="flex flex-col gap-3">
-          {media.map((item) => (
-            <Picture key={item.id} media={item} size="lg" />
-          ))}
+          {media[0] !== undefined && <Showcase media={media[0]} />}
           {typeof focus === "string" && <Prompt>À observer : {focus}</Prompt>}
         </div>
       );
@@ -462,14 +619,12 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
     case "trace-and-draw": {
       const subject = activity.payload["subject"] ?? activity.payload["pattern"];
       return (
-        <OffScreen>
+        <OffScreen withPicture={media.length > 0}>
           <div className="flex flex-col gap-3">
-            {media.length > 0 && (
-              <div className="flex flex-wrap gap-3">
-                {media.map((item) => (
-                  <Picture key={item.id} media={item} />
-                ))}
-              </div>
+            {media.length === 1 ? (
+              <Showcase media={media[0]!} />
+            ) : (
+              media.length > 1 && <Gallery media={media} />
             )}
             {typeof subject === "string" && <Prompt>À dessiner : {subject}</Prompt>}
           </div>
@@ -482,7 +637,11 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
         <OffScreen>
           <ol className="flex flex-col gap-2">
             {asStrings(activity.payload["moves"]).map((move, index) => (
-              <li key={move} className="flex items-center gap-3 text-lg">
+              <li
+                key={move}
+                className="teka-stagger flex items-center gap-3 text-lg"
+                style={{ "--i": index } as React.CSSProperties}
+              >
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-100 font-semibold">
                   {index + 1}
                 </span>
@@ -496,15 +655,9 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
     case "hands-on": {
       const objects = activity.payload["objects"];
       return (
-        <OffScreen>
+        <OffScreen withPicture={media.length > 0}>
           <div className="flex flex-col gap-3">
-            {media.length > 0 && (
-              <div className="flex flex-wrap gap-3">
-                {media.map((item) => (
-                  <Picture key={item.id} media={item} size="sm" />
-                ))}
-              </div>
-            )}
+            {media.length > 0 && <Gallery media={media} size="sm" />}
             {typeof objects === "string" && <Prompt>Avec : {objects}</Prompt>}
           </div>
         </OffScreen>
@@ -517,6 +670,9 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
  * The taught words, each with its picture — then, once they have been seen, the same pictures
  * without their words so the child can be asked for one by name. Naming a picture is how a word
  * moves from heard to owned; the cards alone only show it.
+ *
+ * A word's recording, when someone has made one, sits beside the word as a small « Écouter »
+ * (ADR-046). Until then the parent says the word, which is the design.
  */
 function WordCards({ activity }: { activity: SessionActivity }) {
   const [playing, setPlaying] = useState(false);
@@ -540,16 +696,26 @@ function WordCards({ activity }: { activity: SessionActivity }) {
 
   return (
     <div className="flex flex-col gap-4">
-      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3" aria-label="Les mots">
         {activity.vocabulary.map((entry, index) => {
           const picture = media[index];
           return (
             <li
               key={entry.fr}
-              className="flex flex-col items-center gap-2 rounded-2xl bg-white px-3 py-4 shadow-sm"
+              className="teka-stagger flex flex-col items-center gap-3 rounded-3xl bg-white p-3 shadow-sm"
+              style={{ "--i": index } as React.CSSProperties}
             >
-              {picture && <Picture media={picture} />}
-              <span className="text-center text-lg font-semibold">{entry.fr}</span>
+              {picture !== undefined ? (
+                <Stage className="w-full">
+                  <Picture media={picture} />
+                </Stage>
+              ) : (
+                <span aria-hidden="true" className="teka-stage h-6 w-full" />
+              )}
+              <span className="text-center text-xl font-bold sm:text-2xl">{entry.fr}</span>
+              {entry.audio !== null && (
+                <Listen audio={entry.audio} label={`Écouter : ${entry.fr}`} compact />
+              )}
             </li>
           );
         })}
@@ -568,64 +734,27 @@ function WordCards({ activity }: { activity: SessionActivity }) {
 }
 
 /**
- * A recording, offered and never forced: it plays on a tap, never on arrival, and the transcript
- * is on the page anyway. Nothing here is the only route to the content (ADR-046).
+ * A story or a rhyme, read by the parent, one page at a time rather than one long scroll. A rhyme
+ * is one page, in a larger size, its lines arriving one after another so the eye follows the
+ * beat. A story turns three lines at a time, and each page rises once.
  */
-function Listen({ audio }: { audio: NonNullable<SessionText["audio"]> }) {
-  const [playing, setPlaying] = useState(false);
-  const element = useRef<HTMLAudioElement | null>(null);
-
-  return (
-    <div className="flex items-center gap-3">
-      <button
-        type="button"
-        onClick={() => {
-          const player = element.current;
-          if (player === null) return;
-          if (playing) {
-            player.pause();
-            player.currentTime = 0;
-            setPlaying(false);
-            return;
-          }
-          void player.play().then(
-            () => setPlaying(true),
-            // A browser that refuses to play is not an error the child should see.
-            () => setPlaying(false),
-          );
-        }}
-        className="rounded-xl border-2 border-stone-300 px-4 py-2 text-base font-medium"
-      >
-        {playing ? "Arrêter" : "Écouter l’histoire"}
-      </button>
-      {/* No autoplay, no loop: the parent decides when sound happens. */}
-      <audio
-        ref={element}
-        src={audio.url}
-        preload="none"
-        onEnded={() => setPlaying(false)}
-        aria-label={audio.transcript.slice(0, 80)}
-      />
-    </div>
-  );
-}
-
-/** A story or a rhyme, read by the parent, one page at a time rather than one long scroll. */
 function Narrative({ activity }: { activity: SessionActivity }) {
   const text = activity.text;
   const questions = asStrings(activity.payload["questions"]);
   const [page, setPage] = useState(0);
   if (text === null) return null;
 
-  const perPage = text.kind === "rhyme" ? text.lines.length : 3;
+  const rhyme = text.kind === "rhyme";
+  const perPage = rhyme ? text.lines.length : 3;
   const pages = Math.ceil(text.lines.length / perPage);
   const shown = text.lines.slice(page * perPage, page * perPage + perPage);
   const last = page >= pages - 1;
+  const picture = text.illustration ?? activity.media[0] ?? null;
 
   return (
     <div className="flex flex-col gap-4">
-      <article className="rounded-2xl bg-white px-5 py-5 shadow-sm">
-        <div className="mb-3 flex items-baseline justify-between gap-3">
+      <article className="rounded-3xl bg-white px-5 py-5 shadow-sm">
+        <div className="mb-4 flex items-baseline justify-between gap-3">
           <h4 className="text-xl font-semibold">{text.title}</h4>
           {pages > 1 && (
             <span className="text-sm text-stone-500">
@@ -633,25 +762,34 @@ function Narrative({ activity }: { activity: SessionActivity }) {
             </span>
           )}
         </div>
-        {page === 0 && (text.illustration !== null || activity.media.length > 0) && (
-          <div className="mb-4 flex justify-center gap-3">
-            {text.illustration !== null ? (
-              <Picture media={text.illustration} size="lg" />
-            ) : (
-              activity.media.map((item) => <Picture key={item.id} media={item} size="lg" />)
-            )}
+        {page === 0 && picture !== null && (
+          <div className="mb-5">
+            <Showcase media={picture} />
           </div>
         )}
-        <div className={text.kind === "rhyme" ? "flex flex-col gap-1" : "flex flex-col gap-3"}>
+        <div
+          key={page}
+          className={rhyme ? "teka-rise flex flex-col gap-2" : "teka-rise flex flex-col gap-3"}
+        >
           {shown.map((line, index) => (
-            <p key={index} className="text-lg leading-relaxed">
+            <p
+              key={index}
+              className={
+                rhyme
+                  ? "teka-stagger text-xl leading-relaxed font-medium sm:text-2xl"
+                  : "text-lg leading-relaxed sm:text-xl"
+              }
+              style={rhyme ? ({ "--i": index } as React.CSSProperties) : undefined}
+            >
               {line}
             </p>
           ))}
         </div>
       </article>
 
-      {text.audio !== null && <Listen audio={text.audio} />}
+      {text.audio !== null && (
+        <Listen audio={text.audio} label={rhyme ? "Écouter la comptine" : "Écouter l’histoire"} />
+      )}
 
       {pages > 1 && (
         <div className="flex items-center gap-3">

@@ -1,13 +1,26 @@
 @import "tailwindcss";
 
+/*
+ * Tokens (docs/september-illustration-upgrade-plan.md).
+ *
+ * `--stage` is the tinted panel every picture sits on: the thing that makes a card look furnished
+ * rather than empty. It is the shade of the paper, not a colour, so it never competes with the
+ * picture and never carries meaning (ADR-042).
+ */
 :root {
   --background: #fffdf7;
   --foreground: #1f2937;
+  --stage: #f4efe4;
+  --stage-strong: #ece5d6;
+  --quiet: #f6f3ec;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-stage: var(--stage);
+  --color-stage-strong: var(--stage-strong);
+  --color-quiet: var(--quiet);
 }
 
 body {
@@ -22,6 +35,15 @@ body {
     sans-serif;
 }
 
+/** The tinted panel behind a picture. Its size follows the picture; it never sets one. */
+.teka-stage {
+  background: var(--stage);
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*
  * Motion (ADR-045).
  *
@@ -32,6 +54,9 @@ body {
  *
  * `prefers-reduced-motion: reduce` disables all of it, which is the whole reason the rules live
  * in one place rather than scattered through components.
+ *
+ * Four keyframes, still. A staggered entrance is `teka-rise` with a delay per item (`--i`), and a
+ * page turn is `teka-rise` on a container keyed by the page: neither adds an effect.
  */
 
 @keyframes teka-rise {
@@ -75,6 +100,15 @@ body {
   animation: teka-rise 320ms ease-out both;
 }
 
+/**
+ * Items of a list arriving one after another, once, on mount: the n-th item waits n × 60 ms.
+ * Capped at 600 ms so a long list never keeps a child waiting for its end.
+ */
+.teka-stagger {
+  animation: teka-rise 320ms ease-out both;
+  animation-delay: min(calc(var(--i, 0) * 60ms), 600ms);
+}
+
 /** Confirmation of a correct choice: a single gentle pulse, no confetti, no sound. */
 .teka-pop {
   animation: teka-pop 260ms ease-out;
@@ -92,6 +126,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .teka-rise,
+  .teka-stagger,
   .teka-pop,
   .teka-nudge,
   .teka-attention {

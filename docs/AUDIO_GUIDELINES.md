@@ -39,22 +39,47 @@ So the architecture exists and the library is empty. That is a decision, not an 
 ## What would have to be recorded
 
 If you want pronunciation audio, this is the whole job — about **twenty minutes of recording** by
-one adult who speaks French comfortably:
+one adult who speaks French comfortably. The per-activity decision (recommended, optional,
+unnecessary) is in `docs/september-illustration-audit.md`; nothing is required anywhere.
 
-**The three September vocabulary corpora** (15 words), each said twice, slowly, with a pause:
+**The taught words**, each said twice, slowly, with a pause. A word's recording is found **by its
+transcript**: the `transcript` of a `pronunciation` asset must be the word exactly as the lesson
+teaches it (case and spacing do not matter), and it then lights up on every card that teaches that
+word, in both classes, with no change to the approved content.
 
-- _École_ — le cahier, le crayon, le sac, la table, la chaise
-- _Maison_ — la porte, la fenêtre, le lit, la marmite, le seau
-- _Marché_ — la tomate, la banane, l'oignon, le panier, la monnaie
+- _1ère maternelle_ — la porte, le seau, la table, la chaise, la main, le pied, la tête,
+  le ventre, un, deux, trois
+- _3ème maternelle, École_ — le cahier, le crayon, le sac, la table, la chaise
+- _3ème maternelle, Maison_ — la porte, la fenêtre, le lit, la marmite, le seau
+- _3ème maternelle, Marché_ — la tomate, la banane, l'oignon, le panier, la monnaie
+- _The four shapes_ — le carré, le rectangle, le triangle, le disque
 
-**The four shapes** — le carré, le rectangle, le triangle, le disque.
+**The rhymes**, read in rhythm (about six minutes in total) — this is where a recording helps most
+after pronunciation, because a rhyme has a beat a reader may not know. Set `audioId` on the text
+in `content/texts/<level>.json`; the control says « Écouter la comptine ».
 
-**Optionally, the six rhymes** read in rhythm (about four minutes in total) — this is where a
-recording helps most after pronunciation, because a rhyme has a beat a reader may not know.
+- _1ère_ — Un, deux, trois, mes mains · Bonjour, petit · Je marche, je m'arrête · Le petit
+  seau · La pluie tombe
+- _3ème_ — Un, deux, trois, je compte · Les formes qui dansent
+
+**Optionally, the stories** (`narration`), for a day the parent cannot read: nine in 3ème, two in
+1ère. The control says « Écouter l'histoire ».
 
 Record in a quiet room on a phone, one file per word, normal speaking voice, no music, no effects.
 Add each file under `public/audio/<folder>/<id>.mp3` and one row in the `audio` list of
-`content/media/registry.json` with its `transcript` and `provenance` naming the speaker.
+`content/media/registry.json` with its `transcript` and `provenance` naming the speaker:
+
+```json
+{
+  "id": "mot-la-main",
+  "kind": "pronunciation",
+  "file": "mots/la-main.mp3",
+  "transcript": "la main",
+  "seconds": 2,
+  "origin": "teka-edu-created",
+  "provenance": "Enregistré par <prénom, rôle> le <date>, pour Teka Edu."
+}
+```
 
 Nothing else needs to change: the player appears when an asset exists.
 
