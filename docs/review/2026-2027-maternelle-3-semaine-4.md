@@ -88,7 +88,7 @@ Passe de confirmation finale de la semaine 4, sur le paquet canonique régénér
 
 ### 2026-09-22 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
 
-Mise à niveau visuelle de septembre (ADR-048) : des images ont été redessinées (comptine-mains, corps-main, corps-pied, corps-tete, corps-ventre, comptine-bonjour, comptine-compter, histoire-seau-lisa, histoire-tika, histoire-pluie, bonhomme-articule, objet-cuillere, objet-porte, objet-seau, objet-table, objet-chaise). L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 1 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-lang-19.
+Mise à niveau visuelle de septembre (ADR-048) : des images ont été redessinées (comptine-mains, corps-main, corps-pied, corps-tete, corps-ventre, comptine-bonjour, comptine-compter, histoire-seau-lisa, histoire-tika, histoire-pluie, bonhomme-articule, objet-cuillere, objet-porte, objet-seau, objet-table, objet-chaise, animal-poussin, animal-poule, animal-chevre, histoire-kumu, histoire-nsimba, histoire-mangue, histoire-bibi, histoire-marche, histoire-cailloux, histoire-malo, comptine-formes, comptine-semaine, comptine-cabri, plante-parties). L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 7 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-lang-15, m3-lang-16, m3-lang-17, m3-lang-18, m3-lang-19, m3-world-05, m3-world-06.
 
 **Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (npm run review:visual, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
 
@@ -112,7 +112,7 @@ l’autre — l’appareil est alors le sien._
 
 _Comprendre ce que ressent un personnage et le comparer à ce qu’on a vécu soi-même._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** L’enfant a vécu sa propre rentrée ce mois-ci. C’est le moment de relier l’histoire à son expérience : c’est exactement ce que le programme demande.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -157,7 +157,7 @@ _Comprendre ce que ressent un personnage et le comparer à ce qu’on a vécu so
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-nsimba` — Un enfant avec un sac devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
+- **Image montrée pendant la lecture :** `histoire-nsimba` — Nsimba, un petit garçon avec son sac d’école sur le dos, devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
 
 - **Questions posées à l’enfant après l’écoute (3) :**
 
@@ -191,7 +191,7 @@ _Comprendre ce que ressent un personnage et le comparer à ce qu’on a vécu so
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-nsimba` — Un enfant avec un sac devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
+- **Image montrée pendant la lecture :** `histoire-nsimba` — Nsimba, un petit garçon avec son sac d’école sur le dos, devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -398,7 +398,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Comparer deux animaux et dire ce qui les distingue._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Comparer, c’est trouver ce qui est pareil et ce qui est différent. Prenez deux animaux bien distincts.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -413,9 +413,9 @@ _Comparer deux animaux et dire ce qui les distingue._
 - **Aide en anglais (optionnelle) :** « Compare two animals: what is the same, what is different? »
 - **Images montrées à l'enfant (3) :**
 
-  - `animal-poule` — Une poule (`public/media/animals/animal-poule.svg`)
-  - `animal-chevre` — Une chèvre (`public/media/animals/animal-chevre.svg`)
-  - `animal-poussin` — Un petit poussin (`public/media/animals/animal-poussin.svg`)
+  - `animal-poule` — Une poule blanche, avec sa crête rouge (`public/media/animals/animal-poule.svg`)
+  - `animal-chevre` — Une chèvre blanche, avec ses cornes et sa barbichette (`public/media/animals/animal-chevre.svg`)
+  - `animal-poussin` — Un petit poussin jaune, tout rond (`public/media/animals/animal-poussin.svg`)
 
 - **Objectifs travaillés :** `WORLD-S01-C01-O08` Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale.
 
@@ -478,7 +478,7 @@ l’autre — l’appareil est alors le sien._
 
 _Entendre que deux mots finissent pareil._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
 - **Conseil au parent :** La rime s’entend à la fin du mot. Exagérez la fin en parlant : « chaaa-TON, maiii-SON. » L’enfant doit d’abord reconnaitre, avant d’inventer.
 - **Objectifs enseignés :**
   - `LANG-S02-C01-O15` — Repérer et produire des rimes et des assonances. _(source : programme-2024-langage)_
@@ -528,7 +528,7 @@ _Entendre que deux mots finissent pareil._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-malo` — Un petit chien endormi en rond sous la lune (`public/media/illustrations/histoire-malo.svg`)
+- **Image montrée pendant la lecture :** `histoire-malo` — Malo, un petit chien roulé en boule, endormi sur son tapis sous la lune (`public/media/illustrations/histoire-malo.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Acquérir les habiletés phonologiques et le principe alphabétique » (from-5) :**
 
@@ -808,7 +808,7 @@ l’autre — l’appareil est alors le sien._
 
 _Produire un mot qui rime, après l’avoir reconnu._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Aujourd’hui, l’enfant produit. Les mots inventés sont acceptés : « chat, bat, gat » montre qu’il a compris la rime. Ne corrigez pas l’invention.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -858,7 +858,7 @@ _Produire un mot qui rime, après l’avoir reconnu._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-kumu` — Un petit poussin devant la porte ouverte du poulailler (`public/media/illustrations/histoire-kumu.svg`)
+- **Image montrée pendant la lecture :** `histoire-kumu` — Kumu, le petit poussin, devant la porte ouverte du poulailler (`public/media/illustrations/histoire-kumu.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -1112,7 +1112,7 @@ l’autre — l’appareil est alors le sien._
 
 _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les dire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Servez-vous des mots de l’ordre : d’abord, ensuite, puis, à la fin. Ce sont eux qui structurent le récit.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C02-O06` — Restituer la chronologie des actions majeures d’une histoire simple. _(source : programme-2026)_
@@ -1162,7 +1162,7 @@ _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-cailloux` — Trois cailloux : un rond, un plat et un pointu (`public/media/illustrations/histoire-cailloux.svg`)
+- **Image montrée pendant la lecture :** `histoire-cailloux` — Trois cailloux différents : un rond, un plat et un pointu (`public/media/illustrations/histoire-cailloux.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « S’approprier la notion de chronologie » (from-5) :**
 
@@ -1476,7 +1476,7 @@ _Reprendre les catégories de mots du mois et y ranger des mots nouveaux._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-marche` — Un panier de marché avec des tomates et une banane (`public/media/illustrations/histoire-marche.svg`)
+- **Image montrée pendant la lecture :** `histoire-marche` — Un panier de marché avec des tomates, un régime de bananes et un oignon (`public/media/illustrations/histoire-marche.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -1674,7 +1674,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dire et faire ce qu’il faut pour qu’un être vivant aille bien._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Un animal et une plante n’ont pas les mêmes besoins : ne les mélangez pas. Vous n’avez besoin ni d’un animal ni d’une plante à la maison — une plante du chemin, un animal du quartier vu de loin, ou l’image du dossier suffisent. L’enfant ne touche ni ne nourrit un animal qu’il ne connait pas, et ne manipule pas une plante inconnue : tout geste de soin est choisi et surveillé par l’adulte.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1699,7 +1699,7 @@ _Dire et faire ce qu’il faut pour qu’un être vivant aille bien._
 - **Images montrées à l'enfant (2) :**
 
   - `plante-parties` — Une plante avec ses feuilles, sa tige et ses racines sous la terre (`public/media/illustrations/plante-parties.svg`)
-  - `animal-chevre` — Une chèvre (`public/media/animals/animal-chevre.svg`)
+  - `animal-chevre` — Une chèvre blanche, avec ses cornes et sa barbichette (`public/media/animals/animal-chevre.svg`)
 
 - **Objectifs travaillés :** `WORLD-S01-C01-O10` Décrire les besoins essentiels de quelques animaux ou de végétaux.
 

@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" fill="none">
-  <g stroke="#1f2937" stroke-width="5" stroke-linejoin="round">
-      <circle cx="46" cy="70" r="24" fill="#c9785f"/>
-      <rect x="112" y="46" width="48" height="48" rx="4" fill="#6aa9d8"/>
-      <rect x="24" y="118" width="60" height="34" rx="4" fill="#79b98a"/>
-      <polygon points="136,110 166,158 106,158" fill="#e9b96e"/>
-    </g>
+  <line x1="14" y1="170" x2="186" y2="170" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="48" cy="80" r="26" fill="#e08d6a" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <rect x="110" y="50" width="52" height="52" rx="4" fill="#7cbbe6" transform="rotate(12 136 76)" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <rect x="20" y="126" width="64" height="34" rx="4" fill="#86c692" transform="rotate(-8 52 143)" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <polygon points="146,110 178,164 114,164" fill="#f3c86d" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M84 70 q8 -10 0 -20 M90 82 q10 -6 6 -18 M176 60 q10 4 8 14 M100 150 q8 -8 4 -16 M104 128 q10 -2 12 6" fill="none" stroke="#c9c2b4" stroke-width="4" stroke-linecap="round"/>
 </svg>

@@ -2,8 +2,8 @@
   "version": 1,
   "task": "September illustration, audio, animation and UX upgrade — 1ère and 3ème maternelle",
   "updatedOn": "2026-09-22",
-  "lastCompletedBatch": "B2-illustrations-m1",
-  "nextBatch": "B3-illustrations-m3",
+  "lastCompletedBatch": "B3-illustrations-m3",
+  "nextBatch": "B4-objects-and-reconfirmation",
   "batches": [
     {
       "id": "B0-tracking",
@@ -30,14 +30,14 @@
       "id": "B3-illustrations-m3",
       "title": "Illustrations — the 3ème maternelle set",
       "branch": "feat/september-illustrations",
-      "status": "in-progress",
+      "status": "done",
       "scope": "Stories (kumu, nsimba, mangue, bibi, marche, cailloux, malo), rhymes (compter, formes, semaine, cabri), animals, plante-parties."
     },
     {
       "id": "B4-objects-and-reconfirmation",
       "title": "Objects refined, contact sheet, visual reconfirmation, lapses, migration",
       "branch": "feat/september-illustrations",
-      "status": "pending",
+      "status": "in-progress",
       "scope": "Remaining objects, before/after contact sheet, visual reconfirmation package per level, lessons back to review, data migration, review packages regenerated."
     },
     {
@@ -273,7 +273,7 @@
       "comptine-semaine": {
         "verdict": "replace",
         "priority": "P3",
-        "note": "No lesson reads this rhyme yet; redraw for consistency (seven beads, five school-coloured, two weekend-coloured, today marked by a star)."
+        "note": "No lesson reads this rhyme yet; redrawn for consistency: seven beads on a string, five round then two square, so the two kinds differ by shape and not only by colour."
       },
       "comptine-cabri": {
         "verdict": "replace",
@@ -377,7 +377,21 @@
         "objet-porte",
         "objet-seau",
         "objet-table",
-        "objet-chaise"
+        "objet-chaise",
+        "animal-poussin",
+        "animal-poule",
+        "animal-chevre",
+        "histoire-kumu",
+        "histoire-nsimba",
+        "histoire-mangue",
+        "histoire-bibi",
+        "histoire-marche",
+        "histoire-cailloux",
+        "histoire-malo",
+        "comptine-formes",
+        "comptine-semaine",
+        "comptine-cabri",
+        "plante-parties"
       ],
       "assetsQa": [],
       "uxFamiliesDone": [
@@ -422,11 +436,11 @@
       "byStatus": {
         "not-reviewed": 0,
         "reviewed-no-change": 0,
-        "needs-illustration-update": 46,
-        "needs-audio": 43,
+        "needs-illustration-update": 17,
+        "needs-audio": 45,
         "needs-animation": 0,
         "needs-ux-adjustment": 0,
-        "implemented": 100,
+        "implemented": 127,
         "qa-passed": 113
       },
       "byAudioNeed": {
@@ -686,50 +700,66 @@
         "m1-math-22",
         "m1-phys-22",
         "m1-world-22",
+        "m3-lang-01",
         "m3-phys-01",
         "m3-world-01",
         "m3-art-01",
         "m3-phys-02",
+        "m3-lang-03",
         "m3-math-03",
         "m3-phys-03",
         "m3-time-01",
         "m3-phys-04",
+        "m3-lang-05",
         "m3-phys-05",
+        "m3-world-02",
         "m3-math-06",
         "m3-phys-06",
         "m3-time-02",
         "m3-art-03",
         "m3-phys-07",
+        "m3-lang-08",
         "m3-math-08",
         "m3-phys-08",
         "m3-time-03",
+        "m3-lang-09",
         "m3-phys-09",
+        "m3-world-03",
+        "m3-lang-10",
         "m3-phys-10",
         "m3-time-04",
+        "m3-lang-11",
         "m3-phys-11",
         "m3-world-04",
+        "m3-lang-12",
         "m3-phys-12",
         "m3-math-13",
         "m3-phys-13",
         "m3-time-05",
         "m3-math-14",
         "m3-phys-14",
+        "m3-lang-15",
         "m3-math-15",
         "m3-phys-15",
+        "m3-world-05",
         "m3-math-16",
         "m3-phys-16",
         "m3-time-06",
         "m3-art-06",
         "m3-phys-17",
+        "m3-lang-18",
         "m3-math-18",
         "m3-phys-18",
         "m3-time-07",
         "m3-phys-19",
+        "m3-world-06",
+        "m3-lang-20",
         "m3-phys-20",
         "m3-time-08",
         "m3-math-21",
         "m3-phys-21",
         "m3-world-07",
+        "m3-lang-22",
         "m3-phys-22"
       ]
     },
@@ -878,21 +908,7 @@
       "objet-tomate",
       "objet-banane",
       "objet-oignon",
-      "objet-caillou",
-      "animal-poule",
-      "animal-poussin",
-      "animal-chevre",
-      "histoire-kumu",
-      "histoire-nsimba",
-      "histoire-mangue",
-      "histoire-bibi",
-      "histoire-marche",
-      "histoire-cailloux",
-      "histoire-malo",
-      "comptine-semaine",
-      "comptine-cabri",
-      "comptine-formes",
-      "plante-parties"
+      "objet-caillou"
     ],
     "assets": {
       "forme-carre": {
@@ -1103,19 +1119,19 @@
       "animal-poule": {
         "verdict": "replace",
         "priority": "P1",
-        "status": "needs-illustration-update",
+        "status": "implemented",
         "usedBy": ["m3-lang-03", "m3-world-02", "m3-world-05"]
       },
       "animal-poussin": {
         "verdict": "replace",
         "priority": "P1",
-        "status": "needs-illustration-update",
+        "status": "implemented",
         "usedBy": ["m3-lang-03", "m3-world-05"]
       },
       "animal-chevre": {
         "verdict": "replace",
         "priority": "P1",
-        "status": "needs-illustration-update",
+        "status": "implemented",
         "usedBy": ["m3-lang-09", "m3-world-02", "m3-world-05", "m3-world-06"]
       },
       "histoire-seau-lisa": {
@@ -1142,31 +1158,31 @@
       "histoire-kumu": {
         "verdict": "replace",
         "priority": "P1",
-        "status": "needs-illustration-update",
+        "status": "implemented",
         "usedBy": ["m3-lang-03", "m3-lang-04", "m3-lang-09", "m3-lang-17"]
       },
       "histoire-nsimba": {
         "verdict": "replace",
         "priority": "P1",
-        "status": "needs-illustration-update",
+        "status": "implemented",
         "usedBy": ["m3-lang-01", "m3-lang-10", "m3-lang-15"]
       },
       "histoire-mangue": {
         "verdict": "replace",
         "priority": "P1",
-        "status": "needs-illustration-update",
+        "status": "implemented",
         "usedBy": ["m3-lang-02", "m3-lang-11", "m3-lang-22"]
       },
       "histoire-bibi": {
         "verdict": "replace",
         "priority": "P1",
-        "status": "needs-illustration-update",
+        "status": "implemented",
         "usedBy": ["m3-lang-05", "m3-lang-09", "m3-lang-13"]
       },
       "histoire-marche": {
         "verdict": "replace",
         "priority": "P1",
-        "status": "needs-illustration-update",
+        "status": "implemented",
         "usedBy": ["m3-lang-06", "m3-lang-12", "m3-lang-19"]
       },
       "histoire-pluie": {
@@ -1185,13 +1201,13 @@
       "histoire-cailloux": {
         "verdict": "replace",
         "priority": "P1",
-        "status": "needs-illustration-update",
+        "status": "implemented",
         "usedBy": ["m3-lang-08", "m3-lang-14", "m3-lang-18"]
       },
       "histoire-malo": {
         "verdict": "replace",
         "priority": "P1",
-        "status": "needs-illustration-update",
+        "status": "implemented",
         "usedBy": ["m3-lang-07", "m3-lang-16", "m3-lang-20"]
       },
       "comptine-compter": {
@@ -1225,25 +1241,25 @@
       "comptine-semaine": {
         "verdict": "replace",
         "priority": "P3",
-        "status": "needs-illustration-update",
+        "status": "implemented",
         "usedBy": []
       },
       "comptine-cabri": {
         "verdict": "replace",
         "priority": "P3",
-        "status": "needs-illustration-update",
+        "status": "implemented",
         "usedBy": []
       },
       "comptine-formes": {
         "verdict": "replace",
         "priority": "P2",
-        "status": "needs-illustration-update",
+        "status": "implemented",
         "usedBy": ["m3-art-05", "m3-art-07"]
       },
       "plante-parties": {
         "verdict": "refine",
         "priority": "P2",
-        "status": "needs-illustration-update",
+        "status": "implemented",
         "usedBy": ["m3-world-03", "m3-world-06"]
       },
       "bonhomme-articule": {
@@ -1261,7 +1277,7 @@
         ]
       }
     },
-    "lastCompletedBatch": "B2-illustrations-m1",
-    "nextBatch": "B3-illustrations-m3"
+    "lastCompletedBatch": "B3-illustrations-m3",
+    "nextBatch": "B4-objects-and-reconfirmation"
   }
 }

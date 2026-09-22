@@ -1,11 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" fill="none">
-  <g stroke="#1f2937" stroke-width="6" stroke-linejoin="round">
-      <ellipse cx="105" cy="120" rx="52" ry="42" fill="#fffdf7"/>
-      <circle cx="62" cy="88" r="24" fill="#fffdf7"/>
-      <path d="M55 64 q7 -16 14 0" fill="#c9785f"/>
-      <polygon points="40,88 24,94 40,100" fill="#e9b96e"/>
-      <circle cx="56" cy="84" r="4" fill="#1f2937" stroke="none"/>
-      <line x1="95" y1="162" x2="95" y2="176"/>
-      <line x1="120" y1="162" x2="120" y2="176"/>
-    </g>
+  <ellipse cx="100" cy="178" rx="76" ry="8" fill="#efe9dc"/>
+      <line x1="98" y1="140" x2="96" y2="160" stroke="#2b2a33" stroke-width="18" stroke-linecap="round"/><line x1="98" y1="140" x2="96" y2="160" stroke="#f3c86d" stroke-width="6" stroke-linecap="round"/>
+      <line x1="122" y1="140" x2="124" y2="160" stroke="#2b2a33" stroke-width="18" stroke-linecap="round"/><line x1="122" y1="140" x2="124" y2="160" stroke="#f3c86d" stroke-width="6" stroke-linecap="round"/>
+      <path d="M136 100 q24 -30 34 -8 M140 110 q28 -20 36 4 M140 120 q26 -6 32 12" fill="none" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <ellipse cx="106" cy="114" rx="48" ry="36" fill="#efe9dc" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <ellipse cx="106" cy="110" rx="44" ry="30" fill="#fffdf7"/>
+      <ellipse cx="114" cy="116" rx="22" ry="13" transform="rotate(-20 114 116)" fill="#efe9dc" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="66" cy="80" r="20" fill="#fffdf7" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="56" cy="60" r="6" fill="#d8626b" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="66" cy="56" r="6" fill="#d8626b" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="76" cy="60" r="6" fill="#d8626b" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <polygon points="46,78 30,84 46,90" fill="#f3c86d" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="50" cy="96" r="5" fill="#d8626b" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="62" cy="76" r="4" fill="#2b2a33"/>
 </svg>

@@ -121,6 +121,89 @@ function hand(o: {
   return parts.join("\n      ");
 }
 
+/** Kumu: a round chick, facing left, drawn once and reused in the story picture. */
+function chick(cx: number, cy: number, s = 1): string {
+  const body = base("sun");
+  return [
+    capsule(cx - 10 * s, cy + 28 * s, cx - 12 * s, cy + 44 * s, 5 * s, base("clay")),
+    capsule(cx + 12 * s, cy + 28 * s, cx + 14 * s, cy + 44 * s, 5 * s, base("clay")),
+    `<circle cx="${cx}" cy="${cy}" r="${34 * s}" fill="${shade("sun")}" ${OUTLINE}/>`,
+    `<circle cx="${cx}" cy="${cy - 4 * s}" r="${30 * s}" fill="${body}"/>`,
+    `<ellipse cx="${cx + 10 * s}" cy="${cy + 4 * s}" rx="${16 * s}" ry="${10 * s}" transform="rotate(-25 ${cx + 10 * s} ${cy + 4 * s})" fill="${shade("sun")}" ${OUTLINE}/>`,
+    `<circle cx="${cx - 24 * s}" cy="${cy - 30 * s}" r="${22 * s}" fill="${body}" ${OUTLINE}/>`,
+    `<path d="M${cx - 34 * s} ${cy - 44 * s} q2 -10 8 -12 M${cx - 26 * s} ${cy - 48 * s} q0 -8 6 -10" fill="none" ${OUTLINE}/>`,
+    `<polygon points="${cx - 46 * s},${cy - 30 * s} ${cx - 60 * s},${cy - 24 * s} ${cx - 46 * s},${cy - 18 * s}" fill="${base("clay")}" ${OUTLINE}/>`,
+    `<circle cx="${cx - 30 * s}" cy="${cy - 34 * s}" r="${4 * s}" fill="${LINE}"/>`,
+  ].join("\n      ");
+}
+
+/** A hen, facing left: round body, comb, wattle, tail feathers, legs on a ground. */
+function hen(cx: number, cy: number, s = 1): string {
+  const body = base("paper");
+  return [
+    capsule(cx - 8 * s, cy + 30 * s, cx - 10 * s, cy + 50 * s, 6 * s, base("sun")),
+    capsule(cx + 16 * s, cy + 30 * s, cx + 18 * s, cy + 50 * s, 6 * s, base("sun")),
+    `<path d="M${cx + 30 * s} ${cy - 10 * s} q24 -30 34 -8 M${cx + 34 * s} ${cy} q28 -20 36 4 M${cx + 34 * s} ${cy + 10 * s} q26 -6 32 12" fill="none" ${OUTLINE}/>`,
+    `<ellipse cx="${cx}" cy="${cy + 4 * s}" rx="${48 * s}" ry="${36 * s}" fill="${shade("paper")}" ${OUTLINE}/>`,
+    `<ellipse cx="${cx}" cy="${cy}" rx="${44 * s}" ry="${30 * s}" fill="${body}"/>`,
+    `<ellipse cx="${cx + 8 * s}" cy="${cy + 6 * s}" rx="${22 * s}" ry="${13 * s}" transform="rotate(-20 ${cx + 8 * s} ${cy + 6 * s})" fill="${shade("paper")}" ${OUTLINE}/>`,
+    `<circle cx="${cx - 40 * s}" cy="${cy - 30 * s}" r="${20 * s}" fill="${body}" ${OUTLINE}/>`,
+    `<circle cx="${cx - 50 * s}" cy="${cy - 50 * s}" r="${6 * s}" fill="${base("berry")}" ${OUTLINE}/>`,
+    `<circle cx="${cx - 40 * s}" cy="${cy - 54 * s}" r="${6 * s}" fill="${base("berry")}" ${OUTLINE}/>`,
+    `<circle cx="${cx - 30 * s}" cy="${cy - 50 * s}" r="${6 * s}" fill="${base("berry")}" ${OUTLINE}/>`,
+    `<polygon points="${cx - 60 * s},${cy - 32 * s} ${cx - 76 * s},${cy - 26 * s} ${cx - 60 * s},${cy - 20 * s}" fill="${base("sun")}" ${OUTLINE}/>`,
+    `<circle cx="${cx - 56 * s}" cy="${cy - 14 * s}" r="${5 * s}" fill="${base("berry")}" ${OUTLINE}/>`,
+    `<circle cx="${cx - 44 * s}" cy="${cy - 34 * s}" r="${4 * s}" fill="${LINE}"/>`,
+  ].join("\n      ");
+}
+
+/**
+ * Bibi, and the little cabri of the rhyme: a goat with curved horns, a beard and a tail.
+ * `facing` is the direction of the head (+1 right); `jumping` lifts the legs off the ground.
+ */
+function goat(cx: number, cy: number, s = 1, facing: 1 | -1 = -1, jumping = false): string {
+  const body = base("paper");
+  const f = facing;
+  const legs = jumping
+    ? [
+        capsule(cx - 28 * s, cy + 18 * s, cx - 40 * s * 1 + 0, cy + 40 * s, 7 * s, body),
+        capsule(cx - 12 * s, cy + 18 * s, cx - 20 * s, cy + 42 * s, 7 * s, body),
+        capsule(cx + 14 * s, cy + 18 * s, cx + 26 * s, cy + 40 * s, 7 * s, body),
+        capsule(cx + 30 * s, cy + 18 * s, cx + 44 * s, cy + 38 * s, 7 * s, body),
+      ]
+    : [
+        capsule(cx - 30 * s, cy + 18 * s, cx - 30 * s, cy + 48 * s, 7 * s, body),
+        capsule(cx - 14 * s, cy + 18 * s, cx - 14 * s, cy + 48 * s, 7 * s, body),
+        capsule(cx + 14 * s, cy + 18 * s, cx + 14 * s, cy + 48 * s, 7 * s, body),
+        capsule(cx + 30 * s, cy + 18 * s, cx + 30 * s, cy + 48 * s, 7 * s, body),
+      ];
+  const hx = cx + f * 44 * s;
+  const hy = cy - 22 * s;
+  return [
+    ...legs,
+    capsule(cx - f * 42 * s, cy - 8 * s, cx - f * 52 * s, cy - 24 * s, 6 * s, body),
+    `<rect x="${cx - 44 * s}" y="${cy - 22 * s}" width="${88 * s}" height="${46 * s}" rx="${22 * s}" fill="${shade("paper")}" ${OUTLINE}/>`,
+    `<rect x="${cx - 41 * s}" y="${cy - 19 * s}" width="${82 * s}" height="${32 * s}" rx="${18 * s}" fill="${body}"/>`,
+    `<path d="M${hx - f * 8 * s} ${hy - 16 * s} q${-f * 6 * s} -20 ${f * 8 * s} -22 M${hx + f * 6 * s} ${hy - 16 * s} q${-f * 2 * s} -22 ${f * 14 * s} -20" fill="none" ${OUTLINE}/>`,
+    `<ellipse cx="${hx - f * 16 * s}" cy="${hy - 6 * s}" rx="${10 * s}" ry="${6 * s}" fill="${body}" ${OUTLINE}/>`,
+    `<circle cx="${hx}" cy="${hy}" r="${20 * s}" fill="${body}" ${OUTLINE}/>`,
+    `<polygon points="${hx + f * 4 * s},${hy + 16 * s} ${hx + f * 10 * s},${hy + 30 * s} ${hx + f * 16 * s},${hy + 14 * s}" fill="${base("stone")}" ${OUTLINE}/>`,
+    `<circle cx="${hx + f * 8 * s}" cy="${hy - 4 * s}" r="${4 * s}" fill="${LINE}"/>`,
+    `<circle cx="${hx + f * 18 * s}" cy="${hy + 6 * s}" r="${3 * s}" fill="${LINE}"/>`,
+  ].join("\n      ");
+}
+
+/** A cloud, or a bush: overlapping circles outlined once, then filled again to hide the joins. */
+function puffs(circles: readonly [number, number, number][], fill: string): string {
+  const outlined = circles
+    .map(([x, y, r]) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${fill}" ${OUTLINE}/>`)
+    .join("");
+  const filled = circles
+    .map(([x, y, r]) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${fill}"/>`)
+    .join("");
+  return outlined + filled;
+}
+
 type Asset = {
   id: string;
   kind: "shape" | "object" | "animal" | "illustration";
@@ -419,43 +502,24 @@ const BODY: [id: string, alt: string, tags: string[], body: string][] = [
 const ANIMALS: [id: string, alt: string, tags: string[], body: string][] = [
   [
     "animal-poule",
-    "Une poule",
+    "Une poule blanche, avec sa crête rouge",
     ["poule", "animal"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <ellipse cx="105" cy="120" rx="52" ry="42" fill="${PAPER}"/>
-      <circle cx="62" cy="88" r="24" fill="${PAPER}"/>
-      <path d="M55 64 q7 -16 14 0" fill="${CLAY}"/>
-      <polygon points="40,88 24,94 40,100" fill="${AMBER}"/>
-      <circle cx="56" cy="84" r="4" fill="${INK}" stroke="none"/>
-      <line x1="95" y1="162" x2="95" y2="176"/>
-      <line x1="120" y1="162" x2="120" y2="176"/>
-    </g>`,
+    `${ground(100, 178, 76, 8)}
+      ${hen(106, 110, 1)}`,
   ],
   [
     "animal-poussin",
-    "Un petit poussin",
+    "Un petit poussin jaune, tout rond",
     ["poussin", "animal", "kumu"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <circle cx="105" cy="118" r="40" fill="${AMBER}"/>
-      <circle cx="76" cy="88" r="24" fill="${AMBER}"/>
-      <polygon points="56,88 40,94 56,100" fill="${CLAY}"/>
-      <circle cx="70" cy="84" r="4" fill="${INK}" stroke="none"/>
-      <line x1="96" y1="158" x2="96" y2="172"/>
-      <line x1="118" y1="158" x2="118" y2="172"/>
-    </g>`,
+    `${ground(100, 178, 60, 8)}
+      ${chick(104, 116, 1.1)}`,
   ],
   [
     "animal-chevre",
-    "Une chèvre",
+    "Une chèvre blanche, avec ses cornes et sa barbichette",
     ["chèvre", "animal", "bibi"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <rect x="60" y="95" width="90" height="50" rx="18" fill="${PAPER}"/>
-      <circle cx="55" cy="80" r="22" fill="${PAPER}"/>
-      <path d="M45 62 q-8 -18 6 -20 M65 62 q8 -18 -6 -20" fill="none"/>
-      <circle cx="48" cy="78" r="4" fill="${INK}" stroke="none"/>
-      <line x1="78" y1="145" x2="78" y2="172"/>
-      <line x1="132" y1="145" x2="132" y2="172"/>
-    </g>`,
+    `${ground(100, 178, 76, 8)}
+      ${goat(96, 108, 1, -1)}`,
   ],
 ];
 
@@ -518,71 +582,94 @@ const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] =
   ],
   [
     "histoire-kumu",
-    "Un petit poussin devant la porte ouverte du poulailler",
+    "Kumu, le petit poussin, devant la porte ouverte du poulailler",
     ["kumu", "poussin", "histoire"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <rect x="18" y="60" width="70" height="110" fill="${STONE}"/>
-      <rect x="32" y="86" width="42" height="84" fill="${PAPER}"/>
-      <circle cx="132" cy="126" r="30" fill="${AMBER}"/>
-      <circle cx="112" cy="102" r="18" fill="${AMBER}"/>
-      <polygon points="97,102 84,107 97,112" fill="${CLAY}"/>
-      <circle cx="108" cy="99" r="3" fill="${INK}" stroke="none"/>
-      <line x1="126" y1="156" x2="126" y2="170"/>
-      <line x1="142" y1="156" x2="142" y2="170"/>
-    </g>`,
+    `${ground(100, 180, 92, 7)}
+      <rect x="16" y="66" width="80" height="108" fill="${base("stone")}" ${OUTLINE}/>
+      <rect x="34" y="100" width="44" height="74" fill="${shade("night")}" ${OUTLINE}/>
+      <rect x="14" y="100" width="20" height="74" rx="2" fill="${base("sun")}" ${OUTLINE}/>
+      <polygon points="6,68 56,28 106,68" fill="${base("clay")}" ${OUTLINE}/>
+      ${chick(140, 126, 1)}`,
   ],
   [
     "histoire-nsimba",
-    "Un enfant avec un sac devant la porte de l’école",
+    "Nsimba, un petit garçon avec son sac d’école sur le dos, devant la porte de l’école",
     ["nsimba", "école", "rentrée", "histoire"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <rect x="96" y="34" width="86" height="140" rx="6" fill="${CLAY}"/>
-      <circle cx="112" cy="106" r="6" fill="${PAPER}"/>
-      <circle cx="58" cy="74" r="20" fill="${PAPER}"/>
-      <rect x="40" y="98" width="38" height="48" rx="10" fill="${GREEN}"/>
-      <rect x="30" y="104" width="18" height="30" rx="7" fill="${AMBER}"/>
-      <line x1="48" y1="146" x2="48" y2="172"/>
-      <line x1="70" y1="146" x2="70" y2="172"/>
-    </g>`,
+    `${ground(100, 182, 90, 7)}
+      <rect x="116" y="22" width="62" height="156" rx="4" fill="${shade("stone")}" ${OUTLINE}/>
+      <rect x="126" y="32" width="46" height="146" fill="${base("clay")}" ${OUTLINE}/>
+      <rect x="134" y="46" width="30" height="16" rx="3" fill="${base("paper")}" stroke="${LINE}" stroke-width="4"/>
+      <circle cx="160" cy="112" r="5" fill="${base("sun")}" stroke="${LINE}" stroke-width="4"/>
+      <rect x="86" y="82" width="26" height="46" rx="8" fill="${base("leaf")}" ${OUTLINE}/>
+      ${capsule(60, 132, 56, 172, 12, base("skin"))}
+      ${capsule(80, 132, 84, 172, 12, base("skin"))}
+      <ellipse cx="54" cy="176" rx="10" ry="5" fill="${shade("stone")}" ${OUTLINE}/>
+      <ellipse cx="86" cy="176" rx="10" ry="5" fill="${shade("stone")}" ${OUTLINE}/>
+      <rect x="64" y="70" width="12" height="14" fill="${shade("skin")}" ${OUTLINE}/>
+      ${capsule(52, 88, 36, 120, 10, base("skin"))}
+      ${capsule(88, 88, 100, 120, 10, base("skin"))}
+      <rect x="48" y="80" width="44" height="48" rx="10" fill="${base("sky")}" ${OUTLINE}/>
+      <rect x="50" y="122" width="40" height="22" rx="4" fill="${base("clay")}" ${OUTLINE}/>
+      <line x1="60" y1="84" x2="86" y2="112" stroke="${shade("leaf")}" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="70" cy="50" r="22" fill="${base("skin")}" ${OUTLINE}/>
+      <path d="M48 50 a22 22 0 0 1 44 0 q-22 -12 -44 0 z" fill="${LINE}"/>
+      ${face(70, 54, 16, 4)}`,
   ],
   [
     "histoire-mangue",
-    "Une mangue coupée en trois morceaux",
+    "Une mangue entière, et trois morceaux de mangue sur une assiette",
     ["mangue", "partage", "histoire"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <path d="M60 62 q34 -16 44 16 q10 32 -18 46 q-32 14 -40 -18 q-8 -30 14 -44 z" fill="${AMBER}"/>
-      <path d="M28 128 q28 -12 36 14 q8 26 -16 34 q-26 8 -32 -14 q-6 -22 12 -34 z" fill="${AMBER}"/>
-      <path d="M118 126 q28 -12 36 14 q8 26 -16 34 q-26 8 -32 -14 q-6 -22 12 -34 z" fill="${AMBER}"/>
-    </g>`,
+    `${ground(100, 184, 80, 6)}
+      <ellipse cx="100" cy="64" rx="36" ry="28" transform="rotate(-20 100 64)" fill="${base("sun")}" ${OUTLINE}/>
+      <ellipse cx="112" cy="70" rx="18" ry="14" transform="rotate(-20 112 70)" fill="${base("clay")}"/>
+      <line x1="70" y1="44" x2="62" y2="32" ${OUTLINE}/>
+      <path d="M62 32 q-16 -4 -22 8 q14 6 22 -8 z" fill="${base("leaf")}" ${OUTLINE}/>
+      <ellipse cx="100" cy="140" rx="78" ry="24" fill="${base("stone")}" ${OUTLINE}/>
+      <ellipse cx="100" cy="138" rx="66" ry="16" fill="${shade("paper")}"/>
+      <ellipse cx="56" cy="132" rx="22" ry="13" fill="${base("sun")}" ${OUTLINE}/>
+      <ellipse cx="56" cy="132" rx="14" ry="7" fill="${base("clay")}"/>
+      <ellipse cx="100" cy="136" rx="22" ry="13" fill="${base("sun")}" ${OUTLINE}/>
+      <ellipse cx="100" cy="136" rx="14" ry="7" fill="${base("clay")}"/>
+      <ellipse cx="144" cy="132" rx="22" ry="13" fill="${base("sun")}" ${OUTLINE}/>
+      <ellipse cx="144" cy="132" rx="14" ry="7" fill="${base("clay")}"/>`,
   ],
   [
     "histoire-bibi",
-    "Une chèvre devant une barrière et des feuilles",
+    "Bibi la chèvre, le nez dans un buisson, devant une barrière",
     ["bibi", "chèvre", "jardin", "histoire"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <line x1="126" y1="60" x2="126" y2="168"/>
-      <line x1="160" y1="60" x2="160" y2="168"/>
-      <line x1="112" y1="92" x2="176" y2="92"/>
-      <line x1="112" y1="132" x2="176" y2="132"/>
-      <rect x="36" y="104" width="70" height="44" rx="16" fill="${PAPER}"/>
-      <circle cx="32" cy="90" r="20" fill="${PAPER}"/>
-      <path d="M22 72 q-7 -16 6 -18 M42 72 q7 -16 -6 -18" fill="none"/>
-      <circle cx="26" cy="88" r="3" fill="${INK}" stroke="none"/>
-      <line x1="52" y1="148" x2="52" y2="172"/>
-      <line x1="94" y1="148" x2="94" y2="172"/>
-    </g>`,
+    `${ground(100, 180, 92, 7)}
+      <rect x="150" y="62" width="10" height="112" rx="3" fill="${base("sun")}" ${OUTLINE}/>
+      <rect x="182" y="62" width="10" height="112" rx="3" fill="${base("sun")}" ${OUTLINE}/>
+      <rect x="140" y="92" width="60" height="9" rx="3" fill="${base("sun")}" ${OUTLINE}/>
+      <rect x="140" y="134" width="60" height="9" rx="3" fill="${base("sun")}" ${OUTLINE}/>
+      ${puffs(
+        [
+          [126, 84, 18],
+          [150, 70, 22],
+          [170, 88, 16],
+          [148, 100, 18],
+        ],
+        base("leaf"),
+      )}
+      ${goat(74, 118, 0.95, 1)}`,
   ],
   [
     "histoire-marche",
-    "Un panier de marché avec des tomates et une banane",
+    "Un panier de marché avec des tomates, un régime de bananes et un oignon",
     ["marché", "panier", "histoire"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <circle cx="74" cy="76" r="20" fill="${CLAY}"/>
-      <circle cx="114" cy="70" r="20" fill="${CLAY}"/>
-      <path d="M128 96 q22 -30 46 -22 q-20 12 -30 30 z" fill="${AMBER}"/>
-      <path d="M36 96 h128 l-16 76 h-96 z" fill="${AMBER}"/>
-      <path d="M70 94 a30 26 0 0 1 60 0" fill="none"/>
-    </g>`,
+    `${ground(100, 182, 92, 7)}
+      <circle cx="74" cy="92" r="18" fill="${base("berry")}" ${OUTLINE}/>
+      <circle cx="104" cy="86" r="18" fill="${base("berry")}" ${OUTLINE}/>
+      <path d="M96 70 l-6 -8 M104 68 l0 -10 M112 70 l6 -8" fill="none" stroke="${base("leaf")}" stroke-width="5" stroke-linecap="round"/>
+      <path d="M126 96 q6 -44 46 -40 q-4 20 -18 30 q-14 10 -28 10 z" fill="${base("sun")}" ${OUTLINE}/>
+      <path d="M132 92 q4 -30 30 -32" fill="none" stroke="${shade("sun")}" stroke-width="4" stroke-linecap="round"/>
+      <path d="M38 100 h124 l-16 74 h-92 z" fill="${base("sun")}" ${OUTLINE}/>
+      <path d="M64 104 l-6 66 M100 104 l0 66 M136 104 l6 66" fill="none" stroke="${shade("sun")}" stroke-width="4" stroke-linecap="round"/>
+      <path d="M66 98 a34 30 0 0 1 68 0" fill="none" ${OUTLINE}/>
+      <path d="M30 132 q26 -20 26 8 q0 30 -22 34 q-22 -4 -22 -34 q0 -18 18 -8 z" fill="${base("stone")}" ${OUTLINE}/>
+      <path d="M30 132 l-8 -16 M32 130 l8 -16" fill="none" stroke="${base("leaf")}" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="170" cy="164" r="11" fill="${base("sun")}" ${OUTLINE}/>
+      <circle cx="170" cy="164" r="5" fill="none" stroke="${shade("sun")}" stroke-width="3"/>`,
   ],
   [
     "histoire-pluie",
@@ -606,25 +693,31 @@ const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] =
   ],
   [
     "histoire-cailloux",
-    "Trois cailloux : un rond, un plat et un pointu",
+    "Trois cailloux différents : un rond, un plat et un pointu",
     ["cailloux", "trois", "histoire"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <circle cx="52" cy="120" r="28" fill="${STONE}"/>
-      <ellipse cx="104" cy="132" rx="30" ry="16" fill="${STONE}"/>
-      <polygon points="156,96 178,140 134,140" fill="${STONE}"/>
-    </g>`,
+    `${ground(100, 178, 92, 8)}
+      <circle cx="48" cy="126" r="30" fill="${base("stone")}" ${OUTLINE}/>
+      <ellipse cx="40" cy="114" rx="8" ry="5" fill="${base("paper")}"/>
+      <ellipse cx="108" cy="146" rx="36" ry="15" fill="${base("stone")}" ${OUTLINE}/>
+      <ellipse cx="96" cy="140" rx="10" ry="3" fill="${base("paper")}"/>
+      <polygon points="158,84 188,150 130,150" fill="${base("stone")}" ${OUTLINE}/>
+      <polygon points="156,100 162,116 150,118" fill="${base("paper")}"/>`,
   ],
   [
     "histoire-malo",
-    "Un petit chien endormi en rond sous la lune",
+    "Malo, un petit chien roulé en boule, endormi sur son tapis sous la lune",
     ["malo", "chien", "dormir", "histoire"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <path d="M150 34 a26 26 0 1 0 20 34 a22 22 0 0 1 -20 -34 z" fill="${AMBER}"/>
-      <circle cx="92" cy="132" r="42" fill="${PAPER}"/>
-      <circle cx="60" cy="146" r="20" fill="${PAPER}"/>
-      <path d="M46 132 q-12 -6 -8 -20 q10 4 12 18 z" fill="${STONE}"/>
-      <path d="M52 148 q6 4 12 0" fill="none"/>
-    </g>`,
+    `<path d="M150 22 a30 30 0 1 0 26 44 a24 24 0 0 1 -26 -44 z" fill="${base("sun")}" ${OUTLINE}/>
+      <polygon points="40,30 44,40 54,42 46,48 48,58 40,52 32,58 34,48 26,42 36,40" fill="${base("sun")}" stroke="${LINE}" stroke-width="3" stroke-linejoin="round"/>
+      <polygon points="82,50 84,56 90,57 85,61 86,67 82,63 78,67 79,61 74,57 80,56" fill="${base("sun")}" stroke="${LINE}" stroke-width="3" stroke-linejoin="round"/>
+      <ellipse cx="100" cy="166" rx="82" ry="16" fill="${base("clay")}" ${OUTLINE}/>
+      ${capsule(136, 122, 126, 96, 9, base("sun"))}
+      <circle cx="100" cy="128" r="42" fill="${shade("sun")}" ${OUTLINE}/>
+      <circle cx="100" cy="124" r="37" fill="${base("sun")}"/>
+      <ellipse cx="50" cy="118" rx="10" ry="16" transform="rotate(20 50 118)" fill="${shade("sun")}" ${OUTLINE}/>
+      <circle cx="64" cy="140" r="24" fill="${base("sun")}" ${OUTLINE}/>
+      <path d="M50 136 q6 5 12 0" fill="none" ${OUTLINE}/>
+      <circle cx="44" cy="148" r="5" fill="${LINE}"/>`,
   ],
   [
     "comptine-compter",
@@ -657,54 +750,45 @@ const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] =
   ],
   [
     "comptine-semaine",
-    "Les sept jours de la semaine, alignés",
+    "Sept perles sur un fil : cinq rondes, puis deux carrées",
     ["semaine", "jours", "comptine"],
-    `<g stroke="${INK}" stroke-width="5" stroke-linejoin="round">
-      <rect x="14" y="80" width="24" height="40" rx="5" fill="${PAPER}"/>
-      <rect x="42" y="80" width="24" height="40" rx="5" fill="${PAPER}"/>
-      <rect x="70" y="80" width="24" height="40" rx="5" fill="${PAPER}"/>
-      <rect x="98" y="80" width="24" height="40" rx="5" fill="${PAPER}"/>
-      <rect x="126" y="80" width="24" height="40" rx="5" fill="${PAPER}"/>
-      <rect x="154" y="80" width="24" height="40" rx="5" fill="${GREEN}"/>
-      <rect x="98" y="130" width="24" height="24" rx="5" fill="${AMBER}"/>
-    </g>`,
+    `${ground(100, 126, 88, 7)}
+      <path d="M10 104 q95 -30 180 0" fill="none" ${OUTLINE}/>
+      ${[0, 1, 2, 3, 4].map((i) => `<circle cx="${30 + i * 24}" cy="${100 - Math.sin(((i + 0.5) / 7) * Math.PI) * 10}" r="13" fill="${base("sky")}" ${OUTLINE}/>`).join("")}
+      <rect x="138" y="82" width="24" height="24" rx="5" fill="${base("sun")}" ${OUTLINE}/>
+      <rect x="164" y="88" width="24" height="24" rx="5" fill="${base("sun")}" ${OUTLINE}/>`,
   ],
   [
     "comptine-cabri",
-    "Un petit cabri qui saute",
+    "Un petit cabri qui saute, les quatre pattes en l’air",
     ["cabri", "sauter", "comptine"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <rect x="62" y="80" width="74" height="40" rx="16" fill="${PAPER}"/>
-      <circle cx="148" cy="66" r="18" fill="${PAPER}"/>
-      <path d="M140 50 q-6 -14 5 -16 M158 50 q6 -14 -5 -16" fill="none"/>
-      <circle cx="153" cy="64" r="3" fill="${INK}" stroke="none"/>
-      <line x1="74" y1="120" x2="58" y2="146"/>
-      <line x1="124" y1="120" x2="140" y2="146"/>
-      <path d="M26 156 q30 -30 60 -10" fill="none" stroke="${STONE}"/>
-    </g>`,
+    `${ground(100, 180, 80, 8)}
+      <path d="M30 168 q6 -14 12 0 M44 170 q6 -12 12 0 M150 170 q6 -12 12 0" fill="none" stroke="${base("leaf")}" stroke-width="5" stroke-linecap="round"/>
+      ${goat(100, 96, 0.9, 1, true)}`,
   ],
   [
     "comptine-formes",
     "Les quatre formes qui dansent : rond, carré, rectangle, triangle",
     ["formes", "comptine"],
-    `<g stroke="${INK}" stroke-width="5" stroke-linejoin="round">
-      <circle cx="46" cy="70" r="24" fill="${CLAY}"/>
-      <rect x="112" y="46" width="48" height="48" rx="4" fill="${BLUE}"/>
-      <rect x="24" y="118" width="60" height="34" rx="4" fill="${GREEN}"/>
-      <polygon points="136,110 166,158 106,158" fill="${AMBER}"/>
-    </g>`,
+    `<line x1="14" y1="170" x2="186" y2="170" ${OUTLINE}/>
+      <circle cx="48" cy="80" r="26" fill="${base("clay")}" ${OUTLINE}/>
+      <rect x="110" y="50" width="52" height="52" rx="4" fill="${base("sky")}" transform="rotate(12 136 76)" ${OUTLINE}/>
+      <rect x="20" y="126" width="64" height="34" rx="4" fill="${base("leaf")}" transform="rotate(-8 52 143)" ${OUTLINE}/>
+      <polygon points="146,110 178,164 114,164" fill="${base("sun")}" ${OUTLINE}/>
+      <path d="M84 70 q8 -10 0 -20 M90 82 q10 -6 6 -18 M176 60 q10 4 8 14 M100 150 q8 -8 4 -16 M104 128 q10 -2 12 6" fill="none" stroke="${base("stone")}" stroke-width="4" stroke-linecap="round"/>`,
   ],
   [
     "plante-parties",
     "Une plante avec ses feuilles, sa tige et ses racines sous la terre",
     ["plante", "feuille", "tige", "racine"],
-    `<g stroke="${INK}" stroke-width="6" stroke-linejoin="round">
-      <line x1="100" y1="128" x2="100" y2="40" stroke="${GREEN}"/>
-      <path d="M100 66 q-36 -12 -44 14 q34 12 44 -14 z" fill="${GREEN}"/>
-      <path d="M100 92 q36 -12 44 14 q-34 12 -44 -14 z" fill="${GREEN}"/>
-      <line x1="20" y1="128" x2="180" y2="128" stroke="${CLAY}"/>
-      <path d="M100 128 v20 M100 148 l-22 22 M100 148 l22 22" fill="none" stroke="${STONE}"/>
-    </g>`,
+    `<rect x="0" y="136" width="200" height="64" fill="${shade("skin")}"/>
+      <line x1="0" y1="136" x2="200" y2="136" ${OUTLINE}/>
+      <path d="M100 136 v22 M100 150 l-26 22 M100 150 l26 24 M100 158 l-8 30 M100 158 l10 26" fill="none" stroke="${base("stone")}" stroke-width="5" stroke-linecap="round"/>
+      <line x1="100" y1="136" x2="100" y2="36" stroke="${shade("leaf")}" stroke-width="9" stroke-linecap="round"/>
+      <path d="M100 108 q-44 -14 -52 18 q40 16 52 -18 z" fill="${base("leaf")}" ${OUTLINE}/>
+      <path d="M100 84 q44 -14 52 18 q-40 16 -52 -18 z" fill="${base("leaf")}" ${OUTLINE}/>
+      <path d="M100 60 q-38 -14 -46 14 q36 14 46 -14 z" fill="${base("leaf")}" ${OUTLINE}/>
+      <path d="M100 44 q10 -22 30 -12 q-8 20 -30 12 z" fill="${base("leaf")}" ${OUTLINE}/>`,
   ],
   [
     "bonhomme-articule",

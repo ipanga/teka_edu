@@ -43,9 +43,9 @@ Decisions).
 
 ## Last Checkpoint
 
-2026-09-22 — **B2 done** on `feat/september-illustrations` (stacked on
-`feat/september-visual-ux`, PR #79): 16 pictures of the 1ère set redrawn, 44 approvals lapsed
-and recorded, 1ère reviews transcribed into the history. Next: B3, the 3ème set.
+2026-09-22 — **B3 done** on `feat/september-illustrations` (PR #80, stacked on #79): 30
+pictures redrawn so far, 67 approvals lapsed and recorded per week. Next: B4 — the 11 remaining
+objects, the reviewer's sheet, the visual reconfirmation package, the data migration, QA.
 
 ## Scope
 
@@ -96,14 +96,17 @@ and recorded, 1ère reviews transcribed into the history. Next: B3, the 3ème se
 - [x] B2 — illustrations, 1ère set: 16 pictures, `media:sheet`, `review:lapse`, 44 lapses
       recorded as `consequence` entries, 1ère full reviews transcribed into the history.
 
+- [x] B3 — illustrations, 3ème set: 14 pictures (animals, seven stories, three rhymes, the
+      plant); 67 lapses in total, all recorded.
+
 ## In Progress
 
-- [ ] B3 — illustrations, 3ème set: stories (kumu, nsimba, mangue, bibi, marche, cailloux,
-      malo), rhymes (formes, semaine, cabri), animals, plante-parties.
+- [ ] B4 — objects (crayon, cahier, sac, fenêtre, lit, marmite, panier, tomate, banane,
+      oignon, caillou), `docs/review/media/` sheet, `npm run review:visual`, data migration,
+      review packages, QA in the app.
 
 ## Remaining
 
-- [ ] B3 — illustrations, 3ème set: stories, rhymes, animals, plant.
 - [ ] B4 — objects refined (shade + ground), contact sheet, visual reconfirmation package,
       lapses, data migration, review packages regenerated.
 - [ ] QA — screenshots at phone/tablet/desktop, reduced motion, E2E, Docker not needed.
@@ -139,7 +142,7 @@ and recorded, 1ère reviews transcribed into the history. Next: B3, the 3ème se
 
 - `feat/september-visual-ux` from `develop` at `087fc06`: B0 `6d04196`, B1 `9b8d6ff`; pushed;
   Draft PR #79.
-- `feat/september-illustrations` from `9b8d6ff`: B2 committed next; pushed; Draft PR opened.
+- `feat/september-illustrations` from `9b8d6ff`: B2 pushed, Draft PR #80; B3 committed next.
 
 ## Blockers
 
@@ -153,15 +156,19 @@ visual reconfirmation package is submitted.
 
 ## Exact Resume Point
 
-Batch B3 on `feat/september-illustrations`. In `tools/media/build.ts`, redraw with the new
-palette and helpers, in this order: `animal-poussin`, `animal-poule`, `animal-chevre`,
-`histoire-kumu`, `histoire-nsimba`, `histoire-mangue`, `histoire-bibi`, `histoire-marche`,
-`histoire-cailloux`, `histoire-malo`, `comptine-formes`, `comptine-semaine`, `comptine-cabri`,
-`plante-parties`. Then: `npx tsx tools/media/build.ts`, `npm run media:sheet -- --scale=2
---out=<scratch>.png` and look, `npm run review:lapse`, `npm run review:package`,
-`npm run db:reference`, add the lapsed lessons to the 2026-09-22 `consequence` entries in
-`content/reviews/history.json` (same event, same date), `assetsDone` in the state file,
-`npm run visual:audit`, log B3, commit `feat: the 3ème maternelle pictures`.
+Batch B4 on `feat/september-illustrations`. (1) In `tools/media/build.ts` refine the eleven
+remaining objects with the new palette (shade band, ground, fuller canvas): `objet-crayon`,
+`objet-cahier`, `objet-sac`, `objet-fenetre`, `objet-lit`, `objet-marmite`, `objet-panier`,
+`objet-tomate`, `objet-banane`, `objet-oignon`, `objet-caillou` — then the legacy constants can
+go. (2) `npx tsx tools/media/build.ts`; look at `npm run media:sheet -- --scale=2 --out=<scratch>`.
+(3) `npm run review:lapse`; recompute the lapsed set from `git diff develop` and update the ten
+2026-09-22 `consequence` entries in `content/reviews/history.json`. (4) Write
+`scripts/visual-reconfirmation.ts` (`npm run review:visual`): one Markdown per level in
+`docs/review/`, listing changed assets with old/new alt and hash, the lapsed lessons per week,
+and embedding the sheet `docs/review/media/septembre-avant-apres.png`. (5)
+`npm run review:package`, `npm run db:reference -- --new-migration september_visual_upgrade`,
+`npm run db:start && npm run db:reset && npm run db:test` if Docker is available. (6) Build,
+screenshots of the same seven activities, E2E. (7) State, audit, log, checkpoint, commit.
 
 ## Resume Verification
 

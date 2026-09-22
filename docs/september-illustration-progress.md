@@ -107,3 +107,28 @@ migration), QA of the redraws.
 **Checks** — content validation, unit (374) PASS on the working tree.
 
 **Remains** — B3 (3ème set), B4, QA.
+
+### 2026-09-22 — B3 illustrations, the 3ème maternelle set (done)
+
+**Completed**
+
+- Reusable animals in the generator — `chick()`, `hen()`, `goat()` (facing, jumping) — and
+  `puffs()` for a cloud or a bush, so Kumu, Bibi and the cabri are the same animals in their
+  stories as on their cards.
+- **14 pictures redrawn**: `animal-poussin`, `animal-poule`, `animal-chevre`; the stories
+  `kumu` (the open henhouse door), `nsimba` (a boy with his school bag at the school door),
+  `mangue` (a whole mango and three slices on a plate), `bibi` (nose in a bush at the fence),
+  `marche` (basket, tomatoes, bananas, an onion, a coin), `cailloux` (round, flat, pointed),
+  `malo` (a puppy asleep on his mat under the moon); the rhymes `formes`, `semaine` (seven
+  beads, five round then two square, so the kinds differ by shape and not only by colour),
+  `cabri`; and `plante-parties` (soil, roots, stem, four leaves).
+- Close-ups reviewed at 2×; one correction (the bead string's ground).
+- **23 more approvals lapsed — 67 in total** (35 in 1ère, 32 in 3ème); the ten `consequence`
+  entries of 2026-09-22 now name all 30 changed pictures and every lapsed lesson.
+- The test that every standing approval records the ISSUE-026 re-stamp now accepts an empty
+  set only when the history records the lapse that emptied it.
+
+**Checks** — content validation, unit (374) PASS on the working tree.
+
+**Remains** — B4: the 11 remaining objects, the reviewer's contact sheet in
+`docs/review/media/`, `npm run review:visual`, the data migration, QA in the running app.
