@@ -252,10 +252,14 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 
 ### P1 — Soon
 
-1. Official Cycle 1 curriculum source, then the competency catalogue (PD-004), needed for Task 7 content.
-2. **Prune the container registry by hand before it reaches 50** (ISSUE-011). Pruned to **35**
+0. **Prune the container registry now: 45 of 50** after the September close-out (2026-09-23). The
+   next staging deploy stops at the 45 line until it is pruned (ISSUE-011).
+1. Pin the Supabase CLI in `deploy-staging.yml` and `deploy-production.yml` as #81 did for CI.
+
+2. Official Cycle 1 curriculum source, then the competency catalogue (PD-004), needed for Task 7 content.
+3. **Prune the container registry by hand before it reaches 50** (ISSUE-011). Pruned to **35**
    on 2026-09-20; CI still cannot read the count, and the cap blocks `develop` when it is hit.
-3. Optional hardening: disable the unused legacy `anon` / `service_role` keys on both Supabase projects.
+4. Optional hardening: disable the unused legacy `anon` / `service_role` keys on both Supabase projects.
 
 ### P2 — Later
 
@@ -717,12 +721,17 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = a729722 (merge
 ## Last Session Summary
 
 ```text
-Completed:  SEPTEMBER VISUAL UPGRADE CLOSED — 176/176 approved.
-            3ème visual reconfirmation accepted; five full-review entries; 45 approvals restored
-            with approve-week --lapsed-only (fresh digests, none reused; 86 untouched).
-            1ère 88/88, 3ème 88/88, 0 at review, 176 distinct digests, all ai-assisted.
-            Reconfirmation generator distinguishes shown vs secondary pictures.
-            PRs #79 then #80 merged into develop; staging verified (see ACTIVE_TASK).
+Completed:  SEPTEMBER VISUAL UPGRADE CLOSED — 176/176 approved, on develop and staging.
+            Visual reconfirmation (AI-assisted): 1ère accepted; 3ème accepted after one
+            picture association (m3-art-04-a1) was corrected. 80 lapsed approvals restored
+            with approve-week --lapsed-only (fresh digests, none reused, standing ones untouched).
+            Canonical, fresh local DB and Supabase DEV: 88 + 88 approved, 0 review, 176
+            distinct digests, all ai-assisted.
+            #79 (fdb4661), #81 (f7edc6d: CI database images from Supabase's public ECR mirror,
+            CLI pinned — ghcr.io rate-limited the pull for 2 h) and #80 (e882c10) merged.
+            Staging dpl_14jzPbdFJSjZ7c7Ubb3YqpXrempd READY at e882c10; smoke E2E 31 passed.
 Cost:       $0.
-Not done:   Production release (separate decision). October and 2ème maternelle not started.
+Not done:   Container registry at 45/50 — prune before the next merge (owner approval).
+            Production release is a separate decision; PROD untouched (a729722).
+Next:       October for 3ème maternelle — refine its slice of the annual plan, pilot 2 weeks.
 ```
