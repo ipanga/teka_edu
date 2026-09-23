@@ -107,7 +107,18 @@ function Gallery({ media, size = "md" }: { media: readonly SessionMedia[]; size?
 }
 
 function Prompt({ children }: { children: React.ReactNode }) {
-  return <p className="text-lg font-medium text-stone-700">{children}</p>;
+  const childView = useContext(ChildViewContext);
+  return (
+    <p
+      className={
+        childView
+          ? "text-center text-xl font-medium text-stone-700 sm:text-2xl"
+          : "text-lg font-medium text-stone-700"
+      }
+    >
+      {children}
+    </p>
+  );
 }
 
 /** Encouragement, never a verdict on the child. */
@@ -150,8 +161,17 @@ function OffScreen({
   withPicture?: boolean;
 }) {
   const empty = children === null || children === undefined || children === false;
+  const childView = useContext(ChildViewContext);
   const label = (
-    <p className="text-sm font-semibold tracking-wide text-stone-500 uppercase">
+    <p
+      className={
+        // On the child's own screen an off-screen activity has nothing else to show: the line
+        // becomes the screen, centred and large, rather than a caption lost in a corner.
+        childView && empty
+          ? "mx-auto mt-10 max-w-xl rounded-3xl bg-quiet px-8 py-10 text-center text-xl font-semibold tracking-wide text-stone-600 uppercase sm:text-2xl"
+          : "text-sm font-semibold tracking-wide text-stone-500 uppercase"
+      }
+    >
       {withPicture && !empty
         ? "Regardez l’image ensemble ; l’enfant n’a rien à faire sur l’écran"
         : "Posez l’écran : cette activité se fait sans lui"}
@@ -678,6 +698,7 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
  */
 function WordCards({ activity }: { activity: SessionActivity }) {
   const [playing, setPlaying] = useState(false);
+  const childView = useContext(ChildViewContext);
   const media = activity.media;
   const words = activity.vocabulary.map((entry) => entry.fr);
 
@@ -698,7 +719,15 @@ function WordCards({ activity }: { activity: SessionActivity }) {
 
   return (
     <div className="flex flex-col gap-4">
-      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3" aria-label="Les mots">
+      <ul
+        className={
+          // A two-word lesson on a television should not be two small cards in a corner.
+          childView
+            ? "flex flex-wrap justify-center gap-4 [&>li]:w-40 sm:[&>li]:w-56 xl:[&>li]:w-80"
+            : "grid grid-cols-2 gap-3 sm:grid-cols-3"
+        }
+        aria-label="Les mots"
+      >
         {activity.vocabulary.map((entry, index) => {
           const picture = media[index];
           return (

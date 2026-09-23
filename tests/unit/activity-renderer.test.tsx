@@ -187,3 +187,33 @@ describe("the screen stepping back", () => {
     expect(container.querySelector(".border-dashed")).toBeNull();
   });
 });
+
+describe("the child's own screen", () => {
+  it("makes an off-screen activity's one line the whole screen, not a caption", () => {
+    const move: SessionActivity = {
+      ...base,
+      renderer: "oral-exchange",
+      type: "conversation",
+      vocabulary: [],
+      media: [],
+      payload: {},
+    };
+    render(
+      <ChildViewContext.Provider value={true}>
+        <ActivityRenderer activity={move} />
+      </ChildViewContext.Provider>,
+    );
+    expect(screen.getByText(/Posez l’écran/).className).toMatch(/text-center/);
+  });
+
+  it("centres the word cards and lets them grow", () => {
+    const { container } = render(
+      <ChildViewContext.Provider value={true}>
+        <ActivityRenderer activity={base} />
+      </ChildViewContext.Provider>,
+    );
+    expect(container.querySelector('ul[aria-label="Les mots"]')?.className).toMatch(
+      /justify-center/,
+    );
+  });
+});
