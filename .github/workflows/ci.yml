@@ -98,22 +98,29 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     # Supabase publishes the same images on ghcr.io and on Amazon's public registry. On
-    # 2026-09-23 ghcr.io refused the Postgres pull with `toomanyrequests` for over two hours —
-    # before any test ran, and with or without an authenticated login — so the job pulls from the
-    # public ECR mirror. Same publisher, same tags (the pinned CLI chooses the version); no check
-    # changes.
-    env:
-      SUPABASE_INTERNAL_IMAGE_REGISTRY: public.ecr.aws
+    # 2026-09-23 ghcr.io refused the Postgres pull with `toomanyrequests` for over two hours,
+    # before any test ran. The pull goes to the public ECR mirror instead: same publisher, same
+    # tags. It is set on each step, not on the job, because supabase/setup-cli exports
+    # SUPABASE_INTERNAL_IMAGE_REGISTRY=ghcr.io to the job environment and a job-level value loses.
     steps:
       - uses: actions/checkout@v7
-      # Installs the Supabase CLI version pinned in package-lock.json.
+      # The Supabase CLI version pinned in package.json, so CI runs the CLI the project tests
+      # locally. Without `version` the action installs the latest CLI.
       - uses: supabase/setup-cli@v3
+        with:
+          version: 2.117.0
       - name: Start local database (applies all migrations and the dev seed)
         run: supabase db start
+        env:
+          SUPABASE_INTERNAL_IMAGE_REGISTRY: public.ecr.aws
       - name: Reset database (replays migrations from scratch)
         run: supabase db reset
+        env:
+          SUPABASE_INTERNAL_IMAGE_REGISTRY: public.ecr.aws
       - name: Database tests (pgTAP)
         run: supabase test db
+        env:
+          SUPABASE_INTERNAL_IMAGE_REGISTRY: public.ecr.aws
       - name: Stop database
         if: always()
         run: supabase stop --no-backup
