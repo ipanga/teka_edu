@@ -57,12 +57,20 @@ const ground = (cx = 100, cy = 176, rx = 66, ry = 9): string =>
   `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="${GROUND}"/>`;
 
 /** Two dot eyes and a small smile. People and animals only; never on an object or a shape. */
-const face = (cx: number, cy: number, spread = 16, r = 4.5, mouth: "smile" | "o" = "smile") =>
-  `<circle cx="${cx - spread / 2}" cy="${cy}" r="${r}" fill="${LINE}"/>` +
-  `<circle cx="${cx + spread / 2}" cy="${cy}" r="${r}" fill="${LINE}"/>` +
-  (mouth === "o"
-    ? `<circle cx="${cx}" cy="${cy + 14}" r="4" fill="${LINE}"/>`
-    : `<path d="M${cx - 9} ${cy + 12} q9 9 18 0" fill="none" ${OUTLINE}/>`);
+const face = (cx: number, cy: number, spread = 16, r = 4.5, mouth: "smile" | "o" = "smile") => {
+  // The mouth scales with the eyes. A 6 px smile under 4 px eyes on a small head read as a beard
+  // at television size (final visual QA, 2026-09-23); now it is a thin line in proportion.
+  const w = Math.max(2.5, r * 0.75);
+  const half = spread * 0.36;
+  const dy = r * 2.4;
+  return (
+    `<circle cx="${cx - spread / 2}" cy="${cy}" r="${r}" fill="${LINE}"/>` +
+    `<circle cx="${cx + spread / 2}" cy="${cy}" r="${r}" fill="${LINE}"/>` +
+    (mouth === "o"
+      ? `<circle cx="${cx}" cy="${cy + dy + 1}" r="${r * 0.7}" fill="${LINE}"/>`
+      : `<path d="M${cx - half} ${cy + dy} q${half} ${half * 0.8} ${half * 2} 0" fill="none" stroke="${LINE}" stroke-width="${w}" stroke-linecap="round"/>`)
+  );
+};
 
 /** A capsule — a finger, an arm, a leg: an ink line with a fill line on top, 6 px of outline. */
 const capsule = (x1: number, y1: number, x2: number, y2: number, width: number, fill: string) =>
@@ -84,40 +92,37 @@ function hand(o: {
   folded?: readonly boolean[];
   thumbFolded?: boolean;
 }): string {
+  // Redrawn in the final visual QA: one skin fill with no inner cuff (it read as a glove), a
+  // rounder palm, fingers fanning slightly outward, a narrow wrist. No palm crease: it read as a frown.
   const s = o.scale ?? 1;
   const { cx, top, thumb } = o;
-  const w = 52 * s;
-  const h = 54 * s;
+  const w = 54 * s;
+  const h = 58 * s;
   const spacing = 13 * s;
-  const finger = 11 * s;
-  const heights = (o.heights ?? [32, 44, 50, 46]).map((v) => v * s);
+  const finger = 11.5 * s;
+  const heights = (o.heights ?? [34, 46, 52, 47]).map((v) => v * s);
   const folded = o.folded ?? [false, false, false, false];
   const skin = base("skin");
-  const parts: string[] = [];
-  // Wrist first, so the palm sits on it.
-  parts.push(
-    `<rect x="${cx - 14 * s}" y="${top + h - 8 * s}" width="${28 * s}" height="${30 * s}" rx="${8 * s}" fill="${shade("skin")}" ${OUTLINE}/>`,
-  );
-  // Fingers, little finger on the side away from the thumb.
+  const parts: string[] = [
+    `<rect x="${cx - 14 * s}" y="${top + h - 16 * s}" width="${28 * s}" height="${34 * s}" rx="${10 * s}" fill="${skin}" ${OUTLINE}/>`,
+  ];
   [-1.5, -0.5, 0.5, 1.5].forEach((k, i) => {
     const fx = cx + thumb * k * spacing;
-    const rise = folded[i] ? 10 * s : heights[i]!;
-    parts.push(capsule(fx, top + 8 * s, fx, top + 8 * s - rise, finger, skin));
+    const rise = folded[i] ? 8 * s : heights[i]!;
+    const lean = thumb * k * 0.1 * rise;
+    parts.push(capsule(fx, top + 14 * s, fx + lean, top + 14 * s - rise, finger, skin));
   });
-  // Thumb, reaching outward and up on its own side.
   if (!o.thumbFolded) {
-    const tx = cx + thumb * (w / 2 - 4 * s);
-    const ty = top + 24 * s;
-    parts.push(capsule(tx, ty, tx + thumb * 16 * s, ty - 22 * s, finger, skin));
+    const tx = cx + thumb * (w / 2 - 8 * s);
+    const ty = top + h * 0.62;
+    parts.push(capsule(tx, ty, tx + thumb * 22 * s, ty - 22 * s, finger, skin));
   }
-  // Palm: the shade carries the outline; the base sits inside it, a little higher.
   parts.push(
-    `<rect x="${cx - w / 2}" y="${top}" width="${w}" height="${h}" rx="${18 * s}" fill="${shade("skin")}" ${OUTLINE}/>`,
-    `<rect x="${cx - w / 2 + 3}" y="${top + 3}" width="${w - 6}" height="${h - 14 * s}" rx="${16 * s}" fill="${skin}"/>`,
+    `<rect x="${cx - w / 2}" y="${top}" width="${w}" height="${h}" rx="${24 * s}" fill="${skin}" ${OUTLINE}/>`,
   );
   if (o.thumbFolded) {
     const tx = cx + thumb * (w / 2 - 6 * s);
-    parts.push(capsule(tx, top + 20 * s, cx + thumb * 4 * s, top + 34 * s, finger, skin));
+    parts.push(capsule(tx, top + h * 0.56, cx + thumb * 8 * s, top + h * 0.4, finger * 0.9, skin));
   }
   return parts.join("\n      ");
 }
@@ -167,10 +172,10 @@ function goat(cx: number, cy: number, s = 1, facing: 1 | -1 = -1, jumping = fals
   const f = facing;
   const legs = jumping
     ? [
-        capsule(cx - 28 * s, cy + 18 * s, cx - 40 * s * 1 + 0, cy + 40 * s, 7 * s, body),
-        capsule(cx - 12 * s, cy + 18 * s, cx - 20 * s, cy + 42 * s, 7 * s, body),
-        capsule(cx + 14 * s, cy + 18 * s, cx + 26 * s, cy + 40 * s, 7 * s, body),
-        capsule(cx + 30 * s, cy + 18 * s, cx + 44 * s, cy + 38 * s, 7 * s, body),
+        capsule(cx - f * 22 * s, cy + 16 * s, cx - f * 46 * s, cy + 34 * s, 7 * s, body),
+        capsule(cx - f * 32 * s, cy + 12 * s, cx - f * 58 * s, cy + 22 * s, 7 * s, body),
+        capsule(cx + f * 22 * s, cy + 16 * s, cx + f * 42 * s, cy + 38 * s, 7 * s, body),
+        capsule(cx + f * 32 * s, cy + 12 * s, cx + f * 54 * s, cy + 28 * s, 7 * s, body),
       ]
     : [
         capsule(cx - 30 * s, cy + 18 * s, cx - 30 * s, cy + 48 * s, 7 * s, body),
@@ -484,7 +489,6 @@ const BODY: [id: string, alt: string, tags: string[], body: string][] = [
     "Un pied nu, vu de dessus, avec ses cinq orteils",
     ["pied", "corps"],
     `${ground(100, 186, 60, 6)}
-      <rect x="84" y="140" width="40" height="46" rx="10" fill="${shade("skin")}" ${OUTLINE}/>
       <path d="M58 72 q-14 44 8 82 q12 22 36 22 q28 0 38 -24 q10 -32 6 -70 q-2 -12 -16 -12 h-58 q-12 0 -14 8 z" fill="${base("skin")}" ${OUTLINE}/>
       <circle cx="64" cy="60" r="15" fill="${base("skin")}" ${OUTLINE}/>
       <circle cx="92" cy="52" r="11" fill="${base("skin")}" ${OUTLINE}/>
@@ -506,16 +510,17 @@ const BODY: [id: string, alt: string, tags: string[], body: string][] = [
   ],
   [
     "corps-ventre",
-    "Le ventre d’un enfant, avec le nombril, entre le tee-shirt et le short",
+    "Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous",
     ["ventre", "corps"],
-    `<rect x="52" y="146" width="96" height="42" rx="8" fill="${base("leaf")}" ${OUTLINE}/>
-      <path d="M54 80 q46 -16 92 0 q8 34 0 68 q-46 16 -92 0 q-8 -34 0 -68 z" fill="${base("skin")}" ${OUTLINE}/>
-      <ellipse cx="100" cy="140" rx="34" ry="6" fill="${shade("skin")}"/>
-      <rect x="26" y="26" width="24" height="34" rx="8" fill="${shade("sky")}" ${OUTLINE}/>
-      <rect x="150" y="26" width="24" height="34" rx="8" fill="${shade("sky")}" ${OUTLINE}/>
-      <circle cx="100" cy="122" r="5" fill="${LINE}"/>
-      <path d="M40 20 h120 v50 q-60 16 -120 0 z" fill="${base("sky")}" ${OUTLINE}/>
-      <path d="M46 60 q54 14 108 0 v6 q-54 16 -108 0 z" fill="${shade("sky")}"/>`,
+    `${capsule(46, 50, 36, 138, 15, base("skin"))}
+      ${capsule(154, 50, 164, 138, 15, base("skin"))}
+      <rect x="58" y="146" width="84" height="42" rx="8" fill="${base("leaf")}" ${OUTLINE}/>
+      <line x1="64" y1="156" x2="136" y2="156" stroke="${shade("leaf")}" stroke-width="4" stroke-linecap="round"/>
+      <path d="M60 70 q40 -10 80 0 q10 38 2 78 q-42 12 -84 0 q-8 -40 2 -78 z" fill="${base("skin")}" ${OUTLINE}/>
+      <path d="M92 118 q8 -4 16 0" fill="none" stroke="${shade("skin")}" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="100" cy="112" r="4.5" fill="${LINE}"/>
+      <path d="M58 12 h84 l24 18 l-10 22 l-14 -6 v16 q-42 10 -84 0 v-16 l-14 6 l-10 -22 z" fill="${base("sky")}" ${OUTLINE}/>
+      <rect x="54" y="58" width="92" height="14" rx="7" fill="${shade("sky")}" ${OUTLINE}/>`,
   ],
 ];
 
@@ -602,14 +607,14 @@ const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] =
   ],
   [
     "histoire-kumu",
-    "Kumu, le petit poussin, devant la porte ouverte du poulailler",
+    "Kumu, le petit poussin, qui sort tout seul du poulailler dont la porte est ouverte",
     ["kumu", "poussin", "histoire"],
     `${ground(100, 180, 92, 7)}
       <rect x="16" y="66" width="80" height="108" fill="${base("stone")}" ${OUTLINE}/>
       <rect x="34" y="100" width="44" height="74" fill="${shade("night")}" ${OUTLINE}/>
       <rect x="14" y="100" width="20" height="74" rx="2" fill="${base("sun")}" ${OUTLINE}/>
       <polygon points="6,68 56,28 106,68" fill="${base("clay")}" ${OUTLINE}/>
-      ${chick(140, 126, 1)}`,
+      <g transform="translate(284 0) scale(-1 1)">${chick(142, 128, 0.9)}</g>`,
   ],
   [
     "histoire-nsimba",
@@ -637,7 +642,7 @@ const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] =
   ],
   [
     "histoire-mangue",
-    "Une mangue entière, et trois morceaux de mangue sur une assiette",
+    "Une mangue entière, et trois morceaux de mangue coupés sur une assiette",
     ["mangue", "partage", "histoire"],
     `${ground(100, 184, 80, 6)}
       <ellipse cx="100" cy="64" rx="36" ry="28" transform="rotate(-20 100 64)" fill="${base("sun")}" ${OUTLINE}/>
@@ -646,12 +651,15 @@ const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] =
       <path d="M62 32 q-16 -4 -22 8 q14 6 22 -8 z" fill="${base("leaf")}" ${OUTLINE}/>
       <ellipse cx="100" cy="140" rx="78" ry="24" fill="${base("stone")}" ${OUTLINE}/>
       <ellipse cx="100" cy="138" rx="66" ry="16" fill="${shade("paper")}"/>
-      <ellipse cx="56" cy="132" rx="22" ry="13" fill="${base("sun")}" ${OUTLINE}/>
-      <ellipse cx="56" cy="132" rx="14" ry="7" fill="${base("clay")}"/>
-      <ellipse cx="100" cy="136" rx="22" ry="13" fill="${base("sun")}" ${OUTLINE}/>
-      <ellipse cx="100" cy="136" rx="14" ry="7" fill="${base("clay")}"/>
-      <ellipse cx="144" cy="132" rx="22" ry="13" fill="${base("sun")}" ${OUTLINE}/>
-      <ellipse cx="144" cy="132" rx="14" ry="7" fill="${base("clay")}"/>`,
+      <path d="M32 136 q2 -18 24 -18 q24 0 24 18 q-2 14 -24 14 q-22 0 -24 -14 z" fill="${base("leaf")}" ${OUTLINE}/>
+      <path d="M39 135 q2 -12 17 -12 q17 0 17 12 q-2 9 -17 9 q-15 0 -17 -9 z" fill="${base("sun")}"/>
+      <path d="M48 126 l-4 16 M60 125 l-4 18 M41 133 l30 0" fill="none" stroke="${shade("sun")}" stroke-width="3" stroke-linecap="round"/>
+      <path d="M76 140 q2 -18 24 -18 q24 0 24 18 q-2 14 -24 14 q-22 0 -24 -14 z" fill="${base("leaf")}" ${OUTLINE}/>
+      <path d="M83 139 q2 -12 17 -12 q17 0 17 12 q-2 9 -17 9 q-15 0 -17 -9 z" fill="${base("sun")}"/>
+      <path d="M92 130 l-4 16 M104 129 l-4 18 M85 137 l30 0" fill="none" stroke="${shade("sun")}" stroke-width="3" stroke-linecap="round"/>
+      <path d="M120 136 q2 -18 24 -18 q24 0 24 18 q-2 14 -24 14 q-22 0 -24 -14 z" fill="${base("leaf")}" ${OUTLINE}/>
+      <path d="M127 135 q2 -12 17 -12 q17 0 17 12 q-2 9 -17 9 q-15 0 -17 -9 z" fill="${base("sun")}"/>
+      <path d="M136 126 l-4 16 M148 125 l-4 18 M129 133 l30 0" fill="none" stroke="${shade("sun")}" stroke-width="3" stroke-linecap="round"/>`,
   ],
   [
     "histoire-bibi",
@@ -725,19 +733,22 @@ const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] =
   ],
   [
     "histoire-malo",
-    "Malo, un petit chien roulé en boule, endormi sur son tapis sous la lune",
+    "Malo, un petit chien couché en rond sur son tapis, les yeux fermés, sous la lune et les étoiles",
     ["malo", "chien", "dormir", "histoire"],
     `<path d="M150 22 a30 30 0 1 0 26 44 a24 24 0 0 1 -26 -44 z" fill="${base("sun")}" ${OUTLINE}/>
       <polygon points="40,30 44,40 54,42 46,48 48,58 40,52 32,58 34,48 26,42 36,40" fill="${base("sun")}" stroke="${LINE}" stroke-width="3" stroke-linejoin="round"/>
       <polygon points="82,50 84,56 90,57 85,61 86,67 82,63 78,67 79,61 74,57 80,56" fill="${base("sun")}" stroke="${LINE}" stroke-width="3" stroke-linejoin="round"/>
-      <ellipse cx="100" cy="166" rx="82" ry="16" fill="${base("clay")}" ${OUTLINE}/>
-      ${capsule(136, 122, 126, 96, 9, base("sun"))}
-      <circle cx="100" cy="128" r="42" fill="${shade("sun")}" ${OUTLINE}/>
-      <circle cx="100" cy="124" r="37" fill="${base("sun")}"/>
-      <ellipse cx="50" cy="118" rx="10" ry="16" transform="rotate(20 50 118)" fill="${shade("sun")}" ${OUTLINE}/>
-      <circle cx="64" cy="140" r="24" fill="${base("sun")}" ${OUTLINE}/>
-      <path d="M50 136 q6 5 12 0" fill="none" ${OUTLINE}/>
-      <circle cx="44" cy="148" r="5" fill="${LINE}"/>`,
+      <ellipse cx="100" cy="166" rx="86" ry="15" fill="${base("clay")}" ${OUTLINE}/>
+      <path d="M156 132 q26 -6 16 -34 q-4 18 -20 22" fill="${base("sun")}" ${OUTLINE}/>
+      <ellipse cx="114" cy="136" rx="50" ry="28" fill="${shade("sun")}" ${OUTLINE}/>
+      <ellipse cx="114" cy="132" rx="45" ry="21" fill="${base("sun")}"/>
+      <ellipse cx="46" cy="158" rx="14" ry="7" fill="${base("sun")}" ${OUTLINE}/>
+      <ellipse cx="70" cy="160" rx="14" ry="7" fill="${base("sun")}" ${OUTLINE}/>
+      <circle cx="62" cy="134" r="24" fill="${base("sun")}" ${OUTLINE}/>
+      <ellipse cx="40" cy="146" rx="15" ry="11" fill="${base("sun")}" ${OUTLINE}/>
+      <circle cx="27" cy="143" r="5.5" fill="${LINE}"/>
+      <ellipse cx="72" cy="130" rx="9" ry="17" transform="rotate(25 72 130)" fill="${shade("clay")}" ${OUTLINE}/>
+      <path d="M50 128 q6 5 12 0" fill="none" stroke="${LINE}" stroke-width="3.5" stroke-linecap="round"/>`,
   ],
   [
     "comptine-compter",
@@ -765,8 +776,8 @@ const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] =
     "Deux mains ouvertes, levées, paumes vers toi",
     ["mains", "corps", "comptine"],
     `${ground(100, 182, 82, 8)}
-      ${hand({ cx: 52, top: 90, thumb: 1, scale: 0.92 })}
-      ${hand({ cx: 148, top: 90, thumb: -1, scale: 0.92 })}`,
+      ${hand({ cx: 46, top: 92, thumb: 1, scale: 0.86 })}
+      ${hand({ cx: 154, top: 92, thumb: -1, scale: 0.86 })}`,
   ],
   [
     "comptine-semaine",
@@ -780,11 +791,12 @@ const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] =
   ],
   [
     "comptine-cabri",
-    "Un petit cabri qui saute, les quatre pattes en l’air",
+    "Un petit cabri qui saute, les quatre pattes en l’air, au-dessus de l’herbe",
     ["cabri", "sauter", "comptine"],
-    `${ground(100, 180, 80, 8)}
-      <path d="M30 168 q6 -14 12 0 M44 170 q6 -12 12 0 M150 170 q6 -12 12 0" fill="none" stroke="${base("leaf")}" stroke-width="5" stroke-linecap="round"/>
-      ${goat(100, 96, 0.9, 1, true)}`,
+    `${ground(96, 182, 48, 6)}
+      <path d="M24 176 q6 -14 12 0 M40 178 q6 -12 12 0 M150 178 q6 -12 12 0 M166 176 q6 -14 12 0" fill="none" stroke="${base("leaf")}" stroke-width="5" stroke-linecap="round"/>
+      <path d="M58 150 q10 12 24 10 M104 156 q12 8 24 2" fill="none" stroke="${base("stone")}" stroke-width="4" stroke-linecap="round"/>
+      <g transform="rotate(-12 100 90)">${goat(100, 88, 0.9, 1, true)}</g>`,
   ],
   [
     "comptine-formes",

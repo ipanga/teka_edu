@@ -14,7 +14,7 @@
       <rect x="96" y="88" width="40" height="44" rx="10" fill="#7cbbe6" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
       <circle cx="116" cy="64" r="20" fill="#9a6540" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
       <path d="M96 64 a20 20 0 0 1 40 0 q-20 -10 -40 0 z" fill="#2b2a33"/>
-      <circle cx="108" cy="68" r="4" fill="#2b2a33"/><circle cx="124" cy="68" r="4" fill="#2b2a33"/><circle cx="116" cy="82" r="4" fill="#2b2a33"/>
+      <circle cx="108" cy="68" r="4" fill="#2b2a33"/><circle cx="124" cy="68" r="4" fill="#2b2a33"/><circle cx="116" cy="78.6" r="2.8" fill="#2b2a33"/>
       <rect x="88" y="128" width="92" height="26" rx="8" fill="#86c692" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
       <line x1="100" y1="141" x2="170" y2="141" stroke="#5fa46e" stroke-width="4" stroke-linecap="round"/>
 </svg>

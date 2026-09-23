@@ -1164,7 +1164,7 @@ _Nommer son corps et se servir de ses sens._
 - **Images montrées à l'enfant (2) :**
 
   - `corps-tete` — La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire (`public/media/objects/corps-tete.svg`)
-  - `corps-ventre` — Le ventre d’un enfant, avec le nombril, entre le tee-shirt et le short (`public/media/objects/corps-ventre.svg`)
+  - `corps-ventre` — Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous (`public/media/objects/corps-ventre.svg`)
 
 - **Objectifs travaillés :** `WORLD-S01-C02-O01` Nommer et représenter quelques parties du corps humain.
 

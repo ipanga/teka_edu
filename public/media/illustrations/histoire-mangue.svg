@@ -6,10 +6,13 @@
       <path d="M62 32 q-16 -4 -22 8 q14 6 22 -8 z" fill="#86c692" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
       <ellipse cx="100" cy="140" rx="78" ry="24" fill="#c9c2b4" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
       <ellipse cx="100" cy="138" rx="66" ry="16" fill="#efe9dc"/>
-      <ellipse cx="56" cy="132" rx="22" ry="13" fill="#f3c86d" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
-      <ellipse cx="56" cy="132" rx="14" ry="7" fill="#e08d6a"/>
-      <ellipse cx="100" cy="136" rx="22" ry="13" fill="#f3c86d" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
-      <ellipse cx="100" cy="136" rx="14" ry="7" fill="#e08d6a"/>
-      <ellipse cx="144" cy="132" rx="22" ry="13" fill="#f3c86d" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
-      <ellipse cx="144" cy="132" rx="14" ry="7" fill="#e08d6a"/>
+      <path d="M32 136 q2 -18 24 -18 q24 0 24 18 q-2 14 -24 14 q-22 0 -24 -14 z" fill="#86c692" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M39 135 q2 -12 17 -12 q17 0 17 12 q-2 9 -17 9 q-15 0 -17 -9 z" fill="#f3c86d"/>
+      <path d="M48 126 l-4 16 M60 125 l-4 18 M41 133 l30 0" fill="none" stroke="#d9a63f" stroke-width="3" stroke-linecap="round"/>
+      <path d="M76 140 q2 -18 24 -18 q24 0 24 18 q-2 14 -24 14 q-22 0 -24 -14 z" fill="#86c692" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M83 139 q2 -12 17 -12 q17 0 17 12 q-2 9 -17 9 q-15 0 -17 -9 z" fill="#f3c86d"/>
+      <path d="M92 130 l-4 16 M104 129 l-4 18 M85 137 l30 0" fill="none" stroke="#d9a63f" stroke-width="3" stroke-linecap="round"/>
+      <path d="M120 136 q2 -18 24 -18 q24 0 24 18 q-2 14 -24 14 q-22 0 -24 -14 z" fill="#86c692" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M127 135 q2 -12 17 -12 q17 0 17 12 q-2 9 -17 9 q-15 0 -17 -9 z" fill="#f3c86d"/>
+      <path d="M136 126 l-4 16 M148 125 l-4 18 M129 133 l30 0" fill="none" stroke="#d9a63f" stroke-width="3" stroke-linecap="round"/>
 </svg>

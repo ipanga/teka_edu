@@ -17,5 +17,5 @@
       <line x1="60" y1="84" x2="86" y2="112" stroke="#5fa46e" stroke-width="7" stroke-linecap="round"/>
       <circle cx="70" cy="50" r="22" fill="#9a6540" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
       <path d="M48 50 a22 22 0 0 1 44 0 q-22 -12 -44 0 z" fill="#2b2a33"/>
-      <circle cx="62" cy="54" r="4" fill="#2b2a33"/><circle cx="78" cy="54" r="4" fill="#2b2a33"/><path d="M61 66 q9 9 18 0" fill="none" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="62" cy="54" r="4" fill="#2b2a33"/><circle cx="78" cy="54" r="4" fill="#2b2a33"/><path d="M64.24 63.6 q5.76 4.608 11.52 0" fill="none" stroke="#2b2a33" stroke-width="3" stroke-linecap="round"/>
 </svg>

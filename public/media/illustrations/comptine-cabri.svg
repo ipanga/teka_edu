@@ -1,17 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" fill="none">
-  <ellipse cx="100" cy="180" rx="80" ry="8" fill="#efe9dc"/>
-      <path d="M30 168 q6 -14 12 0 M44 170 q6 -12 12 0 M150 170 q6 -12 12 0" fill="none" stroke="#86c692" stroke-width="5" stroke-linecap="round"/>
-      <line x1="74.8" y1="112.2" x2="64" y2="132" stroke="#2b2a33" stroke-width="18.3" stroke-linecap="round"/><line x1="74.8" y1="112.2" x2="64" y2="132" stroke="#fffdf7" stroke-width="6.3" stroke-linecap="round"/>
-      <line x1="89.2" y1="112.2" x2="82" y2="133.8" stroke="#2b2a33" stroke-width="18.3" stroke-linecap="round"/><line x1="89.2" y1="112.2" x2="82" y2="133.8" stroke="#fffdf7" stroke-width="6.3" stroke-linecap="round"/>
-      <line x1="112.6" y1="112.2" x2="123.4" y2="132" stroke="#2b2a33" stroke-width="18.3" stroke-linecap="round"/><line x1="112.6" y1="112.2" x2="123.4" y2="132" stroke="#fffdf7" stroke-width="6.3" stroke-linecap="round"/>
-      <line x1="127" y1="112.2" x2="139.6" y2="130.2" stroke="#2b2a33" stroke-width="18.3" stroke-linecap="round"/><line x1="127" y1="112.2" x2="139.6" y2="130.2" stroke="#fffdf7" stroke-width="6.3" stroke-linecap="round"/>
-      <line x1="62.199999999999996" y1="88.8" x2="53.199999999999996" y2="74.4" stroke="#2b2a33" stroke-width="17.4" stroke-linecap="round"/><line x1="62.199999999999996" y1="88.8" x2="53.199999999999996" y2="74.4" stroke="#fffdf7" stroke-width="5.4" stroke-linecap="round"/>
-      <rect x="60.4" y="76.2" width="79.2" height="41.4" rx="19.8" fill="#efe9dc" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
-      <rect x="63.1" y="78.9" width="73.8" height="28.8" rx="16.2" fill="#fffdf7"/>
-      <path d="M132.4 61.800000000000004 q-5.4 -20 7.2 -22 M145 61.800000000000004 q-1.8 -22 12.6 -20" fill="none" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
-      <ellipse cx="125.19999999999999" cy="70.8" rx="9" ry="5.4" fill="#fffdf7" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
-      <circle cx="139.6" cy="76.2" r="18" fill="#fffdf7" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
-      <polygon points="143.2,90.60000000000001 148.6,103.2 154,88.8" fill="#c9c2b4" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
-      <circle cx="146.79999999999998" cy="72.60000000000001" r="3.6" fill="#2b2a33"/>
-      <circle cx="155.79999999999998" cy="81.60000000000001" r="2.7" fill="#2b2a33"/>
+  <ellipse cx="96" cy="182" rx="48" ry="6" fill="#efe9dc"/>
+      <path d="M24 176 q6 -14 12 0 M40 178 q6 -12 12 0 M150 178 q6 -12 12 0 M166 176 q6 -14 12 0" fill="none" stroke="#86c692" stroke-width="5" stroke-linecap="round"/>
+      <path d="M58 150 q10 12 24 10 M104 156 q12 8 24 2" fill="none" stroke="#c9c2b4" stroke-width="4" stroke-linecap="round"/>
+      <g transform="rotate(-12 100 90)"><line x1="80.2" y1="102.4" x2="58.6" y2="118.6" stroke="#2b2a33" stroke-width="18.3" stroke-linecap="round"/><line x1="80.2" y1="102.4" x2="58.6" y2="118.6" stroke="#fffdf7" stroke-width="6.3" stroke-linecap="round"/>
+      <line x1="71.2" y1="98.8" x2="47.8" y2="107.8" stroke="#2b2a33" stroke-width="18.3" stroke-linecap="round"/><line x1="71.2" y1="98.8" x2="47.8" y2="107.8" stroke="#fffdf7" stroke-width="6.3" stroke-linecap="round"/>
+      <line x1="119.8" y1="102.4" x2="137.8" y2="122.2" stroke="#2b2a33" stroke-width="18.3" stroke-linecap="round"/><line x1="119.8" y1="102.4" x2="137.8" y2="122.2" stroke="#fffdf7" stroke-width="6.3" stroke-linecap="round"/>
+      <line x1="128.8" y1="98.8" x2="148.6" y2="113.2" stroke="#2b2a33" stroke-width="18.3" stroke-linecap="round"/><line x1="128.8" y1="98.8" x2="148.6" y2="113.2" stroke="#fffdf7" stroke-width="6.3" stroke-linecap="round"/>
+      <line x1="62.199999999999996" y1="80.8" x2="53.199999999999996" y2="66.4" stroke="#2b2a33" stroke-width="17.4" stroke-linecap="round"/><line x1="62.199999999999996" y1="80.8" x2="53.199999999999996" y2="66.4" stroke="#fffdf7" stroke-width="5.4" stroke-linecap="round"/>
+      <rect x="60.4" y="68.2" width="79.2" height="41.4" rx="19.8" fill="#efe9dc" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <rect x="63.1" y="70.9" width="73.8" height="28.8" rx="16.2" fill="#fffdf7"/>
+      <path d="M132.4 53.800000000000004 q-5.4 -20 7.2 -22 M145 53.800000000000004 q-1.8 -22 12.6 -20" fill="none" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <ellipse cx="125.19999999999999" cy="62.800000000000004" rx="9" ry="5.4" fill="#fffdf7" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="139.6" cy="68.2" r="18" fill="#fffdf7" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <polygon points="143.2,82.60000000000001 148.6,95.2 154,80.8" fill="#c9c2b4" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="146.79999999999998" cy="64.60000000000001" r="3.6" fill="#2b2a33"/>
+      <circle cx="155.79999999999998" cy="73.60000000000001" r="2.7" fill="#2b2a33"/></g>
 </svg>

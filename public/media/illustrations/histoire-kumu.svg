@@ -4,13 +4,13 @@
       <rect x="34" y="100" width="44" height="74" fill="#2d3759" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
       <rect x="14" y="100" width="20" height="74" rx="2" fill="#f3c86d" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
       <polygon points="6,68 56,28 106,68" fill="#e08d6a" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
-      <line x1="130" y1="154" x2="128" y2="170" stroke="#2b2a33" stroke-width="17" stroke-linecap="round"/><line x1="130" y1="154" x2="128" y2="170" stroke="#e08d6a" stroke-width="5" stroke-linecap="round"/>
-      <line x1="152" y1="154" x2="154" y2="170" stroke="#2b2a33" stroke-width="17" stroke-linecap="round"/><line x1="152" y1="154" x2="154" y2="170" stroke="#e08d6a" stroke-width="5" stroke-linecap="round"/>
-      <circle cx="140" cy="126" r="34" fill="#d9a63f" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
-      <circle cx="140" cy="122" r="30" fill="#f3c86d"/>
-      <ellipse cx="150" cy="130" rx="16" ry="10" transform="rotate(-25 150 130)" fill="#d9a63f" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
-      <circle cx="116" cy="96" r="22" fill="#f3c86d" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
-      <path d="M106 82 q2 -10 8 -12 M114 78 q0 -8 6 -10" fill="none" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
-      <polygon points="94,96 80,102 94,108" fill="#e08d6a" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
-      <circle cx="110" cy="92" r="4" fill="#2b2a33"/>
+      <g transform="translate(284 0) scale(-1 1)"><line x1="133" y1="153.2" x2="131.2" y2="167.6" stroke="#2b2a33" stroke-width="16.5" stroke-linecap="round"/><line x1="133" y1="153.2" x2="131.2" y2="167.6" stroke="#e08d6a" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="152.8" y1="153.2" x2="154.6" y2="167.6" stroke="#2b2a33" stroke-width="16.5" stroke-linecap="round"/><line x1="152.8" y1="153.2" x2="154.6" y2="167.6" stroke="#e08d6a" stroke-width="4.5" stroke-linecap="round"/>
+      <circle cx="142" cy="128" r="30.6" fill="#d9a63f" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="142" cy="124.4" r="27" fill="#f3c86d"/>
+      <ellipse cx="151" cy="131.6" rx="14.4" ry="9" transform="rotate(-25 151 131.6)" fill="#d9a63f" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="120.4" cy="101" r="19.8" fill="#f3c86d" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M111.4 88.4 q2 -10 8 -12 M118.6 84.8 q0 -8 6 -10" fill="none" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <polygon points="100.6,101 88,106.4 100.6,111.8" fill="#e08d6a" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="115" cy="97.4" r="3.6" fill="#2b2a33"/></g>
 </svg>

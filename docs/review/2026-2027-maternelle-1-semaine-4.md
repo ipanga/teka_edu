@@ -956,7 +956,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
   - `corps-main` — Une main ouverte, les cinq doigts écartés (`public/media/objects/corps-main.svg`)
   - `corps-pied` — Un pied nu, vu de dessus, avec ses cinq orteils (`public/media/objects/corps-pied.svg`)
   - `corps-tete` — La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire (`public/media/objects/corps-tete.svg`)
-  - `corps-ventre` — Le ventre d’un enfant, avec le nombril, entre le tee-shirt et le short (`public/media/objects/corps-ventre.svg`)
+  - `corps-ventre` — Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous (`public/media/objects/corps-ventre.svg`)
 
 - **Objectifs travaillés :** `LANG-S01-C01-O01` Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
 

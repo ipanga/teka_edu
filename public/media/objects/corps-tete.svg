@@ -5,5 +5,5 @@
       <circle cx="152" cy="96" r="10" fill="#9a6540" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
       <circle cx="100" cy="88" r="52" fill="#9a6540" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
       <path d="M48 88 a52 52 0 0 1 104 0 q-52 -24 -104 0 z" fill="#2b2a33"/>
-      <circle cx="84" cy="96" r="5" fill="#2b2a33"/><circle cx="116" cy="96" r="5" fill="#2b2a33"/><path d="M91 108 q9 9 18 0" fill="none" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="84" cy="96" r="5" fill="#2b2a33"/><circle cx="116" cy="96" r="5" fill="#2b2a33"/><path d="M88.48 108 q11.52 9.216 23.04 0" fill="none" stroke="#2b2a33" stroke-width="3.75" stroke-linecap="round"/>
 </svg>

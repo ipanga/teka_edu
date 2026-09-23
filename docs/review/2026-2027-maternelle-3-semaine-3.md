@@ -502,7 +502,7 @@ _Redire une histoire connue dans l’ordre, avec ses propres mots._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue entière, et trois morceaux de mangue sur une assiette (`public/media/illustrations/histoire-mangue.svg`)
+- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue entière, et trois morceaux de mangue coupés sur une assiette (`public/media/illustrations/histoire-mangue.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 

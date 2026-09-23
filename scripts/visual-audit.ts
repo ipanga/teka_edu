@@ -19,6 +19,7 @@ import {
   deriveState,
   type VisualState,
 } from "@/lib/content/visual-audit";
+import { type FinalQa, QA_TRACKER_PATH, buildQaTracker } from "@/lib/content/visual-qa-tracker";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const statePath = path.join(ROOT, VISUAL_STATE_PATH);
@@ -35,6 +36,11 @@ const pretty = async (file: string, text: string) =>
   format(text, { ...(await resolveConfig(file)), filepath: file });
 writeFileSync(statePath, await pretty(statePath, JSON.stringify(nextState, null, 2)), "utf8");
 writeFileSync(auditPath, await pretty(auditPath, buildAuditDocument(data, nextState)), "utf8");
+const finalQa = (state as VisualState & { finalQa?: FinalQa }).finalQa;
+if (finalQa !== undefined) {
+  const trackerPath = path.join(ROOT, QA_TRACKER_PATH);
+  writeFileSync(trackerPath, await pretty(trackerPath, buildQaTracker(data, finalQa)), "utf8");
+}
 
 console.log(
   `${VISUAL_AUDIT_PATH}: ${derived.counts.lessons} lessons, ${derived.counts.activities} activities, ` +

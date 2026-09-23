@@ -152,7 +152,7 @@ _Parler de ce qu’on a fait à quelqu’un qui ne l’a pas vu._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-malo` — Malo, un petit chien roulé en boule, endormi sur son tapis sous la lune (`public/media/illustrations/histoire-malo.svg`)
+- **Image montrée pendant la lecture :** `histoire-malo` — Malo, un petit chien couché en rond sur son tapis, les yeux fermés, sous la lune et les étoiles (`public/media/illustrations/histoire-malo.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -801,7 +801,7 @@ _Reprendre, en parlant, ce que le mois a apporté._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue entière, et trois morceaux de mangue sur une assiette (`public/media/illustrations/histoire-mangue.svg`)
+- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue entière, et trois morceaux de mangue coupés sur une assiette (`public/media/illustrations/histoire-mangue.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 

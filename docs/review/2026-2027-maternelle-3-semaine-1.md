@@ -512,7 +512,7 @@ _Premier corpus de mots : nommer et ranger les objets de l’école._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue entière, et trois morceaux de mangue sur une assiette (`public/media/illustrations/histoire-mangue.svg`)
+- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue entière, et trois morceaux de mangue coupés sur une assiette (`public/media/illustrations/histoire-mangue.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -837,7 +837,7 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-kumu` — Kumu, le petit poussin, devant la porte ouverte du poulailler (`public/media/illustrations/histoire-kumu.svg`)
+- **Image montrée pendant la lecture :** `histoire-kumu` — Kumu, le petit poussin, qui sort tout seul du poulailler dont la porte est ouverte (`public/media/illustrations/histoire-kumu.svg`)
 
 - **Questions posées à l’enfant après l’écoute (3) :**
 
@@ -1188,7 +1188,7 @@ _Frapper les syllabes des prénoms de la maison : entendre que les mots sont fai
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-kumu` — Kumu, le petit poussin, devant la porte ouverte du poulailler (`public/media/illustrations/histoire-kumu.svg`)
+- **Image montrée pendant la lecture :** `histoire-kumu` — Kumu, le petit poussin, qui sort tout seul du poulailler dont la porte est ouverte (`public/media/illustrations/histoire-kumu.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Acquérir les habiletés phonologiques et le principe alphabétique » (from-5) :**
 

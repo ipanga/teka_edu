@@ -813,7 +813,7 @@ _Deuxième corpus de mots : nommer les objets et les pièces de la maison._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-malo` — Malo, un petit chien roulé en boule, endormi sur son tapis sous la lune (`public/media/illustrations/histoire-malo.svg`)
+- **Image montrée pendant la lecture :** `histoire-malo` — Malo, un petit chien couché en rond sur son tapis, les yeux fermés, sous la lune et les étoiles (`public/media/illustrations/histoire-malo.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -1512,7 +1512,7 @@ _Comprendre ce que ressent un personnage, et le dire._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-kumu` — Kumu, le petit poussin, devant la porte ouverte du poulailler (`public/media/illustrations/histoire-kumu.svg`)
+- **Image montrée pendant la lecture :** `histoire-kumu` — Kumu, le petit poussin, qui sort tout seul du poulailler dont la porte est ouverte (`public/media/illustrations/histoire-kumu.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
 
