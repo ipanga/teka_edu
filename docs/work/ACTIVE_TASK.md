@@ -18,7 +18,7 @@ packages are regenerated from canonical content — once. Approvals are **not** 
 
 ## Status
 
-`in_progress`
+`awaiting_review`
 
 ## Branch
 
@@ -36,9 +36,8 @@ on #79 first and are merged into #80 with a normal merge commit — no force pus
 
 ## Last Checkpoint
 
-2026-09-23 — started. Previous task archived to
-`docs/work/archive/2026-09-september-visual-upgrade.md`. Verified: clean tree, 96 approved /
-80 review, develop `087fc06`, staging 302 (protected), production `a729722` healthy.
+2026-09-23 — **Frozen** (`SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION`). 49/49 decided,
+packages regenerated, full verification green. Awaiting the owner's reconfirmation review.
 
 ## Scope
 
@@ -63,34 +62,43 @@ on #79 first and are merged into #80 with a normal merge commit — no force pus
 ## Completed
 
 - [x] Resume checks and archive.
+- [x] PR A: never-invisible stagger + E2E, TV child view, audio in four classes, recording
+      script (`audio:brief`), child-view fixes from the walkthrough.
+- [x] PR B: 14 pictures refined or redrawn, 0 new lapses; tracker; style guide; freeze;
+      packages; migration `20260923175037_september_visual_upgrade`.
+- [x] Full verification (below).
 
 ## In Progress
 
-- [ ] PR A work on `feat/september-visual-ux`: stagger fix, TV scaling, audio plan.
+None.
 
 ## Remaining
 
-- [ ] Merge PR A branch into PR B branch.
-- [ ] Tracker + style guide; re-audit; refinements; freeze; packages; full verification.
+- [ ] Owner: submit the two reconfirmation packages and the sheet (OI-001).
+- [ ] After `accepted`: history entries, `scripts/approve-week.ts` per week, new data migration.
+- [ ] Owner: merge #79 then #80 (retarget #80 to `develop` after #79 merges); staging then
+      deploys and should be checked.
 
 ## Validation State
 
-| Check              | Result  | At                    |
-| ------------------ | ------- | --------------------- |
-| format             | PASS    | `2e46e9d`             |
-| lint               | PASS    | `2e46e9d`             |
-| typecheck          | PASS    | `2e46e9d`             |
-| unit tests         | PASS    | `2e46e9d` — 374       |
-| content validation | PASS    | `2e46e9d`             |
-| database tests     | PASS    | `2e46e9d` — 152 local |
-| build              | PASS    | `2e46e9d`             |
-| E2E                | PASS    | `2e46e9d` — 30        |
-| Docker             | NOT RUN |                       |
-| secret scans       | NOT RUN |                       |
+| Check              | Result | At                                          |
+| ------------------ | ------ | ------------------------------------------- |
+| format             | PASS   | working tree after freeze                   |
+| lint               | PASS   | working tree after freeze                   |
+| typecheck          | PASS   | working tree after freeze                   |
+| unit tests         | PASS   | working tree after freeze — 385             |
+| content validation | PASS   | working tree after freeze — 31 files        |
+| database tests     | PASS   | local `db reset` — 152 pgTAP                |
+| build              | PASS   | working tree after freeze (+ client bundle) |
+| E2E                | PASS   | working tree after freeze — 31 (9 skipped)  |
+| Docker             | PASS   | portable + Vercel images, both smoke-tested |
+| secret scans       | PASS   | gitleaks 169 commits; 0 tracked `.env*`     |
 
 ## Database State
 
-- Local 42 migrations (incl. `20260922220249_september_visual_upgrade`); DEV / PROD 41.
+- Local: 42 migrations incl. `20260923175037_september_visual_upgrade` (regenerated; the
+  earlier `20260922220249` was never applied to a hosted project and was replaced).
+- DEV / PROD: 41. The migration reaches DEV when #80 merges into `develop`.
 
 ## Deployment State
 
@@ -110,8 +118,11 @@ None yet.
 
 ## Exact Resume Point
 
-Switch to `feat/september-visual-ux`; implement the stagger fix and audio plan; commit; merge it
-into `feat/september-illustrations`.
+Nothing is running. The next action is the owner's: send
+`docs/review/2026-2027-maternelle-1-reconfirmation-visuelle.md`,
+`docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md` and
+`docs/review/media/septembre-avant-apres.png` to the reviewer. If a picture must change: set
+`finalQa.frozen` to false, redraw, re-freeze, `npm run review:visual`, submit again.
 
 ## Resume Verification
 

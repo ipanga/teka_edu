@@ -717,26 +717,19 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = a729722 (merge
 ## Last Session Summary
 
 ```text
-Completed:  SEPTEMBER VISUAL UPGRADE — 1ère and 3ème maternelle (PR #79 + PR #80, drafts).
-            Audit of all 302 September activities, 176 lessons, 49 pictures, generated and
-            freshness-tested; a plan and an illustration / motion / audio style system.
-            The child's screen: a tinted stage under every picture, cards, rhyme lines and
-            steps arriving once in sequence, a page turn, a calmer off-screen panel, a bigger
-            child view. Still four keyframes, all off under prefers-reduced-motion.
-            41 of 49 pictures redrawn or refined under one system (warm brown skin, one ink, a
-            shade per tone, a ground, faces on people and animals only); the 8 shapes untouched.
-            Audio: the decision per activity (0 required, 48 recommended, 29 optional), a word
-            finds its recording by transcript, listen controls appear only when a recording
-            exists, a recording brief for both classes. Zero recordings, by ADR-046.
-            ADR-048: a redrawn picture lapses approvals, honoured not bypassed. 80 approvals
-            lapsed (35 + 45), recorded as a consequence entry per week; the 1ère reviews of
-            2026-09-15 transcribed into the history (they lived only in the lesson blocks).
-            Two visual reconfirmation packages with a before/after sheet await the owner.
-            Data migration 20260922220249_september_visual_upgrade; 152 pgTAP PASS locally.
-            The live product is unaffected: the runtime does not gate on status.
-Validation: format, lint, typecheck, unit (374), content (31 files), build, E2E (30),
-            pgTAP (152, local) — all PASS on both branches' working trees.
+Completed:  FINAL SEPTEMBER VISUAL QA — pictures frozen for reconfirmation.
+            49/49 pictures re-judged at every size the product uses, including a 1920 px child
+            screen: 35 accepted, 11 refined, 3 redrawn, 0 open. Tracker generated from content:
+            docs/work/SEPTEMBER_VISUAL_QA.md. No new approval lapsed (still 80: 35 + 45).
+            SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION — 49 hashes frozen, test-held.
+            Reconfirmation packages regenerated: docs/review/2026-2027-maternelle-{1,3}-
+            reconfirmation-visuelle.md + docs/review/media/septembre-avant-apres.png.
+            Motion: staggered lists never invisible (ADR-045 amended). Child's screen fills a TV.
+            Audio: four classes, generated recording script, zero recordings (ADR-046).
+            Style guide: docs/ILLUSTRATION_STYLE_GUIDE.md; system UI font kept.
+Validation: format, lint, typecheck, unit 385, content 31, build, client bundle, E2E 31,
+            pgTAP 152 (local), Docker portable + Vercel (smoke), gitleaks 169 commits — PASS.
 Cost:       $0.
-Not done:   The owner's visual reconfirmation review (OI-001) and the audio recordings
-            (OI-002). ISSUE-011 and ISSUE-017 unchanged.
+Not done:   The owner's reconfirmation review; approvals NOT restored. Staging not updated:
+            it deploys only when #79/#80 reach develop. Production untouched (a729722).
 ```

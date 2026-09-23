@@ -2,37 +2,40 @@
 
 Read this file first in every session. It holds **stable context and working rules only**.
 
-| File                                          | Answers                                                                             |
-| --------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `CLAUDE.md`                                   | What to remember while working (this file)                                          |
-| `PROJECT_STATUS.md`                           | Where implementation stands, what is next                                           |
-| `DECISIONS.md`                                | Why important choices were made (ADRs)                                              |
-| `TEKA_EDU_PROJECT_PLAN.md`                    | What Teka Edu should become (full spec, cited as "Plan §N")                         |
-| `README.md`                                   | How a developer sets up, runs and tests the project                                 |
-| `docs/ENVIRONMENT_VARIABLES.md`               | Every environment variable: the single authoritative inventory                      |
-| `docs/ENVIRONMENT_SETUP.md`                   | Step-by-step configuration of local, Supabase, Vercel and GitHub                    |
-| `docs/DEPLOYMENT.md`                          | Branch lifecycles, CI/CD pipelines, migrations, rollback, failures                  |
-| `docs/FREE_TIER.md`                           | Free-tier limits (classified), cost, safety rules, zero-cost backup design          |
-| `docs/SCHOOL_CALENDAR.md`                     | Calendar model, DRC holidays and sources, generator rules, 2026–2027 facts          |
-| `docs/EDUCATIONAL_MODEL.md`                   | Education hierarchy, curriculum versions/domains, reference-data mirror             |
-| `docs/CURRICULUM.md`                          | Official objectives: sources, hierarchy, age bands, provenance, import              |
-| `docs/DAILY_PROGRAMME.md`                     | Daily programme generator, scheduling rules and where each one comes from           |
-| `docs/CONTENT_AUTHORING.md`                   | How to write lessons and activities, and the rules CI enforces                      |
-| `docs/CONTENT_QUALITY_GATE.md`                | Lifecycle draft → review → approved; the review gate and its two kinds              |
-| `docs/PEDAGOGICAL_REVIEW.md`                  | The review process, the register of reviews, and what each one decided              |
-| `docs/DRC_CURRICULUM_COMPARISON.md`           | The DRC PNEM 2021 vs the French Cycle 1 programme, and the strategy                 |
-| `docs/PHASE3_RENDERER_PLAN.md`                | Renderer families that Phase 3 should build                                         |
-| `docs/ANNUAL_PLAN.md`                         | The year's scope and sequence, and how coverage is proved                           |
-| `docs/PARENT_SESSION.md`                      | How a parent runs the daily session, the routes, and what the UI does               |
-| `docs/MEDIA_ARCHITECTURE.md`                  | Where pictures live, stable ids, accessibility, why it costs nothing                |
-| `docs/AUDIO_GUIDELINES.md`                    | Why the parent is the voice, and what to record first if that changes               |
-| `docs/REAL_SESSION_TESTING.md`                | Running one real session with a child, and recording what happened                  |
-| `docs/RESUMABLE_WORKFLOW.md`                  | How a long task survives an interruption; checkpoints, Git, recovery                |
-| `docs/work/ACTIVE_TASK.md`                    | The task in progress: what is done, what remains, the exact next action             |
-| `docs/september-illustration-upgrade-plan.md` | September visual upgrade: strategy, illustration/motion/audio style system, batches |
-| `docs/september-illustration-audit.md`        | Generated audit of every September activity (`npm run visual:audit`)                |
-| `docs/september-illustration-progress.md`     | Running log of the visual upgrade, and every child-facing wording change            |
-| `docs/september-illustration-open-items.md`   | Blockers, deferred items and owner decisions for the visual upgrade                 |
+| File                                            | Answers                                                                                      |
+| ----------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `CLAUDE.md`                                     | What to remember while working (this file)                                                   |
+| `PROJECT_STATUS.md`                             | Where implementation stands, what is next                                                    |
+| `DECISIONS.md`                                  | Why important choices were made (ADRs)                                                       |
+| `TEKA_EDU_PROJECT_PLAN.md`                      | What Teka Edu should become (full spec, cited as "Plan §N")                                  |
+| `README.md`                                     | How a developer sets up, runs and tests the project                                          |
+| `docs/ENVIRONMENT_VARIABLES.md`                 | Every environment variable: the single authoritative inventory                               |
+| `docs/ENVIRONMENT_SETUP.md`                     | Step-by-step configuration of local, Supabase, Vercel and GitHub                             |
+| `docs/DEPLOYMENT.md`                            | Branch lifecycles, CI/CD pipelines, migrations, rollback, failures                           |
+| `docs/FREE_TIER.md`                             | Free-tier limits (classified), cost, safety rules, zero-cost backup design                   |
+| `docs/SCHOOL_CALENDAR.md`                       | Calendar model, DRC holidays and sources, generator rules, 2026–2027 facts                   |
+| `docs/EDUCATIONAL_MODEL.md`                     | Education hierarchy, curriculum versions/domains, reference-data mirror                      |
+| `docs/CURRICULUM.md`                            | Official objectives: sources, hierarchy, age bands, provenance, import                       |
+| `docs/DAILY_PROGRAMME.md`                       | Daily programme generator, scheduling rules and where each one comes from                    |
+| `docs/CONTENT_AUTHORING.md`                     | How to write lessons and activities, and the rules CI enforces                               |
+| `docs/CONTENT_QUALITY_GATE.md`                  | Lifecycle draft → review → approved; the review gate and its two kinds                       |
+| `docs/PEDAGOGICAL_REVIEW.md`                    | The review process, the register of reviews, and what each one decided                       |
+| `docs/DRC_CURRICULUM_COMPARISON.md`             | The DRC PNEM 2021 vs the French Cycle 1 programme, and the strategy                          |
+| `docs/PHASE3_RENDERER_PLAN.md`                  | Renderer families that Phase 3 should build                                                  |
+| `docs/ANNUAL_PLAN.md`                           | The year's scope and sequence, and how coverage is proved                                    |
+| `docs/PARENT_SESSION.md`                        | How a parent runs the daily session, the routes, and what the UI does                        |
+| `docs/MEDIA_ARCHITECTURE.md`                    | Where pictures live, stable ids, accessibility, why it costs nothing                         |
+| `docs/AUDIO_GUIDELINES.md`                      | Why the parent is the voice, and what to record first if that changes                        |
+| `docs/REAL_SESSION_TESTING.md`                  | Running one real session with a child, and recording what happened                           |
+| `docs/RESUMABLE_WORKFLOW.md`                    | How a long task survives an interruption; checkpoints, Git, recovery                         |
+| `docs/work/ACTIVE_TASK.md`                      | The task in progress: what is done, what remains, the exact next action                      |
+| `docs/september-illustration-upgrade-plan.md`   | September visual upgrade: strategy, illustration/motion/audio style system, batches          |
+| `docs/september-illustration-audit.md`          | Generated audit of every September activity (`npm run visual:audit`)                         |
+| `docs/september-illustration-progress.md`       | Running log of the visual upgrade, and every child-facing wording change                     |
+| `docs/september-illustration-open-items.md`     | Blockers, deferred items and owner decisions for the visual upgrade                          |
+| `docs/ILLUSTRATION_STYLE_GUIDE.md`              | How every picture is drawn (people, body parts, objects, shapes, stories, scale, typography) |
+| `docs/work/SEPTEMBER_VISUAL_QA.md`              | Generated per-asset decision tracker of the final September visual QA, and its freeze        |
+| `docs/audio/septembre-script-enregistrement.md` | Generated recording script: every September recording, transcript, tone, duration            |
 
 Do not copy content between these files. Link to it instead.
 
@@ -174,6 +177,7 @@ npm run visual:audit                               (regenerate the September vis
 npm run media:sheet [-- --since=<ref> --ids=a,b]   (before/after contact sheet of every changed picture)
 npm run review:lapse                               (send stale approvals back to review; re-stamps nothing)
 npm run review:visual                              (visual reconfirmation packages, one per level, with the sheet)
+npm run audio:brief                                (regenerate the September recording script from content)
 ```
 
 ## Development workflow

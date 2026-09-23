@@ -5,7 +5,7 @@ to the bottom with their resolution.
 
 ## Decisions needed from the owner
 
-### OI-001 — When to submit the visual reconfirmation package
+### OI-001 — Submit the visual reconfirmation packages (the pictures are frozen)
 
 Redrawing a picture lapses the approval of every lesson that shows it (ADR-048; `lessonDigest`
 covers picture bytes since ISSUE-026). **80 lessons are at `review`** (35 in 1ère, 45 in 3ème),
@@ -39,9 +39,7 @@ exist, the listen controls appear with no code change.
   pedagogical gain. Revisit if a real session shows the ink mismatch.
 - **Rhymes no lesson reads.** `comptine-semaine` and `comptine-cabri` illustrate texts that no
   September activity reads. They are redrawn for consistency (P3) and lapse nothing.
-- **A display font.** A rounded child-friendly typeface would help, but every font is either a
-  network request (Google Fonts — against offline-first and privacy) or a binary in the repository
-  with a licence to track. System UI stays. Revisit with the PWA work.
+- **A display font.** Decided 2026-09-23: system UI stays (`docs/ILLUSTRATION_STYLE_GUIDE.md`).
 - **Sequenced motion** (a number line filling, a hand folding finger by finger for the rhyme)
   would need a library or scripted SVG animation. Out of ADR-045's four effects; revisit only if
   a real session shows a child needs the demonstration.

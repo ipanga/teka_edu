@@ -235,3 +235,23 @@ display font, sequenced motion.
 `docs/work/ACTIVE_TASK.md`. The work is complete on both branches; what remains is the owner's:
 merge #79, submit the reconfirmation packages, record the outcome, run `approve-week` per
 week, merge #80.
+
+### 2026-09-23 — Final visual QA and freeze (done)
+
+- **All 49 pictures re-judged at 72, 128, 256 px and on a 1920 px child screen**: 35 accepted,
+  11 refined, 3 redrawn, 0 open (`docs/work/SEPTEMBER_VISUAL_QA.md`, generated).
+- Refined: the hand (read as a glove), the small face's mouth (read as a beard on Lisa and
+  Nsimba), the foot's heel stub, the rhyme's touching thumbs, the folded thumb, Kumu (now walks
+  away from the open door), the mango slices (read as eggs). Redrawn: the belly, Malo (read as a
+  bear), the leaping cabri. **No new lapse**: every changed picture was already under
+  reconfirmation.
+- Motion: staggered lists never start invisible (`teka-settle`, ADR-045 amended), proved by E2E.
+- Child's full screen: word cards centre and grow, an off-screen line becomes the screen,
+  prompts scale — found by walking four whole sessions at phone and TV size.
+- Audio: four classes; `docs/audio/septembre-script-enregistrement.md` (29 pronunciation
+  models, 7 rhymes, 10 optional narrations). Zero recordings.
+- Style guide `docs/ILLUSTRATION_STYLE_GUIDE.md`; typography kept (system UI), decision recorded.
+- **`SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION`**: 49 hashes frozen, a test holds them.
+  Packages regenerated with per-activity before/after hashes and a verified summary.
+- Data migration regenerated as `20260923175037_september_visual_upgrade` (the earlier one had
+  never reached a hosted database).

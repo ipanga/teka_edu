@@ -62,6 +62,14 @@ const reviewable = (l: RawLesson): string => {
   return JSON.stringify(copy);
 };
 
+// A package is written once, against a frozen set: a picture redrawn after submission would
+// make the reviewer's answer describe something else.
+const finalQa = readJson("docs/september-illustration-state.json").finalQa as
+  { frozen: boolean; frozenHashes: Record<string, string> } | undefined;
+if (finalQa?.frozen !== true) {
+  console.error("the pictures are not frozen (finalQa.frozen); refusing to write the packages");
+  process.exit(1);
+}
 const data = getReferenceData();
 const registryNow = readJson("content/media/registry.json").assets as Asset[];
 const registryThen = showJson("content/media/registry.json").assets as Asset[];
@@ -110,6 +118,14 @@ for (const levelId of levels) {
     else if (reviewable(then) !== reviewable(now)) moved.push(`${id}: a reviewable field changed`);
   }
   if (textsThen !== textsNow) moved.push(`content/texts/${levelId}.json changed`);
+  // Progression, programme, curriculum and calendar: none of them may move under a visual change.
+  for (const dir of ["content/programmes", "content/curriculum", "content/calendars"]) {
+    try {
+      execFileSync("git", ["diff", "--quiet", since, "--", dir], { cwd: ROOT });
+    } catch {
+      moved.push(`${dir} changed since ${since}`);
+    }
+  }
   if (moved.length > 0) {
     console.error(`${levelId}: the package cannot claim that only pictures changed:`);
     for (const m of moved) console.error(`  - ${m}`);
@@ -137,6 +153,9 @@ for (const levelId of levels) {
   const lines: string[] = [];
   lines.push(
     `# Reconfirmation visuelle — ${levelName}, septembre ${year.slice(0, 4)}`,
+    "",
+    "`SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION` — les images sont figées ; leurs empreintes",
+    "sont vérifiées par un test tant que la relecture n’a pas eu lieu (`docs/work/SEPTEMBER_VISUAL_QA.md`).",
     "",
     "> **Ce document est généré** (`npm run review:visual`). Il ne demande pas une relecture",
     "> complète : les mots lus à l’enfant et à l’adulte, les objectifs, les durées et le matériel",
@@ -176,21 +195,60 @@ for (const levelId of levels) {
       `| \`${a.id}\` | ${a.kind} | ${before?.alt ?? "_nouvelle_"} | ${a.alt} | ${users.length} — ${users.join(", ")} |`,
     );
   }
-  lines.push("", "## Les leçons dont l’approbation est annulée, par semaine", "");
+  const short = (h: string | undefined) => (h ? h.slice(7, 19) : "—");
+  const levelLessons = [...lessonsNow.values()];
+  const unaffected = levelLessons.length - lapsed.length;
+  lines.push(
+    "",
+    "## Résumé",
+    "",
+    "| Mesure | Valeur |",
+    "| --- | --- |",
+    `| Leçons de la classe | ${levelLessons.length} |`,
+    `| Leçons concernées (approbation annulée) | ${lapsed.length} |`,
+    `| Leçons non concernées | ${unaffected} |`,
+    `| Images modifiées (toutes classes) | ${changedAssets.length} |`,
+    `| Images inchangées (toutes classes) | ${registryNow.length - changedAssets.length} |`,
+    "| Texte pédagogique modifié (enfant ou adulte) | **0** — vérifié champ par champ |",
+    "| Objectifs modifiés | **0** — vérifié |",
+    "| Progression, programme, calendrier modifiés | **0** — vérifié |",
+    "| Seuls les images et leur description ont changé | **oui** |",
+    "",
+    "## Chaque activité concernée, semaine par semaine",
+    "",
+    "Pour chaque ligne : aucun texte lu à l’enfant, aucun texte lu à l’adulte, aucun objectif et",
+    "aucune progression n’a changé (vérifié avant l’écriture de ce document). **La seule raison**",
+    "du changement d’empreinte est la ligne « image » : ses octets ont changé, et l’empreinte d’une",
+    "approbation couvre les octets de chaque image montrée (ISSUE-026, ADR-048).",
+    "",
+  );
   const byWeek = new Map<number, RawLesson[]>();
   for (const l of lapsed) {
     const w = weekOf(days.get(l.id) ?? 0);
     byWeek.set(w, [...(byWeek.get(w) ?? []), l]);
   }
   for (const [w, ls] of [...byWeek].sort((a, b) => a[0] - b[0])) {
-    lines.push(`### Semaine ${w} — ${ls.length} leçon(s)`, "");
+    lines.push(
+      `### Semaine ${w} — ${ls.length} leçon(s)`,
+      "",
+      "| Jour | Leçon | Activité | Image | Empreinte avant | Empreinte après | Description avant | Description après | Texte enfant | Texte adulte | Objectif / progression |",
+      "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+    );
     for (const l of ls) {
-      lines.push(
-        `- jour ${days.get(l.id)} · \`${l.id}\` **${l.title}** — images : ${[...picturesOf(l)]
-          .filter((id) => changedAssets.some((a) => a.id === id))
-          .map((id) => `\`${id}\``)
-          .join(", ")}`,
-      );
+      for (const a of l.activities) {
+        const ids = [...a.mediaIds];
+        const t = a.payload["textId"];
+        const ill = typeof t === "string" ? illustrationOf.get(t) : null;
+        if (ill) ids.push(ill);
+        for (const id of ids) {
+          const now = changedAssets.find((c) => c.id === id);
+          if (now === undefined) continue;
+          const then = registryThen.find((b) => b.id === id);
+          lines.push(
+            `| ${days.get(l.id)} | \`${l.id}\` ${l.title} | \`${a.id}\` ${String(a["title"] ?? "")} | \`${id}\` | \`${short(then?.contentHash)}\` | \`${short(now.contentHash)}\` | ${then?.alt ?? "—"} | ${now.alt} | inchangé | inchangé | inchangés |`,
+          );
+        }
+      }
     }
     lines.push("");
   }
