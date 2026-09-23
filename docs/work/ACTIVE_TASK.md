@@ -36,11 +36,11 @@ on #79 first and are merged into #80 with a normal merge commit — no force pus
 
 ## Last Checkpoint
 
-2026-09-23 — 3ème `accepted` recorded; 45 approvals restored; September **176/176 approved**,
-176 distinct digests, 0 review. Migration `20260923192024_september_visual_upgrade`; fresh local
-DB 176 approved, 152 pgTAP PASS; unit 395, E2E 31, build, bundle — PASS. Committed on
-`feat/september-illustrations`. PR #79's database job is failing only on GitHub Container
-Registry rate limits (4 attempts, `toomanyrequests` before any test runs).
+2026-09-23 — #79 squash-merged into `develop` (`fdb4661`); its staging pipeline failed on the
+ghcr.io rate limit, fixed by #81 (database steps pull from `public.ecr.aws`, set per step; CLI
+pinned), merged as `f7edc6d`; **staging deployed green from `f7edc6d`**. `develop` merged into
+`feat/september-illustrations`; #80 retargeted to `develop`; its CI is running. Approvals:
+176/176. Nothing else running.
 
 ## Scope
 
@@ -80,11 +80,9 @@ None.
 
 ## Remaining
 
-- [ ] Re-run PR #79's database job until the registry allows the pull; require all checks green.
-- [ ] Mark #79 ready; squash-merge into `develop`; watch `deploy-staging`.
-- [ ] Merge `develop` into `feat/september-illustrations` (no force push); retarget #80 to
-      `develop`; CI green; mark ready; squash-merge; watch `deploy-staging` (DEV migration).
-- [ ] Verify staging: health SHA, Supabase DEV migration applied, workflow smoke E2E.
+- [ ] #80 CI green → mark ready → squash-merge → watch `deploy-staging` (applies migration
+      `20260923192024_september_visual_upgrade` to Supabase DEV).
+- [ ] Verify staging: health SHA, DEV migration applied, workflow smoke E2E.
 - [ ] Final report; archive this checkpoint.
 
 ## Validation State
@@ -114,7 +112,8 @@ None.
 
 ## Git State
 
-- Both branches pushed, clean.
+- `develop` at `f7edc6d` (#79 squash `fdb4661`, #81 `f7edc6d`).
+- `feat/september-illustrations` (#80, base `develop`): merge of `develop` committed and pushed.
 
 ## Blockers
 
@@ -126,8 +125,8 @@ None yet.
 
 ## Exact Resume Point
 
-`gh run rerun 35903761693 --failed` then `gh pr checks 79`. When all five checks are green:
-`gh pr ready 79 && gh pr merge 79 --squash`. Nothing else is running. Approval totals: 176/176.
+`gh pr checks 80`. When all four checks are green: `gh pr ready 80 && gh pr merge 80 --squash`,
+then `gh run list --branch develop --workflow deploy-staging.yml --limit 1` and watch it.
 
 ## Resume Verification
 
