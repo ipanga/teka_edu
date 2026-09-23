@@ -8,7 +8,15 @@ import type { SchoolDay } from "@/domain/calendar/types";
 import { ACTIVITY_RENDERERS, type RendererFamily } from "@/domain/lessons/renderers";
 import { findText } from "@/domain/lessons/texts";
 import type { Activity, Material } from "@/domain/lessons/types";
-import { type MediaAsset, audioUrl, findAsset, findAudio, mediaUrl } from "@/domain/media/types";
+import {
+  type AudioAsset,
+  type MediaAsset,
+  audioUrl,
+  findAsset,
+  findAudio,
+  mediaUrl,
+  pronunciationFor,
+} from "@/domain/media/types";
 import { generateDailyPlan } from "@/domain/programme/daily-plan";
 import type { DailyPlan } from "@/domain/programme/types";
 import { getProgramme, getReferenceData } from "@/lib/content/reference-data";
@@ -117,7 +125,12 @@ export type SessionActivity = {
   mode: Activity["mode"];
   renderer: RendererFamily;
   type: Activity["type"];
-  vocabulary: readonly { fr: string; en: string | null }[];
+  /**
+   * The taught words, each with its recording when one exists. Null is the normal case: the
+   * parent says the word (ADR-046). The recording is found by transcript, never by an id in the
+   * approved content.
+   */
+  vocabulary: readonly { fr: string; en: string | null; audio: SessionAudio | null }[];
   /** Optional English help. The interface keeps it hidden until the parent asks (ADR-001). */
   englishHelp: string | null;
   payload: Readonly<Record<string, unknown>>;
@@ -158,13 +171,24 @@ function toMedia(id: string | null): SessionMedia | null {
     : { id: asset.id, url: mediaUrl(asset), alt: asset.alt, tags: asset.tags };
 }
 
+const toSessionAudio = (asset: AudioAsset): SessionAudio => ({
+  id: asset.id,
+  url: audioUrl(asset),
+  transcript: asset.transcript,
+  seconds: asset.seconds,
+});
+
 /** Resolves an audio id, or null when the text has no recording. */
 function toAudio(id: string | null): SessionAudio | null {
   if (id === null) return null;
   const asset = findAudio(getReferenceData().audio, id);
-  return asset === undefined
-    ? null
-    : { id: asset.id, url: audioUrl(asset), transcript: asset.transcript, seconds: asset.seconds };
+  return asset === undefined ? null : toSessionAudio(asset);
+}
+
+/** The recording of a taught word, or null when nobody has recorded it yet. */
+function toPronunciation(word: string): SessionAudio | null {
+  const asset = pronunciationFor(word, getReferenceData().audio);
+  return asset === undefined ? null : toSessionAudio(asset);
 }
 
 function toActivity(activity: Activity): SessionActivity {
@@ -181,7 +205,11 @@ function toActivity(activity: Activity): SessionActivity {
     mode: activity.mode,
     renderer: ACTIVITY_RENDERERS[activity.type].family,
     type: activity.type,
-    vocabulary: activity.vocabulary,
+    vocabulary: activity.vocabulary.map((entry) => ({
+      fr: entry.fr,
+      en: entry.en,
+      audio: toPronunciation(entry.fr),
+    })),
     englishHelp: activity.scaffolds.find((s) => s.language === "en")?.childInstruction ?? null,
     payload: activity.payload,
     text:

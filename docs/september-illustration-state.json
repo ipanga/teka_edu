@@ -1,0 +1,1255 @@
+{
+  "version": 1,
+  "task": "September illustration, audio, animation and UX upgrade — 1ère and 3ème maternelle",
+  "updatedOn": "2026-09-22",
+  "lastCompletedBatch": "B1-ux-frame",
+  "nextBatch": "B2-illustrations-m1",
+  "batches": [
+    {
+      "id": "B0-tracking",
+      "title": "Tracking system and audit",
+      "branch": "feat/september-visual-ux",
+      "status": "done",
+      "scope": "State file, audit generator, plan, progress log, open items, ACTIVE_TASK, docs table."
+    },
+    {
+      "id": "B1-ux-frame",
+      "title": "UX frame, motion and audio plumbing",
+      "branch": "feat/september-visual-ux",
+      "status": "done",
+      "scope": "Picture stage, word cards, rhyme and story layout, off-screen frame, child screen, staggered entrances, page turn, pronunciation lookup and listen control. No content change."
+    },
+    {
+      "id": "B2-illustrations-m1",
+      "title": "Illustrations — the 1ère maternelle set",
+      "branch": "feat/september-illustrations",
+      "status": "in-progress",
+      "scope": "corps-main, corps-pied, corps-tete, corps-ventre, comptine-mains, comptine-bonjour, histoire-seau-lisa, histoire-tika, histoire-pluie, bonhomme-articule, objet-cuillere, objet-porte, objet-seau, objet-table, objet-chaise."
+    },
+    {
+      "id": "B3-illustrations-m3",
+      "title": "Illustrations — the 3ème maternelle set",
+      "branch": "feat/september-illustrations",
+      "status": "pending",
+      "scope": "Stories (kumu, nsimba, mangue, bibi, marche, cailloux, malo), rhymes (compter, formes, semaine, cabri), animals, plante-parties."
+    },
+    {
+      "id": "B4-objects-and-reconfirmation",
+      "title": "Objects refined, contact sheet, visual reconfirmation, lapses, migration",
+      "branch": "feat/september-illustrations",
+      "status": "pending",
+      "scope": "Remaining objects, before/after contact sheet, visual reconfirmation package per level, lessons back to review, data migration, review packages regenerated."
+    },
+    {
+      "id": "QA",
+      "title": "QA and validation",
+      "branch": "both",
+      "status": "pending",
+      "scope": "Screenshots at 390, 820 and 1280 px, reduced motion, E2E, contrast, no missing asset, no broken layout."
+    }
+  ],
+  "decisions": {
+    "assets": {
+      "forme-carre": {
+        "verdict": "keep",
+        "priority": "P3",
+        "note": "A shape is a shape; the form is the whole point. Unchanged bytes, no approval lapses."
+      },
+      "forme-rectangle": {
+        "verdict": "keep",
+        "priority": "P3",
+        "note": "Same as forme-carre."
+      },
+      "forme-triangle": {
+        "verdict": "keep",
+        "priority": "P3",
+        "note": "Same as forme-carre."
+      },
+      "forme-disque": {
+        "verdict": "keep",
+        "priority": "P3",
+        "note": "Same as forme-carre."
+      },
+      "forme-carre-penche": {
+        "verdict": "keep",
+        "priority": "P3",
+        "note": "Second exemplar; deliberately wears another shape's colour."
+      },
+      "forme-rectangle-debout": {
+        "verdict": "keep",
+        "priority": "P3",
+        "note": "Second exemplar."
+      },
+      "forme-triangle-quelconque": {
+        "verdict": "keep",
+        "priority": "P3",
+        "note": "Second exemplar."
+      },
+      "forme-disque-petit": {
+        "verdict": "keep",
+        "priority": "P3",
+        "note": "Second exemplar."
+      },
+      "objet-cuillere": {
+        "verdict": "refine",
+        "priority": "P1",
+        "note": "Used by six 1ère lessons; grey blob reads as a paddle. Bowl highlight, handle taper, ground shadow."
+      },
+      "objet-crayon": {
+        "verdict": "refine",
+        "priority": "P2",
+        "note": "Recognisable; add wood ring, lead tip, shade band."
+      },
+      "objet-cahier": {
+        "verdict": "refine",
+        "priority": "P2",
+        "note": "Add a spine shade and a small label; fill the canvas."
+      },
+      "objet-sac": {
+        "verdict": "refine",
+        "priority": "P2",
+        "note": "Straps, pocket, shade band."
+      },
+      "objet-table": {
+        "verdict": "refine",
+        "priority": "P1",
+        "note": "Used by 1ère; add depth (second edge), shade, ground."
+      },
+      "objet-chaise": {
+        "verdict": "refine",
+        "priority": "P1",
+        "note": "Used by 1ère; back slats, four legs in perspective, ground."
+      },
+      "objet-porte": {
+        "verdict": "refine",
+        "priority": "P1",
+        "note": "Used by 1ère; frame, panels, handle, ground."
+      },
+      "objet-fenetre": {
+        "verdict": "refine",
+        "priority": "P2",
+        "note": "Sky and a sun through the panes, frame shade."
+      },
+      "objet-lit": {
+        "verdict": "refine",
+        "priority": "P2",
+        "note": "Blanket fold, pillow, headboard, ground."
+      },
+      "objet-marmite": {
+        "verdict": "refine",
+        "priority": "P2",
+        "note": "Lid knob, two handles, shade, ground."
+      },
+      "objet-seau": {
+        "verdict": "refine",
+        "priority": "P1",
+        "note": "Used by 1ère and by the Lisa story; water line, handle, shade, ground."
+      },
+      "objet-panier": {
+        "verdict": "refine",
+        "priority": "P2",
+        "note": "Weave lines, handle, shade, ground."
+      },
+      "objet-tomate": {
+        "verdict": "refine",
+        "priority": "P2",
+        "note": "Highlight, leaf star, shade band."
+      },
+      "objet-banane": {
+        "verdict": "refine",
+        "priority": "P2",
+        "note": "Two-tone peel, tip and stem."
+      },
+      "objet-oignon": {
+        "verdict": "refine",
+        "priority": "P2",
+        "note": "Layer lines, root tuft, shade."
+      },
+      "objet-caillou": {
+        "verdict": "refine",
+        "priority": "P1",
+        "note": "Counted 13 times in 3ème; add a facet highlight and ground so a row of them reads as stones."
+      },
+      "corps-main": {
+        "verdict": "replace",
+        "priority": "P0",
+        "note": "Amber blob with a stub thumb. Redraw: a child's open hand in a warm brown skin tone, thumb on the correct side, rounded fingers, wrist."
+      },
+      "corps-pied": {
+        "verdict": "replace",
+        "priority": "P0",
+        "note": "Reads as a mitten with beads. Redraw: a bare foot seen from above, five toes decreasing, skin tone, ankle."
+      },
+      "corps-tete": {
+        "verdict": "replace",
+        "priority": "P0",
+        "note": "Yellow circle with ears. Redraw: a child's head with short black hair, brown skin, ears, a soft smile, neck."
+      },
+      "corps-ventre": {
+        "verdict": "replace",
+        "priority": "P0",
+        "note": "Blue slab with a dot. Redraw: a round tummy with a navel between a lifted t-shirt hem and shorts, skin tone — the part alone, as ADR-042 asks."
+      },
+      "animal-poule": {
+        "verdict": "replace",
+        "priority": "P1",
+        "note": "Rounder body, wing, tail feathers, comb and wattle, legs on a ground, friendly eye."
+      },
+      "animal-poussin": {
+        "verdict": "replace",
+        "priority": "P1",
+        "note": "Kumu: rounder, fluffier, tiny wing, on a ground."
+      },
+      "animal-chevre": {
+        "verdict": "replace",
+        "priority": "P1",
+        "note": "Bibi: beard, curved horns, ear, tail, four legs on a ground."
+      },
+      "histoire-seau-lisa": {
+        "verdict": "replace",
+        "priority": "P0",
+        "note": "Stick figure with a red face. Redraw: Lisa as a small child (brown skin, dress, two puffs of hair) beside a chair with her blue bucket on it; she stays the largest thing so a three-year-old finds her."
+      },
+      "histoire-tika": {
+        "verdict": "replace",
+        "priority": "P0",
+        "note": "A circle over a plank. Redraw: a child sitting up in bed, stretching, sun in the window."
+      },
+      "histoire-kumu": {
+        "verdict": "replace",
+        "priority": "P1",
+        "note": "Kumu in front of the open henhouse door, hen visible inside; warm morning."
+      },
+      "histoire-nsimba": {
+        "verdict": "replace",
+        "priority": "P1",
+        "note": "A child with a green school bag in front of a school door, holding an adult's hand is out (only one figure): a child alone, bag on, door with a small sign."
+      },
+      "histoire-mangue": {
+        "verdict": "replace",
+        "priority": "P1",
+        "note": "Three mango slices on a plate, one mango whole behind; ripe orange-yellow with red blush."
+      },
+      "histoire-bibi": {
+        "verdict": "replace",
+        "priority": "P1",
+        "note": "Bibi the goat at a wooden fence, nose in a leafy bush."
+      },
+      "histoire-marche": {
+        "verdict": "replace",
+        "priority": "P1",
+        "note": "A market basket on a cloth with tomatoes, a banana bunch and an onion; a coin beside."
+      },
+      "histoire-pluie": {
+        "verdict": "replace",
+        "priority": "P1",
+        "note": "Used by both classes. A house with a tin roof, rain lines, a puddle, a grey cloud."
+      },
+      "histoire-cailloux": {
+        "verdict": "replace",
+        "priority": "P1",
+        "note": "Three stones with clearly different shapes — round, flat, pointed — on a ground, with facet highlights."
+      },
+      "histoire-malo": {
+        "verdict": "replace",
+        "priority": "P1",
+        "note": "A puppy curled asleep on a mat under a crescent moon and two stars."
+      },
+      "comptine-compter": {
+        "verdict": "replace",
+        "priority": "P1",
+        "note": "A hand showing three fingers, skin tone, thumb folded, wrist; used to count 1-2-3."
+      },
+      "comptine-bonjour": {
+        "verdict": "replace",
+        "priority": "P0",
+        "note": "Used by four 1ère lessons. A rising sun over a hill with two waving hands (skin tone), warm sky."
+      },
+      "comptine-mains": {
+        "verdict": "replace",
+        "priority": "P0",
+        "note": "Used by nine 1ère lessons — the screenshot case. Two open hands, palms out, skin tone, thumbs outward, wrists; the rhyme's gesture."
+      },
+      "comptine-semaine": {
+        "verdict": "replace",
+        "priority": "P3",
+        "note": "No lesson reads this rhyme yet; redraw for consistency (seven beads, five school-coloured, two weekend-coloured, today marked by a star)."
+      },
+      "comptine-cabri": {
+        "verdict": "replace",
+        "priority": "P3",
+        "note": "No lesson reads this rhyme yet; a jumping kid goat, all four legs off a ground line."
+      },
+      "comptine-formes": {
+        "verdict": "replace",
+        "priority": "P2",
+        "note": "Four shapes with tiny faces dancing? No: faces on shapes would contradict the shape assets. Keep them faceless but give each a motion line and a ground."
+      },
+      "plante-parties": {
+        "verdict": "refine",
+        "priority": "P2",
+        "note": "Leaves fuller, soil band brown, roots clearer, a pot is out (the lesson names a plant in the ground)."
+      },
+      "bonhomme-articule": {
+        "verdict": "refine",
+        "priority": "P1",
+        "note": "Deliberately a child's drawing of a jointed figure; make it read as crayon on paper (thicker, slightly wobbly line, small joints marked) rather than a diagram."
+      }
+    },
+    "families": {
+      "audio-narrative": {
+        "ux": "Illustration floats on white; rhyme lines lack rhythm; page count small. Give the picture a tinted stage, larger lines for rhymes, a page turn that rises once.",
+        "animation": "Page turn (teka-rise on page change); rhyme lines rise in sequence once on arrival.",
+        "audio": "rhyme: recommended (rhythm); story: optional narration for days the parent cannot read."
+      },
+      "word-cards": {
+        "ux": "Cards read as empty white boxes; the picture is small. Tinted stage per card, bigger picture, word under it in a larger size; keep « Jouer : je montre le mot ».",
+        "animation": "Cards rise in sequence once; the correct card pops (exists).",
+        "audio": "recommended: recorded pronunciation of each taught word, behind a listen control per card, only when a recording exists."
+      },
+      "quantity": {
+        "ux": "Counters fine; add a stage and a bigger count readout.",
+        "animation": "Each tapped object pops (exists); the count bumps once.",
+        "audio": "unnecessary"
+      },
+      "look-and-name": {
+        "ux": "Choice grid fine; single picture floats — stage it.",
+        "animation": "Attention pulse when revealed (exists).",
+        "audio": "unnecessary"
+      },
+      "group-and-match": {
+        "ux": "Dashed group boxes read as broken; use tinted panels with a soft border.",
+        "animation": "Placed picture pops (exists).",
+        "audio": "unnecessary"
+      },
+      "oral-exchange": {
+        "ux": "Prompt list fine; pictures, when present, need a stage.",
+        "animation": "none",
+        "audio": "unnecessary"
+      },
+      "sound-game": {
+        "ux": "Word chips fine; stage them in the off-screen frame.",
+        "animation": "none",
+        "audio": "recommended: a human model of the syllable or rhyme pairs, when recorded."
+      },
+      "trace-and-draw": {
+        "ux": "Model picture on white; stage it. « À dessiner » label fine.",
+        "animation": "none",
+        "audio": "unnecessary"
+      },
+      "move": {
+        "ux": "Numbered steps fine; softer frame.",
+        "animation": "Steps rise in sequence once.",
+        "audio": "unnecessary"
+      },
+      "hands-on": {
+        "ux": "Small pictures on white; stage them.",
+        "animation": "none",
+        "audio": "unnecessary"
+      }
+    },
+    "activities": {
+      "m1-art-05-a1": {
+        "note": "The rhyme « Un, deux, trois, mes mains » — the screenshot case. Illustration replaced (comptine-mains); rhyme lines staggered; audio recommended."
+      },
+      "m1-lang-05-a2": {
+        "note": "« Les mots de mon corps » — the screenshot case. Body pictures replaced; pronunciation plumbing on the cards."
+      }
+    },
+    "audio": {
+      "policy": "No activity requires audio (ADR-046). recommended = a human recording would teach something the page cannot (pronunciation, rhythm, a sound to recognise); optional = narration for days the parent cannot read; unnecessary = everything else. Zero synthetic voices. Files, when recorded, go under public/audio/<kind>/<id>.mp3 with a registry row naming the speaker.",
+      "recordingBrief": "docs/AUDIO_GUIDELINES.md"
+    },
+    "progress": {
+      "assetsDone": [],
+      "assetsQa": [],
+      "uxFamiliesDone": [
+        "audio-narrative",
+        "word-cards",
+        "quantity",
+        "look-and-name",
+        "group-and-match",
+        "oral-exchange",
+        "sound-game",
+        "trace-and-draw",
+        "move",
+        "hands-on"
+      ],
+      "animationFamiliesDone": [
+        "audio-narrative",
+        "word-cards",
+        "quantity",
+        "look-and-name",
+        "group-and-match",
+        "move"
+      ],
+      "audioPlumbingDone": true,
+      "qaFamiliesDone": [
+        "word-cards",
+        "audio-narrative",
+        "quantity",
+        "look-and-name",
+        "group-and-match",
+        "move",
+        "hands-on"
+      ],
+      "wordingChanges": []
+    }
+  },
+  "derived": {
+    "generatedOn": "2026-09-22",
+    "counts": {
+      "lessons": 176,
+      "activities": 302,
+      "assets": 49,
+      "byStatus": {
+        "not-reviewed": 0,
+        "reviewed-no-change": 0,
+        "needs-illustration-update": 100,
+        "needs-audio": 8,
+        "needs-animation": 0,
+        "needs-ux-adjustment": 0,
+        "implemented": 81,
+        "qa-passed": 113
+      },
+      "byAudioNeed": {
+        "not-needed": 225,
+        "optional": 29,
+        "recommended": 30,
+        "important-for-pronunciation": 18
+      },
+      "assetsByVerdict": {
+        "keep": 8,
+        "refine": 18,
+        "replace": 23
+      }
+    },
+    "audited": {
+      "lessons": [
+        "m1-lang-01",
+        "m1-math-01",
+        "m1-phys-01",
+        "m1-time-01",
+        "m1-lang-02",
+        "m1-math-02",
+        "m1-phys-02",
+        "m1-world-02",
+        "m1-lang-03",
+        "m1-math-03",
+        "m1-phys-03",
+        "m1-time-03",
+        "m1-art-04",
+        "m1-lang-04",
+        "m1-math-04",
+        "m1-phys-04",
+        "m1-art-05",
+        "m1-lang-05",
+        "m1-math-05",
+        "m1-phys-05",
+        "m1-lang-06",
+        "m1-math-06",
+        "m1-phys-06",
+        "m1-time-06",
+        "m1-art-07",
+        "m1-lang-07",
+        "m1-math-07",
+        "m1-phys-07",
+        "m1-lang-08",
+        "m1-math-08",
+        "m1-phys-08",
+        "m1-world-08",
+        "m1-art-09",
+        "m1-lang-09",
+        "m1-math-09",
+        "m1-phys-09",
+        "m1-lang-10",
+        "m1-math-10",
+        "m1-phys-10",
+        "m1-time-10",
+        "m1-art-11",
+        "m1-lang-11",
+        "m1-math-11",
+        "m1-phys-11",
+        "m1-lang-12",
+        "m1-math-12",
+        "m1-phys-12",
+        "m1-time-12",
+        "m1-lang-13",
+        "m1-math-13",
+        "m1-phys-13",
+        "m1-world-13",
+        "m1-art-14",
+        "m1-lang-14",
+        "m1-math-14",
+        "m1-phys-14",
+        "m1-lang-15",
+        "m1-math-15",
+        "m1-phys-15",
+        "m1-time-15",
+        "m1-lang-16",
+        "m1-math-16",
+        "m1-phys-16",
+        "m1-world-16",
+        "m1-art-17",
+        "m1-lang-17",
+        "m1-math-17",
+        "m1-phys-17",
+        "m1-lang-18",
+        "m1-math-18",
+        "m1-phys-18",
+        "m1-time-18",
+        "m1-art-19",
+        "m1-lang-19",
+        "m1-math-19",
+        "m1-phys-19",
+        "m1-lang-20",
+        "m1-math-20",
+        "m1-phys-20",
+        "m1-world-20",
+        "m1-lang-21",
+        "m1-math-21",
+        "m1-phys-21",
+        "m1-time-21",
+        "m1-lang-22",
+        "m1-math-22",
+        "m1-phys-22",
+        "m1-world-22",
+        "m3-lang-01",
+        "m3-math-01",
+        "m3-phys-01",
+        "m3-world-01",
+        "m3-art-01",
+        "m3-lang-02",
+        "m3-math-02",
+        "m3-phys-02",
+        "m3-lang-03",
+        "m3-math-03",
+        "m3-phys-03",
+        "m3-time-01",
+        "m3-art-02",
+        "m3-lang-04",
+        "m3-math-04",
+        "m3-phys-04",
+        "m3-lang-05",
+        "m3-math-05",
+        "m3-phys-05",
+        "m3-world-02",
+        "m3-lang-06",
+        "m3-math-06",
+        "m3-phys-06",
+        "m3-time-02",
+        "m3-art-03",
+        "m3-lang-07",
+        "m3-math-07",
+        "m3-phys-07",
+        "m3-lang-08",
+        "m3-math-08",
+        "m3-phys-08",
+        "m3-time-03",
+        "m3-lang-09",
+        "m3-math-09",
+        "m3-phys-09",
+        "m3-world-03",
+        "m3-lang-10",
+        "m3-math-10",
+        "m3-phys-10",
+        "m3-time-04",
+        "m3-lang-11",
+        "m3-math-11",
+        "m3-phys-11",
+        "m3-world-04",
+        "m3-art-04",
+        "m3-lang-12",
+        "m3-math-12",
+        "m3-phys-12",
+        "m3-lang-13",
+        "m3-math-13",
+        "m3-phys-13",
+        "m3-time-05",
+        "m3-art-05",
+        "m3-lang-14",
+        "m3-math-14",
+        "m3-phys-14",
+        "m3-lang-15",
+        "m3-math-15",
+        "m3-phys-15",
+        "m3-world-05",
+        "m3-lang-16",
+        "m3-math-16",
+        "m3-phys-16",
+        "m3-time-06",
+        "m3-art-06",
+        "m3-lang-17",
+        "m3-math-17",
+        "m3-phys-17",
+        "m3-lang-18",
+        "m3-math-18",
+        "m3-phys-18",
+        "m3-time-07",
+        "m3-lang-19",
+        "m3-math-19",
+        "m3-phys-19",
+        "m3-world-06",
+        "m3-lang-20",
+        "m3-math-20",
+        "m3-phys-20",
+        "m3-time-08",
+        "m3-lang-21",
+        "m3-math-21",
+        "m3-phys-21",
+        "m3-world-07",
+        "m3-art-07",
+        "m3-lang-22",
+        "m3-math-22",
+        "m3-phys-22"
+      ],
+      "activities": 302
+    },
+    "implemented": {
+      "lessons": [
+        "m1-math-01",
+        "m1-phys-01",
+        "m1-time-01",
+        "m1-math-02",
+        "m1-phys-02",
+        "m1-math-03",
+        "m1-phys-03",
+        "m1-time-03",
+        "m1-phys-04",
+        "m1-art-05",
+        "m1-math-05",
+        "m1-phys-05",
+        "m1-phys-06",
+        "m1-time-06",
+        "m1-math-07",
+        "m1-phys-07",
+        "m1-phys-08",
+        "m1-art-09",
+        "m1-math-09",
+        "m1-phys-09",
+        "m1-phys-10",
+        "m1-time-10",
+        "m1-math-11",
+        "m1-phys-11",
+        "m1-math-12",
+        "m1-phys-12",
+        "m1-time-12",
+        "m1-math-13",
+        "m1-phys-13",
+        "m1-world-13",
+        "m1-art-14",
+        "m1-math-14",
+        "m1-phys-14",
+        "m1-phys-15",
+        "m1-time-15",
+        "m1-math-16",
+        "m1-phys-16",
+        "m1-world-16",
+        "m1-math-17",
+        "m1-phys-17",
+        "m1-math-18",
+        "m1-phys-18",
+        "m1-time-18",
+        "m1-art-19",
+        "m1-math-19",
+        "m1-phys-19",
+        "m1-phys-20",
+        "m1-math-21",
+        "m1-phys-21",
+        "m1-time-21",
+        "m1-math-22",
+        "m1-phys-22",
+        "m1-world-22",
+        "m3-phys-01",
+        "m3-art-01",
+        "m3-phys-02",
+        "m3-math-03",
+        "m3-phys-03",
+        "m3-time-01",
+        "m3-phys-04",
+        "m3-phys-05",
+        "m3-math-06",
+        "m3-phys-06",
+        "m3-time-02",
+        "m3-art-03",
+        "m3-phys-07",
+        "m3-math-08",
+        "m3-phys-08",
+        "m3-time-03",
+        "m3-phys-09",
+        "m3-phys-10",
+        "m3-time-04",
+        "m3-phys-11",
+        "m3-phys-12",
+        "m3-math-13",
+        "m3-phys-13",
+        "m3-time-05",
+        "m3-math-14",
+        "m3-phys-14",
+        "m3-math-15",
+        "m3-phys-15",
+        "m3-math-16",
+        "m3-phys-16",
+        "m3-time-06",
+        "m3-art-06",
+        "m3-phys-17",
+        "m3-math-18",
+        "m3-phys-18",
+        "m3-time-07",
+        "m3-phys-19",
+        "m3-phys-20",
+        "m3-time-08",
+        "m3-math-21",
+        "m3-phys-21",
+        "m3-world-07",
+        "m3-phys-22"
+      ]
+    },
+    "qaPassed": {
+      "lessons": [
+        "m1-math-01",
+        "m1-phys-01",
+        "m1-time-01",
+        "m1-math-02",
+        "m1-phys-02",
+        "m1-math-03",
+        "m1-phys-03",
+        "m1-time-03",
+        "m1-phys-04",
+        "m1-math-05",
+        "m1-phys-05",
+        "m1-phys-06",
+        "m1-time-06",
+        "m1-math-07",
+        "m1-phys-07",
+        "m1-phys-08",
+        "m1-math-09",
+        "m1-phys-09",
+        "m1-phys-10",
+        "m1-time-10",
+        "m1-math-11",
+        "m1-phys-11",
+        "m1-math-12",
+        "m1-phys-12",
+        "m1-time-12",
+        "m1-math-13",
+        "m1-phys-13",
+        "m1-world-13",
+        "m1-math-14",
+        "m1-phys-14",
+        "m1-phys-15",
+        "m1-time-15",
+        "m1-math-16",
+        "m1-phys-16",
+        "m1-world-16",
+        "m1-math-17",
+        "m1-phys-17",
+        "m1-math-18",
+        "m1-phys-18",
+        "m1-time-18",
+        "m1-math-19",
+        "m1-phys-19",
+        "m1-phys-20",
+        "m1-math-21",
+        "m1-phys-21",
+        "m1-time-21",
+        "m1-math-22",
+        "m1-phys-22",
+        "m1-world-22",
+        "m3-phys-01",
+        "m3-phys-02",
+        "m3-math-03",
+        "m3-phys-03",
+        "m3-phys-04",
+        "m3-phys-05",
+        "m3-math-06",
+        "m3-phys-06",
+        "m3-phys-07",
+        "m3-math-08",
+        "m3-phys-08",
+        "m3-phys-09",
+        "m3-phys-10",
+        "m3-phys-11",
+        "m3-phys-12",
+        "m3-math-13",
+        "m3-phys-13",
+        "m3-math-14",
+        "m3-phys-14",
+        "m3-math-15",
+        "m3-phys-15",
+        "m3-math-16",
+        "m3-phys-16",
+        "m3-phys-17",
+        "m3-phys-18",
+        "m3-phys-19",
+        "m3-phys-20",
+        "m3-math-21",
+        "m3-phys-21",
+        "m3-phys-22"
+      ]
+    },
+    "pendingAudio": [
+      "m1-lang-01-a2",
+      "m1-lang-01-a3",
+      "m1-lang-02-a2",
+      "m1-lang-02-a3",
+      "m1-lang-03-a3",
+      "m1-art-04-a1",
+      "m1-lang-04-a3",
+      "m1-lang-05-a3",
+      "m1-lang-06-a2",
+      "m1-lang-06-a3",
+      "m1-art-07-a1",
+      "m1-lang-07-a3",
+      "m1-lang-08-a3",
+      "m1-lang-09-a3",
+      "m1-lang-10-a2",
+      "m1-lang-10-a3",
+      "m1-art-11-a1",
+      "m1-lang-11-a2",
+      "m1-lang-11-a3",
+      "m1-lang-12-a3",
+      "m1-lang-13-a2",
+      "m1-lang-13-a3",
+      "m1-lang-14-a3",
+      "m1-lang-15-a3",
+      "m1-lang-16-a2",
+      "m1-lang-16-a3",
+      "m1-art-17-a1",
+      "m1-lang-17-a3",
+      "m1-lang-18-a2",
+      "m1-lang-18-a3",
+      "m1-lang-19-a3",
+      "m1-lang-20-a3",
+      "m1-lang-21-a3",
+      "m1-lang-22-a2",
+      "m1-lang-22-a3",
+      "m3-lang-02-a2",
+      "m3-art-02-a1",
+      "m3-lang-04-a2",
+      "m3-lang-06-a2",
+      "m3-lang-07-a2",
+      "m3-art-04-a1",
+      "m3-lang-13-a2",
+      "m3-art-05-a1",
+      "m3-lang-14-a2",
+      "m3-lang-16-a2",
+      "m3-lang-17-a2",
+      "m3-lang-21-a2",
+      "m3-art-07-a1"
+    ],
+    "pendingAnimation": [],
+    "pendingIllustration": [
+      "objet-cuillere",
+      "objet-crayon",
+      "objet-cahier",
+      "objet-sac",
+      "objet-table",
+      "objet-chaise",
+      "objet-porte",
+      "objet-fenetre",
+      "objet-lit",
+      "objet-marmite",
+      "objet-seau",
+      "objet-panier",
+      "objet-tomate",
+      "objet-banane",
+      "objet-oignon",
+      "objet-caillou",
+      "corps-main",
+      "corps-pied",
+      "corps-tete",
+      "corps-ventre",
+      "animal-poule",
+      "animal-poussin",
+      "animal-chevre",
+      "histoire-seau-lisa",
+      "histoire-tika",
+      "histoire-kumu",
+      "histoire-nsimba",
+      "histoire-mangue",
+      "histoire-bibi",
+      "histoire-marche",
+      "histoire-pluie",
+      "histoire-cailloux",
+      "histoire-malo",
+      "comptine-compter",
+      "comptine-bonjour",
+      "comptine-mains",
+      "comptine-semaine",
+      "comptine-cabri",
+      "comptine-formes",
+      "plante-parties",
+      "bonhomme-articule"
+    ],
+    "assets": {
+      "forme-carre": {
+        "verdict": "keep",
+        "priority": "P3",
+        "status": "reviewed-no-change",
+        "usedBy": [
+          "m1-math-11",
+          "m1-math-13",
+          "m1-math-16",
+          "m1-math-19",
+          "m3-math-03",
+          "m3-math-08",
+          "m3-math-18"
+        ]
+      },
+      "forme-rectangle": {
+        "verdict": "keep",
+        "priority": "P3",
+        "status": "reviewed-no-change",
+        "usedBy": ["m3-math-03", "m3-math-08", "m3-math-18"]
+      },
+      "forme-triangle": {
+        "verdict": "keep",
+        "priority": "P3",
+        "status": "reviewed-no-change",
+        "usedBy": ["m1-math-16", "m1-math-19", "m3-math-03", "m3-math-08", "m3-math-18"]
+      },
+      "forme-disque": {
+        "verdict": "keep",
+        "priority": "P3",
+        "status": "reviewed-no-change",
+        "usedBy": [
+          "m1-math-11",
+          "m1-math-13",
+          "m1-math-16",
+          "m1-math-19",
+          "m3-math-03",
+          "m3-math-08",
+          "m3-math-18"
+        ]
+      },
+      "forme-carre-penche": {
+        "verdict": "keep",
+        "priority": "P3",
+        "status": "reviewed-no-change",
+        "usedBy": ["m3-math-03", "m3-math-08"]
+      },
+      "forme-rectangle-debout": {
+        "verdict": "keep",
+        "priority": "P3",
+        "status": "reviewed-no-change",
+        "usedBy": ["m3-math-03", "m3-math-08"]
+      },
+      "forme-triangle-quelconque": {
+        "verdict": "keep",
+        "priority": "P3",
+        "status": "reviewed-no-change",
+        "usedBy": ["m3-math-03", "m3-math-08"]
+      },
+      "forme-disque-petit": {
+        "verdict": "keep",
+        "priority": "P3",
+        "status": "reviewed-no-change",
+        "usedBy": ["m3-math-03", "m3-math-08"]
+      },
+      "objet-cuillere": {
+        "verdict": "refine",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": [
+          "m1-math-04",
+          "m1-math-06",
+          "m1-math-08",
+          "m1-math-10",
+          "m1-math-15",
+          "m1-math-20"
+        ]
+      },
+      "objet-crayon": {
+        "verdict": "refine",
+        "priority": "P2",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-02", "m3-lang-19"]
+      },
+      "objet-cahier": {
+        "verdict": "refine",
+        "priority": "P2",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-02", "m3-lang-19"]
+      },
+      "objet-sac": {
+        "verdict": "refine",
+        "priority": "P2",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-02"]
+      },
+      "objet-table": {
+        "verdict": "refine",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": ["m1-lang-02", "m1-lang-06", "m3-lang-02"]
+      },
+      "objet-chaise": {
+        "verdict": "refine",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": ["m1-lang-02", "m1-lang-06", "m3-lang-02"]
+      },
+      "objet-porte": {
+        "verdict": "refine",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": ["m1-lang-01", "m1-lang-06", "m1-lang-22", "m3-lang-07", "m3-lang-19"]
+      },
+      "objet-fenetre": {
+        "verdict": "refine",
+        "priority": "P2",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-07"]
+      },
+      "objet-lit": {
+        "verdict": "refine",
+        "priority": "P2",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-07"]
+      },
+      "objet-marmite": {
+        "verdict": "refine",
+        "priority": "P2",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-07", "m3-lang-19"]
+      },
+      "objet-seau": {
+        "verdict": "refine",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": ["m1-lang-01", "m1-lang-06", "m1-lang-22", "m3-lang-07"]
+      },
+      "objet-panier": {
+        "verdict": "refine",
+        "priority": "P2",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-13", "m3-lang-19"]
+      },
+      "objet-tomate": {
+        "verdict": "refine",
+        "priority": "P2",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-13", "m3-lang-19"]
+      },
+      "objet-banane": {
+        "verdict": "refine",
+        "priority": "P2",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-13"]
+      },
+      "objet-oignon": {
+        "verdict": "refine",
+        "priority": "P2",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-13"]
+      },
+      "objet-caillou": {
+        "verdict": "refine",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": [
+          "m3-math-01",
+          "m3-math-02",
+          "m3-math-04",
+          "m3-math-05",
+          "m3-math-07",
+          "m3-math-09",
+          "m3-math-10",
+          "m3-math-11",
+          "m3-math-12",
+          "m3-math-17",
+          "m3-math-19",
+          "m3-math-20",
+          "m3-math-22"
+        ]
+      },
+      "corps-main": {
+        "verdict": "replace",
+        "priority": "P0",
+        "status": "needs-illustration-update",
+        "usedBy": ["m1-lang-11", "m1-lang-18", "m1-lang-22", "m1-world-02", "m1-world-20"]
+      },
+      "corps-pied": {
+        "verdict": "replace",
+        "priority": "P0",
+        "status": "needs-illustration-update",
+        "usedBy": ["m1-lang-11", "m1-lang-18", "m1-world-02", "m1-world-20"]
+      },
+      "corps-tete": {
+        "verdict": "replace",
+        "priority": "P0",
+        "status": "needs-illustration-update",
+        "usedBy": ["m1-lang-13", "m1-lang-18", "m1-lang-22", "m1-world-08", "m1-world-20"]
+      },
+      "corps-ventre": {
+        "verdict": "replace",
+        "priority": "P0",
+        "status": "needs-illustration-update",
+        "usedBy": ["m1-lang-13", "m1-lang-18", "m1-world-08", "m1-world-20"]
+      },
+      "animal-poule": {
+        "verdict": "replace",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-03", "m3-world-02", "m3-world-05"]
+      },
+      "animal-poussin": {
+        "verdict": "replace",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-03", "m3-world-05"]
+      },
+      "animal-chevre": {
+        "verdict": "replace",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-09", "m3-world-02", "m3-world-05", "m3-world-06"]
+      },
+      "histoire-seau-lisa": {
+        "verdict": "replace",
+        "priority": "P0",
+        "status": "needs-illustration-update",
+        "usedBy": [
+          "m1-lang-03",
+          "m1-lang-06",
+          "m1-lang-07",
+          "m1-lang-08",
+          "m1-lang-14",
+          "m1-lang-15",
+          "m1-lang-17",
+          "m1-lang-18"
+        ]
+      },
+      "histoire-tika": {
+        "verdict": "replace",
+        "priority": "P0",
+        "status": "needs-illustration-update",
+        "usedBy": ["m1-lang-09", "m1-lang-21"]
+      },
+      "histoire-kumu": {
+        "verdict": "replace",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-03", "m3-lang-04", "m3-lang-09", "m3-lang-17"]
+      },
+      "histoire-nsimba": {
+        "verdict": "replace",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-01", "m3-lang-10", "m3-lang-15"]
+      },
+      "histoire-mangue": {
+        "verdict": "replace",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-02", "m3-lang-11", "m3-lang-22"]
+      },
+      "histoire-bibi": {
+        "verdict": "replace",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-05", "m3-lang-09", "m3-lang-13"]
+      },
+      "histoire-marche": {
+        "verdict": "replace",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-06", "m3-lang-12", "m3-lang-19"]
+      },
+      "histoire-pluie": {
+        "verdict": "replace",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": [
+          "m1-lang-09",
+          "m1-lang-10",
+          "m1-lang-15",
+          "m1-lang-20",
+          "m3-lang-03",
+          "m3-lang-21"
+        ]
+      },
+      "histoire-cailloux": {
+        "verdict": "replace",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-08", "m3-lang-14", "m3-lang-18"]
+      },
+      "histoire-malo": {
+        "verdict": "replace",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-lang-07", "m3-lang-16", "m3-lang-20"]
+      },
+      "comptine-compter": {
+        "verdict": "replace",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-art-02", "m3-art-04"]
+      },
+      "comptine-bonjour": {
+        "verdict": "replace",
+        "priority": "P0",
+        "status": "needs-illustration-update",
+        "usedBy": ["m1-lang-01", "m1-lang-03", "m1-lang-13", "m1-lang-19"]
+      },
+      "comptine-mains": {
+        "verdict": "replace",
+        "priority": "P0",
+        "status": "needs-illustration-update",
+        "usedBy": [
+          "m1-art-04",
+          "m1-art-07",
+          "m1-art-11",
+          "m1-art-17",
+          "m1-lang-02",
+          "m1-lang-04",
+          "m1-lang-11",
+          "m1-lang-16",
+          "m1-lang-22"
+        ]
+      },
+      "comptine-semaine": {
+        "verdict": "replace",
+        "priority": "P3",
+        "status": "needs-illustration-update",
+        "usedBy": []
+      },
+      "comptine-cabri": {
+        "verdict": "replace",
+        "priority": "P3",
+        "status": "needs-illustration-update",
+        "usedBy": []
+      },
+      "comptine-formes": {
+        "verdict": "replace",
+        "priority": "P2",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-art-05", "m3-art-07"]
+      },
+      "plante-parties": {
+        "verdict": "refine",
+        "priority": "P2",
+        "status": "needs-illustration-update",
+        "usedBy": ["m3-world-03", "m3-world-06"]
+      },
+      "bonhomme-articule": {
+        "verdict": "refine",
+        "priority": "P1",
+        "status": "needs-illustration-update",
+        "usedBy": [
+          "m1-lang-05",
+          "m1-lang-07",
+          "m1-lang-12",
+          "m1-lang-17",
+          "m1-lang-21",
+          "m3-world-01",
+          "m3-world-04"
+        ]
+      }
+    },
+    "lastCompletedBatch": "B1-ux-frame",
+    "nextBatch": "B2-illustrations-m1"
+  }
+}

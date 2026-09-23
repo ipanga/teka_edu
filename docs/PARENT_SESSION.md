@@ -107,6 +107,19 @@ Movement, phonology, drawing, manipulation and most conversation render inside a
 That is not decoration. It is the difference between a répétiteur and a screen that keeps a child
 busy.
 
+### What every picture sits on
+
+Since the September visual upgrade (`docs/september-illustration-upgrade-plan.md`) a picture is
+never on bare white: it sits on a tinted **stage**, one large stage for a story picture or the
+thing to look at, one small stage per word card, counter or choice. Cards, rhyme lines and
+movement steps arrive once, in sequence, and a story page rises once when it turns — all
+`teka-rise` with a delay, nothing new, all off under `prefers-reduced-motion`. On the child's own
+screen (« Montrer à l'enfant ») pictures and tiles grow one step and the counting row is centred.
+
+A taught word shows a small « Écouter : le mot » beside it **only when a human recording of that
+word exists** in the registry, matched by its transcript; a rhyme shows « Écouter la comptine »
+under its text on the same condition (ADR-046). Today none exists, so none is shown.
+
 ### Where a tap teaches
 
 Four interactions, and only where they carry the learning:

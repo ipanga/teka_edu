@@ -295,6 +295,32 @@ test.describe("parent session", () => {
     // The interaction works identically with motion off: nothing waits for an animation.
     await page.getByRole("button", { name: "Un carré", exact: true }).click();
     await expect(page.getByText("Bravo !")).toBeVisible();
+    // The staggered entrances carry no animation at all with motion reduced (ADR-045).
+    const names = await page
+      .locator(".teka-stagger")
+      .evaluateAll((els) => els.map((el) => getComputedStyle(el).animationName));
+    expect(names.length).toBeGreaterThan(0);
+    expect(new Set(names)).toEqual(new Set(["none"]));
     await context.close();
+  });
+
+  test("a staggered list is readable from its first frame, never invisible", async ({ page }) => {
+    // 1ère maternelle, day 11, the last activity is the rhyme « Un, deux, trois, mes mains ».
+    await page.goto("/maternelle/1/seance/11");
+    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    for (let step = 0; step < 8; step++) {
+      if ((await page.locator("h2#activite").textContent()) === "Ma comptine") break;
+      await page
+        .getByRole("button", { name: /Suivant|Terminé/ })
+        .first()
+        .click();
+    }
+    // Sample every line immediately, while the delayed ones are still waiting to start: the
+    // lowest opacity any of them shows must still be legible (teka-settle starts at 0.45).
+    const opacities = await page
+      .locator("p.teka-stagger")
+      .evaluateAll((els) => els.map((el) => Number(getComputedStyle(el).opacity)));
+    expect(opacities.length).toBe(4);
+    expect(Math.min(...opacities)).toBeGreaterThanOrEqual(0.44);
   });
 });
