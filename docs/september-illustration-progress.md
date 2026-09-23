@@ -275,3 +275,14 @@ week, merge #80.
 - No picture file changed; the freeze holds. 3ème package regenerated; the sheet is unchanged.
 - Data migration regenerated as `20260923184512_september_visual_upgrade` (never applied to a
   hosted database).
+
+### 2026-09-23 — 3ème accepted; September closed at 176/176 (done)
+
+- Five 3ème `full-review` / `accepted` entries appended (history 58 → 63, nothing rewritten).
+- 45 approvals restored with `approve-week --lapsed-only` (9 + 10 + 11 + 9 + 6); 86 standing
+  approvals untouched; 176 approved, 176 distinct digests, 0 reused, 0 at review.
+- Reconfirmation generator: a « Rôle » column (principale — montrée à l’enfant / secondaire — non
+  montrée) from `domain/lessons/pictures.ts`; proved in a throwaway worktree at the
+  pre-restoration commit. The accepted package itself is kept as reviewed.
+- Data migration regenerated as `20260923192024_september_visual_upgrade`; fresh local database:
+  176 approved, 0 review, 152 pgTAP PASS.

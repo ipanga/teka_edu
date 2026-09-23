@@ -5,7 +5,7 @@ to the bottom with their resolution.
 
 ## Decisions needed from the owner
 
-### OI-001 — Final targeted confirmation of the 3ème package
+### OI-001 — Visual reconfirmation — RESOLVED 2026-09-23 (both classes accepted, 176/176)
 
 **Status 2026-09-23:** 1ère `accepted` and restored (88/88). 3ème `accepted-with-modifications`:
 `m3-art-04-a1` corrected; send the regenerated

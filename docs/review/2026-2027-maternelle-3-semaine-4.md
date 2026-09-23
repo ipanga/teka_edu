@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 4 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 5 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -98,6 +98,12 @@ Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2
 
 **Suites données :** m3-art-04-a1 reçoit sa propre image, histoire-pluie (la pluie qui tombe sur le toit), déjà existante et inchangée ; une règle unique (domain/lessons/pictures.ts) fait passer l’image propre d’une activité devant celle d’une comptine dite par-dessus, tandis qu’une histoire garde toujours sa propre image. Aucun mot, objectif, durée, textId ni progression n’a changé. Un audit ciblé de toutes les images montrées (110 activités, 184 images) n’a trouvé aucune autre contradiction ; un test (lib/content/media-consistency.ts) l’empêche de revenir. Les approbations restent annulées jusqu’à la confirmation ciblée du paquet régénéré.
 
+### 2026-09-23 — ChatGPT · `accepted` (ai-assisted)
+
+Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.
+
+**Suites données :** Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées.
+
 ## Jour 15 — 2026-09-21
 
 **Durée totale : 35 min** · 4 séances · jour 5 du rythme
@@ -118,7 +124,7 @@ l’autre — l’appareil est alors le sien._
 
 _Comprendre ce que ressent un personnage et le comparer à ce qu’on a vécu soi-même._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** L’enfant a vécu sa propre rentrée ce mois-ci. C’est le moment de relier l’histoire à son expérience : c’est exactement ce que le programme demande.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -404,7 +410,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Comparer deux animaux et dire ce qui les distingue._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Comparer, c’est trouver ce qui est pareil et ce qui est différent. Prenez deux animaux bien distincts.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -484,7 +490,7 @@ l’autre — l’appareil est alors le sien._
 
 _Entendre que deux mots finissent pareil._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
 - **Conseil au parent :** La rime s’entend à la fin du mot. Exagérez la fin en parlant : « chaaa-TON, maiii-SON. » L’enfant doit d’abord reconnaitre, avant d’inventer.
 - **Objectifs enseignés :**
   - `LANG-S02-C01-O15` — Repérer et produire des rimes et des assonances. _(source : programme-2024-langage)_
@@ -814,7 +820,7 @@ l’autre — l’appareil est alors le sien._
 
 _Produire un mot qui rime, après l’avoir reconnu._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Aujourd’hui, l’enfant produit. Les mots inventés sont acceptés : « chat, bat, gat » montre qu’il a compris la rime. Ne corrigez pas l’invention.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -915,7 +921,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Trouver ce qu’il faut ajouter pour arriver à dix._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Dix est le nombre le plus utile à décomposer. Servez-vous des deux mains : cinq et cinq.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1118,7 +1124,7 @@ l’autre — l’appareil est alors le sien._
 
 _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les dire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Servez-vous des mots de l’ordre : d’abord, ensuite, puis, à la fin. Ce sont eux qui structurent le récit.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C02-O06` — Restituer la chronologie des actions majeures d’une histoire simple. _(source : programme-2026)_
@@ -1424,7 +1430,7 @@ l’autre — l’appareil est alors le sien._
 
 _Reprendre les catégories de mots du mois et y ranger des mots nouveaux._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Reprise des trois corpus du mois : l’école, la maison, le marché. L’enfant range, et surtout explique pourquoi.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1538,7 +1544,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Aller au bout de la comptine numérique visée cette année._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Dernière étape de la progression du mois : dix, puis vingt, aujourd’hui trente. Si l’enfant s’arrête à seize, ce n’est pas un échec : on reprend là où ça s’arrête, sans le dire comme une faute.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1680,7 +1686,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dire et faire ce qu’il faut pour qu’un être vivant aille bien._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Un animal et une plante n’ont pas les mêmes besoins : ne les mélangez pas. Vous n’avez besoin ni d’un animal ni d’une plante à la maison — une plante du chemin, un animal du quartier vu de loin, ou l’image du dossier suffisent. L’enfant ne touche ni ne nourrit un animal qu’il ne connait pas, et ne manipule pas une plante inconnue : tout geste de soin est choisi et surveillé par l’adulte.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

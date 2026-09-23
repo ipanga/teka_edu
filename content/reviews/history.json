@@ -695,6 +695,66 @@
       "outcome": "accepted-with-modifications",
       "summary": "Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md et la planche avant/après. Décision : accepted-with-modifications. Un seul défaut : m3-art-04-a1 « Le bruit de la pluie » montrait l’image de la comptine du mois lue par-dessus (comptine-compter, « Une main qui montre trois doigts »), sans rapport avec l’activité, qui fait le bruit de la pluie.",
       "corrections": "m3-art-04-a1 reçoit sa propre image, histoire-pluie (la pluie qui tombe sur le toit), déjà existante et inchangée ; une règle unique (domain/lessons/pictures.ts) fait passer l’image propre d’une activité devant celle d’une comptine dite par-dessus, tandis qu’une histoire garde toujours sa propre image. Aucun mot, objectif, durée, textId ni progression n’a changé. Un audit ciblé de toutes les images montrées (110 activités, 184 images) n’a trouvé aucune autre contradiction ; un test (lib/content/media-consistency.ts) l’empêche de revenir. Les approbations restent annulées jusqu’à la confirmation ciblée du paquet régénéré."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 1,
+      "reviewedOn": "2026-09-23",
+      "reviewKind": "ai-assisted",
+      "reviewer": "ChatGPT",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.",
+      "corrections": "Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 2,
+      "reviewedOn": "2026-09-23",
+      "reviewKind": "ai-assisted",
+      "reviewer": "ChatGPT",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.",
+      "corrections": "Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 3,
+      "reviewedOn": "2026-09-23",
+      "reviewKind": "ai-assisted",
+      "reviewer": "ChatGPT",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.",
+      "corrections": "Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 4,
+      "reviewedOn": "2026-09-23",
+      "reviewKind": "ai-assisted",
+      "reviewer": "ChatGPT",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.",
+      "corrections": "Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 5,
+      "reviewedOn": "2026-09-23",
+      "reviewKind": "ai-assisted",
+      "reviewer": "ChatGPT",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.",
+      "corrections": "Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées."
     }
   ]
 }

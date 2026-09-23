@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 5 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 6 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-14 — ChatGPT · `accepted-with-modifications` (ai-assisted)
@@ -92,6 +92,12 @@ Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2
 
 **Suites données :** m3-art-04-a1 reçoit sa propre image, histoire-pluie (la pluie qui tombe sur le toit), déjà existante et inchangée ; une règle unique (domain/lessons/pictures.ts) fait passer l’image propre d’une activité devant celle d’une comptine dite par-dessus, tandis qu’une histoire garde toujours sa propre image. Aucun mot, objectif, durée, textId ni progression n’a changé. Un audit ciblé de toutes les images montrées (110 activités, 184 images) n’a trouvé aucune autre contradiction ; un test (lib/content/media-consistency.ts) l’empêche de revenir. Les approbations restent annulées jusqu’à la confirmation ciblée du paquet régénéré.
 
+### 2026-09-23 — ChatGPT · `accepted` (ai-assisted)
+
+Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.
+
+**Suites données :** Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées.
+
 ## Jour 1 — 2026-09-01
 
 **Durée totale : 35 min** · 4 séances · jour 1 du rythme
@@ -112,7 +118,7 @@ l’autre — l’appareil est alors le sien._
 
 _L’enfant salue, dit son nom et son âge, et parle des personnes qui vivent avec lui._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Installez-vous face à l’enfant, au calme. Montrez d’abord vous-même : « Bonjour, je m’appelle… » Laissez un vrai temps de réponse. Reformulez au lieu de corriger.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date. _(source : programme-2026)_
@@ -244,7 +250,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter une petite collection en déplaçant les objets, puis en donner un nombre demandé._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Le comptage se fait en déplaçant chaque objet : c’est ce qui empêche d’en compter un deux fois. Redemandez toujours « Alors, combien y en a-t-il en tout ? » : c’est le dernier mot dit qui donne la quantité.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà). _(source : programme-2024-mathematiques)_
@@ -385,7 +391,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Nommer les parties du corps qui plient, et se dessiner en mouvement._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** On cherche les endroits où le corps plie : ce sont les articulations. Faites-les bouger avant de les nommer.
 - **Objectifs enseignés :**
   - `WORLD-S01-C02-O08` — Identifier et nommer quelques articulations et la segmentation des membres. _(source : programme-2026)_
@@ -460,7 +466,7 @@ l’autre — l’appareil est alors le sien._
 
 _Premier corpus de mots : nommer et ranger les objets de l’école._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Posez devant l’enfant les objets que vous avez : un cahier, un crayon, un sac. Nommez chaque objet avec son article, faites répéter, puis employez le mot dans une phrase.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -589,7 +595,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Comparer deux collections sans compter, puis en comptant._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** On compare d’abord en regardant, puis en comptant pour vérifier. Les trois mots à installer sont « plus que », « moins que », « autant que ».
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O05` — Comparer des quantités. _(source : programme-2024-mathematiques)_
@@ -794,7 +800,7 @@ l’autre — l’appareil est alors le sien._
 
 _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre expérience._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Lisez l’histoire d’une traite, sans vous interrompre. Posez les questions seulement à la fin. Il n’y a pas de mauvaise réponse : l’enfant peut redire l’histoire avec ses mots.
 - **Objectifs enseignés :**
   - `LANG-S02-C03-O09` — Comprendre des histoires dont les actions sont organisées autour d’une structure répétitive (rencontres successives) et commencer à comprendre les informations implicites (émotions, états et sentiments des personnages). _(source : programme-2024-langage)_
@@ -1144,7 +1150,7 @@ l’autre — l’appareil est alors le sien._
 
 _Frapper les syllabes des prénoms de la maison : entendre que les mots sont faits de morceaux._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** C’est un jeu d’oreille, pas de lecture. On tape dans les mains en même temps qu’on dit le mot. Ne montrez aucune lettre écrite : tout se joue par l’écoute.
 - **Objectifs enseignés :**
   - `LANG-S02-C01-O03` — Scander les syllabes d’un mot. _(source : programme-2024-langage)_
@@ -1245,7 +1251,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dire la suite des nombres jusqu’à dix sans en oublier._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** La comptine est une chanson : on l’apprend en la disant souvent. Cette semaine, on va jusqu’à dix — pas plus loin. On ira à vingt, puis à trente, plus tard dans le mois.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O26` — Connaitre et utiliser la comptine numérique jusqu’à trente. _(source : programme-2024-mathematiques)_
@@ -1388,7 +1394,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Apprendre une comptine par cœur et la dire en rythme._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** La comptine s’apprend par morceaux : deux vers à la fois, répétés. C’est la première du répertoire de l’année ; il en faudra au moins dix.
 - **Objectifs enseignés :**
   - `ART-S02-C01-O09` — Dire ou chanter au moins dix comptines ou chants, en réinvestissant ceux appris les années antérieures. _(source : programme-2026)_

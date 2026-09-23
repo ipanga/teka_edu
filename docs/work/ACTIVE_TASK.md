@@ -8,7 +8,7 @@
 
 ## Task
 
-Final September visual QA before pedagogical reconfirmation — 1ère and 3ème maternelle.
+Close the September visual upgrade: restore the 3ème approvals, merge #79 and #80, verify staging.
 
 ## Objective
 
@@ -18,7 +18,7 @@ packages are regenerated from canonical content — once. Approvals are **not** 
 
 ## Status
 
-`awaiting_review`
+`in_progress`
 
 ## Branch
 
@@ -36,9 +36,11 @@ on #79 first and are merged into #80 with a normal merge commit — no force pus
 
 ## Last Checkpoint
 
-2026-09-23 — Reconfirmation result applied: 1ère accepted and restored (88/88); 3ème
-`m3-art-04-a1` corrected, narrow media audit done and tested, 3ème package regenerated. Awaiting
-the final targeted confirmation of the 3ème package.
+2026-09-23 — 3ème `accepted` recorded; 45 approvals restored; September **176/176 approved**,
+176 distinct digests, 0 review. Migration `20260923192024_september_visual_upgrade`; fresh local
+DB 176 approved, 152 pgTAP PASS; unit 395, E2E 31, build, bundle — PASS. Committed on
+`feat/september-illustrations`. PR #79's database job is failing only on GitHub Container
+Registry rate limits (4 attempts, `toomanyrequests` before any test runs).
 
 ## Scope
 
@@ -78,13 +80,12 @@ None.
 
 ## Remaining
 
-- [ ] Owner: send `docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md` for the final
-      targeted confirmation.
-- [ ] On `accepted`: a `full-review` `accepted` entry per 3ème week, then
-      `approve-week --level=maternelle-3 --week=<n> --lapsed-only` (1–5), review packages, a new
-      data migration.
-- [ ] Owner: merge #79 then #80 (retarget #80 to `develop` after #79 merges); staging then
-      deploys and should be checked.
+- [ ] Re-run PR #79's database job until the registry allows the pull; require all checks green.
+- [ ] Mark #79 ready; squash-merge into `develop`; watch `deploy-staging`.
+- [ ] Merge `develop` into `feat/september-illustrations` (no force push); retarget #80 to
+      `develop`; CI green; mark ready; squash-merge; watch `deploy-staging` (DEV migration).
+- [ ] Verify staging: health SHA, Supabase DEV migration applied, workflow smoke E2E.
+- [ ] Final report; archive this checkpoint.
 
 ## Validation State
 
@@ -125,10 +126,8 @@ None yet.
 
 ## Exact Resume Point
 
-Nothing is running. Next action is the owner's: send
-`docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md` (the sheet
-`docs/review/media/septembre-avant-apres.png` is unchanged). Do not restore any 3ème approval
-before its `accepted`.
+`gh run rerun 35903761693 --failed` then `gh pr checks 79`. When all five checks are green:
+`gh pr ready 79 && gh pr merge 79 --squash`. Nothing else is running. Approval totals: 176/176.
 
 ## Resume Verification
 

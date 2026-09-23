@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 4 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 5 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -86,6 +86,12 @@ Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2
 
 **Suites données :** m3-art-04-a1 reçoit sa propre image, histoire-pluie (la pluie qui tombe sur le toit), déjà existante et inchangée ; une règle unique (domain/lessons/pictures.ts) fait passer l’image propre d’une activité devant celle d’une comptine dite par-dessus, tandis qu’une histoire garde toujours sa propre image. Aucun mot, objectif, durée, textId ni progression n’a changé. Un audit ciblé de toutes les images montrées (110 activités, 184 images) n’a trouvé aucune autre contradiction ; un test (lib/content/media-consistency.ts) l’empêche de revenir. Les approbations restent annulées jusqu’à la confirmation ciblée du paquet régénéré.
 
+### 2026-09-23 — ChatGPT · `accepted` (ai-assisted)
+
+Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.
+
+**Suites données :** Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées.
+
 ## Jour 10 — 2026-09-14
 
 **Durée totale : 35 min** · 4 séances · jour 10 du rythme
@@ -106,7 +112,7 @@ l’autre — l’appareil est alors le sien._
 
 _Dire ce qu’on voit avec assez de mots pour être compris sans montrer du doigt._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Jeu de description : l’enfant décrit, vous devinez. Interdisez le doigt : c’est ce qui oblige à parler.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -239,7 +245,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Étendre la suite des nombres de dix à vingt._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** On connait dix. On ajoute la deuxième dizaine, qui est régulière à partir de dix-sept. Onze, douze, treize s’apprennent par cœur : dites-les souvent.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -459,7 +465,7 @@ l’autre — l’appareil est alors le sien._
 
 _Redire une histoire connue dans l’ordre, avec ses propres mots._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** L’enfant a entendu Kumu plusieurs fois. Aujourd’hui, c’est lui qui raconte. Vous n’intervenez que s’il s’arrête, et seulement pour relancer.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -559,7 +565,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Décomposer un petit nombre en deux parties._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
 - **Conseil au parent :** On cache une partie sous la main : l’enfant voit une partie et doit dire l’autre. C’est le début du calcul.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O22` — Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà. _(source : programme-2024-mathematiques)_
@@ -701,7 +707,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Retrouver et nommer les endroits du corps qui plient, et s’en servir._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Reprise du jour 1, avec plus de précision. On nomme, puis on bouge seulement la partie nommée.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -777,7 +783,7 @@ l’autre — l’appareil est alors le sien._
 
 _Ranger les mots par catégories : ce qui se mange, ce qui sert à écrire, ce qui se porte._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Ranger des mots par catégories est difficile et très utile : c’est ce qui fait qu’un mot nouveau trouve sa place. Dites toujours pourquoi deux mots vont ensemble.
 - **Objectifs enseignés :**
   - `LANG-S01-C01-O02` — Organiser les mots en catégorie et en réseau. _(source : programme-2024-langage)_
@@ -881,7 +887,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Trouver plusieurs façons de faire six._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 3/3
 - **Conseil au parent :** Même jeu qu’hier, avec six. L’enfant doit verbaliser : c’est le fait de dire « quatre et deux » qui installe la décomposition.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1024,7 +1030,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Fabriquer des sons avec son corps et des objets, et les organiser._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** On fabrique la pluie avec les mains et les objets de la maison. Cherchez les sons avant de les organiser.
 - **Objectifs enseignés :**
   - `ART-S02-C02-O08` — Créer un paysage sonore en répondant à une consigne simple avec son corps, des objets ou des instruments. _(source : programme-2026)_
@@ -1104,7 +1110,7 @@ l’autre — l’appareil est alors le sien._
 
 _Troisième corpus de mots : le marché, les fruits, les légumes, les quantités._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Nommez avec l’article et employez tout de suite le mot dans une phrase de marché : « Je voudrais trois tomates. »
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1444,7 +1450,7 @@ l’autre — l’appareil est alors le sien._
 
 _Frapper les syllabes de mots plus longs et compter combien il y en a._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Même jeu qu’en début de mois, avec des mots plus longs. On frappe, puis on compte les coups.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1694,7 +1700,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dire la comptine du mois par cœur, en rythme, et en commencer une autre._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Le répertoire se construit par reprise. Redites celle du mois, puis ajoutez-en une deuxième, courte.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

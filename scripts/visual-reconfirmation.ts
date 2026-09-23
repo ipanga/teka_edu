@@ -18,6 +18,8 @@ import { execFileSync } from "node:child_process";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { format, resolveConfig } from "prettier";
+import { shownPictureIds } from "@/domain/lessons/pictures";
+import type { ActivityType } from "@/domain/lessons/types";
 import { REVIEW_PACKAGES } from "@/lib/content/review-packages";
 import { getReferenceData } from "@/lib/content/reference-data";
 import { dayOfLessonMap } from "@/lib/content/visual-audit";
@@ -277,8 +279,8 @@ for (const levelId of levels) {
     lines.push(
       `### Semaine ${w} — ${ls.length} leçon(s)`,
       "",
-      "| Jour | Leçon | Activité | Image | Empreinte avant | Empreinte après | Description avant | Description après | Texte enfant | Texte adulte | Objectif / progression |",
-      "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+      "| Jour | Leçon | Activité | Image | Rôle | Empreinte avant | Empreinte après | Description avant | Description après | Texte enfant | Texte adulte | Objectif / progression |",
+      "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     );
     for (const l of ls) {
       for (const a of l.activities) {
@@ -286,12 +288,24 @@ for (const levelId of levels) {
         const t = a.payload["textId"];
         const ill = typeof t === "string" ? illustrationOf.get(t) : null;
         if (ill) ids.push(ill);
+        // Which of these the child actually sees (domain/lessons/pictures.ts): a reviewer must
+        // never mistake a picture carried by a rhyme or story, but not shown, for the activity's.
+        const text = typeof t === "string" ? data.texts.find((x) => x.id === t) : undefined;
+        const shown = new Set(
+          shownPictureIds(
+            { type: a["type"] as ActivityType, mediaIds: a.mediaIds },
+            text === undefined ? null : { kind: text.kind, illustrationId: text.illustrationId },
+          ),
+        );
         for (const id of ids) {
+          const role = shown.has(id)
+            ? "principale — montrée à l’enfant"
+            : "secondaire — liée au texte ou à l’activité, non montrée";
           const now = changedAssets.find((c) => c.id === id);
           if (now === undefined) continue;
           const then = registryThen.find((b) => b.id === id);
           lines.push(
-            `| ${days.get(l.id)} | \`${l.id}\` ${l.title} | \`${a.id}\` ${String(a["title"] ?? "")} | \`${id}\` | \`${short(then?.contentHash)}\` | \`${short(now.contentHash)}\` | ${then?.alt ?? "—"} | ${now.alt} | inchangé | inchangé | inchangés |`,
+            `| ${days.get(l.id)} | \`${l.id}\` ${l.title} | \`${a.id}\` ${String(a["title"] ?? "")} | \`${id}\` | ${role} | \`${short(then?.contentHash)}\` | \`${short(now.contentHash)}\` | ${then?.alt ?? "—"} | ${now.alt} | inchangé | inchangé | inchangés |`,
           );
         }
       }

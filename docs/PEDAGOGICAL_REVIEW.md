@@ -294,6 +294,19 @@ because a rule that is wrong four times out of five is worse than no rule.
 
 ---
 
+## September visual reconfirmation, 2026-09-23 — 3ème accepted; September 176/176
+
+The regenerated 3ème package (with `m3-art-04-a1` corrected and the narrow media audit) came back
+**`accepted`** (AI-assisted, ChatGPT). `histoire-pluie` is the picture shown for « Le bruit de la
+pluie »; the `comptine-compter` reference stays as a secondary, rhyme-related picture that does
+not lead the screen. Recorded as a `full-review` per week; the **45 lapsed approvals restored**
+with `scripts/approve-week.ts --lapsed-only`, digests recomputed (none equals a pre-lapse digest),
+the 43 standing 3ème approvals untouched. **September: 176/176 approved, 176 distinct digests,
+0 at review, all `ai-assisted`.** The reconfirmation generator now labels each picture's role
+(shown to the child, or secondary) so a reviewer cannot mistake one for the other.
+
+---
+
 ## September visual reconfirmation, 2026-09-23 — 1ère accepted, 3ème accepted with one modification
 
 AI-assisted review (ChatGPT) of the two visual reconfirmation packages generated after

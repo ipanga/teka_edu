@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 5 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 6 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -86,6 +86,12 @@ Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2
 
 **Suites données :** m3-art-04-a1 reçoit sa propre image, histoire-pluie (la pluie qui tombe sur le toit), déjà existante et inchangée ; une règle unique (domain/lessons/pictures.ts) fait passer l’image propre d’une activité devant celle d’une comptine dite par-dessus, tandis qu’une histoire garde toujours sa propre image. Aucun mot, objectif, durée, textId ni progression n’a changé. Un audit ciblé de toutes les images montrées (110 activités, 184 images) n’a trouvé aucune autre contradiction ; un test (lib/content/media-consistency.ts) l’empêche de revenir. Les approbations restent annulées jusqu’à la confirmation ciblée du paquet régénéré.
 
+### 2026-09-23 — ChatGPT · `accepted` (ai-assisted)
+
+Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.
+
+**Suites données :** Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées.
+
 ## Jour 5 — 2026-09-07
 
 **Durée totale : 35 min** · 4 séances · jour 5 du rythme
@@ -106,7 +112,7 @@ l’autre — l’appareil est alors le sien._
 
 _Dire ce qu’on a fait, dans l’ordre, en phrases entières._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** L’enfant raconte, vous reformulez. Utilisez « d’abord », « ensuite », « après » pour l’aider à mettre de l’ordre. Ne demandez pas plus de trois moments.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -222,7 +228,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter des collections un peu plus grandes, en les organisant._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Six objets en tas se comptent mal. Montrez comment les aligner d’abord : organiser sa collection est déjà une stratégie de mathématicien.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -366,7 +372,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Nommer les parties d’un animal et dire ce dont il a besoin pour vivre._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Partez d’un animal que l’enfant connait vraiment : une poule, une chèvre, un chien du quartier.
 - **Objectifs enseignés :**
   - `WORLD-S01-C01-O08` — Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale. _(source : programme-2026)_
@@ -443,7 +449,7 @@ l’autre — l’appareil est alors le sien._
 
 _Écouter une suite de mots et la redire : la mémoire des sons se travaille comme un muscle._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Dites les mots lentement, une seule fois, puis attendez. Commencez par deux mots. N’allez à quatre que si l’enfant réussit trois sans effort.
 - **Objectifs enseignés :**
   - `LANG-S02-C01-O13` — Augmenter sa mémoire auditive et sa capacité de concentration. _(source : programme-2024-langage)_
@@ -758,7 +764,7 @@ l’autre — l’appareil est alors le sien._
 
 _Deuxième corpus de mots : nommer les objets et les pièces de la maison._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Faites le tour de la maison en nommant. Chaque mot est dit avec son article, répété, puis employé dans une phrase courte.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -884,7 +890,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Passer une seule fois par chaque objet d’une collection._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
 - **Conseil au parent :** C’est la difficulté la plus courante : recompter un objet, ou en sauter un. La solution est de les déplacer au fur et à mesure, d’un tas vers un autre.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O19` — Poursuivre les stratégies de parcours d’une collection en passant une et une seule fois par chacun de ses éléments. _(source : programme-2024-mathematiques)_
@@ -1092,7 +1098,7 @@ l’autre — l’appareil est alors le sien._
 
 _Employer « il » et « elle » pour parler de quelqu’un d’autre._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** L’enfant dit facilement « je ». Le travail du jour est de parler de quelqu’un d’autre : « il » ou « elle ». Donnez toujours le modèle avant de demander.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1438,7 +1444,7 @@ l’autre — l’appareil est alors le sien._
 
 _Comprendre ce que ressent un personnage, et le dire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Le but n’est pas de résumer l’histoire mais de parler de ce que ressent Bibi. Nommez les émotions vous-même : content, triste, fâché, curieux.
 - **Objectifs enseignés :**
   - `LANG-S02-C03-O14` — Comprendre les émotions, les intentions et les sentiments qui animent les personnages. _(source : programme-2024-langage)_
@@ -1560,7 +1566,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Reprendre le comptage et la comparaison de la semaine._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Reprise de la semaine, en jeu. Rien de nouveau : l’enfant montre ce qu’il sait faire.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1713,7 +1719,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Découvrir les besoins d’un végétal, et les comparer à ceux d’un animal._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Si vous avez une plante, un plant ou même une herbe dans un pot, servez-vous-en. Sinon, observez une plante dehors, sur le chemin.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

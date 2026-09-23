@@ -645,11 +645,11 @@ GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891,
 
 ## Content Status
 
-| Class           | Curriculum mapping     | Week 1                                                                                                                                                                                                   | Week 2      | Full year   |
-| --------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| 1ère maternelle | DONE (band `before-4`) | September **approved in full — 88/88**; visual reconfirmation `accepted` 2026-09-23 (35 approvals restored, fresh digests)                                                                               | Not started | Not started |
-| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                                                                                                                                              | Not started | Not started |
-| 3ème maternelle | DONE (band `from-5`)   | September accepted in full; **45 approvals lapsed for redrawn pictures**; visual reconfirmation `accepted-with-modifications` 2026-09-23, one association corrected, final targeted confirmation pending | Not started | Not started |
+| Class           | Curriculum mapping     | Week 1                                                                                                                     | Week 2      | Full year   |
+| --------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| 1ère maternelle | DONE (band `before-4`) | September **approved in full — 88/88**; visual reconfirmation `accepted` 2026-09-23 (35 approvals restored, fresh digests) | Not started | Not started |
+| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                                                                | Not started | Not started |
+| 3ème maternelle | DONE (band `from-5`)   | September **approved in full — 88/88**; visual reconfirmation `accepted` 2026-09-23 (45 approvals restored, fresh digests) | Not started | Not started |
 
 DRC 2026–2027 calendar data: DONE (official MINEDU-NC calendar and Ordonnance n° 23/042; 189 instructional days).
 Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 official objectives and 529 success examples** imported with provenance.
@@ -717,19 +717,12 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = a729722 (merge
 ## Last Session Summary
 
 ```text
-Completed:  SEPTEMBER VISUAL RECONFIRMATION — result applied.
-            1ère: accepted. Five full-review entries; 35 approvals restored with
-            approve-week --lapsed-only (fresh digests, none reused); 53 standing approvals
-            untouched. 1ère 88/88 approved.
-            3ème: accepted-with-modifications. m3-art-04-a1 « Le bruit de la pluie » showed the
-            counting rhyme's hand; it now names histoire-pluie, and one rule
-            (domain/lessons/pictures.ts) lets a task's own picture lead a rhyme said over it.
-            No word, objective, duration or picture file changed; the freeze holds.
-            Narrow media audit: 110 activities, 184 shown pictures, 1 genuine defect, 3 groups
-            rejected on evidence; now a test (lib/content/media-consistency.ts), shown failing
-            before the fix. 3ème package regenerated for the final targeted confirmation.
-            3ème: 43 approved, 45 at review (NOT restored).
-Validation: see docs/work/ACTIVE_TASK.md (full suite, 2026-09-23).
+Completed:  SEPTEMBER VISUAL UPGRADE CLOSED — 176/176 approved.
+            3ème visual reconfirmation accepted; five full-review entries; 45 approvals restored
+            with approve-week --lapsed-only (fresh digests, none reused; 86 untouched).
+            1ère 88/88, 3ème 88/88, 0 at review, 176 distinct digests, all ai-assisted.
+            Reconfirmation generator distinguishes shown vs secondary pictures.
+            PRs #79 then #80 merged into develop; staging verified (see ACTIVE_TASK).
 Cost:       $0.
-Not done:   3ème final confirmation; merge of #79 then #80; staging update. Production untouched.
+Not done:   Production release (separate decision). October and 2ème maternelle not started.
 ```

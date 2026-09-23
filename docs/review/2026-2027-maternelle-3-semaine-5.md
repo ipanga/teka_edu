@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 3 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 4 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-15 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -86,6 +86,12 @@ Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2
 
 **Suites données :** m3-art-04-a1 reçoit sa propre image, histoire-pluie (la pluie qui tombe sur le toit), déjà existante et inchangée ; une règle unique (domain/lessons/pictures.ts) fait passer l’image propre d’une activité devant celle d’une comptine dite par-dessus, tandis qu’une histoire garde toujours sa propre image. Aucun mot, objectif, durée, textId ni progression n’a changé. Un audit ciblé de toutes les images montrées (110 activités, 184 images) n’a trouvé aucune autre contradiction ; un test (lib/content/media-consistency.ts) l’empêche de revenir. Les approbations restent annulées jusqu’à la confirmation ciblée du paquet régénéré.
 
+### 2026-09-23 — ChatGPT · `accepted` (ai-assisted)
+
+Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.
+
+**Suites données :** Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées.
+
 ## Jour 20 — 2026-09-28
 
 **Durée totale : 35 min** · 4 séances · jour 10 du rythme
@@ -106,7 +112,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler de ce qu’on a fait à quelqu’un qui ne l’a pas vu._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** L’enfant présente son dessin comme à quelqu’un qui ne sait rien. C’est ce qui l’oblige à employer des phrases complètes.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -223,7 +229,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Retrouver ce qui a été enlevé d’une collection._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** L’enfant connait le tout, voit une partie, cherche l’autre. Laissez-lui le temps : ce n’est pas un jeu de rapidité.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -438,7 +444,7 @@ l’autre — l’appareil est alors le sien._
 
 _Reconnaitre un mot à partir de ses syllabes, puis repérer une rime._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Jeu d’écoute pur. Dites les syllabes séparées et laissez l’enfant recoller le mot.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -758,7 +764,7 @@ l’autre — l’appareil est alors le sien._
 
 _Reprendre, en parlant, ce que le mois a apporté._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Dernière séance du mois. Rien de nouveau : l’enfant montre ce qu’il sait faire. Terminez en lui disant précisément ce qu’il sait dire maintenant.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -872,7 +878,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Reprendre en jeu les mathématiques du mois._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Dernière séance du mois : uniquement des choses déjà faites. Terminez en nommant ce que l’enfant sait faire.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1024,7 +1030,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Reprendre le répertoire de comptines et le dessin du mois._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Dernière séance du mois. L’enfant choisit sa comptine — celle qu’il veut — et dessine ce qu’elle raconte. La comptine imprimée ci-dessous n’est là que s’il n’arrive pas à choisir.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
