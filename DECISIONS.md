@@ -1258,6 +1258,13 @@ The rules that make this safe:
 - **No animation carries meaning on its own.** Feedback is also words and colour; a nudge repeats
   what the text already says.
 
+**Amendment, 2026-09-23.** Staggered entrances (word cards, rhyme lines, steps, counters) used
+`teka-rise`, which starts at opacity 0; with a per-item delay the last items of a list stayed
+invisible for up to 600 ms — content hidden while an animation ran, against the rule above. A
+fifth keyframe, `teka-settle`, starts at 45 % opacity and 6 px low, so every item is readable from
+its first frame; delays are capped at 400 ms. An E2E test proves both that reduced motion removes
+it and that no staggered item is ever fully transparent.
+
 **Consequences:** The motion budget is small and visible in one place, which makes it easy to
 refuse additions. If a future activity genuinely needs sequenced motion — a number line filling,
 say — that is the moment to revisit a library, not before.

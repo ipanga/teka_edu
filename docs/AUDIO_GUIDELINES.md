@@ -39,8 +39,14 @@ So the architecture exists and the library is empty. That is a decision, not an 
 ## What would have to be recorded
 
 If you want pronunciation audio, this is the whole job — about **twenty minutes of recording** by
-one adult who speaks French comfortably. The per-activity decision (recommended, optional,
-unnecessary) is in `docs/september-illustration-audit.md`; nothing is required anywhere.
+one adult who speaks French comfortably.
+
+**The recording package is generated**: `docs/audio/septembre-script-enregistrement.md`
+(`npm run audio:brief`) lists every unique recording with its exact transcript, file name,
+purpose, tone and duration, then where each one is used, activity by activity. Every September
+activity is in one of four classes — `important-for-pronunciation` (taught words, sound models),
+`recommended` (rhymes), `optional` (story narration), `not-needed` — and none makes audio a
+requirement. The counts are in `docs/september-illustration-audit.md`.
 
 **The taught words**, each said twice, slowly, with a pause. A word's recording is found **by its
 transcript**: the `transcript` of a `pronunciation` asset must be the word exactly as the lesson

@@ -522,8 +522,8 @@ function ChildScreen({
       className="teka-rise h-full max-h-none w-full max-w-none bg-[var(--background)] p-0 backdrop:bg-stone-900/40"
     >
       <div className="flex h-full flex-col gap-6 overflow-y-auto px-5 py-6">
-        <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-6">
-          <p className="text-center text-2xl leading-relaxed font-semibold sm:text-3xl lg:text-4xl">
+        <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-6 xl:max-w-5xl">
+          <p className="text-center text-2xl leading-relaxed font-semibold sm:text-3xl lg:text-4xl xl:text-5xl">
             « {activity.childInstruction} »
           </p>
           {/* Pictures grow one step on the child's own surface (ChildViewContext). */}
