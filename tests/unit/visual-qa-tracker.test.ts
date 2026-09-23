@@ -41,7 +41,9 @@ describe("the final September visual QA tracker", () => {
     for (const id of pictures) expect(qa.storyReview[id]?.length, id).toBe(STORY_QUESTIONS.length);
   });
 
-  it("never leaves a changed picture on an approved lesson", () => {
+  it("never leaves a changed picture under an approval older than its reconfirmation", () => {
+    // A lesson showing a redrawn picture is either still at `review`, or was re-approved on or
+    // after the visual reconfirmation, with a digest computed on the frozen picture.
     for (const row of buildQaRows(data, qa)) {
       if (row.changed) expect(row.approved, `${row.id} changed under a standing approval`).toBe(0);
     }

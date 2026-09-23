@@ -1310,6 +1310,7 @@
           "m1-lang-10",
           "m1-lang-15",
           "m1-lang-20",
+          "m3-art-04",
           "m3-lang-03",
           "m3-lang-21"
         ]
@@ -2001,6 +2002,6 @@
       "plante-parties": "sha256:a42b3838f45e10f4102964ee5733a71493be6401eedc63ad2f767a853757e5af",
       "bonhomme-articule": "sha256:2308800c0f13fc6c770cdfc2f19bd0ee0102da28398182001a8533882a1351ce"
     },
-    "resumePoint": "FROZEN on 2026-09-23 (SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION). 49/49 pictures decided, 0 open. The reconfirmation packages are docs/review/2026-2027-maternelle-1-reconfirmation-visuelle.md and docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md with docs/review/media/septembre-avant-apres.png. Next action is the owner's: submit them. Do not redraw anything before the answer; if the reviewer asks for a change, unfreeze (finalQa.frozen = false), redraw, re-freeze, regenerate the packages, and submit again. Approvals are restored only after an accepted review, with scripts/approve-week.ts."
+    "resumePoint": "FROZEN (SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), unchanged by the 2026-09-23 correction: no picture file moved. 1ère maternelle: visual reconfirmation accepted, 35 approvals restored (88/88). 3ème maternelle: accepted-with-modifications; the one defect (m3-art-04-a1 showing the counting rhyme's hand) is corrected by an association to histoire-pluie. Next action is the owner's: send docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md for the final targeted confirmation. On accepted: a full-review accepted entry per 3ème week, then scripts/approve-week.ts --level=maternelle-3 --week=<n> --lapsed-only for weeks 1-5."
   }
 }

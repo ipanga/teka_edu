@@ -12,7 +12,7 @@
  * *the square*, never for *the blue one*. The shapes keep the original constants on purpose.
  */
 import { createHash } from "node:crypto";
-import { format } from "prettier";
+import { format, resolveConfig } from "prettier";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
@@ -825,7 +825,7 @@ const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] =
   [
     "bonhomme-articule",
     "Un bonhomme dessiné au crayon sur une feuille, avec les bras et les jambes pliés",
-    ["bonhomme", "corps", "articulation", "dessin"],
+    ["bonhomme", "corps", "articulation", "dessin", "bouger", "marcher"],
     `<rect x="34" y="12" width="132" height="176" rx="4" fill="${base("paper")}" stroke="${shade("stone")}" stroke-width="4"/>
       <g fill="none" stroke="${LINE}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="100" cy="52" r="18"/>
@@ -929,7 +929,10 @@ async function main() {
   const registryPath = path.join(ROOT, "content/media/registry.json");
   writeFileSync(
     registryPath,
-    await format(JSON.stringify(registry, null, 2), { filepath: registryPath }),
+    await format(JSON.stringify(registry, null, 2), {
+      ...(await resolveConfig(registryPath)),
+      filepath: registryPath,
+    }),
     "utf8",
   );
   console.log(`Wrote ${assets.length} assets and content/media/registry.json`);

@@ -294,6 +294,33 @@ because a rule that is wrong four times out of five is worse than no rule.
 
 ---
 
+## September visual reconfirmation, 2026-09-23 — 1ère accepted, 3ème accepted with one modification
+
+AI-assisted review (ChatGPT) of the two visual reconfirmation packages generated after
+`SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION`.
+
+- **1ère maternelle — `accepted`.** The redrawn pictures are clear, coherent and age-appropriate,
+  the weak body-part and story pictures are corrected, the shapes rightly unchanged, and no text,
+  objective, progression, programme or calendar needs further review. Recorded as a `full-review`
+  per week; the **35 lapsed approvals restored** with `scripts/approve-week.ts --lapsed-only`,
+  digests recomputed on the frozen pictures (none equals a pre-lapse digest); the 53 standing
+  approvals untouched, byte for byte. 1ère: **88/88 approved**.
+- **3ème maternelle — `accepted-with-modifications`.** One defect: `m3-art-04-a1` « Le bruit de la
+  pluie » showed the counting rhyme's hand, because the rhyme said over the rain-making carried
+  its own picture onto the screen. Corrected by giving the activity the existing rain-on-a-roof
+  picture (`histoire-pluie`) and one product rule (`domain/lessons/pictures.ts`): a story's
+  picture leads its story; a rhyme said over another task shows the task's own picture. No word,
+  objective, duration, `textId` or progression changed; no picture file changed.
+- **Narrow media audit.** Every picture actually shown was checked against what its activity
+  asks (110 activities, 184 pictures): one genuine defect (the one above), three suspicious groups
+  examined and rejected on canonical evidence. It is now a test
+  (`lib/content/media-consistency.ts`), shown failing on the defect and passing after.
+- **3ème approvals stay lapsed (45)** until the regenerated package
+  `docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md` receives its final targeted
+  confirmation.
+
+---
+
 ## Pictures redrawn, approvals lapsed, 2026-09-22 (ADR-048)
 
 The September visual upgrade (`docs/september-illustration-upgrade-plan.md`) redraws the

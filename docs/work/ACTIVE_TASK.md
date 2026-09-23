@@ -36,8 +36,9 @@ on #79 first and are merged into #80 with a normal merge commit — no force pus
 
 ## Last Checkpoint
 
-2026-09-23 — **Frozen** (`SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION`). 49/49 decided,
-packages regenerated, full verification green. Awaiting the owner's reconfirmation review.
+2026-09-23 — Reconfirmation result applied: 1ère accepted and restored (88/88); 3ème
+`m3-art-04-a1` corrected, narrow media audit done and tested, 3ème package regenerated. Awaiting
+the final targeted confirmation of the 3ème package.
 
 ## Scope
 
@@ -65,8 +66,11 @@ packages regenerated, full verification green. Awaiting the owner's reconfirmati
 - [x] PR A: never-invisible stagger + E2E, TV child view, audio in four classes, recording
       script (`audio:brief`), child-view fixes from the walkthrough.
 - [x] PR B: 14 pictures refined or redrawn, 0 new lapses; tracker; style guide; freeze;
-      packages; migration `20260923175037_september_visual_upgrade`.
+      packages; migration `20260923184512_september_visual_upgrade`.
 - [x] Full verification (below).
+- [x] Reconfirmation result: 1ère 35 approvals restored (`--lapsed-only`); 3ème `m3-art-04-a1`
+      corrected (`histoire-pluie` + `domain/lessons/pictures.ts`); media-consistency audit and test;
+      3ème package regenerated; migration `20260923184512_september_visual_upgrade`.
 
 ## In Progress
 
@@ -74,30 +78,33 @@ None.
 
 ## Remaining
 
-- [ ] Owner: submit the two reconfirmation packages and the sheet (OI-001).
-- [ ] After `accepted`: history entries, `scripts/approve-week.ts` per week, new data migration.
+- [ ] Owner: send `docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md` for the final
+      targeted confirmation.
+- [ ] On `accepted`: a `full-review` `accepted` entry per 3ème week, then
+      `approve-week --level=maternelle-3 --week=<n> --lapsed-only` (1–5), review packages, a new
+      data migration.
 - [ ] Owner: merge #79 then #80 (retarget #80 to `develop` after #79 merges); staging then
       deploys and should be checked.
 
 ## Validation State
 
-| Check              | Result | At                                          |
-| ------------------ | ------ | ------------------------------------------- |
-| format             | PASS   | working tree after freeze                   |
-| lint               | PASS   | working tree after freeze                   |
-| typecheck          | PASS   | working tree after freeze                   |
-| unit tests         | PASS   | working tree after freeze — 385             |
-| content validation | PASS   | working tree after freeze — 31 files        |
-| database tests     | PASS   | local `db reset` — 152 pgTAP                |
-| build              | PASS   | working tree after freeze (+ client bundle) |
-| E2E                | PASS   | working tree after freeze — 31 (9 skipped)  |
-| Docker             | PASS   | portable + Vercel images, both smoke-tested |
-| secret scans       | PASS   | gitleaks 169 commits; 0 tracked `.env*`     |
+| Check              | Result | At                                                |
+| ------------------ | ------ | ------------------------------------------------- |
+| format             | PASS   | working tree after the reconfirmation correction  |
+| lint               | PASS   | same                                              |
+| typecheck          | PASS   | same                                              |
+| unit tests         | PASS   | same — 395 in 30 files                            |
+| content validation | PASS   | same — 31 files (digests, text and media prints)  |
+| database tests     | PASS   | local `db reset` — 152 pgTAP (RLS included)       |
+| build              | PASS   | same, with CI sentinels; client bundle check PASS |
+| E2E                | PASS   | same — 31 passed, 9 production-only skipped       |
+| Docker             | PASS   | portable + Vercel images built, both smoke-tested |
+| secret scans       | PASS   | gitleaks 171 commits, no leaks; 0 tracked `.env*` |
 
 ## Database State
 
-- Local: 42 migrations incl. `20260923175037_september_visual_upgrade` (regenerated; the
-  earlier `20260922220249` was never applied to a hosted project and was replaced).
+- Local: 42 migrations incl. `20260923184512_september_visual_upgrade` (regenerated; the
+  earlier versions were never applied to a hosted project and were replaced).
 - DEV / PROD: 41. The migration reaches DEV when #80 merges into `develop`.
 
 ## Deployment State
@@ -118,11 +125,10 @@ None yet.
 
 ## Exact Resume Point
 
-Nothing is running. The next action is the owner's: send
-`docs/review/2026-2027-maternelle-1-reconfirmation-visuelle.md`,
-`docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md` and
-`docs/review/media/septembre-avant-apres.png` to the reviewer. If a picture must change: set
-`finalQa.frozen` to false, redraw, re-freeze, `npm run review:visual`, submit again.
+Nothing is running. Next action is the owner's: send
+`docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md` (the sheet
+`docs/review/media/septembre-avant-apres.png` is unchanged). Do not restore any 3ème approval
+before its `accepted`.
 
 ## Resume Verification
 

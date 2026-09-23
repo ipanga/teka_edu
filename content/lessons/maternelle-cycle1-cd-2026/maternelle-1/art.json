@@ -43,8 +43,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-23",
+        "reviewedDigest": "798488f5b7c47619",
+        "notes": "Semaine 1 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-art-05",
@@ -137,8 +145,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-23",
+        "reviewedDigest": "ebadd2435c46974b",
+        "notes": "Semaine 2 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-art-09",
@@ -231,8 +247,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-23",
+        "reviewedDigest": "2a9126bc1eef2b76",
+        "notes": "Semaine 3 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-art-14",
@@ -325,8 +349,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "ChatGPT",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-23",
+        "reviewedDigest": "7497e2bb7e1bc02b",
+        "notes": "Semaine 4 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-art-19",

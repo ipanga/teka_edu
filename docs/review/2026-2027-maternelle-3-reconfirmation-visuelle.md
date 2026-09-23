@@ -56,7 +56,7 @@ compter), 128 px (une carte de mot), 256 px (l’image d’une histoire).
 | `histoire-mangue`   | illustration | Une mangue coupée en trois morceaux                                | Une mangue entière, et trois morceaux de mangue coupés sur une assiette                         | 3 — m3-lang-02, m3-lang-11, m3-lang-22                                                                                                                          |
 | `histoire-bibi`     | illustration | Une chèvre devant une barrière et des feuilles                     | Bibi la chèvre, le nez dans un buisson, devant une barrière                                     | 3 — m3-lang-05, m3-lang-09, m3-lang-13                                                                                                                          |
 | `histoire-marche`   | illustration | Un panier de marché avec des tomates et une banane                 | Un panier de marché avec des tomates, un régime de bananes et un oignon                         | 3 — m3-lang-06, m3-lang-12, m3-lang-19                                                                                                                          |
-| `histoire-pluie`    | illustration | La pluie qui tombe sur un toit                                     | La pluie qui tombe d’un nuage sur le toit d’une maison                                          | 2 — m3-lang-03, m3-lang-21                                                                                                                                      |
+| `histoire-pluie`    | illustration | La pluie qui tombe sur un toit                                     | La pluie qui tombe d’un nuage sur le toit d’une maison                                          | 3 — m3-lang-03, m3-lang-21, m3-art-04                                                                                                                           |
 | `histoire-cailloux` | illustration | Trois cailloux : un rond, un plat et un pointu                     | Trois cailloux différents : un rond, un plat et un pointu                                       | 3 — m3-lang-08, m3-lang-14, m3-lang-18                                                                                                                          |
 | `histoire-malo`     | illustration | Un petit chien endormi en rond sous la lune                        | Malo, un petit chien couché en rond sur son tapis, les yeux fermés, sous la lune et les étoiles | 3 — m3-lang-07, m3-lang-16, m3-lang-20                                                                                                                          |
 | `comptine-compter`  | illustration | Une main qui montre trois doigts                                   | Une main qui montre trois doigts                                                                | 2 — m3-art-02, m3-art-04                                                                                                                                        |
@@ -66,17 +66,29 @@ compter), 128 px (une carte de mot), 256 px (l’image d’une histoire).
 
 ## Résumé
 
-| Mesure                                          | Valeur                          |
-| ----------------------------------------------- | ------------------------------- |
-| Leçons de la classe                             | 88                              |
-| Leçons concernées (approbation annulée)         | 45                              |
-| Leçons non concernées                           | 43                              |
-| Images modifiées (toutes classes)               | 41                              |
-| Images inchangées (toutes classes)              | 8                               |
-| Texte pédagogique modifié (enfant ou adulte)    | **0** — vérifié champ par champ |
-| Objectifs modifiés                              | **0** — vérifié                 |
-| Progression, programme, calendrier modifiés     | **0** — vérifié                 |
-| Seuls les images et leur description ont changé | **oui**                         |
+| Mesure                                                            | Valeur                          |
+| ----------------------------------------------------------------- | ------------------------------- |
+| Leçons de la classe                                               | 88                              |
+| Leçons concernées (approbation annulée)                           | 45                              |
+| Leçons non concernées                                             | 43                              |
+| Images modifiées (toutes classes)                                 | 41                              |
+| Images inchangées (toutes classes)                                | 8                               |
+| Texte pédagogique modifié (enfant ou adulte)                      | **0** — vérifié champ par champ |
+| Objectifs modifiés                                                | **0** — vérifié                 |
+| Progression, programme, calendrier modifiés                       | **0** — vérifié                 |
+| Associations image / activité corrigées                           | 1                               |
+| Seuls les images, leur description et ces associations ont changé | **oui**                         |
+
+## Association image / activité corrigée
+
+La relecture a relevé qu’une activité montrait une image sans rapport avec ce qu’elle demande.
+Seule l’image **associée** a changé : aucun mot, aucun objectif, aucune durée, aucune
+progression. Un test vérifie désormais que chaque image montrée partage un mot avec ce que
+l’activité demande (`lib/content/media-consistency.ts`).
+
+| Leçon                         | Activité                            | Images associées avant                         | Images associées après | Image montrée à l’enfant |
+| ----------------------------- | ----------------------------------- | ---------------------------------------------- | ---------------------- | ------------------------ |
+| `m3-art-04` Le paysage sonore | `m3-art-04-a1` Le bruit de la pluie | aucune (l’image de la comptine lue par-dessus) | `histoire-pluie`       | `histoire-pluie`         |
 
 ## Chaque activité concernée, semaine par semaine
 
@@ -139,6 +151,7 @@ approbation couvre les octets de chaque image montrée (ISSUE-026, ADR-048).
 | 11   | `m3-lang-11` Raconte-moi Kumu           | `m3-lang-11-a3` Le temps de lecture   | `histoire-mangue`   | `42120f90f8c9`  | `0c002c3d3fe6`  | Une mangue coupée en trois morceaux                              | Une mangue entière, et trois morceaux de mangue coupés sur une assiette             | inchangé     | inchangé     | inchangés              |
 | 11   | `m3-math-11` Trois et deux font cinq    | `m3-math-11-a1` La main qui cache     | `objet-caillou`     | `4048c95b6d2c`  | `2fdff74f58b4`  | Un caillou                                                       | Un caillou                                                                          | inchangé     | inchangé     | inchangés              |
 | 11   | `m3-world-04` Mes articulations         | `m3-world-04-a2` Le bonhomme qui plie | `bonhomme-articule` | `3582b827c7f8`  | `2308800c0f13`  | Un bonhomme dessiné avec les bras et les jambes pliés            | Un bonhomme dessiné au crayon sur une feuille, avec les bras et les jambes pliés    | inchangé     | inchangé     | inchangés              |
+| 12   | `m3-art-04` Le paysage sonore           | `m3-art-04-a1` Le bruit de la pluie   | `histoire-pluie`    | `e1f085439c7c`  | `3c1c57d6cc05`  | La pluie qui tombe sur un toit                                   | La pluie qui tombe d’un nuage sur le toit d’une maison                              | inchangé     | inchangé     | inchangés              |
 | 12   | `m3-art-04` Le paysage sonore           | `m3-art-04-a1` Le bruit de la pluie   | `comptine-compter`  | `9594d8d30e3f`  | `3e5e86f06d3c`  | Une main qui montre trois doigts                                 | Une main qui montre trois doigts                                                    | inchangé     | inchangé     | inchangés              |
 | 12   | `m3-lang-12` Les mots qui vont ensemble | `m3-lang-12-a3` Le temps de lecture   | `histoire-marche`   | `b58596a1c8ca`  | `7fbfdbccf8ea`  | Un panier de marché avec des tomates et une banane               | Un panier de marché avec des tomates, un régime de bananes et un oignon             | inchangé     | inchangé     | inchangés              |
 | 12   | `m3-math-12` Décomposer six             | `m3-math-12-a1` Six en deux tas       | `objet-caillou`     | `4048c95b6d2c`  | `2fdff74f58b4`  | Un caillou                                                       | Un caillou                                                                          | inchangé     | inchangé     | inchangés              |

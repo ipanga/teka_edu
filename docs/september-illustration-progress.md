@@ -255,3 +255,23 @@ week, merge #80.
   Packages regenerated with per-activity before/after hashes and a verified summary.
 - Data migration regenerated as `20260923175037_september_visual_upgrade` (the earlier one had
   never reached a hosted database).
+
+### 2026-09-23 — Reconfirmation result and the m3-art-04-a1 correction (done)
+
+- **1ère `accepted`**: five `full-review` entries; 35 approvals restored with
+  `approve-week --lapsed-only` (7 + 9 + 7 + 7 + 5), fresh digests, 53 standing approvals untouched.
+- **3ème `accepted-with-modifications`**: `m3-art-04-a1` showed `comptine-compter` (the counting
+  rhyme said over the rain-making). Now it names `histoire-pluie`, and
+  `domain/lessons/pictures.ts` lets a task's own picture lead a rhyme said over it; a story keeps
+  its own picture (so Kumu's and Bibi's story scenes do not change).
+- **Narrow media audit** (`lib/content/media-consistency.ts`, test in
+  `tests/unit/media-consistency.test.ts`): 110 activities, 184 shown pictures; 1 genuine defect;
+  rejected on evidence — `m3-world-06-a2` (plant and goat: the lesson is about caring for an
+  animal or a plant, and the guidance says to use the picture), the five 1ère « Je marche, je
+  m'arrête » rhymes (the crayon figure with bent legs is a body walking and sitting; tags
+  `bouger`, `marcher` added — tags are outside the digest), and `m3-lang-03-a2` / `m3-lang-09-a2`
+  (story pictures correctly lead their stories; their older animal pictures stay covered but
+  unseen). The test failed on the defect before the fix and passes after.
+- No picture file changed; the freeze holds. 3ème package regenerated; the sheet is unchanged.
+- Data migration regenerated as `20260923184512_september_visual_upgrade` (never applied to a
+  hosted database).

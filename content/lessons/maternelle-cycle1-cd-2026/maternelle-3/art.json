@@ -207,7 +207,7 @@
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
-          "mediaIds": [],
+          "mediaIds": ["histoire-pluie"],
           "objectiveCodes": ["ART-S02-C02-O08"],
           "materialCodes": ["objets-maison"],
           "vocabulary": [

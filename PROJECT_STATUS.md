@@ -645,11 +645,11 @@ GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891,
 
 ## Content Status
 
-| Class           | Curriculum mapping     | Week 1                                                                                                                                                           | Week 2      | Full year   |
-| --------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| 1ère maternelle | DONE (band `before-4`) | September reviewed and accepted in full (5 weekly packages); **35 approvals lapsed on 2026-09-22 for redrawn pictures, visual reconfirmation pending** (ADR-048) | Not started | Not started |
-| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                                                                                                      | Not started | Not started |
-| 3ème maternelle | DONE (band `from-5`)   | September reviewed and accepted in full (5 weekly packages); **45 approvals lapsed on 2026-09-22 for redrawn pictures, visual reconfirmation pending** (ADR-048) | Not started | Not started |
+| Class           | Curriculum mapping     | Week 1                                                                                                                                                                                                   | Week 2      | Full year   |
+| --------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| 1ère maternelle | DONE (band `before-4`) | September **approved in full — 88/88**; visual reconfirmation `accepted` 2026-09-23 (35 approvals restored, fresh digests)                                                                               | Not started | Not started |
+| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                                                                                                                                              | Not started | Not started |
+| 3ème maternelle | DONE (band `from-5`)   | September accepted in full; **45 approvals lapsed for redrawn pictures**; visual reconfirmation `accepted-with-modifications` 2026-09-23, one association corrected, final targeted confirmation pending | Not started | Not started |
 
 DRC 2026–2027 calendar data: DONE (official MINEDU-NC calendar and Ordonnance n° 23/042; 189 instructional days).
 Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 official objectives and 529 success examples** imported with provenance.
@@ -717,19 +717,19 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = a729722 (merge
 ## Last Session Summary
 
 ```text
-Completed:  FINAL SEPTEMBER VISUAL QA — pictures frozen for reconfirmation.
-            49/49 pictures re-judged at every size the product uses, including a 1920 px child
-            screen: 35 accepted, 11 refined, 3 redrawn, 0 open. Tracker generated from content:
-            docs/work/SEPTEMBER_VISUAL_QA.md. No new approval lapsed (still 80: 35 + 45).
-            SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION — 49 hashes frozen, test-held.
-            Reconfirmation packages regenerated: docs/review/2026-2027-maternelle-{1,3}-
-            reconfirmation-visuelle.md + docs/review/media/septembre-avant-apres.png.
-            Motion: staggered lists never invisible (ADR-045 amended). Child's screen fills a TV.
-            Audio: four classes, generated recording script, zero recordings (ADR-046).
-            Style guide: docs/ILLUSTRATION_STYLE_GUIDE.md; system UI font kept.
-Validation: format, lint, typecheck, unit 385, content 31, build, client bundle, E2E 31,
-            pgTAP 152 (local), Docker portable + Vercel (smoke), gitleaks 169 commits — PASS.
+Completed:  SEPTEMBER VISUAL RECONFIRMATION — result applied.
+            1ère: accepted. Five full-review entries; 35 approvals restored with
+            approve-week --lapsed-only (fresh digests, none reused); 53 standing approvals
+            untouched. 1ère 88/88 approved.
+            3ème: accepted-with-modifications. m3-art-04-a1 « Le bruit de la pluie » showed the
+            counting rhyme's hand; it now names histoire-pluie, and one rule
+            (domain/lessons/pictures.ts) lets a task's own picture lead a rhyme said over it.
+            No word, objective, duration or picture file changed; the freeze holds.
+            Narrow media audit: 110 activities, 184 shown pictures, 1 genuine defect, 3 groups
+            rejected on evidence; now a test (lib/content/media-consistency.ts), shown failing
+            before the fix. 3ème package regenerated for the final targeted confirmation.
+            3ème: 43 approved, 45 at review (NOT restored).
+Validation: see docs/work/ACTIVE_TASK.md (full suite, 2026-09-23).
 Cost:       $0.
-Not done:   The owner's reconfirmation review; approvals NOT restored. Staging not updated:
-            it deploys only when #79/#80 reach develop. Production untouched (a729722).
+Not done:   3ème final confirmation; merge of #79 then #80; staging update. Production untouched.
 ```

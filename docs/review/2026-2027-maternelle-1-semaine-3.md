@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 1 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 2 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-15 — ChatGPT · `accepted` (ai-assisted)
@@ -61,6 +61,12 @@ Aucune relecture pédagogique n’a eu lieu pour cette semaine à cette date.
 Mise à niveau visuelle de septembre (ADR-048) : 41 images ont été redessinées ou affinées (objet-cuillere, objet-crayon, objet-cahier, objet-sac, objet-table, objet-chaise, objet-porte, objet-fenetre, objet-lit, objet-marmite, objet-seau, objet-panier, objet-tomate, objet-banane, objet-oignon, objet-caillou, corps-main, corps-pied, corps-tete, corps-ventre, animal-poule, animal-poussin, animal-chevre, histoire-seau-lisa, histoire-tika, histoire-kumu, histoire-nsimba, histoire-mangue, histoire-bibi, histoire-marche, histoire-pluie, histoire-cailloux, histoire-malo, comptine-compter, comptine-bonjour, comptine-mains, comptine-semaine, comptine-cabri, comptine-formes, plante-parties, bonhomme-articule) ; les huit formes n’ont pas bougé. L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 7 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m1-art-11, m1-lang-10, m1-lang-11, m1-lang-12, m1-lang-13, m1-lang-14, m1-math-10.
 
 **Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (docs/review/2026-2027-<classe>-reconfirmation-visuelle.md, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
+
+### 2026-09-23 — ChatGPT · `accepted` (ai-assisted)
+
+Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2027-maternelle-1-reconfirmation-visuelle.md et la planche docs/review/media/septembre-avant-apres.png, générés après le gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION. Décision : accepted. Les illustrations redessinées sont jugées suffisamment claires, cohérentes et adaptées à l’âge ; les images du corps et des histoires qui étaient faibles ont été corrigées ; les huit formes géométriques restent inchangées, à juste titre ; aucun texte pédagogique, objectif, progression, programme ou calendrier n’appelle de nouvelle relecture.
+
+**Suites données :** Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées.
 
 ## Jour 10 — 2026-09-14
 
@@ -82,7 +88,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
   - `LANG-S02-C01-O01` — Identifier les sons de la langue, lors de situations d’écoute proposées par le professeur. _(source : programme-2024-langage)_
@@ -182,7 +188,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Compter, donner une petite quantité, ranger par forme._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Un seul petit moment de nombres, avec de vrais objets dans les mains. Deux règles différentes, et elles ne se contredisent pas : **on ne compte jamais plus de trois objets** ce mois-ci, mais **la comptine se dit jusqu’à six** — dire les nombres et compter des choses ne s’apprennent pas au même rythme. Ce qui compte, c’est de redire la même chose chaque jour.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -362,7 +368,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -572,7 +578,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dire des comptines et laisser une trace._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -642,7 +648,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -921,7 +927,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1195,7 +1201,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

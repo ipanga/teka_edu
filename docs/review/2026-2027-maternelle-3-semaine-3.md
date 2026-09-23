@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 3 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 4 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -79,6 +79,12 @@ Confirmation finale. La première relecture complète avait demandé les correct
 Mise à niveau visuelle de septembre (ADR-048) : 41 images ont été redessinées ou affinées (objet-cuillere, objet-crayon, objet-cahier, objet-sac, objet-table, objet-chaise, objet-porte, objet-fenetre, objet-lit, objet-marmite, objet-seau, objet-panier, objet-tomate, objet-banane, objet-oignon, objet-caillou, corps-main, corps-pied, corps-tete, corps-ventre, animal-poule, animal-poussin, animal-chevre, histoire-seau-lisa, histoire-tika, histoire-kumu, histoire-nsimba, histoire-mangue, histoire-bibi, histoire-marche, histoire-pluie, histoire-cailloux, histoire-malo, comptine-compter, comptine-bonjour, comptine-mains, comptine-semaine, comptine-cabri, comptine-formes, plante-parties, bonhomme-articule) ; les huit formes n’ont pas bougé. L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 11 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-art-04, m3-art-05, m3-lang-10, m3-lang-11, m3-lang-12, m3-lang-13, m3-lang-14, m3-math-10, m3-math-11, m3-math-12, m3-world-04.
 
 **Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (docs/review/2026-2027-<classe>-reconfirmation-visuelle.md, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
+
+### 2026-09-23 — ChatGPT · `accepted-with-modifications` (ai-assisted)
+
+Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md et la planche avant/après. Décision : accepted-with-modifications. Un seul défaut : m3-art-04-a1 « Le bruit de la pluie » montrait l’image de la comptine du mois lue par-dessus (comptine-compter, « Une main qui montre trois doigts »), sans rapport avec l’activité, qui fait le bruit de la pluie.
+
+**Suites données :** m3-art-04-a1 reçoit sa propre image, histoire-pluie (la pluie qui tombe sur le toit), déjà existante et inchangée ; une règle unique (domain/lessons/pictures.ts) fait passer l’image propre d’une activité devant celle d’une comptine dite par-dessus, tandis qu’une histoire garde toujours sa propre image. Aucun mot, objectif, durée, textId ni progression n’a changé. Un audit ciblé de toutes les images montrées (110 activités, 184 images) n’a trouvé aucune autre contradiction ; un test (lib/content/media-consistency.ts) l’empêche de revenir. Les approbations restent annulées jusqu’à la confirmation ciblée du paquet régénéré.
 
 ## Jour 10 — 2026-09-14
 
@@ -1032,6 +1038,10 @@ _Fabriquer des sons avec son corps et des objets, et les organiser._
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Make the sound of rain: soft, then loud, then nothing. »
+- **Images montrées à l'enfant (1) :**
+
+  - `histoire-pluie` — La pluie qui tombe d’un nuage sur le toit d’une maison (`public/media/illustrations/histoire-pluie.svg`)
+
 - **Objectifs travaillés :** `ART-S02-C02-O08` Créer un paysage sonore en répondant à une consigne simple avec son corps, des objets ou des instruments.
 
 - **Comptine lue à l’enfant — « Un, deux, trois, je compte »** (2 min, `un-deux-trois-je-compte`) :

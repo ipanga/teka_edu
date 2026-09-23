@@ -59,7 +59,19 @@ const reviewable = (l: RawLesson): string => {
   const copy = { ...l } as Record<string, unknown>;
   delete copy["status"];
   delete copy["review"];
+  // `mediaIds` is compared separately: a corrected picture association is a media change the
+  // package must *show*, not a text change it must refuse (ADR-048, m3-art-04-a1).
+  copy["activities"] = l.activities.map((a) => ({ ...a, mediaIds: undefined }));
   return JSON.stringify(copy);
+};
+
+/** Every picture association an activity changed, so the package names it. */
+type AssociationChange = {
+  lesson: RawLesson;
+  activityId: string;
+  title: string;
+  before: string[];
+  after: string[];
 };
 
 // A package is written once, against a frozen set: a picture redrawn after submission would
@@ -112,10 +124,25 @@ for (const levelId of levels) {
 
   // The claim, checked before it is written.
   const moved: string[] = [];
+  const associations: AssociationChange[] = [];
   for (const [id, now] of lessonsNow) {
     const then = lessonsThen.get(id);
     if (then === undefined) moved.push(`${id}: new since ${since}`);
     else if (reviewable(then) !== reviewable(now)) moved.push(`${id}: a reviewable field changed`);
+    else {
+      for (const a of now.activities) {
+        const b = then.activities.find((x) => x.id === a.id);
+        if (b !== undefined && JSON.stringify(b.mediaIds) !== JSON.stringify(a.mediaIds)) {
+          associations.push({
+            lesson: now,
+            activityId: a.id,
+            title: String(a["title"] ?? ""),
+            before: b.mediaIds,
+            after: a.mediaIds,
+          });
+        }
+      }
+    }
   }
   if (textsThen !== textsNow) moved.push(`content/texts/${levelId}.json changed`);
   // Progression, programme, curriculum and calendar: none of them may move under a visual change.
@@ -212,8 +239,27 @@ for (const levelId of levels) {
     "| Texte pédagogique modifié (enfant ou adulte) | **0** — vérifié champ par champ |",
     "| Objectifs modifiés | **0** — vérifié |",
     "| Progression, programme, calendrier modifiés | **0** — vérifié |",
-    "| Seuls les images et leur description ont changé | **oui** |",
+    `| Associations image / activité corrigées | ${associations.length} |`,
+    `| Seuls les images, leur description${associations.length > 0 ? " et ces associations" : ""} ont changé | **oui** |`,
     "",
+    ...(associations.length === 0
+      ? []
+      : [
+          "## Association image / activité corrigée",
+          "",
+          "La relecture a relevé qu’une activité montrait une image sans rapport avec ce qu’elle demande.",
+          "Seule l’image **associée** a changé : aucun mot, aucun objectif, aucune durée, aucune",
+          "progression. Un test vérifie désormais que chaque image montrée partage un mot avec ce que",
+          "l’activité demande (`lib/content/media-consistency.ts`).",
+          "",
+          "| Leçon | Activité | Images associées avant | Images associées après | Image montrée à l’enfant |",
+          "| --- | --- | --- | --- | --- |",
+          ...associations.map(
+            (c) =>
+              `| \`${c.lesson.id}\` ${c.lesson.title} | \`${c.activityId}\` ${c.title} | ${c.before.map((id) => `\`${id}\``).join(", ") || "aucune (l’image de la comptine lue par-dessus)"} | ${c.after.map((id) => `\`${id}\``).join(", ")} | \`${c.after[0]}\` |`,
+          ),
+          "",
+        ]),
     "## Chaque activité concernée, semaine par semaine",
     "",
     "Pour chaque ligne : aucun texte lu à l’enfant, aucun texte lu à l’adulte, aucun objectif et",

@@ -5,7 +5,15 @@ to the bottom with their resolution.
 
 ## Decisions needed from the owner
 
-### OI-001 — Submit the visual reconfirmation packages (the pictures are frozen)
+### OI-001 — Final targeted confirmation of the 3ème package
+
+**Status 2026-09-23:** 1ère `accepted` and restored (88/88). 3ème `accepted-with-modifications`:
+`m3-art-04-a1` corrected; send the regenerated
+`docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md` for the final confirmation. On
+`accepted`: a `full-review` `accepted` entry per 3ème week, then
+`npx tsx scripts/approve-week.ts --level=maternelle-3 --week=<n> --lapsed-only` for weeks 1–5.
+
+Background:
 
 Redrawing a picture lapses the approval of every lesson that shows it (ADR-048; `lessonDigest`
 covers picture bytes since ISSUE-026). **80 lessons are at `review`** (35 in 1ère, 45 in 3ème),

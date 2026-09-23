@@ -67,6 +67,9 @@ export type QaRow = {
   baseline: string | null;
   current: string;
   lapsed: number;
+  /** Approved lessons whose approval was granted on or after this pass (reconfirmed). */
+  reconfirmed: number;
+  /** Approved lessons whose approval predates this pass: must be 0 for a changed picture. */
   approved: number;
   status: QaStatus;
   group: QaGroup | null;
@@ -96,7 +99,10 @@ export function buildQaRows(data: ReferenceData, qa: FinalQa): QaRow[] {
             : "needs-refinement"
           : frozenOk
             ? changed
-              ? "reconfirmation-ready"
+              ? // Every lesson that shows it has been reconfirmed: the picture is settled.
+                users.every((l) => l.status === "approved")
+                ? "verified"
+                : "reconfirmation-ready"
               : "accepted"
             : changed
               ? "verified"
@@ -114,7 +120,12 @@ export function buildQaRows(data: ReferenceData, qa: FinalQa): QaRow[] {
       baseline,
       current: asset.contentHash,
       lapsed: users.filter((l) => l.status === "review").length,
-      approved: users.filter((l) => l.status === "approved").length,
+      reconfirmed: users.filter(
+        (l) => l.status === "approved" && (l.review?.reviewedOn ?? "") >= qa.pass,
+      ).length,
+      approved: users.filter(
+        (l) => l.status === "approved" && (l.review?.reviewedOn ?? "") < qa.pass,
+      ).length,
       status,
       group: decision?.group ?? null,
     };
@@ -167,7 +178,8 @@ export function buildQaTracker(data: ReferenceData, qa: FinalQa): string {
     `| C — redrawn | ${count((r) => r.group === "C")} |`,
     `| Changed since \`develop\` (what the reviewer approved) | ${count((r) => r.changed)} |`,
     `| Byte-identical to \`develop\` | ${count((r) => !r.changed)} |`,
-    `| Lessons whose approval lapsed for a changed picture | ${lapsedLessons.size} |`,
+    `| Lessons still awaiting reconfirmation for a changed picture | ${lapsedLessons.size} |`,
+    `| Lessons re-approved after the visual reconfirmation | ${data.lessons.filter((l) => l.status === "approved" && (l.review?.reviewedOn ?? "") >= qa.pass).length} |`,
     `| Pictures still \`needs-refinement\` or \`needs-redraw\` | ${count((r) => r.status === "needs-refinement" || r.status === "needs-redraw")} |`,
     "",
     "Groups describe this final pass: A is right as it stands (it may have been redrawn in the first",
@@ -183,7 +195,13 @@ export function buildQaTracker(data: ReferenceData, qa: FinalQa): string {
     const d = qa.assets[r.id];
     const impact = !r.changed
       ? "none — bytes unchanged"
-      : `${r.lapsed} lesson(s) lapsed, awaiting reconfirmation${r.approved > 0 ? `; ${r.approved} still approved — ERROR` : ""}`;
+      : [
+          r.lapsed > 0 ? `${r.lapsed} lapsed, awaiting reconfirmation` : "",
+          r.reconfirmed > 0 ? `${r.reconfirmed} reconfirmed and re-approved` : "",
+          r.approved > 0 ? `${r.approved} approved before this pass — ERROR` : "",
+        ]
+          .filter(Boolean)
+          .join("; ");
     lines.push(
       `| \`${r.id}\` | \`${r.file}\` | ${r.kind} | ${r.classes.join(", ") || "none (no lesson reads it yet)"} | ${r.lessons.length} (${r.activities.length}) | ${cell(d?.purpose ?? "—")} | ${cell(d?.quality ?? "—")} | ${d?.importance ?? "—"} | ${d ? GROUP_LABEL[d.group] : "—"} | ${cell(d?.reason ?? "—")} | ${r.changed ? `\`${short(r.baseline)}\`` : "unchanged"} | ${r.changed ? `\`${short(r.current)}\`, sheet` : "—"} | ${impact} | \`${r.status}\` |`,
     );
@@ -202,7 +220,7 @@ export function buildQaTracker(data: ReferenceData, qa: FinalQa): string {
     "One picture per story stays the rule: none of the answers above called for a second one, and a",
     "read-aloud is not a picture book (the child listens; the picture is where the eyes rest).",
     "",
-    "## Lessons whose approval lapsed, by class and day",
+    "## Lessons still awaiting reconfirmation, by class and day",
     "",
     "| Lesson | Day | Changed pictures it shows |",
     "| --- | --- | --- |",

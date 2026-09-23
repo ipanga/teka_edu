@@ -486,7 +486,7 @@
       "kind": "illustration",
       "file": "illustrations/bonhomme-articule.svg",
       "alt": "Un bonhomme dessiné au crayon sur une feuille, avec les bras et les jambes pliés",
-      "tags": ["bonhomme", "corps", "articulation", "dessin"],
+      "tags": ["bonhomme", "corps", "articulation", "dessin", "bouger", "marcher"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
       "contentHash": "sha256:2308800c0f13fc6c770cdfc2f19bd0ee0102da28398182001a8533882a1351ce"
