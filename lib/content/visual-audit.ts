@@ -95,6 +95,8 @@ export type VisualState = {
     };
   };
   derived: unknown;
+  /** The final visual QA pass (lib/content/visual-qa-tracker.ts). */
+  finalQa?: unknown;
 };
 
 export type AuditRow = {

@@ -5,10 +5,10 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-09-22
-Branch:     feat/beta-0.1-released
-Commit:     develop at 9b45733; main at a729722 (Beta 0.1, live)
-Updated by: Claude Code (claude-opus-5)
+Date:       2026-09-23
+Branch:     feat/september-illustrations (PR #80, stacked on feat/september-visual-ux, PR #79)
+Commit:     develop at 087fc06; main at a729722 (Beta 0.1, live)
+Updated by: Claude Code (claude-fable-5-1)
 ```
 
 ## Current Phase
@@ -645,11 +645,11 @@ GitHub Actions CI:     PASS on push (runs 34610713969, 34610729923, 34611359891,
 
 ## Content Status
 
-| Class           | Curriculum mapping     | Week 1                                                             | Week 2      | Full year   |
-| --------------- | ---------------------- | ------------------------------------------------------------------ | ----------- | ----------- |
-| 1ère maternelle | DONE (band `before-4`) | Not started                                                        | Not started | Not started |
-| 2ème maternelle | DONE (band `from-4`)   | Not started                                                        | Not started | Not started |
-| 3ème maternelle | DONE (band `from-5`)   | September **approved in full** — 88/88, 5 weekly packages accepted | Not started | Not started |
+| Class           | Curriculum mapping     | Week 1                                                                                                                     | Week 2      | Full year   |
+| --------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
+| 1ère maternelle | DONE (band `before-4`) | September **approved in full — 88/88**; visual reconfirmation `accepted` 2026-09-23 (35 approvals restored, fresh digests) | Not started | Not started |
+| 2ème maternelle | DONE (band `from-4`)   | Not started                                                                                                                | Not started | Not started |
+| 3ème maternelle | DONE (band `from-5`)   | September **approved in full — 88/88**; visual reconfirmation `accepted` 2026-09-23 (45 approvals restored, fresh digests) | Not started | Not started |
 
 DRC 2026–2027 calendar data: DONE (official MINEDU-NC calendar and Ordonnance n° 23/042; 189 instructional days).
 Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 official objectives and 529 success examples** imported with provenance.
@@ -717,31 +717,12 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = a729722 (merge
 ## Last Session Summary
 
 ```text
-Completed:  TEKA EDU BETA 0.1 IS LIVE.
-            Public at https://teka-edu.vercel.app — commit a729722, Supabase PROD,
-            deployment dpl_2midgBHcdVDbF8uz57U18MKPmX8P, READY. The anonymous suite passes
-            9 of 9 with no login, no bypass and no cookie.
-            The release never actually failed; my verification did.
-            - A production deployment here carries two .vercel.app aliases: the canonical
-              teka-edu.vercel.app and the team-scoped teka-edu-teka10.vercel.app.
-            - Standard Protection exempts the canonical domain and protects everything else.
-              Measured: canonical 200; team alias 302; generated URL 302; staging 302.
-            - I pointed the final check at the team-scoped alias, which is protected by
-              design, and declared the release failed. The owner opened the canonical URL in
-              a private window and it had been public the whole time.
-            - The root cause is the same one twice: I read a URL that had been copied into a
-              document instead of the alias list the platform returns. targets.production
-              .alias lists both, canonical first.
-            - The earlier "failed" report is kept in the record rather than rewritten.
-            Corrected NEXT_PUBLIC_APP_URL to the canonical URL. Nothing renders from it — it
-            is validation only — so no redeployment was forced to change a release status.
-            Verified unchanged: 88/88, 88/88, 176/176 on 176 distinct digests, 10/10
-            packages, 0 lapsed, 0 mismatches, all ai-assisted, no teacher claim anywhere;
-            PROD 41/41; staging still protected; 0 tracked .env*; Hobby and Free.
-Validation: format, lint, typecheck, unit (355), content (31 files), anonymous production
-            E2E (9/9), CI green on main.
+Completed:  SEPTEMBER VISUAL UPGRADE CLOSED — 176/176 approved.
+            3ème visual reconfirmation accepted; five full-review entries; 45 approvals restored
+            with approve-week --lapsed-only (fresh digests, none reused; 86 untouched).
+            1ère 88/88, 3ème 88/88, 0 at review, 176 distinct digests, all ai-assisted.
+            Reconfirmation generator distinguishes shown vs secondary pictures.
+            PRs #79 then #80 merged into develop; staging verified (see ACTIVE_TASK).
 Cost:       $0.
-Not done:   ISSUE-011 (CI cannot list the container registry; manual pruning is the proven
-            fallback) and ISSUE-017 (no teacher has read the 176 lessons). Both non-blocking
-            and both documented. October and 2ème maternelle are not started.
+Not done:   Production release (separate decision). October and 2ème maternelle not started.
 ```

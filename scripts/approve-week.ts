@@ -13,13 +13,16 @@
  *   - it computes every `reviewedDigest` with `lessonDigest`, under the current definition and
  *     including the fingerprint of every picture the lesson shows. No digest is ever copied
  *     forward, and a lesson whose media cannot be fingerprinted throws rather than being skipped;
- *   - it refuses a week that is not entirely at `review`, so it cannot silently re-stamp.
+ *   - it refuses a week that is not entirely at `review`, so it cannot silently re-stamp — unless
+ *     `--lapsed-only` is given (ADR-048): then only the week's lessons at `review` are approved,
+ *     and every lesson already `approved` is left byte-for-byte untouched. That is the case of a
+ *     visual reconfirmation, where only the lessons showing a redrawn picture lapsed.
  *
  * It writes nothing else: the review history is canonical content and is not touched here.
  */
 import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { format } from "prettier";
+import { format, resolveConfig } from "prettier";
 import { generateSchoolDays } from "@/domain/calendar/school-days";
 import { lessonDigest } from "@/domain/lessons/review";
 import { generateDailyPlan } from "@/domain/programme/daily-plan";
@@ -40,6 +43,7 @@ const args = new Map(
 const levelId = args.get("level") ?? "maternelle-3";
 const week = Number(args.get("week") ?? "1");
 const dryRun = args.get("dry-run") === "true";
+const lapsedOnly = args.get("lapsed-only") === "true";
 
 const data = getReferenceData();
 const pack = REVIEW_PACKAGES.find((p) => p.levelId === levelId && p.week === week);
@@ -96,12 +100,18 @@ const notes =
 
 const DOMAINS = ["lang", "math", "phys", "art", "time-space", "world"];
 let approved = 0;
+let untouched = 0;
 for (const domain of DOMAINS) {
   const file = `content/lessons/maternelle-cycle1-cd-2026/${levelId}/${domain}.json`;
   const parsed = JSON.parse(readFileSync(path.join(ROOT, file), "utf8"));
   let touched = false;
   for (const raw of parsed.lessons as { id: string; status: string; review: unknown }[]) {
     if (!lessonIds.includes(raw.id)) continue;
+    // A standing approval is never touched: not re-stamped, not re-dated, not re-noted.
+    if (lapsedOnly && raw.status === "approved") {
+      untouched += 1;
+      continue;
+    }
     if (raw.status !== "review") {
       throw new Error(`lesson "${raw.id}" is "${raw.status}", not "review": refusing to re-stamp`);
     }
@@ -128,14 +138,22 @@ for (const domain of DOMAINS) {
     // JSON.stringify output left the committed file and this script's output one
     // `prettier --write` apart, so approving a week dirtied six files beyond the approval.
     const full = path.join(ROOT, file);
-    writeFileSync(full, await format(JSON.stringify(parsed, null, 2), { filepath: full }), "utf8");
+    writeFileSync(
+      full,
+      await format(JSON.stringify(parsed, null, 2), {
+        ...(await resolveConfig(full)),
+        filepath: full,
+      }),
+      "utf8",
+    );
   }
 }
 
-if (approved !== lessonIds.length) {
+if (approved + untouched !== lessonIds.length || approved === 0) {
   throw new Error(`expected to approve ${lessonIds.length} lessons, approved ${approved}`);
 }
 console.log(
-  `${dryRun ? "[dry run] " : ""}${levelId} week ${week}: ${approved} lesson(s) approved ` +
+  `${dryRun ? "[dry run] " : ""}${levelId} week ${week}: ${approved} lesson(s) approved, ` +
+    `${untouched} already approved and untouched ` +
     `(${accepted.reviewKind}, ${accepted.outcome}, ${accepted.reviewer}, ${accepted.reviewedOn}).`,
 );

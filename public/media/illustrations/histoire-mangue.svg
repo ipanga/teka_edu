@@ -1,7 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" fill="none">
-  <g stroke="#1f2937" stroke-width="6" stroke-linejoin="round">
-      <path d="M60 62 q34 -16 44 16 q10 32 -18 46 q-32 14 -40 -18 q-8 -30 14 -44 z" fill="#e9b96e"/>
-      <path d="M28 128 q28 -12 36 14 q8 26 -16 34 q-26 8 -32 -14 q-6 -22 12 -34 z" fill="#e9b96e"/>
-      <path d="M118 126 q28 -12 36 14 q8 26 -16 34 q-26 8 -32 -14 q-6 -22 12 -34 z" fill="#e9b96e"/>
-    </g>
+  <ellipse cx="100" cy="184" rx="80" ry="6" fill="#efe9dc"/>
+      <ellipse cx="100" cy="64" rx="36" ry="28" transform="rotate(-20 100 64)" fill="#f3c86d" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <ellipse cx="112" cy="70" rx="18" ry="14" transform="rotate(-20 112 70)" fill="#e08d6a"/>
+      <line x1="70" y1="44" x2="62" y2="32" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M62 32 q-16 -4 -22 8 q14 6 22 -8 z" fill="#86c692" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <ellipse cx="100" cy="140" rx="78" ry="24" fill="#c9c2b4" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <ellipse cx="100" cy="138" rx="66" ry="16" fill="#efe9dc"/>
+      <path d="M32 136 q2 -18 24 -18 q24 0 24 18 q-2 14 -24 14 q-22 0 -24 -14 z" fill="#86c692" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M39 135 q2 -12 17 -12 q17 0 17 12 q-2 9 -17 9 q-15 0 -17 -9 z" fill="#f3c86d"/>
+      <path d="M48 126 l-4 16 M60 125 l-4 18 M41 133 l30 0" fill="none" stroke="#d9a63f" stroke-width="3" stroke-linecap="round"/>
+      <path d="M76 140 q2 -18 24 -18 q24 0 24 18 q-2 14 -24 14 q-22 0 -24 -14 z" fill="#86c692" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M83 139 q2 -12 17 -12 q17 0 17 12 q-2 9 -17 9 q-15 0 -17 -9 z" fill="#f3c86d"/>
+      <path d="M92 130 l-4 16 M104 129 l-4 18 M85 137 l30 0" fill="none" stroke="#d9a63f" stroke-width="3" stroke-linecap="round"/>
+      <path d="M120 136 q2 -18 24 -18 q24 0 24 18 q-2 14 -24 14 q-22 0 -24 -14 z" fill="#86c692" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M127 135 q2 -12 17 -12 q17 0 17 12 q-2 9 -17 9 q-15 0 -17 -9 z" fill="#f3c86d"/>
+      <path d="M136 126 l-4 16 M148 125 l-4 18 M129 133 l30 0" fill="none" stroke="#d9a63f" stroke-width="3" stroke-linecap="round"/>
 </svg>

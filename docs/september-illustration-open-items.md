@@ -5,15 +5,29 @@ to the bottom with their resolution.
 
 ## Decisions needed from the owner
 
-### OI-001 — When to submit the visual reconfirmation package
+### OI-001 — Visual reconfirmation — RESOLVED 2026-09-23 (both classes accepted, 176/176)
+
+**Status 2026-09-23:** 1ère `accepted` and restored (88/88). 3ème `accepted-with-modifications`:
+`m3-art-04-a1` corrected; send the regenerated
+`docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md` for the final confirmation. On
+`accepted`: a `full-review` `accepted` entry per 3ème week, then
+`npx tsx scripts/approve-week.ts --level=maternelle-3 --week=<n> --lapsed-only` for weeks 1–5.
+
+Background:
 
 Redrawing a picture lapses the approval of every lesson that shows it (ADR-048; `lessonDigest`
-covers picture bytes since ISSUE-026). After B2–B4, the lessons of both classes that show a
-changed picture are at `review`, and `npm run review:visual` generates one package per level
-with a before/after contact sheet. The owner submits it to the AI-assisted reviewer, records the
+covers picture bytes since ISSUE-026). **80 lessons are at `review`** (35 in 1ère, 45 in 3ème),
+and the packages are ready: `docs/review/2026-2027-maternelle-1-reconfirmation-visuelle.md`,
+`docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md`, with
+`docs/review/media/septembre-avant-apres.png`. The owner submits it to the AI-assisted reviewer, records the
 outcome in `content/reviews/history.json` (one `full-review` entry per week, scope and wording
 as in the package), and runs `scripts/approve-week.ts` per week. Until then the product keeps
 serving the lessons; only the status differs.
+
+Restoration, per level: one `full-review` entry per week (1 to 5) in
+`content/reviews/history.json` with `outcome: "accepted"`, then
+`npx tsx scripts/approve-week.ts --level=<id> --week=<n>` for each, then
+`npm run review:package`, `npm run db:reference -- --new-migration <name>`, and the usual PR.
 
 **Merge order is the owner's call**: `feat/september-visual-ux` can merge at once (no content
 change); `feat/september-illustrations` can merge before or after the reconfirmation, since the
@@ -33,9 +47,7 @@ exist, the listen controls appear with no code change.
   pedagogical gain. Revisit if a real session shows the ink mismatch.
 - **Rhymes no lesson reads.** `comptine-semaine` and `comptine-cabri` illustrate texts that no
   September activity reads. They are redrawn for consistency (P3) and lapse nothing.
-- **A display font.** A rounded child-friendly typeface would help, but every font is either a
-  network request (Google Fonts — against offline-first and privacy) or a binary in the repository
-  with a licence to track. System UI stays. Revisit with the PWA work.
+- **A display font.** Decided 2026-09-23: system UI stays (`docs/ILLUSTRATION_STYLE_GUIDE.md`).
 - **Sequenced motion** (a number line filling, a hand folding finger by finger for the rhyme)
   would need a library or scripted SVG animation. Out of ADR-045's four effects; revisit only if
   a real session shows a child needs the demonstration.

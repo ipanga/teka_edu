@@ -1,10 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" fill="none">
-  <g stroke="#1f2937" stroke-width="6" stroke-linejoin="round" fill="none">
-      <circle cx="100" cy="46" r="22" fill="#fffdf7"/>
-      <line x1="100" y1="68" x2="100" y2="122"/>
-      <path d="M100 82 l-30 14 l-8 30"/>
-      <path d="M100 82 l30 14 l8 30"/>
-      <path d="M100 122 l-22 26 l4 30"/>
-      <path d="M100 122 l22 26 l-4 30"/>
-    </g>
+  <rect x="34" y="12" width="132" height="176" rx="4" fill="#fffdf7" stroke="#a49c8e" stroke-width="4"/>
+      <g fill="none" stroke="#2b2a33" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="100" cy="52" r="18"/>
+        <line x1="100" y1="70" x2="100" y2="118"/>
+        <polyline points="100,84 72,100 66,128"/>
+        <polyline points="100,84 128,100 134,128"/>
+        <polyline points="100,118 80,146 84,176"/>
+        <polyline points="100,118 120,146 116,176"/>
+      </g>
+      <circle cx="100" cy="84" r="5" fill="#f3c86d" stroke="#2b2a33" stroke-width="4"/><circle cx="72" cy="100" r="5" fill="#f3c86d" stroke="#2b2a33" stroke-width="4"/><circle cx="128" cy="100" r="5" fill="#f3c86d" stroke="#2b2a33" stroke-width="4"/><circle cx="100" cy="118" r="5" fill="#f3c86d" stroke="#2b2a33" stroke-width="4"/><circle cx="80" cy="146" r="5" fill="#f3c86d" stroke="#2b2a33" stroke-width="4"/><circle cx="120" cy="146" r="5" fill="#f3c86d" stroke="#2b2a33" stroke-width="4"/>
 </svg>

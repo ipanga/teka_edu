@@ -132,13 +132,22 @@ describe("an approval can only come from a full review that accepted the week", 
       const lessons = lessonsOfWeek(week);
       expect(lessons.length, `week ${week} has no lessons`).toBeGreaterThan(0);
       const isApproved = lessons.some((l) => l.status === "approved");
-      expect(accepted(week), `week ${week}: approved=${isApproved}`).toBe(isApproved);
-      // A week is approved wholly or not at all.
-      if (isApproved)
+      // No approval without an accepted full review, ever.
+      if (isApproved) expect(accepted(week), `week ${week}`).toBe(true);
+      // An accepted week whose lessons are back at `review` is a *lapse*, and a lapse is never
+      // silent: a `consequence` entry dated on or after the accepting pass says what changed
+      // (ADR-048: a redrawn picture lapses the approval of every lesson that shows it).
+      if (accepted(week) && !isApproved) {
+        const acceptedOn = historyOf(week)
+          .filter((r) => r.scope === "full-review" && r.outcome === "accepted")
+          .map((r) => r.reviewedOn)
+          .sort()
+          .at(-1)!;
         expect(
-          lessons.every((l) => l.status === "approved"),
-          `week ${week}`,
+          historyOf(week).some((r) => r.scope === "consequence" && r.reviewedOn >= acceptedOn),
+          `week ${week}: accepted, not approved, and no consequence entry explains the lapse`,
         ).toBe(true);
+      }
     }
   });
 
@@ -167,14 +176,22 @@ describe("an approval can only come from a full review that accepted the week", 
         passes.filter((r) => r.outcome === "accepted-with-modifications").length,
         `week ${week}`,
       ).toBeGreaterThan(0);
-      expect(passes.at(-1)?.outcome, `week ${week}`).toBe("accepted");
+      // The pedagogical passes ended `accepted`, after at least one pass that asked for
+      // modifications. A later pass may follow — the visual reconfirmation of 2026-09-23 came back
+      // `accepted-with-modifications` for a picture — without rewriting what was accepted before.
+      const lastAccepted = passes.map((r) => r.outcome).lastIndexOf("accepted");
+      expect(lastAccepted, `week ${week} was never accepted`).toBeGreaterThan(0);
+      expect(
+        passes.slice(0, lastAccepted).some((r) => r.outcome === "accepted-with-modifications"),
+        `week ${week}`,
+      ).toBe(true);
     }
     const reads = historyOf(2).filter((r) => r.scope === "full-review");
     expect(reads.length).toBeGreaterThanOrEqual(2);
     expect(reads.filter((r) => r.outcome === "accepted-with-modifications").length).toBeGreaterThan(
       0,
     );
-    expect(reads.at(-1)?.outcome).toBe("accepted");
+    expect(reads.some((r) => r.outcome === "accepted")).toBe(true);
     for (const read of reads) expect(read.reviewKind, read.reviewedOn).toBe("ai-assisted");
   });
 
@@ -222,7 +239,10 @@ describe("the approvals granted to 3ème maternelle Week 1 are protected", () =>
   });
 
   it("lapses when the child's own instruction changes", () => {
-    const lesson = approved.find((l) => l.id === "m3-math-01")!;
+    // Any approved lesson will do: the one this test named first (m3-math-01) has since had its
+    // approval lapse for a redrawn picture (ADR-048), which is the mechanism working, not a
+    // reason to pin the test to a lesson that may lapse again.
+    const lesson = approved.find((l) => l.activities.length > 0)!;
     const before = lessonDigest(lesson, media);
     const edited = {
       ...lesson,

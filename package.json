@@ -41,6 +41,9 @@
     "plan:report": "tsx scripts/plan-report.ts",
     "review:reconfirmation": "tsx scripts/reconfirmation-package.ts",
     "visual:audit": "tsx scripts/visual-audit.ts",
+    "media:sheet": "tsx scripts/media-contact-sheet.ts",
+    "review:lapse": "tsx scripts/lapse-approvals.ts",
+    "review:visual": "tsx scripts/visual-reconfirmation.ts",
     "audio:brief": "tsx scripts/recording-brief.ts"
   },
   "dependencies": {
