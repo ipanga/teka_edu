@@ -134,11 +134,6 @@ prune the container registry.
 
 ## Resume Verification
 
-`gh pr checks 80`. When all four checks are green: `gh pr ready 80 && gh pr merge 80 --squash`,
-then `gh run list --branch develop --workflow deploy-staging.yml --limit 1` and watch it.
-
-## Resume Verification
-
 1. `git status --short`; `git branch --show-current`; `git log -n 5 --oneline`;
 2. `npm run visual:audit` produces no diff;
-3. `docs/work/SEPTEMBER_VISUAL_QA.md` — its resume point.
+3. `vercel vcr image ls dockerfile --project teka-edu --scope teka10` — the registry count.
