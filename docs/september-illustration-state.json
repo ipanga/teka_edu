@@ -413,10 +413,10 @@
         "qa-passed": 113
       },
       "byAudioNeed": {
-        "required": 0,
-        "recommended": 48,
+        "not-needed": 225,
         "optional": 29,
-        "unnecessary": 225
+        "recommended": 30,
+        "important-for-pronunciation": 18
       },
       "assetsByVerdict": {
         "keep": 8,

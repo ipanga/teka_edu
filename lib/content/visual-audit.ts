@@ -38,7 +38,21 @@ export type AuditStatus = (typeof AUDIT_STATUSES)[number];
 
 export type AssetVerdict = "keep" | "refine" | "replace";
 export type Priority = "P0" | "P1" | "P2" | "P3";
-export type AudioNeed = "required" | "recommended" | "optional" | "unnecessary";
+/**
+ * How much a human recording would help (ADR-046). No class makes audio a requirement: every
+ * word is on the page and the parent can say it. `important-for-pronunciation` marks the words
+ * and sound models a child is expected to imitate, which is where a wrong model does harm.
+ */
+export const AUDIO_NEEDS = [
+  "not-needed",
+  "optional",
+  "recommended",
+  "important-for-pronunciation",
+] as const;
+export type AudioNeed = (typeof AUDIO_NEEDS)[number];
+/** The classes that call for a recording to be made. */
+export const WANTS_RECORDING = (need: AudioNeed) =>
+  need === "recommended" || need === "important-for-pronunciation";
 
 export type VisualState = {
   version: number;
@@ -111,22 +125,26 @@ export type AuditRow = {
 };
 
 /**
- * Would a human recording teach something the page cannot? Nothing requires one (ADR-046):
- * "required" exists in the vocabulary so the audit can say, honestly, that it is empty.
+ * Would a human recording teach something the page cannot? Derived from the activity, never
+ * typed in by hand, so the plan follows the content.
  */
 export function audioNeedOf(activity: Activity): { need: AudioNeed; note: string } {
   const family = ACTIVITY_RENDERERS[activity.type].family;
   if (family === "word-cards" && activity.vocabulary.length > 0) {
-    return { need: "recommended", note: "prononciation des mots enseignés" };
+    return { need: "important-for-pronunciation", note: "prononciation des mots enseignés" };
+  }
+  if (family === "sound-game") {
+    return {
+      need: "important-for-pronunciation",
+      note: "un modèle sonore des syllabes ou des rimes",
+    };
   }
   if (activity.type === "song-rhyme")
     return { need: "recommended", note: "le rythme de la comptine" };
-  if (family === "sound-game")
-    return { need: "recommended", note: "un modèle sonore des syllabes ou des rimes" };
   if (activity.type === "listening-story" || activity.type === "read-aloud") {
     return { need: "optional", note: "narration, pour un jour où l’adulte ne peut pas lire" };
   }
-  return { need: "unnecessary", note: "" };
+  return { need: "not-needed", note: "" };
 }
 
 /** The pictures an activity puts on screen, wherever they come from. */
@@ -265,7 +283,7 @@ export function buildAuditRows(data: ReferenceData, state: VisualState): AuditRo
           activity.vocabulary.every((entry) => recorded.has(entry.fr.trim().toLowerCase()))) ||
         (typeof activity.payload["textId"] === "string" &&
           narrated.has(activity.payload["textId"]));
-      if (need === "recommended" && !hasRecording) parts.push("needs-audio");
+      if (WANTS_RECORDING(need) && !hasRecording) parts.push("needs-audio");
 
       const status: AuditStatus =
         parts.length === 0
@@ -283,7 +301,7 @@ export function buildAuditRows(data: ReferenceData, state: VisualState): AuditRo
       if (familyDecision !== undefined && familyDecision.animation !== "none") {
         actions.push(`mouvement : ${familyDecision.animation}`);
       }
-      if (need === "recommended")
+      if (WANTS_RECORDING(need))
         actions.push(`son : ${audioNote} (enregistrement humain, quand il existera)`);
       const priority: Priority | "—" =
         toChange.length > 0
@@ -359,10 +377,10 @@ export function deriveState(
     number
   >;
   const byAudioNeed: Record<AudioNeed, number> = {
-    required: 0,
-    recommended: 0,
+    "not-needed": 0,
     optional: 0,
-    unnecessary: 0,
+    recommended: 0,
+    "important-for-pronunciation": 0,
   };
   for (const row of rows) {
     byStatus[row.status] += 1;
@@ -420,7 +438,7 @@ export function deriveState(
       ),
     },
     pendingAudio: rows
-      .filter((row) => row.audio === "recommended" && !row.recordingExists)
+      .filter((row) => WANTS_RECORDING(row.audio) && !row.recordingExists)
       .map((row) => row.activityId),
     pendingAnimation: rows
       .filter(
@@ -481,10 +499,13 @@ export function buildAuditDocument(data: ReferenceData, state: VisualState): str
     "",
     "| Besoin | Activités |",
     "| --- | --- |",
-    `| \`required\` | ${derived.counts.byAudioNeed.required} — aucune, par décision (ADR-046) |`,
+    `| \`important-for-pronunciation\` | ${derived.counts.byAudioNeed["important-for-pronunciation"]} |`,
     `| \`recommended\` | ${derived.counts.byAudioNeed.recommended} |`,
     `| \`optional\` | ${derived.counts.byAudioNeed.optional} |`,
-    `| \`unnecessary\` | ${derived.counts.byAudioNeed.unnecessary} |`,
+    `| \`not-needed\` | ${derived.counts.byAudioNeed["not-needed"]} |`,
+    "",
+    "Aucune activité n’exige un enregistrement : l’adulte peut toujours dire le mot (ADR-046).",
+    "Le paquet d’enregistrement : `docs/audio/septembre-script-enregistrement.md`.",
     "",
     `Enregistrements disponibles : ${data.audio.length}. ${state.decisions.audio.policy}`,
     "",

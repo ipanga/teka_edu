@@ -4,6 +4,7 @@ import { format, resolveConfig } from "prettier";
 import { describe, expect, it } from "vitest";
 import { getReferenceData } from "@/lib/content/reference-data";
 import {
+  AUDIO_NEEDS,
   AUDIT_STATUSES,
   VISUAL_AUDIT_PATH,
   VISUAL_STATE_PATH,
@@ -75,10 +76,10 @@ describe("the September visual audit", () => {
     }
   });
 
-  it("requires audio nowhere, by decision (ADR-046)", () => {
+  it("classes every activity in one of the four audio needs, none of them a requirement", () => {
     for (const lesson of data.lessons) {
       for (const activity of lesson.activities) {
-        expect(audioNeedOf(activity).need).not.toBe("required");
+        expect(AUDIO_NEEDS).toContain(audioNeedOf(activity).need);
       }
     }
   });

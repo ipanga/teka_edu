@@ -39,9 +39,10 @@ type PictureSize = "sm" | "md" | "lg";
 
 /** Pixel hints and the width classes that let a picture grow with the screen. */
 const PICTURE: Record<PictureSize, { px: number; parent: string; child: string }> = {
-  sm: { px: 80, parent: "max-w-20 sm:max-w-24", child: "max-w-24 sm:max-w-28" },
-  md: { px: 144, parent: "max-w-36 sm:max-w-44", child: "max-w-44 sm:max-w-52" },
-  lg: { px: 256, parent: "max-w-60 sm:max-w-72", child: "max-w-72 sm:max-w-96" },
+  sm: { px: 80, parent: "max-w-20 sm:max-w-24", child: "max-w-24 sm:max-w-28 xl:max-w-36" },
+  md: { px: 144, parent: "max-w-36 sm:max-w-44", child: "max-w-44 sm:max-w-52 xl:max-w-72" },
+  // On a television the story picture is what the whole room looks at: it may take the width.
+  lg: { px: 256, parent: "max-w-60 sm:max-w-72", child: "max-w-72 sm:max-w-96 xl:max-w-[30rem]" },
 };
 
 function Picture({ media, size = "md" }: { media: SessionMedia; size?: PictureSize }) {
@@ -80,9 +81,10 @@ function Stage({
 
 /** One picture, centred on a large stage: the story picture, the thing to look at. */
 function Showcase({ media }: { media: SessionMedia }) {
+  const childView = useContext(ChildViewContext);
   return (
     <div className="flex justify-center">
-      <Stage size="lg" className="w-full max-w-md">
+      <Stage size="lg" className={`w-full ${childView ? "max-w-md xl:max-w-2xl" : "max-w-md"}`}>
         <Picture media={media} size="lg" />
       </Stage>
     </div>
