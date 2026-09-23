@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useRef, useState } from "react";
+import { shownPictureIds } from "@/domain/lessons/pictures";
 import type { RendererFamily } from "@/domain/lessons/renderers";
 import type { SessionActivity, SessionAudio, SessionMedia } from "@/lib/programme/session-view";
 
@@ -780,7 +781,14 @@ function Narrative({ activity }: { activity: SessionActivity }) {
   const pages = Math.ceil(text.lines.length / perPage);
   const shown = text.lines.slice(page * perPage, page * perPage + perPage);
   const last = page >= pages - 1;
-  const picture = text.illustration ?? activity.media[0] ?? null;
+  // One rule for the whole product (domain/lessons/pictures.ts): a story's picture leads its
+  // story; a rhyme said over another task shows that task's own picture when it names one.
+  const [leadId] = shownPictureIds(
+    { type: activity.type, mediaIds: activity.media.map((m) => m.id) },
+    { kind: text.kind, illustrationId: text.illustration?.id ?? null },
+  );
+  const picture =
+    [text.illustration, ...activity.media].find((m) => m !== null && m.id === leadId) ?? null;
 
   return (
     <div className="flex flex-col gap-4">

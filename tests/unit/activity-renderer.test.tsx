@@ -217,3 +217,42 @@ describe("the child's own screen", () => {
     );
   });
 });
+
+describe("which picture leads a text", () => {
+  const rain = picture("histoire-pluie", "La pluie qui tombe sur le toit", "pluie");
+  const hand = picture("comptine-compter", "Une main qui montre trois doigts", "compter");
+  const rhymeOverTask: SessionActivity = {
+    ...base,
+    id: "t-rain",
+    title: "Le bruit de la pluie",
+    renderer: "audio-narrative",
+    type: "song-rhyme",
+    vocabulary: [],
+    media: [rain],
+    payload: { textId: "un-deux-trois-je-compte" },
+    text: {
+      title: "Un, deux, trois, je compte",
+      kind: "rhyme",
+      lines: ["Un, deux, trois,"],
+      illustration: hand,
+      audio: null,
+    },
+  };
+
+  it("shows the task's own picture when a rhyme is said over another task", () => {
+    render(<ActivityRenderer activity={rhymeOverTask} />);
+    expect(screen.getByAltText("La pluie qui tombe sur le toit")).toBeTruthy();
+    expect(screen.queryByAltText("Une main qui montre trois doigts")).toBeNull();
+  });
+
+  it("keeps the story's own scene on a story, even when the activity names pictures", () => {
+    const story: SessionActivity = {
+      ...rhymeOverTask,
+      type: "listening-story",
+      text: { ...rhymeOverTask.text!, kind: "story" },
+    };
+    render(<ActivityRenderer activity={story} />);
+    expect(screen.getByAltText("Une main qui montre trois doigts")).toBeTruthy();
+    expect(screen.queryByAltText("La pluie qui tombe sur le toit")).toBeNull();
+  });
+});
