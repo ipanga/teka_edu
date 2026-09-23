@@ -97,17 +97,15 @@ jobs:
     name: Supabase migrations and database tests
     runs-on: ubuntu-24.04
     timeout-minutes: 15
-    permissions:
-      contents: read
-      packages: read
+    # Supabase publishes the same images on ghcr.io and on Amazon's public registry. On
+    # 2026-09-23 ghcr.io refused the Postgres pull with `toomanyrequests` for over two hours —
+    # before any test ran, and with or without an authenticated login — so the job pulls from the
+    # public ECR mirror. Same publisher, same tags (the pinned CLI chooses the version); no check
+    # changes.
+    env:
+      SUPABASE_INTERNAL_IMAGE_REGISTRY: public.ecr.aws
     steps:
       - uses: actions/checkout@v7
-      # Supabase's images are public on ghcr.io, but anonymous pulls from GitHub's shared runners
-      # are rate-limited: on 2026-09-23 six attempts in two hours failed with `toomanyrequests`
-      # before a single test ran. Logging in with the job's own short-lived token counts the pulls
-      # against this repository instead. No secret is added and no check is skipped.
-      - name: Log in to ghcr.io (authenticated image pulls)
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
       # Installs the Supabase CLI version pinned in package-lock.json.
       - uses: supabase/setup-cli@v3
       - name: Start local database (applies all migrations and the dev seed)
