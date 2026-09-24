@@ -1,0 +1,72 @@
+import { expect, test } from "@playwright/test";
+
+const viewports = [
+  { name: "small phone", width: 320, height: 740 },
+  { name: "large phone", width: 430, height: 932 },
+  { name: "tablet portrait", width: 768, height: 1024 },
+  { name: "tablet landscape", width: 1024, height: 768 },
+  { name: "desktop", width: 1440, height: 900 },
+  { name: "TV", width: 1920, height: 1080 },
+];
+
+for (const viewport of viewports) {
+  test(`September word cards fit and remain interactive on ${viewport.name}`, async ({ page }) => {
+    await page.setViewportSize(viewport);
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await page.goto("/maternelle/1/seance/11");
+    await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
+    await page.getByRole("button", { name: "Terminé", exact: true }).click();
+    await page.getByRole("button", { name: "Montrer à l’enfant", exact: true }).click();
+    const dialog = page.getByRole("dialog");
+    const cards = dialog
+      .getByRole("list", { name: "Les mots", exact: true })
+      .locator(":scope > li");
+    await expect(cards).toHaveCount(2);
+    const first = await cards.nth(0).boundingBox();
+    const second = await cards.nth(1).boundingBox();
+    expect(first).not.toBeNull();
+    expect(second).not.toBeNull();
+    expect(Math.abs(first!.y - second!.y)).toBeLessThan(2);
+    expect(second!.x + second!.width).toBeLessThanOrEqual(viewport.width);
+    expect((await cards.first().getByRole("img").boundingBox())!.width).toBeGreaterThanOrEqual(100);
+    await page.getByRole("button", { name: "Jouer : je montre le mot", exact: true }).click();
+    await dialog.getByRole("button", { name: /Une main ouverte/ }).click();
+    await expect(dialog.getByRole("status")).toHaveText("Bravo !");
+    await expect(dialog.getByRole("button", { name: "Encore un autre" })).toBeVisible();
+    await page.getByRole("button", { name: "Revenir au guide du parent" }).click();
+    await expect(page.getByText("Pour vous", { exact: true })).toBeVisible();
+  });
+}
+
+test("two TV choices fill the stage and the story keeps its text beside its picture", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1920, height: 1080 });
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/maternelle/3/seance/5");
+  await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
+  for (let i = 0; i < 6; i++) {
+    await page.getByRole("button", { name: /^(Suivant|Terminé)$/ }).click();
+  }
+  await page.getByRole("button", { name: "Montrer à l’enfant", exact: true }).click();
+  const dialog = page.getByRole("dialog");
+  const pictures = dialog.getByRole("img");
+  await expect(pictures).toHaveCount(2);
+  for (const picture of await pictures.all()) {
+    expect((await picture.boundingBox())!.width).toBeGreaterThanOrEqual(300);
+  }
+  await page.goto("/maternelle/1/seance/3");
+  await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
+  await page.getByRole("button", { name: "Terminé", exact: true }).click();
+  await page.getByRole("button", { name: "Montrer à l’enfant", exact: true }).click();
+  const image = await page.getByRole("dialog").getByRole("img").boundingBox();
+  const text = await page
+    .getByText("Lisa veut de l’eau. Elle cherche son seau.", { exact: true })
+    .boundingBox();
+  expect(text!.x).toBeGreaterThan(image!.x + image!.width);
+  expect(text!.y).toBeLessThan(image!.y + image!.height);
+  await page.getByRole("button", { name: "Page suivante", exact: true }).click();
+  await expect(page.getByRole("dialog").getByRole("img")).toHaveCount(0);
+  await page.getByRole("button", { name: "Page précédente", exact: true }).click();
+  await expect(page.getByRole("dialog").getByRole("img")).toHaveCount(1);
+});

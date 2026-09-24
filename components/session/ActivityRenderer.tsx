@@ -113,7 +113,7 @@ function Prompt({ children }: { children: React.ReactNode }) {
     <p
       className={
         childView
-          ? "text-center text-xl font-medium text-stone-700 sm:text-2xl"
+          ? "text-center text-xl font-medium text-stone-700 sm:text-2xl xl:text-3xl"
           : "text-lg font-medium text-stone-700"
       }
     >
@@ -332,7 +332,10 @@ function ChooseOne({
   return (
     <div className="flex flex-col gap-4">
       <Prompt>Montre : {nameOf(wanted)}</Prompt>
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+      <div
+        className={`teka-choice-grid ${childView ? "teka-choice-grid-child" : ""}`}
+        style={{ "--choice-columns": Math.min(media.length, 4) } as React.CSSProperties}
+      >
         {media.map((item, index) => {
           const isAnswer = isSameKind(item, wanted);
           return (
@@ -343,7 +346,7 @@ function ChooseOne({
               aria-label={item.alt}
               style={{ "--i": index } as React.CSSProperties}
               className={`teka-stagger flex items-center justify-center rounded-3xl border-4 bg-stage p-3 transition ${
-                childView ? "min-h-40 sm:min-h-52" : "min-h-32 sm:min-h-40"
+                childView ? "min-h-40 sm:min-h-52 xl:min-h-72" : "min-h-32 sm:min-h-40"
               } ${
                 state === "done" && isAnswer
                   ? "teka-pop border-emerald-600"
@@ -723,9 +726,7 @@ function WordCards({ activity }: { activity: SessionActivity }) {
       <ul
         className={
           // A two-word lesson on a television should not be two small cards in a corner.
-          childView
-            ? "flex flex-wrap justify-center gap-4 [&>li]:w-40 sm:[&>li]:w-56 xl:[&>li]:w-80"
-            : "grid grid-cols-2 gap-3 sm:grid-cols-3"
+          childView ? "teka-word-grid justify-center" : "grid grid-cols-2 gap-3 sm:grid-cols-3"
         }
         aria-label="Les mots"
       >
@@ -734,17 +735,21 @@ function WordCards({ activity }: { activity: SessionActivity }) {
           return (
             <li
               key={entry.fr}
-              className="teka-stagger flex flex-col items-center gap-3 rounded-3xl bg-white p-3 shadow-sm"
+              className={`teka-stagger flex flex-col items-center gap-3 rounded-3xl bg-white shadow-sm ${childView ? "p-2 sm:p-3" : "p-3"}`}
               style={{ "--i": index } as React.CSSProperties}
             >
               {picture !== undefined ? (
-                <Stage className="w-full">
+                <Stage size={childView ? "sm" : "md"} className="w-full">
                   <Picture media={picture} />
                 </Stage>
               ) : (
                 <span aria-hidden="true" className="teka-stage h-6 w-full" />
               )}
-              <span className="text-center text-xl font-bold sm:text-2xl">{entry.fr}</span>
+              <span
+                className={`text-center text-xl font-bold sm:text-2xl ${childView ? "xl:text-4xl" : ""}`}
+              >
+                {entry.fr}
+              </span>
               {entry.audio !== null && (
                 <Listen audio={entry.audio} label={`Écouter : ${entry.fr}`} compact />
               )}
@@ -771,6 +776,7 @@ function WordCards({ activity }: { activity: SessionActivity }) {
  * beat. A story turns three lines at a time, and each page rises once.
  */
 function Narrative({ activity }: { activity: SessionActivity }) {
+  const childView = useContext(ChildViewContext);
   const text = activity.text;
   const questions = asStrings(activity.payload["questions"]);
   const [page, setPage] = useState(0);
@@ -801,28 +807,30 @@ function Narrative({ activity }: { activity: SessionActivity }) {
             </span>
           )}
         </div>
-        {page === 0 && picture !== null && (
-          <div className="mb-5">
-            <Showcase media={picture} />
+        <div className={childView && page === 0 && picture !== null ? "teka-narrative-layout" : ""}>
+          {page === 0 && picture !== null && (
+            <div className="mb-5">
+              <Showcase media={picture} />
+            </div>
+          )}
+          <div
+            key={page}
+            className={rhyme ? "teka-rise flex flex-col gap-2" : "teka-rise flex flex-col gap-3"}
+          >
+            {shown.map((line, index) => (
+              <p
+                key={index}
+                className={
+                  rhyme
+                    ? `teka-stagger text-xl leading-relaxed font-medium sm:text-2xl ${childView ? "xl:text-3xl" : ""}`
+                    : `text-lg leading-relaxed sm:text-xl ${childView ? "xl:text-3xl" : ""}`
+                }
+                style={rhyme ? ({ "--i": index } as React.CSSProperties) : undefined}
+              >
+                {line}
+              </p>
+            ))}
           </div>
-        )}
-        <div
-          key={page}
-          className={rhyme ? "teka-rise flex flex-col gap-2" : "teka-rise flex flex-col gap-3"}
-        >
-          {shown.map((line, index) => (
-            <p
-              key={index}
-              className={
-                rhyme
-                  ? "teka-stagger text-xl leading-relaxed font-medium sm:text-2xl"
-                  : "text-lg leading-relaxed sm:text-xl"
-              }
-              style={rhyme ? ({ "--i": index } as React.CSSProperties) : undefined}
-            >
-              {line}
-            </p>
-          ))}
         </div>
       </article>
 

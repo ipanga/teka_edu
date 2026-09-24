@@ -5,7 +5,7 @@ const { sessions } = JSON.parse(
   readFileSync("docs/review/media/astra-baseline/inventory.json", "utf8"),
 );
 const base = process.env.ASTRA_BASE_URL || "https://teka-edu.vercel.app";
-const out = process.env.ASTRA_OUT || "test-results/astra-baseline/screens";
+const out = process.env.ASTRA_OUT || "private/astra-visual-evidence/baseline";
 mkdirSync(out, { recursive: true });
 const sizes = [
   ["small-phone", 320, 740],

@@ -29,8 +29,13 @@ Remote develop verified at the same SHA on 2026-09-24; remote main `28dcb0a73243
 
 ## Last Checkpoint
 
-2026-09-24 — Baseline inventory and first independent asset audit written. No runtime/content/media changes.
-Previous completed checkpoint retained in `archive/2026-09-september-visual-release.md`.
+2026-09-24 — Local-only continuation. Independent inventory and all 49 asset judgments saved;
+302 initial activities captured at six viewports before and after (1,812 per version, no missing
+files). Targeted responsive UI implementation passes 397 unit, 31 existing E2E + 7 new layout
+checks, standard build/typecheck, 152 pgTAP/RLS, both Docker builds/smokes and sentinel bundle scan.
+A final phone-padding correction was made after these checks: affected results below are STALE.
+No registered media/content changed. Hand candidate saved outside registry; foot/head drafts
+being generated. Complete interaction audit is running with resumable per-day markers.
 
 ## Scope
 
@@ -45,7 +50,8 @@ production release, approval stamping, synthetic audio, paid services.
 
 ## Product Decisions
 
-User authorizes a new independent visual review and staging improvements, never self-approval.
+User authorizes independent visual review, never self-approval. Latest steering: keep the
+review local; do not publish more artifacts, create a PR or deploy staging.
 Keep existing illustration freeze/history intact as baseline evidence.
 
 ## Completed
@@ -60,33 +66,49 @@ Keep existing illustration freeze/history intact as baseline evidence.
 
 ## In Progress
 
-Six-viewport production capture running with resumable per-day markers under
-`test-results/astra-baseline/screens`. Source review covers 302 instructions; six asset sheets
-cover 49 pictures. Full interactive-state visual inspection remains pending.
+`node scripts/astra-interactions.mjs` — local server 3000, phone/TV, writes per-day markers
+under `private/astra-visual-evidence/interactions`. It covers initial screens, word-game entry,
+retry/reveal/success/next target, every narrative page, count increments/reset and sort placements.
+It does not establish human inspection of every screenshot or all possible interaction sequences.
+
+Evidence: `private/astra-visual-evidence/{baseline,after}/report.json`, 1812 PNGs in each.
+Selected comparisons: `docs/review/media/astra-comparison/`. Full captures are ignored local files;
+never store these in disposable `test-results`, which Playwright clears.
 
 ## Remaining
 
 - Complete 49 asset and 302 activity audit; inspect actual rendered states at six sizes.
-- Define visual specification and evidence-based implementation batches.
+- Visual specification and batch plan written; keep batch states honest as work proceeds.
 - Implement, inspect before/after, honestly lapse only affected approvals and prepare packages.
-- All required validation; feature PR/CI; staging evaluation; final independent review handoff.
+- Revalidate final padding, finish artwork and independent review handoff. PR/staging withheld by owner.
 - UI findings, accepted assets and detailed batch states will link to the new audit.
 
 ## Validation State
 
-| Check                                                           | Result  | At       |
-| --------------------------------------------------------------- | ------- | -------- |
-| format/lint/types/unit/content/media/digests/history/curriculum | NOT RUN | new task |
-| pgTAP/RLS/build/responsive/reduced-motion                       | NOT RUN | new task |
-| Docker portable/Vercel/smoke/client and repository secrets      | NOT RUN | new task |
+| Check                                                                          | Result | At                                                                                        |
+| ------------------------------------------------------------------------------ | ------ | ----------------------------------------------------------------------------------------- |
+| format                                                                         | STALE  | passed before latest scripts and padding                                                  |
+| lint                                                                           | STALE  | passed before latest scripts and padding                                                  |
+| typecheck                                                                      | STALE  | passed before final padding                                                               |
+| unit tests                                                                     | STALE  | 397/397 before final padding                                                              |
+| content validation/media fingerprints/lesson digests/review history/curriculum | PASS   | ef12344; content unchanged; dry-run lapses 0                                              |
+| database tests/pgTAP/RLS                                                       | PASS   | 152 assertions, local migration 42, UI-only changes                                       |
+| build                                                                          | STALE  | standard Turbopack passed from fresh cache, plus fake-sentinel build; final padding newer |
+| E2E/responsive/reduced-motion                                                  | STALE  | 31 existing + 7 new passed before final padding; 1812 initial captures per version        |
+| Docker portable/Vercel/smoke                                                   | STALE  | both built and smoke-tested, exit 143; final padding newer                                |
+| client-bundle secret scan                                                      | STALE  | 14 files, all 3 CI sentinels absent; final padding newer                                  |
+| repository history secret scan                                                 | PASS   | 190 commits, no leaks                                                                     |
+| source artifact secret scan                                                    | PASS   | tracked + untracked nonignored files, no leaks before newest docs                         |
+| whole directory secret scan                                                    | FAIL   | 9 flags, all ignored .next generated preview/encryption metadata; no source finding       |
+| tracked .env files                                                             | PASS   | zero tracked                                                                              |
 
-Prior release checks are historical evidence only, not validation of this task.
-Baseline reported approvals 88/88 + 88/88; intentional lapses 0; unexpected lapses 0;
-fresh digest verification pending. Weekly packages 10/10 per release record.
+Approvals before/still valid 176/176; intentional/unexpected lapses 0/0; digest mismatches 0.
+No digest was written. No registered illustration was changed. Draft candidates are not accepted.
 
 ## Database State
 
-No database operations. Release record says local/DEV/PROD migration 42.
+Local Supabase stack started; pgTAP/RLS passed (152). No reset or migration authored.
+Hosted DEV/PROD untouched; release baseline migration 42.
 
 ## Deployment State
 
@@ -96,21 +118,34 @@ Never change PRODUCTION_DEPLOY_ENABLED or dispatch production.
 
 ## Git State
 
-Feature branch based on current remote develop. First audit checkpoint ready to commit/push.
+Local feature branch; audit checkpoint `ef12344` was pushed before the owner selected local-only.
+Draft PR creation was rejected by automatic approval review; no PR exists. Do not push further.
 
 ## Blockers
 
-None established. Network reads require sandbox escalation; remote Git read succeeded.
+Staging and PR withheld by latest user instruction: keep review local.
+Full manual interaction-state audit and 26 asset refinements/redraws remain unfinished.
 
 ## User Decisions Needed
 
-None at this stage.
+Owner answered “Keep the review local.” No further push, PR or staging deployment.
 
 ## Exact Resume Point
 
-Continue `node scripts/astra-render-audit.mjs` (resumes existing day markers). Inspect
-representative screenshots and remaining interaction states. Complete audit before broad changes;
-then start body/character draft briefs and responsive UI batch.
+1. Inspect `/tmp/teka-astra-interactions.log`; resume `node scripts/astra-interactions.mjs` if
+   incomplete. Inspect representative resulting screens and record precise coverage/limits.
+2. Save foot/head imagegen results in `docs/review/media/astra-drafts/`; inspect anatomy/style.
+3. Build with CI sentinel values from `.github/workflows/ci.yml`; restart local server after
+   a rebuild, then run E2E. Do not rebuild under an actively capturing server.
+4. Recapture after padding via `ASTRA_BASE_URL=http://127.0.0.1:3000
+ASTRA_OUT=private/astra-visual-evidence/after-final node scripts/astra-render-audit.mjs`.
+5. Regenerate comparisons (`node scripts/astra-comparison.mjs`, currently reads `after`),
+   update audit, tests, checkpoint, and commit locally. No push or PR.
+6. Continue planned illustration batches only after the complete audit; use existing lapse and
+   reconfirmation workflow on real integrated media changes. Never self-approve.
+
+The unchanged baseline has a local build in `/tmp/teka-astra-baseline-src`, serving port 3001.
+Temporary files are convenience only; baseline can be reconstructed from Git `a0b743b`.
 
 ## Resume Verification
 
