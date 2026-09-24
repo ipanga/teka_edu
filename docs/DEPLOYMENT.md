@@ -114,6 +114,14 @@ These are separate jobs that run in parallel. Any failure blocks the merge and t
 | Supabase migrations and database tests       | CLI pinned to the project's 2.117.0; images pulled from Supabase's `public.ecr.aws` mirror (`SUPABASE_INTERNAL_IMAGE_REGISTRY`, set per step because `setup-cli` exports `ghcr.io`; ghcr.io rate-limited the pull on 2026-09-23) → `supabase db start` (applies all migrations and the dev seed) → `supabase db reset` → `supabase test db` (pgTAP: RLS and access registry, reference data = `content/`, integrity rules) |
 | Docker images                                | build `Dockerfile` → run it, wait for `/api/health`, stop it (must exit on SIGTERM, not be killed) → the same for `Dockerfile.vercel`                                                                                                                                                                                                                                                                                      |
 
+**Supabase CLI: one pinned version, 2.117.0.** CI and both deploy workflows install exactly the
+version in `package.json` (`supabase/setup-cli` with `version:`), and
+`tests/unit/supabase-cli-pin.test.ts` fails if any workflow drifts. Why pinned: without `version`
+the action installs the latest CLI, so the tool that migrates DEV and PROD could change between
+two releases with no commit; and on 2026-09-23 an unpinned CI CLI ran a different version from the
+one the project tests locally. Upgrading is a deliberate change of `package.json` and the three
+workflows together.
+
 CI never connects to a hosted Supabase project. On pushes to `develop` and `main`, CI runs inside the deploy workflows (as a reusable workflow) instead of a second time on its own.
 
 ## Database migration pipeline

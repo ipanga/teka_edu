@@ -336,6 +336,14 @@ September merged often enough to go from 4 images to 50 in eight days — so the
 and reached 50 between two glances at a document nobody had reason to open. A threshold that is
 only written down is not a threshold.
 
+**Pruned by hand, 2026-09-24 (owner-authorised).** After the September visual upgrade the
+registry held **44 of 50**. The repository's own policy (`planRegistryPrune`) chose the images
+from the CLI's JSON listing, protecting production's image (`a7297228f173`, the only production
+deployment ever made) and staging's (`da2d4fbd32c3`) as well as the 20 newest: **9 deleted**, all
+from 14–15 September and superseded commits. **44 → 35**; both protected images verified present
+afterwards, production and staging still serving. (A table count of 45 the day before had
+counted the header line.)
+
 **Pruned again by hand, 2026-09-20.** The registry reached **45 of 50**, the configured near-cap
 line, and the guard that should have stopped the deploy could not fire because CI cannot read the
 count. With the owner's approval the repository's own policy chose the images — the 10 oldest,
