@@ -1,31 +1,27 @@
 # Active Task
 
-<!--
-  The checkpoint for the task in progress. A fresh Claude Code session reads this file, compares
-  it with the repository, and resumes — see docs/RESUMABLE_WORKFLOW.md.
--->
-
 ## Task
 
-Prune the container registry, pin the Supabase CLI everywhere, and release the September visual
-upgrade to production.
+September Visual Experience Review — GPT Astra
 
 ## Objective
 
-Production serves the reconfirmed September visual upgrade (176/176 approved) from Supabase PROD,
-verified anonymously at https://teka-edu.vercel.app, with the operational debt closed first.
+Independently audit all September child-facing activities in 1ère and 3ème maternelle;
+improve justified visual defects, validate on staging, and return independent review material.
+Preserve approved pedagogy and media approval integrity. Production is out of scope.
 
 ## Status
 
-`completed`
+`in_progress`
 
 ## Branch
 
-`chore/registry-prune-and-cli-pin` → `develop`; then the promotion PR `develop` → `main`.
+`codex/september-astra-visual-review`
 
 ## Base Branch
 
-`develop` at `da2d4fb`
+Started on clean `develop` at `a0b743b997f1effc5f83981e0f32f19514c10251`.
+Remote develop verified at the same SHA on 2026-09-24; remote main `28dcb0a732436908e2442525fd3fdb8201e5ae9b`.
 
 ## Started
 
@@ -33,93 +29,95 @@ verified anonymously at https://teka-edu.vercel.app, with the operational debt c
 
 ## Last Checkpoint
 
-2026-09-24 — **SEPTEMBER VISUAL UPGRADE PRODUCTION RELEASE: SUCCESS.** Run 35983628116
-(approved by the owner) applied migration 42 to PROD and deployed
-`dpl_22DjVFzGbinNs4xkCrEzgMM5Svh7` (production, READY, `28dcb0a`). Anonymous verification passed
-in full. Record: `docs/releases/SEPTEMBER_VISUAL_UPGRADE_RELEASE.md`.
+2026-09-24 — Baseline inventory and first independent asset audit written. No runtime/content/media changes.
+Previous completed checkpoint retained in `archive/2026-09-september-visual-release.md`.
 
 ## Scope
 
-- Registry maintenance (done); CLI pin in `deploy-staging.yml` and `deploy-production.yml`.
-- Validate `develop`; promote `develop` → `main`; production deployment through its gates.
+176 September lessons, 302 activities, 49 registered images; all responsive parent/child states.
+Complete audit before broad illustration edits. Counts freshly validated. Asset decisions: KEEP 23, REFINE 10, REDRAW 16, REMOVE 0,
+REPLACE-WITH-REAL-OBJECT 0. These are audit recommendations, not replacement acceptances.
 
 ## Out of Scope
 
-- October content; domain changes; any paid service; any manual SQL on PROD.
+Pedagogical text, objectives, dates, duration, progression, October, 2ème maternelle,
+production release, approval stamping, synthetic audio, paid services.
 
 ## Product Decisions
 
-- Owner authorised: pruning, and the production release once every required check is green.
+User authorizes a new independent visual review and staging improvements, never self-approval.
+Keep existing illustration freeze/history intact as baseline evidence.
 
 ## Completed
 
-- [x] Registry pruned 44 → 35 (production `a7297228f173`, staging `da2d4fbd32c3` protected).
-- [x] Supabase CLI pinned to 2.117.0 in CI and both deploy workflows; drift test (PR #83,
-      `22d7b3a`). Staging redeployed at `22d7b3a` (run 35982180315, dispatched because GitHub
-      created no run for the merge push), `dpl_GxFyze4amNh5A5srt46JnP9cSWuS` READY, smoke 31.
-- [x] `develop` validated: 176/176, 176 distinct digests, 0 review, frozen pictures, no content
-      change since `e882c10`; full local suite exit 0.
-- [x] Promotion PR #84 merged into `main` (`28dcb0a`).
-
-- [x] Production run 35983628116: preflights, PROD 41 → 42, Vercel production READY, smoke 31.
-- [x] Anonymous verification: public suite 9/9; 49/49 pictures with frozen hashes; 39 page views
-      at phone/tablet/TV with 0 broken images; `m3-art-04-a1` shows the rain; PROD read-only:
-      176 approved, 176 distinct digests, all `ai-assisted`, 36/36 RLS, no user data; staging,
-      team alias and generated URL 302.
+- Read task attachment, stable project rules, release record and resumable protocol.
+- Verified clean baseline and remote branches; created dedicated branch.
+- Content validation PASS at baseline; 176 current approvals, 302 activities, 49 images.
+- Audited all 49 images; wrote `docs/review/media/SEPTEMBER_ASTRA_VISUAL_AUDIT.md`,
+  `astra-asset-decisions.json`, six readable sheets and canonical inventory.
+- Wrote `docs/VISUAL_DESIGN_SYSTEM.md`; isolated movement and generic renderer correctness
+  issues without modifying approved content. Implementation batches remain planned.
 
 ## In Progress
 
-None.
+Six-viewport production capture running with resumable per-day markers under
+`test-results/astra-baseline/screens`. Source review covers 302 instructions; six asset sheets
+cover 49 pictures. Full interactive-state visual inspection remains pending.
 
 ## Remaining
 
-- [ ] Promote these records to `main` at the next release (they live on `develop`).
+- Complete 49 asset and 302 activity audit; inspect actual rendered states at six sizes.
+- Define visual specification and evidence-based implementation batches.
+- Implement, inspect before/after, honestly lapse only affected approvals and prepare packages.
+- All required validation; feature PR/CI; staging evaluation; final independent review handoff.
+- UI findings, accepted assets and detailed batch states will link to the new audit.
 
 ## Validation State
 
-| Check              | Result | At                                        |
-| ------------------ | ------ | ----------------------------------------- |
-| format             | PASS   | `22d7b3a` local, exit 0                   |
-| lint               | PASS   | `22d7b3a` local, exit 0                   |
-| typecheck          | PASS   | `22d7b3a` local, exit 0                   |
-| unit tests         | PASS   | `22d7b3a` local — 397                     |
-| content validation | PASS   | `22d7b3a` local — 31 files                |
-| database tests     | PASS   | `22d7b3a` local — 152 pgTAP; CI on #84    |
-| build              | PASS   | `22d7b3a` local; client bundle PASS       |
-| E2E                | PASS   | `22d7b3a` local 31; staging smoke 31      |
-| Docker             | PASS   | `22d7b3a` local, both images smoke-tested |
-| secret scans       | PASS   | gitleaks 186 commits; 0 tracked `.env*`   |
+| Check                                                           | Result  | At       |
+| --------------------------------------------------------------- | ------- | -------- |
+| format/lint/types/unit/content/media/digests/history/curriculum | NOT RUN | new task |
+| pgTAP/RLS/build/responsive/reduced-motion                       | NOT RUN | new task |
+| Docker portable/Vercel/smoke/client and repository secrets      | NOT RUN | new task |
+
+Prior release checks are historical evidence only, not validation of this task.
+Baseline reported approvals 88/88 + 88/88; intentional lapses 0; unexpected lapses 0;
+fresh digest verification pending. Weekly packages 10/10 per release record.
 
 ## Database State
 
-- Local 42; DEV 42; **PROD 42** (= repository). Working copy linked to DEV (restored after the
-  read-only PROD checks).
+No database operations. Release record says local/DEV/PROD migration 42.
 
 ## Deployment State
 
-- **Production:** https://teka-edu.vercel.app, `dpl_22DjVFzGbinNs4xkCrEzgMM5Svh7`, `28dcb0a`, PROD.
-- Staging: `22d7b3a` (before this records PR). Registry: **37 of 50**.
-- Supabase CLI: **2.117.0** pinned in CI and both deploy workflows.
+DEV and staging unchanged by this task. Production release record: `28dcb0a`,
+https://teka-edu.vercel.app. Live health independently verified: production `28dcb0a`, status ok.
+Never change PRODUCTION_DEPLOY_ENABLED or dispatch production.
 
 ## Git State
 
-- `main` at `28dcb0a`; `develop` at `22d7b3a`; records on `docs/september-release-checkpoint`.
+Feature branch based on current remote develop. First audit checkpoint ready to commit/push.
 
 ## Blockers
 
-None.
+None established. Network reads require sandbox escalation; remote Git read succeeded.
 
 ## User Decisions Needed
 
-None for this task. Proposed next task below; not started.
+None at this stage.
 
 ## Exact Resume Point
 
-The release is closed. Next task (not started): **refine the October annual progression for 3ème
-maternelle, then prepare October Weeks 1–2 as the first pedagogical-review batch.**
+Continue `node scripts/astra-render-audit.mjs` (resumes existing day markers). Inspect
+representative screenshots and remaining interaction states. Complete audit before broad changes;
+then start body/character draft briefs and responsive UI batch.
 
 ## Resume Verification
 
-1. `git status --short`; `git branch --show-current`; `git log -n 5 --oneline`;
-2. `vercel vcr image ls dockerfile --project teka-edu --scope teka10 --json` — the image count;
-3. `curl -sS https://teka-edu.vercel.app/api/health` — the production commit.
+```sh
+git status --short --branch
+git log -5 --oneline
+cat docs/work/ACTIVE_TASK.md
+npm run content:validate
+npm run media:report
+```
