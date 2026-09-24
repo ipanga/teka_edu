@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 4 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 6 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -73,6 +73,24 @@ Passe de confirmation. Les quatre corrections d’attribution de la passe préc�
 Relecture finale. Les deux corrections de la passe précédente sont vérifiées et acceptées : « Je dis où c’est » garde bien le repère sur le corps de l’enfant — l’adulte pose l’objet devant lui, derrière lui, à côté de lui, et reformule « Oui, il est derrière toi » — et la guidance de « Comment se sent Bibi ? » décrit bien les trois questions de l’histoire avant de relier une émotion au vécu de l’enfant. Aucun défaut pédagogique de fond ne subsiste. Une seule correction rédactionnelle restait, sur l’étai en anglais de « Je dis où c’est » : « compared to you » sonne faux et reste ambigu pour une relation spatiale.
 
 **Suites données :** L’étai en anglais devient « Tell me where the object is: in front of you, behind you, or beside you. Don’t point. », qui reprend directement la consigne française et se comprend sans détour. Ce changement est rédactionnel : il ne touche ni la consigne française, ni la guidance adulte, ni l’objectif, ni la durée, ni le matériel, ni le lexique. La semaine est acceptée et ses 20 leçons passent en « approuvée ».
+
+### 2026-09-22 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
+
+Mise à niveau visuelle de septembre (ADR-048) : 41 images ont été redessinées ou affinées (objet-cuillere, objet-crayon, objet-cahier, objet-sac, objet-table, objet-chaise, objet-porte, objet-fenetre, objet-lit, objet-marmite, objet-seau, objet-panier, objet-tomate, objet-banane, objet-oignon, objet-caillou, corps-main, corps-pied, corps-tete, corps-ventre, animal-poule, animal-poussin, animal-chevre, histoire-seau-lisa, histoire-tika, histoire-kumu, histoire-nsimba, histoire-mangue, histoire-bibi, histoire-marche, histoire-pluie, histoire-cailloux, histoire-malo, comptine-compter, comptine-bonjour, comptine-mains, comptine-semaine, comptine-cabri, comptine-formes, plante-parties, bonhomme-articule) ; les huit formes n’ont pas bougé. L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 10 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-lang-05, m3-lang-06, m3-lang-07, m3-lang-08, m3-lang-09, m3-math-05, m3-math-07, m3-math-09, m3-world-02, m3-world-03.
+
+**Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (docs/review/2026-2027-<classe>-reconfirmation-visuelle.md, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
+
+### 2026-09-23 — ChatGPT · `accepted-with-modifications` (ai-assisted)
+
+Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md et la planche avant/après. Décision : accepted-with-modifications. Un seul défaut : m3-art-04-a1 « Le bruit de la pluie » montrait l’image de la comptine du mois lue par-dessus (comptine-compter, « Une main qui montre trois doigts »), sans rapport avec l’activité, qui fait le bruit de la pluie.
+
+**Suites données :** m3-art-04-a1 reçoit sa propre image, histoire-pluie (la pluie qui tombe sur le toit), déjà existante et inchangée ; une règle unique (domain/lessons/pictures.ts) fait passer l’image propre d’une activité devant celle d’une comptine dite par-dessus, tandis qu’une histoire garde toujours sa propre image. Aucun mot, objectif, durée, textId ni progression n’a changé. Un audit ciblé de toutes les images montrées (110 activités, 184 images) n’a trouvé aucune autre contradiction ; un test (lib/content/media-consistency.ts) l’empêche de revenir. Les approbations restent annulées jusqu’à la confirmation ciblée du paquet régénéré.
+
+### 2026-09-23 — ChatGPT · `accepted` (ai-assisted)
+
+Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.
+
+**Suites données :** Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées.
 
 ## Jour 5 — 2026-09-07
 
@@ -145,7 +163,7 @@ _Dire ce qu’on a fait, dans l’ordre, en phrases entières._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-bibi` — Une chèvre devant une barrière et des feuilles (`public/media/illustrations/histoire-bibi.svg`)
+- **Image montrée pendant la lecture :** `histoire-bibi` — Bibi la chèvre, le nez dans un buisson, devant une barrière (`public/media/illustrations/histoire-bibi.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -369,8 +387,8 @@ _Nommer les parties d’un animal et dire ce dont il a besoin pour vivre._
 - **Aide en anglais (optionnelle) :** « Choose an animal you know and name its parts. »
 - **Images montrées à l'enfant (2) :**
 
-  - `animal-poule` — Une poule (`public/media/animals/animal-poule.svg`)
-  - `animal-chevre` — Une chèvre (`public/media/animals/animal-chevre.svg`)
+  - `animal-poule` — Une poule blanche, avec sa crête rouge (`public/media/animals/animal-poule.svg`)
+  - `animal-chevre` — Une chèvre blanche, avec ses cornes et sa barbichette (`public/media/animals/animal-chevre.svg`)
 
 - **Objectifs travaillés :** `WORLD-S01-C01-O08` Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale.
 
@@ -479,7 +497,7 @@ _Écouter une suite de mots et la redire : la mémoire des sons se travaille com
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-marche` — Un panier de marché avec des tomates et une banane (`public/media/illustrations/histoire-marche.svg`)
+- **Image montrée pendant la lecture :** `histoire-marche` — Un panier de marché avec des tomates, un régime de bananes et un oignon (`public/media/illustrations/histoire-marche.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Acquérir les habiletés phonologiques et le principe alphabétique » (from-5) :**
 
@@ -807,7 +825,7 @@ _Deuxième corpus de mots : nommer les objets et les pièces de la maison._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-malo` — Un petit chien endormi en rond sous la lune (`public/media/illustrations/histoire-malo.svg`)
+- **Image montrée pendant la lecture :** `histoire-malo` — Malo, un petit chien couché en rond sur son tapis, les yeux fermés, sous la lune et les étoiles (`public/media/illustrations/histoire-malo.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -1131,7 +1149,7 @@ _Employer « il » et « elle » pour parler de quelqu’un d’autre._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-cailloux` — Trois cailloux : un rond, un plat et un pointu (`public/media/illustrations/histoire-cailloux.svg`)
+- **Image montrée pendant la lecture :** `histoire-cailloux` — Trois cailloux différents : un rond, un plat et un pointu (`public/media/illustrations/histoire-cailloux.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -1452,7 +1470,7 @@ _Comprendre ce que ressent un personnage, et le dire._
 - **Aide en anglais (optionnelle) :** « Listen to Bibi’s story, then tell me how she feels. »
 - **Images montrées à l'enfant (1) :**
 
-  - `animal-chevre` — Une chèvre (`public/media/animals/animal-chevre.svg`)
+  - `animal-chevre` — Une chèvre blanche, avec ses cornes et sa barbichette (`public/media/animals/animal-chevre.svg`)
 
 - **Objectifs travaillés :** `LANG-S02-C03-O14` Comprendre les émotions, les intentions et les sentiments qui animent les personnages. ; `LANG-S02-C03-O15` Établir un lien entre la lecture effectuée et sa propre expérience.
 
@@ -1473,7 +1491,7 @@ _Comprendre ce que ressent un personnage, et le dire._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-bibi` — Une chèvre devant une barrière et des feuilles (`public/media/illustrations/histoire-bibi.svg`)
+- **Image montrée pendant la lecture :** `histoire-bibi` — Bibi la chèvre, le nez dans un buisson, devant une barrière (`public/media/illustrations/histoire-bibi.svg`)
 
 - **Questions posées à l’enfant après l’écoute (3) :**
 
@@ -1506,7 +1524,7 @@ _Comprendre ce que ressent un personnage, et le dire._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-kumu` — Un petit poussin devant la porte ouverte du poulailler (`public/media/illustrations/histoire-kumu.svg`)
+- **Image montrée pendant la lecture :** `histoire-kumu` — Kumu, le petit poussin, qui sort tout seul du poulailler dont la porte est ouverte (`public/media/illustrations/histoire-kumu.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
 

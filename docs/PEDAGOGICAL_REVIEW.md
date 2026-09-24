@@ -294,6 +294,68 @@ because a rule that is wrong four times out of five is worse than no rule.
 
 ---
 
+## September visual reconfirmation, 2026-09-23 — 3ème accepted; September 176/176
+
+The regenerated 3ème package (with `m3-art-04-a1` corrected and the narrow media audit) came back
+**`accepted`** (AI-assisted, ChatGPT). `histoire-pluie` is the picture shown for « Le bruit de la
+pluie »; the `comptine-compter` reference stays as a secondary, rhyme-related picture that does
+not lead the screen. Recorded as a `full-review` per week; the **45 lapsed approvals restored**
+with `scripts/approve-week.ts --lapsed-only`, digests recomputed (none equals a pre-lapse digest),
+the 43 standing 3ème approvals untouched. **September: 176/176 approved, 176 distinct digests,
+0 at review, all `ai-assisted`.** The reconfirmation generator now labels each picture's role
+(shown to the child, or secondary) so a reviewer cannot mistake one for the other.
+
+---
+
+## September visual reconfirmation, 2026-09-23 — 1ère accepted, 3ème accepted with one modification
+
+AI-assisted review (ChatGPT) of the two visual reconfirmation packages generated after
+`SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION`.
+
+- **1ère maternelle — `accepted`.** The redrawn pictures are clear, coherent and age-appropriate,
+  the weak body-part and story pictures are corrected, the shapes rightly unchanged, and no text,
+  objective, progression, programme or calendar needs further review. Recorded as a `full-review`
+  per week; the **35 lapsed approvals restored** with `scripts/approve-week.ts --lapsed-only`,
+  digests recomputed on the frozen pictures (none equals a pre-lapse digest); the 53 standing
+  approvals untouched, byte for byte. 1ère: **88/88 approved**.
+- **3ème maternelle — `accepted-with-modifications`.** One defect: `m3-art-04-a1` « Le bruit de la
+  pluie » showed the counting rhyme's hand, because the rhyme said over the rain-making carried
+  its own picture onto the screen. Corrected by giving the activity the existing rain-on-a-roof
+  picture (`histoire-pluie`) and one product rule (`domain/lessons/pictures.ts`): a story's
+  picture leads its story; a rhyme said over another task shows the task's own picture. No word,
+  objective, duration, `textId` or progression changed; no picture file changed.
+- **Narrow media audit.** Every picture actually shown was checked against what its activity
+  asks (110 activities, 184 pictures): one genuine defect (the one above), three suspicious groups
+  examined and rejected on canonical evidence. It is now a test
+  (`lib/content/media-consistency.ts`), shown failing on the defect and passing after.
+- **3ème approvals stay lapsed (45)** until the regenerated package
+  `docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md` receives its final targeted
+  confirmation.
+
+---
+
+## Pictures redrawn, approvals lapsed, 2026-09-22 (ADR-048)
+
+The September visual upgrade (`docs/september-illustration-upgrade-plan.md`) redraws the
+pictures a child looks at. Since ISSUE-026 the approval digest covers the bytes of every picture
+a lesson shows, so **every redraw lapses the approvals of the lessons that show it** — and that is
+honoured rather than bypassed. The lessons go back to `review` (`npm run review:lapse`), the lapse
+is recorded as a `consequence` entry per affected week naming the pictures and the lessons, and a
+visual reconfirmation package with a before/after contact sheet (`npm run media:sheet`,
+`npm run review:visual`) is generated for the AI-assisted reviewer. Restoration is the ordinary
+path: a `full-review` `accepted` entry per week, then `scripts/approve-week.ts`.
+
+**A record gap closed on the way.** The five 1ère maternelle reviews of 2026-09-15 existed only in
+the lesson `review` blocks; the history file held `consequence` entries for that class and no
+full pass. Lapsing would have erased the only record. They are now transcribed into
+`content/reviews/history.json` as `full-review` entries, word for word from the blocks, and say
+that they are transcriptions.
+
+Progress by batch is in `docs/september-illustration-progress.md`; the final count of lapsed
+lessons and the packages are recorded there when the last batch lands.
+
+---
+
 ## The approval digest now covers the story, 2026-09-18 (ISSUE-026)
 
 An activity names a story by id. The digest covered the id, and the bytes of the picture the story

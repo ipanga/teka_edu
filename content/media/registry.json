@@ -89,7 +89,7 @@
       "tags": ["cuillère", "maison", "compter"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:273ce87fb67ff6f3bb1c560d3c4fa1d4300efe09fcd1700a1429a0c6d7928dc4"
+      "contentHash": "sha256:1bd21f627e19c7afabcc9df7905373a84020f1419645f1ea84aa007059d77672"
     },
     {
       "id": "objet-crayon",
@@ -99,7 +99,7 @@
       "tags": ["crayon", "école", "écrire"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:44639e40462c742c3d03bc0cb0189478cdd622ff54fdba29756596563a4b0977"
+      "contentHash": "sha256:4e7e6fcde76ccaa85ce468b7d0156c0a72cfcec00d1595df9b83d4da2739d782"
     },
     {
       "id": "objet-cahier",
@@ -109,7 +109,7 @@
       "tags": ["cahier", "école"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:3ea07cf1a9323fbf038e4549729b1d55988704a97e61bddaaf3a2af7f1159a6d"
+      "contentHash": "sha256:66778d5feb533391c02eb640b39b88ce462b7a1e5ec5cb88f58c1e34d68deecd"
     },
     {
       "id": "objet-sac",
@@ -119,7 +119,7 @@
       "tags": ["sac", "cartable", "école"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:5374cbc67b63849b1647a74ef2cb297215bedc4ae46b7515c50d1e2715af70bd"
+      "contentHash": "sha256:1d9ecb68ad9677eefe572d009df7c5b1cbe17e0e01d0655ffb9f5e3ad1c77a8d"
     },
     {
       "id": "objet-table",
@@ -129,7 +129,7 @@
       "tags": ["table", "maison", "école"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:b733a5818916b7957aeb383ef3672beacb258241a7903bbea25d39413dd0b7d9"
+      "contentHash": "sha256:e84b16cb1220a2a537c30731cf7b5d46b149e2fdc676ff7c894f9ea27e788183"
     },
     {
       "id": "objet-chaise",
@@ -139,7 +139,7 @@
       "tags": ["chaise", "maison", "école"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:cab93d8f258def587ee3b52e93fca8b0888f9c1b92cc382497ed5fc414b904fb"
+      "contentHash": "sha256:259fda3c2a6024bd9a2e5082e65c232566ee67ea0b643f2f038df613e1c368fc"
     },
     {
       "id": "objet-porte",
@@ -149,7 +149,7 @@
       "tags": ["porte", "maison"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:4add18c6bb752c524dde70ba87552718b648cd09d972b685655a4681f6374bbd"
+      "contentHash": "sha256:74f41ecf12310e1ccde9ca788451cbf2d591631ceb2889777d66ef98f772eb08"
     },
     {
       "id": "objet-fenetre",
@@ -159,7 +159,7 @@
       "tags": ["fenêtre", "maison"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:27e0083280252576a86ad160b4039ed94cdf5f8786d28d852242bdf33b09dcbe"
+      "contentHash": "sha256:ebab789795a79bfb2c6b7c8a1b80be8cd616c56928fdb6336781dca2d67de823"
     },
     {
       "id": "objet-lit",
@@ -169,7 +169,7 @@
       "tags": ["lit", "maison", "dormir"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:940132c489f71fe5e55fab085a3dd1de6364ba2422a65135d811645fc8ef655a"
+      "contentHash": "sha256:be1fa2a2b1dd7341e4c7d181d726a9126c6294db281d5275c8fe6799f0fc1bce"
     },
     {
       "id": "objet-marmite",
@@ -179,7 +179,7 @@
       "tags": ["marmite", "maison", "cuisine"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:624bada299e4776b0570e8be1b578cc4e9c41ba9f5abcb457c942a11ef29e3ee"
+      "contentHash": "sha256:8a74ce5826a7815b1198e95241bda1cb69ac628b528f9ea1f54b3ef5eac63ffd"
     },
     {
       "id": "objet-seau",
@@ -189,7 +189,7 @@
       "tags": ["seau", "maison", "eau"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:dbfc25b72a397012271c5510f3d5c4e35e503bb3bba7ca23c7fa000df5245071"
+      "contentHash": "sha256:696835fb387b9779e4fc88b55590243f05d2add1ce0ef3a4742ef11f88392bdf"
     },
     {
       "id": "objet-panier",
@@ -199,7 +199,7 @@
       "tags": ["panier", "marché"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:4bde6a79211a101948048e804f61c36f0aa7a26ea4380ce911545a04ec0c06d0"
+      "contentHash": "sha256:370951e6875d48b92f1f1941a5a11ff4378dbb5cf1ff0661559f80673c38bafc"
     },
     {
       "id": "objet-tomate",
@@ -209,7 +209,7 @@
       "tags": ["tomate", "marché", "manger"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:c8dc26f182944020a2893947f37f28b3ddfdc6e6a312778d1eeb21df054195d5"
+      "contentHash": "sha256:1640e1af16df12c4ace21c8a28d00a6eecd1cddb51569cc6359f92a5dd16064b"
     },
     {
       "id": "objet-banane",
@@ -219,7 +219,7 @@
       "tags": ["banane", "marché", "manger"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:3a2bcb5f71dd7b28847c8232b4de9d7ebdb9e9288268a5c191b63e50c5eb2c52"
+      "contentHash": "sha256:611a92eea6ab28d5b145a798226696ecc735a2d276f85a18ea533d5d7d6e82ab"
     },
     {
       "id": "objet-oignon",
@@ -229,7 +229,7 @@
       "tags": ["oignon", "marché", "manger"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:fb5b1a17c85c4a4ae288a9c223b15237bdf68775d3f08f082808e9695f4ec3a1"
+      "contentHash": "sha256:f0b5cc0a9bec9d829cc136aac563b5255f0a781d24cade4ff2fcece49e07ccd8"
     },
     {
       "id": "objet-caillou",
@@ -239,177 +239,177 @@
       "tags": ["caillou", "compter", "petit objet"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:4048c95b6d2c053f4338a4f3d4f21bdbb5ccfb292e34898fa07b29e015ef3855"
+      "contentHash": "sha256:2fdff74f58b431b31c5d0afbe660e80121c2af196cbfe28ca7ca68ec940632f9"
     },
     {
       "id": "corps-main",
       "kind": "object",
       "file": "objects/corps-main.svg",
-      "alt": "Une main ouverte",
+      "alt": "Une main ouverte, les cinq doigts écartés",
       "tags": ["main", "corps"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:daffedc0fae4d0be94d05a74807d6d00d569ab7448713896e34a057bdc559c8b"
+      "contentHash": "sha256:abd0221e19a602427a98a7d1bae8ab17aa46e8f67bc24c849f6fa90e3b600923"
     },
     {
       "id": "corps-pied",
       "kind": "object",
       "file": "objects/corps-pied.svg",
-      "alt": "Un pied",
+      "alt": "Un pied nu, vu de dessus, avec ses cinq orteils",
       "tags": ["pied", "corps"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:a86507ecb9221ad637bbcb57a937fbeeca3a725108f2a14d7307939e1138f463"
+      "contentHash": "sha256:fa04bffa3bc7b0e251eec950229ed93c4b7af12572be9ea9f099183dd49ade90"
     },
     {
       "id": "corps-tete",
       "kind": "object",
       "file": "objects/corps-tete.svg",
-      "alt": "Une tête",
+      "alt": "La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire",
       "tags": ["tête", "corps", "visage"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:fdf56b1fac7336ff8edd086c1a8216592b142f25361a69f045320b23237be0d6"
+      "contentHash": "sha256:2aa04c3b557d1b0e3a7be2a20772c84cc81134f8ef9d78d2089b4e3e4759af39"
     },
     {
       "id": "corps-ventre",
       "kind": "object",
       "file": "objects/corps-ventre.svg",
-      "alt": "Le ventre",
+      "alt": "Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous",
       "tags": ["ventre", "corps"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:c3235304e3e43a8f04212b5e2628c3017d3c1b69f84c7b4d394bd0b5c6e3da1b"
+      "contentHash": "sha256:25ad16ad5bda8d062870553846d666fc7cfca91155eb85beee1bde7700105f80"
     },
     {
       "id": "animal-poule",
       "kind": "animal",
       "file": "animals/animal-poule.svg",
-      "alt": "Une poule",
+      "alt": "Une poule blanche, avec sa crête rouge",
       "tags": ["poule", "animal"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:99fea0b9f556307cf9d4f59b7452296a469b1c1c1547c6f1b8249416396f6479"
+      "contentHash": "sha256:47dd2c1a16e9942332ad42865e4e922ff50b83469902f2399bca7723fa602408"
     },
     {
       "id": "animal-poussin",
       "kind": "animal",
       "file": "animals/animal-poussin.svg",
-      "alt": "Un petit poussin",
+      "alt": "Un petit poussin jaune, tout rond",
       "tags": ["poussin", "animal", "kumu"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:10ad7a4c1989982a7e0b29f296b89c5ca5b74a811e044f2dcaf8beb890e37a89"
+      "contentHash": "sha256:1200d55d4d710dba9341c0194289d79485c7aad667b6e8cfe89f0d17b10ae06e"
     },
     {
       "id": "animal-chevre",
       "kind": "animal",
       "file": "animals/animal-chevre.svg",
-      "alt": "Une chèvre",
+      "alt": "Une chèvre blanche, avec ses cornes et sa barbichette",
       "tags": ["chèvre", "animal", "bibi"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:9ed15f4a27e4798e09672cca349e713a685073d7485bd516eee73df2bb457752"
+      "contentHash": "sha256:62993dc9a45ae5703a0b64e2ee9a36f57520a58be73cecc3ef2044c59dc68477"
     },
     {
       "id": "histoire-seau-lisa",
       "kind": "illustration",
       "file": "illustrations/histoire-seau-lisa.svg",
-      "alt": "Lisa, debout à côté d’une chaise, avec son seau posé dessus",
+      "alt": "Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus",
       "tags": ["histoire", "lisa", "seau", "chaise", "personnage"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:1a1df54d38a059b3c1a851e114ff88d78c92f84f68ea577ba64de101003cee25"
+      "contentHash": "sha256:61b3f228a5b7c344e3bb919832e67d15a2bd3a8f93583a4b964a61d0070746a8"
     },
     {
       "id": "histoire-tika",
       "kind": "illustration",
       "file": "illustrations/histoire-tika.svg",
-      "alt": "Un enfant qui se lève de son lit, le soleil à la fenêtre",
+      "alt": "Un enfant qui s’étire dans son lit, le soleil à la fenêtre",
       "tags": ["histoire", "matin", "lit"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:13202c10f4bcfc52bb840810cb3509e5ef23ecdcf04c5a766f063df03b11c4cc"
+      "contentHash": "sha256:c011c87cf0b38ea454a47932c505ca2e2e6e4ef773ad33e75a1762956853369e"
     },
     {
       "id": "histoire-kumu",
       "kind": "illustration",
       "file": "illustrations/histoire-kumu.svg",
-      "alt": "Un petit poussin devant la porte ouverte du poulailler",
+      "alt": "Kumu, le petit poussin, qui sort tout seul du poulailler dont la porte est ouverte",
       "tags": ["kumu", "poussin", "histoire"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:3c706b9a2439464d46c1f19317ad05efb330fa84949489595932a6168070b716"
+      "contentHash": "sha256:c5158e03e9af9a70cf733c12e6f9682c1abacc99030e84128e3d50233e083f77"
     },
     {
       "id": "histoire-nsimba",
       "kind": "illustration",
       "file": "illustrations/histoire-nsimba.svg",
-      "alt": "Un enfant avec un sac devant la porte de l’école",
+      "alt": "Nsimba, un petit garçon avec son sac d’école sur le dos, devant la porte de l’école",
       "tags": ["nsimba", "école", "rentrée", "histoire"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:3d87ea03ed392f14440ff15c60385dd16baa3a475b39bb7a116214a3366c9e23"
+      "contentHash": "sha256:4b4ab397cf3e41a88837778c3e6cf3eaf7fda336103040c1ddc4b1475cbeadab"
     },
     {
       "id": "histoire-mangue",
       "kind": "illustration",
       "file": "illustrations/histoire-mangue.svg",
-      "alt": "Une mangue coupée en trois morceaux",
+      "alt": "Une mangue entière, et trois morceaux de mangue coupés sur une assiette",
       "tags": ["mangue", "partage", "histoire"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:42120f90f8c9daec6036eabca3c59de0e94c5d5d3174beac456a38061efcc71d"
+      "contentHash": "sha256:0c002c3d3fe6c146ab56eeffe8386c93cf6ac215d8c822faf11219f96c049c4c"
     },
     {
       "id": "histoire-bibi",
       "kind": "illustration",
       "file": "illustrations/histoire-bibi.svg",
-      "alt": "Une chèvre devant une barrière et des feuilles",
+      "alt": "Bibi la chèvre, le nez dans un buisson, devant une barrière",
       "tags": ["bibi", "chèvre", "jardin", "histoire"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:7b659c87392c83043b6b826464824d88fb284b7666daa5b5ea04b85344d53c14"
+      "contentHash": "sha256:115a43f2d89d096ea5dbfd1e3679633656487a36e3a61eb3f8c5615f6a29c87d"
     },
     {
       "id": "histoire-marche",
       "kind": "illustration",
       "file": "illustrations/histoire-marche.svg",
-      "alt": "Un panier de marché avec des tomates et une banane",
+      "alt": "Un panier de marché avec des tomates, un régime de bananes et un oignon",
       "tags": ["marché", "panier", "histoire"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:b58596a1c8ca7fc1be3479b46275fa61dcbc259c640484f5d4f714ac563bca99"
+      "contentHash": "sha256:7fbfdbccf8ea912ea13ca0e875eb4e0a61bda43ec7f9b29c10a48135d4caef6e"
     },
     {
       "id": "histoire-pluie",
       "kind": "illustration",
       "file": "illustrations/histoire-pluie.svg",
-      "alt": "La pluie qui tombe sur un toit",
+      "alt": "La pluie qui tombe d’un nuage sur le toit d’une maison",
       "tags": ["pluie", "toit", "histoire"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:e1f085439c7cbe6fb8dcedfa16531b10ef9545e37e5f18a7ab32d1ff0ca54a07"
+      "contentHash": "sha256:3c1c57d6cc05e9c04d50e19fb044b11e3de377ec8a9d3290db7a9b0f33982561"
     },
     {
       "id": "histoire-cailloux",
       "kind": "illustration",
       "file": "illustrations/histoire-cailloux.svg",
-      "alt": "Trois cailloux : un rond, un plat et un pointu",
+      "alt": "Trois cailloux différents : un rond, un plat et un pointu",
       "tags": ["cailloux", "trois", "histoire"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:b8f285ecf0b548c1e2f72eb639ba0d1de055bea9f876e734918e5035becd3811"
+      "contentHash": "sha256:df6458f051a0cab68852cf991c1dd70e811539eae00907d517033ff66936a317"
     },
     {
       "id": "histoire-malo",
       "kind": "illustration",
       "file": "illustrations/histoire-malo.svg",
-      "alt": "Un petit chien endormi en rond sous la lune",
+      "alt": "Malo, un petit chien couché en rond sur son tapis, les yeux fermés, sous la lune et les étoiles",
       "tags": ["malo", "chien", "dormir", "histoire"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:af8410b51ad8fd2334c4e3dfdfbed7ba4b8e9a957fb2deda14eaf5bb6bd71e1e"
+      "contentHash": "sha256:1d24cfd5888c9272c68b8ecf5134f0070c0e11baacc855618f7cbefc3e23bf6a"
     },
     {
       "id": "comptine-compter",
@@ -419,47 +419,47 @@
       "tags": ["compter", "comptine", "doigts"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:9594d8d30e3ff9cff23c6f32b5f14859b9e37925968e415ca0202c4b73084a8e"
+      "contentHash": "sha256:3e5e86f06d3c23e479c45f54ecc54acebf580da5e3b4dffac7fdeb3f3cb38aa0"
     },
     {
       "id": "comptine-bonjour",
       "kind": "illustration",
       "file": "illustrations/comptine-bonjour.svg",
-      "alt": "Le soleil qui se lève et deux mains qui se saluent",
+      "alt": "Le soleil qui se lève derrière la colline, et deux mains qui font bonjour",
       "tags": ["bonjour", "soleil", "comptine"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:8cfd4f28ad324bd515fdc03a905ca704d5b9d1d7c676418afcc131289f64a0da"
+      "contentHash": "sha256:01ec06b85bdcb93bfa880ec53b917ed4821f179e677f50e9cfac641335ed8e35"
     },
     {
       "id": "comptine-mains",
       "kind": "illustration",
       "file": "illustrations/comptine-mains.svg",
-      "alt": "Deux mains levées",
+      "alt": "Deux mains ouvertes, levées, paumes vers toi",
       "tags": ["mains", "corps", "comptine"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:3dab6003e9a5522589a3e54da172530d30fa60a392f7042cfa80b2e50b43dc9b"
+      "contentHash": "sha256:ad1e83e04b06c8cdf2d548c650b89b4c669bc92338874800ecaa4f9ac6349cc1"
     },
     {
       "id": "comptine-semaine",
       "kind": "illustration",
       "file": "illustrations/comptine-semaine.svg",
-      "alt": "Les sept jours de la semaine, alignés",
+      "alt": "Sept perles sur un fil : cinq rondes, puis deux carrées",
       "tags": ["semaine", "jours", "comptine"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:95be21c437e9be8386dcf705b0cf3d401c5ba1e018a52b69d4c1842aefc52466"
+      "contentHash": "sha256:f47ac915ed8f6f5c56cc26231671b0ae72052848fcd318a10bdf2352a6a74ccd"
     },
     {
       "id": "comptine-cabri",
       "kind": "illustration",
       "file": "illustrations/comptine-cabri.svg",
-      "alt": "Un petit cabri qui saute",
+      "alt": "Un petit cabri qui saute, les quatre pattes en l’air, au-dessus de l’herbe",
       "tags": ["cabri", "sauter", "comptine"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:6760e5f334531f30e2a38c23ecffd3236c9cd3e4a5d4096b03dd9c86acbf518a"
+      "contentHash": "sha256:3a25a1fd6eb99194a440286105466a4ba97ed730a18ae65382587b00300d0b53"
     },
     {
       "id": "comptine-formes",
@@ -469,7 +469,7 @@
       "tags": ["formes", "comptine"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:0eec93f6874faee3305598d72ea218b52725f270d8c25ce1d942f84921dcefb6"
+      "contentHash": "sha256:f0aeb22e2bfaf2c3042d2457c378e2869fa73b27bbb834da779d685823664618"
     },
     {
       "id": "plante-parties",
@@ -479,17 +479,17 @@
       "tags": ["plante", "feuille", "tige", "racine"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:27861c6ae3b78d440a7aad5ee7d02c677da3adff334971b5f98232854d431d54"
+      "contentHash": "sha256:a42b3838f45e10f4102964ee5733a71493be6401eedc63ad2f767a853757e5af"
     },
     {
       "id": "bonhomme-articule",
       "kind": "illustration",
       "file": "illustrations/bonhomme-articule.svg",
-      "alt": "Un bonhomme dessiné avec les bras et les jambes pliés",
-      "tags": ["bonhomme", "corps", "articulation", "dessin"],
+      "alt": "Un bonhomme dessiné au crayon sur une feuille, avec les bras et les jambes pliés",
+      "tags": ["bonhomme", "corps", "articulation", "dessin", "bouger", "marcher"],
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:3582b827c7f89c45cec8a4ddbb79fc79ec90f021ee993e28ee748925de96ec9a"
+      "contentHash": "sha256:2308800c0f13fc6c770cdfc2f19bd0ee0102da28398182001a8533882a1351ce"
     }
   ]
 }

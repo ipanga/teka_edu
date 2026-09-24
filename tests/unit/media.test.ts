@@ -2,7 +2,14 @@ import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { ACTIVITY_RENDERERS } from "@/domain/lessons/renderers";
-import { MEDIA_KINDS, checkMedia, findAsset, mediaUrl } from "@/domain/media/types";
+import {
+  MEDIA_KINDS,
+  checkMedia,
+  findAsset,
+  mediaUrl,
+  pronunciationFor,
+} from "@/domain/media/types";
+import type { AudioAsset } from "@/domain/media/types";
 import type { MediaAsset } from "@/domain/media/types";
 import { getReferenceData } from "@/lib/content/reference-data";
 
@@ -132,5 +139,38 @@ describe("what September shows the child", () => {
       expect(asset, `${text.id} → ${String(text.illustrationId)}`).toBeDefined();
       expect(asset!.kind).toBe("illustration");
     }
+  });
+});
+
+describe("a taught word finds its recording by what it says (ADR-046)", () => {
+  const laMain: AudioAsset = {
+    id: "mot-la-main",
+    kind: "pronunciation",
+    file: "mots/la-main.mp3",
+    transcript: "La main",
+    seconds: 2,
+    origin: "teka-edu-created",
+    provenance: "Enregistré par une personne nommée ici, pour Teka Edu.",
+  };
+  const story: AudioAsset = {
+    ...laMain,
+    id: "histoire-x",
+    kind: "narration",
+    transcript: "la main",
+  };
+
+  it("matches the word without case, surrounding space or apostrophe style", () => {
+    expect(pronunciationFor("la main", [laMain])?.id).toBe("mot-la-main");
+    expect(pronunciationFor("  LA MAIN ", [laMain])?.id).toBe("mot-la-main");
+    expect(pronunciationFor("l’eau", [{ ...laMain, transcript: "l'eau" }])?.id).toBe("mot-la-main");
+  });
+
+  it("never mistakes a story for the pronunciation of a word", () => {
+    expect(pronunciationFor("la main", [story])).toBeUndefined();
+  });
+
+  it("finds nothing while nobody has recorded the word, so no control is shown", () => {
+    expect(pronunciationFor("le pied", [laMain])).toBeUndefined();
+    expect(pronunciationFor("le pied", data.audio)).toBeUndefined();
   });
 });

@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" fill="none">
-  <g stroke="#1f2937" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" fill="#e9b96e">
-      <rect x="72" y="92" width="56" height="62" rx="14"/>
-      <rect x="72" y="46" width="13" height="52" rx="6"/>
-      <rect x="90" y="36" width="13" height="62" rx="6"/>
-      <rect x="108" y="44" width="13" height="54" rx="6"/>
-      <rect x="124" y="58" width="13" height="42" rx="6"/>
-      <rect x="52" y="96" width="24" height="13" rx="6"/>
-    </g>
+  <ellipse cx="100" cy="180" rx="56" ry="8" fill="#efe9dc"/>
+      <rect x="83.9" y="140.29999999999998" width="32.199999999999996" height="39.099999999999994" rx="11.5" fill="#9a6540" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <line x1="77.575" y1="108.1" x2="71.71000000000001" y2="69" stroke="#2b2a33" stroke-width="25.225" stroke-linecap="round"/><line x1="77.575" y1="108.1" x2="71.71000000000001" y2="69" stroke="#9a6540" stroke-width="13.225" stroke-linecap="round"/>
+      <line x1="92.525" y1="108.1" x2="89.88000000000001" y2="55.199999999999996" stroke="#2b2a33" stroke-width="25.225" stroke-linecap="round"/><line x1="92.525" y1="108.1" x2="89.88000000000001" y2="55.199999999999996" stroke="#9a6540" stroke-width="13.225" stroke-linecap="round"/>
+      <line x1="107.475" y1="108.1" x2="110.46499999999999" y2="48.3" stroke="#2b2a33" stroke-width="25.225" stroke-linecap="round"/><line x1="107.475" y1="108.1" x2="110.46499999999999" y2="48.3" stroke="#9a6540" stroke-width="13.225" stroke-linecap="round"/>
+      <line x1="122.425" y1="108.1" x2="130.5325" y2="54.05" stroke="#2b2a33" stroke-width="25.225" stroke-linecap="round"/><line x1="122.425" y1="108.1" x2="130.5325" y2="54.05" stroke="#9a6540" stroke-width="13.225" stroke-linecap="round"/>
+      <line x1="121.85" y1="133.35399999999998" x2="147.14999999999998" y2="108.05399999999999" stroke="#2b2a33" stroke-width="25.225" stroke-linecap="round"/><line x1="121.85" y1="133.35399999999998" x2="147.14999999999998" y2="108.05399999999999" stroke="#9a6540" stroke-width="13.225" stroke-linecap="round"/>
+      <rect x="68.95" y="92" width="62.099999999999994" height="66.69999999999999" rx="27.599999999999998" fill="#9a6540" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
 </svg>

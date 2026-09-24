@@ -1,7 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" fill="none">
-  <g stroke="#1f2937" stroke-width="6" stroke-linejoin="round">
-      <circle cx="52" cy="120" r="28" fill="#b9b2a6"/>
-      <ellipse cx="104" cy="132" rx="30" ry="16" fill="#b9b2a6"/>
-      <polygon points="156,96 178,140 134,140" fill="#b9b2a6"/>
-    </g>
+  <ellipse cx="100" cy="178" rx="92" ry="8" fill="#efe9dc"/>
+      <circle cx="48" cy="126" r="30" fill="#c9c2b4" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <ellipse cx="40" cy="114" rx="8" ry="5" fill="#fffdf7"/>
+      <ellipse cx="108" cy="146" rx="36" ry="15" fill="#c9c2b4" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <ellipse cx="96" cy="140" rx="10" ry="3" fill="#fffdf7"/>
+      <polygon points="158,84 188,150 130,150" fill="#c9c2b4" stroke="#2b2a33" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <polygon points="156,100 162,116 150,118" fill="#fffdf7"/>
 </svg>

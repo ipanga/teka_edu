@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 4 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 6 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-14 — ChatGPT · `accepted-with-modifications` (ai-assisted)
@@ -79,6 +79,24 @@ Confirmation finale, contre le programme officiel Cycle 1 applicable en 2026-202
 Aucune relecture pédagogique n’a eu lieu pour cette semaine à cette date.
 
 **Suites données :** Conséquence d’un changement de définition de l’empreinte d’approbation, pas d’une nouvelle relecture. ISSUE-026 : l’empreinte couvrait l’identifiant de l’histoire lue, pas ses mots, si bien qu’un texte pouvait être réécrit sous une approbation sans la faire tomber. L’empreinte couvre désormais le genre, le titre et les lignes du texte résolu. Les approbations concernées sont d’abord tombées, puis ont été rétablies après vérification, champ par champ et contre la révision d’approbation elle-même, que le contenu relu est identique à celui qui avait été approuvé. Le sens de la décision, la personne qui l’a prise et sa date sont inchangés.
+
+### 2026-09-22 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
+
+Mise à niveau visuelle de septembre (ADR-048) : 41 images ont été redessinées ou affinées (objet-cuillere, objet-crayon, objet-cahier, objet-sac, objet-table, objet-chaise, objet-porte, objet-fenetre, objet-lit, objet-marmite, objet-seau, objet-panier, objet-tomate, objet-banane, objet-oignon, objet-caillou, corps-main, corps-pied, corps-tete, corps-ventre, animal-poule, animal-poussin, animal-chevre, histoire-seau-lisa, histoire-tika, histoire-kumu, histoire-nsimba, histoire-mangue, histoire-bibi, histoire-marche, histoire-pluie, histoire-cailloux, histoire-malo, comptine-compter, comptine-bonjour, comptine-mains, comptine-semaine, comptine-cabri, comptine-formes, plante-parties, bonhomme-articule) ; les huit formes n’ont pas bougé. L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 9 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-art-02, m3-lang-01, m3-lang-02, m3-lang-03, m3-lang-04, m3-math-01, m3-math-02, m3-math-04, m3-world-01.
+
+**Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (docs/review/2026-2027-<classe>-reconfirmation-visuelle.md, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
+
+### 2026-09-23 — ChatGPT · `accepted-with-modifications` (ai-assisted)
+
+Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md et la planche avant/après. Décision : accepted-with-modifications. Un seul défaut : m3-art-04-a1 « Le bruit de la pluie » montrait l’image de la comptine du mois lue par-dessus (comptine-compter, « Une main qui montre trois doigts »), sans rapport avec l’activité, qui fait le bruit de la pluie.
+
+**Suites données :** m3-art-04-a1 reçoit sa propre image, histoire-pluie (la pluie qui tombe sur le toit), déjà existante et inchangée ; une règle unique (domain/lessons/pictures.ts) fait passer l’image propre d’une activité devant celle d’une comptine dite par-dessus, tandis qu’une histoire garde toujours sa propre image. Aucun mot, objectif, durée, textId ni progression n’a changé. Un audit ciblé de toutes les images montrées (110 activités, 184 images) n’a trouvé aucune autre contradiction ; un test (lib/content/media-consistency.ts) l’empêche de revenir. Les approbations restent annulées jusqu’à la confirmation ciblée du paquet régénéré.
+
+### 2026-09-23 — ChatGPT · `accepted` (ai-assisted)
+
+Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.
+
+**Suites données :** Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées.
 
 ## Jour 1 — 2026-09-01
 
@@ -152,7 +170,7 @@ _L’enfant salue, dit son nom et son âge, et parle des personnes qui vivent av
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-nsimba` — Un enfant avec un sac devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
+- **Image montrée pendant la lecture :** `histoire-nsimba` — Nsimba, un petit garçon avec son sac d’école sur le dos, devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -399,7 +417,7 @@ _Nommer les parties du corps qui plient, et se dessiner en mouvement._
 - **Aide en anglais (optionnelle) :** « Draw yourself running or dancing. »
 - **Images montrées à l'enfant (1) :**
 
-  - `bonhomme-articule` — Un bonhomme dessiné avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
+  - `bonhomme-articule` — Un bonhomme dessiné au crayon sur une feuille, avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
 
 - **Objectifs travaillés :** `WORLD-S01-C02-O08` Identifier et nommer quelques articulations et la segmentation des membres. ; `WORLD-S01-C02-O09` Se représenter avec un corps articulé en mouvement.
 
@@ -506,7 +524,7 @@ _Premier corpus de mots : nommer et ranger les objets de l’école._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue coupée en trois morceaux (`public/media/illustrations/histoire-mangue.svg`)
+- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue entière, et trois morceaux de mangue coupés sur une assiette (`public/media/illustrations/histoire-mangue.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -809,8 +827,8 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
 - **Aide en anglais (optionnelle) :** « Listen to Kumu’s story. I will ask you three questions after. »
 - **Images montrées à l'enfant (2) :**
 
-  - `animal-poussin` — Un petit poussin (`public/media/animals/animal-poussin.svg`)
-  - `animal-poule` — Une poule (`public/media/animals/animal-poule.svg`)
+  - `animal-poussin` — Un petit poussin jaune, tout rond (`public/media/animals/animal-poussin.svg`)
+  - `animal-poule` — Une poule blanche, avec sa crête rouge (`public/media/animals/animal-poule.svg`)
 
 - **Objectifs travaillés :** `LANG-S02-C03-O09` Comprendre des histoires dont les actions sont organisées autour d’une structure répétitive (rencontres successives) et commencer à comprendre les informations implicites (émotions, états et sentiments des personnages). ; `LANG-S01-C04-O11` Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
 
@@ -831,7 +849,7 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-kumu` — Un petit poussin devant la porte ouverte du poulailler (`public/media/illustrations/histoire-kumu.svg`)
+- **Image montrée pendant la lecture :** `histoire-kumu` — Kumu, le petit poussin, qui sort tout seul du poulailler dont la porte est ouverte (`public/media/illustrations/histoire-kumu.svg`)
 
 - **Questions posées à l’enfant après l’écoute (3) :**
 
@@ -862,7 +880,7 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe sur un toit (`public/media/illustrations/histoire-pluie.svg`)
+- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe d’un nuage sur le toit d’une maison (`public/media/illustrations/histoire-pluie.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
 
@@ -1182,7 +1200,7 @@ _Frapper les syllabes des prénoms de la maison : entendre que les mots sont fai
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-kumu` — Un petit poussin devant la porte ouverte du poulailler (`public/media/illustrations/histoire-kumu.svg`)
+- **Image montrée pendant la lecture :** `histoire-kumu` — Kumu, le petit poussin, qui sort tout seul du poulailler dont la porte est ouverte (`public/media/illustrations/histoire-kumu.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Acquérir les habiletés phonologiques et le principe alphabétique » (from-5) :**
 

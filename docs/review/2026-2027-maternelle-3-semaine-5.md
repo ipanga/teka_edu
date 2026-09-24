@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 2 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 4 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-15 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -73,6 +73,24 @@ Première vraie relecture pédagogique complète de la semaine 5. Les trois entr
 Passe de confirmation finale de la semaine 5, sur le paquet canonique régénéré après la passe « accepted-with-modifications » du même jour. Les huit corrections demandées ont été revérifiées une à une dans le paquet régénéré et elles y sont : les objectifs de « Combien manque-t-il ? » et de « Tout ce que je sais compter » décrivent maintenant l’activité qui les porte ; « Devine le mot » travaille vraiment une rime, avec deux paires orales construites sur des mots du mois ; « Ma semaine en ordre » dit que l’adulte lit les jours à voix haute et que ce qu’on regarde est l’ordre, pas la lecture ; « Tous les mouvements du mois » enchaîne deux ou trois mouvements et finit immobile ; « Je chante et je dessine » a rendu à chaque activité son objectif, la comptine au chant et le dessin au dessin ; le choix de la comptine est redevenu un choix ; et l’étiquette « À défaut » n’est plus répétée. Aucun nouveau défaut pédagogique n’a été trouvé. La semaine 5 est autorisée à l’approbation.
 
 **Suites données :** Aucune. La semaine est acceptée telle quelle. Les douze leçons passent de « review » à « approved », avec des empreintes calculées à neuf sur le texte exact que cette passe a lu ; aucune empreinte n’est reprise d’une passe précédente. Les entrées antérieures de cette semaine — trois corrections héritées des semaines 1 et 4, puis la première relecture complète conclue « accepted-with-modifications » — sont conservées telles qu’elles ont été écrites. Avec cette approbation, septembre est relu et accepté en entier pour la 1ère et la 3ème maternelle.
+
+### 2026-09-22 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
+
+Mise à niveau visuelle de septembre (ADR-048) : 41 images ont été redessinées ou affinées (objet-cuillere, objet-crayon, objet-cahier, objet-sac, objet-table, objet-chaise, objet-porte, objet-fenetre, objet-lit, objet-marmite, objet-seau, objet-panier, objet-tomate, objet-banane, objet-oignon, objet-caillou, corps-main, corps-pied, corps-tete, corps-ventre, animal-poule, animal-poussin, animal-chevre, histoire-seau-lisa, histoire-tika, histoire-kumu, histoire-nsimba, histoire-mangue, histoire-bibi, histoire-marche, histoire-pluie, histoire-cailloux, histoire-malo, comptine-compter, comptine-bonjour, comptine-mains, comptine-semaine, comptine-cabri, comptine-formes, plante-parties, bonhomme-articule) ; les huit formes n’ont pas bougé. L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 6 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-art-07, m3-lang-20, m3-lang-21, m3-lang-22, m3-math-20, m3-math-22.
+
+**Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (docs/review/2026-2027-<classe>-reconfirmation-visuelle.md, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
+
+### 2026-09-23 — ChatGPT · `accepted-with-modifications` (ai-assisted)
+
+Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md et la planche avant/après. Décision : accepted-with-modifications. Un seul défaut : m3-art-04-a1 « Le bruit de la pluie » montrait l’image de la comptine du mois lue par-dessus (comptine-compter, « Une main qui montre trois doigts »), sans rapport avec l’activité, qui fait le bruit de la pluie.
+
+**Suites données :** m3-art-04-a1 reçoit sa propre image, histoire-pluie (la pluie qui tombe sur le toit), déjà existante et inchangée ; une règle unique (domain/lessons/pictures.ts) fait passer l’image propre d’une activité devant celle d’une comptine dite par-dessus, tandis qu’une histoire garde toujours sa propre image. Aucun mot, objectif, durée, textId ni progression n’a changé. Un audit ciblé de toutes les images montrées (110 activités, 184 images) n’a trouvé aucune autre contradiction ; un test (lib/content/media-consistency.ts) l’empêche de revenir. Les approbations restent annulées jusqu’à la confirmation ciblée du paquet régénéré.
+
+### 2026-09-23 — ChatGPT · `accepted` (ai-assisted)
+
+Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.
+
+**Suites données :** Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées.
 
 ## Jour 20 — 2026-09-28
 
@@ -146,7 +164,7 @@ _Parler de ce qu’on a fait à quelqu’un qui ne l’a pas vu._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-malo` — Un petit chien endormi en rond sous la lune (`public/media/illustrations/histoire-malo.svg`)
+- **Image montrée pendant la lecture :** `histoire-malo` — Malo, un petit chien couché en rond sur son tapis, les yeux fermés, sous la lune et les étoiles (`public/media/illustrations/histoire-malo.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -476,7 +494,7 @@ _Reconnaitre un mot à partir de ses syllabes, puis repérer une rime._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe sur un toit (`public/media/illustrations/histoire-pluie.svg`)
+- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe d’un nuage sur le toit d’une maison (`public/media/illustrations/histoire-pluie.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -795,7 +813,7 @@ _Reprendre, en parlant, ce que le mois a apporté._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue coupée en trois morceaux (`public/media/illustrations/histoire-mangue.svg`)
+- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue entière, et trois morceaux de mangue coupés sur une assiette (`public/media/illustrations/histoire-mangue.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 

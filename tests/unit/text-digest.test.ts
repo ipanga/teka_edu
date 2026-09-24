@@ -141,7 +141,19 @@ describe("every approval standing today is bound to the story it reads", () => {
       (l) => l.status === "approved" && l.review?.notes?.includes("ISSUE-026"),
     );
     // The approved lessons that read a story at the time: the only ones the definition touched.
-    expect(restamped.length).toBeGreaterThan(0);
+    // Every one of them shows a story picture, and every story picture was redrawn on
+    // 2026-09-22, which lapsed those approvals (ADR-048). The re-stamp then stands on nothing
+    // today — and that is only acceptable because the lapse is itself on record.
+    if (restamped.length === 0) {
+      const lapses = data.reviewHistory.filter(
+        (r) => r.scope === "consequence" && r.summary.includes("ADR-048"),
+      );
+      expect(
+        lapses.length,
+        "no approval carries the re-stamp and no lapse explains it",
+      ).toBeGreaterThan(0);
+      return;
+    }
     for (const l of restamped) {
       expect(l.review?.notes, l.id).toMatch(/Aucune nouvelle relecture/);
       expect(l.review?.reviewKind, l.id).toBe("ai-assisted");

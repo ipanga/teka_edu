@@ -49,7 +49,8 @@ draft ──▶ review ──▶ approved ──▶ retired
 | `approved` | An independent review accepted this exact text on a date, and said which kind it was | Reviewer    |
 | `retired`  | Withdrawn, kept for history                                                          | Owner       |
 
-Every lesson in the repository today is `review`.
+Where September stands is in `PROJECT_STATUS.md` (Content Status): both classes were accepted in
+full, and 80 lessons went back to `review` on 2026-09-22 when their pictures were redrawn (ADR-048).
 
 ## What an approval must carry
 
@@ -127,6 +128,15 @@ Generation **fails** — and so does CI — when a package names a text it canno
 bullet promises a list and delivers nothing. Both are real failures that reached a reviewer once.
 A unit test also fails if the committed package is out of date, so a reviewer is never handed a
 document that no longer matches what the app serves.
+
+**A redrawn picture (ADR-048).** The digest covers the bytes of every picture a lesson shows, so
+redrawing one lapses the approvals of the lessons that show it. `npm run review:lapse` sends them
+back to `review` (it re-stamps nothing), the lapse is recorded as a `consequence` entry per week,
+and `npm run review:visual` writes a **visual reconfirmation package** per level — the changed
+pictures with their old and new descriptions, the lapsed lessons per week, and a before/after
+sheet — after verifying that no reviewable text moved. The reviewer answers `accepted` or
+`accepted-with-modifications`; a `full-review` entry per week and `scripts/approve-week.ts`
+restore the approvals with freshly computed digests.
 
 **Granularity.** Review a batch small enough to be read properly: a week, or a month. Never
 generate a year and call one pass a review.

@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 3 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 5 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -85,6 +85,24 @@ Deuxième relecture pédagogique complète de la semaine 4, sur le paquet corrig
 Passe de confirmation finale de la semaine 4, sur le paquet canonique régénéré après les corrections du deuxième passage. Les quatre corrections demandées au deuxième passage ont été revérifiées une à une : la chronologie de l’histoire porte désormais l’objectif écrit pour une histoire ; les deux attributions autour de la bande numérique décrivent la tâche que l’enfant fait réellement ; « Marche sur les formes » gagne vraiment son objectif d’équilibres construits par une combinaison d’actions ; et « D’un animal à l’autre » est devenu une course continue, debout. Le point de sécurité du « Jeu des appuis » — plus de tissu libre dans le passage — est accepté lui aussi. Les corrections du premier passage ont été revérifiées dans le même mouvement. Aucun nouveau défaut pédagogique n’a été trouvé. La semaine 4 est autorisée à l’approbation.
 
 **Suites données :** Aucune. La semaine est acceptée telle quelle. Les vingt leçons passent de « review » à « approved », avec des empreintes calculées à neuf sur le texte exact que cette passe a lu ; aucune empreinte n’est reprise d’une passe précédente. Les entrées antérieures de cette semaine — quatre corrections héritées des semaines 1 à 3, puis deux relectures complètes conclues « accepted-with-modifications » — sont conservées telles qu’elles ont été écrites : cette semaine a demandé trois lectures, et l’historique le dit.
+
+### 2026-09-22 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
+
+Mise à niveau visuelle de septembre (ADR-048) : 41 images ont été redessinées ou affinées (objet-cuillere, objet-crayon, objet-cahier, objet-sac, objet-table, objet-chaise, objet-porte, objet-fenetre, objet-lit, objet-marmite, objet-seau, objet-panier, objet-tomate, objet-banane, objet-oignon, objet-caillou, corps-main, corps-pied, corps-tete, corps-ventre, animal-poule, animal-poussin, animal-chevre, histoire-seau-lisa, histoire-tika, histoire-kumu, histoire-nsimba, histoire-mangue, histoire-bibi, histoire-marche, histoire-pluie, histoire-cailloux, histoire-malo, comptine-compter, comptine-bonjour, comptine-mains, comptine-semaine, comptine-cabri, comptine-formes, plante-parties, bonhomme-articule) ; les huit formes n’ont pas bougé. L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 9 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-lang-15, m3-lang-16, m3-lang-17, m3-lang-18, m3-lang-19, m3-math-17, m3-math-19, m3-world-05, m3-world-06.
+
+**Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (docs/review/2026-2027-<classe>-reconfirmation-visuelle.md, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
+
+### 2026-09-23 — ChatGPT · `accepted-with-modifications` (ai-assisted)
+
+Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md et la planche avant/après. Décision : accepted-with-modifications. Un seul défaut : m3-art-04-a1 « Le bruit de la pluie » montrait l’image de la comptine du mois lue par-dessus (comptine-compter, « Une main qui montre trois doigts »), sans rapport avec l’activité, qui fait le bruit de la pluie.
+
+**Suites données :** m3-art-04-a1 reçoit sa propre image, histoire-pluie (la pluie qui tombe sur le toit), déjà existante et inchangée ; une règle unique (domain/lessons/pictures.ts) fait passer l’image propre d’une activité devant celle d’une comptine dite par-dessus, tandis qu’une histoire garde toujours sa propre image. Aucun mot, objectif, durée, textId ni progression n’a changé. Un audit ciblé de toutes les images montrées (110 activités, 184 images) n’a trouvé aucune autre contradiction ; un test (lib/content/media-consistency.ts) l’empêche de revenir. Les approbations restent annulées jusqu’à la confirmation ciblée du paquet régénéré.
+
+### 2026-09-23 — ChatGPT · `accepted` (ai-assisted)
+
+Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.
+
+**Suites données :** Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées.
 
 ## Jour 15 — 2026-09-21
 
@@ -151,7 +169,7 @@ _Comprendre ce que ressent un personnage et le comparer à ce qu’on a vécu so
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-nsimba` — Un enfant avec un sac devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
+- **Image montrée pendant la lecture :** `histoire-nsimba` — Nsimba, un petit garçon avec son sac d’école sur le dos, devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
 
 - **Questions posées à l’enfant après l’écoute (3) :**
 
@@ -185,7 +203,7 @@ _Comprendre ce que ressent un personnage et le comparer à ce qu’on a vécu so
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-nsimba` — Un enfant avec un sac devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
+- **Image montrée pendant la lecture :** `histoire-nsimba` — Nsimba, un petit garçon avec son sac d’école sur le dos, devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -407,9 +425,9 @@ _Comparer deux animaux et dire ce qui les distingue._
 - **Aide en anglais (optionnelle) :** « Compare two animals: what is the same, what is different? »
 - **Images montrées à l'enfant (3) :**
 
-  - `animal-poule` — Une poule (`public/media/animals/animal-poule.svg`)
-  - `animal-chevre` — Une chèvre (`public/media/animals/animal-chevre.svg`)
-  - `animal-poussin` — Un petit poussin (`public/media/animals/animal-poussin.svg`)
+  - `animal-poule` — Une poule blanche, avec sa crête rouge (`public/media/animals/animal-poule.svg`)
+  - `animal-chevre` — Une chèvre blanche, avec ses cornes et sa barbichette (`public/media/animals/animal-chevre.svg`)
+  - `animal-poussin` — Un petit poussin jaune, tout rond (`public/media/animals/animal-poussin.svg`)
 
 - **Objectifs travaillés :** `WORLD-S01-C01-O08` Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale.
 
@@ -522,7 +540,7 @@ _Entendre que deux mots finissent pareil._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-malo` — Un petit chien endormi en rond sous la lune (`public/media/illustrations/histoire-malo.svg`)
+- **Image montrée pendant la lecture :** `histoire-malo` — Malo, un petit chien couché en rond sur son tapis, les yeux fermés, sous la lune et les étoiles (`public/media/illustrations/histoire-malo.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Acquérir les habiletés phonologiques et le principe alphabétique » (from-5) :**
 
@@ -852,7 +870,7 @@ _Produire un mot qui rime, après l’avoir reconnu._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-kumu` — Un petit poussin devant la porte ouverte du poulailler (`public/media/illustrations/histoire-kumu.svg`)
+- **Image montrée pendant la lecture :** `histoire-kumu` — Kumu, le petit poussin, qui sort tout seul du poulailler dont la porte est ouverte (`public/media/illustrations/histoire-kumu.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -1156,7 +1174,7 @@ _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-cailloux` — Trois cailloux : un rond, un plat et un pointu (`public/media/illustrations/histoire-cailloux.svg`)
+- **Image montrée pendant la lecture :** `histoire-cailloux` — Trois cailloux différents : un rond, un plat et un pointu (`public/media/illustrations/histoire-cailloux.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « S’approprier la notion de chronologie » (from-5) :**
 
@@ -1470,7 +1488,7 @@ _Reprendre les catégories de mots du mois et y ranger des mots nouveaux._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-marche` — Un panier de marché avec des tomates et une banane (`public/media/illustrations/histoire-marche.svg`)
+- **Image montrée pendant la lecture :** `histoire-marche` — Un panier de marché avec des tomates, un régime de bananes et un oignon (`public/media/illustrations/histoire-marche.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -1693,7 +1711,7 @@ _Dire et faire ce qu’il faut pour qu’un être vivant aille bien._
 - **Images montrées à l'enfant (2) :**
 
   - `plante-parties` — Une plante avec ses feuilles, sa tige et ses racines sous la terre (`public/media/illustrations/plante-parties.svg`)
-  - `animal-chevre` — Une chèvre (`public/media/animals/animal-chevre.svg`)
+  - `animal-chevre` — Une chèvre blanche, avec ses cornes et sa barbichette (`public/media/animals/animal-chevre.svg`)
 
 - **Objectifs travaillés :** `WORLD-S01-C01-O10` Décrire les besoins essentiels de quelques animaux ou de végétaux.
 

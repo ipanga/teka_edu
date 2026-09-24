@@ -106,13 +106,21 @@ The deploy jobs run only when the repository variables `STAGING_DEPLOY_ENABLED` 
 
 These are separate jobs that run in parallel. Any failure blocks the merge and the deployment.
 
-| Job                                          | Steps                                                                                                                                                                                   |
-| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Promotion source                             | PRs into `main` must come from `develop` or `hotfix/<name>` **in this repository**, never from a fork (unit-tested in `tests/unit/promotion-source.test.ts`)                            |
-| Format, lint, typecheck, unit tests, content | `npm ci` → `format:check` → `lint` → `typecheck` → `test` (Vitest) → `content:validate`                                                                                                 |
-| Build, client-bundle secret check, E2E smoke | `next build` with fake sentinel values for server secrets → `check:client-bundle` (fails if a sentinel appears in browser JS) → Playwright smoke against the built standalone server    |
-| Supabase migrations and database tests       | `supabase db start` (applies all migrations and the dev seed) → `supabase db reset` → `supabase test db` (pgTAP: RLS and access registry, reference data = `content/`, integrity rules) |
-| Docker images                                | build `Dockerfile` → run it, wait for `/api/health`, stop it (must exit on SIGTERM, not be killed) → the same for `Dockerfile.vercel`                                                   |
+| Job                                          | Steps                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Promotion source                             | PRs into `main` must come from `develop` or `hotfix/<name>` **in this repository**, never from a fork (unit-tested in `tests/unit/promotion-source.test.ts`)                                                                                                                                                                                                                                                               |
+| Format, lint, typecheck, unit tests, content | `npm ci` → `format:check` → `lint` → `typecheck` → `test` (Vitest) → `content:validate`                                                                                                                                                                                                                                                                                                                                    |
+| Build, client-bundle secret check, E2E smoke | `next build` with fake sentinel values for server secrets → `check:client-bundle` (fails if a sentinel appears in browser JS) → Playwright smoke against the built standalone server                                                                                                                                                                                                                                       |
+| Supabase migrations and database tests       | CLI pinned to the project's 2.117.0; images pulled from Supabase's `public.ecr.aws` mirror (`SUPABASE_INTERNAL_IMAGE_REGISTRY`, set per step because `setup-cli` exports `ghcr.io`; ghcr.io rate-limited the pull on 2026-09-23) → `supabase db start` (applies all migrations and the dev seed) → `supabase db reset` → `supabase test db` (pgTAP: RLS and access registry, reference data = `content/`, integrity rules) |
+| Docker images                                | build `Dockerfile` → run it, wait for `/api/health`, stop it (must exit on SIGTERM, not be killed) → the same for `Dockerfile.vercel`                                                                                                                                                                                                                                                                                      |
+
+**Supabase CLI: one pinned version, 2.117.0.** CI and both deploy workflows install exactly the
+version in `package.json` (`supabase/setup-cli` with `version:`), and
+`tests/unit/supabase-cli-pin.test.ts` fails if any workflow drifts. Why pinned: without `version`
+the action installs the latest CLI, so the tool that migrates DEV and PROD could change between
+two releases with no commit; and on 2026-09-23 an unpinned CI CLI ran a different version from the
+one the project tests locally. Upgrading is a deliberate change of `package.json` and the three
+workflows together.
 
 CI never connects to a hosted Supabase project. On pushes to `develop` and `main`, CI runs inside the deploy workflows (as a reusable workflow) instead of a second time on its own.
 
@@ -215,46 +223,45 @@ _after_ `supabase db push` has already migrated PROD would be the worst possible
 by hand immediately after the first production deployment; wire it into the workflow once
 production is confirmed public.
 
-### Deployment Protection: the model Beta 0.1 needs, and already has
+### Deployment Protection, and the two production URLs
 
-**Corrected 2026-09-21.** An earlier audit here claimed that production would be behind the Vercel
-login because the project has no custom domain. That was wrong, and the mistake is worth keeping
-visible: it was inferred from the _name_ of an API value rather than from what the setting does.
+**Settled 2026-09-22 by deploying, then by reading the alias list properly.**
 
-The project reports `ssoProtection.deploymentType = "all_except_custom_domains"`. That string is
-the legacy identifier for what the dashboard calls **Standard Protection**, and what the API
-documents today as `prod_deployment_urls_and_all_previews`. The newer name says what it protects:
-**production deployment URLs and all previews** — and _not_ the production domain.
+A production deployment on this project carries **two** `.vercel.app` aliases, and they do not
+behave the same way:
 
-| Vercel Authentication             | Previews    | Generated production URL | Production domain |
-| --------------------------------- | ----------- | ------------------------ | ----------------- |
-| **Standard Protection** (current) | protected   | protected                | **public**        |
-| All Deployments                   | protected   | protected                | protected         |
-| Only Preview Deployments          | protected   | public                   | public            |
-| Disabled                          | **exposed** | exposed                  | public            |
+| URL                             | What it is                           | Anonymous result           |
+| ------------------------------- | ------------------------------------ | -------------------------- |
+| `teka-edu.vercel.app`           | the **canonical production domain**  | **200 — public**           |
+| `teka-edu-teka10.vercel.app`    | the **team-scoped** production alias | 302 → `vercel.com/sso-api` |
+| `teka-<hash>-teka10.vercel.app` | the generated deployment URL         | 302 → `vercel.com/sso-api` |
+| `teka-edu-staging.vercel.app`   | the staging (Preview) alias          | 302 → `vercel.com/sso-api` |
 
-So the configuration Beta 0.1 needs is the one already saved. **Nothing has to change, and
-nothing should be disabled.**
+So **Standard Protection does exactly what it says**: the canonical production domain is public,
+and everything else — team-scoped alias, generated URLs, previews — stays behind Vercel
+Authentication. That is the model Beta 0.1 wants, and it needed no change.
 
-The evidence, all three pointing the same way:
+**The canonical production URL is `https://teka-edu.vercel.app`.** It is what
+`NEXT_PUBLIC_APP_URL` names, what the public release check must target, and what a parent is
+given.
 
-- the dashboard's own wording — _Standard Protection: protect all except production domains for
-  the project_;
-- the API's current name for the same mode, `prod_deployment_urls_and_all_previews`;
-- the live behaviour: an anonymous request to the production domain answers `404
-DEPLOYMENT_NOT_FOUND` — resolved, not intercepted — while the same client on the preview alias
-  is redirected to `vercel.com/sso-api` with an SSO nonce cookie.
+#### How the first release was wrongly called a failure
 
-**One consequence to expect on release day.** The _generated_ production deployment URL
-(`teka-edu-<hash>.vercel.app`) stays protected under Standard Protection. That is correct and is
-not a failure:
+Worth keeping, because the mistake was cheap to make and expensive to repeat.
 
-- the in-workflow smoke test targets that generated URL and carries
-  `VERCEL_AUTOMATION_BYPASS_SECRET`, so it passes;
-- the **public** check must target the production **domain**,
-  `https://teka-edu-teka10.vercel.app`. Pointing it at a generated URL would fail for the wrong
-  reason, so `tests/e2e/production-public.spec.ts` refuses such a URL rather than reporting a
-  protection failure that is not one.
+1. An early audit read `ssoProtection = "all_except_custom_domains"`, reasoned that a project
+   with no custom domain has no exemption, and called protection a blocker.
+2. A later audit called that wrong, partly on an anonymous `404 DEPLOYMENT_NOT_FOUND` against
+   `teka-edu-teka10.vercel.app` — which meant _nothing is deployed here_, not _this is public_.
+3. The release then deployed successfully, and the final anonymous check was pointed at
+   `teka-edu-teka10.vercel.app` — **the team-scoped alias** — which is protected. The release was
+   reported as failed.
+4. The owner opened `teka-edu.vercel.app` in a private window. It was public all along.
+
+**The deployment never failed.** The verification targeted the wrong one of two production
+aliases. `targets.production.alias` lists both; the canonical domain is the one without the team
+slug, and it is listed first. Reading only the value that had been copied into a document, rather
+than the list the platform returns, is what produced two wrong conclusions in a row.
 
 ### Preflight: what the production job proves before it changes anything
 

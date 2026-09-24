@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 3 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 5 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -73,6 +73,24 @@ Deuxième passe. Les corrections de la première sont confirmées et ne sont pas
 Confirmation finale. La première relecture complète avait demandé les corrections de fond — des objectifs portés par des activités qui ne les travaillaient pas, une fuite du jour 10 vers le complément du jour 11, la procédure de « La main qui cache », la hanche à la place du cou, un exemple de syllabes ambigu et une comparaison globale entre deux tas presque égaux. La deuxième en avait demandé trois de plus : le vocabulaire « familles » resté dans le résumé et le titre, le matériel de « Mets la table » qui renvoyait aux objets de la maison, et « Dix passes ensemble » qui revendiquait « lancer loin et avec précision » sans faire varier la distance. Le dossier régénéré a été revérifié : toutes les corrections demandées sont présentes, et aucun nouveau défaut pédagogique n’apparaît.
 
 **Suites données :** Aucune. La semaine est acceptée. Les 20 leçons passent de « en relecture » à « approuvée », avec une empreinte recalculée sous la définition courante — contenu de la leçon et des activités, consignes, guidance, étais en anglais, matériel, empreintes des images et du texte résolu des histoires. L’historique est conservé tel quel : les deux passes précédentes restent « acceptée avec modifications », et cette relecture reste assistée par IA — aucune personne qui enseigne à cet âge n’a lu ce contenu.
+
+### 2026-09-22 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
+
+Mise à niveau visuelle de septembre (ADR-048) : 41 images ont été redessinées ou affinées (objet-cuillere, objet-crayon, objet-cahier, objet-sac, objet-table, objet-chaise, objet-porte, objet-fenetre, objet-lit, objet-marmite, objet-seau, objet-panier, objet-tomate, objet-banane, objet-oignon, objet-caillou, corps-main, corps-pied, corps-tete, corps-ventre, animal-poule, animal-poussin, animal-chevre, histoire-seau-lisa, histoire-tika, histoire-kumu, histoire-nsimba, histoire-mangue, histoire-bibi, histoire-marche, histoire-pluie, histoire-cailloux, histoire-malo, comptine-compter, comptine-bonjour, comptine-mains, comptine-semaine, comptine-cabri, comptine-formes, plante-parties, bonhomme-articule) ; les huit formes n’ont pas bougé. L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant ; elle ne correspond donc plus, et les approbations de 11 leçon(s) de cette semaine sont annulées — pas re-tamponnées — en attendant une reconfirmation visuelle. Aucun mot lu à l’enfant ou à l’adulte n’a changé. Leçons concernées : m3-art-04, m3-art-05, m3-lang-10, m3-lang-11, m3-lang-12, m3-lang-13, m3-lang-14, m3-math-10, m3-math-11, m3-math-12, m3-world-04.
+
+**Suites données :** Aucune correction pédagogique. Restauration : soumettre le paquet de reconfirmation visuelle (docs/review/2026-2027-<classe>-reconfirmation-visuelle.md, avec la planche avant/après), enregistrer une passe « full-review » « accepted » pour cette semaine, puis exécuter scripts/approve-week.ts.
+
+### 2026-09-23 — ChatGPT · `accepted-with-modifications` (ai-assisted)
+
+Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md et la planche avant/après. Décision : accepted-with-modifications. Un seul défaut : m3-art-04-a1 « Le bruit de la pluie » montrait l’image de la comptine du mois lue par-dessus (comptine-compter, « Une main qui montre trois doigts »), sans rapport avec l’activité, qui fait le bruit de la pluie.
+
+**Suites données :** m3-art-04-a1 reçoit sa propre image, histoire-pluie (la pluie qui tombe sur le toit), déjà existante et inchangée ; une règle unique (domain/lessons/pictures.ts) fait passer l’image propre d’une activité devant celle d’une comptine dite par-dessus, tandis qu’une histoire garde toujours sa propre image. Aucun mot, objectif, durée, textId ni progression n’a changé. Un audit ciblé de toutes les images montrées (110 activités, 184 images) n’a trouvé aucune autre contradiction ; un test (lib/content/media-consistency.ts) l’empêche de revenir. Les approbations restent annulées jusqu’à la confirmation ciblée du paquet régénéré.
+
+### 2026-09-23 — ChatGPT · `accepted` (ai-assisted)
+
+Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.
+
+**Suites données :** Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées.
 
 ## Jour 10 — 2026-09-14
 
@@ -147,7 +165,7 @@ _Dire ce qu’on voit avec assez de mots pour être compris sans montrer du doig
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-nsimba` — Un enfant avec un sac devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
+- **Image montrée pendant la lecture :** `histoire-nsimba` — Nsimba, un petit garçon avec son sac d’école sur le dos, devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -496,7 +514,7 @@ _Redire une histoire connue dans l’ordre, avec ses propres mots._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue coupée en trois morceaux (`public/media/illustrations/histoire-mangue.svg`)
+- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue entière, et trois morceaux de mangue coupés sur une assiette (`public/media/illustrations/histoire-mangue.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -716,7 +734,7 @@ _Retrouver et nommer les endroits du corps qui plient, et s’en servir._
 - **Aide en anglais (optionnelle) :** « Draw a person with bent arms. »
 - **Images montrées à l'enfant (1) :**
 
-  - `bonhomme-articule` — Un bonhomme dessiné avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
+  - `bonhomme-articule` — Un bonhomme dessiné au crayon sur une feuille, avec les bras et les jambes pliés (`public/media/illustrations/bonhomme-articule.svg`)
 
 - **Objectifs travaillés :** `WORLD-S01-C02-O08` Identifier et nommer quelques articulations et la segmentation des membres. ; `WORLD-S01-C02-O09` Se représenter avec un corps articulé en mouvement.
 
@@ -813,7 +831,7 @@ _Ranger les mots par catégories : ce qui se mange, ce qui sert à écrire, ce q
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-marche` — Un panier de marché avec des tomates et une banane (`public/media/illustrations/histoire-marche.svg`)
+- **Image montrée pendant la lecture :** `histoire-marche` — Un panier de marché avec des tomates, un régime de bananes et un oignon (`public/media/illustrations/histoire-marche.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (from-5) :**
 
@@ -1026,6 +1044,10 @@ _Fabriquer des sons avec son corps et des objets, et les organiser._
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Make the sound of rain: soft, then loud, then nothing. »
+- **Images montrées à l'enfant (1) :**
+
+  - `histoire-pluie` — La pluie qui tombe d’un nuage sur le toit d’une maison (`public/media/illustrations/histoire-pluie.svg`)
+
 - **Objectifs travaillés :** `ART-S02-C02-O08` Créer un paysage sonore en répondant à une consigne simple avec son corps, des objets ou des instruments.
 
 - **Comptine lue à l’enfant — « Un, deux, trois, je compte »** (2 min, `un-deux-trois-je-compte`) :
@@ -1146,7 +1168,7 @@ _Troisième corpus de mots : le marché, les fruits, les légumes, les quantité
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-bibi` — Une chèvre devant une barrière et des feuilles (`public/media/illustrations/histoire-bibi.svg`)
+- **Image montrée pendant la lecture :** `histoire-bibi` — Bibi la chèvre, le nez dans un buisson, devant une barrière (`public/media/illustrations/histoire-bibi.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -1477,7 +1499,7 @@ _Frapper les syllabes de mots plus longs et compter combien il y en a._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-cailloux` — Trois cailloux : un rond, un plat et un pointu (`public/media/illustrations/histoire-cailloux.svg`)
+- **Image montrée pendant la lecture :** `histoire-cailloux` — Trois cailloux différents : un rond, un plat et un pointu (`public/media/illustrations/histoire-cailloux.svg`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
