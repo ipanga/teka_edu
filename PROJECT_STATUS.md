@@ -759,3 +759,21 @@ September Astra local checkpoint (2026-09-25): all 302 initial TV child screens 
 inspected in addition to all 302 phone initial screens. The first 176 noninitial phone
 interaction captures were inspected; 189 readable interaction sheets are available locally.
 Full state/scroll QA and illustration integration remain in progress. No publication or deployment.
+
+### 2026-09-25 — Astra local interaction review continued
+
+All 501 captured noninitial phone states are now manually inspected; TV sheets 001–028 add
+112 inspected states. The durable manifest is
+`docs/review/media/astra-manual-interaction-review.json`. These are captured viewports, not
+a full-scroll or physical-distance certification. Long phone count resets retain the bottom
+scroll position. TV feedback and placed sorting thumbnails remain small and faded.
+Generic counting/sorting correctness findings remain isolated for independent review; no
+approved content or media changed. Review remains local; no push, PR or deployment.
+
+### 2026-09-25 — Local TV feedback layout follow-up
+
+Manual interaction review now covers all 501 phone and 501 TV noninitial viewports (all 189 sheets). Five-choice TV games previously wrapped 4+1 and clipped return controls after feedback. Wide child choice grids now show five choices in one row; child feedback is 30px. Nine layout E2E tests pass on the local Webpack development preview, including retry/reveal/success navigation bounds; 397 unit tests and changed-file lint pass. Five-word and eight-shape reveal screenshots manually inspected.
+
+Standard Turbopack build still fails with local process port-binding EPERM. Webpack production build now passes after extracting the existing health-route helper into `lib/health.ts` without changing endpoint behavior; fresh typecheck, health tests and changed-file lint pass. Standalone server started locally on port 3003. After the approval-service reset, normal approved retries succeeded: 40 production-build E2E pass (9 skipped). Full-scroll capture covers 1,606 states and 1,042 additional images with zero horizontal overflow, broken/missing images or unreachable returns. Six sample scroll images inspected; full manual scroll review remains pending. Container/bundle checks remain stale. No lesson/media registry/history changes, approval stamps, push, PR or deployment. Review remains incomplete; next: manual scroll and other viewport review. See `docs/work/ACTIVE_TASK.md`.
+
+Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, against the Webpack development preview (`/tmp/teka-astra-five-choice-all-e2e.log`). The later production-build E2E also passes; container validation remains stale.

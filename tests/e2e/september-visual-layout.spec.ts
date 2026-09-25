@@ -90,3 +90,35 @@ test("two TV choices fill the stage and the story keeps its text beside its pict
   await page.getByRole("button", { name: "Page précédente", exact: true }).click();
   await expect(page.getByRole("dialog").getByRole("img")).toHaveCount(1);
 });
+
+test("five TV word choices keep feedback and navigation on screen", async ({ page }) => {
+  await page.setViewportSize({ width: 1920, height: 1080 });
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/maternelle/3/seance/2");
+  await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
+  await page.getByRole("button", { name: "Terminé", exact: true }).click();
+  await page.getByRole("button", { name: "Montrer à l’enfant", exact: true }).click();
+  const dialog = page.getByRole("dialog");
+  await dialog.getByRole("button", { name: "Jouer : je montre le mot", exact: true }).click();
+  const choices = dialog.locator(".teka-choice-grid > button");
+  await expect(choices).toHaveCount(5);
+  const boxes = await Promise.all((await choices.all()).map((choice) => choice.boundingBox()));
+  for (const box of boxes) expect(Math.abs(box!.y - boxes[0]!.y)).toBeLessThan(2);
+  for (const state of ["retry", "revealed", "success"]) {
+    await choices.nth(state === "success" ? 0 : 1).click();
+    const feedback = dialog.getByRole("status");
+    await expect(feedback).toBeVisible();
+    expect(
+      await feedback.evaluate((element) => parseFloat(getComputedStyle(element).fontSize)),
+    ).toBeGreaterThanOrEqual(30);
+    for (const name of ["Revoir les mots", "Revenir au guide du parent"]) {
+      const box = await dialog.getByRole("button", { name, exact: true }).boundingBox();
+      expect(box!.y).toBeGreaterThanOrEqual(0);
+      expect(box!.y + box!.height).toBeLessThanOrEqual(1080);
+    }
+    if (state !== "retry") {
+      const box = await dialog.getByRole("button", { name: "Encore un autre" }).boundingBox();
+      expect(box!.y + box!.height).toBeLessThanOrEqual(1080);
+    }
+  }
+});

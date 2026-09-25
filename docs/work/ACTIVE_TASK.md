@@ -39,7 +39,7 @@ production tests intentionally skipped), standard build, 152 pgTAP/RLS assertion
 builds/smokes and bundle sentinel scan. Four body illustration candidates remain outside the
 registry. All 302 initial phone viewports were manually inspected in 44 day sheets; full manual state
 inspection, lower scroll content and replacement integration are unfinished. Initial TV manual
-inspection is now complete (302 screens); 176 additional phone interaction viewports reviewed.
+inspection is now complete (302 screens); all 501 additional phone and 501 TV interaction viewports reviewed.
 
 ## Scope
 
@@ -86,6 +86,16 @@ files; never store these in disposable `test-results`, which Playwright clears.
 - Implement, inspect before/after, honestly lapse only affected approvals and prepare packages.
 - Finish artwork and independent review handoff. PR/staging withheld by owner.
 - UI findings, accepted assets and detailed batch states will link to the new audit.
+
+UI follow-up implemented: five-choice TV grid uses one row on wide child screens; feedback grows to 30px. Nine layout E2E tests pass against the local Webpack dev preview on port 3002; 397 unit tests and changed-file lint pass. Five-word and eight-shape retry/reveal/success captures keep parent-return bottom at 1056px in a 1080px viewport. Manually inspected both reveal captures. Evidence: `private/astra-visual-evidence/five-choice-fix/`.
+
+Standard Turbopack build remains blocked by process port-binding EPERM. The Webpack production build now PASSES: moved the existing health helper out of the route module into `lib/health.ts`, preserving behavior and tests. Fresh typecheck, three health tests and changed-file ESLint pass. Log: `/tmp/teka-astra-health-webpack.log`. Standalone build started locally on port 3003. Container/bundle verification remains stale for these changes; the fresh production browser suite below supersedes the earlier development-only results.
+
+Full-scroll interaction capture is now complete on the local production build: 88 session files, 1,606 states, 497 states requiring scroll (all phone), 1,042 extra overlapping scroll images; zero horizontal overflow, broken images, missing files or unreachable return controls. See `docs/review/media/astra-interaction-scroll-evidence.json`. Only six sample scroll images manually inspected: complete scroll visual review remains pending. Resetting a long count keeps the phone at the bottom, leaving the instruction offscreen; confirmed usability finding, not fixed.
+
+Fresh verification: Webpack production build, typecheck, full format/lint, 397 unit tests, 40 production-build E2E (9 production-only skipped), content validation (31 JSON) and approval dry-run (0 lapses) pass. Standard Turbopack build remains affected by local EPERM; container and sentinel-bundle checks remain stale. Approval service briefly failed due to usage limits; normal approved retries succeeded after its stated reset time. No ongoing approval-service blocker.
+
+Exact next work: inspect remaining full-scroll images (manifest above records the six already inspected), review the four other viewport sets and parent layouts, then address documented visual defects and continue artwork batches. Do not rerun completed capture just to resume. Existing capture sets predate any later layout fixes and must be labeled accordingly. Standalone preview is on port 3003 while alive; rebuild with `npm run build -- --webpack`, then `PORT=3003 HOSTNAME=127.0.0.1 npm run start` if needed. Commit locally only; no push/PR/staging/production.
 
 ## Validation State
 
@@ -144,8 +154,8 @@ Owner answered “Keep the review local.” No further push, PR or staging deplo
    reachable at the bottom; no TV initial screen needs scroll. TV review sheets are generated
    in `private/astra-visual-evidence/manual-sheets/tv-*.png`; all 44 sheets / 302 initial TV
    screens now manually inspected. See `astra-manual-tv-review.json`. Interaction sheets
-   generated: 189 sheets / 1,002 noninitial states. Phone sheets 001–022 (176 states)
-   manually inspected; next `private/astra-visual-evidence/interaction-sheets/phone-023.png`.
+   generated: 189 sheets / 1,002 noninitial states. Phone sheets 001–063 (501 states)
+   manually inspected; TV sheets 001–126 (501 states) inspected; all 1,002 captured noninitial viewports inspected.
    Manifest: `astra-manual-interaction-review.json`. Captures are viewports, often auto-scrolled;
    full-scroll interaction coverage and tablet/desktop manual inspection remain incomplete.
    Local checkpoint before this fix: `30769a0`.
@@ -168,3 +178,5 @@ cat docs/work/ACTIVE_TASK.md
 npm run content:validate
 npm run media:report
 ```
+
+Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, against the Webpack development preview (`/tmp/teka-astra-five-choice-all-e2e.log`). This does not replace production-build/container validation.

@@ -111,3 +111,10 @@ DEV: unchanged. Staging: unchanged, withheld by local-only instruction. Producti
 5. Independent review; staging only if the owner later changes the local-only instruction.
 
 This is a recoverable checkpoint, **not completion of the full mission**.
+
+
+## Five-choice TV feedback follow-up (2026-09-25)
+
+The five-word school/home games wrapped 4+1; after reveal/success the return controls extended below the TV viewport. Wide child grids now use five columns for five choices. Feedback text grows from 18px to 30px on wide child screens. No lesson wording, answer rules or registered media changed.
+
+Local development verification: nine layout E2E tests pass across six sizes. For five-word `m3-lang-02-a2` and eight-shape `m3-math-03-a1`, retry/reveal/success all retain the parent-return bottom at 1056px within 1080px. Both reveal screenshots were visually inspected. Evidence is local in `private/astra-visual-evidence/five-choice-fix/`. Standard Turbopack build remains blocked by port binding. Webpack production build passes after moving the health-route helper to a regular module, preserving endpoint behavior. After the approval-service reset, normal approved retries passed 40 production-build browser tests (9 skipped). The full-scroll capture has 1,606 states, 1,042 scroll images and no unreachable returns; only six scroll sample images manually inspected. This is not a completed release validation.

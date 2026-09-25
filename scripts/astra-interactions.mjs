@@ -5,6 +5,11 @@ const { sessions } = JSON.parse(
   readFileSync("docs/review/media/astra-baseline/inventory.json", "utf8"),
 );
 const out = process.env.ASTRA_OUT || "private/astra-visual-evidence/interactions-final";
+const baseUrl = process.env.ASTRA_BASE_URL || "http://127.0.0.1:3000";
+if (!["127.0.0.1", "localhost", "[::1]"].includes(new URL(baseUrl).hostname)) {
+  throw new Error("Interaction audit requires a local preview URL");
+}
+const fullScroll = process.env.ASTRA_FULL_SCROLL === "1";
 mkdirSync(out, { recursive: true });
 const browser = await chromium.launch();
 for (const [size, width, height] of [
@@ -20,7 +25,7 @@ for (const [size, width, height] of [
     const marker = `${out}/${size}-${level}-${day}.json`;
     if (existsSync(marker)) continue;
     const states = [];
-    await page.goto(`http://127.0.0.1:3000/maternelle/${level}/seance/${day}`);
+    await page.goto(`${baseUrl}/maternelle/${level}/seance/${day}`);
     await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
     for (const activity of session.steps.flatMap((s) => s.activities)) {
       const capture = async (name) => {
@@ -39,7 +44,55 @@ for (const [size, width, height] of [
         }));
         const filename = `${size}-${activity.id}-${name}.png`;
         await page.screenshot({ path: `${out}/${filename}` });
-        states.push({ activity: activity.id, name, filename, ...state });
+        const frames = [];
+        let scrollGeometry;
+        let returnVisibleAtEnd;
+        if (fullScroll) {
+          const scroller = dialog.locator(":scope > div");
+          scrollGeometry = await scroller.evaluate((d) => ({
+            scrollTop: d.scrollTop,
+            scrollHeight: d.scrollHeight,
+            clientHeight: d.clientHeight,
+            horizontalOverflow: d.scrollWidth > d.clientWidth,
+          }));
+          const max = scrollGeometry.scrollHeight - scrollGeometry.clientHeight;
+          if (max > 1) {
+            for (
+              let top = 0;
+              ;
+              top = Math.min(max, top + Math.max(1, Math.floor(scrollGeometry.clientHeight * 0.8)))
+            ) {
+              await scroller.evaluate((d, y) => {
+                d.scrollTop = y;
+              }, top);
+              await page.evaluate(
+                () =>
+                  new Promise((resolve) =>
+                    requestAnimationFrame(() => requestAnimationFrame(resolve)),
+                  ),
+              );
+              const frame = `${size}-${activity.id}-${name}-scroll-${top}.png`;
+              await page.screenshot({ path: `${out}/${frame}` });
+              frames.push(frame);
+              if (top >= max) break;
+            }
+          }
+          const back = await dialog
+            .getByRole("button", { name: "Revenir au guide du parent", exact: true })
+            .boundingBox();
+          returnVisibleAtEnd = back !== null && back.y >= 0 && back.y + back.height <= height + 1;
+          // Preserve the interaction's original scroll position before the next action.
+          await scroller.evaluate((d, y) => {
+            d.scrollTop = y;
+          }, scrollGeometry.scrollTop);
+        }
+        states.push({
+          activity: activity.id,
+          name,
+          filename,
+          ...state,
+          ...(fullScroll ? { scrollGeometry, frames, returnVisibleAtEnd } : {}),
+        });
       };
       await page.getByRole("button", { name: "Montrer à l’enfant", exact: true }).click();
       const dialog = page.getByRole("dialog");

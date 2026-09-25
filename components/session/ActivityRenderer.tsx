@@ -124,19 +124,21 @@ function Prompt({ children }: { children: React.ReactNode }) {
 
 /** Encouragement, never a verdict on the child. */
 function Feedback({ state, hint }: { state: "idle" | "retry" | "done"; hint: string | null }) {
+  const childView = useContext(ChildViewContext);
+  const textSize = childView ? "text-lg xl:text-3xl" : "text-lg";
   if (state === "idle") return null;
   if (state === "done") {
     return (
       <p
         role="status"
-        className="teka-pop rounded-2xl bg-emerald-100 px-5 py-3 text-lg font-semibold"
+        className={`teka-pop rounded-2xl bg-emerald-100 px-5 py-3 font-semibold ${textSize}`}
       >
         Bravo !
       </p>
     );
   }
   return (
-    <p role="status" className="teka-nudge rounded-2xl bg-amber-50 px-5 py-3 text-lg">
+    <p role="status" className={`teka-nudge rounded-2xl bg-amber-50 px-5 py-3 ${textSize}`}>
       {hint ?? "Essaie encore. Regarde bien."}
     </p>
   );
@@ -334,7 +336,12 @@ function ChooseOne({
       <Prompt>Montre : {nameOf(wanted)}</Prompt>
       <div
         className={`teka-choice-grid ${childView ? "teka-choice-grid-child" : ""}`}
-        style={{ "--choice-columns": Math.min(media.length, 4) } as React.CSSProperties}
+        style={
+          {
+            "--choice-columns": Math.min(media.length, 4),
+            "--wide-choice-columns": media.length === 5 ? 5 : Math.min(media.length, 4),
+          } as React.CSSProperties
+        }
       >
         {media.map((item, index) => {
           const isAnswer = isSameKind(item, wanted);

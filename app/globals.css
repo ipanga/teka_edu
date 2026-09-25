@@ -185,6 +185,9 @@ body {
 }
 
 @media (min-width: 1280px) {
+  .teka-choice-grid-child {
+    grid-template-columns: repeat(var(--wide-choice-columns), minmax(0, 1fr));
+  }
   .teka-choice-grid-child img {
     max-width: 22rem;
   }

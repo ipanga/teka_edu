@@ -1103,7 +1103,7 @@
           "filename": "phone-m3-math-03-a1-success.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1151,7 +1151,7 @@
           "filename": "phone-m3-math-03-a2-sort-selected-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1199,7 +1199,7 @@
           "filename": "phone-m3-math-03-a2-sort-selected-8.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1247,7 +1247,7 @@
           "filename": "phone-m3-math-04-a1-count-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1295,7 +1295,7 @@
           "filename": "phone-m3-lang-05-a3-page-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1343,7 +1343,7 @@
           "filename": "phone-m3-math-05-a1-count-6.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1391,7 +1391,7 @@
           "filename": "phone-m3-lang-06-a3-page-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1439,7 +1439,7 @@
           "filename": "phone-m3-math-06-a2-count-8.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1487,7 +1487,7 @@
           "filename": "phone-m3-lang-07-a3-page-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1535,7 +1535,7 @@
           "filename": "phone-m3-math-07-a2-count-7.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1583,7 +1583,7 @@
           "filename": "phone-m3-math-08-a1-success.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1631,7 +1631,7 @@
           "filename": "phone-m3-lang-09-a2-page-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1679,7 +1679,7 @@
           "filename": "phone-m3-math-09-a1-count-5.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1727,7 +1727,7 @@
           "filename": "phone-m3-lang-10-a3-page-5.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1775,7 +1775,7 @@
           "filename": "phone-m3-math-10-a1-count-8.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1823,7 +1823,7 @@
           "filename": "phone-m3-math-10-a1-count-16.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1871,7 +1871,7 @@
           "filename": "phone-m3-lang-11-a3-page-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1919,7 +1919,7 @@
           "filename": "phone-m3-lang-12-a3-page-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -1967,7 +1967,7 @@
           "filename": "phone-m3-math-12-a2-reset.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2015,7 +2015,7 @@
           "filename": "phone-m3-lang-13-a3-page-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2063,7 +2063,7 @@
           "filename": "phone-m3-math-13-a1-count-8.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2111,7 +2111,7 @@
           "filename": "phone-m3-math-14-a2-count-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2159,7 +2159,7 @@
           "filename": "phone-m3-math-14-a2-count-10.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2207,7 +2207,7 @@
           "filename": "phone-m3-lang-15-a3-page-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2255,7 +2255,7 @@
           "filename": "phone-m3-math-15-a2-count-7.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2303,7 +2303,7 @@
           "filename": "phone-m3-world-05-a1-next-target.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2351,7 +2351,7 @@
           "filename": "phone-m3-math-16-a1-count-5.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2399,7 +2399,7 @@
           "filename": "phone-m3-lang-17-a3-page-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2447,7 +2447,7 @@
           "filename": "phone-m3-math-17-a2-count-7.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2495,7 +2495,7 @@
           "filename": "phone-m3-math-18-a1-retry.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2543,7 +2543,7 @@
           "filename": "phone-m3-lang-19-a2-sort-selected-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2591,7 +2591,7 @@
           "filename": "phone-m3-lang-19-a3-page-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2639,7 +2639,7 @@
           "filename": "phone-m3-math-19-a1-count-6.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2687,7 +2687,7 @@
           "filename": "phone-m3-math-19-a1-count-14.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2735,7 +2735,7 @@
           "filename": "phone-m3-world-06-a2-retry.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2783,7 +2783,7 @@
           "filename": "phone-m3-math-20-a2-count-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2831,7 +2831,7 @@
           "filename": "phone-m3-math-20-a2-count-10.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2879,7 +2879,7 @@
           "filename": "phone-m3-math-21-a2-count-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2927,7 +2927,7 @@
           "filename": "phone-m3-lang-22-a3-page-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -2975,7 +2975,7 @@
           "filename": "phone-m3-math-22-a1-count-6.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3008,7 +3008,7 @@
           "filename": "phone-m3-math-22-a1-reset.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3036,7 +3036,7 @@
           "filename": "tv-m1-lang-01-a2-success.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3064,7 +3064,7 @@
           "filename": "tv-m1-math-01-a1-count-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3092,7 +3092,7 @@
           "filename": "tv-m1-math-01-a1-reset.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3120,7 +3120,7 @@
           "filename": "tv-m1-lang-02-a2-success.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3148,7 +3148,7 @@
           "filename": "tv-m1-math-02-a1-count-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3176,7 +3176,7 @@
           "filename": "tv-m1-math-02-a1-reset.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3204,7 +3204,7 @@
           "filename": "tv-m1-world-02-a1-next-target.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3232,7 +3232,7 @@
           "filename": "tv-m1-math-03-a1-count-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3260,7 +3260,7 @@
           "filename": "tv-m1-math-03-a1-count-6.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3288,7 +3288,7 @@
           "filename": "tv-m1-math-04-a1-count-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3316,7 +3316,7 @@
           "filename": "tv-m1-math-04-a1-reset.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3344,7 +3344,7 @@
           "filename": "tv-m1-math-05-a1-count-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3372,7 +3372,7 @@
           "filename": "tv-m1-lang-06-a2-game.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3400,7 +3400,7 @@
           "filename": "tv-m1-lang-06-a2-next-target.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3428,7 +3428,7 @@
           "filename": "tv-m1-math-07-a1-count-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3456,7 +3456,7 @@
           "filename": "tv-m1-world-08-a1-retry.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3484,7 +3484,7 @@
           "filename": "tv-m1-lang-09-a2-page-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3512,7 +3512,7 @@
           "filename": "tv-m1-math-09-a1-count-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3540,7 +3540,7 @@
           "filename": "tv-m1-lang-11-a2-game.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3568,7 +3568,7 @@
           "filename": "tv-m1-lang-11-a2-next-target.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3596,7 +3596,7 @@
           "filename": "tv-m1-math-11-a1-sort-placed-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3624,7 +3624,7 @@
           "filename": "tv-m1-lang-13-a2-success.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3652,7 +3652,7 @@
           "filename": "tv-m1-math-13-a1-sort-selected-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3680,7 +3680,7 @@
           "filename": "tv-m1-math-14-a1-count-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3708,7 +3708,7 @@
           "filename": "tv-m1-math-14-a1-reset.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3736,7 +3736,7 @@
           "filename": "tv-m1-math-16-a1-sort-placed-1.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3764,7 +3764,7 @@
           "filename": "tv-m1-math-16-a1-sort-placed-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3792,7 +3792,7 @@
           "filename": "tv-m1-math-17-a1-count-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3820,7 +3820,7 @@
           "filename": "tv-m1-lang-18-a2-game.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3848,7 +3848,7 @@
           "filename": "tv-m1-lang-18-a2-next-target.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3876,7 +3876,7 @@
           "filename": "tv-m1-math-19-a1-sort-placed-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3904,7 +3904,7 @@
           "filename": "tv-m1-math-20-a1-count-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3932,7 +3932,7 @@
           "filename": "tv-m1-math-20-a1-count-6.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3960,7 +3960,7 @@
           "filename": "tv-m1-world-20-a1-success.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -3988,7 +3988,7 @@
           "filename": "tv-m1-lang-22-a2-retry.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4016,7 +4016,7 @@
           "filename": "tv-m1-math-22-a1-count-1.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4044,7 +4044,7 @@
           "filename": "tv-m1-math-22-a1-count-5.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4072,7 +4072,7 @@
           "filename": "tv-m3-lang-01-a3-page-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4100,7 +4100,7 @@
           "filename": "tv-m3-math-01-a1-count-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4128,7 +4128,7 @@
           "filename": "tv-m3-math-01-a1-reset.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4156,7 +4156,7 @@
           "filename": "tv-m3-lang-02-a2-success.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4184,7 +4184,7 @@
           "filename": "tv-m3-lang-02-a3-page-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4212,7 +4212,7 @@
           "filename": "tv-m3-math-02-a2-count-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4240,7 +4240,7 @@
           "filename": "tv-m3-lang-03-a2-page-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4268,7 +4268,7 @@
           "filename": "tv-m3-lang-03-a3-page-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4296,7 +4296,7 @@
           "filename": "tv-m3-math-03-a1-success.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4324,7 +4324,7 @@
           "filename": "tv-m3-math-03-a2-sort-selected-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4352,7 +4352,7 @@
           "filename": "tv-m3-math-03-a2-sort-selected-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4380,7 +4380,7 @@
           "filename": "tv-m3-math-03-a2-sort-selected-6.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4408,7 +4408,7 @@
           "filename": "tv-m3-math-03-a2-sort-selected-8.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4436,7 +4436,7 @@
           "filename": "tv-m3-lang-04-a3-page-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4464,7 +4464,7 @@
           "filename": "tv-m3-math-04-a1-count-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4492,7 +4492,7 @@
           "filename": "tv-m3-math-04-a1-count-8.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4520,7 +4520,7 @@
           "filename": "tv-m3-lang-05-a3-page-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4548,7 +4548,7 @@
           "filename": "tv-m3-math-05-a1-count-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4576,7 +4576,7 @@
           "filename": "tv-m3-math-05-a1-count-6.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4604,7 +4604,7 @@
           "filename": "tv-m3-world-02-a1-success.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4632,7 +4632,7 @@
           "filename": "tv-m3-lang-06-a3-page-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4660,7 +4660,7 @@
           "filename": "tv-m3-math-06-a2-count-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4688,7 +4688,7 @@
           "filename": "tv-m3-math-06-a2-count-8.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4716,7 +4716,7 @@
           "filename": "tv-m3-lang-07-a2-revealed.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4744,7 +4744,7 @@
           "filename": "tv-m3-lang-07-a3-page-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4772,7 +4772,7 @@
           "filename": "tv-m3-math-07-a2-count-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4800,7 +4800,7 @@
           "filename": "tv-m3-math-07-a2-count-7.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4828,7 +4828,7 @@
           "filename": "tv-m3-lang-08-a3-page-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4856,7 +4856,7 @@
           "filename": "tv-m3-math-08-a1-success.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4884,7 +4884,7 @@
           "filename": "tv-m3-math-08-a2-success.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4912,7 +4912,7 @@
           "filename": "tv-m3-lang-09-a2-page-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4940,7 +4940,7 @@
           "filename": "tv-m3-math-09-a1-count-1.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4968,7 +4968,7 @@
           "filename": "tv-m3-math-09-a1-count-5.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -4996,7 +4996,7 @@
           "filename": "tv-m3-math-09-a1-reset.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5024,7 +5024,7 @@
           "filename": "tv-m3-lang-10-a3-page-5.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5052,7 +5052,7 @@
           "filename": "tv-m3-math-10-a1-count-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5080,7 +5080,7 @@
           "filename": "tv-m3-math-10-a1-count-8.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5108,7 +5108,7 @@
           "filename": "tv-m3-math-10-a1-count-12.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5136,7 +5136,7 @@
           "filename": "tv-m3-math-10-a1-count-16.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5164,7 +5164,7 @@
           "filename": "tv-m3-math-10-a1-count-20.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5192,7 +5192,7 @@
           "filename": "tv-m3-lang-11-a3-page-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5220,7 +5220,7 @@
           "filename": "tv-m3-math-11-a2-count-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5248,7 +5248,7 @@
           "filename": "tv-m3-lang-12-a3-page-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5276,7 +5276,7 @@
           "filename": "tv-m3-math-12-a2-count-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5304,7 +5304,7 @@
           "filename": "tv-m3-math-12-a2-reset.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5332,7 +5332,7 @@
           "filename": "tv-m3-lang-13-a2-success.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5360,7 +5360,7 @@
           "filename": "tv-m3-lang-13-a3-page-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5388,7 +5388,7 @@
           "filename": "tv-m3-math-13-a1-count-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5416,7 +5416,7 @@
           "filename": "tv-m3-math-13-a1-count-8.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5444,7 +5444,7 @@
           "filename": "tv-m3-lang-14-a3-page-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5472,7 +5472,7 @@
           "filename": "tv-m3-math-14-a2-count-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5500,7 +5500,7 @@
           "filename": "tv-m3-math-14-a2-count-6.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5528,7 +5528,7 @@
           "filename": "tv-m3-math-14-a2-count-10.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5556,7 +5556,7 @@
           "filename": "tv-m3-lang-15-a2-page-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5584,7 +5584,7 @@
           "filename": "tv-m3-lang-15-a3-page-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5612,7 +5612,7 @@
           "filename": "tv-m3-math-15-a2-count-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5640,7 +5640,7 @@
           "filename": "tv-m3-math-15-a2-count-7.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5668,7 +5668,7 @@
           "filename": "tv-m3-math-15-a2-reset.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5696,7 +5696,7 @@
           "filename": "tv-m3-world-05-a1-next-target.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5724,7 +5724,7 @@
           "filename": "tv-m3-math-16-a1-count-1.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5752,7 +5752,7 @@
           "filename": "tv-m3-math-16-a1-count-5.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5780,7 +5780,7 @@
           "filename": "tv-m3-math-16-a1-count-9.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5808,7 +5808,7 @@
           "filename": "tv-m3-lang-17-a3-page-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5836,7 +5836,7 @@
           "filename": "tv-m3-math-17-a2-count-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5864,7 +5864,7 @@
           "filename": "tv-m3-math-17-a2-count-7.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5892,7 +5892,7 @@
           "filename": "tv-m3-math-17-a2-reset.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5920,7 +5920,7 @@
           "filename": "tv-m3-math-18-a1-retry.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5948,7 +5948,7 @@
           "filename": "tv-m3-lang-19-a2-sort-selected-1.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -5976,7 +5976,7 @@
           "filename": "tv-m3-lang-19-a2-sort-selected-3.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6004,7 +6004,7 @@
           "filename": "tv-m3-lang-19-a2-sort-selected-5.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6032,7 +6032,7 @@
           "filename": "tv-m3-lang-19-a3-page-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6060,7 +6060,7 @@
           "filename": "tv-m3-math-19-a1-count-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6088,7 +6088,7 @@
           "filename": "tv-m3-math-19-a1-count-6.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6116,7 +6116,7 @@
           "filename": "tv-m3-math-19-a1-count-10.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6144,7 +6144,7 @@
           "filename": "tv-m3-math-19-a1-count-14.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6172,7 +6172,7 @@
           "filename": "tv-m3-math-19-a1-count-18.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6200,7 +6200,7 @@
           "filename": "tv-m3-world-06-a2-retry.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6228,7 +6228,7 @@
           "filename": "tv-m3-lang-20-a3-page-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6256,7 +6256,7 @@
           "filename": "tv-m3-math-20-a2-count-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6284,7 +6284,7 @@
           "filename": "tv-m3-math-20-a2-count-6.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6312,7 +6312,7 @@
           "filename": "tv-m3-math-20-a2-count-10.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6340,7 +6340,7 @@
           "filename": "tv-m3-lang-21-a3-page-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6368,7 +6368,7 @@
           "filename": "tv-m3-math-21-a2-count-4.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6396,7 +6396,7 @@
           "filename": "tv-m3-math-21-a2-count-8.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6424,7 +6424,7 @@
           "filename": "tv-m3-lang-22-a3-page-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6452,7 +6452,7 @@
           "filename": "tv-m3-math-22-a1-count-2.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6480,7 +6480,7 @@
           "filename": "tv-m3-math-22-a1-count-6.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6508,7 +6508,7 @@
           "filename": "tv-m3-math-22-a1-count-10.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     },
     {
@@ -6521,17 +6521,28 @@
           "filename": "tv-m3-math-22-a1-reset.png"
         }
       ],
-      "reviewed": false,
+      "reviewed": true,
       "scope": "Captured viewport at interaction time; browser auto-scroll can hide the top or bottom. Not a full-scroll review."
     }
   ],
-  "reviewedStates": 176,
-  "nextSheet": "phone-023.png",
+  "reviewedStates": 1002,
+  "nextSheet": null,
   "findings": [
     "Feedback outlines and text distinguish retry/reveal/success; no overlap seen in reviewed states.",
     "Phone count completion and four-choice feedback push controls below the captured viewport; full-scroll state audit remains required.",
     "m1-math-16-a1 and m1-math-19-a1 accept triangle into les ronds and report Bravo; isolated pedagogical correctness finding remains open.",
     "Story pagination captures predate the nonshrinking counter fix.",
-    "Story pages after the opening page contain text only; do not assume one illustration appears on every page."
+    "Story pages after the opening page contain text only; do not assume one illustration appears on every page.",
+    "All 501 captured noninitial phone states inspected across sheets 001–063. This does not establish full-scroll coverage.",
+    "m3-math-03-a1 arbitrary shape placements and m3-lang-19-a2 arbitrary vocabulary placements receive completion praise; preserve as isolated correctness findings for independent review.",
+    "m3-math-10-a1 shows a count starting at one despite the approved instruction to count from ten to twenty; no approved text or behavior changed.",
+    "m3-lang-13-a2 game choices omit monnaie, although it remains in the instruction; initial vocabulary preview has no image for this word.",
+    "After reset, long count grids retain the bottom scroll position, so the instruction can remain offscreen. Verify intended scroll behavior in live follow-up.",
+    "TV sheets 001–028: feedback text, sorting group labels and placed thumbnails remain undersized relative to the instruction and available space; disabled group opacity reduces image contrast. All controls fit in these captured states. Physical distance testing not performed.",
+    "TV sheets 029–048 inspected. In tv-041, m3-lang-02-a2 five choices wrap 4+1 and feedback pushes review/parent-return controls below the viewport. Shapes in tv-046 remain visible, but feedback and navigation are small. Sorting in tv-047–048 repeats undersized, faded placed thumbnails and accepts mismatched groups. These captures predate the next layout fix.",
+    "TV sheets 049–072 inspected. Five-word home game m3-lang-07-a2 also clips the parent-return control after reveal/success (061–062). Counting controls fit but small objects/dots and navigation remain undersized; circle-count instruction m3-math-07-a2 displays a rectangular grid. Story text is readable in these captures, with small navigation/question text. These captures predate the five-choice/feedback fix.",
+    "TV sheets 073–104 inspected: count instructions mentioning hidden objects, fingers, number strips, two equal piles and chairs/plates continue to render a generic tap grid. m3-world-05 comparison renders three animal choices; m3-math-18 paper-face matching renders a shape quiz. These are isolated instruction/interaction findings, not authorization to alter approved pedagogy. Controls fit in these captured states.",
+    "TV sheets 105–126 inspected: m3-lang-19-a2 accepts pencil/tomato in home, door in market and pot in school with completion praise; group thumbnails remain tiny and faded. m3-world-06-a2 asks about needs but offers plant/goat identification. m3-math-20-a2 reproducing a quantity and m3-math-21-a2 number-strip/pile instructions render a ten-dot tap grid. No additional clipping seen. Story text remains legible in captures; navigation remains small.",
+    "All 1,002 noninitial captured viewports inspected: 501 phone and 501 TV across 189 sheets. This completes inspection of this capture set only. Full-scroll interaction review, other viewport manual review and physical TV distance assessment remain outstanding. Captures predate the five-choice/feedback fix; separate local six-state evidence verifies that fix."
   ]
 }
