@@ -134,9 +134,53 @@
         "m1-world-02-a1"
       ],
       "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-004.png",
+      "activities": [
+        "m1-lang-05-a1",
+        "m1-lang-05-a2",
+        "m1-lang-05-a3",
+        "m1-math-05-a1",
+        "m1-phys-05-a1",
+        "m1-art-05-a1",
+        "m1-lang-06-a1",
+        "m1-lang-06-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-004.png",
+      "activities": [
+        "m1-lang-03-a1",
+        "m1-lang-03-a2",
+        "m1-lang-03-a3",
+        "m1-math-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-004.png",
+      "activities": [
+        "m1-lang-03-a1",
+        "m1-lang-03-a2",
+        "m1-lang-03-a3",
+        "m1-math-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-004.png",
+      "activities": [
+        "m1-lang-03-a1",
+        "m1-lang-03-a2",
+        "m1-lang-03-a3",
+        "m1-math-03-a1"
+      ],
+      "reviewed": true
     }
   ],
-  "initialPanelsReviewed": 60,
+  "initialPanelsReviewed": 80,
   "scrollSheets": [
     {
       "sheet": "scroll/scroll-001.png",
@@ -285,6 +329,51 @@
         "m1-math-07-a1 · count-1"
       ],
       "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-017.png",
+      "states": [
+        "m1-math-07-a1 · count-2",
+        "m1-math-07-a1 · count-3",
+        "m1-math-07-a1 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-018.png",
+      "states": [
+        "m1-math-07-a1 · count-5",
+        "m1-math-07-a1 · count-6",
+        "m1-lang-08-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-019.png",
+      "states": [
+        "m1-lang-09-a2 · initial",
+        "m1-lang-09-a3 · initial",
+        "m1-math-09-a1 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-020.png",
+      "states": [
+        "m1-math-09-a1 · count-1",
+        "m1-math-09-a1 · count-2",
+        "m1-math-09-a1 · count-3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-021.png",
+      "states": [
+        "m1-math-09-a1 · count-4",
+        "m1-math-09-a1 · count-5",
+        "m1-math-09-a1 · count-6"
+      ],
+      "reviewed": true
     }
   ],
   "findings": [
@@ -299,7 +388,10 @@
     "Scroll sheets 007–016: Claude Max/Opus inspected all thirty states; Astra independently inspected the claimed defect and representative counting, reset, rhyme and navigation states. No new product defect was accepted. Counts, highlights and answer feedback remain consistent, and every control is reachable in a paired frame.",
     "Scroll sheet 015: grey borders that move between paired frames are CSS hover borders, caused by the capture script scrolling content beneath a stationary pointer. Stable orange and green answer borders confirm that this is capture noise rather than misleading application state.",
     "The repeated number activities and repeated « Je marche, je m’arrête » rhyme are established, previously reviewed curriculum content, not evidence of a visual regression. Existing finger-versus-dot and rhyme-image pedagogy findings remain unchanged and unapproved.",
-    "Initial sheet 003 across all four viewports: all twenty panels are readable and controls remain reachable. Tablet-landscape narrative content continues below its initial viewport as expected and is covered by full-scroll evidence. Movement support text remains relatively small; no new clipping or overlap was found."
+    "Initial sheet 003 across all four viewports: all twenty panels are readable and controls remain reachable. Tablet-landscape narrative content continues below its initial viewport as expected and is covered by full-scroll evidence. Movement support text remains relatively small; no new clipping or overlap was found.",
+    "Scroll sheets 017–021: all fifteen states inspected locally. Count values and highlighted objects agree, success controls remain reachable in the lower paired frame, and Tika story navigation plus rhyme return controls are reachable. No new clipping or overlap was found.",
+    "Scroll sheet 018 repeats the already recorded bucket-on-chair mismatch for « Le petit seau »; scroll sheet 019 has a coherent rain illustration and a readable one-line story counter. These do not add a new finding.",
+    "Initial sheet 004 across all four viewports: all twenty panels inspected. Phone, portrait and desktop layouts fit. The tablet-landscape story and rhyme continue below the initial viewport, consistent with prior narrative behavior; the initial capture alone is not treated as full-scroll evidence. The Lisa bucket image remains an existing pedagogical finding."
   ],
-  "next": "scroll/scroll-017.png; initial sheet 004 for each of the four viewports. No other generated sheet is marked manually reviewed."
+  "next": "scroll/scroll-022.png; initial sheet 005 for each of the four viewports. No other generated sheet is marked manually reviewed."
 }
