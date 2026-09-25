@@ -729,6 +729,7 @@ function WordCards({ activity }: { activity: SessionActivity }) {
           childView ? "teka-word-grid justify-center" : "grid grid-cols-2 gap-3 sm:grid-cols-3"
         }
         aria-label="Les mots"
+        style={{ "--word-columns": Math.min(activity.vocabulary.length, 4) } as React.CSSProperties}
       >
         {activity.vocabulary.map((entry, index) => {
           const picture = media[index];

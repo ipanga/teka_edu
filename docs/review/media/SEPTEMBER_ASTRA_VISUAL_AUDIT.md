@@ -4,7 +4,7 @@ Status: **audit in progress; no implementation accepted**. Baseline `a0b743b` (d
 
 ## Coverage and evidence
 
-Canonical inventory: 176 approved lessons, 302 activities (132 + 170), 49 registered images. All 49 images independently inspected in six sheets at 270 px; 47 are referenced by September lessons. All 302 instructions and renderer assignments read. This is **not** a claim that every interactive state has been visually inspected. Six-viewport initial-state capture is in progress; story pages, retries, sorting and completion states still require inspection.
+Canonical inventory: 176 approved lessons, 302 activities (132 + 170), 49 registered images. All 49 images independently inspected in six sheets at 270 px; 47 are referenced by September lessons. All 302 instructions and renderer assignments read. This is **not** a claim that every interactive state has been visually inspected. Six-viewport initial-state capture is complete (1,812 before and 1,812 final after). Another 1,606 interaction states cover all 302 activities on phone/TV; capture is complete, manual inspection now covers all 302 initial phone viewports in 44 readable day sheets; subsequent states, scrolled content and other viewports remain only partially manually inspected. [Manual phone manifest](astra-manual-phone-review.json). Both final summaries report zero missing screenshots, broken pictures and horizontal overflow.
 
 The previous acceptance decisions were not reused. Scores: 1 = misleading/unusable, 2 = substantial design weakness, 3 = usable with concerns, 4 = clear and suitable, 5 = precise for its teaching function. Phone/TV columns are provisional asset judgments, pending in-app verification; no child recognition study or physical viewing-distance test has been conducted.
 
@@ -68,6 +68,17 @@ Uses include media carried by a text; some are not the leading rendered illustra
 
 ## UI findings and isolated correctness defects
 
+- **P2 missing visual support — `m3-lang-13-a2`:** “la monnaie” has an empty picture stage, unlike the four surrounding vocabulary objects. No image request fails, so the broken-image counter cannot detect this. A meaningful illustration or explicit real-object presentation is needed; do not silently drop the approved vocabulary word.
+- **P2 hierarchy — `m3-art-04-a1`:** the instruction asks for rain sounds. Parent guidance explicitly permits the monthly counting rhyme as optional accompaniment, and the payload references it. The renderer nevertheless makes that optional rhyme the dominant child screen. Preserve the approved text; separate primary task presentation from optional accompaniment in a dedicated behavior review.
+- **P2 phone pagination:** long story titles (Nsimba, Kumu, Bibi, mama Lelo, Tito and Malo) squeeze the small page counter into two lines. Keep the counter together and let the title wrap; exact story wording remains binding.
+- **P2 phone scrolling:** long stories/rhymes, 5+ word cards, eight-shape choices and 10+ counting items extend below 740 px. The initial screenshot is not a full-content capture. Review scroll reachability, bottom controls and continuity separately; do not mark them clipped solely from the first viewport.
+- **P2 parent/child separation:** the sorting footer asks the adult to ask “pourquoi ?” inside child view. Other guided-conversation prompts also remain prominent. Any relocation must preserve guidance and parent-led use.
+
+
+- **P1 correctness, isolated — unconstrained sorting:** the renderer accepts a triangle in “les ronds” and completes after every item is placed. The captured TV sort-completion state demonstrates that completion does not establish a correct classification. Preserve approved teaching text; raise a separate correctness change to bind category validity to authored meaning.
+- **Capture timing correction:** the first automated reveal screenshot ran before the reduced-motion 1 ms transition painted. Final capture waits two animation frames. Manual inspection of `phone-m1-lang-02-a2-revealed.png` confirms the correct table has a visible amber outline; this was a capture issue, not a runtime defect.
+
+
 - **P1 correctness, isolated — movement payloads:** `m1-phys-06-a1`, `08`, `11`, `15`, `19` ask for throwing but carry running steps; `09`, `12`, `16`, `20` ask for line walking but carry running steps. Other imitation activities also repeat generic running steps. Do not silently edit these approved payloads in a visual task. Independent content correction required.
 - **P1 correctness, isolated — off-screen quantity:** `CountTogether` adds “Touche chaque objet…” even when the approved task names fingers, hidden objects, number strips, two sets or making a collection. All September session modes are off-screen. This changes the task presented by the renderer; document exact affected activities before a separate correctness fix.
 - **P1 correctness, isolated — generic choices:** `look-and-name` selects `ChooseOne` whenever there is more than one picture. Animal-part observation becomes “Montre : poule” rather than naming parts. Body-part observation similarly becomes an image quiz. Do not silently change teaching behavior.
@@ -86,14 +97,14 @@ Derived from all activities: important-for-pronunciation 18; recommended 30; opt
 
 | Batch | Scope | State |
 | --- | --- | --- |
-| 1 | Body parts and hand rhymes; character specification | planned |
+| 1 | Body parts and hand rhymes; character specification | in-progress: four unregistered body candidates, in-app preview inspected |
 | 2 | Everyday object refinements | planned |
 | 3 | Animals and plant | planned |
 | 4 | Story scenes, referencing approved texts exactly | planned |
 | 5 | Math: retain geometry, refine natural stones only | planned |
 | 6 | Movement/spatial: preserve real objects; isolate content defects | planned |
-| 7 | Responsive layout, TV, control hierarchy, motion | planned |
-| 8 | Full interaction QA, before/after, reconfirmation, staging | planned |
+| 7 | Responsive layout, TV, control hierarchy, motion | validated locally: responsive word/choice/story layout, 39 E2E, reduced motion |
+| 8 | Full interaction QA, before/after, reconfirmation | in-progress: capture complete, manual inspection partial; staging withheld by owner |
 
 No media changed. Approvals before/still valid: 176/176; intentional/unexpected lapses: 0/0; content validation passes. No approval digest edited.
 

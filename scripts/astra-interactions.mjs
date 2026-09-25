@@ -4,7 +4,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 const { sessions } = JSON.parse(
   readFileSync("docs/review/media/astra-baseline/inventory.json", "utf8"),
 );
-const out = "private/astra-visual-evidence/interactions";
+const out = process.env.ASTRA_OUT || "private/astra-visual-evidence/interactions-final";
 mkdirSync(out, { recursive: true });
 const browser = await chromium.launch();
 for (const [size, width, height] of [
@@ -27,6 +27,10 @@ for (const [size, width, height] of [
         const dialog = page.getByRole("dialog");
         await dialog.evaluate(async (d) =>
           Promise.all([...d.querySelectorAll("img")].map((i) => i.decode().catch(() => {}))),
+        );
+        await page.evaluate(
+          () =>
+            new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
         );
         const state = await dialog.evaluate((d) => ({
           text: d.innerText,

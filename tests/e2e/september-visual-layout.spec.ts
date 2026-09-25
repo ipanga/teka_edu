@@ -9,6 +9,26 @@ const viewports = [
   { name: "TV", width: 1920, height: 1080 },
 ];
 
+test("four body words and the parent return control fit a TV screen", async ({ page }) => {
+  await page.setViewportSize({ width: 1920, height: 1080 });
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/maternelle/1/seance/18");
+  await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
+  await page.getByRole("button", { name: "Terminé", exact: true }).click();
+  await page.getByRole("button", { name: "Montrer à l’enfant", exact: true }).click();
+  const dialog = page.getByRole("dialog");
+  const cards = dialog.getByRole("list", { name: "Les mots", exact: true }).locator(":scope > li");
+  await expect(cards).toHaveCount(4);
+  const boxes = await Promise.all((await cards.all()).map((card) => card.boundingBox()));
+  for (const box of boxes) {
+    expect(Math.abs(box!.y - boxes[0]!.y)).toBeLessThan(2);
+  }
+  const back = await dialog
+    .getByRole("button", { name: "Revenir au guide du parent" })
+    .boundingBox();
+  expect(back!.y + back!.height).toBeLessThanOrEqual(1080);
+});
+
 for (const viewport of viewports) {
   test(`September word cards fit and remain interactive on ${viewport.name}`, async ({ page }) => {
     await page.setViewportSize(viewport);

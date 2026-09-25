@@ -1,0 +1,22 @@
+{
+  "stateCaptures": 1606,
+  "uniqueActivities": 302,
+  "dayViewportFiles": 88,
+  "brokenImages": 0,
+  "horizontalOverflow": 0,
+  "missingScreenshots": 0,
+  "statesByPrefix": {
+    "initial": 604,
+    "game": 20,
+    "retry": 40,
+    "revealed": 40,
+    "success": 40,
+    "next": 40,
+    "count": 496,
+    "reset": 60,
+    "page": 170,
+    "sort": 96
+  },
+  "sourceDirectory": "private/astra-visual-evidence/interactions-fourwords",
+  "limitations": "Final layout, two animation frames awaited before capture. Automated traversal of listed states, not exhaustive action permutations or manual acceptance of every screenshot."
+}

@@ -188,8 +188,12 @@ body {
   .teka-choice-grid-child img {
     max-width: 22rem;
   }
+  .teka-word-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--word-columns), minmax(0, 20rem));
+  }
   .teka-word-grid > li {
-    width: 20rem;
+    width: auto;
   }
   .teka-narrative-layout {
     display: grid;

@@ -48,19 +48,36 @@ accepted as a final asset. No content hash, description or approval digest has c
 integration must first finish in-activity QA, preserve the historical freeze, record real approval
 lapses and generate the existing reconfirmation packages. Never copy an approval digest.
 
+## Four-body-word follow-up
+
+Browser-only substitution of the four candidates exposed a 3+1 TV wrap, putting the parent
+return control below the viewport. The final count-aware grid now places all four cards in one
+row at 1080p; an E2E assertion checks the card row and return-control bounds. No teaching text
+or interaction logic changed. [Phone draft preview](astra-comparison/body-candidates-phone.png),
+[TV draft preview](astra-comparison/body-candidates-tv.png),
+[72/128/256 px baseline comparison](astra-comparison/body-candidates.png).
+
+Hand: continuous silhouette and five fingers improve recognition. Foot: five connected toes,
+credible ankle/instep; the corrected candidate avoids the first attempt's sixth toe. Head:
+friendly connected portrait, but finely rendered texture must be checked against the final
+family. Belly: first draft overemphasized the face; the refinement uses a downward gaze and tighter framing to strengthen the tummy gesture. Final family consistency and independent review remain pending.
+All four remain unregistered drafts, with no approval impact.
+
 ## Evidence and limits
 
 - Both classes: 176 lessons, 302 activity initial states × six viewports = 1,812 per version.
-- Before and initial after: no broken pictures, no detected horizontal overflow.
+- Before and final after: no broken pictures, no detected horizontal overflow.
 - Full captures are local in `private/astra-visual-evidence/`, separate from disposable E2E output.
 - [Machine-readable responsive summary](astra-responsive-evidence.json).
 - Source review covers all instructions; all 49 asset renders were inspected. Initial-state
-  capture is **not equivalent to manual inspection of every interactive state**. The local
-  interaction walker is collecting story pages, retries, reveal, success, counting and sorting.
+  capture is **not equivalent to manual inspection of every interactive state**. The completed local
+  interaction walker captured 1,606 states across all 302 activities on phone/TV: story pages,
+  retries, reveal, success, counting and sorting. No missing files, broken images or overflow.
+  [Final interaction summary](astra-interaction-evidence.json).
 - No physical TV-distance test or child recognition study is claimed.
-- New layout checks: 7 passed before the padding follow-up; existing E2E 31 passed, unit 397,
-  pgTAP/RLS 152, both local container smoke tests passed. Revalidation of the final padding
-  adjustment is pending. Full current results belong in `docs/work/ACTIVE_TASK.md`.
+- Final padding revalidation passed: 8 new layout checks + 31 existing E2E, unit 397,
+  pgTAP/RLS 152, both local container smoke tests. Nine production-only E2E tests intentionally
+  skipped for this local run. Full current results belong in `docs/work/ACTIVE_TASK.md`.
 
 ## Approval and environment state
 
@@ -76,7 +93,7 @@ DEV: unchanged. Staging: unchanged, withheld by local-only instruction. Producti
 ## Outstanding work, priority order
 
 1. Finish the complete interaction-state audit and isolate renderer/content correctness findings.
-2. Validate and recapture the final phone padding; retain meaningful screenshot evidence.
+2. Review the four body candidates in context; final phone padding and recapture are complete.
 3. Produce and inspect the 16 redraws and 10 refinements, or document why quality remains inadequate.
    Two unused assets should not create unnecessary September implementation work.
 4. Integrate only reviewed candidates, honestly lapse dependent approvals, produce per-level packages.

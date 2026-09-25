@@ -12,7 +12,7 @@ const samples = [
 ];
 for (const [viewport, activity, title, width, height] of samples) {
   const frames = ["baseline", "after"].map((version) => {
-    const source = `private/astra-visual-evidence/${version}/${viewport}-${activity}.png`;
+    const source = `private/astra-visual-evidence/${version === "after" ? "after-fourwords" : version}/${viewport}-${activity}.png`;
     cpSync(source, `${out}/${version}-${viewport}-${activity}.png`);
     return `<section><h2>${version === "baseline" ? "BEFORE · a0b743b" : "AFTER · local UI"}</h2><img width="${width}" height="${height}" src="data:image/png;base64,${readFileSync(source).toString("base64")}"></section>`;
   });
