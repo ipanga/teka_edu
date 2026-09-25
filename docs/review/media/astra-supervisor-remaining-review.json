@@ -178,9 +178,53 @@
         "m1-math-03-a1"
       ],
       "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-005.png",
+      "activities": [
+        "m1-lang-06-a3",
+        "m1-math-06-a1",
+        "m1-phys-06-a1",
+        "m1-time-06-a1",
+        "m1-lang-07-a1",
+        "m1-lang-07-a2",
+        "m1-lang-07-a3",
+        "m1-math-07-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-005.png",
+      "activities": [
+        "m1-phys-03-a1",
+        "m1-time-03-a1",
+        "m1-lang-04-a1",
+        "m1-lang-04-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-005.png",
+      "activities": [
+        "m1-phys-03-a1",
+        "m1-time-03-a1",
+        "m1-lang-04-a1",
+        "m1-lang-04-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-005.png",
+      "activities": [
+        "m1-phys-03-a1",
+        "m1-time-03-a1",
+        "m1-lang-04-a1",
+        "m1-lang-04-a2"
+      ],
+      "reviewed": true
     }
   ],
-  "initialPanelsReviewed": 80,
+  "initialPanelsReviewed": 100,
   "scrollSheets": [
     {
       "sheet": "scroll/scroll-001.png",
@@ -374,6 +418,97 @@
         "m1-math-09-a1 · count-6"
       ],
       "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-022.png",
+      "states": [
+        "m1-math-09-a1 · reset",
+        "m1-lang-10-a3 · initial",
+        "m1-lang-11-a3 · initial"
+      ],
+      "reviewed": true,
+      "note": "The reset state is retained historical evidence from before VIS-FIX-01."
+    },
+    {
+      "sheet": "scroll/scroll-023.png",
+      "states": [
+        "m1-math-11-a1 · initial",
+        "m1-math-11-a1 · sort-selected-1",
+        "m1-math-11-a1 · sort-placed-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-024.png",
+      "states": [
+        "m1-math-11-a1 · sort-selected-2",
+        "m1-lang-12-a3 · initial",
+        "m1-lang-13-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-025.png",
+      "states": [
+        "m1-math-13-a1 · initial",
+        "m1-math-13-a1 · sort-selected-1",
+        "m1-math-13-a1 · sort-placed-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-026.png",
+      "states": [
+        "m1-math-13-a1 · sort-selected-2",
+        "m1-lang-14-a3 · initial",
+        "m1-math-14-a1 · count-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-027.png",
+      "states": [
+        "m1-math-14-a1 · count-2",
+        "m1-math-14-a1 · count-3",
+        "m1-math-14-a1 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-028.png",
+      "states": [
+        "m1-math-14-a1 · count-5",
+        "m1-math-14-a1 · count-6",
+        "m1-lang-15-a2 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-029.png",
+      "states": [
+        "m1-lang-15-a3 · initial",
+        "m1-lang-16-a3 · initial",
+        "m1-math-16-a1 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-030.png",
+      "states": [
+        "m1-math-16-a1 · sort-selected-1",
+        "m1-math-16-a1 · sort-placed-1",
+        "m1-math-16-a1 · sort-selected-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-031.png",
+      "states": [
+        "m1-math-16-a1 · sort-placed-2",
+        "m1-math-16-a1 · sort-selected-3",
+        "m1-lang-17-a3 · initial"
+      ],
+      "reviewed": true
     }
   ],
   "findings": [
@@ -391,7 +526,34 @@
     "Initial sheet 003 across all four viewports: all twenty panels are readable and controls remain reachable. Tablet-landscape narrative content continues below its initial viewport as expected and is covered by full-scroll evidence. Movement support text remains relatively small; no new clipping or overlap was found.",
     "Scroll sheets 017–021: all fifteen states inspected locally. Count values and highlighted objects agree, success controls remain reachable in the lower paired frame, and Tika story navigation plus rhyme return controls are reachable. No new clipping or overlap was found.",
     "Scroll sheet 018 repeats the already recorded bucket-on-chair mismatch for « Le petit seau »; scroll sheet 019 has a coherent rain illustration and a readable one-line story counter. These do not add a new finding.",
-    "Initial sheet 004 across all four viewports: all twenty panels inspected. Phone, portrait and desktop layouts fit. The tablet-landscape story and rhyme continue below the initial viewport, consistent with prior narrative behavior; the initial capture alone is not treated as full-scroll evidence. The Lisa bucket image remains an existing pedagogical finding."
+    "Initial sheet 004 across all four viewports: all twenty panels inspected. Phone, portrait and desktop layouts fit. The tablet-landscape story and rhyme continue below the initial viewport, consistent with prior narrative behavior; the initial capture alone is not treated as full-scroll evidence. The Lisa bucket image remains an existing pedagogical finding.",
+    "Scroll sheets 022–031: Claude Max/Opus inspected all thirty states; Astra independently inspected the reported triangle issue, representative sort placement, final counting and story navigation. No new clipping, overlap or reachability defect was found.",
+    "m1-math-16-a1 contains a triangle but only « les ronds » and « les carrés » groups. This is a genuine interaction/pedagogical correctness issue, but it is already recorded as open in astra-manual-interaction-review.json. Approved content is unchanged pending a bounded pedagogical decision.",
+    "Placed group-and-match tokens are approximately 20 px wide on a 320 px phone and low prominence inside large drop zones. This is accepted as a HIGH_VALUE_IMPROVEMENT candidate for the later systemic design pass, not a blocker for evidence review.",
+    "Initial sheet 005 across all four viewports: all twenty panels inspected and all controls fit. The phone m1-phys-06-a1 screen says « Lance la balle dans le seau » but displays generic « courir / s’arrêter / recommencer » steps. This is a content/display semantic defect and must not be silently corrected without reconfirmation."
   ],
-  "next": "scroll/scroll-022.png; initial sheet 005 for each of the four viewports. No other generated sheet is marked manually reviewed."
+  "classifiedFindings": [
+    {
+      "id": "group-and-match-placed-token-legibility",
+      "classification": "HIGH_VALUE_IMPROVEMENT",
+      "status": "candidate-for-systemic-design-pass",
+      "evidence": "Placed shapes are approximately 20 px wide inside large group zones at 320 px, making the result hard for a preschool child to recognize.",
+      "scope": "GroupAndMatch child renderer; no approved content change."
+    },
+    {
+      "id": "m1-math-16-triangle-without-group",
+      "classification": "DEFECT",
+      "status": "known-open-pedagogical-finding",
+      "evidence": "The triangle can only be placed into « les ronds » or « les carrés » while the instruction asks for the same shape.",
+      "scope": "Approved activity data; preserve digest and require bounded pedagogical decision before editing."
+    },
+    {
+      "id": "m1-physical-ball-generic-running-steps",
+      "classification": "DEFECT",
+      "status": "new-pedagogical-integrity-finding",
+      "evidence": "m1-phys-06-a1 instructs « Lance la balle dans le seau » while its displayed move list is « courir / s’arrêter / recommencer ».",
+      "scope": "Approved activity payload; inspect all repeated ball activities and require bounded pedagogical reconfirmation before editing."
+    }
+  ],
+  "next": "scroll/scroll-032.png; initial sheet 006 for each of the four viewports. No other generated sheet is marked manually reviewed."
 }

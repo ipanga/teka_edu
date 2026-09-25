@@ -784,13 +784,15 @@ Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, a
 
 - `scripts/astra-remaining-sheets.mjs` generated 165 full-scroll sheets and 266 large-phone, tablet and desktop sheets, covering all 1,208 initial panels. They are stored, Git-ignored, under `private/astra-visual-evidence/remaining-review/`.
 - The six previously reviewed scroll frames are preserved; everything else is unreviewed.
-- Astra's visual review is in progress: scroll sheets 001–021 and initial sheets 001–004 for all four
-  viewport sets have been accepted as reviewed (37 sheets / 80 initial panels). Claude Max/Opus inspected
+- Astra's visual review is in progress: scroll sheets 001–031 and initial sheets 001–005 for all four
+  viewport sets have been accepted as reviewed (51 sheets / 100 initial panels). Claude Max/Opus inspected
   scroll sheets 007–016 under the owner's narrow evidence authorization. Astra independently checked its
   only claimed defect and representative clean states; the moving grey outline was a stationary-pointer
   hover artifact in the capture, so no product correction was justified. Existing pedagogy findings and
-  stale reset captures remain recorded. Scroll sheets 017–021 and initial sheet 004 were then inspected
-  locally with no new regression. Next is scroll sheet 022 and initial sheet 005 for each viewport.
+  stale reset captures remain recorded. The later review confirmed the already-open triangle-without-matching-
+  group issue, identified undersized placed sort tokens as a high-value UX candidate, and found that the
+  approved ball-throw activity displays unrelated generic running steps. No approved content or digest was
+  changed. Next is scroll sheet 032 and initial sheet 006 for each viewport.
 
 **VIS-FIX-01:**
 
