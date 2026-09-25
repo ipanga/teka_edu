@@ -46,9 +46,53 @@
         "m1-math-01-a1"
       ],
       "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-002.png",
+      "activities": [
+        "m1-lang-02-a3",
+        "m1-math-02-a1",
+        "m1-phys-02-a1",
+        "m1-world-02-a1",
+        "m1-lang-03-a1",
+        "m1-lang-03-a2",
+        "m1-lang-03-a3",
+        "m1-math-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-002.png",
+      "activities": [
+        "m1-phys-01-a1",
+        "m1-time-01-a1",
+        "m1-lang-02-a1",
+        "m1-lang-02-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-002.png",
+      "activities": [
+        "m1-phys-01-a1",
+        "m1-time-01-a1",
+        "m1-lang-02-a1",
+        "m1-lang-02-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-002.png",
+      "activities": [
+        "m1-phys-01-a1",
+        "m1-time-01-a1",
+        "m1-lang-02-a1",
+        "m1-lang-02-a2"
+      ],
+      "reviewed": true
     }
   ],
-  "initialPanelsReviewed": 20,
+  "initialPanelsReviewed": 40,
   "scrollSheets": [
     {
       "sheet": "scroll/scroll-001.png",
@@ -58,6 +102,52 @@
         "m1-math-01-a1 · count-1"
       ],
       "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-002.png",
+      "states": [
+        "m1-math-01-a1 · count-2",
+        "m1-math-01-a1 · count-3",
+        "m1-math-01-a1 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-003.png",
+      "states": [
+        "m1-math-01-a1 · count-5",
+        "m1-math-01-a1 · count-6",
+        "m1-math-01-a1 · reset"
+      ],
+      "reviewed": true,
+      "note": "The reset state is retained historical evidence from before VIS-FIX-01; the current reset behavior was separately inspected and accepted."
+    },
+    {
+      "sheet": "scroll/scroll-004.png",
+      "states": [
+        "m1-lang-02-a3 · initial",
+        "m1-math-02-a1 · count-1",
+        "m1-math-02-a1 · count-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-005.png",
+      "states": [
+        "m1-math-02-a1 · count-3",
+        "m1-math-02-a1 · count-4",
+        "m1-math-02-a1 · count-5"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-006.png",
+      "states": [
+        "m1-math-02-a1 · count-6",
+        "m1-lang-03-a2 · initial",
+        "m1-lang-03-a3 · initial"
+      ],
+      "reviewed": true
     }
   ],
   "findings": [
@@ -65,7 +155,10 @@
     "Tablet portrait first four panels: legible pictures and instructions; six counting tiles wrap five plus one.",
     "Tablet landscape first four panels: narrative opening image pushes rhyme text and return control below the captured viewport; needs separate full-scroll review. Other three panels fit.",
     "Desktop first four panels: story text beside picture and return controls fit; two-word preview is labeled possibly stale.",
-    "Scroll sheet 001: three states and their paired top/bottom captures inspected, with readable text, image and reachable return control; no overlap seen. Dot-grid versus finger instruction remains an existing pedagogical finding."
+    "Scroll sheet 001: three states and their paired top/bottom captures inspected, with readable text, image and reachable return control; no overlap seen. Dot-grid versus finger instruction remains an existing pedagogical finding.",
+    "Scroll sheets 002–006: fifteen states and their paired captures inspected. Counting controls and return controls remain reachable; no clipping or overlap was found. The m1-math-01 reset capture is historical evidence from before VIS-FIX-01.",
+    "Large-phone sheet 002: all eight panels fit. The physical-activity support steps remain comparatively small, and the Lisa opening image reveals the bucket location before the later question; both are existing review findings. The story-counter capture is labeled stale.",
+    "Tablet portrait, tablet landscape and desktop sheet 002: all twelve panels fit without clipping. Movement support text is relatively small at distance; the two-word preview is labeled possibly stale."
   ],
-  "next": "scroll/scroll-002.png; initial sheet 002 for each of the four viewports. No other generated sheet is marked manually reviewed."
+  "next": "scroll/scroll-007.png; initial sheet 003 for each of the four viewports. No other generated sheet is marked manually reviewed."
 }
