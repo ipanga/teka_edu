@@ -784,10 +784,12 @@ Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, a
 
 - `scripts/astra-remaining-sheets.mjs` generated 165 full-scroll sheets and 266 large-phone, tablet and desktop sheets, covering all 1,208 initial panels. They are stored, Git-ignored, under `private/astra-visual-evidence/remaining-review/`.
 - The six previously reviewed scroll frames are preserved; everything else is unreviewed.
-- Astra's visual review is in progress: scroll sheets 001–006 and initial sheets 001–002 for all four
-  viewport sets have been inspected (14 sheets / 40 initial panels). No new layout regression was found;
-  the durable review manifest records the existing pedagogy findings and stale captures. Next is scroll
-  sheet 007 and initial sheet 003 for each viewport.
+- Astra's visual review is in progress: scroll sheets 001–016 and initial sheets 001–003 for all four
+  viewport sets have been accepted as reviewed (28 sheets / 60 initial panels). Claude Max/Opus inspected
+  scroll sheets 007–016 under the owner's narrow evidence authorization. Astra independently checked its
+  only claimed defect and representative clean states; the moving grey outline was a stationary-pointer
+  hover artifact in the capture, so no product correction was justified. Existing pedagogy findings and
+  stale reset captures remain recorded. Next is scroll sheet 017 and initial sheet 004 for each viewport.
 
 **VIS-FIX-01:**
 

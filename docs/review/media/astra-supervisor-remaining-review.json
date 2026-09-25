@@ -90,9 +90,53 @@
         "m1-lang-02-a2"
       ],
       "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-003.png",
+      "activities": [
+        "m1-phys-03-a1",
+        "m1-time-03-a1",
+        "m1-lang-04-a1",
+        "m1-lang-04-a2",
+        "m1-lang-04-a3",
+        "m1-math-04-a1",
+        "m1-phys-04-a1",
+        "m1-art-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-003.png",
+      "activities": [
+        "m1-lang-02-a3",
+        "m1-math-02-a1",
+        "m1-phys-02-a1",
+        "m1-world-02-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-003.png",
+      "activities": [
+        "m1-lang-02-a3",
+        "m1-math-02-a1",
+        "m1-phys-02-a1",
+        "m1-world-02-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-003.png",
+      "activities": [
+        "m1-lang-02-a3",
+        "m1-math-02-a1",
+        "m1-phys-02-a1",
+        "m1-world-02-a1"
+      ],
+      "reviewed": true
     }
   ],
-  "initialPanelsReviewed": 40,
+  "initialPanelsReviewed": 60,
   "scrollSheets": [
     {
       "sheet": "scroll/scroll-001.png",
@@ -148,6 +192,99 @@
         "m1-lang-03-a3 · initial"
       ],
       "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-007.png",
+      "states": [
+        "m1-math-03-a1 · initial",
+        "m1-math-03-a1 · count-1",
+        "m1-math-03-a1 · count-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-008.png",
+      "states": [
+        "m1-math-03-a1 · count-3",
+        "m1-math-03-a1 · count-4",
+        "m1-math-03-a1 · count-5"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-009.png",
+      "states": [
+        "m1-math-03-a1 · count-6",
+        "m1-math-03-a1 · reset",
+        "m1-lang-04-a3 · initial"
+      ],
+      "reviewed": true,
+      "note": "The reset state is retained historical evidence from before VIS-FIX-01."
+    },
+    {
+      "sheet": "scroll/scroll-010.png",
+      "states": [
+        "m1-math-04-a1 · count-1",
+        "m1-math-04-a1 · count-2",
+        "m1-math-04-a1 · count-3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-011.png",
+      "states": [
+        "m1-math-04-a1 · count-4",
+        "m1-math-04-a1 · count-5",
+        "m1-math-04-a1 · count-6"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-012.png",
+      "states": [
+        "m1-lang-05-a3 · initial",
+        "m1-math-05-a1 · initial",
+        "m1-math-05-a1 · count-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-013.png",
+      "states": [
+        "m1-math-05-a1 · count-2",
+        "m1-math-05-a1 · count-3",
+        "m1-math-05-a1 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-014.png",
+      "states": [
+        "m1-math-05-a1 · count-5",
+        "m1-math-05-a1 · count-6",
+        "m1-math-05-a1 · reset"
+      ],
+      "reviewed": true,
+      "note": "The reset state is retained historical evidence from before VIS-FIX-01."
+    },
+    {
+      "sheet": "scroll/scroll-015.png",
+      "states": [
+        "m1-lang-06-a2 · retry",
+        "m1-lang-06-a2 · revealed",
+        "m1-lang-06-a2 · success"
+      ],
+      "reviewed": true,
+      "note": "Claude reported changing grey tile outlines. Supervisor inspection and source review confirmed these are hover borders moving as the capture script scrolls content beneath a stationary pointer; orange/green answer states stay stable. No product defect."
+    },
+    {
+      "sheet": "scroll/scroll-016.png",
+      "states": [
+        "m1-lang-06-a3 · initial",
+        "m1-lang-07-a3 · initial",
+        "m1-math-07-a1 · count-1"
+      ],
+      "reviewed": true
     }
   ],
   "findings": [
@@ -158,7 +295,11 @@
     "Scroll sheet 001: three states and their paired top/bottom captures inspected, with readable text, image and reachable return control; no overlap seen. Dot-grid versus finger instruction remains an existing pedagogical finding.",
     "Scroll sheets 002–006: fifteen states and their paired captures inspected. Counting controls and return controls remain reachable; no clipping or overlap was found. The m1-math-01 reset capture is historical evidence from before VIS-FIX-01.",
     "Large-phone sheet 002: all eight panels fit. The physical-activity support steps remain comparatively small, and the Lisa opening image reveals the bucket location before the later question; both are existing review findings. The story-counter capture is labeled stale.",
-    "Tablet portrait, tablet landscape and desktop sheet 002: all twelve panels fit without clipping. Movement support text is relatively small at distance; the two-word preview is labeled possibly stale."
+    "Tablet portrait, tablet landscape and desktop sheet 002: all twelve panels fit without clipping. Movement support text is relatively small at distance; the two-word preview is labeled possibly stale.",
+    "Scroll sheets 007–016: Claude Max/Opus inspected all thirty states; Astra independently inspected the claimed defect and representative counting, reset, rhyme and navigation states. No new product defect was accepted. Counts, highlights and answer feedback remain consistent, and every control is reachable in a paired frame.",
+    "Scroll sheet 015: grey borders that move between paired frames are CSS hover borders, caused by the capture script scrolling content beneath a stationary pointer. Stable orange and green answer borders confirm that this is capture noise rather than misleading application state.",
+    "The repeated number activities and repeated « Je marche, je m’arrête » rhyme are established, previously reviewed curriculum content, not evidence of a visual regression. Existing finger-versus-dot and rhyme-image pedagogy findings remain unchanged and unapproved.",
+    "Initial sheet 003 across all four viewports: all twenty panels are readable and controls remain reachable. Tablet-landscape narrative content continues below its initial viewport as expected and is covered by full-scroll evidence. Movement support text remains relatively small; no new clipping or overlap was found."
   ],
-  "next": "scroll/scroll-007.png; initial sheet 003 for each of the four viewports. No other generated sheet is marked manually reviewed."
+  "next": "scroll/scroll-017.png; initial sheet 004 for each of the four viewports. No other generated sheet is marked manually reviewed."
 }
