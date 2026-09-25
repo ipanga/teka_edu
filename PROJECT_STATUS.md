@@ -784,8 +784,8 @@ Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, a
 
 - `scripts/astra-remaining-sheets.mjs` generated 165 full-scroll sheets and 266 large-phone, tablet and desktop sheets, covering all 1,208 initial panels. They are stored, Git-ignored, under `private/astra-visual-evidence/remaining-review/`.
 - The six previously reviewed scroll frames are preserved; everything else is unreviewed.
-- Astra's visual review is in progress: scroll sheets 001–061 and initial sheets 001–008 for all four
-  viewport sets have been accepted as reviewed (93 sheets / 160 initial panels). Claude Max/Opus inspected
+- Astra's visual review is in progress: scroll sheets 001–081 and initial sheets 001–012 for all four
+  viewport sets have been accepted as reviewed (129 sheets / 240 initial panels). Claude Max/Opus inspected
   scroll sheets 007–016 under the owner's narrow evidence authorization. Astra independently checked its
   only claimed defect and representative clean states; the moving grey outline was a stationary-pointer
   hover artifact in the capture, so no product correction was justified. Existing pedagogy findings and
@@ -794,8 +794,8 @@ Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, a
   1ère movement activities display unrelated generic running steps, and confirmed that generic media tags
   produce ungrammatical French labels such as « Montre : main ». The latest batch also found sentence stems
   rendered as empty picture cards, shape-specific retry copy in an object game, and a same-number lesson
-  rendered as a fixed six-dot counter. No approved content or digest was changed. Next is scroll sheet 062
-  and initial sheet 009 for each viewport.
+  rendered as a fixed six-dot counter. The same generic counter also erases required line, two-set and circle structures, while fixed-label shape sorting accepts mismatches and praises completion. No approved content or digest was changed. Next is scroll sheet 082
+  and initial sheet 013 for each viewport.
 
 **VIS-FIX-01:**
 
