@@ -70,8 +70,8 @@ Uses include media carried by a text; some are not the leading rendered illustra
 
 - **P2 missing visual support — `m3-lang-13-a2`:** “la monnaie” has an empty picture stage, unlike the four surrounding vocabulary objects. No image request fails, so the broken-image counter cannot detect this. A meaningful illustration or explicit real-object presentation is needed; do not silently drop the approved vocabulary word.
 - **P2 hierarchy — `m3-art-04-a1`:** the instruction asks for rain sounds. Parent guidance explicitly permits the monthly counting rhyme as optional accompaniment, and the payload references it. The renderer nevertheless makes that optional rhyme the dominant child screen. Preserve the approved text; separate primary task presentation from optional accompaniment in a dedicated behavior review.
-- **P2 phone pagination:** long story titles (Nsimba, Kumu, Bibi, mama Lelo, Tito and Malo) squeeze the small page counter into two lines. Keep the counter together and let the title wrap; exact story wording remains binding.
-- **P2 phone scrolling:** long stories/rhymes, 5+ word cards, eight-shape choices and 10+ counting items extend below 740 px. The initial screenshot is not a full-content capture. Review scroll reachability, bottom controls and continuity separately; do not mark them clipped solely from the first viewport.
+- **P2 phone pagination:** long story titles (Nsimba, Kumu, Bibi, mama Lelo, Tito and Malo) squeeze the small page counter into two lines. Implemented: keep the counter together and let the title wrap; validated in a rendered 320px phone screenshot. Exact story wording is unchanged.
+- **P2 phone scrolling:** long stories/rhymes, 5+ word cards, eight-shape choices and 10+ counting items extend below 740 px. The initial screenshot is not a full-content capture. Follow-up geometry checks confirmed bottom return-control reachability in all 302 initial activities on phone/TV; 91 phone screens scroll, none on TV. Five longest lower-scroll frames were visually inspected. Do not mark a screen clipped solely from its first viewport.
 - **P2 parent/child separation:** the sorting footer asks the adult to ask “pourquoi ?” inside child view. Other guided-conversation prompts also remain prominent. Any relocation must preserve guidance and parent-led use.
 
 
@@ -416,3 +416,7 @@ Rows below record source inspection and proposed visual treatment; screen covera
 | m3-math-22-a1 | m3-math-22 | 3ème maternelle / 22 | quantity | objet-caillou | not-needed | Source reviewed. Isolate generic screen-counting mismatch; no pedagogy change. |
 | m3-math-22-a2 | m3-math-22 | 3ème maternelle / 22 | hands-on | none | not-needed | Source reviewed. Retain off-screen interaction; verify in-app composition. |
 | m3-phys-22-a1 | m3-phys-22 | 3ème maternelle / 22 | move | none | not-needed | Source reviewed. Retain off-screen interaction; verify in-app composition. |
+
+### TV initial-state manual inspection — 2026-09-25
+
+All 302 initial TV child screens across 44 day sheets were visually inspected. The manifest is `astra-manual-tv-review.json`. Four-card vocabulary now fits one row; five/seven-card sets fit two rows. No initial clipping or overlapping controls was observed. Supporting text, sorting group labels and parent controls remain small; physical TV distance readability is unverified. The missing monnaie image and previously isolated off-screen renderer contradictions are also visible on TV. Subsequent interaction states and other viewport manual reviews remain incomplete.

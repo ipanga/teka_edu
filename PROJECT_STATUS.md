@@ -754,3 +754,8 @@ Cost:       $0.
 Next:       Refine the October annual progression for 3ème maternelle, then prepare October
             Weeks 1-2 as the first pedagogical-review batch. Not started.
 ```
+
+September Astra local checkpoint (2026-09-25): all 302 initial TV child screens manually
+inspected in addition to all 302 phone initial screens. The first 176 noninitial phone
+interaction captures were inspected; 189 readable interaction sheets are available locally.
+Full state/scroll QA and illustration integration remain in progress. No publication or deployment.

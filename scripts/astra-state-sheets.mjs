@@ -7,26 +7,33 @@ mkdirSync(out, { recursive: true });
 const { sessions } = JSON.parse(
   readFileSync("docs/review/media/astra-baseline/inventory.json", "utf8"),
 );
+const tv = process.env.ASTRA_SHEET_VIEWPORT === "tv";
+const prefix = tv ? "tv" : "phone";
+const width = tv ? 960 : 320;
+const height = tv ? 540 : 740;
+const columns = tv ? 2 : 4;
 const browser = await chromium.launch();
-const page = await browser.newPage({ viewport: { width: 1360, height: 1620 } });
+const page = await browser.newPage({
+  viewport: { width: columns * (width + 16) + 16, height: 1620 },
+});
 const manifest = [];
 for (const { level, day, session } of sessions) {
   const activities = session.steps.flatMap((s) => s.activities);
   const cards = activities.map((a) => {
-    const file = `small-phone-${a.id}.png`;
-    return `<section><h2>${a.id}</h2><img width="320" height="740" src="data:image/png;base64,${readFileSync(`${root}/after-fourwords/${file}`).toString("base64")}"></section>`;
+    const file = `${tv ? "tv" : "small-phone"}-${a.id}.png`;
+    return `<section><h2>${a.id}</h2><img width="${width}" height="${height}" src="data:image/png;base64,${readFileSync(`${root}/after-fourwords/${file}`).toString("base64")}"></section>`;
   });
   await page.setContent(
-    `<html><style>body{font:16px system-ui;background:#dedad1;margin:16px}main{display:grid;grid-template-columns:repeat(4,320px);gap:16px}h1{font-size:22px}h2{font-size:16px;margin:4px}section{background:white}</style><h1>Initial child screens · class ${level} · day ${day} · final layout</h1><main>${cards.join("")}</main></html>`,
+    `<html><style>body{font:16px system-ui;background:#dedad1;margin:16px}main{display:grid;grid-template-columns:repeat(${columns},${width}px);gap:16px}h1{font-size:22px}h2{font-size:16px;margin:4px}section{background:white}</style><h1>Initial child screens · class ${level} · day ${day} · final layout</h1><main>${cards.join("")}</main></html>`,
   );
-  await page.screenshot({ path: `${out}/phone-${level}-${day}.png`, fullPage: true });
+  await page.screenshot({ path: `${out}/${prefix}-${level}-${day}.png`, fullPage: true });
   manifest.push({
     level,
     day,
     activities: activities.map((a) => a.id),
-    sheet: `phone-${level}-${day}.png`,
+    sheet: `${prefix}-${level}-${day}.png`,
     reviewed: false,
   });
 }
-writeFileSync(`${out}/manifest.json`, JSON.stringify(manifest, null, 2) + "\n");
+writeFileSync(`${out}/${prefix}-manifest.json`, JSON.stringify(manifest, null, 2) + "\n");
 await browser.close();

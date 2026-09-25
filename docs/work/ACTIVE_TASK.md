@@ -38,7 +38,8 @@ images or detected horizontal overflow. Final checks: 397 unit tests, 39 E2E pas
 production tests intentionally skipped), standard build, 152 pgTAP/RLS assertions, both Docker
 builds/smokes and bundle sentinel scan. Four body illustration candidates remain outside the
 registry. All 302 initial phone viewports were manually inspected in 44 day sheets; full manual state
-inspection, lower scroll content and replacement integration are unfinished.
+inspection, lower scroll content and replacement integration are unfinished. Initial TV manual
+inspection is now complete (302 screens); 176 additional phone interaction viewports reviewed.
 
 ## Scope
 
@@ -138,7 +139,16 @@ Owner answered “Keep the review local.” No further push, PR or staging deplo
 1. Continue manual inspection beyond the 302 initial phone viewports (complete): review lower
    scroll content, phone/TV interaction states and other viewports. See
    `docs/review/media/astra-manual-phone-review.json` and ignored `manual-sheets/`.
-   Next visual fix: prevent story page counter wrapping beside long titles.
+   Story page counter now uses a nonshrinking single line; validated in rendered phone screenshot.
+   Scroll audit: 302 activities at phone + TV, 91 phone screens require scroll, all return controls
+   reachable at the bottom; no TV initial screen needs scroll. TV review sheets are generated
+   in `private/astra-visual-evidence/manual-sheets/tv-*.png`; all 44 sheets / 302 initial TV
+   screens now manually inspected. See `astra-manual-tv-review.json`. Interaction sheets
+   generated: 189 sheets / 1,002 noninitial states. Phone sheets 001–022 (176 states)
+   manually inspected; next `private/astra-visual-evidence/interaction-sheets/phone-023.png`.
+   Manifest: `astra-manual-interaction-review.json`. Captures are viewports, often auto-scrolled;
+   full-scroll interaction coverage and tablet/desktop manual inspection remain incomplete.
+   Local checkpoint before this fix: `30769a0`.
 2. Compare the four body candidates at 72/128/256/480 px and in actual phone/TV activities.
    All are local drafts under `docs/review/media/astra-drafts`, outside the media registry.
 3. Continue the 26-asset brief plan; no broad integration before audit is complete.

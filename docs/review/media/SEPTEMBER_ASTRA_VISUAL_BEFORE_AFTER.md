@@ -63,6 +63,17 @@ friendly connected portrait, but finely rendered texture must be checked against
 family. Belly: first draft overemphasized the face; the refinement uses a downward gaze and tighter framing to strengthen the tummy gesture. Final family consistency and independent review remain pending.
 All four remain unregistered drafts, with no approval impact.
 
+## Small-phone pagination and scroll reachability
+
+The story page counter now stays on one line beside long titles; story wording and paging are
+unchanged. [Rendered phone example](astra-comparison/phone-story-pagination.png).
+The follow-up scroll audit checked 302 initial activities on phone and TV: 91 phone screens
+need scrolling, none on TV; all parent-return controls were reachable at the bottom.
+[Scroll measurements](astra-scroll-evidence.json). Five longest bottom captures were manually
+inspected. This does not establish manual inspection of every later interaction or scroll frame.
+The 1,812 initial and 1,606 interaction capture sets predate this narrow pagination fix; the
+follow-up scroll captures and 39 passing E2E checks validate the correction.
+
 ## Evidence and limits
 
 - Both classes: 176 lessons, 302 activity initial states × six viewports = 1,812 per version.

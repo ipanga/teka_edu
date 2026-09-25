@@ -144,7 +144,7 @@ Acceptance check: pass baseline recognition; compare at 72/128/256/480 px. Inspe
 
 Problem: Whole fruit floats and three halves imply three mangoes rather than three pieces.
 
-Prompt: Apply the shared direction. Single whole mango as reference and exactly three credible cut portions on a plate; verify story quantities. No additional teaching cue, character, object or narrative event beyond the canonical activity. No text. Keep the subject fully visible and strongly recognizable without its label.
+Prompt: Apply the shared direction. Depict one mango only: either the whole fruit before sharing, or exactly three credible portions from that one fruit. Never show a second whole mango beside the portions. Keep the shared illustration neutral across story pages. No additional teaching cue, character, object or narrative event beyond the canonical activity. No text. Keep the subject fully visible and strongly recognizable without its label.
 
 Acceptance check: concern baseline recognition; compare at 72/128/256/480 px. Inspect actual uses: m3-lang-02-a3, m3-lang-11-a3, m3-lang-22-a3. Expected dependency set: m3-lang-02, m3-lang-11, m3-lang-22. Compute actual digest lapses before integration; do not stamp approvals.
 
@@ -152,7 +152,7 @@ Acceptance check: concern baseline recognition; compare at 72/128/256/480 px. In
 
 Problem: Goat repeats weak anatomy; bush obscures its muzzle and action.
 
-Prompt: Apply the shared direction. Recognizable goat leaning toward leaves beside a simple fence; clear head/neck gesture. No additional teaching cue, character, object or narrative event beyond the canonical activity. No text. Keep the subject fully visible and strongly recognizable without its label.
+Prompt: Apply the shared direction. Recognizable white goat with the canonical black patch on one ear, leaning toward leaves beside a simple fence; clear head/neck gesture. No additional teaching cue, character, object or narrative event beyond the canonical activity. No text. Keep the subject fully visible and strongly recognizable without its label.
 
 Acceptance check: concern baseline recognition; compare at 72/128/256/480 px. Inspect actual uses: m3-lang-05-a3, m3-lang-09-a2, m3-lang-13-a3. Expected dependency set: m3-lang-05, m3-lang-09, m3-lang-13. Compute actual digest lapses before integration; do not stamp approvals.
 
@@ -160,7 +160,7 @@ Acceptance check: concern baseline recognition; compare at 72/128/256/480 px. In
 
 Problem: Banana looks like a single leaf; onion is apple-like; no human story engagement.
 
-Prompt: Apply the shared direction. Clarify produce silhouettes and basket contents; do not add narrative events. No additional teaching cue, character, object or narrative event beyond the canonical activity. No text. Keep the subject fully visible and strongly recognizable without its label.
+Prompt: Apply the shared direction. Clarify produce silhouettes and basket contents. Preserve exactly five tomatoes and three onions if those story quantities are depicted; keep each countable and do not add narrative events. No additional teaching cue, character, object or narrative event beyond the canonical activity. No text. Keep the subject fully visible and strongly recognizable without its label.
 
 Acceptance check: concern baseline recognition; compare at 72/128/256/480 px. Inspect actual uses: m3-lang-06-a3, m3-lang-12-a3, m3-lang-19-a3. Expected dependency set: m3-lang-06, m3-lang-12, m3-lang-19. Compute actual digest lapses before integration; do not stamp approvals.
 

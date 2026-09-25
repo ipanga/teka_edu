@@ -803,7 +803,7 @@ function Narrative({ activity }: { activity: SessionActivity }) {
         <div className="mb-4 flex items-baseline justify-between gap-3">
           <h4 className="text-xl font-semibold">{text.title}</h4>
           {pages > 1 && (
-            <span className="text-sm text-stone-500">
+            <span className="shrink-0 whitespace-nowrap text-sm text-stone-500">
               {page + 1} / {pages}
             </span>
           )}
