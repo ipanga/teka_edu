@@ -266,9 +266,97 @@
         "m1-art-04-a1"
       ],
       "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-007.png",
+      "activities": [
+        "m1-lang-09-a1",
+        "m1-lang-09-a2",
+        "m1-lang-09-a3",
+        "m1-math-09-a1",
+        "m1-phys-09-a1",
+        "m1-art-09-a1",
+        "m1-lang-10-a1",
+        "m1-lang-10-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-008.png",
+      "activities": [
+        "m1-lang-10-a3",
+        "m1-math-10-a1",
+        "m1-phys-10-a1",
+        "m1-time-10-a1",
+        "m1-lang-11-a1",
+        "m1-lang-11-a2",
+        "m1-lang-11-a3",
+        "m1-math-11-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-007.png",
+      "activities": [
+        "m1-lang-05-a1",
+        "m1-lang-05-a2",
+        "m1-lang-05-a3",
+        "m1-math-05-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-008.png",
+      "activities": [
+        "m1-phys-05-a1",
+        "m1-art-05-a1",
+        "m1-lang-06-a1",
+        "m1-lang-06-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-007.png",
+      "activities": [
+        "m1-lang-05-a1",
+        "m1-lang-05-a2",
+        "m1-lang-05-a3",
+        "m1-math-05-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-008.png",
+      "activities": [
+        "m1-phys-05-a1",
+        "m1-art-05-a1",
+        "m1-lang-06-a1",
+        "m1-lang-06-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-007.png",
+      "activities": [
+        "m1-lang-05-a1",
+        "m1-lang-05-a2",
+        "m1-lang-05-a3",
+        "m1-math-05-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-008.png",
+      "activities": [
+        "m1-phys-05-a1",
+        "m1-art-05-a1",
+        "m1-lang-06-a1",
+        "m1-lang-06-a2"
+      ],
+      "reviewed": true
     }
   ],
-  "initialPanelsReviewed": 120,
+  "initialPanelsReviewed": 160,
   "scrollSheets": [
     {
       "sheet": "scroll/scroll-001.png",
@@ -644,6 +732,186 @@
         "m1-lang-22-a2 · retry"
       ],
       "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-042.png",
+      "states": [
+        "m1-lang-22-a2 · revealed",
+        "m1-lang-22-a2 · success",
+        "m1-lang-22-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-043.png",
+      "states": [
+        "m1-math-22-a1 · initial",
+        "m1-math-22-a1 · count-1",
+        "m1-math-22-a1 · count-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-044.png",
+      "states": [
+        "m1-math-22-a1 · count-3",
+        "m1-math-22-a1 · count-4",
+        "m1-math-22-a1 · count-5"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-045.png",
+      "states": [
+        "m1-math-22-a1 · count-6",
+        "m1-math-22-a1 · reset",
+        "m3-lang-01-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-046.png",
+      "states": [
+        "m3-lang-01-a3 · page-2",
+        "m3-lang-01-a3 · page-3",
+        "m3-lang-01-a3 · page-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-047.png",
+      "states": [
+        "m3-math-01-a1 · initial",
+        "m3-math-01-a1 · count-1",
+        "m3-math-01-a1 · count-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-048.png",
+      "states": [
+        "m3-math-01-a1 · count-3",
+        "m3-math-01-a1 · count-4",
+        "m3-math-01-a1 · count-5"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-049.png",
+      "states": [
+        "m3-math-01-a1 · reset",
+        "m3-lang-02-a2 · initial",
+        "m3-lang-02-a2 · game"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-050.png",
+      "states": [
+        "m3-lang-02-a2 · retry",
+        "m3-lang-02-a2 · success",
+        "m3-lang-02-a2 · next-target"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-051.png",
+      "states": [
+        "m3-lang-02-a3 · initial",
+        "m3-lang-02-a3 · page-2",
+        "m3-math-02-a2 · count-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-052.png",
+      "states": [
+        "m3-math-02-a2 · count-2",
+        "m3-math-02-a2 · count-3",
+        "m3-math-02-a2 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-053.png",
+      "states": [
+        "m3-math-02-a2 · count-5",
+        "m3-math-02-a2 · count-6",
+        "m3-lang-03-a2 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-054.png",
+      "states": [
+        "m3-lang-03-a2 · page-3",
+        "m3-lang-03-a2 · page-4",
+        "m3-lang-03-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-055.png",
+      "states": [
+        "m3-lang-03-a3 · page-3",
+        "m3-math-03-a1 · initial",
+        "m3-math-03-a1 · retry"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-056.png",
+      "states": [
+        "m3-math-03-a1 · revealed",
+        "m3-math-03-a1 · success",
+        "m3-math-03-a1 · next-target"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-057.png",
+      "states": [
+        "m3-math-03-a2 · initial",
+        "m3-math-03-a2 · sort-selected-1",
+        "m3-math-03-a2 · sort-placed-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-058.png",
+      "states": [
+        "m3-math-03-a2 · sort-selected-2",
+        "m3-math-03-a2 · sort-placed-2",
+        "m3-math-03-a2 · sort-selected-3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-059.png",
+      "states": [
+        "m3-math-03-a2 · sort-placed-3",
+        "m3-math-03-a2 · sort-selected-4",
+        "m3-math-03-a2 · sort-placed-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-060.png",
+      "states": [
+        "m3-math-03-a2 · sort-selected-5",
+        "m3-math-03-a2 · sort-placed-5",
+        "m3-math-03-a2 · sort-selected-6"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-061.png",
+      "states": [
+        "m3-math-03-a2 · sort-placed-6",
+        "m3-math-03-a2 · sort-selected-7",
+        "m3-math-03-a2 · sort-placed-7"
+      ],
+      "reviewed": true
     }
   ],
   "findings": [
@@ -669,7 +937,12 @@
     "Scroll sheets 032–041: Claude Max/Opus inspected all thirty states; Astra independently inspected the missing-article defect and representative count/sort states. Count and sort continuity, feedback and control reachability pass. m1-math-19 repeats the already-open triangle-group defect.",
     "m1-world-20-a1 renders bare media tags as French target labels, producing « Montre : main » and « C’est celui-ci : main. » This is a confirmed renderer/data-label DEFECT; the generic label strategy needs a systemic solution rather than a lesson-text patch.",
     "Claude's note that the counted object in m1-math-20-a1 was ambiguous was rejected after inspecting the source-resolution sheet: the spoon is recognizable. The weak action depiction in « Je marche, je m’arrête » remains part of the existing illustration-semantic finding.",
-    "Initial sheet 006 across all four viewports: all twenty panels inspected and controls fit. m1-phys-08-a1 repeats the approved ball-throw/generic-running-steps defect. Body-part pictures are clear; the hands-on spoon remains small but recognizable."
+    "Initial sheet 006 across all four viewports: all twenty panels inspected and controls fit. m1-phys-08-a1 repeats the approved ball-throw/generic-running-steps defect. Body-part pictures are clear; the hands-on spoon remains small but recognizable.",
+    "Initial sheets 007–008 across all four viewports: all forty panels inspected. Controls and content fit on phone, portrait and desktop. Tablet-landscape narrative content can continue below the initial viewport and remains covered by scroll evidence. m1-phys-09-a1 and m1-phys-10-a1 prove the generic movement-step mismatch is broader than ball activities; the repeated 1ère payload needs a bounded content audit.",
+    "Scroll sheets 042–061: Claude Max/Opus inspected all sixty states; Astra independently inspected all three claimed defects and their source paths. Count, story, choice and sort continuity remain intact, and controls are reachable in overlapping frames.",
+    "m3-lang-02-a2 renders sentence stems as empty picture cards because seven vocabulary entries are paired positionally with only five media assets. Its generic choice game also uses the hardcoded shape retry « Regarde bien la forme ». Both are renderer-level DEFECTS suitable for the systemic design pass.",
+    "m3-math-02-a2 asks for the same number as the adult's pile of four, but the child renderer presents six tappable dots and celebrates six without showing or comparing the model pile. This is a pedagogical-integrity DEFECT; approved data and success semantics remain unchanged pending a bounded decision.",
+    "Claude's notes about missing story illustrations, isolated French punctuation wraps and moving hover borders were kept as optional polish or capture artifacts. They do not justify implementation during evidence review."
   ],
   "classifiedFindings": [
     {
@@ -687,11 +960,11 @@
       "scope": "Approved activity data; preserve digest and require bounded pedagogical decision before editing."
     },
     {
-      "id": "m1-physical-ball-generic-running-steps",
+      "id": "m1-move-generic-running-steps",
       "classification": "DEFECT",
       "status": "new-pedagogical-integrity-finding",
-      "evidence": "m1-phys-06-a1 instructs « Lance la balle dans le seau » while its displayed move list is « courir / s’arrêter / recommencer ».",
-      "scope": "Approved activity payload; inspect all repeated ball activities and require bounded pedagogical reconfirmation before editing."
+      "evidence": "The 1ère movement payload repeats « courir / s’arrêter / recommencer » across days regardless of the approved instruction. Confirmed mismatches include throwing a ball into a bucket (m1-phys-06-a1 and m1-phys-08-a1) and walking to a marker then returning (m1-phys-09-a1 and m1-phys-10-a1).",
+      "scope": "Approved 1ère movement payloads; audit all instances and require bounded pedagogical reconfirmation before editing."
     },
     {
       "id": "choose-one-bare-french-noun-labels",
@@ -699,7 +972,28 @@
       "status": "candidate-for-systemic-design-pass",
       "evidence": "m1-world-20-a1 renders « Montre : main » and « C’est celui-ci : main. » because generic ChooseOne labels fall back to bare media tags.",
       "scope": "Renderer/media-label architecture; preserve approved lesson text and solve French display labels systematically."
+    },
+    {
+      "id": "vocabulary-sentence-stems-empty-picture-cards",
+      "classification": "DEFECT",
+      "status": "candidate-for-systemic-design-pass",
+      "evidence": "m3-lang-02-a2 includes « il sert à » and « elle sert à » after five pictured words; the word-card renderer gives both sentence stems empty image slots, making them look broken.",
+      "scope": "Word-card vocabulary/media pairing; preserve approved vocabulary and render non-picture sentence frames intentionally."
+    },
+    {
+      "id": "choose-one-shape-specific-retry-copy",
+      "classification": "DEFECT",
+      "status": "candidate-for-systemic-design-pass",
+      "evidence": "m3-lang-02-a2 is an object vocabulary choice game, but its retry says « Regarde bien la forme » because ChooseOne hardcodes shape-specific feedback.",
+      "scope": "Generic ChooseOne feedback architecture; use context-appropriate wording without changing approved lesson instructions."
+    },
+    {
+      "id": "m3-math-02-same-number-fixed-counter",
+      "classification": "DEFECT",
+      "status": "new-pedagogical-integrity-finding",
+      "evidence": "m3-math-02-a2 asks the child to make as many objects as the adult's four-object pile, but the child screen shows a fixed six-dot counter and celebrates six, with no model pile or comparison.",
+      "scope": "Approved counting activity and renderer semantics; requires a bounded pedagogical decision before changing content or success behavior."
     }
   ],
-  "next": "scroll/scroll-042.png; initial sheet 007 for each of the four viewports. No other generated sheet is marked manually reviewed."
+  "next": "scroll/scroll-062.png; initial sheet 009 for each of the four viewports. No other generated sheet is marked manually reviewed."
 }
