@@ -222,9 +222,53 @@
         "m1-lang-04-a2"
       ],
       "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-006.png",
+      "activities": [
+        "m1-phys-07-a1",
+        "m1-art-07-a1",
+        "m1-lang-08-a1",
+        "m1-lang-08-a2",
+        "m1-lang-08-a3",
+        "m1-math-08-a1",
+        "m1-phys-08-a1",
+        "m1-world-08-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-006.png",
+      "activities": [
+        "m1-lang-04-a3",
+        "m1-math-04-a1",
+        "m1-phys-04-a1",
+        "m1-art-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-006.png",
+      "activities": [
+        "m1-lang-04-a3",
+        "m1-math-04-a1",
+        "m1-phys-04-a1",
+        "m1-art-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-006.png",
+      "activities": [
+        "m1-lang-04-a3",
+        "m1-math-04-a1",
+        "m1-phys-04-a1",
+        "m1-art-04-a1"
+      ],
+      "reviewed": true
     }
   ],
-  "initialPanelsReviewed": 100,
+  "initialPanelsReviewed": 120,
   "scrollSheets": [
     {
       "sheet": "scroll/scroll-001.png",
@@ -509,6 +553,97 @@
         "m1-lang-17-a3 · initial"
       ],
       "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-032.png",
+      "states": [
+        "m1-math-17-a1 · initial",
+        "m1-math-17-a1 · count-1",
+        "m1-math-17-a1 · count-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-033.png",
+      "states": [
+        "m1-math-17-a1 · count-3",
+        "m1-math-17-a1 · count-4",
+        "m1-math-17-a1 · count-5"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-034.png",
+      "states": [
+        "m1-math-17-a1 · count-6",
+        "m1-math-17-a1 · reset",
+        "m1-lang-18-a2 · retry"
+      ],
+      "reviewed": true,
+      "note": "The reset state is retained historical evidence from before VIS-FIX-01."
+    },
+    {
+      "sheet": "scroll/scroll-035.png",
+      "states": [
+        "m1-lang-18-a2 · revealed",
+        "m1-lang-18-a2 · success",
+        "m1-lang-18-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-036.png",
+      "states": [
+        "m1-lang-19-a3 · initial",
+        "m1-math-19-a1 · initial",
+        "m1-math-19-a1 · sort-selected-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-037.png",
+      "states": [
+        "m1-math-19-a1 · sort-placed-1",
+        "m1-math-19-a1 · sort-selected-2",
+        "m1-math-19-a1 · sort-placed-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-038.png",
+      "states": [
+        "m1-math-19-a1 · sort-selected-3",
+        "m1-lang-20-a3 · initial",
+        "m1-math-20-a1 · count-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-039.png",
+      "states": [
+        "m1-math-20-a1 · count-2",
+        "m1-math-20-a1 · count-3",
+        "m1-math-20-a1 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-040.png",
+      "states": [
+        "m1-math-20-a1 · count-5",
+        "m1-math-20-a1 · count-6",
+        "m1-world-20-a1 · revealed"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-041.png",
+      "states": [
+        "m1-lang-21-a2 · initial",
+        "m1-lang-21-a3 · initial",
+        "m1-lang-22-a2 · retry"
+      ],
+      "reviewed": true
     }
   ],
   "findings": [
@@ -530,7 +665,11 @@
     "Scroll sheets 022–031: Claude Max/Opus inspected all thirty states; Astra independently inspected the reported triangle issue, representative sort placement, final counting and story navigation. No new clipping, overlap or reachability defect was found.",
     "m1-math-16-a1 contains a triangle but only « les ronds » and « les carrés » groups. This is a genuine interaction/pedagogical correctness issue, but it is already recorded as open in astra-manual-interaction-review.json. Approved content is unchanged pending a bounded pedagogical decision.",
     "Placed group-and-match tokens are approximately 20 px wide on a 320 px phone and low prominence inside large drop zones. This is accepted as a HIGH_VALUE_IMPROVEMENT candidate for the later systemic design pass, not a blocker for evidence review.",
-    "Initial sheet 005 across all four viewports: all twenty panels inspected and all controls fit. The phone m1-phys-06-a1 screen says « Lance la balle dans le seau » but displays generic « courir / s’arrêter / recommencer » steps. This is a content/display semantic defect and must not be silently corrected without reconfirmation."
+    "Initial sheet 005 across all four viewports: all twenty panels inspected and all controls fit. The phone m1-phys-06-a1 screen says « Lance la balle dans le seau » but displays generic « courir / s’arrêter / recommencer » steps. This is a content/display semantic defect and must not be silently corrected without reconfirmation.",
+    "Scroll sheets 032–041: Claude Max/Opus inspected all thirty states; Astra independently inspected the missing-article defect and representative count/sort states. Count and sort continuity, feedback and control reachability pass. m1-math-19 repeats the already-open triangle-group defect.",
+    "m1-world-20-a1 renders bare media tags as French target labels, producing « Montre : main » and « C’est celui-ci : main. » This is a confirmed renderer/data-label DEFECT; the generic label strategy needs a systemic solution rather than a lesson-text patch.",
+    "Claude's note that the counted object in m1-math-20-a1 was ambiguous was rejected after inspecting the source-resolution sheet: the spoon is recognizable. The weak action depiction in « Je marche, je m’arrête » remains part of the existing illustration-semantic finding.",
+    "Initial sheet 006 across all four viewports: all twenty panels inspected and controls fit. m1-phys-08-a1 repeats the approved ball-throw/generic-running-steps defect. Body-part pictures are clear; the hands-on spoon remains small but recognizable."
   ],
   "classifiedFindings": [
     {
@@ -553,7 +692,14 @@
       "status": "new-pedagogical-integrity-finding",
       "evidence": "m1-phys-06-a1 instructs « Lance la balle dans le seau » while its displayed move list is « courir / s’arrêter / recommencer ».",
       "scope": "Approved activity payload; inspect all repeated ball activities and require bounded pedagogical reconfirmation before editing."
+    },
+    {
+      "id": "choose-one-bare-french-noun-labels",
+      "classification": "DEFECT",
+      "status": "candidate-for-systemic-design-pass",
+      "evidence": "m1-world-20-a1 renders « Montre : main » and « C’est celui-ci : main. » because generic ChooseOne labels fall back to bare media tags.",
+      "scope": "Renderer/media-label architecture; preserve approved lesson text and solve French display labels systematically."
     }
   ],
-  "next": "scroll/scroll-032.png; initial sheet 006 for each of the four viewports. No other generated sheet is marked manually reviewed."
+  "next": "scroll/scroll-042.png; initial sheet 007 for each of the four viewports. No other generated sheet is marked manually reviewed."
 }

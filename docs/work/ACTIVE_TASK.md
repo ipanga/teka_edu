@@ -11,17 +11,17 @@ September Visual Experience Review — GPT Astra
 - **Task status:** IN_PROGRESS. September is neither implementation-complete nor ready for independent reconfirmation.
 - **Supervisor:** Astra; **worker:** Claude Code CLI 2.1.282, installed at `/Users/Apple/.local/bin/claude`; ready to launch with Max authentication.
 - **Current branch:** `codex/september-astra-visual-review`; **current implementation commit:** `cf924e5` (VIS-QA-01 evidence tooling plus the accepted VIS-FIX-01 count-reset fix); subsequent commits are review checkpoints only.
-- **Base commit / refreshed develop:** `a0b743b`; **refreshed main:** `28dcb0a`. Fetch completed on 2026-09-25. The next checkpoint commit will leave eleven local commits ahead of the feature remote; no open PRs returned by GitHub.
+- **Base commit / refreshed develop:** `a0b743b`; **refreshed main:** `28dcb0a`. Fetch completed on 2026-09-25. The next checkpoint commit will leave twelve local commits ahead of the feature remote; no open PRs returned by GitHub.
 - **Completed:** existing audit inventory, initial phone/TV review, all 1,002 noninitial viewport reviews, UI fixes, 1,606-state scroll capture. Preserve existing evidence; do not restart.
-- **In progress / pending:** manual review of 1,042 scroll images (scroll sheets 001–031 inspected), four other viewport sets (sheets 001–005 inspected), parent layouts, the whole-product UX audit, justified design fixes, illustration consistency and eventual independent review packages.
+- **In progress / pending:** manual review of 1,042 scroll images (scroll sheets 001–041 inspected), four other viewport sets (sheets 001–006 inspected), parent layouts, the whole-product UX audit, justified design fixes, illustration consistency and eventual independent review packages.
 - **Authentication verified:** normal macOS credential-store access with `env -u ANTHROPIC_API_KEY claude auth status` confirms `claude.ai`, subscription `max`. The earlier sandbox-only check could not see this login. Always exclude the API-key override for worker invocations.
 - **Owner decision required:** none at this checkpoint. The owner granted standing authorization for the remaining September visual/UX audit evidence and narrowly relevant assets to be sent through Claude Max. Secrets, credentials, environment files, user data and unrelated repository content remain excluded.
 - **Tests completed:** VIS-FIX-01 passes a fresh Webpack production build, project typecheck, full unit suite (399/399), changed-file lint/format and its focused browser test on the current development runtime. The browser test independently fails against the old `4a062ee` production build because the instruction remains offscreen, then passes against the fix. The previous 40-test browser suite, container and bundle checks remain stale for this runtime change; the standard Turbopack build has a local EPERM.
 - **CI state:** no CI for the unpublished local commits. Latest fetched staging deployment succeeded at `a0b743b`; production deployment succeeded at `28dcb0a`. Historical validation table below must not be read as fresh CI for this branch.
 - **Staging state:** existing deployment unchanged; this review is local only under the owner's earlier explicit instruction.
 - **Production state:** existing public service at `28dcb0a`, unchanged. No release authorization.
-- **Exact next command:** isolate and delegate `scroll/scroll-032.png` through `scroll/scroll-041.png` to Claude Max/Opus under the standing authorization; independently verify every claimed defect and representative clean sheets. Inspect initial sheet 006 for each viewport locally.
-- **Exact resume point:** scroll sheets 001–031 and initial sheets 001–005 are accepted as reviewed evidence. Resume at `private/astra-visual-evidence/remaining-review/scroll/scroll-032.png`, then initial sheet 006 for each viewport. No push, PR, deployment or approval stamping.
+- **Exact next command:** isolate and delegate `scroll/scroll-042.png` through `scroll/scroll-051.png` to Claude Max/Opus under the standing authorization; independently verify every claimed defect and representative clean sheets. Inspect initial sheet 007 for each viewport locally.
+- **Exact resume point:** scroll sheets 001–041 and initial sheets 001–006 are accepted as reviewed evidence. Resume at `private/astra-visual-evidence/remaining-review/scroll/scroll-042.png`, then initial sheet 007 for each viewport. No push, PR, deployment or approval stamping.
 
 | ID         | Task                                               | Worker                                 | State                          | Review                      | CI         | Staging  |
 | ---------- | -------------------------------------------------- | -------------------------------------- | ------------------------------ | --------------------------- | ---------- | -------- |
@@ -31,13 +31,13 @@ September Visual Experience Review — GPT Astra
 
 ## VIS-QA-01 checkpoint — 2026-09-25 (Claude Code worker)
 
-- **State:** evidence prepared; visual review IN_PROGRESS. Astra accepted scroll sheets 001–031 and sheets 001–005 for all four other viewports as reviewed; the durable review manifest is `docs/review/media/astra-supervisor-remaining-review.json`.
+- **State:** evidence prepared; visual review IN_PROGRESS. Astra accepted scroll sheets 001–041 and sheets 001–006 for all four other viewports as reviewed; the durable review manifest is `docs/review/media/astra-supervisor-remaining-review.json`.
 - **Generated (supervisor ran the generator, because the worker session could not execute `node`):**
   - 165 scroll sheets and 266 other-viewport sheets; all 431 files exist.
   - 1,208 initial panels.
   - The six previously reviewed scroll frames are preserved as reviewed; every other frame is unreviewed.
-  - Supervisor accepted `scroll/scroll-001.png` through `scroll/scroll-031.png` and the first five
-    large-phone, tablet-portrait, tablet-landscape and desktop sheets. That is 51 sheets / 100 initial panels,
+  - Supervisor accepted `scroll/scroll-001.png` through `scroll/scroll-041.png` and the first six
+    large-phone, tablet-portrait, tablet-landscape and desktop sheets. That is 65 sheets / 120 initial panels,
     not acceptance of the set. Scroll 007–016 had a bounded Claude Max/Opus first pass; Astra independently
     checked its only claimed defect and representative clean states. The claim was a stationary-pointer hover
     artifact in the scroll capture, so no implementation change was justified.
@@ -84,8 +84,11 @@ September Visual Experience Review — GPT Astra
   - Newly recorded content/display defect: `m1-phys-06-a1` says to throw a ball into a bucket but displays
     generic running steps. Inspect repeated instances; any correction requires bounded pedagogical
     reconfirmation because the approved payload would change.
+  - Confirmed renderer/data-label defect: `m1-world-20-a1` renders bare nouns as « Montre : main » and
+    « C’est celui-ci : main. ». Solve generic French display labels in the systemic design pass without
+    altering approved lesson instructions.
 - **Next review entry:** continue at
-  `private/astra-visual-evidence/remaining-review/scroll/scroll-032.png`, then sheet 006 for each
+  `private/astra-visual-evidence/remaining-review/scroll/scroll-042.png`, then sheet 007 for each
   other viewport. Record each judgement in `astra-supervisor-remaining-review.json`. Never edit
   `reviewed` in the generated manifests by hand.
 
