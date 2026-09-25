@@ -784,8 +784,8 @@ Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, a
 
 - `scripts/astra-remaining-sheets.mjs` generated 165 full-scroll sheets and 266 large-phone, tablet and desktop sheets, covering all 1,208 initial panels. They are stored, Git-ignored, under `private/astra-visual-evidence/remaining-review/`.
 - The six previously reviewed scroll frames are preserved; everything else is unreviewed.
-- Astra's visual review is in progress: scroll sheets 001–121 and initial sheets 001–016 for all four
-  viewport sets have been accepted as reviewed (185 sheets / 320 initial panels). Claude Max/Opus inspected
+- Astra's visual review is in progress: scroll sheets 001–141 and initial sheets 001–018 for all four
+  viewport sets have been accepted as reviewed (213 sheets / 360 initial panels). Claude Max/Opus inspected
   scroll sheets 007–016 under the owner's narrow evidence authorization. Astra independently checked its
   only claimed defect and representative clean states; the moving grey outline was a stationary-pointer
   hover artifact in the capture, so no product correction was justified. Existing pedagogy findings and
@@ -794,8 +794,8 @@ Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, a
   1ère movement activities display unrelated generic running steps, and confirmed that generic media tags
   produce ungrammatical French labels such as « Montre : main ». The latest batch also found sentence stems
   rendered as empty picture cards, shape-specific retry copy in an object game, and a same-number lesson
-  rendered as a fixed six-dot counter. The same generic counter also erases required line, two-set and circle structures, while fixed-label shape sorting accepts mismatches and praises completion. The latest review also found missing matching models, real-world observation converted into graded choice, and a 10–20 lesson rendered as a very tall 1–20 counter. The next batch also confirmed that later hidden-part, two-collection, model-pile and number-strip tasks collapse into the generic dot grid, and found « la monnaie » rendered as an empty word card because its fifth image is absent. The rain/counting-rhyme and recalled-then-new-rhyme screens match their approved guides. No approved content or digest was changed. Next is scroll sheet 122
-  and initial sheet 017 for each viewport.
+  rendered as a fixed six-dot counter. The same generic counter also erases required line, two-set and circle structures, while fixed-label shape sorting accepts mismatches and praises completion. The latest review also found missing matching models, real-world observation converted into graded choice, and a 10–20 lesson rendered as a very tall 1–20 counter. The next batch also confirmed that later hidden-part, two-collection, model-pile and number-strip tasks collapse into the generic dot grid, and found « la monnaie » rendered as an empty word card because its fifth image is absent. The rain/counting-rhyme and recalled-then-new-rhyme screens match their approved guides. The following batch found a square-and-triangle house task rendered as four isolated shapes, and extended the fixed-choice conversion defect to animal comparison and real-object face matching. The sleeping Malo image and one-picture-per-story model match explicit approved illustration decisions. No approved content or digest was changed. Next is scroll sheet 142
+  and initial sheet 019 for each viewport.
 
 **VIS-FIX-01:**
 
