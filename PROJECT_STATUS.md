@@ -765,8 +765,8 @@ Full state/scroll QA and illustration integration remain in progress. No publica
 All 501 captured noninitial phone states are now manually inspected; TV sheets 001–028 add
 112 inspected states. The durable manifest is
 `docs/review/media/astra-manual-interaction-review.json`. These are captured viewports, not
-a full-scroll or physical-distance certification. Long phone count resets retain the bottom
-scroll position. TV feedback and placed sorting thumbnails remain small and faded.
+a full-scroll or physical-distance certification. Long phone count resets retained the bottom
+scroll position (fixed locally later by VIS-FIX-01). TV feedback and placed sorting thumbnails remain small and faded.
 Generic counting/sorting correctness findings remain isolated for independent review; no
 approved content or media changed. Review remains local; no push, PR or deployment.
 
@@ -777,3 +777,21 @@ Manual interaction review now covers all 501 phone and 501 TV noninitial viewpor
 Standard Turbopack build still fails with local process port-binding EPERM. Webpack production build now passes after extracting the existing health-route helper into `lib/health.ts` without changing endpoint behavior; fresh typecheck, health tests and changed-file lint pass. Standalone server started locally on port 3003. After the approval-service reset, normal approved retries succeeded: 40 production-build E2E pass (9 skipped). Full-scroll capture covers 1,606 states and 1,042 additional images with zero horizontal overflow, broken/missing images or unreachable returns. Six sample scroll images inspected; full manual scroll review remains pending. Container/bundle checks remain stale. No lesson/media registry/history changes, approval stamps, push, PR or deployment. Review remains incomplete; next: manual scroll and other viewport review. See `docs/work/ACTIVE_TASK.md`.
 
 Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, against the Webpack development preview (`/tmp/teka-astra-five-choice-all-e2e.log`). The later production-build E2E also passes; container validation remains stale.
+
+### 2026-09-25 — VIS-QA-01 evidence and VIS-FIX-01 count reset (local)
+
+**VIS-QA-01:**
+
+- `scripts/astra-remaining-sheets.mjs` generated 165 full-scroll sheets and 266 large-phone, tablet and desktop sheets, covering all 1,208 initial panels. They are stored, Git-ignored, under `private/astra-visual-evidence/remaining-review/`.
+- The six previously reviewed scroll frames are preserved; everything else is unreviewed.
+- Astra's visual review of these sheets is pending.
+
+**VIS-FIX-01:**
+
+- In the child view, « Recommencer » in a counting activity resets the count as before. It now also brings the dialog back to the instruction and focuses it, through a narrow `ChildSurfaceContext` callback. The parent guide is unchanged.
+- Fresh checks: Webpack production build, typecheck, full unit suite 399/399, and changed-file lint
+  and format pass. The focused phone E2E fails against the old build at the instruction visibility
+  assertion and passes against the current development runtime, including unchanged parent scroll.
+- Astra inspected the post-reset 320×740 screen and accepted the bounded implementation locally.
+- The earlier full browser/container/bundle results remain stale for this runtime change.
+- No content, media, approval, push, PR or deployment. See `docs/work/ACTIVE_TASK.md`.

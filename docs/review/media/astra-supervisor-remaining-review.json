@@ -1,0 +1,71 @@
+{
+  "source": "private/astra-visual-evidence/remaining-review",
+  "reviewer": "Astra supervisor",
+  "scope": "Visual inspection of captured pixels only; no independent pedagogical acceptance or physical distance test. Sources predate later UI fixes as labeled by their manifest.",
+  "initialSheets": [
+    {
+      "sheet": "large-phone/large-phone-001.png",
+      "activities": [
+        "m1-lang-01-a1",
+        "m1-lang-01-a2",
+        "m1-lang-01-a3",
+        "m1-math-01-a1",
+        "m1-phys-01-a1",
+        "m1-time-01-a1",
+        "m1-lang-02-a1",
+        "m1-lang-02-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-001.png",
+      "activities": [
+        "m1-lang-01-a1",
+        "m1-lang-01-a2",
+        "m1-lang-01-a3",
+        "m1-math-01-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-001.png",
+      "activities": [
+        "m1-lang-01-a1",
+        "m1-lang-01-a2",
+        "m1-lang-01-a3",
+        "m1-math-01-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-001.png",
+      "activities": [
+        "m1-lang-01-a1",
+        "m1-lang-01-a2",
+        "m1-lang-01-a3",
+        "m1-math-01-a1"
+      ],
+      "reviewed": true
+    }
+  ],
+  "initialPanelsReviewed": 20,
+  "scrollSheets": [
+    {
+      "sheet": "scroll/scroll-001.png",
+      "states": [
+        "m1-lang-01-a3 · initial",
+        "m1-math-01-a1 · initial",
+        "m1-math-01-a1 · count-1"
+      ],
+      "reviewed": true
+    }
+  ],
+  "findings": [
+    "Large-phone first eight panels: pictures and controls are clear and fit captured viewports; movement supporting text remains smaller than the child instruction.",
+    "Tablet portrait first four panels: legible pictures and instructions; six counting tiles wrap five plus one.",
+    "Tablet landscape first four panels: narrative opening image pushes rhyme text and return control below the captured viewport; needs separate full-scroll review. Other three panels fit.",
+    "Desktop first four panels: story text beside picture and return controls fit; two-word preview is labeled possibly stale.",
+    "Scroll sheet 001: three states and their paired top/bottom captures inspected, with readable text, image and reachable return control; no overlap seen. Dot-grid versus finger instruction remains an existing pedagogical finding."
+  ],
+  "next": "scroll/scroll-002.png; initial sheet 002 for each of the four viewports. No other generated sheet is marked manually reviewed."
+}

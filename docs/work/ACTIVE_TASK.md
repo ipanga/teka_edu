@@ -4,6 +4,107 @@
 
 September Visual Experience Review — GPT Astra
 
+## Supervisor handoff — 2026-09-25
+
+- **Task status:** IN_PROGRESS. September is neither implementation-complete nor ready for independent reconfirmation.
+- **Supervisor:** Astra; **worker:** Claude Code CLI 2.1.282, installed at `/Users/Apple/.local/bin/claude`; ready to launch with Max authentication.
+- **Current branch:** `codex/september-astra-visual-review`; **current implementation commit:** `4a062ee`, plus uncommitted VIS-QA-01 evidence tooling and the uncommitted VIS-FIX-01 count-reset fix (below).
+- **Base commit / refreshed develop:** `a0b743b`; **refreshed main:** `28dcb0a`. Fetch completed on 2026-09-25. Five local commits ahead of the feature remote; no open PRs returned by GitHub.
+- **Completed:** existing audit inventory, initial phone/TV review, all 1,002 noninitial viewport reviews, UI fixes, 1,606-state scroll capture. Preserve existing evidence; do not restart.
+- **In progress / pending:** manual review of 1,042 scroll images (six inspected), four other viewport sets, parent layouts, illustration refinements and eventual independent review packages.
+- **Authentication verified:** normal macOS credential-store access with `env -u ANTHROPIC_API_KEY claude auth status` confirms `claude.ai`, subscription `max`. The earlier sandbox-only check could not see this login. Always exclude the API-key override for worker invocations.
+- **Owner decision required:** none. Owner confirmed Claude Max; authentication verified. No API-billed worker usage authorized.
+- **Tests completed:** VIS-FIX-01 passes a fresh Webpack production build, project typecheck, full unit suite (399/399), changed-file lint/format and its focused browser test on the current development runtime. The browser test independently fails against the old `4a062ee` production build because the instruction remains offscreen, then passes against the fix. The previous 40-test browser suite, container and bundle checks remain stale for this runtime change; the standard Turbopack build has a local EPERM.
+- **CI state:** no CI for the five unpublished local commits. Latest fetched staging deployment succeeded at `a0b743b`; production deployment succeeded at `28dcb0a`. Historical validation table below must not be read as fresh CI for this branch.
+- **Staging state:** existing deployment unchanged; this review is local only under the owner's earlier explicit instruction.
+- **Production state:** existing public service at `28dcb0a`, unchanged. No release authorization.
+- **Exact next command:** delegate the bounded `scroll-002.png` through `scroll-011.png` audit to Claude Code Max with `env -u ANTHROPIC_API_KEY claude --model opus ...`; Codex then independently checks each reported defect and representative clean sheet before accepting the batch.
+- **Exact resume point:** VIS-FIX-01 is supervisor-accepted locally. Continue VIS-QA-01 at `private/astra-visual-evidence/remaining-review/scroll/scroll-002.png` and initial sheet 002 for each other viewport. One worker owns this worktree. No push, PR, deployment or approval stamping.
+
+| ID         | Task                                               | Worker                                 | State                          | Review                      | CI         | Staging  |
+| ---------- | -------------------------------------------------- | -------------------------------------- | ------------------------------ | --------------------------- | ---------- | -------- |
+| VIS-QA-01  | Organize remaining existing screenshots for review | Claude Code                            | Evidence prepared (431 sheets) | Pending Astra visual review | Local only | Withheld |
+| VIS-FIX-01 | Child count reset returns to the instruction       | Claude Code                            | Implemented and verified       | Astra pass                  | Local only | Withheld |
+| VIS-ART    | Remaining justified asset refinements              | Claude / specialized visual generation | Pending audit completion       | Independent review required | Not run    | Withheld |
+
+## VIS-QA-01 checkpoint — 2026-09-25 (Claude Code worker)
+
+- **State:** evidence prepared; visual review IN_PROGRESS. Astra reviewed scroll sheet 001 and sheet 001 for all four other viewports; the durable review manifest is `docs/review/media/astra-supervisor-remaining-review.json`.
+- **Generated (supervisor ran the generator, because the worker session could not execute `node`):**
+  - 165 scroll sheets and 266 other-viewport sheets; all 431 files exist.
+  - 1,208 initial panels.
+  - The six previously reviewed scroll frames are preserved as reviewed; every other frame is unreviewed.
+  - Supervisor visually reviewed `scroll/scroll-001.png` and the first large-phone, tablet-portrait,
+    tablet-landscape and desktop sheets. That is five sheets / 20 initial panels, not acceptance of the set.
+- **Generator:** `scripts/astra-remaining-sheets.mjs` (Prettier and ESLint pass). It reads existing captures only
+  and never opens the app. It exits non-zero on a missing frame/PNG, a duplicate frame, or a
+  previously reviewed frame that is absent from the capture. Existing sheets are skipped, so it can resume.
+  Output goes to ignored `private/astra-visual-evidence/remaining-review/`:
+  - `scroll-manifest.json`: every scroll frame, grouped by state (activity, state, source state
+    screenshot, clientHeight/scrollHeight, frame position k/n, scrollTop). `reviewed: true` only for
+    the six frames in `astra-interaction-scroll-evidence.json`; every other frame is `false`.
+  - `scroll/scroll-NNN.png`: one row per state, 320 px native frames, labelled as separate
+    overlapping scroll positions of one screen. Only states with an unreviewed frame are included,
+    and frames already reviewed are outlined.
+  - `initial-manifest.json` + `{large-phone,tablet-portrait,tablet-landscape,desktop}/…-NNN.png`:
+    unscaled source-size panels. The sizes are read from the PNG headers. All panels are unreviewed, and each
+    carries `possiblyStale` reasons.
+- **Counts:**
+  - 1,042 phone scroll frames in 497 states; 0 TV scroll frames.
+  - 1,208 initial panels (302 each for large-phone, tablet-portrait, tablet-landscape and desktop).
+  - Sheets: 38 large-phone (8 per sheet), plus 76 each for the other three (4 per sheet), and 165 scroll sheets.
+- **Source staleness:** `after-fourwords` was last written 2026-09-25 05:55, from an uncommitted
+  tree after `0e9e4e5`. Its exact revision was not recorded. It predates runtime commits `30769a0`, `7e74ecb` and `4a062ee`:
+  - the story counter is now kept on a single line, at all sizes;
+  - at ≥1280 px (desktop only among the four sets), the word grid is count-aware and five choices sit in one row.
+  - The scroll frames come from the build recorded in the scroll evidence (the `4a062ee` runtime).
+    After VIS-FIX-01, the phone `reset` states of counting activities are stale: they show the old
+    bottom-of-screen position (for example, `phone-m3-math-10-a1-reset-scroll-702.png`). No other captured state is affected.
+- **Parent-mode evidence gaps (no coverage invented):**
+  - No parent-view screenshot exists in any capture set.
+  - `astra-render-audit.mjs` recorded only the parent DOM, and only for each activity's initial state: horizontal overflow and image widths/broken flags, at six viewports.
+  - The E2E suite checks parent overflow only at 390×844 and 1280×900, for day 6 of 3ème.
+  - Not captured at all:
+    - parent guide screens;
+    - the « Pour vous » folded zone, open or closed;
+    - the calendar and home at the six sizes;
+    - the pause point and session end;
+    - parent layouts after returning from child view.
+- **Next review entry:** continue at
+  `private/astra-visual-evidence/remaining-review/scroll/scroll-002.png`, then sheet 002 for each
+  other viewport. Record each judgement in `astra-supervisor-remaining-review.json`. Never edit
+  `reviewed` in the generated manifests by hand.
+
+## VIS-FIX-01 — child count reset scroll (2026-09-25, Claude Code worker)
+
+- **Defect:** on a phone, pressing « Recommencer » in a long count (for example, `m3-math-10-a1`, 20 objects)
+  left the child dialog at `scrollTop` 702 of 702. The instruction and the start of the grid were
+  off screen, and focus stayed on the button that had just been removed.
+- **Fix:**
+  - `ActivityRenderer.tsx` gains `ChildSurfaceContext`, a callback that is null outside the child view.
+  - `CountTogether` resets the count exactly as before, then calls the callback.
+  - In `SessionRunner.tsx`, `ChildScreen` provides the callback through explicit refs: it sets the dialog
+    scroller to `scrollTop = 0` (an instant jump, so reduced motion is respected) and focuses the instruction
+    (`tabIndex={-1}`, `preventScroll`).
+  - The parent guide has no provider, so its page and focus behave as before.
+  - Counting semantics, wording, tiles and other activity types are unchanged.
+- **Tests:**
+  - Unit test: `counting again` in `tests/unit/activity-renderer.test.tsx`. It failed before the fix
+    (the contract was missing) and passes after; the file is 15/15.
+  - Browser regression: `counting again on a phone…` in `tests/e2e/september-visual-layout.spec.ts`.
+    It covers a 320×740 phone, 12 counted, Recommencer pressed from the lower screen, the zero state, the
+    instruction and Objet 1 in view, the instruction focused and the button gone. It also checks that the
+    parent page's `scrollY` is unchanged.
+  - The worker could not run the browser test because its non-interactive permission surface denied
+    browser launch. The supervisor ran it: it fails on the old build at the instruction-in-viewport
+    assertion and passes on the current development runtime, including the parent scroll invariant.
+- **Supervisor review:** accepted. The callback is limited to the child surface, uses explicit refs,
+  restores focus to the instruction after the reset button unmounts, and does not alter approved text
+  or counting semantics. The post-reset 320×740 screenshot was visually inspected.
+- **Fresh validation:** Webpack production build PASS, typecheck PASS, full unit suite 399/399,
+  changed-file lint/format PASS, focused E2E old-build FAIL/current-runtime PASS.
+- **Approvals:** no content, media or approval changes. Content digests are unaffected.
+
 ## Objective
 
 Independently audit all September child-facing activities in 1ère and 3ème maternelle;
@@ -91,7 +192,7 @@ UI follow-up implemented: five-choice TV grid uses one row on wide child screens
 
 Standard Turbopack build remains blocked by process port-binding EPERM. The Webpack production build now PASSES: moved the existing health helper out of the route module into `lib/health.ts`, preserving behavior and tests. Fresh typecheck, three health tests and changed-file ESLint pass. Log: `/tmp/teka-astra-health-webpack.log`. Standalone build started locally on port 3003. Container/bundle verification remains stale for these changes; the fresh production browser suite below supersedes the earlier development-only results.
 
-Full-scroll interaction capture is now complete on the local production build: 88 session files, 1,606 states, 497 states requiring scroll (all phone), 1,042 extra overlapping scroll images; zero horizontal overflow, broken images, missing files or unreachable return controls. See `docs/review/media/astra-interaction-scroll-evidence.json`. Only six sample scroll images manually inspected: complete scroll visual review remains pending. Resetting a long count keeps the phone at the bottom, leaving the instruction offscreen; confirmed usability finding, not fixed.
+Full-scroll interaction capture is now complete on the local production build: 88 session files, 1,606 states, 497 states requiring scroll (all phone), 1,042 extra overlapping scroll images; zero horizontal overflow, broken images, missing files or unreachable return controls. See `docs/review/media/astra-interaction-scroll-evidence.json`. Only six sample scroll images manually inspected: complete scroll visual review remains pending. Resetting a long count kept the phone at the bottom, leaving the instruction offscreen; fixed locally by VIS-FIX-01 (browser check pending).
 
 Fresh verification: Webpack production build, typecheck, full format/lint, 397 unit tests, 40 production-build E2E (9 production-only skipped), content validation (31 JSON) and approval dry-run (0 lapses) pass. Standard Turbopack build remains affected by local EPERM; container and sentinel-bundle checks remain stale. Approval service briefly failed due to usage limits; normal approved retries succeeded after its stated reset time. No ongoing approval-service blocker.
 

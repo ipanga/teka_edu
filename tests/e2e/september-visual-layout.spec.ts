@@ -91,6 +91,47 @@ test("two TV choices fill the stage and the story keeps its text beside its pict
   await expect(page.getByRole("dialog").getByRole("img")).toHaveCount(1);
 });
 
+test("counting again on a phone brings the child's instruction back into view", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 320, height: 740 });
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/maternelle/3/seance/10");
+  await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
+  // m3-math-10-a1, the fourth activity: twenty objects, far longer than a phone screen.
+  for (let i = 0; i < 3; i++) {
+    await page.getByRole("button", { name: /^(Suivant|Terminé)$/ }).click();
+  }
+  await page.getByRole("button", { name: "Montrer à l’enfant", exact: true }).click();
+  const dialog = page.getByRole("dialog");
+  const instruction = dialog.getByText(/^« .* »$/);
+  for (const n of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) {
+    await dialog.getByRole("button", { name: `Objet ${n}`, exact: true }).click();
+  }
+  const reset = dialog.getByRole("button", { name: "Recommencer", exact: true });
+  await reset.scrollIntoViewIfNeeded();
+  await expect(instruction).not.toBeInViewport();
+  await reset.click();
+  await expect(dialog.getByRole("status")).toHaveText("…");
+  await expect(reset).toHaveCount(0);
+  await expect(instruction).toBeInViewport();
+  await expect(dialog.getByRole("button", { name: "Objet 1", exact: true })).toBeInViewport();
+  await expect(instruction).toBeFocused();
+
+  // In the parent's guide the page keeps its place: only the count goes back to zero.
+  await dialog.getByRole("button", { name: "Revenir au guide du parent", exact: true }).click();
+  for (const n of [1, 2, 3]) {
+    await page.getByRole("button", { name: `Objet ${n}`, exact: true }).click();
+  }
+  const parentReset = page.getByRole("button", { name: "Recommencer", exact: true });
+  await parentReset.scrollIntoViewIfNeeded();
+  const before = await page.evaluate(() => window.scrollY);
+  expect(before).toBeGreaterThan(0);
+  await parentReset.click();
+  await expect(page.getByRole("status")).toHaveText("…");
+  expect(await page.evaluate(() => window.scrollY)).toBe(before);
+});
+
 test("five TV word choices keep feedback and navigation on screen", async ({ page }) => {
   await page.setViewportSize({ width: 1920, height: 1080 });
   await page.emulateMedia({ reducedMotion: "reduce" });

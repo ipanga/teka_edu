@@ -1,7 +1,11 @@
 // @vitest-environment jsdom
 import { fireEvent, render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
-import { ActivityRenderer, ChildViewContext } from "@/components/session/ActivityRenderer";
+import { describe, expect, it, vi } from "vitest";
+import {
+  ActivityRenderer,
+  ChildSurfaceContext,
+  ChildViewContext,
+} from "@/components/session/ActivityRenderer";
 import type { SessionActivity, SessionAudio } from "@/lib/programme/session-view";
 
 /**
@@ -254,5 +258,41 @@ describe("which picture leads a text", () => {
     render(<ActivityRenderer activity={story} />);
     expect(screen.getByAltText("Une main qui montre trois doigts")).toBeTruthy();
     expect(screen.queryByAltText("La pluie qui tombe sur le toit")).toBeNull();
+  });
+});
+
+describe("counting again", () => {
+  const counting: SessionActivity = {
+    ...base,
+    renderer: "quantity",
+    type: "counting",
+    vocabulary: [],
+    media: [],
+    payload: { upTo: 20 },
+  };
+
+  it("on the child's surface, brings the instruction back after Recommencer", () => {
+    const showInstruction = vi.fn();
+    render(
+      <ChildViewContext.Provider value={true}>
+        <ChildSurfaceContext.Provider value={showInstruction}>
+          <ActivityRenderer activity={counting} />
+        </ChildSurfaceContext.Provider>
+      </ChildViewContext.Provider>,
+    );
+    fireEvent.click(screen.getByRole("button", { name: "Objet 12" }));
+    expect(screen.getByRole("status").textContent).toBe("12");
+    fireEvent.click(screen.getByRole("button", { name: "Recommencer" }));
+    expect(screen.getByRole("status").textContent).toBe("…");
+    expect(screen.queryByRole("button", { name: "Recommencer" })).toBeNull();
+    expect(showInstruction).toHaveBeenCalledTimes(1);
+  });
+
+  it("in the parent's guide, only resets the count", () => {
+    render(<ActivityRenderer activity={counting} />);
+    fireEvent.click(screen.getByRole("button", { name: "Objet 20" }));
+    expect(screen.getByRole("status").textContent).toBe("20 en tout. Bravo !");
+    fireEvent.click(screen.getByRole("button", { name: "Recommencer" }));
+    expect(screen.getByRole("status").textContent).toBe("…");
   });
 });

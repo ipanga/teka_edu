@@ -36,6 +36,13 @@ import type { SessionActivity, SessionAudio, SessionMedia } from "@/lib/programm
  */
 export const ChildViewContext = createContext(false);
 
+/**
+ * On the child's surface only: brings the child's instruction back to the top of the screen and
+ * gives it focus, for an interaction that starts over from far down a phone screen. Null in the
+ * parent's guide, whose page keeps its place.
+ */
+export const ChildSurfaceContext = createContext<(() => void) | null>(null);
+
 type PictureSize = "sm" | "md" | "lg";
 
 /** Pixel hints and the width classes that let a picture grow with the screen. */
@@ -395,6 +402,7 @@ function ChooseOne({
 function CountTogether({ upTo, media }: { upTo: number; media: SessionMedia | undefined }) {
   const [counted, setCounted] = useState(0);
   const childView = useContext(ChildViewContext);
+  const showInstruction = useContext(ChildSurfaceContext);
   const total = Math.min(Math.max(upTo, 1), 20);
   // On the child's own surface the tiles are the whole screen: bigger, and centred.
   const tile = childView ? "h-24 w-24 sm:h-32 sm:w-32" : "h-20 w-20 sm:h-24 sm:w-24";
@@ -440,7 +448,12 @@ function CountTogether({ upTo, media }: { upTo: number; media: SessionMedia | un
       {counted > 0 && (
         <button
           type="button"
-          onClick={() => setCounted(0)}
+          onClick={() => {
+            setCounted(0);
+            // The button disappears at zero: on a phone the child would be left at the bottom of
+            // twenty empty tiles, with focus on nothing. Start again from the instruction.
+            showInstruction?.();
+          }}
           className="w-fit rounded-xl border-2 border-stone-300 px-4 py-2 text-base font-medium"
         >
           Recommencer
