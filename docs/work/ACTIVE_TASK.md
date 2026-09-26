@@ -10,8 +10,8 @@ September Visual Experience Review — GPT Astra
 
 - **Task status:** AWAITING_RECONFIRMATION. The completed audit remains closed. The authorized correction batch is implemented and locally validated; no approval was restored.
 - **Supervisor:** Astra; **worker:** Claude Code CLI 2.1.282, installed at `/Users/Apple/.local/bin/claude`; ready to launch with Max authentication.
-- **Current branch:** `codex/september-astra-visual-review`; **current durable checkpoint:** `b868eec` (`Record September correction batch design`), with the validated implementation ready for the next local checkpoint commit.
-- **Base commit / refreshed develop:** `a0b743b`; **refreshed main:** `28dcb0a`. Fetch completed on 2026-09-25. The implementation checkpoint is thirty local commits ahead of the feature remote; no PR was created because the owner selected local-only work.
+- **Current branch:** `codex/september-astra-visual-review`; **current durable checkpoint:** `259b6ff` (`Correct September pedagogical media defects`).
+- **Base commit / refreshed develop:** `a0b743b`; **refreshed main:** `28dcb0a`. Fetch completed on 2026-09-25. The implementation checkpoint is thirty-three local commits ahead of the feature remote; no PR was created because the owner selected local-only work.
 - **Completed:** existing audit inventory, initial phone/TV review, all 1,002 noninitial viewport reviews, UI fixes, 1,606-state scroll capture. Preserve existing evidence; do not restart.
 - **Completed audit:** all 165 scroll sheets and all 266 initial sheets (431 sheets / 1,208 initial panels), plus 56 whole-product captures across phone, tablet, desktop and TV. The product audit covers home, all class entry states, calendar, preparation and alternatives, parent guidance folded/open, child view, pause, early stop, completion and observation. It found zero horizontal overflow and zero broken images.
 - **Authentication verified:** normal macOS credential-store access with `env -u ANTHROPIC_API_KEY claude auth status` confirms `claude.ai`, subscription `max`. The earlier sandbox-only check could not see this login. Always exclude the API-key override for worker invocations.
