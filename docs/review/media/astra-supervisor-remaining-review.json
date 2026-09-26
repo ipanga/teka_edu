@@ -2272,9 +2272,189 @@
         "m3-time-05-a2"
       ],
       "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-059.png",
+      "activities": [
+        "m3-lang-14-a1",
+        "m3-lang-14-a2",
+        "m3-lang-14-a3",
+        "m3-math-14-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-060.png",
+      "activities": [
+        "m3-math-14-a2",
+        "m3-phys-14-a1",
+        "m3-art-05-a1",
+        "m3-lang-15-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-061.png",
+      "activities": [
+        "m3-lang-15-a2",
+        "m3-lang-15-a3",
+        "m3-math-15-a1",
+        "m3-math-15-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-062.png",
+      "activities": [
+        "m3-phys-15-a1",
+        "m3-world-05-a1",
+        "m3-world-05-a2",
+        "m3-lang-16-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-063.png",
+      "activities": [
+        "m3-lang-16-a2",
+        "m3-lang-16-a3",
+        "m3-math-16-a1",
+        "m3-math-16-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-064.png",
+      "activities": [
+        "m3-phys-16-a1",
+        "m3-time-06-a1",
+        "m3-time-06-a2",
+        "m3-lang-17-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-059.png",
+      "activities": [
+        "m3-lang-14-a1",
+        "m3-lang-14-a2",
+        "m3-lang-14-a3",
+        "m3-math-14-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-060.png",
+      "activities": [
+        "m3-math-14-a2",
+        "m3-phys-14-a1",
+        "m3-art-05-a1",
+        "m3-lang-15-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-061.png",
+      "activities": [
+        "m3-lang-15-a2",
+        "m3-lang-15-a3",
+        "m3-math-15-a1",
+        "m3-math-15-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-062.png",
+      "activities": [
+        "m3-phys-15-a1",
+        "m3-world-05-a1",
+        "m3-world-05-a2",
+        "m3-lang-16-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-063.png",
+      "activities": [
+        "m3-lang-16-a2",
+        "m3-lang-16-a3",
+        "m3-math-16-a1",
+        "m3-math-16-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-064.png",
+      "activities": [
+        "m3-phys-16-a1",
+        "m3-time-06-a1",
+        "m3-time-06-a2",
+        "m3-lang-17-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-059.png",
+      "activities": [
+        "m3-lang-14-a1",
+        "m3-lang-14-a2",
+        "m3-lang-14-a3",
+        "m3-math-14-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-060.png",
+      "activities": [
+        "m3-math-14-a2",
+        "m3-phys-14-a1",
+        "m3-art-05-a1",
+        "m3-lang-15-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-061.png",
+      "activities": [
+        "m3-lang-15-a2",
+        "m3-lang-15-a3",
+        "m3-math-15-a1",
+        "m3-math-15-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-062.png",
+      "activities": [
+        "m3-phys-15-a1",
+        "m3-world-05-a1",
+        "m3-world-05-a2",
+        "m3-lang-16-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-063.png",
+      "activities": [
+        "m3-lang-16-a2",
+        "m3-lang-16-a3",
+        "m3-math-16-a1",
+        "m3-math-16-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-064.png",
+      "activities": [
+        "m3-phys-16-a1",
+        "m3-time-06-a1",
+        "m3-time-06-a2",
+        "m3-lang-17-a1"
+      ],
+      "reviewed": true
     }
   ],
-  "initialPanelsReviewed": 998,
+  "initialPanelsReviewed": 1070,
   "scrollSheets": [
     {
       "sheet": "scroll/scroll-001.png",
@@ -3848,7 +4028,11 @@
     "Claude proposed a new low-severity reachability defect because m3-math-10-a1 places the return control below the tablet-landscape initial viewport. Astra rejected it as a new finding: completed full-scroll evidence proves the control remains reachable, and the underlying tall 10–20 counter is already classified. Isolated punctuation and hyphen wraps remain optional polish.",
     "Initial sheets 054–058 for tablet portrait, tablet landscape and desktop: Claude Max/Opus inspected all sixty panels from an isolated authorized package; Astra independently checked every proposed new issue against source-resolution evidence and prior approvals.",
     "Claude’s m3-art-04-a1 claim was rejected: the approved guide explicitly permits the counting rhyme over rain sounds, and the accepted correction intentionally makes the rain image lead. m3-lang-12-a2 missing sort items and m3-lang-13-a2 missing money media are already classified. Punctuation/hyphen wraps remain optional polish.",
-    "The m3-world-04-a2 model shows bent arms as instructed; bent legs add a valid articulated pose rather than contradicting the task. The m3-lang-13-a2 landscape controls continue below the initial viewport and are reachable in full-scroll evidence. Generic counter, movement, media-free handoff and incomplete setup-thumbnail findings recur; no new defect class was added."
+    "The m3-world-04-a2 model shows bent arms as instructed; bent legs add a valid articulated pose rather than contradicting the task. The m3-lang-13-a2 landscape controls continue below the initial viewport and are reachable in full-scroll evidence. Generic counter, movement, media-free handoff and incomplete setup-thumbnail findings recur; no new defect class was added.",
+    "Initial sheets 059–064 for tablet portrait, tablet landscape and desktop: Claude Max/Opus inspected all seventy-two panels from an isolated authorized package; Astra independently checked every substantive claim against source-resolution evidence, approved payloads and prior classifications.",
+    "Generic counters recur in m3-math-14-a2, m3-math-15-a2 and m3-math-16-a1; the fixed-choice conversion recurs in m3-world-05-a1; and generic movement steps recur in m3-phys-14-a1 and m3-phys-15-a1. These extend existing classified findings rather than creating new classes.",
+    "Claude’s missing-media, missing-model and missing-setup claims were rejected where m3-lang-15-a1 is intentionally oral, m3-world-05-a2 is intentionally open drawing, and text-only materials do not require thumbnails. Guillemets and punctuation wrapping remain optional polish.",
+    "m3-lang-16-a2 is explicitly off-screen and the approved adult guide supplies the spoken rhyming and non-rhyming comparison order. Its six chips are the already-accepted word bank, not an on-screen pairing interaction, so the proposed pair-grouping issue is NO_CHANGE."
   ],
   "classifiedFindings": [
     {
@@ -3978,5 +4162,5 @@
       "scope": "Approved activity payload/content completeness; define the intended word set through the pedagogical review workflow before changing the child or parent experience."
     }
   ],
-  "next": "Initial sheet 059 for tablet portrait, tablet landscape and desktop; all 165 scroll sheets, all 38 large-phone sheets and sheets 001–058 for the other three initial viewports are reviewed. No other generated sheet is marked manually reviewed."
+  "next": "Initial sheet 065 for tablet portrait, tablet landscape and desktop; all 165 scroll sheets, all 38 large-phone sheets and sheets 001–064 for the other three initial viewports are reviewed. No other generated sheet is marked manually reviewed."
 }
