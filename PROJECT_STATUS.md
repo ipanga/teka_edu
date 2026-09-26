@@ -34,6 +34,9 @@ all 22 1ère movement payloads, the missing spoken sorting words, « la monnaie 
 are corrected. Exactly 27 affected approvals were lapsed and remain at review; two mixed reconfirmation
 packages await an independent decision. Local validation passes with 414 unit tests, 41 E2E tests and fresh
 phone/tablet/desktop/TV evidence. Owner selected local only: no push, PR, staging or production change.
+The isolated Claude Max reviewer invocation was blocked by automatic approval review before transmission;
+none of the five dossier files was sent. A fresh explicit payload-and-destination authorization is required
+before retrying the independent review.
 Older phase summaries below are historical and may predate the September production release.
 
 ## Current Phase

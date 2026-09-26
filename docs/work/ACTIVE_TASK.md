@@ -116,6 +116,10 @@ September Visual Experience Review — GPT Astra
 - **Exact resume point:** record the independent verdict and rationale. On `accepted`, follow the existing
   review-history and approval mechanism for only the named lessons, then verify fresh digests and unchanged
   unaffected approvals. On `accepted-with-modifications` or `rejected`, keep the relevant lessons at review.
+- **External reviewer invocation:** blocked by automatic approval review on 2026-09-26 before transmission.
+  No dossier file was sent. The next action is a fresh owner authorization that explicitly names Anthropic
+  Claude Max as the destination and the exact five files above as the payload; then rerun the isolated,
+  read-only review from `/private/tmp/teka-september-reconfirmation-review`.
 
 ## VIS-QA-01 checkpoint — 2026-09-25 (Claude Code worker)
 
