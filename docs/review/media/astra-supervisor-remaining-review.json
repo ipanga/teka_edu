@@ -882,9 +882,229 @@
         "m1-lang-14-a2"
       ],
       "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-021.png",
+      "activities": [
+        "m3-phys-04-a1",
+        "m3-art-02-a1",
+        "m3-lang-05-a1",
+        "m3-lang-05-a2",
+        "m3-lang-05-a3",
+        "m3-math-05-a1",
+        "m3-math-05-a2",
+        "m3-phys-05-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-022.png",
+      "activities": [
+        "m3-world-02-a1",
+        "m3-world-02-a2",
+        "m3-lang-06-a1",
+        "m3-lang-06-a2",
+        "m3-lang-06-a3",
+        "m3-math-06-a1",
+        "m3-math-06-a2",
+        "m3-phys-06-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-023.png",
+      "activities": [
+        "m3-time-02-a1",
+        "m3-time-02-a2",
+        "m3-lang-07-a1",
+        "m3-lang-07-a2",
+        "m3-lang-07-a3",
+        "m3-math-07-a1",
+        "m3-math-07-a2",
+        "m3-phys-07-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-024.png",
+      "activities": [
+        "m3-art-03-a1",
+        "m3-lang-08-a1",
+        "m3-lang-08-a2",
+        "m3-lang-08-a3",
+        "m3-math-08-a1",
+        "m3-math-08-a2",
+        "m3-phys-08-a1",
+        "m3-time-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-025.png",
+      "activities": [
+        "m3-time-03-a2",
+        "m3-lang-09-a1",
+        "m3-lang-09-a2",
+        "m3-lang-09-a3",
+        "m3-math-09-a1",
+        "m3-math-09-a2",
+        "m3-phys-09-a1",
+        "m3-world-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-021.png",
+      "activities": [
+        "m1-lang-14-a3",
+        "m1-math-14-a1",
+        "m1-phys-14-a1",
+        "m1-art-14-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-022.png",
+      "activities": [
+        "m1-lang-15-a1",
+        "m1-lang-15-a2",
+        "m1-lang-15-a3",
+        "m1-math-15-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-023.png",
+      "activities": [
+        "m1-phys-15-a1",
+        "m1-time-15-a1",
+        "m1-lang-16-a1",
+        "m1-lang-16-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-024.png",
+      "activities": [
+        "m1-lang-16-a3",
+        "m1-math-16-a1",
+        "m1-phys-16-a1",
+        "m1-world-16-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-025.png",
+      "activities": [
+        "m1-lang-17-a1",
+        "m1-lang-17-a2",
+        "m1-lang-17-a3",
+        "m1-math-17-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-021.png",
+      "activities": [
+        "m1-lang-14-a3",
+        "m1-math-14-a1",
+        "m1-phys-14-a1",
+        "m1-art-14-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-022.png",
+      "activities": [
+        "m1-lang-15-a1",
+        "m1-lang-15-a2",
+        "m1-lang-15-a3",
+        "m1-math-15-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-023.png",
+      "activities": [
+        "m1-phys-15-a1",
+        "m1-time-15-a1",
+        "m1-lang-16-a1",
+        "m1-lang-16-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-024.png",
+      "activities": [
+        "m1-lang-16-a3",
+        "m1-math-16-a1",
+        "m1-phys-16-a1",
+        "m1-world-16-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-025.png",
+      "activities": [
+        "m1-lang-17-a1",
+        "m1-lang-17-a2",
+        "m1-lang-17-a3",
+        "m1-math-17-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-021.png",
+      "activities": [
+        "m1-lang-14-a3",
+        "m1-math-14-a1",
+        "m1-phys-14-a1",
+        "m1-art-14-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-022.png",
+      "activities": [
+        "m1-lang-15-a1",
+        "m1-lang-15-a2",
+        "m1-lang-15-a3",
+        "m1-math-15-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-023.png",
+      "activities": [
+        "m1-phys-15-a1",
+        "m1-time-15-a1",
+        "m1-lang-16-a1",
+        "m1-lang-16-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-024.png",
+      "activities": [
+        "m1-lang-16-a3",
+        "m1-math-16-a1",
+        "m1-phys-16-a1",
+        "m1-world-16-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-025.png",
+      "activities": [
+        "m1-lang-17-a1",
+        "m1-lang-17-a2",
+        "m1-lang-17-a3",
+        "m1-math-17-a1"
+      ],
+      "reviewed": true
     }
   ],
-  "initialPanelsReviewed": 400,
+  "initialPanelsReviewed": 500,
   "scrollSheets": [
     {
       "sheet": "scroll/scroll-001.png",
@@ -2432,7 +2652,11 @@
     "m3-math-19-a1 is explicitly « De un à trente » with upTo 30, but the child renderer supplies only twenty dots and ends with « 20 en tout. Bravo ! ». This is a sequence-cap DEFECT, not optional improvement.",
     "m3-math-20-a2 loses the original set needed to reconstruct a quantity, and m3-math-21-a2 loses both the separate piles and number strip. These extend the existing generic counting renderer defect.",
     "m3-art-07-a1 is NO_CHANGE: its approved parent guidance makes the single printed rhyme an explicit fallback only when the child cannot choose a favourite from memory. The one visible rhyme therefore does not remove the off-screen choice.",
-    "The remaining punctuation wraps, sort-token fading and reflow are OPTIONAL_POLISH; the latter remains covered by the placed-token legibility improvement. Story navigation and one-picture story presentation remain coherent."
+    "The remaining punctuation wraps, sort-token fading and reflow are OPTIONAL_POLISH; the latter remains covered by the placed-token legibility improvement. Story navigation and one-picture story presentation remain coherent.",
+    "Initial sheets 021–025 across all four viewports: all one hundred panels inspected by Claude Max/Opus and independently checked by Astra on large-phone and tablet-landscape. No clipping, overlap, broken image or unreachable return control was found.",
+    "m1-time-15-a1 and m1-world-16-a1 intentionally use the real environment without media, but the look-and-name renderer bypasses the off-screen handoff and shows only a small « À observer » line. The child receives no visible cue to put down the device. This is a genuine renderer-semantics DEFECT.",
+    "m1-math-15-a1 asks for three real spoons while displaying one spoon, and m3-math-07-a1 asks for pebbles in a box while displaying one isolated pebble. The generic hands-on reference thumbnail can contradict or incompletely model the required physical setup; this is a HIGH_VALUE_IMPROVEMENT for the systemic off-screen design pass.",
+    "Generic counters, movement steps, fixed-choice labels, missing matching models and the triangle-without-group issue recur and remain covered by existing classified findings. The one-picture story screens match the approved illustration model. Minor punctuation wraps are OPTIONAL_POLISH."
   ],
   "classifiedFindings": [
     {
@@ -2539,7 +2763,21 @@
       "status": "new-pedagogical-integrity-finding",
       "evidence": "m3-math-19-a1 is titled « De un à trente » and has upTo 30, but the rendered interaction contains twenty targets and ends with « 20 en tout. Bravo ! ».",
       "scope": "Counting renderer and approved sequence semantics; preserve the 1–30 objective and do not cap or congratulate at 20."
+    },
+    {
+      "id": "look-and-name-real-world-missing-offscreen-cue",
+      "classification": "DEFECT",
+      "status": "candidate-for-systemic-design-pass",
+      "evidence": "m1-time-15-a1 and m1-world-16-a1 intentionally have no media because the child must observe the real environment, but the look-and-name renderer shows only « À observer » and never supplies the existing « Posez l’écran » handoff.",
+      "scope": "Look-and-name renderer for off-screen real-world observation; preserve approved focus text and make the device handoff explicit."
+    },
+    {
+      "id": "hands-on-reference-media-misrepresents-setup",
+      "classification": "HIGH_VALUE_IMPROVEMENT",
+      "status": "candidate-for-systemic-design-pass",
+      "evidence": "m1-math-15-a1 asks for three real spoons but shows one spoon; m3-math-07-a1 asks for pebbles in a box but shows one isolated pebble. The generic thumbnail can be read as the task model even when it omits the required quantity or container.",
+      "scope": "Hands-on renderer and media semantics; distinguish a vocabulary reference from a complete setup model and keep the physical-task instruction dominant."
     }
   ],
-  "next": "Initial sheet 021 for each of the four viewports; all 165 scroll sheets are reviewed. No other generated sheet is marked manually reviewed."
+  "next": "Initial sheet 026 for each of the four viewports; all 165 scroll sheets and initial sheets 001–025 are reviewed. No other generated sheet is marked manually reviewed."
 }
