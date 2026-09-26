@@ -1,0 +1,1293 @@
+[
+  {
+    "id": "forme-carre",
+    "decision": "KEEP",
+    "quality": 5,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Unambiguous geometry; orientation/colour variants prevent a prototype-only cue.",
+    "treatment": "Retain exact bytes.",
+    "lessons": [
+      "m1-math-11",
+      "m1-math-13",
+      "m1-math-16",
+      "m1-math-19",
+      "m3-math-03",
+      "m3-math-08",
+      "m3-math-18"
+    ],
+    "activities": [
+      "m1-math-11-a1",
+      "m1-math-13-a1",
+      "m1-math-16-a1",
+      "m1-math-19-a1",
+      "m3-math-03-a1",
+      "m3-math-03-a2",
+      "m3-math-08-a1",
+      "m3-math-08-a2",
+      "m3-math-18-a1",
+      "m3-math-18-a2"
+    ],
+    "classes": [
+      "1ère maternelle",
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-1.png"
+  },
+  {
+    "id": "forme-rectangle",
+    "decision": "KEEP",
+    "quality": 5,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Unambiguous geometry; orientation/colour variants prevent a prototype-only cue.",
+    "treatment": "Retain exact bytes.",
+    "lessons": [
+      "m3-math-03",
+      "m3-math-08",
+      "m3-math-18"
+    ],
+    "activities": [
+      "m3-math-03-a1",
+      "m3-math-03-a2",
+      "m3-math-08-a1",
+      "m3-math-08-a2",
+      "m3-math-18-a1",
+      "m3-math-18-a2"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-1.png"
+  },
+  {
+    "id": "forme-triangle",
+    "decision": "KEEP",
+    "quality": 5,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Unambiguous geometry; orientation/colour variants prevent a prototype-only cue.",
+    "treatment": "Retain exact bytes.",
+    "lessons": [
+      "m1-math-16",
+      "m1-math-19",
+      "m3-math-03",
+      "m3-math-08",
+      "m3-math-18"
+    ],
+    "activities": [
+      "m1-math-16-a1",
+      "m1-math-19-a1",
+      "m3-math-03-a1",
+      "m3-math-03-a2",
+      "m3-math-08-a1",
+      "m3-math-08-a2",
+      "m3-math-18-a1",
+      "m3-math-18-a2"
+    ],
+    "classes": [
+      "1ère maternelle",
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-1.png"
+  },
+  {
+    "id": "forme-disque",
+    "decision": "KEEP",
+    "quality": 5,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Unambiguous geometry; orientation/colour variants prevent a prototype-only cue.",
+    "treatment": "Retain exact bytes.",
+    "lessons": [
+      "m1-math-11",
+      "m1-math-13",
+      "m1-math-16",
+      "m1-math-19",
+      "m3-math-03",
+      "m3-math-08",
+      "m3-math-18"
+    ],
+    "activities": [
+      "m1-math-11-a1",
+      "m1-math-13-a1",
+      "m1-math-16-a1",
+      "m1-math-19-a1",
+      "m3-math-03-a1",
+      "m3-math-03-a2",
+      "m3-math-08-a1",
+      "m3-math-08-a2",
+      "m3-math-18-a1",
+      "m3-math-18-a2"
+    ],
+    "classes": [
+      "1ère maternelle",
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-1.png"
+  },
+  {
+    "id": "forme-carre-penche",
+    "decision": "KEEP",
+    "quality": 5,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Unambiguous geometry; orientation/colour variants prevent a prototype-only cue.",
+    "treatment": "Retain exact bytes.",
+    "lessons": [
+      "m3-math-03",
+      "m3-math-08"
+    ],
+    "activities": [
+      "m3-math-03-a1",
+      "m3-math-03-a2",
+      "m3-math-08-a1"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-1.png"
+  },
+  {
+    "id": "forme-rectangle-debout",
+    "decision": "KEEP",
+    "quality": 5,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Unambiguous geometry; orientation/colour variants prevent a prototype-only cue.",
+    "treatment": "Retain exact bytes.",
+    "lessons": [
+      "m3-math-03",
+      "m3-math-08"
+    ],
+    "activities": [
+      "m3-math-03-a1",
+      "m3-math-03-a2",
+      "m3-math-08-a1"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-1.png"
+  },
+  {
+    "id": "forme-triangle-quelconque",
+    "decision": "KEEP",
+    "quality": 5,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Unambiguous geometry; orientation/colour variants prevent a prototype-only cue.",
+    "treatment": "Retain exact bytes.",
+    "lessons": [
+      "m3-math-03",
+      "m3-math-08"
+    ],
+    "activities": [
+      "m3-math-03-a1",
+      "m3-math-03-a2",
+      "m3-math-08-a1"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-1.png"
+  },
+  {
+    "id": "forme-disque-petit",
+    "decision": "KEEP",
+    "quality": 5,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Unambiguous geometry; orientation/colour variants prevent a prototype-only cue.",
+    "treatment": "Retain exact bytes.",
+    "lessons": [
+      "m3-math-03",
+      "m3-math-08"
+    ],
+    "activities": [
+      "m3-math-03-a1",
+      "m3-math-03-a2",
+      "m3-math-08-a1"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-1.png"
+  },
+  {
+    "id": "objet-cuillere",
+    "decision": "REFINE",
+    "quality": 3,
+    "recognition": "concern",
+    "age": "yes",
+    "phone": "concern",
+    "tv": "pass",
+    "reason": "Short handle and large bowl can read as a hand mirror.",
+    "treatment": "Lengthen handle; use a shallow oval bowl and restrained metal shading.",
+    "lessons": [
+      "m1-math-04",
+      "m1-math-06",
+      "m1-math-08",
+      "m1-math-10",
+      "m1-math-15",
+      "m1-math-20"
+    ],
+    "activities": [
+      "m1-math-04-a1",
+      "m1-math-06-a1",
+      "m1-math-08-a1",
+      "m1-math-10-a1",
+      "m1-math-15-a1",
+      "m1-math-20-a1"
+    ],
+    "classes": [
+      "1ère maternelle"
+    ],
+    "sheet": "astra-baseline/assets-1.png"
+  },
+  {
+    "id": "objet-crayon",
+    "decision": "KEEP",
+    "quality": 4,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Graphite tip, shaft and eraser are distinct; simple silhouette helps repeated use.",
+    "treatment": "Retain.",
+    "lessons": [
+      "m3-lang-02",
+      "m3-lang-19"
+    ],
+    "activities": [
+      "m3-lang-02-a2",
+      "m3-lang-19-a2"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-2.png"
+  },
+  {
+    "id": "objet-cahier",
+    "decision": "KEEP",
+    "quality": 4,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Spine and ruled label read clearly as a school notebook.",
+    "treatment": "Retain.",
+    "lessons": [
+      "m3-lang-02",
+      "m3-lang-19"
+    ],
+    "activities": [
+      "m3-lang-02-a2",
+      "m3-lang-19-a2"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-2.png"
+  },
+  {
+    "id": "objet-sac",
+    "decision": "REFINE",
+    "quality": 3,
+    "recognition": "concern",
+    "age": "yes",
+    "phone": "concern",
+    "tv": "pass",
+    "reason": "Front view reads as a handbag as readily as a school bag.",
+    "treatment": "Show a softly rounded backpack and visible shoulder straps.",
+    "lessons": [
+      "m3-lang-02"
+    ],
+    "activities": [
+      "m3-lang-02-a2"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-2.png"
+  },
+  {
+    "id": "objet-table",
+    "decision": "KEEP",
+    "quality": 4,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Top and four legs remain separable; object name is clear.",
+    "treatment": "Retain.",
+    "lessons": [
+      "m1-lang-02",
+      "m1-lang-06",
+      "m3-lang-02"
+    ],
+    "activities": [
+      "m1-lang-02-a2",
+      "m1-lang-06-a2",
+      "m3-lang-02-a2"
+    ],
+    "classes": [
+      "1ère maternelle",
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-2.png"
+  },
+  {
+    "id": "objet-chaise",
+    "decision": "KEEP",
+    "quality": 4,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Back, seat and legs remain distinct.",
+    "treatment": "Retain.",
+    "lessons": [
+      "m1-lang-02",
+      "m1-lang-06",
+      "m3-lang-02"
+    ],
+    "activities": [
+      "m1-lang-02-a2",
+      "m1-lang-06-a2",
+      "m3-lang-02-a2"
+    ],
+    "classes": [
+      "1ère maternelle",
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-2.png"
+  },
+  {
+    "id": "objet-porte",
+    "decision": "KEEP",
+    "quality": 4,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Frame, panels and handle clearly identify a door.",
+    "treatment": "Retain.",
+    "lessons": [
+      "m1-lang-01",
+      "m1-lang-06",
+      "m1-lang-22",
+      "m3-lang-07",
+      "m3-lang-19"
+    ],
+    "activities": [
+      "m1-lang-01-a2",
+      "m1-lang-06-a2",
+      "m1-lang-22-a2",
+      "m3-lang-07-a2",
+      "m3-lang-19-a2"
+    ],
+    "classes": [
+      "1ère maternelle",
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-2.png"
+  },
+  {
+    "id": "objet-fenetre",
+    "decision": "KEEP",
+    "quality": 4,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Frame and sill identify a window; sun is a small contextual cue.",
+    "treatment": "Retain.",
+    "lessons": [
+      "m3-lang-07"
+    ],
+    "activities": [
+      "m3-lang-07-a2"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-2.png"
+  },
+  {
+    "id": "objet-lit",
+    "decision": "KEEP",
+    "quality": 4,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Pillow, blanket and headboard make a clear bed silhouette.",
+    "treatment": "Retain.",
+    "lessons": [
+      "m3-lang-07"
+    ],
+    "activities": [
+      "m3-lang-07-a2"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-2.png"
+  },
+  {
+    "id": "objet-marmite",
+    "decision": "KEEP",
+    "quality": 4,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Lid, deep vessel and two side handles clearly identify a cooking pot.",
+    "treatment": "Retain.",
+    "lessons": [
+      "m3-lang-07",
+      "m3-lang-19"
+    ],
+    "activities": [
+      "m3-lang-07-a2",
+      "m3-lang-19-a2"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-2.png"
+  },
+  {
+    "id": "objet-seau",
+    "decision": "KEEP",
+    "quality": 4,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Arched handle and open tapering vessel are distinct from the pot.",
+    "treatment": "Retain.",
+    "lessons": [
+      "m1-lang-01",
+      "m1-lang-06",
+      "m1-lang-22",
+      "m3-lang-07"
+    ],
+    "activities": [
+      "m1-lang-01-a2",
+      "m1-lang-06-a2",
+      "m1-lang-22-a2",
+      "m3-lang-07-a2"
+    ],
+    "classes": [
+      "1ère maternelle",
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-3.png"
+  },
+  {
+    "id": "objet-panier",
+    "decision": "KEEP",
+    "quality": 4,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Woven surface and handle support recognition without a label.",
+    "treatment": "Retain.",
+    "lessons": [
+      "m3-lang-13",
+      "m3-lang-19"
+    ],
+    "activities": [
+      "m3-lang-13-a2",
+      "m3-lang-19-a2"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-3.png"
+  },
+  {
+    "id": "objet-tomate",
+    "decision": "REFINE",
+    "quality": 3,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Recognizable but spherical disk and radiating stalk remain icon-like.",
+    "treatment": "Organic lobed silhouette, short calyx and softer highlight.",
+    "lessons": [
+      "m3-lang-13",
+      "m3-lang-19"
+    ],
+    "activities": [
+      "m3-lang-13-a2",
+      "m3-lang-19-a2"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-3.png"
+  },
+  {
+    "id": "objet-banane",
+    "decision": "REFINE",
+    "quality": 3,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Crescent is recognizable; square stem and needle tip look mechanical.",
+    "treatment": "Natural tapered ends and restrained curved ridge.",
+    "lessons": [
+      "m3-lang-13"
+    ],
+    "activities": [
+      "m3-lang-13-a2"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-3.png"
+  },
+  {
+    "id": "objet-oignon",
+    "decision": "REFINE",
+    "quality": 3,
+    "recognition": "concern",
+    "age": "yes",
+    "phone": "concern",
+    "tv": "pass",
+    "reason": "Grey sprouting bulb can read as garlic or a generic seed.",
+    "treatment": "Warm papery skin, dry neck and fine root tuft; keep one whole onion.",
+    "lessons": [
+      "m3-lang-13"
+    ],
+    "activities": [
+      "m3-lang-13-a2"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-3.png"
+  },
+  {
+    "id": "objet-caillou",
+    "decision": "KEEP",
+    "quality": 4,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Simple irregular pebble remains clear when repeated for counting.",
+    "treatment": "Retain; do not introduce extra marks resembling counters.",
+    "lessons": [
+      "m3-math-01",
+      "m3-math-02",
+      "m3-math-04",
+      "m3-math-05",
+      "m3-math-07",
+      "m3-math-09",
+      "m3-math-10",
+      "m3-math-11",
+      "m3-math-12",
+      "m3-math-17",
+      "m3-math-19",
+      "m3-math-20",
+      "m3-math-22"
+    ],
+    "activities": [
+      "m3-math-01-a1",
+      "m3-math-02-a1",
+      "m3-math-04-a2",
+      "m3-math-05-a1",
+      "m3-math-07-a1",
+      "m3-math-09-a1",
+      "m3-math-10-a2",
+      "m3-math-11-a1",
+      "m3-math-12-a1",
+      "m3-math-17-a1",
+      "m3-math-19-a2",
+      "m3-math-20-a1",
+      "m3-math-22-a1"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-3.png"
+  },
+  {
+    "id": "corps-main",
+    "decision": "REDRAW",
+    "quality": 2,
+    "recognition": "concern",
+    "age": "yes",
+    "phone": "concern",
+    "tv": "concern",
+    "reason": "Oval palm overlays separate tubular fingers; wrist reads as glove cuff.",
+    "treatment": "Continuous natural hand silhouette, five credible digits, short forearm, soft skin modelling.",
+    "lessons": [
+      "m1-lang-11",
+      "m1-lang-18",
+      "m1-lang-22",
+      "m1-world-02",
+      "m1-world-20"
+    ],
+    "activities": [
+      "m1-world-02-a1",
+      "m1-lang-11-a2",
+      "m1-lang-18-a2",
+      "m1-world-20-a1",
+      "m1-lang-22-a2"
+    ],
+    "classes": [
+      "1ère maternelle"
+    ],
+    "sheet": "astra-baseline/assets-3.png"
+  },
+  {
+    "id": "corps-pied",
+    "decision": "REDRAW",
+    "quality": 1,
+    "recognition": "fail",
+    "age": "concern",
+    "phone": "concern",
+    "tv": "concern",
+    "reason": "Five circular beads sit above an oval sole; reads as a footprint symbol.",
+    "treatment": "Natural top/three-quarter foot with connected toes, ankle and instep; no detached circles.",
+    "lessons": [
+      "m1-lang-11",
+      "m1-lang-18",
+      "m1-world-02",
+      "m1-world-20"
+    ],
+    "activities": [
+      "m1-world-02-a1",
+      "m1-lang-11-a2",
+      "m1-lang-18-a2",
+      "m1-world-20-a1"
+    ],
+    "classes": [
+      "1ère maternelle"
+    ],
+    "sheet": "astra-baseline/assets-3.png"
+  },
+  {
+    "id": "corps-tete",
+    "decision": "REDRAW",
+    "quality": 2,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "concern",
+    "reason": "Floating neck block and separate shoulder arc look assembled.",
+    "treatment": "Friendly connected head-and-shoulders portrait, natural ears and varied skin tone within the character system.",
+    "lessons": [
+      "m1-lang-13",
+      "m1-lang-18",
+      "m1-lang-22",
+      "m1-world-08",
+      "m1-world-20"
+    ],
+    "activities": [
+      "m1-world-08-a1",
+      "m1-lang-13-a2",
+      "m1-lang-18-a2",
+      "m1-world-20-a1",
+      "m1-lang-22-a2"
+    ],
+    "classes": [
+      "1ère maternelle"
+    ],
+    "sheet": "astra-baseline/assets-3.png"
+  },
+  {
+    "id": "corps-ventre",
+    "decision": "REDRAW",
+    "quality": 1,
+    "recognition": "concern",
+    "age": "concern",
+    "phone": "concern",
+    "tv": "concern",
+    "reason": "Headless torso and block shorts feel detached; belly outline is rigid.",
+    "treatment": "Child touching their own belly, continuous body, relaxed pose and unambiguous target.",
+    "lessons": [
+      "m1-lang-13",
+      "m1-lang-18",
+      "m1-world-08",
+      "m1-world-20"
+    ],
+    "activities": [
+      "m1-world-08-a1",
+      "m1-lang-13-a2",
+      "m1-lang-18-a2",
+      "m1-world-20-a1"
+    ],
+    "classes": [
+      "1ère maternelle"
+    ],
+    "sheet": "astra-baseline/assets-4.png"
+  },
+  {
+    "id": "animal-poule",
+    "decision": "REDRAW",
+    "quality": 2,
+    "recognition": "concern",
+    "age": "yes",
+    "phone": "concern",
+    "tv": "concern",
+    "reason": "Round body, tube legs and three tail strokes look like a generic bird icon.",
+    "treatment": "Credible hen silhouette: small head, comb/wattle, feathered tail and feet.",
+    "lessons": [
+      "m3-lang-03",
+      "m3-world-02",
+      "m3-world-05"
+    ],
+    "activities": [
+      "m3-lang-03-a2",
+      "m3-world-02-a1",
+      "m3-world-05-a1"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-4.png"
+  },
+  {
+    "id": "animal-poussin",
+    "decision": "REFINE",
+    "quality": 3,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Yellow chick is recognizable but identical rounded machinery limits warmth.",
+    "treatment": "Soft fluffy contour, fine feet and a small natural wing.",
+    "lessons": [
+      "m3-lang-03",
+      "m3-world-05"
+    ],
+    "activities": [
+      "m3-lang-03-a2",
+      "m3-world-05-a1"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-4.png"
+  },
+  {
+    "id": "animal-chevre",
+    "decision": "REDRAW",
+    "quality": 2,
+    "recognition": "concern",
+    "age": "yes",
+    "phone": "concern",
+    "tv": "concern",
+    "reason": "Pill body and straight capsule legs; ears/muzzle and hooves insufficiently distinct.",
+    "treatment": "Goat silhouette with lateral ears, short beard, curved horns and cloven hooves.",
+    "lessons": [
+      "m3-lang-09",
+      "m3-world-02",
+      "m3-world-05",
+      "m3-world-06"
+    ],
+    "activities": [
+      "m3-world-02-a1",
+      "m3-lang-09-a2",
+      "m3-world-05-a1",
+      "m3-world-06-a2"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-4.png"
+  },
+  {
+    "id": "histoire-seau-lisa",
+    "decision": "REDRAW",
+    "quality": 2,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "concern",
+    "reason": "Lisa is visible but is a geometric doll; weak emotional engagement.",
+    "treatment": "Preschool Lisa beside a chair with blue bucket ON its seat; richer warm scene, no extra answer cues.",
+    "lessons": [
+      "m1-lang-03",
+      "m1-lang-06",
+      "m1-lang-07",
+      "m1-lang-08",
+      "m1-lang-14",
+      "m1-lang-15",
+      "m1-lang-17",
+      "m1-lang-18"
+    ],
+    "activities": [
+      "m1-lang-03-a2",
+      "m1-lang-06-a3",
+      "m1-lang-07-a2",
+      "m1-lang-08-a3",
+      "m1-lang-14-a3",
+      "m1-lang-15-a2",
+      "m1-lang-17-a2",
+      "m1-lang-18-a3"
+    ],
+    "classes": [
+      "1ère maternelle"
+    ],
+    "sheet": "astra-baseline/assets-4.png"
+  },
+  {
+    "id": "histoire-tika",
+    "decision": "REDRAW",
+    "quality": 2,
+    "recognition": "concern",
+    "age": "yes",
+    "phone": "concern",
+    "tv": "concern",
+    "reason": "Arms end as capsules; child appears mounted behind a bed icon.",
+    "treatment": "Natural waking stretch in bed, connected hands and shoulders, morning light at window.",
+    "lessons": [
+      "m1-lang-09",
+      "m1-lang-21"
+    ],
+    "activities": [
+      "m1-lang-09-a2",
+      "m1-lang-21-a2"
+    ],
+    "classes": [
+      "1ère maternelle"
+    ],
+    "sheet": "astra-baseline/assets-4.png"
+  },
+  {
+    "id": "histoire-kumu",
+    "decision": "REDRAW",
+    "quality": 2,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "concern",
+    "reason": "Departure reads, but shed and chick are adjacent icons rather than an engaging scene.",
+    "treatment": "Small chick walking away from open henhouse, a little ground/path, no ending revealed.",
+    "lessons": [
+      "m3-lang-03",
+      "m3-lang-04",
+      "m3-lang-09",
+      "m3-lang-17"
+    ],
+    "activities": [
+      "m3-lang-03-a2",
+      "m3-lang-04-a3",
+      "m3-lang-09-a3",
+      "m3-lang-17-a3"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-4.png"
+  },
+  {
+    "id": "histoire-nsimba",
+    "decision": "REDRAW",
+    "quality": 2,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "concern",
+    "reason": "Rectangular limbs and isolated door convey little school context or emotion.",
+    "treatment": "Consistent preschool boy with backpack arriving at a modest school doorway; restrained expression.",
+    "lessons": [
+      "m3-lang-01",
+      "m3-lang-10",
+      "m3-lang-15"
+    ],
+    "activities": [
+      "m3-lang-01-a3",
+      "m3-lang-10-a3",
+      "m3-lang-15-a2",
+      "m3-lang-15-a3"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-4.png"
+  },
+  {
+    "id": "histoire-mangue",
+    "decision": "REDRAW",
+    "quality": 2,
+    "recognition": "concern",
+    "age": "yes",
+    "phone": "concern",
+    "tv": "concern",
+    "reason": "Whole fruit floats and three halves imply three mangoes rather than three pieces.",
+    "treatment": "Single whole mango as reference and exactly three credible cut portions on a plate; verify story quantities.",
+    "lessons": [
+      "m3-lang-02",
+      "m3-lang-11",
+      "m3-lang-22"
+    ],
+    "activities": [
+      "m3-lang-02-a3",
+      "m3-lang-11-a3",
+      "m3-lang-22-a3"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-4.png"
+  },
+  {
+    "id": "histoire-bibi",
+    "decision": "REDRAW",
+    "quality": 2,
+    "recognition": "concern",
+    "age": "yes",
+    "phone": "concern",
+    "tv": "concern",
+    "reason": "Goat repeats weak anatomy; bush obscures its muzzle and action.",
+    "treatment": "Recognizable goat leaning toward leaves beside a simple fence; clear head/neck gesture.",
+    "lessons": [
+      "m3-lang-05",
+      "m3-lang-09",
+      "m3-lang-13"
+    ],
+    "activities": [
+      "m3-lang-05-a3",
+      "m3-lang-09-a2",
+      "m3-lang-13-a3"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-5.png"
+  },
+  {
+    "id": "histoire-marche",
+    "decision": "REFINE",
+    "quality": 3,
+    "recognition": "concern",
+    "age": "yes",
+    "phone": "concern",
+    "tv": "pass",
+    "reason": "Banana looks like a single leaf; onion is apple-like; no human story engagement.",
+    "treatment": "Clarify produce silhouettes and basket contents; do not add narrative events.",
+    "lessons": [
+      "m3-lang-06",
+      "m3-lang-12",
+      "m3-lang-19"
+    ],
+    "activities": [
+      "m3-lang-06-a3",
+      "m3-lang-12-a3",
+      "m3-lang-19-a3"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-5.png"
+  },
+  {
+    "id": "histoire-pluie",
+    "decision": "KEEP",
+    "quality": 4,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Cloud, raindrops, roof and puddle give clear useful context.",
+    "treatment": "Retain; richer scenery would compete with listening to rain.",
+    "lessons": [
+      "m1-lang-09",
+      "m1-lang-10",
+      "m1-lang-15",
+      "m1-lang-20",
+      "m3-art-04",
+      "m3-lang-03",
+      "m3-lang-21"
+    ],
+    "activities": [
+      "m1-lang-09-a3",
+      "m1-lang-10-a3",
+      "m1-lang-15-a3",
+      "m1-lang-20-a3",
+      "m3-lang-03-a3",
+      "m3-art-04-a1",
+      "m3-lang-21-a3"
+    ],
+    "classes": [
+      "1ère maternelle",
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-5.png"
+  },
+  {
+    "id": "histoire-cailloux",
+    "decision": "REFINE",
+    "quality": 3,
+    "recognition": "concern",
+    "age": "yes",
+    "phone": "concern",
+    "tv": "pass",
+    "reason": "Pointed stone is an exact triangle; can teach a shape symbol instead of a rock.",
+    "treatment": "Natural irregular pointed rock while preserving three distinct stones: round, flat, pointed.",
+    "lessons": [
+      "m3-lang-08",
+      "m3-lang-14",
+      "m3-lang-18"
+    ],
+    "activities": [
+      "m3-lang-08-a3",
+      "m3-lang-14-a3",
+      "m3-lang-18-a3"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-5.png"
+  },
+  {
+    "id": "histoire-malo",
+    "decision": "REDRAW",
+    "quality": 2,
+    "recognition": "concern",
+    "age": "yes",
+    "phone": "concern",
+    "tv": "concern",
+    "reason": "Muzzle is small, tail cat-like; sleeping dog remains ambiguous at small size.",
+    "treatment": "Clear dog profile with long muzzle, floppy ear, forepaws and relaxed curled tail on mat.",
+    "lessons": [
+      "m3-lang-07",
+      "m3-lang-16",
+      "m3-lang-20"
+    ],
+    "activities": [
+      "m3-lang-07-a3",
+      "m3-lang-16-a3",
+      "m3-lang-20-a3"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-5.png"
+  },
+  {
+    "id": "comptine-compter",
+    "decision": "REDRAW",
+    "quality": 2,
+    "recognition": "concern",
+    "age": "yes",
+    "phone": "concern",
+    "tv": "concern",
+    "reason": "Three raised fingers visible but folded fingers/palm are assembled blobs.",
+    "treatment": "Anatomically credible counting hand with exactly three raised fingers and two naturally folded.",
+    "lessons": [
+      "m3-art-02",
+      "m3-art-04"
+    ],
+    "activities": [
+      "m3-art-02-a1",
+      "m3-art-04-a1"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-5.png"
+  },
+  {
+    "id": "comptine-bonjour",
+    "decision": "REDRAW",
+    "quality": 2,
+    "recognition": "concern",
+    "age": "yes",
+    "phone": "concern",
+    "tv": "concern",
+    "reason": "Detached cuffed hands flank a giant sun; greeting has no human anchor.",
+    "treatment": "Friendly greeting gesture with natural hand anatomy and restrained sunrise context.",
+    "lessons": [
+      "m1-lang-01",
+      "m1-lang-03",
+      "m1-lang-13",
+      "m1-lang-19"
+    ],
+    "activities": [
+      "m1-lang-01-a3",
+      "m1-lang-03-a3",
+      "m1-lang-13-a3",
+      "m1-lang-19-a3"
+    ],
+    "classes": [
+      "1ère maternelle"
+    ],
+    "sheet": "astra-baseline/assets-5.png"
+  },
+  {
+    "id": "comptine-mains",
+    "decision": "REDRAW",
+    "quality": 2,
+    "recognition": "concern",
+    "age": "yes",
+    "phone": "concern",
+    "tv": "concern",
+    "reason": "Both palms are separate ovals; five digits readable but glove-like.",
+    "treatment": "Two natural open hands with short forearms; five fingers each, thumbs inward, clear separation.",
+    "lessons": [
+      "m1-art-04",
+      "m1-art-07",
+      "m1-art-11",
+      "m1-art-17",
+      "m1-lang-02",
+      "m1-lang-04",
+      "m1-lang-11",
+      "m1-lang-16",
+      "m1-lang-22"
+    ],
+    "activities": [
+      "m1-lang-02-a3",
+      "m1-art-04-a1",
+      "m1-lang-04-a3",
+      "m1-art-07-a1",
+      "m1-art-11-a1",
+      "m1-lang-11-a3",
+      "m1-lang-16-a3",
+      "m1-art-17-a1",
+      "m1-lang-22-a3"
+    ],
+    "classes": [
+      "1ère maternelle"
+    ],
+    "sheet": "astra-baseline/assets-5.png"
+  },
+  {
+    "id": "comptine-semaine",
+    "decision": "KEEP",
+    "quality": 4,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Seven beads with five circles and two squares are explicit and distinguishable.",
+    "treatment": "Retain; no September lesson currently uses it.",
+    "lessons": [],
+    "activities": [],
+    "classes": [],
+    "sheet": "astra-baseline/assets-5.png"
+  },
+  {
+    "id": "comptine-cabri",
+    "decision": "REFINE",
+    "quality": 3,
+    "recognition": "concern",
+    "age": "yes",
+    "phone": "concern",
+    "tv": "pass",
+    "reason": "Airborne pose works; goat anatomy inherits generic pill silhouette.",
+    "treatment": "Use the goat family anatomy if later needed; no September lesson currently uses it.",
+    "lessons": [],
+    "activities": [],
+    "classes": [],
+    "sheet": "astra-baseline/assets-6.png"
+  },
+  {
+    "id": "comptine-formes",
+    "decision": "KEEP",
+    "quality": 4,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Four recognizable shapes; motion marks are restrained, no distracting faces.",
+    "treatment": "Retain exact geometry.",
+    "lessons": [
+      "m3-art-05",
+      "m3-art-07"
+    ],
+    "activities": [
+      "m3-art-05-a1",
+      "m3-art-07-a1"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-6.png"
+  },
+  {
+    "id": "plante-parties",
+    "decision": "REFINE",
+    "quality": 3,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Plant reads, but roots are a rigid fork and soil is a hard block.",
+    "treatment": "Organic branching roots below a clear soil cutaway; retain leaf, stem, root separation.",
+    "lessons": [
+      "m3-world-03",
+      "m3-world-06"
+    ],
+    "activities": [
+      "m3-world-03-a1",
+      "m3-world-06-a2"
+    ],
+    "classes": [
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-6.png"
+  },
+  {
+    "id": "bonhomme-articule",
+    "decision": "KEEP",
+    "quality": 4,
+    "recognition": "pass",
+    "age": "yes",
+    "phone": "pass",
+    "tv": "pass",
+    "reason": "Stick drawing is purposeful here: an achievable model for drawing joints.",
+    "treatment": "Retain; a finished character would raise the drawing expectation.",
+    "lessons": [
+      "m1-lang-05",
+      "m1-lang-07",
+      "m1-lang-12",
+      "m1-lang-17",
+      "m1-lang-21",
+      "m3-world-01",
+      "m3-world-04"
+    ],
+    "activities": [
+      "m1-lang-05-a3",
+      "m1-lang-07-a3",
+      "m1-lang-12-a3",
+      "m1-lang-17-a3",
+      "m1-lang-21-a3",
+      "m3-world-01-a2",
+      "m3-world-04-a2"
+    ],
+    "classes": [
+      "1ère maternelle",
+      "3ème maternelle"
+    ],
+    "sheet": "astra-baseline/assets-6.png"
+  }
+]

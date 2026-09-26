@@ -852,7 +852,7 @@
           "minutes": 7,
           "mode": "off-screen",
           "role": "consolidation",
-          "mediaIds": ["forme-disque", "forme-carre", "forme-triangle"],
+          "mediaIds": ["forme-disque", "forme-carre"],
           "objectiveCodes": ["MATH-S03-C01-O01"],
           "materialCodes": ["formes-papier"],
           "vocabulary": [],
@@ -872,11 +872,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Claude Max / Opus",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "ceeb99989e33c974",
-        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "c43bc95e58b85cbc",
+        "notes": "Semaine 4 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -1006,7 +1006,7 @@
           "minutes": 7,
           "mode": "off-screen",
           "role": "consolidation",
-          "mediaIds": ["forme-disque", "forme-carre", "forme-triangle"],
+          "mediaIds": ["forme-disque", "forme-carre"],
           "objectiveCodes": ["MATH-S03-C01-O01"],
           "materialCodes": ["formes-papier"],
           "vocabulary": [],
@@ -1026,11 +1026,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Claude Max / Opus",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "bdc85728e0fc65f4",
-        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "8ca836ce801418dc",
+        "notes": "Semaine 4 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {

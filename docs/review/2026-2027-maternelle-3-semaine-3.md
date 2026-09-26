@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 5 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 6 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -91,6 +91,12 @@ Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2
 Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.
 
 **Suites données :** Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées.
+
+### 2026-09-26 — Claude Max / Opus · `accepted` (ai-assisted)
+
+Reconfirmation pédagogique ciblée des 27 leçons affectées par les corrections de septembre. La première passe indépendante a conclu accepted-with-modifications : 25 leçons, le changement de renderer et objet-monnaie étaient acceptés ; m1-phys-22-a1 demandait une formulation française plus claire et forme-maison-composee un mur géométriquement carré avec une planche correctement identifiée. Après vérification indépendante et correction minimale, la seconde passe a conclu accepted pour les 27 leçons, les deux médias et le changement de renderer. Objectifs, progression, durées et sécurité sont inchangés.
+
+**Suites données :** m1-phys-22-a1 dit désormais « jouer ensemble en respectant la règle ». Le mur de forme-maison-composee mesure 82 × 82 unités et la planche porte l’identifiant canonique. Aucune autre correction demandée. Les approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
 
 ## Jour 10 — 2026-09-14
 
@@ -1134,12 +1140,13 @@ _Troisième corpus de mots : le marché, les fruits, les légumes, les quantité
 - **Matériel :** Aucun matériel
 - **Lexique visé :** la tomate _(the tomato)_ · la banane _(the banana)_ · l’oignon _(the onion)_ · le panier _(the basket)_ · la monnaie _(the change)_
 - **Aide en anglais (optionnelle) :** « Name the market words: tomato, banana, onion, basket, change. »
-- **Images montrées à l'enfant (4) :**
+- **Images montrées à l'enfant (5) :**
 
   - `objet-tomate` — Une tomate (`public/media/objects/objet-tomate.svg`)
   - `objet-banane` — Une banane (`public/media/objects/objet-banane.svg`)
   - `objet-oignon` — Un oignon (`public/media/objects/objet-oignon.svg`)
   - `objet-panier` — Un panier (`public/media/objects/objet-panier.svg`)
+  - `objet-monnaie` — Deux billets simples et une pièce, la monnaie du marché (`public/media/objects/objet-monnaie.svg`)
 
 - **Objectifs travaillés :** `LANG-S01-C01-O03` Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
 

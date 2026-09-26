@@ -1,0 +1,705 @@
+{
+  "reviewDate": "2026-09-25",
+  "reviewer": "Codex visual inspection",
+  "source": "private/astra-visual-evidence/after-fourwords",
+  "sheets": [
+    {
+      "level": 1,
+      "day": 1,
+      "activities": [
+        "m1-lang-01-a1",
+        "m1-lang-01-a2",
+        "m1-lang-01-a3",
+        "m1-math-01-a1",
+        "m1-phys-01-a1",
+        "m1-time-01-a1"
+      ],
+      "sheet": "phone-1-1.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 2,
+      "activities": [
+        "m1-lang-02-a1",
+        "m1-lang-02-a2",
+        "m1-lang-02-a3",
+        "m1-math-02-a1",
+        "m1-phys-02-a1",
+        "m1-world-02-a1"
+      ],
+      "sheet": "phone-1-2.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 3,
+      "activities": [
+        "m1-lang-03-a1",
+        "m1-lang-03-a2",
+        "m1-lang-03-a3",
+        "m1-math-03-a1",
+        "m1-phys-03-a1",
+        "m1-time-03-a1"
+      ],
+      "sheet": "phone-1-3.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 4,
+      "activities": [
+        "m1-lang-04-a1",
+        "m1-lang-04-a2",
+        "m1-lang-04-a3",
+        "m1-math-04-a1",
+        "m1-phys-04-a1",
+        "m1-art-04-a1"
+      ],
+      "sheet": "phone-1-4.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 5,
+      "activities": [
+        "m1-lang-05-a1",
+        "m1-lang-05-a2",
+        "m1-lang-05-a3",
+        "m1-math-05-a1",
+        "m1-phys-05-a1",
+        "m1-art-05-a1"
+      ],
+      "sheet": "phone-1-5.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 6,
+      "activities": [
+        "m1-lang-06-a1",
+        "m1-lang-06-a2",
+        "m1-lang-06-a3",
+        "m1-math-06-a1",
+        "m1-phys-06-a1",
+        "m1-time-06-a1"
+      ],
+      "sheet": "phone-1-6.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 7,
+      "activities": [
+        "m1-lang-07-a1",
+        "m1-lang-07-a2",
+        "m1-lang-07-a3",
+        "m1-math-07-a1",
+        "m1-phys-07-a1",
+        "m1-art-07-a1"
+      ],
+      "sheet": "phone-1-7.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 8,
+      "activities": [
+        "m1-lang-08-a1",
+        "m1-lang-08-a2",
+        "m1-lang-08-a3",
+        "m1-math-08-a1",
+        "m1-phys-08-a1",
+        "m1-world-08-a1"
+      ],
+      "sheet": "phone-1-8.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 9,
+      "activities": [
+        "m1-lang-09-a1",
+        "m1-lang-09-a2",
+        "m1-lang-09-a3",
+        "m1-math-09-a1",
+        "m1-phys-09-a1",
+        "m1-art-09-a1"
+      ],
+      "sheet": "phone-1-9.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 10,
+      "activities": [
+        "m1-lang-10-a1",
+        "m1-lang-10-a2",
+        "m1-lang-10-a3",
+        "m1-math-10-a1",
+        "m1-phys-10-a1",
+        "m1-time-10-a1"
+      ],
+      "sheet": "phone-1-10.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 11,
+      "activities": [
+        "m1-lang-11-a1",
+        "m1-lang-11-a2",
+        "m1-lang-11-a3",
+        "m1-math-11-a1",
+        "m1-phys-11-a1",
+        "m1-art-11-a1"
+      ],
+      "sheet": "phone-1-11.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 12,
+      "activities": [
+        "m1-lang-12-a1",
+        "m1-lang-12-a2",
+        "m1-lang-12-a3",
+        "m1-math-12-a1",
+        "m1-phys-12-a1",
+        "m1-time-12-a1"
+      ],
+      "sheet": "phone-1-12.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 13,
+      "activities": [
+        "m1-lang-13-a1",
+        "m1-lang-13-a2",
+        "m1-lang-13-a3",
+        "m1-math-13-a1",
+        "m1-phys-13-a1",
+        "m1-world-13-a1"
+      ],
+      "sheet": "phone-1-13.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 14,
+      "activities": [
+        "m1-lang-14-a1",
+        "m1-lang-14-a2",
+        "m1-lang-14-a3",
+        "m1-math-14-a1",
+        "m1-phys-14-a1",
+        "m1-art-14-a1"
+      ],
+      "sheet": "phone-1-14.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 15,
+      "activities": [
+        "m1-lang-15-a1",
+        "m1-lang-15-a2",
+        "m1-lang-15-a3",
+        "m1-math-15-a1",
+        "m1-phys-15-a1",
+        "m1-time-15-a1"
+      ],
+      "sheet": "phone-1-15.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 16,
+      "activities": [
+        "m1-lang-16-a1",
+        "m1-lang-16-a2",
+        "m1-lang-16-a3",
+        "m1-math-16-a1",
+        "m1-phys-16-a1",
+        "m1-world-16-a1"
+      ],
+      "sheet": "phone-1-16.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 17,
+      "activities": [
+        "m1-lang-17-a1",
+        "m1-lang-17-a2",
+        "m1-lang-17-a3",
+        "m1-math-17-a1",
+        "m1-phys-17-a1",
+        "m1-art-17-a1"
+      ],
+      "sheet": "phone-1-17.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 18,
+      "activities": [
+        "m1-lang-18-a1",
+        "m1-lang-18-a2",
+        "m1-lang-18-a3",
+        "m1-math-18-a1",
+        "m1-phys-18-a1",
+        "m1-time-18-a1"
+      ],
+      "sheet": "phone-1-18.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 19,
+      "activities": [
+        "m1-lang-19-a1",
+        "m1-lang-19-a2",
+        "m1-lang-19-a3",
+        "m1-math-19-a1",
+        "m1-phys-19-a1",
+        "m1-art-19-a1"
+      ],
+      "sheet": "phone-1-19.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 20,
+      "activities": [
+        "m1-lang-20-a1",
+        "m1-lang-20-a2",
+        "m1-lang-20-a3",
+        "m1-math-20-a1",
+        "m1-phys-20-a1",
+        "m1-world-20-a1"
+      ],
+      "sheet": "phone-1-20.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 21,
+      "activities": [
+        "m1-lang-21-a1",
+        "m1-lang-21-a2",
+        "m1-lang-21-a3",
+        "m1-math-21-a1",
+        "m1-phys-21-a1",
+        "m1-time-21-a1"
+      ],
+      "sheet": "phone-1-21.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 1,
+      "day": 22,
+      "activities": [
+        "m1-lang-22-a1",
+        "m1-lang-22-a2",
+        "m1-lang-22-a3",
+        "m1-math-22-a1",
+        "m1-phys-22-a1",
+        "m1-world-22-a1"
+      ],
+      "sheet": "phone-1-22.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 1,
+      "activities": [
+        "m3-lang-01-a1",
+        "m3-lang-01-a2",
+        "m3-lang-01-a3",
+        "m3-math-01-a1",
+        "m3-math-01-a2",
+        "m3-phys-01-a1",
+        "m3-world-01-a1",
+        "m3-world-01-a2"
+      ],
+      "sheet": "phone-3-1.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 2,
+      "activities": [
+        "m3-lang-02-a1",
+        "m3-lang-02-a2",
+        "m3-lang-02-a3",
+        "m3-math-02-a1",
+        "m3-math-02-a2",
+        "m3-phys-02-a1",
+        "m3-art-01-a1"
+      ],
+      "sheet": "phone-3-2.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 3,
+      "activities": [
+        "m3-lang-03-a1",
+        "m3-lang-03-a2",
+        "m3-lang-03-a3",
+        "m3-math-03-a1",
+        "m3-math-03-a2",
+        "m3-phys-03-a1",
+        "m3-time-01-a1",
+        "m3-time-01-a2"
+      ],
+      "sheet": "phone-3-3.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 4,
+      "activities": [
+        "m3-lang-04-a1",
+        "m3-lang-04-a2",
+        "m3-lang-04-a3",
+        "m3-math-04-a1",
+        "m3-math-04-a2",
+        "m3-phys-04-a1",
+        "m3-art-02-a1"
+      ],
+      "sheet": "phone-3-4.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 5,
+      "activities": [
+        "m3-lang-05-a1",
+        "m3-lang-05-a2",
+        "m3-lang-05-a3",
+        "m3-math-05-a1",
+        "m3-math-05-a2",
+        "m3-phys-05-a1",
+        "m3-world-02-a1",
+        "m3-world-02-a2"
+      ],
+      "sheet": "phone-3-5.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 6,
+      "activities": [
+        "m3-lang-06-a1",
+        "m3-lang-06-a2",
+        "m3-lang-06-a3",
+        "m3-math-06-a1",
+        "m3-math-06-a2",
+        "m3-phys-06-a1",
+        "m3-time-02-a1",
+        "m3-time-02-a2"
+      ],
+      "sheet": "phone-3-6.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 7,
+      "activities": [
+        "m3-lang-07-a1",
+        "m3-lang-07-a2",
+        "m3-lang-07-a3",
+        "m3-math-07-a1",
+        "m3-math-07-a2",
+        "m3-phys-07-a1",
+        "m3-art-03-a1"
+      ],
+      "sheet": "phone-3-7.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 8,
+      "activities": [
+        "m3-lang-08-a1",
+        "m3-lang-08-a2",
+        "m3-lang-08-a3",
+        "m3-math-08-a1",
+        "m3-math-08-a2",
+        "m3-phys-08-a1",
+        "m3-time-03-a1",
+        "m3-time-03-a2"
+      ],
+      "sheet": "phone-3-8.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 9,
+      "activities": [
+        "m3-lang-09-a1",
+        "m3-lang-09-a2",
+        "m3-lang-09-a3",
+        "m3-math-09-a1",
+        "m3-math-09-a2",
+        "m3-phys-09-a1",
+        "m3-world-03-a1",
+        "m3-world-03-a2"
+      ],
+      "sheet": "phone-3-9.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 10,
+      "activities": [
+        "m3-lang-10-a1",
+        "m3-lang-10-a2",
+        "m3-lang-10-a3",
+        "m3-math-10-a1",
+        "m3-math-10-a2",
+        "m3-phys-10-a1",
+        "m3-time-04-a1",
+        "m3-time-04-a2"
+      ],
+      "sheet": "phone-3-10.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 11,
+      "activities": [
+        "m3-lang-11-a1",
+        "m3-lang-11-a2",
+        "m3-lang-11-a3",
+        "m3-math-11-a1",
+        "m3-math-11-a2",
+        "m3-phys-11-a1",
+        "m3-world-04-a1",
+        "m3-world-04-a2"
+      ],
+      "sheet": "phone-3-11.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 12,
+      "activities": [
+        "m3-lang-12-a1",
+        "m3-lang-12-a2",
+        "m3-lang-12-a3",
+        "m3-math-12-a1",
+        "m3-math-12-a2",
+        "m3-phys-12-a1",
+        "m3-art-04-a1"
+      ],
+      "sheet": "phone-3-12.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 13,
+      "activities": [
+        "m3-lang-13-a1",
+        "m3-lang-13-a2",
+        "m3-lang-13-a3",
+        "m3-math-13-a1",
+        "m3-math-13-a2",
+        "m3-phys-13-a1",
+        "m3-time-05-a1",
+        "m3-time-05-a2"
+      ],
+      "sheet": "phone-3-13.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 14,
+      "activities": [
+        "m3-lang-14-a1",
+        "m3-lang-14-a2",
+        "m3-lang-14-a3",
+        "m3-math-14-a1",
+        "m3-math-14-a2",
+        "m3-phys-14-a1",
+        "m3-art-05-a1"
+      ],
+      "sheet": "phone-3-14.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 15,
+      "activities": [
+        "m3-lang-15-a1",
+        "m3-lang-15-a2",
+        "m3-lang-15-a3",
+        "m3-math-15-a1",
+        "m3-math-15-a2",
+        "m3-phys-15-a1",
+        "m3-world-05-a1",
+        "m3-world-05-a2"
+      ],
+      "sheet": "phone-3-15.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 16,
+      "activities": [
+        "m3-lang-16-a1",
+        "m3-lang-16-a2",
+        "m3-lang-16-a3",
+        "m3-math-16-a1",
+        "m3-math-16-a2",
+        "m3-phys-16-a1",
+        "m3-time-06-a1",
+        "m3-time-06-a2"
+      ],
+      "sheet": "phone-3-16.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 17,
+      "activities": [
+        "m3-lang-17-a1",
+        "m3-lang-17-a2",
+        "m3-lang-17-a3",
+        "m3-math-17-a1",
+        "m3-math-17-a2",
+        "m3-phys-17-a1",
+        "m3-art-06-a1"
+      ],
+      "sheet": "phone-3-17.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 18,
+      "activities": [
+        "m3-lang-18-a1",
+        "m3-lang-18-a2",
+        "m3-lang-18-a3",
+        "m3-math-18-a1",
+        "m3-math-18-a2",
+        "m3-phys-18-a1",
+        "m3-time-07-a1",
+        "m3-time-07-a2"
+      ],
+      "sheet": "phone-3-18.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 19,
+      "activities": [
+        "m3-lang-19-a1",
+        "m3-lang-19-a2",
+        "m3-lang-19-a3",
+        "m3-math-19-a1",
+        "m3-math-19-a2",
+        "m3-phys-19-a1",
+        "m3-world-06-a1",
+        "m3-world-06-a2"
+      ],
+      "sheet": "phone-3-19.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 20,
+      "activities": [
+        "m3-lang-20-a1",
+        "m3-lang-20-a2",
+        "m3-lang-20-a3",
+        "m3-math-20-a1",
+        "m3-math-20-a2",
+        "m3-phys-20-a1",
+        "m3-time-08-a1",
+        "m3-time-08-a2"
+      ],
+      "sheet": "phone-3-20.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 21,
+      "activities": [
+        "m3-lang-21-a1",
+        "m3-lang-21-a2",
+        "m3-lang-21-a3",
+        "m3-math-21-a1",
+        "m3-math-21-a2",
+        "m3-phys-21-a1",
+        "m3-world-07-a1",
+        "m3-world-07-a2"
+      ],
+      "sheet": "phone-3-21.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    },
+    {
+      "level": 3,
+      "day": 22,
+      "activities": [
+        "m3-lang-22-a1",
+        "m3-lang-22-a2",
+        "m3-lang-22-a3",
+        "m3-math-22-a1",
+        "m3-math-22-a2",
+        "m3-phys-22-a1",
+        "m3-art-07-a1",
+        "m3-art-07-a2"
+      ],
+      "sheet": "phone-3-22.png",
+      "reviewed": true,
+      "scope": "Initial 320x740 viewport only; lower scroll content and subsequent states not covered by this sheet."
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "baselineCommit": "a0b743b997f1effc5f83981e0f32f19514c10251",
+  "after": "Count-aware TV word grid, final phone padding; no registered media edits",
+  "viewports": {
+    "desktop": {
+      "baseline": {
+        "activityStates": 302,
+        "childBrokenImages": 0,
+        "childHorizontalOverflow": 0,
+        "retainedScreenshots": 302
+      },
+      "after": {
+        "activityStates": 302,
+        "childBrokenImages": 0,
+        "childHorizontalOverflow": 0,
+        "retainedScreenshots": 302
+      }
+    },
+    "large-phone": {
+      "baseline": {
+        "activityStates": 302,
+        "childBrokenImages": 0,
+        "childHorizontalOverflow": 0,
+        "retainedScreenshots": 302
+      },
+      "after": {
+        "activityStates": 302,
+        "childBrokenImages": 0,
+        "childHorizontalOverflow": 0,
+        "retainedScreenshots": 302
+      }
+    },
+    "small-phone": {
+      "baseline": {
+        "activityStates": 302,
+        "childBrokenImages": 0,
+        "childHorizontalOverflow": 0,
+        "retainedScreenshots": 302
+      },
+      "after": {
+        "activityStates": 302,
+        "childBrokenImages": 0,
+        "childHorizontalOverflow": 0,
+        "retainedScreenshots": 302
+      }
+    },
+    "tablet-landscape": {
+      "baseline": {
+        "activityStates": 302,
+        "childBrokenImages": 0,
+        "childHorizontalOverflow": 0,
+        "retainedScreenshots": 302
+      },
+      "after": {
+        "activityStates": 302,
+        "childBrokenImages": 0,
+        "childHorizontalOverflow": 0,
+        "retainedScreenshots": 302
+      }
+    },
+    "tablet-portrait": {
+      "baseline": {
+        "activityStates": 302,
+        "childBrokenImages": 0,
+        "childHorizontalOverflow": 0,
+        "retainedScreenshots": 302
+      },
+      "after": {
+        "activityStates": 302,
+        "childBrokenImages": 0,
+        "childHorizontalOverflow": 0,
+        "retainedScreenshots": 302
+      }
+    },
+    "tv": {
+      "baseline": {
+        "activityStates": 302,
+        "childBrokenImages": 0,
+        "childHorizontalOverflow": 0,
+        "retainedScreenshots": 302
+      },
+      "after": {
+        "activityStates": 302,
+        "childBrokenImages": 0,
+        "childHorizontalOverflow": 0,
+        "retainedScreenshots": 302
+      }
+    }
+  },
+  "limitations": [
+    "Initial state capture is automated coverage, not complete human inspection of all interactive states.",
+    "Screenshots are not a physical TV distance or preschool recognition study.",
+    "No staging evaluation; user selected local only."
+  ],
+  "sourceDirectories": {
+    "baseline": "private/astra-visual-evidence/baseline",
+    "after": "private/astra-visual-evidence/after-fourwords"
+  }
+}
