@@ -340,7 +340,7 @@ function ChooseOne({
 
   return (
     <div className="flex flex-col gap-4">
-      <Prompt>Montre : {nameOf(wanted)}</Prompt>
+      <Prompt>Trouve l’image pour « {nameOf(wanted)} ».</Prompt>
       <div
         className={`teka-choice-grid ${childView ? "teka-choice-grid-child" : ""}`}
         style={
@@ -378,8 +378,8 @@ function ChooseOne({
         state={state}
         hint={
           revealed
-            ? `C’est celui-ci : ${nameOf(wanted)}. Nommez-le ensemble, puis recommencez.`
-            : "Essaie encore. Regarde bien la forme."
+            ? `Voici l’image pour « ${nameOf(wanted)} ». Nommez-la ensemble, puis recommencez.`
+            : "Essaie encore. Regarde bien les images."
         }
       />
       {(state === "done" || revealed) && media.length > 1 && (
@@ -406,9 +406,38 @@ function CountTogether({ upTo, media }: { upTo: number; media: SessionMedia | un
   const total = Math.min(Math.max(upTo, 1), 20);
   // On the child's own surface the tiles are the whole screen: bigger, and centred.
   const tile = childView ? "h-24 w-24 sm:h-32 sm:w-32" : "h-20 w-20 sm:h-24 sm:w-24";
+  const status = (
+    <p
+      role="status"
+      key={counted}
+      className={`font-bold ${childView ? "text-5xl sm:text-6xl" : "text-4xl"} ${counted > 0 ? "teka-pop" : ""}`}
+    >
+      {counted === 0 ? "…" : counted === total ? `${counted} en tout. Bravo !` : counted}
+    </p>
+  );
+  const reset = counted > 0 && (
+    <button
+      type="button"
+      onClick={() => {
+        setCounted(0);
+        // The button disappears at zero: on a phone the child would be left at the bottom of
+        // twenty empty tiles, with focus on nothing. Start again from the instruction.
+        showInstruction?.();
+      }}
+      className="w-fit rounded-xl border-2 border-stone-300 px-4 py-2 text-base font-medium"
+    >
+      Recommencer
+    </button>
+  );
   return (
     <div className={`flex flex-col gap-4 ${childView ? "items-center text-center" : ""}`}>
       <Prompt>Touche chaque objet en comptant à voix haute.</Prompt>
+      {childView && (
+        <div className="sticky top-0 z-10 flex w-full items-center justify-center gap-4 bg-[var(--background)] py-2">
+          {status}
+          {reset}
+        </div>
+      )}
       <div
         className={`flex flex-wrap gap-2 rounded-3xl bg-stage p-3 ${childView ? "justify-center" : ""}`}
         aria-label={`${total} objets à compter`}
@@ -438,27 +467,8 @@ function CountTogether({ upTo, media }: { upTo: number; media: SessionMedia | un
           );
         })}
       </div>
-      <p
-        role="status"
-        key={counted}
-        className={`font-bold ${childView ? "text-5xl sm:text-6xl" : "text-4xl"} ${counted > 0 ? "teka-pop" : ""}`}
-      >
-        {counted === 0 ? "…" : counted === total ? `${counted} en tout. Bravo !` : counted}
-      </p>
-      {counted > 0 && (
-        <button
-          type="button"
-          onClick={() => {
-            setCounted(0);
-            // The button disappears at zero: on a phone the child would be left at the bottom of
-            // twenty empty tiles, with focus on nothing. Start again from the instruction.
-            showInstruction?.();
-          }}
-          className="w-fit rounded-xl border-2 border-stone-300 px-4 py-2 text-base font-medium"
-        >
-          Recommencer
-        </button>
-      )}
+      {!childView && status}
+      {!childView && reset}
     </div>
   );
 }
@@ -471,6 +481,7 @@ function SortIntoGroups({
   categories: readonly string[];
   media: readonly SessionMedia[];
 }) {
+  const childView = useContext(ChildViewContext);
   const [placed, setPlaced] = useState<Record<string, string>>({});
   const [picked, setPicked] = useState<string | null>(null);
   const remaining = media.filter((item) => placed[item.id] === undefined);
@@ -523,7 +534,10 @@ function SortIntoGroups({
               <span className="text-base font-medium">{category}</span>
               <span className="flex flex-wrap justify-center gap-1">
                 {inside.map((item) => (
-                  <span key={item.id} className="teka-pop w-10">
+                  <span
+                    key={item.id}
+                    className={`teka-pop ${childView ? "w-16 sm:w-20 xl:w-24" : "w-10"}`}
+                  >
                     <Picture media={item} size="sm" />
                   </span>
                 ))}
@@ -654,12 +668,13 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
     case "look-and-name": {
       const focus = activity.payload["focus"];
       if (media.length > 1) return <ChooseOne media={media} />;
-      return (
+      const body = (
         <div className="flex flex-col gap-3">
           {media[0] !== undefined && <Showcase media={media[0]} />}
           {typeof focus === "string" && <Prompt>À observer : {focus}</Prompt>}
         </div>
       );
+      return offScreen && media.length === 0 ? <OffScreen>{body}</OffScreen> : body;
     }
 
     case "trace-and-draw": {
@@ -756,16 +771,14 @@ function WordCards({ activity }: { activity: SessionActivity }) {
           return (
             <li
               key={entry.fr}
-              className={`teka-stagger flex flex-col items-center gap-3 rounded-3xl bg-white shadow-sm ${childView ? "p-2 sm:p-3" : "p-3"}`}
+              className={`teka-stagger flex flex-col items-center gap-3 rounded-3xl shadow-sm ${picture === undefined ? "justify-center bg-quiet" : "bg-white"} ${childView ? "p-2 sm:p-3" : "p-3"}`}
               style={{ "--i": index } as React.CSSProperties}
             >
               {picture !== undefined ? (
                 <Stage size={childView ? "sm" : "md"} className="w-full">
                   <Picture media={picture} />
                 </Stage>
-              ) : (
-                <span aria-hidden="true" className="teka-stage h-6 w-full" />
-              )}
+              ) : null}
               <span
                 className={`text-center text-xl font-bold sm:text-2xl ${childView ? "xl:text-4xl" : ""}`}
               >

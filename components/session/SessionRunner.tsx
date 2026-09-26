@@ -160,7 +160,11 @@ export function SessionRunner({ session, levelSlug }: { session: SessionDay; lev
                   <span>
                     {material.name}
                     {material.safetyNote !== null && (
-                      <span className="ml-2 font-medium text-amber-800">⚠</span>
+                      <span className="mt-1 block text-base font-medium text-amber-800">
+                        <span aria-hidden="true">⚠ </span>
+                        <span className="sr-only">Consigne de sécurité : </span>
+                        {material.safetyNote}
+                      </span>
                     )}
                   </span>
                 </li>
@@ -222,11 +226,18 @@ export function SessionRunner({ session, levelSlug }: { session: SessionDay; lev
         <h2 id="arret" className="text-3xl font-bold">
           On s’arrête là pour aujourd’hui.
         </h2>
-        <p className="text-lg">
-          C’est très bien ainsi : {index} activité{index > 1 ? "s" : ""} de faite
-          {index > 1 ? "s" : ""}. Un enfant fatigué n’apprend plus, et la séance vous attendra.
-          Dites-lui ce qu’il a réussi aujourd’hui.
-        </p>
+        {index === 0 ? (
+          <p className="text-lg">
+            C’est très bien ainsi : vous vous êtes arrêtés avant de terminer la première activité.
+            La séance vous attendra. Vous pourrez réessayer quand l’enfant sera disponible.
+          </p>
+        ) : (
+          <p className="text-lg">
+            C’est très bien ainsi : {index} activité{index > 1 ? "s" : ""} de faite
+            {index > 1 ? "s" : ""}. Un enfant fatigué n’apprend plus, et la séance vous attendra.
+            Dites-lui ce qu’il a réussi aujourd’hui.
+          </p>
+        )}
         <div className="flex flex-wrap gap-3">
           <button
             type="button"
@@ -267,13 +278,13 @@ export function SessionRunner({ session, levelSlug }: { session: SessionDay; lev
           </button>
           <Link
             href={`/maternelle/${levelSlug}/seance/${session.instructionalDay}/observation`}
-            className="rounded-2xl border-2 border-stone-300 px-5 py-3 text-lg font-medium"
+            className="rounded-2xl bg-emerald-700 px-5 py-3 text-lg font-semibold text-white"
           >
             Noter comment ça s’est passé
           </Link>
           <Link
             href={`/maternelle/${levelSlug}/calendrier`}
-            className="rounded-2xl bg-emerald-700 px-5 py-3 text-lg font-semibold text-white"
+            className="rounded-2xl border-2 border-stone-300 px-5 py-3 text-lg font-medium"
           >
             Voir le calendrier
           </Link>

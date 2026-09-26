@@ -90,9 +90,22 @@ describe("word cards", () => {
   it("keeps the naming game", () => {
     render(<ActivityRenderer activity={base} />);
     fireEvent.click(screen.getByRole("button", { name: "Jouer : je montre le mot" }));
-    expect(screen.getByText(/^Montre : /)).toBeTruthy();
+    expect(screen.getByText(/^Trouve l’image pour/)).toBeTruthy();
     fireEvent.click(screen.getByRole("button", { name: "Revoir les mots" }));
     expect(screen.getByText("la main")).toBeTruthy();
+  });
+
+  it("renders a text-only vocabulary entry intentionally, without an empty picture stage", () => {
+    const { container } = render(
+      <ActivityRenderer
+        activity={{
+          ...base,
+          vocabulary: [...base.vocabulary, { fr: "il sert à", en: "it is used to", audio: null }],
+        }}
+      />,
+    );
+    expect(container.querySelectorAll(".teka-stage")).toHaveLength(2);
+    expect(screen.getByText("il sert à").closest("li")?.querySelector(".teka-stage")).toBeNull();
   });
 
   it("grows the pictures on the child's own surface", () => {
@@ -189,6 +202,23 @@ describe("the screen stepping back", () => {
     expect(screen.getByText(/Posez l’écran/)).toBeTruthy();
     expect(container.querySelectorAll("li.teka-stagger").length).toBe(3);
     expect(container.querySelector(".border-dashed")).toBeNull();
+  });
+
+  it("gives a media-free observation an explicit off-screen handoff", () => {
+    render(
+      <ActivityRenderer
+        activity={{
+          ...base,
+          renderer: "look-and-name",
+          type: "observation",
+          vocabulary: [],
+          media: [],
+          payload: { focus: "les articulations en action" },
+        }}
+      />,
+    );
+    expect(screen.getByText(/Posez l’écran/)).toBeTruthy();
+    expect(screen.getByText(/les articulations en action/)).toBeTruthy();
   });
 });
 

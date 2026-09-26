@@ -4394,13 +4394,18 @@
     "Initial sheets 071–076 for tablet portrait, tablet landscape and desktop: Claude Max/Opus inspected all sixty-six panels from an isolated authorized package; Astra independently checked every substantive claim against source-resolution evidence and approved payloads.",
     "Generic counter semantics recur in m3-math-20-a2, m3-math-21-a2 and m3-math-22-a1; movement-step mismatch recurs in m3-phys-20-a1; and the single-pebble reference in m3-math-20-a1 extends the existing incomplete hands-on reference finding.",
     "m3-world-07-a2 is an off-screen body observation without the existing device-handoff banner, extending the classified look-and-name handoff defect. m3-lang-21-a2 already displays its off-screen banner and the adult guide supplies the final rhyme pairs, so Claude’s proposed omission was rejected.",
-    "m3-art-07-a1 prints one favourite-rhyme fallback exactly as its approved parent guidance requires; m3-math-21-a1 labels an off-screen physical arrangement; both are NO_CHANGE. Generated child evidence is complete: 266 initial sheets / 1,208 panels and 165 scroll sheets."
+    "m3-art-07-a1 prints one favourite-rhyme fallback exactly as its approved parent guidance requires; m3-math-21-a1 labels an off-screen physical arrangement; both are NO_CHANGE. Generated child evidence is complete: 266 initial sheets / 1,208 panels and 165 scroll sheets.",
+    "Whole-product UX audit complete: 56 captures across phone, tablet, desktop and TV cover fourteen parent/child journey states; automated checks found zero horizontal overflow and zero broken images.",
+    "Astra accepted visible safety notes, accurate zero-progress stop copy, observation-first completion priority, grammatical generic choice copy, intentional text-only cards, media-free handoff, sticky long-count feedback and larger placed sort tokens. These corrections are implemented locally without changing approved lesson payloads or media.",
+    "Astra rejected or deferred preference-only Claude suggestions after source and contrast checks. Calendar density, in-session next navigation, home-card hierarchy and guillemet wrapping are optional; the observation report remains intentionally copyable Markdown.",
+    "The illustration system is already reconciled and frozen: the final QA records 35 accepted, 11 refined and 3 redrawn assets with 0 outstanding changes and 176/176 approvals. No illustration or audio asset changed in this pass.",
+    "The remaining genuine findings affect approved teaching semantics or frozen media and require a bounded owner decision and reconfirmation; they were not silently patched as visual defects."
   ],
   "classifiedFindings": [
     {
       "id": "group-and-match-placed-token-legibility",
       "classification": "HIGH_VALUE_IMPROVEMENT",
-      "status": "candidate-for-systemic-design-pass",
+      "status": "implemented-and-visually-verified-local",
       "evidence": "Placed shapes are approximately 20 px wide inside large group zones at 320 px, making the result hard for a preschool child to recognize.",
       "scope": "GroupAndMatch child renderer; no approved content change."
     },
@@ -4421,21 +4426,21 @@
     {
       "id": "choose-one-bare-french-noun-labels",
       "classification": "DEFECT",
-      "status": "candidate-for-systemic-design-pass",
+      "status": "implemented-and-visually-verified-local",
       "evidence": "m1-world-20-a1 renders « Montre : main » and « C’est celui-ci : main. » because generic ChooseOne labels fall back to bare media tags.",
       "scope": "Renderer/media-label architecture; preserve approved lesson text and solve French display labels systematically."
     },
     {
       "id": "vocabulary-sentence-stems-empty-picture-cards",
       "classification": "DEFECT",
-      "status": "candidate-for-systemic-design-pass",
+      "status": "implemented-and-visually-verified-local",
       "evidence": "m3-lang-02-a2 includes « il sert à » and « elle sert à » after five pictured words; the word-card renderer gives both sentence stems empty image slots, making them look broken.",
       "scope": "Word-card vocabulary/media pairing; preserve approved vocabulary and render non-picture sentence frames intentionally."
     },
     {
       "id": "choose-one-shape-specific-retry-copy",
       "classification": "DEFECT",
-      "status": "candidate-for-systemic-design-pass",
+      "status": "implemented-and-visually-verified-local",
       "evidence": "m3-lang-02-a2 is an object vocabulary choice game, but its retry says « Regarde bien la forme » because ChooseOne hardcodes shape-specific feedback.",
       "scope": "Generic ChooseOne feedback architecture; use context-appropriate wording without changing approved lesson instructions."
     },
@@ -4477,7 +4482,7 @@
     {
       "id": "long-count-feedback-offscreen",
       "classification": "HIGH_VALUE_IMPROVEMENT",
-      "status": "candidate-for-systemic-design-pass",
+      "status": "implemented-and-visually-verified-local",
       "evidence": "At 320×740, the twenty-item count grid is about three screens tall; the running count and reset control are two screens below the first targets, so action and feedback cannot be seen together.",
       "scope": "Long CountTogether layouts; keep live progress visible through a denser layout or persistent feedback."
     },
@@ -4505,7 +4510,7 @@
     {
       "id": "look-and-name-real-world-missing-offscreen-cue",
       "classification": "DEFECT",
-      "status": "candidate-for-systemic-design-pass",
+      "status": "implemented-and-visually-verified-local",
       "evidence": "m1-time-15-a1 and m1-world-16-a1 intentionally have no media because the child must observe the real environment, but the look-and-name renderer shows only « À observer » and never supplies the existing « Posez l’écran » handoff.",
       "scope": "Look-and-name renderer for off-screen real-world observation; preserve approved focus text and make the device handoff explicit."
     },
@@ -4524,5 +4529,56 @@
       "scope": "Approved activity payload/content completeness; define the intended word set through the pedagogical review workflow before changing the child or parent experience."
     }
   ],
-  "next": "Generated child evidence is complete: all 165 scroll sheets and all 266 initial sheets (1,208 panels) are reviewed. Next audit the parent layouts and whole-product UX gaps; no generated sheet remains unreviewed."
+  "next": "Audit complete locally. Run and record final validation, then obtain the owner’s bounded pedagogical decision before changing the remaining approved activity semantics or adding media. Do not regenerate reviewed evidence; do not push, create a PR or deploy.",
+  "productUxAudit": {
+    "status": "complete-local",
+    "reviewedOn": "2026-09-26",
+    "captureScript": "scripts/astra-product-ux-audit.mjs",
+    "localEvidence": "private/astra-product-ux-audit/",
+    "viewports": [
+      "390x844",
+      "768x1024",
+      "1440x900",
+      "1920x1080"
+    ],
+    "states": [
+      "home",
+      "class-1",
+      "class-2-unavailable",
+      "class-3",
+      "calendar",
+      "session-preparation",
+      "session-preparation-alternatives",
+      "activity-parent-folded",
+      "activity-parent-guidance",
+      "activity-child",
+      "session-pause",
+      "session-stopped",
+      "session-complete",
+      "observation"
+    ],
+    "captures": 56,
+    "horizontalOverflow": 0,
+    "brokenImages": 0,
+    "acceptedCorrections": [
+      "Expose material safety notes in the short preparation list.",
+      "Use accurate copy when a family stops before completing the first activity.",
+      "Make the observation/report action primary at normal completion.",
+      "Use grammatical generic choice and retry copy for both shapes and vocabulary.",
+      "Remove false empty-picture stages from intentionally text-only vocabulary.",
+      "Add the established off-screen handoff to media-free real-world observations.",
+      "Keep long-count progress and reset visible in the child surface.",
+      "Increase placed sort-token legibility in the child surface."
+    ],
+    "rejectedOrOptional": [
+      "Child return-link contrast: measured at approximately 4.72:1 and passes WCAG AA for normal text.",
+      "Observation Markdown preview: raw, copyable output is the documented product behavior.",
+      "Calendar density, next-session navigation during an active session, home-card hierarchy and guillemet wrapping: optional polish without a demonstrated reachability or correctness defect."
+    ],
+    "claude": {
+      "model": "Claude Max / Opus",
+      "transmitted": "Four labelled whole-product contact sheets and a bounded review prompt only.",
+      "independentSupervisorReview": true
+    }
+  }
 }

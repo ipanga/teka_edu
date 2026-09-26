@@ -4,30 +4,31 @@
 
 September Visual Experience Review — GPT Astra
 
-**Current phase:** Phase B — generated September child evidence is complete; audit parent layouts and the whole-product UX flow.
+**Current phase:** Phase F — September visual/UX audit complete locally; safe corrections implemented; final validation in progress.
 
-## Supervisor handoff — 2026-09-25
+## Supervisor handoff — 2026-09-26
 
-- **Task status:** IN_PROGRESS. September is neither implementation-complete nor ready for independent reconfirmation.
+- **Task status:** AUDIT_COMPLETE / IMPLEMENTATION_PARTIAL. All requested visual evidence and the whole-product journey are reviewed. Safe renderer and parent-flow corrections are implemented locally; pedagogical correctness changes remain gated on an owner decision and reconfirmation.
 - **Supervisor:** Astra; **worker:** Claude Code CLI 2.1.282, installed at `/Users/Apple/.local/bin/claude`; ready to launch with Max authentication.
-- **Current branch:** `codex/september-astra-visual-review`; **current implementation commit:** `cf924e5` (VIS-QA-01 evidence tooling plus the accepted VIS-FIX-01 count-reset fix); subsequent commits are review checkpoints only.
-- **Base commit / refreshed develop:** `a0b743b`; **refreshed main:** `28dcb0a`. Fetch completed on 2026-09-25. The next checkpoint commit will leave twenty-nine local commits ahead of the feature remote; no open PRs returned by GitHub.
+- **Current branch:** `codex/september-astra-visual-review`; **current implementation commit:** working tree after `3851838` (generated-evidence completion checkpoint), awaiting the final UX implementation checkpoint.
+- **Base commit / refreshed develop:** `a0b743b`; **refreshed main:** `28dcb0a`. Fetch completed on 2026-09-25. The branch is twenty-nine local commits ahead of the feature remote before the final UX checkpoint; no PR was created because the owner selected local-only work.
 - **Completed:** existing audit inventory, initial phone/TV review, all 1,002 noninitial viewport reviews, UI fixes, 1,606-state scroll capture. Preserve existing evidence; do not restart.
-- **In progress / pending:** manual review of 1,042 scroll images (all 165 scroll sheets inspected), large-phone initial set complete (38/38 sheets), tablet portrait/landscape and all 266 initial sheets complete, parent layouts, the whole-product UX audit, justified design fixes, illustration consistency and eventual independent review packages.
+- **Completed audit:** all 165 scroll sheets and all 266 initial sheets (431 sheets / 1,208 initial panels), plus 56 whole-product captures across phone, tablet, desktop and TV. The product audit covers home, all class entry states, calendar, preparation and alternatives, parent guidance folded/open, child view, pause, early stop, completion and observation. It found zero horizontal overflow and zero broken images.
 - **Authentication verified:** normal macOS credential-store access with `env -u ANTHROPIC_API_KEY claude auth status` confirms `claude.ai`, subscription `max`. The earlier sandbox-only check could not see this login. Always exclude the API-key override for worker invocations.
-- **Owner decision required:** none at this checkpoint. The owner granted standing authorization for the remaining September visual/UX audit evidence and narrowly relevant assets to be sent through Claude Max. Secrets, credentials, environment files, user data and unrelated repository content remain excluded.
-- **Tests completed:** VIS-FIX-01 passes a fresh Webpack production build, project typecheck, full unit suite (399/399), changed-file lint/format and its focused browser test on the current development runtime. The browser test independently fails against the old `4a062ee` production build because the instruction remains offscreen, then passes against the fix. The previous 40-test browser suite, container and bundle checks remain stale for this runtime change; the standard Turbopack build has a local EPERM.
+- **Owner decision required:** approve or reject a bounded pedagogical correction and reconfirmation batch for the remaining correctness findings: generic counting erases required task structure; open observation is converted to fixed choice; the 10–20 and 1–30 activities use the wrong ranges; matching/drawing/sorting omit required models or items; shape sorting needs an explicit open-versus-checked design; movement steps mismatch the approved instruction; one triangle has no destination group; and « la monnaie » needs a newly approved representation. No such content/media correction was made during this visual pass.
+- **Tests completed:** format, lint, typecheck, 401/401 unit tests, 31-file content validation, Webpack production build with the three documented fake server sentinels, 28-file client-bundle scan and the full local browser suite (41 passed, 9 production-only skipped). The 56-state product audit and focused phone/TV captures provide the visual and responsive checks. No database/schema change made pgTAP relevant; no deployment/container artifact was requested or produced.
 - **CI state:** no CI for the unpublished local commits. Latest fetched staging deployment succeeded at `a0b743b`; production deployment succeeded at `28dcb0a`. Historical validation table below must not be read as fresh CI for this branch.
 - **Staging state:** existing deployment unchanged; this review is local only under the owner's earlier explicit instruction.
 - **Production state:** existing public service at `28dcb0a`, unchanged. No release authorization.
-- **Exact next command:** inspect the existing parent DOM audit, parent-related E2E coverage and session/navigation surfaces; capture only the missing layouts needed to verify concrete UX risks.
-- **Exact resume point:** all 165 scroll sheets and all 266 initial sheets are accepted as reviewed evidence (431 sheets / 1,208 initial panels). Generated child evidence is complete. Resume with the parent-layout and whole-product UX gap audit. No push, PR, deployment or approval stamping.
+- **Exact next command:** checkpoint the validated local changes, then wait for the owner's bounded pedagogical decision.
+- **Exact resume point:** the visual/UX audit and safe implementation are complete. Do not regenerate or rereview the 431 evidence sheets or the 56 product captures. Resume only with an owner-authorized pedagogical correction/reconfirmation batch. No push, PR, deployment or approval stamping.
 
-| ID         | Task                                               | Worker                                 | State                          | Review                      | CI         | Staging  |
-| ---------- | -------------------------------------------------- | -------------------------------------- | ------------------------------ | --------------------------- | ---------- | -------- |
-| VIS-QA-01  | Organize remaining existing screenshots for review | Claude Code                            | Evidence prepared (431 sheets) | Pending Astra visual review | Local only | Withheld |
-| VIS-FIX-01 | Child count reset returns to the instruction       | Claude Code                            | Implemented and verified       | Astra pass                  | Local only | Withheld |
-| VIS-ART    | Remaining justified asset refinements              | Claude / specialized visual generation | Pending audit completion       | Independent review required | Not run    | Withheld |
+| ID         | Task                                             | Worker                | State                          | Review                  | CI         | Staging  |
+| ---------- | ------------------------------------------------ | --------------------- | ------------------------------ | ----------------------- | ---------- | -------- |
+| VIS-QA-01  | Review September screenshots and product journey | Claude Code / Astra   | Complete (487 sheets/captures) | Astra pass              | Local only | Withheld |
+| VIS-FIX-01 | Child count reset returns to the instruction     | Claude Code           | Implemented and verified       | Astra pass              | Local only | Withheld |
+| VIS-FIX-02 | Safe renderer and parent-flow corrections        | Astra                 | Implemented and verified       | Astra pass              | Local only | Withheld |
+| VIS-PED    | Gated pedagogical correctness corrections        | Owner / future worker | Decision required              | Reconfirmation required | Not run    | Withheld |
 
 ## VIS-QA-01 checkpoint — 2026-09-25 (Claude Code worker)
 
@@ -156,9 +157,39 @@ September Visual Experience Review — GPT Astra
     because the screen already has the off-screen banner; the body-observation screen extends the existing
     missing-handoff class; and the printed favourite rhyme is an explicitly approved fallback. All sixty-six
     panels were reviewed and add no new defect class.
-- **Next review entry:** generated child evidence is complete. Audit the existing parent DOM measurements,
-  parent-related E2E coverage and whole-product session/navigation surfaces; capture only missing evidence
-  needed to verify a concrete risk.
+- **Next review entry:** none. Generated child evidence and the parent/whole-product journey are complete.
+
+## VIS-FIX-02 — whole-product and systemic visual corrections (2026-09-26, Astra supervisor)
+
+- **Evidence:** `scripts/astra-product-ux-audit.mjs` captured 14 product states at 390×844, 768×1024,
+  1440×900 and 1920×1080: 56 full-page captures, zero horizontal overflow and zero broken images.
+  Captures are local and ignored under `private/astra-product-ux-audit/`; the reusable deterministic script
+  is tracked. The first standalone attempt mixed stale static chunks and was discarded. The accepted capture
+  set came from the correctly styled local runtime on port 3002.
+- **Claude review:** an isolated package contained only four labelled product contact sheets and the bounded
+  audit prompt. Claude Max/Opus identified hidden safety notes, misleading zero-progress stop copy and an
+  inconsistent completion priority; Astra independently accepted those three. Astra rejected a contrast claim
+  after calculating approximately 4.72:1, retained the intentionally transparent Markdown observation preview,
+  and classified calendar density, in-session next-session navigation and home-card polish as optional.
+- **Parent-flow corrections:** safety notes are visible in the short preparation list; an early stop before the
+  first activity no longer says « 0 activité de faite »; normal completion makes the observation/report step the
+  primary action and the calendar secondary.
+- **Renderer corrections:** generic choice copy is grammatical for shapes and vocabulary; retry copy no longer
+  assumes a shape; media-free real-world observation gets the existing « Posez l’écran » handoff; text-only
+  vocabulary no longer looks like missing media; long child counts keep progress/reset visible; and placed sort
+  tokens remain identifiable on phone and TV.
+- **Independent visual checks:** phone/TV text-only cards, handoff, sticky count and placed-token states were
+  captured and inspected. The post-fix 56-state product capture repeated with zero overflow/broken images.
+- **Illustration reconciliation:** `docs/ILLUSTRATION_STYLE_GUIDE.md` remains the governing system. The older
+  23 KEEP / 10 REFINE / 16 REDRAW list was a baseline recommendation that the subsequent final QA superseded.
+  `docs/work/SEPTEMBER_VISUAL_QA.md` records 35 accepted, 11 refined and 3 redrawn assets, 0 remaining changes,
+  176/176 approvals and a frozen registry. No asset byte, registry entry or approval was changed here.
+- **Audio reconciliation:** zero recordings remains intentional. The human-recording-only architecture is ready;
+  no synthetic voice, paid service or placeholder recording was introduced.
+- **Deferred by pedagogy/approval gate:** counting structures and ranges, fixed-choice conversion, matching and
+  drawing models, sorting semantics/items, movement steps, triangle grouping and the missing « la monnaie »
+  representation. These are genuine findings, but an automatic visual patch would change approved teaching
+  intent or frozen media.
 
 ## VIS-FIX-01 — child count reset scroll (2026-09-25, Claude Code worker)
 
@@ -267,11 +298,11 @@ files; never store these in disposable `test-results`, which Playwright clears.
 
 ## Remaining
 
-- Complete 49 asset and 302 activity audit; inspect actual rendered states at six sizes.
-- Visual specification and batch plan written; keep batch states honest as work proceeds.
-- Implement, inspect before/after, honestly lapse only affected approvals and prepare packages.
-- Finish artwork and independent review handoff. PR/staging withheld by owner.
-- UI findings, accepted assets and detailed batch states will link to the new audit.
+- Run and record the final local validation set for VIS-FIX-02.
+- Obtain the owner's pedagogical direction before changing the remaining approved activity semantics or adding
+  the missing market representation; any accepted content/media correction must lapse and reconfirm the exact
+  affected approvals.
+- Keep the completed audit local. PR, staging and production remain withheld by the owner.
 
 UI follow-up implemented: five-choice TV grid uses one row on wide child screens; feedback grows to 30px. Nine layout E2E tests pass against the local Webpack dev preview on port 3002; 397 unit tests and changed-file lint pass. Five-word and eight-shape retry/reveal/success captures keep parent-return bottom at 1056px in a 1080px viewport. Manually inspected both reveal captures. Evidence: `private/astra-visual-evidence/five-choice-fix/`.
 
@@ -281,22 +312,24 @@ Full-scroll interaction capture is now complete on the local production build: 8
 
 Fresh verification: Webpack production build, typecheck, full format/lint, 397 unit tests, 40 production-build E2E (9 production-only skipped), content validation (31 JSON) and approval dry-run (0 lapses) pass. Standard Turbopack build remains affected by local EPERM; container and sentinel-bundle checks remain stale. Approval service briefly failed due to usage limits; normal approved retries succeeded after its stated reset time. No ongoing approval-service blocker.
 
-Exact next work: inspect remaining full-scroll images (manifest above records the six already inspected), review the four other viewport sets and parent layouts, then address documented visual defects and continue artwork batches. Do not rerun completed capture just to resume. Existing capture sets predate any later layout fixes and must be labeled accordingly. Standalone preview is on port 3003 while alive; rebuild with `npm run build -- --webpack`, then `PORT=3003 HOSTNAME=127.0.0.1 npm run start` if needed. Commit locally only; no push/PR/staging/production.
+Exact next work: run final validation and checkpoint the records. Do not rerun the completed evidence review.
+The post-fix product captures live locally under `private/astra-product-ux-audit/`. Commit locally only; no
+push/PR/staging/production.
 
 ## Validation State
 
 | Check                                                                          | Result | At                                                                                  |
 | ------------------------------------------------------------------------------ | ------ | ----------------------------------------------------------------------------------- |
-| format                                                                         | PASS   | format check passed; recheck after checkpoint edits                                 |
-| lint                                                                           | PASS   | final runtime layout                                                                |
-| typecheck                                                                      | PASS   | final runtime layout                                                                |
-| unit tests                                                                     | PASS   | 397/397 final runtime layout                                                        |
-| content validation/media fingerprints/lesson digests/review history/curriculum | PASS   | content unchanged; dry-run lapses 0                                                 |
+| format                                                                         | PASS   | full repository after final checkpoint edits                                        |
+| lint                                                                           | PASS   | full repository after VIS-FIX-02                                                    |
+| typecheck                                                                      | PASS   | generated route types plus TypeScript                                               |
+| unit tests                                                                     | PASS   | 401/401 after VIS-FIX-02                                                            |
+| content validation/media fingerprints/lesson digests/review history/curriculum | PASS   | 31 JSON files; no content/media/approval diff                                       |
 | database tests/pgTAP/RLS                                                       | PASS   | 152 assertions, local migration 42                                                  |
-| build                                                                          | PASS   | final standard Turbopack build with CI fake sentinels                               |
-| E2E/responsive/reduced-motion                                                  | PASS   | 39 passed, 9 public-production tests skipped; 1812 initial captures per version     |
-| Docker portable/Vercel/smoke                                                   | PASS   | both final builds and health/signal checks, exit 143                                |
-| client-bundle secret scan                                                      | PASS   | 14 files, all 3 CI sentinels absent                                                 |
+| build                                                                          | PASS   | final Webpack production build with three CI fake sentinels                         |
+| E2E/responsive/reduced-motion                                                  | PASS   | 41 passed, 9 public-production tests skipped; 56 product captures, 0 overflow       |
+| Docker portable/Vercel/smoke                                                   | STALE  | no container or deployment artifact changed; prior release check retained           |
+| client-bundle secret scan                                                      | PASS   | 28 files, all 3 CI sentinels absent                                                 |
 | repository history secret scans                                                | PASS   | 190 commits, no leaks                                                               |
 | source artifact secret scan                                                    | PASS   | 393 source/artifact files, 63.91 MB, no findings; later edits are audit prose       |
 | whole directory secret scan                                                    | FAIL   | 9 flags, all ignored .next generated preview/encryption metadata; no source finding |
@@ -324,36 +357,21 @@ Draft PR creation was rejected by automatic approval review; no PR exists. Do no
 ## Blockers
 
 Staging and PR withheld by latest user instruction: keep review local.
-Full manual interaction-state audit and 26 asset refinements/redraws remain unfinished.
+The remaining implementation work changes approved pedagogy or frozen media and needs the owner's bounded
+direction plus the existing lapse/reconfirmation process. The visual/UX audit itself is complete.
 
 ## User Decisions Needed
 
-Owner answered “Keep the review local.” No further push, PR or staging deployment.
+Decide whether to authorize a bounded pedagogical correction and reconfirmation batch for the remaining
+correctness findings listed in the supervisor handoff. Continue to keep the review local: no push, PR or staging.
 
 ## Exact Resume Point
 
-1. Continue manual inspection beyond the 302 initial phone viewports (complete): review lower
-   scroll content, phone/TV interaction states and other viewports. See
-   `docs/review/media/astra-manual-phone-review.json` and ignored `manual-sheets/`.
-   Story page counter now uses a nonshrinking single line; validated in rendered phone screenshot.
-   Scroll audit: 302 activities at phone + TV, 91 phone screens require scroll, all return controls
-   reachable at the bottom; no TV initial screen needs scroll. TV review sheets are generated
-   in `private/astra-visual-evidence/manual-sheets/tv-*.png`; all 44 sheets / 302 initial TV
-   screens now manually inspected. See `astra-manual-tv-review.json`. Interaction sheets
-   generated: 189 sheets / 1,002 noninitial states. Phone sheets 001–063 (501 states)
-   manually inspected; TV sheets 001–126 (501 states) inspected; all 1,002 captured noninitial viewports inspected.
-   Manifest: `astra-manual-interaction-review.json`. Captures are viewports, often auto-scrolled;
-   full-scroll interaction coverage and tablet/desktop manual inspection remain incomplete.
-   Local checkpoint before this fix: `30769a0`.
-2. Compare the four body candidates at 72/128/256/480 px and in actual phone/TV activities.
-   All are local drafts under `docs/review/media/astra-drafts`, outside the media registry.
-3. Continue the 26-asset brief plan; no broad integration before audit is complete.
-4. On real integration, use existing lapse/reconfirmation workflow and preserve historical
-   approvals. Never self-approve or copy approval digests.
-5. Update audit/checkpoint, rerun applicable checks and commit locally. No push or PR.
-
-The unchanged baseline has a local build in `/tmp/teka-astra-baseline-src`, serving port 3001.
-Temporary files are convenience only; baseline can be reconstructed from Git `a0b743b`.
+1. The audit is complete: 165 scroll sheets, 266 initial sheets and 56 product captures are reviewed.
+2. Preserve VIS-FIX-01 and VIS-FIX-02. All final local checks pass; do not repeat them unless code changes.
+3. If the owner authorizes the pedagogical batch, define the intended behavior for each gated finding,
+   implement only that scope, lapse only affected approvals and generate independent reconfirmation material.
+4. Keep all work local. Never self-approve or copy approval digests; no push, PR, staging or production.
 
 ## Resume Verification
 

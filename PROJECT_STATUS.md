@@ -11,19 +11,27 @@ Commit:     main 28dcb0a (September visual upgrade, live); develop 22d7b3a + thi
 Updated by: Claude Code (claude-opus-5-5)
 ```
 
-## Independent September visual review — 2026-09-25
+## Independent September visual/UX review — 2026-09-26
 
-New owner-requested review on `codex/september-astra-visual-review`, based on `a0b743b`.
-Fresh content validation: 176/176 approved, 302 activities, 49 assets; live production health
-verified at `28dcb0a`. No teaching content, media or production changes. First asset audit:
-23 KEEP, 10 REFINE, 16 REDRAW; these are recommendations, not new approvals.
+Owner-requested local review on `codex/september-astra-visual-review`, based on `a0b743b`.
+The audit is complete: all 165 scroll sheets and 266 initial sheets (431 sheets / 1,208 panels)
+were inspected, followed by 56 whole-product captures covering fourteen journey states on phone,
+tablet, desktop and TV. The product capture found zero horizontal overflow and zero broken images.
 [Audit](docs/review/media/SEPTEMBER_ASTRA_VISUAL_AUDIT.md),
-[checkpoint](docs/work/ACTIVE_TASK.md). Local responsive changes are implemented and tested:
-397 unit, 39 E2E, 152 pgTAP assertions, standard build and both container smokes passed.
-Final capture retains 1,812 initial screens per version and 1,606 interaction states; automated
-checks found no missing files, broken images or horizontal overflow. All 302 initial phone viewports were manually inspected; subsequent states, scrolled
-content and other viewports remain partially inspected. Four body illustration drafts are outside the registry; no approval hashes changed.
-Owner selected local only: no further publishing, PR or staging. Full mission remains in progress.
+[durable manifest](docs/review/media/astra-supervisor-remaining-review.json), and
+[checkpoint](docs/work/ACTIVE_TASK.md).
+
+Safe local corrections expose material safety notes, correct zero-progress stop copy, prioritize the
+observation report on completion, improve generic French choice copy, remove false empty-image stages,
+add missing off-screen handoffs, keep long-count feedback visible and enlarge placed sort tokens. No
+approved lesson payload, media byte, registry entry or approval digest changed. The final illustration QA
+already supersedes the original 23 KEEP / 10 REFINE / 16 REDRAW recommendation: 35 accepted, 11 refined,
+3 redrawn, 0 outstanding, 176/176 approvals. Audio remains intentionally at zero recordings.
+
+The remaining genuine findings change approved pedagogy or frozen media: counter structures/ranges,
+fixed-choice conversion, missing matching/drawing models, sorting semantics/items, movement steps,
+triangle grouping and a missing « la monnaie » representation. They await a bounded owner decision and
+reconfirmation. Owner selected local only: no push, PR, staging or production change.
 Older phase summaries below are historical and may predate the September production release.
 
 ## Current Phase
@@ -806,3 +814,21 @@ Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, a
 - Astra inspected the post-reset 320×740 screen and accepted the bounded implementation locally.
 - The earlier full browser/container/bundle results remain stale for this runtime change.
 - No content, media, approval, push, PR or deployment. See `docs/work/ACTIVE_TASK.md`.
+
+### 2026-09-26 — September audit completion and VIS-FIX-02 (local)
+
+- Completed review of all generated child evidence: 165 scroll sheets plus 266 initial sheets,
+  representing 1,208 initial panels. No sheet remains unreviewed.
+- Added a deterministic whole-product audit covering fourteen journey states at phone, tablet, desktop
+  and TV sizes. Its 56 post-fix captures have zero horizontal overflow and zero broken images. Captures
+  remain ignored and local; `scripts/astra-product-ux-audit.mjs` is the reusable tracked harness.
+- Claude Max/Opus reviewed an isolated four-sheet package under the owner's standing authorization. Astra
+  independently accepted three parent-flow findings and rejected or downgraded preference-only claims.
+- Implemented safe, non-pedagogical fixes: visible preparation safety notes; accurate stop-before-first-
+  activity copy; observation-first completion priority; grammatical generic choice/retry copy; intentional
+  text-only vocabulary cards; an off-screen handoff for media-free observation; sticky long-count progress;
+  and larger placed sorting tokens.
+- Reconciled the illustration record with the final frozen QA: 35 accepted, 11 refined, 3 redrawn, 0
+  outstanding, 176/176 approvals. No asset, lesson payload, digest, database, environment or deployment changed.
+- Genuine renderer/content findings that alter teaching intent remain gated on owner direction and the
+  existing approval-lapse/reconfirmation workflow. The review is local only; no push, PR or deployment.

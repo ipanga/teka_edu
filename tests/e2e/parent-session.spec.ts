@@ -28,6 +28,9 @@ test.describe("parent session", () => {
   test("a session runs from preparation to the end, one activity at a time", async ({ page }) => {
     await page.goto("/maternelle/3/seance/1");
     await expect(page.getByRole("heading", { name: "À préparer" })).toBeVisible();
+    // Safety information is never hidden behind the substitutions disclosure: a parent who has
+    // every material still needs to see it before handing small objects to a child.
+    await expect(page.getByText(/les petits objets se portent à la bouche/i)).toBeVisible();
     // The list is short and scannable; what to use instead waits until the parent asks, so the
     // preparation screen is a list to fetch rather than a page to read.
     await expect(page.getByText("À défaut :")).toHaveCount(0);
@@ -139,7 +142,7 @@ test.describe("parent session", () => {
       name: /^Un (carré|rectangle|triangle|disque|petit disque)/,
     });
     await expect(shapes).toHaveCount(8);
-    await expect(page.getByText(/^Montre : carré/)).toBeVisible();
+    await expect(page.getByText(/Trouve l’image pour « carré »/)).toBeVisible();
 
     // A wrong tap encourages another try; it never says the child is wrong.
     await page.getByRole("button", { name: "Un triangle", exact: true }).click();
