@@ -1102,9 +1102,229 @@
         "m1-math-17-a1"
       ],
       "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-026.png",
+      "activities": [
+        "m3-world-03-a2",
+        "m3-lang-10-a1",
+        "m3-lang-10-a2",
+        "m3-lang-10-a3",
+        "m3-math-10-a1",
+        "m3-math-10-a2",
+        "m3-phys-10-a1",
+        "m3-time-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-027.png",
+      "activities": [
+        "m3-time-04-a2",
+        "m3-lang-11-a1",
+        "m3-lang-11-a2",
+        "m3-lang-11-a3",
+        "m3-math-11-a1",
+        "m3-math-11-a2",
+        "m3-phys-11-a1",
+        "m3-world-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-028.png",
+      "activities": [
+        "m3-world-04-a2",
+        "m3-lang-12-a1",
+        "m3-lang-12-a2",
+        "m3-lang-12-a3",
+        "m3-math-12-a1",
+        "m3-math-12-a2",
+        "m3-phys-12-a1",
+        "m3-art-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-029.png",
+      "activities": [
+        "m3-lang-13-a1",
+        "m3-lang-13-a2",
+        "m3-lang-13-a3",
+        "m3-math-13-a1",
+        "m3-math-13-a2",
+        "m3-phys-13-a1",
+        "m3-time-05-a1",
+        "m3-time-05-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-030.png",
+      "activities": [
+        "m3-lang-14-a1",
+        "m3-lang-14-a2",
+        "m3-lang-14-a3",
+        "m3-math-14-a1",
+        "m3-math-14-a2",
+        "m3-phys-14-a1",
+        "m3-art-05-a1",
+        "m3-lang-15-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-026.png",
+      "activities": [
+        "m1-phys-17-a1",
+        "m1-art-17-a1",
+        "m1-lang-18-a1",
+        "m1-lang-18-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-027.png",
+      "activities": [
+        "m1-lang-18-a3",
+        "m1-math-18-a1",
+        "m1-phys-18-a1",
+        "m1-time-18-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-028.png",
+      "activities": [
+        "m1-lang-19-a1",
+        "m1-lang-19-a2",
+        "m1-lang-19-a3",
+        "m1-math-19-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-029.png",
+      "activities": [
+        "m1-phys-19-a1",
+        "m1-art-19-a1",
+        "m1-lang-20-a1",
+        "m1-lang-20-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-030.png",
+      "activities": [
+        "m1-lang-20-a3",
+        "m1-math-20-a1",
+        "m1-phys-20-a1",
+        "m1-world-20-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-026.png",
+      "activities": [
+        "m1-phys-17-a1",
+        "m1-art-17-a1",
+        "m1-lang-18-a1",
+        "m1-lang-18-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-027.png",
+      "activities": [
+        "m1-lang-18-a3",
+        "m1-math-18-a1",
+        "m1-phys-18-a1",
+        "m1-time-18-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-028.png",
+      "activities": [
+        "m1-lang-19-a1",
+        "m1-lang-19-a2",
+        "m1-lang-19-a3",
+        "m1-math-19-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-029.png",
+      "activities": [
+        "m1-phys-19-a1",
+        "m1-art-19-a1",
+        "m1-lang-20-a1",
+        "m1-lang-20-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-030.png",
+      "activities": [
+        "m1-lang-20-a3",
+        "m1-math-20-a1",
+        "m1-phys-20-a1",
+        "m1-world-20-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-026.png",
+      "activities": [
+        "m1-phys-17-a1",
+        "m1-art-17-a1",
+        "m1-lang-18-a1",
+        "m1-lang-18-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-027.png",
+      "activities": [
+        "m1-lang-18-a3",
+        "m1-math-18-a1",
+        "m1-phys-18-a1",
+        "m1-time-18-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-028.png",
+      "activities": [
+        "m1-lang-19-a1",
+        "m1-lang-19-a2",
+        "m1-lang-19-a3",
+        "m1-math-19-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-029.png",
+      "activities": [
+        "m1-phys-19-a1",
+        "m1-art-19-a1",
+        "m1-lang-20-a1",
+        "m1-lang-20-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-030.png",
+      "activities": [
+        "m1-lang-20-a3",
+        "m1-math-20-a1",
+        "m1-phys-20-a1",
+        "m1-world-20-a1"
+      ],
+      "reviewed": true
     }
   ],
-  "initialPanelsReviewed": 500,
+  "initialPanelsReviewed": 600,
   "scrollSheets": [
     {
       "sheet": "scroll/scroll-001.png",
@@ -2656,7 +2876,11 @@
     "Initial sheets 021–025 across all four viewports: all one hundred panels inspected by Claude Max/Opus and independently checked by Astra on large-phone and tablet-landscape. No clipping, overlap, broken image or unreachable return control was found.",
     "m1-time-15-a1 and m1-world-16-a1 intentionally use the real environment without media, but the look-and-name renderer bypasses the off-screen handoff and shows only a small « À observer » line. The child receives no visible cue to put down the device. This is a genuine renderer-semantics DEFECT.",
     "m1-math-15-a1 asks for three real spoons while displaying one spoon, and m3-math-07-a1 asks for pebbles in a box while displaying one isolated pebble. The generic hands-on reference thumbnail can contradict or incompletely model the required physical setup; this is a HIGH_VALUE_IMPROVEMENT for the systemic off-screen design pass.",
-    "Generic counters, movement steps, fixed-choice labels, missing matching models and the triangle-without-group issue recur and remain covered by existing classified findings. The one-picture story screens match the approved illustration model. Minor punctuation wraps are OPTIONAL_POLISH."
+    "Generic counters, movement steps, fixed-choice labels, missing matching models and the triangle-without-group issue recur and remain covered by existing classified findings. The one-picture story screens match the approved illustration model. Minor punctuation wraps are OPTIONAL_POLISH.",
+    "Initial sheets 026–030 across all four viewports: all one hundred panels independently inspected by Astra after the bounded Claude Max invocation was rejected by automatic approval review before transmission. No file from this batch was sent to Anthropic. No clipping, overlap, broken image or unreachable return control was found.",
+    "m3-lang-12-a2 tells the child to sort « ces mots » and tells the adult to say the words one by one, but the approved activity supplies no word list, examples, media or pairs. The child surface can render only the three category names. This is a genuine content/payload completeness DEFECT, recorded separately without changing approved pedagogy.",
+    "The media-free look-and-name handoff defect recurs in m1-time-18-a1 and m3-world-04-a1. The triangle-without-a-valid-group defect recurs in m1-math-19-a1: the renderer offers a triangle while the approved activity and categories specify only rounds and squares.",
+    "Generic movement steps, long/generic counters, incomplete hands-on reference media, fixed-choice body-part presentation, bare noun labels and the missing market-word picture recur and remain covered by existing findings. Story/rhyme continuation in landscape is covered by full-scroll evidence and is NO_CHANGE."
   ],
   "classifiedFindings": [
     {
@@ -2777,7 +3001,14 @@
       "status": "candidate-for-systemic-design-pass",
       "evidence": "m1-math-15-a1 asks for three real spoons but shows one spoon; m3-math-07-a1 asks for pebbles in a box but shows one isolated pebble. The generic thumbnail can be read as the task model even when it omits the required quantity or container.",
       "scope": "Hands-on renderer and media semantics; distinguish a vocabulary reference from a complete setup model and keep the physical-task instruction dominant."
+    },
+    {
+      "id": "sorting-activity-omits-items-to-sort",
+      "classification": "DEFECT",
+      "status": "new-pedagogical-integrity-finding",
+      "evidence": "m3-lang-12-a2 asks the child to sort « ces mots » into food, writing and clothing categories, while adult guidance says to present words one by one; the payload contains categories only and supplies no words, examples, media or pairs.",
+      "scope": "Approved activity payload/content completeness; define the intended word set through the pedagogical review workflow before changing the child or parent experience."
     }
   ],
-  "next": "Initial sheet 026 for each of the four viewports; all 165 scroll sheets and initial sheets 001–025 are reviewed. No other generated sheet is marked manually reviewed."
+  "next": "Initial sheet 031 for each of the four viewports; all 165 scroll sheets and initial sheets 001–030 are reviewed. No other generated sheet is marked manually reviewed."
 }
