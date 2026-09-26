@@ -10,8 +10,8 @@ September Visual Experience Review — GPT Astra
 
 - **Task status:** AUDIT_COMPLETE / IMPLEMENTATION_PARTIAL. All requested visual evidence and the whole-product journey are reviewed. Safe renderer and parent-flow corrections are implemented locally; pedagogical correctness changes remain gated on an owner decision and reconfirmation.
 - **Supervisor:** Astra; **worker:** Claude Code CLI 2.1.282, installed at `/Users/Apple/.local/bin/claude`; ready to launch with Max authentication.
-- **Current branch:** `codex/september-astra-visual-review`; **current implementation commit:** working tree after `3851838` (generated-evidence completion checkpoint), awaiting the final UX implementation checkpoint.
-- **Base commit / refreshed develop:** `a0b743b`; **refreshed main:** `28dcb0a`. Fetch completed on 2026-09-25. The branch is twenty-nine local commits ahead of the feature remote before the final UX checkpoint; no PR was created because the owner selected local-only work.
+- **Current branch:** `codex/september-astra-visual-review`; **current implementation commit:** `0aa3780` (`Complete September visual UX audit`).
+- **Base commit / refreshed develop:** `a0b743b`; **refreshed main:** `28dcb0a`. Fetch completed on 2026-09-25. The implementation checkpoint is thirty local commits ahead of the feature remote; no PR was created because the owner selected local-only work.
 - **Completed:** existing audit inventory, initial phone/TV review, all 1,002 noninitial viewport reviews, UI fixes, 1,606-state scroll capture. Preserve existing evidence; do not restart.
 - **Completed audit:** all 165 scroll sheets and all 266 initial sheets (431 sheets / 1,208 initial panels), plus 56 whole-product captures across phone, tablet, desktop and TV. The product audit covers home, all class entry states, calendar, preparation and alternatives, parent guidance folded/open, child view, pause, early stop, completion and observation. It found zero horizontal overflow and zero broken images.
 - **Authentication verified:** normal macOS credential-store access with `env -u ANTHROPIC_API_KEY claude auth status` confirms `claude.ai`, subscription `max`. The earlier sandbox-only check could not see this login. Always exclude the API-key override for worker invocations.
@@ -20,7 +20,7 @@ September Visual Experience Review — GPT Astra
 - **CI state:** no CI for the unpublished local commits. Latest fetched staging deployment succeeded at `a0b743b`; production deployment succeeded at `28dcb0a`. Historical validation table below must not be read as fresh CI for this branch.
 - **Staging state:** existing deployment unchanged; this review is local only under the owner's earlier explicit instruction.
 - **Production state:** existing public service at `28dcb0a`, unchanged. No release authorization.
-- **Exact next command:** checkpoint the validated local changes, then wait for the owner's bounded pedagogical decision.
+- **Exact next command:** wait for the owner's bounded pedagogical decision; no autonomous correction remains within the approved visual-only scope.
 - **Exact resume point:** the visual/UX audit and safe implementation are complete. Do not regenerate or rereview the 431 evidence sheets or the 56 product captures. Resume only with an owner-authorized pedagogical correction/reconfirmation batch. No push, PR, deployment or approval stamping.
 
 | ID         | Task                                             | Worker                | State                          | Review                  | CI         | Staging  |
