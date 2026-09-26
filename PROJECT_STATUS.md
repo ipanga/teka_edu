@@ -5,9 +5,9 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-09-26
-Branch:     codex/september-astra-visual-review, PR #86 → develop
-Commit:     release checkpoint 73bfb63; PR-status update pending
+Date:       2026-09-27
+Branch:     codex/september-astra-visual-review; PR #86 merged → develop
+Commit:     develop 5c875287; staging checkpoint pending commit
 Updated by: Codex technical lead
 ```
 
@@ -43,10 +43,15 @@ format, lint, typecheck, 414 unit tests, content validation, deterministic repor
 build, a 28-file client-bundle scan, 41 E2E tests (9 production-only skipped), all migrations replayed from
 scratch, 152 pgTAP/RLS assertions, and both portable and Vercel container builds and smoke tests. The local
 Turbopack port-binding `EPERM` is unchanged; Turbopack succeeds inside both Linux containers. The generated
-reconfirmation migration is the only migration pending on DEV and PROD. Branch and environment protections,
+reconfirmation migration was applied to DEV and remains the only migration pending on PROD. Branch and environment protections,
 secret scanning, push protection and the production owner-review gate are active. The feature branch is
-published as PR #86 into `develop`; CI is pending and nothing has merged or deployed. No October work has
-started.
+published as PR #86 into `develop`; all four required checks passed and it was squash-merged as `5c875287`.
+Staging run `36261271043` deployed exact SHA `5c875287` as Preview deployment
+`dpl_Af851j9qzLcbcdW12sBEsr6TPoNg`, applied only `20260926173653_september_reconfirmation.sql`
+to Supabase DEV, passed 41 live E2E tests (9 production-only skipped), retained Vercel Authentication,
+and passed targeted visual inspection of both classes and the corrected September activities. Production
+remains healthy at `28dcb0a`; the next action is the protected `develop` → `main` promotion. No October work
+has started.
 Older phase summaries below are historical and may predate the September production release.
 
 ## Current Phase
