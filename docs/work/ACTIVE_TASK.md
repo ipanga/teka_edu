@@ -4,31 +4,31 @@
 
 September Visual Experience Review — GPT Astra
 
-**Current phase:** Phase G — bounded September corrections implemented and validated locally; 27 approvals remain lapsed pending independent reconfirmation.
+**Current phase:** September reconfirmation material is complete and ready for an independent AI-assisted reviewer; 27 approvals remain lapsed pending that decision.
 
 ## Supervisor handoff — 2026-09-26
 
-- **Task status:** AWAITING_RECONFIRMATION. The completed audit remains closed. The authorized correction batch is implemented and locally validated; no approval was restored.
+- **Task status:** READY_FOR_INDEPENDENT_RECONFIRMATION. The completed audit remains closed. The reviewer dossier is complete; no approval was restored and no pedagogical decision has been inferred.
 - **Supervisor:** Astra; **worker:** Claude Code CLI 2.1.282, installed at `/Users/Apple/.local/bin/claude`; ready to launch with Max authentication.
-- **Current branch:** `codex/september-astra-visual-review`; **current durable checkpoint:** `259b6ff` (`Correct September pedagogical media defects`).
+- **Current branch:** `codex/september-astra-visual-review`; **current durable checkpoint:** `b0c4ab3` (`Record September correction checkpoint`), with the reconfirmation dossier ready for its local checkpoint commit.
 - **Base commit / refreshed develop:** `a0b743b`; **refreshed main:** `28dcb0a`. Fetch completed on 2026-09-25. The implementation checkpoint is thirty-three local commits ahead of the feature remote; no PR was created because the owner selected local-only work.
 - **Completed:** existing audit inventory, initial phone/TV review, all 1,002 noninitial viewport reviews, UI fixes, 1,606-state scroll capture. Preserve existing evidence; do not restart.
 - **Completed audit:** all 165 scroll sheets and all 266 initial sheets (431 sheets / 1,208 initial panels), plus 56 whole-product captures across phone, tablet, desktop and TV. The product audit covers home, all class entry states, calendar, preparation and alternatives, parent guidance folded/open, child view, pause, early stop, completion and observation. It found zero horizontal overflow and zero broken images.
 - **Authentication verified:** normal macOS credential-store access with `env -u ANTHROPIC_API_KEY claude auth status` confirms `claude.ai`, subscription `max`. The earlier sandbox-only check could not see this login. Always exclude the API-key override for worker invocations.
-- **Owner decision required:** arrange or authorize an independent AI-assisted review of the two generated mixed reconfirmation packages. Until it is accepted, the 27 lessons stay at `review` and must not be restored.
+- **Owner decision required:** send the five-file review set named below to an independent ChatGPT reviewer and return its explicit `accepted`, `accepted-with-modifications`, or `rejected` decision with rationale. Until then, all 27 lessons stay at `review`.
 - **Tests completed:** format, lint, typecheck, 414/414 unit tests, 31-file content validation, deterministic reports and pgTAP mirror, approval dry-run with 0 further lapses, Webpack production build with the three documented fake server sentinels, 28-file client-bundle scan and the full local browser suite (41 passed, 9 production-only skipped). Sixteen fresh targeted captures cover the corrected states at phone, tablet, desktop and TV; Astra inspected all four contact sheets. No database migration was made; Docker was not relevant to this renderer/content/media-only batch.
 - **CI state:** no CI for the unpublished local commits. Latest fetched staging deployment succeeded at `a0b743b`; production deployment succeeded at `28dcb0a`. Historical validation table below must not be read as fresh CI for this branch.
 - **Staging state:** existing deployment unchanged; this review is local only under the owner's earlier explicit instruction.
 - **Production state:** existing public service at `28dcb0a`, unchanged. No release authorization.
-- **Exact next task:** independently review `docs/review/2026-2027-maternelle-1-semaines-1-5-reconfirmation.md` and `docs/review/2026-2027-maternelle-3-semaines-3-4-reconfirmation.md` with `docs/review/media/septembre-avant-apres.png`; record the actual decision, then and only then use the existing approval command on accepted lapsed lessons.
-- **Exact resume point:** corrections, lapse, packages and validation are complete locally. Do not repeat the 431 evidence sheets, 56 product captures or correction implementation. Preserve all 27 lapsed approvals until an independent reconfirmation decision exists. No push, PR, deployment or approval stamping has occurred.
+- **Exact next task:** give the independent reviewer the reviewer brief, both generated before/after packages, structured manifest and two-asset media sheet. Record the returned decision verbatim; only an explicit acceptance permits the existing approval command on the named lapsed lessons.
+- **Exact resume point:** the review material is ready and locally verified: 27/27 lesson records, 2/2 media records, 149 approved, 27 review, 0 additional stale approvals, 49 prior media hashes unchanged and all unaffected approval records unchanged. Do not alter or regenerate content while awaiting the decision. No push, PR, deployment or approval stamping has occurred.
 
-| ID         | Task                                              | Worker              | State                          | Review                  | CI         | Staging  |
-| ---------- | ------------------------------------------------- | ------------------- | ------------------------------ | ----------------------- | ---------- | -------- |
-| VIS-QA-01  | Review September screenshots and product journey  | Claude Code / Astra | Complete (487 sheets/captures) | Astra pass              | Local only | Withheld |
-| VIS-FIX-01 | Child count reset returns to the instruction      | Claude Code         | Implemented and verified       | Astra pass              | Local only | Withheld |
-| VIS-FIX-02 | Safe renderer and parent-flow corrections         | Astra               | Implemented and verified       | Astra pass              | Local only | Withheld |
-| VIS-PED    | Bounded pedagogical/media correctness corrections | Astra / Claude Code | Implemented and validated      | Awaiting reconfirmation | Local pass | Withheld |
+| ID         | Task                                              | Worker              | State                          | Review           | CI         | Staging  |
+| ---------- | ------------------------------------------------- | ------------------- | ------------------------------ | ---------------- | ---------- | -------- |
+| VIS-QA-01  | Review September screenshots and product journey  | Claude Code / Astra | Complete (487 sheets/captures) | Astra pass       | Local only | Withheld |
+| VIS-FIX-01 | Child count reset returns to the instruction      | Claude Code         | Implemented and verified       | Astra pass       | Local only | Withheld |
+| VIS-FIX-02 | Safe renderer and parent-flow corrections         | Astra               | Implemented and verified       | Astra pass       | Local only | Withheld |
+| VIS-PED    | Bounded pedagogical/media correctness corrections | Astra / Claude Code | Reconfirmation dossier ready   | Decision pending | Local pass | Withheld |
 
 ## VIS-PED design checkpoint — 2026-09-26
 
@@ -91,6 +91,31 @@ September Visual Experience Review — GPT Astra
 - **Environment:** local only. No push, PR, CI, staging, production, production data or October work.
 - **Next:** obtain a genuinely independent reconfirmation decision on the two packages. If accepted, record
   that review and restore only the 27 lapsed lessons through the repository command with fresh digests.
+
+## Independent reconfirmation material checkpoint — 2026-09-26
+
+- **Ready files:** `docs/review/2026-2027-september-corrections-reconfirmation-brief.md`, the two generated
+  class/week packages, `docs/review/2026-2027-september-corrections-reconfirmation-manifest.json`, and
+  `docs/review/media/septembre-corrections-media.png`.
+- **Lesson coverage:** the manifest contains one complete record for each of the 27 lapsed lessons: class,
+  instructional day/week, activity, exact field, before/after value, audience classification, pedagogical
+  reason, learning objectives, unchanged progression/duration/safety confirmations, media references,
+  previous digest impact and a pending three-way reviewer decision.
+- **System separation:** the brief identifies the mode-authoritative renderer change separately. It is outside
+  lesson digests and changes no canonical instruction, guidance, objective, progression, duration or safety
+  text. It still asks the independent reviewer to confirm that the presentation preserves off-screen meaning.
+- **Media coverage:** the sheet renders `objet-monnaie` and canonical `forme-maison-composee` at 72, 128 and
+  256 px. The brief records purpose, lesson/activity, French accessibility description, September-style check
+  and absence of misleading numerical, currency-specific or extra pedagogical detail. The owner request's
+  `forme-maison-compose` spelling is explicitly mapped to the registered `forme-maison-composee` ID.
+- **Integrity check:** 27 unique records; 149 lessons approved and 27 at review; every affected `review` is
+  null; 0 additional stale approvals; all unaffected approval records match `aa111b5`; both new media hashes
+  match the registry; all 49 prior media hashes are unchanged. No fresh digest exists or was computed.
+- **Decision state:** pending independent AI-assisted review. Technical validation remains evidence only and
+  is explicitly not treated as pedagogical acceptance. No review-history entry or approval restoration made.
+- **Exact resume point:** record the independent verdict and rationale. On `accepted`, follow the existing
+  review-history and approval mechanism for only the named lessons, then verify fresh digests and unchanged
+  unaffected approvals. On `accepted-with-modifications` or `rejected`, keep the relevant lessons at review.
 
 ## VIS-QA-01 checkpoint — 2026-09-25 (Claude Code worker)
 

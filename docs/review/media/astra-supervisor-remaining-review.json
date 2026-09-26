@@ -4582,7 +4582,7 @@
     }
   },
   "correctionBatch": {
-    "status": "implemented-validated-awaiting-independent-reconfirmation",
+    "status": "reconfirmation-material-ready-decision-pending",
     "authorizedOn": "2026-09-26",
     "baseCommit": "aa111b5",
     "auditReopened": false,
@@ -4637,7 +4637,7 @@
       "implementationWorker": "Edited only ActivityRenderer and targeted renderer/E2E tests; no final transcript returned before supervisor termination.",
       "supervisorDisposition": "Astra reviewed every diff, retained the mode-authoritative implementation, and changed quantity references so generic payload metadata cannot override the approved instruction."
     },
-    "next": "Independent AI-assisted reconfirmation of the two mixed packages is required. Keep all 27 lessons at review until an accepted decision is recorded; then restore only those lessons with fresh digests.",
+    "next": "Send the reviewer brief, two generated packages, structured manifest and two-asset media sheet to an independent ChatGPT reviewer. Record its explicit decision and rationale; do not restore any approval before acceptance.",
     "implementedOn": "2026-09-26",
     "rendererResult": "Off-screen mode is authoritative for quantity, group-and-match and look-and-name. Static references remain where useful; counters, graded choices, sorting targets and completion praise are absent.",
     "actualLapsedLessons": 27,
@@ -4700,6 +4700,37 @@
       "clientBundle": "28 files; 3 fake server sentinels absent",
       "e2e": "41 passed / 9 production-only skipped"
     },
-    "checkpointCommit": "259b6ff"
+    "checkpointCommit": "259b6ff",
+    "reconfirmationMaterial": {
+      "status": "ready-for-independent-ai-assisted-review",
+      "preparedOn": "2026-09-26",
+      "reviewerBrief": "docs/review/2026-2027-september-corrections-reconfirmation-brief.md",
+      "manifest": "docs/review/2026-2027-september-corrections-reconfirmation-manifest.json",
+      "generatedPackages": [
+        "docs/review/2026-2027-maternelle-1-semaines-1-5-reconfirmation.md",
+        "docs/review/2026-2027-maternelle-3-semaines-3-4-reconfirmation.md"
+      ],
+      "mediaSheet": "docs/review/media/septembre-corrections-media.png",
+      "lessonRecords": 27,
+      "mediaRecords": 2,
+      "counts": {
+        "total": 176,
+        "approved": 149,
+        "review": 27,
+        "additionalStaleApprovals": 0
+      },
+      "integrity": {
+        "allAffectedReviewsNull": true,
+        "unaffectedApprovalRecordsUnchangedFrom": "aa111b5",
+        "priorFrozenMediaHashesUnchanged": 49,
+        "freshDigestsComputed": 0
+      },
+      "decision": "pending-independent-review",
+      "allowedDecisions": [
+        "accepted",
+        "accepted-with-modifications",
+        "rejected"
+      ]
+    }
   }
 }

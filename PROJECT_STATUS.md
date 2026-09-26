@@ -856,3 +856,17 @@ Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, a
 - Next gate: an independent AI-assisted reviewer must decide the two reconfirmation packages. Until acceptance
   is recorded, the 27 lessons remain at `review`. No push, PR, staging, production, production-data or October
   work occurred.
+
+### 2026-09-26 — September independent reconfirmation dossier ready (local)
+
+- Added a reviewer brief and machine-readable manifest covering exactly the 27 lapsed lessons. Every record
+  contains the class, day/week, exact before/after field, audience, pedagogical reason, objectives, unchanged
+  progression/duration/safety checks, media references, previous digest impact and pending reviewer verdict.
+- The renderer-only presentation correction is separated from canonical pedagogical changes and carries no
+  lesson-digest impact. The dossier explicitly states that technical validation does not grant approval.
+- The two new assets have rendered evidence plus their pedagogical purpose, use, French accessibility text,
+  style assessment and misleading-detail check. The other 49 frozen asset hashes remain unchanged.
+- Dossier integrity check passes: 176 total, 149 approved, exactly 27 at `review`, zero additional stale
+  approvals, all unaffected approval records unchanged from `aa111b5`, and no fresh digest computed or stored.
+- State is unambiguous: ready for an independent ChatGPT decision. No accepted review entry, approval
+  restoration, content change, push, PR, deployment, production-data operation or October work occurred.
