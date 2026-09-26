@@ -20,6 +20,10 @@ import type { SessionActivity, SessionAudio, SessionMedia } from "@/lib/programm
  * Interaction exists only where tapping genuinely teaches: choosing the named shape, showing a
  * quantity, pairing, sorting. Nothing here scores a child; a wrong tap invites another try.
  *
+ * An activity marked `off-screen` is off-screen, whatever its family could do on a screen: the
+ * counting, sorting or observing happens with real things, and the renderer shows references at
+ * most — never a counter to tap, a choice to get right, or praise for finishing.
+ *
  * Visual patterns (docs/september-illustration-upgrade-plan.md): every picture sits on a tinted
  * **stage**, so a card with one picture is furnished rather than empty; lists of cards, lines and
  * steps arrive once, in sequence; a page turn rises once. All of it is off under
@@ -35,6 +39,13 @@ import type { SessionActivity, SessionAudio, SessionMedia } from "@/lib/programm
  * surface, not of any one activity.
  */
 export const ChildViewContext = createContext(false);
+
+/**
+ * On the child's surface only: brings the child's instruction back to the top of the screen and
+ * gives it focus, for an interaction that starts over from far down a phone screen. Null in the
+ * parent's guide, whose page keeps its place.
+ */
+export const ChildSurfaceContext = createContext<(() => void) | null>(null);
 
 type PictureSize = "sm" | "md" | "lg";
 
@@ -113,7 +124,7 @@ function Prompt({ children }: { children: React.ReactNode }) {
     <p
       className={
         childView
-          ? "text-center text-xl font-medium text-stone-700 sm:text-2xl"
+          ? "text-center text-xl font-medium text-stone-700 sm:text-2xl xl:text-3xl"
           : "text-lg font-medium text-stone-700"
       }
     >
@@ -124,19 +135,21 @@ function Prompt({ children }: { children: React.ReactNode }) {
 
 /** Encouragement, never a verdict on the child. */
 function Feedback({ state, hint }: { state: "idle" | "retry" | "done"; hint: string | null }) {
+  const childView = useContext(ChildViewContext);
+  const textSize = childView ? "text-lg xl:text-3xl" : "text-lg";
   if (state === "idle") return null;
   if (state === "done") {
     return (
       <p
         role="status"
-        className="teka-pop rounded-2xl bg-emerald-100 px-5 py-3 text-lg font-semibold"
+        className={`teka-pop rounded-2xl bg-emerald-100 px-5 py-3 font-semibold ${textSize}`}
       >
         Bravo !
       </p>
     );
   }
   return (
-    <p role="status" className="teka-nudge rounded-2xl bg-amber-50 px-5 py-3 text-lg">
+    <p role="status" className={`teka-nudge rounded-2xl bg-amber-50 px-5 py-3 ${textSize}`}>
       {hint ?? "Essaie encore. Regarde bien."}
     </p>
   );
@@ -204,6 +217,81 @@ const list = (items: readonly string[]) => (
     ))}
   </ul>
 );
+
+/** The groups of a sort, as cards: the parent's reference, not places to tap. */
+const categoryCards = (categories: readonly string[]) => (
+  <div className="grid gap-2 sm:grid-cols-3">
+    {categories.map((category, index) => (
+      <div
+        key={category}
+        className="teka-stagger rounded-2xl bg-white px-4 py-6 text-center text-lg shadow-sm"
+        style={{ "--i": index } as React.CSSProperties}
+      >
+        {category}
+      </div>
+    ))}
+  </div>
+);
+
+/** The pairs of a matching game, one per line. */
+const pairList = (pairs: readonly unknown[]) => (
+  <ul className="flex flex-col gap-2">
+    {pairs.map((pair, index) => (
+      <li
+        key={index}
+        className="teka-stagger rounded-xl bg-white px-4 py-3 text-lg shadow-sm"
+        style={{ "--i": index } as React.CSSProperties}
+      >
+        {asStrings(pair).join("  →  ")}
+      </li>
+    ))}
+  </ul>
+);
+
+/**
+ * What to fetch for an activity done with real objects. The line says what to use and comes
+ * first; a picture only shows the kind of object meant, and says so, so that a parent does not
+ * read one pebble as "one pebble" or a picture as the way to lay things out.
+ */
+const setupFor = (objects: unknown, media: readonly SessionMedia[]) =>
+  typeof objects === "string" || media.length > 0 ? (
+    <div className="flex flex-col gap-3">
+      {typeof objects === "string" && <Prompt>Avec : {objects}</Prompt>}
+      {media.length > 0 && (
+        <figure className="flex flex-col gap-2">
+          <Gallery media={media} size="sm" />
+          <figcaption className="text-sm text-stone-600">
+            Exemple d’objet seulement : l’image ne montre ni combien en préparer, ni comment les
+            disposer.
+          </figcaption>
+        </figure>
+      )}
+    </div>
+  ) : null;
+
+/**
+ * Several pictures to look at together, large and side by side. None of them is a button: the
+ * looking and the talking are the activity, and there is nothing to get right.
+ */
+function SideBySide({ media }: { media: readonly SessionMedia[] }) {
+  const columns =
+    media.length === 2
+      ? "grid-cols-2"
+      : media.length === 3
+        ? "grid-cols-2 sm:grid-cols-3"
+        : "grid-cols-2 sm:grid-cols-4";
+  return (
+    <ul className={`grid gap-3 ${columns}`} aria-label="Images">
+      {media.map((item, index) => (
+        <li key={item.id} className="teka-stagger" style={{ "--i": index } as React.CSSProperties}>
+          <Stage className="h-full">
+            <Picture media={item} size="lg" />
+          </Stage>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 /** The word a picture is for: the first tag a lesson would use, e.g. "carré". */
 const labelOf = (media: SessionMedia) => media.tags[0] ?? media.alt;
@@ -331,8 +419,16 @@ function ChooseOne({
 
   return (
     <div className="flex flex-col gap-4">
-      <Prompt>Montre : {nameOf(wanted)}</Prompt>
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+      <Prompt>Trouve l’image pour « {nameOf(wanted)} ».</Prompt>
+      <div
+        className={`teka-choice-grid ${childView ? "teka-choice-grid-child" : ""}`}
+        style={
+          {
+            "--choice-columns": Math.min(media.length, 4),
+            "--wide-choice-columns": media.length === 5 ? 5 : Math.min(media.length, 4),
+          } as React.CSSProperties
+        }
+      >
         {media.map((item, index) => {
           const isAnswer = isSameKind(item, wanted);
           return (
@@ -343,7 +439,7 @@ function ChooseOne({
               aria-label={item.alt}
               style={{ "--i": index } as React.CSSProperties}
               className={`teka-stagger flex items-center justify-center rounded-3xl border-4 bg-stage p-3 transition ${
-                childView ? "min-h-40 sm:min-h-52" : "min-h-32 sm:min-h-40"
+                childView ? "min-h-40 sm:min-h-52 xl:min-h-72" : "min-h-32 sm:min-h-40"
               } ${
                 state === "done" && isAnswer
                   ? "teka-pop border-emerald-600"
@@ -361,8 +457,8 @@ function ChooseOne({
         state={state}
         hint={
           revealed
-            ? `C’est celui-ci : ${nameOf(wanted)}. Nommez-le ensemble, puis recommencez.`
-            : "Essaie encore. Regarde bien la forme."
+            ? `Voici l’image pour « ${nameOf(wanted)} ». Nommez-la ensemble, puis recommencez.`
+            : "Essaie encore. Regarde bien les images."
         }
       />
       {(state === "done" || revealed) && media.length > 1 && (
@@ -385,12 +481,42 @@ function ChooseOne({
 function CountTogether({ upTo, media }: { upTo: number; media: SessionMedia | undefined }) {
   const [counted, setCounted] = useState(0);
   const childView = useContext(ChildViewContext);
+  const showInstruction = useContext(ChildSurfaceContext);
   const total = Math.min(Math.max(upTo, 1), 20);
   // On the child's own surface the tiles are the whole screen: bigger, and centred.
   const tile = childView ? "h-24 w-24 sm:h-32 sm:w-32" : "h-20 w-20 sm:h-24 sm:w-24";
+  const status = (
+    <p
+      role="status"
+      key={counted}
+      className={`font-bold ${childView ? "text-5xl sm:text-6xl" : "text-4xl"} ${counted > 0 ? "teka-pop" : ""}`}
+    >
+      {counted === 0 ? "…" : counted === total ? `${counted} en tout. Bravo !` : counted}
+    </p>
+  );
+  const reset = counted > 0 && (
+    <button
+      type="button"
+      onClick={() => {
+        setCounted(0);
+        // The button disappears at zero: on a phone the child would be left at the bottom of
+        // twenty empty tiles, with focus on nothing. Start again from the instruction.
+        showInstruction?.();
+      }}
+      className="w-fit rounded-xl border-2 border-stone-300 px-4 py-2 text-base font-medium"
+    >
+      Recommencer
+    </button>
+  );
   return (
     <div className={`flex flex-col gap-4 ${childView ? "items-center text-center" : ""}`}>
       <Prompt>Touche chaque objet en comptant à voix haute.</Prompt>
+      {childView && (
+        <div className="sticky top-0 z-10 flex w-full items-center justify-center gap-4 bg-[var(--background)] py-2">
+          {status}
+          {reset}
+        </div>
+      )}
       <div
         className={`flex flex-wrap gap-2 rounded-3xl bg-stage p-3 ${childView ? "justify-center" : ""}`}
         aria-label={`${total} objets à compter`}
@@ -420,22 +546,8 @@ function CountTogether({ upTo, media }: { upTo: number; media: SessionMedia | un
           );
         })}
       </div>
-      <p
-        role="status"
-        key={counted}
-        className={`font-bold ${childView ? "text-5xl sm:text-6xl" : "text-4xl"} ${counted > 0 ? "teka-pop" : ""}`}
-      >
-        {counted === 0 ? "…" : counted === total ? `${counted} en tout. Bravo !` : counted}
-      </p>
-      {counted > 0 && (
-        <button
-          type="button"
-          onClick={() => setCounted(0)}
-          className="w-fit rounded-xl border-2 border-stone-300 px-4 py-2 text-base font-medium"
-        >
-          Recommencer
-        </button>
-      )}
+      {!childView && status}
+      {!childView && reset}
     </div>
   );
 }
@@ -448,6 +560,7 @@ function SortIntoGroups({
   categories: readonly string[];
   media: readonly SessionMedia[];
 }) {
+  const childView = useContext(ChildViewContext);
   const [placed, setPlaced] = useState<Record<string, string>>({});
   const [picked, setPicked] = useState<string | null>(null);
   const remaining = media.filter((item) => placed[item.id] === undefined);
@@ -500,7 +613,10 @@ function SortIntoGroups({
               <span className="text-base font-medium">{category}</span>
               <span className="flex flex-wrap justify-center gap-1">
                 {inside.map((item) => (
-                  <span key={item.id} className="teka-pop w-10">
+                  <span
+                    key={item.id}
+                    className={`teka-pop ${childView ? "w-16 sm:w-20 xl:w-24" : "w-10"}`}
+                  >
                     <Picture media={item} size="sm" />
                   </span>
                 ))}
@@ -577,6 +693,25 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
     case "quantity": {
       const upTo = activity.payload["upTo"];
       const objects = activity.payload["objects"];
+      // Counting real objects, or counting aloud: a screen counter would compete with the table.
+      // The approved instruction above this renderer carries the exact arrangement and range. A
+      // generic `objects` payload is only renderer metadata and can be less specific, so do not
+      // restate it here as if it were the task. A linked picture remains a vocabulary reference,
+      // explicitly not a model of the quantity or arrangement to make.
+      if (offScreen) {
+        return (
+          <OffScreen>
+            {media.length > 0 ? (
+              <figure className="flex flex-col gap-2">
+                <Gallery media={media} size="sm" />
+                <figcaption className="text-sm text-stone-600">
+                  Exemple d’objet seulement : suivez la consigne pour la quantité et la disposition.
+                </figcaption>
+              </figure>
+            ) : null}
+          </OffScreen>
+        );
+      }
       return (
         <div className={`flex flex-col gap-3 ${childView ? "items-center text-center" : ""}`}>
           {typeof objects === "string" && (
@@ -590,53 +725,59 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
     case "group-and-match": {
       const categories = asStrings(activity.payload["categories"]);
       const pairs = Array.isArray(activity.payload["pairs"]) ? activity.payload["pairs"] : [];
+      if (offScreen) {
+        // Sorted and matched with real things: pictures and groups are references to talk over.
+        const items = asStrings(activity.payload["items"]);
+        const hasBody =
+          media.length > 0 || categories.length > 0 || pairs.length > 0 || items.length > 0;
+        return (
+          <OffScreen withPicture={media.length > 0}>
+            {hasBody ? (
+              <div className="flex flex-col gap-3">
+                {media.length > 0 && <Gallery media={media} size="sm" />}
+                {categories.length > 0 && categoryCards(categories)}
+                {pairs.length > 0 && pairList(pairs)}
+                {items.length > 0 && (
+                  <ul className="flex flex-wrap gap-2" aria-label="Les mots du jeu">
+                    {items.map((item, index) => (
+                      <li
+                        key={item}
+                        className="teka-stagger rounded-xl bg-white px-4 py-3 text-lg shadow-sm"
+                        style={{ "--i": index } as React.CSSProperties}
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ) : null}
+          </OffScreen>
+        );
+      }
       if (categories.length > 0 && media.length > 0) {
         return <SortIntoGroups categories={categories} media={media} />;
       }
       if (media.length > 1) return <ChooseOne media={media} />;
-      if (categories.length > 0) {
-        return (
-          <OffScreen>
-            <div className="grid gap-2 sm:grid-cols-3">
-              {categories.map((category, index) => (
-                <div
-                  key={category}
-                  className="teka-stagger rounded-2xl bg-white px-4 py-6 text-center text-lg shadow-sm"
-                  style={{ "--i": index } as React.CSSProperties}
-                >
-                  {category}
-                </div>
-              ))}
-            </div>
-          </OffScreen>
-        );
-      }
-      return (
-        <OffScreen>
-          <ul className="flex flex-col gap-2">
-            {pairs.map((pair, index) => (
-              <li
-                key={index}
-                className="teka-stagger rounded-xl bg-white px-4 py-3 text-lg shadow-sm"
-                style={{ "--i": index } as React.CSSProperties}
-              >
-                {asStrings(pair).join("  →  ")}
-              </li>
-            ))}
-          </ul>
-        </OffScreen>
-      );
+      if (categories.length > 0) return <OffScreen>{categoryCards(categories)}</OffScreen>;
+      return <OffScreen>{pairList(pairs)}</OffScreen>;
     }
 
     case "look-and-name": {
       const focus = activity.payload["focus"];
-      if (media.length > 1) return <ChooseOne media={media} />;
-      return (
-        <div className="flex flex-col gap-3">
-          {media[0] !== undefined && <Showcase media={media[0]} />}
-          {typeof focus === "string" && <Prompt>À observer : {focus}</Prompt>}
-        </div>
-      );
+      if (!offScreen && media.length > 1) return <ChooseOne media={media} />;
+      const body =
+        media.length > 0 || typeof focus === "string" ? (
+          <div className="flex flex-col gap-3">
+            {media.length === 1 ? (
+              <Showcase media={media[0]!} />
+            ) : (
+              media.length > 1 && <SideBySide media={media} />
+            )}
+            {typeof focus === "string" && <Prompt>À observer : {focus}</Prompt>}
+          </div>
+        ) : null;
+      return offScreen ? <OffScreen withPicture={media.length > 0}>{body}</OffScreen> : body;
     }
 
     case "trace-and-draw": {
@@ -675,17 +816,8 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
         </OffScreen>
       );
 
-    case "hands-on": {
-      const objects = activity.payload["objects"];
-      return (
-        <OffScreen withPicture={media.length > 0}>
-          <div className="flex flex-col gap-3">
-            {media.length > 0 && <Gallery media={media} size="sm" />}
-            {typeof objects === "string" && <Prompt>Avec : {objects}</Prompt>}
-          </div>
-        </OffScreen>
-      );
-    }
+    case "hands-on":
+      return <OffScreen>{setupFor(activity.payload["objects"], media)}</OffScreen>;
   }
 }
 
@@ -723,28 +855,29 @@ function WordCards({ activity }: { activity: SessionActivity }) {
       <ul
         className={
           // A two-word lesson on a television should not be two small cards in a corner.
-          childView
-            ? "flex flex-wrap justify-center gap-4 [&>li]:w-40 sm:[&>li]:w-56 xl:[&>li]:w-80"
-            : "grid grid-cols-2 gap-3 sm:grid-cols-3"
+          childView ? "teka-word-grid justify-center" : "grid grid-cols-2 gap-3 sm:grid-cols-3"
         }
         aria-label="Les mots"
+        style={{ "--word-columns": Math.min(activity.vocabulary.length, 4) } as React.CSSProperties}
       >
         {activity.vocabulary.map((entry, index) => {
           const picture = media[index];
           return (
             <li
               key={entry.fr}
-              className="teka-stagger flex flex-col items-center gap-3 rounded-3xl bg-white p-3 shadow-sm"
+              className={`teka-stagger flex flex-col items-center gap-3 rounded-3xl shadow-sm ${picture === undefined ? "justify-center bg-quiet" : "bg-white"} ${childView ? "p-2 sm:p-3" : "p-3"}`}
               style={{ "--i": index } as React.CSSProperties}
             >
               {picture !== undefined ? (
-                <Stage className="w-full">
+                <Stage size={childView ? "sm" : "md"} className="w-full">
                   <Picture media={picture} />
                 </Stage>
-              ) : (
-                <span aria-hidden="true" className="teka-stage h-6 w-full" />
-              )}
-              <span className="text-center text-xl font-bold sm:text-2xl">{entry.fr}</span>
+              ) : null}
+              <span
+                className={`text-center text-xl font-bold sm:text-2xl ${childView ? "xl:text-4xl" : ""}`}
+              >
+                {entry.fr}
+              </span>
               {entry.audio !== null && (
                 <Listen audio={entry.audio} label={`Écouter : ${entry.fr}`} compact />
               )}
@@ -771,6 +904,7 @@ function WordCards({ activity }: { activity: SessionActivity }) {
  * beat. A story turns three lines at a time, and each page rises once.
  */
 function Narrative({ activity }: { activity: SessionActivity }) {
+  const childView = useContext(ChildViewContext);
   const text = activity.text;
   const questions = asStrings(activity.payload["questions"]);
   const [page, setPage] = useState(0);
@@ -796,33 +930,35 @@ function Narrative({ activity }: { activity: SessionActivity }) {
         <div className="mb-4 flex items-baseline justify-between gap-3">
           <h4 className="text-xl font-semibold">{text.title}</h4>
           {pages > 1 && (
-            <span className="text-sm text-stone-500">
+            <span className="shrink-0 whitespace-nowrap text-sm text-stone-500">
               {page + 1} / {pages}
             </span>
           )}
         </div>
-        {page === 0 && picture !== null && (
-          <div className="mb-5">
-            <Showcase media={picture} />
+        <div className={childView && page === 0 && picture !== null ? "teka-narrative-layout" : ""}>
+          {page === 0 && picture !== null && (
+            <div className="mb-5">
+              <Showcase media={picture} />
+            </div>
+          )}
+          <div
+            key={page}
+            className={rhyme ? "teka-rise flex flex-col gap-2" : "teka-rise flex flex-col gap-3"}
+          >
+            {shown.map((line, index) => (
+              <p
+                key={index}
+                className={
+                  rhyme
+                    ? `teka-stagger text-xl leading-relaxed font-medium sm:text-2xl ${childView ? "xl:text-3xl" : ""}`
+                    : `text-lg leading-relaxed sm:text-xl ${childView ? "xl:text-3xl" : ""}`
+                }
+                style={rhyme ? ({ "--i": index } as React.CSSProperties) : undefined}
+              >
+                {line}
+              </p>
+            ))}
           </div>
-        )}
-        <div
-          key={page}
-          className={rhyme ? "teka-rise flex flex-col gap-2" : "teka-rise flex flex-col gap-3"}
-        >
-          {shown.map((line, index) => (
-            <p
-              key={index}
-              className={
-                rhyme
-                  ? "teka-stagger text-xl leading-relaxed font-medium sm:text-2xl"
-                  : "text-lg leading-relaxed sm:text-xl"
-              }
-              style={rhyme ? ({ "--i": index } as React.CSSProperties) : undefined}
-            >
-              {line}
-            </p>
-          ))}
         </div>
       </article>
 

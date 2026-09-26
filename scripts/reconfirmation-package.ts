@@ -316,9 +316,10 @@ lines.push(
   "",
 );
 if (weeksIn("approved").length > 0) {
+  const restorableWeeks = weeksIn("approved");
   lines.push(
-    `Si c’est le cas, ${list(weeksIn("approved"))} peut retrouver le statut \`approved\` avec`,
-    "`reviewKind: ai-assisted`. Aucune leçon n’est approuvée aujourd’hui.",
+    `Si c’est le cas, ${list(restorableWeeks)} ${restorableWeeks.length === 1 ? "peut" : "peuvent"} retrouver le statut \`approved\` avec`,
+    "`reviewKind: ai-assisted`. Aucune des leçons dont l’approbation a expiré n’est approuvée aujourd’hui.",
     "",
   );
 }

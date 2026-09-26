@@ -1,0 +1,36 @@
+{
+  "source": "private/astra-visual-evidence/interactions-scroll",
+  "build": "Webpack production build after health-helper extraction and five-choice TV fix; local port 3003",
+  "sessionFiles": 88,
+  "states": 1606,
+  "scrollStates": 497,
+  "scrollFrames": 1042,
+  "horizontalOverflow": 0,
+  "brokenImages": 0,
+  "unreachableReturns": 0,
+  "missingFiles": 0,
+  "viewports": {
+    "phone": {
+      "states": 803,
+      "scrollStates": 497
+    },
+    "tv": {
+      "states": 803,
+      "scrollStates": 0
+    }
+  },
+  "manualReview": "Only six full-scroll sample frames inspected; complete full-scroll visual review remains pending. Geometry coverage is not visual approval.",
+  "manuallyReviewedFrames": [
+    "phone-m3-math-10-a1-count-20-scroll-0.png",
+    "phone-m3-math-10-a1-count-20-scroll-592.png",
+    "phone-m3-math-10-a1-count-20-scroll-810.png",
+    "phone-m3-math-10-a1-reset-scroll-702.png",
+    "phone-m3-lang-02-a2-revealed-scroll-0.png",
+    "phone-m3-lang-02-a2-revealed-scroll-422.png"
+  ],
+  "findings": [
+    "Long phone counting completion and five-word reveal controls are reachable after scrolling.",
+    "Count reset preserves bottom position, leaving the instruction and start of the grid offscreen. This is a confirmed usability finding, not yet fixed.",
+    "Counting instructions about fingers and ten-to-twenty retain generic one-to-twenty dot behavior; isolated pedagogical finding remains open."
+  ]
+}

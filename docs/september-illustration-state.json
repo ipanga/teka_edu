@@ -1,7 +1,7 @@
 {
   "version": 1,
   "task": "September illustration, audio, animation and UX upgrade — 1ère and 3ème maternelle",
-  "updatedOn": "2026-09-23",
+  "updatedOn": "2026-09-26",
   "lastCompletedBatch": "QA",
   "nextBatch": null,
   "batches": [
@@ -294,6 +294,16 @@
         "verdict": "refine",
         "priority": "P1",
         "note": "Deliberately a child's drawing of a jointed figure; make it read as crayon on paper (thicker, slightly wobbly line, small joints marked) rather than a diagram."
+      },
+      "objet-monnaie": {
+        "verdict": "replace",
+        "priority": "P1",
+        "note": "Nouvelle représentation nécessaire pour le cinquième mot du marché : deux billets génériques sans valeur chiffrée et une pièce, lisibles sans introduire de calcul."
+      },
+      "forme-maison-composee": {
+        "verdict": "replace",
+        "priority": "P1",
+        "note": "Nouveau modèle composé nécessaire : mur carré et toit triangulaire, sans formes étrangères à la consigne."
       }
     },
     "families": {
@@ -402,7 +412,9 @@
         "objet-seau",
         "objet-table",
         "objet-tomate",
-        "plante-parties"
+        "plante-parties",
+        "objet-monnaie",
+        "forme-maison-composee"
       ],
       "assetsQa": [
         "animal-chevre",
@@ -445,7 +457,9 @@
         "objet-seau",
         "objet-table",
         "objet-tomate",
-        "plante-parties"
+        "plante-parties",
+        "objet-monnaie",
+        "forme-maison-composee"
       ],
       "uxFamiliesDone": [
         "audio-narrative",
@@ -484,11 +498,11 @@
     }
   },
   "derived": {
-    "generatedOn": "2026-09-23",
+    "generatedOn": "2026-09-26",
     "counts": {
       "lessons": 176,
       "activities": 302,
-      "assets": 49,
+      "assets": 51,
       "byStatus": {
         "not-reviewed": 0,
         "reviewed-no-change": 0,
@@ -508,7 +522,7 @@
       "assetsByVerdict": {
         "keep": 8,
         "refine": 18,
-        "replace": 23
+        "replace": 25
       }
     },
     "audited": {
@@ -1051,7 +1065,7 @@
         "verdict": "keep",
         "priority": "P3",
         "status": "reviewed-no-change",
-        "usedBy": ["m1-math-16", "m1-math-19", "m3-math-03", "m3-math-08", "m3-math-18"]
+        "usedBy": ["m3-math-03", "m3-math-08", "m3-math-18"]
       },
       "forme-disque": {
         "verdict": "keep",
@@ -1188,6 +1202,12 @@
         "status": "qa-passed",
         "usedBy": ["m3-lang-13"]
       },
+      "objet-monnaie": {
+        "verdict": "replace",
+        "priority": "P1",
+        "status": "qa-passed",
+        "usedBy": ["m3-lang-13"]
+      },
       "objet-caillou": {
         "verdict": "refine",
         "priority": "P1",
@@ -1249,6 +1269,12 @@
         "priority": "P1",
         "status": "qa-passed",
         "usedBy": ["m3-lang-09", "m3-world-02", "m3-world-05", "m3-world-06"]
+      },
+      "forme-maison-composee": {
+        "verdict": "replace",
+        "priority": "P1",
+        "status": "qa-passed",
+        "usedBy": ["m3-math-18"]
       },
       "histoire-seau-lisa": {
         "verdict": "replace",
@@ -1743,6 +1769,20 @@
         "quality": "Les pattes pendaient : il semblait debout.",
         "importance": "low",
         "reason": "Redessiné en bond : pattes avant tendues devant, arrière derrière, corps incliné, ombre au sol détachée."
+      },
+      "objet-monnaie": {
+        "group": "C",
+        "purpose": "Représenter « la monnaie » comme mot du marché, sans enseigner une valeur ou une opération.",
+        "quality": "Deux billets génériques et une pièce, silhouettes nettes, sans chiffre ni devise ; lisibles à 72, 128 et 256 px.",
+        "importance": "high",
+        "reason": "Créée pour réparer la carte vide de m3-lang-13-a2 ; représentation simple et limitée au mot approuvé."
+      },
+      "forme-maison-composee": {
+        "group": "C",
+        "purpose": "Montrer le modèle exact de la maison à dessiner : mur carré et toit triangulaire.",
+        "quality": "Composition immédiatement lisible, avec un carré et un triangle dominants ; le mur est désormais un carré géométrique de 82 × 82 unités.",
+        "importance": "high",
+        "reason": "Créée pour remplacer les quatre formes isolées qui ne modélisaient pas la maison de m3-math-18-a2."
       }
     },
     "storyReview": {
@@ -1949,7 +1989,9 @@
       "comptine-cabri": "sha256:6760e5f334531f30e2a38c23ecffd3236c9cd3e4a5d4096b03dd9c86acbf518a",
       "comptine-formes": "sha256:0eec93f6874faee3305598d72ea218b52725f270d8c25ce1d942f84921dcefb6",
       "plante-parties": "sha256:27861c6ae3b78d440a7aad5ee7d02c677da3adff334971b5f98232854d431d54",
-      "bonhomme-articule": "sha256:3582b827c7f89c45cec8a4ddbb79fc79ec90f021ee993e28ee748925de96ec9a"
+      "bonhomme-articule": "sha256:3582b827c7f89c45cec8a4ddbb79fc79ec90f021ee993e28ee748925de96ec9a",
+      "objet-monnaie": "sha256:not-present-on-develop",
+      "forme-maison-composee": "sha256:not-present-on-develop"
     },
     "frozenHashes": {
       "forme-carre": "sha256:b43caa434c57bf26e9fd57a361b3d52343ef911a3c9c627f2d894eca6caf1ec8",
@@ -2000,8 +2042,10 @@
       "comptine-cabri": "sha256:3a25a1fd6eb99194a440286105466a4ba97ed730a18ae65382587b00300d0b53",
       "comptine-formes": "sha256:f0aeb22e2bfaf2c3042d2457c378e2869fa73b27bbb834da779d685823664618",
       "plante-parties": "sha256:a42b3838f45e10f4102964ee5733a71493be6401eedc63ad2f767a853757e5af",
-      "bonhomme-articule": "sha256:2308800c0f13fc6c770cdfc2f19bd0ee0102da28398182001a8533882a1351ce"
+      "bonhomme-articule": "sha256:2308800c0f13fc6c770cdfc2f19bd0ee0102da28398182001a8533882a1351ce",
+      "objet-monnaie": "sha256:fed6b6600180e86f583121cd1ec85647959e4787c08e670d074a30c3f12fb019",
+      "forme-maison-composee": "sha256:5183c91aca97b925a3618a8db130fed3c6f465b7fde1c9828392ed15e82ca02a"
     },
-    "resumePoint": "CLOSED for review on 2026-09-23: both classes accepted the visual reconfirmation; 176/176 September lessons approved (35 + 45 restored with approve-week --lapsed-only, fresh digests). The pictures stay frozen (SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION): any redraw now lapses approvals again and needs a new reconfirmation."
+    "resumePoint": "Correction batch in progress on 2026-09-26: two new media assets are visually QA-passed and frozen; affected lesson approvals must remain lapsed until the mixed content/media reconfirmation is explicitly accepted."
   }
 }

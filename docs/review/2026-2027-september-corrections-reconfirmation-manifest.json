@@ -1,0 +1,2036 @@
+{
+  "schemaVersion": 1,
+  "title": "September bounded corrections — independent pedagogical reconfirmation manifest",
+  "preparedOn": "2026-09-26",
+  "reviewedBaseCommit": "aa111b5",
+  "correctionCommit": "259b6ff",
+  "reconfirmationCorrectionCommit": "52419a3",
+  "checkpointCommit": "8847b6b",
+  "branch": "codex/september-astra-visual-review",
+  "status": "accepted-and-approvals-restored",
+  "reviewPasses": [
+    {
+      "reviewedOn": "2026-09-26",
+      "reviewer": "Claude Max / Opus",
+      "outcome": "accepted-with-modifications",
+      "acceptedScope": "25 named lessons, the renderer-only change and objet-monnaie",
+      "requiredModifications": [
+        "m1-phys-22-a1: replace the ambiguous phrase ‘tenir la règle’ with ‘respecter la règle’",
+        "forme-maison-composee / m3-math-18-a2: make the wall geometrically square and regenerate the sheet under the canonical asset id"
+      ],
+      "independentlyVerified": true,
+      "approvalRestored": false
+    },
+    {
+      "reviewedOn": "2026-09-26",
+      "reviewer": "Claude Max / Opus",
+      "outcome": "accepted",
+      "acceptedScope": "all 27 named lessons, the renderer-only change, objet-monnaie and forme-maison-composee",
+      "requiredModifications": [],
+      "independentlyVerified": true,
+      "approvalRestored": true
+    }
+  ],
+  "scope": {
+    "totalSeptemberLessons": 176,
+    "affectedLessons": 27,
+    "approved": 176,
+    "review": 0,
+    "additionalStaleApprovals": 0
+  },
+  "sourcePackages": [
+    "docs/review/2026-2027-maternelle-1-semaines-1-5-reconfirmation.md",
+    "docs/review/2026-2027-maternelle-3-semaines-3-4-reconfirmation.md"
+  ],
+  "mediaSheet": "docs/review/media/septembre-corrections-media.png",
+  "mediaReferencesDefinition": "For a changed mediaIds field, mediaReferences is the union of the before and after values for audit traceability; after is the final canonical activity value.",
+  "globalInvariants": {
+    "curriculumProgressionChanged": false,
+    "calendarChanged": false,
+    "lessonOrderChanged": false,
+    "learningObjectivesChanged": false,
+    "durationIntentChanged": false,
+    "safetyGuidanceRegressed": false,
+    "unaffectedApprovalRecordsChanged": false,
+    "technicalValidationIsApproval": false
+  },
+  "rendererOnlyChanges": {
+    "approvalImpact": "none; renderer code is outside lesson digests",
+    "summary": "For activities explicitly marked off-screen, quantity, group-and-match and look-and-name now render only a handoff and useful static references. They no longer invent counters, graded choices, sorting targets or completion praise. Hands-on pictures are labelled as examples rather than exact physical setups.",
+    "semanticConfirmation": "The canonical child instruction, adult guidance, objectives, progression, durations and safety text are unchanged by this system correction.",
+    "reviewQuestion": "Confirm that this presentation preserves the approved off-screen activity rather than adding or removing pedagogy."
+  },
+  "lessons": [
+    {
+      "lessonId": "m1-phys-01",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 1,
+      "week": 1,
+      "activityId": "m1-phys-01-a1",
+      "activityTitle": "Le jeu et la règle",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "écouter le signal",
+          "bouger quand le jeu commence",
+          "s’arrêter quand l’adulte dit « stop »"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic running steps with the approved listen, move and stop-on-signal rule.",
+      "lessonObjectiveCodes": [
+        "PHYS-S04-C01-O03"
+      ],
+      "activityObjectiveCodes": [
+        "PHYS-S04-C01-O03"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "discovery",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "6cccc6de1581a42e",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "1ad97c39ab5c4c89"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [],
+      "learningObjectiveCodes": [
+        "PHYS-S04-C01-O03"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-02",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 2,
+      "week": 1,
+      "activityId": "m1-phys-02-a1",
+      "activityTitle": "Je cours",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "courir jusqu’au repère",
+          "revenir en marchant",
+          "recommencer — trois allers en tout"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic steps with the approved safe run-to-marker, walking return and three-trip sequence.",
+      "lessonObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ],
+      "activityObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "discovery",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "070bbe0aedee29e2",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "c02cb0a6522bda14"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [],
+      "learningObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-03",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 3,
+      "week": 1,
+      "activityId": "m1-phys-03-a1",
+      "activityTitle": "Je cours",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "courir jusqu’au repère",
+          "revenir en marchant",
+          "recommencer — trois allers en tout"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic steps with the approved safe run-to-marker, walking return and three-trip sequence.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "practice",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "1650cad1dfb7c8d5",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "fda5965b534382b3"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ],
+      "learningObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-04",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 4,
+      "week": 1,
+      "activityId": "m1-phys-04-a1",
+      "activityTitle": "Je bouge comme toi",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "regarder et imiter le mouvement",
+          "inventer un mouvement",
+          "se faire imiter par l’adulte"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic running steps with the approved observe, imitate, invent and reciprocal-imitation sequence.",
+      "lessonObjectiveCodes": [
+        "PHYS-S03-C01-O01"
+      ],
+      "activityObjectiveCodes": [
+        "PHYS-S03-C01-O01"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "discovery",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "0f061f6c2df8d2ce",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "38c2a4a402e9d71a"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [],
+      "learningObjectiveCodes": [
+        "PHYS-S03-C01-O01"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-05",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 5,
+      "week": 2,
+      "activityId": "m1-phys-05-a1",
+      "activityTitle": "Je cours",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "courir jusqu’au repère",
+          "revenir en marchant",
+          "recommencer — trois allers en tout"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic steps with the approved safe run-to-marker, walking return and three-trip sequence.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "practice",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "4876f8d5c08fe3d1",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "ef3eb1675720680f"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ],
+      "learningObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-06",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 6,
+      "week": 2,
+      "activityId": "m1-phys-06-a1",
+      "activityTitle": "Je lance",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "viser le seau",
+          "lancer la balle",
+          "ramasser et recommencer — cinq lancers en tout"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic running steps with the approved aim, throw, retrieve and five-throw sequence.",
+      "lessonObjectiveCodes": [
+        "PHYS-S01-C01-O01"
+      ],
+      "activityObjectiveCodes": [
+        "PHYS-S01-C01-O01"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "discovery",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "c0d7e8d0e9d070da",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "bef80f59a6346f05"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [],
+      "learningObjectiveCodes": [
+        "PHYS-S01-C01-O01"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-07",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 7,
+      "week": 2,
+      "activityId": "m1-phys-07-a1",
+      "activityTitle": "Je bouge comme toi",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "regarder et imiter le mouvement",
+          "inventer un mouvement",
+          "se faire imiter par l’adulte"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic running steps with the approved observe, imitate, invent and reciprocal-imitation sequence.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "PHYS-S03-C01-O01"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "practice",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "57e08d076efdcfaf",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "5f721a63605454a3"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "PHYS-S03-C01-O01"
+      ],
+      "learningObjectiveCodes": [
+        "PHYS-S03-C01-O01"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-08",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 8,
+      "week": 2,
+      "activityId": "m1-phys-08-a1",
+      "activityTitle": "Je lance",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "viser le seau",
+          "lancer la balle",
+          "ramasser et recommencer — cinq lancers en tout"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic running steps with the approved aim, throw, retrieve and five-throw sequence.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "PHYS-S01-C01-O01"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "practice",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "368f690b06a2e5eb",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "e579b6fa1f2a9c22"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "PHYS-S01-C01-O01"
+      ],
+      "learningObjectiveCodes": [
+        "PHYS-S01-C01-O01"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-09",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 9,
+      "week": 2,
+      "activityId": "m1-phys-09-a1",
+      "activityTitle": "Je marche sur la ligne",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "marcher sur la ligne, avec la main de l’adulte si besoin",
+          "essayer seul",
+          "continuer ou recommencer si on en a envie"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic running steps with the approved line-walking support: optional adult hand, solo attempt and child-chosen continuation.",
+      "lessonObjectiveCodes": [
+        "PHYS-S02-C01-O01"
+      ],
+      "activityObjectiveCodes": [
+        "PHYS-S02-C01-O01"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "discovery",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "2c0c1df6137e349e",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "9a3246700aa097a6"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [],
+      "learningObjectiveCodes": [
+        "PHYS-S02-C01-O01"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-10",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 10,
+      "week": 3,
+      "activityId": "m1-phys-10-a1",
+      "activityTitle": "Je cours",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "courir jusqu’au repère",
+          "revenir en marchant",
+          "recommencer — trois allers en tout"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic steps with the approved safe run-to-marker, walking return and three-trip sequence.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "practice",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "e5ca525846e24f72",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "cb3b3530aae9ac88"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ],
+      "learningObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-11",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 11,
+      "week": 3,
+      "activityId": "m1-phys-11-a1",
+      "activityTitle": "Je lance",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "viser le seau",
+          "lancer la balle",
+          "ramasser et recommencer — cinq lancers en tout"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic running steps with the approved aim, throw, retrieve and five-throw sequence.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "PHYS-S01-C01-O01"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "practice",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "83dd807a21bdc69e",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "2aec4137ea46115f"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "PHYS-S01-C01-O01"
+      ],
+      "learningObjectiveCodes": [
+        "PHYS-S01-C01-O01"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-12",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 12,
+      "week": 3,
+      "activityId": "m1-phys-12-a1",
+      "activityTitle": "Je marche sur la ligne",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "marcher sur la ligne, avec la main de l’adulte si besoin",
+          "essayer seul",
+          "continuer ou recommencer si on en a envie"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic running steps with the approved line-walking support: optional adult hand, solo attempt and child-chosen continuation.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "PHYS-S02-C01-O01"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "practice",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "2e2ed7c89bff07b2",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "ac3ac5fee479e8fa"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "PHYS-S02-C01-O01"
+      ],
+      "learningObjectiveCodes": [
+        "PHYS-S02-C01-O01"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-13",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 13,
+      "week": 3,
+      "activityId": "m1-phys-13-a1",
+      "activityTitle": "Je bouge comme toi",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "regarder et imiter le mouvement",
+          "inventer un mouvement",
+          "se faire imiter par l’adulte"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic running steps with the approved observe, imitate, invent and reciprocal-imitation sequence.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "PHYS-S03-C01-O01"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "practice",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "3563841c80dd168c",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "82154094693b1720"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "PHYS-S03-C01-O01"
+      ],
+      "learningObjectiveCodes": [
+        "PHYS-S03-C01-O01"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-14",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 14,
+      "week": 3,
+      "activityId": "m1-phys-14-a1",
+      "activityTitle": "Je cours",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "courir jusqu’au repère",
+          "revenir en marchant",
+          "recommencer — trois allers en tout"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic steps with the approved safe run-to-marker, walking return and three-trip sequence.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "practice",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "3f09acd0d76a1152",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "0d04e448366e2648"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ],
+      "learningObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-15",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 15,
+      "week": 4,
+      "activityId": "m1-phys-15-a1",
+      "activityTitle": "Je lance",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "viser le seau",
+          "lancer la balle",
+          "ramasser et recommencer — cinq lancers en tout"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic running steps with the approved aim, throw, retrieve and five-throw sequence.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "PHYS-S01-C01-O01"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "practice",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "33f010d2947c4116",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "8eda122f56a1bc57"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "PHYS-S01-C01-O01"
+      ],
+      "learningObjectiveCodes": [
+        "PHYS-S01-C01-O01"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-16",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 16,
+      "week": 4,
+      "activityId": "m1-phys-16-a1",
+      "activityTitle": "Je marche sur la ligne",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "marcher sur la ligne, avec la main de l’adulte si besoin",
+          "essayer seul",
+          "continuer ou recommencer si on en a envie"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic running steps with the approved line-walking support: optional adult hand, solo attempt and child-chosen continuation.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "PHYS-S02-C01-O01"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "consolidation",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "7be8dcf3d0680aa3",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "a4d3fc137b29870b"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "PHYS-S02-C01-O01"
+      ],
+      "learningObjectiveCodes": [
+        "PHYS-S02-C01-O01"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-17",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 17,
+      "week": 4,
+      "activityId": "m1-phys-17-a1",
+      "activityTitle": "Je bouge comme toi",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "regarder et imiter le mouvement",
+          "inventer un mouvement",
+          "se faire imiter par l’adulte"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic running steps with the approved observe, imitate, invent and reciprocal-imitation sequence.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "PHYS-S03-C01-O01"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "consolidation",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "0cc389173b6d53bf",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "5efa4673626eb5db"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "PHYS-S03-C01-O01"
+      ],
+      "learningObjectiveCodes": [
+        "PHYS-S03-C01-O01"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-18",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 18,
+      "week": 4,
+      "activityId": "m1-phys-18-a1",
+      "activityTitle": "Je cours",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "courir jusqu’au repère",
+          "revenir en marchant",
+          "recommencer — trois allers en tout"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic steps with the approved safe run-to-marker, walking return and three-trip sequence.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "consolidation",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "4ea3157f08fa4037",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "e300849d2da2bc09"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ],
+      "learningObjectiveCodes": [
+        "PHYS-S01-C01-O02"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-19",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 19,
+      "week": 4,
+      "activityId": "m1-phys-19-a1",
+      "activityTitle": "Je lance",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "viser le seau",
+          "lancer la balle",
+          "ramasser et recommencer — cinq lancers en tout"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic running steps with the approved aim, throw, retrieve and five-throw sequence.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "PHYS-S01-C01-O01"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "consolidation",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "56f5c1d52db059d5",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "a19999707e10a6b6"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "PHYS-S01-C01-O01"
+      ],
+      "learningObjectiveCodes": [
+        "PHYS-S01-C01-O01"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-20",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 20,
+      "week": 5,
+      "activityId": "m1-phys-20-a1",
+      "activityTitle": "Je marche sur la ligne",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "marcher sur la ligne, avec la main de l’adulte si besoin",
+          "essayer seul",
+          "continuer ou recommencer si on en a envie"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic running steps with the approved line-walking support: optional adult hand, solo attempt and child-chosen continuation.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "PHYS-S02-C01-O01"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "consolidation",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "1451929196bfd88d",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "bb3d9d559223de75"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "PHYS-S02-C01-O01"
+      ],
+      "learningObjectiveCodes": [
+        "PHYS-S02-C01-O01"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-21",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 21,
+      "week": 5,
+      "activityId": "m1-phys-21-a1",
+      "activityTitle": "Je bouge comme toi",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "courir",
+          "s’arrêter",
+          "recommencer"
+        ]
+      },
+      "after": {
+        "moves": [
+          "regarder et imiter le mouvement",
+          "inventer un mouvement",
+          "se faire imiter par l’adulte"
+        ]
+      },
+      "pedagogicalReason": "Replace unrelated generic running steps with the approved observe, imitate, invent and reciprocal-imitation sequence.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "PHYS-S03-C01-O01"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "consolidation",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "e2e1eb715f6900dd",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "57d90b2d8aaf9029"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "PHYS-S03-C01-O01"
+      ],
+      "learningObjectiveCodes": [
+        "PHYS-S03-C01-O01"
+      ]
+    },
+    {
+      "lessonId": "m1-phys-22",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 22,
+      "week": 5,
+      "activityId": "m1-phys-22-a1",
+      "activityTitle": "Je choisis mon jeu",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
+      "before": {
+        "moves": [
+          "choisir son jeu",
+          "écouter la règle",
+          "jouer chacun son tour"
+        ]
+      },
+      "after": {
+        "moves": [
+          "choisir son jeu",
+          "écouter la règle du jeu choisi",
+          "jouer ensemble en respectant la règle"
+        ]
+      },
+      "pedagogicalReason": "Make the supporting steps match the approved consolidation task: choose a game, hear its rule, then play together while keeping that rule.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "PHYS-S04-C01-O03"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "consolidation",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 6,
+        "lessonMinutes": 6,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "21b1d5f00040376a",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "2ddecdb4759b5472"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "PHYS-S04-C01-O03"
+      ],
+      "learningObjectiveCodes": [
+        "PHYS-S04-C01-O03"
+      ]
+    },
+    {
+      "lessonId": "m1-math-16",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 16,
+      "week": 4,
+      "activityId": "m1-math-16-a1",
+      "activityTitle": "Les formes ensemble",
+      "changedField": "mediaIds",
+      "changeClassification": "media / child-facing reference",
+      "before": [
+        "forme-disque",
+        "forme-carre",
+        "forme-triangle"
+      ],
+      "after": [
+        "forme-disque",
+        "forme-carre"
+      ],
+      "pedagogicalReason": "Remove the triangle, which had no valid destination in the approved open sort limited to rounds and squares.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "MATH-S03-C01-O01"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "consolidation",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 7,
+        "lessonMinutes": 7,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [
+        "forme-carre",
+        "forme-disque",
+        "forme-triangle"
+      ],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "ceeb99989e33c974",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "c43bc95e58b85cbc"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "MATH-S03-C01-O01"
+      ],
+      "learningObjectiveCodes": [
+        "MATH-S03-C01-O01"
+      ]
+    },
+    {
+      "lessonId": "m1-math-19",
+      "classId": "maternelle-1",
+      "className": "1ère maternelle",
+      "instructionalDay": 19,
+      "week": 4,
+      "activityId": "m1-math-19-a1",
+      "activityTitle": "Les formes ensemble",
+      "changedField": "mediaIds",
+      "changeClassification": "media / child-facing reference",
+      "before": [
+        "forme-disque",
+        "forme-carre",
+        "forme-triangle"
+      ],
+      "after": [
+        "forme-disque",
+        "forme-carre"
+      ],
+      "pedagogicalReason": "Remove the triangle, which had no valid destination in the approved open sort limited to rounds and squares.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "MATH-S03-C01-O01"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "consolidation",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 7,
+        "lessonMinutes": 7,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [
+        "forme-carre",
+        "forme-disque",
+        "forme-triangle"
+      ],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "bdc85728e0fc65f4",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "8ca836ce801418dc"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "MATH-S03-C01-O01"
+      ],
+      "learningObjectiveCodes": [
+        "MATH-S03-C01-O01"
+      ]
+    },
+    {
+      "lessonId": "m3-lang-12",
+      "classId": "maternelle-3",
+      "className": "3ème maternelle",
+      "instructionalDay": 12,
+      "week": 3,
+      "activityId": "m3-lang-12-a2",
+      "activityTitle": "Je range les mots par catégories",
+      "changedField": "payload",
+      "changeClassification": "renderer metadata / child-visible spoken word bank",
+      "before": {
+        "categories": [
+          "ce qui se mange",
+          "ce qui sert à écrire",
+          "ce qui se porte"
+        ]
+      },
+      "after": {
+        "categories": [
+          "ce qui se mange",
+          "ce qui sert à écrire",
+          "ce qui se porte"
+        ],
+        "items": [
+          "la banane",
+          "le pain",
+          "le crayon",
+          "la craie",
+          "la chemise",
+          "la chaussure"
+        ]
+      },
+      "pedagogicalReason": "Supply the six words the approved adult guidance says to present one by one: two examples for each existing category.",
+      "lessonObjectiveCodes": [
+        "LANG-S01-C01-O02"
+      ],
+      "activityObjectiveCodes": [
+        "LANG-S01-C01-O02"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "discovery",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 8,
+        "lessonMinutes": 13,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "83147d036337f033",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "8f9822d3c5c6207b"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S02-C03-O04"
+      ],
+      "learningObjectiveCodes": [
+        "LANG-S01-C01-O02",
+        "LANG-S02-C03-O04",
+        "TIME-SPACE-S01-C01-O12"
+      ]
+    },
+    {
+      "lessonId": "m3-lang-13",
+      "classId": "maternelle-3",
+      "className": "3ème maternelle",
+      "instructionalDay": 13,
+      "week": 3,
+      "activityId": "m3-lang-13-a2",
+      "activityTitle": "Au marché",
+      "changedField": "mediaIds",
+      "changeClassification": "media / child-facing reference",
+      "before": [
+        "objet-tomate",
+        "objet-banane",
+        "objet-oignon",
+        "objet-panier"
+      ],
+      "after": [
+        "objet-tomate",
+        "objet-banane",
+        "objet-oignon",
+        "objet-panier",
+        "objet-monnaie"
+      ],
+      "pedagogicalReason": "Supply the missing fifth picture so « la monnaie » no longer appears as an empty word card.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "LANG-S01-C01-O03"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "practice",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 8,
+        "lessonMinutes": 13,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [
+        "objet-banane",
+        "objet-monnaie",
+        "objet-oignon",
+        "objet-panier",
+        "objet-tomate"
+      ],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "9a156a830b781cfb",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "7bedc9cf8cca00bf"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C01-O02",
+        "LANG-S01-C01-O03",
+        "LANG-S02-C03-O04"
+      ],
+      "learningObjectiveCodes": [
+        "LANG-S01-C01-O02",
+        "LANG-S01-C01-O03",
+        "LANG-S02-C03-O04",
+        "TIME-SPACE-S01-C01-O12"
+      ]
+    },
+    {
+      "lessonId": "m3-math-18",
+      "classId": "maternelle-3",
+      "className": "3ème maternelle",
+      "instructionalDay": 18,
+      "week": 4,
+      "activityId": "m3-math-18-a2",
+      "activityTitle": "Je dessine avec des formes",
+      "changedField": "mediaIds",
+      "changeClassification": "media / child-facing reference",
+      "before": [
+        "forme-carre",
+        "forme-rectangle",
+        "forme-triangle",
+        "forme-disque"
+      ],
+      "after": [
+        "forme-maison-composee"
+      ],
+      "pedagogicalReason": "Replace unrelated isolated shapes with one visible model of the approved square-wall and triangle-roof house.",
+      "lessonObjectiveCodes": [],
+      "activityObjectiveCodes": [
+        "MATH-S03-C01-O08"
+      ],
+      "progression": {
+        "changed": false,
+        "stage": "consolidation",
+        "confirmation": "Lesson and activity objective mappings, supporting objectives and progression stage are byte-identical to the reviewed base."
+      },
+      "duration": {
+        "changed": false,
+        "activityMinutes": 4,
+        "lessonMinutes": 9,
+        "confirmation": "Activity minutes and total lesson duration intent are byte-identical to the reviewed base."
+      },
+      "safety": {
+        "regressed": false,
+        "confirmation": "Lesson parent guidance and affected activity adult guidance are byte-identical to the reviewed base; no safety instruction was removed or weakened."
+      },
+      "mediaReferences": [
+        "forme-carre",
+        "forme-disque",
+        "forme-maison-composee",
+        "forme-rectangle",
+        "forme-triangle"
+      ],
+      "approvalImpact": {
+        "previousStatus": "approved",
+        "previousReviewedDigest": "e5d1f8ce7a53270e",
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "2a0571d056534784"
+      },
+      "reviewDecision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
+      },
+      "supportingObjectiveCodes": [
+        "MATH-S03-C01-O07",
+        "MATH-S03-C01-O08"
+      ],
+      "learningObjectiveCodes": [
+        "MATH-S03-C01-O07",
+        "MATH-S03-C01-O08"
+      ]
+    }
+  ],
+  "newMedia": [
+    {
+      "assetId": "objet-monnaie",
+      "requestedNameNote": null,
+      "renderedFile": "public/media/objects/objet-monnaie.svg",
+      "contactSheet": "docs/review/media/septembre-corrections-media.png",
+      "purpose": "Complete the five approved market vocabulary cards without introducing arithmetic.",
+      "lessonId": "m3-lang-13",
+      "activityId": "m3-lang-13-a2",
+      "accessibilityFrenchDescription": "Deux billets simples et une pièce, la monnaie du marché",
+      "contentHash": "sha256:fed6b6600180e86f583121cd1ec85647959e4787c08e670d074a30c3f12fb019",
+      "styleConfirmation": "Matches the accepted September preschool vector system: warm limited palette, simple silhouette, controlled dark outline, single teaching concept and legibility at 72, 128 and 256 px.",
+      "nonMisleadingDetailConfirmation": "Two generic banknotes and one coin; no numeral, denomination, currency name, flag, logo or exchange calculation.",
+      "decision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26"
+      }
+    },
+    {
+      "assetId": "forme-maison-composee",
+      "requestedNameNote": "The request wrote forme-maison-compose; the canonical registered id is forme-maison-composee.",
+      "renderedFile": "public/media/illustrations/forme-maison-composee.svg",
+      "contactSheet": "docs/review/media/septembre-corrections-media.png",
+      "purpose": "Provide the visible model requested by the approved house drawing: square wall, triangular roof and optional disk sun.",
+      "lessonId": "m3-math-18",
+      "activityId": "m3-math-18-a2",
+      "accessibilityFrenchDescription": "Une maison composée d’un carré pour le mur et d’un triangle pour le toit, avec un disque pour le soleil",
+      "contentHash": "sha256:5183c91aca97b925a3618a8db130fed3c6f465b7fde1c9828392ed15e82ca02a",
+      "styleConfirmation": "Matches the accepted September preschool vector system: warm limited palette, simple silhouette, controlled dark outline, single teaching concept and legibility at 72, 128 and 256 px.",
+      "nonMisleadingDetailConfirmation": "One square wall, one triangular roof and one disk sun; no extra door, window, written label or competing geometric model.",
+      "decision": {
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26"
+      }
+    }
+  ],
+  "reviewerInstructions": {
+    "independence": "Decide pedagogical acceptability independently. Passing tests and audit provenance are technical evidence only.",
+    "requiredOutput": [
+      "verdict for each affected change or an explicit verdict covering a named set",
+      "accepted, accepted-with-modifications, or rejected",
+      "pedagogical rationale",
+      "exact requested correction for every non-accepted item",
+      "separate verdict for each new media asset"
+    ],
+    "approvalRule": "No approval may be restored until an accepted decision is recorded. Accepted-with-modifications and rejected items remain at review."
+  },
+  "submittedArtifactHashes": {
+    "docs/review/2026-2027-september-corrections-reconfirmation-brief.md": "sha256:fb09b4b34058b6a2719baf68a97e347202d586b44727559d3a1abe13b93b6d6e",
+    "docs/review/2026-2027-maternelle-1-semaines-1-5-reconfirmation.md": "sha256:a1c2a245d7f91fe1c729e8a98027d0d4f8496e83515af4ae594a959de5ff4c20",
+    "docs/review/2026-2027-maternelle-3-semaines-3-4-reconfirmation.md": "sha256:34dd34d35370847329012e55284bac2c939cf1b88f2ac18083759e6bdd28674a",
+    "docs/review/2026-2027-september-corrections-reconfirmation-manifest.json": "sha256:10b3c77c0daafb33bb5b54783699d95f1096ebbad9a4ffcb2ebaa7e3f750db97",
+    "docs/review/media/septembre-corrections-media.png": "sha256:87f7af6a3f14a5c9bb51d156179e732a3abce148e3c0d5b57081468215debb2b"
+  }
+}

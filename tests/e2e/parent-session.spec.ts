@@ -28,6 +28,9 @@ test.describe("parent session", () => {
   test("a session runs from preparation to the end, one activity at a time", async ({ page }) => {
     await page.goto("/maternelle/3/seance/1");
     await expect(page.getByRole("heading", { name: "À préparer" })).toBeVisible();
+    // Safety information is never hidden behind the substitutions disclosure: a parent who has
+    // every material still needs to see it before handing small objects to a child.
+    await expect(page.getByText(/les petits objets se portent à la bouche/i)).toBeVisible();
     // The list is short and scannable; what to use instead waits until the parent asks, so the
     // preparation screen is a list to fetch rather than a page to read.
     await expect(page.getByText("À défaut :")).toHaveCount(0);
@@ -118,7 +121,7 @@ test.describe("parent session", () => {
     expect(body).not.toMatch(/LANG-S\d{2}|MATH-S\d{2}|exemples? de réussite/i);
   });
 
-  test("the child is shown the shapes the lesson talks about, and can touch them", async ({
+  test("the child is shown the shapes the lesson talks about, to name them together", async ({
     page,
   }) => {
     // The defect this phase existed to fix: « Regarde les formes » with nothing on the screen.
@@ -133,40 +136,47 @@ test.describe("parent session", () => {
     }
     await expect(page.getByText("Je nomme les formes")).toBeVisible();
 
-    // Two exemplars of each of the four shapes, each a real button with an accessible name, so
-    // the child sees that a square on its point and a small disk are still a square and a disk.
-    const shapes = page.getByRole("button", {
-      name: /^Un (carré|rectangle|triangle|disque|petit disque)/,
-    });
-    await expect(shapes).toHaveCount(8);
-    await expect(page.getByText(/^Montre : carré/)).toBeVisible();
+    // Two exemplars of each of the four shapes, each with an accessible name, so the child sees
+    // that a square on its point and a small disk are still a square and a disk.
+    const shapes = /^Un (carré|rectangle|triangle|disque|petit disque)/;
+    await expect(page.getByRole("img", { name: shapes })).toHaveCount(8);
+    await expect(
+      page.getByRole("img", { name: "Un carré posé de biais, plus petit" }),
+    ).toBeVisible();
 
-    // A wrong tap encourages another try; it never says the child is wrong.
-    await page.getByRole("button", { name: "Un triangle", exact: true }).click();
-    await expect(page.getByText(/Essaie encore/)).toBeVisible();
+    // The activity is off-screen: the parent names the shapes with the child. The pictures are
+    // there to look at, not a choice the screen grades.
+    await expect(page.getByText(/Regardez l’image ensemble/)).toBeVisible();
+    await expect(page.getByRole("button", { name: shapes })).toHaveCount(0);
+    await expect(page.getByText(/Trouve l’image pour/)).toHaveCount(0);
+    await expect(page.getByText("Bravo !")).toHaveCount(0);
     const body = (await page.locator("body").textContent()) ?? "";
     expect(body).not.toMatch(/incorrect|faux|erreur/i);
-
-    // The tilted square is a square: it must be accepted, not corrected.
-    await page.getByRole("button", { name: "Un carré posé de biais, plus petit" }).click();
-    await expect(page.getByText("Bravo !")).toBeVisible();
   });
 
-  test("counting gives the child something to count", async ({ page }) => {
+  test("the September count is done with real objects, not on the screen", async ({ page }) => {
     await page.goto("/maternelle/3/seance/1");
     await page.getByRole("button", { name: "Commencer la leçon" }).click();
     for (let step = 0; step < 8; step++) {
-      if (await page.getByText(/Touche chaque objet/).isVisible()) break;
+      if ((await page.locator("h2#activite").textContent()) === "Je compte les objets") break;
       await page
         .getByRole("button", { name: /Suivant|Terminé/ })
         .first()
         .click();
     }
-    await expect(page.getByText(/Touche chaque objet/)).toBeVisible();
-    const objects = page.getByRole("button", { name: /^Objet \d+$/ });
-    await expect(objects.first()).toBeVisible();
-    await objects.nth(2).click();
-    await expect(page.getByRole("status")).toContainText("3");
+    await expect(page.locator("h2#activite")).toHaveText("Je compte les objets");
+    // The approved instruction carries the exact setup. The renderer only identifies the linked
+    // object as an example, and never substitutes a generic setup or counter for that instruction.
+    await expect(page.getByText(/Posez l’écran/)).toBeVisible();
+    await expect(page.getByText(/Exemple d’objet seulement/)).toBeVisible();
+    await expect(
+      page.getByText(/suivez la consigne pour la quantité et la disposition/),
+    ).toBeVisible();
+    await expect(page.getByText("Avec : petits objets de la maison", { exact: true })).toHaveCount(
+      0,
+    );
+    await expect(page.getByRole("button", { name: /^Objet \d+$/ })).toHaveCount(0);
+    await expect(page.getByText(/Touche chaque objet/)).toHaveCount(0);
   });
 
   test("an off-screen activity asks the parent to put the screen down", async ({ page }) => {
@@ -292,9 +302,11 @@ test.describe("parent session", () => {
         .first()
         .click();
     }
-    // The interaction works identically with motion off: nothing waits for an animation.
-    await page.getByRole("button", { name: "Un carré", exact: true }).click();
-    await expect(page.getByText("Bravo !")).toBeVisible();
+    // The pictures are all there with motion off: nothing waits for an animation.
+    await expect(page.getByRole("img", { name: "Un carré", exact: true })).toBeVisible();
+    await expect(
+      page.getByRole("img", { name: /^Un (carré|rectangle|triangle|disque|petit disque)/ }),
+    ).toHaveCount(8);
     // The staggered entrances carry no animation at all with motion reduced (ADR-045).
     const names = await page
       .locator(".teka-stagger")

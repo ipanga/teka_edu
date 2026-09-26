@@ -1,0 +1,4737 @@
+{
+  "source": "private/astra-visual-evidence/remaining-review",
+  "reviewer": "Astra supervisor",
+  "scope": "Visual inspection of captured pixels only; no independent pedagogical acceptance or physical distance test. Sources predate later UI fixes as labeled by their manifest.",
+  "initialSheets": [
+    {
+      "sheet": "large-phone/large-phone-001.png",
+      "activities": [
+        "m1-lang-01-a1",
+        "m1-lang-01-a2",
+        "m1-lang-01-a3",
+        "m1-math-01-a1",
+        "m1-phys-01-a1",
+        "m1-time-01-a1",
+        "m1-lang-02-a1",
+        "m1-lang-02-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-001.png",
+      "activities": [
+        "m1-lang-01-a1",
+        "m1-lang-01-a2",
+        "m1-lang-01-a3",
+        "m1-math-01-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-001.png",
+      "activities": [
+        "m1-lang-01-a1",
+        "m1-lang-01-a2",
+        "m1-lang-01-a3",
+        "m1-math-01-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-001.png",
+      "activities": [
+        "m1-lang-01-a1",
+        "m1-lang-01-a2",
+        "m1-lang-01-a3",
+        "m1-math-01-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-002.png",
+      "activities": [
+        "m1-lang-02-a3",
+        "m1-math-02-a1",
+        "m1-phys-02-a1",
+        "m1-world-02-a1",
+        "m1-lang-03-a1",
+        "m1-lang-03-a2",
+        "m1-lang-03-a3",
+        "m1-math-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-002.png",
+      "activities": [
+        "m1-phys-01-a1",
+        "m1-time-01-a1",
+        "m1-lang-02-a1",
+        "m1-lang-02-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-002.png",
+      "activities": [
+        "m1-phys-01-a1",
+        "m1-time-01-a1",
+        "m1-lang-02-a1",
+        "m1-lang-02-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-002.png",
+      "activities": [
+        "m1-phys-01-a1",
+        "m1-time-01-a1",
+        "m1-lang-02-a1",
+        "m1-lang-02-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-003.png",
+      "activities": [
+        "m1-phys-03-a1",
+        "m1-time-03-a1",
+        "m1-lang-04-a1",
+        "m1-lang-04-a2",
+        "m1-lang-04-a3",
+        "m1-math-04-a1",
+        "m1-phys-04-a1",
+        "m1-art-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-003.png",
+      "activities": [
+        "m1-lang-02-a3",
+        "m1-math-02-a1",
+        "m1-phys-02-a1",
+        "m1-world-02-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-003.png",
+      "activities": [
+        "m1-lang-02-a3",
+        "m1-math-02-a1",
+        "m1-phys-02-a1",
+        "m1-world-02-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-003.png",
+      "activities": [
+        "m1-lang-02-a3",
+        "m1-math-02-a1",
+        "m1-phys-02-a1",
+        "m1-world-02-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-004.png",
+      "activities": [
+        "m1-lang-05-a1",
+        "m1-lang-05-a2",
+        "m1-lang-05-a3",
+        "m1-math-05-a1",
+        "m1-phys-05-a1",
+        "m1-art-05-a1",
+        "m1-lang-06-a1",
+        "m1-lang-06-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-004.png",
+      "activities": [
+        "m1-lang-03-a1",
+        "m1-lang-03-a2",
+        "m1-lang-03-a3",
+        "m1-math-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-004.png",
+      "activities": [
+        "m1-lang-03-a1",
+        "m1-lang-03-a2",
+        "m1-lang-03-a3",
+        "m1-math-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-004.png",
+      "activities": [
+        "m1-lang-03-a1",
+        "m1-lang-03-a2",
+        "m1-lang-03-a3",
+        "m1-math-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-005.png",
+      "activities": [
+        "m1-lang-06-a3",
+        "m1-math-06-a1",
+        "m1-phys-06-a1",
+        "m1-time-06-a1",
+        "m1-lang-07-a1",
+        "m1-lang-07-a2",
+        "m1-lang-07-a3",
+        "m1-math-07-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-005.png",
+      "activities": [
+        "m1-phys-03-a1",
+        "m1-time-03-a1",
+        "m1-lang-04-a1",
+        "m1-lang-04-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-005.png",
+      "activities": [
+        "m1-phys-03-a1",
+        "m1-time-03-a1",
+        "m1-lang-04-a1",
+        "m1-lang-04-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-005.png",
+      "activities": [
+        "m1-phys-03-a1",
+        "m1-time-03-a1",
+        "m1-lang-04-a1",
+        "m1-lang-04-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-006.png",
+      "activities": [
+        "m1-phys-07-a1",
+        "m1-art-07-a1",
+        "m1-lang-08-a1",
+        "m1-lang-08-a2",
+        "m1-lang-08-a3",
+        "m1-math-08-a1",
+        "m1-phys-08-a1",
+        "m1-world-08-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-006.png",
+      "activities": [
+        "m1-lang-04-a3",
+        "m1-math-04-a1",
+        "m1-phys-04-a1",
+        "m1-art-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-006.png",
+      "activities": [
+        "m1-lang-04-a3",
+        "m1-math-04-a1",
+        "m1-phys-04-a1",
+        "m1-art-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-006.png",
+      "activities": [
+        "m1-lang-04-a3",
+        "m1-math-04-a1",
+        "m1-phys-04-a1",
+        "m1-art-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-007.png",
+      "activities": [
+        "m1-lang-09-a1",
+        "m1-lang-09-a2",
+        "m1-lang-09-a3",
+        "m1-math-09-a1",
+        "m1-phys-09-a1",
+        "m1-art-09-a1",
+        "m1-lang-10-a1",
+        "m1-lang-10-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-008.png",
+      "activities": [
+        "m1-lang-10-a3",
+        "m1-math-10-a1",
+        "m1-phys-10-a1",
+        "m1-time-10-a1",
+        "m1-lang-11-a1",
+        "m1-lang-11-a2",
+        "m1-lang-11-a3",
+        "m1-math-11-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-007.png",
+      "activities": [
+        "m1-lang-05-a1",
+        "m1-lang-05-a2",
+        "m1-lang-05-a3",
+        "m1-math-05-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-008.png",
+      "activities": [
+        "m1-phys-05-a1",
+        "m1-art-05-a1",
+        "m1-lang-06-a1",
+        "m1-lang-06-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-007.png",
+      "activities": [
+        "m1-lang-05-a1",
+        "m1-lang-05-a2",
+        "m1-lang-05-a3",
+        "m1-math-05-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-008.png",
+      "activities": [
+        "m1-phys-05-a1",
+        "m1-art-05-a1",
+        "m1-lang-06-a1",
+        "m1-lang-06-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-007.png",
+      "activities": [
+        "m1-lang-05-a1",
+        "m1-lang-05-a2",
+        "m1-lang-05-a3",
+        "m1-math-05-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-008.png",
+      "activities": [
+        "m1-phys-05-a1",
+        "m1-art-05-a1",
+        "m1-lang-06-a1",
+        "m1-lang-06-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-009.png",
+      "activities": [
+        "m1-phys-11-a1",
+        "m1-art-11-a1",
+        "m1-lang-12-a1",
+        "m1-lang-12-a2",
+        "m1-lang-12-a3",
+        "m1-math-12-a1",
+        "m1-phys-12-a1",
+        "m1-time-12-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-010.png",
+      "activities": [
+        "m1-lang-13-a1",
+        "m1-lang-13-a2",
+        "m1-lang-13-a3",
+        "m1-math-13-a1",
+        "m1-phys-13-a1",
+        "m1-world-13-a1",
+        "m1-lang-14-a1",
+        "m1-lang-14-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-011.png",
+      "activities": [
+        "m1-lang-14-a3",
+        "m1-math-14-a1",
+        "m1-phys-14-a1",
+        "m1-art-14-a1",
+        "m1-lang-15-a1",
+        "m1-lang-15-a2",
+        "m1-lang-15-a3",
+        "m1-math-15-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-012.png",
+      "activities": [
+        "m1-phys-15-a1",
+        "m1-time-15-a1",
+        "m1-lang-16-a1",
+        "m1-lang-16-a2",
+        "m1-lang-16-a3",
+        "m1-math-16-a1",
+        "m1-phys-16-a1",
+        "m1-world-16-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-009.png",
+      "activities": [
+        "m1-lang-06-a3",
+        "m1-math-06-a1",
+        "m1-phys-06-a1",
+        "m1-time-06-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-010.png",
+      "activities": [
+        "m1-lang-07-a1",
+        "m1-lang-07-a2",
+        "m1-lang-07-a3",
+        "m1-math-07-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-011.png",
+      "activities": [
+        "m1-phys-07-a1",
+        "m1-art-07-a1",
+        "m1-lang-08-a1",
+        "m1-lang-08-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-012.png",
+      "activities": [
+        "m1-lang-08-a3",
+        "m1-math-08-a1",
+        "m1-phys-08-a1",
+        "m1-world-08-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-009.png",
+      "activities": [
+        "m1-lang-06-a3",
+        "m1-math-06-a1",
+        "m1-phys-06-a1",
+        "m1-time-06-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-010.png",
+      "activities": [
+        "m1-lang-07-a1",
+        "m1-lang-07-a2",
+        "m1-lang-07-a3",
+        "m1-math-07-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-011.png",
+      "activities": [
+        "m1-phys-07-a1",
+        "m1-art-07-a1",
+        "m1-lang-08-a1",
+        "m1-lang-08-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-012.png",
+      "activities": [
+        "m1-lang-08-a3",
+        "m1-math-08-a1",
+        "m1-phys-08-a1",
+        "m1-world-08-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-009.png",
+      "activities": [
+        "m1-lang-06-a3",
+        "m1-math-06-a1",
+        "m1-phys-06-a1",
+        "m1-time-06-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-010.png",
+      "activities": [
+        "m1-lang-07-a1",
+        "m1-lang-07-a2",
+        "m1-lang-07-a3",
+        "m1-math-07-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-011.png",
+      "activities": [
+        "m1-phys-07-a1",
+        "m1-art-07-a1",
+        "m1-lang-08-a1",
+        "m1-lang-08-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-012.png",
+      "activities": [
+        "m1-lang-08-a3",
+        "m1-math-08-a1",
+        "m1-phys-08-a1",
+        "m1-world-08-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-013.png",
+      "activities": [
+        "m1-lang-17-a1",
+        "m1-lang-17-a2",
+        "m1-lang-17-a3",
+        "m1-math-17-a1",
+        "m1-phys-17-a1",
+        "m1-art-17-a1",
+        "m1-lang-18-a1",
+        "m1-lang-18-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-014.png",
+      "activities": [
+        "m1-lang-18-a3",
+        "m1-math-18-a1",
+        "m1-phys-18-a1",
+        "m1-time-18-a1",
+        "m1-lang-19-a1",
+        "m1-lang-19-a2",
+        "m1-lang-19-a3",
+        "m1-math-19-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-013.png",
+      "activities": [
+        "m1-lang-09-a1",
+        "m1-lang-09-a2",
+        "m1-lang-09-a3",
+        "m1-math-09-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-014.png",
+      "activities": [
+        "m1-phys-09-a1",
+        "m1-art-09-a1",
+        "m1-lang-10-a1",
+        "m1-lang-10-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-013.png",
+      "activities": [
+        "m1-lang-09-a1",
+        "m1-lang-09-a2",
+        "m1-lang-09-a3",
+        "m1-math-09-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-014.png",
+      "activities": [
+        "m1-phys-09-a1",
+        "m1-art-09-a1",
+        "m1-lang-10-a1",
+        "m1-lang-10-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-013.png",
+      "activities": [
+        "m1-lang-09-a1",
+        "m1-lang-09-a2",
+        "m1-lang-09-a3",
+        "m1-math-09-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-014.png",
+      "activities": [
+        "m1-phys-09-a1",
+        "m1-art-09-a1",
+        "m1-lang-10-a1",
+        "m1-lang-10-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-015.png",
+      "activities": [
+        "m1-phys-19-a1",
+        "m1-art-19-a1",
+        "m1-lang-20-a1",
+        "m1-lang-20-a2",
+        "m1-lang-20-a3",
+        "m1-math-20-a1",
+        "m1-phys-20-a1",
+        "m1-world-20-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-016.png",
+      "activities": [
+        "m1-lang-21-a1",
+        "m1-lang-21-a2",
+        "m1-lang-21-a3",
+        "m1-math-21-a1",
+        "m1-phys-21-a1",
+        "m1-time-21-a1",
+        "m1-lang-22-a1",
+        "m1-lang-22-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-015.png",
+      "activities": [
+        "m1-lang-10-a3",
+        "m1-math-10-a1",
+        "m1-phys-10-a1",
+        "m1-time-10-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-016.png",
+      "activities": [
+        "m1-lang-11-a1",
+        "m1-lang-11-a2",
+        "m1-lang-11-a3",
+        "m1-math-11-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-015.png",
+      "activities": [
+        "m1-lang-10-a3",
+        "m1-math-10-a1",
+        "m1-phys-10-a1",
+        "m1-time-10-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-016.png",
+      "activities": [
+        "m1-lang-11-a1",
+        "m1-lang-11-a2",
+        "m1-lang-11-a3",
+        "m1-math-11-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-015.png",
+      "activities": [
+        "m1-lang-10-a3",
+        "m1-math-10-a1",
+        "m1-phys-10-a1",
+        "m1-time-10-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-016.png",
+      "activities": [
+        "m1-lang-11-a1",
+        "m1-lang-11-a2",
+        "m1-lang-11-a3",
+        "m1-math-11-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-017.png",
+      "activities": [
+        "m1-lang-22-a3",
+        "m1-math-22-a1",
+        "m1-phys-22-a1",
+        "m1-world-22-a1",
+        "m3-lang-01-a1",
+        "m3-lang-01-a2",
+        "m3-lang-01-a3",
+        "m3-math-01-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-018.png",
+      "activities": [
+        "m3-math-01-a2",
+        "m3-phys-01-a1",
+        "m3-world-01-a1",
+        "m3-world-01-a2",
+        "m3-lang-02-a1",
+        "m3-lang-02-a2",
+        "m3-lang-02-a3",
+        "m3-math-02-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-017.png",
+      "activities": [
+        "m1-phys-11-a1",
+        "m1-art-11-a1",
+        "m1-lang-12-a1",
+        "m1-lang-12-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-018.png",
+      "activities": [
+        "m1-lang-12-a3",
+        "m1-math-12-a1",
+        "m1-phys-12-a1",
+        "m1-time-12-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-017.png",
+      "activities": [
+        "m1-phys-11-a1",
+        "m1-art-11-a1",
+        "m1-lang-12-a1",
+        "m1-lang-12-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-018.png",
+      "activities": [
+        "m1-lang-12-a3",
+        "m1-math-12-a1",
+        "m1-phys-12-a1",
+        "m1-time-12-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-017.png",
+      "activities": [
+        "m1-phys-11-a1",
+        "m1-art-11-a1",
+        "m1-lang-12-a1",
+        "m1-lang-12-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-018.png",
+      "activities": [
+        "m1-lang-12-a3",
+        "m1-math-12-a1",
+        "m1-phys-12-a1",
+        "m1-time-12-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-019.png",
+      "activities": [
+        "m3-math-02-a2",
+        "m3-phys-02-a1",
+        "m3-art-01-a1",
+        "m3-lang-03-a1",
+        "m3-lang-03-a2",
+        "m3-lang-03-a3",
+        "m3-math-03-a1",
+        "m3-math-03-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-020.png",
+      "activities": [
+        "m3-phys-03-a1",
+        "m3-time-01-a1",
+        "m3-time-01-a2",
+        "m3-lang-04-a1",
+        "m3-lang-04-a2",
+        "m3-lang-04-a3",
+        "m3-math-04-a1",
+        "m3-math-04-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-019.png",
+      "activities": [
+        "m1-lang-13-a1",
+        "m1-lang-13-a2",
+        "m1-lang-13-a3",
+        "m1-math-13-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-020.png",
+      "activities": [
+        "m1-phys-13-a1",
+        "m1-world-13-a1",
+        "m1-lang-14-a1",
+        "m1-lang-14-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-019.png",
+      "activities": [
+        "m1-lang-13-a1",
+        "m1-lang-13-a2",
+        "m1-lang-13-a3",
+        "m1-math-13-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-020.png",
+      "activities": [
+        "m1-phys-13-a1",
+        "m1-world-13-a1",
+        "m1-lang-14-a1",
+        "m1-lang-14-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-019.png",
+      "activities": [
+        "m1-lang-13-a1",
+        "m1-lang-13-a2",
+        "m1-lang-13-a3",
+        "m1-math-13-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-020.png",
+      "activities": [
+        "m1-phys-13-a1",
+        "m1-world-13-a1",
+        "m1-lang-14-a1",
+        "m1-lang-14-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-021.png",
+      "activities": [
+        "m3-phys-04-a1",
+        "m3-art-02-a1",
+        "m3-lang-05-a1",
+        "m3-lang-05-a2",
+        "m3-lang-05-a3",
+        "m3-math-05-a1",
+        "m3-math-05-a2",
+        "m3-phys-05-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-022.png",
+      "activities": [
+        "m3-world-02-a1",
+        "m3-world-02-a2",
+        "m3-lang-06-a1",
+        "m3-lang-06-a2",
+        "m3-lang-06-a3",
+        "m3-math-06-a1",
+        "m3-math-06-a2",
+        "m3-phys-06-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-023.png",
+      "activities": [
+        "m3-time-02-a1",
+        "m3-time-02-a2",
+        "m3-lang-07-a1",
+        "m3-lang-07-a2",
+        "m3-lang-07-a3",
+        "m3-math-07-a1",
+        "m3-math-07-a2",
+        "m3-phys-07-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-024.png",
+      "activities": [
+        "m3-art-03-a1",
+        "m3-lang-08-a1",
+        "m3-lang-08-a2",
+        "m3-lang-08-a3",
+        "m3-math-08-a1",
+        "m3-math-08-a2",
+        "m3-phys-08-a1",
+        "m3-time-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-025.png",
+      "activities": [
+        "m3-time-03-a2",
+        "m3-lang-09-a1",
+        "m3-lang-09-a2",
+        "m3-lang-09-a3",
+        "m3-math-09-a1",
+        "m3-math-09-a2",
+        "m3-phys-09-a1",
+        "m3-world-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-021.png",
+      "activities": [
+        "m1-lang-14-a3",
+        "m1-math-14-a1",
+        "m1-phys-14-a1",
+        "m1-art-14-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-022.png",
+      "activities": [
+        "m1-lang-15-a1",
+        "m1-lang-15-a2",
+        "m1-lang-15-a3",
+        "m1-math-15-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-023.png",
+      "activities": [
+        "m1-phys-15-a1",
+        "m1-time-15-a1",
+        "m1-lang-16-a1",
+        "m1-lang-16-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-024.png",
+      "activities": [
+        "m1-lang-16-a3",
+        "m1-math-16-a1",
+        "m1-phys-16-a1",
+        "m1-world-16-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-025.png",
+      "activities": [
+        "m1-lang-17-a1",
+        "m1-lang-17-a2",
+        "m1-lang-17-a3",
+        "m1-math-17-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-021.png",
+      "activities": [
+        "m1-lang-14-a3",
+        "m1-math-14-a1",
+        "m1-phys-14-a1",
+        "m1-art-14-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-022.png",
+      "activities": [
+        "m1-lang-15-a1",
+        "m1-lang-15-a2",
+        "m1-lang-15-a3",
+        "m1-math-15-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-023.png",
+      "activities": [
+        "m1-phys-15-a1",
+        "m1-time-15-a1",
+        "m1-lang-16-a1",
+        "m1-lang-16-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-024.png",
+      "activities": [
+        "m1-lang-16-a3",
+        "m1-math-16-a1",
+        "m1-phys-16-a1",
+        "m1-world-16-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-025.png",
+      "activities": [
+        "m1-lang-17-a1",
+        "m1-lang-17-a2",
+        "m1-lang-17-a3",
+        "m1-math-17-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-021.png",
+      "activities": [
+        "m1-lang-14-a3",
+        "m1-math-14-a1",
+        "m1-phys-14-a1",
+        "m1-art-14-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-022.png",
+      "activities": [
+        "m1-lang-15-a1",
+        "m1-lang-15-a2",
+        "m1-lang-15-a3",
+        "m1-math-15-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-023.png",
+      "activities": [
+        "m1-phys-15-a1",
+        "m1-time-15-a1",
+        "m1-lang-16-a1",
+        "m1-lang-16-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-024.png",
+      "activities": [
+        "m1-lang-16-a3",
+        "m1-math-16-a1",
+        "m1-phys-16-a1",
+        "m1-world-16-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-025.png",
+      "activities": [
+        "m1-lang-17-a1",
+        "m1-lang-17-a2",
+        "m1-lang-17-a3",
+        "m1-math-17-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-026.png",
+      "activities": [
+        "m3-world-03-a2",
+        "m3-lang-10-a1",
+        "m3-lang-10-a2",
+        "m3-lang-10-a3",
+        "m3-math-10-a1",
+        "m3-math-10-a2",
+        "m3-phys-10-a1",
+        "m3-time-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-027.png",
+      "activities": [
+        "m3-time-04-a2",
+        "m3-lang-11-a1",
+        "m3-lang-11-a2",
+        "m3-lang-11-a3",
+        "m3-math-11-a1",
+        "m3-math-11-a2",
+        "m3-phys-11-a1",
+        "m3-world-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-028.png",
+      "activities": [
+        "m3-world-04-a2",
+        "m3-lang-12-a1",
+        "m3-lang-12-a2",
+        "m3-lang-12-a3",
+        "m3-math-12-a1",
+        "m3-math-12-a2",
+        "m3-phys-12-a1",
+        "m3-art-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-029.png",
+      "activities": [
+        "m3-lang-13-a1",
+        "m3-lang-13-a2",
+        "m3-lang-13-a3",
+        "m3-math-13-a1",
+        "m3-math-13-a2",
+        "m3-phys-13-a1",
+        "m3-time-05-a1",
+        "m3-time-05-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-030.png",
+      "activities": [
+        "m3-lang-14-a1",
+        "m3-lang-14-a2",
+        "m3-lang-14-a3",
+        "m3-math-14-a1",
+        "m3-math-14-a2",
+        "m3-phys-14-a1",
+        "m3-art-05-a1",
+        "m3-lang-15-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-026.png",
+      "activities": [
+        "m1-phys-17-a1",
+        "m1-art-17-a1",
+        "m1-lang-18-a1",
+        "m1-lang-18-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-027.png",
+      "activities": [
+        "m1-lang-18-a3",
+        "m1-math-18-a1",
+        "m1-phys-18-a1",
+        "m1-time-18-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-028.png",
+      "activities": [
+        "m1-lang-19-a1",
+        "m1-lang-19-a2",
+        "m1-lang-19-a3",
+        "m1-math-19-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-029.png",
+      "activities": [
+        "m1-phys-19-a1",
+        "m1-art-19-a1",
+        "m1-lang-20-a1",
+        "m1-lang-20-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-030.png",
+      "activities": [
+        "m1-lang-20-a3",
+        "m1-math-20-a1",
+        "m1-phys-20-a1",
+        "m1-world-20-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-026.png",
+      "activities": [
+        "m1-phys-17-a1",
+        "m1-art-17-a1",
+        "m1-lang-18-a1",
+        "m1-lang-18-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-027.png",
+      "activities": [
+        "m1-lang-18-a3",
+        "m1-math-18-a1",
+        "m1-phys-18-a1",
+        "m1-time-18-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-028.png",
+      "activities": [
+        "m1-lang-19-a1",
+        "m1-lang-19-a2",
+        "m1-lang-19-a3",
+        "m1-math-19-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-029.png",
+      "activities": [
+        "m1-phys-19-a1",
+        "m1-art-19-a1",
+        "m1-lang-20-a1",
+        "m1-lang-20-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-030.png",
+      "activities": [
+        "m1-lang-20-a3",
+        "m1-math-20-a1",
+        "m1-phys-20-a1",
+        "m1-world-20-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-026.png",
+      "activities": [
+        "m1-phys-17-a1",
+        "m1-art-17-a1",
+        "m1-lang-18-a1",
+        "m1-lang-18-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-027.png",
+      "activities": [
+        "m1-lang-18-a3",
+        "m1-math-18-a1",
+        "m1-phys-18-a1",
+        "m1-time-18-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-028.png",
+      "activities": [
+        "m1-lang-19-a1",
+        "m1-lang-19-a2",
+        "m1-lang-19-a3",
+        "m1-math-19-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-029.png",
+      "activities": [
+        "m1-phys-19-a1",
+        "m1-art-19-a1",
+        "m1-lang-20-a1",
+        "m1-lang-20-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-030.png",
+      "activities": [
+        "m1-lang-20-a3",
+        "m1-math-20-a1",
+        "m1-phys-20-a1",
+        "m1-world-20-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-031.png",
+      "activities": [
+        "m3-lang-15-a2",
+        "m3-lang-15-a3",
+        "m3-math-15-a1",
+        "m3-math-15-a2",
+        "m3-phys-15-a1",
+        "m3-world-05-a1",
+        "m3-world-05-a2",
+        "m3-lang-16-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-032.png",
+      "activities": [
+        "m3-lang-16-a2",
+        "m3-lang-16-a3",
+        "m3-math-16-a1",
+        "m3-math-16-a2",
+        "m3-phys-16-a1",
+        "m3-time-06-a1",
+        "m3-time-06-a2",
+        "m3-lang-17-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-033.png",
+      "activities": [
+        "m3-lang-17-a2",
+        "m3-lang-17-a3",
+        "m3-math-17-a1",
+        "m3-math-17-a2",
+        "m3-phys-17-a1",
+        "m3-art-06-a1",
+        "m3-lang-18-a1",
+        "m3-lang-18-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-034.png",
+      "activities": [
+        "m3-lang-18-a3",
+        "m3-math-18-a1",
+        "m3-math-18-a2",
+        "m3-phys-18-a1",
+        "m3-time-07-a1",
+        "m3-time-07-a2",
+        "m3-lang-19-a1",
+        "m3-lang-19-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-035.png",
+      "activities": [
+        "m3-lang-19-a3",
+        "m3-math-19-a1",
+        "m3-math-19-a2",
+        "m3-phys-19-a1",
+        "m3-world-06-a1",
+        "m3-world-06-a2",
+        "m3-lang-20-a1",
+        "m3-lang-20-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-031.png",
+      "activities": [
+        "m1-lang-21-a1",
+        "m1-lang-21-a2",
+        "m1-lang-21-a3",
+        "m1-math-21-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-032.png",
+      "activities": [
+        "m1-phys-21-a1",
+        "m1-time-21-a1",
+        "m1-lang-22-a1",
+        "m1-lang-22-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-033.png",
+      "activities": [
+        "m1-lang-22-a3",
+        "m1-math-22-a1",
+        "m1-phys-22-a1",
+        "m1-world-22-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-034.png",
+      "activities": [
+        "m3-lang-01-a1",
+        "m3-lang-01-a2",
+        "m3-lang-01-a3",
+        "m3-math-01-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-035.png",
+      "activities": [
+        "m3-math-01-a2",
+        "m3-phys-01-a1",
+        "m3-world-01-a1",
+        "m3-world-01-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-031.png",
+      "activities": [
+        "m1-lang-21-a1",
+        "m1-lang-21-a2",
+        "m1-lang-21-a3",
+        "m1-math-21-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-032.png",
+      "activities": [
+        "m1-phys-21-a1",
+        "m1-time-21-a1",
+        "m1-lang-22-a1",
+        "m1-lang-22-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-033.png",
+      "activities": [
+        "m1-lang-22-a3",
+        "m1-math-22-a1",
+        "m1-phys-22-a1",
+        "m1-world-22-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-034.png",
+      "activities": [
+        "m3-lang-01-a1",
+        "m3-lang-01-a2",
+        "m3-lang-01-a3",
+        "m3-math-01-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-035.png",
+      "activities": [
+        "m3-math-01-a2",
+        "m3-phys-01-a1",
+        "m3-world-01-a1",
+        "m3-world-01-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-031.png",
+      "activities": [
+        "m1-lang-21-a1",
+        "m1-lang-21-a2",
+        "m1-lang-21-a3",
+        "m1-math-21-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-032.png",
+      "activities": [
+        "m1-phys-21-a1",
+        "m1-time-21-a1",
+        "m1-lang-22-a1",
+        "m1-lang-22-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-033.png",
+      "activities": [
+        "m1-lang-22-a3",
+        "m1-math-22-a1",
+        "m1-phys-22-a1",
+        "m1-world-22-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-034.png",
+      "activities": [
+        "m3-lang-01-a1",
+        "m3-lang-01-a2",
+        "m3-lang-01-a3",
+        "m3-math-01-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-035.png",
+      "activities": [
+        "m3-math-01-a2",
+        "m3-phys-01-a1",
+        "m3-world-01-a1",
+        "m3-world-01-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-036.png",
+      "activities": [
+        "m3-lang-20-a3",
+        "m3-math-20-a1",
+        "m3-math-20-a2",
+        "m3-phys-20-a1",
+        "m3-time-08-a1",
+        "m3-time-08-a2",
+        "m3-lang-21-a1",
+        "m3-lang-21-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-037.png",
+      "activities": [
+        "m3-lang-21-a3",
+        "m3-math-21-a1",
+        "m3-math-21-a2",
+        "m3-phys-21-a1",
+        "m3-world-07-a1",
+        "m3-world-07-a2",
+        "m3-lang-22-a1",
+        "m3-lang-22-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-038.png",
+      "activities": [
+        "m3-lang-22-a3",
+        "m3-math-22-a1",
+        "m3-math-22-a2",
+        "m3-phys-22-a1",
+        "m3-art-07-a1",
+        "m3-art-07-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-036.png",
+      "activities": [
+        "m3-lang-02-a1",
+        "m3-lang-02-a2",
+        "m3-lang-02-a3",
+        "m3-math-02-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-037.png",
+      "activities": [
+        "m3-math-02-a2",
+        "m3-phys-02-a1",
+        "m3-art-01-a1",
+        "m3-lang-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-038.png",
+      "activities": [
+        "m3-lang-03-a2",
+        "m3-lang-03-a3",
+        "m3-math-03-a1",
+        "m3-math-03-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-036.png",
+      "activities": [
+        "m3-lang-02-a1",
+        "m3-lang-02-a2",
+        "m3-lang-02-a3",
+        "m3-math-02-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-037.png",
+      "activities": [
+        "m3-math-02-a2",
+        "m3-phys-02-a1",
+        "m3-art-01-a1",
+        "m3-lang-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-038.png",
+      "activities": [
+        "m3-lang-03-a2",
+        "m3-lang-03-a3",
+        "m3-math-03-a1",
+        "m3-math-03-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-036.png",
+      "activities": [
+        "m3-lang-02-a1",
+        "m3-lang-02-a2",
+        "m3-lang-02-a3",
+        "m3-math-02-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-037.png",
+      "activities": [
+        "m3-math-02-a2",
+        "m3-phys-02-a1",
+        "m3-art-01-a1",
+        "m3-lang-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-038.png",
+      "activities": [
+        "m3-lang-03-a2",
+        "m3-lang-03-a3",
+        "m3-math-03-a1",
+        "m3-math-03-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-039.png",
+      "activities": [
+        "m3-phys-03-a1",
+        "m3-time-01-a1",
+        "m3-time-01-a2",
+        "m3-lang-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-040.png",
+      "activities": [
+        "m3-lang-04-a2",
+        "m3-lang-04-a3",
+        "m3-math-04-a1",
+        "m3-math-04-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-041.png",
+      "activities": [
+        "m3-phys-04-a1",
+        "m3-art-02-a1",
+        "m3-lang-05-a1",
+        "m3-lang-05-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-042.png",
+      "activities": [
+        "m3-lang-05-a3",
+        "m3-math-05-a1",
+        "m3-math-05-a2",
+        "m3-phys-05-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-043.png",
+      "activities": [
+        "m3-world-02-a1",
+        "m3-world-02-a2",
+        "m3-lang-06-a1",
+        "m3-lang-06-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-039.png",
+      "activities": [
+        "m3-phys-03-a1",
+        "m3-time-01-a1",
+        "m3-time-01-a2",
+        "m3-lang-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-040.png",
+      "activities": [
+        "m3-lang-04-a2",
+        "m3-lang-04-a3",
+        "m3-math-04-a1",
+        "m3-math-04-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-041.png",
+      "activities": [
+        "m3-phys-04-a1",
+        "m3-art-02-a1",
+        "m3-lang-05-a1",
+        "m3-lang-05-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-042.png",
+      "activities": [
+        "m3-lang-05-a3",
+        "m3-math-05-a1",
+        "m3-math-05-a2",
+        "m3-phys-05-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-043.png",
+      "activities": [
+        "m3-world-02-a1",
+        "m3-world-02-a2",
+        "m3-lang-06-a1",
+        "m3-lang-06-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-039.png",
+      "activities": [
+        "m3-phys-03-a1",
+        "m3-time-01-a1",
+        "m3-time-01-a2",
+        "m3-lang-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-040.png",
+      "activities": [
+        "m3-lang-04-a2",
+        "m3-lang-04-a3",
+        "m3-math-04-a1",
+        "m3-math-04-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-041.png",
+      "activities": [
+        "m3-phys-04-a1",
+        "m3-art-02-a1",
+        "m3-lang-05-a1",
+        "m3-lang-05-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-042.png",
+      "activities": [
+        "m3-lang-05-a3",
+        "m3-math-05-a1",
+        "m3-math-05-a2",
+        "m3-phys-05-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-043.png",
+      "activities": [
+        "m3-world-02-a1",
+        "m3-world-02-a2",
+        "m3-lang-06-a1",
+        "m3-lang-06-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-044.png",
+      "activities": [
+        "m3-lang-06-a3",
+        "m3-math-06-a1",
+        "m3-math-06-a2",
+        "m3-phys-06-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-045.png",
+      "activities": [
+        "m3-time-02-a1",
+        "m3-time-02-a2",
+        "m3-lang-07-a1",
+        "m3-lang-07-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-046.png",
+      "activities": [
+        "m3-lang-07-a3",
+        "m3-math-07-a1",
+        "m3-math-07-a2",
+        "m3-phys-07-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-047.png",
+      "activities": [
+        "m3-art-03-a1",
+        "m3-lang-08-a1",
+        "m3-lang-08-a2",
+        "m3-lang-08-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-048.png",
+      "activities": [
+        "m3-math-08-a1",
+        "m3-math-08-a2",
+        "m3-phys-08-a1",
+        "m3-time-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-044.png",
+      "activities": [
+        "m3-lang-06-a3",
+        "m3-math-06-a1",
+        "m3-math-06-a2",
+        "m3-phys-06-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-045.png",
+      "activities": [
+        "m3-time-02-a1",
+        "m3-time-02-a2",
+        "m3-lang-07-a1",
+        "m3-lang-07-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-046.png",
+      "activities": [
+        "m3-lang-07-a3",
+        "m3-math-07-a1",
+        "m3-math-07-a2",
+        "m3-phys-07-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-047.png",
+      "activities": [
+        "m3-art-03-a1",
+        "m3-lang-08-a1",
+        "m3-lang-08-a2",
+        "m3-lang-08-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-048.png",
+      "activities": [
+        "m3-math-08-a1",
+        "m3-math-08-a2",
+        "m3-phys-08-a1",
+        "m3-time-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-044.png",
+      "activities": [
+        "m3-lang-06-a3",
+        "m3-math-06-a1",
+        "m3-math-06-a2",
+        "m3-phys-06-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-045.png",
+      "activities": [
+        "m3-time-02-a1",
+        "m3-time-02-a2",
+        "m3-lang-07-a1",
+        "m3-lang-07-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-046.png",
+      "activities": [
+        "m3-lang-07-a3",
+        "m3-math-07-a1",
+        "m3-math-07-a2",
+        "m3-phys-07-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-047.png",
+      "activities": [
+        "m3-art-03-a1",
+        "m3-lang-08-a1",
+        "m3-lang-08-a2",
+        "m3-lang-08-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-048.png",
+      "activities": [
+        "m3-math-08-a1",
+        "m3-math-08-a2",
+        "m3-phys-08-a1",
+        "m3-time-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-049.png",
+      "activities": [
+        "m3-time-03-a2",
+        "m3-lang-09-a1",
+        "m3-lang-09-a2",
+        "m3-lang-09-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-050.png",
+      "activities": [
+        "m3-math-09-a1",
+        "m3-math-09-a2",
+        "m3-phys-09-a1",
+        "m3-world-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-051.png",
+      "activities": [
+        "m3-world-03-a2",
+        "m3-lang-10-a1",
+        "m3-lang-10-a2",
+        "m3-lang-10-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-052.png",
+      "activities": [
+        "m3-math-10-a1",
+        "m3-math-10-a2",
+        "m3-phys-10-a1",
+        "m3-time-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-053.png",
+      "activities": [
+        "m3-time-04-a2",
+        "m3-lang-11-a1",
+        "m3-lang-11-a2",
+        "m3-lang-11-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-049.png",
+      "activities": [
+        "m3-time-03-a2",
+        "m3-lang-09-a1",
+        "m3-lang-09-a2",
+        "m3-lang-09-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-050.png",
+      "activities": [
+        "m3-math-09-a1",
+        "m3-math-09-a2",
+        "m3-phys-09-a1",
+        "m3-world-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-051.png",
+      "activities": [
+        "m3-world-03-a2",
+        "m3-lang-10-a1",
+        "m3-lang-10-a2",
+        "m3-lang-10-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-052.png",
+      "activities": [
+        "m3-math-10-a1",
+        "m3-math-10-a2",
+        "m3-phys-10-a1",
+        "m3-time-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-053.png",
+      "activities": [
+        "m3-time-04-a2",
+        "m3-lang-11-a1",
+        "m3-lang-11-a2",
+        "m3-lang-11-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-049.png",
+      "activities": [
+        "m3-time-03-a2",
+        "m3-lang-09-a1",
+        "m3-lang-09-a2",
+        "m3-lang-09-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-050.png",
+      "activities": [
+        "m3-math-09-a1",
+        "m3-math-09-a2",
+        "m3-phys-09-a1",
+        "m3-world-03-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-051.png",
+      "activities": [
+        "m3-world-03-a2",
+        "m3-lang-10-a1",
+        "m3-lang-10-a2",
+        "m3-lang-10-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-052.png",
+      "activities": [
+        "m3-math-10-a1",
+        "m3-math-10-a2",
+        "m3-phys-10-a1",
+        "m3-time-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-053.png",
+      "activities": [
+        "m3-time-04-a2",
+        "m3-lang-11-a1",
+        "m3-lang-11-a2",
+        "m3-lang-11-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-054.png",
+      "activities": [
+        "m3-math-11-a1",
+        "m3-math-11-a2",
+        "m3-phys-11-a1",
+        "m3-world-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-055.png",
+      "activities": [
+        "m3-world-04-a2",
+        "m3-lang-12-a1",
+        "m3-lang-12-a2",
+        "m3-lang-12-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-056.png",
+      "activities": [
+        "m3-math-12-a1",
+        "m3-math-12-a2",
+        "m3-phys-12-a1",
+        "m3-art-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-057.png",
+      "activities": [
+        "m3-lang-13-a1",
+        "m3-lang-13-a2",
+        "m3-lang-13-a3",
+        "m3-math-13-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-058.png",
+      "activities": [
+        "m3-math-13-a2",
+        "m3-phys-13-a1",
+        "m3-time-05-a1",
+        "m3-time-05-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-054.png",
+      "activities": [
+        "m3-math-11-a1",
+        "m3-math-11-a2",
+        "m3-phys-11-a1",
+        "m3-world-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-055.png",
+      "activities": [
+        "m3-world-04-a2",
+        "m3-lang-12-a1",
+        "m3-lang-12-a2",
+        "m3-lang-12-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-056.png",
+      "activities": [
+        "m3-math-12-a1",
+        "m3-math-12-a2",
+        "m3-phys-12-a1",
+        "m3-art-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-057.png",
+      "activities": [
+        "m3-lang-13-a1",
+        "m3-lang-13-a2",
+        "m3-lang-13-a3",
+        "m3-math-13-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-058.png",
+      "activities": [
+        "m3-math-13-a2",
+        "m3-phys-13-a1",
+        "m3-time-05-a1",
+        "m3-time-05-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-054.png",
+      "activities": [
+        "m3-math-11-a1",
+        "m3-math-11-a2",
+        "m3-phys-11-a1",
+        "m3-world-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-055.png",
+      "activities": [
+        "m3-world-04-a2",
+        "m3-lang-12-a1",
+        "m3-lang-12-a2",
+        "m3-lang-12-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-056.png",
+      "activities": [
+        "m3-math-12-a1",
+        "m3-math-12-a2",
+        "m3-phys-12-a1",
+        "m3-art-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-057.png",
+      "activities": [
+        "m3-lang-13-a1",
+        "m3-lang-13-a2",
+        "m3-lang-13-a3",
+        "m3-math-13-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-058.png",
+      "activities": [
+        "m3-math-13-a2",
+        "m3-phys-13-a1",
+        "m3-time-05-a1",
+        "m3-time-05-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-059.png",
+      "activities": [
+        "m3-lang-14-a1",
+        "m3-lang-14-a2",
+        "m3-lang-14-a3",
+        "m3-math-14-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-060.png",
+      "activities": [
+        "m3-math-14-a2",
+        "m3-phys-14-a1",
+        "m3-art-05-a1",
+        "m3-lang-15-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-061.png",
+      "activities": [
+        "m3-lang-15-a2",
+        "m3-lang-15-a3",
+        "m3-math-15-a1",
+        "m3-math-15-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-062.png",
+      "activities": [
+        "m3-phys-15-a1",
+        "m3-world-05-a1",
+        "m3-world-05-a2",
+        "m3-lang-16-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-063.png",
+      "activities": [
+        "m3-lang-16-a2",
+        "m3-lang-16-a3",
+        "m3-math-16-a1",
+        "m3-math-16-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-064.png",
+      "activities": [
+        "m3-phys-16-a1",
+        "m3-time-06-a1",
+        "m3-time-06-a2",
+        "m3-lang-17-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-059.png",
+      "activities": [
+        "m3-lang-14-a1",
+        "m3-lang-14-a2",
+        "m3-lang-14-a3",
+        "m3-math-14-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-060.png",
+      "activities": [
+        "m3-math-14-a2",
+        "m3-phys-14-a1",
+        "m3-art-05-a1",
+        "m3-lang-15-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-061.png",
+      "activities": [
+        "m3-lang-15-a2",
+        "m3-lang-15-a3",
+        "m3-math-15-a1",
+        "m3-math-15-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-062.png",
+      "activities": [
+        "m3-phys-15-a1",
+        "m3-world-05-a1",
+        "m3-world-05-a2",
+        "m3-lang-16-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-063.png",
+      "activities": [
+        "m3-lang-16-a2",
+        "m3-lang-16-a3",
+        "m3-math-16-a1",
+        "m3-math-16-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-064.png",
+      "activities": [
+        "m3-phys-16-a1",
+        "m3-time-06-a1",
+        "m3-time-06-a2",
+        "m3-lang-17-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-059.png",
+      "activities": [
+        "m3-lang-14-a1",
+        "m3-lang-14-a2",
+        "m3-lang-14-a3",
+        "m3-math-14-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-060.png",
+      "activities": [
+        "m3-math-14-a2",
+        "m3-phys-14-a1",
+        "m3-art-05-a1",
+        "m3-lang-15-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-061.png",
+      "activities": [
+        "m3-lang-15-a2",
+        "m3-lang-15-a3",
+        "m3-math-15-a1",
+        "m3-math-15-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-062.png",
+      "activities": [
+        "m3-phys-15-a1",
+        "m3-world-05-a1",
+        "m3-world-05-a2",
+        "m3-lang-16-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-063.png",
+      "activities": [
+        "m3-lang-16-a2",
+        "m3-lang-16-a3",
+        "m3-math-16-a1",
+        "m3-math-16-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-064.png",
+      "activities": [
+        "m3-phys-16-a1",
+        "m3-time-06-a1",
+        "m3-time-06-a2",
+        "m3-lang-17-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-065.png",
+      "activities": [
+        "m3-lang-17-a2",
+        "m3-lang-17-a3",
+        "m3-math-17-a1",
+        "m3-math-17-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-066.png",
+      "activities": [
+        "m3-phys-17-a1",
+        "m3-art-06-a1",
+        "m3-lang-18-a1",
+        "m3-lang-18-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-067.png",
+      "activities": [
+        "m3-lang-18-a3",
+        "m3-math-18-a1",
+        "m3-math-18-a2",
+        "m3-phys-18-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-068.png",
+      "activities": [
+        "m3-time-07-a1",
+        "m3-time-07-a2",
+        "m3-lang-19-a1",
+        "m3-lang-19-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-069.png",
+      "activities": [
+        "m3-lang-19-a3",
+        "m3-math-19-a1",
+        "m3-math-19-a2",
+        "m3-phys-19-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-070.png",
+      "activities": [
+        "m3-world-06-a1",
+        "m3-world-06-a2",
+        "m3-lang-20-a1",
+        "m3-lang-20-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-065.png",
+      "activities": [
+        "m3-lang-17-a2",
+        "m3-lang-17-a3",
+        "m3-math-17-a1",
+        "m3-math-17-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-066.png",
+      "activities": [
+        "m3-phys-17-a1",
+        "m3-art-06-a1",
+        "m3-lang-18-a1",
+        "m3-lang-18-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-067.png",
+      "activities": [
+        "m3-lang-18-a3",
+        "m3-math-18-a1",
+        "m3-math-18-a2",
+        "m3-phys-18-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-068.png",
+      "activities": [
+        "m3-time-07-a1",
+        "m3-time-07-a2",
+        "m3-lang-19-a1",
+        "m3-lang-19-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-069.png",
+      "activities": [
+        "m3-lang-19-a3",
+        "m3-math-19-a1",
+        "m3-math-19-a2",
+        "m3-phys-19-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-070.png",
+      "activities": [
+        "m3-world-06-a1",
+        "m3-world-06-a2",
+        "m3-lang-20-a1",
+        "m3-lang-20-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-065.png",
+      "activities": [
+        "m3-lang-17-a2",
+        "m3-lang-17-a3",
+        "m3-math-17-a1",
+        "m3-math-17-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-066.png",
+      "activities": [
+        "m3-phys-17-a1",
+        "m3-art-06-a1",
+        "m3-lang-18-a1",
+        "m3-lang-18-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-067.png",
+      "activities": [
+        "m3-lang-18-a3",
+        "m3-math-18-a1",
+        "m3-math-18-a2",
+        "m3-phys-18-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-068.png",
+      "activities": [
+        "m3-time-07-a1",
+        "m3-time-07-a2",
+        "m3-lang-19-a1",
+        "m3-lang-19-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-069.png",
+      "activities": [
+        "m3-lang-19-a3",
+        "m3-math-19-a1",
+        "m3-math-19-a2",
+        "m3-phys-19-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-070.png",
+      "activities": [
+        "m3-world-06-a1",
+        "m3-world-06-a2",
+        "m3-lang-20-a1",
+        "m3-lang-20-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-071.png",
+      "activities": [
+        "m3-lang-20-a3",
+        "m3-math-20-a1",
+        "m3-math-20-a2",
+        "m3-phys-20-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-072.png",
+      "activities": [
+        "m3-time-08-a1",
+        "m3-time-08-a2",
+        "m3-lang-21-a1",
+        "m3-lang-21-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-073.png",
+      "activities": [
+        "m3-lang-21-a3",
+        "m3-math-21-a1",
+        "m3-math-21-a2",
+        "m3-phys-21-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-074.png",
+      "activities": [
+        "m3-world-07-a1",
+        "m3-world-07-a2",
+        "m3-lang-22-a1",
+        "m3-lang-22-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-075.png",
+      "activities": [
+        "m3-lang-22-a3",
+        "m3-math-22-a1",
+        "m3-math-22-a2",
+        "m3-phys-22-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-076.png",
+      "activities": [
+        "m3-art-07-a1",
+        "m3-art-07-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-071.png",
+      "activities": [
+        "m3-lang-20-a3",
+        "m3-math-20-a1",
+        "m3-math-20-a2",
+        "m3-phys-20-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-072.png",
+      "activities": [
+        "m3-time-08-a1",
+        "m3-time-08-a2",
+        "m3-lang-21-a1",
+        "m3-lang-21-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-073.png",
+      "activities": [
+        "m3-lang-21-a3",
+        "m3-math-21-a1",
+        "m3-math-21-a2",
+        "m3-phys-21-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-074.png",
+      "activities": [
+        "m3-world-07-a1",
+        "m3-world-07-a2",
+        "m3-lang-22-a1",
+        "m3-lang-22-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-075.png",
+      "activities": [
+        "m3-lang-22-a3",
+        "m3-math-22-a1",
+        "m3-math-22-a2",
+        "m3-phys-22-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-076.png",
+      "activities": [
+        "m3-art-07-a1",
+        "m3-art-07-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-071.png",
+      "activities": [
+        "m3-lang-20-a3",
+        "m3-math-20-a1",
+        "m3-math-20-a2",
+        "m3-phys-20-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-072.png",
+      "activities": [
+        "m3-time-08-a1",
+        "m3-time-08-a2",
+        "m3-lang-21-a1",
+        "m3-lang-21-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-073.png",
+      "activities": [
+        "m3-lang-21-a3",
+        "m3-math-21-a1",
+        "m3-math-21-a2",
+        "m3-phys-21-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-074.png",
+      "activities": [
+        "m3-world-07-a1",
+        "m3-world-07-a2",
+        "m3-lang-22-a1",
+        "m3-lang-22-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-075.png",
+      "activities": [
+        "m3-lang-22-a3",
+        "m3-math-22-a1",
+        "m3-math-22-a2",
+        "m3-phys-22-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-076.png",
+      "activities": [
+        "m3-art-07-a1",
+        "m3-art-07-a2"
+      ],
+      "reviewed": true
+    }
+  ],
+  "initialPanelsReviewed": 1208,
+  "scrollSheets": [
+    {
+      "sheet": "scroll/scroll-001.png",
+      "states": [
+        "m1-lang-01-a3 · initial",
+        "m1-math-01-a1 · initial",
+        "m1-math-01-a1 · count-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-002.png",
+      "states": [
+        "m1-math-01-a1 · count-2",
+        "m1-math-01-a1 · count-3",
+        "m1-math-01-a1 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-003.png",
+      "states": [
+        "m1-math-01-a1 · count-5",
+        "m1-math-01-a1 · count-6",
+        "m1-math-01-a1 · reset"
+      ],
+      "reviewed": true,
+      "note": "The reset state is retained historical evidence from before VIS-FIX-01; the current reset behavior was separately inspected and accepted."
+    },
+    {
+      "sheet": "scroll/scroll-004.png",
+      "states": [
+        "m1-lang-02-a3 · initial",
+        "m1-math-02-a1 · count-1",
+        "m1-math-02-a1 · count-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-005.png",
+      "states": [
+        "m1-math-02-a1 · count-3",
+        "m1-math-02-a1 · count-4",
+        "m1-math-02-a1 · count-5"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-006.png",
+      "states": [
+        "m1-math-02-a1 · count-6",
+        "m1-lang-03-a2 · initial",
+        "m1-lang-03-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-007.png",
+      "states": [
+        "m1-math-03-a1 · initial",
+        "m1-math-03-a1 · count-1",
+        "m1-math-03-a1 · count-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-008.png",
+      "states": [
+        "m1-math-03-a1 · count-3",
+        "m1-math-03-a1 · count-4",
+        "m1-math-03-a1 · count-5"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-009.png",
+      "states": [
+        "m1-math-03-a1 · count-6",
+        "m1-math-03-a1 · reset",
+        "m1-lang-04-a3 · initial"
+      ],
+      "reviewed": true,
+      "note": "The reset state is retained historical evidence from before VIS-FIX-01."
+    },
+    {
+      "sheet": "scroll/scroll-010.png",
+      "states": [
+        "m1-math-04-a1 · count-1",
+        "m1-math-04-a1 · count-2",
+        "m1-math-04-a1 · count-3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-011.png",
+      "states": [
+        "m1-math-04-a1 · count-4",
+        "m1-math-04-a1 · count-5",
+        "m1-math-04-a1 · count-6"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-012.png",
+      "states": [
+        "m1-lang-05-a3 · initial",
+        "m1-math-05-a1 · initial",
+        "m1-math-05-a1 · count-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-013.png",
+      "states": [
+        "m1-math-05-a1 · count-2",
+        "m1-math-05-a1 · count-3",
+        "m1-math-05-a1 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-014.png",
+      "states": [
+        "m1-math-05-a1 · count-5",
+        "m1-math-05-a1 · count-6",
+        "m1-math-05-a1 · reset"
+      ],
+      "reviewed": true,
+      "note": "The reset state is retained historical evidence from before VIS-FIX-01."
+    },
+    {
+      "sheet": "scroll/scroll-015.png",
+      "states": [
+        "m1-lang-06-a2 · retry",
+        "m1-lang-06-a2 · revealed",
+        "m1-lang-06-a2 · success"
+      ],
+      "reviewed": true,
+      "note": "Claude reported changing grey tile outlines. Supervisor inspection and source review confirmed these are hover borders moving as the capture script scrolls content beneath a stationary pointer; orange/green answer states stay stable. No product defect."
+    },
+    {
+      "sheet": "scroll/scroll-016.png",
+      "states": [
+        "m1-lang-06-a3 · initial",
+        "m1-lang-07-a3 · initial",
+        "m1-math-07-a1 · count-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-017.png",
+      "states": [
+        "m1-math-07-a1 · count-2",
+        "m1-math-07-a1 · count-3",
+        "m1-math-07-a1 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-018.png",
+      "states": [
+        "m1-math-07-a1 · count-5",
+        "m1-math-07-a1 · count-6",
+        "m1-lang-08-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-019.png",
+      "states": [
+        "m1-lang-09-a2 · initial",
+        "m1-lang-09-a3 · initial",
+        "m1-math-09-a1 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-020.png",
+      "states": [
+        "m1-math-09-a1 · count-1",
+        "m1-math-09-a1 · count-2",
+        "m1-math-09-a1 · count-3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-021.png",
+      "states": [
+        "m1-math-09-a1 · count-4",
+        "m1-math-09-a1 · count-5",
+        "m1-math-09-a1 · count-6"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-022.png",
+      "states": [
+        "m1-math-09-a1 · reset",
+        "m1-lang-10-a3 · initial",
+        "m1-lang-11-a3 · initial"
+      ],
+      "reviewed": true,
+      "note": "The reset state is retained historical evidence from before VIS-FIX-01."
+    },
+    {
+      "sheet": "scroll/scroll-023.png",
+      "states": [
+        "m1-math-11-a1 · initial",
+        "m1-math-11-a1 · sort-selected-1",
+        "m1-math-11-a1 · sort-placed-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-024.png",
+      "states": [
+        "m1-math-11-a1 · sort-selected-2",
+        "m1-lang-12-a3 · initial",
+        "m1-lang-13-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-025.png",
+      "states": [
+        "m1-math-13-a1 · initial",
+        "m1-math-13-a1 · sort-selected-1",
+        "m1-math-13-a1 · sort-placed-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-026.png",
+      "states": [
+        "m1-math-13-a1 · sort-selected-2",
+        "m1-lang-14-a3 · initial",
+        "m1-math-14-a1 · count-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-027.png",
+      "states": [
+        "m1-math-14-a1 · count-2",
+        "m1-math-14-a1 · count-3",
+        "m1-math-14-a1 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-028.png",
+      "states": [
+        "m1-math-14-a1 · count-5",
+        "m1-math-14-a1 · count-6",
+        "m1-lang-15-a2 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-029.png",
+      "states": [
+        "m1-lang-15-a3 · initial",
+        "m1-lang-16-a3 · initial",
+        "m1-math-16-a1 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-030.png",
+      "states": [
+        "m1-math-16-a1 · sort-selected-1",
+        "m1-math-16-a1 · sort-placed-1",
+        "m1-math-16-a1 · sort-selected-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-031.png",
+      "states": [
+        "m1-math-16-a1 · sort-placed-2",
+        "m1-math-16-a1 · sort-selected-3",
+        "m1-lang-17-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-032.png",
+      "states": [
+        "m1-math-17-a1 · initial",
+        "m1-math-17-a1 · count-1",
+        "m1-math-17-a1 · count-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-033.png",
+      "states": [
+        "m1-math-17-a1 · count-3",
+        "m1-math-17-a1 · count-4",
+        "m1-math-17-a1 · count-5"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-034.png",
+      "states": [
+        "m1-math-17-a1 · count-6",
+        "m1-math-17-a1 · reset",
+        "m1-lang-18-a2 · retry"
+      ],
+      "reviewed": true,
+      "note": "The reset state is retained historical evidence from before VIS-FIX-01."
+    },
+    {
+      "sheet": "scroll/scroll-035.png",
+      "states": [
+        "m1-lang-18-a2 · revealed",
+        "m1-lang-18-a2 · success",
+        "m1-lang-18-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-036.png",
+      "states": [
+        "m1-lang-19-a3 · initial",
+        "m1-math-19-a1 · initial",
+        "m1-math-19-a1 · sort-selected-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-037.png",
+      "states": [
+        "m1-math-19-a1 · sort-placed-1",
+        "m1-math-19-a1 · sort-selected-2",
+        "m1-math-19-a1 · sort-placed-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-038.png",
+      "states": [
+        "m1-math-19-a1 · sort-selected-3",
+        "m1-lang-20-a3 · initial",
+        "m1-math-20-a1 · count-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-039.png",
+      "states": [
+        "m1-math-20-a1 · count-2",
+        "m1-math-20-a1 · count-3",
+        "m1-math-20-a1 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-040.png",
+      "states": [
+        "m1-math-20-a1 · count-5",
+        "m1-math-20-a1 · count-6",
+        "m1-world-20-a1 · revealed"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-041.png",
+      "states": [
+        "m1-lang-21-a2 · initial",
+        "m1-lang-21-a3 · initial",
+        "m1-lang-22-a2 · retry"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-042.png",
+      "states": [
+        "m1-lang-22-a2 · revealed",
+        "m1-lang-22-a2 · success",
+        "m1-lang-22-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-043.png",
+      "states": [
+        "m1-math-22-a1 · initial",
+        "m1-math-22-a1 · count-1",
+        "m1-math-22-a1 · count-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-044.png",
+      "states": [
+        "m1-math-22-a1 · count-3",
+        "m1-math-22-a1 · count-4",
+        "m1-math-22-a1 · count-5"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-045.png",
+      "states": [
+        "m1-math-22-a1 · count-6",
+        "m1-math-22-a1 · reset",
+        "m3-lang-01-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-046.png",
+      "states": [
+        "m3-lang-01-a3 · page-2",
+        "m3-lang-01-a3 · page-3",
+        "m3-lang-01-a3 · page-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-047.png",
+      "states": [
+        "m3-math-01-a1 · initial",
+        "m3-math-01-a1 · count-1",
+        "m3-math-01-a1 · count-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-048.png",
+      "states": [
+        "m3-math-01-a1 · count-3",
+        "m3-math-01-a1 · count-4",
+        "m3-math-01-a1 · count-5"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-049.png",
+      "states": [
+        "m3-math-01-a1 · reset",
+        "m3-lang-02-a2 · initial",
+        "m3-lang-02-a2 · game"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-050.png",
+      "states": [
+        "m3-lang-02-a2 · retry",
+        "m3-lang-02-a2 · success",
+        "m3-lang-02-a2 · next-target"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-051.png",
+      "states": [
+        "m3-lang-02-a3 · initial",
+        "m3-lang-02-a3 · page-2",
+        "m3-math-02-a2 · count-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-052.png",
+      "states": [
+        "m3-math-02-a2 · count-2",
+        "m3-math-02-a2 · count-3",
+        "m3-math-02-a2 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-053.png",
+      "states": [
+        "m3-math-02-a2 · count-5",
+        "m3-math-02-a2 · count-6",
+        "m3-lang-03-a2 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-054.png",
+      "states": [
+        "m3-lang-03-a2 · page-3",
+        "m3-lang-03-a2 · page-4",
+        "m3-lang-03-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-055.png",
+      "states": [
+        "m3-lang-03-a3 · page-3",
+        "m3-math-03-a1 · initial",
+        "m3-math-03-a1 · retry"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-056.png",
+      "states": [
+        "m3-math-03-a1 · revealed",
+        "m3-math-03-a1 · success",
+        "m3-math-03-a1 · next-target"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-057.png",
+      "states": [
+        "m3-math-03-a2 · initial",
+        "m3-math-03-a2 · sort-selected-1",
+        "m3-math-03-a2 · sort-placed-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-058.png",
+      "states": [
+        "m3-math-03-a2 · sort-selected-2",
+        "m3-math-03-a2 · sort-placed-2",
+        "m3-math-03-a2 · sort-selected-3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-059.png",
+      "states": [
+        "m3-math-03-a2 · sort-placed-3",
+        "m3-math-03-a2 · sort-selected-4",
+        "m3-math-03-a2 · sort-placed-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-060.png",
+      "states": [
+        "m3-math-03-a2 · sort-selected-5",
+        "m3-math-03-a2 · sort-placed-5",
+        "m3-math-03-a2 · sort-selected-6"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-061.png",
+      "states": [
+        "m3-math-03-a2 · sort-placed-6",
+        "m3-math-03-a2 · sort-selected-7",
+        "m3-math-03-a2 · sort-placed-7"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-062.png",
+      "states": [
+        "m3-math-03-a2 · sort-selected-8",
+        "m3-math-03-a2 · sort-placed-8",
+        "m3-lang-04-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-063.png",
+      "states": [
+        "m3-lang-04-a3 · page-2",
+        "m3-lang-04-a3 · page-3",
+        "m3-lang-04-a3 · page-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-064.png",
+      "states": [
+        "m3-math-04-a1 · initial",
+        "m3-math-04-a1 · count-1",
+        "m3-math-04-a1 · count-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-065.png",
+      "states": [
+        "m3-math-04-a1 · count-3",
+        "m3-math-04-a1 · count-4",
+        "m3-math-04-a1 · count-5"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-066.png",
+      "states": [
+        "m3-math-04-a1 · count-6",
+        "m3-math-04-a1 · count-7",
+        "m3-math-04-a1 · count-8"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-067.png",
+      "states": [
+        "m3-math-04-a1 · count-9",
+        "m3-math-04-a1 · count-10",
+        "m3-math-04-a1 · reset"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-068.png",
+      "states": [
+        "m3-art-02-a1 · initial",
+        "m3-lang-05-a3 · initial",
+        "m3-lang-05-a3 · page-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-069.png",
+      "states": [
+        "m3-lang-05-a3 · page-3",
+        "m3-lang-05-a3 · page-4",
+        "m3-math-05-a1 · count-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-070.png",
+      "states": [
+        "m3-math-05-a1 · count-2",
+        "m3-math-05-a1 · count-3",
+        "m3-math-05-a1 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-071.png",
+      "states": [
+        "m3-math-05-a1 · count-5",
+        "m3-math-05-a1 · count-6",
+        "m3-lang-06-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-072.png",
+      "states": [
+        "m3-lang-06-a3 · page-2",
+        "m3-lang-06-a3 · page-3",
+        "m3-math-06-a2 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-073.png",
+      "states": [
+        "m3-math-06-a2 · count-1",
+        "m3-math-06-a2 · count-2",
+        "m3-math-06-a2 · count-3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-074.png",
+      "states": [
+        "m3-math-06-a2 · count-4",
+        "m3-math-06-a2 · count-5",
+        "m3-math-06-a2 · count-6"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-075.png",
+      "states": [
+        "m3-math-06-a2 · count-7",
+        "m3-math-06-a2 · count-8",
+        "m3-math-06-a2 · reset"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-076.png",
+      "states": [
+        "m3-lang-07-a2 · initial",
+        "m3-lang-07-a2 · game",
+        "m3-lang-07-a2 · retry"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-077.png",
+      "states": [
+        "m3-lang-07-a2 · revealed",
+        "m3-lang-07-a2 · success",
+        "m3-lang-07-a2 · next-target"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-078.png",
+      "states": [
+        "m3-lang-07-a3 · initial",
+        "m3-lang-07-a3 · page-2",
+        "m3-lang-07-a3 · page-3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-079.png",
+      "states": [
+        "m3-math-07-a2 · initial",
+        "m3-math-07-a2 · count-1",
+        "m3-math-07-a2 · count-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-080.png",
+      "states": [
+        "m3-math-07-a2 · count-3",
+        "m3-math-07-a2 · count-4",
+        "m3-math-07-a2 · count-5"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-081.png",
+      "states": [
+        "m3-math-07-a2 · count-6",
+        "m3-math-07-a2 · count-7",
+        "m3-math-07-a2 · count-8"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-082.png",
+      "states": [
+        "m3-math-07-a2 · reset",
+        "m3-lang-08-a2 · initial",
+        "m3-lang-08-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-083.png",
+      "states": [
+        "m3-lang-08-a3 · page-2",
+        "m3-lang-08-a3 · page-3",
+        "m3-math-08-a1 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-084.png",
+      "states": [
+        "m3-math-08-a1 · retry",
+        "m3-math-08-a1 · revealed",
+        "m3-math-08-a1 · success"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-085.png",
+      "states": [
+        "m3-math-08-a1 · next-target",
+        "m3-math-08-a2 · revealed",
+        "m3-math-08-a2 · success"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-086.png",
+      "states": [
+        "m3-lang-09-a2 · initial",
+        "m3-lang-09-a2 · page-4",
+        "m3-lang-09-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-087.png",
+      "states": [
+        "m3-lang-09-a3 · page-2",
+        "m3-lang-09-a3 · page-3",
+        "m3-lang-09-a3 · page-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-088.png",
+      "states": [
+        "m3-math-09-a1 · initial",
+        "m3-math-09-a1 · count-1",
+        "m3-math-09-a1 · count-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-089.png",
+      "states": [
+        "m3-math-09-a1 · count-3",
+        "m3-math-09-a1 · count-4",
+        "m3-math-09-a1 · count-5"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-090.png",
+      "states": [
+        "m3-math-09-a1 · count-6",
+        "m3-math-09-a1 · count-7",
+        "m3-math-09-a1 · count-8"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-091.png",
+      "states": [
+        "m3-math-09-a1 · reset",
+        "m3-lang-10-a3 · initial",
+        "m3-lang-10-a3 · page-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-092.png",
+      "states": [
+        "m3-lang-10-a3 · page-3",
+        "m3-lang-10-a3 · page-4",
+        "m3-math-10-a1 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-093.png",
+      "states": [
+        "m3-math-10-a1 · count-1",
+        "m3-math-10-a1 · count-2",
+        "m3-math-10-a1 · count-3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-094.png",
+      "states": [
+        "m3-math-10-a1 · count-4",
+        "m3-math-10-a1 · count-5",
+        "m3-math-10-a1 · count-6"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-095.png",
+      "states": [
+        "m3-math-10-a1 · count-7",
+        "m3-math-10-a1 · count-8",
+        "m3-math-10-a1 · count-9"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-096.png",
+      "states": [
+        "m3-math-10-a1 · count-10",
+        "m3-math-10-a1 · count-11",
+        "m3-math-10-a1 · count-12"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-097.png",
+      "states": [
+        "m3-math-10-a1 · count-13",
+        "m3-math-10-a1 · count-14",
+        "m3-math-10-a1 · count-15"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-098.png",
+      "states": [
+        "m3-math-10-a1 · count-16",
+        "m3-math-10-a1 · count-17",
+        "m3-math-10-a1 · count-18"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-099.png",
+      "states": [
+        "m3-math-10-a1 · count-19",
+        "m3-math-10-a1 · reset",
+        "m3-lang-11-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-100.png",
+      "states": [
+        "m3-lang-11-a3 · page-2",
+        "m3-math-11-a2 · initial",
+        "m3-math-11-a2 · count-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-101.png",
+      "states": [
+        "m3-math-11-a2 · count-2",
+        "m3-math-11-a2 · count-3",
+        "m3-math-11-a2 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-102.png",
+      "states": [
+        "m3-math-11-a2 · count-5",
+        "m3-math-11-a2 · reset",
+        "m3-lang-12-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-103.png",
+      "states": [
+        "m3-lang-12-a3 · page-2",
+        "m3-lang-12-a3 · page-3",
+        "m3-math-12-a2 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-104.png",
+      "states": [
+        "m3-math-12-a2 · count-1",
+        "m3-math-12-a2 · count-2",
+        "m3-math-12-a2 · count-3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-105.png",
+      "states": [
+        "m3-math-12-a2 · count-4",
+        "m3-math-12-a2 · count-5",
+        "m3-math-12-a2 · count-6"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-106.png",
+      "states": [
+        "m3-math-12-a2 · reset",
+        "m3-art-04-a1 · initial",
+        "m3-lang-13-a2 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-107.png",
+      "states": [
+        "m3-lang-13-a2 · retry",
+        "m3-lang-13-a2 · revealed",
+        "m3-lang-13-a2 · success"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-108.png",
+      "states": [
+        "m3-lang-13-a3 · initial",
+        "m3-lang-13-a3 · page-2",
+        "m3-lang-13-a3 · page-3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-109.png",
+      "states": [
+        "m3-lang-13-a3 · page-4",
+        "m3-math-13-a1 · initial",
+        "m3-math-13-a1 · count-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-110.png",
+      "states": [
+        "m3-math-13-a1 · count-2",
+        "m3-math-13-a1 · count-3",
+        "m3-math-13-a1 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-111.png",
+      "states": [
+        "m3-math-13-a1 · count-5",
+        "m3-math-13-a1 · count-6",
+        "m3-math-13-a1 · count-7"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-112.png",
+      "states": [
+        "m3-math-13-a1 · count-8",
+        "m3-math-13-a1 · count-9",
+        "m3-math-13-a1 · count-10"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-113.png",
+      "states": [
+        "m3-math-13-a1 · reset",
+        "m3-lang-14-a3 · initial",
+        "m3-lang-14-a3 · page-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-114.png",
+      "states": [
+        "m3-lang-14-a3 · page-3",
+        "m3-math-14-a2 · initial",
+        "m3-math-14-a2 · count-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-115.png",
+      "states": [
+        "m3-math-14-a2 · count-2",
+        "m3-math-14-a2 · count-3",
+        "m3-math-14-a2 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-116.png",
+      "states": [
+        "m3-math-14-a2 · count-5",
+        "m3-math-14-a2 · count-6",
+        "m3-math-14-a2 · count-7"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-117.png",
+      "states": [
+        "m3-math-14-a2 · count-8",
+        "m3-math-14-a2 · count-9",
+        "m3-math-14-a2 · count-10"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-118.png",
+      "states": [
+        "m3-math-14-a2 · reset",
+        "m3-art-05-a1 · initial",
+        "m3-lang-15-a2 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-119.png",
+      "states": [
+        "m3-lang-15-a2 · page-2",
+        "m3-lang-15-a2 · page-4",
+        "m3-lang-15-a2 · page-5"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-120.png",
+      "states": [
+        "m3-lang-15-a3 · initial",
+        "m3-lang-15-a3 · page-2",
+        "m3-lang-15-a3 · page-3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-121.png",
+      "states": [
+        "m3-lang-15-a3 · page-4",
+        "m3-math-15-a2 · initial",
+        "m3-math-15-a2 · count-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-122.png",
+      "states": [
+        "m3-math-15-a2 · count-2",
+        "m3-math-15-a2 · count-3",
+        "m3-math-15-a2 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-123.png",
+      "states": [
+        "m3-math-15-a2 · count-5",
+        "m3-math-15-a2 · count-6",
+        "m3-math-15-a2 · count-7"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-124.png",
+      "states": [
+        "m3-math-15-a2 · count-8",
+        "m3-math-15-a2 · count-9",
+        "m3-math-15-a2 · count-10"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-125.png",
+      "states": [
+        "m3-math-15-a2 · reset",
+        "m3-world-05-a1 · retry",
+        "m3-world-05-a1 · revealed"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-126.png",
+      "states": [
+        "m3-world-05-a1 · success",
+        "m3-lang-16-a3 · initial",
+        "m3-lang-16-a3 · page-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-127.png",
+      "states": [
+        "m3-lang-16-a3 · page-3",
+        "m3-math-16-a1 · initial",
+        "m3-math-16-a1 · count-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-128.png",
+      "states": [
+        "m3-math-16-a1 · count-2",
+        "m3-math-16-a1 · count-3",
+        "m3-math-16-a1 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-129.png",
+      "states": [
+        "m3-math-16-a1 · count-5",
+        "m3-math-16-a1 · count-6",
+        "m3-math-16-a1 · count-7"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-130.png",
+      "states": [
+        "m3-math-16-a1 · count-8",
+        "m3-math-16-a1 · count-9",
+        "m3-math-16-a1 · count-10"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-131.png",
+      "states": [
+        "m3-math-16-a1 · reset",
+        "m3-lang-17-a3 · initial",
+        "m3-lang-17-a3 · page-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-132.png",
+      "states": [
+        "m3-lang-17-a3 · page-3",
+        "m3-lang-17-a3 · page-4",
+        "m3-math-17-a2 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-133.png",
+      "states": [
+        "m3-math-17-a2 · count-1",
+        "m3-math-17-a2 · count-2",
+        "m3-math-17-a2 · count-3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-134.png",
+      "states": [
+        "m3-math-17-a2 · count-4",
+        "m3-math-17-a2 · count-5",
+        "m3-math-17-a2 · count-6"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-135.png",
+      "states": [
+        "m3-math-17-a2 · count-7",
+        "m3-math-17-a2 · count-8",
+        "m3-math-17-a2 · count-9"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-136.png",
+      "states": [
+        "m3-math-17-a2 · count-10",
+        "m3-math-17-a2 · reset",
+        "m3-lang-18-a3 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-137.png",
+      "states": [
+        "m3-lang-18-a3 · page-2",
+        "m3-lang-18-a3 · page-3",
+        "m3-math-18-a1 · revealed"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-138.png",
+      "states": [
+        "m3-math-18-a1 · success",
+        "m3-math-18-a2 · initial",
+        "m3-lang-19-a2 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-139.png",
+      "states": [
+        "m3-lang-19-a2 · sort-selected-1",
+        "m3-lang-19-a2 · sort-placed-1",
+        "m3-lang-19-a2 · sort-selected-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-140.png",
+      "states": [
+        "m3-lang-19-a2 · sort-placed-2",
+        "m3-lang-19-a2 · sort-selected-3",
+        "m3-lang-19-a2 · sort-placed-3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-141.png",
+      "states": [
+        "m3-lang-19-a2 · sort-selected-4",
+        "m3-lang-19-a2 · sort-placed-4",
+        "m3-lang-19-a2 · sort-selected-5"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-142.png",
+      "states": [
+        "m3-lang-19-a2 · sort-placed-5",
+        "m3-lang-19-a2 · sort-selected-6",
+        "m3-lang-19-a2 · sort-placed-6"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-143.png",
+      "states": [
+        "m3-lang-19-a3 · initial",
+        "m3-lang-19-a3 · page-2",
+        "m3-lang-19-a3 · page-3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-144.png",
+      "states": [
+        "m3-math-19-a1 · initial",
+        "m3-math-19-a1 · count-1",
+        "m3-math-19-a1 · count-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-145.png",
+      "states": [
+        "m3-math-19-a1 · count-3",
+        "m3-math-19-a1 · count-4",
+        "m3-math-19-a1 · count-5"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-146.png",
+      "states": [
+        "m3-math-19-a1 · count-6",
+        "m3-math-19-a1 · count-7",
+        "m3-math-19-a1 · count-8"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-147.png",
+      "states": [
+        "m3-math-19-a1 · count-9",
+        "m3-math-19-a1 · count-10",
+        "m3-math-19-a1 · count-11"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-148.png",
+      "states": [
+        "m3-math-19-a1 · count-12",
+        "m3-math-19-a1 · count-13",
+        "m3-math-19-a1 · count-14"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-149.png",
+      "states": [
+        "m3-math-19-a1 · count-15",
+        "m3-math-19-a1 · count-16",
+        "m3-math-19-a1 · count-17"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-150.png",
+      "states": [
+        "m3-math-19-a1 · count-18",
+        "m3-math-19-a1 · count-19",
+        "m3-math-19-a1 · count-20"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-151.png",
+      "states": [
+        "m3-math-19-a1 · reset",
+        "m3-lang-20-a3 · initial",
+        "m3-lang-20-a3 · page-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-152.png",
+      "states": [
+        "m3-lang-20-a3 · page-3",
+        "m3-math-20-a2 · initial",
+        "m3-math-20-a2 · count-1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-153.png",
+      "states": [
+        "m3-math-20-a2 · count-2",
+        "m3-math-20-a2 · count-3",
+        "m3-math-20-a2 · count-4"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-154.png",
+      "states": [
+        "m3-math-20-a2 · count-5",
+        "m3-math-20-a2 · count-6",
+        "m3-math-20-a2 · count-7"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-155.png",
+      "states": [
+        "m3-math-20-a2 · count-8",
+        "m3-math-20-a2 · count-9",
+        "m3-math-20-a2 · count-10"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-156.png",
+      "states": [
+        "m3-math-20-a2 · reset",
+        "m3-lang-21-a3 · initial",
+        "m3-lang-21-a3 · page-3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-157.png",
+      "states": [
+        "m3-math-21-a2 · initial",
+        "m3-math-21-a2 · count-1",
+        "m3-math-21-a2 · count-2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-158.png",
+      "states": [
+        "m3-math-21-a2 · count-3",
+        "m3-math-21-a2 · count-4",
+        "m3-math-21-a2 · count-5"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-159.png",
+      "states": [
+        "m3-math-21-a2 · count-6",
+        "m3-math-21-a2 · count-7",
+        "m3-math-21-a2 · count-8"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-160.png",
+      "states": [
+        "m3-math-21-a2 · count-9",
+        "m3-math-21-a2 · count-10",
+        "m3-math-21-a2 · reset"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-161.png",
+      "states": [
+        "m3-lang-22-a3 · initial",
+        "m3-lang-22-a3 · page-2",
+        "m3-math-22-a1 · initial"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-162.png",
+      "states": [
+        "m3-math-22-a1 · count-1",
+        "m3-math-22-a1 · count-2",
+        "m3-math-22-a1 · count-3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-163.png",
+      "states": [
+        "m3-math-22-a1 · count-4",
+        "m3-math-22-a1 · count-5",
+        "m3-math-22-a1 · count-6"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-164.png",
+      "states": [
+        "m3-math-22-a1 · count-7",
+        "m3-math-22-a1 · count-8",
+        "m3-math-22-a1 · count-9"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "scroll/scroll-165.png",
+      "states": [
+        "m3-math-22-a1 · count-10",
+        "m3-math-22-a1 · reset",
+        "m3-art-07-a1 · initial"
+      ],
+      "reviewed": true
+    }
+  ],
+  "findings": [
+    "Large-phone first eight panels: pictures and controls are clear and fit captured viewports; movement supporting text remains smaller than the child instruction.",
+    "Tablet portrait first four panels: legible pictures and instructions; six counting tiles wrap five plus one.",
+    "Tablet landscape first four panels: narrative opening image pushes rhyme text and return control below the captured viewport; needs separate full-scroll review. Other three panels fit.",
+    "Desktop first four panels: story text beside picture and return controls fit; two-word preview is labeled possibly stale.",
+    "Scroll sheet 001: three states and their paired top/bottom captures inspected, with readable text, image and reachable return control; no overlap seen. Dot-grid versus finger instruction remains an existing pedagogical finding.",
+    "Scroll sheets 002–006: fifteen states and their paired captures inspected. Counting controls and return controls remain reachable; no clipping or overlap was found. The m1-math-01 reset capture is historical evidence from before VIS-FIX-01.",
+    "Large-phone sheet 002: all eight panels fit. The physical-activity support steps remain comparatively small, and the Lisa opening image reveals the bucket location before the later question; both are existing review findings. The story-counter capture is labeled stale.",
+    "Tablet portrait, tablet landscape and desktop sheet 002: all twelve panels fit without clipping. Movement support text is relatively small at distance; the two-word preview is labeled possibly stale.",
+    "Scroll sheets 007–016: Claude Max/Opus inspected all thirty states; Astra independently inspected the claimed defect and representative counting, reset, rhyme and navigation states. No new product defect was accepted. Counts, highlights and answer feedback remain consistent, and every control is reachable in a paired frame.",
+    "Scroll sheet 015: grey borders that move between paired frames are CSS hover borders, caused by the capture script scrolling content beneath a stationary pointer. Stable orange and green answer borders confirm that this is capture noise rather than misleading application state.",
+    "The repeated number activities and repeated « Je marche, je m’arrête » rhyme are established, previously reviewed curriculum content, not evidence of a visual regression. Existing finger-versus-dot and rhyme-image pedagogy findings remain unchanged and unapproved.",
+    "Initial sheet 003 across all four viewports: all twenty panels are readable and controls remain reachable. Tablet-landscape narrative content continues below its initial viewport as expected and is covered by full-scroll evidence. Movement support text remains relatively small; no new clipping or overlap was found.",
+    "Scroll sheets 017–021: all fifteen states inspected locally. Count values and highlighted objects agree, success controls remain reachable in the lower paired frame, and Tika story navigation plus rhyme return controls are reachable. No new clipping or overlap was found.",
+    "Scroll sheet 018 repeats the already recorded bucket-on-chair mismatch for « Le petit seau »; scroll sheet 019 has a coherent rain illustration and a readable one-line story counter. These do not add a new finding.",
+    "Initial sheet 004 across all four viewports: all twenty panels inspected. Phone, portrait and desktop layouts fit. The tablet-landscape story and rhyme continue below the initial viewport, consistent with prior narrative behavior; the initial capture alone is not treated as full-scroll evidence. The Lisa bucket image remains an existing pedagogical finding.",
+    "Scroll sheets 022–031: Claude Max/Opus inspected all thirty states; Astra independently inspected the reported triangle issue, representative sort placement, final counting and story navigation. No new clipping, overlap or reachability defect was found.",
+    "m1-math-16-a1 contains a triangle but only « les ronds » and « les carrés » groups. This is a genuine interaction/pedagogical correctness issue, but it is already recorded as open in astra-manual-interaction-review.json. Approved content is unchanged pending a bounded pedagogical decision.",
+    "Placed group-and-match tokens are approximately 20 px wide on a 320 px phone and low prominence inside large drop zones. This is accepted as a HIGH_VALUE_IMPROVEMENT candidate for the later systemic design pass, not a blocker for evidence review.",
+    "Initial sheet 005 across all four viewports: all twenty panels inspected and all controls fit. The phone m1-phys-06-a1 screen says « Lance la balle dans le seau » but displays generic « courir / s’arrêter / recommencer » steps. This is a content/display semantic defect and must not be silently corrected without reconfirmation.",
+    "Scroll sheets 032–041: Claude Max/Opus inspected all thirty states; Astra independently inspected the missing-article defect and representative count/sort states. Count and sort continuity, feedback and control reachability pass. m1-math-19 repeats the already-open triangle-group defect.",
+    "m1-world-20-a1 renders bare media tags as French target labels, producing « Montre : main » and « C’est celui-ci : main. » This is a confirmed renderer/data-label DEFECT; the generic label strategy needs a systemic solution rather than a lesson-text patch.",
+    "Claude's note that the counted object in m1-math-20-a1 was ambiguous was rejected after inspecting the source-resolution sheet: the spoon is recognizable. The weak action depiction in « Je marche, je m’arrête » remains part of the existing illustration-semantic finding.",
+    "Initial sheet 006 across all four viewports: all twenty panels inspected and controls fit. m1-phys-08-a1 repeats the approved ball-throw/generic-running-steps defect. Body-part pictures are clear; the hands-on spoon remains small but recognizable.",
+    "Initial sheets 007–008 across all four viewports: all forty panels inspected. Controls and content fit on phone, portrait and desktop. Tablet-landscape narrative content can continue below the initial viewport and remains covered by scroll evidence. m1-phys-09-a1 and m1-phys-10-a1 prove the generic movement-step mismatch is broader than ball activities; the repeated 1ère payload needs a bounded content audit.",
+    "Scroll sheets 042–061: Claude Max/Opus inspected all sixty states; Astra independently inspected all three claimed defects and their source paths. Count, story, choice and sort continuity remain intact, and controls are reachable in overlapping frames.",
+    "m3-lang-02-a2 renders sentence stems as empty picture cards because seven vocabulary entries are paired positionally with only five media assets. Its generic choice game also uses the hardcoded shape retry « Regarde bien la forme ». Both are renderer-level DEFECTS suitable for the systemic design pass.",
+    "m3-math-02-a2 asks for the same number as the adult's pile of four, but the child renderer presents six tappable dots and celebrates six without showing or comparing the model pile. This is a pedagogical-integrity DEFECT; approved data and success semantics remain unchanged pending a bounded decision.",
+    "Claude's notes about missing story illustrations, isolated French punctuation wraps and moving hover borders were kept as optional polish or capture artifacts. They do not justify implementation during evidence review.",
+    "Initial sheets 009–012 across all four viewports: all eighty panels inspected. Phone, portrait and desktop content fits; tablet-landscape narrative cards can continue below the initial viewport as already covered by scroll evidence. The repeated generic 1ère movement steps, bare ChooseOne labels, triangle-without-group case, dot-grid/finger conflict and story-image issues are already classified; no new initial-screen defect was added.",
+    "Scroll sheets 062–081: Claude Max/Opus inspected all sixty states; Astra independently inspected each claimed defect and the corresponding approved payload. Story, count and choice state continuity passes and controls remain reachable in overlapping frames.",
+    "The generic counting renderer erases task-defining structure in four approved activities: matching an adult's pile, lining objects up, counting separate mine/yours sets and counting objects arranged in a circle. This is one systemic pedagogical-integrity DEFECT, not four isolated visual preferences.",
+    "m3-math-03-a2 uses fixed shape labels while accepting mismatched placements and praising completion. This is a genuine feedback-semantics DEFECT. The intended open-versus-checked sorting model needs a bounded pedagogical decision before implementation.",
+    "Initial sheets 013–014 across all four viewports: all forty panels inspected. The layouts fit except for expected tablet-landscape narrative continuation covered by scroll evidence. Only already-classified movement, dot-grid/finger and triangle-group findings recur.",
+    "Scroll sheets 082–101: Claude Max/Opus inspected all sixty states; Astra independently inspected every new defect against the approved payload. Stories, ordinary count continuity, resets and navigation remain coherent and reachable.",
+    "m3-math-08-a1 loses its comparison model and becomes a written-name choice task; m3-math-08-a2 replaces open room observation with a graded fixed square. Both are genuine renderer/semantics DEFECTS.",
+    "m3-math-10-a1 changes counting from 10–20 into 1–20 and separates its running count from early taps by two phone screens. The sequence error is a DEFECT; persistent/compact feedback is a HIGH_VALUE_IMPROVEMENT.",
+    "The singular reveal copy when two rotated variants are accepted and isolated French punctuation wraps are OPTIONAL_POLISH. The Kumu reference is not a defect: Kumu was introduced earlier in the month.",
+    "Initial sheets 015–016 across all four viewports: all forty panels inspected. Layouts fit except for expected tablet-landscape narrative continuation covered by scroll evidence. Only already-classified generic movement steps, bare noun labels, dot-grid/finger and group-and-match issues recur.",
+    "Scroll sheets 102–121: Claude Max/Opus inspected all sixty states; Astra independently checked every new claim against the rendered evidence, approved payload and prior visual-reconfirmation history. Controls remain reachable and ordinary narrative/count continuity is coherent.",
+    "m3-lang-13-a2 asks for five market words but provides only four media assets. « la monnaie » therefore renders as a visibly empty picture card. This is a genuine word-card vocabulary/media DEFECT.",
+    "The counting renderer defect also affects m3-math-12-a2 (the hidden complement is revealed), m3-math-13-a1 (two real collections collapse into one grid), m3-math-14-a2 (the model pile disappears) and m3-math-15-a2 (the number strip and fingers disappear). These extend the existing systemic finding.",
+    "No change is justified for m3-art-04-a1: its approved guide explicitly permits the month’s counting rhyme over the rain sounds, and the prior accepted correction intentionally retained the rhyme while changing its picture to rain. No change is justified for m3-art-05-a1 either: the known rhyme is recalled from memory before the displayed new rhyme. Repeated narrow-screen punctuation wraps remain OPTIONAL_POLISH.",
+    "Initial sheets 017–018 across all four viewports: all forty panels inspected. Layouts and return controls fit. Only the already-classified generic movement steps and empty sentence-stem cards recur; tablet-landscape rhyme continuation is expected and covered by scroll evidence.",
+    "Scroll sheets 122–141: Claude Max/Opus inspected all sixty states; Astra independently checked the claimed defects against rendered evidence, approved payloads and prior illustration decisions. No clipping, overlap, broken image or unreachable control was found.",
+    "m3-math-18-a2 asks the child to draw a house with a square wall and triangular roof, but the look-only renderer presents four separate shapes, including a rectangle and circle, without composing or modelling a house. This is a genuine renderer/media-semantic DEFECT.",
+    "m3-world-05-a1 turns open comparison of two real animals into a graded « Montre : poule » choice, and m3-math-18-a1 turns matching a paper shape to a real object face into a graded shape-name choice. These extend the existing real-world-observation-rendered-as-fixed-choice defect.",
+    "No change is justified for the sleeping Malo illustration: the approved one-picture story asset intentionally shows the peaceful ending, and the illustration audit explicitly records that choice. Text-only later story pages follow the one-picture-per-story design rule. Questions spoken by story characters do not contradict the instruction to ask no comprehension question afterward.",
+    "Reflow of remaining sort pictures, subdued placed tokens and isolated punctuation or hyphen wraps are OPTIONAL_POLISH. Small placed-token legibility remains covered by the existing high-value improvement.",
+    "Initial sheets 019–020 across all four viewports: all forty panels inspected. Layouts and return controls fit. Generic counting, movement and open-sorting issues recur; no new initial-screen defect was found.",
+    "Scroll sheets 142–165: Claude Max/Opus inspected all seventy-two states; Astra independently checked every substantive claim against rendered evidence and approved source. This completes all 165 scroll sheets with no new clipping, overlap, broken image or unreachable control.",
+    "m3-math-19-a1 is explicitly « De un à trente » with upTo 30, but the child renderer supplies only twenty dots and ends with « 20 en tout. Bravo ! ». This is a sequence-cap DEFECT, not optional improvement.",
+    "m3-math-20-a2 loses the original set needed to reconstruct a quantity, and m3-math-21-a2 loses both the separate piles and number strip. These extend the existing generic counting renderer defect.",
+    "m3-art-07-a1 is NO_CHANGE: its approved parent guidance makes the single printed rhyme an explicit fallback only when the child cannot choose a favourite from memory. The one visible rhyme therefore does not remove the off-screen choice.",
+    "The remaining punctuation wraps, sort-token fading and reflow are OPTIONAL_POLISH; the latter remains covered by the placed-token legibility improvement. Story navigation and one-picture story presentation remain coherent.",
+    "Initial sheets 021–025 across all four viewports: all one hundred panels inspected by Claude Max/Opus and independently checked by Astra on large-phone and tablet-landscape. No clipping, overlap, broken image or unreachable return control was found.",
+    "m1-time-15-a1 and m1-world-16-a1 intentionally use the real environment without media, but the look-and-name renderer bypasses the off-screen handoff and shows only a small « À observer » line. The child receives no visible cue to put down the device. This is a genuine renderer-semantics DEFECT.",
+    "m1-math-15-a1 asks for three real spoons while displaying one spoon, and m3-math-07-a1 asks for pebbles in a box while displaying one isolated pebble. The generic hands-on reference thumbnail can contradict or incompletely model the required physical setup; this is a HIGH_VALUE_IMPROVEMENT for the systemic off-screen design pass.",
+    "Generic counters, movement steps, fixed-choice labels, missing matching models and the triangle-without-group issue recur and remain covered by existing classified findings. The one-picture story screens match the approved illustration model. Minor punctuation wraps are OPTIONAL_POLISH.",
+    "Initial sheets 026–030 across all four viewports: all one hundred panels independently inspected by Astra after the bounded Claude Max invocation was rejected by automatic approval review before transmission. No file from this batch was sent to Anthropic. No clipping, overlap, broken image or unreachable return control was found.",
+    "m3-lang-12-a2 tells the child to sort « ces mots » and tells the adult to say the words one by one, but the approved activity supplies no word list, examples, media or pairs. The child surface can render only the three category names. This is a genuine content/payload completeness DEFECT, recorded separately without changing approved pedagogy.",
+    "The media-free look-and-name handoff defect recurs in m1-time-18-a1 and m3-world-04-a1. The triangle-without-a-valid-group defect recurs in m1-math-19-a1: the renderer offers a triangle while the approved activity and categories specify only rounds and squares.",
+    "Generic movement steps, long/generic counters, incomplete hands-on reference media, fixed-choice body-part presentation, bare noun labels and the missing market-word picture recur and remain covered by existing findings. Story/rhyme continuation in landscape is covered by full-scroll evidence and is NO_CHANGE.",
+    "Initial sheets 031–035 across all four viewports: all one hundred panels independently inspected by Astra. No new clipping, overlap, broken image or unreachable return control was found; expected tablet-landscape story and rhyme continuation remains covered by full-scroll evidence.",
+    "The media-free look-and-name off-screen handoff defect recurs in m1-world-22-a1 and m3-world-01-a1. Generic dot counters again erase required number-strip, hidden-number, finger and 1–30 semantics, while animal/plant observation and real-object matching again become graded fixed choices.",
+    "One-object thumbnails for multi-object hands-on tasks, generic movement diagrams and the separate-shape house model recur and remain covered by existing classified findings. m3-lang-19-a2 supplies its sorting words and categories coherently, so it adds no content-completeness finding.",
+    "Initial sheets 036–038 across the available four viewport sets: all fifty-eight panels independently inspected by Astra. No new clipping, overlap, broken image or unreachable return control was found. This completes all 38 large-phone initial sheets.",
+    "m3-lang-02-a2 repeats the already-classified empty sentence-stem cards; m3-math-02-a2 repeats the generic counter that erases the adult model pile; and m3-math-03-a2 repeats the open-sorting feedback defect. The one-pebble thumbnail for a two-pile comparison extends the existing incomplete physical-setup reference finding.",
+    "Story continuation in tablet landscape remains covered by full-scroll evidence. The displayed school-object vocabulary, off-screen oral exchanges and real-object drawing handoff are coherent and add no new finding.",
+    "Initial sheets 039–043 for tablet portrait, tablet landscape and desktop: all sixty panels independently inspected by Astra. No new clipping, overlap, broken image or unreachable return control was found; expected story continuation in landscape remains covered by full-scroll evidence.",
+    "m3-math-04-a1 substitutes generic dots for the requested fingers, and m3-math-05-a1 does not preserve a single-line arrangement. Both extend the classified generic-counter semantics defect. Single-object thumbnails for ten- and six-object physical tasks extend the existing setup-reference improvement.",
+    "m3-world-02-a1 asks the child to choose a known animal and name its parts, but the renderer fixes the target to a chicken within a chicken/goat choice. This extends the existing open-real-world-prompt-to-fixed-choice defect rather than creating a new class.",
+    "Initial sheets 044–048 for tablet portrait, tablet landscape and desktop: all sixty panels independently inspected by Astra. No new clipping, overlap or broken image was found. Lower word-card and story content in landscape continues below the initial viewport and remains covered by full-scroll evidence.",
+    "m3-math-06-a2 merges the required mine/yours collections; m3-math-07-a2 replaces the circle with a generic grid; m3-math-08-a1 omits the comparison model; and m3-math-08-a2 converts room observation into a fixed choice. These are recurrences of classified renderer-semantics defects.",
+    "m3-math-07-a1 names a box but shows only a pebble, extending the existing incomplete physical-setup reference finding. Story, vocabulary, movement and off-screen oral/drawing screens in this batch add no new finding.",
+    "Initial sheets 049–053 for tablet portrait, tablet landscape and desktop: Claude Max/Opus inspected all sixty panels from an isolated authorized package; Astra independently checked its substantive claims against the source-resolution evidence.",
+    "Generic counter semantics recur in m3-math-09-a1 and m3-math-10-a1, and the single-pebble reference for twelve objects in m3-math-10-a2 extends the existing incomplete setup-thumbnail finding. Oral, movement, plant, story and other hands-on screens add no new defect.",
+    "Claude proposed a new low-severity reachability defect because m3-math-10-a1 places the return control below the tablet-landscape initial viewport. Astra rejected it as a new finding: completed full-scroll evidence proves the control remains reachable, and the underlying tall 10–20 counter is already classified. Isolated punctuation and hyphen wraps remain optional polish.",
+    "Initial sheets 054–058 for tablet portrait, tablet landscape and desktop: Claude Max/Opus inspected all sixty panels from an isolated authorized package; Astra independently checked every proposed new issue against source-resolution evidence and prior approvals.",
+    "Claude’s m3-art-04-a1 claim was rejected: the approved guide explicitly permits the counting rhyme over rain sounds, and the accepted correction intentionally makes the rain image lead. m3-lang-12-a2 missing sort items and m3-lang-13-a2 missing money media are already classified. Punctuation/hyphen wraps remain optional polish.",
+    "The m3-world-04-a2 model shows bent arms as instructed; bent legs add a valid articulated pose rather than contradicting the task. The m3-lang-13-a2 landscape controls continue below the initial viewport and are reachable in full-scroll evidence. Generic counter, movement, media-free handoff and incomplete setup-thumbnail findings recur; no new defect class was added.",
+    "Initial sheets 059–064 for tablet portrait, tablet landscape and desktop: Claude Max/Opus inspected all seventy-two panels from an isolated authorized package; Astra independently checked every substantive claim against source-resolution evidence, approved payloads and prior classifications.",
+    "Generic counters recur in m3-math-14-a2, m3-math-15-a2 and m3-math-16-a1; the fixed-choice conversion recurs in m3-world-05-a1; and generic movement steps recur in m3-phys-14-a1 and m3-phys-15-a1. These extend existing classified findings rather than creating new classes.",
+    "Claude’s missing-media, missing-model and missing-setup claims were rejected where m3-lang-15-a1 is intentionally oral, m3-world-05-a2 is intentionally open drawing, and text-only materials do not require thumbnails. Guillemets and punctuation wrapping remain optional polish.",
+    "m3-lang-16-a2 is explicitly off-screen and the approved adult guide supplies the spoken rhyming and non-rhyming comparison order. Its six chips are the already-accepted word bank, not an on-screen pairing interaction, so the proposed pair-grouping issue is NO_CHANGE.",
+    "Initial sheets 065–070 for tablet portrait, tablet landscape and desktop: Claude Max/Opus inspected all seventy-two panels from an isolated authorized package; Astra independently checked the substantive claims against source-resolution evidence and existing classifications.",
+    "Generic counter structure loss recurs in m3-math-17-a2 and m3-math-19-a1; fixed-choice conversion recurs in m3-math-18-a1 and m3-world-06-a2; incomplete reference media recurs in m3-math-17-a1 and m3-math-19-a2; and movement-step mismatches recur in m3-phys-18-a1 and m3-phys-19-a1.",
+    "Several instructions allow French guillemets to wrap onto isolated lines. This is genuine optional typography polish already observed in prior batches, not a new visual defect class; the resulting lower content and controls remain reachable in completed full-scroll evidence.",
+    "Off-screen sound, oral and drawing activities, story screens and the open category sort otherwise match their approved modes. No broken media, overlap or newly unreachable control was found.",
+    "Initial sheets 071–076 for tablet portrait, tablet landscape and desktop: Claude Max/Opus inspected all sixty-six panels from an isolated authorized package; Astra independently checked every substantive claim against source-resolution evidence and approved payloads.",
+    "Generic counter semantics recur in m3-math-20-a2, m3-math-21-a2 and m3-math-22-a1; movement-step mismatch recurs in m3-phys-20-a1; and the single-pebble reference in m3-math-20-a1 extends the existing incomplete hands-on reference finding.",
+    "m3-world-07-a2 is an off-screen body observation without the existing device-handoff banner, extending the classified look-and-name handoff defect. m3-lang-21-a2 already displays its off-screen banner and the adult guide supplies the final rhyme pairs, so Claude’s proposed omission was rejected.",
+    "m3-art-07-a1 prints one favourite-rhyme fallback exactly as its approved parent guidance requires; m3-math-21-a1 labels an off-screen physical arrangement; both are NO_CHANGE. Generated child evidence is complete: 266 initial sheets / 1,208 panels and 165 scroll sheets.",
+    "Whole-product UX audit complete: 56 captures across phone, tablet, desktop and TV cover fourteen parent/child journey states; automated checks found zero horizontal overflow and zero broken images.",
+    "Astra accepted visible safety notes, accurate zero-progress stop copy, observation-first completion priority, grammatical generic choice copy, intentional text-only cards, media-free handoff, sticky long-count feedback and larger placed sort tokens. These corrections are implemented locally without changing approved lesson payloads or media.",
+    "Astra rejected or deferred preference-only Claude suggestions after source and contrast checks. Calendar density, in-session next navigation, home-card hierarchy and guillemet wrapping are optional; the observation report remains intentionally copyable Markdown.",
+    "The illustration system is already reconciled and frozen: the final QA records 35 accepted, 11 refined and 3 redrawn assets with 0 outstanding changes and 176/176 approvals. No illustration or audio asset changed in this pass.",
+    "The remaining genuine findings affect approved teaching semantics or frozen media and require a bounded owner decision and reconfirmation; they were not silently patched as visual defects."
+  ],
+  "classifiedFindings": [
+    {
+      "id": "group-and-match-placed-token-legibility",
+      "classification": "HIGH_VALUE_IMPROVEMENT",
+      "status": "implemented-and-visually-verified-local",
+      "evidence": "Placed shapes are approximately 20 px wide inside large group zones at 320 px, making the result hard for a preschool child to recognize.",
+      "scope": "GroupAndMatch child renderer; no approved content change."
+    },
+    {
+      "id": "m1-math-16-triangle-without-group",
+      "classification": "DEFECT",
+      "status": "known-open-pedagogical-finding",
+      "evidence": "The triangle can only be placed into « les ronds » or « les carrés » while the instruction asks for the same shape.",
+      "scope": "Approved activity data; preserve digest and require bounded pedagogical decision before editing."
+    },
+    {
+      "id": "m1-move-generic-running-steps",
+      "classification": "DEFECT",
+      "status": "new-pedagogical-integrity-finding",
+      "evidence": "The 1ère movement payload repeats « courir / s’arrêter / recommencer » across days regardless of the approved instruction. Confirmed mismatches include throwing a ball into a bucket (m1-phys-06-a1 and m1-phys-08-a1) and walking to a marker then returning (m1-phys-09-a1 and m1-phys-10-a1).",
+      "scope": "Approved 1ère movement payloads; audit all instances and require bounded pedagogical reconfirmation before editing."
+    },
+    {
+      "id": "choose-one-bare-french-noun-labels",
+      "classification": "DEFECT",
+      "status": "implemented-and-visually-verified-local",
+      "evidence": "m1-world-20-a1 renders « Montre : main » and « C’est celui-ci : main. » because generic ChooseOne labels fall back to bare media tags.",
+      "scope": "Renderer/media-label architecture; preserve approved lesson text and solve French display labels systematically."
+    },
+    {
+      "id": "vocabulary-sentence-stems-empty-picture-cards",
+      "classification": "DEFECT",
+      "status": "implemented-and-visually-verified-local",
+      "evidence": "m3-lang-02-a2 includes « il sert à » and « elle sert à » after five pictured words; the word-card renderer gives both sentence stems empty image slots, making them look broken.",
+      "scope": "Word-card vocabulary/media pairing; preserve approved vocabulary and render non-picture sentence frames intentionally."
+    },
+    {
+      "id": "choose-one-shape-specific-retry-copy",
+      "classification": "DEFECT",
+      "status": "implemented-and-visually-verified-local",
+      "evidence": "m3-lang-02-a2 is an object vocabulary choice game, but its retry says « Regarde bien la forme » because ChooseOne hardcodes shape-specific feedback.",
+      "scope": "Generic ChooseOne feedback architecture; use context-appropriate wording without changing approved lesson instructions."
+    },
+    {
+      "id": "counting-renderer-erases-task-structure",
+      "classification": "DEFECT",
+      "status": "new-pedagogical-integrity-finding",
+      "evidence": "The generic counting screen turns distinct approved tasks into the same tappable grid: m3-math-02-a2 loses the adult's model; m3-math-05-a1 loses the line; m3-math-06-a2 collapses mine/yours; m3-math-07-a2 loses the circle; m3-math-11-a2 cannot split five objects into two piles; m3-math-12-a2 reveals the hidden complement; m3-math-13-a1 collapses two real collections; m3-math-14-a2 loses the model pile; and m3-math-15-a2 loses the number strip and finger representation. Additional examples: m3-math-16-a1 replaces hide-and-guess on the number strip with counting ten dots, and m3-math-17-a2 replaces showing and hiding fingers with the same count-to-ten grid. Further examples: m3-math-20-a2 omits the original collection that must be rebuilt, and m3-math-21-a2 omits the separate piles and number strip required by the task.",
+      "scope": "Counting renderer and approved activity semantics; requires a bounded pedagogical decision before changing layout, data or success behavior."
+    },
+    {
+      "id": "group-and-match-unconditional-completion-praise",
+      "classification": "DEFECT",
+      "status": "new-pedagogical-integrity-finding",
+      "evidence": "m3-math-03-a2 labels four bins by shape, accepts visibly mismatched placements, states there is no wrong answer, then says « Tout est rangé. Bravo ! » when every token has merely been placed.",
+      "scope": "GroupAndMatch feedback contract and approved sorting pedagogy; decide between open unlabelled sorting and checked labelled groups before implementation."
+    },
+    {
+      "id": "matching-renderer-omits-model",
+      "classification": "DEFECT",
+      "status": "new-pedagogical-integrity-finding",
+      "evidence": "m3-math-08-a1 asks the child to find the shape matching « celle-ci », and its approved guidance requires comparing differently sized/oriented pairs, but the child screen shows no model shape and instead asks « Montre : carré ».",
+      "scope": "Matching renderer and approved comparison semantics; provide an explicit model/pair interaction without altering the approved instruction."
+    },
+    {
+      "id": "real-world-observation-rendered-as-fixed-choice",
+      "classification": "DEFECT",
+      "status": "new-pedagogical-integrity-finding",
+      "evidence": "m3-math-08-a2 asks the child to find and name a shape in the room, but the child screen requires selecting a predetermined on-screen square and grades that tap. The same conversion appears in m3-world-05-a1, where comparing two animals becomes choosing « poule », and m3-math-18-a1, where matching a paper shape to a real object face becomes choosing « carré ».",
+      "scope": "Observation and matching renderer semantics; preserve approved real-world tasks and avoid inventing fixed on-screen answers."
+    },
+    {
+      "id": "count-from-ten-rendered-one-to-twenty",
+      "classification": "DEFECT",
+      "status": "new-pedagogical-integrity-finding",
+      "evidence": "m3-math-10-a1 is « De dix à vingt », but the child counter starts at 1, passes through 10 without a transition and finishes at 20, changing the practiced sequence to 1–20.",
+      "scope": "Counting renderer and approved sequence semantics; require a bounded pedagogical design for the given first ten and the 10–20 transition."
+    },
+    {
+      "id": "long-count-feedback-offscreen",
+      "classification": "HIGH_VALUE_IMPROVEMENT",
+      "status": "implemented-and-visually-verified-local",
+      "evidence": "At 320×740, the twenty-item count grid is about three screens tall; the running count and reset control are two screens below the first targets, so action and feedback cannot be seen together.",
+      "scope": "Long CountTogether layouts; keep live progress visible through a denser layout or persistent feedback."
+    },
+    {
+      "id": "word-card-missing-market-media",
+      "classification": "DEFECT",
+      "status": "candidate-for-systemic-design-pass",
+      "evidence": "m3-lang-13-a2 teaches five market words, but only four media assets are linked; « la monnaie » renders as an empty picture card.",
+      "scope": "Vocabulary/media pairing and word-card fallback; preserve the approved five-word instruction and supply an intentional representation for every taught word."
+    },
+    {
+      "id": "drawing-renderer-omits-composed-model",
+      "classification": "DEFECT",
+      "status": "candidate-for-systemic-design-pass",
+      "evidence": "m3-math-18-a2 asks for a house made from a square wall and triangle roof, but its look-only panel shows four isolated shapes, including a rectangle and circle, with no house composition.",
+      "scope": "Drawing renderer and activity-media semantics; preserve the approved instruction and provide an intentional model or reference aligned with the subject."
+    },
+    {
+      "id": "count-to-thirty-rendered-to-twenty",
+      "classification": "DEFECT",
+      "status": "new-pedagogical-integrity-finding",
+      "evidence": "m3-math-19-a1 is titled « De un à trente » and has upTo 30, but the rendered interaction contains twenty targets and ends with « 20 en tout. Bravo ! ».",
+      "scope": "Counting renderer and approved sequence semantics; preserve the 1–30 objective and do not cap or congratulate at 20."
+    },
+    {
+      "id": "look-and-name-real-world-missing-offscreen-cue",
+      "classification": "DEFECT",
+      "status": "implemented-and-visually-verified-local",
+      "evidence": "m1-time-15-a1 and m1-world-16-a1 intentionally have no media because the child must observe the real environment, but the look-and-name renderer shows only « À observer » and never supplies the existing « Posez l’écran » handoff.",
+      "scope": "Look-and-name renderer for off-screen real-world observation; preserve approved focus text and make the device handoff explicit."
+    },
+    {
+      "id": "hands-on-reference-media-misrepresents-setup",
+      "classification": "HIGH_VALUE_IMPROVEMENT",
+      "status": "candidate-for-systemic-design-pass",
+      "evidence": "m1-math-15-a1 asks for three real spoons but shows one spoon; m3-math-07-a1 asks for pebbles in a box but shows one isolated pebble. The generic thumbnail can be read as the task model even when it omits the required quantity or container.",
+      "scope": "Hands-on renderer and media semantics; distinguish a vocabulary reference from a complete setup model and keep the physical-task instruction dominant."
+    },
+    {
+      "id": "sorting-activity-omits-items-to-sort",
+      "classification": "DEFECT",
+      "status": "new-pedagogical-integrity-finding",
+      "evidence": "m3-lang-12-a2 asks the child to sort « ces mots » into food, writing and clothing categories, while adult guidance says to present words one by one; the payload contains categories only and supplies no words, examples, media or pairs.",
+      "scope": "Approved activity payload/content completeness; define the intended word set through the pedagogical review workflow before changing the child or parent experience."
+    }
+  ],
+  "next": "Bounded correction batch authorized. Implement mode-authoritative renderer fixes first, then the five content/media correction groups, lapse only changed approvals, and generate minimum mixed reconfirmation packages. Do not repeat the completed audit or publish/deploy.",
+  "productUxAudit": {
+    "status": "complete-local",
+    "reviewedOn": "2026-09-26",
+    "captureScript": "scripts/astra-product-ux-audit.mjs",
+    "localEvidence": "private/astra-product-ux-audit/",
+    "viewports": [
+      "390x844",
+      "768x1024",
+      "1440x900",
+      "1920x1080"
+    ],
+    "states": [
+      "home",
+      "class-1",
+      "class-2-unavailable",
+      "class-3",
+      "calendar",
+      "session-preparation",
+      "session-preparation-alternatives",
+      "activity-parent-folded",
+      "activity-parent-guidance",
+      "activity-child",
+      "session-pause",
+      "session-stopped",
+      "session-complete",
+      "observation"
+    ],
+    "captures": 56,
+    "horizontalOverflow": 0,
+    "brokenImages": 0,
+    "acceptedCorrections": [
+      "Expose material safety notes in the short preparation list.",
+      "Use accurate copy when a family stops before completing the first activity.",
+      "Make the observation/report action primary at normal completion.",
+      "Use grammatical generic choice and retry copy for both shapes and vocabulary.",
+      "Remove false empty-picture stages from intentionally text-only vocabulary.",
+      "Add the established off-screen handoff to media-free real-world observations.",
+      "Keep long-count progress and reset visible in the child surface.",
+      "Increase placed sort-token legibility in the child surface."
+    ],
+    "rejectedOrOptional": [
+      "Child return-link contrast: measured at approximately 4.72:1 and passes WCAG AA for normal text.",
+      "Observation Markdown preview: raw, copyable output is the documented product behavior.",
+      "Calendar density, next-session navigation during an active session, home-card hierarchy and guillemet wrapping: optional polish without a demonstrated reachability or correctness defect."
+    ],
+    "claude": {
+      "model": "Claude Max / Opus",
+      "transmitted": "Four labelled whole-product contact sheets and a bounded review prompt only.",
+      "independentSupervisorReview": true
+    }
+  },
+  "correctionBatch": {
+    "status": "reconfirmation-material-ready-decision-pending",
+    "authorizedOn": "2026-09-26",
+    "baseCommit": "aa111b5",
+    "auditReopened": false,
+    "rendererClassification": {
+      "cause": "Explicit off-screen mode is ignored by quantity, sorting/matching and multi-image observation renderers, which invent screen interactions that replace the approved real-world task.",
+      "correction": "Make mode authoritative and show only non-interactive reference material where useful.",
+      "approvalImpact": "none; renderer code is outside lesson digests"
+    },
+    "contentCorrections": [
+      "Remove the stray triangle media from m1-math-16-a1 and equivalent m1-math-19-a1; their guidance teaches rounds and squares only.",
+      "Replace generic movement display steps in all 22 1ère physical lessons with steps derived from their existing instruction and guidance.",
+      "Supply a bounded six-word bank, two words per approved category, for m3-lang-12-a2."
+    ],
+    "mediaCorrections": [
+      "Add a simple no-numeral objet-monnaie representation and link it as the fifth m3-lang-13-a2 word card.",
+      "Add a composed square-wall/triangle-roof house model and use it in m3-math-18-a2."
+    ],
+    "expectedLapsedLessons": 27,
+    "expectedLapsedLessonIds": [
+      "m1-phys-01",
+      "m1-phys-02",
+      "m1-phys-03",
+      "m1-phys-04",
+      "m1-phys-05",
+      "m1-phys-06",
+      "m1-phys-07",
+      "m1-phys-08",
+      "m1-phys-09",
+      "m1-phys-10",
+      "m1-phys-11",
+      "m1-phys-12",
+      "m1-phys-13",
+      "m1-phys-14",
+      "m1-phys-15",
+      "m1-phys-16",
+      "m1-phys-17",
+      "m1-phys-18",
+      "m1-phys-19",
+      "m1-phys-20",
+      "m1-phys-21",
+      "m1-phys-22",
+      "m1-math-16",
+      "m1-math-19",
+      "m3-lang-12",
+      "m3-lang-13",
+      "m3-math-18"
+    ],
+    "claude": {
+      "mode": "read-only correction map",
+      "accepted": "affected families, direct equivalents, media-to-vocabulary ordering, mixed reconfirmation route and approval-scope analysis",
+      "rejected": "new on-screen counting mini-games and checked sorting contracts, because every affected canonical activity is explicitly off-screen",
+      "implementationWorker": "Edited only ActivityRenderer and targeted renderer/E2E tests; no final transcript returned before supervisor termination.",
+      "supervisorDisposition": "Astra reviewed every diff, retained the mode-authoritative implementation, and changed quantity references so generic payload metadata cannot override the approved instruction."
+    },
+    "next": "Send the reviewer brief, two generated packages, structured manifest and two-asset media sheet to an independent ChatGPT reviewer. Record its explicit decision and rationale; do not restore any approval before acceptance.",
+    "implementedOn": "2026-09-26",
+    "rendererResult": "Off-screen mode is authoritative for quantity, group-and-match and look-and-name. Static references remain where useful; counters, graded choices, sorting targets and completion praise are absent.",
+    "actualLapsedLessons": 27,
+    "actualLapsedLessonIds": [
+      "m1-phys-01",
+      "m1-phys-02",
+      "m1-phys-03",
+      "m1-phys-04",
+      "m1-phys-05",
+      "m1-phys-06",
+      "m1-phys-07",
+      "m1-phys-08",
+      "m1-phys-09",
+      "m1-phys-10",
+      "m1-phys-11",
+      "m1-phys-12",
+      "m1-phys-13",
+      "m1-phys-14",
+      "m1-phys-15",
+      "m1-phys-16",
+      "m1-phys-17",
+      "m1-phys-18",
+      "m1-phys-19",
+      "m1-phys-20",
+      "m1-phys-21",
+      "m1-phys-22",
+      "m1-math-16",
+      "m1-math-19",
+      "m3-lang-12",
+      "m3-lang-13",
+      "m3-math-18"
+    ],
+    "approvalState": "All 27 changed lessons are review/null; second lapse dry-run reports 0. No approval restored or digest restamped.",
+    "reconfirmationPackages": [
+      "docs/review/2026-2027-maternelle-1-semaines-1-5-reconfirmation.md",
+      "docs/review/2026-2027-maternelle-3-semaines-3-4-reconfirmation.md"
+    ],
+    "mediaEvidence": "docs/review/media/septembre-avant-apres.png",
+    "targetedVisualEvidence": {
+      "location": "private/astra-visual-evidence/september-correction-qa/",
+      "tracked": false,
+      "captures": 16,
+      "viewports": [
+        "390x844",
+        "768x1024",
+        "1440x900",
+        "1920x1080"
+      ],
+      "result": "Astra inspected four contact sheets; no clipping, overlap, broken image or unreachable control."
+    },
+    "validation": {
+      "format": "pass",
+      "lint": "pass",
+      "typecheck": "pass",
+      "unit": "414 passed",
+      "content": "31 JSON files valid",
+      "visualAudit": "176 lessons / 302 activities / 51 assets; 0 pending pictures",
+      "approvalDryRun": "0",
+      "build": "Next 16.3.4 Webpack production build passed",
+      "clientBundle": "28 files; 3 fake server sentinels absent",
+      "e2e": "41 passed / 9 production-only skipped"
+    },
+    "checkpointCommit": "259b6ff",
+    "reconfirmationMaterial": {
+      "status": "ready-for-independent-ai-assisted-review",
+      "preparedOn": "2026-09-26",
+      "reviewerBrief": "docs/review/2026-2027-september-corrections-reconfirmation-brief.md",
+      "manifest": "docs/review/2026-2027-september-corrections-reconfirmation-manifest.json",
+      "generatedPackages": [
+        "docs/review/2026-2027-maternelle-1-semaines-1-5-reconfirmation.md",
+        "docs/review/2026-2027-maternelle-3-semaines-3-4-reconfirmation.md"
+      ],
+      "mediaSheet": "docs/review/media/septembre-corrections-media.png",
+      "lessonRecords": 27,
+      "mediaRecords": 2,
+      "counts": {
+        "total": 176,
+        "approved": 149,
+        "review": 27,
+        "additionalStaleApprovals": 0
+      },
+      "integrity": {
+        "allAffectedReviewsNull": true,
+        "unaffectedApprovalRecordsUnchangedFrom": "aa111b5",
+        "priorFrozenMediaHashesUnchanged": 49,
+        "freshDigestsComputed": 0
+      },
+      "decision": "pending-independent-review",
+      "allowedDecisions": [
+        "accepted",
+        "accepted-with-modifications",
+        "rejected"
+      ],
+      "checkpointCommit": "c114777"
+    }
+  }
+}

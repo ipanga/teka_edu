@@ -232,6 +232,16 @@
       "contentHash": "sha256:f0b5cc0a9bec9d829cc136aac563b5255f0a781d24cade4ff2fcece49e07ccd8"
     },
     {
+      "id": "objet-monnaie",
+      "kind": "object",
+      "file": "objects/objet-monnaie.svg",
+      "alt": "Deux billets simples et une pièce, la monnaie du marché",
+      "tags": ["monnaie", "argent", "marché"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:fed6b6600180e86f583121cd1ec85647959e4787c08e670d074a30c3f12fb019"
+    },
+    {
       "id": "objet-caillou",
       "kind": "object",
       "file": "objects/objet-caillou.svg",
@@ -310,6 +320,16 @@
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
       "contentHash": "sha256:62993dc9a45ae5703a0b64e2ee9a36f57520a58be73cecc3ef2044c59dc68477"
+    },
+    {
+      "id": "forme-maison-composee",
+      "kind": "illustration",
+      "file": "illustrations/forme-maison-composee.svg",
+      "alt": "Une maison composée d’un carré pour le mur et d’un triangle pour le toit, avec un disque pour le soleil",
+      "tags": ["maison", "carré", "triangle", "disque", "forme"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:5183c91aca97b925a3618a8db130fed3c6f465b7fde1c9828392ed15e82ca02a"
     },
     {
       "id": "histoire-seau-lisa",

@@ -5,11 +5,49 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-09-23
-Branch:     feat/september-illustrations (PR #80, stacked on feat/september-visual-ux, PR #79)
-Commit:     develop at 087fc06; main at a729722 (Beta 0.1, live)
-Updated by: Claude Code (claude-fable-5-1)
+Date:       2026-09-26
+Branch:     codex/september-astra-visual-review, PR #86 → develop
+Commit:     release checkpoint 73bfb63; PR-status update pending
+Updated by: Codex technical lead
 ```
+
+## Independent September visual/UX review — 2026-09-26
+
+Owner-requested local review on `codex/september-astra-visual-review`, based on `a0b743b`.
+The audit is complete: all 165 scroll sheets and 266 initial sheets (431 sheets / 1,208 panels)
+were inspected, followed by 56 whole-product captures covering fourteen journey states on phone,
+tablet, desktop and TV. The product capture found zero horizontal overflow and zero broken images.
+[Audit](docs/review/media/SEPTEMBER_ASTRA_VISUAL_AUDIT.md),
+[durable manifest](docs/review/media/astra-supervisor-remaining-review.json), and
+[checkpoint](docs/work/ACTIVE_TASK.md).
+
+Safe local corrections expose material safety notes, correct zero-progress stop copy, prioritize the
+observation report on completion, improve generic French choice copy, remove false empty-image stages,
+add missing off-screen handoffs, keep long-count feedback visible and enlarge placed sort tokens. No
+approved lesson payload, media byte, registry entry or approval digest changed. The final illustration QA
+already supersedes the original 23 KEEP / 10 REFINE / 16 REDRAW recommendation: 35 accepted, 11 refined,
+3 redrawn, 0 outstanding, 176/176 approvals. Audio remains intentionally at zero recordings.
+
+The owner authorized the bounded correction batch. Explicit off-screen mode now prevents generic counters,
+graded choices and sorting praise from replacing the approved real-world tasks. The two round/square sorts,
+all 22 1ère movement payloads, the missing spoken sorting words, « la monnaie » card and composed house model
+are corrected. Claude Max / Opus first returned `accepted-with-modifications`: `m1-phys-22-a1` needed clearer
+French and the house model needed a geometrically square wall. Both findings were independently verified and
+corrected. Its final isolated review explicitly accepted all 27 lessons, the renderer-only change and both
+assets with no further modification. Seven full-review entries were recorded and the repository mechanism
+restored exactly 27 approvals with fresh digests. September is now 176 approved / 0 review; none of the fresh
+digests reuse a prior value and all 149 unaffected approval records remain byte-for-byte unchanged.
+
+The owner authorized the protected release path on 2026-09-26. Fresh pre-release validation passes with
+format, lint, typecheck, 414 unit tests, content validation, deterministic reports, a Webpack production
+build, a 28-file client-bundle scan, 41 E2E tests (9 production-only skipped), all migrations replayed from
+scratch, 152 pgTAP/RLS assertions, and both portable and Vercel container builds and smoke tests. The local
+Turbopack port-binding `EPERM` is unchanged; Turbopack succeeds inside both Linux containers. The generated
+reconfirmation migration is the only migration pending on DEV and PROD. Branch and environment protections,
+secret scanning, push protection and the production owner-review gate are active. The feature branch is
+published as PR #86 into `develop`; CI is pending and nothing has merged or deployed. No October work has
+started.
+Older phase summaries below are historical and may predate the September production release.
 
 ## Current Phase
 
@@ -120,24 +158,24 @@ Objective: A verified year for the youngest class, then one month, then the revi
 
 Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED`.
 
-| Area                            | Status                          | Evidence / remaining                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Git repository                  | **VERIFIED**                    | Initialised 2026-09-11 with no force push (the remote was empty beforehand). `origin/main` = `1b95480`, a merge commit of `3df64bf` + `4abe26e`; `origin/develop` = `4abe26e`. Both branches have identical trees.                                                                                                                                                                                                                         |
-| Docker                          | **VERIFIED**                    | Both images build, report healthy, run as user `node`, and exit on SIGTERM with code 143, both locally (arm64) and on GitHub runners (x86_64).                                                                                                                                                                                                                                                                                             |
-| GitHub Actions                  | **VERIFIED**                    | Push-triggered CI: VERIFIED (runs 34610713969, 34610729923, 34611359891, 34612999684, 34617650743 on the promotion merge; deploy jobs skipped as designed). PR-triggered CI: VERIFIED (PR #1, run 34612652962, Linux x86_64). No GitHub environments exist yet.                                                                                                                                                                            |
-| Branch protection               | **VERIFIED**                    | GitHub Rulesets active for `develop` and `main` (re-verified after the promotion; `main` accepted PR #5 only with all 5 checks green, merge commit only): PR required, 0 approvals, conversations resolved, 4 quality checks required (+ `Promotion source` on `main`), force push and deletion blocked, no bypass actors. A direct push to `develop` was rejected (GH013). Details: `docs/DEPLOYMENT.md`, ADR-022.                        |
-| Supabase local                  | **VERIFIED**                    | `db start` / `db reset` / `test db` (PASS) / `stop` all work. Full `supabase start` confirmed `sb_publishable_…` / `sb_secret_…` local keys, and the env validation accepts them.                                                                                                                                                                                                                                                          |
-| Supabase DEV (`teka-edu-dev`)   | **VERIFIED**                    | Ref `quyhkkizsmosybavoewd`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Working copy linked. `db push` up to date (no migrations), remote pgTAP RLS test PASS, 0 public tables without RLS, security advisors clean. Pooled `DATABASE_URL` connects. CI secrets are in GitHub `staging`; runtime values are in the owner's Keychain.                                                                                                     |
-| Supabase PROD (`teka-edu-prod`) | **VERIFIED**                    | Ref `eganrivpkjhozkkahyxy`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Read-only checks only: migration list empty, 0 public tables without RLS, security advisors clean; pooled `DATABASE_URL` connects. Nothing pushed or seeded. CI secrets are in GitHub `production`; runtime values are in the owner's Keychain.                                                                                                                  |
-| GitHub environments             | **CONFIGURED**                  | `staging` (branch `develop`): Supabase + Vercel secrets (incl. the project-scoped `VERCEL_TOKEN`) and `STAGING_DOMAIN`. `production` (branch `main`, required reviewer): Supabase secrets, `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` / bypass secret, **no `VERCEL_TOKEN`**.                                                                                                                                                                   |
-| Database migrations             | **VERIFIED**                    | Six migrations (Phase 1 schema + data, Phase 2 schema + data, Phase 2.5 quality gate + data). Local: `db reset` + 128 pgTAP assertions pass. DEV: all six migrations applied and local/remote lists match; row counts checked read-only (20 lessons, all `review`, 0 approved; 398 objectives; 529 success examples). Security and performance advisors: no issues. PROD: untouched.                                                       |
-| Vercel staging                  | **VERIFIED**                    | Project `teka-edu` (Hobby, `container` preset, `cdg1`, no Git link). First verified deployment: run 34635262697, `dpl_99QEWbwtBTV53u5HzdudDaKndjgy` (Preview, READY, commit `e2f8f69`), alias https://teka-edu-staging.vercel.app. `/api/health` reports `staging` and the DEV ref; region `cdg1` confirmed by `x-vercel-id`. Protection returns 302 without auth. Browser bundle and logs are secret-free. `STAGING_DEPLOY_ENABLED=true`. |
-| Vercel production               | **LIVE (Beta 0.1, 2026-09-22)** | Public at https://teka-edu.vercel.app, deployment `dpl_2midgBHcdVDbF8uz57U18MKPmX8P`, commit `a729722`, Supabase PROD. Standard Protection keeps the team-scoped alias, generated URLs and staging behind Vercel Authentication. `PRODUCTION_DEPLOY_ENABLED=true`. Anonymous public check 9/9.                                                                                                                                             |
-| Environment variables           | **CONFIGURED**                  | Validation and Markdown inventory complete. Environment-file cleanup is VERIFIED on both `develop` and `main`: no `.env*` file in either tree, and the public default branch shows none (ADR-023). No hosted values exist yet.                                                                                                                                                                                                             |
-| develop → main promotion        | **VERIFIED**                    | PR #5, merged 2026-09-11 as merge commit `1b95480`. `Promotion source` passed on a real event ("'develop' from ipanga/teka_edu may be promoted to main", run 34617296272), and all 4 quality checks passed. The merge-triggered `Deploy production` run 34617650743 skipped its deploy job. There are no GitHub deployments or environments.                                                                                               |
-| Repository security             | **VERIFIED**                    | No real secret in the full Git history (gitleaks, all refs + pattern scan). Secret scanning and push protection enabled (no alerts). Fork PR workflows need owner approval for all external contributors. `Promotion source` checks the repository identity.                                                                                                                                                                               |
-| Free-tier compliance            | **VERIFIED**                    | Vercel Hobby with no payment method on file (no billing possible); Supabase DEV and PROD on Free; no add-ons. Platform cost **$0/month**. Limits and classification: `docs/FREE_TIER.md`.                                                                                                                                                                                                                                                  |
-| Deployment documentation        | **CONFIGURED**                  | Written. Must be re-checked against the first real staging and production deployments.                                                                                                                                                                                                                                                                                                                                                     |
+| Area                            | Status                                          | Evidence / remaining                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Git repository                  | **VERIFIED**                                    | Initialised 2026-09-11 with no force push (the remote was empty beforehand). `origin/main` = `1b95480`, a merge commit of `3df64bf` + `4abe26e`; `origin/develop` = `4abe26e`. Both branches have identical trees.                                                                                                                                                                                                                         |
+| Docker                          | **VERIFIED**                                    | Both images build, report healthy, run as user `node`, and exit on SIGTERM with code 143, both locally (arm64) and on GitHub runners (x86_64).                                                                                                                                                                                                                                                                                             |
+| GitHub Actions                  | **VERIFIED**                                    | Push-triggered CI: VERIFIED (runs 34610713969, 34610729923, 34611359891, 34612999684, 34617650743 on the promotion merge; deploy jobs skipped as designed). PR-triggered CI: VERIFIED (PR #1, run 34612652962, Linux x86_64). No GitHub environments exist yet.                                                                                                                                                                            |
+| Branch protection               | **VERIFIED**                                    | GitHub Rulesets active for `develop` and `main` (re-verified after the promotion; `main` accepted PR #5 only with all 5 checks green, merge commit only): PR required, 0 approvals, conversations resolved, 4 quality checks required (+ `Promotion source` on `main`), force push and deletion blocked, no bypass actors. A direct push to `develop` was rejected (GH013). Details: `docs/DEPLOYMENT.md`, ADR-022.                        |
+| Supabase local                  | **VERIFIED**                                    | `db start` / `db reset` / `test db` (PASS) / `stop` all work. Full `supabase start` confirmed `sb_publishable_…` / `sb_secret_…` local keys, and the env validation accepts them.                                                                                                                                                                                                                                                          |
+| Supabase DEV (`teka-edu-dev`)   | **VERIFIED**                                    | Ref `quyhkkizsmosybavoewd`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Working copy linked. `db push` up to date (no migrations), remote pgTAP RLS test PASS, 0 public tables without RLS, security advisors clean. Pooled `DATABASE_URL` connects. CI secrets are in GitHub `staging`; runtime values are in the owner's Keychain.                                                                                                     |
+| Supabase PROD (`teka-edu-prod`) | **VERIFIED**                                    | Ref `eganrivpkjhozkkahyxy`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Read-only checks only: migration list empty, 0 public tables without RLS, security advisors clean; pooled `DATABASE_URL` connects. Nothing pushed or seeded. CI secrets are in GitHub `production`; runtime values are in the owner's Keychain.                                                                                                                  |
+| GitHub environments             | **CONFIGURED**                                  | `staging` (branch `develop`): Supabase + Vercel secrets (incl. the project-scoped `VERCEL_TOKEN`) and `STAGING_DOMAIN`. `production` (branch `main`, required reviewer): Supabase secrets, `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` / bypass secret, **no `VERCEL_TOKEN`**.                                                                                                                                                                   |
+| Database migrations             | **VERIFIED**                                    | Six migrations (Phase 1 schema + data, Phase 2 schema + data, Phase 2.5 quality gate + data). Local: `db reset` + 128 pgTAP assertions pass. DEV: all six migrations applied and local/remote lists match; row counts checked read-only (20 lessons, all `review`, 0 approved; 398 objectives; 529 success examples). Security and performance advisors: no issues. PROD: untouched.                                                       |
+| Vercel staging                  | **VERIFIED**                                    | Project `teka-edu` (Hobby, `container` preset, `cdg1`, no Git link). First verified deployment: run 34635262697, `dpl_99QEWbwtBTV53u5HzdudDaKndjgy` (Preview, READY, commit `e2f8f69`), alias https://teka-edu-staging.vercel.app. `/api/health` reports `staging` and the DEV ref; region `cdg1` confirmed by `x-vercel-id`. Protection returns 302 without auth. Browser bundle and logs are secret-free. `STAGING_DEPLOY_ENABLED=true`. |
+| Vercel production               | **LIVE (September visual upgrade, 2026-09-24)** | Public at https://teka-edu.vercel.app, deployment `dpl_22DjVFzGbinNs4xkCrEzgMM5Svh7`, commit `28dcb0a`, Supabase PROD (42 migrations). Run 35983628116. Anonymous public suite 9/9; 49/49 pictures served with their frozen hashes. Staging, team alias and generated URLs protected (302). Record: `docs/releases/SEPTEMBER_VISUAL_UPGRADE_RELEASE.md`.                                                                                   |
+| Environment variables           | **CONFIGURED**                                  | Validation and Markdown inventory complete. Environment-file cleanup is VERIFIED on both `develop` and `main`: no `.env*` file in either tree, and the public default branch shows none (ADR-023). No hosted values exist yet.                                                                                                                                                                                                             |
+| develop → main promotion        | **VERIFIED**                                    | PR #5, merged 2026-09-11 as merge commit `1b95480`. `Promotion source` passed on a real event ("'develop' from ipanga/teka_edu may be promoted to main", run 34617296272), and all 4 quality checks passed. The merge-triggered `Deploy production` run 34617650743 skipped its deploy job. There are no GitHub deployments or environments.                                                                                               |
+| Repository security             | **VERIFIED**                                    | No real secret in the full Git history (gitleaks, all refs + pattern scan). Secret scanning and push protection enabled (no alerts). Fork PR workflows need owner approval for all external contributors. `Promotion source` checks the repository identity.                                                                                                                                                                               |
+| Free-tier compliance            | **VERIFIED**                                    | Vercel Hobby with no payment method on file (no billing possible); Supabase DEV and PROD on Free; no add-ons. Platform cost **$0/month**. Limits and classification: `docs/FREE_TIER.md`.                                                                                                                                                                                                                                                  |
+| Deployment documentation        | **CONFIGURED**                                  | Written. Must be re-checked against the first real staging and production deployments.                                                                                                                                                                                                                                                                                                                                                     |
 
 ## In Progress
 
@@ -252,14 +290,10 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 
 ### P1 — Soon
 
-0. **Prune the container registry now: 45 of 50** after the September close-out (2026-09-23). The
-   next staging deploy stops at the 45 line until it is pruned (ISSUE-011).
-1. Pin the Supabase CLI in `deploy-staging.yml` and `deploy-production.yml` as #81 did for CI.
-
-2. Official Cycle 1 curriculum source, then the competency catalogue (PD-004), needed for Task 7 content.
-3. **Prune the container registry by hand before it reaches 50** (ISSUE-011). Pruned to **35**
-   on 2026-09-20; CI still cannot read the count, and the cap blocks `develop` when it is hit.
-4. Optional hardening: disable the unused legacy `anon` / `service_role` keys on both Supabase projects.
+1. Official Cycle 1 curriculum source, then the competency catalogue (PD-004), needed for Task 7 content.
+2. **Prune the container registry by hand before it reaches 45** (ISSUE-011). Last pruned
+   2026-09-24 (44 → 35); **37 of 50** after the September release. CI still cannot read the count.
+3. Optional hardening: disable the unused legacy `anon` / `service_role` keys on both Supabase projects.
 
 ### P2 — Later
 
@@ -672,7 +706,7 @@ Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 off
 Local:      Runs: npm run dev, npm run start (standalone), Docker image
 Docker:     Verified locally (arm64) and in GitHub CI (x86_64), both Dockerfiles
 Staging:    LIVE https://teka-edu-staging.vercel.app (Vercel Preview, container, cdg1, Supabase DEV); auto-deploys from develop
-Production: LIVE https://teka-edu.vercel.app (Beta 0.1, 2026-09-22; container, cdg1, Supabase PROD).
+Production: LIVE https://teka-edu.vercel.app (September visual upgrade, 2026-09-24, 28dcb0a; container, cdg1, Supabase PROD).
             The team-scoped alias teka-edu-teka10.vercel.app and all generated URLs stay protected
 CI:         Verified on GitHub for push and pull_request events; required by the develop/main rulesets;
             first production promotion PR #5 green
@@ -729,17 +763,142 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = a729722 (merge
 ## Last Session Summary
 
 ```text
-Completed:  SEPTEMBER VISUAL UPGRADE CLOSED — 176/176 approved, on develop and staging.
-            Visual reconfirmation (AI-assisted): 1ère accepted; 3ème accepted after one
-            picture association (m3-art-04-a1) was corrected. 80 lapsed approvals restored
-            with approve-week --lapsed-only (fresh digests, none reused, standing ones untouched).
-            Canonical, fresh local DB and Supabase DEV: 88 + 88 approved, 0 review, 176
-            distinct digests, all ai-assisted.
-            #79 (fdb4661), #81 (f7edc6d: CI database images from Supabase's public ECR mirror,
-            CLI pinned — ghcr.io rate-limited the pull for 2 h) and #80 (e882c10) merged.
-            Staging dpl_14jzPbdFJSjZ7c7Ubb3YqpXrempd READY at e882c10; smoke E2E 31 passed.
+Completed:  SEPTEMBER VISUAL UPGRADE PRODUCTION RELEASE: SUCCESS.
+            Registry pruned 44 -> 35 (owner-authorised, repository policy, production and staging
+            protected); Supabase CLI pinned to 2.117.0 in CI and both deploy workflows (#83).
+            Promotion #84 -> main 28dcb0a; run 35983628116 approved by the owner; PROD 41 -> 42
+            migrations; dpl_22DjVFzGbinNs4xkCrEzgMM5Svh7 production READY.
+            Anonymous: public suite 9/9, 49/49 pictures with frozen hashes, 39 page views with
+            0 broken images at phone/tablet/TV, m3-art-04-a1 shows the rain picture.
+            PROD read-only: 176 approved (88 + 88), 176 distinct digests, all ai-assisted,
+            36/36 tables with RLS, no user data. Staging and generated URLs protected.
+            Registry 37 of 50.
 Cost:       $0.
-Not done:   Container registry at 45/50 — prune before the next merge (owner approval).
-            Production release is a separate decision; PROD untouched (a729722).
-Next:       October for 3ème maternelle — refine its slice of the annual plan, pilot 2 weeks.
+Next:       Refine the October annual progression for 3ème maternelle, then prepare October
+            Weeks 1-2 as the first pedagogical-review batch. Not started.
 ```
+
+September Astra local checkpoint (2026-09-25): all 302 initial TV child screens manually
+inspected in addition to all 302 phone initial screens. The first 176 noninitial phone
+interaction captures were inspected; 189 readable interaction sheets are available locally.
+Full state/scroll QA and illustration integration remain in progress. No publication or deployment.
+
+### 2026-09-25 — Astra local interaction review continued
+
+All 501 captured noninitial phone states are now manually inspected; TV sheets 001–028 add
+112 inspected states. The durable manifest is
+`docs/review/media/astra-manual-interaction-review.json`. These are captured viewports, not
+a full-scroll or physical-distance certification. Long phone count resets retained the bottom
+scroll position (fixed locally later by VIS-FIX-01). TV feedback and placed sorting thumbnails remain small and faded.
+Generic counting/sorting correctness findings remain isolated for independent review; no
+approved content or media changed. Review remains local; no push, PR or deployment.
+
+### 2026-09-25 — Local TV feedback layout follow-up
+
+Manual interaction review now covers all 501 phone and 501 TV noninitial viewports (all 189 sheets). Five-choice TV games previously wrapped 4+1 and clipped return controls after feedback. Wide child choice grids now show five choices in one row; child feedback is 30px. Nine layout E2E tests pass on the local Webpack development preview, including retry/reveal/success navigation bounds; 397 unit tests and changed-file lint pass. Five-word and eight-shape reveal screenshots manually inspected.
+
+Standard Turbopack build still fails with local process port-binding EPERM. Webpack production build now passes after extracting the existing health-route helper into `lib/health.ts` without changing endpoint behavior; fresh typecheck, health tests and changed-file lint pass. Standalone server started locally on port 3003. After the approval-service reset, normal approved retries succeeded: 40 production-build E2E pass (9 skipped). Full-scroll capture covers 1,606 states and 1,042 additional images with zero horizontal overflow, broken/missing images or unreachable returns. Six sample scroll images inspected; full manual scroll review remains pending. Container/bundle checks remain stale. No lesson/media registry/history changes, approval stamps, push, PR or deployment. Review remains incomplete; next: manual scroll and other viewport review. See `docs/work/ACTIVE_TASK.md`.
+
+Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, against the Webpack development preview (`/tmp/teka-astra-five-choice-all-e2e.log`). The later production-build E2E also passes; container validation remains stale.
+
+### 2026-09-25 — VIS-QA-01 evidence and VIS-FIX-01 count reset (local)
+
+**VIS-QA-01:**
+
+- `scripts/astra-remaining-sheets.mjs` generated 165 full-scroll sheets and 266 large-phone, tablet and desktop sheets, covering all 1,208 initial panels. They are stored, Git-ignored, under `private/astra-visual-evidence/remaining-review/`.
+- The six previously reviewed scroll frames are preserved; everything else is unreviewed.
+- Astra's visual review is in progress: all 165 scroll sheets, all 38 large-phone initial sheets and initial
+  all 76 tablet-portrait, tablet-landscape and desktop sheets have been accepted as reviewed
+  (431 total sheets / 1,208 initial panels). Claude Max/Opus inspected
+  scroll sheets 007–016 under the owner's narrow evidence authorization. Astra independently checked its
+  only claimed defect and representative clean states; the moving grey outline was a stationary-pointer
+  hover artifact in the capture, so no product correction was justified. Existing pedagogy findings and
+  stale reset captures remain recorded. The later review confirmed the already-open triangle-without-matching-
+  group issue, identified undersized placed sort tokens as a high-value UX candidate, and found that the
+  1ère movement activities display unrelated generic running steps, and confirmed that generic media tags
+  produce ungrammatical French labels such as « Montre : main ». The latest batch also found sentence stems
+  rendered as empty picture cards, shape-specific retry copy in an object game, and a same-number lesson
+  rendered as a fixed six-dot counter. The same generic counter also erases required line, two-set and circle structures, while fixed-label shape sorting accepts mismatches and praises completion. The latest review also found missing matching models, real-world observation converted into graded choice, and a 10–20 lesson rendered as a very tall 1–20 counter. The next batch also confirmed that later hidden-part, two-collection, model-pile and number-strip tasks collapse into the generic dot grid, and found « la monnaie » rendered as an empty word card because its fifth image is absent. The rain/counting-rhyme and recalled-then-new-rhyme screens match their approved guides. The following batch found a square-and-triangle house task rendered as four isolated shapes, and extended the fixed-choice conversion defect to animal comparison and real-object face matching. The sleeping Malo image and one-picture-per-story model match explicit approved illustration decisions. The final scroll batch found the approved 1–30 task capped and praised at 20, while later reconstruction and number-strip tasks further confirm the generic-counter defect. The printed favourite rhyme is an approved fallback and needs no change. All 165 scroll sheets are now reviewed. Initial sheets 021–025 additionally expose a missing off-screen handoff for media-free real-world observation and misleadingly incomplete reference thumbnails in two hands-on setups; these are classified for the systemic design pass. Initial sheets 026–030 add a content/payload completeness defect in `m3-lang-12-a2`, which asks to sort words but supplies none; existing handoff, grouping and renderer defects recur. Initial sheets 031–035 add no new defect class and confirm the existing off-screen handoff, generic counter, fixed-choice conversion and incomplete hands-on reference findings. Initial sheets 036–038 add no new class and confirm the empty sentence-stem, counter, sorting-feedback and physical-setup findings; all 38 large-phone initial sheets are now complete. Initial sheets 039–043 add no new class and confirm finger-to-dot substitution, line-arrangement loss, thumbnail ambiguity and fixed-choice conversion. Initial sheets 044–048 add no new class and confirm two-set/circle arrangement loss, the missing comparison model, fixed-choice conversion and setup-thumbnail incompleteness. Claude Max/Opus reviewed sheets 049–064; Astra independently rejected or deduplicated every proposed new issue, including the explicitly approved rain/rhyme pairing, scroll-reachable landscape controls, optional punctuation wraps and the approved off-screen six-word rhyme bank. Generic counter, fixed-choice and movement issues recur. Claims of missing media or models were rejected where the approved activity is intentionally oral, open drawing or text-only. Initial sheets 065–070 add no new class: generic counter, fixed-choice, movement and incomplete-reference findings recur, while guillemet line breaks remain optional typography polish and all controls are scroll-reachable. Initial sheets 071–076 also add no new class: the proposed sound-game omission was rejected because its off-screen banner is present, body observation extends the existing missing-handoff class, and the printed favourite rhyme is an explicitly approved fallback. All generated child evidence is now reviewed. No approved content or digest was changed. Next is the parent-layout and whole-product UX gap audit.
+
+**VIS-FIX-01:**
+
+- In the child view, « Recommencer » in a counting activity resets the count as before. It now also brings the dialog back to the instruction and focuses it, through a narrow `ChildSurfaceContext` callback. The parent guide is unchanged.
+- Fresh checks: Webpack production build, typecheck, full unit suite 399/399, and changed-file lint
+  and format pass. The focused phone E2E fails against the old build at the instruction visibility
+  assertion and passes against the current development runtime, including unchanged parent scroll.
+- Astra inspected the post-reset 320×740 screen and accepted the bounded implementation locally.
+- The earlier full browser/container/bundle results remain stale for this runtime change.
+- No content, media, approval, push, PR or deployment. See `docs/work/ACTIVE_TASK.md`.
+
+### 2026-09-26 — September audit completion and VIS-FIX-02 (local)
+
+- Completed review of all generated child evidence: 165 scroll sheets plus 266 initial sheets,
+  representing 1,208 initial panels. No sheet remains unreviewed.
+- Added a deterministic whole-product audit covering fourteen journey states at phone, tablet, desktop
+  and TV sizes. Its 56 post-fix captures have zero horizontal overflow and zero broken images. Captures
+  remain ignored and local; `scripts/astra-product-ux-audit.mjs` is the reusable tracked harness.
+- Claude Max/Opus reviewed an isolated four-sheet package under the owner's standing authorization. Astra
+  independently accepted three parent-flow findings and rejected or downgraded preference-only claims.
+- Implemented safe, non-pedagogical fixes: visible preparation safety notes; accurate stop-before-first-
+  activity copy; observation-first completion priority; grammatical generic choice/retry copy; intentional
+  text-only vocabulary cards; an off-screen handoff for media-free observation; sticky long-count progress;
+  and larger placed sorting tokens.
+- Reconciled the illustration record with the final frozen QA: 35 accepted, 11 refined, 3 redrawn, 0
+  outstanding, 176/176 approvals. No asset, lesson payload, digest, database, environment or deployment changed.
+- Genuine renderer/content findings that alter teaching intent remain gated on owner direction and the
+  existing approval-lapse/reconfirmation workflow. The review is local only; no push, PR or deployment.
+
+### 2026-09-26 — Bounded September pedagogical/media correction batch (local)
+
+- Made `off-screen` authoritative for quantity, matching/sorting and observation renderers. The application
+  no longer substitutes a generic tappable counter, graded fixed choice or completion praise for an approved
+  real-object, spoken or observational task. Static pictures are explicitly reference material.
+- Corrected the two round/square sorts, all 22 1ère movement step payloads and the missing six-word language
+  sort. Added and froze a simple no-numeral money asset and a composed square-wall/triangle-roof house model;
+  all 49 earlier frozen asset bytes remain unchanged.
+- Lapsed exactly the 27 changed lessons and generated the minimum mixed reconfirmation packages for 1ère
+  weeks 1–5 and 3ème weeks 3–4. A second lapse dry-run reports zero stale approvals. No approval was restored
+  and no digest was restamped.
+- Local validation passes: format, lint, typecheck, 414 unit tests, 31-file content validation, deterministic
+  reports and pgTAP mirror, 51-asset visual audit, Webpack production build, 28-file three-sentinel client scan,
+  and 41 E2E tests (9 production-only skipped). Sixteen targeted captures at phone, tablet, desktop and TV
+  sizes were inspected with no clipping, overlap, broken media or unreachable control.
+- Claude Max/Opus supplied the bounded correction map and a renderer/test implementation. Astra independently
+  rejected new on-screen mini-games, reviewed every worker diff and adjusted generic quantity references so
+  they cannot contradict the approved instruction.
+- Next gate: an independent AI-assisted reviewer must decide the two reconfirmation packages. Until acceptance
+  is recorded, the 27 lessons remain at `review`. No push, PR, staging, production, production-data or October
+  work occurred.
+
+### 2026-09-26 — September independent reconfirmation dossier ready (local)
+
+- Added a reviewer brief and machine-readable manifest covering exactly the 27 lapsed lessons. Every record
+  contains the class, day/week, exact before/after field, audience, pedagogical reason, objectives, unchanged
+  progression/duration/safety checks, media references, previous digest impact and pending reviewer verdict.
+- The renderer-only presentation correction is separated from canonical pedagogical changes and carries no
+  lesson-digest impact. The dossier explicitly states that technical validation does not grant approval.
+- The two new assets have rendered evidence plus their pedagogical purpose, use, French accessibility text,
+  style assessment and misleading-detail check. The other 49 frozen asset hashes remain unchanged.
+- Dossier integrity check passes: 176 total, 149 approved, exactly 27 at `review`, zero additional stale
+  approvals, all unaffected approval records unchanged from `aa111b5`, and no fresh digest computed or stored.
+- State is unambiguous: ready for an independent ChatGPT decision. No accepted review entry, approval
+  restoration, content change, push, PR, deployment, production-data operation or October work occurred.
+
+### 2026-09-26 — September independent reconfirmation accepted (local)
+
+- Under the owner's exact five-file authorization, Claude Max / Opus independently reviewed the bounded
+  dossier. Pass 1 returned `accepted-with-modifications`; Astra verified and corrected the ambiguous rule
+  wording and non-square house wall. The final isolated pass explicitly accepted all 27 lessons, the
+  renderer-only presentation change and both new assets with no further modification.
+- Recorded seven full-review AI-assisted acceptance entries for 1ère maternelle weeks 1–5 and 3ème
+  maternelle weeks 3–4. The standard lapsed-only approval command restored exactly 27 lessons.
+- September now has 176 approved lessons and 0 at `review`. Every restored digest is fresh and verified,
+  no restored digest reuses its prior value, all 176 current digests are unique, and all 149 unaffected
+  approval records are byte-for-byte unchanged.
+- Generated `supabase/migrations/20260926173653_september_reconfirmation.sql`; a disposable local database
+  reset and all 152 pgTAP assertions pass. The local Supabase stack was stopped afterward.
+- Final local checks pass: format, lint, typecheck, 414 unit tests, content validation, deterministic reports,
+  Webpack production build, 28-file client-bundle secret scan and 41 E2E tests (9 production-only skipped).
+  Eight final captures verify the corrected rule wording and square house at phone, tablet, desktop and TV.
+- The default Turbopack build retains the known local port-binding `EPERM`; the Webpack production build
+  succeeds. No push, PR, merge, staging, production, production-data operation or October work occurred.

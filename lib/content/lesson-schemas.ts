@@ -228,7 +228,12 @@ const ACTIVITY_PAYLOADS: Record<ActivityType, z.ZodType> = {
   phonology: z.strictObject({ focusSound: french.optional(), words: z.array(french).min(2) }),
   counting: z.strictObject({ upTo: z.number().int().min(1).max(30), objects: french }),
   matching: z.strictObject({ pairs: z.array(z.tuple([french, french])).min(2) }),
-  sorting: z.strictObject({ categories: z.array(french).min(2) }),
+  // A spoken sort may need its own bounded word bank. It stays optional because picture sorts
+  // carry their items in `mediaIds`, while language sorts have no suitable picture dependency.
+  sorting: z.strictObject({
+    categories: z.array(french).min(2),
+    items: z.array(french).min(2).optional(),
+  }),
   observation: z.strictObject({ focus: french }),
   drawing: z.strictObject({ subject: french }),
   "graphic-practice": z.strictObject({ pattern: french }),

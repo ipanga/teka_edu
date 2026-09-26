@@ -1659,7 +1659,7 @@
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "mediaIds": ["forme-carre", "forme-rectangle", "forme-triangle", "forme-disque"],
+          "mediaIds": ["forme-maison-composee"],
           "objectiveCodes": ["MATH-S03-C01-O08"],
           "materialCodes": ["papier", "crayon"],
           "vocabulary": [
@@ -1688,11 +1688,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Claude Max / Opus",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-20",
-        "reviewedDigest": "e5d1f8ce7a53270e",
-        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "2a0571d056534784",
+        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {

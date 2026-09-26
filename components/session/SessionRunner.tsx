@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { SessionDay } from "@/lib/programme/session-view";
-import { ActivityRenderer, ChildViewContext } from "./ActivityRenderer";
+import { ActivityRenderer, ChildSurfaceContext, ChildViewContext } from "./ActivityRenderer";
 
 /**
  * The parent runs the session from here: prepare, then one activity at a time, with a break when
@@ -160,7 +160,11 @@ export function SessionRunner({ session, levelSlug }: { session: SessionDay; lev
                   <span>
                     {material.name}
                     {material.safetyNote !== null && (
-                      <span className="ml-2 font-medium text-amber-800">⚠</span>
+                      <span className="mt-1 block text-base font-medium text-amber-800">
+                        <span aria-hidden="true">⚠ </span>
+                        <span className="sr-only">Consigne de sécurité : </span>
+                        {material.safetyNote}
+                      </span>
                     )}
                   </span>
                 </li>
@@ -222,11 +226,18 @@ export function SessionRunner({ session, levelSlug }: { session: SessionDay; lev
         <h2 id="arret" className="text-3xl font-bold">
           On s’arrête là pour aujourd’hui.
         </h2>
-        <p className="text-lg">
-          C’est très bien ainsi : {index} activité{index > 1 ? "s" : ""} de faite
-          {index > 1 ? "s" : ""}. Un enfant fatigué n’apprend plus, et la séance vous attendra.
-          Dites-lui ce qu’il a réussi aujourd’hui.
-        </p>
+        {index === 0 ? (
+          <p className="text-lg">
+            C’est très bien ainsi : vous vous êtes arrêtés avant de terminer la première activité.
+            La séance vous attendra. Vous pourrez réessayer quand l’enfant sera disponible.
+          </p>
+        ) : (
+          <p className="text-lg">
+            C’est très bien ainsi : {index} activité{index > 1 ? "s" : ""} de faite
+            {index > 1 ? "s" : ""}. Un enfant fatigué n’apprend plus, et la séance vous attendra.
+            Dites-lui ce qu’il a réussi aujourd’hui.
+          </p>
+        )}
         <div className="flex flex-wrap gap-3">
           <button
             type="button"
@@ -267,13 +278,13 @@ export function SessionRunner({ session, levelSlug }: { session: SessionDay; lev
           </button>
           <Link
             href={`/maternelle/${levelSlug}/seance/${session.instructionalDay}/observation`}
-            className="rounded-2xl border-2 border-stone-300 px-5 py-3 text-lg font-medium"
+            className="rounded-2xl bg-emerald-700 px-5 py-3 text-lg font-semibold text-white"
           >
             Noter comment ça s’est passé
           </Link>
           <Link
             href={`/maternelle/${levelSlug}/calendrier`}
-            className="rounded-2xl bg-emerald-700 px-5 py-3 text-lg font-semibold text-white"
+            className="rounded-2xl border-2 border-stone-300 px-5 py-3 text-lg font-medium"
           >
             Voir le calendrier
           </Link>
@@ -503,6 +514,13 @@ function ChildScreen({
   activity: SessionDay["steps"][number]["activities"][number];
 }) {
   const dialog = useRef<HTMLDialogElement | null>(null);
+  const scroller = useRef<HTMLDivElement | null>(null);
+  const instruction = useRef<HTMLParagraphElement | null>(null);
+  // Instant, never smooth: nothing moves under prefers-reduced-motion (ADR-045).
+  const showInstruction = useCallback(() => {
+    if (scroller.current !== null) scroller.current.scrollTop = 0;
+    instruction.current?.focus({ preventScroll: true });
+  }, []);
 
   useEffect(() => {
     const element = dialog.current;
@@ -521,14 +539,21 @@ function ChildScreen({
       }}
       className="teka-rise h-full max-h-none w-full max-w-none bg-[var(--background)] p-0 backdrop:bg-stone-900/40"
     >
-      <div className="flex h-full flex-col gap-6 overflow-y-auto px-5 py-6">
+      <div ref={scroller} className="flex h-full flex-col gap-6 overflow-y-auto px-5 py-6">
         <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-6 xl:max-w-5xl">
-          <p className="text-center text-2xl leading-relaxed font-semibold sm:text-3xl lg:text-4xl xl:text-5xl">
+          {/* Focusable by script only, so a control that disappears can hand focus back here. */}
+          <p
+            ref={instruction}
+            tabIndex={-1}
+            className="text-center text-2xl leading-relaxed font-semibold sm:text-3xl lg:text-4xl xl:text-5xl"
+          >
             « {activity.childInstruction} »
           </p>
           {/* Pictures grow one step on the child's own surface (ChildViewContext). */}
           <ChildViewContext.Provider value={true}>
-            <div className="flex-1">{open && <ActivityRenderer activity={activity} />}</div>
+            <ChildSurfaceContext.Provider value={showInstruction}>
+              <div className="flex-1">{open && <ActivityRenderer activity={activity} />}</div>
+            </ChildSurfaceContext.Provider>
           </ChildViewContext.Provider>
         </div>
         <button

@@ -1,0 +1,17 @@
+{
+  "phone": {
+    "activitiesChecked": 302,
+    "requiringScroll": 91,
+    "returnOutsideViewportAfterScroll": 0,
+    "horizontalOverflow": 0,
+    "screenshots": 185
+  },
+  "tv": {
+    "activitiesChecked": 302,
+    "requiringScroll": 0,
+    "returnOutsideViewportAfterScroll": 0,
+    "horizontalOverflow": 0,
+    "screenshots": 1
+  },
+  "limitations": "Initial activity screen scroll geometry only, not every subsequent interaction. Selected longest lower-scroll captures visually inspected; all initial phone screens separately reviewed."
+}

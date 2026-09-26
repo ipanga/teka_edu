@@ -45,3 +45,7 @@ supabase/.branches/
 .DS_Store
 Thumbs.db
 npm-debug.log*
+
+# Local-only visual audit captures; selected review sheets are tracked in docs/review/.
+/private/astra-visual-evidence/
+/private/astra-product-ux-audit/

@@ -18,7 +18,10 @@ import { expect, test, type APIResponse, type Browser } from "@playwright/test";
  * It is **not** part of the deployment smoke test, because it can only pass once production is
  * both deployed and public. Point it at the production URL to run it:
  *
- *   PRODUCTION_PUBLIC_URL=https://teka-edu-teka10.vercel.app npm run test:e2e -- production-public
+ *   PRODUCTION_PUBLIC_URL=https://teka-edu.vercel.app PLAYWRIGHT_BASE_URL=https://teka-edu.vercel.app \
+ *     npm run test:e2e -- production-public
+ *
+ * Use the canonical domain: the team-scoped alias and generated URLs are protected by design.
  *
  * Without that variable every test here skips, so it never turns the staging pipeline red for
  * being honest about a deployment that does not exist yet.

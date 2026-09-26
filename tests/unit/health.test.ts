@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { GET, supabaseProjectRef } from "@/app/api/health/route";
+import { GET } from "@/app/api/health/route";
+import { supabaseProjectRef } from "@/lib/health";
 
 describe("GET /api/health", () => {
   it("reports ok with non-sensitive metadata only", async () => {
