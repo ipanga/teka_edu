@@ -4529,7 +4529,7 @@
       "scope": "Approved activity payload/content completeness; define the intended word set through the pedagogical review workflow before changing the child or parent experience."
     }
   ],
-  "next": "Audit complete locally. Run and record final validation, then obtain the owner’s bounded pedagogical decision before changing the remaining approved activity semantics or adding media. Do not regenerate reviewed evidence; do not push, create a PR or deploy.",
+  "next": "Bounded correction batch authorized. Implement mode-authoritative renderer fixes first, then the five content/media correction groups, lapse only changed approvals, and generate minimum mixed reconfirmation packages. Do not repeat the completed audit or publish/deploy.",
   "productUxAudit": {
     "status": "complete-local",
     "reviewedOn": "2026-09-26",
@@ -4580,5 +4580,61 @@
       "transmitted": "Four labelled whole-product contact sheets and a bounded review prompt only.",
       "independentSupervisorReview": true
     }
+  },
+  "correctionBatch": {
+    "status": "authorized-design-complete",
+    "authorizedOn": "2026-09-26",
+    "baseCommit": "aa111b5",
+    "auditReopened": false,
+    "rendererClassification": {
+      "cause": "Explicit off-screen mode is ignored by quantity, sorting/matching and multi-image observation renderers, which invent screen interactions that replace the approved real-world task.",
+      "correction": "Make mode authoritative and show only non-interactive reference material where useful.",
+      "approvalImpact": "none; renderer code is outside lesson digests"
+    },
+    "contentCorrections": [
+      "Remove the stray triangle media from m1-math-16-a1 and equivalent m1-math-19-a1; their guidance teaches rounds and squares only.",
+      "Replace generic movement display steps in all 22 1ère physical lessons with steps derived from their existing instruction and guidance.",
+      "Supply a bounded six-word bank, two words per approved category, for m3-lang-12-a2."
+    ],
+    "mediaCorrections": [
+      "Add a simple no-numeral objet-monnaie representation and link it as the fifth m3-lang-13-a2 word card.",
+      "Add a composed square-wall/triangle-roof house model and use it in m3-math-18-a2."
+    ],
+    "expectedLapsedLessons": 27,
+    "expectedLapsedLessonIds": [
+      "m1-phys-01",
+      "m1-phys-02",
+      "m1-phys-03",
+      "m1-phys-04",
+      "m1-phys-05",
+      "m1-phys-06",
+      "m1-phys-07",
+      "m1-phys-08",
+      "m1-phys-09",
+      "m1-phys-10",
+      "m1-phys-11",
+      "m1-phys-12",
+      "m1-phys-13",
+      "m1-phys-14",
+      "m1-phys-15",
+      "m1-phys-16",
+      "m1-phys-17",
+      "m1-phys-18",
+      "m1-phys-19",
+      "m1-phys-20",
+      "m1-phys-21",
+      "m1-phys-22",
+      "m1-math-16",
+      "m1-math-19",
+      "m3-lang-12",
+      "m3-lang-13",
+      "m3-math-18"
+    ],
+    "claude": {
+      "mode": "read-only correction map",
+      "accepted": "affected families, direct equivalents, media-to-vocabulary ordering, mixed reconfirmation route and approval-scope analysis",
+      "rejected": "new on-screen counting mini-games and checked sorting contracts, because every affected canonical activity is explicitly off-screen"
+    },
+    "next": "Implement the renderer-only correction and its regression tests; then checkpoint before content/media changes."
   }
 }

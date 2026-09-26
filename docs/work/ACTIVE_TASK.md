@@ -4,31 +4,59 @@
 
 September Visual Experience Review — GPT Astra
 
-**Current phase:** Phase F — September visual/UX audit complete locally; safe corrections implemented; final validation in progress.
+**Current phase:** Phase G — bounded September pedagogical/media correction batch authorized; defect classification and implementation design in progress.
 
 ## Supervisor handoff — 2026-09-26
 
-- **Task status:** AUDIT_COMPLETE / IMPLEMENTATION_PARTIAL. All requested visual evidence and the whole-product journey are reviewed. Safe renderer and parent-flow corrections are implemented locally; pedagogical correctness changes remain gated on an owner decision and reconfirmation.
+- **Task status:** IN_PROGRESS. The completed audit remains closed. The owner authorized the recorded pedagogical/media corrections, approval lapses and minimum reconfirmation packages on 2026-09-26.
 - **Supervisor:** Astra; **worker:** Claude Code CLI 2.1.282, installed at `/Users/Apple/.local/bin/claude`; ready to launch with Max authentication.
 - **Current branch:** `codex/september-astra-visual-review`; **current implementation commit:** `0aa3780` (`Complete September visual UX audit`).
 - **Base commit / refreshed develop:** `a0b743b`; **refreshed main:** `28dcb0a`. Fetch completed on 2026-09-25. The implementation checkpoint is thirty local commits ahead of the feature remote; no PR was created because the owner selected local-only work.
 - **Completed:** existing audit inventory, initial phone/TV review, all 1,002 noninitial viewport reviews, UI fixes, 1,606-state scroll capture. Preserve existing evidence; do not restart.
 - **Completed audit:** all 165 scroll sheets and all 266 initial sheets (431 sheets / 1,208 initial panels), plus 56 whole-product captures across phone, tablet, desktop and TV. The product audit covers home, all class entry states, calendar, preparation and alternatives, parent guidance folded/open, child view, pause, early stop, completion and observation. It found zero horizontal overflow and zero broken images.
 - **Authentication verified:** normal macOS credential-store access with `env -u ANTHROPIC_API_KEY claude auth status` confirms `claude.ai`, subscription `max`. The earlier sandbox-only check could not see this login. Always exclude the API-key override for worker invocations.
-- **Owner decision required:** approve or reject a bounded pedagogical correction and reconfirmation batch for the remaining correctness findings: generic counting erases required task structure; open observation is converted to fixed choice; the 10–20 and 1–30 activities use the wrong ranges; matching/drawing/sorting omit required models or items; shape sorting needs an explicit open-versus-checked design; movement steps mismatch the approved instruction; one triangle has no destination group; and « la monnaie » needs a newly approved representation. No such content/media correction was made during this visual pass.
+- **Owner decision required:** none at entry. The owner authorized the bounded batch and supplied the sorting rule: open sorting for exploratory intent, checked/labeled groups only for an explicitly taught known criterion. Reconfirmation remains an independent review step; no approval may be restored automatically.
 - **Tests completed:** format, lint, typecheck, 401/401 unit tests, 31-file content validation, Webpack production build with the three documented fake server sentinels, 28-file client-bundle scan and the full local browser suite (41 passed, 9 production-only skipped). The 56-state product audit and focused phone/TV captures provide the visual and responsive checks. No database/schema change made pgTAP relevant; no deployment/container artifact was requested or produced.
 - **CI state:** no CI for the unpublished local commits. Latest fetched staging deployment succeeded at `a0b743b`; production deployment succeeded at `28dcb0a`. Historical validation table below must not be read as fresh CI for this branch.
 - **Staging state:** existing deployment unchanged; this review is local only under the owner's earlier explicit instruction.
 - **Production state:** existing public service at `28dcb0a`, unchanged. No release authorization.
-- **Exact next command:** wait for the owner's bounded pedagogical decision; no autonomous correction remains within the approved visual-only scope.
-- **Exact resume point:** the visual/UX audit and safe implementation are complete. Do not regenerate or rereview the 431 evidence sheets or the 56 product captures. Resume only with an owner-authorized pedagogical correction/reconfirmation batch. No push, PR, deployment or approval stamping.
+- **Exact next command:** classify every remaining recorded defect against renderer, activity data, lesson semantics, media and approval scope; obtain an independent bounded Claude Opus correction map, then implement the smallest systemic fixes.
+- **Exact resume point:** start from `aa111b5`; do not regenerate or rereview the 431 evidence sheets or the 56 product captures. The correction set is the unresolved findings in `astra-supervisor-remaining-review.json`. No push, PR, deployment or approval stamping.
 
-| ID         | Task                                             | Worker                | State                          | Review                  | CI         | Staging  |
-| ---------- | ------------------------------------------------ | --------------------- | ------------------------------ | ----------------------- | ---------- | -------- |
-| VIS-QA-01  | Review September screenshots and product journey | Claude Code / Astra   | Complete (487 sheets/captures) | Astra pass              | Local only | Withheld |
-| VIS-FIX-01 | Child count reset returns to the instruction     | Claude Code           | Implemented and verified       | Astra pass              | Local only | Withheld |
-| VIS-FIX-02 | Safe renderer and parent-flow corrections        | Astra                 | Implemented and verified       | Astra pass              | Local only | Withheld |
-| VIS-PED    | Gated pedagogical correctness corrections        | Owner / future worker | Decision required              | Reconfirmation required | Not run    | Withheld |
+| ID         | Task                                              | Worker              | State                          | Review                  | CI         | Staging  |
+| ---------- | ------------------------------------------------- | ------------------- | ------------------------------ | ----------------------- | ---------- | -------- |
+| VIS-QA-01  | Review September screenshots and product journey  | Claude Code / Astra | Complete (487 sheets/captures) | Astra pass              | Local only | Withheld |
+| VIS-FIX-01 | Child count reset returns to the instruction      | Claude Code         | Implemented and verified       | Astra pass              | Local only | Withheld |
+| VIS-FIX-02 | Safe renderer and parent-flow corrections         | Astra               | Implemented and verified       | Astra pass              | Local only | Withheld |
+| VIS-PED    | Bounded pedagogical/media correctness corrections | Astra / Claude Code | Authorized; design in progress | Reconfirmation required | Not run    | Withheld |
+
+## VIS-PED design checkpoint — 2026-09-26
+
+- **Classification complete:** the broad renderer defect is that explicit `off-screen` mode is not
+  authoritative in the quantity, sorting/matching and multi-image observation families. Those renderers
+  invent counters, graded choices and completion praise for activities whose approved pedagogy happens with
+  real objects, movement or conversation. Fix the shared renderer and retain only useful static reference
+  material. Renderer-only changes do not alter approval digests.
+- **Claude Max/Opus:** completed a read-only correction map from the bounded source set. It confirmed the
+  affected families, two equivalent occurrences and the approval mechanism. Astra rejected its proposed
+  thirteen new counting mini-game contracts and checked sorting game because they would add screen pedagogy
+  to activities already marked off-screen and would create unnecessary content lapses.
+- **Content/data corrections:** remove the stray triangle from `m1-math-16-a1` and the equivalent
+  `m1-math-19-a1`, whose approved guidance teaches only rounds and squares; replace generic movement display
+  steps across all 22 1ère physical lessons with steps derived from each existing instruction/guidance; and
+  supply a bounded six-word bank for `m3-lang-12-a2`.
+- **Media corrections:** add one simple no-numeral representation of « la monnaie » to `m3-lang-13-a2`, and
+  one composed square-wall/triangle-roof house model to `m3-math-18-a2`. Existing frozen asset bytes remain
+  unchanged. The two additions require new fingerprints, visual checks and mixed content/media
+  reconfirmation, not the old visual-only shortcut.
+- **Expected approval scope before dry-run:** 27 lessons — all 22 1ère physical lessons,
+  `m1-math-16`, `m1-math-19`, `m3-lang-12`, `m3-lang-13` and `m3-math-18`. Confirm this with the lapse dry-run
+  after implementation; do not copy these counts into approval records.
+- **Direct equivalents:** the renderer correction also covers all other off-screen counters and the
+  previously recorded fixed-choice conversions (`m3-world-02-a1`, `m3-world-06-a2`) without changing their
+  canonical content. The 3ème movement steps were audited and already match their instructions; no change.
+- **Exact next task:** delegate the bounded renderer/test edit to Claude Code, review it independently, then
+  implement and validate the content/media corrections as separate checkpoints.
 
 ## VIS-QA-01 checkpoint — 2026-09-25 (Claude Code worker)
 
