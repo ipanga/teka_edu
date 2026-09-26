@@ -7,7 +7,7 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-09-27
 Branch:     codex/september-astra-visual-review; PR #86 merged → develop
-Commit:     develop 5c875287; staging checkpoint pending commit
+Commit:     main 51c83a22; production run 36276270999 awaiting owner approval
 Updated by: Codex technical lead
 ```
 
@@ -50,8 +50,15 @@ Staging run `36261271043` deployed exact SHA `5c875287` as Preview deployment
 `dpl_Af851j9qzLcbcdW12sBEsr6TPoNg`, applied only `20260926173653_september_reconfirmation.sql`
 to Supabase DEV, passed 41 live E2E tests (9 production-only skipped), retained Vercel Authentication,
 and passed targeted visual inspection of both classes and the corrected September activities. Production
-remains healthy at `28dcb0a`; the next action is the protected `develop` → `main` promotion. No October work
-has started.
+remained healthy at `28dcb0a` through the promotion preflight. No October work has started.
+
+Promotion PR #87 then passed all five required checks and was merged with a merge commit as main SHA
+`51c83a229e1559e98dbf7127fb916c2c8d6a841b`. Production run `36276270999` reran the four full CI jobs
+successfully and is waiting at the protected `production` Environment gate. GitHub names `ipanga` as the
+required reviewer and reports that account can approve. No PROD migration or new deployment has started;
+the existing public deployment remains healthy at `28dcb0a`. Exact next action: the owner approves run
+`36276270999`, after which the protected workflow may apply the single pending reconfirmation migration,
+deploy exact main SHA `51c83a2`, and run its live smoke test.
 Older phase summaries below are historical and may predate the September production release.
 
 ## Current Phase
