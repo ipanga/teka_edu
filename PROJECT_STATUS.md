@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-26
-Branch:     codex/september-astra-visual-review (release prepared), main at 28dcb0a
-Commit:     fd8481c; release checkpoint update pending
+Branch:     codex/september-astra-visual-review, PR #86 → develop
+Commit:     release checkpoint 73bfb63; PR-status update pending
 Updated by: Codex technical lead
 ```
 
@@ -44,8 +44,9 @@ build, a 28-file client-bundle scan, 41 E2E tests (9 production-only skipped), a
 scratch, 152 pgTAP/RLS assertions, and both portable and Vercel container builds and smoke tests. The local
 Turbopack port-binding `EPERM` is unchanged; Turbopack succeeds inside both Linux containers. The generated
 reconfirmation migration is the only migration pending on DEV and PROD. Branch and environment protections,
-secret scanning, push protection and the production owner-review gate are active. The release has not yet
-been pushed, merged or deployed; no October work has started.
+secret scanning, push protection and the production owner-review gate are active. The feature branch is
+published as PR #86 into `develop`; CI is pending and nothing has merged or deployed. No October work has
+started.
 Older phase summaries below are historical and may predate the September production release.
 
 ## Current Phase
