@@ -20,6 +20,10 @@ import type { SessionActivity, SessionAudio, SessionMedia } from "@/lib/programm
  * Interaction exists only where tapping genuinely teaches: choosing the named shape, showing a
  * quantity, pairing, sorting. Nothing here scores a child; a wrong tap invites another try.
  *
+ * An activity marked `off-screen` is off-screen, whatever its family could do on a screen: the
+ * counting, sorting or observing happens with real things, and the renderer shows references at
+ * most — never a counter to tap, a choice to get right, or praise for finishing.
+ *
  * Visual patterns (docs/september-illustration-upgrade-plan.md): every picture sits on a tinted
  * **stage**, so a card with one picture is furnished rather than empty; lists of cards, lines and
  * steps arrive once, in sequence; a page turn rises once. All of it is off under
@@ -213,6 +217,81 @@ const list = (items: readonly string[]) => (
     ))}
   </ul>
 );
+
+/** The groups of a sort, as cards: the parent's reference, not places to tap. */
+const categoryCards = (categories: readonly string[]) => (
+  <div className="grid gap-2 sm:grid-cols-3">
+    {categories.map((category, index) => (
+      <div
+        key={category}
+        className="teka-stagger rounded-2xl bg-white px-4 py-6 text-center text-lg shadow-sm"
+        style={{ "--i": index } as React.CSSProperties}
+      >
+        {category}
+      </div>
+    ))}
+  </div>
+);
+
+/** The pairs of a matching game, one per line. */
+const pairList = (pairs: readonly unknown[]) => (
+  <ul className="flex flex-col gap-2">
+    {pairs.map((pair, index) => (
+      <li
+        key={index}
+        className="teka-stagger rounded-xl bg-white px-4 py-3 text-lg shadow-sm"
+        style={{ "--i": index } as React.CSSProperties}
+      >
+        {asStrings(pair).join("  →  ")}
+      </li>
+    ))}
+  </ul>
+);
+
+/**
+ * What to fetch for an activity done with real objects. The line says what to use and comes
+ * first; a picture only shows the kind of object meant, and says so, so that a parent does not
+ * read one pebble as "one pebble" or a picture as the way to lay things out.
+ */
+const setupFor = (objects: unknown, media: readonly SessionMedia[]) =>
+  typeof objects === "string" || media.length > 0 ? (
+    <div className="flex flex-col gap-3">
+      {typeof objects === "string" && <Prompt>Avec : {objects}</Prompt>}
+      {media.length > 0 && (
+        <figure className="flex flex-col gap-2">
+          <Gallery media={media} size="sm" />
+          <figcaption className="text-sm text-stone-600">
+            Exemple d’objet seulement : l’image ne montre ni combien en préparer, ni comment les
+            disposer.
+          </figcaption>
+        </figure>
+      )}
+    </div>
+  ) : null;
+
+/**
+ * Several pictures to look at together, large and side by side. None of them is a button: the
+ * looking and the talking are the activity, and there is nothing to get right.
+ */
+function SideBySide({ media }: { media: readonly SessionMedia[] }) {
+  const columns =
+    media.length === 2
+      ? "grid-cols-2"
+      : media.length === 3
+        ? "grid-cols-2 sm:grid-cols-3"
+        : "grid-cols-2 sm:grid-cols-4";
+  return (
+    <ul className={`grid gap-3 ${columns}`} aria-label="Images">
+      {media.map((item, index) => (
+        <li key={item.id} className="teka-stagger" style={{ "--i": index } as React.CSSProperties}>
+          <Stage className="h-full">
+            <Picture media={item} size="lg" />
+          </Stage>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 /** The word a picture is for: the first tag a lesson would use, e.g. "carré". */
 const labelOf = (media: SessionMedia) => media.tags[0] ?? media.alt;
@@ -614,6 +693,25 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
     case "quantity": {
       const upTo = activity.payload["upTo"];
       const objects = activity.payload["objects"];
+      // Counting real objects, or counting aloud: a screen counter would compete with the table.
+      // The approved instruction above this renderer carries the exact arrangement and range. A
+      // generic `objects` payload is only renderer metadata and can be less specific, so do not
+      // restate it here as if it were the task. A linked picture remains a vocabulary reference,
+      // explicitly not a model of the quantity or arrangement to make.
+      if (offScreen) {
+        return (
+          <OffScreen>
+            {media.length > 0 ? (
+              <figure className="flex flex-col gap-2">
+                <Gallery media={media} size="sm" />
+                <figcaption className="text-sm text-stone-600">
+                  Exemple d’objet seulement : suivez la consigne pour la quantité et la disposition.
+                </figcaption>
+              </figure>
+            ) : null}
+          </OffScreen>
+        );
+      }
       return (
         <div className={`flex flex-col gap-3 ${childView ? "items-center text-center" : ""}`}>
           {typeof objects === "string" && (
@@ -627,54 +725,59 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
     case "group-and-match": {
       const categories = asStrings(activity.payload["categories"]);
       const pairs = Array.isArray(activity.payload["pairs"]) ? activity.payload["pairs"] : [];
+      if (offScreen) {
+        // Sorted and matched with real things: pictures and groups are references to talk over.
+        const items = asStrings(activity.payload["items"]);
+        const hasBody =
+          media.length > 0 || categories.length > 0 || pairs.length > 0 || items.length > 0;
+        return (
+          <OffScreen withPicture={media.length > 0}>
+            {hasBody ? (
+              <div className="flex flex-col gap-3">
+                {media.length > 0 && <Gallery media={media} size="sm" />}
+                {categories.length > 0 && categoryCards(categories)}
+                {pairs.length > 0 && pairList(pairs)}
+                {items.length > 0 && (
+                  <ul className="flex flex-wrap gap-2" aria-label="Les mots du jeu">
+                    {items.map((item, index) => (
+                      <li
+                        key={item}
+                        className="teka-stagger rounded-xl bg-white px-4 py-3 text-lg shadow-sm"
+                        style={{ "--i": index } as React.CSSProperties}
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ) : null}
+          </OffScreen>
+        );
+      }
       if (categories.length > 0 && media.length > 0) {
         return <SortIntoGroups categories={categories} media={media} />;
       }
       if (media.length > 1) return <ChooseOne media={media} />;
-      if (categories.length > 0) {
-        return (
-          <OffScreen>
-            <div className="grid gap-2 sm:grid-cols-3">
-              {categories.map((category, index) => (
-                <div
-                  key={category}
-                  className="teka-stagger rounded-2xl bg-white px-4 py-6 text-center text-lg shadow-sm"
-                  style={{ "--i": index } as React.CSSProperties}
-                >
-                  {category}
-                </div>
-              ))}
-            </div>
-          </OffScreen>
-        );
-      }
-      return (
-        <OffScreen>
-          <ul className="flex flex-col gap-2">
-            {pairs.map((pair, index) => (
-              <li
-                key={index}
-                className="teka-stagger rounded-xl bg-white px-4 py-3 text-lg shadow-sm"
-                style={{ "--i": index } as React.CSSProperties}
-              >
-                {asStrings(pair).join("  →  ")}
-              </li>
-            ))}
-          </ul>
-        </OffScreen>
-      );
+      if (categories.length > 0) return <OffScreen>{categoryCards(categories)}</OffScreen>;
+      return <OffScreen>{pairList(pairs)}</OffScreen>;
     }
 
     case "look-and-name": {
       const focus = activity.payload["focus"];
-      if (media.length > 1) return <ChooseOne media={media} />;
-      const body = (
-        <div className="flex flex-col gap-3">
-          {media[0] !== undefined && <Showcase media={media[0]} />}
-          {typeof focus === "string" && <Prompt>À observer : {focus}</Prompt>}
-        </div>
-      );
-      return offScreen && media.length === 0 ? <OffScreen>{body}</OffScreen> : body;
+      if (!offScreen && media.length > 1) return <ChooseOne media={media} />;
+      const body =
+        media.length > 0 || typeof focus === "string" ? (
+          <div className="flex flex-col gap-3">
+            {media.length === 1 ? (
+              <Showcase media={media[0]!} />
+            ) : (
+              media.length > 1 && <SideBySide media={media} />
+            )}
+            {typeof focus === "string" && <Prompt>À observer : {focus}</Prompt>}
+          </div>
+        ) : null;
+      return offScreen ? <OffScreen withPicture={media.length > 0}>{body}</OffScreen> : body;
     }
 
     case "trace-and-draw": {
@@ -713,17 +816,8 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
         </OffScreen>
       );
 
-    case "hands-on": {
-      const objects = activity.payload["objects"];
-      return (
-        <OffScreen withPicture={media.length > 0}>
-          <div className="flex flex-col gap-3">
-            {media.length > 0 && <Gallery media={media} size="sm" />}
-            {typeof objects === "string" && <Prompt>Avec : {objects}</Prompt>}
-          </div>
-        </OffScreen>
-      );
-    }
+    case "hands-on":
+      return <OffScreen>{setupFor(activity.payload["objects"], media)}</OffScreen>;
   }
 }
 

@@ -292,8 +292,10 @@ describe("which picture leads a text", () => {
 });
 
 describe("counting again", () => {
+  // A synthetic on-screen count: no September activity is one, but the family keeps the counter.
   const counting: SessionActivity = {
     ...base,
+    mode: "on-screen",
     renderer: "quantity",
     type: "counting",
     vocabulary: [],
@@ -324,5 +326,204 @@ describe("counting again", () => {
     expect(screen.getByRole("status").textContent).toBe("20 en tout. Bravo !");
     fireEvent.click(screen.getByRole("button", { name: "Recommencer" }));
     expect(screen.getByRole("status").textContent).toBe("…");
+  });
+});
+
+describe("an off-screen activity stays off the screen, whatever its family can do", () => {
+  const pebble = picture("objet-caillou", "Un petit caillou", "caillou");
+  const hen = picture("animal-poule", "Une poule", "poule");
+  const goat = picture("animal-chevre", "Une chèvre", "chèvre");
+
+  it("hands a count to real objects: an example picture, no substitute setup or counter", () => {
+    render(
+      <ActivityRenderer
+        activity={{
+          ...base,
+          renderer: "quantity",
+          type: "counting",
+          vocabulary: [],
+          media: [pebble],
+          payload: { upTo: 5, objects: "petits objets de la maison" },
+        }}
+      />,
+    );
+    expect(screen.getByText(/Posez l’écran/)).toBeTruthy();
+    expect(screen.getByAltText("Un petit caillou")).toBeTruthy();
+    expect(screen.getByText(/Exemple d’objet/)).toBeTruthy();
+    expect(screen.getByText(/suivez la consigne pour la quantité et la disposition/)).toBeTruthy();
+    expect(screen.queryByText("Avec : petits objets de la maison")).toBeNull();
+    expect(screen.queryByRole("button", { name: /^Objet \d+$/ })).toBeNull();
+    expect(screen.queryAllByRole("button")).toHaveLength(0);
+    expect(screen.queryByText(/Touche chaque objet/)).toBeNull();
+    expect(screen.queryByRole("status")).toBeNull();
+  });
+
+  it("hands a count said aloud to the voice, with no grid of targets", () => {
+    render(
+      <ChildViewContext.Provider value={true}>
+        <ActivityRenderer
+          activity={{
+            ...base,
+            renderer: "quantity",
+            type: "counting",
+            vocabulary: [],
+            media: [],
+            payload: { upTo: 20, objects: "les doigts et les mots" },
+          }}
+        />
+      </ChildViewContext.Provider>,
+    );
+    expect(screen.getByText(/Posez l’écran/)).toBeTruthy();
+    expect(screen.queryByText("Avec : les doigts et les mots")).toBeNull();
+    expect(screen.queryByRole("group", { name: /objets à compter/ })).toBeNull();
+    expect(screen.queryAllByRole("button")).toHaveLength(0);
+  });
+
+  it("shows a sort's pictures and groups as references, with nothing to place", () => {
+    render(
+      <ActivityRenderer
+        activity={{
+          ...base,
+          renderer: "group-and-match",
+          type: "sorting",
+          vocabulary: [],
+          media: [hen, goat],
+          payload: {
+            categories: ["deux pattes", "quatre pattes"],
+            items: ["la poule", "la chèvre"],
+          },
+        }}
+      />,
+    );
+    expect(screen.getByText(/Regardez l’image ensemble/)).toBeTruthy();
+    expect(screen.getByAltText("Une poule")).toBeTruthy();
+    expect(screen.getByAltText("Une chèvre")).toBeTruthy();
+    expect(screen.getByText("deux pattes")).toBeTruthy();
+    expect(screen.getByText("quatre pattes")).toBeTruthy();
+    expect(screen.getByRole("list", { name: "Les mots du jeu" }).textContent).toContain(
+      "la chèvre",
+    );
+    expect(screen.queryAllByRole("button")).toHaveLength(0);
+    expect(screen.queryByText(/Choisis une image/)).toBeNull();
+    expect(screen.queryByText(/Bravo/)).toBeNull();
+  });
+
+  it("shows a matching game's pairs, with no picture to choose", () => {
+    render(
+      <ActivityRenderer
+        activity={{
+          ...base,
+          renderer: "group-and-match",
+          type: "matching",
+          vocabulary: [],
+          media: [hen, goat],
+          payload: {
+            pairs: [
+              ["la poule", "le poussin"],
+              ["la chèvre", "le chevreau"],
+            ],
+          },
+        }}
+      />,
+    );
+    expect(screen.getByAltText("Une poule")).toBeTruthy();
+    expect(screen.getByText(/la poule\s+→\s+le poussin/)).toBeTruthy();
+    expect(screen.getByText(/la chèvre\s+→\s+le chevreau/)).toBeTruthy();
+    expect(screen.queryAllByRole("button")).toHaveLength(0);
+    expect(screen.queryByText(/Trouve l’image/)).toBeNull();
+    expect(screen.queryByRole("status")).toBeNull();
+  });
+
+  it("shows several pictures to observe, with the focus, and no choice to get right", () => {
+    render(
+      <ChildViewContext.Provider value={true}>
+        <ActivityRenderer
+          activity={{
+            ...base,
+            renderer: "look-and-name",
+            type: "observation",
+            vocabulary: [],
+            media: [hen, goat],
+            payload: { focus: "les pattes, la tête, les yeux" },
+          }}
+        />
+      </ChildViewContext.Provider>,
+    );
+    expect(screen.getByText(/Regardez l’image ensemble/)).toBeTruthy();
+    expect(screen.getByAltText("Une poule")).toBeTruthy();
+    expect(screen.getByAltText("Une chèvre")).toBeTruthy();
+    expect(screen.getByText(/les pattes, la tête, les yeux/)).toBeTruthy();
+    expect(screen.queryAllByRole("button")).toHaveLength(0);
+    expect(screen.queryByText(/Trouve l’image/)).toBeNull();
+    expect(screen.queryByRole("status")).toBeNull();
+  });
+
+  it("puts what to fetch first, and labels a hands-on picture as an example only", () => {
+    render(
+      <ActivityRenderer
+        activity={{
+          ...base,
+          renderer: "hands-on",
+          type: "manipulation",
+          vocabulary: [],
+          media: [pebble],
+          payload: { objects: "six petits objets" },
+        }}
+      />,
+    );
+    expect(screen.getByText(/Posez l’écran/)).toBeTruthy();
+    const setup = screen.getByText("Avec : six petits objets");
+    const example = screen.getByAltText("Un petit caillou");
+    const order = setup.compareDocumentPosition(example);
+    expect(order & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(screen.getByText(/Exemple d’objet seulement/).textContent).toMatch(
+      /ni combien en préparer, ni comment les disposer/,
+    );
+    expect(screen.queryAllByRole("button")).toHaveLength(0);
+  });
+});
+
+describe("an on-screen activity keeps its interaction", () => {
+  const square = picture("forme-carre", "Un carré", "carré");
+  const disk = picture("forme-disque", "Un disque", "disque");
+
+  it("offers a multi-picture observation as a choice", () => {
+    render(
+      <ActivityRenderer
+        activity={{
+          ...base,
+          mode: "on-screen",
+          renderer: "look-and-name",
+          type: "observation",
+          vocabulary: [],
+          media: [square, disk],
+          payload: {},
+        }}
+      />,
+    );
+    expect(screen.getByText(/^Trouve l’image pour/)).toBeTruthy();
+    expect(screen.getByRole("button", { name: "Un carré" })).toBeTruthy();
+  });
+
+  it("offers a sort with pictures as a sort", () => {
+    render(
+      <ActivityRenderer
+        activity={{
+          ...base,
+          mode: "on-screen",
+          renderer: "group-and-match",
+          type: "sorting",
+          vocabulary: [],
+          media: [square, disk],
+          payload: { categories: ["les carrés", "les disques"] },
+        }}
+      />,
+    );
+    expect(screen.getByText("Choisis une image, puis choisis son groupe.")).toBeTruthy();
+    fireEvent.click(screen.getByRole("button", { name: "Un carré" }));
+    fireEvent.click(screen.getByRole("button", { name: "les carrés" }));
+    fireEvent.click(screen.getByRole("button", { name: "Un disque" }));
+    fireEvent.click(screen.getByRole("button", { name: "les disques" }));
+    expect(screen.getByRole("status").textContent).toBe("Tout est rangé. Bravo !");
   });
 });

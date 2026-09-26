@@ -28,10 +28,12 @@ approved lesson payload, media byte, registry entry or approval digest changed. 
 already supersedes the original 23 KEEP / 10 REFINE / 16 REDRAW recommendation: 35 accepted, 11 refined,
 3 redrawn, 0 outstanding, 176/176 approvals. Audio remains intentionally at zero recordings.
 
-The remaining genuine findings change approved pedagogy or frozen media: counter structures/ranges,
-fixed-choice conversion, missing matching/drawing models, sorting semantics/items, movement steps,
-triangle grouping and a missing « la monnaie » representation. They await a bounded owner decision and
-reconfirmation. Owner selected local only: no push, PR, staging or production change.
+The owner authorized the bounded correction batch. Explicit off-screen mode now prevents generic counters,
+graded choices and sorting praise from replacing the approved real-world tasks. The two round/square sorts,
+all 22 1ère movement payloads, the missing spoken sorting words, « la monnaie » card and composed house model
+are corrected. Exactly 27 affected approvals were lapsed and remain at review; two mixed reconfirmation
+packages await an independent decision. Local validation passes with 414 unit tests, 41 E2E tests and fresh
+phone/tablet/desktop/TV evidence. Owner selected local only: no push, PR, staging or production change.
 Older phase summaries below are historical and may predate the September production release.
 
 ## Current Phase
@@ -832,3 +834,25 @@ Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, a
   outstanding, 176/176 approvals. No asset, lesson payload, digest, database, environment or deployment changed.
 - Genuine renderer/content findings that alter teaching intent remain gated on owner direction and the
   existing approval-lapse/reconfirmation workflow. The review is local only; no push, PR or deployment.
+
+### 2026-09-26 — Bounded September pedagogical/media correction batch (local)
+
+- Made `off-screen` authoritative for quantity, matching/sorting and observation renderers. The application
+  no longer substitutes a generic tappable counter, graded fixed choice or completion praise for an approved
+  real-object, spoken or observational task. Static pictures are explicitly reference material.
+- Corrected the two round/square sorts, all 22 1ère movement step payloads and the missing six-word language
+  sort. Added and froze a simple no-numeral money asset and a composed square-wall/triangle-roof house model;
+  all 49 earlier frozen asset bytes remain unchanged.
+- Lapsed exactly the 27 changed lessons and generated the minimum mixed reconfirmation packages for 1ère
+  weeks 1–5 and 3ème weeks 3–4. A second lapse dry-run reports zero stale approvals. No approval was restored
+  and no digest was restamped.
+- Local validation passes: format, lint, typecheck, 414 unit tests, 31-file content validation, deterministic
+  reports and pgTAP mirror, 51-asset visual audit, Webpack production build, 28-file three-sentinel client scan,
+  and 41 E2E tests (9 production-only skipped). Sixteen targeted captures at phone, tablet, desktop and TV
+  sizes were inspected with no clipping, overlap, broken media or unreachable control.
+- Claude Max/Opus supplied the bounded correction map and a renderer/test implementation. Astra independently
+  rejected new on-screen mini-games, reviewed every worker diff and adjusted generic quantity references so
+  they cannot contradict the approved instruction.
+- Next gate: an independent AI-assisted reviewer must decide the two reconfirmation packages. Until acceptance
+  is recorded, the 27 lessons remain at `review`. No push, PR, staging, production, production-data or October
+  work occurred.

@@ -153,7 +153,7 @@ export function buildQaTracker(data: ReferenceData, qa: FinalQa): string {
   }
 
   const lines: string[] = [
-    "# September visual QA — the 49 pictures",
+    `# September visual QA — the ${rows.length} pictures`,
     "",
     "> **Generated** by `npm run visual:audit` from canonical content and the `finalQa` block of",
     "> `docs/september-illustration-state.json`. Do not edit by hand: change a decision in the state",

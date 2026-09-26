@@ -783,7 +783,7 @@ l’autre — l’appareil est alors le sien._
 
 _Ranger les mots par catégories : ce qui se mange, ce qui sert à écrire, ce qui se porte._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Ranger des mots par catégories est difficile et très utile : c’est ce qui fait qu’un mot nouveau trouve sa place. Dites toujours pourquoi deux mots vont ensemble.
 - **Objectifs enseignés :**
   - `LANG-S01-C01-O02` — Organiser les mots en catégorie et en réseau. _(source : programme-2024-langage)_
@@ -1110,7 +1110,7 @@ l’autre — l’appareil est alors le sien._
 
 _Troisième corpus de mots : le marché, les fruits, les légumes, les quantités._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Nommez avec l’article et employez tout de suite le mot dans une phrase de marché : « Je voudrais trois tomates. »
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1134,12 +1134,13 @@ _Troisième corpus de mots : le marché, les fruits, les légumes, les quantité
 - **Matériel :** Aucun matériel
 - **Lexique visé :** la tomate _(the tomato)_ · la banane _(the banana)_ · l’oignon _(the onion)_ · le panier _(the basket)_ · la monnaie _(the change)_
 - **Aide en anglais (optionnelle) :** « Name the market words: tomato, banana, onion, basket, change. »
-- **Images montrées à l'enfant (4) :**
+- **Images montrées à l'enfant (5) :**
 
   - `objet-tomate` — Une tomate (`public/media/objects/objet-tomate.svg`)
   - `objet-banane` — Une banane (`public/media/objects/objet-banane.svg`)
   - `objet-oignon` — Un oignon (`public/media/objects/objet-oignon.svg`)
   - `objet-panier` — Un panier (`public/media/objects/objet-panier.svg`)
+  - `objet-monnaie` — Deux billets simples et une pièce, la monnaie du marché (`public/media/objects/objet-monnaie.svg`)
 
 - **Objectifs travaillés :** `LANG-S01-C01-O03` Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
 

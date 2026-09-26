@@ -1234,7 +1234,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Retrouver les formes planes sur les objets réels._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** On repart des formes en papier, puis on les compare aux faces des objets. Dites toujours « la face de la boite est un carré », jamais « la boite est un carré ».
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1268,12 +1268,9 @@ _Retrouver les formes planes sur les objets réels._
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
 - **À défaut :** Un crayon, un stylo, une craie ou un morceau de charbon conviennent.
 - **Aide en anglais (optionnelle) :** « Draw a house with a square and a triangle. »
-- **Images montrées à l'enfant (4) :**
+- **Images montrées à l'enfant (1) :**
 
-  - `forme-carre` — Un carré (`public/media/shapes/forme-carre.svg`)
-  - `forme-rectangle` — Un rectangle (`public/media/shapes/forme-rectangle.svg`)
-  - `forme-triangle` — Un triangle (`public/media/shapes/forme-triangle.svg`)
-  - `forme-disque` — Un disque, tout rond (`public/media/shapes/forme-disque.svg`)
+  - `forme-maison-composee` — Une maison composée d’un carré pour le mur et d’un triangle pour le toit, avec un disque pour le soleil (`public/media/illustrations/forme-maison-composee.svg`)
 
 - **Objectifs travaillés :** `MATH-S03-C01-O08` Décrire et nommer quelques figures géométriques simples : carré, rectangle, triangle, disque.
 

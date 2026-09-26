@@ -460,6 +460,20 @@ const OBJECTS: [id: string, alt: string, tags: string[], body: string][] = [
       <path d="M90 176 l-4 10 M100 178 v10 M110 176 l4 10" fill="none" stroke="${shade("stone")}" stroke-width="4" stroke-linecap="round"/>`,
   ],
   [
+    "objet-monnaie",
+    "Deux billets simples et une pièce, la monnaie du marché",
+    ["monnaie", "argent", "marché"],
+    `${ground(100, 180, 76, 7)}
+      <rect x="34" y="64" width="116" height="66" rx="8" transform="rotate(-8 92 97)" fill="${base("leaf")}" ${OUTLINE}/>
+      <circle cx="92" cy="97" r="18" fill="${shade("leaf")}" stroke="${LINE}" stroke-width="4"/>
+      <path d="M48 82 h18 M118 112 h18" fill="none" stroke="${shade("leaf")}" stroke-width="4" stroke-linecap="round"/>
+      <rect x="48" y="92" width="116" height="66" rx="8" transform="rotate(7 106 125)" fill="${base("sky")}" ${OUTLINE}/>
+      <circle cx="106" cy="125" r="18" fill="${shade("sky")}" stroke="${LINE}" stroke-width="4"/>
+      <path d="M62 109 h18 M132 141 h18" fill="none" stroke="${shade("sky")}" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="154" cy="158" r="24" fill="${base("sun")}" ${OUTLINE}/>
+      <circle cx="154" cy="158" r="12" fill="none" stroke="${shade("sun")}" stroke-width="4"/>`,
+  ],
+  [
     "objet-caillou",
     "Un caillou",
     ["caillou", "compter", "petit objet"],
@@ -555,6 +569,15 @@ const ANIMALS: [id: string, alt: string, tags: string[], body: string][] = [
  * the listening, it does not replace it.
  */
 const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] = [
+  [
+    "forme-maison-composee",
+    "Une maison composée d’un carré pour le mur et d’un triangle pour le toit, avec un disque pour le soleil",
+    ["maison", "carré", "triangle", "disque", "forme"],
+    `${ground(100, 180, 76, 7)}
+      <rect x="52" y="92" width="96" height="82" rx="3" fill="${base("clay")}" ${OUTLINE}/>
+      <polygon points="42,94 100,36 158,94" fill="${base("sun")}" ${OUTLINE}/>
+      <circle cx="158" cy="42" r="20" fill="${base("sky")}" ${OUTLINE}/>`,
+  ],
   [
     "histoire-seau-lisa",
     "Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus",

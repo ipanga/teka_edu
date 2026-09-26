@@ -852,7 +852,7 @@
           "minutes": 7,
           "mode": "off-screen",
           "role": "consolidation",
-          "mediaIds": ["forme-disque", "forme-carre", "forme-triangle"],
+          "mediaIds": ["forme-disque", "forme-carre"],
           "objectiveCodes": ["MATH-S03-C01-O01"],
           "materialCodes": ["formes-papier"],
           "vocabulary": [],
@@ -868,16 +868,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "ceeb99989e33c974",
-        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-math-17",
@@ -1006,7 +998,7 @@
           "minutes": 7,
           "mode": "off-screen",
           "role": "consolidation",
-          "mediaIds": ["forme-disque", "forme-carre", "forme-triangle"],
+          "mediaIds": ["forme-disque", "forme-carre"],
           "objectiveCodes": ["MATH-S03-C01-O01"],
           "materialCodes": ["formes-papier"],
           "vocabulary": [],
@@ -1022,16 +1014,8 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "approved",
-      "review": {
-        "reviewKind": "ai-assisted",
-        "outcome": "accepted",
-        "reviewer": "ChatGPT",
-        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-15",
-        "reviewedDigest": "bdc85728e0fc65f4",
-        "notes": "Semaine 4 : passe 1 acceptée avec modifications (7 points), passe 2 acceptée après correction de l’image de Lisa. Décision de relecture : ChatGPT. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
-      }
+      "status": "review",
+      "review": null
     },
     {
       "id": "m1-math-20",
