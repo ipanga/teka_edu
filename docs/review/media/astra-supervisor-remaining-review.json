@@ -2122,9 +2122,159 @@
         "m3-lang-11-a3"
       ],
       "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-054.png",
+      "activities": [
+        "m3-math-11-a1",
+        "m3-math-11-a2",
+        "m3-phys-11-a1",
+        "m3-world-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-055.png",
+      "activities": [
+        "m3-world-04-a2",
+        "m3-lang-12-a1",
+        "m3-lang-12-a2",
+        "m3-lang-12-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-056.png",
+      "activities": [
+        "m3-math-12-a1",
+        "m3-math-12-a2",
+        "m3-phys-12-a1",
+        "m3-art-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-057.png",
+      "activities": [
+        "m3-lang-13-a1",
+        "m3-lang-13-a2",
+        "m3-lang-13-a3",
+        "m3-math-13-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-058.png",
+      "activities": [
+        "m3-math-13-a2",
+        "m3-phys-13-a1",
+        "m3-time-05-a1",
+        "m3-time-05-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-054.png",
+      "activities": [
+        "m3-math-11-a1",
+        "m3-math-11-a2",
+        "m3-phys-11-a1",
+        "m3-world-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-055.png",
+      "activities": [
+        "m3-world-04-a2",
+        "m3-lang-12-a1",
+        "m3-lang-12-a2",
+        "m3-lang-12-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-056.png",
+      "activities": [
+        "m3-math-12-a1",
+        "m3-math-12-a2",
+        "m3-phys-12-a1",
+        "m3-art-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-057.png",
+      "activities": [
+        "m3-lang-13-a1",
+        "m3-lang-13-a2",
+        "m3-lang-13-a3",
+        "m3-math-13-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-058.png",
+      "activities": [
+        "m3-math-13-a2",
+        "m3-phys-13-a1",
+        "m3-time-05-a1",
+        "m3-time-05-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-054.png",
+      "activities": [
+        "m3-math-11-a1",
+        "m3-math-11-a2",
+        "m3-phys-11-a1",
+        "m3-world-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-055.png",
+      "activities": [
+        "m3-world-04-a2",
+        "m3-lang-12-a1",
+        "m3-lang-12-a2",
+        "m3-lang-12-a3"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-056.png",
+      "activities": [
+        "m3-math-12-a1",
+        "m3-math-12-a2",
+        "m3-phys-12-a1",
+        "m3-art-04-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-057.png",
+      "activities": [
+        "m3-lang-13-a1",
+        "m3-lang-13-a2",
+        "m3-lang-13-a3",
+        "m3-math-13-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-058.png",
+      "activities": [
+        "m3-math-13-a2",
+        "m3-phys-13-a1",
+        "m3-time-05-a1",
+        "m3-time-05-a2"
+      ],
+      "reviewed": true
     }
   ],
-  "initialPanelsReviewed": 938,
+  "initialPanelsReviewed": 998,
   "scrollSheets": [
     {
       "sheet": "scroll/scroll-001.png",
@@ -3695,7 +3845,10 @@
     "m3-math-07-a1 names a box but shows only a pebble, extending the existing incomplete physical-setup reference finding. Story, vocabulary, movement and off-screen oral/drawing screens in this batch add no new finding.",
     "Initial sheets 049–053 for tablet portrait, tablet landscape and desktop: Claude Max/Opus inspected all sixty panels from an isolated authorized package; Astra independently checked its substantive claims against the source-resolution evidence.",
     "Generic counter semantics recur in m3-math-09-a1 and m3-math-10-a1, and the single-pebble reference for twelve objects in m3-math-10-a2 extends the existing incomplete setup-thumbnail finding. Oral, movement, plant, story and other hands-on screens add no new defect.",
-    "Claude proposed a new low-severity reachability defect because m3-math-10-a1 places the return control below the tablet-landscape initial viewport. Astra rejected it as a new finding: completed full-scroll evidence proves the control remains reachable, and the underlying tall 10–20 counter is already classified. Isolated punctuation and hyphen wraps remain optional polish."
+    "Claude proposed a new low-severity reachability defect because m3-math-10-a1 places the return control below the tablet-landscape initial viewport. Astra rejected it as a new finding: completed full-scroll evidence proves the control remains reachable, and the underlying tall 10–20 counter is already classified. Isolated punctuation and hyphen wraps remain optional polish.",
+    "Initial sheets 054–058 for tablet portrait, tablet landscape and desktop: Claude Max/Opus inspected all sixty panels from an isolated authorized package; Astra independently checked every proposed new issue against source-resolution evidence and prior approvals.",
+    "Claude’s m3-art-04-a1 claim was rejected: the approved guide explicitly permits the counting rhyme over rain sounds, and the accepted correction intentionally makes the rain image lead. m3-lang-12-a2 missing sort items and m3-lang-13-a2 missing money media are already classified. Punctuation/hyphen wraps remain optional polish.",
+    "The m3-world-04-a2 model shows bent arms as instructed; bent legs add a valid articulated pose rather than contradicting the task. The m3-lang-13-a2 landscape controls continue below the initial viewport and are reachable in full-scroll evidence. Generic counter, movement, media-free handoff and incomplete setup-thumbnail findings recur; no new defect class was added."
   ],
   "classifiedFindings": [
     {
@@ -3825,5 +3978,5 @@
       "scope": "Approved activity payload/content completeness; define the intended word set through the pedagogical review workflow before changing the child or parent experience."
     }
   ],
-  "next": "Initial sheet 054 for tablet portrait, tablet landscape and desktop; all 165 scroll sheets, all 38 large-phone sheets and sheets 001–053 for the other three initial viewports are reviewed. No other generated sheet is marked manually reviewed."
+  "next": "Initial sheet 059 for tablet portrait, tablet landscape and desktop; all 165 scroll sheets, all 38 large-phone sheets and sheets 001–058 for the other three initial viewports are reviewed. No other generated sheet is marked manually reviewed."
 }
