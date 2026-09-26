@@ -10,7 +10,7 @@ September Visual Experience Review — GPT Astra
 
 - **Task status:** COMPLETE_LOCAL. The completed audit remains closed. Claude Max / Opus explicitly accepted all 27 affected lessons, the renderer-only change and both new assets after the two requested corrections were independently verified and applied.
 - **Supervisor:** Astra; **worker:** Claude Code CLI 2.1.282, installed at `/Users/Apple/.local/bin/claude`; ready to launch with Max authentication.
-- **Current branch:** `codex/september-astra-visual-review`; **current durable checkpoint:** `a8a9d49` (`Record September re-review checkpoint`), with the accepted review, approval restoration and final validation prepared for the next local checkpoint commit.
+- **Current branch:** `codex/september-astra-visual-review`; **current durable checkpoint:** `8847b6b` (`Restore accepted September approvals`).
 - **Base commit / refreshed develop:** `a0b743b`; **refreshed main:** `28dcb0a`. Fetch completed on 2026-09-25. The dossier checkpoint is thirty-five local commits ahead of the feature remote; no PR was created because the owner selected local-only work.
 - **Completed:** existing audit inventory, initial phone/TV review, all 1,002 noninitial viewport reviews, UI fixes, 1,606-state scroll capture. Preserve existing evidence; do not restart.
 - **Completed audit:** all 165 scroll sheets and all 266 initial sheets (431 sheets / 1,208 initial panels), plus 56 whole-product captures across phone, tablet, desktop and TV. The product audit covers home, all class entry states, calendar, preparation and alternatives, parent guidance folded/open, child view, pause, early stop, completion and observation. It found zero horizontal overflow and zero broken images.
@@ -20,7 +20,7 @@ September Visual Experience Review — GPT Astra
 - **CI state:** no CI for the unpublished local commits. Latest fetched staging deployment succeeded at `a0b743b`; production deployment succeeded at `28dcb0a`. Historical validation table below must not be read as fresh CI for this branch.
 - **Staging state:** existing deployment unchanged; this review is local only under the owner's earlier explicit instruction.
 - **Production state:** existing public service at `28dcb0a`, unchanged. No release authorization.
-- **Exact next task:** checkpoint the accepted review and restored approvals locally, then stop. Any publication or October work requires separate owner authorization.
+- **Exact next task:** none within the authorized scope. Any publication or October work requires separate owner authorization.
 - **Exact resume point:** 176/176 September lessons are approved and 0 are at `review`. The 27 restored lessons have fresh verified digests; none reuse their prior digest, all 176 current digests are unique, and the 149 unaffected approval records are byte-for-byte unchanged. All 51 media hashes are verified, including the 49 frozen assets. The disposable Supabase stack and local application server are stopped. No push, PR, merge, staging, production, production-data operation or October work occurred.
 
 | ID         | Task                                              | Worker              | State                          | Review     | CI         | Staging  |

@@ -5,7 +5,7 @@
   "reviewedBaseCommit": "aa111b5",
   "correctionCommit": "259b6ff",
   "reconfirmationCorrectionCommit": "52419a3",
-  "checkpointCommit": "b0c4ab3",
+  "checkpointCommit": "8847b6b",
   "branch": "codex/september-astra-visual-review",
   "status": "accepted-and-approvals-restored",
   "reviewPasses": [

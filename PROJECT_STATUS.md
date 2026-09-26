@@ -7,7 +7,7 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-09-26
 Branch:     codex/september-astra-visual-review (local only), main at 28dcb0a
-Commit:     local checkpoint pending; latest durable checkpoint a8a9d49
+Commit:     local approval-restoration checkpoint 8847b6b
 Updated by: Codex / independent Claude Max review
 ```
 
