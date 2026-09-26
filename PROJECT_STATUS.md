@@ -6,9 +6,9 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-26
-Branch:     codex/september-astra-visual-review (local only), main at 28dcb0a
-Commit:     local approval-restoration checkpoint 8847b6b
-Updated by: Codex / independent Claude Max review
+Branch:     codex/september-astra-visual-review (release prepared), main at 28dcb0a
+Commit:     fd8481c; release checkpoint update pending
+Updated by: Codex technical lead
 ```
 
 ## Independent September visual/UX review — 2026-09-26
@@ -38,11 +38,14 @@ assets with no further modification. Seven full-review entries were recorded and
 restored exactly 27 approvals with fresh digests. September is now 176 approved / 0 review; none of the fresh
 digests reuse a prior value and all 149 unaffected approval records remain byte-for-byte unchanged.
 
-Local validation passes with format, lint, typecheck, 414 unit tests, content validation, a Webpack production
-build, a 28-file client-bundle scan, 41 E2E tests (9 production-only skipped), and 152 pgTAP assertions after a
-disposable database reset. Eight final phone/tablet/desktop/TV captures verify the corrected rule wording and
-square house. The generated migration mirrors the accepted canonical state. The owner selected local only:
-no push, PR, merge, staging, production, production-data operation or October work occurred.
+The owner authorized the protected release path on 2026-09-26. Fresh pre-release validation passes with
+format, lint, typecheck, 414 unit tests, content validation, deterministic reports, a Webpack production
+build, a 28-file client-bundle scan, 41 E2E tests (9 production-only skipped), all migrations replayed from
+scratch, 152 pgTAP/RLS assertions, and both portable and Vercel container builds and smoke tests. The local
+Turbopack port-binding `EPERM` is unchanged; Turbopack succeeds inside both Linux containers. The generated
+reconfirmation migration is the only migration pending on DEV and PROD. Branch and environment protections,
+secret scanning, push protection and the production owner-review gate are active. The release has not yet
+been pushed, merged or deployed; no October work has started.
 Older phase summaries below are historical and may predate the September production release.
 
 ## Current Phase

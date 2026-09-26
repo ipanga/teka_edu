@@ -2,26 +2,28 @@
 
 ## Task
 
-September Visual Experience Review — GPT Astra
+September Upgrade Production Release
 
-**Current phase:** September reconfirmation is complete. The independent AI-assisted reviewer accepted the corrected material, and all 27 affected approvals were restored with fresh digests.
+**Current phase:** pre-release verification is complete; publish the feature branch and open the protected PR into `develop`.
 
 ## Supervisor handoff — 2026-09-26
 
-- **Task status:** COMPLETE_LOCAL. The completed audit remains closed. Claude Max / Opus explicitly accepted all 27 affected lessons, the renderer-only change and both new assets after the two requested corrections were independently verified and applied.
+- **Task status:** RELEASE_PREPARED. The completed audit and reconfirmation remain closed. The owner authorized promotion through staging and production on 2026-09-26.
 - **Supervisor:** Astra; **worker:** Claude Code CLI 2.1.282, installed at `/Users/Apple/.local/bin/claude`; ready to launch with Max authentication.
-- **Current branch:** `codex/september-astra-visual-review`; **current durable checkpoint:** `8847b6b` (`Restore accepted September approvals`).
-- **Base commit / refreshed develop:** `a0b743b`; **refreshed main:** `28dcb0a`. Fetch completed on 2026-09-25. The dossier checkpoint is thirty-five local commits ahead of the feature remote; no PR was created because the owner selected local-only work.
+- **Current branch:** `codex/september-astra-visual-review`; **current commit:** `fd8481c`; **current durable content checkpoint:** `8847b6b` (`Restore accepted September approvals`).
+- **Base commit / refreshed develop:** `a0b743b`; **refreshed main:** `28dcb0a`. Fetch completed on 2026-09-26. The feature branch is 41 local commits ahead of its remote and has not yet been pushed; no PR exists yet.
 - **Completed:** existing audit inventory, initial phone/TV review, all 1,002 noninitial viewport reviews, UI fixes, 1,606-state scroll capture. Preserve existing evidence; do not restart.
 - **Completed audit:** all 165 scroll sheets and all 266 initial sheets (431 sheets / 1,208 initial panels), plus 56 whole-product captures across phone, tablet, desktop and TV. The product audit covers home, all class entry states, calendar, preparation and alternatives, parent guidance folded/open, child view, pause, early stop, completion and observation. It found zero horizontal overflow and zero broken images.
 - **Authentication verified:** normal macOS credential-store access with `env -u ANTHROPIC_API_KEY claude auth status` confirms `claude.ai`, subscription `max`. The earlier sandbox-only check could not see this login. Always exclude the API-key override for worker invocations.
-- **Owner decision required:** none for the completed September reconfirmation. October work and any push, PR, merge or deployment remain outside the authorized scope.
-- **Tests completed:** format, lint, typecheck, 414/414 unit tests, content validation, deterministic reports, approval lapse dry-run with 0 lapses, Webpack production build with the three documented fake server sentinels, 28-file client-bundle scan, 41 E2E tests passed (9 production-only skipped), and 152 local pgTAP assertions passed after a disposable database reset. Eight final targeted captures cover the accepted rule wording and square house at phone, tablet, desktop and TV; Astra inspected both contact sheets. The generated reference-data migration matches the canonical approved state.
-- **CI state:** no CI for the unpublished local commits. Latest fetched staging deployment succeeded at `a0b743b`; production deployment succeeded at `28dcb0a`. Historical validation table below must not be read as fresh CI for this branch.
-- **Staging state:** existing deployment unchanged; this review is local only under the owner's earlier explicit instruction.
-- **Production state:** existing public service at `28dcb0a`, unchanged. No release authorization.
-- **Exact next task:** none within the authorized scope. Any publication or October work requires separate owner authorization.
-- **Exact resume point:** 176/176 September lessons are approved and 0 are at `review`. The 27 restored lessons have fresh verified digests; none reuse their prior digest, all 176 current digests are unique, and the 149 unaffected approval records are byte-for-byte unchanged. All 51 media hashes are verified, including the 49 frozen assets. The disposable Supabase stack and local application server are stopped. No push, PR, merge, staging, production, production-data operation or October work occurred.
+- **Owner decision required:** none now. GitHub's required `production` Environment reviewer gate will require the owner's approval after the protected `develop` → `main` promotion is ready.
+- **Tests completed:** fresh release checks pass: format, lint, typecheck, 414/414 unit tests, 31-file content validation, deterministic curriculum/progression/media/review reports, approval lapse dry-run with 0 lapses, Webpack production build with three fake server sentinels, 28-file client-bundle scan, 41 local E2E tests passed (9 production-only skipped), all migrations replayed from scratch, 152 pgTAP/RLS assertions, and portable plus Vercel container builds and smoke tests. The default local Turbopack build reproduces only the documented port-binding `EPERM`; Turbopack succeeds inside both Linux container builds.
+- **CI state:** no CI for the unpublished release commit yet. Latest staging deployment succeeded at `a0b743b`; production succeeded at `28dcb0a`. Branch rules remain active with four required checks on `develop` and those four plus `Promotion source` on `main`; neither branch permits bypass.
+- **Staging state:** existing protected staging deployment remains at `a0b743b`, uses Supabase DEV and returns Vercel Authentication to anonymous requests. The release has not reached staging.
+- **Production state:** existing public production remains healthy at `28dcb0a`, reports `environment=production` and Supabase PROD ref `eganrivpkjhozkkahyxy`. The release has not reached production.
+- **Migration state:** hosted DEV and PROD were current through `20260923192024_september_visual_upgrade.sql`; exactly `20260926173653_september_reconfirmation.sql` is pending. It is generated, idempotent reference-data reconciliation, passed a fresh local replay and contains no schema drop or rename.
+- **Security state:** no tracked `.env*`, no tracked `private/` evidence, GitHub secret scanning and push protection enabled, 28-file client scan clean, staging restricted to `develop`, production restricted to `main`, and the production reviewer gate remains enabled.
+- **Exact next task:** commit this release checkpoint, push `codex/september-astra-visual-review`, create its PR into `develop`, and wait for all four required CI checks before merging.
+- **Exact resume point:** 176/176 September lessons are approved and 0 are at `review`; 176 current digests are unique, none of the 27 fresh digests reuse a prior value, and the 149 unaffected approval records remain byte-for-byte unchanged. Local Supabase and test servers are stopped. Nothing has been pushed, merged or deployed in this release task, and no October work has started.
 
 | ID         | Task                                              | Worker              | State                          | Review     | CI         | Staging  |
 | ---------- | ------------------------------------------------- | ------------------- | ------------------------------ | ---------- | ---------- | -------- |
