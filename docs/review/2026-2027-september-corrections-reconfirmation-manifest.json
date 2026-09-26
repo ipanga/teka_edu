@@ -6,7 +6,21 @@
   "correctionCommit": "259b6ff",
   "checkpointCommit": "b0c4ab3",
   "branch": "codex/september-astra-visual-review",
-  "status": "ready-for-independent-ai-assisted-review",
+  "status": "ready-for-independent-ai-assisted-re-review",
+  "reviewPasses": [
+    {
+      "reviewedOn": "2026-09-26",
+      "reviewer": "Claude Max / Opus",
+      "outcome": "accepted-with-modifications",
+      "acceptedScope": "25 named lessons, the renderer-only change and objet-monnaie",
+      "requiredModifications": [
+        "m1-phys-22-a1: replace the ambiguous phrase ‘tenir la règle’ with ‘respecter la règle’",
+        "forme-maison-composee / m3-math-18-a2: make the wall geometrically square and regenerate the sheet under the canonical asset id"
+      ],
+      "independentlyVerified": true,
+      "approvalRestored": false
+    }
+  ],
   "scope": {
     "totalSeptemberLessons": 176,
     "affectedLessons": 27,
@@ -19,6 +33,7 @@
     "docs/review/2026-2027-maternelle-3-semaines-3-4-reconfirmation.md"
   ],
   "mediaSheet": "docs/review/media/septembre-corrections-media.png",
+  "mediaReferencesDefinition": "For a changed mediaIds field, mediaReferences is the union of the before and after values for audit traceability; after is the final canonical activity value.",
   "globalInvariants": {
     "curriculumProgressionChanged": false,
     "calendarChanged": false,
@@ -45,7 +60,7 @@
       "activityId": "m1-phys-01-a1",
       "activityTitle": "Le jeu et la règle",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -113,7 +128,7 @@
       "activityId": "m1-phys-02-a1",
       "activityTitle": "Je cours",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -181,7 +196,7 @@
       "activityId": "m1-phys-03-a1",
       "activityTitle": "Je cours",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -249,7 +264,7 @@
       "activityId": "m1-phys-04-a1",
       "activityTitle": "Je bouge comme toi",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -317,7 +332,7 @@
       "activityId": "m1-phys-05-a1",
       "activityTitle": "Je cours",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -385,7 +400,7 @@
       "activityId": "m1-phys-06-a1",
       "activityTitle": "Je lance",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -453,7 +468,7 @@
       "activityId": "m1-phys-07-a1",
       "activityTitle": "Je bouge comme toi",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -521,7 +536,7 @@
       "activityId": "m1-phys-08-a1",
       "activityTitle": "Je lance",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -589,7 +604,7 @@
       "activityId": "m1-phys-09-a1",
       "activityTitle": "Je marche sur la ligne",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -657,7 +672,7 @@
       "activityId": "m1-phys-10-a1",
       "activityTitle": "Je cours",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -725,7 +740,7 @@
       "activityId": "m1-phys-11-a1",
       "activityTitle": "Je lance",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -793,7 +808,7 @@
       "activityId": "m1-phys-12-a1",
       "activityTitle": "Je marche sur la ligne",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -861,7 +876,7 @@
       "activityId": "m1-phys-13-a1",
       "activityTitle": "Je bouge comme toi",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -929,7 +944,7 @@
       "activityId": "m1-phys-14-a1",
       "activityTitle": "Je cours",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -997,7 +1012,7 @@
       "activityId": "m1-phys-15-a1",
       "activityTitle": "Je lance",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -1065,7 +1080,7 @@
       "activityId": "m1-phys-16-a1",
       "activityTitle": "Je marche sur la ligne",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -1133,7 +1148,7 @@
       "activityId": "m1-phys-17-a1",
       "activityTitle": "Je bouge comme toi",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -1201,7 +1216,7 @@
       "activityId": "m1-phys-18-a1",
       "activityTitle": "Je cours",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -1269,7 +1284,7 @@
       "activityId": "m1-phys-19-a1",
       "activityTitle": "Je lance",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -1337,7 +1352,7 @@
       "activityId": "m1-phys-20-a1",
       "activityTitle": "Je marche sur la ligne",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -1405,7 +1420,7 @@
       "activityId": "m1-phys-21-a1",
       "activityTitle": "Je bouge comme toi",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "courir",
@@ -1473,7 +1488,7 @@
       "activityId": "m1-phys-22-a1",
       "activityTitle": "Je choisis mon jeu",
       "changedField": "payload",
-      "changeClassification": "renderer metadata / child-visible supporting steps",
+      "changeClassification": "renderer metadata / on-screen supporting steps read by the adult",
       "before": {
         "moves": [
           "choisir son jeu",
@@ -1485,7 +1500,7 @@
         "moves": [
           "choisir son jeu",
           "écouter la règle du jeu choisi",
-          "jouer ensemble en tenant la règle"
+          "jouer ensemble en respectant la règle"
         ]
       },
       "pedagogicalReason": "Make the supporting steps match the approved consolidation task: choose a game, hear its rule, then play together while keeping that rule.",
@@ -1929,7 +1944,7 @@
       "lessonId": "m3-math-18",
       "activityId": "m3-math-18-a2",
       "accessibilityFrenchDescription": "Une maison composée d’un carré pour le mur et d’un triangle pour le toit, avec un disque pour le soleil",
-      "contentHash": "sha256:037e26efa02fd69848b9b0b33024d527c234539939587f35c5fcc85bc249323e",
+      "contentHash": "sha256:5183c91aca97b925a3618a8db130fed3c6f465b7fde1c9828392ed15e82ca02a",
       "styleConfirmation": "Matches the accepted September preschool vector system: warm limited palette, simple silhouette, controlled dark outline, single teaching concept and legibility at 72, 128 and 256 px.",
       "nonMisleadingDetailConfirmation": "One square wall, one triangular roof and one disk sun; no extra door, window, written label or competing geometric model.",
       "decision": {

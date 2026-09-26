@@ -574,7 +574,7 @@ const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] =
     "Une maison composée d’un carré pour le mur et d’un triangle pour le toit, avec un disque pour le soleil",
     ["maison", "carré", "triangle", "disque", "forme"],
     `${ground(100, 180, 76, 7)}
-      <rect x="52" y="92" width="96" height="82" rx="3" fill="${base("clay")}" ${OUTLINE}/>
+      <rect x="59" y="92" width="82" height="82" rx="3" fill="${base("clay")}" ${OUTLINE}/>
       <polygon points="42,94 100,36 158,94" fill="${base("sun")}" ${OUTLINE}/>
       <circle cx="158" cy="42" r="20" fill="${base("sky")}" ${OUTLINE}/>`,
   ],

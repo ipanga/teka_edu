@@ -65,7 +65,7 @@ des comptines, questions de compréhension — sauf là où ils apparaissent ci-
 Pour chaque changement : confirmez qu’il applique bien la correction demandée et qu’il
 n’introduit pas de pédagogie nouvelle.
 
-Si c’est le cas, les semaines 3 et 4 peut retrouver le statut `approved` avec
-`reviewKind: ai-assisted`. Aucune leçon n’est approuvée aujourd’hui.
+Si c’est le cas, les semaines 3 et 4 peuvent retrouver le statut `approved` avec
+`reviewKind: ai-assisted`. Aucune des leçons dont l’approbation a expiré n’est approuvée aujourd’hui.
 
 **Décision :** ☐ reconfirmé ☐ confirmé avec modifications ☐ à revoir

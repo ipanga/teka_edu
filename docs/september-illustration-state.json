@@ -1780,7 +1780,7 @@
       "forme-maison-composee": {
         "group": "C",
         "purpose": "Montrer le modèle exact de la maison à dessiner : mur carré et toit triangulaire.",
-        "quality": "Composition immédiatement lisible, avec un carré et un triangle dominants ; aucun rectangle ou disque présenté comme élément à reproduire.",
+        "quality": "Composition immédiatement lisible, avec un carré et un triangle dominants ; le mur est désormais un carré géométrique de 82 × 82 unités.",
         "importance": "high",
         "reason": "Créée pour remplacer les quatre formes isolées qui ne modélisaient pas la maison de m3-math-18-a2."
       }
@@ -2044,7 +2044,7 @@
       "plante-parties": "sha256:a42b3838f45e10f4102964ee5733a71493be6401eedc63ad2f767a853757e5af",
       "bonhomme-articule": "sha256:2308800c0f13fc6c770cdfc2f19bd0ee0102da28398182001a8533882a1351ce",
       "objet-monnaie": "sha256:fed6b6600180e86f583121cd1ec85647959e4787c08e670d074a30c3f12fb019",
-      "forme-maison-composee": "sha256:037e26efa02fd69848b9b0b33024d527c234539939587f35c5fcc85bc249323e"
+      "forme-maison-composee": "sha256:5183c91aca97b925a3618a8db130fed3c6f465b7fde1c9828392ed15e82ca02a"
     },
     "resumePoint": "Correction batch in progress on 2026-09-26: two new media assets are visually QA-passed and frozen; affected lesson approvals must remain lapsed until the mixed content/media reconfirmation is explicitly accepted."
   }

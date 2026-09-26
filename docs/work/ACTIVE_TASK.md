@@ -111,15 +111,16 @@ September Visual Experience Review — GPT Astra
 - **Integrity check:** 27 unique records; 149 lessons approved and 27 at review; every affected `review` is
   null; 0 additional stale approvals; all unaffected approval records match `aa111b5`; both new media hashes
   match the registry; all 49 prior media hashes are unchanged. No fresh digest exists or was computed.
-- **Decision state:** pending independent AI-assisted review. Technical validation remains evidence only and
-  is explicitly not treated as pedagogical acceptance. No review-history entry or approval restoration made.
-- **Exact resume point:** record the independent verdict and rationale. On `accepted`, follow the existing
-  review-history and approval mechanism for only the named lessons, then verify fresh digests and unchanged
-  unaffected approvals. On `accepted-with-modifications` or `rejected`, keep the relevant lessons at review.
-- **External reviewer invocation:** blocked by automatic approval review on 2026-09-26 before transmission.
-  No dossier file was sent. The next action is a fresh owner authorization that explicitly names Anthropic
-  Claude Max as the destination and the exact five files above as the payload; then rerun the isolated,
-  read-only review from `/private/tmp/teka-september-reconfirmation-review`.
+- **Decision state:** Claude Max / Opus pass 1 returned `accepted-with-modifications`. Technical validation
+  remains evidence only and is explicitly not treated as final pedagogical acceptance. No review-history
+  acceptance entry or approval restoration has been made.
+- **Verified corrections:** `m1-phys-22-a1` now says « respecter la règle »; the
+  `forme-maison-composee` wall is 82 × 82; the contact sheet uses the canonical ID. Targeted validation
+  passes (36 tests, content validation, approval lapse dry-run); 149 lessons remain approved and 27 at
+  `review`, with unaffected approval records unchanged.
+- **Exact current resume point:** the same five-file dossier is regenerated for a final isolated Claude Max
+  re-review. Only an explicit final `accepted` verdict permits recording full-review acceptance and restoring
+  the 27 lapsed approvals with fresh digests.
 
 ## VIS-QA-01 checkpoint — 2026-09-25 (Claude Code worker)
 

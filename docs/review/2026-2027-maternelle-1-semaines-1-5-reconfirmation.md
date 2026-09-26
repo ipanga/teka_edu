@@ -273,7 +273,7 @@ l’empreinte (`reviewedDigest`) doit produire quand le texte relu change.
 
 **Après :**
 
-> {"moves":["choisir son jeu","écouter la règle du jeu choisi","jouer ensemble en tenant la règle"]}
+> {"moves":["choisir son jeu","écouter la règle du jeu choisi","jouer ensemble en respectant la règle"]}
 
 ## Ce qui n’a pas changé
 
@@ -287,7 +287,7 @@ des comptines, questions de compréhension — sauf là où ils apparaissent ci-
 Pour chaque changement : confirmez qu’il applique bien la correction demandée et qu’il
 n’introduit pas de pédagogie nouvelle.
 
-Si c’est le cas, les semaines 1, 2, 3, 4 et 5 peut retrouver le statut `approved` avec
-`reviewKind: ai-assisted`. Aucune leçon n’est approuvée aujourd’hui.
+Si c’est le cas, les semaines 1, 2, 3, 4 et 5 peuvent retrouver le statut `approved` avec
+`reviewKind: ai-assisted`. Aucune des leçons dont l’approbation a expiré n’est approuvée aujourd’hui.
 
 **Décision :** ☐ reconfirmé ☐ confirmé avec modifications ☐ à revoir

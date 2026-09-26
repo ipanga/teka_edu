@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { readFileSync } from "node:fs";
 import { getReferenceData } from "@/lib/content/reference-data";
 
 const data = getReferenceData();
@@ -41,7 +42,7 @@ describe("the bounded September pedagogical and media corrections", () => {
       if (/ligne/i.test(current.childInstruction))
         expect(moves, current.id).toMatch(/ligne.*adulte.*seul.*envie/i);
       if (/jeu que tu préfères/i.test(current.childInstruction))
-        expect(moves, current.id).toMatch(/choisir.*règle.*jouer/i);
+        expect(moves, current.id).toMatch(/choisir.*règle.*jouer.*respectant la règle/i);
     }
   });
 
@@ -88,5 +89,9 @@ describe("the bounded September pedagogical and media corrections", () => {
     expect(corrected.mediaIds).toEqual(["forme-maison-composee"]);
     const model = data.media.find((asset) => asset.id === "forme-maison-composee")!;
     expect(model.alt).toMatch(/carré pour le mur.*triangle pour le toit/i);
+    const svg = readFileSync(`public/media/${model.file}`, "utf8");
+    const wall = svg.match(/<rect[^>]*width="([\d.]+)"[^>]*height="([\d.]+)"/);
+    expect(wall).not.toBeNull();
+    expect(Number(wall![1])).toBe(Number(wall![2]));
   });
 });
