@@ -1425,8 +1425,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "8f9822d3c5c6207b",
+        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m3-lang-13",
@@ -1548,8 +1556,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "7bedc9cf8cca00bf",
+        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m3-lang-14",

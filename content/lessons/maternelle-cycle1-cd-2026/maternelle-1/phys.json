@@ -47,8 +47,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "1ad97c39ab5c4c89",
+        "notes": "Semaine 1 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-02",
@@ -94,8 +102,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "c02cb0a6522bda14",
+        "notes": "Semaine 1 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-03",
@@ -141,8 +157,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "fda5965b534382b3",
+        "notes": "Semaine 1 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-04",
@@ -188,8 +212,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "38c2a4a402e9d71a",
+        "notes": "Semaine 1 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-05",
@@ -235,8 +267,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "ef3eb1675720680f",
+        "notes": "Semaine 2 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-06",
@@ -282,8 +322,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "bef80f59a6346f05",
+        "notes": "Semaine 2 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-07",
@@ -329,8 +377,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "5f721a63605454a3",
+        "notes": "Semaine 2 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-08",
@@ -376,8 +432,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "e579b6fa1f2a9c22",
+        "notes": "Semaine 2 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-09",
@@ -423,8 +487,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "9a3246700aa097a6",
+        "notes": "Semaine 2 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-10",
@@ -470,8 +542,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "cb3b3530aae9ac88",
+        "notes": "Semaine 3 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-11",
@@ -517,8 +597,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "2aec4137ea46115f",
+        "notes": "Semaine 3 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-12",
@@ -564,8 +652,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "ac3ac5fee479e8fa",
+        "notes": "Semaine 3 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-13",
@@ -611,8 +707,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "82154094693b1720",
+        "notes": "Semaine 3 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-14",
@@ -658,8 +762,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "0d04e448366e2648",
+        "notes": "Semaine 3 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-15",
@@ -705,8 +817,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "8eda122f56a1bc57",
+        "notes": "Semaine 4 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-16",
@@ -752,8 +872,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "a4d3fc137b29870b",
+        "notes": "Semaine 4 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-17",
@@ -799,8 +927,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "5efa4673626eb5db",
+        "notes": "Semaine 4 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-18",
@@ -846,8 +982,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "e300849d2da2bc09",
+        "notes": "Semaine 4 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-19",
@@ -893,8 +1037,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "a19999707e10a6b6",
+        "notes": "Semaine 4 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-20",
@@ -940,8 +1092,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "bb3d9d559223de75",
+        "notes": "Semaine 5 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-21",
@@ -987,8 +1147,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "57d90b2d8aaf9029",
+        "notes": "Semaine 5 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-phys-22",
@@ -1034,8 +1202,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-26",
+        "reviewedDigest": "2ddecdb4759b5472",
+        "notes": "Semaine 5 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     }
   ]
 }

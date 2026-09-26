@@ -5,10 +5,10 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-09-24
-Branch:     develop (records), main at 28dcb0a
-Commit:     main 28dcb0a (September visual upgrade, live); develop 22d7b3a + this record
-Updated by: Claude Code (claude-opus-5-5)
+Date:       2026-09-26
+Branch:     codex/september-astra-visual-review (local only), main at 28dcb0a
+Commit:     local checkpoint pending; latest durable checkpoint a8a9d49
+Updated by: Codex / independent Claude Max review
 ```
 
 ## Independent September visual/UX review — 2026-09-26
@@ -31,14 +31,18 @@ already supersedes the original 23 KEEP / 10 REFINE / 16 REDRAW recommendation: 
 The owner authorized the bounded correction batch. Explicit off-screen mode now prevents generic counters,
 graded choices and sorting praise from replacing the approved real-world tasks. The two round/square sorts,
 all 22 1ère movement payloads, the missing spoken sorting words, « la monnaie » card and composed house model
-are corrected. Exactly 27 affected approvals were lapsed and remain at review; two mixed reconfirmation
-packages await an independent decision. Local validation passes with 414 unit tests, 41 E2E tests and fresh
-phone/tablet/desktop/TV evidence. Owner selected local only: no push, PR, staging or production change.
-The owner then gave exact payload-and-destination authorization. Claude Max / Opus returned
-`accepted-with-modifications`: 25 lessons, the renderer-only change and `objet-monnaie` were accepted;
-`m1-phys-22-a1` needed clearer French and the house model needed a geometrically square wall. Both
-findings were independently verified and corrected. The minimum evidence is regenerated for a final
-independent re-review. All 27 lessons remain at `review`; no approval or digest has been restored.
+are corrected. Claude Max / Opus first returned `accepted-with-modifications`: `m1-phys-22-a1` needed clearer
+French and the house model needed a geometrically square wall. Both findings were independently verified and
+corrected. Its final isolated review explicitly accepted all 27 lessons, the renderer-only change and both
+assets with no further modification. Seven full-review entries were recorded and the repository mechanism
+restored exactly 27 approvals with fresh digests. September is now 176 approved / 0 review; none of the fresh
+digests reuse a prior value and all 149 unaffected approval records remain byte-for-byte unchanged.
+
+Local validation passes with format, lint, typecheck, 414 unit tests, content validation, a Webpack production
+build, a 28-file client-bundle scan, 41 E2E tests (9 production-only skipped), and 152 pgTAP assertions after a
+disposable database reset. Eight final phone/tablet/desktop/TV captures verify the corrected rule wording and
+square house. The generated migration mirrors the accepted canonical state. The owner selected local only:
+no push, PR, merge, staging, production, production-data operation or October work occurred.
 Older phase summaries below are historical and may predate the September production release.
 
 ## Current Phase
@@ -875,3 +879,22 @@ Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, a
   approvals, all unaffected approval records unchanged from `aa111b5`, and no fresh digest computed or stored.
 - State is unambiguous: ready for an independent ChatGPT decision. No accepted review entry, approval
   restoration, content change, push, PR, deployment, production-data operation or October work occurred.
+
+### 2026-09-26 — September independent reconfirmation accepted (local)
+
+- Under the owner's exact five-file authorization, Claude Max / Opus independently reviewed the bounded
+  dossier. Pass 1 returned `accepted-with-modifications`; Astra verified and corrected the ambiguous rule
+  wording and non-square house wall. The final isolated pass explicitly accepted all 27 lessons, the
+  renderer-only presentation change and both new assets with no further modification.
+- Recorded seven full-review AI-assisted acceptance entries for 1ère maternelle weeks 1–5 and 3ème
+  maternelle weeks 3–4. The standard lapsed-only approval command restored exactly 27 lessons.
+- September now has 176 approved lessons and 0 at `review`. Every restored digest is fresh and verified,
+  no restored digest reuses its prior value, all 176 current digests are unique, and all 149 unaffected
+  approval records are byte-for-byte unchanged.
+- Generated `supabase/migrations/20260926173653_september_reconfirmation.sql`; a disposable local database
+  reset and all 152 pgTAP assertions pass. The local Supabase stack was stopped afterward.
+- Final local checks pass: format, lint, typecheck, 414 unit tests, content validation, deterministic reports,
+  Webpack production build, 28-file client-bundle secret scan and 41 E2E tests (9 production-only skipped).
+  Eight final captures verify the corrected rule wording and square house at phone, tablet, desktop and TV.
+- The default Turbopack build retains the known local port-binding `EPERM`; the Webpack production build
+  succeeds. No push, PR, merge, staging, production, production-data operation or October work occurred.

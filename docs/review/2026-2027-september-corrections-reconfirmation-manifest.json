@@ -7,7 +7,7 @@
   "reconfirmationCorrectionCommit": "52419a3",
   "checkpointCommit": "b0c4ab3",
   "branch": "codex/september-astra-visual-review",
-  "status": "ready-for-independent-ai-assisted-re-review",
+  "status": "accepted-and-approvals-restored",
   "reviewPasses": [
     {
       "reviewedOn": "2026-09-26",
@@ -20,13 +20,22 @@
       ],
       "independentlyVerified": true,
       "approvalRestored": false
+    },
+    {
+      "reviewedOn": "2026-09-26",
+      "reviewer": "Claude Max / Opus",
+      "outcome": "accepted",
+      "acceptedScope": "all 27 named lessons, the renderer-only change, objet-monnaie and forme-maison-composee",
+      "requiredModifications": [],
+      "independentlyVerified": true,
+      "approvalRestored": true
     }
   ],
   "scope": {
     "totalSeptemberLessons": 176,
     "affectedLessons": 27,
-    "approved": 149,
-    "review": 27,
+    "approved": 176,
+    "review": 0,
     "additionalStaleApprovals": 0
   },
   "sourcePackages": [
@@ -102,18 +111,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "6cccc6de1581a42e",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "1ad97c39ab5c4c89"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [],
       "learningObjectiveCodes": [
@@ -170,18 +181,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "070bbe0aedee29e2",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "c02cb0a6522bda14"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [],
       "learningObjectiveCodes": [
@@ -236,18 +249,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "1650cad1dfb7c8d5",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "fda5965b534382b3"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "PHYS-S01-C01-O02"
@@ -306,18 +321,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "0f061f6c2df8d2ce",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "38c2a4a402e9d71a"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [],
       "learningObjectiveCodes": [
@@ -372,18 +389,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "4876f8d5c08fe3d1",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "ef3eb1675720680f"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "PHYS-S01-C01-O02"
@@ -442,18 +461,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "c0d7e8d0e9d070da",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "bef80f59a6346f05"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [],
       "learningObjectiveCodes": [
@@ -508,18 +529,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "57e08d076efdcfaf",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "5f721a63605454a3"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "PHYS-S03-C01-O01"
@@ -576,18 +599,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "368f690b06a2e5eb",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "e579b6fa1f2a9c22"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "PHYS-S01-C01-O01"
@@ -646,18 +671,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "2c0c1df6137e349e",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "9a3246700aa097a6"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [],
       "learningObjectiveCodes": [
@@ -712,18 +739,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "e5ca525846e24f72",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "cb3b3530aae9ac88"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "PHYS-S01-C01-O02"
@@ -780,18 +809,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "83dd807a21bdc69e",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "2aec4137ea46115f"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "PHYS-S01-C01-O01"
@@ -848,18 +879,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "2e2ed7c89bff07b2",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "ac3ac5fee479e8fa"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "PHYS-S02-C01-O01"
@@ -916,18 +949,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "3563841c80dd168c",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "82154094693b1720"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "PHYS-S03-C01-O01"
@@ -984,18 +1019,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "3f09acd0d76a1152",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "0d04e448366e2648"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "PHYS-S01-C01-O02"
@@ -1052,18 +1089,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "33f010d2947c4116",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "8eda122f56a1bc57"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "PHYS-S01-C01-O01"
@@ -1120,18 +1159,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "7be8dcf3d0680aa3",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "a4d3fc137b29870b"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "PHYS-S02-C01-O01"
@@ -1188,18 +1229,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "0cc389173b6d53bf",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "5efa4673626eb5db"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "PHYS-S03-C01-O01"
@@ -1256,18 +1299,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "4ea3157f08fa4037",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "e300849d2da2bc09"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "PHYS-S01-C01-O02"
@@ -1324,18 +1369,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "56f5c1d52db059d5",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "a19999707e10a6b6"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "PHYS-S01-C01-O01"
@@ -1392,18 +1439,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "1451929196bfd88d",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "bb3d9d559223de75"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "PHYS-S02-C01-O01"
@@ -1460,18 +1509,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "e2e1eb715f6900dd",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "57d90b2d8aaf9029"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "PHYS-S03-C01-O01"
@@ -1528,18 +1579,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "21b1d5f00040376a",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "2ddecdb4759b5472"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "PHYS-S04-C01-O03"
@@ -1595,18 +1648,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "ceeb99989e33c974",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "c43bc95e58b85cbc"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "MATH-S03-C01-O01"
@@ -1662,18 +1717,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "bdc85728e0fc65f4",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "8ca836ce801418dc"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "MATH-S03-C01-O01"
@@ -1740,18 +1797,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "83147d036337f033",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "8f9822d3c5c6207b"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "TIME-SPACE-S01-C01-O12",
@@ -1816,18 +1875,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "9a156a830b781cfb",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "7bedc9cf8cca00bf"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "TIME-SPACE-S01-C01-O12",
@@ -1891,18 +1952,20 @@
       "approvalImpact": {
         "previousStatus": "approved",
         "previousReviewedDigest": "e5d1f8ce7a53270e",
-        "currentStatus": "review",
-        "currentReview": null,
-        "freshDigest": "not computed or stored; permitted only after an accepted independent decision"
+        "currentStatus": "approved",
+        "currentReview": {
+          "reviewKind": "ai-assisted",
+          "outcome": "accepted",
+          "reviewer": "Claude Max / Opus",
+          "reviewedOn": "2026-09-26"
+        },
+        "freshDigest": "2a0571d056534784"
       },
       "reviewDecision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ],
-        "reviewerRationaleRequired": true
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26",
+        "rationale": "Final re-review accepted the corrected material after both requested modifications."
       },
       "supportingObjectiveCodes": [
         "MATH-S03-C01-O07",
@@ -1928,12 +1991,9 @@
       "styleConfirmation": "Matches the accepted September preschool vector system: warm limited palette, simple silhouette, controlled dark outline, single teaching concept and legibility at 72, 128 and 256 px.",
       "nonMisleadingDetailConfirmation": "Two generic banknotes and one coin; no numeral, denomination, currency name, flag, logo or exchange calculation.",
       "decision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ]
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26"
       }
     },
     {
@@ -1949,12 +2009,9 @@
       "styleConfirmation": "Matches the accepted September preschool vector system: warm limited palette, simple silhouette, controlled dark outline, single teaching concept and legibility at 72, 128 and 256 px.",
       "nonMisleadingDetailConfirmation": "One square wall, one triangular roof and one disk sun; no extra door, window, written label or competing geometric model.",
       "decision": {
-        "status": "pending-independent-review",
-        "allowed": [
-          "accepted",
-          "accepted-with-modifications",
-          "rejected"
-        ]
+        "status": "accepted",
+        "reviewer": "Claude Max / Opus",
+        "reviewedOn": "2026-09-26"
       }
     }
   ],
@@ -1968,5 +2025,12 @@
       "separate verdict for each new media asset"
     ],
     "approvalRule": "No approval may be restored until an accepted decision is recorded. Accepted-with-modifications and rejected items remain at review."
+  },
+  "submittedArtifactHashes": {
+    "docs/review/2026-2027-september-corrections-reconfirmation-brief.md": "sha256:fb09b4b34058b6a2719baf68a97e347202d586b44727559d3a1abe13b93b6d6e",
+    "docs/review/2026-2027-maternelle-1-semaines-1-5-reconfirmation.md": "sha256:a1c2a245d7f91fe1c729e8a98027d0d4f8496e83515af4ae594a959de5ff4c20",
+    "docs/review/2026-2027-maternelle-3-semaines-3-4-reconfirmation.md": "sha256:34dd34d35370847329012e55284bac2c939cf1b88f2ac18083759e6bdd28674a",
+    "docs/review/2026-2027-september-corrections-reconfirmation-manifest.json": "sha256:10b3c77c0daafb33bb5b54783699d95f1096ebbad9a4ffcb2ebaa7e3f750db97",
+    "docs/review/media/septembre-corrections-media.png": "sha256:87f7af6a3f14a5c9bb51d156179e732a3abce148e3c0d5b57081468215debb2b"
   }
 }

@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 2 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 3 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-15 — ChatGPT · `accepted` (ai-assisted)
@@ -67,6 +67,12 @@ Mise à niveau visuelle de septembre (ADR-048) : 41 images ont été redessinée
 Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2027-maternelle-1-reconfirmation-visuelle.md et la planche docs/review/media/septembre-avant-apres.png, générés après le gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION. Décision : accepted. Les illustrations redessinées sont jugées suffisamment claires, cohérentes et adaptées à l’âge ; les images du corps et des histoires qui étaient faibles ont été corrigées ; les huit formes géométriques restent inchangées, à juste titre ; aucun texte pédagogique, objectif, progression, programme ou calendrier n’appelle de nouvelle relecture.
 
 **Suites données :** Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées.
+
+### 2026-09-26 — Claude Max / Opus · `accepted` (ai-assisted)
+
+Reconfirmation pédagogique ciblée des 27 leçons affectées par les corrections de septembre. La première passe indépendante a conclu accepted-with-modifications : 25 leçons, le changement de renderer et objet-monnaie étaient acceptés ; m1-phys-22-a1 demandait une formulation française plus claire et forme-maison-composee un mur géométriquement carré avec une planche correctement identifiée. Après vérification indépendante et correction minimale, la seconde passe a conclu accepted pour les 27 leçons, les deux médias et le changement de renderer. Objectifs, progression, durées et sécurité sont inchangés.
+
+**Suites données :** m1-phys-22-a1 dit désormais « jouer ensemble en respectant la règle ». Le mur de forme-maison-composee mesure 82 × 82 unités et la planche porte l’identifiant canonique. Aucune autre correction demandée. Les approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
 
 ## Jour 5 — 2026-09-07
 
@@ -256,7 +262,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -553,7 +559,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
   - `PHYS-S01-C01-O01` — Manipuler et lancer des objets avec des intentions motrices différentes. _(source : programme-2026)_
@@ -828,7 +834,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1107,7 +1113,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1405,7 +1411,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger tous les jours, avec une règle simple et de la place._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Six minutes de mouvement, dehors si possible. Dégagez l’espace avec l’enfant avant de commencer : c’est déjà l’activité.
 - **Objectifs enseignés :**
   - `PHYS-S02-C01-O01` — Développer de nouveaux équilibres par des modes de déplacement variés. _(source : programme-2026)_

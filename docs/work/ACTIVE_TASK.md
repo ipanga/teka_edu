@@ -4,31 +4,31 @@
 
 September Visual Experience Review — GPT Astra
 
-**Current phase:** September reconfirmation material is complete and ready for an independent AI-assisted reviewer; 27 approvals remain lapsed pending that decision.
+**Current phase:** September reconfirmation is complete. The independent AI-assisted reviewer accepted the corrected material, and all 27 affected approvals were restored with fresh digests.
 
 ## Supervisor handoff — 2026-09-26
 
-- **Task status:** READY_FOR_INDEPENDENT_RECONFIRMATION. The completed audit remains closed. The reviewer dossier is complete; no approval was restored and no pedagogical decision has been inferred.
+- **Task status:** COMPLETE_LOCAL. The completed audit remains closed. Claude Max / Opus explicitly accepted all 27 affected lessons, the renderer-only change and both new assets after the two requested corrections were independently verified and applied.
 - **Supervisor:** Astra; **worker:** Claude Code CLI 2.1.282, installed at `/Users/Apple/.local/bin/claude`; ready to launch with Max authentication.
-- **Current branch:** `codex/september-astra-visual-review`; **current durable checkpoint:** `c114777` (`Prepare September reconfirmation dossier`).
+- **Current branch:** `codex/september-astra-visual-review`; **current durable checkpoint:** `a8a9d49` (`Record September re-review checkpoint`), with the accepted review, approval restoration and final validation prepared for the next local checkpoint commit.
 - **Base commit / refreshed develop:** `a0b743b`; **refreshed main:** `28dcb0a`. Fetch completed on 2026-09-25. The dossier checkpoint is thirty-five local commits ahead of the feature remote; no PR was created because the owner selected local-only work.
 - **Completed:** existing audit inventory, initial phone/TV review, all 1,002 noninitial viewport reviews, UI fixes, 1,606-state scroll capture. Preserve existing evidence; do not restart.
 - **Completed audit:** all 165 scroll sheets and all 266 initial sheets (431 sheets / 1,208 initial panels), plus 56 whole-product captures across phone, tablet, desktop and TV. The product audit covers home, all class entry states, calendar, preparation and alternatives, parent guidance folded/open, child view, pause, early stop, completion and observation. It found zero horizontal overflow and zero broken images.
 - **Authentication verified:** normal macOS credential-store access with `env -u ANTHROPIC_API_KEY claude auth status` confirms `claude.ai`, subscription `max`. The earlier sandbox-only check could not see this login. Always exclude the API-key override for worker invocations.
-- **Owner decision required:** send the five-file review set named below to an independent ChatGPT reviewer and return its explicit `accepted`, `accepted-with-modifications`, or `rejected` decision with rationale. Until then, all 27 lessons stay at `review`.
-- **Tests completed:** format, lint, typecheck, 414/414 unit tests, 31-file content validation, deterministic reports and pgTAP mirror, approval dry-run with 0 further lapses, Webpack production build with the three documented fake server sentinels, 28-file client-bundle scan and the full local browser suite (41 passed, 9 production-only skipped). Sixteen fresh targeted captures cover the corrected states at phone, tablet, desktop and TV; Astra inspected all four contact sheets. No database migration was made; Docker was not relevant to this renderer/content/media-only batch.
+- **Owner decision required:** none for the completed September reconfirmation. October work and any push, PR, merge or deployment remain outside the authorized scope.
+- **Tests completed:** format, lint, typecheck, 414/414 unit tests, content validation, deterministic reports, approval lapse dry-run with 0 lapses, Webpack production build with the three documented fake server sentinels, 28-file client-bundle scan, 41 E2E tests passed (9 production-only skipped), and 152 local pgTAP assertions passed after a disposable database reset. Eight final targeted captures cover the accepted rule wording and square house at phone, tablet, desktop and TV; Astra inspected both contact sheets. The generated reference-data migration matches the canonical approved state.
 - **CI state:** no CI for the unpublished local commits. Latest fetched staging deployment succeeded at `a0b743b`; production deployment succeeded at `28dcb0a`. Historical validation table below must not be read as fresh CI for this branch.
 - **Staging state:** existing deployment unchanged; this review is local only under the owner's earlier explicit instruction.
 - **Production state:** existing public service at `28dcb0a`, unchanged. No release authorization.
-- **Exact next task:** give the independent reviewer the reviewer brief, both generated before/after packages, structured manifest and two-asset media sheet. Record the returned decision verbatim; only an explicit acceptance permits the existing approval command on the named lapsed lessons.
-- **Exact resume point:** the review material is ready and locally verified: 27/27 lesson records, 2/2 media records, 149 approved, 27 review, 0 additional stale approvals, 49 prior media hashes unchanged and all unaffected approval records unchanged. Do not alter or regenerate content while awaiting the decision. No push, PR, deployment or approval stamping has occurred.
+- **Exact next task:** checkpoint the accepted review and restored approvals locally, then stop. Any publication or October work requires separate owner authorization.
+- **Exact resume point:** 176/176 September lessons are approved and 0 are at `review`. The 27 restored lessons have fresh verified digests; none reuse their prior digest, all 176 current digests are unique, and the 149 unaffected approval records are byte-for-byte unchanged. All 51 media hashes are verified, including the 49 frozen assets. The disposable Supabase stack and local application server are stopped. No push, PR, merge, staging, production, production-data operation or October work occurred.
 
-| ID         | Task                                              | Worker              | State                          | Review           | CI         | Staging  |
-| ---------- | ------------------------------------------------- | ------------------- | ------------------------------ | ---------------- | ---------- | -------- |
-| VIS-QA-01  | Review September screenshots and product journey  | Claude Code / Astra | Complete (487 sheets/captures) | Astra pass       | Local only | Withheld |
-| VIS-FIX-01 | Child count reset returns to the instruction      | Claude Code         | Implemented and verified       | Astra pass       | Local only | Withheld |
-| VIS-FIX-02 | Safe renderer and parent-flow corrections         | Astra               | Implemented and verified       | Astra pass       | Local only | Withheld |
-| VIS-PED    | Bounded pedagogical/media correctness corrections | Astra / Claude Code | Reconfirmation dossier ready   | Decision pending | Local pass | Withheld |
+| ID         | Task                                              | Worker              | State                          | Review     | CI         | Staging  |
+| ---------- | ------------------------------------------------- | ------------------- | ------------------------------ | ---------- | ---------- | -------- |
+| VIS-QA-01  | Review September screenshots and product journey  | Claude Code / Astra | Complete (487 sheets/captures) | Astra pass | Local only | Withheld |
+| VIS-FIX-01 | Child count reset returns to the instruction      | Claude Code         | Implemented and verified       | Astra pass | Local only | Withheld |
+| VIS-FIX-02 | Safe renderer and parent-flow corrections         | Astra               | Implemented and verified       | Astra pass | Local only | Withheld |
+| VIS-PED    | Bounded pedagogical/media correctness corrections | Astra / Claude Code | Complete; approvals restored   | Accepted   | Local pass | Withheld |
 
 ## VIS-PED design checkpoint — 2026-09-26
 
@@ -123,6 +123,30 @@ September Visual Experience Review — GPT Astra
   the 27 lapsed approvals with fresh digests.
 - **Correction checkpoint:** `52419a3` (`Apply September reconfirmation corrections`). Nothing is running;
   the worktree is clean before the final dossier metadata checkpoint.
+
+## Independent reconfirmation completion checkpoint — 2026-09-26
+
+- **Reviewer result:** Claude Max / Opus returned an explicit final `accepted` verdict for all 27 lessons,
+  the renderer-only presentation change, `objet-monnaie` and `forme-maison-composee`. It requested no further
+  modification. Its earlier two requested corrections were the clearer « respecter la règle » wording and a
+  geometrically square house wall; Astra independently verified both defects and the final corrections.
+- **Review record:** seven full-review AI-assisted acceptance entries cover 1ère maternelle weeks 1–5 and
+  3ème maternelle weeks 3–4. The repository's lapsed-only approval command restored exactly 27 lessons.
+- **Digest integrity:** 176 lessons are approved and 0 remain at `review`; the 27 restored lessons have fresh
+  digests, no fresh digest equals its previous value, all 176 current digests are unique, and the 149
+  unaffected approval records are byte-for-byte unchanged.
+- **Database mirror:** generated `supabase/migrations/20260926173653_september_reconfirmation.sql`, reset the
+  disposable local database and passed all 152 pgTAP assertions. The local Supabase stack was then stopped.
+- **Final validation:** format, lint, typecheck, 414 unit tests, content validation, deterministic generated
+  packages and reports, Webpack production build, 28-file client-bundle secret scan, 41 local E2E tests
+  (9 production-only skipped), approval lapse dry-run with 0 lapses, and 152 pgTAP assertions pass. The default
+  Turbopack build still encounters the known local port-binding `EPERM`; the Webpack production build passes.
+- **Visual verification:** eight final captures at 390×844, 768×1024, 1440×900 and 1920×1080 confirm the
+  corrected rule wording and square house without horizontal overflow, clipping, overlap or broken media.
+- **Environment:** local only and stopped. No push, PR, merge, staging, production, production-data operation
+  or October work occurred. No owner decision is required for this completed task.
+- **Exact resume point:** September is fully approved at 176/176 after independent reconfirmation. The next
+  action is only one separately authorized by the owner; do not restart the completed audit or reconfirmation.
 
 ## VIS-QA-01 checkpoint — 2026-09-25 (Claude Code worker)
 
