@@ -1322,9 +1322,229 @@
         "m1-world-20-a1"
       ],
       "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-031.png",
+      "activities": [
+        "m3-lang-15-a2",
+        "m3-lang-15-a3",
+        "m3-math-15-a1",
+        "m3-math-15-a2",
+        "m3-phys-15-a1",
+        "m3-world-05-a1",
+        "m3-world-05-a2",
+        "m3-lang-16-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-032.png",
+      "activities": [
+        "m3-lang-16-a2",
+        "m3-lang-16-a3",
+        "m3-math-16-a1",
+        "m3-math-16-a2",
+        "m3-phys-16-a1",
+        "m3-time-06-a1",
+        "m3-time-06-a2",
+        "m3-lang-17-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-033.png",
+      "activities": [
+        "m3-lang-17-a2",
+        "m3-lang-17-a3",
+        "m3-math-17-a1",
+        "m3-math-17-a2",
+        "m3-phys-17-a1",
+        "m3-art-06-a1",
+        "m3-lang-18-a1",
+        "m3-lang-18-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-034.png",
+      "activities": [
+        "m3-lang-18-a3",
+        "m3-math-18-a1",
+        "m3-math-18-a2",
+        "m3-phys-18-a1",
+        "m3-time-07-a1",
+        "m3-time-07-a2",
+        "m3-lang-19-a1",
+        "m3-lang-19-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "large-phone/large-phone-035.png",
+      "activities": [
+        "m3-lang-19-a3",
+        "m3-math-19-a1",
+        "m3-math-19-a2",
+        "m3-phys-19-a1",
+        "m3-world-06-a1",
+        "m3-world-06-a2",
+        "m3-lang-20-a1",
+        "m3-lang-20-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-031.png",
+      "activities": [
+        "m1-lang-21-a1",
+        "m1-lang-21-a2",
+        "m1-lang-21-a3",
+        "m1-math-21-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-032.png",
+      "activities": [
+        "m1-phys-21-a1",
+        "m1-time-21-a1",
+        "m1-lang-22-a1",
+        "m1-lang-22-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-033.png",
+      "activities": [
+        "m1-lang-22-a3",
+        "m1-math-22-a1",
+        "m1-phys-22-a1",
+        "m1-world-22-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-034.png",
+      "activities": [
+        "m3-lang-01-a1",
+        "m3-lang-01-a2",
+        "m3-lang-01-a3",
+        "m3-math-01-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-portrait/tablet-portrait-035.png",
+      "activities": [
+        "m3-math-01-a2",
+        "m3-phys-01-a1",
+        "m3-world-01-a1",
+        "m3-world-01-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-031.png",
+      "activities": [
+        "m1-lang-21-a1",
+        "m1-lang-21-a2",
+        "m1-lang-21-a3",
+        "m1-math-21-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-032.png",
+      "activities": [
+        "m1-phys-21-a1",
+        "m1-time-21-a1",
+        "m1-lang-22-a1",
+        "m1-lang-22-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-033.png",
+      "activities": [
+        "m1-lang-22-a3",
+        "m1-math-22-a1",
+        "m1-phys-22-a1",
+        "m1-world-22-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-034.png",
+      "activities": [
+        "m3-lang-01-a1",
+        "m3-lang-01-a2",
+        "m3-lang-01-a3",
+        "m3-math-01-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "tablet-landscape/tablet-landscape-035.png",
+      "activities": [
+        "m3-math-01-a2",
+        "m3-phys-01-a1",
+        "m3-world-01-a1",
+        "m3-world-01-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-031.png",
+      "activities": [
+        "m1-lang-21-a1",
+        "m1-lang-21-a2",
+        "m1-lang-21-a3",
+        "m1-math-21-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-032.png",
+      "activities": [
+        "m1-phys-21-a1",
+        "m1-time-21-a1",
+        "m1-lang-22-a1",
+        "m1-lang-22-a2"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-033.png",
+      "activities": [
+        "m1-lang-22-a3",
+        "m1-math-22-a1",
+        "m1-phys-22-a1",
+        "m1-world-22-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-034.png",
+      "activities": [
+        "m3-lang-01-a1",
+        "m3-lang-01-a2",
+        "m3-lang-01-a3",
+        "m3-math-01-a1"
+      ],
+      "reviewed": true
+    },
+    {
+      "sheet": "desktop/desktop-035.png",
+      "activities": [
+        "m3-math-01-a2",
+        "m3-phys-01-a1",
+        "m3-world-01-a1",
+        "m3-world-01-a2"
+      ],
+      "reviewed": true
     }
   ],
-  "initialPanelsReviewed": 600,
+  "initialPanelsReviewed": 700,
   "scrollSheets": [
     {
       "sheet": "scroll/scroll-001.png",
@@ -2880,7 +3100,10 @@
     "Initial sheets 026–030 across all four viewports: all one hundred panels independently inspected by Astra after the bounded Claude Max invocation was rejected by automatic approval review before transmission. No file from this batch was sent to Anthropic. No clipping, overlap, broken image or unreachable return control was found.",
     "m3-lang-12-a2 tells the child to sort « ces mots » and tells the adult to say the words one by one, but the approved activity supplies no word list, examples, media or pairs. The child surface can render only the three category names. This is a genuine content/payload completeness DEFECT, recorded separately without changing approved pedagogy.",
     "The media-free look-and-name handoff defect recurs in m1-time-18-a1 and m3-world-04-a1. The triangle-without-a-valid-group defect recurs in m1-math-19-a1: the renderer offers a triangle while the approved activity and categories specify only rounds and squares.",
-    "Generic movement steps, long/generic counters, incomplete hands-on reference media, fixed-choice body-part presentation, bare noun labels and the missing market-word picture recur and remain covered by existing findings. Story/rhyme continuation in landscape is covered by full-scroll evidence and is NO_CHANGE."
+    "Generic movement steps, long/generic counters, incomplete hands-on reference media, fixed-choice body-part presentation, bare noun labels and the missing market-word picture recur and remain covered by existing findings. Story/rhyme continuation in landscape is covered by full-scroll evidence and is NO_CHANGE.",
+    "Initial sheets 031–035 across all four viewports: all one hundred panels independently inspected by Astra. No new clipping, overlap, broken image or unreachable return control was found; expected tablet-landscape story and rhyme continuation remains covered by full-scroll evidence.",
+    "The media-free look-and-name off-screen handoff defect recurs in m1-world-22-a1 and m3-world-01-a1. Generic dot counters again erase required number-strip, hidden-number, finger and 1–30 semantics, while animal/plant observation and real-object matching again become graded fixed choices.",
+    "One-object thumbnails for multi-object hands-on tasks, generic movement diagrams and the separate-shape house model recur and remain covered by existing classified findings. m3-lang-19-a2 supplies its sorting words and categories coherently, so it adds no content-completeness finding."
   ],
   "classifiedFindings": [
     {
@@ -3010,5 +3233,5 @@
       "scope": "Approved activity payload/content completeness; define the intended word set through the pedagogical review workflow before changing the child or parent experience."
     }
   ],
-  "next": "Initial sheet 031 for each of the four viewports; all 165 scroll sheets and initial sheets 001–030 are reviewed. No other generated sheet is marked manually reviewed."
+  "next": "Initial sheet 036 for each of the four viewports; all 165 scroll sheets and initial sheets 001–035 are reviewed. No other generated sheet is marked manually reviewed."
 }
