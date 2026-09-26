@@ -121,6 +121,8 @@ September Visual Experience Review — GPT Astra
 - **Exact current resume point:** the same five-file dossier is regenerated for a final isolated Claude Max
   re-review. Only an explicit final `accepted` verdict permits recording full-review acceptance and restoring
   the 27 lapsed approvals with fresh digests.
+- **Correction checkpoint:** `52419a3` (`Apply September reconfirmation corrections`). Nothing is running;
+  the worktree is clean before the final dossier metadata checkpoint.
 
 ## VIS-QA-01 checkpoint — 2026-09-25 (Claude Code worker)
 
