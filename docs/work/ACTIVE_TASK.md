@@ -4,24 +4,24 @@
 
 September Visual Experience Review — GPT Astra
 
-**Current phase:** Phase A — finish remaining September evidence review. The expanded whole-product UX audit begins after the evidence set is complete.
+**Current phase:** Phase B — generated September child evidence is complete; audit parent layouts and the whole-product UX flow.
 
 ## Supervisor handoff — 2026-09-25
 
 - **Task status:** IN_PROGRESS. September is neither implementation-complete nor ready for independent reconfirmation.
 - **Supervisor:** Astra; **worker:** Claude Code CLI 2.1.282, installed at `/Users/Apple/.local/bin/claude`; ready to launch with Max authentication.
 - **Current branch:** `codex/september-astra-visual-review`; **current implementation commit:** `cf924e5` (VIS-QA-01 evidence tooling plus the accepted VIS-FIX-01 count-reset fix); subsequent commits are review checkpoints only.
-- **Base commit / refreshed develop:** `a0b743b`; **refreshed main:** `28dcb0a`. Fetch completed on 2026-09-25. The next checkpoint commit will leave twenty-eight local commits ahead of the feature remote; no open PRs returned by GitHub.
+- **Base commit / refreshed develop:** `a0b743b`; **refreshed main:** `28dcb0a`. Fetch completed on 2026-09-25. The next checkpoint commit will leave twenty-nine local commits ahead of the feature remote; no open PRs returned by GitHub.
 - **Completed:** existing audit inventory, initial phone/TV review, all 1,002 noninitial viewport reviews, UI fixes, 1,606-state scroll capture. Preserve existing evidence; do not restart.
-- **In progress / pending:** manual review of 1,042 scroll images (all 165 scroll sheets inspected), large-phone initial set complete (38/38 sheets), tablet portrait/landscape and desktop initial sets inspected through sheet 070, parent layouts, the whole-product UX audit, justified design fixes, illustration consistency and eventual independent review packages.
+- **In progress / pending:** manual review of 1,042 scroll images (all 165 scroll sheets inspected), large-phone initial set complete (38/38 sheets), tablet portrait/landscape and all 266 initial sheets complete, parent layouts, the whole-product UX audit, justified design fixes, illustration consistency and eventual independent review packages.
 - **Authentication verified:** normal macOS credential-store access with `env -u ANTHROPIC_API_KEY claude auth status` confirms `claude.ai`, subscription `max`. The earlier sandbox-only check could not see this login. Always exclude the API-key override for worker invocations.
 - **Owner decision required:** none at this checkpoint. The owner granted standing authorization for the remaining September visual/UX audit evidence and narrowly relevant assets to be sent through Claude Max. Secrets, credentials, environment files, user data and unrelated repository content remain excluded.
 - **Tests completed:** VIS-FIX-01 passes a fresh Webpack production build, project typecheck, full unit suite (399/399), changed-file lint/format and its focused browser test on the current development runtime. The browser test independently fails against the old `4a062ee` production build because the instruction remains offscreen, then passes against the fix. The previous 40-test browser suite, container and bundle checks remain stale for this runtime change; the standard Turbopack build has a local EPERM.
 - **CI state:** no CI for the unpublished local commits. Latest fetched staging deployment succeeded at `a0b743b`; production deployment succeeded at `28dcb0a`. Historical validation table below must not be read as fresh CI for this branch.
 - **Staging state:** existing deployment unchanged; this review is local only under the owner's earlier explicit instruction.
 - **Production state:** existing public service at `28dcb0a`, unchanged. No release authorization.
-- **Exact next command:** inspect initial sheets 071–076 for tablet portrait, tablet landscape and desktop; use Claude only if it materially improves classification and independently verify every substantive claim.
-- **Exact resume point:** all 165 scroll sheets, all 38 large-phone sheets and sheets 001–070 in each remaining initial viewport are accepted as reviewed evidence (413 sheets / 1,142 initial panels). Resume at initial sheet 071 for tablet portrait, tablet landscape and desktop. No push, PR, deployment or approval stamping.
+- **Exact next command:** inspect the existing parent DOM audit, parent-related E2E coverage and session/navigation surfaces; capture only the missing layouts needed to verify concrete UX risks.
+- **Exact resume point:** all 165 scroll sheets and all 266 initial sheets are accepted as reviewed evidence (431 sheets / 1,208 initial panels). Generated child evidence is complete. Resume with the parent-layout and whole-product UX gap audit. No push, PR, deployment or approval stamping.
 
 | ID         | Task                                               | Worker                                 | State                          | Review                      | CI         | Staging  |
 | ---------- | -------------------------------------------------- | -------------------------------------- | ------------------------------ | --------------------------- | ---------- | -------- |
@@ -37,8 +37,8 @@ September Visual Experience Review — GPT Astra
   - 1,208 initial panels.
   - The six previously reviewed scroll frames are preserved as reviewed; every other frame is unreviewed.
   - Supervisor accepted `scroll/scroll-001.png` through `scroll/scroll-165.png`, all 38 large-phone sheets and
-    sheets 001–070 for tablet portrait, tablet landscape and desktop. That is 413 sheets / 1,142 initial panels,
-    not acceptance of the set. Scroll 007–016 had a bounded Claude Max/Opus first pass; Astra independently
+    all 76 sheets for tablet portrait, tablet landscape and desktop. That is 431 sheets / 1,208 initial panels;
+    the generated child evidence set is complete. Scroll 007–016 had a bounded Claude Max/Opus first pass; Astra independently
     checked its only claimed defect and representative clean states. The claim was a stationary-pointer hover
     artifact in the scroll capture, so no implementation change was justified.
 - **Generator:** `scripts/astra-remaining-sheets.mjs` (Prettier and ESLint pass). It reads existing captures only
@@ -151,10 +151,14 @@ September Visual Experience Review — GPT Astra
     are genuine typography polish already seen in earlier batches; all affected content and controls remain
     scroll-reachable, so no new defect class was added. Off-screen, story, drawing and oral screens otherwise
     match their approved activity modes. All seventy-two panels were reviewed.
-- **Next review entry:** continue at
-  initial sheet 071 for tablet portrait, tablet landscape and desktop. Record each judgement in
-  `astra-supervisor-remaining-review.json`. Never edit
-  `reviewed` in the generated manifests by hand.
+  - Initial sheets 071–076 were reviewed by Claude Max/Opus and independently checked by Astra. Generic
+    counter, movement and incomplete-reference findings recur. The proposed sound-game omission was rejected
+    because the screen already has the off-screen banner; the body-observation screen extends the existing
+    missing-handoff class; and the printed favourite rhyme is an explicitly approved fallback. All sixty-six
+    panels were reviewed and add no new defect class.
+- **Next review entry:** generated child evidence is complete. Audit the existing parent DOM measurements,
+  parent-related E2E coverage and whole-product session/navigation surfaces; capture only missing evidence
+  needed to verify a concrete risk.
 
 ## VIS-FIX-01 — child count reset scroll (2026-09-25, Claude Code worker)
 
