@@ -46,8 +46,9 @@ frozen for owner visual review. Eighteen dependent lessons remain at `review`; n
   E2E tests pass; nine production-only E2E tests are skipped locally. The default Turbopack build still hits
   the documented host `EPERM` while creating its internal worker port; the supported webpack production build
   succeeds.
-- **Environment:** branch `codex/september-rich-media-pilot`, local only. No push, PR, merge, staging,
-  production, database migration, production data operation or October work occurred.
+- **Environment:** branch `codex/september-rich-media-pilot`, implementation checkpoint `7abc18e`
+  (`Implement September rich-media pilot`), local only. No push, PR, merge, staging, production, database
+  migration, production data operation or October work occurred.
 - **Decision required:** owner accepts the pilot style unchanged, requests named refinements, or rejects/
   redirects the direction. Approval restoration and the remaining 15 candidates stay blocked until that
   explicit visual decision and an independent reconfirmation decision.

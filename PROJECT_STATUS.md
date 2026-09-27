@@ -972,6 +972,7 @@ Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, a
 - Final checks: format, lint, typecheck, 438 unit tests, 31-file content validation, Webpack production build,
   three-sentinel client-bundle scan and 42 local E2E tests pass; nine production-only E2E tests are skipped.
   Default Turbopack still reproduces the host-only worker-port `EPERM` documented in prior checkpoints.
-- Branch is `codex/september-rich-media-pilot`; work is local only. No push, PR, merge, staging, production,
-  database migration, production-data operation or October work occurred. Next gate is the owner’s visual
-  decision on the pilot; full rollout and approval restoration remain unauthorized.
+- Branch is `codex/september-rich-media-pilot`; implementation checkpoint is `7abc18e` (`Implement September
+rich-media pilot`). Work is local only. No push, PR, merge, staging, production, database migration,
+  production-data operation or October work occurred. Next gate is the owner’s visual decision on the pilot;
+  full rollout and approval restoration remain unauthorized.
