@@ -1160,7 +1160,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Nommer son corps et se servir de ses sens._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1175,7 +1175,7 @@ _Nommer son corps et se servir de ses sens._
 - **Aide en anglais (optionnelle) :** « Show me your head. Show me your tummy. »
 - **Images montrées à l'enfant (2) :**
 
-  - `corps-tete` — La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire (`public/media/objects/corps-tete.svg`)
+  - `corps-tete` — La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire (`public/media/objects/corps-tete.webp`)
   - `corps-ventre` — Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous (`public/media/objects/corps-ventre.svg`)
 
 - **Objectifs travaillés :** `WORLD-S01-C02-O01` Nommer et représenter quelques parties du corps humain.

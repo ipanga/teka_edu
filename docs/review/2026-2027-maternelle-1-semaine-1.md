@@ -94,7 +94,7 @@ l’autre — l’appareil est alors le sien._
 
 _Oser dire bonjour à l’adulte, et entendre les premiers mots du mois._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
   - `LANG-S01-C04-O01` — Entrer en communication verbale avec un adulte ou un autre élève. _(source : programme-2024-langage)_
@@ -142,7 +142,7 @@ _Oser dire bonjour à l’adulte, et entendre les premiers mots du mois._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `comptine-bonjour` — Le soleil qui se lève derrière la colline, et deux mains qui font bonjour (`public/media/illustrations/comptine-bonjour.svg`)
+- **Image montrée pendant la lecture :** `comptine-bonjour` — Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines (`public/media/illustrations/comptine-bonjour.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -655,7 +655,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.). _(source : programme-2024-langage)_
@@ -717,7 +717,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `comptine-bonjour` — Le soleil qui se lève derrière la colline, et deux mains qui font bonjour (`public/media/illustrations/comptine-bonjour.svg`)
+- **Image montrée pendant la lecture :** `comptine-bonjour` — Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines (`public/media/illustrations/comptine-bonjour.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (before-4) :**
 

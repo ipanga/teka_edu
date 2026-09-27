@@ -20,6 +20,7 @@ import path from "node:path";
 import { format, resolveConfig } from "prettier";
 import { shownPictureIds } from "@/domain/lessons/pictures";
 import type { ActivityType } from "@/domain/lessons/types";
+import { assetFingerprint } from "@/domain/media/types";
 import { REVIEW_PACKAGES } from "@/lib/content/review-packages";
 import { getReferenceData } from "@/lib/content/reference-data";
 import { dayOfLessonMap } from "@/lib/content/visual-audit";
@@ -36,14 +37,24 @@ const args = new Map(
 );
 const since = args.get("since") ?? "develop";
 const levels = args.has("level") ? [args.get("level")!] : ["maternelle-1", "maternelle-3"];
-const SHEET = "docs/review/media/septembre-avant-apres.png";
+const SHEET = "docs/review/media/september-rich-media-pilot-comparison.png";
 const DOMAINS = ["lang", "math", "phys", "art", "time-space", "world"];
 
 const git = (a: string[]) => execFileSync("git", a, { cwd: ROOT, encoding: "utf8" });
 const readJson = (file: string) => JSON.parse(readFileSync(path.join(ROOT, file), "utf8"));
 const showJson = (file: string) => JSON.parse(git(["show", `${since}:${file}`]));
 
-type Asset = { id: string; kind: string; alt: string; contentHash: string };
+type Asset = {
+  id: string;
+  kind: string;
+  file: string;
+  alt: string;
+  contentHash: string;
+  sequence?: {
+    frames: { file: string; alt: string; contentHash: string }[];
+    pageFrames: number[];
+  };
+};
 type RawLesson = Record<string, unknown> & {
   id: string;
   title: string;
@@ -89,7 +100,8 @@ const registryNow = readJson("content/media/registry.json").assets as Asset[];
 const registryThen = showJson("content/media/registry.json").assets as Asset[];
 const changedAssets = registryNow.filter((a) => {
   const before = registryThen.find((b) => b.id === a.id);
-  return before === undefined || before.contentHash !== a.contentHash || before.alt !== a.alt;
+  // The whole fingerprint: a redrawn frame of a story sequence is a picture change to reconfirm.
+  return before === undefined || assetFingerprint(before) !== assetFingerprint(a);
 });
 if (changedAssets.length === 0) {
   console.log(`no picture changed since ${since}; nothing to reconfirm`);
@@ -183,8 +195,9 @@ for (const levelId of levels) {
   lines.push(
     `# Reconfirmation visuelle — ${levelName}, septembre ${year.slice(0, 4)}`,
     "",
-    "`SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION` — les images sont figées ; leurs empreintes",
-    "sont vérifiées par un test tant que la relecture n’a pas eu lieu (`docs/work/SEPTEMBER_VISUAL_QA.md`).",
+    "`SEPTEMBER_RICH_MEDIA_PILOT_FROZEN_FOR_REVIEW` — les cinq images du pilote sont figées ;",
+    "leurs fichiers, dimensions et empreintes exactes sont consignés dans",
+    "`docs/september-rich-media-audit.json` jusqu’à la décision du propriétaire.",
     "",
     "> **Ce document est généré** (`npm run review:visual`). Il ne demande pas une relecture",
     "> complète : les mots lus à l’enfant et à l’adulte, les objectifs, les durées et le matériel",
@@ -194,11 +207,11 @@ for (const levelId of levels) {
     "",
     "## Ce qui s’est passé",
     "",
-    "Les images de septembre ont été redessinées pour être plus chaleureuses, plus lisibles et",
-    "cohérentes entre elles (`docs/september-illustration-upgrade-plan.md`) : une seule encre, des",
-    "aplats avec une ombre, une peau brune pour les enfants et les parties du corps, un sol sous",
-    "chaque chose, un visage sur les personnes et les animaux seulement. Les huit formes",
-    "géométriques n’ont pas bougé.",
+    "Cinq images représentatives de septembre ont été remplacées localement par des illustrations",
+    "WebP plus chaleureuses, expressives et proches d’un album préscolaire. Deux histoires utilisent",
+    "désormais une courte séquence alignée sur leurs pages existantes. Aucun texte n’a été réécrit ;",
+    "les personnages, objets, quantités, actions et décors doivent être jugés contre le texte approuvé.",
+    "Les 46 autres images, dont toutes les formes géométriques, n’ont pas bougé.",
     "",
     "L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant (ISSUE-026).",
     `Les approbations de **${lapsed.length} leçon(s)** de cette classe ont donc été annulées — pas`,
@@ -222,6 +235,26 @@ for (const levelId of levels) {
     const users = [...lessonsNow.values()].filter((l) => picturesOf(l).has(a.id)).map((l) => l.id);
     lines.push(
       `| \`${a.id}\` | ${a.kind} | ${before?.alt ?? "_nouvelle_"} | ${a.alt} | ${users.length} — ${users.join(", ")} |`,
+    );
+  }
+  const sequencedHere = shownHere.filter((asset) => asset.sequence !== undefined);
+  if (sequencedHere.length > 0) {
+    lines.push(
+      "",
+      "## Séquences des histoires",
+      "",
+      "| Histoire | Page(s) | Fichier | Description exacte de la scène |",
+      "| --- | --- | --- | --- |",
+      ...sequencedHere.flatMap((asset) =>
+        asset.sequence!.frames.map((frame, index) => {
+          const pages = asset
+            .sequence!.pageFrames.flatMap((frameIndex, page) =>
+              frameIndex === index ? [page + 1] : [],
+            )
+            .join(", ");
+          return `| \`${asset.id}\` | ${pages} | \`public/media/${frame.file}\` | ${frame.alt} |`;
+        }),
+      ),
     );
   }
   const short = (h: string | undefined) => (h ? h.slice(7, 19) : "—");
@@ -317,13 +350,15 @@ for (const levelId of levels) {
     "",
     "Pour chaque image de la planche, et en pensant à l’enfant qui la regarde pendant l’activité :",
     "",
-    "1. l’image montre-t-elle bien **la chose que la leçon nomme** — la main, le pied, Lisa, le seau,",
-    "   trois cailloux différents — sans rien qui détourne l’attention ?",
+    "1. l’image montre-t-elle bien **la chose, le geste ou la scène que la leçon nomme**, sans détail",
+    "   contradictoire ou distrayant ?",
     "2. est-elle **lisible à 72 px** quand elle est répétée dans une rangée à compter ?",
     "3. la description (`alt`, lue par une synthèse vocale à une famille francophone) dit-elle ce",
     "   que l’image montre ?",
-    "4. voyez-vous une image qui **contredit** ce qu’une leçon dit — un geste, un nombre, une",
-    "   orientation ?",
+    "4. voyez-vous une image qui **contredit** ce qu’une leçon dit — geste, quantité, personnage,",
+    "   objet, émotion, lieu ou ordre temporel ?",
+    "5. dans chaque histoire, l’identité, l’âge, la peau et les vêtements des personnages restent-ils",
+    "   cohérents, et chaque scène correspond-elle vraiment aux lignes de sa page ?",
     "",
     "Répondez **`accepted`** (les images conviennent), ou **`accepted-with-modifications`** en",
     "nommant l’image et ce qui doit changer.",

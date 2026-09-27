@@ -948,3 +948,30 @@ Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, a
   Eight final captures verify the corrected rule wording and square house at phone, tablet, desktop and TV.
 - The default Turbopack build retains the known local port-binding `EPERM`; the Webpack production build
   succeeds. No push, PR, merge, staging, production, production-data operation or October work occurred.
+
+### 2026-09-27 — Controlled September rich-media pilot ready for owner review (local)
+
+- Integrated five representative WebP assets: body vocabulary (`corps-tete`), expressive animal
+  (`animal-chevre`), rhyme (`comptine-bonjour`), four-frame Nsimba story and three-frame mango story. The
+  story sequences map to existing pages and leave every approved word, objective, duration and progression
+  unchanged. The other 15 candidates remain untouched pending owner direction.
+- Added sequence-aware registry schemas, approval fingerprints, frame validation, intrinsic layout sizing,
+  next-frame preload, review-package rendering, contact sheets and deterministic media generation. ADR-049
+  records the mixed SVG/WebP boundary. Source masters remain ignored locally; optimized delivery totals
+  1,773,178 bytes across ten files at WebP quality 88.
+- The standard integrity flow lapsed exactly 18 dependent lessons: 8 in 1ère and 10 in 3ème. Current state is
+  176 total, 158 approved and 18 at `review`; all 158 unaffected approval records are byte-for-byte unchanged
+  and the follow-up lapse dry-run reports zero stale approvals. No approval or digest was restored.
+- The five-item comparison sheet, per-class reconfirmation packages and durable rich-media manifest are
+  current. Actual child screens pass at 320, 390, 430, 1280 and 1440 px with zero horizontal overflow,
+  no clipped image and exact story page/frame sequences. Representative phone and desktop captures are held
+  in ignored local evidence for owner inspection.
+- Claude Max / Opus 5.5 implemented the bounded sequence plumbing under the owner’s authorization. Astra
+  independently reviewed the diff, corrected two alt descriptions, supplied and checked all seven story
+  frames, optimized delivery, strengthened the freeze test and ran the final validation.
+- Final checks: format, lint, typecheck, 438 unit tests, 31-file content validation, Webpack production build,
+  three-sentinel client-bundle scan and 42 local E2E tests pass; nine production-only E2E tests are skipped.
+  Default Turbopack still reproduces the host-only worker-port `EPERM` documented in prior checkpoints.
+- Branch is `codex/september-rich-media-pilot`; work is local only. No push, PR, merge, staging, production,
+  database migration, production-data operation or October work occurred. Next gate is the owner’s visual
+  decision on the pilot; full rollout and approval restoration remain unauthorized.

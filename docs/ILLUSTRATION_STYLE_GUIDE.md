@@ -2,13 +2,21 @@
 
 How every Teka Edu picture is drawn, so that October, 2ème maternelle and every later month look
 like the same product as September. Decisions: ADR-042 (media), ADR-045 (motion), ADR-048
-(redraws and approvals). The generator is `tools/media/build.ts`; the per-asset record of the
-September pass is `docs/work/SEPTEMBER_VISUAL_QA.md`.
+(redraws and approvals), ADR-049 (mixed SVG/WebP and story sequences). The generator is
+`tools/media/build.ts`; the per-asset record of the September pass is
+`docs/work/SEPTEMBER_VISUAL_QA.md`.
 
 **The goal is calm, warm, clear and educational — not a cartoon game.** A picture helps a child
 understand first, and is attractive second.
 
-## The frame every picture shares
+## The shared visual frame
+
+Teka Edu uses two delivery treatments. Exact instructional geometry, diagrams and simple isolated
+objects remain SVG. Body references, expressive animals, rhymes, characters and contextual story
+scenes may use painted WebP when the vector treatment is too schematic. Both treatments keep a
+warm paper background, the established palette, an uncluttered focal subject and no embedded text.
+
+### SVG construction
 
 | Rule       | Value                                                                                  |
 | ---------- | -------------------------------------------------------------------------------------- |
@@ -19,6 +27,18 @@ understand first, and is attractive second.
 | Background | None by default; the app's tinted stage frames the picture                             |
 | Text       | Never inside a picture                                                                 |
 | File       | Static SVG, a few kilobytes, no external reference                                     |
+
+### Painted WebP
+
+- Warm, polished preschool storybook rendering: softly painted, friendly and clear, never
+  photographic, stock-like, hyper-real or visually busy.
+- People reflect the Teka Edu audience; recurring characters keep the same age, skin, face,
+  hairstyle and clothing across a sequence.
+- The focal action and pedagogically relevant count must remain unmistakable at phone size.
+- Source art is kept as local evidence; delivery uses WebP with explicit intrinsic dimensions,
+  optimized quality and no embedded text.
+- Each candidate is judged inside the real lesson screen. A beautiful image that changes a count,
+  action, position, setting, body part, colour cue or story fact is rejected.
 
 The palette (base / shade): paper `#fffdf7`/`#efe9dc`, sky `#7cbbe6`/`#5395c4`, leaf
 `#86c692`/`#5fa46e`, sun `#f3c86d`/`#d9a63f`, clay `#e08d6a`/`#bf6a4b`, stone `#c9c2b4`/`#a49c8e`,
@@ -68,12 +88,14 @@ it does not change what the child must recognise.
 
 ## Story and rhyme pictures
 
-- **One picture per story or rhyme.** A read-aloud is not a picture book; the picture is where a
-  listening child's eyes rest.
+- A rhyme normally uses one strong image. A story may use one image or a bounded 2–6 image sequence
+  when its existing pages contain materially distinct moments.
+- A sequence maps frames to existing renderer pages. It never adds pages or changes the approved
+  words. A frame may remain for two adjacent pages when the moment continues.
 - It shows the **character, the object and the action** the story is about, with one
-  environmental cue at most (a door, a bush, a moon) — enough to understand the situation, not
-  enough to replace listening. Kumu walks _away_ from the open henhouse; the fear and the return
-  stay in the words.
+  clear setting — enough to understand the situation, without replacing listening.
+- Across a sequence, verify character identity, clothing, age, skin tone, environmental
+  continuity, object and people counts, actions, emotions and temporal order page by page.
 - The child must understand the important part without an adult explaining the picture. The
   seven questions of `docs/work/SEPTEMBER_VISUAL_QA.md` are the test.
 
@@ -107,8 +129,8 @@ Revisit only with the PWA work, if a self-hosted, openly licensed face with clea
 
 ## Adding a picture
 
-1. Draw it in `tools/media/build.ts` with the helpers (`ground`, `face`, `capsule`, `hand`,
-   `chick`, `hen`, `goat`, `puffs`) and the palette.
+1. For an SVG, draw it in `tools/media/build.ts`. For painted art, create and retain a high-quality
+   local source master, verify it against the exact lesson, and export an optimized WebP.
 2. `npx tsx tools/media/build.ts`, then `npm run media:sheet -- --ids=<id> --scale=2` and look.
 3. Give it a decision in the state file and `npm run visual:audit`.
 4. If lessons already approved show it, `npm run review:lapse` and a visual reconfirmation

@@ -1,6 +1,6 @@
-# September rich-media audit — Phase A
+# September rich-media audit — controlled pilot
 
-Generated from the canonical media registry, approved September lessons and supplied texts. This is a proposed post-release format strategy; it changes no production asset or approval.
+Generated from the canonical media registry, September lessons and supplied texts. Five representative assets are integrated locally for owner review; production remains unchanged.
 
 ## Decision summary
 
@@ -9,8 +9,9 @@ Generated from the canonical media registry, approved September lessons and supp
 - 0 SVG assets require refinement; accepted schematic and isolated-object SVGs stay unchanged unless a later real defect is demonstrated.
 - 20 proposed for high-quality WebP delivery.
 - Final formats: 31 SVG and 20 WebP; 0 PNG delivery exceptions.
-- Proposed WebP rollout would lapse 53 unique lessons (27 in 1ère, 26 in 3ème); the current Phase A/B evidence lapses 0.
-- Manifest SHA-256: `c1e1cd457cda24798e2bf328c7f0a759ec452da8be2c54375b96dcd16eb81190`.
+- The five-asset pilot lapses 18 unique lessons: 8 in 1ère maternelle and 10 in 3ème maternelle. All remain at review; no approval was restored.
+- A full rollout is not authorized. The other 15 WebP candidates remain unimplemented.
+- Manifest SHA-256: `2fa391b732154cb4bfa4bd22a57a50993c5af7d92be8e9d645eb5e70fbbc373f`.
 
 The supplied screenshots validate the distinction: layout and scaling are sound, while the body, rhyme and story art remains visually schematic. Shapes, counting models and isolated objects do not share that defect.
 

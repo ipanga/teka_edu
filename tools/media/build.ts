@@ -10,11 +10,19 @@
  * a warm brown skin for people and body parts, a soft ground, faces on people and animals only,
  * recognisable at arm's length on a phone. Colour never carries meaning — the child is asked for
  * *the square*, never for *the blue one*. The shapes keep the original constants on purpose.
+ *
+ * Rich painted art (WebP, docs/september-rich-media-benchmark.md) is not drawn here. A registry
+ * row whose file is not an SVG is kept as written — id, description, frames, page mapping — and
+ * this script only refreshes what follows from its files: each file's hash and pixel size. The
+ * SVG drawing of that id is then no longer written. A file that is missing keeps its recorded
+ * values, and content validation reports it.
  */
 import { createHash } from "node:crypto";
 import { format, resolveConfig } from "prettier";
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
+import type { MediaFrame } from "../../domain/media/types";
+import { webpSize } from "../../lib/content/webp-size";
 
 const ROOT = path.resolve(import.meta.dirname, "../..");
 const OUT = path.join(ROOT, "public/media");
@@ -217,6 +225,16 @@ type Asset = {
   alt: string;
   tags: string[];
   body: string;
+};
+
+/** What follows from a painted file's bytes: its hash and its size. */
+type RasterFile = { file: string; contentHash: string; width?: number; height?: number };
+
+/** A registry row for painted art, as authored in content/media/registry.json. */
+type RasterRow = RasterFile & {
+  id: string;
+  sequence?: { frames: MediaFrame[]; pageFrames: number[] };
+  [field: string]: unknown;
 };
 
 /** A shape, drawn large and plain: the form is the whole point. */
@@ -915,10 +933,21 @@ async function main() {
     })),
   ];
 
+  const registryPath = path.join(ROOT, "content/media/registry.json");
+  const previous = JSON.parse(readFileSync(registryPath, "utf8")) as {
+    audio?: unknown[];
+    assets: RasterRow[];
+  };
+  // Painted art is authored outside this script: its rows are kept, never overwritten by a drawing.
+  const raster = new Map(
+    previous.assets.filter((row) => !row.file.endsWith(".svg")).map((row) => [row.id, row]),
+  );
+
   const seen = new Set<string>();
   for (const asset of assets) {
     if (seen.has(asset.id)) throw new Error(`duplicate media id: ${asset.id}`);
     seen.add(asset.id);
+    if (raster.has(asset.id)) continue;
     const target = path.join(OUT, asset.file);
     mkdirSync(path.dirname(target), { recursive: true });
     writeFileSync(target, svg(asset.body), "utf8");
@@ -930,12 +959,26 @@ async function main() {
       .update(readFileSync(path.join(OUT, file)))
       .digest("hex")}`;
 
-  const registry = {
-    // Audio is authored by hand, never generated: a recording needs a human voice (ADR-046).
-    // The generator preserves whatever is already declared.
-    audio:
-      JSON.parse(readFileSync(path.join(ROOT, "content/media/registry.json"), "utf8")).audio ?? [],
-    assets: assets.map(({ id, kind, file, alt, tags }) => ({
+  /** A raster file's hash and size, read from the file; the recorded values when it is absent. */
+  const refresh = <T extends RasterFile>(entry: T): T => {
+    const file = path.join(OUT, entry.file);
+    if (!existsSync(file)) return entry;
+    const size = entry.file.endsWith(".webp") ? webpSize(readFileSync(file)) : null;
+    return { ...entry, contentHash: hashOf(entry.file), ...(size ?? {}) };
+  };
+  const refreshRaster = (row: RasterRow): RasterRow => {
+    const own = refresh(row);
+    if (row.sequence === undefined) return own;
+    return {
+      ...own,
+      sequence: { ...row.sequence, frames: row.sequence.frames.map((frame) => refresh(frame)) },
+    };
+  };
+
+  const generated = assets.map(({ id, kind, file, alt, tags }) => {
+    const kept = raster.get(id);
+    if (kept !== undefined) return refreshRaster(kept);
+    return {
       id,
       kind,
       file,
@@ -944,12 +987,21 @@ async function main() {
       origin: "teka-edu-created",
       provenance: "Tracé original produit par tools/media/build.ts pour Teka Edu.",
       contentHash: hashOf(file),
-    })),
+    };
+  });
+  const registry = {
+    // Audio is authored by hand, never generated: a recording needs a human voice (ADR-046).
+    // The generator preserves whatever is already declared.
+    audio: previous.audio ?? [],
+    assets: [
+      ...generated,
+      // Painted art with no drawing here at all is kept too, after the drawn set.
+      ...[...raster.values()].filter((row) => !seen.has(row.id)).map(refreshRaster),
+    ],
   };
   // Formatted the way `npm run format:check` expects. Writing raw JSON.stringify output left the
   // committed file and the generator's output permanently one `prettier --write` apart, so
   // re-running the generator dirtied the tree and hand-formatting was reverted by the next run.
-  const registryPath = path.join(ROOT, "content/media/registry.json");
   writeFileSync(
     registryPath,
     await format(JSON.stringify(registry, null, 2), {

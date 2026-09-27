@@ -764,7 +764,7 @@ l’autre — l’appareil est alors le sien._
 
 _Reprendre, en parlant, ce que le mois a apporté._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Dernière séance du mois. Rien de nouveau : l’enfant montre ce qu’il sait faire. Terminez en lui disant précisément ce qu’il sait dire maintenant.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -813,7 +813,12 @@ _Reprendre, en parlant, ce que le mois a apporté._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue entière, et trois morceaux de mangue coupés sur une assiette (`public/media/illustrations/histoire-mangue.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-mangue`
+
+  - Page 1 : Ilunga, assis sous le manguier, tient une grosse mangue dans ses deux mains (`public/media/illustrations/histoire-mangue-01.webp`)
+  - Page 2 : Ama et Tito arrivent et regardent la mangue ; Ilunga réfléchit (`public/media/illustrations/histoire-mangue-02.webp`)
+  - Page 3 : Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main (`public/media/illustrations/histoire-mangue-03.webp`)
+  - Page 4 : Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main (`public/media/illustrations/histoire-mangue-03.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 

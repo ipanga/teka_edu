@@ -118,7 +118,7 @@ l’autre — l’appareil est alors le sien._
 
 _Dire ce qu’on voit avec assez de mots pour être compris sans montrer du doigt._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Jeu de description : l’enfant décrit, vous devinez. Interdisez le doigt : c’est ce qui oblige à parler.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -171,7 +171,13 @@ _Dire ce qu’on voit avec assez de mots pour être compris sans montrer du doig
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-nsimba` — Nsimba, un petit garçon avec son sac d’école sur le dos, devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-nsimba`
+
+  - Page 1 : Nsimba, son sac d’école sur le dos, tient la main de son adulte devant le portail de l’école ; la maitresse s’accroupit pour lui dire bonjour (`public/media/illustrations/histoire-nsimba-01.webp`)
+  - Page 2 : Nsimba, son sac d’école sur le dos, tient la main de son adulte devant le portail de l’école ; la maitresse s’accroupit pour lui dire bonjour (`public/media/illustrations/histoire-nsimba-01.webp`)
+  - Page 3 : Nsimba entre dans la classe avec son sac ; la maitresse lui montre sa place et une étiquette vierge sur la table (`public/media/illustrations/histoire-nsimba-02.webp`)
+  - Page 4 : Amina tend un crayon bleu à Nsimba, qui dessine une maison, un soleil et deux enfants (`public/media/illustrations/histoire-nsimba-03.webp`)
+  - Page 5 : Le soir, Nsimba sourit à côté de son adulte : demain, il retourne à l’école (`public/media/illustrations/histoire-nsimba-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -471,7 +477,7 @@ l’autre — l’appareil est alors le sien._
 
 _Redire une histoire connue dans l’ordre, avec ses propres mots._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** L’enfant a entendu Kumu plusieurs fois. Aujourd’hui, c’est lui qui raconte. Vous n’intervenez que s’il s’arrête, et seulement pour relancer.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -520,7 +526,12 @@ _Redire une histoire connue dans l’ordre, avec ses propres mots._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue entière, et trois morceaux de mangue coupés sur une assiette (`public/media/illustrations/histoire-mangue.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-mangue`
+
+  - Page 1 : Ilunga, assis sous le manguier, tient une grosse mangue dans ses deux mains (`public/media/illustrations/histoire-mangue-01.webp`)
+  - Page 2 : Ama et Tito arrivent et regardent la mangue ; Ilunga réfléchit (`public/media/illustrations/histoire-mangue-02.webp`)
+  - Page 3 : Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main (`public/media/illustrations/histoire-mangue-03.webp`)
+  - Page 4 : Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main (`public/media/illustrations/histoire-mangue-03.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 

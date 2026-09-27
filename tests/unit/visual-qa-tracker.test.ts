@@ -17,6 +17,17 @@ const data = getReferenceData();
 const qa = (
   JSON.parse(readFileSync(path.join(ROOT, VISUAL_STATE_PATH), "utf8")) as { finalQa: FinalQa }
 ).finalQa;
+const richMediaPilot = JSON.parse(
+  readFileSync(path.join(ROOT, "docs/september-rich-media-audit.json"), "utf8"),
+) as {
+  assets: {
+    id: string;
+    afterHash: string | null;
+    implementationState: string;
+    reviewState: string;
+    approvalImpact: { lessonIds: string[] };
+  }[];
+};
 
 describe("the final September visual QA tracker", () => {
   it("is committed up to date", async () => {
@@ -55,12 +66,26 @@ describe("the final September visual QA tracker", () => {
     }
   });
 
-  it("holds every picture at its frozen bytes once the set is frozen", () => {
+  it("holds the approved set frozen and permits only audited pilot bytes while their lessons are at review", () => {
     if (!qa.frozen) return;
     for (const asset of data.media) {
-      expect(asset.contentHash, `${asset.id} moved after the freeze`).toBe(
-        qa.frozenHashes[asset.id],
+      if (asset.contentHash === qa.frozenHashes[asset.id]) continue;
+      const pilot = richMediaPilot.assets.find((candidate) => candidate.id === asset.id);
+      expect(pilot?.implementationState, `${asset.id} moved outside the controlled pilot`).toBe(
+        "integrated-local-pilot",
       );
+      expect(pilot?.reviewState, `${asset.id} is not pending explicit owner review`).toBe(
+        "needs-owner-visual-review",
+      );
+      expect(pilot?.afterHash, `${asset.id} does not match the audited pilot hash`).toBe(
+        asset.contentHash,
+      );
+      for (const lessonId of pilot?.approvalImpact.lessonIds ?? []) {
+        expect(
+          data.lessons.find((lesson) => lesson.id === lessonId)?.status,
+          `${asset.id} changed while dependent lesson ${lessonId} retained approval`,
+        ).toBe("review");
+      }
     }
   });
 });

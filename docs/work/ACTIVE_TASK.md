@@ -4,7 +4,56 @@
 
 September Rich-Media Visual Upgrade
 
-**Current phase:** Phase A asset/format audit is complete and the Phase B seven-category style benchmark is ready for owner direction. No production asset or approval changed.
+**Current phase:** the controlled five-asset rich-media pilot is implemented and validated locally. It is
+frozen for owner visual review. Eighteen dependent lessons remain at `review`; no approval has been restored.
+
+## Controlled rich-media pilot checkpoint — 2026-09-27
+
+- **Scope:** five registered assets only: `corps-tete`, `animal-chevre`, `comptine-bonjour`,
+  `histoire-nsimba` and `histoire-mangue`. The other 15 WebP candidates remain unimplemented. No lesson text,
+  story, objective, duration, progression, calendar, safety guidance or media association changed.
+- **Real integration:** the three single illustrations are optimized square WebPs. Nsimba uses four frames
+  across its five existing pages (`0,0,1,2,3`); the mango story uses three frames across four existing pages
+  (`0,1,2,2`). The renderer reserves intrinsic dimensions, changes the accessible description with each
+  frame and preloads only the next frame. ADR-049 records the mixed SVG/WebP and bounded-sequence boundary.
+- **Performance:** source masters remain ignored local evidence at 1254×1254 or 1448×1086. Delivery is
+  1024×1024 for singles and 1200×900 for story frames, WebP quality 88 with smart subsampling. The ten files
+  total 1,773,178 bytes, down from 2,692,772 bytes before the final delivery resize, while retaining at least
+  2× pixels for the largest observed 454 px render.
+- **Approval integrity:** the baseline recorded all 18 affected lessons as approved before any integration.
+  The standard lapse mechanism moved exactly those 18 to `review` (8 in 1ère, 10 in 3ème). September is now
+  158 approved / 18 review. All 158 unaffected approval records are byte-for-byte unchanged; a second lapse
+  dry-run reports zero stale approvals. No digest was copied, forged, restamped or restored.
+- **Review evidence:** `docs/review/media/september-rich-media-pilot-comparison.png` is the compact five-item
+  before/after sheet with real formats, activities, rationale and approval impact. Generated class packages
+  are `docs/review/2026-2027-maternelle-1-reconfirmation-visuelle.md` and
+  `docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md`; they list each story frame page by page.
+  The exact hashes, dimensions, file sizes, masters, lesson uses and pending decisions are frozen in
+  `docs/september-rich-media-audit.json`.
+- **Visual QA:** the actual child screens were exercised at 320×740, 390×844, 430×932, 1280×900 and
+  1440×900. All images loaded, both story frame maps matched exactly, horizontal overflow was zero, no image
+  crossed the viewport, and reduced motion remained usable. Ten representative phone/desktop captures and
+  metrics are ignored local evidence under
+  `private/astra-visual-evidence/september-rich-media-pilot-screens/`. No broken image, crop, distortion,
+  text overflow, unreachable control or content contradiction was found. The goat beside the retained hen
+  visibly demonstrates the temporary SVG/WebP mix; whether that direction is accepted is the owner decision.
+- **Claude Code:** Opus 5.5 implemented the bounded sequence-aware registry, renderer, validators, reports and
+  focused tests through the owner-authorized Claude Max CLI. Astra reviewed every change, corrected inaccurate
+  alt text, supplied the seven missing story frames, tightened freeze/integrity checks, optimized delivery and
+  independently validated the result. Claude changed no approval, lesson wording, environment or deployment.
+- **Validation:** Prettier, ESLint, typecheck, 438/438 unit tests, 31-file content validation, deterministic
+  review/visual/database artifacts, Webpack production build, 28-file three-sentinel client scan and 42 local
+  E2E tests pass; nine production-only E2E tests are skipped locally. The default Turbopack build still hits
+  the documented host `EPERM` while creating its internal worker port; the supported webpack production build
+  succeeds.
+- **Environment:** branch `codex/september-rich-media-pilot`, local only. No push, PR, merge, staging,
+  production, database migration, production data operation or October work occurred.
+- **Decision required:** owner accepts the pilot style unchanged, requests named refinements, or rejects/
+  redirects the direction. Approval restoration and the remaining 15 candidates stay blocked until that
+  explicit visual decision and an independent reconfirmation decision.
+- **Exact resume point:** inspect the compact comparison sheet and the integrated phone/desktop captures. If
+  the owner accepts the visual direction, submit the two reconfirmation packages to an independent reviewer;
+  do not begin the wider September rollout yet.
 
 ## Rich-media Phase A/B checkpoint — 2026-09-27
 

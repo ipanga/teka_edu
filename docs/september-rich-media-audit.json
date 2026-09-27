@@ -1,15 +1,14 @@
 {
-  "task": "September rich-media visual upgrade — Phase A",
-  "version": 1,
+  "task": "September rich-media visual upgrade — controlled pilot",
+  "version": 2,
   "generatedOn": "2026-09-27",
-  "baselineCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
-  "scope": [
-    "maternelle-1 September",
-    "maternelle-3 September"
-  ],
-  "status": "phase-a-complete-phase-b-benchmark-awaiting-owner-direction",
+  "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
+  "pilotBaselineCommit": "cbc1cf3",
+  "scope": ["maternelle-1 September", "maternelle-3 September"],
+  "status": "controlled-pilot-integrated-awaiting-owner-visual-review",
   "productionAssetsChanged": false,
-  "approvedContentChanged": false,
+  "localPilotAssetsChanged": true,
+  "approvedLessonSemanticsChanged": false,
   "counts": {
     "audited-keep": 31,
     "audited-refine": 0,
@@ -21,12 +20,15 @@
     "ifAllProposedWebpAssetsAreIntegrated": 53,
     "maternelle1": 27,
     "maternelle3": 26,
-    "currentImpact": 0
+    "currentImpact": 18,
+    "currentApproved": 158,
+    "currentReview": 18
   },
   "notes": [
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
     "A small story sequence is a presentation proposal tied to existing text pages. It must not alter story wording or progression.",
-    "Any changed registered asset byte or media association must use the existing lapse and independent reconfirmation mechanism."
+    "The five pilot assets are integrated locally. Their 18 dependent lessons lapsed through the existing mechanism and remain at review.",
+    "All 158 unaffected approvals remain byte-for-byte unchanged from the pilot baseline."
   ],
   "assets": [
     {
@@ -108,8 +110,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -169,8 +171,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -230,8 +232,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -319,8 +321,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -366,8 +368,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -413,8 +415,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -460,8 +462,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -507,8 +509,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -575,8 +577,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -615,8 +617,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -655,8 +657,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -688,8 +690,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -735,8 +737,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -782,8 +784,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -843,8 +845,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -876,8 +878,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -909,8 +911,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -949,8 +951,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -1003,8 +1005,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -1043,8 +1045,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -1083,8 +1085,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -1116,8 +1118,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -1149,8 +1151,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -1182,8 +1184,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -1299,8 +1301,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -1360,18 +1362,12 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 5,
-        "lessonIds": [
-          "m1-lang-11",
-          "m1-lang-18",
-          "m1-lang-22",
-          "m1-world-02",
-          "m1-world-20"
-        ]
+        "lessonIds": ["m1-lang-11", "m1-lang-18", "m1-lang-22", "m1-world-02", "m1-world-20"]
       },
       "beforeHash": "sha256:abd0221e19a602427a98a7d1bae8ab17aa46e8f67bc24c849f6fa90e3b600923",
       "afterHash": null
@@ -1420,17 +1416,12 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 4,
-        "lessonIds": [
-          "m1-lang-11",
-          "m1-lang-18",
-          "m1-world-02",
-          "m1-world-20"
-        ]
+        "lessonIds": ["m1-lang-11", "m1-lang-18", "m1-world-02", "m1-world-20"]
       },
       "beforeHash": "sha256:fa04bffa3bc7b0e251eec950229ed93c4b7af12572be9ea9f099183dd49ade90",
       "afterHash": null
@@ -1486,21 +1477,38 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "integrated-local-pilot",
+      "reviewState": "needs-owner-visual-review",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 5,
-        "lessonIds": [
-          "m1-lang-13",
-          "m1-lang-18",
-          "m1-lang-22",
-          "m1-world-08",
-          "m1-world-20"
-        ]
+        "lessonIds": ["m1-lang-13", "m1-lang-18", "m1-lang-22", "m1-world-08", "m1-world-20"]
       },
       "beforeHash": "sha256:2aa04c3b557d1b0e3a7be2a20772c84cc81134f8ef9d78d2089b4e3e4759af39",
-      "afterHash": null
+      "afterHash": "sha256:ea479dea64fd092a84c9e7443791b939d36a821a27c9fd72de3b74770412e18f",
+      "proposedFile": "public/media/objects/corps-tete.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-benchmark-masters/corps-tete-master.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 1106,
+      "deliveryFiles": [
+        {
+          "file": "public/media/objects/corps-tete.webp",
+          "bytes": 173750
+        }
+      ],
+      "currentDecision": "awaiting-owner-pilot-review"
     },
     {
       "id": "corps-ventre",
@@ -1546,17 +1554,12 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 4,
-        "lessonIds": [
-          "m1-lang-13",
-          "m1-lang-18",
-          "m1-world-08",
-          "m1-world-20"
-        ]
+        "lessonIds": ["m1-lang-13", "m1-lang-18", "m1-world-08", "m1-world-20"]
       },
       "beforeHash": "sha256:25ad16ad5bda8d062870553846d666fc7cfca91155eb85beee1bde7700105f80",
       "afterHash": null
@@ -1598,16 +1601,12 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 3,
-        "lessonIds": [
-          "m3-lang-03",
-          "m3-world-02",
-          "m3-world-05"
-        ]
+        "lessonIds": ["m3-lang-03", "m3-world-02", "m3-world-05"]
       },
       "beforeHash": "sha256:47dd2c1a16e9942332ad42865e4e922ff50b83469902f2399bca7723fa602408",
       "afterHash": null
@@ -1642,15 +1641,12 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 2,
-        "lessonIds": [
-          "m3-lang-03",
-          "m3-world-05"
-        ]
+        "lessonIds": ["m3-lang-03", "m3-world-05"]
       },
       "beforeHash": "sha256:1200d55d4d710dba9341c0194289d79485c7aad667b6e8cfe89f0d17b10ae06e",
       "afterHash": null
@@ -1658,7 +1654,7 @@
     {
       "id": "animal-chevre",
       "kind": "animal",
-      "pedagogicalRole": "Une chèvre blanche, avec ses cornes et sa barbichette",
+      "pedagogicalRole": "Une jeune chèvre blanche, avec ses cornes, sa barbichette et une oreille noire",
       "currentFile": "public/media/animals/animal-chevre.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -1699,20 +1695,38 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses; otherwise unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "integrated-local-pilot",
+      "reviewState": "needs-owner-visual-review",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 4,
-        "lessonIds": [
-          "m3-lang-09",
-          "m3-world-02",
-          "m3-world-05",
-          "m3-world-06"
-        ]
+        "lessonIds": ["m3-lang-09", "m3-world-02", "m3-world-05", "m3-world-06"]
       },
       "beforeHash": "sha256:62993dc9a45ae5703a0b64e2ee9a36f57520a58be73cecc3ef2044c59dc68477",
-      "afterHash": null
+      "afterHash": "sha256:9af0f57f755f83a20648cfcffd3f61d05c128a44bb6df50522f0c75c9821fab1",
+      "proposedFile": "public/media/animals/animal-chevre.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-benchmark-masters/bibi-character-master.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2120,
+      "deliveryFiles": [
+        {
+          "file": "public/media/animals/animal-chevre.webp",
+          "bytes": 109692
+        }
+      ],
+      "currentDecision": "awaiting-owner-pilot-review"
     },
     {
       "id": "forme-maison-composee",
@@ -1737,8 +1751,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -1819,8 +1833,8 @@
       "presentation": "3-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 8,
@@ -1868,15 +1882,12 @@
       "presentation": "3-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 2,
-        "lessonIds": [
-          "m1-lang-09",
-          "m1-lang-21"
-        ]
+        "lessonIds": ["m1-lang-09", "m1-lang-21"]
       },
       "beforeHash": "sha256:c011c87cf0b38ea454a47932c505ca2e2e6e4ef773ad33e75a1762956853369e",
       "afterHash": null
@@ -1925,17 +1936,12 @@
       "presentation": "4-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 4,
-        "lessonIds": [
-          "m3-lang-03",
-          "m3-lang-04",
-          "m3-lang-09",
-          "m3-lang-17"
-        ]
+        "lessonIds": ["m3-lang-03", "m3-lang-04", "m3-lang-09", "m3-lang-17"]
       },
       "beforeHash": "sha256:c5158e03e9af9a70cf733c12e6f9682c1abacc99030e84128e3d50233e083f77",
       "afterHash": null
@@ -1943,7 +1949,7 @@
     {
       "id": "histoire-nsimba",
       "kind": "illustration",
-      "pedagogicalRole": "Nsimba, un petit garçon avec son sac d’école sur le dos, devant la porte de l’école",
+      "pedagogicalRole": "Nsimba, son sac d’école sur le dos, tient la main de son adulte devant le portail de l’école ; la maitresse s’accroupit pour lui dire bonjour",
       "currentFile": "public/media/illustrations/histoire-nsimba.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -1984,24 +1990,55 @@
       "presentation": "4-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "integrated-local-pilot",
+      "reviewState": "needs-owner-visual-review",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 3,
-        "lessonIds": [
-          "m3-lang-01",
-          "m3-lang-10",
-          "m3-lang-15"
-        ]
+        "lessonIds": ["m3-lang-01", "m3-lang-10", "m3-lang-15"]
       },
       "beforeHash": "sha256:4b4ab397cf3e41a88837778c3e6cf3eaf7fda336103040c1ddc4b1475cbeadab",
-      "afterHash": null
+      "afterHash": "sha256:f50ceb4a3ac04514dcfaf8e1b2a6a1788b5f1d4077653d675a51a69aa217d425",
+      "proposedFile": "public/media/illustrations/histoire-nsimba-01.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-pilot-masters/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2925,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-nsimba-01.webp",
+          "bytes": 254756
+        },
+        {
+          "file": "public/media/illustrations/histoire-nsimba-02.webp",
+          "bytes": 159894
+        },
+        {
+          "file": "public/media/illustrations/histoire-nsimba-03.webp",
+          "bytes": 174514
+        },
+        {
+          "file": "public/media/illustrations/histoire-nsimba-04.webp",
+          "bytes": 185784
+        }
+      ],
+      "currentDecision": "awaiting-owner-pilot-review"
     },
     {
       "id": "histoire-mangue",
       "kind": "illustration",
-      "pedagogicalRole": "Une mangue entière, et trois morceaux de mangue coupés sur une assiette",
+      "pedagogicalRole": "Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main",
       "currentFile": "public/media/illustrations/histoire-mangue.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -2035,19 +2072,46 @@
       "presentation": "3-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "integrated-local-pilot",
+      "reviewState": "needs-owner-visual-review",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 3,
-        "lessonIds": [
-          "m3-lang-02",
-          "m3-lang-11",
-          "m3-lang-22"
-        ]
+        "lessonIds": ["m3-lang-02", "m3-lang-11", "m3-lang-22"]
       },
       "beforeHash": "sha256:0c002c3d3fe6c146ab56eeffe8386c93cf6ac215d8c822faf11219f96c049c4c",
-      "afterHash": null
+      "afterHash": "sha256:bbc2f54f554ab59614cf55ab6513d103b54f3d6c44b632391c1f3c79472a8c67",
+      "proposedFile": "public/media/illustrations/histoire-mangue-03.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-pilot-masters/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2162,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-mangue-01.webp",
+          "bytes": 221788
+        },
+        {
+          "file": "public/media/illustrations/histoire-mangue-02.webp",
+          "bytes": 201520
+        },
+        {
+          "file": "public/media/illustrations/histoire-mangue-03.webp",
+          "bytes": 188624
+        }
+      ],
+      "currentDecision": "awaiting-owner-pilot-review"
     },
     {
       "id": "histoire-bibi",
@@ -2086,16 +2150,12 @@
       "presentation": "3-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 3,
-        "lessonIds": [
-          "m3-lang-05",
-          "m3-lang-09",
-          "m3-lang-13"
-        ]
+        "lessonIds": ["m3-lang-05", "m3-lang-09", "m3-lang-13"]
       },
       "beforeHash": "sha256:115a43f2d89d096ea5dbfd1e3679633656487a36e3a61eb3f8c5615f6a29c87d",
       "afterHash": null
@@ -2137,16 +2197,12 @@
       "presentation": "3-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 3,
-        "lessonIds": [
-          "m3-lang-06",
-          "m3-lang-12",
-          "m3-lang-19"
-        ]
+        "lessonIds": ["m3-lang-06", "m3-lang-12", "m3-lang-19"]
       },
       "beforeHash": "sha256:7fbfdbccf8ea912ea13ca0e875eb4e0a61bda43ec7f9b29c10a48135d4caef6e",
       "afterHash": null
@@ -2216,8 +2272,8 @@
       "presentation": "3-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 7,
@@ -2271,16 +2327,12 @@
       "presentation": "3-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 3,
-        "lessonIds": [
-          "m3-lang-08",
-          "m3-lang-14",
-          "m3-lang-18"
-        ]
+        "lessonIds": ["m3-lang-08", "m3-lang-14", "m3-lang-18"]
       },
       "beforeHash": "sha256:df6458f051a0cab68852cf991c1dd70e811539eae00907d517033ff66936a317",
       "afterHash": null
@@ -2322,16 +2374,12 @@
       "presentation": "4-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 3,
-        "lessonIds": [
-          "m3-lang-07",
-          "m3-lang-16",
-          "m3-lang-20"
-        ]
+        "lessonIds": ["m3-lang-07", "m3-lang-16", "m3-lang-20"]
       },
       "beforeHash": "sha256:1d24cfd5888c9272c68b8ecf5134f0070c0e11baacc855618f7cbefc3e23bf6a",
       "afterHash": null
@@ -2366,8 +2414,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -2379,7 +2427,7 @@
     {
       "id": "comptine-bonjour",
       "kind": "illustration",
-      "pedagogicalRole": "Le soleil qui se lève derrière la colline, et deux mains qui font bonjour",
+      "pedagogicalRole": "Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines",
       "currentFile": "public/media/illustrations/comptine-bonjour.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -2420,20 +2468,38 @@
       "presentation": "single image",
       "animationValue": "existing one-time frame entrance only",
       "audioUsefulness": "recommended human rhyme recording",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "integrated-local-pilot",
+      "reviewState": "needs-owner-visual-review",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 4,
-        "lessonIds": [
-          "m1-lang-01",
-          "m1-lang-03",
-          "m1-lang-13",
-          "m1-lang-19"
-        ]
+        "lessonIds": ["m1-lang-01", "m1-lang-03", "m1-lang-13", "m1-lang-19"]
       },
       "beforeHash": "sha256:01ec06b85bdcb93bfa880ec53b917ed4821f179e677f50e9cfac641335ed8e35",
-      "afterHash": null
+      "afterHash": "sha256:2d1ad0c5d999fd8f3c3ecf446ed5ddad79bde90dc7044449d1267718a190c621",
+      "proposedFile": "public/media/illustrations/comptine-bonjour.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-benchmark-masters/comptine-bonjour-master.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 4599,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/comptine-bonjour.webp",
+          "bytes": 102856
+        }
+      ],
+      "currentDecision": "awaiting-owner-pilot-review"
     },
     {
       "id": "comptine-mains",
@@ -2514,8 +2580,8 @@
       "presentation": "single image",
       "animationValue": "existing one-time frame entrance only",
       "audioUsefulness": "recommended human rhyme recording",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 9,
@@ -2549,8 +2615,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -2574,8 +2640,8 @@
       "presentation": "single image",
       "animationValue": "existing one-time frame entrance only",
       "audioUsefulness": "recommended human rhyme recording",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 0,
@@ -2614,8 +2680,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -2654,8 +2720,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,
@@ -2729,8 +2795,8 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "unnecessary",
-      "implementationState": "pending-owner-style-decision",
-      "reviewState": "needs-review",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
       "approvalImpact": {
         "expected": "none",
         "lessonCount": 0,

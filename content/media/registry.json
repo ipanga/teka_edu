@@ -274,12 +274,14 @@
     {
       "id": "corps-tete",
       "kind": "object",
-      "file": "objects/corps-tete.svg",
+      "file": "objects/corps-tete.webp",
       "alt": "La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire",
+      "width": 1024,
+      "height": 1024,
       "tags": ["tête", "corps", "visage"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:2aa04c3b557d1b0e3a7be2a20772c84cc81134f8ef9d78d2089b4e3e4759af39"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré et retenue au banc d’essai visuel de septembre 2026 (docs/september-rich-media-benchmark.md).",
+      "contentHash": "sha256:ea479dea64fd092a84c9e7443791b939d36a821a27c9fd72de3b74770412e18f"
     },
     {
       "id": "corps-ventre",
@@ -314,12 +316,14 @@
     {
       "id": "animal-chevre",
       "kind": "animal",
-      "file": "animals/animal-chevre.svg",
-      "alt": "Une chèvre blanche, avec ses cornes et sa barbichette",
+      "file": "animals/animal-chevre.webp",
+      "alt": "Une jeune chèvre blanche, avec ses cornes, sa barbichette et une oreille noire",
+      "width": 1024,
+      "height": 1024,
       "tags": ["chèvre", "animal", "bibi"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:62993dc9a45ae5703a0b64e2ee9a36f57520a58be73cecc3ef2044c59dc68477"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré et retenue au banc d’essai visuel de septembre 2026 (docs/september-rich-media-benchmark.md).",
+      "contentHash": "sha256:9af0f57f755f83a20648cfcffd3f61d05c128a44bb6df50522f0c75c9821fab1"
     },
     {
       "id": "forme-maison-composee",
@@ -364,22 +368,85 @@
     {
       "id": "histoire-nsimba",
       "kind": "illustration",
-      "file": "illustrations/histoire-nsimba.svg",
-      "alt": "Nsimba, un petit garçon avec son sac d’école sur le dos, devant la porte de l’école",
+      "file": "illustrations/histoire-nsimba-01.webp",
+      "alt": "Nsimba, son sac d’école sur le dos, tient la main de son adulte devant le portail de l’école ; la maitresse s’accroupit pour lui dire bonjour",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-nsimba-01.webp",
+            "alt": "Nsimba, son sac d’école sur le dos, tient la main de son adulte devant le portail de l’école ; la maitresse s’accroupit pour lui dire bonjour",
+            "contentHash": "sha256:f50ceb4a3ac04514dcfaf8e1b2a6a1788b5f1d4077653d675a51a69aa217d425",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-nsimba-02.webp",
+            "alt": "Nsimba entre dans la classe avec son sac ; la maitresse lui montre sa place et une étiquette vierge sur la table",
+            "contentHash": "sha256:b0ddad78557a957dbd2f7ef19aeefaf7714be7f36ca9305f76db51f54cf17b46",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-nsimba-03.webp",
+            "alt": "Amina tend un crayon bleu à Nsimba, qui dessine une maison, un soleil et deux enfants",
+            "contentHash": "sha256:ab1550194330750c417e972e2b4c969cf35147baa6cc9604a6a201c7cf301a5e",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-nsimba-04.webp",
+            "alt": "Le soir, Nsimba sourit à côté de son adulte : demain, il retourne à l’école",
+            "contentHash": "sha256:c4d4619feaaffe8e26f3baeef16ddd04c523c8c00aebb955cc552ab873650c49",
+            "width": 1200,
+            "height": 900
+          }
+        ],
+        "pageFrames": [0, 0, 1, 2, 3]
+      },
       "tags": ["nsimba", "école", "rentrée", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:4b4ab397cf3e41a88837778c3e6cf3eaf7fda336103040c1ddc4b1475cbeadab"
+      "provenance": "Séquence d’illustrations peintes originales pour Teka Edu, alignée sur les pages de l’histoire (pilote visuel de septembre 2026, docs/september-rich-media-benchmark.md).",
+      "contentHash": "sha256:f50ceb4a3ac04514dcfaf8e1b2a6a1788b5f1d4077653d675a51a69aa217d425"
     },
     {
       "id": "histoire-mangue",
       "kind": "illustration",
-      "file": "illustrations/histoire-mangue.svg",
-      "alt": "Une mangue entière, et trois morceaux de mangue coupés sur une assiette",
+      "file": "illustrations/histoire-mangue-03.webp",
+      "alt": "Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-mangue-01.webp",
+            "alt": "Ilunga, assis sous le manguier, tient une grosse mangue dans ses deux mains",
+            "contentHash": "sha256:d34f5dbe3a621076f7645febb4f470a70ea85b802aa22a339c1d60a1bc43ea20",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-mangue-02.webp",
+            "alt": "Ama et Tito arrivent et regardent la mangue ; Ilunga réfléchit",
+            "contentHash": "sha256:57585c800134f3e992ca3fa446316baf8274e699b111283c9e992f9495e4e272",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-mangue-03.webp",
+            "alt": "Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main",
+            "contentHash": "sha256:bbc2f54f554ab59614cf55ab6513d103b54f3d6c44b632391c1f3c79472a8c67",
+            "width": 1200,
+            "height": 900
+          }
+        ],
+        "pageFrames": [0, 1, 2, 2]
+      },
       "tags": ["mangue", "partage", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:0c002c3d3fe6c146ab56eeffe8386c93cf6ac215d8c822faf11219f96c049c4c"
+      "provenance": "Séquence d’illustrations peintes originales pour Teka Edu, alignée sur les pages de l’histoire (pilote visuel de septembre 2026, docs/september-rich-media-benchmark.md).",
+      "contentHash": "sha256:bbc2f54f554ab59614cf55ab6513d103b54f3d6c44b632391c1f3c79472a8c67"
     },
     {
       "id": "histoire-bibi",
@@ -444,12 +511,14 @@
     {
       "id": "comptine-bonjour",
       "kind": "illustration",
-      "file": "illustrations/comptine-bonjour.svg",
-      "alt": "Le soleil qui se lève derrière la colline, et deux mains qui font bonjour",
+      "file": "illustrations/comptine-bonjour.webp",
+      "alt": "Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines",
+      "width": 1024,
+      "height": 1024,
       "tags": ["bonjour", "soleil", "comptine"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:01ec06b85bdcb93bfa880ec53b917ed4821f179e677f50e9cfac641335ed8e35"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré et retenue au banc d’essai visuel de septembre 2026 (docs/september-rich-media-benchmark.md).",
+      "contentHash": "sha256:2d1ad0c5d999fd8f3c3ecf446ed5ddad79bde90dc7044449d1267718a190c621"
     },
     {
       "id": "comptine-mains",

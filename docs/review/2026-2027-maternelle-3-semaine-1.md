@@ -118,7 +118,7 @@ l’autre — l’appareil est alors le sien._
 
 _L’enfant salue, dit son nom et son âge, et parle des personnes qui vivent avec lui._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Installez-vous face à l’enfant, au calme. Montrez d’abord vous-même : « Bonjour, je m’appelle… » Laissez un vrai temps de réponse. Reformulez au lieu de corriger.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C01-O12` — Énoncer la date. _(source : programme-2026)_
@@ -170,7 +170,13 @@ _L’enfant salue, dit son nom et son âge, et parle des personnes qui vivent av
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-nsimba` — Nsimba, un petit garçon avec son sac d’école sur le dos, devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-nsimba`
+
+  - Page 1 : Nsimba, son sac d’école sur le dos, tient la main de son adulte devant le portail de l’école ; la maitresse s’accroupit pour lui dire bonjour (`public/media/illustrations/histoire-nsimba-01.webp`)
+  - Page 2 : Nsimba, son sac d’école sur le dos, tient la main de son adulte devant le portail de l’école ; la maitresse s’accroupit pour lui dire bonjour (`public/media/illustrations/histoire-nsimba-01.webp`)
+  - Page 3 : Nsimba entre dans la classe avec son sac ; la maitresse lui montre sa place et une étiquette vierge sur la table (`public/media/illustrations/histoire-nsimba-02.webp`)
+  - Page 4 : Amina tend un crayon bleu à Nsimba, qui dessine une maison, un soleil et deux enfants (`public/media/illustrations/histoire-nsimba-03.webp`)
+  - Page 5 : Le soir, Nsimba sourit à côté de son adulte : demain, il retourne à l’école (`public/media/illustrations/histoire-nsimba-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -466,7 +472,7 @@ l’autre — l’appareil est alors le sien._
 
 _Premier corpus de mots : nommer et ranger les objets de l’école._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Posez devant l’enfant les objets que vous avez : un cahier, un crayon, un sac. Nommez chaque objet avec son article, faites répéter, puis employez le mot dans une phrase.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -524,7 +530,12 @@ _Premier corpus de mots : nommer et ranger les objets de l’école._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue entière, et trois morceaux de mangue coupés sur une assiette (`public/media/illustrations/histoire-mangue.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-mangue`
+
+  - Page 1 : Ilunga, assis sous le manguier, tient une grosse mangue dans ses deux mains (`public/media/illustrations/histoire-mangue-01.webp`)
+  - Page 2 : Ama et Tito arrivent et regardent la mangue ; Ilunga réfléchit (`public/media/illustrations/histoire-mangue-02.webp`)
+  - Page 3 : Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main (`public/media/illustrations/histoire-mangue-03.webp`)
+  - Page 4 : Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main (`public/media/illustrations/histoire-mangue-03.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 

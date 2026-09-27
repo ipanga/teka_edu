@@ -1,11 +1,19 @@
 import { createHash } from "node:crypto";
-import { readFile, readdir, writeFile } from "node:fs/promises";
+import { execFileSync } from "node:child_process";
+import { readFile, readdir, stat, writeFile } from "node:fs/promises";
 import { dirname, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { format, resolveConfig } from "prettier";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const baselineCommit = "cbc1cf3";
 const registry = JSON.parse(await readFile(join(root, "content/media/registry.json"), "utf8"));
+const baselineRegistry = JSON.parse(
+  execFileSync("git", ["show", `${baselineCommit}:content/media/registry.json`], {
+    cwd: root,
+    encoding: "utf8",
+  }),
+);
 const legacyState = JSON.parse(
   await readFile(join(root, "docs/september-illustration-state.json"), "utf8"),
 );
@@ -69,6 +77,43 @@ const webpSingle = new Set([
   "comptine-cabri",
 ]);
 
+const pilot = {
+  "corps-tete": {
+    master: "private/astra-visual-evidence/september-rich-benchmark-masters/corps-tete-master.png",
+    source: [1254, 1254],
+  },
+  "animal-chevre": {
+    master:
+      "private/astra-visual-evidence/september-rich-benchmark-masters/bibi-character-master.png",
+    source: [1254, 1254],
+  },
+  "comptine-bonjour": {
+    master:
+      "private/astra-visual-evidence/september-rich-benchmark-masters/comptine-bonjour-master.png",
+    source: [1254, 1254],
+  },
+  "histoire-nsimba": {
+    master: "private/astra-visual-evidence/september-rich-media-pilot-masters/",
+    source: [1448, 1086],
+  },
+  "histoire-mangue": {
+    master: "private/astra-visual-evidence/september-rich-media-pilot-masters/",
+    source: [1448, 1086],
+  },
+};
+
+const oldFileSize = (file) =>
+  execFileSync("git", ["show", `${baselineCommit}:public/media/${file}`], { cwd: root }).length;
+const delivery = async (asset) => {
+  const files = asset.sequence?.frames.map((frame) => frame.file) ?? [asset.file];
+  return Promise.all(
+    files.map(async (file) => ({
+      file: `public/media/${file}`,
+      bytes: (await stat(join(root, "public/media", file))).size,
+    })),
+  );
+};
+
 function formatDecision(asset) {
   if (storyFrames[asset.id]) {
     return {
@@ -126,40 +171,56 @@ function formatDecision(asset) {
   };
 }
 
-const assets = registry.assets.map((asset) => {
-  const decision = formatDecision(asset);
-  const assetUsages = usages.get(asset.id) ?? [];
-  const lessonIds = [...new Set(assetUsages.map((usage) => usage.lessonId))];
-  const currentQa = legacyState.finalQa.assets[asset.id];
-  return {
-    id: asset.id,
-    kind: asset.kind,
-    pedagogicalRole: asset.alt,
-    currentFile: `public/media/${asset.file}`,
-    currentFormat: asset.file.split(".").at(-1),
-    childActuallySeesIt: assetUsages.length > 0,
-    usages: assetUsages,
-    currentVisualStatus: currentQa?.status ?? "unknown",
-    selectedFinalFormat: decision.finalFormat,
-    decision: decision.decision,
-    reason: decision.reason,
-    presentation: decision.presentation,
-    animationValue: decision.animation,
-    audioUsefulness: decision.audio,
-    implementationState: "pending-owner-style-decision",
-    reviewState: "needs-review",
-    approvalImpact:
-      decision.decision === "audited-keep"
-        ? { expected: "none", lessonCount: 0, lessonIds: [] }
-        : {
-            expected: "lapse-on-byte-or-association-change",
-            lessonCount: lessonIds.length,
-            lessonIds,
-          },
-    beforeHash: asset.contentHash,
-    afterHash: null,
-  };
-});
+const assets = await Promise.all(
+  registry.assets.map(async (asset) => {
+    const decision = formatDecision(asset);
+    const assetUsages = usages.get(asset.id) ?? [];
+    const lessonIds = [...new Set(assetUsages.map((usage) => usage.lessonId))];
+    const currentQa = legacyState.finalQa.assets[asset.id];
+    const before = baselineRegistry.assets.find((candidate) => candidate.id === asset.id) ?? asset;
+    const selected = pilot[asset.id];
+    return {
+      id: asset.id,
+      kind: asset.kind,
+      pedagogicalRole: asset.alt,
+      currentFile: `public/media/${before.file}`,
+      currentFormat: before.file.split(".").at(-1),
+      childActuallySeesIt: assetUsages.length > 0,
+      usages: assetUsages,
+      currentVisualStatus: currentQa?.status ?? "unknown",
+      selectedFinalFormat: decision.finalFormat,
+      decision: decision.decision,
+      reason: decision.reason,
+      presentation: decision.presentation,
+      animationValue: decision.animation,
+      audioUsefulness: decision.audio,
+      implementationState: selected ? "integrated-local-pilot" : "not-started",
+      reviewState: selected ? "needs-owner-visual-review" : "not-in-pilot",
+      approvalImpact:
+        decision.decision === "audited-keep"
+          ? { expected: "none", lessonCount: 0, lessonIds: [] }
+          : {
+              expected: "lapse-on-byte-or-association-change",
+              lessonCount: lessonIds.length,
+              lessonIds,
+            },
+      beforeHash: before.contentHash,
+      afterHash: selected ? asset.contentHash : null,
+      ...(selected
+        ? {
+            proposedFile: `public/media/${asset.file}`,
+            sourceMaster: selected.master,
+            sourceDimensions: { width: selected.source[0], height: selected.source[1] },
+            deliveredDimensions: { width: asset.width, height: asset.height },
+            compression: { format: "WebP", quality: 88, smartSubsample: true },
+            oldFileBytes: oldFileSize(before.file),
+            deliveryFiles: await delivery(asset),
+            currentDecision: "awaiting-owner-pilot-review",
+          }
+        : {}),
+    };
+  }),
+);
 
 const counts = assets.reduce(
   (result, asset) => {
@@ -179,31 +240,40 @@ const proposedAffectedLessons = [
 ];
 
 const manifest = {
-  task: "September rich-media visual upgrade — Phase A",
-  version: 1,
+  task: "September rich-media visual upgrade — controlled pilot",
+  version: 2,
   generatedOn: "2026-09-27",
-  baselineCommit: "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
+  productionCommit: "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
+  pilotBaselineCommit: baselineCommit,
   scope: ["maternelle-1 September", "maternelle-3 September"],
-  status: "phase-a-complete-phase-b-benchmark-awaiting-owner-direction",
+  status: "controlled-pilot-integrated-awaiting-owner-visual-review",
   productionAssetsChanged: false,
-  approvedContentChanged: false,
+  localPilotAssetsChanged: true,
+  approvedLessonSemanticsChanged: false,
   counts,
   anticipatedApprovalImpact: {
     ifAllProposedWebpAssetsAreIntegrated: proposedAffectedLessons.length,
     maternelle1: proposedAffectedLessons.filter((id) => id.startsWith("m1-")).length,
     maternelle3: proposedAffectedLessons.filter((id) => id.startsWith("m3-")).length,
-    currentImpact: 0,
+    currentImpact: 18,
+    currentApproved: 158,
+    currentReview: 18,
   },
   notes: [
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
     "A small story sequence is a presentation proposal tied to existing text pages. It must not alter story wording or progression.",
-    "Any changed registered asset byte or media association must use the existing lapse and independent reconfirmation mechanism.",
+    "The five pilot assets are integrated locally. Their 18 dependent lessons lapsed through the existing mechanism and remain at review.",
+    "All 158 unaffected approvals remain byte-for-byte unchanged from the pilot baseline.",
   ],
   assets,
 };
 
-const json = `${JSON.stringify(manifest, null, 2)}\n`;
-await writeFile(join(root, "docs/september-rich-media-audit.json"), json);
+const jsonPath = join(root, "docs/september-rich-media-audit.json");
+const json = await format(JSON.stringify(manifest, null, 2), {
+  ...(await resolveConfig(jsonPath)),
+  filepath: jsonPath,
+});
+await writeFile(jsonPath, json);
 
 const rows = assets
   .map((asset) => {
@@ -215,9 +285,9 @@ const rows = assets
   .join("\n");
 
 const digest = createHash("sha256").update(json).digest("hex");
-const markdown = `# September rich-media audit — Phase A
+const markdown = `# September rich-media audit — controlled pilot
 
-Generated from the canonical media registry, approved September lessons and supplied texts. This is a proposed post-release format strategy; it changes no production asset or approval.
+Generated from the canonical media registry, September lessons and supplied texts. Five representative assets are integrated locally for owner review; production remains unchanged.
 
 ## Decision summary
 
@@ -226,7 +296,8 @@ Generated from the canonical media registry, approved September lessons and supp
 - ${counts["audited-refine"]} SVG assets require refinement; accepted schematic and isolated-object SVGs stay unchanged unless a later real defect is demonstrated.
 - ${counts["audited-redraw"]} proposed for high-quality WebP delivery.
 - Final formats: ${counts.svg} SVG and ${counts.webp} WebP; 0 PNG delivery exceptions.
-- Proposed WebP rollout would lapse ${proposedAffectedLessons.length} unique lessons (${manifest.anticipatedApprovalImpact.maternelle1} in 1ère, ${manifest.anticipatedApprovalImpact.maternelle3} in 3ème); the current Phase A/B evidence lapses 0.
+- The five-asset pilot lapses 18 unique lessons: 8 in 1ère maternelle and 10 in 3ème maternelle. All remain at review; no approval was restored.
+- A full rollout is not authorized. The other 15 WebP candidates remain unimplemented.
 - Manifest SHA-256: \`${digest}\`.
 
 The supplied screenshots validate the distinction: layout and scaling are sound, while the body, rhyme and story art remains visually schematic. Shapes, counting models and isolated objects do not share that defect.

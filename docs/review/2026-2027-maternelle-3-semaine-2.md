@@ -372,7 +372,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Nommer les parties d’un animal et dire ce dont il a besoin pour vivre._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Partez d’un animal que l’enfant connait vraiment : une poule, une chèvre, un chien du quartier.
 - **Objectifs enseignés :**
   - `WORLD-S01-C01-O08` — Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale. _(source : programme-2026)_
@@ -388,7 +388,7 @@ _Nommer les parties d’un animal et dire ce dont il a besoin pour vivre._
 - **Images montrées à l'enfant (2) :**
 
   - `animal-poule` — Une poule blanche, avec sa crête rouge (`public/media/animals/animal-poule.svg`)
-  - `animal-chevre` — Une chèvre blanche, avec ses cornes et sa barbichette (`public/media/animals/animal-chevre.svg`)
+  - `animal-chevre` — Une jeune chèvre blanche, avec ses cornes, sa barbichette et une oreille noire (`public/media/animals/animal-chevre.webp`)
 
 - **Objectifs travaillés :** `WORLD-S01-C01-O08` Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale.
 
@@ -1444,7 +1444,7 @@ l’autre — l’appareil est alors le sien._
 
 _Comprendre ce que ressent un personnage, et le dire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Le but n’est pas de résumer l’histoire mais de parler de ce que ressent Bibi. Nommez les émotions vous-même : content, triste, fâché, curieux.
 - **Objectifs enseignés :**
   - `LANG-S02-C03-O14` — Comprendre les émotions, les intentions et les sentiments qui animent les personnages. _(source : programme-2024-langage)_
@@ -1470,7 +1470,7 @@ _Comprendre ce que ressent un personnage, et le dire._
 - **Aide en anglais (optionnelle) :** « Listen to Bibi’s story, then tell me how she feels. »
 - **Images montrées à l'enfant (1) :**
 
-  - `animal-chevre` — Une chèvre blanche, avec ses cornes et sa barbichette (`public/media/animals/animal-chevre.svg`)
+  - `animal-chevre` — Une jeune chèvre blanche, avec ses cornes, sa barbichette et une oreille noire (`public/media/animals/animal-chevre.webp`)
 
 - **Objectifs travaillés :** `LANG-S02-C03-O14` Comprendre les émotions, les intentions et les sentiments qui animent les personnages. ; `LANG-S02-C03-O15` Établir un lien entre la lecture effectuée et sa propre expérience.
 

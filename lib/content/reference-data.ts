@@ -58,6 +58,7 @@ import { type TeachingText, checkTexts } from "@/domain/lessons/texts";
 import {
   checkAudio,
   checkMedia,
+  checkMediaSequences,
   mediaDigestSource,
   type AudioAsset,
   type MediaAsset,
@@ -372,6 +373,7 @@ export function checkReferenceData(data: ReferenceData): string[] {
     ),
     ...checkTexts(data.texts, data.lessons),
     ...checkMedia(data.media, data.lessons),
+    ...checkMediaSequences(data.media, data.texts),
     ...checkAudio(data.audio, data.texts),
     ...data.annualPlans.flatMap((plan) =>
       checkAnnualPlan(

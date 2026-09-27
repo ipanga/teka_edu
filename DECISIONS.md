@@ -1412,3 +1412,34 @@ words did not move, and the review history says why. That is the honest state: t
 different picture than the reviewer saw. The cost is one review round per level, with a contact
 sheet a reviewer can judge in minutes. The benefit is that the gate keeps meaning what ADR-035
 said it means.
+
+---
+
+## ADR-049 — Rich illustrations use committed WebP and bounded story sequences
+
+**Status:** Accepted · **Date:** 2026-09-27 · **Extends:** ADR-042, ADR-048 · **Scope:** media architecture; individual pilot assets still require owner visual review
+
+**Context:** The September audit found two valid visual needs. Exact shapes, diagrams and simple
+objects are best as small deterministic SVGs. People, body references, expressive animals, rhymes
+and story moments lose warmth, emotion and context when assembled from the same schematic vector
+primitives. One raster picture per story was also insufficient when the existing text pages move
+through materially different moments.
+
+**Decision:** Keep the mixed boundary: SVG for exact instructional graphics and optimized WebP for
+reviewed painted art. WebP rows record intrinsic width and height as well as the byte hash. A story
+illustration may declare 2–6 frames and one frame index for every existing narrative page. The
+sequence changes presentation only; it cannot change text, page count, lesson progression or
+duration. Validation requires every frame to exist, match its recorded hash and dimensions, be
+used, and align with the story’s actual page count. The renderer reserves the image aspect ratio
+and preloads only the next frame.
+
+Generation happens outside the product. Only the reviewed, optimized files enter `public/media/`;
+there is no runtime model, image API, secret, external URL or paid request. The approval digest
+fingerprints every frame description, byte hash and page mapping, so any visual or sequencing
+change lapses exactly the lessons that depend on it under ADR-048.
+
+**Consequences:** story screens can show coherent narrative progression without rewriting approved
+content, while shapes and diagrams stay exact and inexpensive. Painted assets are larger than SVGs,
+so each review records file sizes and checks real phone and desktop screens. This architecture does
+not authorize the remaining September candidates: the controlled five-asset pilot must receive the
+owner’s visual decision before any wider rollout.
