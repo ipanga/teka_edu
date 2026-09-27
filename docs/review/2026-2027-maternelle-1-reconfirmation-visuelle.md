@@ -12,29 +12,36 @@ leurs fichiers, dimensions et empreintes exactes sont consignés dans
 
 ## Ce qui s’est passé
 
-2 image(s) de septembre ont été remplacées localement par des illustrations
+1 image(s) de septembre ont été remplacées localement par des illustrations
 WebP plus chaleureuses, expressives et proches d’un album préscolaire. Une histoire peut utiliser
 une courte séquence alignée sur ses pages existantes. Aucun texte n’a été réécrit ; les personnages,
 objets, quantités, actions et décors doivent être jugés contre le texte approuvé.
-Les 49 autres images, dont toutes les formes géométriques, n’ont pas bougé.
+Les 50 autres images, dont toutes les formes géométriques, n’ont pas bougé.
 
 L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant (ISSUE-026).
-Les approbations de **9 leçon(s)** de cette classe ont donc été annulées — pas
+Les approbations de **2 leçon(s)** de cette classe ont donc été annulées — pas
 re-tamponnées — et ce document vous demande de confirmer que les nouvelles images servent
 toujours ce que chaque leçon enseigne (ADR-048).
 
 ## La planche avant / après
 
-![Avant / après : chaque image redessinée, aux trois tailles de l’application](media/september-rich-media-rollout-batch-2-comparison.png)
+![Avant / après : chaque image redessinée, aux trois tailles de l’application](media/september-rich-media-rollout-batch-3-comparison.png)
 
 La planche montre chaque image aux trois tailles de l’application : 72 px (une rangée à
 compter), 128 px (une carte de mot), 256 px (l’image d’une histoire).
 
 ## Les images que cette classe montre — 1
 
-| Image            | Type         | Description avant                            | Description après                                                                          | Leçons de cette classe                                                                                     |
-| ---------------- | ------------ | -------------------------------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| `comptine-mains` | illustration | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | 9 — m1-lang-02, m1-lang-04, m1-lang-11, m1-lang-16, m1-lang-22, m1-art-04, m1-art-07, m1-art-11, m1-art-17 |
+| Image           | Type         | Description avant                                          | Description après                                                                                           | Leçons de cette classe     |
+| --------------- | ------------ | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------- |
+| `histoire-tika` | illustration | Un enfant qui s’étire dans son lit, le soleil à la fenêtre | Le matin, Tika boit dans une tasse devant son bol ; des cubes et un ballon attendent près de lui pour jouer | 2 — m1-lang-09, m1-lang-21 |
+
+## Séquences des histoires
+
+| Histoire        | Page(s) | Fichier                                            | Description exacte de la scène                                                                              |
+| --------------- | ------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `histoire-tika` | 1       | `public/media/illustrations/histoire-tika-01.webp` | Le matin, Tika boit dans une tasse devant son bol ; des cubes et un ballon attendent près de lui pour jouer |
+| `histoire-tika` | 2       | `public/media/illustrations/histoire-tika-02.webp` | Le soir, Tika dort paisiblement dans son lit, les yeux fermés                                               |
 
 ## Texte approuvé et image montrée, page par page
 
@@ -42,39 +49,31 @@ Ces extraits sont les mots canoniques réellement affichés dans l’application
 de juger chaque scène sans devoir consulter un autre fichier. Une histoire avance par groupes
 de 3 lignes ; une comptine tient sur une seule page.
 
-### `comptine-mains` — Un, deux, trois, mes mains
+### `histoire-tika` — Tika se lève
 
-- **Page 1 — image :** `public/media/illustrations/comptine-mains.webp`
-  - Description accessible : Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre
+- **Page 1 — image :** `public/media/illustrations/histoire-tika-01.webp`
+  - Description accessible : Le matin, Tika boit dans une tasse devant son bol ; des cubes et un ballon attendent près de lui pour jouer
   - Texte affiché :
-    > Un, deux, trois,
-    > mes mains sont là.
-    > Un, deux, trois,
-    > je les cache… les voilà !
+    > Le matin, Tika ouvre les yeux.
+    > Tika se lève. Tika met un pied, puis l’autre pied.
+    > Tika boit. Tika mange.
 
-### `comptine-mains` — Mes deux mains
-
-- **Page 1 — image :** `public/media/illustrations/comptine-mains.webp`
-  - Description accessible : Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre
+- **Page 2 — image :** `public/media/illustrations/histoire-tika-02.webp`
+  - Description accessible : Le soir, Tika dort paisiblement dans son lit, les yeux fermés
   - Texte affiché :
-    > Voici ma tête,
-    > voici mes épaules,
-    > voici mes deux mains
-    > qui montent tout là-haut.
-    > Voici mes genoux,
-    > voici mes deux pieds,
-    > et voici mon ventre
-    > qui se met à rigoler !
+    > Puis Tika joue, joue, joue.
+    > Le soir, Tika est fatigué.
+    > Tika ferme les yeux. Bonne nuit, Tika.
 
 ## Résumé
 
 | Mesure                                        | Valeur                          |
 | --------------------------------------------- | ------------------------------- |
 | Leçons de la classe                           | 88                              |
-| Leçons concernées (approbation annulée)       | 9                               |
-| Leçons non concernées                         | 79                              |
-| Images modifiées (toutes classes)             | 2                               |
-| Images inchangées (toutes classes)            | 49                              |
+| Leçons concernées (approbation annulée)       | 2                               |
+| Leçons non concernées                         | 86                              |
+| Images modifiées (toutes classes)             | 1                               |
+| Images inchangées (toutes classes)            | 50                              |
 | Texte pédagogique modifié (enfant ou adulte)  | **0** — vérifié champ par champ |
 | Objectifs modifiés                            | **0** — vérifié                 |
 | Progression, programme, calendrier modifiés   | **0** — vérifié                 |
@@ -88,39 +87,17 @@ aucune progression n’a changé (vérifié avant l’écriture de ce document).
 du changement d’empreinte est la ligne « image » : ses octets ont changé, et l’empreinte d’une
 approbation couvre les octets de chaque image montrée (ISSUE-026, ADR-048).
 
-### Semaine 1 — 3 leçon(s)
-
-| Jour | Leçon                                     | Activité                                   | Image            | Rôle                            | Empreinte avant | Empreinte après | Description avant                            | Description après                                                                          | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | ----------------------------------------- | ------------------------------------------ | ---------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
-| 2    | `m1-lang-02` Encore des mots de la maison | `m1-lang-02-a3` Un, deux, trois, mes mains | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
-| 4    | `m1-art-04` Ma comptine                   | `m1-art-04-a1` Ma comptine                 | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
-| 4    | `m1-lang-04` Je dis ce que je fais        | `m1-lang-04-a3` Un, deux, trois, mes mains | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
-
 ### Semaine 2 — 1 leçon(s)
 
-| Jour | Leçon                   | Activité                   | Image            | Rôle                            | Empreinte avant | Empreinte après | Description avant                            | Description après                                                                          | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | ----------------------- | -------------------------- | ---------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
-| 7    | `m1-art-07` Ma comptine | `m1-art-07-a1` Ma comptine | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
-
-### Semaine 3 — 2 leçon(s)
-
-| Jour | Leçon                          | Activité                                   | Image            | Rôle                            | Empreinte avant | Empreinte après | Description avant                            | Description après                                                                          | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | ------------------------------ | ------------------------------------------ | ---------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
-| 11   | `m1-art-11` Ma comptine        | `m1-art-11-a1` Ma comptine                 | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
-| 11   | `m1-lang-11` Ma main, mon pied | `m1-lang-11-a3` Un, deux, trois, mes mains | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
-
-### Semaine 4 — 2 leçon(s)
-
-| Jour | Leçon                      | Activité                                   | Image            | Rôle                            | Empreinte avant | Empreinte après | Description avant                            | Description après                                                                          | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | -------------------------- | ------------------------------------------ | ---------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
-| 16   | `m1-lang-16` J’écoute bien | `m1-lang-16-a3` Un, deux, trois, mes mains | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
-| 17   | `m1-art-17` Ma comptine    | `m1-art-17-a1` Ma comptine                 | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
+| Jour | Leçon                           | Activité                     | Image           | Rôle                            | Empreinte avant | Empreinte après | Description avant                                          | Description après                                                                                           | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | ------------------------------- | ---------------------------- | --------------- | ------------------------------- | --------------- | --------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------ | ------------ | ---------------------- |
+| 9    | `m1-lang-09` L’histoire de Tika | `m1-lang-09-a2` Tika se lève | `histoire-tika` | principale — montrée à l’enfant | `c011c87cf0b3`  | `b5df0ae7a105`  | Un enfant qui s’étire dans son lit, le soleil à la fenêtre | Le matin, Tika boit dans une tasse devant son bol ; des cubes et un ballon attendent près de lui pour jouer | inchangé     | inchangé     | inchangés              |
 
 ### Semaine 5 — 1 leçon(s)
 
-| Jour | Leçon                                 | Activité                                   | Image            | Rôle                            | Empreinte avant | Empreinte après | Description avant                            | Description après                                                                          | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | ------------------------------------- | ------------------------------------------ | ---------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
-| 22   | `m1-lang-22` Tout ce que je sais dire | `m1-lang-22-a3` Un, deux, trois, mes mains | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
+| Jour | Leçon                    | Activité                     | Image           | Rôle                            | Empreinte avant | Empreinte après | Description avant                                          | Description après                                                                                           | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | ------------------------ | ---------------------------- | --------------- | ------------------------------- | --------------- | --------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------ | ------------ | ---------------------- |
+| 21   | `m1-lang-21` Encore Tika | `m1-lang-21-a2` Tika se lève | `histoire-tika` | principale — montrée à l’enfant | `c011c87cf0b3`  | `b5df0ae7a105`  | Un enfant qui s’étire dans son lit, le soleil à la fenêtre | Le matin, Tika boit dans une tasse devant son bol ; des cubes et un ballon attendent près de lui pour jouer | inchangé     | inchangé     | inchangés              |
 
 ## Ce que l’on vous demande
 

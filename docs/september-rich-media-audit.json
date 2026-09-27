@@ -5,7 +5,7 @@
   "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   "pilotBaselineCommit": "cbc1cf3",
   "scope": ["maternelle-1 September", "maternelle-3 September"],
-  "status": "rollout-batch-2-reconfirmed-controlled-rollout-active",
+  "status": "rollout-batch-3-awaiting-independent-reconfirmation",
   "productionAssetsChanged": false,
   "localPilotAssetsChanged": true,
   "approvedLessonSemanticsChanged": false,
@@ -20,9 +20,9 @@
     "ifAllProposedWebpAssetsAreIntegrated": 53,
     "maternelle1": 27,
     "maternelle3": 26,
-    "currentImpact": 0,
-    "currentApproved": 176,
-    "currentReview": 0
+    "currentImpact": 2,
+    "currentApproved": 174,
+    "currentReview": 2
   },
   "notes": [
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
@@ -35,7 +35,8 @@
     "Rollout batch 1 integrates corps-main, corps-pied, corps-ventre, animal-poule and animal-poussin. The first independent pass accepted four assets and requested a tighter belly crop; the corrected corps-ventre and all 10 dependent lessons were accepted on the second pass.",
     "The lapsed-only workflow restored exactly 10 Batch-1 approvals with fresh digests. All 166 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
     "Rollout batch 2 integrates comptine-mains and the currently unused comptine-cabri. Claude Max / Opus 5.5 independently accepted both assets and all nine dependent lessons without correction; comptine-cabri lapses no approval.",
-    "The lapsed-only workflow restored exactly nine Batch-2 approvals with fresh digests. All 167 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain."
+    "The lapsed-only workflow restored exactly nine Batch-2 approvals with fresh digests. All 167 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
+    "Rollout batch 3 integrates only the three-frame histoire-tika sequence. Exactly two lessons depend on it and await independent reconfirmation; seven other story-sequence candidates remain untouched."
   ],
   "assets": [
     {
@@ -1977,7 +1978,7 @@
     {
       "id": "histoire-tika",
       "kind": "illustration",
-      "pedagogicalRole": "Un enfant qui s’étire dans son lit, le soleil à la fenêtre",
+      "pedagogicalRole": "Le matin, Tika boit dans une tasse devant son bol ; des cubes et un ballon attendent près de lui pour jouer",
       "currentFile": "public/media/illustrations/histoire-tika.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -2001,18 +2002,45 @@
       "selectedFinalFormat": "webp",
       "decision": "audited-redraw",
       "reason": "The current single schematic SVG cannot carry the character, action, emotion, and narrative progression required by the approved story.",
-      "presentation": "3-image sequence aligned to existing story pages",
+      "presentation": "2-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
-      "implementationState": "not-started",
-      "reviewState": "not-in-pilot",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "awaiting-independent-reconfirmation",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 2,
         "lessonIds": ["m1-lang-09", "m1-lang-21"]
       },
       "beforeHash": "sha256:c011c87cf0b38ea454a47932c505ca2e2e6e4ef773ad33e75a1762956853369e",
-      "afterHash": null
+      "afterHash": "sha256:b5df0ae7a10553a2c6bb3a8aa3dfea46da3006f185d843be0865049799572e9e",
+      "proposedFile": "public/media/illustrations/histoire-tika-01.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2720,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-tika-01.webp",
+          "bytes": 259586
+        },
+        {
+          "file": "public/media/illustrations/histoire-tika-02.webp",
+          "bytes": 205194
+        }
+      ],
+      "currentDecision": "owner-authorized; independent-review-pending"
     },
     {
       "id": "histoire-kumu",

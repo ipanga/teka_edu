@@ -20,18 +20,28 @@ const cases = [
     path: "/maternelle/1/seance/18",
     activity: "Les quatre mots de mon corps",
     expected: ["corps-main.webp", "corps-pied.webp", "corps-ventre.webp"],
+    nextExpected: null,
   },
   {
     name: "animal-references",
     path: "/maternelle/3/seance/15",
     activity: "Pareil ou différent ?",
     expected: ["animal-poule.webp", "animal-poussin.webp"],
+    nextExpected: null,
   },
   {
     name: "hands-rhyme",
     path: "/maternelle/1/seance/2",
     activity: "Un, deux, trois, mes mains",
     expected: ["comptine-mains.webp"],
+    nextExpected: null,
+  },
+  {
+    name: "tika-story",
+    path: "/maternelle/1/seance/9",
+    activity: "Tika se lève",
+    expected: ["histoire-tika-01.webp"],
+    nextExpected: "histoire-tika-02.webp",
   },
 ] as const;
 
@@ -78,6 +88,15 @@ test("the controlled rollout renders its integrated references across target wid
         );
       }
       for (const expected of item.expected) expect(actual).toContain(expected);
+      if (item.nextExpected !== null) {
+        await dialog.getByRole("button", { name: "Page suivante", exact: true }).click();
+        const next = dialog.getByRole("img");
+        await expect(next).toHaveAttribute("src", new RegExp(`${item.nextExpected}$`));
+        await expect
+          .poll(() => next.evaluate((node: HTMLImageElement) => node.naturalWidth))
+          .toBe(1200);
+        await next.evaluate((node: HTMLImageElement) => node.decode());
+      }
       const layout = await page.evaluate(() => {
         const modal = document.querySelector<HTMLElement>("dialog")!;
         return {

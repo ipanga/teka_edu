@@ -358,12 +358,33 @@
     {
       "id": "histoire-tika",
       "kind": "illustration",
-      "file": "illustrations/histoire-tika.svg",
-      "alt": "Un enfant qui s’étire dans son lit, le soleil à la fenêtre",
-      "tags": ["histoire", "matin", "lit"],
+      "file": "illustrations/histoire-tika-01.webp",
+      "alt": "Le matin, Tika boit dans une tasse devant son bol ; des cubes et un ballon attendent près de lui pour jouer",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-tika-01.webp",
+            "alt": "Le matin, Tika boit dans une tasse devant son bol ; des cubes et un ballon attendent près de lui pour jouer",
+            "contentHash": "sha256:b5df0ae7a10553a2c6bb3a8aa3dfea46da3006f185d843be0865049799572e9e",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-tika-02.webp",
+            "alt": "Le soir, Tika dort paisiblement dans son lit, les yeux fermés",
+            "contentHash": "sha256:c371fa360e91b67dfed28d0f2f16e5a8877bd71b218f658cecccfbb8bb425a54",
+            "width": 1200,
+            "height": 900
+          }
+        ],
+        "pageFrames": [0, 1]
+      },
+      "tags": ["tika", "histoire", "matin", "repas", "jeu", "soir", "lit"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:c011c87cf0b38ea454a47932c505ca2e2e6e4ef773ad33e75a1762956853369e"
+      "provenance": "Séquence d’illustrations peintes originales pour Teka Edu, produite avec l’outil ImageGen intégré et alignée sur les trois pages existantes de l’histoire lors du déploiement rich-media contrôlé de septembre 2026.",
+      "contentHash": "sha256:b5df0ae7a10553a2c6bb3a8aa3dfea46da3006f185d843be0865049799572e9e"
     },
     {
       "id": "histoire-kumu",

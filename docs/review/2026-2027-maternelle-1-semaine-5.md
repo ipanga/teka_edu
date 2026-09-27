@@ -400,7 +400,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -437,7 +437,10 @@ Un doigt pointé, un geste, un seul mot ou un mot approximatif : tout cela répo
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-tika` — Un enfant qui s’étire dans son lit, le soleil à la fenêtre (`public/media/illustrations/histoire-tika.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-tika`
+
+  - Page 1 : Le matin, Tika boit dans une tasse devant son bol ; des cubes et un ballon attendent près de lui pour jouer (`public/media/illustrations/histoire-tika-01.webp`)
+  - Page 2 : Le soir, Tika dort paisiblement dans son lit, les yeux fermés (`public/media/illustrations/histoire-tika-02.webp`)
 
 - **Questions posées à l’enfant après l’écoute (2) :**
 
