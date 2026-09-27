@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 7 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 8 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-15 — ChatGPT · `accepted` (ai-assisted)
@@ -97,6 +97,12 @@ Reconfirmation visuelle indépendante du lot 2 du déploiement rich-media de sep
 Reconfirmation visuelle indépendante du lot 3 du déploiement rich-media de septembre, couvrant exactement histoire-tika et deux leçons. Claude Max / Opus 5.5 a conclu accepted : les deux images correspondent aux deux pages canoniques, Tika reste le même enfant dans le même foyer, les repères matin/soir sont clairs, les descriptions accessibles sont exactes et m1-lang-09 comme m1-lang-21 sont acceptées sans correction.
 
 **Suites données :** Aucune correction demandée. Les deux conditions de vérification du reviewer ont été contrôlées dans le dépôt : les guidances adultes ne décrivent pas l’ancien SVG et restent compatibles avec les deux pages ; assetFingerprint inclut chaque description, chaque contentHash et la table pageFrames, puis approve-week calcule lessonDigest depuis ce fingerprint complet. Les SHA-256 finaux ont été revérifiés : page 1 b5df0ae7a10553a2c6bb3a8aa3dfea46da3006f185d843be0865049799572e9e ; page 2 c371fa360e91b67dfed28d0f2f16e5a8877bd71b218f658cecccfbb8bb425a54. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les deux approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
+
+### 2026-09-27 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 4 du déploiement rich-media de septembre, couvrant exactement histoire-seau-lisa et huit leçons. Après une première conclusion accepted-with-modifications portant uniquement sur la preuve, le dossier corrigé montre les trois cadres avec leurs SHA-256 complets, associe la comptine au cadre principal 2 et conserve la progression 1–2–3 du récit. Claude Max / Opus 5.5 a conclu accepted pour les huit leçons.
+
+**Suites données :** Aucune correction pédagogique ou visuelle demandée. Seul le dossier de preuve a été corrigé : la comptine Le petit seau y affiche désormais histoire-seau-lisa-02.webp et les trois SHA-256 complets sont exposés. Les octets des trois WebP ont été revérifiés contre ces valeurs ; assetFingerprint couvre chaque cadre et pageFrames, puis lessonDigest reçoit cette empreinte complète. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
 
 ## Jour 5 — 2026-09-07
 
@@ -391,7 +397,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -687,7 +693,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
   - `LANG-S02-C03-O03` — Reconnaitre un personnage, le nommer et le situer dans les illustrations. _(source : programme-2024-langage)_
@@ -974,7 +980,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

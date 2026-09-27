@@ -1139,6 +1139,54 @@
       "outcome": "accepted",
       "summary": "Reconfirmation visuelle indépendante du lot 3 du déploiement rich-media de septembre, couvrant exactement histoire-tika et deux leçons. Claude Max / Opus 5.5 a conclu accepted : les deux images correspondent aux deux pages canoniques, Tika reste le même enfant dans le même foyer, les repères matin/soir sont clairs, les descriptions accessibles sont exactes et m1-lang-09 comme m1-lang-21 sont acceptées sans correction.",
       "corrections": "Aucune correction demandée. Les deux conditions de vérification du reviewer ont été contrôlées dans le dépôt : les guidances adultes ne décrivent pas l’ancien SVG et restent compatibles avec les deux pages ; assetFingerprint inclut chaque description, chaque contentHash et la table pageFrames, puis approve-week calcule lessonDigest depuis ce fingerprint complet. Les SHA-256 finaux ont été revérifiés : page 1 b5df0ae7a10553a2c6bb3a8aa3dfea46da3006f185d843be0865049799572e9e ; page 2 c371fa360e91b67dfed28d0f2f16e5a8877bd71b218f658cecccfbb8bb425a54. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les deux approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf."
+    },
+    {
+      "levelId": "maternelle-1",
+      "schoolYearId": "2026-2027",
+      "week": 1,
+      "reviewedOn": "2026-09-27",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Claude Max / Opus 5.5",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle indépendante du lot 4 du déploiement rich-media de septembre, couvrant exactement histoire-seau-lisa et huit leçons. Après une première conclusion accepted-with-modifications portant uniquement sur la preuve, le dossier corrigé montre les trois cadres avec leurs SHA-256 complets, associe la comptine au cadre principal 2 et conserve la progression 1–2–3 du récit. Claude Max / Opus 5.5 a conclu accepted pour les huit leçons.",
+      "corrections": "Aucune correction pédagogique ou visuelle demandée. Seul le dossier de preuve a été corrigé : la comptine Le petit seau y affiche désormais histoire-seau-lisa-02.webp et les trois SHA-256 complets sont exposés. Les octets des trois WebP ont été revérifiés contre ces valeurs ; assetFingerprint couvre chaque cadre et pageFrames, puis lessonDigest reçoit cette empreinte complète. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf."
+    },
+    {
+      "levelId": "maternelle-1",
+      "schoolYearId": "2026-2027",
+      "week": 2,
+      "reviewedOn": "2026-09-27",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Claude Max / Opus 5.5",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle indépendante du lot 4 du déploiement rich-media de septembre, couvrant exactement histoire-seau-lisa et huit leçons. Après une première conclusion accepted-with-modifications portant uniquement sur la preuve, le dossier corrigé montre les trois cadres avec leurs SHA-256 complets, associe la comptine au cadre principal 2 et conserve la progression 1–2–3 du récit. Claude Max / Opus 5.5 a conclu accepted pour les huit leçons.",
+      "corrections": "Aucune correction pédagogique ou visuelle demandée. Seul le dossier de preuve a été corrigé : la comptine Le petit seau y affiche désormais histoire-seau-lisa-02.webp et les trois SHA-256 complets sont exposés. Les octets des trois WebP ont été revérifiés contre ces valeurs ; assetFingerprint couvre chaque cadre et pageFrames, puis lessonDigest reçoit cette empreinte complète. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf."
+    },
+    {
+      "levelId": "maternelle-1",
+      "schoolYearId": "2026-2027",
+      "week": 3,
+      "reviewedOn": "2026-09-27",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Claude Max / Opus 5.5",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle indépendante du lot 4 du déploiement rich-media de septembre, couvrant exactement histoire-seau-lisa et huit leçons. Après une première conclusion accepted-with-modifications portant uniquement sur la preuve, le dossier corrigé montre les trois cadres avec leurs SHA-256 complets, associe la comptine au cadre principal 2 et conserve la progression 1–2–3 du récit. Claude Max / Opus 5.5 a conclu accepted pour les huit leçons.",
+      "corrections": "Aucune correction pédagogique ou visuelle demandée. Seul le dossier de preuve a été corrigé : la comptine Le petit seau y affiche désormais histoire-seau-lisa-02.webp et les trois SHA-256 complets sont exposés. Les octets des trois WebP ont été revérifiés contre ces valeurs ; assetFingerprint couvre chaque cadre et pageFrames, puis lessonDigest reçoit cette empreinte complète. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf."
+    },
+    {
+      "levelId": "maternelle-1",
+      "schoolYearId": "2026-2027",
+      "week": 4,
+      "reviewedOn": "2026-09-27",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Claude Max / Opus 5.5",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle indépendante du lot 4 du déploiement rich-media de septembre, couvrant exactement histoire-seau-lisa et huit leçons. Après une première conclusion accepted-with-modifications portant uniquement sur la preuve, le dossier corrigé montre les trois cadres avec leurs SHA-256 complets, associe la comptine au cadre principal 2 et conserve la progression 1–2–3 du récit. Claude Max / Opus 5.5 a conclu accepted pour les huit leçons.",
+      "corrections": "Aucune correction pédagogique ou visuelle demandée. Seul le dossier de preuve a été corrigé : la comptine Le petit seau y affiche désormais histoire-seau-lisa-02.webp et les trois SHA-256 complets sont exposés. Les octets des trois WebP ont été revérifiés contre ces valeurs ; assetFingerprint couvre chaque cadre et pageFrames, puis lessonDigest reçoit cette empreinte complète. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf."
     }
   ]
 }

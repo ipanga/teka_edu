@@ -223,7 +223,7 @@ const assets = await Promise.all(
     const isPilot = pilot[asset.id] !== undefined;
     const isRolloutBatch2 = rolloutBatch2[asset.id] !== undefined;
     const isRolloutBatch3 = rolloutBatch3[asset.id] !== undefined;
-    const awaitingReview = rolloutBatch4[asset.id] !== undefined;
+    const isRolloutBatch4 = rolloutBatch4[asset.id] !== undefined;
     return {
       id: asset.id,
       kind: asset.kind,
@@ -244,11 +244,7 @@ const assets = await Promise.all(
           ? "integrated-local-pilot"
           : "integrated-local-rollout"
         : "not-started",
-      reviewState: selected
-        ? awaitingReview
-          ? "awaiting-independent-reconfirmation"
-          : "independently-reconfirmed"
-        : "not-in-pilot",
+      reviewState: selected ? "independently-reconfirmed" : "not-in-pilot",
       approvalImpact:
         decision.decision === "audited-keep"
           ? { expected: "none", lessonCount: 0, lessonIds: [] }
@@ -268,8 +264,8 @@ const assets = await Promise.all(
             compression: { format: "WebP", quality: 88, smartSubsample: true },
             oldFileBytes: oldFileSize(before.file),
             deliveryFiles: await delivery(asset),
-            currentDecision: awaitingReview
-              ? "owner-authorized; independent-review-pending"
+            currentDecision: isRolloutBatch4
+              ? "independent-review-accepted; lapsed-only-approval-restored"
               : isRolloutBatch3
                 ? "independent-review-accepted; lapsed-only-approval-restored"
                 : isRolloutBatch2
@@ -305,7 +301,7 @@ const manifest = {
   productionCommit: "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   pilotBaselineCommit: baselineCommit,
   scope: ["maternelle-1 September", "maternelle-3 September"],
-  status: "rollout-batch-4-awaiting-independent-reconfirmation",
+  status: "rollout-batch-4-independently-reconfirmed",
   productionAssetsChanged: false,
   localPilotAssetsChanged: true,
   approvedLessonSemanticsChanged: false,
@@ -321,8 +317,8 @@ const manifest = {
   notes: [
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
     "A small story sequence is a presentation proposal tied to existing text pages. It must not alter story wording or progression.",
-    "The five pilot assets are integrated locally. Their 18 dependent lessons lapsed through the existing mechanism and remain at review.",
-    "All 158 unaffected approvals remain byte-for-byte unchanged from the pilot baseline.",
+    "The five pilot assets are integrated locally. Their 18 dependent lessons lapsed through the existing mechanism and were restored only after independent acceptance.",
+    "All 158 unaffected approvals remained byte-for-byte unchanged from the pilot baseline.",
     "Independent review accepted four asset families and requested two bounded Nsimba corrections: a dedicated page-1 walking scene and a visible Nsimba name card on page 3.",
     "Both corrections were integrated without changing canonical lesson text; the second independent pass accepted all five asset families and all 18 affected lessons.",
     "The standard lapsed-only workflow restored exactly 18 approvals with fresh digests; all 158 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
@@ -332,7 +328,8 @@ const manifest = {
     "The lapsed-only workflow restored exactly nine Batch-2 approvals with fresh digests. All 167 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
     "Rollout batch 3 integrates only the two-frame histoire-tika sequence. Claude Max / Opus 5.5 independently accepted both frames and both dependent lessons without correction; seven other story-sequence candidates remain untouched.",
     "The lapsed-only workflow restored exactly two Batch-3 approvals with fresh digests. All 174 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
-    "Rollout batch 4 integrates only the three-frame histoire-seau-lisa sequence. Exactly eight lessons depend on it and await independent reconfirmation; six other story-sequence candidates remain untouched.",
+    "Rollout batch 4 integrates only the three-frame histoire-seau-lisa sequence. The first review accepted the images and requested corrected evidence; the corrected dossier explicitly maps the rhyme to primary frame 2 and exposes every frame hash. Claude Max / Opus 5.5 then accepted all eight dependent lessons.",
+    "The lapsed-only workflow restored exactly eight Batch-4 approvals with fresh digests. All 168 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain; six other story-sequence candidates remain untouched.",
   ],
   assets,
 };
@@ -367,7 +364,9 @@ Generated from the canonical media registry, September lessons and supplied text
 - Final formats: ${counts.svg} SVG and ${counts.webp} WebP; 0 PNG delivery exceptions.
 - The five-asset pilot affected 18 unique lessons: 8 in 1ère maternelle and 10 in 3ème maternelle. All 18 were independently reconfirmed and restored with fresh digests; September is 176/176 approved.
 - Rollout batch 1 contains five single-image references and affects exactly 10 lessons. All five assets and all 10 lessons were independently reconfirmed and restored with fresh digests.
-- Rollout batch 2 contains two rhyme illustrations. Nine lessons depend on comptine-mains and await independent reconfirmation; comptine-cabri is currently unused and lapses no approval. The other eight story candidates remain unimplemented.
+- Rollout batch 2 contains two rhyme illustrations. Both assets and all nine lessons that depend on comptine-mains were independently reconfirmed; comptine-cabri is currently unused and lapsed no approval.
+- Rollout batch 3 contains the two-frame histoire-tika sequence. Both frames and both dependent lessons were independently reconfirmed and restored with fresh digests.
+- Rollout batch 4 contains the three-frame histoire-seau-lisa sequence. The corrected evidence and all eight dependent lessons were independently accepted and restored with fresh digests. Six story candidates remain unimplemented.
 - Manifest SHA-256: \`${digest}\`.
 
 The supplied screenshots validate the distinction: layout and scaling are sound, while the body, rhyme and story art remains visually schematic. Shapes, counting models and isolated objects do not share that defect.

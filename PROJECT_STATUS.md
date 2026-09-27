@@ -7,7 +7,7 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-09-27
 Branch:     codex/september-rich-media-pilot; controlled rollout local checkpoint
-Commit:     main 51c83a22 remains production; Batch 2 frozen at b9621ff before acceptance
+Commit:     main 51c83a22 remains production; Batch 4 corrected evidence checkpoint 83ae1ea
 Updated by: Codex technical lead
 ```
 
@@ -52,12 +52,12 @@ byte-for-byte unchanged from checkpoint `ebf2372`, and zero stale approvals rema
 438 tests, content validation, Webpack build and the phone/tablet/desktop/TV story page-turn E2E pass. Production
 remains unchanged.
 
-Rollout batch 4 is frozen locally for independent review. It replaces the shared `histoire-seau-lisa` SVG with
+Rollout batch 4 is independently accepted locally. It replaces the shared `histoire-seau-lisa` SVG with
 a three-page painted story sequence while retaining a meaningful primary bucket frame for the rhyme and
 observation uses. A narrow tested validator update permits a sequence asset to be shared by non-story text only
 when it still illustrates at least one correctly mapped story; the renderer already pages stories only. Exactly
-eight 1ère maternelle lessons moved to `review`, 168 remain approved, and all 168 unaffected approval records
-are byte-for-byte unchanged from `f5b6a03`. Formatting, lint, typecheck, 438 tests, content validation, Webpack
+eight 1ère maternelle lessons moved to `review` during integration, and all 168 unaffected lesson records
+remained byte-for-byte unchanged from the pre-Batch-4 baseline. Formatting, lint, typecheck, 438 tests, content validation, Webpack
 build, all three story page turns and the rhyme primary frame pass responsive QA. Six story candidates remain;
 production is unchanged.
 
@@ -66,7 +66,12 @@ The first Batch-4 Opus 5.5 review accepted all three final images but returned
 the rhyme while the real UI and weekly evidence correctly showed primary frame 2. The generator now follows the
 renderer’s story-only paging rule, lists every frame SHA-256 and explains the full sequence fingerprint used by
 lesson digests. Targeted package, sequence, content and lapse validation pass. No media, lesson or approval byte
-changed, and all eight affected lessons remain at `review` pending a corrected bounded review.
+changed during that evidence correction. The corrected bounded pass then returned `accepted`. Local verification
+matched every reviewed SHA-256 to the actual WebP files, four full-review entries cover weeks 1–4, and the
+standard lapsed-only mechanism restored exactly the eight affected lessons with fresh digests. September is
+176 approved / 0 review with 176 distinct digests; all 168 unaffected lesson records are byte-for-byte unchanged
+and zero stale approvals remain. The next local batch is the four-page `histoire-kumu` sequence; fresh owner
+authorization is still required before its eventual independent-review package is transmitted.
 
 ## Independent September visual/UX review — 2026-09-26
 

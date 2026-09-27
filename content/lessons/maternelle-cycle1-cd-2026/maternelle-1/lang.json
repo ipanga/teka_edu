@@ -308,8 +308,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus 5.5",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-27",
+        "reviewedDigest": "62ee4c67917c9097",
+        "notes": "Semaine 1 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-04",
@@ -609,8 +617,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus 5.5",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-27",
+        "reviewedDigest": "160d6f7884655dc0",
+        "notes": "Semaine 2 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-07",
@@ -695,8 +711,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus 5.5",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-27",
+        "reviewedDigest": "8296642ad22aa2f2",
+        "notes": "Semaine 2 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-08",
@@ -786,8 +810,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus 5.5",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-27",
+        "reviewedDigest": "36940a04428ab7c2",
+        "notes": "Semaine 2 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-09",
@@ -1406,8 +1438,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus 5.5",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-27",
+        "reviewedDigest": "54fe2f30713d636a",
+        "notes": "Semaine 3 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-15",
@@ -1503,8 +1543,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus 5.5",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-27",
+        "reviewedDigest": "6e565fec7154edde",
+        "notes": "Semaine 4 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-16",
@@ -1698,8 +1746,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus 5.5",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-27",
+        "reviewedDigest": "a3fbb457c74c399f",
+        "notes": "Semaine 4 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-18",
@@ -1811,8 +1867,16 @@
         }
       ],
       "origin": "teka-edu-created",
-      "status": "review",
-      "review": null
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Claude Max / Opus 5.5",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-09-27",
+        "reviewedDigest": "acd5ecbc0246d02e",
+        "notes": "Semaine 4 : 2026-09-18 conséquence d’une autre relecture, 2026-09-15 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     },
     {
       "id": "m1-lang-19",

@@ -4,12 +4,13 @@
 
 September Rich-Media Visual Upgrade
 
-**Current phase:** the controlled pilot and rollout batches 1–3 are independently accepted and fully
-reapproved. Rollout batch 4 integrates only the three-page `histoire-seau-lisa` sequence; exactly eight
-dependent lessons are at `review` pending independent reconfirmation and 168 remain approved. Six bounded
-story-sequence candidates remain unimplemented. Production remains unchanged.
+**Current phase:** the controlled pilot and rollout batches 1–4 are independently accepted and fully
+reapproved. Rollout batch 4 integrates only the three-page `histoire-seau-lisa` sequence; its eight dependent
+lessons have fresh digests, September is 176 approved / 0 review, and all 168 unaffected lesson records remain
+byte-for-byte unchanged. The next bounded local batch is the four-page `histoire-kumu` sequence. Production
+remains unchanged.
 
-## Rollout batch 4 frozen for review — 2026-09-27
+## Rollout batch 4 independently accepted — 2026-09-27
 
 - **Media:** `histoire-seau-lisa` has three 1200×900 WebP frames at quality 88: Lisa searches under the empty
   table; her mother points to the single blue bucket on the chair while Lisa takes it; her mother pours water
@@ -19,8 +20,8 @@ story-sequence candidates remain unimplemented. Production remains unchanged.
   bucket. The sequence validator now permits this renderer-supported sharing only when the asset still
   illustrates at least one correctly sized story; a focused unit test covers the boundary.
 - **Scope:** exactly `m1-lang-03`, `m1-lang-06`, `m1-lang-07`, `m1-lang-08`, `m1-lang-14`, `m1-lang-15`,
-  `m1-lang-17` and `m1-lang-18` moved to `review`. All other 168 approval records remain byte-for-byte unchanged
-  from accepted Batch-3 checkpoint `f5b6a03`.
+  `m1-lang-17` and `m1-lang-18` moved to `review` during integration. All other 168 lesson records remained
+  byte-for-byte unchanged from the pre-Batch-4 baseline.
 - **Evidence:** `docs/review/media/september-rich-media-rollout-batch-4-comparison.png` renders the old SVG,
   primary frame, all three page frames, accessible descriptions, exact uses and approval impact. The bounded
   class package is `docs/review/2026-2027-maternelle-1-reconfirmation-visuelle.md`.
@@ -34,10 +35,17 @@ story-sequence candidates remain unimplemented. Production remains unchanged.
 - **Evidence correction:** `scripts/visual-reconfirmation.ts` now mirrors the renderer by paging sequences only
   for stories and using the primary file for rhymes. The regenerated dossier shows frame 2 for “Le petit seau”,
   lists all three SHA-256 values and explains that `assetFingerprint` plus `lessonDigest` cover every frame and
-  `pageFrames`. Media, lesson and approval bytes did not change; all eight lessons remain at `review`.
-- **Exact resume point:** obtain fresh owner authorization to send only the corrected Batch-4 comparison sheet,
-  corrected bounded 1ère maternelle reconfirmation package and corrected reviewer prompt through authenticated
-  Claude Max. Restore no approval before explicit acceptance.
+  `pageFrames`. Media, lesson and approval bytes did not change during that correction.
+- **Independent review pass 2:** after authenticated Claude Max access was restored, Opus 5.5 explicitly
+  returned `accepted` for the corrected dossier, all three final images and all eight dependent lessons. Local
+  verification confirmed that the actual WebP hashes are exactly the three values reviewed.
+- **Approval integrity:** four accepted full-review entries cover weeks 1–4. The standard `--lapsed-only`
+  workflow restored exactly eight lessons with freshly computed digests. September is 176 approved / 0 review
+  with 176 distinct valid digests; all 168 unaffected lesson records remain byte-for-byte unchanged and the
+  lapse dry run reports zero stale approvals.
+- **Exact resume point:** begin the next authorized local batch with `histoire-kumu`: verify the fixed 12-line
+  text renders as four three-line pages, generate exactly four page-aligned illustrations, validate and freeze
+  review evidence. Stop for fresh owner authorization before transmitting the Kumu review package.
 
 ## Rollout batch 3 independently accepted — 2026-09-27
 
