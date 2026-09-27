@@ -2,9 +2,50 @@
 
 ## Task
 
-September Upgrade Production Release
+September Rich-Media Visual Upgrade
 
-**Current phase:** the September upgrade is released and independently verified in production. Stop before October work for the owner's manual inspection.
+**Current phase:** Phase A asset/format audit is complete and the Phase B seven-category style benchmark is ready for owner direction. No production asset or approval changed.
+
+## Rich-media Phase A/B checkpoint — 2026-09-27
+
+- **Trigger:** the owner’s production screenshots confirm that the responsive UI is clean while several human,
+  body, rhyme and story pictures still read as assembled SVG icons rather than professional preschool
+  illustrations. This is a new post-release visual task; the completed September release verification below
+  remains closed.
+- **Scope recovered:** 176 September lessons, 302 activities and all 51 registered visual assets across 1ère
+  and 3ème maternelle. Existing audit and frozen hashes were reused; the completed audit was not restarted.
+- **Phase A decision:** keep 31 assets as SVG and propose 20 as WebP. SVG stays for eight shapes, seventeen
+  isolated/counting objects, the composed-shape house and five schematic instructional models. WebP is proposed
+  for four body references, three expressive animals, ten stories and three expressive rhymes. PNG has no
+  delivery use; lossless masters stay in ignored local evidence only.
+- **Story treatment:** each of the ten stories is mapped to a bounded 3–4 image sequence aligned with existing
+  renderer pages. No story text, instruction, objective, progression, duration or safety content changes.
+- **Durable evidence:** `docs/september-rich-media-audit.json` contains all 51 asset decisions, exact
+  lesson/activity uses, child visibility, final format, rationale, sequence decision, motion/audio category,
+  review state, before hash and anticipated approval impact. Its generated Markdown view is
+  `docs/september-rich-media-audit.md`.
+- **Phase B benchmark:** seven categories are represented in
+  `docs/review/media/september-rich-benchmark.png`: the existing bucket SVG as simple-object control plus six
+  non-integrated WebP candidates for body vocabulary, recurring character, story page, rhyme, expressive animal
+  and contextual scene. The proposed visual language is warm hand-painted 2D art with restrained gouache
+  texture, clear phone-scale compositions and stable character references.
+- **Independent visual review:** the first Nsimba character draft’s dark vignette was rejected and corrected.
+  The first mango-sharing scene was rejected because extra mangoes contradicted « une seule mangue »; the
+  accepted revision shows exactly three children with one piece each and no other mango. The remaining
+  candidates passed the same semantic and visual check.
+- **Claude Code:** Claude Max authentication is healthy, but automatic approval review rejected transmitting
+  the five new screenshots and expanded repository/content context because the previous disclosure permission
+  covered an earlier bounded audit. No workaround was attempted. Claude has made no change in this phase.
+- **Approval impact now:** 0 lessons, 0 digests. Candidates are not registered, rendered by the app or deployed.
+  A complete proposed WebP rollout would lapse 53 unique lessons (27 in 1ère, 26 in 3ème) and therefore requires
+  small batches plus independent reconfirmation.
+- **Environment:** local branch `codex/september-astra-visual-review`; production remains exact main SHA
+  `51c83a229e1559e98dbf7127fb916c2c8d6a841b`. No production/staging/database operation and no October work.
+- **Owner decision required:** accept, reject or redirect the proposed visual language and SVG/WebP boundary
+  before any registered asset is replaced. Separately, Claude can provide its requested second opinion only if
+  the owner explicitly authorizes the newly bounded screenshot/repository disclosure.
+- **Exact next action:** after owner direction, implement one small body/rhyme/story/animal batch, integrate it
+  locally at phone and desktop sizes, then lapse and independently reconfirm only the exact affected lessons.
 
 ## Supervisor handoff — 2026-09-26
 

@@ -6,10 +6,32 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-27
-Branch:     codex/september-astra-visual-review; release tracking checkpoint
-Commit:     main 51c83a22; production run 36276270999 succeeded
+Branch:     codex/september-astra-visual-review; rich-media Phase A/B local checkpoint
+Commit:     main 51c83a22 remains production; local benchmark not integrated
 Updated by: Codex technical lead
 ```
+
+## September rich-media visual upgrade — 2026-09-27
+
+The owner’s live screenshots started a new post-release visual phase. The responsive application and approved
+content remain correct, but human, body, rhyme and narrative SVGs still look schematic at large child-view
+sizes. Phase A reused the existing 176-lesson / 302-activity audit and reclassified all 51 registered assets by
+pedagogical purpose and delivery medium: 31 stay SVG and 20 are proposed as WebP. The exact asset, activity,
+format, sequence, audio/motion and approval-impact matrix is in
+[`docs/september-rich-media-audit.md`](docs/september-rich-media-audit.md) and its JSON manifest.
+
+A non-integrated Phase B benchmark now covers seven required categories. The existing bucket is the retained
+simple-object SVG control; six ImageGen candidates cover body vocabulary, Nsimba’s character reference, a
+Nsimba story page, a greeting rhyme, Bibi the goat and the resolution of « La mangue partagée ». Two first
+drafts were rejected and corrected: Nsimba’s dark vignette and extra mangoes that contradicted « une seule ».
+The accepted contact sheet is `docs/review/media/september-rich-benchmark.png`; proposed WebPs are 124–376 KiB.
+
+No candidate is registered, rendered by the application, included in a lesson digest or deployed. Current
+approval impact is therefore zero. A full rollout would affect 53 unique lessons (27 in 1ère, 26 in 3ème) and
+must use small batches plus the existing lapse and independent reconfirmation mechanism. Claude Max is logged
+in, but automatic approval review rejected sending the newly supplied screenshots and expanded repository
+context because earlier disclosure authorization covered a different completed audit. The next gate is the
+owner’s visual-direction decision; no October work begins.
 
 ## Independent September visual/UX review — 2026-09-26
 
