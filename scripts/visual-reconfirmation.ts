@@ -244,8 +244,8 @@ for (const levelId of levels) {
       "",
       "## Séquences des histoires",
       "",
-      "| Histoire | Page(s) | Fichier | Description exacte de la scène |",
-      "| --- | --- | --- | --- |",
+      "| Histoire | Page(s) | Fichier | SHA-256 | Description exacte de la scène |",
+      "| --- | --- | --- | --- | --- |",
       ...sequencedHere.flatMap((asset) =>
         asset.sequence!.frames.map((frame, index) => {
           const pages = asset
@@ -253,9 +253,14 @@ for (const levelId of levels) {
               frameIndex === index ? [page + 1] : [],
             )
             .join(", ");
-          return `| \`${asset.id}\` | ${pages} | \`public/media/${frame.file}\` | ${frame.alt} |`;
+          return `| \`${asset.id}\` | ${pages} | \`public/media/${frame.file}\` | \`${frame.contentHash}\` | ${frame.alt} |`;
         }),
       ),
+      "",
+      "L’empreinte d’approbation ne se limite pas au hash principal affiché dans le tableau des",
+      "activités : `assetFingerprint` inclut la description et le SHA-256 de **chaque cadre**, puis",
+      "la table `pageFrames`. `lessonDigest` reçoit cette empreinte complète pour toute leçon qui",
+      "utilise l’image ; modifier n’importe quel cadre annule donc l’approbation.",
     );
   }
   const reviewedTexts = data.texts.filter(
@@ -285,7 +290,9 @@ for (const levelId of levels) {
               ),
             );
       for (const [page, pageLines] of pages.entries()) {
-        const frameIndex = asset.sequence?.pageFrames[page];
+        // The real renderer pages a sequence only for a story. A rhyme or another text shows the
+        // asset's primary file, even when that asset also carries a story sequence.
+        const frameIndex = text.kind === "story" ? asset.sequence?.pageFrames[page] : undefined;
         const frame = frameIndex === undefined ? undefined : asset.sequence?.frames[frameIndex];
         const shownFile = frame?.file ?? asset.file;
         const shownAlt = frame?.alt ?? asset.alt;
@@ -343,6 +350,8 @@ for (const levelId of levels) {
     "aucune progression n’a changé (vérifié avant l’écriture de ce document). **La seule raison**",
     "du changement d’empreinte est la ligne « image » : ses octets ont changé, et l’empreinte d’une",
     "approbation couvre les octets de chaque image montrée (ISSUE-026, ADR-048).",
+    "Pour une séquence, les colonnes « empreinte » ci-dessous abrègent le hash du cadre principal ;",
+    "la section « Séquences des histoires » donne tous les SHA-256 et explique l’empreinte complète.",
     "",
   );
   const byWeek = new Map<number, RawLesson[]>();

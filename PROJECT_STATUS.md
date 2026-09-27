@@ -61,6 +61,13 @@ are byte-for-byte unchanged from `f5b6a03`. Formatting, lint, typecheck, 438 tes
 build, all three story page turns and the rhyme primary frame pass responsive QA. Six story candidates remain;
 production is unchanged.
 
+The first Batch-4 Opus 5.5 review accepted all three final images but returned
+`accepted-with-modifications` for an evidence-generator defect: the page-by-page dossier showed frame 1 beside
+the rhyme while the real UI and weekly evidence correctly showed primary frame 2. The generator now follows the
+renderer’s story-only paging rule, lists every frame SHA-256 and explains the full sequence fingerprint used by
+lesson digests. Targeted package, sequence, content and lapse validation pass. No media, lesson or approval byte
+changed, and all eight affected lessons remain at `review` pending a corrected bounded review.
+
 ## Independent September visual/UX review — 2026-09-26
 
 Owner-requested local review on `codex/september-astra-visual-review`, based on `a0b743b`.

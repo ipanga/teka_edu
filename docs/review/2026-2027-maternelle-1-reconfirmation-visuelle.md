@@ -38,11 +38,16 @@ compter), 128 px (une carte de mot), 256 px (l’image d’une histoire).
 
 ## Séquences des histoires
 
-| Histoire             | Page(s) | Fichier                                                 | Description exacte de la scène                                                              |
-| -------------------- | ------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `histoire-seau-lisa` | 1       | `public/media/illustrations/histoire-seau-lisa-01.webp` | Lisa, en robe rouge, regarde sous la table vide pour chercher son seau                      |
-| `histoire-seau-lisa` | 2       | `public/media/illustrations/histoire-seau-lisa-02.webp` | Lisa prend son seau bleu posé sur une chaise pendant que sa maman le lui montre             |
-| `histoire-seau-lisa` | 3       | `public/media/illustrations/histoire-seau-lisa-03.webp` | Maman verse de l’eau d’une cruche dans le seau bleu posé au sol ; Lisa sourit à côté d’elle |
+| Histoire             | Page(s) | Fichier                                                 | SHA-256                                                                   | Description exacte de la scène                                                              |
+| -------------------- | ------- | ------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `histoire-seau-lisa` | 1       | `public/media/illustrations/histoire-seau-lisa-01.webp` | `sha256:d57e220eab71297785635f5f8883e4cbd3ec67b7b58631566114e10ac31b1cd4` | Lisa, en robe rouge, regarde sous la table vide pour chercher son seau                      |
+| `histoire-seau-lisa` | 2       | `public/media/illustrations/histoire-seau-lisa-02.webp` | `sha256:42b9840e6bde3fe7010e158037b85de701c8cf4998d2a4f2168d615f639f5d1c` | Lisa prend son seau bleu posé sur une chaise pendant que sa maman le lui montre             |
+| `histoire-seau-lisa` | 3       | `public/media/illustrations/histoire-seau-lisa-03.webp` | `sha256:effee2420f3c0202bcf3837fcb253321ffca7c3d2abe6e99f6a258bfd2dfd533` | Maman verse de l’eau d’une cruche dans le seau bleu posé au sol ; Lisa sourit à côté d’elle |
+
+L’empreinte d’approbation ne se limite pas au hash principal affiché dans le tableau des
+activités : `assetFingerprint` inclut la description et le SHA-256 de **chaque cadre**, puis
+la table `pageFrames`. `lessonDigest` reçoit cette empreinte complète pour toute leçon qui
+utilise l’image ; modifier n’importe quel cadre annule donc l’approbation.
 
 ## Texte approuvé et image montrée, page par page
 
@@ -52,8 +57,8 @@ de 3 lignes ; une comptine tient sur une seule page.
 
 ### `histoire-seau-lisa` — Le petit seau
 
-- **Page 1 — image :** `public/media/illustrations/histoire-seau-lisa-01.webp`
-  - Description accessible : Lisa, en robe rouge, regarde sous la table vide pour chercher son seau
+- **Page 1 — image :** `public/media/illustrations/histoire-seau-lisa-02.webp`
+  - Description accessible : Lisa, en robe rouge, prend son seau bleu posé sur une chaise pendant que sa maman le lui montre
   - Texte affiché :
     > Dans mon seau il y a de l’eau,
     > dans ma main il y a le seau,
@@ -103,6 +108,8 @@ Pour chaque ligne : aucun texte lu à l’enfant, aucun texte lu à l’adulte, 
 aucune progression n’a changé (vérifié avant l’écriture de ce document). **La seule raison**
 du changement d’empreinte est la ligne « image » : ses octets ont changé, et l’empreinte d’une
 approbation couvre les octets de chaque image montrée (ISSUE-026, ADR-048).
+Pour une séquence, les colonnes « empreinte » ci-dessous abrègent le hash du cadre principal ;
+la section « Séquences des histoires » donne tous les SHA-256 et explique l’empreinte complète.
 
 ### Semaine 1 — 1 leçon(s)
 

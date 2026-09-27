@@ -27,9 +27,17 @@ story-sequence candidates remain unimplemented. Production remains unchanged.
 - **Validation:** formatting, lint, typecheck, all 438 unit tests, content validation, Webpack build and real UI
   checks for all three story pages plus the rhyme primary frame pass. Phone and desktop inspection found no
   broken image, overflow, distortion, adult-content leak or misleading interaction.
-- **Exact resume point:** obtain owner authorization to send only the Batch-4 comparison sheet, bounded 1ère
-  maternelle reconfirmation package and bounded reviewer prompt through authenticated Claude Max. Restore no
-  approval before explicit independent acceptance.
+- **Independent review pass 1:** Claude Max / Opus 5.5 accepted all three images but returned
+  `accepted-with-modifications` because the generated page-by-page evidence incorrectly paired the rhyme with
+  frame 1 even though the real UI and weekly rows use primary frame 2. It also asked the dossier to expose every
+  sequence-frame hash rather than only the primary hash.
+- **Evidence correction:** `scripts/visual-reconfirmation.ts` now mirrors the renderer by paging sequences only
+  for stories and using the primary file for rhymes. The regenerated dossier shows frame 2 for “Le petit seau”,
+  lists all three SHA-256 values and explains that `assetFingerprint` plus `lessonDigest` cover every frame and
+  `pageFrames`. Media, lesson and approval bytes did not change; all eight lessons remain at `review`.
+- **Exact resume point:** obtain fresh owner authorization to send only the corrected Batch-4 comparison sheet,
+  corrected bounded 1ère maternelle reconfirmation package and corrected reviewer prompt through authenticated
+  Claude Max. Restore no approval before explicit acceptance.
 
 ## Rollout batch 3 independently accepted — 2026-09-27
 
