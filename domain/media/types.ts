@@ -177,8 +177,9 @@ export function assetFiles(asset: MediaAsset): { file: string; contentHash: stri
  *  - every frame is shown on at least one page, and every page names an existing frame;
  *  - frames share one size, so turning a page never moves the text under the parent's eyes;
  *  - the asset illustrates at least one story, and every story it illustrates has exactly as many
- *    pages as `pageFrames` has entries. A story rewritten to another length makes this fail
- *    rather than show the wrong scene on a page.
+ *    pages as `pageFrames` has entries. A non-story text may share the asset: it shows the primary
+ *    frame and never pages through the sequence. A story rewritten to another length makes this
+ *    fail rather than show the wrong scene on a page.
  */
 export function checkMediaSequences(
   assets: readonly MediaAsset[],
@@ -230,13 +231,13 @@ export function checkMediaSequences(
         problems.push(`${where}: frame ${frame.file} is never shown on a page`);
       }
     });
-    const illustrated = texts.filter((text) => text.illustrationId === asset.id);
-    if (illustrated.length === 0) problems.push(`${where}: a sequence must illustrate a story`);
-    for (const text of illustrated) {
-      if (text.kind !== "story") {
-        problems.push(`${where}: text "${text.id}" is a ${text.kind}; only a story pages through`);
-        continue;
-      }
+    const illustratedStories = texts.filter(
+      (text) => text.illustrationId === asset.id && text.kind === "story",
+    );
+    if (illustratedStories.length === 0) {
+      problems.push(`${where}: a sequence must illustrate at least one story`);
+    }
+    for (const text of illustratedStories) {
       const pages = narrativePageCount(text);
       if (pages !== pageFrames.length) {
         problems.push(

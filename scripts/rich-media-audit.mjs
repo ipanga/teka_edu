@@ -131,6 +131,13 @@ const rolloutBatch3 = {
   },
 };
 
+const rolloutBatch4 = {
+  "histoire-seau-lisa": {
+    master: "private/astra-visual-evidence/september-rich-media-rollout-masters/",
+    source: [1448, 1086],
+  },
+};
+
 const oldFileSize = (file) =>
   execFileSync("git", ["show", `${baselineCommit}:public/media/${file}`], { cwd: root }).length;
 const delivery = async (asset) => {
@@ -211,10 +218,12 @@ const assets = await Promise.all(
       pilot[asset.id] ??
       rolloutBatch1[asset.id] ??
       rolloutBatch2[asset.id] ??
-      rolloutBatch3[asset.id];
+      rolloutBatch3[asset.id] ??
+      rolloutBatch4[asset.id];
     const isPilot = pilot[asset.id] !== undefined;
     const isRolloutBatch2 = rolloutBatch2[asset.id] !== undefined;
     const isRolloutBatch3 = rolloutBatch3[asset.id] !== undefined;
+    const awaitingReview = rolloutBatch4[asset.id] !== undefined;
     return {
       id: asset.id,
       kind: asset.kind,
@@ -235,7 +244,11 @@ const assets = await Promise.all(
           ? "integrated-local-pilot"
           : "integrated-local-rollout"
         : "not-started",
-      reviewState: selected ? "independently-reconfirmed" : "not-in-pilot",
+      reviewState: selected
+        ? awaitingReview
+          ? "awaiting-independent-reconfirmation"
+          : "independently-reconfirmed"
+        : "not-in-pilot",
       approvalImpact:
         decision.decision === "audited-keep"
           ? { expected: "none", lessonCount: 0, lessonIds: [] }
@@ -255,11 +268,13 @@ const assets = await Promise.all(
             compression: { format: "WebP", quality: 88, smartSubsample: true },
             oldFileBytes: oldFileSize(before.file),
             deliveryFiles: await delivery(asset),
-            currentDecision: isRolloutBatch3
-              ? "independent-review-accepted; lapsed-only-approval-restored"
-              : isRolloutBatch2
+            currentDecision: awaitingReview
+              ? "owner-authorized; independent-review-pending"
+              : isRolloutBatch3
                 ? "independent-review-accepted; lapsed-only-approval-restored"
-                : "owner-accepted; independent-review-accepted",
+                : isRolloutBatch2
+                  ? "independent-review-accepted; lapsed-only-approval-restored"
+                  : "owner-accepted; independent-review-accepted",
           }
         : {}),
     };
@@ -290,7 +305,7 @@ const manifest = {
   productionCommit: "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   pilotBaselineCommit: baselineCommit,
   scope: ["maternelle-1 September", "maternelle-3 September"],
-  status: "rollout-batch-3-reconfirmed-controlled-rollout-active",
+  status: "rollout-batch-4-awaiting-independent-reconfirmation",
   productionAssetsChanged: false,
   localPilotAssetsChanged: true,
   approvedLessonSemanticsChanged: false,
@@ -317,6 +332,7 @@ const manifest = {
     "The lapsed-only workflow restored exactly nine Batch-2 approvals with fresh digests. All 167 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
     "Rollout batch 3 integrates only the two-frame histoire-tika sequence. Claude Max / Opus 5.5 independently accepted both frames and both dependent lessons without correction; seven other story-sequence candidates remain untouched.",
     "The lapsed-only workflow restored exactly two Batch-3 approvals with fresh digests. All 174 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
+    "Rollout batch 4 integrates only the three-frame histoire-seau-lisa sequence. Exactly eight lessons depend on it and await independent reconfirmation; six other story-sequence candidates remain untouched.",
   ],
   assets,
 };

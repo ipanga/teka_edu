@@ -12,7 +12,7 @@ Generated from the canonical media registry, September lessons and supplied text
 - The five-asset pilot affected 18 unique lessons: 8 in 1ère maternelle and 10 in 3ème maternelle. All 18 were independently reconfirmed and restored with fresh digests; September is 176/176 approved.
 - Rollout batch 1 contains five single-image references and affects exactly 10 lessons. All five assets and all 10 lessons were independently reconfirmed and restored with fresh digests.
 - Rollout batch 2 contains two rhyme illustrations. Nine lessons depend on comptine-mains and await independent reconfirmation; comptine-cabri is currently unused and lapses no approval. The other eight story candidates remain unimplemented.
-- Manifest SHA-256: `769409ed5191602faf1c33479ee4ed773f52817ccacd84df07ee9d06e0614194`.
+- Manifest SHA-256: `82842e12d0bfbef382ffbe008e608c57e3ec3b1e5d4ad0a56d27ab0adfe7039f`.
 
 The supplied screenshots validate the distinction: layout and scaling are sound, while the body, rhyme and story art remains visually schematic. Shapes, counting models and isolated objects do not share that defect.
 

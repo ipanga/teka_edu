@@ -52,6 +52,15 @@ byte-for-byte unchanged from checkpoint `ebf2372`, and zero stale approvals rema
 438 tests, content validation, Webpack build and the phone/tablet/desktop/TV story page-turn E2E pass. Production
 remains unchanged.
 
+Rollout batch 4 is frozen locally for independent review. It replaces the shared `histoire-seau-lisa` SVG with
+a three-page painted story sequence while retaining a meaningful primary bucket frame for the rhyme and
+observation uses. A narrow tested validator update permits a sequence asset to be shared by non-story text only
+when it still illustrates at least one correctly mapped story; the renderer already pages stories only. Exactly
+eight 1ère maternelle lessons moved to `review`, 168 remain approved, and all 168 unaffected approval records
+are byte-for-byte unchanged from `f5b6a03`. Formatting, lint, typecheck, 438 tests, content validation, Webpack
+build, all three story page turns and the rhyme primary frame pass responsive QA. Six story candidates remain;
+production is unchanged.
+
 ## Independent September visual/UX review — 2026-09-26
 
 Owner-requested local review on `codex/september-astra-visual-review`, based on `a0b743b`.

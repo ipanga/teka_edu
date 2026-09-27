@@ -112,7 +112,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -151,7 +151,11 @@ Un doigt pointé, un geste, un seul mot ou un mot approximatif : tout cela répo
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus (`public/media/illustrations/histoire-seau-lisa.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-seau-lisa`
+
+  - Page 1 : Lisa, en robe rouge, regarde sous la table vide pour chercher son seau (`public/media/illustrations/histoire-seau-lisa-01.webp`)
+  - Page 2 : Lisa prend son seau bleu posé sur une chaise pendant que sa maman le lui montre (`public/media/illustrations/histoire-seau-lisa-02.webp`)
+  - Page 3 : Maman verse de l’eau d’une cruche dans le seau bleu posé au sol ; Lisa sourit à côté d’elle (`public/media/illustrations/histoire-seau-lisa-03.webp`)
 
 - **Questions posées à l’enfant après l’écoute (2) :**
 
@@ -670,7 +674,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -694,7 +698,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Matériel :** Aucun matériel
 - **Images montrées à l'enfant (1) :**
 
-  - `histoire-seau-lisa` — Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus (`public/media/illustrations/histoire-seau-lisa.svg`)
+  - `histoire-seau-lisa` — Lisa, en robe rouge, prend son seau bleu posé sur une chaise pendant que sa maman le lui montre (`public/media/illustrations/histoire-seau-lisa-02.webp`)
 
 - **Objectifs travaillés :** `LANG-S02-C03-O03` Reconnaitre un personnage, le nommer et le situer dans les illustrations.
 
@@ -955,7 +959,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1006,7 +1010,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus (`public/media/illustrations/histoire-seau-lisa.svg`)
+- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Lisa, en robe rouge, prend son seau bleu posé sur une chaise pendant que sa maman le lui montre (`public/media/illustrations/histoire-seau-lisa-02.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 

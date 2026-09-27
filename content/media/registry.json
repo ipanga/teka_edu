@@ -348,12 +348,40 @@
     {
       "id": "histoire-seau-lisa",
       "kind": "illustration",
-      "file": "illustrations/histoire-seau-lisa.svg",
-      "alt": "Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus",
+      "file": "illustrations/histoire-seau-lisa-02.webp",
+      "alt": "Lisa, en robe rouge, prend son seau bleu posé sur une chaise pendant que sa maman le lui montre",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-seau-lisa-01.webp",
+            "alt": "Lisa, en robe rouge, regarde sous la table vide pour chercher son seau",
+            "contentHash": "sha256:d57e220eab71297785635f5f8883e4cbd3ec67b7b58631566114e10ac31b1cd4",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-seau-lisa-02.webp",
+            "alt": "Lisa prend son seau bleu posé sur une chaise pendant que sa maman le lui montre",
+            "contentHash": "sha256:42b9840e6bde3fe7010e158037b85de701c8cf4998d2a4f2168d615f639f5d1c",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-seau-lisa-03.webp",
+            "alt": "Maman verse de l’eau d’une cruche dans le seau bleu posé au sol ; Lisa sourit à côté d’elle",
+            "contentHash": "sha256:effee2420f3c0202bcf3837fcb253321ffca7c3d2abe6e99f6a258bfd2dfd533",
+            "width": 1200,
+            "height": 900
+          }
+        ],
+        "pageFrames": [0, 1, 2]
+      },
       "tags": ["histoire", "lisa", "seau", "chaise", "personnage"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:61b3f228a5b7c344e3bb919832e67d15a2bd3a8f93583a4b964a61d0070746a8"
+      "provenance": "Séquence d’illustrations peintes originales pour Teka Edu, produite avec l’outil ImageGen intégré et alignée sur les trois pages existantes de l’histoire lors du déploiement rich-media contrôlé de septembre 2026.",
+      "contentHash": "sha256:42b9840e6bde3fe7010e158037b85de701c8cf4998d2a4f2168d615f639f5d1c"
     },
     {
       "id": "histoire-tika",

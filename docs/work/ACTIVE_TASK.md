@@ -5,8 +5,31 @@
 September Rich-Media Visual Upgrade
 
 **Current phase:** the controlled pilot and rollout batches 1–3 are independently accepted and fully
-reapproved. September is 176 approved / 0 review with 176 distinct valid digests. Seven bounded story-sequence
-candidates remain unimplemented. Production remains unchanged.
+reapproved. Rollout batch 4 integrates only the three-page `histoire-seau-lisa` sequence; exactly eight
+dependent lessons are at `review` pending independent reconfirmation and 168 remain approved. Six bounded
+story-sequence candidates remain unimplemented. Production remains unchanged.
+
+## Rollout batch 4 frozen for review — 2026-09-27
+
+- **Media:** `histoire-seau-lisa` has three 1200×900 WebP frames at quality 88: Lisa searches under the empty
+  table; her mother points to the single blue bucket on the chair while Lisa takes it; her mother pours water
+  into that bucket while Lisa smiles. Lisa, her mother, clothing, bucket and home remain continuous.
+- **Shared story/rhyme behavior:** the canonical story renders three pages and pages through all three frames.
+  The existing rhyme and observation uses show only the primary second frame, where Lisa visibly handles the
+  bucket. The sequence validator now permits this renderer-supported sharing only when the asset still
+  illustrates at least one correctly sized story; a focused unit test covers the boundary.
+- **Scope:** exactly `m1-lang-03`, `m1-lang-06`, `m1-lang-07`, `m1-lang-08`, `m1-lang-14`, `m1-lang-15`,
+  `m1-lang-17` and `m1-lang-18` moved to `review`. All other 168 approval records remain byte-for-byte unchanged
+  from accepted Batch-3 checkpoint `f5b6a03`.
+- **Evidence:** `docs/review/media/september-rich-media-rollout-batch-4-comparison.png` renders the old SVG,
+  primary frame, all three page frames, accessible descriptions, exact uses and approval impact. The bounded
+  class package is `docs/review/2026-2027-maternelle-1-reconfirmation-visuelle.md`.
+- **Validation:** formatting, lint, typecheck, all 438 unit tests, content validation, Webpack build and real UI
+  checks for all three story pages plus the rhyme primary frame pass. Phone and desktop inspection found no
+  broken image, overflow, distortion, adult-content leak or misleading interaction.
+- **Exact resume point:** obtain owner authorization to send only the Batch-4 comparison sheet, bounded 1ère
+  maternelle reconfirmation package and bounded reviewer prompt through authenticated Claude Max. Restore no
+  approval before explicit independent acceptance.
 
 ## Rollout batch 3 independently accepted — 2026-09-27
 
@@ -32,8 +55,7 @@ candidates remain unimplemented. Production remains unchanged.
 - **Approval integrity:** accepted full-review entries cover weeks 2 and 5. The lapsed-only workflow restored
   exactly two lessons with fresh digests. September is 176 approved / 0 review with 176 distinct valid digests;
   all 174 unaffected records remain byte-for-byte unchanged and zero stale approvals remain.
-- **Exact resume point:** commit this accepted Batch-3 checkpoint, then inspect the next bounded story candidate
-  against its canonical rendered pages.
+- **Exact resume point:** accepted in local checkpoint `f5b6a03`; Batch 4 begins from that exact state.
 
 ## Rollout batch 2 independently accepted — 2026-09-27
 

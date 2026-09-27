@@ -5,7 +5,7 @@
   "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   "pilotBaselineCommit": "cbc1cf3",
   "scope": ["maternelle-1 September", "maternelle-3 September"],
-  "status": "rollout-batch-3-reconfirmed-controlled-rollout-active",
+  "status": "rollout-batch-4-awaiting-independent-reconfirmation",
   "productionAssetsChanged": false,
   "localPilotAssetsChanged": true,
   "approvedLessonSemanticsChanged": false,
@@ -20,9 +20,9 @@
     "ifAllProposedWebpAssetsAreIntegrated": 53,
     "maternelle1": 27,
     "maternelle3": 26,
-    "currentImpact": 0,
-    "currentApproved": 176,
-    "currentReview": 0
+    "currentImpact": 8,
+    "currentApproved": 168,
+    "currentReview": 8
   },
   "notes": [
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
@@ -37,7 +37,8 @@
     "Rollout batch 2 integrates comptine-mains and the currently unused comptine-cabri. Claude Max / Opus 5.5 independently accepted both assets and all nine dependent lessons without correction; comptine-cabri lapses no approval.",
     "The lapsed-only workflow restored exactly nine Batch-2 approvals with fresh digests. All 167 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
     "Rollout batch 3 integrates only the two-frame histoire-tika sequence. Claude Max / Opus 5.5 independently accepted both frames and both dependent lessons without correction; seven other story-sequence candidates remain untouched.",
-    "The lapsed-only workflow restored exactly two Batch-3 approvals with fresh digests. All 174 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain."
+    "The lapsed-only workflow restored exactly two Batch-3 approvals with fresh digests. All 174 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
+    "Rollout batch 4 integrates only the three-frame histoire-seau-lisa sequence. Exactly eight lessons depend on it and await independent reconfirmation; six other story-sequence candidates remain untouched."
   ],
   "assets": [
     {
@@ -1888,7 +1889,7 @@
     {
       "id": "histoire-seau-lisa",
       "kind": "illustration",
-      "pedagogicalRole": "Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus",
+      "pedagogicalRole": "Lisa, en robe rouge, prend son seau bleu posé sur une chaise pendant que sa maman le lui montre",
       "currentFile": "public/media/illustrations/histoire-seau-lisa.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -1957,8 +1958,8 @@
       "presentation": "3-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
-      "implementationState": "not-started",
-      "reviewState": "not-in-pilot",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "awaiting-independent-reconfirmation",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 8,
@@ -1974,7 +1975,38 @@
         ]
       },
       "beforeHash": "sha256:61b3f228a5b7c344e3bb919832e67d15a2bd3a8f93583a4b964a61d0070746a8",
-      "afterHash": null
+      "afterHash": "sha256:42b9840e6bde3fe7010e158037b85de701c8cf4998d2a4f2168d615f639f5d1c",
+      "proposedFile": "public/media/illustrations/histoire-seau-lisa-02.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 3204,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-seau-lisa-01.webp",
+          "bytes": 238978
+        },
+        {
+          "file": "public/media/illustrations/histoire-seau-lisa-02.webp",
+          "bytes": 298688
+        },
+        {
+          "file": "public/media/illustrations/histoire-seau-lisa-03.webp",
+          "bytes": 296364
+        }
+      ],
+      "currentDecision": "owner-authorized; independent-review-pending"
     },
     {
       "id": "histoire-tika",

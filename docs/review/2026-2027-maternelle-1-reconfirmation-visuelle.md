@@ -19,29 +19,30 @@ objets, quantités, actions et décors doivent être jugés contre le texte appr
 Les 50 autres images, dont toutes les formes géométriques, n’ont pas bougé.
 
 L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant (ISSUE-026).
-Les approbations de **2 leçon(s)** de cette classe ont donc été annulées — pas
+Les approbations de **8 leçon(s)** de cette classe ont donc été annulées — pas
 re-tamponnées — et ce document vous demande de confirmer que les nouvelles images servent
 toujours ce que chaque leçon enseigne (ADR-048).
 
 ## La planche avant / après
 
-![Avant / après : chaque image redessinée, aux trois tailles de l’application](media/september-rich-media-rollout-batch-3-comparison.png)
+![Avant / après : chaque image redessinée, aux trois tailles de l’application](media/september-rich-media-rollout-batch-4-comparison.png)
 
 La planche montre chaque image aux trois tailles de l’application : 72 px (une rangée à
 compter), 128 px (une carte de mot), 256 px (l’image d’une histoire).
 
 ## Les images que cette classe montre — 1
 
-| Image           | Type         | Description avant                                          | Description après                                                                                           | Leçons de cette classe     |
-| --------------- | ------------ | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------- |
-| `histoire-tika` | illustration | Un enfant qui s’étire dans son lit, le soleil à la fenêtre | Le matin, Tika boit dans une tasse devant son bol ; des cubes et un ballon attendent près de lui pour jouer | 2 — m1-lang-09, m1-lang-21 |
+| Image                | Type         | Description avant                                                                                | Description après                                                                               | Leçons de cette classe                                                                             |
+| -------------------- | ------------ | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `histoire-seau-lisa` | illustration | Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus | Lisa, en robe rouge, prend son seau bleu posé sur une chaise pendant que sa maman le lui montre | 8 — m1-lang-03, m1-lang-06, m1-lang-07, m1-lang-08, m1-lang-14, m1-lang-15, m1-lang-17, m1-lang-18 |
 
 ## Séquences des histoires
 
-| Histoire        | Page(s) | Fichier                                            | Description exacte de la scène                                                                              |
-| --------------- | ------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `histoire-tika` | 1       | `public/media/illustrations/histoire-tika-01.webp` | Le matin, Tika boit dans une tasse devant son bol ; des cubes et un ballon attendent près de lui pour jouer |
-| `histoire-tika` | 2       | `public/media/illustrations/histoire-tika-02.webp` | Le soir, Tika dort paisiblement dans son lit, les yeux fermés                                               |
+| Histoire             | Page(s) | Fichier                                                 | Description exacte de la scène                                                              |
+| -------------------- | ------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `histoire-seau-lisa` | 1       | `public/media/illustrations/histoire-seau-lisa-01.webp` | Lisa, en robe rouge, regarde sous la table vide pour chercher son seau                      |
+| `histoire-seau-lisa` | 2       | `public/media/illustrations/histoire-seau-lisa-02.webp` | Lisa prend son seau bleu posé sur une chaise pendant que sa maman le lui montre             |
+| `histoire-seau-lisa` | 3       | `public/media/illustrations/histoire-seau-lisa-03.webp` | Maman verse de l’eau d’une cruche dans le seau bleu posé au sol ; Lisa sourit à côté d’elle |
 
 ## Texte approuvé et image montrée, page par page
 
@@ -49,29 +50,45 @@ Ces extraits sont les mots canoniques réellement affichés dans l’application
 de juger chaque scène sans devoir consulter un autre fichier. Une histoire avance par groupes
 de 3 lignes ; une comptine tient sur une seule page.
 
-### `histoire-tika` — Tika se lève
+### `histoire-seau-lisa` — Le petit seau
 
-- **Page 1 — image :** `public/media/illustrations/histoire-tika-01.webp`
-  - Description accessible : Le matin, Tika boit dans une tasse devant son bol ; des cubes et un ballon attendent près de lui pour jouer
+- **Page 1 — image :** `public/media/illustrations/histoire-seau-lisa-01.webp`
+  - Description accessible : Lisa, en robe rouge, regarde sous la table vide pour chercher son seau
   - Texte affiché :
-    > Le matin, Tika ouvre les yeux.
-    > Tika se lève. Tika met un pied, puis l’autre pied.
-    > Tika boit. Tika mange.
+    > Dans mon seau il y a de l’eau,
+    > dans ma main il y a le seau,
+    > sur ma tête il n’y a rien —
+    > sur ma tête il y a ma main !
 
-- **Page 2 — image :** `public/media/illustrations/histoire-tika-02.webp`
-  - Description accessible : Le soir, Tika dort paisiblement dans son lit, les yeux fermés
+### `histoire-seau-lisa` — Le seau de Lisa
+
+- **Page 1 — image :** `public/media/illustrations/histoire-seau-lisa-01.webp`
+  - Description accessible : Lisa, en robe rouge, regarde sous la table vide pour chercher son seau
   - Texte affiché :
-    > Puis Tika joue, joue, joue.
-    > Le soir, Tika est fatigué.
-    > Tika ferme les yeux. Bonne nuit, Tika.
+    > Lisa veut de l’eau. Elle cherche son seau.
+    > Le seau n’est pas sur la table.
+    > Lisa regarde sous la table : pas de seau.
+
+- **Page 2 — image :** `public/media/illustrations/histoire-seau-lisa-02.webp`
+  - Description accessible : Lisa prend son seau bleu posé sur une chaise pendant que sa maman le lui montre
+  - Texte affiché :
+    > Lisa regarde derrière la porte : pas de seau.
+    > Maman dit : « Regarde sur la chaise. »
+    > Le seau est sur la chaise ! Lisa prend son seau.
+
+- **Page 3 — image :** `public/media/illustrations/histoire-seau-lisa-03.webp`
+  - Description accessible : Maman verse de l’eau d’une cruche dans le seau bleu posé au sol ; Lisa sourit à côté d’elle
+  - Texte affiché :
+    > Maman verse de l’eau dans le seau.
+    > Lisa sourit : elle a son eau.
 
 ## Résumé
 
 | Mesure                                        | Valeur                          |
 | --------------------------------------------- | ------------------------------- |
 | Leçons de la classe                           | 88                              |
-| Leçons concernées (approbation annulée)       | 2                               |
-| Leçons non concernées                         | 86                              |
+| Leçons concernées (approbation annulée)       | 8                               |
+| Leçons non concernées                         | 80                              |
 | Images modifiées (toutes classes)             | 1                               |
 | Images inchangées (toutes classes)            | 50                              |
 | Texte pédagogique modifié (enfant ou adulte)  | **0** — vérifié champ par champ |
@@ -87,17 +104,33 @@ aucune progression n’a changé (vérifié avant l’écriture de ce document).
 du changement d’empreinte est la ligne « image » : ses octets ont changé, et l’empreinte d’une
 approbation couvre les octets de chaque image montrée (ISSUE-026, ADR-048).
 
-### Semaine 2 — 1 leçon(s)
+### Semaine 1 — 1 leçon(s)
 
-| Jour | Leçon                           | Activité                     | Image           | Rôle                            | Empreinte avant | Empreinte après | Description avant                                          | Description après                                                                                           | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | ------------------------------- | ---------------------------- | --------------- | ------------------------------- | --------------- | --------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------ | ------------ | ---------------------- |
-| 9    | `m1-lang-09` L’histoire de Tika | `m1-lang-09-a2` Tika se lève | `histoire-tika` | principale — montrée à l’enfant | `c011c87cf0b3`  | `b5df0ae7a105`  | Un enfant qui s’étire dans son lit, le soleil à la fenêtre | Le matin, Tika boit dans une tasse devant son bol ; des cubes et un ballon attendent près de lui pour jouer | inchangé     | inchangé     | inchangés              |
+| Jour | Leçon                           | Activité                        | Image                | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                                                | Description après                                                                               | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | ------------------------------- | ------------------------------- | -------------------- | ------------------------------- | --------------- | --------------- | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- | ------------ | ------------ | ---------------------- |
+| 3    | `m1-lang-03` L’histoire du seau | `m1-lang-03-a2` Le seau de Lisa | `histoire-seau-lisa` | principale — montrée à l’enfant | `61b3f228a5b7`  | `42b9840e6bde`  | Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus | Lisa, en robe rouge, prend son seau bleu posé sur une chaise pendant que sa maman le lui montre | inchangé     | inchangé     | inchangés              |
 
-### Semaine 5 — 1 leçon(s)
+### Semaine 2 — 3 leçon(s)
 
-| Jour | Leçon                    | Activité                     | Image           | Rôle                            | Empreinte avant | Empreinte après | Description avant                                          | Description après                                                                                           | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | ------------------------ | ---------------------------- | --------------- | ------------------------------- | --------------- | --------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------ | ------------ | ---------------------- |
-| 21   | `m1-lang-21` Encore Tika | `m1-lang-21-a2` Tika se lève | `histoire-tika` | principale — montrée à l’enfant | `c011c87cf0b3`  | `b5df0ae7a105`  | Un enfant qui s’étire dans son lit, le soleil à la fenêtre | Le matin, Tika boit dans une tasse devant son bol ; des cubes et un ballon attendent près de lui pour jouer | inchangé     | inchangé     | inchangés              |
+| Jour | Leçon                                  | Activité                      | Image                | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                                                | Description après                                                                               | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | -------------------------------------- | ----------------------------- | -------------------- | ------------------------------- | --------------- | --------------- | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- | ------------ | ------------ | ---------------------- |
+| 6    | `m1-lang-06` Je connais quatre mots    | `m1-lang-06-a3` Le petit seau | `histoire-seau-lisa` | principale — montrée à l’enfant | `61b3f228a5b7`  | `42b9840e6bde`  | Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus | Lisa, en robe rouge, prend son seau bleu posé sur une chaise pendant que sa maman le lui montre | inchangé     | inchangé     | inchangés              |
+| 7    | `m1-lang-07` Je reconnais Lisa         | `m1-lang-07-a2` Qui est-ce ?  | `histoire-seau-lisa` | principale — montrée à l’enfant | `61b3f228a5b7`  | `42b9840e6bde`  | Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus | Lisa, en robe rouge, prend son seau bleu posé sur une chaise pendant que sa maman le lui montre | inchangé     | inchangé     | inchangés              |
+| 8    | `m1-lang-08` Je raconte ce que je fais | `m1-lang-08-a3` Le petit seau | `histoire-seau-lisa` | principale — montrée à l’enfant | `61b3f228a5b7`  | `42b9840e6bde`  | Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus | Lisa, en robe rouge, prend son seau bleu posé sur une chaise pendant que sa maman le lui montre | inchangé     | inchangé     | inchangés              |
+
+### Semaine 3 — 1 leçon(s)
+
+| Jour | Leçon                              | Activité                      | Image                | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                                                | Description après                                                                               | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | ---------------------------------- | ----------------------------- | -------------------- | ------------------------------- | --------------- | --------------- | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- | ------------ | ------------ | ---------------------- |
+| 14   | `m1-lang-14` Je dis ce que je fais | `m1-lang-14-a3` Le petit seau | `histoire-seau-lisa` | principale — montrée à l’enfant | `61b3f228a5b7`  | `42b9840e6bde`  | Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus | Lisa, en robe rouge, prend son seau bleu posé sur une chaise pendant que sa maman le lui montre | inchangé     | inchangé     | inchangés              |
+
+### Semaine 4 — 3 leçon(s)
+
+| Jour | Leçon                                  | Activité                        | Image                | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                                                | Description après                                                                               | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | -------------------------------------- | ------------------------------- | -------------------- | ------------------------------- | --------------- | --------------- | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- | ------------ | ------------ | ---------------------- |
+| 15   | `m1-lang-15` Encore l’histoire du seau | `m1-lang-15-a2` Le seau de Lisa | `histoire-seau-lisa` | principale — montrée à l’enfant | `61b3f228a5b7`  | `42b9840e6bde`  | Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus | Lisa, en robe rouge, prend son seau bleu posé sur une chaise pendant que sa maman le lui montre | inchangé     | inchangé     | inchangés              |
+| 17   | `m1-lang-17` Je montre le personnage   | `m1-lang-17-a2` Qui est-ce ?    | `histoire-seau-lisa` | principale — montrée à l’enfant | `61b3f228a5b7`  | `42b9840e6bde`  | Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus | Lisa, en robe rouge, prend son seau bleu posé sur une chaise pendant que sa maman le lui montre | inchangé     | inchangé     | inchangés              |
+| 18   | `m1-lang-18` Les mots de mon corps     | `m1-lang-18-a3` Le petit seau   | `histoire-seau-lisa` | principale — montrée à l’enfant | `61b3f228a5b7`  | `42b9840e6bde`  | Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus | Lisa, en robe rouge, prend son seau bleu posé sur une chaise pendant que sa maman le lui montre | inchangé     | inchangé     | inchangés              |
 
 ## Ce que l’on vous demande
 

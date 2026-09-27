@@ -20,28 +20,42 @@ const cases = [
     path: "/maternelle/1/seance/18",
     activity: "Les quatre mots de mon corps",
     expected: ["corps-main.webp", "corps-pied.webp", "corps-ventre.webp"],
-    nextExpected: null,
+    nextExpected: [],
   },
   {
     name: "animal-references",
     path: "/maternelle/3/seance/15",
     activity: "Pareil ou différent ?",
     expected: ["animal-poule.webp", "animal-poussin.webp"],
-    nextExpected: null,
+    nextExpected: [],
   },
   {
     name: "hands-rhyme",
     path: "/maternelle/1/seance/2",
     activity: "Un, deux, trois, mes mains",
     expected: ["comptine-mains.webp"],
-    nextExpected: null,
+    nextExpected: [],
   },
   {
     name: "tika-story",
     path: "/maternelle/1/seance/9",
     activity: "Tika se lève",
     expected: ["histoire-tika-01.webp"],
-    nextExpected: "histoire-tika-02.webp",
+    nextExpected: ["histoire-tika-02.webp"],
+  },
+  {
+    name: "lisa-story",
+    path: "/maternelle/1/seance/3",
+    activity: "Le seau de Lisa",
+    expected: ["histoire-seau-lisa-01.webp"],
+    nextExpected: ["histoire-seau-lisa-02.webp", "histoire-seau-lisa-03.webp"],
+  },
+  {
+    name: "bucket-rhyme",
+    path: "/maternelle/1/seance/6",
+    activity: "Le petit seau",
+    expected: ["histoire-seau-lisa-02.webp"],
+    nextExpected: [],
   },
 ] as const;
 
@@ -88,10 +102,10 @@ test("the controlled rollout renders its integrated references across target wid
         );
       }
       for (const expected of item.expected) expect(actual).toContain(expected);
-      if (item.nextExpected !== null) {
+      for (const expected of item.nextExpected) {
         await dialog.getByRole("button", { name: "Page suivante", exact: true }).click();
         const next = dialog.getByRole("img");
-        await expect(next).toHaveAttribute("src", new RegExp(`${item.nextExpected}$`));
+        await expect(next).toHaveAttribute("src", new RegExp(`${expected}$`));
         await expect
           .poll(() => next.evaluate((node: HTMLImageElement) => node.naturalWidth))
           .toBe(1200);

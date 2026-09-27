@@ -160,11 +160,17 @@ describe("sequence rules", () => {
     expect(checkMediaSequences([uneven], [story(10)])[0]).toMatch(/not the size of the first/);
   });
 
-  it("pages only through a story, and only one that uses it", () => {
+  it("requires a story, while a rhyme may share its primary frame without paging", () => {
     expect(checkMediaSequences([sequenced()], [{ ...story(4), kind: "rhyme" }])[0]).toMatch(
-      /only a story pages through/,
+      /at least one story/,
     );
-    expect(checkMediaSequences([sequenced()], [])[0]).toMatch(/must illustrate a story/);
+    expect(
+      checkMediaSequences(
+        [sequenced()],
+        [story(10), { ...story(4), id: "comptine-x", kind: "rhyme" }],
+      ),
+    ).toEqual([]);
+    expect(checkMediaSequences([sequenced()], [])[0]).toMatch(/must illustrate at least one story/);
   });
 
   it("lists every frame file once, so validation reads and hashes each of them", () => {
