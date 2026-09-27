@@ -66,7 +66,7 @@ describe("the final September visual QA tracker", () => {
     }
   });
 
-  it("holds the approved set frozen and permits only audited pilot bytes while their lessons are at review", () => {
+  it("holds the approved set frozen and permits only independently reconfirmed pilot bytes", () => {
     if (!qa.frozen) return;
     for (const asset of data.media) {
       if (asset.contentHash === qa.frozenHashes[asset.id]) continue;
@@ -74,8 +74,8 @@ describe("the final September visual QA tracker", () => {
       expect(pilot?.implementationState, `${asset.id} moved outside the controlled pilot`).toBe(
         "integrated-local-pilot",
       );
-      expect(pilot?.reviewState, `${asset.id} is not pending explicit owner review`).toBe(
-        "needs-owner-visual-review",
+      expect(pilot?.reviewState, `${asset.id} lacks independent reconfirmation`).toBe(
+        "independently-reconfirmed",
       );
       expect(pilot?.afterHash, `${asset.id} does not match the audited pilot hash`).toBe(
         asset.contentHash,
@@ -83,8 +83,8 @@ describe("the final September visual QA tracker", () => {
       for (const lessonId of pilot?.approvalImpact.lessonIds ?? []) {
         expect(
           data.lessons.find((lesson) => lesson.id === lessonId)?.status,
-          `${asset.id} changed while dependent lesson ${lessonId} retained approval`,
-        ).toBe("review");
+          `${asset.id} changed without reapproving dependent lesson ${lessonId}`,
+        ).toBe("approved");
       }
     }
   });

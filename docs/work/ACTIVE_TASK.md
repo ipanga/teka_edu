@@ -4,9 +4,30 @@
 
 September Rich-Media Visual Upgrade
 
-**Current phase:** the owner accepted the controlled five-asset pilot direction. Independent pedagogical
-reconfirmation is being repeated against strengthened page-by-page evidence. Eighteen dependent lessons
-remain at `review`; no approval has been restored and the wider rollout has not begun.
+**Current phase:** the controlled five-asset pilot is independently accepted and fully reapproved. September
+is 176/176 approved with zero stale digests. The authorized remaining 15 rich-media candidates can now proceed
+in small bounded batches; production remains unchanged.
+
+## Pilot reconfirmation accepted — 2026-09-27
+
+- **Authentication:** `ANTHROPIC_API_KEY` inherited from `~/.zshrc` was overriding the macOS credential-store
+  session. It was unset only for Claude processes; no credential or shell file was printed, changed or stored.
+  Claude reported `authMethod: claude.ai` and `subscriptionType: max`. No API-key billing was used.
+- **Independent review:** pass 1 accepted four asset families and 15 lessons, and requested two bounded
+  `histoire-nsimba` corrections. Page 1 now has its own worried walk-to-school scene; page 3 now has a readable
+  `Nsimba` name card and matching French description. The final Opus 5.5 pass explicitly accepted all five
+  families and all 18 lessons with no remaining blocker.
+- **Approval integrity:** ten `full-review` / `accepted` entries cover weeks 1–5 in both classes. The standard
+  `--lapsed-only` workflow restored exactly 18 lessons. September is 176 approved / 0 review with 176 distinct
+  valid digests; all 18 restored digests differ from their prior values, all 158 unaffected approval records
+  are byte-for-byte unchanged, and a lapse dry-run reports 0 stale approvals.
+- **Validation:** corrected evidence was inspected at native size; formatting, lint, typecheck, all 438 unit
+  tests, 31-file content validation, the Webpack production build, the four-width rich-media E2E, the
+  client-bundle secret scan and the approval-lapse dry-run pass. No lesson text, objective, duration,
+  progression, programme, calendar, safety guidance or unrelated media changed.
+- **Exact resume point:** commit this accepted pilot checkpoint, then implement the remaining 15 candidates in
+  small coherent batches. Inspect every use and canonical text before generation, lapse only newly affected
+  lessons, and reconfirm each bounded batch before restoring it.
 
 ## Independent pilot reconfirmation checkpoint — 2026-09-27
 

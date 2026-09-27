@@ -39,7 +39,7 @@ const cases = [
     path: "/maternelle/3/seance/1",
     activity: "Le temps de lecture",
     expected: [
-      "histoire-nsimba-01.webp",
+      "histoire-nsimba-00.webp",
       "histoire-nsimba-01.webp",
       "histoire-nsimba-02.webp",
       "histoire-nsimba-03.webp",

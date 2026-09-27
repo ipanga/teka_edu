@@ -993,3 +993,19 @@ rich-media pilot`). Work is local only. No push, PR, merge, staging, production,
   official Claude.ai OAuth flow is open for the owner to complete privately in Chrome.
 - State remains exactly 176 total, 158 approved and 18 review. The remaining 15 candidates are untouched;
   no push, PR, merge, staging, production, database, deployment or October work occurred.
+
+### 2026-09-27 — Rich-media pilot independently accepted (local)
+
+- Diagnosed an inherited `ANTHROPIC_API_KEY` reference in `~/.zshrc` overriding the existing Claude Max
+  credential-store session. Unsetting it only for Claude processes confirmed `claude.ai` / Max authentication;
+  no credential, shell configuration or repository environment file was changed or exposed.
+- Claude Max / Opus 5.5 accepted four pilot families and requested two precise Nsimba corrections. Added a
+  page-1 walk-to-school frame and corrected page 3 with a readable `Nsimba` card; the five-page story now has
+  five chronology-aligned frames. The final isolated pass accepted all five families and all 18 lessons.
+- Recorded ten full-review acceptance entries and restored exactly 18 lessons through `approve-week.ts
+--lapsed-only`. September is 176 approved / 0 review with 176 distinct valid digests; all restored digests
+  are fresh, all 158 unaffected approval records are unchanged, and the lapse dry-run reports zero stale.
+- Formatting, lint, typecheck, all 438 unit tests, 31-file content validation, a Webpack production build, the
+  four-width rich-media E2E, client-bundle secret scan and approval-lapse dry-run pass. Work remains local; no
+  push, PR, merge, staging, production, database, deployment or October work occurred. The next authorized
+  phase is the remaining 15 rich-media candidates in small batches.

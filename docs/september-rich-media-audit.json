@@ -5,7 +5,7 @@
   "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   "pilotBaselineCommit": "cbc1cf3",
   "scope": ["maternelle-1 September", "maternelle-3 September"],
-  "status": "controlled-pilot-owner-accepted-awaiting-independent-reconfirmation",
+  "status": "pilot-reconfirmed-controlled-rollout-authorized",
   "productionAssetsChanged": false,
   "localPilotAssetsChanged": true,
   "approvedLessonSemanticsChanged": false,
@@ -20,17 +20,18 @@
     "ifAllProposedWebpAssetsAreIntegrated": 53,
     "maternelle1": 27,
     "maternelle3": 26,
-    "currentImpact": 18,
-    "currentApproved": 158,
-    "currentReview": 18
+    "currentImpact": 0,
+    "currentApproved": 176,
+    "currentReview": 0
   },
   "notes": [
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
     "A small story sequence is a presentation proposal tied to existing text pages. It must not alter story wording or progression.",
     "The five pilot assets are integrated locally. Their 18 dependent lessons lapsed through the existing mechanism and remain at review.",
     "All 158 unaffected approvals remain byte-for-byte unchanged from the pilot baseline.",
-    "The first independent review did not accept an evidence package that omitted canonical narrative lines and showed secondary frames at 128 px; local verification found no justified media correction.",
-    "The regenerated packages pair every canonical story/rhyme line with its exact page image and render every story frame at 256 px. A bounded retry awaits restoration of the owner-authenticated Claude Max CLI session."
+    "Independent review accepted four asset families and requested two bounded Nsimba corrections: a dedicated page-1 walking scene and a visible Nsimba name card on page 3.",
+    "Both corrections were integrated without changing canonical lesson text; the second independent pass accepted all five asset families and all 18 affected lessons.",
+    "The standard lapsed-only workflow restored exactly 18 approvals with fresh digests; all 158 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain."
   ],
   "assets": [
     {
@@ -1480,7 +1481,7 @@
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses",
       "implementationState": "integrated-local-pilot",
-      "reviewState": "needs-owner-visual-review",
+      "reviewState": "independently-reconfirmed",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 5,
@@ -1510,7 +1511,7 @@
           "bytes": 173750
         }
       ],
-      "currentDecision": "awaiting-owner-pilot-review"
+      "currentDecision": "owner-accepted; independent-review-accepted"
     },
     {
       "id": "corps-ventre",
@@ -1698,7 +1699,7 @@
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses; otherwise unnecessary",
       "implementationState": "integrated-local-pilot",
-      "reviewState": "needs-owner-visual-review",
+      "reviewState": "independently-reconfirmed",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 4,
@@ -1728,7 +1729,7 @@
           "bytes": 109692
         }
       ],
-      "currentDecision": "awaiting-owner-pilot-review"
+      "currentDecision": "owner-accepted; independent-review-accepted"
     },
     {
       "id": "forme-maison-composee",
@@ -1951,7 +1952,7 @@
     {
       "id": "histoire-nsimba",
       "kind": "illustration",
-      "pedagogicalRole": "Nsimba, son sac d’école sur le dos, tient la main de son adulte devant le portail de l’école ; la maitresse s’accroupit pour lui dire bonjour",
+      "pedagogicalRole": "Sur le chemin de l’école, Nsimba serre la main de son adulte et avance avec une expression inquiète",
       "currentFile": "public/media/illustrations/histoire-nsimba.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -1989,19 +1990,19 @@
       "selectedFinalFormat": "webp",
       "decision": "audited-redraw",
       "reason": "The current single schematic SVG cannot carry the character, action, emotion, and narrative progression required by the approved story.",
-      "presentation": "4-image sequence aligned to existing story pages",
+      "presentation": "5-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
       "implementationState": "integrated-local-pilot",
-      "reviewState": "needs-owner-visual-review",
+      "reviewState": "independently-reconfirmed",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 3,
         "lessonIds": ["m3-lang-01", "m3-lang-10", "m3-lang-15"]
       },
       "beforeHash": "sha256:4b4ab397cf3e41a88837778c3e6cf3eaf7fda336103040c1ddc4b1475cbeadab",
-      "afterHash": "sha256:f50ceb4a3ac04514dcfaf8e1b2a6a1788b5f1d4077653d675a51a69aa217d425",
-      "proposedFile": "public/media/illustrations/histoire-nsimba-01.webp",
+      "afterHash": "sha256:9b6176698ba526e07710e1764881383293419b18f2a3f7cad83cdf4fb70d4a55",
+      "proposedFile": "public/media/illustrations/histoire-nsimba-00.webp",
       "sourceMaster": "private/astra-visual-evidence/september-rich-media-pilot-masters/",
       "sourceDimensions": {
         "width": 1448,
@@ -2019,12 +2020,16 @@
       "oldFileBytes": 2925,
       "deliveryFiles": [
         {
+          "file": "public/media/illustrations/histoire-nsimba-00.webp",
+          "bytes": 265206
+        },
+        {
           "file": "public/media/illustrations/histoire-nsimba-01.webp",
           "bytes": 254756
         },
         {
           "file": "public/media/illustrations/histoire-nsimba-02.webp",
-          "bytes": 159894
+          "bytes": 134398
         },
         {
           "file": "public/media/illustrations/histoire-nsimba-03.webp",
@@ -2035,7 +2040,7 @@
           "bytes": 185784
         }
       ],
-      "currentDecision": "awaiting-owner-pilot-review"
+      "currentDecision": "owner-accepted; independent-review-accepted"
     },
     {
       "id": "histoire-mangue",
@@ -2075,7 +2080,7 @@
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
       "implementationState": "integrated-local-pilot",
-      "reviewState": "needs-owner-visual-review",
+      "reviewState": "independently-reconfirmed",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 3,
@@ -2113,7 +2118,7 @@
           "bytes": 188624
         }
       ],
-      "currentDecision": "awaiting-owner-pilot-review"
+      "currentDecision": "owner-accepted; independent-review-accepted"
     },
     {
       "id": "histoire-bibi",
@@ -2471,7 +2476,7 @@
       "animationValue": "existing one-time frame entrance only",
       "audioUsefulness": "recommended human rhyme recording",
       "implementationState": "integrated-local-pilot",
-      "reviewState": "needs-owner-visual-review",
+      "reviewState": "independently-reconfirmed",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 4,
@@ -2501,7 +2506,7 @@
           "bytes": 102856
         }
       ],
-      "currentDecision": "awaiting-owner-pilot-review"
+      "currentDecision": "owner-accepted; independent-review-accepted"
     },
     {
       "id": "comptine-mains",

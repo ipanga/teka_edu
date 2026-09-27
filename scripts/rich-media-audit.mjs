@@ -26,6 +26,7 @@ for (const file of textFiles) {
 }
 
 const lessonRoot = join(root, "content/lessons/maternelle-cycle1-cd-2026");
+const lessons = new Map();
 const usages = new Map(registry.assets.map((asset) => [asset.id, []]));
 for (const level of ["maternelle-1", "maternelle-3"]) {
   for (const file of (await readdir(join(lessonRoot, level))).filter((name) =>
@@ -33,6 +34,7 @@ for (const level of ["maternelle-1", "maternelle-3"]) {
   )) {
     const data = JSON.parse(await readFile(join(lessonRoot, level, file), "utf8"));
     for (const lesson of data.lessons) {
+      lessons.set(lesson.id, lesson);
       for (const activity of lesson.activities) {
         const ids = new Set(activity.mediaIds);
         const text = activity.payload?.textId ? texts.get(activity.payload.textId) : undefined;
@@ -55,7 +57,7 @@ const storyFrames = {
   "histoire-seau-lisa": 3,
   "histoire-tika": 3,
   "histoire-kumu": 4,
-  "histoire-nsimba": 4,
+  "histoire-nsimba": 5,
   "histoire-mangue": 3,
   "histoire-bibi": 3,
   "histoire-marche": 3,
@@ -195,7 +197,7 @@ const assets = await Promise.all(
       animationValue: decision.animation,
       audioUsefulness: decision.audio,
       implementationState: selected ? "integrated-local-pilot" : "not-started",
-      reviewState: selected ? "needs-owner-visual-review" : "not-in-pilot",
+      reviewState: selected ? "independently-reconfirmed" : "not-in-pilot",
       approvalImpact:
         decision.decision === "audited-keep"
           ? { expected: "none", lessonCount: 0, lessonIds: [] }
@@ -215,7 +217,7 @@ const assets = await Promise.all(
             compression: { format: "WebP", quality: 88, smartSubsample: true },
             oldFileBytes: oldFileSize(before.file),
             deliveryFiles: await delivery(asset),
-            currentDecision: "awaiting-owner-pilot-review",
+            currentDecision: "owner-accepted; independent-review-accepted",
           }
         : {}),
     };
@@ -246,7 +248,7 @@ const manifest = {
   productionCommit: "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   pilotBaselineCommit: baselineCommit,
   scope: ["maternelle-1 September", "maternelle-3 September"],
-  status: "controlled-pilot-integrated-awaiting-owner-visual-review",
+  status: "pilot-reconfirmed-controlled-rollout-authorized",
   productionAssetsChanged: false,
   localPilotAssetsChanged: true,
   approvedLessonSemanticsChanged: false,
@@ -255,15 +257,18 @@ const manifest = {
     ifAllProposedWebpAssetsAreIntegrated: proposedAffectedLessons.length,
     maternelle1: proposedAffectedLessons.filter((id) => id.startsWith("m1-")).length,
     maternelle3: proposedAffectedLessons.filter((id) => id.startsWith("m3-")).length,
-    currentImpact: 18,
-    currentApproved: 158,
-    currentReview: 18,
+    currentImpact: [...lessons.values()].filter((lesson) => lesson.status === "review").length,
+    currentApproved: [...lessons.values()].filter((lesson) => lesson.status === "approved").length,
+    currentReview: [...lessons.values()].filter((lesson) => lesson.status === "review").length,
   },
   notes: [
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
     "A small story sequence is a presentation proposal tied to existing text pages. It must not alter story wording or progression.",
     "The five pilot assets are integrated locally. Their 18 dependent lessons lapsed through the existing mechanism and remain at review.",
     "All 158 unaffected approvals remain byte-for-byte unchanged from the pilot baseline.",
+    "Independent review accepted four asset families and requested two bounded Nsimba corrections: a dedicated page-1 walking scene and a visible Nsimba name card on page 3.",
+    "Both corrections were integrated without changing canonical lesson text; the second independent pass accepted all five asset families and all 18 affected lessons.",
+    "The standard lapsed-only workflow restored exactly 18 approvals with fresh digests; all 158 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
   ],
   assets,
 };
@@ -287,7 +292,7 @@ const rows = assets
 const digest = createHash("sha256").update(json).digest("hex");
 const markdown = `# September rich-media audit — controlled pilot
 
-Generated from the canonical media registry, September lessons and supplied texts. Five representative assets are integrated locally for owner review; production remains unchanged.
+Generated from the canonical media registry, September lessons and supplied texts. The owner accepted the five representative assets; two bounded Nsimba corrections were integrated and the final independent pass accepted all 18 affected lessons. Production remains unchanged.
 
 ## Decision summary
 
@@ -296,8 +301,8 @@ Generated from the canonical media registry, September lessons and supplied text
 - ${counts["audited-refine"]} SVG assets require refinement; accepted schematic and isolated-object SVGs stay unchanged unless a later real defect is demonstrated.
 - ${counts["audited-redraw"]} proposed for high-quality WebP delivery.
 - Final formats: ${counts.svg} SVG and ${counts.webp} WebP; 0 PNG delivery exceptions.
-- The five-asset pilot lapses 18 unique lessons: 8 in 1ère maternelle and 10 in 3ème maternelle. All remain at review; no approval was restored.
-- A full rollout is not authorized. The other 15 WebP candidates remain unimplemented.
+- The five-asset pilot affected 18 unique lessons: 8 in 1ère maternelle and 10 in 3ème maternelle. All 18 were independently reconfirmed and restored with fresh digests; September is 176/176 approved.
+- The controlled wider rollout is authorized in small batches. The other 15 WebP candidates remain unimplemented at this checkpoint.
 - Manifest SHA-256: \`${digest}\`.
 
 The supplied screenshots validate the distinction: layout and scaling are sound, while the body, rhyme and story art remains visually schematic. Shapes, counting models and isolated objects do not share that defect.

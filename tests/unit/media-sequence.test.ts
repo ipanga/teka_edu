@@ -73,12 +73,12 @@ describe("the pilot's registry rows", () => {
     }
   });
 
-  it("maps Nsimba's five pages onto four frames, the first held over two pages", () => {
+  it("maps Nsimba's five pages onto five chronology-aligned frames", () => {
     const nsimba = asset("histoire-nsimba");
     expect(narrativePageCount(text("le-premier-jour-de-nsimba"))).toBe(5);
-    expect(nsimba.sequence?.pageFrames).toEqual([0, 0, 1, 2, 3]);
+    expect(nsimba.sequence?.pageFrames).toEqual([0, 1, 2, 3, 4]);
     expect(nsimba.sequence?.frames.map((f) => f.file)).toEqual(
-      [1, 2, 3, 4].map((n) => `illustrations/histoire-nsimba-0${n}.webp`),
+      [0, 1, 2, 3, 4].map((n) => `illustrations/histoire-nsimba-0${n}.webp`),
     );
   });
 

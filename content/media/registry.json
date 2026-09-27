@@ -368,12 +368,19 @@
     {
       "id": "histoire-nsimba",
       "kind": "illustration",
-      "file": "illustrations/histoire-nsimba-01.webp",
-      "alt": "Nsimba, son sac d’école sur le dos, tient la main de son adulte devant le portail de l’école ; la maitresse s’accroupit pour lui dire bonjour",
+      "file": "illustrations/histoire-nsimba-00.webp",
+      "alt": "Sur le chemin de l’école, Nsimba serre la main de son adulte et avance avec une expression inquiète",
       "width": 1200,
       "height": 900,
       "sequence": {
         "frames": [
+          {
+            "file": "illustrations/histoire-nsimba-00.webp",
+            "alt": "Sur le chemin de l’école, Nsimba serre la main de son adulte et avance avec une expression inquiète",
+            "contentHash": "sha256:9b6176698ba526e07710e1764881383293419b18f2a3f7cad83cdf4fb70d4a55",
+            "width": 1200,
+            "height": 900
+          },
           {
             "file": "illustrations/histoire-nsimba-01.webp",
             "alt": "Nsimba, son sac d’école sur le dos, tient la main de son adulte devant le portail de l’école ; la maitresse s’accroupit pour lui dire bonjour",
@@ -383,8 +390,8 @@
           },
           {
             "file": "illustrations/histoire-nsimba-02.webp",
-            "alt": "Nsimba entre dans la classe avec son sac ; la maitresse lui montre sa place et une étiquette vierge sur la table",
-            "contentHash": "sha256:b0ddad78557a957dbd2f7ef19aeefaf7714be7f36ca9305f76db51f54cf17b46",
+            "alt": "Nsimba entre dans la classe avec son sac ; la maitresse lui montre sa place et l’étiquette « Nsimba » sur la table",
+            "contentHash": "sha256:6aa2fd6c617d249baec33175dae8d3170e687c25d836c72a7bd957a8a4e549b0",
             "width": 1200,
             "height": 900
           },
@@ -403,12 +410,12 @@
             "height": 900
           }
         ],
-        "pageFrames": [0, 0, 1, 2, 3]
+        "pageFrames": [0, 1, 2, 3, 4]
       },
       "tags": ["nsimba", "école", "rentrée", "histoire"],
       "origin": "teka-edu-created",
       "provenance": "Séquence d’illustrations peintes originales pour Teka Edu, alignée sur les pages de l’histoire (pilote visuel de septembre 2026, docs/september-rich-media-benchmark.md).",
-      "contentHash": "sha256:f50ceb4a3ac04514dcfaf8e1b2a6a1788b5f1d4077653d675a51a69aa217d425"
+      "contentHash": "sha256:9b6176698ba526e07710e1764881383293419b18f2a3f7cad83cdf4fb70d4a55"
     },
     {
       "id": "histoire-mangue",
