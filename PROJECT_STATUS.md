@@ -42,14 +42,15 @@ remained byte-for-byte unchanged. September is 176 approved / 0 review with 176 
 stale approval. Eight story-sequence candidates remain unimplemented; production is unchanged and October has
 not started.
 
-Rollout batch 3 is now frozen locally for independent review. It changes only `histoire-tika`, replacing the
+Rollout batch 3 is independently accepted. It changes only `histoire-tika`, replacing the
 single schematic SVG with two page-aligned 1200×900 WebP scenes. The fixed six-line story renders as two pages;
 content validation rejected an initial three-frame map before any approval changed, so no global pagination or
-content was altered. Exactly `m1-lang-09` and `m1-lang-21` moved to `review`; 174 lessons remain approved and all
-174 unaffected approval records are byte-for-byte unchanged from checkpoint `ebf2372`. Formatting, lint,
-typecheck, 438 tests, content validation, Webpack build and the phone/tablet/desktop/TV story page-turn E2E pass.
-The next gate is bounded owner authorization for Claude Max to review the Batch-3 sheet, 1ère maternelle visual
-reconfirmation package and reviewer prompt. Production remains unchanged.
+content was altered. Claude Max / Opus 5.5 explicitly accepted both frames and both affected lessons without
+correction. The lapsed-only mechanism restored exactly `m1-lang-09` and `m1-lang-21` with fresh digests;
+September is 176 approved / 0 review with 176 distinct valid digests, all 174 unaffected approval records remain
+byte-for-byte unchanged from checkpoint `ebf2372`, and zero stale approvals remain. Formatting, lint, typecheck,
+438 tests, content validation, Webpack build and the phone/tablet/desktop/TV story page-turn E2E pass. Production
+remains unchanged.
 
 ## Independent September visual/UX review — 2026-09-26
 

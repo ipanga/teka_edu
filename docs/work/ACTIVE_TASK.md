@@ -4,12 +4,11 @@
 
 September Rich-Media Visual Upgrade
 
-**Current phase:** the controlled pilot and rollout batches 1–2 are independently accepted and fully
-reapproved. Rollout batch 3 integrates only the two-page `histoire-tika` sequence; exactly two dependent
-lessons are at `review` pending independent reconfirmation and 174 remain approved. Seven bounded
-story-sequence candidates remain unimplemented. Production remains unchanged.
+**Current phase:** the controlled pilot and rollout batches 1–3 are independently accepted and fully
+reapproved. September is 176 approved / 0 review with 176 distinct valid digests. Seven bounded story-sequence
+candidates remain unimplemented. Production remains unchanged.
 
-## Rollout batch 3 frozen for review — 2026-09-27
+## Rollout batch 3 independently accepted — 2026-09-27
 
 - **Media:** `histoire-tika` now has two 1200×900 WebP frames at quality 88. Page 1 shows Tika drinking and
   eating with blocks and a ball ready for the following play; page 2 shows the same child asleep at night.
@@ -18,7 +17,7 @@ story-sequence candidates remain unimplemented. Production remains unchanged.
   initial three-frame proposal was rejected locally by content validation before any approval changed. The
   delivered two-frame map is exactly `[0, 1]`; no global pagination or story text changed.
 - **Scope:** only `m1-lang-09` and `m1-lang-21` display this story. The standard lapse mechanism moved exactly
-  those two lessons to `review`; all other 174 approval records remain byte-for-byte unchanged from accepted
+  those two lessons to `review`; all other 174 approval records remained byte-for-byte unchanged from accepted
   Batch-2 checkpoint `ebf2372`.
 - **Evidence:** `docs/review/media/september-rich-media-rollout-batch-3-comparison.png` renders the old SVG,
   both final frames, page assignments, accessible descriptions, exact uses and approval impact. The bounded
@@ -27,9 +26,14 @@ story-sequence candidates remain unimplemented. Production remains unchanged.
   production build and real story page-turn E2E across phone, tablet, desktop and TV pass. Visual inspection
   found no broken image, overflow, distortion, adult-content leak or misleading interaction. The lapse dry run
   reports zero additional stale approvals.
-- **Exact resume point:** obtain owner authorization to send only the Batch-3 comparison sheet, the bounded
-  1ère maternelle reconfirmation package and a bounded reviewer prompt through the authenticated Claude Max
-  CLI. Restore neither approval before an explicit independent acceptance.
+- **Independent review:** Claude Max / Opus 5.5 explicitly accepted both frames and both lessons without
+  correction. Its two verification conditions were checked locally: adult guidance does not describe the old
+  SVG, and the approval fingerprint covers both frame descriptions, both frame hashes and `pageFrames`.
+- **Approval integrity:** accepted full-review entries cover weeks 2 and 5. The lapsed-only workflow restored
+  exactly two lessons with fresh digests. September is 176 approved / 0 review with 176 distinct valid digests;
+  all 174 unaffected records remain byte-for-byte unchanged and zero stale approvals remain.
+- **Exact resume point:** commit this accepted Batch-3 checkpoint, then inspect the next bounded story candidate
+  against its canonical rendered pages.
 
 ## Rollout batch 2 independently accepted — 2026-09-27
 
