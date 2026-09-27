@@ -5,7 +5,7 @@
   "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   "pilotBaselineCommit": "cbc1cf3",
   "scope": ["maternelle-1 September", "maternelle-3 September"],
-  "status": "rollout-batch-1-reconfirmed-controlled-rollout-active",
+  "status": "rollout-batch-2-awaiting-independent-reconfirmation",
   "productionAssetsChanged": false,
   "localPilotAssetsChanged": true,
   "approvedLessonSemanticsChanged": false,
@@ -20,9 +20,9 @@
     "ifAllProposedWebpAssetsAreIntegrated": 53,
     "maternelle1": 27,
     "maternelle3": 26,
-    "currentImpact": 0,
-    "currentApproved": 176,
-    "currentReview": 0
+    "currentImpact": 9,
+    "currentApproved": 167,
+    "currentReview": 9
   },
   "notes": [
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
@@ -33,7 +33,8 @@
     "Both corrections were integrated without changing canonical lesson text; the second independent pass accepted all five asset families and all 18 affected lessons.",
     "The standard lapsed-only workflow restored exactly 18 approvals with fresh digests; all 158 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
     "Rollout batch 1 integrates corps-main, corps-pied, corps-ventre, animal-poule and animal-poussin. The first independent pass accepted four assets and requested a tighter belly crop; the corrected corps-ventre and all 10 dependent lessons were accepted on the second pass.",
-    "The lapsed-only workflow restored exactly 10 Batch-1 approvals with fresh digests. All 166 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain."
+    "The lapsed-only workflow restored exactly 10 Batch-1 approvals with fresh digests. All 166 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
+    "Rollout batch 2 integrates comptine-mains and the currently unused comptine-cabri. Exactly nine lessons depend on comptine-mains and await independent reconfirmation; comptine-cabri lapses no approval."
   ],
   "assets": [
     {
@@ -2628,7 +2629,7 @@
     {
       "id": "comptine-mains",
       "kind": "illustration",
-      "pedagogicalRole": "Deux mains ouvertes, levées, paumes vers toi",
+      "pedagogicalRole": "Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre",
       "currentFile": "public/media/illustrations/comptine-mains.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -2704,8 +2705,8 @@
       "presentation": "single image",
       "animationValue": "existing one-time frame entrance only",
       "audioUsefulness": "recommended human rhyme recording",
-      "implementationState": "not-started",
-      "reviewState": "not-in-pilot",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "awaiting-independent-reconfirmation",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 9,
@@ -2722,7 +2723,30 @@
         ]
       },
       "beforeHash": "sha256:ad1e83e04b06c8cdf2d548c650b89b4c669bc92338874800ecaa4f9ac6349cc1",
-      "afterHash": null
+      "afterHash": "sha256:36a5f61241200ce5fae6b6be0fd1a1d58f5ba092a8e8cc99c54165bff526b5e2",
+      "proposedFile": "public/media/illustrations/comptine-mains.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/comptine-mains.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 3611,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/comptine-mains.webp",
+          "bytes": 62312
+        }
+      ],
+      "currentDecision": "owner-authorized; independent-review-pending"
     },
     {
       "id": "comptine-semaine",
@@ -2752,7 +2776,7 @@
     {
       "id": "comptine-cabri",
       "kind": "illustration",
-      "pedagogicalRole": "Un petit cabri qui saute, les quatre pattes en l’air, au-dessus de l’herbe",
+      "pedagogicalRole": "Un jeune cabri blanc bondit, les quatre sabots en l’air au-dessus de l’herbe",
       "currentFile": "public/media/illustrations/comptine-cabri.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": false,
@@ -2764,15 +2788,38 @@
       "presentation": "single image",
       "animationValue": "existing one-time frame entrance only",
       "audioUsefulness": "recommended human rhyme recording",
-      "implementationState": "not-started",
-      "reviewState": "not-in-pilot",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "awaiting-independent-reconfirmation",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 0,
         "lessonIds": []
       },
       "beforeHash": "sha256:3a25a1fd6eb99194a440286105466a4ba97ed730a18ae65382587b00300d0b53",
-      "afterHash": null
+      "afterHash": "sha256:eca0deff35ee29631052202b90e5fc68f8ff75eb1790e85c91988dc5203c26b8",
+      "proposedFile": "public/media/illustrations/comptine-cabri.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/comptine-cabri.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2791,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/comptine-cabri.webp",
+          "bytes": 94518
+        }
+      ],
+      "currentDecision": "owner-authorized; independent-review-pending"
     },
     {
       "id": "comptine-formes",

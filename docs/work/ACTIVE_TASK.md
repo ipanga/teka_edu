@@ -5,8 +5,23 @@
 September Rich-Media Visual Upgrade
 
 **Current phase:** the controlled pilot and rollout batch 1 are independently accepted and fully reapproved.
-September is 176/176 approved with zero stale digests. Ten rich-media candidates remain and may continue in
-small bounded batches. Production remains unchanged.
+Rollout batch 2 integrates `comptine-mains` and the currently unused `comptine-cabri`. Exactly nine dependent
+lessons are at `review` pending independent reconfirmation; 167 remain approved. Production remains unchanged.
+
+## Rollout batch 2 frozen for review — 2026-09-27
+
+- **Media:** `comptine-mains` shows two natural raised palms with exactly five digits each and inward-facing
+  thumbs; `comptine-cabri` shows the established young goat character with all four hooves airborne. Both are
+  1024×1024 WebP files at quality 88 with matching French descriptions.
+- **Scope:** nine 1ère maternelle lessons use `comptine-mains`; `comptine-cabri` is registered for the canonical
+  “Saute, petit cabri” rhyme but no September lesson currently displays it, so it lapses no approval.
+- **Evidence:** `docs/review/media/september-rich-media-rollout-batch-2-comparison.png` renders both assets at
+  72, 128 and 256 px. The 1ère maternelle reconfirmation package proves all lesson text, rhyme text, objectives,
+  durations, progression, programme and calendar are unchanged from accepted checkpoint `4e80f9f`.
+- **Validation:** formatting, lint, typecheck, all 438 unit tests, 31-file content validation, Webpack production
+  build and real child-screen E2E across phone, tablet, desktop and TV pass.
+- **Exact resume point:** obtain the bounded Claude Max / Opus 5.5 decision for the two rhyme illustrations and
+  nine affected lessons. Restore no approval before explicit acceptance.
 
 ## Rollout batch 1 independently accepted — 2026-09-27
 

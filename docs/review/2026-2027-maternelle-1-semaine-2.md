@@ -892,7 +892,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dire des comptines et laisser une trace._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -915,7 +915,7 @@ _Dire des comptines et laisser une trace._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains ouvertes, levées, paumes vers toi (`public/media/illustrations/comptine-mains.svg`)
+- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre (`public/media/illustrations/comptine-mains.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Jouer avec sa voix et acquérir un répertoire de comptines et de chansons » (before-4) :**
 

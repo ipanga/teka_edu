@@ -12,40 +12,38 @@ leurs fichiers, dimensions et empreintes exactes sont consignés dans
 
 ## Ce qui s’est passé
 
-5 image(s) de septembre ont été remplacées localement par des illustrations
+2 image(s) de septembre ont été remplacées localement par des illustrations
 WebP plus chaleureuses, expressives et proches d’un album préscolaire. Une histoire peut utiliser
 une courte séquence alignée sur ses pages existantes. Aucun texte n’a été réécrit ; les personnages,
 objets, quantités, actions et décors doivent être jugés contre le texte approuvé.
-Les 46 autres images, dont toutes les formes géométriques, n’ont pas bougé.
+Les 49 autres images, dont toutes les formes géométriques, n’ont pas bougé.
 
 L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant (ISSUE-026).
-Les approbations de **3 leçon(s)** de cette classe ont donc été annulées — pas
+Les approbations de **0 leçon(s)** de cette classe ont donc été annulées — pas
 re-tamponnées — et ce document vous demande de confirmer que les nouvelles images servent
 toujours ce que chaque leçon enseigne (ADR-048).
 
 ## La planche avant / après
 
-![Avant / après : chaque image redessinée, aux trois tailles de l’application](media/september-rich-media-rollout-batch-1-comparison.png)
+![Avant / après : chaque image redessinée, aux trois tailles de l’application](media/september-rich-media-rollout-batch-2-comparison.png)
 
 La planche montre chaque image aux trois tailles de l’application : 72 px (une rangée à
 compter), 128 px (une carte de mot), 256 px (l’image d’une histoire).
 
-## Les images que cette classe montre — 2
+## Les images que cette classe montre — 0
 
-| Image            | Type   | Description avant                      | Description après                                                                    | Leçons de cette classe                   |
-| ---------------- | ------ | -------------------------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------- |
-| `animal-poule`   | animal | Une poule blanche, avec sa crête rouge | Une poule blanche avec une crête rouge, une aile repliée et des pattes bien visibles | 3 — m3-lang-03, m3-world-02, m3-world-05 |
-| `animal-poussin` | animal | Un petit poussin jaune, tout rond      | Un jeune poussin jaune, duveteux, avec une petite aile et deux pattes fines          | 2 — m3-lang-03, m3-world-05              |
+| Image | Type | Description avant | Description après | Leçons de cette classe |
+| ----- | ---- | ----------------- | ----------------- | ---------------------- |
 
 ## Résumé
 
 | Mesure                                        | Valeur                          |
 | --------------------------------------------- | ------------------------------- |
 | Leçons de la classe                           | 88                              |
-| Leçons concernées (approbation annulée)       | 3                               |
-| Leçons non concernées                         | 85                              |
-| Images modifiées (toutes classes)             | 5                               |
-| Images inchangées (toutes classes)            | 46                              |
+| Leçons concernées (approbation annulée)       | 0                               |
+| Leçons non concernées                         | 88                              |
+| Images modifiées (toutes classes)             | 2                               |
+| Images inchangées (toutes classes)            | 49                              |
 | Texte pédagogique modifié (enfant ou adulte)  | **0** — vérifié champ par champ |
 | Objectifs modifiés                            | **0** — vérifié                 |
 | Progression, programme, calendrier modifiés   | **0** — vérifié                 |
@@ -58,26 +56,6 @@ Pour chaque ligne : aucun texte lu à l’enfant, aucun texte lu à l’adulte, 
 aucune progression n’a changé (vérifié avant l’écriture de ce document). **La seule raison**
 du changement d’empreinte est la ligne « image » : ses octets ont changé, et l’empreinte d’une
 approbation couvre les octets de chaque image montrée (ISSUE-026, ADR-048).
-
-### Semaine 1 — 1 leçon(s)
-
-| Jour | Leçon                                    | Activité                           | Image            | Rôle                                                    | Empreinte avant | Empreinte après | Description avant                      | Description après                                                                    | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | ---------------------------------------- | ---------------------------------- | ---------------- | ------------------------------------------------------- | --------------- | --------------- | -------------------------------------- | ------------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
-| 3    | `m3-lang-03` J’écoute l’histoire de Kumu | `m3-lang-03-a2` L’histoire de Kumu | `animal-poussin` | secondaire — liée au texte ou à l’activité, non montrée | `1200d55d4d71`  | `7f1210316653`  | Un petit poussin jaune, tout rond      | Un jeune poussin jaune, duveteux, avec une petite aile et deux pattes fines          | inchangé     | inchangé     | inchangés              |
-| 3    | `m3-lang-03` J’écoute l’histoire de Kumu | `m3-lang-03-a2` L’histoire de Kumu | `animal-poule`   | secondaire — liée au texte ou à l’activité, non montrée | `47dd2c1a16e9`  | `d3007f43b420`  | Une poule blanche, avec sa crête rouge | Une poule blanche avec une crête rouge, une aile repliée et des pattes bien visibles | inchangé     | inchangé     | inchangés              |
-
-### Semaine 2 — 1 leçon(s)
-
-| Jour | Leçon                                    | Activité                                 | Image          | Rôle                            | Empreinte avant | Empreinte après | Description avant                      | Description après                                                                    | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | ---------------------------------------- | ---------------------------------------- | -------------- | ------------------------------- | --------------- | --------------- | -------------------------------------- | ------------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
-| 5    | `m3-world-02` Les animaux autour de nous | `m3-world-02-a1` Les parties de l’animal | `animal-poule` | principale — montrée à l’enfant | `47dd2c1a16e9`  | `d3007f43b420`  | Une poule blanche, avec sa crête rouge | Une poule blanche avec une crête rouge, une aile repliée et des pattes bien visibles | inchangé     | inchangé     | inchangés              |
-
-### Semaine 4 — 1 leçon(s)
-
-| Jour | Leçon                                 | Activité                               | Image            | Rôle                            | Empreinte avant | Empreinte après | Description avant                      | Description après                                                                    | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | ------------------------------------- | -------------------------------------- | ---------------- | ------------------------------- | --------------- | --------------- | -------------------------------------- | ------------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
-| 15   | `m3-world-05` L’animal et ses parties | `m3-world-05-a1` Pareil ou différent ? | `animal-poule`   | principale — montrée à l’enfant | `47dd2c1a16e9`  | `d3007f43b420`  | Une poule blanche, avec sa crête rouge | Une poule blanche avec une crête rouge, une aile repliée et des pattes bien visibles | inchangé     | inchangé     | inchangés              |
-| 15   | `m3-world-05` L’animal et ses parties | `m3-world-05-a1` Pareil ou différent ? | `animal-poussin` | principale — montrée à l’enfant | `1200d55d4d71`  | `7f1210316653`  | Un petit poussin jaune, tout rond      | Un jeune poussin jaune, duveteux, avec une petite aile et deux pattes fines          | inchangé     | inchangé     | inchangés              |
 
 ## Ce que l’on vous demande
 

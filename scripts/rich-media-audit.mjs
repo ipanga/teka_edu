@@ -114,6 +114,16 @@ const rolloutBatch1 = Object.fromEntries(
   ]),
 );
 
+const rolloutBatch2 = Object.fromEntries(
+  ["comptine-mains", "comptine-cabri"].map((id) => [
+    id,
+    {
+      master: `private/astra-visual-evidence/september-rich-media-rollout-masters/${id}.png`,
+      source: [1254, 1254],
+    },
+  ]),
+);
+
 const oldFileSize = (file) =>
   execFileSync("git", ["show", `${baselineCommit}:public/media/${file}`], { cwd: root }).length;
 const delivery = async (asset) => {
@@ -190,8 +200,9 @@ const assets = await Promise.all(
     const lessonIds = [...new Set(assetUsages.map((usage) => usage.lessonId))];
     const currentQa = legacyState.finalQa.assets[asset.id];
     const before = baselineRegistry.assets.find((candidate) => candidate.id === asset.id) ?? asset;
-    const selected = pilot[asset.id] ?? rolloutBatch1[asset.id];
+    const selected = pilot[asset.id] ?? rolloutBatch1[asset.id] ?? rolloutBatch2[asset.id];
     const isPilot = pilot[asset.id] !== undefined;
+    const awaitingReview = rolloutBatch2[asset.id] !== undefined;
     return {
       id: asset.id,
       kind: asset.kind,
@@ -212,7 +223,11 @@ const assets = await Promise.all(
           ? "integrated-local-pilot"
           : "integrated-local-rollout"
         : "not-started",
-      reviewState: selected ? "independently-reconfirmed" : "not-in-pilot",
+      reviewState: selected
+        ? awaitingReview
+          ? "awaiting-independent-reconfirmation"
+          : "independently-reconfirmed"
+        : "not-in-pilot",
       approvalImpact:
         decision.decision === "audited-keep"
           ? { expected: "none", lessonCount: 0, lessonIds: [] }
@@ -232,7 +247,9 @@ const assets = await Promise.all(
             compression: { format: "WebP", quality: 88, smartSubsample: true },
             oldFileBytes: oldFileSize(before.file),
             deliveryFiles: await delivery(asset),
-            currentDecision: "owner-accepted; independent-review-accepted",
+            currentDecision: awaitingReview
+              ? "owner-authorized; independent-review-pending"
+              : "owner-accepted; independent-review-accepted",
           }
         : {}),
     };
@@ -263,7 +280,7 @@ const manifest = {
   productionCommit: "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   pilotBaselineCommit: baselineCommit,
   scope: ["maternelle-1 September", "maternelle-3 September"],
-  status: "rollout-batch-1-reconfirmed-controlled-rollout-active",
+  status: "rollout-batch-2-awaiting-independent-reconfirmation",
   productionAssetsChanged: false,
   localPilotAssetsChanged: true,
   approvedLessonSemanticsChanged: false,
@@ -286,6 +303,7 @@ const manifest = {
     "The standard lapsed-only workflow restored exactly 18 approvals with fresh digests; all 158 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
     "Rollout batch 1 integrates corps-main, corps-pied, corps-ventre, animal-poule and animal-poussin. The first independent pass accepted four assets and requested a tighter belly crop; the corrected corps-ventre and all 10 dependent lessons were accepted on the second pass.",
     "The lapsed-only workflow restored exactly 10 Batch-1 approvals with fresh digests. All 166 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
+    "Rollout batch 2 integrates comptine-mains and the currently unused comptine-cabri. Exactly nine lessons depend on comptine-mains and await independent reconfirmation; comptine-cabri lapses no approval.",
   ],
   assets,
 };
@@ -319,7 +337,8 @@ Generated from the canonical media registry, September lessons and supplied text
 - ${counts["audited-redraw"]} proposed for high-quality WebP delivery.
 - Final formats: ${counts.svg} SVG and ${counts.webp} WebP; 0 PNG delivery exceptions.
 - The five-asset pilot affected 18 unique lessons: 8 in 1ère maternelle and 10 in 3ème maternelle. All 18 were independently reconfirmed and restored with fresh digests; September is 176/176 approved.
-- Rollout batch 1 contains five single-image references and affects exactly 10 lessons. All five assets and all 10 lessons were independently reconfirmed and restored with fresh digests; the other 10 candidates remain unimplemented.
+- Rollout batch 1 contains five single-image references and affects exactly 10 lessons. All five assets and all 10 lessons were independently reconfirmed and restored with fresh digests.
+- Rollout batch 2 contains two rhyme illustrations. Nine lessons depend on comptine-mains and await independent reconfirmation; comptine-cabri is currently unused and lapses no approval. The other eight story candidates remain unimplemented.
 - Manifest SHA-256: \`${digest}\`.
 
 The supplied screenshots validate the distinction: layout and scaling are sound, while the body, rhyme and story art remains visually schematic. Shapes, counting models and isolated objects do not share that defect.

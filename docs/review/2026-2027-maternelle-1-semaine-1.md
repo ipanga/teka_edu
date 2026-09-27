@@ -381,7 +381,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -430,7 +430,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains ouvertes, levées, paumes vers toi (`public/media/illustrations/comptine-mains.svg`)
+- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre (`public/media/illustrations/comptine-mains.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -959,7 +959,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
   - `LANG-S01-C04-O02` — Dire ce qu’on fait. _(source : programme-2024-langage)_
@@ -1000,7 +1000,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains ouvertes, levées, paumes vers toi (`public/media/illustrations/comptine-mains.svg`)
+- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre (`public/media/illustrations/comptine-mains.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -1169,7 +1169,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dire des comptines et laisser une trace._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1192,7 +1192,7 @@ _Dire des comptines et laisser une trace._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains ouvertes, levées, paumes vers toi (`public/media/illustrations/comptine-mains.svg`)
+- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre (`public/media/illustrations/comptine-mains.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Jouer avec sa voix et acquérir un répertoire de comptines et de chansons » (before-4) :**
 

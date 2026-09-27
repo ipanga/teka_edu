@@ -540,12 +540,14 @@
     {
       "id": "comptine-mains",
       "kind": "illustration",
-      "file": "illustrations/comptine-mains.svg",
-      "alt": "Deux mains ouvertes, levées, paumes vers toi",
+      "file": "illustrations/comptine-mains.webp",
+      "alt": "Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre",
       "tags": ["mains", "corps", "comptine"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:ad1e83e04b06c8cdf2d548c650b89b4c669bc92338874800ecaa4f9ac6349cc1"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré pour le déploiement contrôlé de septembre 2026.",
+      "contentHash": "sha256:36a5f61241200ce5fae6b6be0fd1a1d58f5ba092a8e8cc99c54165bff526b5e2",
+      "width": 1024,
+      "height": 1024
     },
     {
       "id": "comptine-semaine",
@@ -560,12 +562,14 @@
     {
       "id": "comptine-cabri",
       "kind": "illustration",
-      "file": "illustrations/comptine-cabri.svg",
-      "alt": "Un petit cabri qui saute, les quatre pattes en l’air, au-dessus de l’herbe",
+      "file": "illustrations/comptine-cabri.webp",
+      "alt": "Un jeune cabri blanc bondit, les quatre sabots en l’air au-dessus de l’herbe",
       "tags": ["cabri", "sauter", "comptine"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:3a25a1fd6eb99194a440286105466a4ba97ed730a18ae65382587b00300d0b53"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré pour le déploiement contrôlé de septembre 2026.",
+      "contentHash": "sha256:eca0deff35ee29631052202b90e5fc68f8ff75eb1790e85c91988dc5203c26b8",
+      "width": 1024,
+      "height": 1024
     },
     {
       "id": "comptine-formes",

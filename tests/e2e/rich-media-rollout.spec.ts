@@ -27,6 +27,12 @@ const cases = [
     activity: "Pareil ou différent ?",
     expected: ["animal-poule.webp", "animal-poussin.webp"],
   },
+  {
+    name: "hands-rhyme",
+    path: "/maternelle/1/seance/2",
+    activity: "Un, deux, trois, mes mains",
+    expected: ["comptine-mains.webp"],
+  },
 ] as const;
 
 async function reachActivity(page: Page, item: (typeof cases)[number]) {
@@ -47,7 +53,7 @@ async function reachActivity(page: Page, item: (typeof cases)[number]) {
   throw new Error(`Activity not reached: ${item.path} / ${item.activity}`);
 }
 
-test("rollout batch 1 renders its body and animal references across target widths", async ({
+test("the controlled rollout renders its integrated references across target widths", async ({
   page,
 }) => {
   test.setTimeout(120_000);

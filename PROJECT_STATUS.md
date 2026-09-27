@@ -1027,3 +1027,16 @@ rich-media pilot`). Work is local only. No push, PR, merge, staging, production,
   E2E across phone, tablet, desktop and TV pass.
 - Work remains local. Production and staging are unchanged; no push, PR, merge, deployment, database or October
   work occurred.
+
+### 2026-09-27 — Rich-media rollout batch 2 frozen for independent review (local)
+
+- Integrated `comptine-mains` and the currently unused `comptine-cabri` as 1024×1024 WebP rhyme illustrations.
+  The hands image shows exactly two raised palms with five digits each; the cabri matches the accepted goat
+  character and has all four hooves visibly airborne.
+- The standard lapse mechanism moved exactly nine `comptine-mains` lessons to `review`; 167 lessons remain
+  approved. `comptine-cabri` has no September lesson use and lapsed no approval.
+- The batch-only sheet renders both images at 72, 128 and 256 px. Formatting, lint, typecheck, all 438 unit
+  tests, 31-file content validation, Webpack production build and child-screen E2E on phone, tablet, desktop and
+  TV pass. Independent acceptance is still required before restoring the nine approvals.
+- Work remains local. Production and staging are unchanged; no push, PR, merge, deployment, database or October
+  work occurred.

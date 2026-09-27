@@ -12,41 +12,69 @@ leurs fichiers, dimensions et empreintes exactes sont consignés dans
 
 ## Ce qui s’est passé
 
-5 image(s) de septembre ont été remplacées localement par des illustrations
+2 image(s) de septembre ont été remplacées localement par des illustrations
 WebP plus chaleureuses, expressives et proches d’un album préscolaire. Une histoire peut utiliser
 une courte séquence alignée sur ses pages existantes. Aucun texte n’a été réécrit ; les personnages,
 objets, quantités, actions et décors doivent être jugés contre le texte approuvé.
-Les 46 autres images, dont toutes les formes géométriques, n’ont pas bougé.
+Les 49 autres images, dont toutes les formes géométriques, n’ont pas bougé.
 
 L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant (ISSUE-026).
-Les approbations de **7 leçon(s)** de cette classe ont donc été annulées — pas
+Les approbations de **9 leçon(s)** de cette classe ont donc été annulées — pas
 re-tamponnées — et ce document vous demande de confirmer que les nouvelles images servent
 toujours ce que chaque leçon enseigne (ADR-048).
 
 ## La planche avant / après
 
-![Avant / après : chaque image redessinée, aux trois tailles de l’application](media/september-rich-media-rollout-batch-1-comparison.png)
+![Avant / après : chaque image redessinée, aux trois tailles de l’application](media/september-rich-media-rollout-batch-2-comparison.png)
 
 La planche montre chaque image aux trois tailles de l’application : 72 px (une rangée à
 compter), 128 px (une carte de mot), 256 px (l’image d’une histoire).
 
-## Les images que cette classe montre — 3
+## Les images que cette classe montre — 1
 
-| Image          | Type   | Description avant                                                                            | Description après                                                              | Leçons de cette classe                                           |
-| -------------- | ------ | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
-| `corps-main`   | object | Une main ouverte, les cinq doigts écartés                                                    | Une main d’enfant ouverte, la paume visible et les cinq doigts écartés         | 5 — m1-lang-11, m1-lang-18, m1-lang-22, m1-world-02, m1-world-20 |
-| `corps-pied`   | object | Un pied nu, vu de dessus, avec ses cinq orteils                                              | Un pied nu d’enfant, vu de dessus et légèrement de côté, avec ses cinq orteils | 4 — m1-lang-11, m1-lang-18, m1-world-02, m1-world-20             |
-| `corps-ventre` | object | Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous | Le ventre d’un enfant, une main posée dessus                                   | 4 — m1-lang-13, m1-lang-18, m1-world-08, m1-world-20             |
+| Image            | Type         | Description avant                            | Description après                                                                          | Leçons de cette classe                                                                                     |
+| ---------------- | ------------ | -------------------------------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| `comptine-mains` | illustration | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | 9 — m1-lang-02, m1-lang-04, m1-lang-11, m1-lang-16, m1-lang-22, m1-art-04, m1-art-07, m1-art-11, m1-art-17 |
+
+## Texte approuvé et image montrée, page par page
+
+Ces extraits sont les mots canoniques réellement affichés dans l’application. Ils permettent
+de juger chaque scène sans devoir consulter un autre fichier. Une histoire avance par groupes
+de 3 lignes ; une comptine tient sur une seule page.
+
+### `comptine-mains` — Un, deux, trois, mes mains
+
+- **Page 1 — image :** `public/media/illustrations/comptine-mains.webp`
+  - Description accessible : Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre
+  - Texte affiché :
+    > Un, deux, trois,
+    > mes mains sont là.
+    > Un, deux, trois,
+    > je les cache… les voilà !
+
+### `comptine-mains` — Mes deux mains
+
+- **Page 1 — image :** `public/media/illustrations/comptine-mains.webp`
+  - Description accessible : Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre
+  - Texte affiché :
+    > Voici ma tête,
+    > voici mes épaules,
+    > voici mes deux mains
+    > qui montent tout là-haut.
+    > Voici mes genoux,
+    > voici mes deux pieds,
+    > et voici mon ventre
+    > qui se met à rigoler !
 
 ## Résumé
 
 | Mesure                                        | Valeur                          |
 | --------------------------------------------- | ------------------------------- |
 | Leçons de la classe                           | 88                              |
-| Leçons concernées (approbation annulée)       | 7                               |
-| Leçons non concernées                         | 81                              |
-| Images modifiées (toutes classes)             | 5                               |
-| Images inchangées (toutes classes)            | 46                              |
+| Leçons concernées (approbation annulée)       | 9                               |
+| Leçons non concernées                         | 79                              |
+| Images modifiées (toutes classes)             | 2                               |
+| Images inchangées (toutes classes)            | 49                              |
 | Texte pédagogique modifié (enfant ou adulte)  | **0** — vérifié champ par champ |
 | Objectifs modifiés                            | **0** — vérifié                 |
 | Progression, programme, calendrier modifiés   | **0** — vérifié                 |
@@ -60,43 +88,39 @@ aucune progression n’a changé (vérifié avant l’écriture de ce document).
 du changement d’empreinte est la ligne « image » : ses octets ont changé, et l’empreinte d’une
 approbation couvre les octets de chaque image montrée (ISSUE-026, ADR-048).
 
-### Semaine 1 — 1 leçon(s)
+### Semaine 1 — 3 leçon(s)
 
-| Jour | Leçon                           | Activité                           | Image        | Rôle                            | Empreinte avant | Empreinte après | Description avant                               | Description après                                                              | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | ------------------------------- | ---------------------------------- | ------------ | ------------------------------- | --------------- | --------------- | ----------------------------------------------- | ------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
-| 2    | `m1-world-02` Ma main, mon pied | `m1-world-02-a1` Ma main, mon pied | `corps-main` | principale — montrée à l’enfant | `abd0221e19a6`  | `b4322808c67f`  | Une main ouverte, les cinq doigts écartés       | Une main d’enfant ouverte, la paume visible et les cinq doigts écartés         | inchangé     | inchangé     | inchangés              |
-| 2    | `m1-world-02` Ma main, mon pied | `m1-world-02-a1` Ma main, mon pied | `corps-pied` | principale — montrée à l’enfant | `fa04bffa3bc7`  | `2d2e0162e6c3`  | Un pied nu, vu de dessus, avec ses cinq orteils | Un pied nu d’enfant, vu de dessus et légèrement de côté, avec ses cinq orteils | inchangé     | inchangé     | inchangés              |
+| Jour | Leçon                                     | Activité                                   | Image            | Rôle                            | Empreinte avant | Empreinte après | Description avant                            | Description après                                                                          | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | ----------------------------------------- | ------------------------------------------ | ---------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
+| 2    | `m1-lang-02` Encore des mots de la maison | `m1-lang-02-a3` Un, deux, trois, mes mains | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
+| 4    | `m1-art-04` Ma comptine                   | `m1-art-04-a1` Ma comptine                 | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
+| 4    | `m1-lang-04` Je dis ce que je fais        | `m1-lang-04-a3` Un, deux, trois, mes mains | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
 
 ### Semaine 2 — 1 leçon(s)
 
-| Jour | Leçon                             | Activité                             | Image          | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                                            | Description après                            | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | --------------------------------- | ------------------------------------ | -------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------ | ------------ | ---------------------- |
-| 8    | `m1-world-08` Ma tête, mon ventre | `m1-world-08-a1` Ma tête, mon ventre | `corps-ventre` | principale — montrée à l’enfant | `25ad16ad5bda`  | `17ca288c5657`  | Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous | Le ventre d’un enfant, une main posée dessus | inchangé     | inchangé     | inchangés              |
+| Jour | Leçon                   | Activité                   | Image            | Rôle                            | Empreinte avant | Empreinte après | Description avant                            | Description après                                                                          | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | ----------------------- | -------------------------- | ---------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
+| 7    | `m1-art-07` Ma comptine | `m1-art-07-a1` Ma comptine | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
 
 ### Semaine 3 — 2 leçon(s)
 
-| Jour | Leçon                            | Activité                              | Image          | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                                            | Description après                                                              | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | -------------------------------- | ------------------------------------- | -------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
-| 11   | `m1-lang-11` Ma main, mon pied   | `m1-lang-11-a2` Les mots de mon corps | `corps-main`   | principale — montrée à l’enfant | `abd0221e19a6`  | `b4322808c67f`  | Une main ouverte, les cinq doigts écartés                                                    | Une main d’enfant ouverte, la paume visible et les cinq doigts écartés         | inchangé     | inchangé     | inchangés              |
-| 11   | `m1-lang-11` Ma main, mon pied   | `m1-lang-11-a2` Les mots de mon corps | `corps-pied`   | principale — montrée à l’enfant | `fa04bffa3bc7`  | `2d2e0162e6c3`  | Un pied nu, vu de dessus, avec ses cinq orteils                                              | Un pied nu d’enfant, vu de dessus et légèrement de côté, avec ses cinq orteils | inchangé     | inchangé     | inchangés              |
-| 13   | `m1-lang-13` Ma tête, mon ventre | `m1-lang-13-a2` Les mots de mon corps | `corps-ventre` | principale — montrée à l’enfant | `25ad16ad5bda`  | `17ca288c5657`  | Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous | Le ventre d’un enfant, une main posée dessus                                   | inchangé     | inchangé     | inchangés              |
+| Jour | Leçon                          | Activité                                   | Image            | Rôle                            | Empreinte avant | Empreinte après | Description avant                            | Description après                                                                          | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | ------------------------------ | ------------------------------------------ | ---------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
+| 11   | `m1-art-11` Ma comptine        | `m1-art-11-a1` Ma comptine                 | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
+| 11   | `m1-lang-11` Ma main, mon pied | `m1-lang-11-a3` Un, deux, trois, mes mains | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
 
-### Semaine 4 — 1 leçon(s)
+### Semaine 4 — 2 leçon(s)
 
-| Jour | Leçon                              | Activité                                     | Image          | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                                            | Description après                                                              | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | ---------------------------------- | -------------------------------------------- | -------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
-| 18   | `m1-lang-18` Les mots de mon corps | `m1-lang-18-a2` Les quatre mots de mon corps | `corps-main`   | principale — montrée à l’enfant | `abd0221e19a6`  | `b4322808c67f`  | Une main ouverte, les cinq doigts écartés                                                    | Une main d’enfant ouverte, la paume visible et les cinq doigts écartés         | inchangé     | inchangé     | inchangés              |
-| 18   | `m1-lang-18` Les mots de mon corps | `m1-lang-18-a2` Les quatre mots de mon corps | `corps-pied`   | principale — montrée à l’enfant | `fa04bffa3bc7`  | `2d2e0162e6c3`  | Un pied nu, vu de dessus, avec ses cinq orteils                                              | Un pied nu d’enfant, vu de dessus et légèrement de côté, avec ses cinq orteils | inchangé     | inchangé     | inchangés              |
-| 18   | `m1-lang-18` Les mots de mon corps | `m1-lang-18-a2` Les quatre mots de mon corps | `corps-ventre` | principale — montrée à l’enfant | `25ad16ad5bda`  | `17ca288c5657`  | Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous | Le ventre d’un enfant, une main posée dessus                                   | inchangé     | inchangé     | inchangés              |
+| Jour | Leçon                      | Activité                                   | Image            | Rôle                            | Empreinte avant | Empreinte après | Description avant                            | Description après                                                                          | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | -------------------------- | ------------------------------------------ | ---------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
+| 16   | `m1-lang-16` J’écoute bien | `m1-lang-16-a3` Un, deux, trois, mes mains | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
+| 17   | `m1-art-17` Ma comptine    | `m1-art-17-a1` Ma comptine                 | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
 
-### Semaine 5 — 2 leçon(s)
+### Semaine 5 — 1 leçon(s)
 
-| Jour | Leçon                                 | Activité                              | Image          | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                                            | Description après                                                              | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | ------------------------------------- | ------------------------------------- | -------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
-| 20   | `m1-world-20` Tout mon corps          | `m1-world-20-a1` Tout mon corps       | `corps-main`   | principale — montrée à l’enfant | `abd0221e19a6`  | `b4322808c67f`  | Une main ouverte, les cinq doigts écartés                                                    | Une main d’enfant ouverte, la paume visible et les cinq doigts écartés         | inchangé     | inchangé     | inchangés              |
-| 20   | `m1-world-20` Tout mon corps          | `m1-world-20-a1` Tout mon corps       | `corps-pied`   | principale — montrée à l’enfant | `fa04bffa3bc7`  | `2d2e0162e6c3`  | Un pied nu, vu de dessus, avec ses cinq orteils                                              | Un pied nu d’enfant, vu de dessus et légèrement de côté, avec ses cinq orteils | inchangé     | inchangé     | inchangés              |
-| 20   | `m1-world-20` Tout mon corps          | `m1-world-20-a1` Tout mon corps       | `corps-ventre` | principale — montrée à l’enfant | `25ad16ad5bda`  | `17ca288c5657`  | Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous | Le ventre d’un enfant, une main posée dessus                                   | inchangé     | inchangé     | inchangés              |
-| 22   | `m1-lang-22` Tout ce que je sais dire | `m1-lang-22-a2` Tous les mots du mois | `corps-main`   | principale — montrée à l’enfant | `abd0221e19a6`  | `b4322808c67f`  | Une main ouverte, les cinq doigts écartés                                                    | Une main d’enfant ouverte, la paume visible et les cinq doigts écartés         | inchangé     | inchangé     | inchangés              |
+| Jour | Leçon                                 | Activité                                   | Image            | Rôle                            | Empreinte avant | Empreinte après | Description avant                            | Description après                                                                          | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | ------------------------------------- | ------------------------------------------ | ---------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
+| 22   | `m1-lang-22` Tout ce que je sais dire | `m1-lang-22-a3` Un, deux, trois, mes mains | `comptine-mains` | principale — montrée à l’enfant | `ad1e83e04b06`  | `36a5f6124120`  | Deux mains ouvertes, levées, paumes vers toi | Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre | inchangé     | inchangé     | inchangés              |
 
 ## Ce que l’on vous demande
 
