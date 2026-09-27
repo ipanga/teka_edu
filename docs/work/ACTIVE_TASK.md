@@ -4,8 +4,32 @@
 
 September Rich-Media Visual Upgrade
 
-**Current phase:** the controlled five-asset rich-media pilot is implemented and validated locally. It is
-frozen for owner visual review. Eighteen dependent lessons remain at `review`; no approval has been restored.
+**Current phase:** the owner accepted the controlled five-asset pilot direction. Independent pedagogical
+reconfirmation is being repeated against strengthened page-by-page evidence. Eighteen dependent lessons
+remain at `review`; no approval has been restored and the wider rollout has not begun.
+
+## Independent pilot reconfirmation checkpoint — 2026-09-27
+
+- **Review pass 1:** Claude Max / Opus did not accept the first dossier because it omitted the exact story
+  and rhyme lines and rendered secondary story frames at only 128 px. Astra checked every substantive claim
+  against the canonical repository. The greeting pose supports both canonical rhymes; the mango story is the
+  separate daily read-aloud after the Kumu retelling; Nsimba, the adult and all three mango-story children are
+  continuous; and every story frame supports its assigned page without a contradiction. No media correction
+  is justified from that pass.
+- **Evidence correction:** `scripts/visual-reconfirmation.ts` now places every canonical story/rhyme line
+  beside the exact image shown on that page. `scripts/media-contact-sheet.ts` now renders all seven story
+  frames at 256 px. The two class packages and `september-rich-media-pilot-comparison.png` were regenerated;
+  lesson/content/media bytes and approval digests did not change.
+- **Approval integrity:** September remains 176 total, 158 approved and exactly 18 at `review`. No acceptance
+  entry exists, no digest has been restored, and the remaining 15 candidates are still untouched.
+- **Claude authentication:** the first retry consumed zero input tokens and cost $0 because an invalid
+  `ANTHROPIC_API_KEY` environment override shadowed the Max login. With that override removed, Claude CLI
+  reports no subscription session. The official Claude.ai OAuth flow is open in Chrome at the signed-out
+  Google account chooser; the owner must complete that private login before the bounded review can resume.
+- **Exact resume point:** after the owner completes the open Claude.ai/Google login, verify
+  `env -u ANTHROPIC_API_KEY claude auth status` reports `claude.ai` / `max`; rerun the isolated read-only
+  review from `/tmp/teka-pilot-review-2`; independently verify the verdict; restore only the exact 18 lessons
+  through the standard mechanism if and only if the verdict is explicitly `accepted`.
 
 ## Controlled rich-media pilot checkpoint — 2026-09-27
 

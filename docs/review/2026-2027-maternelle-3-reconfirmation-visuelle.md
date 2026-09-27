@@ -50,6 +50,75 @@ compter), 128 px (une carte de mot), 256 px (l’image d’une histoire).
 | `histoire-mangue` | 2       | `public/media/illustrations/histoire-mangue-02.webp` | Ama et Tito arrivent et regardent la mangue ; Ilunga réfléchit                                                                                |
 | `histoire-mangue` | 3, 4    | `public/media/illustrations/histoire-mangue-03.webp` | Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main                                                                 |
 
+## Texte approuvé et image montrée, page par page
+
+Ces extraits sont les mots canoniques réellement affichés dans l’application. Ils permettent
+de juger chaque scène sans devoir consulter un autre fichier. Une histoire avance par groupes
+de 3 lignes ; une comptine tient sur une seule page.
+
+### `histoire-nsimba` — Le premier jour de Nsimba
+
+- **Page 1 — image :** `public/media/illustrations/histoire-nsimba-01.webp`
+  - Description accessible : Nsimba, son sac d’école sur le dos, tient la main de son adulte devant le portail de l’école ; la maitresse s’accroupit pour lui dire bonjour
+  - Texte affiché :
+    > Ce matin, Nsimba met sa chemise, ses chaussures, et son petit sac sur le dos.
+    > Aujourd’hui, c’est son premier jour à l’école.
+    > Sur le chemin, son ventre fait un drôle de nœud. Nsimba serre très fort la main de son adulte.
+
+- **Page 2 — image :** `public/media/illustrations/histoire-nsimba-01.webp`
+  - Description accessible : Nsimba, son sac d’école sur le dos, tient la main de son adulte devant le portail de l’école ; la maitresse s’accroupit pour lui dire bonjour
+  - Texte affiché :
+    > Devant le portail, il y a beaucoup d’enfants. Beaucoup de bruit. Beaucoup de pieds.
+    > Nsimba voudrait rentrer à la maison.
+    > La maitresse s’accroupit devant lui. « Bonjour. Moi, c’est madame Kalala. Et toi ? »
+
+- **Page 3 — image :** `public/media/illustrations/histoire-nsimba-02.webp`
+  - Description accessible : Nsimba entre dans la classe avec son sac ; la maitresse lui montre sa place et une étiquette vierge sur la table
+  - Texte affiché :
+    > Nsimba ne dit rien. Puis, tout doucement : « Nsimba. »
+    > « Viens, Nsimba, dit la maitresse. Ta place est ici, avec ton prénom dessus. »
+    > Sur la table, il y a son prénom. Rien qu’à lui.
+
+- **Page 4 — image :** `public/media/illustrations/histoire-nsimba-03.webp`
+  - Description accessible : Amina tend un crayon bleu à Nsimba, qui dessine une maison, un soleil et deux enfants
+  - Texte affiché :
+    > À côté, une fille lui tend un crayon bleu. « Tu veux ? Moi, c’est Amina. »
+    > Nsimba prend le crayon. Il dessine une maison, un soleil, et deux enfants.
+    > Le soir, son adulte demande : « Alors, cette école ? »
+
+- **Page 5 — image :** `public/media/illustrations/histoire-nsimba-04.webp`
+  - Description accessible : Le soir, Nsimba sourit à côté de son adulte : demain, il retourne à l’école
+  - Texte affiché :
+    > Nsimba répond : « Demain, j’y retourne. »
+
+### `histoire-mangue` — La mangue partagée
+
+- **Page 1 — image :** `public/media/illustrations/histoire-mangue-01.webp`
+  - Description accessible : Ilunga, assis sous le manguier, tient une grosse mangue dans ses deux mains
+  - Texte affiché :
+    > Ilunga trouve une grosse mangue sous l’arbre. Une seule.
+    > Il la met dans ses deux mains. Elle est lourde, et elle sent très bon.
+    > Ilunga s’assoit pour la manger tout seul.
+
+- **Page 2 — image :** `public/media/illustrations/histoire-mangue-02.webp`
+  - Description accessible : Ama et Tito arrivent et regardent la mangue ; Ilunga réfléchit
+  - Texte affiché :
+    > Mais voilà Ama, sa voisine. Et voilà Tito, son petit frère. Ils regardent la mangue.
+    > Ils sont trois, et il y a une seule mangue.
+    > Ilunga réfléchit. Une mangue, trois enfants. Comment faire ?
+
+- **Page 3 — image :** `public/media/illustrations/histoire-mangue-03.webp`
+  - Description accessible : Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main
+  - Texte affiché :
+    > Il coupe la mangue en trois morceaux : un, deux, trois.
+    > Un morceau pour Ama. Un morceau pour Tito. Un morceau pour lui.
+    > « Maintenant, dit Ilunga, on a tous quelque chose. »
+
+- **Page 4 — image :** `public/media/illustrations/histoire-mangue-03.webp`
+  - Description accessible : Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main
+  - Texte affiché :
+    > Et la mangue, partagée en trois, a un gout encore meilleur.
+
 ## Résumé
 
 | Mesure                                        | Valeur                          |

@@ -976,3 +976,20 @@ Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, a
 rich-media pilot`). Work is local only. No push, PR, merge, staging, production, database migration,
   production-data operation or October work occurred. Next gate is the owner’s visual decision on the pilot;
   full rollout and approval restoration remain unauthorized.
+
+### 2026-09-27 — Rich-media pilot reconfirmation evidence strengthened (local)
+
+- The owner accepted the pilot direction and authorized the controlled September rollout, subject first to
+  independent acceptance of the exact 18 pilot-affected lessons.
+- Claude Max / Opus rejected the first review dossier because it lacked the canonical story/rhyme lines and
+  showed non-primary story frames at 128 px. Independent repository checks found no resulting media defect:
+  both greeting rhymes match the hand/foot pose, the Kumu lesson’s mango item is a separate daily read-aloud,
+  recurring characters remain continuous, and the Nsimba and mango frames support their assigned pages.
+- The generated packages now quote every canonical line beside its exact page image, and the comparison sheet
+  renders all seven story frames at 256 px. No lesson, text, media file, association, objective, duration,
+  progression, digest or approval changed while strengthening this evidence.
+- The bounded retry has not run: an invalid API-key environment override produced a pre-input 401 with zero
+  tokens and $0 cost, while the Max subscription session is signed out when that override is removed. The
+  official Claude.ai OAuth flow is open for the owner to complete privately in Chrome.
+- State remains exactly 176 total, 158 approved and 18 review. The remaining 15 candidates are untouched;
+  no push, PR, merge, staging, production, database, deployment or October work occurred.

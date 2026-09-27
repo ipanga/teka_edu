@@ -19,6 +19,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { format, resolveConfig } from "prettier";
 import { shownPictureIds } from "@/domain/lessons/pictures";
+import { STORY_LINES_PER_PAGE } from "@/domain/lessons/texts";
 import type { ActivityType } from "@/domain/lessons/types";
 import { assetFingerprint } from "@/domain/media/types";
 import { REVIEW_PACKAGES } from "@/lib/content/review-packages";
@@ -256,6 +257,47 @@ for (const levelId of levels) {
         }),
       ),
     );
+  }
+  const reviewedTexts = data.texts.filter(
+    (text) =>
+      text.illustrationId !== null && shownHere.some((asset) => asset.id === text.illustrationId),
+  );
+  if (reviewedTexts.length > 0) {
+    lines.push(
+      "",
+      "## Texte approuvé et image montrée, page par page",
+      "",
+      "Ces extraits sont les mots canoniques réellement affichés dans l’application. Ils permettent",
+      "de juger chaque scène sans devoir consulter un autre fichier. Une histoire avance par groupes",
+      `de ${STORY_LINES_PER_PAGE} lignes ; une comptine tient sur une seule page.`,
+      "",
+    );
+    for (const text of reviewedTexts) {
+      const asset = shownHere.find((candidate) => candidate.id === text.illustrationId)!;
+      lines.push(`### \`${asset.id}\` — ${text.title}`, "");
+      const pages =
+        text.kind === "rhyme"
+          ? [text.lines]
+          : Array.from({ length: Math.ceil(text.lines.length / STORY_LINES_PER_PAGE) }, (_, page) =>
+              text.lines.slice(
+                page * STORY_LINES_PER_PAGE,
+                page * STORY_LINES_PER_PAGE + STORY_LINES_PER_PAGE,
+              ),
+            );
+      for (const [page, pageLines] of pages.entries()) {
+        const frameIndex = asset.sequence?.pageFrames[page];
+        const frame = frameIndex === undefined ? undefined : asset.sequence?.frames[frameIndex];
+        const shownFile = frame?.file ?? asset.file;
+        const shownAlt = frame?.alt ?? asset.alt;
+        lines.push(
+          `- **Page ${page + 1} — image :** \`public/media/${shownFile}\``,
+          `  - Description accessible : ${shownAlt}`,
+          "  - Texte affiché :",
+          ...pageLines.map((line) => `    > ${line}`),
+          "",
+        );
+      }
+    }
   }
   const short = (h: string | undefined) => (h ? h.slice(7, 19) : "—");
   const levelLessons = [...lessonsNow.values()];

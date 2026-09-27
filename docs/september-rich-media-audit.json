@@ -5,7 +5,7 @@
   "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   "pilotBaselineCommit": "cbc1cf3",
   "scope": ["maternelle-1 September", "maternelle-3 September"],
-  "status": "controlled-pilot-integrated-awaiting-owner-visual-review",
+  "status": "controlled-pilot-owner-accepted-awaiting-independent-reconfirmation",
   "productionAssetsChanged": false,
   "localPilotAssetsChanged": true,
   "approvedLessonSemanticsChanged": false,
@@ -28,7 +28,9 @@
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
     "A small story sequence is a presentation proposal tied to existing text pages. It must not alter story wording or progression.",
     "The five pilot assets are integrated locally. Their 18 dependent lessons lapsed through the existing mechanism and remain at review.",
-    "All 158 unaffected approvals remain byte-for-byte unchanged from the pilot baseline."
+    "All 158 unaffected approvals remain byte-for-byte unchanged from the pilot baseline.",
+    "The first independent review did not accept an evidence package that omitted canonical narrative lines and showed secondary frames at 128 px; local verification found no justified media correction.",
+    "The regenerated packages pair every canonical story/rhyme line with its exact page image and render every story frame at 256 px. A bounded retry awaits restoration of the owner-authenticated Claude Max CLI session."
   ],
   "assets": [
     {

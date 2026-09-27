@@ -107,7 +107,7 @@ const rows = changed
         .join(", ");
       const file = path.join(ROOT, "public/media", frame.file);
       const picture = existsSync(file)
-        ? cell(dataUri(frame.file, readFileSync(file)), 128)
+        ? cell(dataUri(frame.file, readFileSync(file)), 256)
         : "<em>fichier manquant</em>";
       return `<div class="frame">${picture}<small>Page(s) ${pages} — ${escape(frame.alt)}</small></div>`;
     });
@@ -139,6 +139,7 @@ const html = `<!doctype html>
   small { color: #57534e; display: block; margin-top: 6px; max-width: 560px; }
   code { font-size: 13px; }
   .frame { margin-top: 12px; }
+  .frame small { max-width: 780px; }
   .review { margin-top: 12px; padding: 10px 12px; border-radius: 10px; background: #f8fafc; color: #334155; font-size: 12px; line-height: 1.55; }
 </style></head><body>
 <h1>Images de septembre — avant / après</h1>

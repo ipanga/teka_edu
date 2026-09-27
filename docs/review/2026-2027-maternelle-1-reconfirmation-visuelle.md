@@ -37,6 +37,36 @@ compter), 128 px (une carte de mot), 256 px (l’image d’une histoire).
 | `corps-tete`       | object       | La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire        | La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire                                        | 5 — m1-lang-13, m1-lang-18, m1-lang-22, m1-world-08, m1-world-20 |
 | `comptine-bonjour` | illustration | Le soleil qui se lève derrière la colline, et deux mains qui font bonjour | Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines | 4 — m1-lang-01, m1-lang-03, m1-lang-13, m1-lang-19               |
 
+## Texte approuvé et image montrée, page par page
+
+Ces extraits sont les mots canoniques réellement affichés dans l’application. Ils permettent
+de juger chaque scène sans devoir consulter un autre fichier. Une histoire avance par groupes
+de 3 lignes ; une comptine tient sur une seule page.
+
+### `comptine-bonjour` — Bonjour, petit
+
+- **Page 1 — image :** `public/media/illustrations/comptine-bonjour.webp`
+  - Description accessible : Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines
+  - Texte affiché :
+    > Bonjour, bonjour, petit bonjour.
+    > Je dis bonjour à qui est là.
+    > Bonjour la main, bonjour le pied,
+    > bonjour, bonjour, et me voilà.
+
+### `comptine-bonjour` — Bonjour, bonjour
+
+- **Page 1 — image :** `public/media/illustrations/comptine-bonjour.webp`
+  - Description accessible : Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines
+  - Texte affiché :
+    > Bonjour, bonjour,
+    > le soleil est levé.
+    > Bonjour, bonjour,
+    > la journée peut commencer.
+    > Je dis bonjour à toi,
+    > tu dis bonjour à moi,
+    > et on se donne la main,
+    > une fois, deux fois, trois !
+
 ## Résumé
 
 | Mesure                                        | Valeur                          |
