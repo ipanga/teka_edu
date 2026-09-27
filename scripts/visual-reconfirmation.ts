@@ -38,7 +38,7 @@ const args = new Map(
 );
 const since = args.get("since") ?? "develop";
 const levels = args.has("level") ? [args.get("level")!] : ["maternelle-1", "maternelle-3"];
-const SHEET = "docs/review/media/september-rich-media-pilot-comparison.png";
+const SHEET = args.get("sheet") ?? "docs/review/media/september-rich-media-rollout-comparison.png";
 const DOMAINS = ["lang", "math", "phys", "art", "time-space", "world"];
 
 const git = (a: string[]) => execFileSync("git", a, { cwd: ROOT, encoding: "utf8" });
@@ -196,7 +196,7 @@ for (const levelId of levels) {
   lines.push(
     `# Reconfirmation visuelle — ${levelName}, septembre ${year.slice(0, 4)}`,
     "",
-    "`SEPTEMBER_RICH_MEDIA_PILOT_FROZEN_FOR_REVIEW` — les cinq images du pilote sont figées ;",
+    "`SEPTEMBER_RICH_MEDIA_BATCH_FROZEN_FOR_REVIEW` — les images de ce lot sont figées ;",
     "leurs fichiers, dimensions et empreintes exactes sont consignés dans",
     "`docs/september-rich-media-audit.json` jusqu’à la décision du propriétaire.",
     "",
@@ -208,11 +208,11 @@ for (const levelId of levels) {
     "",
     "## Ce qui s’est passé",
     "",
-    "Cinq images représentatives de septembre ont été remplacées localement par des illustrations",
-    "WebP plus chaleureuses, expressives et proches d’un album préscolaire. Deux histoires utilisent",
-    "désormais une courte séquence alignée sur leurs pages existantes. Aucun texte n’a été réécrit ;",
-    "les personnages, objets, quantités, actions et décors doivent être jugés contre le texte approuvé.",
-    "Les 46 autres images, dont toutes les formes géométriques, n’ont pas bougé.",
+    `${changedAssets.length} image(s) de septembre ont été remplacées localement par des illustrations`,
+    "WebP plus chaleureuses, expressives et proches d’un album préscolaire. Une histoire peut utiliser",
+    "une courte séquence alignée sur ses pages existantes. Aucun texte n’a été réécrit ; les personnages,",
+    "objets, quantités, actions et décors doivent être jugés contre le texte approuvé.",
+    `Les ${registryNow.length - changedAssets.length} autres images, dont toutes les formes géométriques, n’ont pas bougé.`,
     "",
     "L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant (ISSUE-026).",
     `Les approbations de **${lapsed.length} leçon(s)** de cette classe ont donc été annulées — pas`,

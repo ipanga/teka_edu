@@ -434,7 +434,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Comparer deux animaux et dire ce qui les distingue._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Comparer, c’est trouver ce qui est pareil et ce qui est différent. Prenez deux animaux bien distincts.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -449,9 +449,9 @@ _Comparer deux animaux et dire ce qui les distingue._
 - **Aide en anglais (optionnelle) :** « Compare two animals: what is the same, what is different? »
 - **Images montrées à l'enfant (3) :**
 
-  - `animal-poule` — Une poule blanche, avec sa crête rouge (`public/media/animals/animal-poule.svg`)
+  - `animal-poule` — Une poule blanche avec une crête rouge, une aile repliée et des pattes bien visibles (`public/media/animals/animal-poule.webp`)
   - `animal-chevre` — Une jeune chèvre blanche, avec ses cornes, sa barbichette et une oreille noire (`public/media/animals/animal-chevre.webp`)
-  - `animal-poussin` — Un petit poussin jaune, tout rond (`public/media/animals/animal-poussin.svg`)
+  - `animal-poussin` — Un jeune poussin jaune, duveteux, avec une petite aile et deux pattes fines (`public/media/animals/animal-poussin.webp`)
 
 - **Objectifs travaillés :** `WORLD-S01-C01-O08` Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale.
 

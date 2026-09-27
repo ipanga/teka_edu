@@ -378,7 +378,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Nommer les parties d’un animal et dire ce dont il a besoin pour vivre._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Partez d’un animal que l’enfant connait vraiment : une poule, une chèvre, un chien du quartier.
 - **Objectifs enseignés :**
   - `WORLD-S01-C01-O08` — Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale. _(source : programme-2026)_
@@ -393,7 +393,7 @@ _Nommer les parties d’un animal et dire ce dont il a besoin pour vivre._
 - **Aide en anglais (optionnelle) :** « Choose an animal you know and name its parts. »
 - **Images montrées à l'enfant (2) :**
 
-  - `animal-poule` — Une poule blanche, avec sa crête rouge (`public/media/animals/animal-poule.svg`)
+  - `animal-poule` — Une poule blanche avec une crête rouge, une aile repliée et des pattes bien visibles (`public/media/animals/animal-poule.webp`)
   - `animal-chevre` — Une jeune chèvre blanche, avec ses cornes, sa barbichette et une oreille noire (`public/media/animals/animal-chevre.webp`)
 
 - **Objectifs travaillés :** `WORLD-S01-C01-O08` Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale.

@@ -254,22 +254,26 @@
     {
       "id": "corps-main",
       "kind": "object",
-      "file": "objects/corps-main.svg",
-      "alt": "Une main ouverte, les cinq doigts écartés",
+      "file": "objects/corps-main.webp",
+      "alt": "Une main d’enfant ouverte, la paume visible et les cinq doigts écartés",
       "tags": ["main", "corps"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:abd0221e19a602427a98a7d1bae8ab17aa46e8f67bc24c849f6fa90e3b600923"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré pour le déploiement contrôlé de septembre 2026.",
+      "contentHash": "sha256:b4322808c67f02dae6513d5be4af3370131cef5d88c134655346f71f528c9865",
+      "width": 1024,
+      "height": 1024
     },
     {
       "id": "corps-pied",
       "kind": "object",
-      "file": "objects/corps-pied.svg",
-      "alt": "Un pied nu, vu de dessus, avec ses cinq orteils",
+      "file": "objects/corps-pied.webp",
+      "alt": "Un pied nu d’enfant, vu de dessus et légèrement de côté, avec ses cinq orteils",
       "tags": ["pied", "corps"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:fa04bffa3bc7b0e251eec950229ed93c4b7af12572be9ea9f099183dd49ade90"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré pour le déploiement contrôlé de septembre 2026.",
+      "contentHash": "sha256:2d2e0162e6c31797194a8dcd0a9246ebc541c559e5749eb26d371ff6c9ba01d5",
+      "width": 1024,
+      "height": 1024
     },
     {
       "id": "corps-tete",
@@ -286,32 +290,38 @@
     {
       "id": "corps-ventre",
       "kind": "object",
-      "file": "objects/corps-ventre.svg",
-      "alt": "Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous",
+      "file": "objects/corps-ventre.webp",
+      "alt": "Un enfant pose ses deux mains sur son ventre",
       "tags": ["ventre", "corps"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:25ad16ad5bda8d062870553846d666fc7cfca91155eb85beee1bde7700105f80"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré pour le déploiement contrôlé de septembre 2026.",
+      "contentHash": "sha256:da14601cb14944a50b6f7375df58c281599e84f05ace55180cb177e574cda284",
+      "width": 1024,
+      "height": 1024
     },
     {
       "id": "animal-poule",
       "kind": "animal",
-      "file": "animals/animal-poule.svg",
-      "alt": "Une poule blanche, avec sa crête rouge",
+      "file": "animals/animal-poule.webp",
+      "alt": "Une poule blanche avec une crête rouge, une aile repliée et des pattes bien visibles",
       "tags": ["poule", "animal"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:47dd2c1a16e9942332ad42865e4e922ff50b83469902f2399bca7723fa602408"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré pour le déploiement contrôlé de septembre 2026.",
+      "contentHash": "sha256:d3007f43b420295f98986733e47ba7104aef900e4573acfb5ff7ec3bbd6e716c",
+      "width": 1024,
+      "height": 1024
     },
     {
       "id": "animal-poussin",
       "kind": "animal",
-      "file": "animals/animal-poussin.svg",
-      "alt": "Un petit poussin jaune, tout rond",
+      "file": "animals/animal-poussin.webp",
+      "alt": "Un jeune poussin jaune, duveteux, avec une petite aile et deux pattes fines",
       "tags": ["poussin", "animal", "kumu"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:1200d55d4d710dba9341c0194289d79485c7aad667b6e8cfe89f0d17b10ae06e"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré pour le déploiement contrôlé de septembre 2026.",
+      "contentHash": "sha256:7f1210316653dd49e3e4efb9c0df31869e3731a1f41a487d6a26de4253001eea",
+      "width": 1024,
+      "height": 1024
     },
     {
       "id": "animal-chevre",

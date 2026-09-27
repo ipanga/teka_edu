@@ -4,9 +4,31 @@
 
 September Rich-Media Visual Upgrade
 
-**Current phase:** the controlled five-asset pilot is independently accepted and fully reapproved. September
-is 176/176 approved with zero stale digests. The authorized remaining 15 rich-media candidates can now proceed
-in small bounded batches; production remains unchanged.
+**Current phase:** the controlled five-asset pilot is independently accepted and fully reapproved. Rollout
+batch 1 now integrates `corps-main`, `corps-pied`, `corps-ventre`, `animal-poule` and `animal-poussin` locally.
+Exactly 10 dependent lessons are at `review` pending independent reconfirmation; 166 remain approved.
+Production remains unchanged.
+
+## Rollout batch 1 frozen for review — 2026-09-27
+
+- **Media:** three previously prepared body-reference candidates and two newly generated animal references are
+  delivered as 1024×1024 WebP files at quality 88 with accessible French descriptions. The source PNG masters
+  remain outside version control.
+- **Evidence:** `docs/review/2026-2027-maternelle-1-reconfirmation-visuelle.md`,
+  `docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md` and
+  `docs/review/media/september-rich-media-rollout-batch-1-comparison.png` compare only this batch against
+  checkpoint `4862ac0` and prove that lesson text, objectives, duration, progression, programme and calendar did
+  not change.
+- **Approval integrity:** the standard lapse mechanism removed exactly 10 approvals: seven in 1ère maternelle
+  and three in 3ème maternelle. No approval will be restored before explicit independent acceptance.
+- **Validation:** formatting, lint, all 438 unit tests, 31-file content validation, the Webpack production build
+  and the real child-screen E2E pass across phone, tablet, desktop and TV. Native and rendered inspection found
+  no broken image, overflow, distorted art, adult-content leak or misleading on-screen interaction.
+- **Exact resume point:** the bounded reviewer payload is staged locally at
+  `/tmp/teka-rollout-batch1-review`. Automatic approval review blocked its transmission because the prior
+  authorization did not name these three newly generated files. After explicit authorization, obtain the Claude
+  Max / Opus 5.5 verdict, verify every finding locally, then restore only accepted lessons through the standard
+  fresh-digest workflow.
 
 ## Pilot reconfirmation accepted — 2026-09-27
 

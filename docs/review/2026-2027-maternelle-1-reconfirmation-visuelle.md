@@ -1,6 +1,6 @@
 # Reconfirmation visuelle — 1ère maternelle, septembre 2026
 
-`SEPTEMBER_RICH_MEDIA_PILOT_FROZEN_FOR_REVIEW` — les cinq images du pilote sont figées ;
+`SEPTEMBER_RICH_MEDIA_BATCH_FROZEN_FOR_REVIEW` — les images de ce lot sont figées ;
 leurs fichiers, dimensions et empreintes exactes sont consignés dans
 `docs/september-rich-media-audit.json` jusqu’à la décision du propriétaire.
 
@@ -12,68 +12,39 @@ leurs fichiers, dimensions et empreintes exactes sont consignés dans
 
 ## Ce qui s’est passé
 
-Cinq images représentatives de septembre ont été remplacées localement par des illustrations
-WebP plus chaleureuses, expressives et proches d’un album préscolaire. Deux histoires utilisent
-désormais une courte séquence alignée sur leurs pages existantes. Aucun texte n’a été réécrit ;
-les personnages, objets, quantités, actions et décors doivent être jugés contre le texte approuvé.
+5 image(s) de septembre ont été remplacées localement par des illustrations
+WebP plus chaleureuses, expressives et proches d’un album préscolaire. Une histoire peut utiliser
+une courte séquence alignée sur ses pages existantes. Aucun texte n’a été réécrit ; les personnages,
+objets, quantités, actions et décors doivent être jugés contre le texte approuvé.
 Les 46 autres images, dont toutes les formes géométriques, n’ont pas bougé.
 
 L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant (ISSUE-026).
-Les approbations de **8 leçon(s)** de cette classe ont donc été annulées — pas
+Les approbations de **7 leçon(s)** de cette classe ont donc été annulées — pas
 re-tamponnées — et ce document vous demande de confirmer que les nouvelles images servent
 toujours ce que chaque leçon enseigne (ADR-048).
 
 ## La planche avant / après
 
-![Avant / après : chaque image redessinée, aux trois tailles de l’application](media/september-rich-media-pilot-comparison.png)
+![Avant / après : chaque image redessinée, aux trois tailles de l’application](media/september-rich-media-rollout-batch-1-comparison.png)
 
 La planche montre chaque image aux trois tailles de l’application : 72 px (une rangée à
 compter), 128 px (une carte de mot), 256 px (l’image d’une histoire).
 
-## Les images que cette classe montre — 2
+## Les images que cette classe montre — 3
 
-| Image              | Type         | Description avant                                                         | Description après                                                                                         | Leçons de cette classe                                           |
-| ------------------ | ------------ | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `corps-tete`       | object       | La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire        | La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire                                        | 5 — m1-lang-13, m1-lang-18, m1-lang-22, m1-world-08, m1-world-20 |
-| `comptine-bonjour` | illustration | Le soleil qui se lève derrière la colline, et deux mains qui font bonjour | Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines | 4 — m1-lang-01, m1-lang-03, m1-lang-13, m1-lang-19               |
-
-## Texte approuvé et image montrée, page par page
-
-Ces extraits sont les mots canoniques réellement affichés dans l’application. Ils permettent
-de juger chaque scène sans devoir consulter un autre fichier. Une histoire avance par groupes
-de 3 lignes ; une comptine tient sur une seule page.
-
-### `comptine-bonjour` — Bonjour, petit
-
-- **Page 1 — image :** `public/media/illustrations/comptine-bonjour.webp`
-  - Description accessible : Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines
-  - Texte affiché :
-    > Bonjour, bonjour, petit bonjour.
-    > Je dis bonjour à qui est là.
-    > Bonjour la main, bonjour le pied,
-    > bonjour, bonjour, et me voilà.
-
-### `comptine-bonjour` — Bonjour, bonjour
-
-- **Page 1 — image :** `public/media/illustrations/comptine-bonjour.webp`
-  - Description accessible : Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines
-  - Texte affiché :
-    > Bonjour, bonjour,
-    > le soleil est levé.
-    > Bonjour, bonjour,
-    > la journée peut commencer.
-    > Je dis bonjour à toi,
-    > tu dis bonjour à moi,
-    > et on se donne la main,
-    > une fois, deux fois, trois !
+| Image          | Type   | Description avant                                                                            | Description après                                                              | Leçons de cette classe                                           |
+| -------------- | ------ | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| `corps-main`   | object | Une main ouverte, les cinq doigts écartés                                                    | Une main d’enfant ouverte, la paume visible et les cinq doigts écartés         | 5 — m1-lang-11, m1-lang-18, m1-lang-22, m1-world-02, m1-world-20 |
+| `corps-pied`   | object | Un pied nu, vu de dessus, avec ses cinq orteils                                              | Un pied nu d’enfant, vu de dessus et légèrement de côté, avec ses cinq orteils | 4 — m1-lang-11, m1-lang-18, m1-world-02, m1-world-20             |
+| `corps-ventre` | object | Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous | Un enfant pose ses deux mains sur son ventre                                   | 4 — m1-lang-13, m1-lang-18, m1-world-08, m1-world-20             |
 
 ## Résumé
 
 | Mesure                                        | Valeur                          |
 | --------------------------------------------- | ------------------------------- |
 | Leçons de la classe                           | 88                              |
-| Leçons concernées (approbation annulée)       | 8                               |
-| Leçons non concernées                         | 80                              |
+| Leçons concernées (approbation annulée)       | 7                               |
+| Leçons non concernées                         | 81                              |
 | Images modifiées (toutes classes)             | 5                               |
 | Images inchangées (toutes classes)            | 46                              |
 | Texte pédagogique modifié (enfant ou adulte)  | **0** — vérifié champ par champ |
@@ -89,39 +60,43 @@ aucune progression n’a changé (vérifié avant l’écriture de ce document).
 du changement d’empreinte est la ligne « image » : ses octets ont changé, et l’empreinte d’une
 approbation couvre les octets de chaque image montrée (ISSUE-026, ADR-048).
 
-### Semaine 1 — 2 leçon(s)
+### Semaine 1 — 1 leçon(s)
 
-| Jour | Leçon                            | Activité                       | Image              | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                         | Description après                                                                                         | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | -------------------------------- | ------------------------------ | ------------------ | ------------------------------- | --------------- | --------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------------ | ------------ | ---------------------- |
-| 1    | `m1-lang-01` Bonjour, je suis là | `m1-lang-01-a3` Bonjour, petit | `comptine-bonjour` | principale — montrée à l’enfant | `01ec06b85bdc`  | `2d1ad0c5d999`  | Le soleil qui se lève derrière la colline, et deux mains qui font bonjour | Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines | inchangé     | inchangé     | inchangés              |
-| 3    | `m1-lang-03` L’histoire du seau  | `m1-lang-03-a3` Bonjour, petit | `comptine-bonjour` | principale — montrée à l’enfant | `01ec06b85bdc`  | `2d1ad0c5d999`  | Le soleil qui se lève derrière la colline, et deux mains qui font bonjour | Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines | inchangé     | inchangé     | inchangés              |
+| Jour | Leçon                           | Activité                           | Image        | Rôle                            | Empreinte avant | Empreinte après | Description avant                               | Description après                                                              | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | ------------------------------- | ---------------------------------- | ------------ | ------------------------------- | --------------- | --------------- | ----------------------------------------------- | ------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
+| 2    | `m1-world-02` Ma main, mon pied | `m1-world-02-a1` Ma main, mon pied | `corps-main` | principale — montrée à l’enfant | `abd0221e19a6`  | `b4322808c67f`  | Une main ouverte, les cinq doigts écartés       | Une main d’enfant ouverte, la paume visible et les cinq doigts écartés         | inchangé     | inchangé     | inchangés              |
+| 2    | `m1-world-02` Ma main, mon pied | `m1-world-02-a1` Ma main, mon pied | `corps-pied` | principale — montrée à l’enfant | `fa04bffa3bc7`  | `2d2e0162e6c3`  | Un pied nu, vu de dessus, avec ses cinq orteils | Un pied nu d’enfant, vu de dessus et légèrement de côté, avec ses cinq orteils | inchangé     | inchangé     | inchangés              |
 
 ### Semaine 2 — 1 leçon(s)
 
-| Jour | Leçon                             | Activité                             | Image        | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                  | Description après                                                  | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | --------------------------------- | ------------------------------------ | ------------ | ------------------------------- | --------------- | --------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
-| 8    | `m1-world-08` Ma tête, mon ventre | `m1-world-08-a1` Ma tête, mon ventre | `corps-tete` | principale — montrée à l’enfant | `2aa04c3b557d`  | `ea479dea64fd`  | La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire | La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire | inchangé     | inchangé     | inchangés              |
+| Jour | Leçon                             | Activité                             | Image          | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                                            | Description après                            | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | --------------------------------- | ------------------------------------ | -------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------ | ------------ | ---------------------- |
+| 8    | `m1-world-08` Ma tête, mon ventre | `m1-world-08-a1` Ma tête, mon ventre | `corps-ventre` | principale — montrée à l’enfant | `25ad16ad5bda`  | `da14601cb149`  | Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous | Un enfant pose ses deux mains sur son ventre | inchangé     | inchangé     | inchangés              |
 
-### Semaine 3 — 1 leçon(s)
+### Semaine 3 — 2 leçon(s)
 
-| Jour | Leçon                            | Activité                              | Image              | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                         | Description après                                                                                         | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | -------------------------------- | ------------------------------------- | ------------------ | ------------------------------- | --------------- | --------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------------ | ------------ | ---------------------- |
-| 13   | `m1-lang-13` Ma tête, mon ventre | `m1-lang-13-a2` Les mots de mon corps | `corps-tete`       | principale — montrée à l’enfant | `2aa04c3b557d`  | `ea479dea64fd`  | La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire        | La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire                                        | inchangé     | inchangé     | inchangés              |
-| 13   | `m1-lang-13` Ma tête, mon ventre | `m1-lang-13-a3` Bonjour, petit        | `comptine-bonjour` | principale — montrée à l’enfant | `01ec06b85bdc`  | `2d1ad0c5d999`  | Le soleil qui se lève derrière la colline, et deux mains qui font bonjour | Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines | inchangé     | inchangé     | inchangés              |
+| Jour | Leçon                            | Activité                              | Image          | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                                            | Description après                                                              | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | -------------------------------- | ------------------------------------- | -------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
+| 11   | `m1-lang-11` Ma main, mon pied   | `m1-lang-11-a2` Les mots de mon corps | `corps-main`   | principale — montrée à l’enfant | `abd0221e19a6`  | `b4322808c67f`  | Une main ouverte, les cinq doigts écartés                                                    | Une main d’enfant ouverte, la paume visible et les cinq doigts écartés         | inchangé     | inchangé     | inchangés              |
+| 11   | `m1-lang-11` Ma main, mon pied   | `m1-lang-11-a2` Les mots de mon corps | `corps-pied`   | principale — montrée à l’enfant | `fa04bffa3bc7`  | `2d2e0162e6c3`  | Un pied nu, vu de dessus, avec ses cinq orteils                                              | Un pied nu d’enfant, vu de dessus et légèrement de côté, avec ses cinq orteils | inchangé     | inchangé     | inchangés              |
+| 13   | `m1-lang-13` Ma tête, mon ventre | `m1-lang-13-a2` Les mots de mon corps | `corps-ventre` | principale — montrée à l’enfant | `25ad16ad5bda`  | `da14601cb149`  | Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous | Un enfant pose ses deux mains sur son ventre                                   | inchangé     | inchangé     | inchangés              |
 
-### Semaine 4 — 2 leçon(s)
+### Semaine 4 — 1 leçon(s)
 
-| Jour | Leçon                              | Activité                                     | Image              | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                         | Description après                                                                                         | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | ---------------------------------- | -------------------------------------------- | ------------------ | ------------------------------- | --------------- | --------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------------ | ------------ | ---------------------- |
-| 18   | `m1-lang-18` Les mots de mon corps | `m1-lang-18-a2` Les quatre mots de mon corps | `corps-tete`       | principale — montrée à l’enfant | `2aa04c3b557d`  | `ea479dea64fd`  | La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire        | La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire                                        | inchangé     | inchangé     | inchangés              |
-| 19   | `m1-lang-19` Je dis ce que je fais | `m1-lang-19-a3` Bonjour, petit               | `comptine-bonjour` | principale — montrée à l’enfant | `01ec06b85bdc`  | `2d1ad0c5d999`  | Le soleil qui se lève derrière la colline, et deux mains qui font bonjour | Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines | inchangé     | inchangé     | inchangés              |
+| Jour | Leçon                              | Activité                                     | Image          | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                                            | Description après                                                              | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | ---------------------------------- | -------------------------------------------- | -------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
+| 18   | `m1-lang-18` Les mots de mon corps | `m1-lang-18-a2` Les quatre mots de mon corps | `corps-main`   | principale — montrée à l’enfant | `abd0221e19a6`  | `b4322808c67f`  | Une main ouverte, les cinq doigts écartés                                                    | Une main d’enfant ouverte, la paume visible et les cinq doigts écartés         | inchangé     | inchangé     | inchangés              |
+| 18   | `m1-lang-18` Les mots de mon corps | `m1-lang-18-a2` Les quatre mots de mon corps | `corps-pied`   | principale — montrée à l’enfant | `fa04bffa3bc7`  | `2d2e0162e6c3`  | Un pied nu, vu de dessus, avec ses cinq orteils                                              | Un pied nu d’enfant, vu de dessus et légèrement de côté, avec ses cinq orteils | inchangé     | inchangé     | inchangés              |
+| 18   | `m1-lang-18` Les mots de mon corps | `m1-lang-18-a2` Les quatre mots de mon corps | `corps-ventre` | principale — montrée à l’enfant | `25ad16ad5bda`  | `da14601cb149`  | Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous | Un enfant pose ses deux mains sur son ventre                                   | inchangé     | inchangé     | inchangés              |
 
 ### Semaine 5 — 2 leçon(s)
 
-| Jour | Leçon                                 | Activité                              | Image        | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                  | Description après                                                  | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | ------------------------------------- | ------------------------------------- | ------------ | ------------------------------- | --------------- | --------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
-| 20   | `m1-world-20` Tout mon corps          | `m1-world-20-a1` Tout mon corps       | `corps-tete` | principale — montrée à l’enfant | `2aa04c3b557d`  | `ea479dea64fd`  | La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire | La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire | inchangé     | inchangé     | inchangés              |
-| 22   | `m1-lang-22` Tout ce que je sais dire | `m1-lang-22-a2` Tous les mots du mois | `corps-tete` | principale — montrée à l’enfant | `2aa04c3b557d`  | `ea479dea64fd`  | La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire | La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire | inchangé     | inchangé     | inchangés              |
+| Jour | Leçon                                 | Activité                              | Image          | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                                            | Description après                                                              | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | ------------------------------------- | ------------------------------------- | -------------- | ------------------------------- | --------------- | --------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------ | ------------ | ---------------------- |
+| 20   | `m1-world-20` Tout mon corps          | `m1-world-20-a1` Tout mon corps       | `corps-main`   | principale — montrée à l’enfant | `abd0221e19a6`  | `b4322808c67f`  | Une main ouverte, les cinq doigts écartés                                                    | Une main d’enfant ouverte, la paume visible et les cinq doigts écartés         | inchangé     | inchangé     | inchangés              |
+| 20   | `m1-world-20` Tout mon corps          | `m1-world-20-a1` Tout mon corps       | `corps-pied`   | principale — montrée à l’enfant | `fa04bffa3bc7`  | `2d2e0162e6c3`  | Un pied nu, vu de dessus, avec ses cinq orteils                                              | Un pied nu d’enfant, vu de dessus et légèrement de côté, avec ses cinq orteils | inchangé     | inchangé     | inchangés              |
+| 20   | `m1-world-20` Tout mon corps          | `m1-world-20-a1` Tout mon corps       | `corps-ventre` | principale — montrée à l’enfant | `25ad16ad5bda`  | `da14601cb149`  | Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous | Un enfant pose ses deux mains sur son ventre                                   | inchangé     | inchangé     | inchangés              |
+| 22   | `m1-lang-22` Tout ce que je sais dire | `m1-lang-22-a2` Tous les mots du mois | `corps-main`   | principale — montrée à l’enfant | `abd0221e19a6`  | `b4322808c67f`  | Une main ouverte, les cinq doigts écartés                                                    | Une main d’enfant ouverte, la paume visible et les cinq doigts écartés         | inchangé     | inchangé     | inchangés              |
 
 ## Ce que l’on vous demande
 

@@ -68,23 +68,31 @@ describe("the final September visual QA tracker", () => {
 
   it("holds the approved set frozen and permits only independently reconfirmed pilot bytes", () => {
     if (!qa.frozen) return;
+    const pendingLessons = new Set(
+      richMediaPilot.assets
+        .filter((asset) => asset.reviewState === "awaiting-independent-reconfirmation")
+        .flatMap((asset) => asset.approvalImpact.lessonIds),
+    );
     for (const asset of data.media) {
       if (asset.contentHash === qa.frozenHashes[asset.id]) continue;
       const pilot = richMediaPilot.assets.find((candidate) => candidate.id === asset.id);
-      expect(pilot?.implementationState, `${asset.id} moved outside the controlled pilot`).toBe(
-        "integrated-local-pilot",
-      );
-      expect(pilot?.reviewState, `${asset.id} lacks independent reconfirmation`).toBe(
-        "independently-reconfirmed",
-      );
+      expect(
+        ["integrated-local-pilot", "integrated-local-rollout"],
+        `${asset.id} moved outside the controlled rollout`,
+      ).toContain(pilot?.implementationState);
+      expect(
+        ["independently-reconfirmed", "awaiting-independent-reconfirmation"],
+        `${asset.id} has no controlled review state`,
+      ).toContain(pilot?.reviewState);
       expect(pilot?.afterHash, `${asset.id} does not match the audited pilot hash`).toBe(
         asset.contentHash,
       );
       for (const lessonId of pilot?.approvalImpact.lessonIds ?? []) {
+        const expected = pendingLessons.has(lessonId) ? "review" : "approved";
         expect(
           data.lessons.find((lesson) => lesson.id === lessonId)?.status,
-          `${asset.id} changed without reapproving dependent lesson ${lessonId}`,
-        ).toBe("approved");
+          `${asset.id} has an approval state inconsistent with its independent review`,
+        ).toBe(expected);
       }
     }
   });

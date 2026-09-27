@@ -817,7 +817,7 @@ l’autre — l’appareil est alors le sien._
 
 _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre expérience._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Lisez l’histoire d’une traite, sans vous interrompre. Posez les questions seulement à la fin. Il n’y a pas de mauvaise réponse : l’enfant peut redire l’histoire avec ses mots.
 - **Objectifs enseignés :**
   - `LANG-S02-C03-O09` — Comprendre des histoires dont les actions sont organisées autour d’une structure répétitive (rencontres successives) et commencer à comprendre les informations implicites (émotions, états et sentiments des personnages). _(source : programme-2024-langage)_
@@ -844,8 +844,8 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
 - **Aide en anglais (optionnelle) :** « Listen to Kumu’s story. I will ask you three questions after. »
 - **Images montrées à l'enfant (2) :**
 
-  - `animal-poussin` — Un petit poussin jaune, tout rond (`public/media/animals/animal-poussin.svg`)
-  - `animal-poule` — Une poule blanche, avec sa crête rouge (`public/media/animals/animal-poule.svg`)
+  - `animal-poussin` — Un jeune poussin jaune, duveteux, avec une petite aile et deux pattes fines (`public/media/animals/animal-poussin.webp`)
+  - `animal-poule` — Une poule blanche avec une crête rouge, une aile repliée et des pattes bien visibles (`public/media/animals/animal-poule.webp`)
 
 - **Objectifs travaillés :** `LANG-S02-C03-O09` Comprendre des histoires dont les actions sont organisées autour d’une structure répétitive (rencontres successives) et commencer à comprendre les informations implicites (émotions, états et sentiments des personnages). ; `LANG-S01-C04-O11` Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
 

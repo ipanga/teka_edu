@@ -1166,7 +1166,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Nommer son corps et se servir de ses sens._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1182,7 +1182,7 @@ _Nommer son corps et se servir de ses sens._
 - **Images montrées à l'enfant (2) :**
 
   - `corps-tete` — La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire (`public/media/objects/corps-tete.webp`)
-  - `corps-ventre` — Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous (`public/media/objects/corps-ventre.svg`)
+  - `corps-ventre` — Un enfant pose ses deux mains sur son ventre (`public/media/objects/corps-ventre.webp`)
 
 - **Objectifs travaillés :** `WORLD-S01-C02-O01` Nommer et représenter quelques parties du corps humain.
 

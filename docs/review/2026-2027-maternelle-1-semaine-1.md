@@ -595,7 +595,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Nommer son corps et se servir de ses sens._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 1/3
 - **Conseil au parent :** On touche et on nomme sur son propre corps. Rien à préparer : le matériel, c’est lui.
 - **Objectifs enseignés :**
   - `WORLD-S01-C02-O01` — Nommer et représenter quelques parties du corps humain. _(source : programme-2026)_
@@ -609,8 +609,8 @@ _Nommer son corps et se servir de ses sens._
 - **Aide en anglais (optionnelle) :** « Show me your hand. »
 - **Images montrées à l'enfant (2) :**
 
-  - `corps-main` — Une main ouverte, les cinq doigts écartés (`public/media/objects/corps-main.svg`)
-  - `corps-pied` — Un pied nu, vu de dessus, avec ses cinq orteils (`public/media/objects/corps-pied.svg`)
+  - `corps-main` — Une main d’enfant ouverte, la paume visible et les cinq doigts écartés (`public/media/objects/corps-main.webp`)
+  - `corps-pied` — Un pied nu d’enfant, vu de dessus et légèrement de côté, avec ses cinq orteils (`public/media/objects/corps-pied.webp`)
 
 - **Objectifs travaillés :** `WORLD-S01-C02-O01` Nommer et représenter quelques parties du corps humain.
 

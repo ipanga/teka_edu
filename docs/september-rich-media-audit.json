@@ -1,11 +1,11 @@
 {
-  "task": "September rich-media visual upgrade — controlled pilot",
+  "task": "September rich-media visual upgrade — controlled rollout",
   "version": 2,
   "generatedOn": "2026-09-27",
   "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   "pilotBaselineCommit": "cbc1cf3",
   "scope": ["maternelle-1 September", "maternelle-3 September"],
-  "status": "pilot-reconfirmed-controlled-rollout-authorized",
+  "status": "rollout-batch-1-awaiting-independent-reconfirmation",
   "productionAssetsChanged": false,
   "localPilotAssetsChanged": true,
   "approvedLessonSemanticsChanged": false,
@@ -20,9 +20,9 @@
     "ifAllProposedWebpAssetsAreIntegrated": 53,
     "maternelle1": 27,
     "maternelle3": 26,
-    "currentImpact": 0,
-    "currentApproved": 176,
-    "currentReview": 0
+    "currentImpact": 10,
+    "currentApproved": 166,
+    "currentReview": 10
   },
   "notes": [
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
@@ -31,7 +31,8 @@
     "All 158 unaffected approvals remain byte-for-byte unchanged from the pilot baseline.",
     "Independent review accepted four asset families and requested two bounded Nsimba corrections: a dedicated page-1 walking scene and a visible Nsimba name card on page 3.",
     "Both corrections were integrated without changing canonical lesson text; the second independent pass accepted all five asset families and all 18 affected lessons.",
-    "The standard lapsed-only workflow restored exactly 18 approvals with fresh digests; all 158 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain."
+    "The standard lapsed-only workflow restored exactly 18 approvals with fresh digests; all 158 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
+    "Rollout batch 1 integrates corps-main, corps-pied, corps-ventre, animal-poule and animal-poussin. Exactly 10 dependent lessons are at review pending independent reconfirmation."
   ],
   "assets": [
     {
@@ -1317,7 +1318,7 @@
     {
       "id": "corps-main",
       "kind": "object",
-      "pedagogicalRole": "Une main ouverte, les cinq doigts écartés",
+      "pedagogicalRole": "Une main d’enfant ouverte, la paume visible et les cinq doigts écartés",
       "currentFile": "public/media/objects/corps-main.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -1365,20 +1366,43 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses",
-      "implementationState": "not-started",
-      "reviewState": "not-in-pilot",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "awaiting-independent-reconfirmation",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 5,
         "lessonIds": ["m1-lang-11", "m1-lang-18", "m1-lang-22", "m1-world-02", "m1-world-20"]
       },
       "beforeHash": "sha256:abd0221e19a602427a98a7d1bae8ab17aa46e8f67bc24c849f6fa90e3b600923",
-      "afterHash": null
+      "afterHash": "sha256:b4322808c67f02dae6513d5be4af3370131cef5d88c134655346f71f528c9865",
+      "proposedFile": "public/media/objects/corps-main.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/corps-main.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 1946,
+      "deliveryFiles": [
+        {
+          "file": "public/media/objects/corps-main.webp",
+          "bytes": 39154
+        }
+      ],
+      "currentDecision": "owner-authorized; independent-review-pending"
     },
     {
       "id": "corps-pied",
       "kind": "object",
-      "pedagogicalRole": "Un pied nu, vu de dessus, avec ses cinq orteils",
+      "pedagogicalRole": "Un pied nu d’enfant, vu de dessus et légèrement de côté, avec ses cinq orteils",
       "currentFile": "public/media/objects/corps-pied.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -1419,15 +1443,38 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses",
-      "implementationState": "not-started",
-      "reviewState": "not-in-pilot",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "awaiting-independent-reconfirmation",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 4,
         "lessonIds": ["m1-lang-11", "m1-lang-18", "m1-world-02", "m1-world-20"]
       },
       "beforeHash": "sha256:fa04bffa3bc7b0e251eec950229ed93c4b7af12572be9ea9f099183dd49ade90",
-      "afterHash": null
+      "afterHash": "sha256:2d2e0162e6c31797194a8dcd0a9246ebc541c559e5749eb26d371ff6c9ba01d5",
+      "proposedFile": "public/media/objects/corps-pied.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/corps-pied.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 1065,
+      "deliveryFiles": [
+        {
+          "file": "public/media/objects/corps-pied.webp",
+          "bytes": 38912
+        }
+      ],
+      "currentDecision": "owner-authorized; independent-review-pending"
     },
     {
       "id": "corps-tete",
@@ -1516,7 +1563,7 @@
     {
       "id": "corps-ventre",
       "kind": "object",
-      "pedagogicalRole": "Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous",
+      "pedagogicalRole": "Un enfant pose ses deux mains sur son ventre",
       "currentFile": "public/media/objects/corps-ventre.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -1557,20 +1604,43 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses",
-      "implementationState": "not-started",
-      "reviewState": "not-in-pilot",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "awaiting-independent-reconfirmation",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 4,
         "lessonIds": ["m1-lang-13", "m1-lang-18", "m1-world-08", "m1-world-20"]
       },
       "beforeHash": "sha256:25ad16ad5bda8d062870553846d666fc7cfca91155eb85beee1bde7700105f80",
-      "afterHash": null
+      "afterHash": "sha256:da14601cb14944a50b6f7375df58c281599e84f05ace55180cb177e574cda284",
+      "proposedFile": "public/media/objects/corps-ventre.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/corps-ventre.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 1467,
+      "deliveryFiles": [
+        {
+          "file": "public/media/objects/corps-ventre.webp",
+          "bytes": 80926
+        }
+      ],
+      "currentDecision": "owner-authorized; independent-review-pending"
     },
     {
       "id": "animal-poule",
       "kind": "animal",
-      "pedagogicalRole": "Une poule blanche, avec sa crête rouge",
+      "pedagogicalRole": "Une poule blanche avec une crête rouge, une aile repliée et des pattes bien visibles",
       "currentFile": "public/media/animals/animal-poule.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -1604,20 +1674,43 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses; otherwise unnecessary",
-      "implementationState": "not-started",
-      "reviewState": "not-in-pilot",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "awaiting-independent-reconfirmation",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 3,
         "lessonIds": ["m3-lang-03", "m3-world-02", "m3-world-05"]
       },
       "beforeHash": "sha256:47dd2c1a16e9942332ad42865e4e922ff50b83469902f2399bca7723fa602408",
-      "afterHash": null
+      "afterHash": "sha256:d3007f43b420295f98986733e47ba7104aef900e4573acfb5ff7ec3bbd6e716c",
+      "proposedFile": "public/media/animals/animal-poule.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/animal-poule.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2025,
+      "deliveryFiles": [
+        {
+          "file": "public/media/animals/animal-poule.webp",
+          "bytes": 100128
+        }
+      ],
+      "currentDecision": "owner-authorized; independent-review-pending"
     },
     {
       "id": "animal-poussin",
       "kind": "animal",
-      "pedagogicalRole": "Un petit poussin jaune, tout rond",
+      "pedagogicalRole": "Un jeune poussin jaune, duveteux, avec une petite aile et deux pattes fines",
       "currentFile": "public/media/animals/animal-poussin.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -1644,15 +1737,38 @@
       "presentation": "single image",
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses; otherwise unnecessary",
-      "implementationState": "not-started",
-      "reviewState": "not-in-pilot",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "awaiting-independent-reconfirmation",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 2,
         "lessonIds": ["m3-lang-03", "m3-world-05"]
       },
       "beforeHash": "sha256:1200d55d4d710dba9341c0194289d79485c7aad667b6e8cfe89f0d17b10ae06e",
-      "afterHash": null
+      "afterHash": "sha256:7f1210316653dd49e3e4efb9c0df31869e3731a1f41a487d6a26de4253001eea",
+      "proposedFile": "public/media/animals/animal-poussin.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/animal-poussin.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 1553,
+      "deliveryFiles": [
+        {
+          "file": "public/media/animals/animal-poussin.webp",
+          "bytes": 64094
+        }
+      ],
+      "currentDecision": "owner-authorized; independent-review-pending"
     },
     {
       "id": "animal-chevre",

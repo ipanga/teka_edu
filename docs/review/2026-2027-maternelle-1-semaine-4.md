@@ -943,7 +943,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -970,10 +970,10 @@ _Parler avec l’adulte, entendre des mots et les redire._
 - **Aide en anglais (optionnelle) :** « Show me the part I name. Then say one or two with me. »
 - **Images montrées à l'enfant (4) :**
 
-  - `corps-main` — Une main ouverte, les cinq doigts écartés (`public/media/objects/corps-main.svg`)
-  - `corps-pied` — Un pied nu, vu de dessus, avec ses cinq orteils (`public/media/objects/corps-pied.svg`)
+  - `corps-main` — Une main d’enfant ouverte, la paume visible et les cinq doigts écartés (`public/media/objects/corps-main.webp`)
+  - `corps-pied` — Un pied nu d’enfant, vu de dessus et légèrement de côté, avec ses cinq orteils (`public/media/objects/corps-pied.webp`)
   - `corps-tete` — La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire (`public/media/objects/corps-tete.webp`)
-  - `corps-ventre` — Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous (`public/media/objects/corps-ventre.svg`)
+  - `corps-ventre` — Un enfant pose ses deux mains sur son ventre (`public/media/objects/corps-ventre.webp`)
 
 - **Objectifs travaillés :** `LANG-S01-C01-O01` Comprendre, mémoriser, réemployer les mots des corpus enseignés (2 par période).
 
