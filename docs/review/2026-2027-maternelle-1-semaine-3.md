@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 5 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 6 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-15 — ChatGPT · `accepted` (ai-assisted)
@@ -85,6 +85,12 @@ Reconfirmation visuelle indépendante du pilote rich-media de septembre, couvran
 Reconfirmation visuelle indépendante du lot 1 du déploiement rich-media de septembre, couvrant exactement 10 leçons et cinq images. La première passe Claude Max / Opus 5.5 a conclu accepted-with-modifications : corps-main, corps-pied, animal-poule, animal-poussin et six leçons étaient acceptés ; corps-ventre devait devenir un gros plan du torse, sans visage, centré sur le ventre et lisible à 72 px. Après vérification indépendante, correction minimale et régénération du paquet, la seconde passe a conclu accepted pour corps-ventre, les quatre leçons bloquées et donc les 10 leçons du lot.
 
 **Suites données :** corps-ventre montre désormais un gros plan du torse, sans tête ni visage, avec le ventre centré et une seule main posée dessus ; sa description accessible correspond exactement à l’image. La planche complète intégrée au paquet et la planche corrective ont été régénérées sur les octets finaux. Les quatre autres images acceptées à la première passe sont restées octet pour octet identiques. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
+
+### 2026-09-27 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 2 du déploiement rich-media de septembre, couvrant exactement neuf leçons et deux illustrations de comptine. Claude Max / Opus 5.5 a conclu accepted : comptine-mains montre exactement deux mains levées, cinq doigts chacune et les pouces tournés vers l’intérieur, lisibles à 72, 128 et 256 px ; comptine-cabri montre un jeune cabri reconnaissable avec quatre sabots en l’air. Les deux images et les neuf leçons sont acceptées sans correction.
+
+**Suites données :** Aucune correction demandée. Les SHA-256 finaux ont été vérifiés contre les WebP gelés : comptine-mains 36a5f61241200ce5fae6b6be0fd1a1d58f5ba092a8e8cc99c54165bff526b5e2 et comptine-cabri eca0deff35ee29631052202b90e5fc68f8ff75eb1790e85c91988dc5203c26b8. Aucun texte pédagogique, comptine, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les neuf approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
 
 ## Jour 10 — 2026-09-14
 
@@ -386,7 +392,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -596,7 +602,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dire des comptines et laisser une trace._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 1/3
 - **Conseil au parent :** Chanter ou dessiner, sans attendre de résultat. À cet âge, refaire la même comptine est un progrès, pas une répétition.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

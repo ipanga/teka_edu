@@ -5,7 +5,7 @@
   "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   "pilotBaselineCommit": "cbc1cf3",
   "scope": ["maternelle-1 September", "maternelle-3 September"],
-  "status": "rollout-batch-2-awaiting-independent-reconfirmation",
+  "status": "rollout-batch-2-reconfirmed-controlled-rollout-active",
   "productionAssetsChanged": false,
   "localPilotAssetsChanged": true,
   "approvedLessonSemanticsChanged": false,
@@ -20,9 +20,9 @@
     "ifAllProposedWebpAssetsAreIntegrated": 53,
     "maternelle1": 27,
     "maternelle3": 26,
-    "currentImpact": 9,
-    "currentApproved": 167,
-    "currentReview": 9
+    "currentImpact": 0,
+    "currentApproved": 176,
+    "currentReview": 0
   },
   "notes": [
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
@@ -34,7 +34,8 @@
     "The standard lapsed-only workflow restored exactly 18 approvals with fresh digests; all 158 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
     "Rollout batch 1 integrates corps-main, corps-pied, corps-ventre, animal-poule and animal-poussin. The first independent pass accepted four assets and requested a tighter belly crop; the corrected corps-ventre and all 10 dependent lessons were accepted on the second pass.",
     "The lapsed-only workflow restored exactly 10 Batch-1 approvals with fresh digests. All 166 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
-    "Rollout batch 2 integrates comptine-mains and the currently unused comptine-cabri. Exactly nine lessons depend on comptine-mains and await independent reconfirmation; comptine-cabri lapses no approval."
+    "Rollout batch 2 integrates comptine-mains and the currently unused comptine-cabri. Claude Max / Opus 5.5 independently accepted both assets and all nine dependent lessons without correction; comptine-cabri lapses no approval.",
+    "The lapsed-only workflow restored exactly nine Batch-2 approvals with fresh digests. All 167 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain."
   ],
   "assets": [
     {
@@ -2706,7 +2707,7 @@
       "animationValue": "existing one-time frame entrance only",
       "audioUsefulness": "recommended human rhyme recording",
       "implementationState": "integrated-local-rollout",
-      "reviewState": "awaiting-independent-reconfirmation",
+      "reviewState": "independently-reconfirmed",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 9,
@@ -2746,7 +2747,7 @@
           "bytes": 62312
         }
       ],
-      "currentDecision": "owner-authorized; independent-review-pending"
+      "currentDecision": "independent-review-accepted; lapsed-only-approval-restored"
     },
     {
       "id": "comptine-semaine",
@@ -2789,7 +2790,7 @@
       "animationValue": "existing one-time frame entrance only",
       "audioUsefulness": "recommended human rhyme recording",
       "implementationState": "integrated-local-rollout",
-      "reviewState": "awaiting-independent-reconfirmation",
+      "reviewState": "independently-reconfirmed",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 0,
@@ -2819,7 +2820,7 @@
           "bytes": 94518
         }
       ],
-      "currentDecision": "owner-authorized; independent-review-pending"
+      "currentDecision": "independent-review-accepted; lapsed-only-approval-restored"
     },
     {
       "id": "comptine-formes",

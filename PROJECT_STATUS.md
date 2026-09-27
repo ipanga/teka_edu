@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-27
-Branch:     codex/september-astra-visual-review; rich-media Phase A/B local checkpoint
-Commit:     main 51c83a22 remains production; local benchmark not integrated
+Branch:     codex/september-rich-media-pilot; controlled rollout local checkpoint
+Commit:     main 51c83a22 remains production; Batch 2 frozen at b9621ff before acceptance
 Updated by: Codex technical lead
 ```
 
@@ -32,6 +32,15 @@ must use small batches plus the existing lapse and independent reconfirmation me
 in, but automatic approval review rejected sending the newly supplied screenshots and expanded repository
 context because earlier disclosure authorization covered a different completed audit. The next gate is the
 owner’s visual-direction decision; no October work begins.
+
+The owner subsequently accepted the Phase B direction and authorized the controlled rollout. The five-asset
+pilot, five-asset rollout batch 1 and two-asset rollout batch 2 are now integrated locally and independently
+accepted. Batch 2 adds `comptine-mains` plus the currently unused `comptine-cabri`; Claude Max / Opus 5.5
+accepted both illustrations and all nine dependent lessons without correction. The repository’s lapsed-only
+workflow restored exactly those nine lessons with fresh digests, while all 167 unaffected approval records
+remained byte-for-byte unchanged. September is 176 approved / 0 review with 176 distinct valid digests and no
+stale approval. Eight story-sequence candidates remain unimplemented; production is unchanged and October has
+not started.
 
 ## Independent September visual/UX review — 2026-09-26
 

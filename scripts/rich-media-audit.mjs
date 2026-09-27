@@ -202,7 +202,7 @@ const assets = await Promise.all(
     const before = baselineRegistry.assets.find((candidate) => candidate.id === asset.id) ?? asset;
     const selected = pilot[asset.id] ?? rolloutBatch1[asset.id] ?? rolloutBatch2[asset.id];
     const isPilot = pilot[asset.id] !== undefined;
-    const awaitingReview = rolloutBatch2[asset.id] !== undefined;
+    const isRolloutBatch2 = rolloutBatch2[asset.id] !== undefined;
     return {
       id: asset.id,
       kind: asset.kind,
@@ -223,11 +223,7 @@ const assets = await Promise.all(
           ? "integrated-local-pilot"
           : "integrated-local-rollout"
         : "not-started",
-      reviewState: selected
-        ? awaitingReview
-          ? "awaiting-independent-reconfirmation"
-          : "independently-reconfirmed"
-        : "not-in-pilot",
+      reviewState: selected ? "independently-reconfirmed" : "not-in-pilot",
       approvalImpact:
         decision.decision === "audited-keep"
           ? { expected: "none", lessonCount: 0, lessonIds: [] }
@@ -247,8 +243,8 @@ const assets = await Promise.all(
             compression: { format: "WebP", quality: 88, smartSubsample: true },
             oldFileBytes: oldFileSize(before.file),
             deliveryFiles: await delivery(asset),
-            currentDecision: awaitingReview
-              ? "owner-authorized; independent-review-pending"
+            currentDecision: isRolloutBatch2
+              ? "independent-review-accepted; lapsed-only-approval-restored"
               : "owner-accepted; independent-review-accepted",
           }
         : {}),
@@ -280,7 +276,7 @@ const manifest = {
   productionCommit: "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   pilotBaselineCommit: baselineCommit,
   scope: ["maternelle-1 September", "maternelle-3 September"],
-  status: "rollout-batch-2-awaiting-independent-reconfirmation",
+  status: "rollout-batch-2-reconfirmed-controlled-rollout-active",
   productionAssetsChanged: false,
   localPilotAssetsChanged: true,
   approvedLessonSemanticsChanged: false,
@@ -303,7 +299,8 @@ const manifest = {
     "The standard lapsed-only workflow restored exactly 18 approvals with fresh digests; all 158 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
     "Rollout batch 1 integrates corps-main, corps-pied, corps-ventre, animal-poule and animal-poussin. The first independent pass accepted four assets and requested a tighter belly crop; the corrected corps-ventre and all 10 dependent lessons were accepted on the second pass.",
     "The lapsed-only workflow restored exactly 10 Batch-1 approvals with fresh digests. All 166 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
-    "Rollout batch 2 integrates comptine-mains and the currently unused comptine-cabri. Exactly nine lessons depend on comptine-mains and await independent reconfirmation; comptine-cabri lapses no approval.",
+    "Rollout batch 2 integrates comptine-mains and the currently unused comptine-cabri. Claude Max / Opus 5.5 independently accepted both assets and all nine dependent lessons without correction; comptine-cabri lapses no approval.",
+    "The lapsed-only workflow restored exactly nine Batch-2 approvals with fresh digests. All 167 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
   ],
   assets,
 };

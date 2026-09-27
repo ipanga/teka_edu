@@ -1055,6 +1055,66 @@
       "outcome": "accepted",
       "summary": "Reconfirmation visuelle indépendante du lot 1 du déploiement rich-media de septembre, couvrant exactement 10 leçons et cinq images. La première passe Claude Max / Opus 5.5 a conclu accepted-with-modifications : corps-main, corps-pied, animal-poule, animal-poussin et six leçons étaient acceptés ; corps-ventre devait devenir un gros plan du torse, sans visage, centré sur le ventre et lisible à 72 px. Après vérification indépendante, correction minimale et régénération du paquet, la seconde passe a conclu accepted pour corps-ventre, les quatre leçons bloquées et donc les 10 leçons du lot.",
       "corrections": "corps-ventre montre désormais un gros plan du torse, sans tête ni visage, avec le ventre centré et une seule main posée dessus ; sa description accessible correspond exactement à l’image. La planche complète intégrée au paquet et la planche corrective ont été régénérées sur les octets finaux. Les quatre autres images acceptées à la première passe sont restées octet pour octet identiques. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées."
+    },
+    {
+      "levelId": "maternelle-1",
+      "schoolYearId": "2026-2027",
+      "week": 1,
+      "reviewedOn": "2026-09-27",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Claude Max / Opus 5.5",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle indépendante du lot 2 du déploiement rich-media de septembre, couvrant exactement neuf leçons et deux illustrations de comptine. Claude Max / Opus 5.5 a conclu accepted : comptine-mains montre exactement deux mains levées, cinq doigts chacune et les pouces tournés vers l’intérieur, lisibles à 72, 128 et 256 px ; comptine-cabri montre un jeune cabri reconnaissable avec quatre sabots en l’air. Les deux images et les neuf leçons sont acceptées sans correction.",
+      "corrections": "Aucune correction demandée. Les SHA-256 finaux ont été vérifiés contre les WebP gelés : comptine-mains 36a5f61241200ce5fae6b6be0fd1a1d58f5ba092a8e8cc99c54165bff526b5e2 et comptine-cabri eca0deff35ee29631052202b90e5fc68f8ff75eb1790e85c91988dc5203c26b8. Aucun texte pédagogique, comptine, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les neuf approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées."
+    },
+    {
+      "levelId": "maternelle-1",
+      "schoolYearId": "2026-2027",
+      "week": 2,
+      "reviewedOn": "2026-09-27",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Claude Max / Opus 5.5",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle indépendante du lot 2 du déploiement rich-media de septembre, couvrant exactement neuf leçons et deux illustrations de comptine. Claude Max / Opus 5.5 a conclu accepted : comptine-mains montre exactement deux mains levées, cinq doigts chacune et les pouces tournés vers l’intérieur, lisibles à 72, 128 et 256 px ; comptine-cabri montre un jeune cabri reconnaissable avec quatre sabots en l’air. Les deux images et les neuf leçons sont acceptées sans correction.",
+      "corrections": "Aucune correction demandée. Les SHA-256 finaux ont été vérifiés contre les WebP gelés : comptine-mains 36a5f61241200ce5fae6b6be0fd1a1d58f5ba092a8e8cc99c54165bff526b5e2 et comptine-cabri eca0deff35ee29631052202b90e5fc68f8ff75eb1790e85c91988dc5203c26b8. Aucun texte pédagogique, comptine, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les neuf approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées."
+    },
+    {
+      "levelId": "maternelle-1",
+      "schoolYearId": "2026-2027",
+      "week": 3,
+      "reviewedOn": "2026-09-27",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Claude Max / Opus 5.5",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle indépendante du lot 2 du déploiement rich-media de septembre, couvrant exactement neuf leçons et deux illustrations de comptine. Claude Max / Opus 5.5 a conclu accepted : comptine-mains montre exactement deux mains levées, cinq doigts chacune et les pouces tournés vers l’intérieur, lisibles à 72, 128 et 256 px ; comptine-cabri montre un jeune cabri reconnaissable avec quatre sabots en l’air. Les deux images et les neuf leçons sont acceptées sans correction.",
+      "corrections": "Aucune correction demandée. Les SHA-256 finaux ont été vérifiés contre les WebP gelés : comptine-mains 36a5f61241200ce5fae6b6be0fd1a1d58f5ba092a8e8cc99c54165bff526b5e2 et comptine-cabri eca0deff35ee29631052202b90e5fc68f8ff75eb1790e85c91988dc5203c26b8. Aucun texte pédagogique, comptine, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les neuf approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées."
+    },
+    {
+      "levelId": "maternelle-1",
+      "schoolYearId": "2026-2027",
+      "week": 4,
+      "reviewedOn": "2026-09-27",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Claude Max / Opus 5.5",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle indépendante du lot 2 du déploiement rich-media de septembre, couvrant exactement neuf leçons et deux illustrations de comptine. Claude Max / Opus 5.5 a conclu accepted : comptine-mains montre exactement deux mains levées, cinq doigts chacune et les pouces tournés vers l’intérieur, lisibles à 72, 128 et 256 px ; comptine-cabri montre un jeune cabri reconnaissable avec quatre sabots en l’air. Les deux images et les neuf leçons sont acceptées sans correction.",
+      "corrections": "Aucune correction demandée. Les SHA-256 finaux ont été vérifiés contre les WebP gelés : comptine-mains 36a5f61241200ce5fae6b6be0fd1a1d58f5ba092a8e8cc99c54165bff526b5e2 et comptine-cabri eca0deff35ee29631052202b90e5fc68f8ff75eb1790e85c91988dc5203c26b8. Aucun texte pédagogique, comptine, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les neuf approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées."
+    },
+    {
+      "levelId": "maternelle-1",
+      "schoolYearId": "2026-2027",
+      "week": 5,
+      "reviewedOn": "2026-09-27",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Claude Max / Opus 5.5",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle indépendante du lot 2 du déploiement rich-media de septembre, couvrant exactement neuf leçons et deux illustrations de comptine. Claude Max / Opus 5.5 a conclu accepted : comptine-mains montre exactement deux mains levées, cinq doigts chacune et les pouces tournés vers l’intérieur, lisibles à 72, 128 et 256 px ; comptine-cabri montre un jeune cabri reconnaissable avec quatre sabots en l’air. Les deux images et les neuf leçons sont acceptées sans correction.",
+      "corrections": "Aucune correction demandée. Les SHA-256 finaux ont été vérifiés contre les WebP gelés : comptine-mains 36a5f61241200ce5fae6b6be0fd1a1d58f5ba092a8e8cc99c54165bff526b5e2 et comptine-cabri eca0deff35ee29631052202b90e5fc68f8ff75eb1790e85c91988dc5203c26b8. Aucun texte pédagogique, comptine, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les neuf approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées."
     }
   ]
 }

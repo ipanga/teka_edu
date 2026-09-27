@@ -4,11 +4,11 @@
 
 September Rich-Media Visual Upgrade
 
-**Current phase:** the controlled pilot and rollout batch 1 are independently accepted and fully reapproved.
-Rollout batch 2 integrates `comptine-mains` and the currently unused `comptine-cabri`. Exactly nine dependent
-lessons are at `review` pending independent reconfirmation; 167 remain approved. Production remains unchanged.
+**Current phase:** the controlled pilot and rollout batches 1–2 are independently accepted and fully
+reapproved. September is 176 approved / 0 review with 176 distinct valid digests. Eight bounded story-sequence
+candidates remain unimplemented. Production remains unchanged.
 
-## Rollout batch 2 frozen for review — 2026-09-27
+## Rollout batch 2 independently accepted — 2026-09-27
 
 - **Media:** `comptine-mains` shows two natural raised palms with exactly five digits each and inward-facing
   thumbs; `comptine-cabri` shows the established young goat character with all four hooves airborne. Both are
@@ -18,10 +18,17 @@ lessons are at `review` pending independent reconfirmation; 167 remain approved.
 - **Evidence:** `docs/review/media/september-rich-media-rollout-batch-2-comparison.png` renders both assets at
   72, 128 and 256 px. The 1ère maternelle reconfirmation package proves all lesson text, rhyme text, objectives,
   durations, progression, programme and calendar are unchanged from accepted checkpoint `4e80f9f`.
+- **Independent review:** Claude Max / Opus 5.5 explicitly accepted both illustrations and all nine dependent
+  lessons without correction. Independent verification confirmed that the reviewed WebP hashes exactly match
+  the registry and that the visual/count claims are true of the delivered files.
+- **Approval integrity:** five accepted full-review entries cover weeks 1–5. The standard `--lapsed-only`
+  workflow restored exactly nine lessons with fresh digests. September is 176 approved / 0 review with 176
+  distinct valid digests; all 167 unaffected records remain byte-for-byte unchanged.
 - **Validation:** formatting, lint, typecheck, all 438 unit tests, 31-file content validation, Webpack production
-  build and real child-screen E2E across phone, tablet, desktop and TV pass.
-- **Exact resume point:** obtain the bounded Claude Max / Opus 5.5 decision for the two rhyme illustrations and
-  nine affected lessons. Restore no approval before explicit acceptance.
+  build and real child-screen E2E across phone, tablet, desktop and TV pass. The final lapse dry-run reports
+  zero stale approvals.
+- **Exact resume point:** commit this accepted Batch-2 checkpoint, then inspect and implement the next bounded
+  story-sequence batch. Lapse and reconfirm only its newly affected lessons.
 
 ## Rollout batch 1 independently accepted — 2026-09-27
 
