@@ -291,11 +291,11 @@
       "id": "corps-ventre",
       "kind": "object",
       "file": "objects/corps-ventre.webp",
-      "alt": "Un enfant pose ses deux mains sur son ventre",
+      "alt": "Le ventre d’un enfant, une main posée dessus",
       "tags": ["ventre", "corps"],
       "origin": "teka-edu-created",
       "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré pour le déploiement contrôlé de septembre 2026.",
-      "contentHash": "sha256:da14601cb14944a50b6f7375df58c281599e84f05ace55180cb177e574cda284",
+      "contentHash": "sha256:17ca288c56571be307dfa51555f2ebb8398ec3727278d538018fa444f4ed810a",
       "width": 1024,
       "height": 1024
     },

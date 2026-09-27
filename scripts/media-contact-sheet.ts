@@ -114,8 +114,10 @@ const rows = changed
     const uses = audit?.usages
       .map((usage) => `${usage.lessonId}/${usage.activityId} — ${usage.activityTitle}`)
       .join(" · ");
+    const beforeFormat = old?.file.split(".").at(-1) ?? audit?.currentFormat ?? "—";
+    const afterFormat = asset.file.split(".").at(-1) ?? audit?.selectedFinalFormat ?? "—";
     const review = audit
-      ? `<div class="review"><b>Leçon / activité :</b> ${escape(uses || "—")}<br><b>Format :</b> ${audit.currentFormat.toUpperCase()} → ${audit.selectedFinalFormat.toUpperCase()}<br><b>Pourquoi :</b> ${escape(audit.reason)}<br><b>Approbation :</b> ${audit.approvalImpact.lessonCount} leçon(s) dépendante(s) repassent à « review ».</div>`
+      ? `<div class="review"><b>Leçon / activité :</b> ${escape(uses || "—")}<br><b>Format :</b> ${beforeFormat.toUpperCase()} → ${afterFormat.toUpperCase()}<br><b>Pourquoi :</b> ${escape(audit.reason)}<br><b>Approbation :</b> ${audit.approvalImpact.lessonCount} leçon(s) dépendante(s) repassent à « review ».</div>`
       : "";
     return `
       <tr>

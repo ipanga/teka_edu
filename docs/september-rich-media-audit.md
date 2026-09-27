@@ -10,8 +10,8 @@ Generated from the canonical media registry, September lessons and supplied text
 - 20 proposed for high-quality WebP delivery.
 - Final formats: 31 SVG and 20 WebP; 0 PNG delivery exceptions.
 - The five-asset pilot affected 18 unique lessons: 8 in 1ère maternelle and 10 in 3ème maternelle. All 18 were independently reconfirmed and restored with fresh digests; September is 176/176 approved.
-- Rollout batch 1 contains five single-image references and affects exactly 10 lessons. Independent reconfirmation is pending; the other 10 candidates remain unimplemented.
-- Manifest SHA-256: `64bc2845192a4290f256a9c412c7c9308faebdc68dad8894d9caaac86b093644`.
+- Rollout batch 1 contains five single-image references and affects exactly 10 lessons. All five assets and all 10 lessons were independently reconfirmed and restored with fresh digests; the other 10 candidates remain unimplemented.
+- Manifest SHA-256: `aa31159ebf2dd90bd06ebdd1bf9ce4102bae65a575dbfed3c08d18003369f6ff`.
 
 The supplied screenshots validate the distinction: layout and scaling are sound, while the body, rhyme and story art remains visually schematic. Shapes, counting models and isolated objects do not share that defect.
 

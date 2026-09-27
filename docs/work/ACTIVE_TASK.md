@@ -4,12 +4,11 @@
 
 September Rich-Media Visual Upgrade
 
-**Current phase:** the controlled five-asset pilot is independently accepted and fully reapproved. Rollout
-batch 1 now integrates `corps-main`, `corps-pied`, `corps-ventre`, `animal-poule` and `animal-poussin` locally.
-Exactly 10 dependent lessons are at `review` pending independent reconfirmation; 166 remain approved.
-Production remains unchanged.
+**Current phase:** the controlled pilot and rollout batch 1 are independently accepted and fully reapproved.
+September is 176/176 approved with zero stale digests. Ten rich-media candidates remain and may continue in
+small bounded batches. Production remains unchanged.
 
-## Rollout batch 1 frozen for review — 2026-09-27
+## Rollout batch 1 independently accepted — 2026-09-27
 
 - **Media:** three previously prepared body-reference candidates and two newly generated animal references are
   delivered as 1024×1024 WebP files at quality 88 with accessible French descriptions. The source PNG masters
@@ -19,16 +18,19 @@ Production remains unchanged.
   `docs/review/media/september-rich-media-rollout-batch-1-comparison.png` compare only this batch against
   checkpoint `4862ac0` and prove that lesson text, objectives, duration, progression, programme and calendar did
   not change.
-- **Approval integrity:** the standard lapse mechanism removed exactly 10 approvals: seven in 1ère maternelle
-  and three in 3ème maternelle. No approval will be restored before explicit independent acceptance.
+- **Independent review:** the first Opus 5.5 pass accepted four assets and six lessons but found that the
+  whole-child `corps-ventre` card was ambiguous at 72 px. Independent inspection confirmed the defect. The
+  corrected card is a close torso crop with no face, a centered belly and one resting hand. The second pass
+  explicitly accepted the corrected asset, the four blocked lessons and the complete 10-lesson batch.
+- **Approval integrity:** eight accepted full-review entries cover the affected weeks. The standard
+  `--lapsed-only` workflow restored exactly 10 lessons with fresh digests. September is 176 approved / 0 review
+  with 176 distinct valid digests; all 166 unaffected records remain byte-for-byte unchanged and the lapse
+  dry-run reports 0 stale approvals.
 - **Validation:** formatting, lint, all 438 unit tests, 31-file content validation, the Webpack production build
   and the real child-screen E2E pass across phone, tablet, desktop and TV. Native and rendered inspection found
   no broken image, overflow, distorted art, adult-content leak or misleading on-screen interaction.
-- **Exact resume point:** the bounded reviewer payload is staged locally at
-  `/tmp/teka-rollout-batch1-review`. Automatic approval review blocked its transmission because the prior
-  authorization did not name these three newly generated files. After explicit authorization, obtain the Claude
-  Max / Opus 5.5 verdict, verify every finding locally, then restore only accepted lessons through the standard
-  fresh-digest workflow.
+- **Exact resume point:** commit this accepted Batch-1 checkpoint, then inspect and implement the next small
+  coherent subset of the 10 remaining candidates. Lapse and reconfirm only newly affected lessons.
 
 ## Pilot reconfirmation accepted — 2026-09-27
 

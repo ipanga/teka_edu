@@ -1010,17 +1010,20 @@ rich-media pilot`). Work is local only. No push, PR, merge, staging, production,
   push, PR, merge, staging, production, database, deployment or October work occurred. The next authorized
   phase is the remaining 15 rich-media candidates in small batches.
 
-### 2026-09-27 — Rich-media rollout batch 1 frozen for independent review (local)
+### 2026-09-27 — Rich-media rollout batch 1 independently accepted (local)
 
 - Integrated five single-image references: `corps-main`, `corps-pied`, `corps-ventre`, `animal-poule` and
   `animal-poussin`. All use 1024×1024 WebP delivery; no canonical lesson wording, objective, duration,
   progression, programme, calendar or safety guidance changed.
 - Generated a batch-only before/after sheet and both class reconfirmation packages against accepted checkpoint
   `4862ac0`. The sheet verifies recognition at 72, 128 and 256 px and names every dependent activity.
-- The standard approval-lapse mechanism moved exactly 10 dependent lessons to `review` (7 in 1ère maternelle,
-  3 in 3ème maternelle); 166 remain approved. Independent acceptance and fresh digests are still required.
+- The first independent Opus 5.5 pass accepted four assets and six lessons, and requested a tighter
+  `corps-ventre` crop. The finding was independently confirmed; the corrected torso-only card passed responsive
+  verification, and the second pass explicitly accepted the asset, four blocked lessons and complete batch.
+- Eight accepted full-review entries authorized restoration of exactly 10 lessons through `approve-week.ts
+--lapsed-only`. September is 176 approved / 0 review with 176 distinct current digests; all 166 unaffected
+  approval records are byte-for-byte unchanged and the lapse dry-run reports zero stale approvals.
 - Formatting, lint, all 438 unit tests, 31-file content validation, a Webpack production build and child-screen
-  E2E across phone, tablet, desktop and TV pass. Automatic approval review blocked sending the new batch-only
-  reviewer payload to Anthropic until those three exact files receive explicit authorization.
+  E2E across phone, tablet, desktop and TV pass.
 - Work remains local. Production and staging are unchanged; no push, PR, merge, deployment, database or October
   work occurred.

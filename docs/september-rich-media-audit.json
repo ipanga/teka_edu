@@ -5,7 +5,7 @@
   "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   "pilotBaselineCommit": "cbc1cf3",
   "scope": ["maternelle-1 September", "maternelle-3 September"],
-  "status": "rollout-batch-1-awaiting-independent-reconfirmation",
+  "status": "rollout-batch-1-reconfirmed-controlled-rollout-active",
   "productionAssetsChanged": false,
   "localPilotAssetsChanged": true,
   "approvedLessonSemanticsChanged": false,
@@ -20,9 +20,9 @@
     "ifAllProposedWebpAssetsAreIntegrated": 53,
     "maternelle1": 27,
     "maternelle3": 26,
-    "currentImpact": 10,
-    "currentApproved": 166,
-    "currentReview": 10
+    "currentImpact": 0,
+    "currentApproved": 176,
+    "currentReview": 0
   },
   "notes": [
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
@@ -32,7 +32,8 @@
     "Independent review accepted four asset families and requested two bounded Nsimba corrections: a dedicated page-1 walking scene and a visible Nsimba name card on page 3.",
     "Both corrections were integrated without changing canonical lesson text; the second independent pass accepted all five asset families and all 18 affected lessons.",
     "The standard lapsed-only workflow restored exactly 18 approvals with fresh digests; all 158 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
-    "Rollout batch 1 integrates corps-main, corps-pied, corps-ventre, animal-poule and animal-poussin. Exactly 10 dependent lessons are at review pending independent reconfirmation."
+    "Rollout batch 1 integrates corps-main, corps-pied, corps-ventre, animal-poule and animal-poussin. The first independent pass accepted four assets and requested a tighter belly crop; the corrected corps-ventre and all 10 dependent lessons were accepted on the second pass.",
+    "The lapsed-only workflow restored exactly 10 Batch-1 approvals with fresh digests. All 166 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain."
   ],
   "assets": [
     {
@@ -1367,7 +1368,7 @@
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses",
       "implementationState": "integrated-local-rollout",
-      "reviewState": "awaiting-independent-reconfirmation",
+      "reviewState": "independently-reconfirmed",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 5,
@@ -1397,7 +1398,7 @@
           "bytes": 39154
         }
       ],
-      "currentDecision": "owner-authorized; independent-review-pending"
+      "currentDecision": "owner-accepted; independent-review-accepted"
     },
     {
       "id": "corps-pied",
@@ -1444,7 +1445,7 @@
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses",
       "implementationState": "integrated-local-rollout",
-      "reviewState": "awaiting-independent-reconfirmation",
+      "reviewState": "independently-reconfirmed",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 4,
@@ -1474,7 +1475,7 @@
           "bytes": 38912
         }
       ],
-      "currentDecision": "owner-authorized; independent-review-pending"
+      "currentDecision": "owner-accepted; independent-review-accepted"
     },
     {
       "id": "corps-tete",
@@ -1563,7 +1564,7 @@
     {
       "id": "corps-ventre",
       "kind": "object",
-      "pedagogicalRole": "Un enfant pose ses deux mains sur son ventre",
+      "pedagogicalRole": "Le ventre d’un enfant, une main posée dessus",
       "currentFile": "public/media/objects/corps-ventre.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -1605,14 +1606,14 @@
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses",
       "implementationState": "integrated-local-rollout",
-      "reviewState": "awaiting-independent-reconfirmation",
+      "reviewState": "independently-reconfirmed",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 4,
         "lessonIds": ["m1-lang-13", "m1-lang-18", "m1-world-08", "m1-world-20"]
       },
       "beforeHash": "sha256:25ad16ad5bda8d062870553846d666fc7cfca91155eb85beee1bde7700105f80",
-      "afterHash": "sha256:da14601cb14944a50b6f7375df58c281599e84f05ace55180cb177e574cda284",
+      "afterHash": "sha256:17ca288c56571be307dfa51555f2ebb8398ec3727278d538018fa444f4ed810a",
       "proposedFile": "public/media/objects/corps-ventre.webp",
       "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/corps-ventre.png",
       "sourceDimensions": {
@@ -1632,10 +1633,10 @@
       "deliveryFiles": [
         {
           "file": "public/media/objects/corps-ventre.webp",
-          "bytes": 80926
+          "bytes": 98932
         }
       ],
-      "currentDecision": "owner-authorized; independent-review-pending"
+      "currentDecision": "owner-accepted; independent-review-accepted"
     },
     {
       "id": "animal-poule",
@@ -1675,7 +1676,7 @@
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses; otherwise unnecessary",
       "implementationState": "integrated-local-rollout",
-      "reviewState": "awaiting-independent-reconfirmation",
+      "reviewState": "independently-reconfirmed",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 3,
@@ -1705,7 +1706,7 @@
           "bytes": 100128
         }
       ],
-      "currentDecision": "owner-authorized; independent-review-pending"
+      "currentDecision": "owner-accepted; independent-review-accepted"
     },
     {
       "id": "animal-poussin",
@@ -1738,7 +1739,7 @@
       "animationValue": "none",
       "audioUsefulness": "important for pronunciation in vocabulary uses; otherwise unnecessary",
       "implementationState": "integrated-local-rollout",
-      "reviewState": "awaiting-independent-reconfirmation",
+      "reviewState": "independently-reconfirmed",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 2,
@@ -1768,7 +1769,7 @@
           "bytes": 64094
         }
       ],
-      "currentDecision": "owner-authorized; independent-review-pending"
+      "currentDecision": "owner-accepted; independent-review-accepted"
     },
     {
       "id": "animal-chevre",
