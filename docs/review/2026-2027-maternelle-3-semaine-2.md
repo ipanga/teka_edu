@@ -1456,7 +1456,7 @@ l’autre — l’appareil est alors le sien._
 
 _Comprendre ce que ressent un personnage, et le dire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Le but n’est pas de résumer l’histoire mais de parler de ce que ressent Bibi. Nommez les émotions vous-même : content, triste, fâché, curieux.
 - **Objectifs enseignés :**
   - `LANG-S02-C03-O14` — Comprendre les émotions, les intentions et les sentiments qui animent les personnages. _(source : programme-2024-langage)_
@@ -1536,7 +1536,12 @@ _Comprendre ce que ressent un personnage, et le dire._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-kumu` — Kumu, le petit poussin, qui sort tout seul du poulailler dont la porte est ouverte (`public/media/illustrations/histoire-kumu.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-kumu`
+
+  - Page 1 : Kumu, petit poussin jaune, sort seul du poulailler ouvert tandis que sa maman poule reste derrière lui, près d’un grand manguier et d’un grand seau bleu (`public/media/illustrations/histoire-kumu-01.webp`)
+  - Page 2 : Loin de la maison, Kumu s’arrête sur le chemin et appelle tandis qu’un petit lézard passe en courant (`public/media/illustrations/histoire-kumu-02.webp`)
+  - Page 3 : Une jeune chèvre mange une feuille pendant que Kumu ferme les yeux et écoute sa maman poule appeler près du poulailler (`public/media/illustrations/histoire-kumu-03.webp`)
+  - Page 4 : Devant le poulailler, Kumu se blottit au chaud sous l’aile ouverte de sa maman poule et la regarde (`public/media/illustrations/histoire-kumu-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
 

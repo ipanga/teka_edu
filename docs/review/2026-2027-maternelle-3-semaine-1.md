@@ -823,7 +823,7 @@ l’autre — l’appareil est alors le sien._
 
 _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre expérience._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Lisez l’histoire d’une traite, sans vous interrompre. Posez les questions seulement à la fin. Il n’y a pas de mauvaise réponse : l’enfant peut redire l’histoire avec ses mots.
 - **Objectifs enseignés :**
   - `LANG-S02-C03-O09` — Comprendre des histoires dont les actions sont organisées autour d’une structure répétitive (rencontres successives) et commencer à comprendre les informations implicites (émotions, états et sentiments des personnages). _(source : programme-2024-langage)_
@@ -872,7 +872,12 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-kumu` — Kumu, le petit poussin, qui sort tout seul du poulailler dont la porte est ouverte (`public/media/illustrations/histoire-kumu.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-kumu`
+
+  - Page 1 : Kumu, petit poussin jaune, sort seul du poulailler ouvert tandis que sa maman poule reste derrière lui, près d’un grand manguier et d’un grand seau bleu (`public/media/illustrations/histoire-kumu-01.webp`)
+  - Page 2 : Loin de la maison, Kumu s’arrête sur le chemin et appelle tandis qu’un petit lézard passe en courant (`public/media/illustrations/histoire-kumu-02.webp`)
+  - Page 3 : Une jeune chèvre mange une feuille pendant que Kumu ferme les yeux et écoute sa maman poule appeler près du poulailler (`public/media/illustrations/histoire-kumu-03.webp`)
+  - Page 4 : Devant le poulailler, Kumu se blottit au chaud sous l’aile ouverte de sa maman poule et la regarde (`public/media/illustrations/histoire-kumu-04.webp`)
 
 - **Questions posées à l’enfant après l’écoute (3) :**
 
@@ -1173,7 +1178,7 @@ l’autre — l’appareil est alors le sien._
 
 _Frapper les syllabes des prénoms de la maison : entendre que les mots sont faits de morceaux._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** C’est un jeu d’oreille, pas de lecture. On tape dans les mains en même temps qu’on dit le mot. Ne montrez aucune lettre écrite : tout se joue par l’écoute.
 - **Objectifs enseignés :**
   - `LANG-S02-C01-O03` — Scander les syllabes d’un mot. _(source : programme-2024-langage)_
@@ -1223,7 +1228,12 @@ _Frapper les syllabes des prénoms de la maison : entendre que les mots sont fai
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-kumu` — Kumu, le petit poussin, qui sort tout seul du poulailler dont la porte est ouverte (`public/media/illustrations/histoire-kumu.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-kumu`
+
+  - Page 1 : Kumu, petit poussin jaune, sort seul du poulailler ouvert tandis que sa maman poule reste derrière lui, près d’un grand manguier et d’un grand seau bleu (`public/media/illustrations/histoire-kumu-01.webp`)
+  - Page 2 : Loin de la maison, Kumu s’arrête sur le chemin et appelle tandis qu’un petit lézard passe en courant (`public/media/illustrations/histoire-kumu-02.webp`)
+  - Page 3 : Une jeune chèvre mange une feuille pendant que Kumu ferme les yeux et écoute sa maman poule appeler près du poulailler (`public/media/illustrations/histoire-kumu-03.webp`)
+  - Page 4 : Devant le poulailler, Kumu se blottit au chaud sous l’aile ouverte de sa maman poule et la regarde (`public/media/illustrations/histoire-kumu-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Acquérir les habiletés phonologiques et le principe alphabétique » (from-5) :**
 

@@ -5,10 +5,35 @@
 September Rich-Media Visual Upgrade
 
 **Current phase:** the controlled pilot and rollout batches 1–4 are independently accepted and fully
-reapproved. Rollout batch 4 integrates only the three-page `histoire-seau-lisa` sequence; its eight dependent
-lessons have fresh digests, September is 176 approved / 0 review, and all 168 unaffected lesson records remain
-byte-for-byte unchanged. The next bounded local batch is the four-page `histoire-kumu` sequence. Production
-remains unchanged.
+reapproved. Rollout batch 5 integrates only the four-page `histoire-kumu` sequence; exactly four dependent
+lessons are at `review`, 172 remain approved, and all 172 unaffected lesson records remain byte-for-byte
+unchanged. The Kumu review package is frozen locally and awaits owner authorization for bounded Claude Max
+transmission. Production remains unchanged.
+
+## Rollout batch 5 frozen for review — 2026-09-28
+
+- **Canonical mapping:** `kumu-le-petit-poussin` contains exactly 12 unchanged lines. The renderer groups three
+  story lines per page, producing exactly four pages. The registered sequence maps them one-to-one as
+  `pageFrames: [0, 1, 2, 3]`; no story text, pagination rule, objective, duration or progression changed.
+- **Continuity:** Kumu remains the same very small fluffy yellow chick; his mother remains the same white hen;
+  the page-3 goat matches the accepted young white goat with one black ear. All four frames share one morning,
+  grassy path, wooden coop and warm hand-painted DRC/African setting. Page 2 has only Kumu and the passing
+  lizard; page 4 has only Kumu sheltered beneath his mother’s open wing. No image contains written text.
+- **Delivery:** four 1200×900 WebP frames at quality 88, mapped to pages 1–4. Full SHA-256 values and accessible
+  French descriptions are frozen in `content/media/registry.json`, the audit manifest and the reconfirmation
+  package. Lossless 1448×1086 PNG masters and the continuity specification remain ignored local evidence.
+- **Scope:** exactly `m3-lang-03`, `m3-lang-04`, `m3-lang-09` and `m3-lang-17` changed effective digest and moved
+  to `review` through the standard lapse mechanism. September is 172 approved / 4 review; every other 172
+  lesson records remains byte-for-byte unchanged from accepted Batch-4 checkpoint `e5c8398`.
+- **Evidence:** `docs/review/media/september-rich-media-rollout-batch-5-comparison.png` renders the old SVG,
+  primary image, all four page frames, page assignments, descriptions, exact uses and approval impact. The
+  bounded class package is `docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md`.
+- **Responsive QA:** the existing rollout E2E loads frames 1–4 in order and verifies natural width, decoding,
+  document width and dialog width at 320×740, 768×1024, 1440×900 and 1920×1080. Phone and desktop inspection
+  found no broken image, crop, distortion, overflow, adult-content leak or misleading interaction.
+- **Exact resume point:** request explicit owner authorization to send only the frozen 3ème maternelle package,
+  Batch-5 comparison sheet and bounded reviewer prompt through authenticated Claude Max. Restore no approval
+  before an explicit independent `accepted` verdict.
 
 ## Rollout batch 4 independently accepted — 2026-09-27
 

@@ -5,7 +5,7 @@
   "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   "pilotBaselineCommit": "cbc1cf3",
   "scope": ["maternelle-1 September", "maternelle-3 September"],
-  "status": "rollout-batch-4-independently-reconfirmed",
+  "status": "rollout-batch-5-awaiting-independent-reconfirmation",
   "productionAssetsChanged": false,
   "localPilotAssetsChanged": true,
   "approvedLessonSemanticsChanged": false,
@@ -20,9 +20,9 @@
     "ifAllProposedWebpAssetsAreIntegrated": 53,
     "maternelle1": 27,
     "maternelle3": 26,
-    "currentImpact": 0,
-    "currentApproved": 176,
-    "currentReview": 0
+    "currentImpact": 4,
+    "currentApproved": 172,
+    "currentReview": 4
   },
   "notes": [
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
@@ -39,7 +39,8 @@
     "Rollout batch 3 integrates only the two-frame histoire-tika sequence. Claude Max / Opus 5.5 independently accepted both frames and both dependent lessons without correction; seven other story-sequence candidates remain untouched.",
     "The lapsed-only workflow restored exactly two Batch-3 approvals with fresh digests. All 174 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
     "Rollout batch 4 integrates only the three-frame histoire-seau-lisa sequence. The first review accepted the images and requested corrected evidence; the corrected dossier explicitly maps the rhyme to primary frame 2 and exposes every frame hash. Claude Max / Opus 5.5 then accepted all eight dependent lessons.",
-    "The lapsed-only workflow restored exactly eight Batch-4 approvals with fresh digests. All 168 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain; six other story-sequence candidates remain untouched."
+    "The lapsed-only workflow restored exactly eight Batch-4 approvals with fresh digests. All 168 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain; six other story-sequence candidates remain untouched.",
+    "Rollout batch 5 integrates only the four-frame histoire-kumu sequence. The 12 canonical lines render as four pages of three lines and map exactly to frames 1–4. Exactly four lessons depend on it and await independent reconfirmation; five other story-sequence candidates remain untouched."
   ],
   "assets": [
     {
@@ -2079,7 +2080,7 @@
     {
       "id": "histoire-kumu",
       "kind": "illustration",
-      "pedagogicalRole": "Kumu, le petit poussin, qui sort tout seul du poulailler dont la porte est ouverte",
+      "pedagogicalRole": "Kumu, petit poussin jaune, sort seul du poulailler ouvert tandis que sa maman poule reste derrière lui",
       "currentFile": "public/media/illustrations/histoire-kumu.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -2120,15 +2121,50 @@
       "presentation": "4-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
-      "implementationState": "not-started",
-      "reviewState": "not-in-pilot",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "awaiting-independent-reconfirmation",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 4,
         "lessonIds": ["m3-lang-03", "m3-lang-04", "m3-lang-09", "m3-lang-17"]
       },
       "beforeHash": "sha256:c5158e03e9af9a70cf733c12e6f9682c1abacc99030e84128e3d50233e083f77",
-      "afterHash": null
+      "afterHash": "sha256:027ee3b6119faf82c9b58d974846b73e5531b71d5309516b0d8446715f9542be",
+      "proposedFile": "public/media/illustrations/histoire-kumu-01.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/histoire-kumu/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2163,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-kumu-01.webp",
+          "bytes": 228070
+        },
+        {
+          "file": "public/media/illustrations/histoire-kumu-02.webp",
+          "bytes": 226634
+        },
+        {
+          "file": "public/media/illustrations/histoire-kumu-03.webp",
+          "bytes": 258396
+        },
+        {
+          "file": "public/media/illustrations/histoire-kumu-04.webp",
+          "bytes": 265564
+        }
+      ],
+      "currentDecision": "owner-authorized; independent-review-pending"
     },
     {
       "id": "histoire-nsimba",

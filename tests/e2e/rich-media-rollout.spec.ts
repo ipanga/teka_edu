@@ -51,6 +51,13 @@ const cases = [
     nextExpected: ["histoire-seau-lisa-02.webp", "histoire-seau-lisa-03.webp"],
   },
   {
+    name: "kumu-story",
+    path: "/maternelle/3/seance/3",
+    activity: "L’histoire de Kumu",
+    expected: ["histoire-kumu-01.webp"],
+    nextExpected: ["histoire-kumu-02.webp", "histoire-kumu-03.webp", "histoire-kumu-04.webp"],
+  },
+  {
     name: "bucket-rhyme",
     path: "/maternelle/1/seance/6",
     activity: "Le petit seau",

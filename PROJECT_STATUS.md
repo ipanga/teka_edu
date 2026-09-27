@@ -5,9 +5,9 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-09-27
+Date:       2026-09-28
 Branch:     codex/september-rich-media-pilot; controlled rollout local checkpoint
-Commit:     main 51c83a22 remains production; Batch 4 corrected evidence checkpoint 83ae1ea
+Commit:     main 51c83a22 remains production; Batch 4 accepted checkpoint e5c8398
 Updated by: Codex technical lead
 ```
 
@@ -72,6 +72,16 @@ standard lapsed-only mechanism restored exactly the eight affected lessons with 
 176 approved / 0 review with 176 distinct digests; all 168 unaffected lesson records are byte-for-byte unchanged
 and zero stale approvals remain. The next local batch is the four-page `histoire-kumu` sequence; fresh owner
 authorization is still required before its eventual independent-review package is transmitted.
+
+Rollout batch 5 is frozen locally for independent review. The unchanged 12-line `histoire-kumu` renders as
+four three-line pages and now maps exactly to four 1200×900 WebP scenes: Kumu leaves the coop; calls beside a
+passing lizard; listens beside the leaf-eating goat and finds his mother’s voice; then shelters beneath her
+wing. Character, setting and morning continuity hold across the sequence, with no embedded text. The standard
+lapse mechanism moved exactly `m3-lang-03`, `m3-lang-04`, `m3-lang-09` and `m3-lang-17` to `review`; September is
+172 approved / 4 review and all other 172 lesson records remain byte-for-byte unchanged from `e5c8398`. The
+four-width rollout E2E verifies page order, loaded 1200 px images and zero viewport/dialog overflow; phone and
+desktop inspection found no visual or interaction defect. The Kumu-only dossier and comparison sheet are ready
+locally. They must not be sent to Claude Max until the owner gives fresh explicit authorization.
 
 ## Independent September visual/UX review — 2026-09-26
 
