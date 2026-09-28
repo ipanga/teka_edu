@@ -5,11 +5,45 @@
 September Rich-Media Visual Upgrade
 
 **Current phase:** the controlled pilot and rollout batches 1–5 are independently accepted and fully
-reapproved. The corrected Kumu sequence received an explicit `accepted` verdict, and the lapsed-only mechanism
-restored exactly four lessons with fresh digests. September is 176 approved / 0 review with 176 distinct valid
-digests; all 172 unaffected lesson records remain byte-for-byte unchanged. The next authorized step is exactly
-one untouched story candidate, followed by a fresh independent-review authorization boundary. Production
-remains unchanged.
+reapproved. Rollout batch 6 integrates exactly the four-page `histoire-bibi` sequence. Exactly three dependent
+lessons are at `review`, 173 remain approved with 173 distinct standing digests, and all 173 unaffected lesson
+records remain byte-for-byte unchanged. The Bibi review package is frozen locally and awaits fresh owner
+authorization for bounded Claude Max transmission. Production remains unchanged.
+
+## Rollout batch 6 frozen for review — 2026-09-28
+
+- **Canonical mapping:** `bibi-la-chevre-curieuse` contains exactly 12 unchanged lines. The renderer groups
+  three story lines per page, producing four pages. The registered sequence maps them one-to-one as
+  `pageFrames: [0, 1, 2, 3]`; the older three-frame estimate was corrected from actual pagination.
+- **Narrative sequence:** page 1 shows Bibi opening and passing through the garden gate; page 2 shows her eating
+  a green leaf among the orderly vegetables; page 3 shows Mama Lelo arriving while Bibi lowers her head; page 4
+  shows the closed gate and Mama Lelo giving Bibi a separate grass pile. No later event leaks into an earlier
+  page, and no image contains written text or an unsafe cutting tool.
+- **Continuity:** Bibi remains the accepted young white goat with one black ear, short tan horns, small beard and
+  dark hooves. Mama Lelo keeps the same braids, coral-orange blouse, teal-and-indigo wrap skirt and sandals on
+  pages 3–4. The wooden fence, vegetable rows, homestead, vegetation, ochre earth and warm mid-morning light are
+  coherent throughout.
+- **Delivery:** four 1200×900 WebP frames at quality 88. SHA-256 values, in page order, are
+  `1e15939369feba99abb39e6b32d2d5b745638601d7e578935479f468066e48e4`,
+  `7c6c8dadd01b16a11cb38bcc3df17f633581ec8ed6f1f14669f94449e1853112`,
+  `b8f2d6bbbf0e3c54a8c06fc23147c233405afac65a0aa89465f8d68f268951ee` and
+  `7d39bca6f7dbd7181a1e492511ba4c632a0472bbbbc0916cb0710129a374db0e`.
+- **Approval scope:** exactly `m3-lang-05`, `m3-lang-09` and `m3-lang-13` changed digest and moved to `review`.
+  September is 173 approved / 3 review; all other 173 lesson records remain byte-for-byte unchanged from
+  accepted Batch-5 checkpoint `3a77b3c`. A correctly formed `--dry-run=true` reports zero additional lapses.
+- **Validation:** formatting, lint, typecheck, all 438 unit tests, 31-file content validation, Webpack production
+  build, three-sentinel client-bundle scan and the four-width rich-media E2E pass. Phone and desktop inspection
+  found no broken image, crop, overflow, adult-content leak, misleading interaction or continuity defect.
+- **Evidence:** `docs/review/media/september-rich-media-rollout-batch-6-comparison.png` and
+  `docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md` show all four pages, hashes, descriptions, uses
+  and approval impact.
+- **Isolated package:** `/tmp/teka-rollout-batch6-review` contains exactly the dossier
+  (`edca1da102743ae9421594f16ca4e450d1857bfd6001c9d9362bc60d5ef4f804`), comparison sheet
+  (`68385f9df8068c3e1d5521400a06cc02e181e7267edb6bc3836c15c7d0bbbffe`) and bounded prompt
+  (`55a99b50fdd14a99aca8523a0dd787ca9871dca40bee06f3cf27f50d28729bcd`).
+- **Exact resume point:** request explicit owner authorization to transmit only those three isolated files via
+  authenticated Claude Max. Restore no approval before an explicit independent `accepted` verdict, and do not
+  begin another story while Bibi is awaiting review.
 
 ## Rollout batch 5 independently accepted — 2026-09-28
 

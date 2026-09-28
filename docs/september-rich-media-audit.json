@@ -5,7 +5,7 @@
   "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   "pilotBaselineCommit": "cbc1cf3",
   "scope": ["maternelle-1 September", "maternelle-3 September"],
-  "status": "rollout-batch-5-independently-reconfirmed",
+  "status": "rollout-batch-6-awaiting-independent-reconfirmation",
   "productionAssetsChanged": false,
   "localPilotAssetsChanged": true,
   "approvedLessonSemanticsChanged": false,
@@ -20,9 +20,9 @@
     "ifAllProposedWebpAssetsAreIntegrated": 53,
     "maternelle1": 27,
     "maternelle3": 26,
-    "currentImpact": 0,
-    "currentApproved": 176,
-    "currentReview": 0
+    "currentImpact": 3,
+    "currentApproved": 173,
+    "currentReview": 3
   },
   "notes": [
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
@@ -40,7 +40,8 @@
     "The lapsed-only workflow restored exactly two Batch-3 approvals with fresh digests. All 174 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
     "Rollout batch 4 integrates only the three-frame histoire-seau-lisa sequence. The first review accepted the images and requested corrected evidence; the corrected dossier explicitly maps the rhyme to primary frame 2 and exposes every frame hash. Claude Max / Opus 5.5 then accepted all eight dependent lessons.",
     "The lapsed-only workflow restored exactly eight Batch-4 approvals with fresh digests. All 168 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain; six other story-sequence candidates remain untouched.",
-    "Rollout batch 5 integrates only the four-frame histoire-kumu sequence. The first independent review accepted frames 1, 2 and 4 but requested clearer closed eyelids on Kumu in frame 3 at 256 px. Only frame 3 was redrawn; the second review explicitly accepted the complete sequence. The lapsed-only workflow restored exactly four lessons with fresh digests; all 172 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain. Five other story-sequence candidates remain untouched."
+    "Rollout batch 5 integrates only the four-frame histoire-kumu sequence. The first independent review accepted frames 1, 2 and 4 but requested clearer closed eyelids on Kumu in frame 3 at 256 px. Only frame 3 was redrawn; the second review explicitly accepted the complete sequence. The lapsed-only workflow restored exactly four lessons with fresh digests; all 172 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain. Five other story-sequence candidates remain untouched.",
+    "Rollout batch 6 integrates only the four-frame histoire-bibi sequence. The 12 canonical lines render as four pages of three lines and map exactly to frames 1–4. Exactly three lessons depend on it and await independent reconfirmation; four other story-sequence candidates remain untouched."
   ],
   "assets": [
     {
@@ -2340,7 +2341,7 @@
     {
       "id": "histoire-bibi",
       "kind": "illustration",
-      "pedagogicalRole": "Bibi la chèvre, le nez dans un buisson, devant une barrière",
+      "pedagogicalRole": "Bibi, petite chèvre blanche avec une oreille noire, pousse la barrière du jardin et entre parmi les légumes",
       "currentFile": "public/media/illustrations/histoire-bibi.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -2371,18 +2372,53 @@
       "selectedFinalFormat": "webp",
       "decision": "audited-redraw",
       "reason": "The current single schematic SVG cannot carry the character, action, emotion, and narrative progression required by the approved story.",
-      "presentation": "3-image sequence aligned to existing story pages",
+      "presentation": "4-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
-      "implementationState": "not-started",
-      "reviewState": "not-in-pilot",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "awaiting-independent-reconfirmation",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 3,
         "lessonIds": ["m3-lang-05", "m3-lang-09", "m3-lang-13"]
       },
       "beforeHash": "sha256:115a43f2d89d096ea5dbfd1e3679633656487a36e3a61eb3f8c5615f6a29c87d",
-      "afterHash": null
+      "afterHash": "sha256:1e15939369feba99abb39e6b32d2d5b745638601d7e578935479f468066e48e4",
+      "proposedFile": "public/media/illustrations/histoire-bibi-01.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/histoire-bibi/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 3885,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-bibi-01.webp",
+          "bytes": 363462
+        },
+        {
+          "file": "public/media/illustrations/histoire-bibi-02.webp",
+          "bytes": 351624
+        },
+        {
+          "file": "public/media/illustrations/histoire-bibi-03.webp",
+          "bytes": 357738
+        },
+        {
+          "file": "public/media/illustrations/histoire-bibi-04.webp",
+          "bytes": 416538
+        }
+      ],
+      "currentDecision": "owner-authorized-local-integration; independent-review-pending"
     },
     {
       "id": "histoire-marche",

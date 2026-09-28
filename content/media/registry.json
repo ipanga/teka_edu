@@ -552,12 +552,47 @@
     {
       "id": "histoire-bibi",
       "kind": "illustration",
-      "file": "illustrations/histoire-bibi.svg",
-      "alt": "Bibi la chèvre, le nez dans un buisson, devant une barrière",
+      "file": "illustrations/histoire-bibi-01.webp",
+      "alt": "Bibi, petite chèvre blanche avec une oreille noire, pousse la barrière du jardin et entre parmi les légumes",
       "tags": ["bibi", "chèvre", "jardin", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:115a43f2d89d096ea5dbfd1e3679633656487a36e3a61eb3f8c5615f6a29c87d"
+      "provenance": "Séquence de quatre illustrations peintes originales pour Teka Edu, produite avec l’outil ImageGen intégré et alignée sur les quatre pages canoniques de l’histoire lors du déploiement rich-media contrôlé de septembre 2026.",
+      "contentHash": "sha256:1e15939369feba99abb39e6b32d2d5b745638601d7e578935479f468066e48e4",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-bibi-01.webp",
+            "alt": "Bibi, petite chèvre blanche avec une oreille noire, pousse la barrière du jardin et entre parmi les rangées de légumes",
+            "contentHash": "sha256:1e15939369feba99abb39e6b32d2d5b745638601d7e578935479f468066e48e4",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-bibi-02.webp",
+            "alt": "Dans le jardin, Bibi mange une feuille verte au milieu des légumes bien rangés, tandis que la barrière reste ouverte",
+            "contentHash": "sha256:7c6c8dadd01b16a11cb38bcc3df17f633581ec8ed6f1f14669f94449e1853112",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-bibi-03.webp",
+            "alt": "Mama Lelo découvre les feuilles grignotées ; Bibi baisse la tête pendant que Mama Lelo réfléchit",
+            "contentHash": "sha256:b8f2d6bbbf0e3c54a8c06fc23147c233405afac65a0aa89465f8d68f268951ee",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-bibi-04.webp",
+            "alt": "Devant la barrière bien fermée, Mama Lelo donne un grand tas d’herbe à Bibi, qui mange son repas",
+            "contentHash": "sha256:7d39bca6f7dbd7181a1e492511ba4c632a0472bbbbc0916cb0710129a374db0e",
+            "width": 1200,
+            "height": 900
+          }
+        ],
+        "pageFrames": [0, 1, 2, 3]
+      }
     },
     {
       "id": "histoire-marche",

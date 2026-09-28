@@ -1133,7 +1133,7 @@ l’autre — l’appareil est alors le sien._
 
 _Troisième corpus de mots : le marché, les fruits, les légumes, les quantités._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Nommez avec l’article et employez tout de suite le mot dans une phrase de marché : « Je voudrais trois tomates. »
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1192,7 +1192,12 @@ _Troisième corpus de mots : le marché, les fruits, les légumes, les quantité
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-bibi` — Bibi la chèvre, le nez dans un buisson, devant une barrière (`public/media/illustrations/histoire-bibi.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-bibi`
+
+  - Page 1 : Bibi, petite chèvre blanche avec une oreille noire, pousse la barrière du jardin et entre parmi les rangées de légumes (`public/media/illustrations/histoire-bibi-01.webp`)
+  - Page 2 : Dans le jardin, Bibi mange une feuille verte au milieu des légumes bien rangés, tandis que la barrière reste ouverte (`public/media/illustrations/histoire-bibi-02.webp`)
+  - Page 3 : Mama Lelo découvre les feuilles grignotées ; Bibi baisse la tête pendant que Mama Lelo réfléchit (`public/media/illustrations/histoire-bibi-03.webp`)
+  - Page 4 : Devant la barrière bien fermée, Mama Lelo donne un grand tas d’herbe à Bibi, qui mange son repas (`public/media/illustrations/histoire-bibi-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 

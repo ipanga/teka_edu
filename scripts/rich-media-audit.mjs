@@ -59,7 +59,7 @@ const storyFrames = {
   "histoire-kumu": 4,
   "histoire-nsimba": 5,
   "histoire-mangue": 3,
-  "histoire-bibi": 3,
+  "histoire-bibi": 4,
   "histoire-marche": 3,
   "histoire-pluie": 3,
   "histoire-cailloux": 3,
@@ -141,6 +141,13 @@ const rolloutBatch4 = {
 const rolloutBatch5 = {
   "histoire-kumu": {
     master: "private/astra-visual-evidence/september-rich-media-rollout-masters/histoire-kumu/",
+    source: [1448, 1086],
+  },
+};
+
+const rolloutBatch6 = {
+  "histoire-bibi": {
+    master: "private/astra-visual-evidence/september-rich-media-rollout-masters/histoire-bibi/",
     source: [1448, 1086],
   },
 };
@@ -227,12 +234,14 @@ const assets = await Promise.all(
       rolloutBatch2[asset.id] ??
       rolloutBatch3[asset.id] ??
       rolloutBatch4[asset.id] ??
-      rolloutBatch5[asset.id];
+      rolloutBatch5[asset.id] ??
+      rolloutBatch6[asset.id];
     const isPilot = pilot[asset.id] !== undefined;
     const isRolloutBatch2 = rolloutBatch2[asset.id] !== undefined;
     const isRolloutBatch3 = rolloutBatch3[asset.id] !== undefined;
     const isRolloutBatch4 = rolloutBatch4[asset.id] !== undefined;
     const isRolloutBatch5 = rolloutBatch5[asset.id] !== undefined;
+    const isRolloutBatch6 = rolloutBatch6[asset.id] !== undefined;
     return {
       id: asset.id,
       kind: asset.kind,
@@ -253,7 +262,11 @@ const assets = await Promise.all(
           ? "integrated-local-pilot"
           : "integrated-local-rollout"
         : "not-started",
-      reviewState: selected ? "independently-reconfirmed" : "not-in-pilot",
+      reviewState: selected
+        ? isRolloutBatch6
+          ? "awaiting-independent-reconfirmation"
+          : "independently-reconfirmed"
+        : "not-in-pilot",
       approvalImpact:
         decision.decision === "audited-keep"
           ? { expected: "none", lessonCount: 0, lessonIds: [] }
@@ -273,15 +286,17 @@ const assets = await Promise.all(
             compression: { format: "WebP", quality: 88, smartSubsample: true },
             oldFileBytes: oldFileSize(before.file),
             deliveryFiles: await delivery(asset),
-            currentDecision: isRolloutBatch5
-              ? "independent-review-accepted; lapsed-only-approval-restored"
-              : isRolloutBatch4
+            currentDecision: isRolloutBatch6
+              ? "owner-authorized-local-integration; independent-review-pending"
+              : isRolloutBatch5
                 ? "independent-review-accepted; lapsed-only-approval-restored"
-                : isRolloutBatch3
+                : isRolloutBatch4
                   ? "independent-review-accepted; lapsed-only-approval-restored"
-                  : isRolloutBatch2
+                  : isRolloutBatch3
                     ? "independent-review-accepted; lapsed-only-approval-restored"
-                    : "owner-accepted; independent-review-accepted",
+                    : isRolloutBatch2
+                      ? "independent-review-accepted; lapsed-only-approval-restored"
+                      : "owner-accepted; independent-review-accepted",
           }
         : {}),
     };
@@ -312,7 +327,7 @@ const manifest = {
   productionCommit: "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   pilotBaselineCommit: baselineCommit,
   scope: ["maternelle-1 September", "maternelle-3 September"],
-  status: "rollout-batch-5-independently-reconfirmed",
+  status: "rollout-batch-6-awaiting-independent-reconfirmation",
   productionAssetsChanged: false,
   localPilotAssetsChanged: true,
   approvedLessonSemanticsChanged: false,
@@ -342,6 +357,7 @@ const manifest = {
     "Rollout batch 4 integrates only the three-frame histoire-seau-lisa sequence. The first review accepted the images and requested corrected evidence; the corrected dossier explicitly maps the rhyme to primary frame 2 and exposes every frame hash. Claude Max / Opus 5.5 then accepted all eight dependent lessons.",
     "The lapsed-only workflow restored exactly eight Batch-4 approvals with fresh digests. All 168 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain; six other story-sequence candidates remain untouched.",
     "Rollout batch 5 integrates only the four-frame histoire-kumu sequence. The first independent review accepted frames 1, 2 and 4 but requested clearer closed eyelids on Kumu in frame 3 at 256 px. Only frame 3 was redrawn; the second review explicitly accepted the complete sequence. The lapsed-only workflow restored exactly four lessons with fresh digests; all 172 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain. Five other story-sequence candidates remain untouched.",
+    "Rollout batch 6 integrates only the four-frame histoire-bibi sequence. The 12 canonical lines render as four pages of three lines and map exactly to frames 1–4. Exactly three lessons depend on it and await independent reconfirmation; four other story-sequence candidates remain untouched.",
   ],
   assets,
 };
@@ -380,6 +396,7 @@ Generated from the canonical media registry, September lessons and supplied text
 - Rollout batch 3 contains the two-frame histoire-tika sequence. Both frames and both dependent lessons were independently reconfirmed and restored with fresh digests.
 - Rollout batch 4 contains the three-frame histoire-seau-lisa sequence. The corrected evidence and all eight dependent lessons were independently accepted and restored with fresh digests. Six story candidates remain unimplemented.
 - Rollout batch 5 contains the four-frame histoire-kumu sequence. The corrected frame 3 and all four dependent lessons were independently accepted and restored with fresh digests. Five story candidates remain unimplemented.
+- Rollout batch 6 contains the four-frame histoire-bibi sequence. Exactly three dependent lessons await independent reconfirmation; four story candidates remain unimplemented.
 - Manifest SHA-256: \`${digest}\`.
 
 The supplied screenshots validate the distinction: layout and scaling are sound, while the body, rhyme and story art remains visually schematic. Shapes, counting models and isolated objects do not share that defect.

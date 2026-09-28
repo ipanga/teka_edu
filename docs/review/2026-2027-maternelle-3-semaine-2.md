@@ -130,7 +130,7 @@ l’autre — l’appareil est alors le sien._
 
 _Dire ce qu’on a fait, dans l’ordre, en phrases entières._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** L’enfant raconte, vous reformulez. Utilisez « d’abord », « ensuite », « après » pour l’aider à mettre de l’ordre. Ne demandez pas plus de trois moments.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -181,7 +181,12 @@ _Dire ce qu’on a fait, dans l’ordre, en phrases entières._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-bibi` — Bibi la chèvre, le nez dans un buisson, devant une barrière (`public/media/illustrations/histoire-bibi.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-bibi`
+
+  - Page 1 : Bibi, petite chèvre blanche avec une oreille noire, pousse la barrière du jardin et entre parmi les rangées de légumes (`public/media/illustrations/histoire-bibi-01.webp`)
+  - Page 2 : Dans le jardin, Bibi mange une feuille verte au milieu des légumes bien rangés, tandis que la barrière reste ouverte (`public/media/illustrations/histoire-bibi-02.webp`)
+  - Page 3 : Mama Lelo découvre les feuilles grignotées ; Bibi baisse la tête pendant que Mama Lelo réfléchit (`public/media/illustrations/histoire-bibi-03.webp`)
+  - Page 4 : Devant la barrière bien fermée, Mama Lelo donne un grand tas d’herbe à Bibi, qui mange son repas (`public/media/illustrations/histoire-bibi-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -1462,7 +1467,7 @@ l’autre — l’appareil est alors le sien._
 
 _Comprendre ce que ressent un personnage, et le dire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Le but n’est pas de résumer l’histoire mais de parler de ce que ressent Bibi. Nommez les émotions vous-même : content, triste, fâché, curieux.
 - **Objectifs enseignés :**
   - `LANG-S02-C03-O14` — Comprendre les émotions, les intentions et les sentiments qui animent les personnages. _(source : programme-2024-langage)_
@@ -1509,7 +1514,12 @@ _Comprendre ce que ressent un personnage, et le dire._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-bibi` — Bibi la chèvre, le nez dans un buisson, devant une barrière (`public/media/illustrations/histoire-bibi.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-bibi`
+
+  - Page 1 : Bibi, petite chèvre blanche avec une oreille noire, pousse la barrière du jardin et entre parmi les rangées de légumes (`public/media/illustrations/histoire-bibi-01.webp`)
+  - Page 2 : Dans le jardin, Bibi mange une feuille verte au milieu des légumes bien rangés, tandis que la barrière reste ouverte (`public/media/illustrations/histoire-bibi-02.webp`)
+  - Page 3 : Mama Lelo découvre les feuilles grignotées ; Bibi baisse la tête pendant que Mama Lelo réfléchit (`public/media/illustrations/histoire-bibi-03.webp`)
+  - Page 4 : Devant la barrière bien fermée, Mama Lelo donne un grand tas d’herbe à Bibi, qui mange son repas (`public/media/illustrations/histoire-bibi-04.webp`)
 
 - **Questions posées à l’enfant après l’écoute (3) :**
 
