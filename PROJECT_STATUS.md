@@ -73,15 +73,17 @@ standard lapsed-only mechanism restored exactly the eight affected lessons with 
 and zero stale approvals remain. The next local batch is the four-page `histoire-kumu` sequence; fresh owner
 authorization is still required before its eventual independent-review package is transmitted.
 
-Rollout batch 5 is frozen locally for independent review. The unchanged 12-line `histoire-kumu` renders as
-four three-line pages and now maps exactly to four 1200×900 WebP scenes: Kumu leaves the coop; calls beside a
-passing lizard; listens beside the leaf-eating goat and finds his mother’s voice; then shelters beneath her
-wing. Character, setting and morning continuity hold across the sequence, with no embedded text. The standard
-lapse mechanism moved exactly `m3-lang-03`, `m3-lang-04`, `m3-lang-09` and `m3-lang-17` to `review`; September is
-172 approved / 4 review and all other 172 lesson records remain byte-for-byte unchanged from `e5c8398`. The
-four-width rollout E2E verifies page order, loaded 1200 px images and zero viewport/dialog overflow; phone and
-desktop inspection found no visual or interaction defect. The Kumu-only dossier and comparison sheet are ready
-locally. They must not be sent to Claude Max until the owner gives fresh explicit authorization.
+The first independent Batch-5 review returned `accepted-with-modifications`: frames 1, 2 and 4, the unchanged
+12-line / four-page mapping and the four expected lapses passed, while frame 3 needed Kumu's closed eyes to read
+more clearly at 256 px. Independent inspection confirmed that the original eyelid was too fine at that size.
+Only frame 3 was regenerated; Kumu now visibly closes both eyes and raises his head toward the coop while the
+leaf-eating goat, white hen, coop, path, warm morning and text-free painted scene remain coherent. The corrected
+1200×900 WebP SHA-256 is `3d55d4687ed29f49b0fb5f6934edfb3e918cbba295464f1bfb15ddeb99e7dd95`.
+The dossier generator also now names image bytes, accessible descriptions and sequence page mappings as inputs
+to the approval fingerprint. No approval was restored: September remains 172 approved / 4 review, exactly
+`m3-lang-03`, `m3-lang-04`, `m3-lang-09` and `m3-lang-17` remain at `review`, and the 172 unaffected records are
+unchanged from `e5c8398`. Corrected evidence is frozen locally and must not be sent to Claude Max without fresh
+owner authorization.
 
 ## Independent September visual/UX review — 2026-09-26
 

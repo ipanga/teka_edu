@@ -5,12 +5,44 @@
 September Rich-Media Visual Upgrade
 
 **Current phase:** the controlled pilot and rollout batches 1–4 are independently accepted and fully
-reapproved. Rollout batch 5 integrates only the four-page `histoire-kumu` sequence; exactly four dependent
-lessons are at `review`, 172 remain approved, and all 172 unaffected lesson records remain byte-for-byte
-unchanged. The Kumu review package is frozen locally and awaits owner authorization for bounded Claude Max
-transmission. Production remains unchanged.
+reapproved. The first independent Batch-5 review accepted Kumu frames 1, 2 and 4 and requested one bounded
+frame-3 correction so Kumu's closed eyes remain unmistakable at 256 px. Only frame 3 and the evidence wording
+changed; exactly four dependent lessons remain at `review`, 172 remain approved, and all 172 unaffected lesson
+records remain byte-for-byte unchanged. Corrected evidence is frozen locally and requires fresh owner
+authorization before a second bounded Claude Max review. Production remains unchanged.
 
-## Rollout batch 5 frozen for review — 2026-09-28
+## Rollout batch 5 corrected after independent review — 2026-09-28
+
+- **Reviewer verdict:** Claude Max / Opus 5.5 returned `accepted-with-modifications`. It accepted frames 1, 2
+  and 4, the 12-line / four-page mapping, all unchanged teaching fields, the four expected lapses and the
+  sequence's overall preschool suitability. It requested only clearer closed eyelids and a listening head pose
+  for Kumu in frame 3 at the real 256 px story size.
+- **Independent verification:** the canonical third page says Kumu closes his eyes and listens. The original
+  frame contained a very fine closed eyelid, but the mark became easy to miss at 256 px. The concern was
+  accepted as a small semantic-legibility defect, not a lesson-content defect.
+- **Correction:** only `public/media/illustrations/histoire-kumu-03.webp` was regenerated. Kumu now has clearly
+  closed curved eyelids and raises his head toward the coop. The goat still eats one leaf, the white hen remains
+  beside the same coop, and the path, warm morning, 4:3 framing and text-free painted style remain coherent.
+  The corrected 1200×900 WebP SHA-256 is
+  `3d55d4687ed29f49b0fb5f6934edfb3e918cbba295464f1bfb15ddeb99e7dd95`.
+- **Evidence precision:** the dossier generator now states that image bytes, accessible descriptions and a
+  sequence's page-to-frame table all participate in the approval fingerprint. The corrected comparison sheet
+  and 3ème maternelle dossier expose the new frame-3 hash while frames 1, 2 and 4 remain unchanged.
+- **Approval integrity:** no approval was restored. September remains 172 approved / 4 review; the affected
+  lessons remain exactly `m3-lang-03`, `m3-lang-04`, `m3-lang-09` and `m3-lang-17`.
+- **Validation:** formatting, lint, typecheck, all 438 unit tests, 31-file content validation, the Webpack
+  production build, three-sentinel client-bundle scan, zero-lapse dry run and the four-width rich-media E2E
+  pass. The default Turbopack build still hits the known local worker port-binding restriction; Webpack is the
+  validated production-build fallback used by this project.
+- **Corrected isolated package:** `/tmp/teka-rollout-batch5-corrected-review` contains exactly the dossier
+  (`63aa6ada92adddff894e10a8a9532116d4c80d1fdede3bfe52a3711bf7aa88a0`), comparison sheet
+  (`ab3d057bb9b61addc1d6877f32c4190a7ff92b3ef193962e553428c2b865dc23`) and bounded prompt
+  (`dc4830e9b3f1ed79a8a32a10a6bd56a1773075ea1eb4c1f23d33567a2e929e2`).
+- **Exact resume point:** obtain fresh owner authorization for only the corrected isolated dossier, comparison
+  sheet and bounded reviewer prompt. Send nothing before that authorization. Restore approvals only after an
+  explicit `accepted` verdict on the corrected evidence.
+
+## Rollout batch 5 initial package frozen for review — 2026-09-28
 
 - **Canonical mapping:** `kumu-le-petit-poussin` contains exactly 12 unchanged lines. The renderer groups three
   story lines per page, producing exactly four pages. The registered sequence maps them one-to-one as
@@ -31,9 +63,8 @@ transmission. Production remains unchanged.
 - **Responsive QA:** the existing rollout E2E loads frames 1–4 in order and verifies natural width, decoding,
   document width and dialog width at 320×740, 768×1024, 1440×900 and 1920×1080. Phone and desktop inspection
   found no broken image, crop, distortion, overflow, adult-content leak or misleading interaction.
-- **Exact resume point:** request explicit owner authorization to send only the frozen 3ème maternelle package,
-  Batch-5 comparison sheet and bounded reviewer prompt through authenticated Claude Max. Restore no approval
-  before an explicit independent `accepted` verdict.
+- **Historical resume point:** the owner authorized this first package; the resulting review and correction are
+  recorded in the newer checkpoint above.
 
 ## Rollout batch 4 independently accepted — 2026-09-27
 

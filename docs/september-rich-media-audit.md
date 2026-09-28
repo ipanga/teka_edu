@@ -14,8 +14,8 @@ Generated from the canonical media registry, September lessons and supplied text
 - Rollout batch 2 contains two rhyme illustrations. Both assets and all nine lessons that depend on comptine-mains were independently reconfirmed; comptine-cabri is currently unused and lapsed no approval.
 - Rollout batch 3 contains the two-frame histoire-tika sequence. Both frames and both dependent lessons were independently reconfirmed and restored with fresh digests.
 - Rollout batch 4 contains the three-frame histoire-seau-lisa sequence. The corrected evidence and all eight dependent lessons were independently accepted and restored with fresh digests. Six story candidates remain unimplemented.
-- Rollout batch 5 contains the four-frame histoire-kumu sequence. Exactly four dependent lessons await independent reconfirmation; five story candidates remain unimplemented.
-- Manifest SHA-256: `e42a828bdc3940343b3a62a5de517f674ec9745b5c8cd399e1e7dc58d6998dae`.
+- Rollout batch 5 contains the four-frame histoire-kumu sequence. The corrected frame 3 makes Kumu's closed eyes legible at 256 px; exactly four dependent lessons remain at review pending fresh independent acceptance. Five story candidates remain unimplemented.
+- Manifest SHA-256: `eabfbd29fc6f39bbbbc27fc660f232c000657bc47c2fd503054355f50b9acb01`.
 
 The supplied screenshots validate the distinction: layout and scaling are sound, while the body, rhyme and story art remains visually schematic. Shapes, counting models and isolated objects do not share that defect.
 

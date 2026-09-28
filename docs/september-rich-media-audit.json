@@ -5,7 +5,7 @@
   "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   "pilotBaselineCommit": "cbc1cf3",
   "scope": ["maternelle-1 September", "maternelle-3 September"],
-  "status": "rollout-batch-5-awaiting-independent-reconfirmation",
+  "status": "rollout-batch-5-corrected-awaiting-independent-reconfirmation",
   "productionAssetsChanged": false,
   "localPilotAssetsChanged": true,
   "approvedLessonSemanticsChanged": false,
@@ -40,7 +40,7 @@
     "The lapsed-only workflow restored exactly two Batch-3 approvals with fresh digests. All 174 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
     "Rollout batch 4 integrates only the three-frame histoire-seau-lisa sequence. The first review accepted the images and requested corrected evidence; the corrected dossier explicitly maps the rhyme to primary frame 2 and exposes every frame hash. Claude Max / Opus 5.5 then accepted all eight dependent lessons.",
     "The lapsed-only workflow restored exactly eight Batch-4 approvals with fresh digests. All 168 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain; six other story-sequence candidates remain untouched.",
-    "Rollout batch 5 integrates only the four-frame histoire-kumu sequence. The 12 canonical lines render as four pages of three lines and map exactly to frames 1–4. Exactly four lessons depend on it and await independent reconfirmation; five other story-sequence candidates remain untouched."
+    "Rollout batch 5 integrates only the four-frame histoire-kumu sequence. The first independent review accepted frames 1, 2 and 4 but requested clearer closed eyelids on Kumu in frame 3 at 256 px. Only frame 3 was redrawn; its corrected SHA-256 is 3d55d4687ed29f49b0fb5f6934edfb3e918cbba295464f1bfb15ddeb99e7dd95. Exactly four lessons remain at review pending fresh independent acceptance; five other story-sequence candidates remain untouched."
   ],
   "assets": [
     {
@@ -2122,7 +2122,7 @@
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
       "implementationState": "integrated-local-rollout",
-      "reviewState": "awaiting-independent-reconfirmation",
+      "reviewState": "corrected-awaiting-independent-reconfirmation",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 4,
@@ -2157,14 +2157,14 @@
         },
         {
           "file": "public/media/illustrations/histoire-kumu-03.webp",
-          "bytes": 258396
+          "bytes": 220702
         },
         {
           "file": "public/media/illustrations/histoire-kumu-04.webp",
           "bytes": 265564
         }
       ],
-      "currentDecision": "owner-authorized; independent-review-pending"
+      "currentDecision": "independent-review-requested-one-frame-correction; corrected-evidence-pending"
     },
     {
       "id": "histoire-nsimba",

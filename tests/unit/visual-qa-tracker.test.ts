@@ -70,7 +70,12 @@ describe("the final September visual QA tracker", () => {
     if (!qa.frozen) return;
     const pendingLessons = new Set(
       richMediaPilot.assets
-        .filter((asset) => asset.reviewState === "awaiting-independent-reconfirmation")
+        .filter((asset) =>
+          [
+            "awaiting-independent-reconfirmation",
+            "corrected-awaiting-independent-reconfirmation",
+          ].includes(asset.reviewState),
+        )
         .flatMap((asset) => asset.approvalImpact.lessonIds),
     );
     for (const asset of data.media) {
@@ -81,7 +86,11 @@ describe("the final September visual QA tracker", () => {
         `${asset.id} moved outside the controlled rollout`,
       ).toContain(pilot?.implementationState);
       expect(
-        ["independently-reconfirmed", "awaiting-independent-reconfirmation"],
+        [
+          "independently-reconfirmed",
+          "awaiting-independent-reconfirmation",
+          "corrected-awaiting-independent-reconfirmation",
+        ],
         `${asset.id} has no controlled review state`,
       ).toContain(pilot?.reviewState);
       expect(pilot?.afterHash, `${asset.id} does not match the audited pilot hash`).toBe(

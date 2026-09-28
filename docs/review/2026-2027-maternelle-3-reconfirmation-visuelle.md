@@ -42,7 +42,7 @@ compter), 128 px (une carte de mot), 256 px (l’image d’une histoire).
 | --------------- | ------- | -------------------------------------------------- | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `histoire-kumu` | 1       | `public/media/illustrations/histoire-kumu-01.webp` | `sha256:027ee3b6119faf82c9b58d974846b73e5531b71d5309516b0d8446715f9542be` | Kumu, petit poussin jaune, sort seul du poulailler ouvert tandis que sa maman poule reste derrière lui, près d’un grand manguier et d’un grand seau bleu |
 | `histoire-kumu` | 2       | `public/media/illustrations/histoire-kumu-02.webp` | `sha256:46c72911eec6b4765ccfa37e66ced474e13db28cd5c8144ec20d9517755723b9` | Loin de la maison, Kumu s’arrête sur le chemin et appelle tandis qu’un petit lézard passe en courant                                                     |
-| `histoire-kumu` | 3       | `public/media/illustrations/histoire-kumu-03.webp` | `sha256:f1762fda23ece1bd3c7ce0460b50e49f4b6b299c55b29ba6e2db820cb7d6755a` | Une jeune chèvre mange une feuille pendant que Kumu ferme les yeux et écoute sa maman poule appeler près du poulailler                                   |
+| `histoire-kumu` | 3       | `public/media/illustrations/histoire-kumu-03.webp` | `sha256:3d55d4687ed29f49b0fb5f6934edfb3e918cbba295464f1bfb15ddeb99e7dd95` | Une jeune chèvre mange une feuille pendant que Kumu ferme les yeux et écoute sa maman poule appeler près du poulailler                                   |
 | `histoire-kumu` | 4       | `public/media/illustrations/histoire-kumu-04.webp` | `sha256:3c3a60bdd2fc1913b8394fb8643fa98a545a51ff91fb11d25abf56282b57b13a` | Devant le poulailler, Kumu se blottit au chaud sous l’aile ouverte de sa maman poule et la regarde                                                       |
 
 L’empreinte d’approbation ne se limite pas au hash principal affiché dans le tableau des
@@ -105,8 +105,9 @@ de 3 lignes ; une comptine tient sur une seule page.
 
 Pour chaque ligne : aucun texte lu à l’enfant, aucun texte lu à l’adulte, aucun objectif et
 aucune progression n’a changé (vérifié avant l’écriture de ce document). **La seule raison**
-du changement d’empreinte est la ligne « image » : ses octets ont changé, et l’empreinte d’une
-approbation couvre les octets de chaque image montrée (ISSUE-026, ADR-048).
+du changement d’empreinte est la présentation visuelle : les octets des images, leurs descriptions
+accessibles et, pour une séquence, sa table page-cadre participent à l’empreinte couverte par
+l’approbation (ISSUE-026, ADR-048).
 Pour une séquence, les colonnes « empreinte » ci-dessous abrègent le hash du cadre principal ;
 la section « Séquences des histoires » donne tous les SHA-256 et explique l’empreinte complète.
 
