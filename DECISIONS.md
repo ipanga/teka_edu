@@ -1443,3 +1443,31 @@ content, while shapes and diagrams stay exact and inexpensive. Painted assets ar
 so each review records file sizes and checks real phone and desktop screens. This architecture does
 not authorize the remaining September candidates: the controlled five-asset pilot must receive the
 owner’s visual decision before any wider rollout.
+
+---
+
+## ADR-050 — Supported devices are phones, tablets, and laptops/MacBooks
+
+**Status:** Accepted · **Date:** 2026-09-28 · **Supersedes:** the TV/projection portions of the
+original plan and earlier device assumptions
+
+**Context:** Early planning treated projected television layouts as a target. The product owner has
+now narrowed the maintained product surface to devices families actually used to run Teka Edu:
+phones, tablets, and laptops/MacBooks. Keeping TV in current tests and acceptance language would
+create a support obligation that the product no longer has. Historical review evidence remains a
+truthful record of what was tested at the time and must not be rewritten.
+
+**Decision:** Teka Edu's supported device classes are **phones, tablets, and laptops/MacBooks**.
+TV and Smart TV are explicitly outside the supported-device scope and must not be introduced into
+acceptance, regression, release-readiness, pedagogical-media, or future implementation requirements
+unless the product owner explicitly reverses this decision.
+
+A 1280–1440 px browser viewport represents a laptop/MacBook in active tests. Tablet portrait and
+landscape variants may both be tested. Existing responsive CSS may continue to render at larger
+widths; incidental rendering does not create TV support. Historical screenshots, review manifests,
+release records, and archived audit tooling retain their original labels because they document past
+work rather than current requirements.
+
+**Consequences:** Active responsive tests and reusable audit tools cover phone, tablet, and
+laptop/MacBook only. Current project documentation uses those names. No ordinary responsive CSS is
+removed solely because it also works on a wider display.

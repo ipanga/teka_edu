@@ -6,10 +6,19 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-28
-Branch:     codex/september-rich-media-pilot; controlled rollout local checkpoint
-Commit:     main 51c83a22 remains production; Batch 4 accepted checkpoint e5c8398
-Updated by: Codex technical lead
+Branch:     codex/september-rich-media-pilot (pushed as backup); Claude Code handoff complete
+Commit:     main 51c83a22 remains production; handoff commit on top of Batch 7 freeze f62356b
+Updated by: Claude Code
 ```
+
+## Supported devices — current policy
+
+ADR-050 supersedes the former TV/projection assumption. The supported matrix is exactly **phone,
+tablet, and laptop/MacBook**. Active Playwright tests and reusable responsive audit scripts use
+those device classes; a 1280–1440 px browser viewport represents laptop/MacBook. TV and Smart TV
+are outside acceptance, regression, release-readiness and media-review scope. Historical evidence
+that records past TV checks remains unchanged as an accurate record and creates no current support
+obligation.
 
 ## September rich-media visual upgrade — 2026-09-27
 
@@ -100,8 +109,12 @@ quantities remain legible in the 256 px contact sheet and responsive application
 `m3-lang-06`, `m3-lang-12` and `m3-lang-19` moved to `review`; September is 173 approved / 3 review with 173
 distinct standing digests, zero additional lapses and all 173 unaffected records byte-for-byte unchanged from
 the accepted Batch-6 state. Formatting, lint, typecheck, 438 tests, content validation, Webpack build,
-three-sentinel bundle scan and four-width E2E pass. The isolated three-file review package is ready locally and
-must not be sent to Claude Max without fresh owner authorization. Seventeen of twenty rich-media candidates are
+three-sentinel bundle scan and the then-current four-width E2E pass. The isolated three-file review package is
+ready locally. The owner explicitly authorized its bounded Claude Max review on 2026-09-28, but automatic
+approval review blocked transmission before any file was sent; Batch 7 therefore remains unreviewed and no
+approval was restored. Claude Code took over on 2026-09-28, re-verified every count above, revalidated on
+phone, tablet and laptop/MacBook (42 E2E passed, 9 production-only skips) and committed the handoff; the owner
+will run the Batch 7 review in a separate fresh Claude Code session. Seventeen of twenty rich-media candidates are
 integrated, sixteen are independently complete, seven story sequences are integrated, and the three untouched
 stories are `histoire-pluie`, `histoire-cailloux` and `histoire-malo`. Production remains unchanged.
 
@@ -399,7 +412,8 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 1. **1ère maternelle**: the full 2026–2027 annual progression first, then September daily lessons only. The routing, the renderers and the annual-plan machinery are level-agnostic, so it is content plus one annual plan — then the review gate.
 2. **Re-review of September Week 1** (ADR-047). The corrections materially changed the pedagogy, so the regenerated package goes back for a second pass before Week 1 can be recorded as accepted. Weeks 2–5 have not been reviewed at all.
 3. **October and beyond for 3ème maternelle**, once September has completed the gate and been tested by real families — authoring a second month before either would multiply any mistake by two.
-4. **TV presentation mode** and the offline service worker (`docs/PHASE3_RENDERER_PLAN.md`).
+4. **Offline service worker** (`docs/PHASE3_RENDERER_PLAN.md`). TV/Smart TV is explicitly out of scope
+   under ADR-050.
 
 ### Deferred — production (not in the current phase, ADR-027)
 

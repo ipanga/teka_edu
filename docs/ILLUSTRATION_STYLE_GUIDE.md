@@ -52,8 +52,8 @@ square).
 - Warm, simple proportions: a large round head, a body about one and a half heads tall, limbs as
   capsules. Credible, never realistic.
 - A face is two dot eyes and one small mouth, **in proportion to the eyes** (`face()` scales the
-  mouth's line to the eye radius). A 6 px smile under small eyes reads as a beard at television
-  size — the defect the final QA found on Lisa and Nsimba.
+  mouth's line to the eye radius). A 6 px smile under small eyes reads as a beard at large display
+  sizes — the defect the final QA of 2026-09-23 found on Lisa and Nsimba at the TV width then tested.
 - Skin is the warm brown of the palette, because the children in Teka Edu's stories live in
   Kinshasa. Hair is the ink colour; girls and boys differ by hair and clothes, never by
   stereotype.
@@ -102,7 +102,7 @@ it does not change what the child must recognise.
 ## Scale
 
 Every picture is checked at 72 px (a counting row), 128 px (a word card), 256 px (a story), and
-on the child's full screen at television size, where it may reach 480 px. `npm run media:sheet`
+on the child's full screen at laptop/MacBook size, where it may reach 480 px. `npm run media:sheet`
 renders the first three for any changed picture; screenshots of the session cover the last.
 
 ## Motion

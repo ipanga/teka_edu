@@ -44,8 +44,9 @@ return. Parent view retains separate “La part de l’enfant” and “Pour vou
 and playing are different actions; clarify wording without changing their behavior.
 
 Use option-count-aware grids. At 320 px, two recognition choices must fit without horizontal
-scroll. At 1920×1080, two or three choices should occupy the central stage rather than a portion
-of a four-column row. Target 280–360 px pictures for sparse choices and 36 px key labels on TV.
+scroll. On a 1440×900 laptop/MacBook viewport, two or three choices should occupy the central
+stage rather than a portion of a four-column row. Target 280–360 px pictures for sparse choices
+and clear key labels on laptops.
 For many options preserve enough room to distinguish each shape; scrolling remains preferable
 to clipped content. Large-screen narrative may place image and text side by side, while phones
 stack them. Never truncate approved instructions or story text to fit a design.
@@ -68,8 +69,8 @@ image generation, then be optimized and committed locally with provenance and ex
 Do not hotlink. Preserve the canonical generator for generated SVG. A draft image outside the
 registry does not lapse approval; integrating it does and must trigger the existing lapse workflow.
 
-Inspect each replacement at 72, 128, 256 and TV size, with labels covered, then in actual affected
-activities. Produce readable before/after sheets and an explicit affected-lesson list. Do not
+Inspect each replacement at 72, 128 and 256 px, then in actual affected activities on phone,
+tablet, and laptop/MacBook. Produce readable before/after sheets and an explicit affected-lesson list. Do not
 refresh approval digests. No replacement is accepted merely because it generated successfully.
 If the required quality is unavailable, retain the baseline and attach the precise brief; label
 that batch pending rather than shipping a placeholder or claiming completion.

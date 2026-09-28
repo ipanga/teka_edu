@@ -67,7 +67,7 @@ const ground = (cx = 100, cy = 176, rx = 66, ry = 9): string =>
 /** Two dot eyes and a small smile. People and animals only; never on an object or a shape. */
 const face = (cx: number, cy: number, spread = 16, r = 4.5, mouth: "smile" | "o" = "smile") => {
   // The mouth scales with the eyes. A 6 px smile under 4 px eyes on a small head read as a beard
-  // at television size (final visual QA, 2026-09-23); now it is a thin line in proportion.
+  // at the TV width tested in the final visual QA (2026-09-23); now it is a thin line in proportion.
   const w = Math.max(2.5, r * 0.75);
   const half = spread * 0.36;
   const dy = r * 2.4;

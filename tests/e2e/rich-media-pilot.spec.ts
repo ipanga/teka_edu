@@ -11,8 +11,9 @@ const viewports = [
   { name: "phone-320", width: 320, height: 740 },
   { name: "phone-390", width: 390, height: 844 },
   { name: "phone-430", width: 430, height: 932 },
-  { name: "desktop-1280", width: 1280, height: 900 },
-  { name: "desktop-1440", width: 1440, height: 900 },
+  { name: "tablet-768", width: 768, height: 1024 },
+  { name: "laptop-macbook-1280", width: 1280, height: 900 },
+  { name: "laptop-macbook-1440", width: 1440, height: 900 },
 ];
 
 const cases = [

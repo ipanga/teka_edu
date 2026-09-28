@@ -29,6 +29,8 @@ Read this file first in every session. It holds **stable context and working rul
 | `docs/REAL_SESSION_TESTING.md`                  | Running one real session with a child, and recording what happened                           |
 | `docs/RESUMABLE_WORKFLOW.md`                    | How a long task survives an interruption; checkpoints, Git, recovery                         |
 | `docs/work/ACTIVE_TASK.md`                      | The task in progress: what is done, what remains, the exact next action                      |
+| `docs/handoff/CODEX_TO_CLAUDE_CODE_HANDOFF.md`  | Durable September state and exact Claude Code continuation instructions                      |
+| `docs/media/SEPTEMBER_RICH_MEDIA_HANDOFF.md`    | Durable inventory and review state for every September media candidate                       |
 | `docs/september-illustration-upgrade-plan.md`   | September visual upgrade: strategy, illustration/motion/audio style system, batches          |
 | `docs/september-illustration-audit.md`          | Generated audit of every September activity (`npm run visual:audit`)                         |
 | `docs/september-illustration-progress.md`       | Running log of the visual upgrade, and every child-facing wording change                     |
@@ -80,7 +82,7 @@ Keep this table in sync with the repository. Mark a row **Implemented** only whe
 | Home / class selection | `/` lists the three maternelle classes; `/maternelle/[niveau]/…` (ADR-044)                                    | Implemented (1ère and 3ème have lessons)                   |
 | Parent session UI      | `/maternelle/<c>/seance/[day]`, `/calendrier` + `components/session/` (ADR-039)                               | Implemented (September, 3ème maternelle)                   |
 | Renderer families      | `components/session/ActivityRenderer.tsx`: 15 activity kinds → 10 screens                                     | Implemented, with interaction where it teaches             |
-| Media                  | `content/media/registry.json` + `public/media/*.svg`, by stable id (ADR-042)                                  | Implemented (49 assets, one illustration system, $0)       |
+| Media                  | `content/media/registry.json` + tracked SVG/WebP under `public/media/`, by stable id (ADR-042/049)            | Implemented (51 registered assets, mixed SVG/WebP, $0)     |
 | Audio                  | Same registry; recorded human French only, never autoplay (ADR-046); a word finds its recording by transcript | Architecture implemented, **0 recordings**                 |
 | Annual scope/sequence  | `domain/programme/annual-plan.ts` + `content/programmes/**-annual-plan.json`                                  | Implemented (3ème 162, 1ère 116, 189 days)                 |
 | Supplied texts         | `content/texts/` — stories and rhymes, so no lesson needs an outside book                                     | Implemented (14 Teka Edu originals)                        |
@@ -250,6 +252,10 @@ feature/*  -> develop  -> main
 
 ## Child UX rules
 
+- **Supported devices are phone, tablet, and laptop/MacBook only** (ADR-050). TV and Smart TV are
+  outside the product, acceptance, regression, release-readiness and media-review scope. A layout
+  that happens to render at a wider size creates no support obligation.
+
 - The child-facing UI is in French by default.
 - Large touch targets, very little text to read, strong visual support, and — where a human
   recording exists — audio for words. Never synthesised speech for a word the child must
@@ -259,7 +265,8 @@ feature/*  -> develop  -> main
 - No ads, no social features, no chat, no public profiles, no dark patterns, no infinite scroll, and no competitive leaderboards.
 - Collect no child data beyond: local ID, nickname, class, optional primary language, and French support level.
 - The parent area is separate from the child area.
-- Keep TV/presentation mode working: fullscreen, large text and images, keyboard/mouse controls for the parent.
+- Validate responsive behavior on phone, tablet, and laptop/MacBook. Laptop browser tests may use
+  an existing desktop-width viewport, but their semantics and reports must say laptop/MacBook.
 
 ## Engineering rules
 
@@ -277,6 +284,15 @@ feature/*  -> develop  -> main
 12. Update the documentation after significant implementation changes.
 13. Avoid very large files. Record non-obvious decisions in `DECISIONS.md`.
 14. Flag uncertain pedagogical content for review instead of presenting it as final.
+15. Preserve every accepted or integrated WebP byte in its tracked `public/media/` path. Never
+    replace reviewed ImageGen artwork with a lower-quality SVG without a demonstrated defect.
+16. During a Claude-only period, author SVG only for visuals that vector art can communicate
+    clearly: shapes, counts, objects, matching, tracing and simple diagrams/scenes. Mark a complex
+    narrative illustration for later ImageGen enhancement when SVG would materially weaken it.
+    Never call a paid image API or add a runtime image-generation dependency.
+17. Any media byte, accessible description or story page mapping change follows ADR-048: compute
+    impact, lapse only affected approvals, validate, freeze evidence, obtain explicit authorization
+    before external review, and restore only after an exact independent `accepted` verdict.
 
 ## Resumable work (read this before any long task)
 
@@ -288,6 +304,11 @@ remember progress.** When the checkpoint and the repository disagree, the reposi
 test result `STALE` in the same edit that invalidates it. Before re-running a migration or a
 deployment, check the actual remote state — an interrupted session usually did not interrupt the
 remote operation.
+
+For the September rich-media continuation, also read
+`docs/handoff/CODEX_TO_CLAUDE_CODE_HANDOFF.md`,
+`docs/media/SEPTEMBER_RICH_MEDIA_HANDOFF.md`, and recent Git history before changing files. Update
+the active checkpoint and durable handoff before a long task ends or context is compacted.
 
 ## Documentation protocol
 

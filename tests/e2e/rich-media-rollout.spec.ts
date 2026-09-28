@@ -10,8 +10,7 @@ const evidence = path.resolve(
 const viewports = [
   { name: "phone", width: 320, height: 740 },
   { name: "tablet", width: 768, height: 1024 },
-  { name: "desktop", width: 1440, height: 900 },
-  { name: "tv", width: 1920, height: 1080 },
+  { name: "laptop-macbook", width: 1440, height: 900 },
 ];
 
 const cases = [

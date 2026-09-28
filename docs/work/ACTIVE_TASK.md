@@ -4,11 +4,49 @@
 
 September Rich-Media Visual Upgrade
 
-**Current phase:** the controlled pilot and rollout batches 1–6 are independently accepted and fully
-reapproved. Rollout batch 7 integrates exactly the four-page `histoire-marche` sequence. Exactly three
-dependent lessons are at `review`, 173 remain approved with 173 distinct standing digests, and all 173
-unaffected lesson records remain byte-for-byte unchanged. The Marché review package is frozen locally and
-awaits fresh owner authorization for bounded Claude Max transmission. Production remains unchanged.
+**Current phase:** the Claude Code handoff is complete and checkpointed; Batch 7 awaits an independent review
+run by the owner in a separate fresh Claude Code session. Nothing is deployed and October is not started. The controlled
+pilot and rollout batches 1–6 are independently accepted and fully reapproved. Batch 7 integrates the four-page
+`histoire-marche` sequence; exactly `m3-lang-06`, `m3-lang-12` and `m3-lang-19` remain at `review`, while 173
+lessons remain approved with 173 distinct standing digests and all 173 unaffected records remain byte-for-byte
+unchanged. The owner authorized the exact three-file Claude Max review, but automatic approval review blocked
+the transmission before any file was sent. Production remains unchanged.
+
+## Durable Claude Code handoff — 2026-09-28
+
+- **Supported devices:** ADR-050 supersedes TV/projection requirements. The active matrix is exactly phone,
+  tablet and laptop/MacBook. Active Playwright tests, reusable responsive audit scripts, source comments and
+  current product/media documentation use those classes. Historical TV-labelled evidence and dated checkpoint
+  records remain untouched because they describe past work.
+- **Media preservation:** all 51 registry assets resolve to 69 current runtime files: 35 WebPs and 34 SVGs.
+  Every required file is tracked, every SHA-256 matches, and no runtime asset depends on `/tmp`, chat storage,
+  ImageGen storage or an untracked master. Runtime files total 7,597,868 bytes; the largest is
+  `histoire-bibi-04.webp` at 416,538 bytes. Git LFS is not configured and is not required.
+- **Durable documents:** `docs/media/SEPTEMBER_RICH_MEDIA_HANDOFF.md` inventories every candidate, and
+  `docs/handoff/CODEX_TO_CLAUDE_CODE_HANDOFF.md` records the project state, continuation workflow, safety
+  invariants, remaining candidates and exact Claude Code resume procedure.
+- **Remaining stories:** canonical order is `histoire-pluie`, `histoire-cailloux`, `histoire-malo`. Each renders
+  as four pages under the real three-lines-per-page renderer rule. The previous three-frame estimates for Pluie
+  and Cailloux were corrected in the audit generator. Do not begin any of them before Batch 7 is stable.
+- **Batch 7 review blocker:** the authenticated CLI was confirmed as `Claude Max account` with
+  `ANTHROPIC_API_KEY` removed. Automatic approval review rejected the authorized external send because it did
+  not recognize the attached authorization as sufficiently visible. No file was transmitted, no verdict exists,
+  and no approval was restored. Its decision prohibits retrying or routing around the rejection.
+- **Claude Code takeover (2026-09-28):** recovered all 24 modified and 2 untracked Codex files; nothing was
+  missing. Codex had already corrected the stale body-card alt text and Lisa later-page assertions. Claude Code
+  restored the truthful historical wording of the 2026-09-23 "beard" finding (seen at the TV width then tested)
+  in `tools/media/build.ts` and the illustration style guide, renamed the 1280 px parent-session test to
+  laptop/MacBook, and committed the frozen Batch 7 reviewer prompt byte-identically under `docs/review/prompts/`.
+- **Validation (2026-09-28, after all handoff edits):** format check, lint, typecheck, 438/438 unit tests,
+  31-file content validation, production build, sentinel-build client-bundle scan (14 files, 3 server-only values
+  absent) and `review:lapse -- --dry-run=true` (0 lapses) pass. Full Playwright: 42 passed, 0 failed, 9 skipped
+  (`production-public.spec.ts`, which needs `PLAYWRIGHT_BASE_URL`), across phone 320/360/390/430, tablet 768
+  portrait / 1024 landscape and laptop/MacBook 1280/1440. Approval integrity and media hashes re-verified.
+- **Repository checkpoint:** branch `codex/september-rich-media-pilot`; handoff commit
+  `chore: complete durable Claude Code handoff` on top of `f62356b`, pushed to `origin` as a backup.
+- **Exact resume point:** the owner runs the Batch 7 review in a fresh Claude Code session with exactly the three
+  files listed in `docs/handoff/CODEX_TO_CLAUDE_CODE_HANDOFF.md`, then relays the verdict. Restore nothing and
+  begin no other story until then.
 
 ## Rollout batch 7 frozen for review — 2026-09-28
 

@@ -61,8 +61,8 @@ const storyFrames = {
   "histoire-mangue": 3,
   "histoire-bibi": 4,
   "histoire-marche": 4,
-  "histoire-pluie": 3,
-  "histoire-cailloux": 3,
+  "histoire-pluie": 4,
+  "histoire-cailloux": 4,
   "histoire-malo": 4,
 };
 

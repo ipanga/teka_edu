@@ -82,11 +82,11 @@ test.describe("home and class selection", () => {
     await expect(page.getByRole("button", { name: "Revenir au guide du parent" })).toBeVisible();
   });
 
-  test("the home screen works from a phone to a television", async ({ page }) => {
+  test("the home screen works on phone, tablet, and laptop/MacBook", async ({ page }) => {
     for (const viewport of [
       { width: 360, height: 780 },
       { width: 768, height: 1024 },
-      { width: 1920, height: 1080 },
+      { width: 1440, height: 900 },
     ]) {
       await page.setViewportSize(viewport);
       await page.goto("/");

@@ -55,7 +55,7 @@ type PictureSize = "sm" | "md" | "lg";
 const PICTURE: Record<PictureSize, { px: number; parent: string; child: string }> = {
   sm: { px: 80, parent: "max-w-20 sm:max-w-24", child: "max-w-24 sm:max-w-28 xl:max-w-36" },
   md: { px: 144, parent: "max-w-36 sm:max-w-44", child: "max-w-44 sm:max-w-52 xl:max-w-72" },
-  // On a television the story picture is what the whole room looks at: it may take the width.
+  // On a laptop/MacBook the story picture can use the available child-view width.
   lg: { px: 256, parent: "max-w-60 sm:max-w-72", child: "max-w-72 sm:max-w-96 xl:max-w-[30rem]" },
 };
 
@@ -862,7 +862,7 @@ function WordCards({ activity }: { activity: SessionActivity }) {
     <div className="flex flex-col gap-4">
       <ul
         className={
-          // A two-word lesson on a television should not be two small cards in a corner.
+          // A two-word lesson on a laptop/MacBook should not be two small cards in a corner.
           childView ? "teka-word-grid justify-center" : "grid grid-cols-2 gap-3 sm:grid-cols-3"
         }
         aria-label="Les mots"

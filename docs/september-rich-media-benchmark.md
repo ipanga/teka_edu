@@ -84,5 +84,6 @@ respectful Congolese children or context where the approved story identifies the
 ## Owner gate
 
 The next implementation batch should begin only after the owner accepts the visual direction and the proposed
-SVG/WebP boundary. Integration will then proceed in small groups with responsive phone/desktop review and the
+SVG/WebP boundary. Integration will then proceed in small groups with responsive phone, tablet, and
+laptop/MacBook review and the
 existing lapse/reconfirmation mechanism.
