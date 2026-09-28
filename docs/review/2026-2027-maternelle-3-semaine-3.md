@@ -812,7 +812,7 @@ l’autre — l’appareil est alors le sien._
 
 _Ranger les mots par catégories : ce qui se mange, ce qui sert à écrire, ce qui se porte._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Ranger des mots par catégories est difficile et très utile : c’est ce qui fait qu’un mot nouveau trouve sa place. Dites toujours pourquoi deux mots vont ensemble.
 - **Objectifs enseignés :**
   - `LANG-S01-C01-O02` — Organiser les mots en catégorie et en réseau. _(source : programme-2024-langage)_
@@ -860,7 +860,12 @@ _Ranger les mots par catégories : ce qui se mange, ce qui sert à écrire, ce q
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-marche` — Un panier de marché avec des tomates, un régime de bananes et un oignon (`public/media/illustrations/histoire-marche.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-marche`
+
+  - Page 1 : Mama Lelo et Ama arrivent ensemble au marché parmi les tomates rouges, les feuilles vertes et les bananes jaunes (`public/media/illustrations/histoire-marche-01.webp`)
+  - Page 2 : Au marché, Mama Lelo et Ama comptent cinq tomates et trois oignons clairement séparés dans un plateau (`public/media/illustrations/histoire-marche-02.webp`)
+  - Page 3 : Dans la cour de la maison, Mama Lelo et Ama déposent ensemble le panier près de cinq tomates et trois oignons triés (`public/media/illustrations/histoire-marche-03.webp`)
+  - Page 4 : Mama Lelo félicite Ama, fière devant les cinq tomates et les trois oignons rangés en deux groupes (`public/media/illustrations/histoire-marche-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (from-5) :**
 

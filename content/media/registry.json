@@ -597,12 +597,47 @@
     {
       "id": "histoire-marche",
       "kind": "illustration",
-      "file": "illustrations/histoire-marche.svg",
-      "alt": "Un panier de marché avec des tomates, un régime de bananes et un oignon",
+      "file": "illustrations/histoire-marche-01.webp",
+      "alt": "Mama Lelo et Ama arrivent ensemble au marché parmi les tomates, les feuilles vertes et les bananes",
       "tags": ["marché", "panier", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:7fbfdbccf8ea912ea13ca0e875eb4e0a61bda43ec7f9b29c10a48135d4caef6e"
+      "provenance": "Séquence de quatre illustrations peintes originales pour Teka Edu, produite avec l’outil ImageGen intégré et alignée sur les quatre pages canoniques de l’histoire lors du déploiement rich-media contrôlé de septembre 2026.",
+      "contentHash": "sha256:4188ac69de8d39f7d742ea5f257cc888067217c28f53816d8afbccd446dbcb75",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-marche-01.webp",
+            "alt": "Mama Lelo et Ama arrivent ensemble au marché parmi les tomates rouges, les feuilles vertes et les bananes jaunes",
+            "contentHash": "sha256:4188ac69de8d39f7d742ea5f257cc888067217c28f53816d8afbccd446dbcb75",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-marche-02.webp",
+            "alt": "Au marché, Mama Lelo et Ama comptent cinq tomates et trois oignons clairement séparés dans un plateau",
+            "contentHash": "sha256:0a674df545e61cb3868bf8be9fe54c1d220dad13dae7e33ada2a67f337c8bc39",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-marche-03.webp",
+            "alt": "Dans la cour de la maison, Mama Lelo et Ama déposent ensemble le panier près de cinq tomates et trois oignons triés",
+            "contentHash": "sha256:c61a2d3efeb08b7af036d979e82ed3f1f324692e3c20f43f1c9df8b7a72bf9db",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-marche-04.webp",
+            "alt": "Mama Lelo félicite Ama, fière devant les cinq tomates et les trois oignons rangés en deux groupes",
+            "contentHash": "sha256:5cb5137fb4c0a12641f185f5bd6a3f2dcedee3db556b7ca7c4615ceb423e2f00",
+            "width": 1200,
+            "height": 900
+          }
+        ],
+        "pageFrames": [0, 1, 2, 3]
+      }
     },
     {
       "id": "histoire-pluie",

@@ -25,25 +25,25 @@ toujours ce que chaque leçon enseigne (ADR-048).
 
 ## La planche avant / après
 
-![Avant / après : chaque image redessinée, aux trois tailles de l’application](media/september-rich-media-rollout-batch-6-comparison.png)
+![Avant / après : chaque image redessinée, aux trois tailles de l’application](media/september-rich-media-rollout-batch-7-comparison.png)
 
 La planche montre chaque image aux trois tailles de l’application : 72 px (une rangée à
 compter), 128 px (une carte de mot), 256 px (l’image d’une histoire).
 
 ## Les images que cette classe montre — 1
 
-| Image           | Type         | Description avant                                           | Description après                                                                                           | Leçons de cette classe                 |
-| --------------- | ------------ | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------- |
-| `histoire-bibi` | illustration | Bibi la chèvre, le nez dans un buisson, devant une barrière | Bibi, petite chèvre blanche avec une oreille noire, pousse la barrière du jardin et entre parmi les légumes | 3 — m3-lang-05, m3-lang-09, m3-lang-13 |
+| Image             | Type         | Description avant                                                       | Description après                                                                                  | Leçons de cette classe                 |
+| ----------------- | ------------ | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| `histoire-marche` | illustration | Un panier de marché avec des tomates, un régime de bananes et un oignon | Mama Lelo et Ama arrivent ensemble au marché parmi les tomates, les feuilles vertes et les bananes | 3 — m3-lang-06, m3-lang-12, m3-lang-19 |
 
 ## Séquences des histoires
 
-| Histoire        | Page(s) | Fichier                                            | SHA-256                                                                   | Description exacte de la scène                                                                                         |
-| --------------- | ------- | -------------------------------------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `histoire-bibi` | 1       | `public/media/illustrations/histoire-bibi-01.webp` | `sha256:1e15939369feba99abb39e6b32d2d5b745638601d7e578935479f468066e48e4` | Bibi, petite chèvre blanche avec une oreille noire, pousse la barrière du jardin et entre parmi les rangées de légumes |
-| `histoire-bibi` | 2       | `public/media/illustrations/histoire-bibi-02.webp` | `sha256:7c6c8dadd01b16a11cb38bcc3df17f633581ec8ed6f1f14669f94449e1853112` | Dans le jardin, Bibi mange une feuille verte au milieu des légumes bien rangés, tandis que la barrière reste ouverte   |
-| `histoire-bibi` | 3       | `public/media/illustrations/histoire-bibi-03.webp` | `sha256:b8f2d6bbbf0e3c54a8c06fc23147c233405afac65a0aa89465f8d68f268951ee` | Mama Lelo découvre les feuilles grignotées ; Bibi baisse la tête pendant que Mama Lelo réfléchit                       |
-| `histoire-bibi` | 4       | `public/media/illustrations/histoire-bibi-04.webp` | `sha256:7d39bca6f7dbd7181a1e492511ba4c632a0472bbbbc0916cb0710129a374db0e` | Devant la barrière bien fermée, Mama Lelo donne un grand tas d’herbe à Bibi, qui mange son repas                       |
+| Histoire          | Page(s) | Fichier                                              | SHA-256                                                                   | Description exacte de la scène                                                                                      |
+| ----------------- | ------- | ---------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `histoire-marche` | 1       | `public/media/illustrations/histoire-marche-01.webp` | `sha256:4188ac69de8d39f7d742ea5f257cc888067217c28f53816d8afbccd446dbcb75` | Mama Lelo et Ama arrivent ensemble au marché parmi les tomates rouges, les feuilles vertes et les bananes jaunes    |
+| `histoire-marche` | 2       | `public/media/illustrations/histoire-marche-02.webp` | `sha256:0a674df545e61cb3868bf8be9fe54c1d220dad13dae7e33ada2a67f337c8bc39` | Au marché, Mama Lelo et Ama comptent cinq tomates et trois oignons clairement séparés dans un plateau               |
+| `histoire-marche` | 3       | `public/media/illustrations/histoire-marche-03.webp` | `sha256:c61a2d3efeb08b7af036d979e82ed3f1f324692e3c20f43f1c9df8b7a72bf9db` | Dans la cour de la maison, Mama Lelo et Ama déposent ensemble le panier près de cinq tomates et trois oignons triés |
+| `histoire-marche` | 4       | `public/media/illustrations/histoire-marche-04.webp` | `sha256:5cb5137fb4c0a12641f185f5bd6a3f2dcedee3db556b7ca7c4615ceb423e2f00` | Mama Lelo félicite Ama, fière devant les cinq tomates et les trois oignons rangés en deux groupes                   |
 
 L’empreinte d’approbation ne se limite pas au hash principal affiché dans le tableau des
 activités : `assetFingerprint` inclut la description et le SHA-256 de **chaque cadre**, puis
@@ -56,35 +56,33 @@ Ces extraits sont les mots canoniques réellement affichés dans l’application
 de juger chaque scène sans devoir consulter un autre fichier. Une histoire avance par groupes
 de 3 lignes ; une comptine tient sur une seule page.
 
-### `histoire-bibi` — Bibi, la chèvre curieuse
+### `histoire-marche` — Le marché de mama Lelo
 
-- **Page 1 — image :** `public/media/illustrations/histoire-bibi-01.webp`
-  - Description accessible : Bibi, petite chèvre blanche avec une oreille noire, pousse la barrière du jardin et entre parmi les rangées de légumes
+- **Page 1 — image :** `public/media/illustrations/histoire-marche-01.webp`
+  - Description accessible : Mama Lelo et Ama arrivent ensemble au marché parmi les tomates rouges, les feuilles vertes et les bananes jaunes
   - Texte affiché :
-    > Bibi est une chèvre blanche avec une tache noire sur l’oreille.
-    > Bibi veut toujours savoir ce qu’il y a plus loin.
-    > Un jour, elle pousse la barrière avec sa tête, et la barrière s’ouvre.
+    > Le samedi, mama Lelo va au marché, et Ama vient avec elle.
+    > Le marché, c’est plein de couleurs : le rouge des tomates, le vert des feuilles, le jaune des bananes.
+    > « Ama, dit mama Lelo, tu comptes avec moi ? »
 
-- **Page 2 — image :** `public/media/illustrations/histoire-bibi-02.webp`
-  - Description accessible : Dans le jardin, Bibi mange une feuille verte au milieu des légumes bien rangés, tandis que la barrière reste ouverte
+- **Page 2 — image :** `public/media/illustrations/histoire-marche-02.webp`
+  - Description accessible : Au marché, Mama Lelo et Ama comptent cinq tomates et trois oignons clairement séparés dans un plateau
   - Texte affiché :
-    > Bibi marche jusqu’au jardin. Dans le jardin, il y a des feuilles vertes, bien rangées.
-    > Elle mange une feuille. Puis deux. Puis trois. C’est délicieux.
-    > Mais ce jardin, c’est le jardin de mama Lelo. Et ces feuilles, ce sont ses légumes.
+    > Elles achètent des tomates : une, deux, trois, quatre, cinq. Cinq tomates dans le panier.
+    > Elles achètent des oignons : un, deux, trois. Trois oignons dans le panier.
+    > « Et maintenant, demande mama Lelo, qu’est-ce qu’il y a le plus ? Les tomates ou les oignons ? »
 
-- **Page 3 — image :** `public/media/illustrations/histoire-bibi-03.webp`
-  - Description accessible : Mama Lelo découvre les feuilles grignotées ; Bibi baisse la tête pendant que Mama Lelo réfléchit
+- **Page 3 — image :** `public/media/illustrations/histoire-marche-03.webp`
+  - Description accessible : Dans la cour de la maison, Mama Lelo et Ama déposent ensemble le panier près de cinq tomates et trois oignons triés
   - Texte affiché :
-    > Mama Lelo arrive. « Bibi ! Encore toi ! »
-    > Bibi baisse la tête. Elle sait qu’elle a fait une bêtise.
-    > Mama Lelo réfléchit. Une chèvre a besoin de manger, c’est vrai. Mais pas dans son jardin.
+    > Ama regarde. Cinq, c’est plus que trois. « Les tomates ! » dit-elle.
+    > Sur le chemin du retour, le panier est lourd. Elles le portent à deux, chacune une anse.
+    > À la maison, Ama range : les tomates avec les tomates, les oignons avec les oignons.
 
-- **Page 4 — image :** `public/media/illustrations/histoire-bibi-04.webp`
-  - Description accessible : Devant la barrière bien fermée, Mama Lelo donne un grand tas d’herbe à Bibi, qui mange son repas
+- **Page 4 — image :** `public/media/illustrations/histoire-marche-04.webp`
+  - Description accessible : Mama Lelo félicite Ama, fière devant les cinq tomates et les trois oignons rangés en deux groupes
   - Texte affiché :
-    > Alors elle coupe de l’herbe, beaucoup d’herbe, et elle la donne à Bibi.
-    > « Voilà ton repas à toi, dit-elle. Les légumes, c’est pour nous. »
-    > Depuis ce jour, Bibi a son tas d’herbe, et le jardin a sa barrière bien fermée.
+    > « Tu as bien travaillé », dit mama Lelo. Et Ama est très fière.
 
 ## Résumé
 
@@ -111,18 +109,23 @@ l’approbation (ISSUE-026, ADR-048).
 Pour une séquence, les colonnes « empreinte » ci-dessous abrègent le hash du cadre principal ;
 la section « Séquences des histoires » donne tous les SHA-256 et explique l’empreinte complète.
 
-### Semaine 2 — 2 leçon(s)
+### Semaine 2 — 1 leçon(s)
 
-| Jour | Leçon                              | Activité                               | Image           | Rôle                            | Empreinte avant | Empreinte après | Description avant                                           | Description après                                                                                           | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | ---------------------------------- | -------------------------------------- | --------------- | ------------------------------- | --------------- | --------------- | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------ | ------------ | ---------------------- |
-| 5    | `m3-lang-05` Je raconte ma journée | `m3-lang-05-a3` Le temps de lecture    | `histoire-bibi` | principale — montrée à l’enfant | `115a43f2d89d`  | `1e15939369fe`  | Bibi la chèvre, le nez dans un buisson, devant une barrière | Bibi, petite chèvre blanche avec une oreille noire, pousse la barrière du jardin et entre parmi les légumes | inchangé     | inchangé     | inchangés              |
-| 9    | `m3-lang-09` Les émotions de Bibi  | `m3-lang-09-a2` Comment se sent Bibi ? | `histoire-bibi` | principale — montrée à l’enfant | `115a43f2d89d`  | `1e15939369fe`  | Bibi la chèvre, le nez dans un buisson, devant une barrière | Bibi, petite chèvre blanche avec une oreille noire, pousse la barrière du jardin et entre parmi les légumes | inchangé     | inchangé     | inchangés              |
+| Jour | Leçon                      | Activité                            | Image             | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                       | Description après                                                                                  | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | -------------------------- | ----------------------------------- | ----------------- | ------------------------------- | --------------- | --------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------ | ------------ | ---------------------- |
+| 6    | `m3-lang-06` Écoute bien ! | `m3-lang-06-a3` Le temps de lecture | `histoire-marche` | principale — montrée à l’enfant | `7fbfdbccf8ea`  | `4188ac69de8d`  | Un panier de marché avec des tomates, un régime de bananes et un oignon | Mama Lelo et Ama arrivent ensemble au marché parmi les tomates, les feuilles vertes et les bananes | inchangé     | inchangé     | inchangés              |
 
 ### Semaine 3 — 1 leçon(s)
 
-| Jour | Leçon                           | Activité                            | Image           | Rôle                            | Empreinte avant | Empreinte après | Description avant                                           | Description après                                                                                           | Texte enfant | Texte adulte | Objectif / progression |
-| ---- | ------------------------------- | ----------------------------------- | --------------- | ------------------------------- | --------------- | --------------- | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------ | ------------ | ---------------------- |
-| 13   | `m3-lang-13` Les mots du marché | `m3-lang-13-a3` Le temps de lecture | `histoire-bibi` | principale — montrée à l’enfant | `115a43f2d89d`  | `1e15939369fe`  | Bibi la chèvre, le nez dans un buisson, devant une barrière | Bibi, petite chèvre blanche avec une oreille noire, pousse la barrière du jardin et entre parmi les légumes | inchangé     | inchangé     | inchangés              |
+| Jour | Leçon                                   | Activité                            | Image             | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                       | Description après                                                                                  | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | --------------------------------------- | ----------------------------------- | ----------------- | ------------------------------- | --------------- | --------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------ | ------------ | ---------------------- |
+| 12   | `m3-lang-12` Les mots qui vont ensemble | `m3-lang-12-a3` Le temps de lecture | `histoire-marche` | principale — montrée à l’enfant | `7fbfdbccf8ea`  | `4188ac69de8d`  | Un panier de marché avec des tomates, un régime de bananes et un oignon | Mama Lelo et Ama arrivent ensemble au marché parmi les tomates, les feuilles vertes et les bananes | inchangé     | inchangé     | inchangés              |
+
+### Semaine 4 — 1 leçon(s)
+
+| Jour | Leçon                          | Activité                            | Image             | Rôle                            | Empreinte avant | Empreinte après | Description avant                                                       | Description après                                                                                  | Texte enfant | Texte adulte | Objectif / progression |
+| ---- | ------------------------------ | ----------------------------------- | ----------------- | ------------------------------- | --------------- | --------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------ | ------------ | ---------------------- |
+| 19   | `m3-lang-19` Je range les mots | `m3-lang-19-a3` Le temps de lecture | `histoire-marche` | principale — montrée à l’enfant | `7fbfdbccf8ea`  | `4188ac69de8d`  | Un panier de marché avec des tomates, un régime de bananes et un oignon | Mama Lelo et Ama arrivent ensemble au marché parmi les tomates, les feuilles vertes et les bananes | inchangé     | inchangé     | inchangés              |
 
 ## Ce que l’on vous demande
 

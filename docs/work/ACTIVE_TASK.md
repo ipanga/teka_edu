@@ -5,11 +5,49 @@
 September Rich-Media Visual Upgrade
 
 **Current phase:** the controlled pilot and rollout batches 1–6 are independently accepted and fully
-reapproved. The four-page `histoire-bibi` sequence received an explicit `accepted` verdict without correction,
-and the lapsed-only mechanism restored exactly three lessons with fresh digests. September is 176 approved / 0
-review with 176 distinct valid digests; all 173 unaffected lesson records remain byte-for-byte unchanged. The
-next authorized step is exactly one untouched story candidate, followed by a fresh review-authorization
-boundary. Production remains unchanged.
+reapproved. Rollout batch 7 integrates exactly the four-page `histoire-marche` sequence. Exactly three
+dependent lessons are at `review`, 173 remain approved with 173 distinct standing digests, and all 173
+unaffected lesson records remain byte-for-byte unchanged. The Marché review package is frozen locally and
+awaits fresh owner authorization for bounded Claude Max transmission. Production remains unchanged.
+
+## Rollout batch 7 frozen for review — 2026-09-28
+
+- **Canonical mapping:** `le-marche-de-mama-lelo` contains exactly 10 unchanged lines. The renderer groups
+  three story lines per page, producing four pages of 3, 3, 3 and 1 line. The registered sequence maps them
+  one-to-one as `pageFrames: [0, 1, 2, 3]`; the older three-frame estimate was corrected from actual pagination.
+- **Narrative sequence:** page 1 establishes Mama Lelo and Ama at the open-air market with red tomatoes, green
+  leaves and yellow bananas; page 2 shows exactly five tomatoes and three onions for counting and comparison;
+  page 3 moves to the home courtyard, where they lower the same heavy basket together and Ama sorts the same
+  five tomatoes and three onions; page 4 shows the two completed groups while Mama Lelo praises a proud Ama.
+- **Continuity and display-size check:** Mama Lelo keeps her braids, coral blouse, teal-and-indigo wrap skirt and
+  sandals. Ama keeps her braided high puff, red-orange tie, orange floral dress and sandals. Market, basket,
+  home courtyard, warm daylight and painted style remain coherent. A 256 px contact sheet and the phone and
+  desktop captures preserve the required gestures and exact `5 > 3` quantities without written prices,
+  currency, embedded text or unsafe action.
+- **Delivery:** four 1200×900 WebP frames at quality 88. SHA-256 values, in page order, are
+  `4188ac69de8d39f7d742ea5f257cc888067217c28f53816d8afbccd446dbcb75`,
+  `0a674df545e61cb3868bf8be9fe54c1d220dad13dae7e33ada2a67f337c8bc39`,
+  `c61a2d3efeb08b7af036d979e82ed3f1f324692e3c20f43f1c9df8b7a72bf9db` and
+  `5cb5137fb4c0a12641f185f5bd6a3f2dcedee3db556b7ca7c4615ceb423e2f00`.
+- **Approval scope:** exactly `m3-lang-06`, `m3-lang-12` and `m3-lang-19` changed digest and moved to `review`.
+  September is 173 approved / 3 review with 173 distinct standing digests. All other 173 lesson records remain
+  byte-for-byte unchanged from the accepted pre-Batch-7 baseline, and `review:lapse -- --dry-run=true` reports
+  zero additional lapses. No approval has been restored.
+- **Validation:** formatting, lint, typecheck, all 438 unit tests, 31-file content validation, Webpack production
+  build, 28-file/three-sentinel client-bundle scan and the four-width rich-media Playwright pass. Phone and
+  desktop inspection found no broken image, crop, overflow, adult-content leak or misleading interaction.
+- **Evidence:** `docs/review/media/september-rich-media-rollout-batch-7-comparison.png` and
+  `docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md` show all four pages, full hashes, accessible
+  descriptions, exact uses and approval impact.
+- **Isolated package:** `/tmp/teka-rollout-batch7-review` contains exactly the dossier
+  (`3b60e89866e972d0483dd32a3c014d17cf747421b901aa12f52fba17abbb1b44`), comparison sheet
+  (`8c96f6eaa34fb4b20d186b740795860fab38265a208aaa93f7103be8b3eec64e`) and bounded prompt
+  (`f0f997d860b0dbcbd49e4a2756bf52f793949b9cbf47139c359a3dc815c29cc7`).
+- **Repository checkpoint:** branch `codex/september-rich-media-pilot`; accepted Batch-6 parent `a3afbe1`;
+  the Batch-7 freeze is the commit containing this checkpoint.
+- **Exact resume point:** obtain explicit owner authorization to transmit only those three isolated files via
+  authenticated Claude Max. Restore no approval before an explicit independent `accepted` verdict, and do not
+  begin another story while Marché is awaiting review.
 
 ## Rollout batch 6 independently accepted — 2026-09-28
 

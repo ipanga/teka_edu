@@ -91,6 +91,20 @@ restored exactly `m3-lang-05`, `m3-lang-09` and `m3-lang-13` with fresh digests.
 review with 176 distinct valid digests, zero stale approvals and all 173 unaffected records byte-for-byte
 unchanged. Sixteen of twenty rich-media candidates are independently complete; four untouched stories remain.
 
+Rollout batch 7 is frozen locally for independent review. Canonical repository order selected
+`histoire-marche`; its 10 unchanged lines render as four pages of 3, 3, 3 and 1 line, correcting the older
+three-frame estimate. Four 1200×900 WebP scenes now show Mama Lelo and Ama arriving at the market, comparing
+exactly five tomatoes with three onions, carrying and sorting the same produce at home, and celebrating the
+completed groups. Character, clothing, basket, daylight and setting transitions remain continuous; the exact
+quantities remain legible in the 256 px contact sheet and responsive application captures. Exactly
+`m3-lang-06`, `m3-lang-12` and `m3-lang-19` moved to `review`; September is 173 approved / 3 review with 173
+distinct standing digests, zero additional lapses and all 173 unaffected records byte-for-byte unchanged from
+the accepted Batch-6 state. Formatting, lint, typecheck, 438 tests, content validation, Webpack build,
+three-sentinel bundle scan and four-width E2E pass. The isolated three-file review package is ready locally and
+must not be sent to Claude Max without fresh owner authorization. Seventeen of twenty rich-media candidates are
+integrated, sixteen are independently complete, seven story sequences are integrated, and the three untouched
+stories are `histoire-pluie`, `histoire-cailloux` and `histoire-malo`. Production remains unchanged.
+
 ## Independent September visual/UX review — 2026-09-26
 
 Owner-requested local review on `codex/september-astra-visual-review`, based on `a0b743b`.

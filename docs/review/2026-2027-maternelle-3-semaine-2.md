@@ -478,7 +478,7 @@ l’autre — l’appareil est alors le sien._
 
 _Écouter une suite de mots et la redire : la mémoire des sons se travaille comme un muscle._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Dites les mots lentement, une seule fois, puis attendez. Commencez par deux mots. N’allez à quatre que si l’enfant réussit trois sans effort.
 - **Objectifs enseignés :**
   - `LANG-S02-C01-O13` — Augmenter sa mémoire auditive et sa capacité de concentration. _(source : programme-2024-langage)_
@@ -526,7 +526,12 @@ _Écouter une suite de mots et la redire : la mémoire des sons se travaille com
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-marche` — Un panier de marché avec des tomates, un régime de bananes et un oignon (`public/media/illustrations/histoire-marche.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-marche`
+
+  - Page 1 : Mama Lelo et Ama arrivent ensemble au marché parmi les tomates rouges, les feuilles vertes et les bananes jaunes (`public/media/illustrations/histoire-marche-01.webp`)
+  - Page 2 : Au marché, Mama Lelo et Ama comptent cinq tomates et trois oignons clairement séparés dans un plateau (`public/media/illustrations/histoire-marche-02.webp`)
+  - Page 3 : Dans la cour de la maison, Mama Lelo et Ama déposent ensemble le panier près de cinq tomates et trois oignons triés (`public/media/illustrations/histoire-marche-03.webp`)
+  - Page 4 : Mama Lelo félicite Ama, fière devant les cinq tomates et les trois oignons rangés en deux groupes (`public/media/illustrations/histoire-marche-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Acquérir les habiletés phonologiques et le principe alphabétique » (from-5) :**
 
