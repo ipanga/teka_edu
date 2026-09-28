@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 9 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 10 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -110,6 +110,12 @@ Reconfirmation visuelle indépendante du lot 5 du déploiement rich-media de sep
 
 **Suites données :** Seul le cadre 3 a été régénéré ; Kumu ferme désormais visiblement les deux yeux et lève la tête vers le poulailler pour écouter. Les cadres 1, 2 et 4 sont restés octet pour octet identiques. Les quatre WebP sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 027ee3b6119faf82c9b58d974846b73e5531b71d5309516b0d8446715f9542be, 46c72911eec6b4765ccfa37e66ced474e13db28cd5c8144ec20d9517755723b9, 3d55d4687ed29f49b0fb5f6934edfb3e918cbba295464f1bfb15ddeb99e7dd95, 3c3a60bdd2fc1913b8394fb8643fa98a545a51ff91fb11d25abf56282b57b13a. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les quatre approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
 
+### 2026-09-28 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 6 du déploiement rich-media de septembre, couvrant exactement la séquence histoire-bibi et trois leçons. Claude Max / Opus 5.5 a conclu accepted sans bloqueur : les 12 lignes canoniques rendent quatre pages et quatre cadres dans l’ordre ; Bibi, Mama Lelo, le jardin, la barrière, la lumière et le style restent cohérents ; l’entrée, les légumes mangés, l’intervention bienveillante et la résolution par un tas d’herbe séparé sont clairs à 256 px et adaptés à la maternelle.
+
+**Suites données :** Aucune correction demandée. Les quatre WebP finaux sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 1e15939369feba99abb39e6b32d2d5b745638601d7e578935479f468066e48e4, 7c6c8dadd01b16a11cb38bcc3df17f633581ec8ed6f1f14669f94449e1853112, b8f2d6bbbf0e3c54a8c06fc23147c233405afac65a0aa89465f8d68f268951ee et 7d39bca6f7dbd7181a1e492511ba4c632a0472bbbbc0916cb0710129a374db0e. AssetFingerprint couvre les quatre cadres, leurs descriptions et pageFrames, puis lessonDigest couvre cette empreinte complète. Aucun texte pédagogique, objectif, durée, matériel, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les trois approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
+
 ## Jour 5 — 2026-09-07
 
 **Durée totale : 35 min** · 4 séances · jour 5 du rythme
@@ -130,7 +136,7 @@ l’autre — l’appareil est alors le sien._
 
 _Dire ce qu’on a fait, dans l’ordre, en phrases entières._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** L’enfant raconte, vous reformulez. Utilisez « d’abord », « ensuite », « après » pour l’aider à mettre de l’ordre. Ne demandez pas plus de trois moments.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1467,7 +1473,7 @@ l’autre — l’appareil est alors le sien._
 
 _Comprendre ce que ressent un personnage, et le dire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Le but n’est pas de résumer l’histoire mais de parler de ce que ressent Bibi. Nommez les émotions vous-même : content, triste, fâché, curieux.
 - **Objectifs enseignés :**
   - `LANG-S02-C03-O14` — Comprendre les émotions, les intentions et les sentiments qui animent les personnages. _(source : programme-2024-langage)_

@@ -4,11 +4,30 @@
 
 September Rich-Media Visual Upgrade
 
-**Current phase:** the controlled pilot and rollout batches 1–5 are independently accepted and fully
-reapproved. Rollout batch 6 integrates exactly the four-page `histoire-bibi` sequence. Exactly three dependent
-lessons are at `review`, 173 remain approved with 173 distinct standing digests, and all 173 unaffected lesson
-records remain byte-for-byte unchanged. The Bibi review package is frozen locally and awaits fresh owner
-authorization for bounded Claude Max transmission. Production remains unchanged.
+**Current phase:** the controlled pilot and rollout batches 1–6 are independently accepted and fully
+reapproved. The four-page `histoire-bibi` sequence received an explicit `accepted` verdict without correction,
+and the lapsed-only mechanism restored exactly three lessons with fresh digests. September is 176 approved / 0
+review with 176 distinct valid digests; all 173 unaffected lesson records remain byte-for-byte unchanged. The
+next authorized step is exactly one untouched story candidate, followed by a fresh review-authorization
+boundary. Production remains unchanged.
+
+## Rollout batch 6 independently accepted — 2026-09-28
+
+- **Verdict:** Claude Max / Opus 5.5 explicitly returned `accepted` with no genuine blocker. It confirmed all
+  four page events, chronological progression, Bibi and Mama Lelo continuity, garden continuity, positive
+  resolution, preschool suitability and readability at the supplied 256 px story size.
+- **Repository verification:** all four final files decode as 1200×900 WebPs and match the four full hashes in
+  the reviewed dossier. The registry maps pages exactly as `[0, 1, 2, 3]`; asset fingerprinting covers all four
+  image bytes, descriptions and the page table.
+- **Approval restoration:** accepted `full-review` entries cover 3ème maternelle weeks 2 and 3. The established
+  `--lapsed-only` mechanism restored exactly `m3-lang-05`, `m3-lang-09` and `m3-lang-13` with fresh digests.
+- **Integrity:** September is 176 approved / 0 review with 176 distinct valid digests. The lapse dry run reports
+  zero stale approvals, and all 173 unaffected records remain byte-for-byte unchanged from the pre-Batch-6
+  baseline.
+- **Rich-media state:** 20 candidates total, 16 independently completed and integrated as WebP, 31 SVGs
+  retained, six story sequences integrated and four untouched story candidates remaining.
+- **Exact resume point:** create one local batch for the next untouched story candidate selected from canonical
+  repository order. Freeze its evidence and stop for fresh owner authorization before any Claude transmission.
 
 ## Rollout batch 6 frozen for review — 2026-09-28
 

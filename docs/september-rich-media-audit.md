@@ -15,8 +15,8 @@ Generated from the canonical media registry, September lessons and supplied text
 - Rollout batch 3 contains the two-frame histoire-tika sequence. Both frames and both dependent lessons were independently reconfirmed and restored with fresh digests.
 - Rollout batch 4 contains the three-frame histoire-seau-lisa sequence. The corrected evidence and all eight dependent lessons were independently accepted and restored with fresh digests. Six story candidates remain unimplemented.
 - Rollout batch 5 contains the four-frame histoire-kumu sequence. The corrected frame 3 and all four dependent lessons were independently accepted and restored with fresh digests. Five story candidates remain unimplemented.
-- Rollout batch 6 contains the four-frame histoire-bibi sequence. Exactly three dependent lessons await independent reconfirmation; four story candidates remain unimplemented.
-- Manifest SHA-256: `df00a9cf5868b6ed7db7dd7c0e17e973b0ad5a6818ddbe3f752a6f254ce40282`.
+- Rollout batch 6 contains the four-frame histoire-bibi sequence. All four frames and all three dependent lessons were independently accepted and restored with fresh digests. Four story candidates remain unimplemented.
+- Manifest SHA-256: `2f4569f3f2e3c297e3321e92f275baa056766c9b552c5ac230e91035a6000c05`.
 
 The supplied screenshots validate the distinction: layout and scaling are sound, while the body, rhyme and story art remains visually schematic. Shapes, counting models and isolated objects do not share that defect.
 

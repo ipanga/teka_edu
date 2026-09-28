@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 7 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 8 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -103,6 +103,12 @@ Reconfirmation pédagogique ciblée des 27 leçons affectées par les correction
 Reconfirmation visuelle indépendante du pilote rich-media de septembre, couvrant exactement les 18 leçons affectées et les cinq familles d’images. La première passe Claude Max / Opus 5.5 a conclu accepted-with-modifications : les quatre familles corps-tete, animal-chevre, comptine-bonjour et histoire-mangue ainsi que 15 leçons étaient acceptées ; histoire-nsimba demandait une scène propre à la page 1 et une étiquette portant le prénom de Nsimba à la page 3. Après vérification indépendante, corrections minimales et régénération du paquet, la seconde passe a conclu accepted pour les 18 leçons et les cinq familles, sans autre correction.
 
 **Suites données :** histoire-nsimba utilise désormais cinq scènes pour cinq pages : la page 1 montre Nsimba inquiet sur le chemin en tenant la main de son adulte, et la page 2 seule montre le portail et la maitresse. La page 3 montre une étiquette lisible « Nsimba » et sa description accessible la nomme. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier ni consigne n’a changé. Les approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
+
+### 2026-09-28 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 6 du déploiement rich-media de septembre, couvrant exactement la séquence histoire-bibi et trois leçons. Claude Max / Opus 5.5 a conclu accepted sans bloqueur : les 12 lignes canoniques rendent quatre pages et quatre cadres dans l’ordre ; Bibi, Mama Lelo, le jardin, la barrière, la lumière et le style restent cohérents ; l’entrée, les légumes mangés, l’intervention bienveillante et la résolution par un tas d’herbe séparé sont clairs à 256 px et adaptés à la maternelle.
+
+**Suites données :** Aucune correction demandée. Les quatre WebP finaux sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 1e15939369feba99abb39e6b32d2d5b745638601d7e578935479f468066e48e4, 7c6c8dadd01b16a11cb38bcc3df17f633581ec8ed6f1f14669f94449e1853112, b8f2d6bbbf0e3c54a8c06fc23147c233405afac65a0aa89465f8d68f268951ee et 7d39bca6f7dbd7181a1e492511ba4c632a0472bbbbc0916cb0710129a374db0e. AssetFingerprint couvre les quatre cadres, leurs descriptions et pageFrames, puis lessonDigest couvre cette empreinte complète. Aucun texte pédagogique, objectif, durée, matériel, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les trois approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
 
 ## Jour 10 — 2026-09-14
 
@@ -1133,7 +1139,7 @@ l’autre — l’appareil est alors le sien._
 
 _Troisième corpus de mots : le marché, les fruits, les légumes, les quantités._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Nommez avec l’article et employez tout de suite le mot dans une phrase de marché : « Je voudrais trois tomates. »
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

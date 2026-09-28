@@ -82,16 +82,14 @@ full-review entries cover 3ème maternelle weeks 1, 2 and 4. The standard lapsed
 with 176 distinct valid digests, zero stale approvals and all 172 unaffected records byte-for-byte unchanged.
 Fifteen of twenty rich-media candidates are independently complete; five untouched story candidates remain.
 
-Rollout batch 6 is frozen locally for independent review. Canonical repository order selected `histoire-bibi`;
-its 12 unchanged lines render as four pages of three, correcting the older three-frame estimate. Four 1200×900
-WebP scenes now show Bibi passing through the open garden gate, eating among the orderly vegetables, lowering
-her head when Mama Lelo arrives, and receiving a separate grass pile beside the closed gate. Bibi, Mama Lelo,
-the garden, lighting and painted style remain continuous, with no embedded text or unsafe tool. Exactly
-`m3-lang-05`, `m3-lang-09` and `m3-lang-13` moved to `review`; September is 173 approved / 3 review with 173
-distinct standing digests, zero additional lapses and all 173 unaffected records byte-for-byte unchanged from
-accepted Batch-5 checkpoint `3a77b3c`. Formatting, lint, typecheck, 438 tests, content validation, Webpack build,
-client-bundle scan and the four-width responsive E2E pass. The isolated Bibi package is ready locally and must
-not be sent to Claude Max without fresh owner authorization.
+Rollout batch 6 is independently accepted and fully reapproved. Claude Max / Opus 5.5 explicitly accepted all
+four `histoire-bibi` frames and all three dependent lessons without correction, confirming the chronology,
+character and garden continuity, positive resolution, preschool suitability and readability at 256 px. Local
+verification confirms all four WebPs are 1200×900, match the reviewed hashes and map `[0, 1, 2, 3]` to the 12
+canonical lines. Accepted full-review entries cover 3ème maternelle weeks 2 and 3. The lapsed-only mechanism
+restored exactly `m3-lang-05`, `m3-lang-09` and `m3-lang-13` with fresh digests. September is 176 approved / 0
+review with 176 distinct valid digests, zero stale approvals and all 173 unaffected records byte-for-byte
+unchanged. Sixteen of twenty rich-media candidates are independently complete; four untouched stories remain.
 
 ## Independent September visual/UX review — 2026-09-26
 

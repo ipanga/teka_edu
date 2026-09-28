@@ -5,7 +5,7 @@
   "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   "pilotBaselineCommit": "cbc1cf3",
   "scope": ["maternelle-1 September", "maternelle-3 September"],
-  "status": "rollout-batch-6-awaiting-independent-reconfirmation",
+  "status": "rollout-batch-6-independently-reconfirmed",
   "productionAssetsChanged": false,
   "localPilotAssetsChanged": true,
   "approvedLessonSemanticsChanged": false,
@@ -20,9 +20,9 @@
     "ifAllProposedWebpAssetsAreIntegrated": 53,
     "maternelle1": 27,
     "maternelle3": 26,
-    "currentImpact": 3,
-    "currentApproved": 173,
-    "currentReview": 3
+    "currentImpact": 0,
+    "currentApproved": 176,
+    "currentReview": 0
   },
   "notes": [
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
@@ -41,7 +41,7 @@
     "Rollout batch 4 integrates only the three-frame histoire-seau-lisa sequence. The first review accepted the images and requested corrected evidence; the corrected dossier explicitly maps the rhyme to primary frame 2 and exposes every frame hash. Claude Max / Opus 5.5 then accepted all eight dependent lessons.",
     "The lapsed-only workflow restored exactly eight Batch-4 approvals with fresh digests. All 168 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain; six other story-sequence candidates remain untouched.",
     "Rollout batch 5 integrates only the four-frame histoire-kumu sequence. The first independent review accepted frames 1, 2 and 4 but requested clearer closed eyelids on Kumu in frame 3 at 256 px. Only frame 3 was redrawn; the second review explicitly accepted the complete sequence. The lapsed-only workflow restored exactly four lessons with fresh digests; all 172 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain. Five other story-sequence candidates remain untouched.",
-    "Rollout batch 6 integrates only the four-frame histoire-bibi sequence. The 12 canonical lines render as four pages of three lines and map exactly to frames 1–4. Exactly three lessons depend on it and await independent reconfirmation; four other story-sequence candidates remain untouched."
+    "Rollout batch 6 integrates only the four-frame histoire-bibi sequence. Claude Max / Opus 5.5 explicitly accepted the complete sequence and all three dependent lessons without correction. The lapsed-only workflow restored exactly three approvals with fresh digests; all 173 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain. Four other story-sequence candidates remain untouched."
   ],
   "assets": [
     {
@@ -2376,7 +2376,7 @@
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
       "implementationState": "integrated-local-rollout",
-      "reviewState": "awaiting-independent-reconfirmation",
+      "reviewState": "independently-reconfirmed",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 3,
@@ -2418,7 +2418,7 @@
           "bytes": 416538
         }
       ],
-      "currentDecision": "owner-authorized-local-integration; independent-review-pending"
+      "currentDecision": "independent-review-accepted; lapsed-only-approval-restored"
     },
     {
       "id": "histoire-marche",
