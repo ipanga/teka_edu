@@ -4,12 +4,31 @@
 
 September Rich-Media Visual Upgrade
 
-**Current phase:** the controlled pilot and rollout batches 1–4 are independently accepted and fully
-reapproved. The first independent Batch-5 review accepted Kumu frames 1, 2 and 4 and requested one bounded
-frame-3 correction so Kumu's closed eyes remain unmistakable at 256 px. Only frame 3 and the evidence wording
-changed; exactly four dependent lessons remain at `review`, 172 remain approved, and all 172 unaffected lesson
-records remain byte-for-byte unchanged. Corrected evidence is frozen locally and requires fresh owner
-authorization before a second bounded Claude Max review. Production remains unchanged.
+**Current phase:** the controlled pilot and rollout batches 1–5 are independently accepted and fully
+reapproved. The corrected Kumu sequence received an explicit `accepted` verdict, and the lapsed-only mechanism
+restored exactly four lessons with fresh digests. September is 176 approved / 0 review with 176 distinct valid
+digests; all 172 unaffected lesson records remain byte-for-byte unchanged. The next authorized step is exactly
+one untouched story candidate, followed by a fresh independent-review authorization boundary. Production
+remains unchanged.
+
+## Rollout batch 5 independently accepted — 2026-09-28
+
+- **Final verdict:** the second bounded Claude Max / Opus 5.5 review explicitly returned `accepted`, with no
+  blocker. It confirmed that Kumu's two eyes read as closed at 256 px, his raised head communicates listening,
+  the page-3 event matches the canonical story, and the corrected frame remains coherent with the other three.
+- **Repository verification:** all four final WebPs decode at 1200×900 and match the hashes in the dossier.
+  Frames 1, 2 and 4 remain byte-for-byte identical to the first review; corrected frame 3 is
+  `3d55d4687ed29f49b0fb5f6934edfb3e918cbba295464f1bfb15ddeb99e7dd95`.
+- **Approval restoration:** three accepted `full-review` entries cover 3ème maternelle weeks 1, 2 and 4. The
+  established `--lapsed-only` mechanism restored exactly `m3-lang-03`, `m3-lang-04`, `m3-lang-09` and
+  `m3-lang-17` with freshly computed digests.
+- **Integrity:** September is 176 approved / 0 review with 176 distinct valid digests. The lapse dry run reports
+  zero stale approvals, and all 172 unaffected records remain byte-for-byte unchanged from the pre-Batch-5
+  baseline.
+- **Rich-media state:** 20 candidates total, 15 independently completed and integrated as WebP, 31 SVGs
+  retained, five story sequences integrated and five story candidates remaining.
+- **Exact resume point:** create one local batch for the next untouched story candidate selected from canonical
+  repository order. Freeze its evidence and stop for fresh owner authorization before any Claude transmission.
 
 ## Rollout batch 5 corrected after independent review — 2026-09-28
 

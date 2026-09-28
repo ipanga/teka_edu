@@ -1187,6 +1187,42 @@
       "outcome": "accepted",
       "summary": "Reconfirmation visuelle indépendante du lot 4 du déploiement rich-media de septembre, couvrant exactement histoire-seau-lisa et huit leçons. Après une première conclusion accepted-with-modifications portant uniquement sur la preuve, le dossier corrigé montre les trois cadres avec leurs SHA-256 complets, associe la comptine au cadre principal 2 et conserve la progression 1–2–3 du récit. Claude Max / Opus 5.5 a conclu accepted pour les huit leçons.",
       "corrections": "Aucune correction pédagogique ou visuelle demandée. Seul le dossier de preuve a été corrigé : la comptine Le petit seau y affiche désormais histoire-seau-lisa-02.webp et les trois SHA-256 complets sont exposés. Les octets des trois WebP ont été revérifiés contre ces valeurs ; assetFingerprint couvre chaque cadre et pageFrames, puis lessonDigest reçoit cette empreinte complète. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 1,
+      "reviewedOn": "2026-09-28",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Claude Max / Opus 5.5",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle indépendante du lot 5 du déploiement rich-media de septembre, couvrant exactement la séquence histoire-kumu et quatre leçons. La première passe Claude Max / Opus 5.5 a accepté les cadres 1, 2 et 4, la pagination canonique de 12 lignes en quatre pages et tous les champs pédagogiques, mais a demandé que les yeux fermés de Kumu restent clairement lisibles à 256 px dans le cadre 3. Après la correction bornée, la seconde passe a conclu accepted : les yeux fermés, la posture d’écoute, le tournant narratif, la continuité visuelle et l’adéquation préscolaire sont confirmés sans bloqueur.",
+      "corrections": "Seul le cadre 3 a été régénéré ; Kumu ferme désormais visiblement les deux yeux et lève la tête vers le poulailler pour écouter. Les cadres 1, 2 et 4 sont restés octet pour octet identiques. Les quatre WebP sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 027ee3b6119faf82c9b58d974846b73e5531b71d5309516b0d8446715f9542be, 46c72911eec6b4765ccfa37e66ced474e13db28cd5c8144ec20d9517755723b9, 3d55d4687ed29f49b0fb5f6934edfb3e918cbba295464f1bfb15ddeb99e7dd95, 3c3a60bdd2fc1913b8394fb8643fa98a545a51ff91fb11d25abf56282b57b13a. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les quatre approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 2,
+      "reviewedOn": "2026-09-28",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Claude Max / Opus 5.5",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle indépendante du lot 5 du déploiement rich-media de septembre, couvrant exactement la séquence histoire-kumu et quatre leçons. La première passe Claude Max / Opus 5.5 a accepté les cadres 1, 2 et 4, la pagination canonique de 12 lignes en quatre pages et tous les champs pédagogiques, mais a demandé que les yeux fermés de Kumu restent clairement lisibles à 256 px dans le cadre 3. Après la correction bornée, la seconde passe a conclu accepted : les yeux fermés, la posture d’écoute, le tournant narratif, la continuité visuelle et l’adéquation préscolaire sont confirmés sans bloqueur.",
+      "corrections": "Seul le cadre 3 a été régénéré ; Kumu ferme désormais visiblement les deux yeux et lève la tête vers le poulailler pour écouter. Les cadres 1, 2 et 4 sont restés octet pour octet identiques. Les quatre WebP sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 027ee3b6119faf82c9b58d974846b73e5531b71d5309516b0d8446715f9542be, 46c72911eec6b4765ccfa37e66ced474e13db28cd5c8144ec20d9517755723b9, 3d55d4687ed29f49b0fb5f6934edfb3e918cbba295464f1bfb15ddeb99e7dd95, 3c3a60bdd2fc1913b8394fb8643fa98a545a51ff91fb11d25abf56282b57b13a. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les quatre approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 4,
+      "reviewedOn": "2026-09-28",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Claude Max / Opus 5.5",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle indépendante du lot 5 du déploiement rich-media de septembre, couvrant exactement la séquence histoire-kumu et quatre leçons. La première passe Claude Max / Opus 5.5 a accepté les cadres 1, 2 et 4, la pagination canonique de 12 lignes en quatre pages et tous les champs pédagogiques, mais a demandé que les yeux fermés de Kumu restent clairement lisibles à 256 px dans le cadre 3. Après la correction bornée, la seconde passe a conclu accepted : les yeux fermés, la posture d’écoute, le tournant narratif, la continuité visuelle et l’adéquation préscolaire sont confirmés sans bloqueur.",
+      "corrections": "Seul le cadre 3 a été régénéré ; Kumu ferme désormais visiblement les deux yeux et lève la tête vers le poulailler pour écouter. Les cadres 1, 2 et 4 sont restés octet pour octet identiques. Les quatre WebP sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 027ee3b6119faf82c9b58d974846b73e5531b71d5309516b0d8446715f9542be, 46c72911eec6b4765ccfa37e66ced474e13db28cd5c8144ec20d9517755723b9, 3d55d4687ed29f49b0fb5f6934edfb3e918cbba295464f1bfb15ddeb99e7dd95, 3c3a60bdd2fc1913b8394fb8643fa98a545a51ff91fb11d25abf56282b57b13a. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les quatre approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf."
     }
   ]
 }

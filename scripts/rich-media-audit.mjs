@@ -253,11 +253,7 @@ const assets = await Promise.all(
           ? "integrated-local-pilot"
           : "integrated-local-rollout"
         : "not-started",
-      reviewState: selected
-        ? isRolloutBatch5
-          ? "corrected-awaiting-independent-reconfirmation"
-          : "independently-reconfirmed"
-        : "not-in-pilot",
+      reviewState: selected ? "independently-reconfirmed" : "not-in-pilot",
       approvalImpact:
         decision.decision === "audited-keep"
           ? { expected: "none", lessonCount: 0, lessonIds: [] }
@@ -278,7 +274,7 @@ const assets = await Promise.all(
             oldFileBytes: oldFileSize(before.file),
             deliveryFiles: await delivery(asset),
             currentDecision: isRolloutBatch5
-              ? "independent-review-requested-one-frame-correction; corrected-evidence-pending"
+              ? "independent-review-accepted; lapsed-only-approval-restored"
               : isRolloutBatch4
                 ? "independent-review-accepted; lapsed-only-approval-restored"
                 : isRolloutBatch3
@@ -316,7 +312,7 @@ const manifest = {
   productionCommit: "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   pilotBaselineCommit: baselineCommit,
   scope: ["maternelle-1 September", "maternelle-3 September"],
-  status: "rollout-batch-5-corrected-awaiting-independent-reconfirmation",
+  status: "rollout-batch-5-independently-reconfirmed",
   productionAssetsChanged: false,
   localPilotAssetsChanged: true,
   approvedLessonSemanticsChanged: false,
@@ -345,7 +341,7 @@ const manifest = {
     "The lapsed-only workflow restored exactly two Batch-3 approvals with fresh digests. All 174 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
     "Rollout batch 4 integrates only the three-frame histoire-seau-lisa sequence. The first review accepted the images and requested corrected evidence; the corrected dossier explicitly maps the rhyme to primary frame 2 and exposes every frame hash. Claude Max / Opus 5.5 then accepted all eight dependent lessons.",
     "The lapsed-only workflow restored exactly eight Batch-4 approvals with fresh digests. All 168 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain; six other story-sequence candidates remain untouched.",
-    "Rollout batch 5 integrates only the four-frame histoire-kumu sequence. The first independent review accepted frames 1, 2 and 4 but requested clearer closed eyelids on Kumu in frame 3 at 256 px. Only frame 3 was redrawn; its corrected SHA-256 is 3d55d4687ed29f49b0fb5f6934edfb3e918cbba295464f1bfb15ddeb99e7dd95. Exactly four lessons remain at review pending fresh independent acceptance; five other story-sequence candidates remain untouched.",
+    "Rollout batch 5 integrates only the four-frame histoire-kumu sequence. The first independent review accepted frames 1, 2 and 4 but requested clearer closed eyelids on Kumu in frame 3 at 256 px. Only frame 3 was redrawn; the second review explicitly accepted the complete sequence. The lapsed-only workflow restored exactly four lessons with fresh digests; all 172 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain. Five other story-sequence candidates remain untouched.",
   ],
   assets,
 };
@@ -383,7 +379,7 @@ Generated from the canonical media registry, September lessons and supplied text
 - Rollout batch 2 contains two rhyme illustrations. Both assets and all nine lessons that depend on comptine-mains were independently reconfirmed; comptine-cabri is currently unused and lapsed no approval.
 - Rollout batch 3 contains the two-frame histoire-tika sequence. Both frames and both dependent lessons were independently reconfirmed and restored with fresh digests.
 - Rollout batch 4 contains the three-frame histoire-seau-lisa sequence. The corrected evidence and all eight dependent lessons were independently accepted and restored with fresh digests. Six story candidates remain unimplemented.
-- Rollout batch 5 contains the four-frame histoire-kumu sequence. The corrected frame 3 makes Kumu's closed eyes legible at 256 px; exactly four dependent lessons remain at review pending fresh independent acceptance. Five story candidates remain unimplemented.
+- Rollout batch 5 contains the four-frame histoire-kumu sequence. The corrected frame 3 and all four dependent lessons were independently accepted and restored with fresh digests. Five story candidates remain unimplemented.
 - Manifest SHA-256: \`${digest}\`.
 
 The supplied screenshots validate the distinction: layout and scaling are sound, while the body, rhyme and story art remains visually schematic. Shapes, counting models and isolated objects do not share that defect.

@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 8 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 9 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -103,6 +103,12 @@ Reconfirmation visuelle indépendante du pilote rich-media de septembre, couvran
 Reconfirmation visuelle indépendante du lot 1 du déploiement rich-media de septembre, couvrant exactement 10 leçons et cinq images. La première passe Claude Max / Opus 5.5 a conclu accepted-with-modifications : corps-main, corps-pied, animal-poule, animal-poussin et six leçons étaient acceptés ; corps-ventre devait devenir un gros plan du torse, sans visage, centré sur le ventre et lisible à 72 px. Après vérification indépendante, correction minimale et régénération du paquet, la seconde passe a conclu accepted pour corps-ventre, les quatre leçons bloquées et donc les 10 leçons du lot.
 
 **Suites données :** corps-ventre montre désormais un gros plan du torse, sans tête ni visage, avec le ventre centré et une seule main posée dessus ; sa description accessible correspond exactement à l’image. La planche complète intégrée au paquet et la planche corrective ont été régénérées sur les octets finaux. Les quatre autres images acceptées à la première passe sont restées octet pour octet identiques. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
+
+### 2026-09-28 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 5 du déploiement rich-media de septembre, couvrant exactement la séquence histoire-kumu et quatre leçons. La première passe Claude Max / Opus 5.5 a accepté les cadres 1, 2 et 4, la pagination canonique de 12 lignes en quatre pages et tous les champs pédagogiques, mais a demandé que les yeux fermés de Kumu restent clairement lisibles à 256 px dans le cadre 3. Après la correction bornée, la seconde passe a conclu accepted : les yeux fermés, la posture d’écoute, le tournant narratif, la continuité visuelle et l’adéquation préscolaire sont confirmés sans bloqueur.
+
+**Suites données :** Seul le cadre 3 a été régénéré ; Kumu ferme désormais visiblement les deux yeux et lève la tête vers le poulailler pour écouter. Les cadres 1, 2 et 4 sont restés octet pour octet identiques. Les quatre WebP sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 027ee3b6119faf82c9b58d974846b73e5531b71d5309516b0d8446715f9542be, 46c72911eec6b4765ccfa37e66ced474e13db28cd5c8144ec20d9517755723b9, 3d55d4687ed29f49b0fb5f6934edfb3e918cbba295464f1bfb15ddeb99e7dd95, 3c3a60bdd2fc1913b8394fb8643fa98a545a51ff91fb11d25abf56282b57b13a. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les quatre approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
 
 ## Jour 5 — 2026-09-07
 
@@ -1456,7 +1462,7 @@ l’autre — l’appareil est alors le sien._
 
 _Comprendre ce que ressent un personnage, et le dire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Le but n’est pas de résumer l’histoire mais de parler de ce que ressent Bibi. Nommez les émotions vous-même : content, triste, fâché, curieux.
 - **Objectifs enseignés :**
   - `LANG-S02-C03-O14` — Comprendre les émotions, les intentions et les sentiments qui animent les personnages. _(source : programme-2024-langage)_

@@ -73,17 +73,14 @@ standard lapsed-only mechanism restored exactly the eight affected lessons with 
 and zero stale approvals remain. The next local batch is the four-page `histoire-kumu` sequence; fresh owner
 authorization is still required before its eventual independent-review package is transmitted.
 
-The first independent Batch-5 review returned `accepted-with-modifications`: frames 1, 2 and 4, the unchanged
-12-line / four-page mapping and the four expected lapses passed, while frame 3 needed Kumu's closed eyes to read
-more clearly at 256 px. Independent inspection confirmed that the original eyelid was too fine at that size.
-Only frame 3 was regenerated; Kumu now visibly closes both eyes and raises his head toward the coop while the
-leaf-eating goat, white hen, coop, path, warm morning and text-free painted scene remain coherent. The corrected
-1200×900 WebP SHA-256 is `3d55d4687ed29f49b0fb5f6934edfb3e918cbba295464f1bfb15ddeb99e7dd95`.
-The dossier generator also now names image bytes, accessible descriptions and sequence page mappings as inputs
-to the approval fingerprint. No approval was restored: September remains 172 approved / 4 review, exactly
-`m3-lang-03`, `m3-lang-04`, `m3-lang-09` and `m3-lang-17` remain at `review`, and the 172 unaffected records are
-unchanged from `e5c8398`. Corrected evidence is frozen locally and must not be sent to Claude Max without fresh
-owner authorization.
+Rollout batch 5 is independently accepted and fully reapproved. The first Claude Max / Opus 5.5 pass accepted
+frames 1, 2 and 4 and requested clearer closed eyelids on Kumu in frame 3 at 256 px. Only frame 3 was
+regenerated; the second bounded pass explicitly returned `accepted` with no blocker. Local verification confirms
+all four WebPs are 1200×900, match the reviewed hashes, and frames 1, 2 and 4 remained byte-identical. Accepted
+full-review entries cover 3ème maternelle weeks 1, 2 and 4. The standard lapsed-only mechanism restored exactly
+`m3-lang-03`, `m3-lang-04`, `m3-lang-09` and `m3-lang-17` with fresh digests. September is 176 approved / 0 review
+with 176 distinct valid digests, zero stale approvals and all 172 unaffected records byte-for-byte unchanged.
+Fifteen of twenty rich-media candidates are independently complete; five untouched story candidates remain.
 
 ## Independent September visual/UX review — 2026-09-26
 
