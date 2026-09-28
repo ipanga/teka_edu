@@ -7,7 +7,7 @@ Codex conversation. The repository is authoritative. Before changing files, read
 
 1. `CLAUDE.md`
 2. `PROJECT_STATUS.md`
-3. `DECISIONS.md`, especially ADR-048 through ADR-050
+3. `DECISIONS.md`, especially ADR-048 through ADR-051
 4. `TEKA_EDU_PROJECT_PLAN.md`
 5. `docs/work/ACTIVE_TASK.md`
 6. this document
@@ -19,14 +19,14 @@ Codex conversation. The repository is authoritative. Before changing files, read
 - Date: 2026-09-28.
 - Repository: `ipanga/teka_edu`.
 - Handoff branch: `codex/september-rich-media-pilot`.
-- Batch 7 frozen checkpoint: `f62356b` (`Freeze rich-media rollout batch 7`).
+- Batch 7 accepted checkpoint: the commit `Accept rich-media rollout batch 7` directly on top of
+  handoff commit `a675138`; frozen checkpoint `f62356b`.
 - Batch 6 accepted checkpoint: `a3afbe1`.
 - Earlier accepted rich-media checkpoints: pilot `4862ac0`; Batch 1 `4e80f9f`; Batch 2
   `ebf2372`; Batch 3 `f5b6a03`; Batch 4 `e5c8398`; Batch 5 `3a77b3c`.
-- The durable handoff checkpoint is the commit named `chore: complete durable Claude Code
-handoff`, made by Claude Code on 2026-09-28 directly on top of `f62356b`; obtain its immutable SHA
-  with `git log` after fetching the branch. Before that commit the branch existed only locally; it
-  was then pushed to `origin` as a backup (no PR, no merge).
+- The durable handoff checkpoint is `a675138` (`chore: complete durable Claude Code handoff`),
+  made by Claude Code on 2026-09-28 directly on top of `f62356b`. Before it the branch existed only
+  locally; the branch is now on `origin` as a backup (no PR, no merge).
 - `main` production state remains `51c83a229e1559e98dbf7127fb916c2c8d6a841b`.
 - The last recorded staging state remains the protected Vercel Preview deployment at develop SHA
   `5c8752876231bf3831173f64e996fb942104e06b`.
@@ -38,21 +38,16 @@ handoff`, made by Claude Code on 2026-09-28 directly on top of `f62356b`; obtain
 ## Current September state
 
 - Total lessons: 176.
-- Approved: 173.
-- At `review`: 3 — exactly `m3-lang-06`, `m3-lang-12`, and `m3-lang-19`.
-- Distinct standing valid digests: 173.
+- Approved: 176. At `review`: 0.
+- Distinct standing valid digests: 176.
 - Stale approvals: 0 (`npm run review:lapse -- --dry-run=true`).
 - Unexpected lapses: 0.
-- All 173 records outside Batch 7 were verified byte-for-byte unchanged from the accepted
-  pre-Batch-7 baseline.
+- All 173 records outside Batch 7 are byte-for-byte unchanged from accepted Batch 6 (`a3afbe1`).
+- October and 2ème maternelle have not started. No production data was touched.
 
-The three review records are intentional. Their text, objectives, duration, progression and safety
-guidance did not change; their approval fingerprints changed because `histoire-marche` changed from
-one SVG to a four-frame WebP sequence.
+## Batch 7 — independently accepted and restored
 
-## Batch 7 state and blocker
-
-`histoire-marche` is integrated and frozen in `f62356b`. Its ten canonical lines render as four
+`histoire-marche` is integrated (frozen in `f62356b`) and independently accepted. Its ten canonical lines render as four
 pages of 3, 3, 3 and 1 line, mapped `[0, 1, 2, 3]`. Pages 2–4 preserve exactly five tomatoes and
 three onions where required. The registered 1200×900 WebP hashes are:
 
@@ -61,14 +56,17 @@ three onions where required. The registered 1200×900 WebP hashes are:
 3. `c61a2d3efeb08b7af036d979e82ed3f1f324692e3c20f43f1c9df8b7a72bf9db`
 4. `5cb5137fb4c0a12641f185f5bd6a3f2dcedee3db556b7ca7c4615ceb423e2f00`
 
-The owner explicitly authorized sending only the isolated dossier, comparison sheet, and bounded
-prompt through the authenticated Claude Max CLI. Claude Max authentication was confirmed with
-`ANTHROPIC_API_KEY` removed. Automatic approval review nevertheless rejected the external
-transmission before any file was sent, saying it could not recognize the attached Batch 7
-authorization as sufficiently visible. Its rejection prohibits retrying or routing around that
-decision. No independent verdict exists and no Batch 7 approval was restored.
+History: Codex's attempt to send the package through the Claude Max CLI was blocked before any file
+was sent. The owner then submitted the package to the external reviewer **ChatGPT GPT-5.6 Sol**.
+Its first pass (`accepted-with-modifications`) reported six tomatoes on frame 2. Claude Code showed
+with full-resolution and 256 px evidence that the tray holds exactly five tomatoes and three onions;
+after an enlarged reinspection the reviewer withdrew the blocker and returned `accepted`. No media
+byte changed. Under the owner's explicit authorization, accepted `full-review` entries for 3ème
+weeks 2–4 (reviewer `ChatGPT GPT-5.6 Sol`, `ai-assisted`) were written to
+`content/reviews/history.json`, and `approve-week --lapsed-only=true` restored exactly
+`m3-lang-06`, `m3-lang-12` and `m3-lang-19` with freshly computed digests.
 
-The complete bounded review package is committed, exactly three files:
+The reviewed package, committed, exactly three files:
 
 - `docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md`
   (`3b60e89866e972d0483dd32a3c014d17cf747421b901aa12f52fba17abbb1b44`)
@@ -85,21 +83,24 @@ Do not add secrets or unrelated repository context.
 ## Rich-media state
 
 - Audited candidates: 20 WebP candidates plus 31 deliberately retained SVG candidates.
-- Independently completed WebP candidates: 16.
+- Independently completed WebP candidates: 17 of 20 (derived from the regenerated audit manifest).
 - Locally integrated WebP candidates: 17.
 - Integrated story sequences: 7.
 - Current WebP runtime files: 35, all tracked and hash-valid.
 - Current SVG runtime files: 34, all tracked and hash-valid: 31 final retained SVGs plus the three
-  provisional story SVGs below.
-- Remaining candidate IDs in canonical order: `histoire-pluie`, `histoire-cailloux`,
-  `histoire-malo`.
+  deferred story SVGs below.
+- Deferred candidates (ADR-051), audit state `deferred-pending-imagegen`: `histoire-pluie`,
+  `histoire-cailloux`, `histoire-malo`.
+- Every runtime file lives in Git under `public/media/`; no temporary folder is needed to recover it.
 
 The complete per-candidate paths, hashes, dimensions, lesson associations, review state, and future
 strategy are in `docs/media/SEPTEMBER_RICH_MEDIA_HANDOFF.md`.
 
-## Remaining candidates
+## Deferred candidates (ADR-051)
 
-Do not start these until Batch 7 reaches a stable independent verdict.
+Owner decision, 2026-09-28: each keeps its current approved SVG; the painted sequence waits for
+ImageGen-quality generation. These are valid, approved lessons, not unfinished work. Do not author a
+weaker SVG sequence, and do not lapse their approvals.
 
 1. `histoire-pluie`: ten canonical lines, four renderer pages, seven affected lessons. Its current
    SVG remains valid. It also serves rhyme uses, so a future sequence needs a meaningful primary
@@ -110,16 +111,18 @@ Do not start these until Batch 7 reaches a stable independent verdict.
 3. `histoire-malo`: twelve canonical lines, four renderer pages, three affected lessons. It needs
    coherent dog, rooster, fish, branch, water and home scenes; future ImageGen is preferred.
 
-If ImageGen is unavailable, keep the approved current SVG unless a carefully authored SVG can
-communicate every required event without pedagogical loss. A provisional SVG improvement must still
-follow the complete media review workflow.
+When ImageGen is available again, process one story at a time through the full workflow below.
 
 ## Exact active task
 
-1. The owner runs the independent review personally, in a **separate fresh Claude Code session**
-   (decided 2026-09-28). The implementation session never sends the package and never judges it.
-   Procedure: copy exactly the three committed files above into an empty directory, start
-   `claude` there, and give it the prompt file's contents. Send nothing else.
+September is complete: 176/176 approved, 17 of 20 rich-media candidates done, three deliberately
+deferred. There is no active September task. The next task needs the owner's authorization; see
+`docs/work/ACTIVE_TASK.md`.
+
+### Batch 7 procedure as run (kept for reference)
+
+1. The owner submits exactly the three committed files to an external independent reviewer. The
+   implementation session never sends the package and never judges it.
 2. The owner relays the verdict to the implementation session, verbatim.
 3. Before acting on it, verify the three files' SHA-256 values still match those listed above.
 4. If and only if the independent verdict begins exactly `accepted`, independently verify every
@@ -132,7 +135,9 @@ follow the complete media review workflow.
 6. If the verdict is not exactly `accepted`, restore nothing. Verify any requested correction
    against canonical content, change only the demonstrated defect, regenerate minimum evidence,
    and obtain fresh transmission authorization.
-7. Do not begin `histoire-pluie` before Batch 7 is stable.
+7. Writing an accepted history entry needs the owner's permission typed directly in Claude Code:
+   auto mode refuses it as self-approval, and a pasted authorization is not treated as the
+   owner's own words.
 
 ## Established review workflow
 
@@ -184,7 +189,7 @@ laptop/MacBook.
 - Preserve accepted media bytes and registry associations.
 - Never track `.env*`; never print or commit secrets; keep server secrets out of client bundles.
 - Never mutate production data or deploy without explicit authorization.
-- Never force push. Push only the authorized feature branch during this handoff.
+- Never force push. Push only the authorized feature branch.
 - Do not begin October or 2ème maternelle work.
 - Supported devices are phone, tablet, and laptop/MacBook; TV/Smart TV is unsupported.
 - Update `docs/work/ACTIVE_TASK.md`, this handoff, the media inventory, and `PROJECT_STATUS.md`

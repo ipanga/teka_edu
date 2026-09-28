@@ -16,8 +16,8 @@ Generated from the canonical media registry, September lessons and supplied text
 - Rollout batch 4 contains the three-frame histoire-seau-lisa sequence. The corrected evidence and all eight dependent lessons were independently accepted and restored with fresh digests. Six story candidates remain unimplemented.
 - Rollout batch 5 contains the four-frame histoire-kumu sequence. The corrected frame 3 and all four dependent lessons were independently accepted and restored with fresh digests. Five story candidates remain unimplemented.
 - Rollout batch 6 contains the four-frame histoire-bibi sequence. All four frames and all three dependent lessons were independently accepted and restored with fresh digests. Four story candidates remain unimplemented.
-- Rollout batch 7 contains the four-frame histoire-marche sequence. Exactly three dependent lessons await independent reconfirmation; three story candidates remain unimplemented.
-- Manifest SHA-256: `a9b0fb2cbb8c0019456279cc87c9a75678bf249e1cc15e9bf69b9aed9fb2b994`.
+- Rollout batch 7 contains the four-frame histoire-marche sequence. All four frames and all three dependent lessons were independently accepted and restored with fresh digests. The three remaining story candidates (histoire-pluie, histoire-cailloux, histoire-malo) keep their approved SVGs; their painted upgrade is deliberately deferred until ImageGen-quality generation is available.
+- Manifest SHA-256: `ed1ac83edf8083f1e014222dfff16c5651b7997341882354d59413c8ef28ae38`.
 
 The supplied screenshots validate the distinction: layout and scaling are sound, while the body, rhyme and story art remains visually schematic. Shapes, counting models and isolated objects do not share that defect.
 

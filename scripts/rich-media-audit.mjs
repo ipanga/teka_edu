@@ -270,12 +270,11 @@ const assets = await Promise.all(
         ? isPilot
           ? "integrated-local-pilot"
           : "integrated-local-rollout"
-        : "not-started",
-      reviewState: selected
-        ? isRolloutBatch7
-          ? "awaiting-independent-reconfirmation"
-          : "independently-reconfirmed"
-        : "not-in-pilot",
+        : decision.decision === "audited-redraw"
+          ? // Owner decision 2026-09-28: the approved SVG stays until ImageGen-quality art exists.
+            "deferred-pending-imagegen"
+          : "not-started",
+      reviewState: selected ? "independently-reconfirmed" : "not-in-pilot",
       approvalImpact:
         decision.decision === "audited-keep"
           ? { expected: "none", lessonCount: 0, lessonIds: [] }
@@ -296,7 +295,7 @@ const assets = await Promise.all(
             oldFileBytes: oldFileSize(before.file),
             deliveryFiles: await delivery(asset),
             currentDecision: isRolloutBatch7
-              ? "owner-authorized-local-integration; independent-review-pending"
+              ? "independent-review-accepted; lapsed-only-approval-restored"
               : isRolloutBatch6
                 ? "independent-review-accepted; lapsed-only-approval-restored"
                 : isRolloutBatch5
@@ -338,7 +337,7 @@ const manifest = {
   productionCommit: "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   pilotBaselineCommit: baselineCommit,
   scope: ["maternelle-1 September", "maternelle-3 September"],
-  status: "rollout-batch-7-awaiting-independent-reconfirmation",
+  status: "rollout-batch-7-independently-reconfirmed",
   productionAssetsChanged: false,
   localPilotAssetsChanged: true,
   approvedLessonSemanticsChanged: false,
@@ -369,7 +368,7 @@ const manifest = {
     "The lapsed-only workflow restored exactly eight Batch-4 approvals with fresh digests. All 168 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain; six other story-sequence candidates remain untouched.",
     "Rollout batch 5 integrates only the four-frame histoire-kumu sequence. The first independent review accepted frames 1, 2 and 4 but requested clearer closed eyelids on Kumu in frame 3 at 256 px. Only frame 3 was redrawn; the second review explicitly accepted the complete sequence. The lapsed-only workflow restored exactly four lessons with fresh digests; all 172 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain. Five other story-sequence candidates remain untouched.",
     "Rollout batch 6 integrates only the four-frame histoire-bibi sequence. Claude Max / Opus 5.5 explicitly accepted the complete sequence and all three dependent lessons without correction. The lapsed-only workflow restored exactly three approvals with fresh digests; all 173 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain. Four other story-sequence candidates remain untouched.",
-    "Rollout batch 7 integrates only the four-frame histoire-marche sequence. The 10 canonical lines render as four pages of three, three, three and one line and map exactly to frames 1–4. Exactly three lessons depend on it and await independent reconfirmation; three other story-sequence candidates remain untouched.",
+    "Rollout batch 7 integrates only the four-frame histoire-marche sequence. The 10 canonical lines render as four pages of three, three, three and one line and map exactly to frames 1–4. The external reviewer ChatGPT GPT-5.6 Sol first reported six tomatoes on frame 2; evidence and an enlarged reinspection confirmed exactly five tomatoes and three onions, the blocker was withdrawn, and the corrected verdict accepted the complete sequence without any media change. The lapsed-only workflow restored exactly three approvals with fresh digests; all 173 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain. The three remaining story candidates keep their approved SVGs; their painted upgrade is deliberately deferred until ImageGen-quality generation is available.",
   ],
   assets,
 };
@@ -409,7 +408,7 @@ Generated from the canonical media registry, September lessons and supplied text
 - Rollout batch 4 contains the three-frame histoire-seau-lisa sequence. The corrected evidence and all eight dependent lessons were independently accepted and restored with fresh digests. Six story candidates remain unimplemented.
 - Rollout batch 5 contains the four-frame histoire-kumu sequence. The corrected frame 3 and all four dependent lessons were independently accepted and restored with fresh digests. Five story candidates remain unimplemented.
 - Rollout batch 6 contains the four-frame histoire-bibi sequence. All four frames and all three dependent lessons were independently accepted and restored with fresh digests. Four story candidates remain unimplemented.
-- Rollout batch 7 contains the four-frame histoire-marche sequence. Exactly three dependent lessons await independent reconfirmation; three story candidates remain unimplemented.
+- Rollout batch 7 contains the four-frame histoire-marche sequence. All four frames and all three dependent lessons were independently accepted and restored with fresh digests. The three remaining story candidates (histoire-pluie, histoire-cailloux, histoire-malo) keep their approved SVGs; their painted upgrade is deliberately deferred until ImageGen-quality generation is available.
 - Manifest SHA-256: \`${digest}\`.
 
 The supplied screenshots validate the distinction: layout and scaling are sound, while the body, rhyme and story art remains visually schematic. Shapes, counting models and isolated objects do not share that defect.

@@ -288,7 +288,8 @@ feature/*  -> develop  -> main
     replace reviewed ImageGen artwork with a lower-quality SVG without a demonstrated defect.
 16. During a Claude-only period, author SVG only for visuals that vector art can communicate
     clearly: shapes, counts, objects, matching, tracing and simple diagrams/scenes. Mark a complex
-    narrative illustration for later ImageGen enhancement when SVG would materially weaken it.
+    narrative illustration for later ImageGen enhancement when SVG would materially weaken it
+    (ADR-051: `histoire-pluie`, `histoire-cailloux`, `histoire-malo` keep their approved SVGs).
     Never call a paid image API or add a runtime image-generation dependency.
 17. Any media byte, accessible description or story page mapping change follows ADR-048: compute
     impact, lapse only affected approvals, validate, freeze evidence, obtain explicit authorization

@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-28
-Branch:     codex/september-rich-media-pilot (pushed as backup); Claude Code handoff complete
-Commit:     main 51c83a22 remains production; handoff commit on top of Batch 7 freeze f62356b
+Branch:     codex/september-rich-media-pilot (pushed as backup); Batch 7 accepted and restored
+Commit:     main 51c83a22 remains production; Batch 7 acceptance on top of handoff a675138
 Updated by: Claude Code
 ```
 
@@ -113,10 +113,22 @@ three-sentinel bundle scan and the then-current four-width E2E pass. The isolate
 ready locally. The owner explicitly authorized its bounded Claude Max review on 2026-09-28, but automatic
 approval review blocked transmission before any file was sent; Batch 7 therefore remains unreviewed and no
 approval was restored. Claude Code took over on 2026-09-28, re-verified every count above, revalidated on
-phone, tablet and laptop/MacBook (42 E2E passed, 9 production-only skips) and committed the handoff; the owner
-will run the Batch 7 review in a separate fresh Claude Code session. Seventeen of twenty rich-media candidates are
-integrated, sixteen are independently complete, seven story sequences are integrated, and the three untouched
-stories are `histoire-pluie`, `histoire-cailloux` and `histoire-malo`. Production remains unchanged.
+phone, tablet and laptop/MacBook (42 E2E passed, 9 production-only skips) and committed the handoff
+(`a675138`). Production remains unchanged.
+
+**Batch 7 independently accepted and restored — 2026-09-28.** The owner submitted the frozen three-file package
+to the external reviewer **ChatGPT GPT-5.6 Sol**. Its first pass (`accepted-with-modifications`) reported six
+tomatoes on frame 2; Claude Code showed, at full resolution and on the 256 px tile, that the tray holds exactly
+five tomatoes and three onions. After an enlarged reinspection the reviewer withdrew the blocker and returned
+`accepted`. No media byte changed. Accepted `full-review` entries for 3ème weeks 2–4 were recorded under the
+owner's explicit authorization, and `approve-week --lapsed-only` restored exactly `m3-lang-06`, `m3-lang-12` and
+`m3-lang-19` with freshly computed digests (none reused). September is **176 approved / 0 review, 176 distinct
+valid digests, 0 stale**, and all 173 unaffected records are byte-for-byte unchanged from accepted Batch 6.
+Derived from the regenerated manifest: **17 of 20** WebP candidates are independently complete, 31 SVGs are
+deliberately retained, seven story sequences are integrated. The last three candidates — `histoire-pluie`,
+`histoire-cailloux`, `histoire-malo` — **keep their approved SVGs; their painted upgrade is deliberately deferred
+until ImageGen-quality generation is available** (ADR-051). They are valid, approved lessons, not incomplete
+work. October and 2ème maternelle have not started; no production data was touched.
 
 ## Independent September visual/UX review — 2026-09-26
 

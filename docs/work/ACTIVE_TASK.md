@@ -4,13 +4,31 @@
 
 September Rich-Media Visual Upgrade
 
-**Current phase:** the Claude Code handoff is complete and checkpointed; Batch 7 awaits an independent review
-run by the owner in a separate fresh Claude Code session. Nothing is deployed and October is not started. The controlled
-pilot and rollout batches 1–6 are independently accepted and fully reapproved. Batch 7 integrates the four-page
-`histoire-marche` sequence; exactly `m3-lang-06`, `m3-lang-12` and `m3-lang-19` remain at `review`, while 173
-lessons remain approved with 173 distinct standing digests and all 173 unaffected records remain byte-for-byte
-unchanged. The owner authorized the exact three-file Claude Max review, but automatic approval review blocked
-the transmission before any file was sent. Production remains unchanged.
+**Current phase:** September is complete. The pilot and rollout batches 1–7 are independently accepted and fully
+reapproved: 176/176 lessons approved with 176 distinct valid digests. 17 of 20 rich-media candidates are done; the
+last three stories are deliberately deferred until ImageGen-quality art exists (ADR-051). No task is active: the next
+one needs the owner's authorization. Production is unchanged; October and 2ème maternelle have not started.
+
+## Rollout batch 7 independently accepted — 2026-09-28
+
+- **Verdict:** the owner submitted the frozen package (dossier `3b60e898…`, sheet `8c96f6ea…`, prompt `f0f997d8…`) to
+  the external reviewer **ChatGPT GPT-5.6 Sol**. First pass: `accepted-with-modifications`, reporting six tomatoes on
+  frame 2. Claude Code showed at full resolution and on the 256 px tile that the tray holds exactly five tomatoes
+  and three onions. After an enlarged reinspection the reviewer withdrew the blocker and returned `accepted`. No
+  media byte changed.
+- **Approval restoration:** under the owner's explicit, directly typed authorization, accepted `full-review` entries
+  for 3ème weeks 2, 3 and 4 were written (reviewer `ChatGPT GPT-5.6 Sol`, `ai-assisted`). `approve-week
+--lapsed-only=true` restored exactly `m3-lang-06`, `m3-lang-12` and `m3-lang-19`, one per week with 19 untouched
+  each, with fresh digests that match no earlier approval.
+- **Integrity:** 176 approved / 0 review, 176 distinct valid digests, 0 stale, `review:lapse` dry run 0; all 173
+  unaffected records byte-for-byte unchanged from Batch 6 `a3afbe1`.
+- **Rich media (derived from the regenerated manifest):** 20 candidates, 17 independently complete, 31 SVGs
+  retained, 7 story sequences. `histoire-pluie`, `histoire-cailloux` and `histoire-malo` are
+  `deferred-pending-imagegen`: approved SVGs kept, no media changed, no approval lapsed.
+- **Regenerated:** rich-media audit (JSON + MD), 3ème week 2–4 review packages, visual QA tracker, reference-data
+  pgTAP test.
+- **Exact resume point:** wait for the owner to authorize the next task. Do not start October, 2ème maternelle or
+  another rich-media conversion without it.
 
 ## Durable Claude Code handoff — 2026-09-28
 

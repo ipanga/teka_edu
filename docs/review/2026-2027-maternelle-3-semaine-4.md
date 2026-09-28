@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 9 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 10 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -127,6 +127,12 @@ Reconfirmation visuelle indépendante du lot 1 du déploiement rich-media de sep
 Reconfirmation visuelle indépendante du lot 5 du déploiement rich-media de septembre, couvrant exactement la séquence histoire-kumu et quatre leçons. La première passe Claude Max / Opus 5.5 a accepté les cadres 1, 2 et 4, la pagination canonique de 12 lignes en quatre pages et tous les champs pédagogiques, mais a demandé que les yeux fermés de Kumu restent clairement lisibles à 256 px dans le cadre 3. Après la correction bornée, la seconde passe a conclu accepted : les yeux fermés, la posture d’écoute, le tournant narratif, la continuité visuelle et l’adéquation préscolaire sont confirmés sans bloqueur.
 
 **Suites données :** Seul le cadre 3 a été régénéré ; Kumu ferme désormais visiblement les deux yeux et lève la tête vers le poulailler pour écouter. Les cadres 1, 2 et 4 sont restés octet pour octet identiques. Les quatre WebP sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 027ee3b6119faf82c9b58d974846b73e5531b71d5309516b0d8446715f9542be, 46c72911eec6b4765ccfa37e66ced474e13db28cd5c8144ec20d9517755723b9, 3d55d4687ed29f49b0fb5f6934edfb3e918cbba295464f1bfb15ddeb99e7dd95, 3c3a60bdd2fc1913b8394fb8643fa98a545a51ff91fb11d25abf56282b57b13a. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les quatre approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
+
+### 2026-09-28 — ChatGPT GPT-5.6 Sol · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 7 du déploiement rich-media de septembre, couvrant exactement la séquence histoire-marche et trois leçons (m3-lang-06, m3-lang-12, m3-lang-19), à partir du dossier, de la planche comparative et de la consigne bornée gelés. ChatGPT GPT-5.6 Sol, relecteur externe indépendant de l’auteur des images et de la session d’implémentation, a d’abord conclu accepted-with-modifications en signalant six tomates sur le cadre 2. La session d’implémentation Claude Code a contesté ce bloqueur avec des preuves : le plateau pédagogique du cadre 2 contient exactement cinq tomates et trois oignons, en pleine résolution comme sur la vignette de 256 px. Après réinspection agrandie, ChatGPT GPT-5.6 Sol a confirmé cinq tomates et trois oignons, retiré le bloqueur et conclu accepted : les 10 lignes canoniques rendent quatre pages (3/3/3/1) associées aux cadres [0, 1, 2, 3] ; Mama Lelo, Ama, les vêtements, le panier, le marché, la cour, la lumière et le style restent cohérents ; les couleurs, le comptage et la comparaison de cinq tomates avec trois oignons, le tri et la fierté d’Ama sont clairs et adaptés à la maternelle.
+
+**Suites données :** Aucune correction : le seul bloqueur signalé provenait d’un comptage visuel erroné et a été retiré ; aucun média n’a été modifié ni régénéré. Les quatre WebP sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 4188ac69de8d39f7d742ea5f257cc888067217c28f53816d8afbccd446dbcb75, 0a674df545e61cb3868bf8be9fe54c1d220dad13dae7e33ada2a67f337c8bc39, c61a2d3efeb08b7af036d979e82ed3f1f324692e3c20f43f1c9df8b7a72bf9db et 5cb5137fb4c0a12641f185f5bd6a3f2dcedee3db556b7ca7c4615ceb423e2f00. AssetFingerprint couvre les quatre cadres, leurs descriptions et pageFrames, puis lessonDigest couvre cette empreinte complète. Aucun texte pédagogique, objectif, durée, matériel, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Le propriétaire a explicitement autorisé l’enregistrement de ce verdict externe et la restauration des trois approbations expirées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
 
 ## Jour 15 — 2026-09-21
 
@@ -1468,7 +1474,7 @@ l’autre — l’appareil est alors le sien._
 
 _Reprendre les catégories de mots du mois et y ranger des mots nouveaux._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Reprise des trois corpus du mois : l’école, la maison, le marché. L’enfant range, et surtout explique pourquoi.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

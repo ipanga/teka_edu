@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 8 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 9 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -109,6 +109,12 @@ Reconfirmation visuelle indépendante du pilote rich-media de septembre, couvran
 Reconfirmation visuelle indépendante du lot 6 du déploiement rich-media de septembre, couvrant exactement la séquence histoire-bibi et trois leçons. Claude Max / Opus 5.5 a conclu accepted sans bloqueur : les 12 lignes canoniques rendent quatre pages et quatre cadres dans l’ordre ; Bibi, Mama Lelo, le jardin, la barrière, la lumière et le style restent cohérents ; l’entrée, les légumes mangés, l’intervention bienveillante et la résolution par un tas d’herbe séparé sont clairs à 256 px et adaptés à la maternelle.
 
 **Suites données :** Aucune correction demandée. Les quatre WebP finaux sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 1e15939369feba99abb39e6b32d2d5b745638601d7e578935479f468066e48e4, 7c6c8dadd01b16a11cb38bcc3df17f633581ec8ed6f1f14669f94449e1853112, b8f2d6bbbf0e3c54a8c06fc23147c233405afac65a0aa89465f8d68f268951ee et 7d39bca6f7dbd7181a1e492511ba4c632a0472bbbbc0916cb0710129a374db0e. AssetFingerprint couvre les quatre cadres, leurs descriptions et pageFrames, puis lessonDigest couvre cette empreinte complète. Aucun texte pédagogique, objectif, durée, matériel, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les trois approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
+
+### 2026-09-28 — ChatGPT GPT-5.6 Sol · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 7 du déploiement rich-media de septembre, couvrant exactement la séquence histoire-marche et trois leçons (m3-lang-06, m3-lang-12, m3-lang-19), à partir du dossier, de la planche comparative et de la consigne bornée gelés. ChatGPT GPT-5.6 Sol, relecteur externe indépendant de l’auteur des images et de la session d’implémentation, a d’abord conclu accepted-with-modifications en signalant six tomates sur le cadre 2. La session d’implémentation Claude Code a contesté ce bloqueur avec des preuves : le plateau pédagogique du cadre 2 contient exactement cinq tomates et trois oignons, en pleine résolution comme sur la vignette de 256 px. Après réinspection agrandie, ChatGPT GPT-5.6 Sol a confirmé cinq tomates et trois oignons, retiré le bloqueur et conclu accepted : les 10 lignes canoniques rendent quatre pages (3/3/3/1) associées aux cadres [0, 1, 2, 3] ; Mama Lelo, Ama, les vêtements, le panier, le marché, la cour, la lumière et le style restent cohérents ; les couleurs, le comptage et la comparaison de cinq tomates avec trois oignons, le tri et la fierté d’Ama sont clairs et adaptés à la maternelle.
+
+**Suites données :** Aucune correction : le seul bloqueur signalé provenait d’un comptage visuel erroné et a été retiré ; aucun média n’a été modifié ni régénéré. Les quatre WebP sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 4188ac69de8d39f7d742ea5f257cc888067217c28f53816d8afbccd446dbcb75, 0a674df545e61cb3868bf8be9fe54c1d220dad13dae7e33ada2a67f337c8bc39, c61a2d3efeb08b7af036d979e82ed3f1f324692e3c20f43f1c9df8b7a72bf9db et 5cb5137fb4c0a12641f185f5bd6a3f2dcedee3db556b7ca7c4615ceb423e2f00. AssetFingerprint couvre les quatre cadres, leurs descriptions et pageFrames, puis lessonDigest couvre cette empreinte complète. Aucun texte pédagogique, objectif, durée, matériel, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Le propriétaire a explicitement autorisé l’enregistrement de ce verdict externe et la restauration des trois approbations expirées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
 
 ## Jour 10 — 2026-09-14
 
@@ -812,7 +818,7 @@ l’autre — l’appareil est alors le sien._
 
 _Ranger les mots par catégories : ce qui se mange, ce qui sert à écrire, ce qui se porte._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Ranger des mots par catégories est difficile et très utile : c’est ce qui fait qu’un mot nouveau trouve sa place. Dites toujours pourquoi deux mots vont ensemble.
 - **Objectifs enseignés :**
   - `LANG-S01-C01-O02` — Organiser les mots en catégorie et en réseau. _(source : programme-2024-langage)_

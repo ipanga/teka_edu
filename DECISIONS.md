@@ -1471,3 +1471,27 @@ work rather than current requirements.
 **Consequences:** Active responsive tests and reusable audit tools cover phone, tablet, and
 laptop/MacBook only. Current project documentation uses those names. No ordinary responsive CSS is
 removed solely because it also works on a wider display.
+
+---
+
+## ADR-051 — Complex September story illustrations wait for ImageGen-quality art
+
+**Status:** Accepted · **Date:** 2026-09-28 · **Decided by:** the product owner
+
+**Context:** Seventeen of the twenty audited September WebP candidates are integrated and
+independently accepted. The last three — `histoire-pluie`, `histoire-cailloux` and
+`histoire-malo` — are narrative stories that need expressive characters, animals, changing weather,
+exact quantities carried through character action, and continuity across four pages. ImageGen-quality
+raster generation is unavailable while Claude Code continues the work, and vector art cannot carry
+those scenes at the standard of the seven accepted painted story sequences.
+
+**Decision:** Keep each story's current approved SVG. Defer its painted sequence until
+ImageGen-quality generation is available again, and then run it through the ADR-048 workflow. Do not
+author a weaker SVG sequence to close the candidate. No runtime media changes, so no approval lapses.
+SVG stays appropriate for schematic educational content — shapes, colours, counting objects, matching,
+recognition cards, diagrams, tracing and simple scenes — and is never a substitute for a complex
+natural illustration. Accepted WebP assets are preserved byte for byte.
+
+**Consequences:** September is complete and fully approved (176/176) with 17 of 20 rich-media
+candidates finished. The rich-media audit marks the three stories `deferred-pending-imagegen`; this
+is a deliberate quality decision, not an unfinished lesson.
