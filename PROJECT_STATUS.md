@@ -5,9 +5,9 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-09-30
-Branch:     codex/september-rich-media-pilot; histoire-cailloux independently accepted and restored
-Commit:     reviewed Cailloux 6220f1e; accepted-state checkpoint follows; production unchanged
+Date:       2026-10-01
+Branch:     codex/september-rich-media-pilot; final September histoire-malo frozen awaiting review
+Commit:     accepted Cailloux cd4f39b; Malo freeze checkpoint follows; production unchanged
 Updated by: Codex
 ```
 
@@ -20,9 +20,29 @@ are outside acceptance, regression, release-readiness and media-review scope. Hi
 that records past TV checks remains unchanged as an accurate record and creates no current support
 obligation.
 
-## Codex continuation — 2026-09-30
+## Current September continuation — 2026-10-01
 
-Current state supersedes the implementation snapshot below: Cailloux separately accepted
+Accepted Cailloux cd4f39b95a234f0fed5c819a7e81db8a1138d936 was fully validated, committed,
+pushed and remote-verified before Malo. Audit confirmed Malo alone deferred. It now has four
+1200x900 ImageGen WebPs for twelve unchanged lines (3/3/3/3), pageFrames [0,1,2,3].
+Exactly m3-lang-07, m3-lang-16 and m3-lang-20 intentionally lapsed: 173 approved / 3 review /
+176 distinct fresh digests / zero stale/unexpected lapses. Other 173 records unchanged.
+All 50 unrelated assets/media, canonical texts, review history, accepted Pluie/Cailloux evidence
+match cd4f39b. All 20 candidates integrated, 19 accepted; ten sequences, 31 retained SVGs.
+Malo package docs/review/histoire-malo contains 26 hashed files plus manifest SHA-256
+f76f81e72adef7810695da6cb2b29d6fde0aa4dc981e9abd43fc0f1289141603.
+Actual frames/256 px sheet/phone-tablet-MacBook layouts inspected as implementation QA only.
+Frame 2 shows aftermath of branch attempt/fish visit; frame 3 highlights cold-water trial;
+reviewer must judge moment choices against all canonical lines, not just descriptions.
+Validation passed: 438 unit tests, 66 local browser tests including eight Malo viewports;
+nine production-only checks skipped; 31 content files, types, lint, production Webpack build,
+28-file/three-sentinel bundle scan, zero additional lapse dry-run and full repository formatting.
+All frozen-file integrity checks passed. No Malo acceptance/history/restoration. Stop for fresh independent review.
+No PR/merge/staging/production/DB operation. Date rollover does not start October content work.
+
+## Accepted Cailloux checkpoint — 2026-09-30
+
+Accepted checkpoint state supersedes the implementation snapshot below: Cailloux separately accepted
 without correction. Owner relayed verdict; all frozen hashes and runtime bytes matched before
 action. Exactly m3-lang-08, m3-lang-14 and m3-lang-18 restored by fresh-digest lapsed-only
 weeks 2/3/4 after dry-run. September 176 approved / 0 review / 176 distinct current valid digests,

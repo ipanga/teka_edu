@@ -1,11 +1,11 @@
 {
   "task": "September rich-media visual upgrade — controlled rollout",
   "version": 2,
-  "generatedOn": "2026-09-30",
+  "generatedOn": "2026-10-01",
   "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   "pilotBaselineCommit": "cbc1cf3",
   "scope": ["maternelle-1 September", "maternelle-3 September"],
-  "status": "rollout-batch-9-independently-reconfirmed",
+  "status": "rollout-batch-10-awaiting-independent-reconfirmation",
   "productionAssetsChanged": false,
   "localPilotAssetsChanged": true,
   "approvedLessonSemanticsChanged": false,
@@ -20,11 +20,12 @@
     "ifAllProposedWebpAssetsAreIntegrated": 53,
     "maternelle1": 27,
     "maternelle3": 26,
-    "currentImpact": 0,
-    "currentApproved": 176,
-    "currentReview": 0
+    "currentImpact": 3,
+    "currentApproved": 173,
+    "currentReview": 3
   },
   "notes": [
+    "Batch 10 histoire-malo integrates four rich ImageGen frames for twelve unchanged canonical lines (3/3/3/3). Exactly m3-lang-07, m3-lang-16 and m3-lang-20 intentionally at review; 173 unaffected approval records unchanged against accepted Cailloux cd4f39b. 20/20 integrated, 19/20 independently accepted, ten sequences, 31 retained SVGs, no deferred candidates. Separate independent acceptance required; no self-approval or restoration. Frozen accepted evidence preserved.",
     "Batch 9 histoire-cailloux independently accepted without correction at frozen 6220f1e; owner relayed verdict and authorized exactly three fresh-digest lapsed-only restorations. September 176 approved / 0 review / 176 distinct current valid digests / zero stale or unexpected lapses. All 173 unaffected approval records unchanged; frozen Cailloux/Pluie packages preserved. Nineteen of twenty candidates independently complete, nine sequences, 31 retained SVGs; Malo is the final deferred candidate.",
     "Accepted Pluie checkpoint b4f242d snapshot: batch 8 was independently accepted without correction at frozen checkpoint 45b4683. Owner relayed the verdict and authorized restoration. Exactly seven approvals restored with fresh-digest lapsed-only workflow; 169 unaffected records unchanged. At that checkpoint September was 176/176 approved, zero stale/unexpected lapses, 18/20 independently completed; Cailloux/Malo were deferred. Pluie source masters 1448x1086 except frame 2 at 1447x1087; delivery 1200x900. Current batch 9 state is reported separately above.",
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
@@ -2708,7 +2709,7 @@
     {
       "id": "histoire-malo",
       "kind": "illustration",
-      "pedagogicalRole": "Malo, un petit chien couché en rond sur son tapis, les yeux fermés, sous la lune et les étoiles",
+      "pedagogicalRole": "Au coucher du soleil, Malo, petit chien doré aux oreilles brunes, regarde le coq perché sur une branche basse. Ses yeux sont encore ouverts mais fatigués.",
       "currentFile": "public/media/illustrations/histoire-malo.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -2742,15 +2743,50 @@
       "presentation": "4-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
-      "implementationState": "deferred-pending-imagegen",
-      "reviewState": "not-in-pilot",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "awaiting-independent-reconfirmation",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 3,
         "lessonIds": ["m3-lang-07", "m3-lang-16", "m3-lang-20"]
       },
       "beforeHash": "sha256:1d24cfd5888c9272c68b8ecf5134f0070c0e11baacc855618f7cbefc3e23bf6a",
-      "afterHash": null
+      "afterHash": "sha256:d63aad056d6b5e81693c5806b136909f921d48fd47fa4b80e6647efe3d8cb27d",
+      "proposedFile": "public/media/illustrations/histoire-malo-01.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/histoire-malo/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2017,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-malo-01.webp",
+          "bytes": 278596
+        },
+        {
+          "file": "public/media/illustrations/histoire-malo-02.webp",
+          "bytes": 277702
+        },
+        {
+          "file": "public/media/illustrations/histoire-malo-03.webp",
+          "bytes": 273706
+        },
+        {
+          "file": "public/media/illustrations/histoire-malo-04.webp",
+          "bytes": 243678
+        }
+      ],
+      "currentDecision": "awaiting-independent-review; approvals-intentionally-lapsed"
     },
     {
       "id": "comptine-compter",

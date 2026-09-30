@@ -124,7 +124,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler de ce qu’on a fait à quelqu’un qui ne l’a pas vu._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** L’enfant présente son dessin comme à quelqu’un qui ne sait rien. C’est ce qui l’oblige à employer des phrases complètes.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -176,7 +176,12 @@ _Parler de ce qu’on a fait à quelqu’un qui ne l’a pas vu._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-malo` — Malo, un petit chien couché en rond sur son tapis, les yeux fermés, sous la lune et les étoiles (`public/media/illustrations/histoire-malo.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-malo`
+
+  - Page 1 : Au coucher du soleil, Malo, petit chien doré aux oreilles brunes, regarde le coq perché sur une branche basse. Ses yeux sont encore ouverts mais fatigués. (`public/media/illustrations/histoire-malo-01.webp`)
+  - Page 2 : Le coq dort, la tête sous son aile. Après sa tentative sur la branche, Malo est au sol et regarde le poisson dans le seau. (`public/media/illustrations/histoire-malo-02.webp`)
+  - Page 3 : Malo met une seule patte dans l’eau du seau et réagit au froid. Le poisson garde son œil ouvert ; le tapis de Malo est visible dans la maison. (`public/media/illustrations/histoire-malo-03.webp`)
+  - Page 4 : Malo dort en rond sur son tapis, les yeux fermés et le nez posé sur le bout de sa queue. La lune et les étoiles brillent dehors. (`public/media/illustrations/histoire-malo-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 

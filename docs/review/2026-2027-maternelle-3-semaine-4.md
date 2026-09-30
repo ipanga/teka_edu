@@ -538,7 +538,7 @@ l’autre — l’appareil est alors le sien._
 
 _Entendre que deux mots finissent pareil._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 3/3
 - **Conseil au parent :** La rime s’entend à la fin du mot. Exagérez la fin en parlant : « chaaa-TON, maiii-SON. » L’enfant doit d’abord reconnaitre, avant d’inventer.
 - **Objectifs enseignés :**
   - `LANG-S02-C01-O15` — Repérer et produire des rimes et des assonances. _(source : programme-2024-langage)_
@@ -588,7 +588,12 @@ _Entendre que deux mots finissent pareil._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-malo` — Malo, un petit chien couché en rond sur son tapis, les yeux fermés, sous la lune et les étoiles (`public/media/illustrations/histoire-malo.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-malo`
+
+  - Page 1 : Au coucher du soleil, Malo, petit chien doré aux oreilles brunes, regarde le coq perché sur une branche basse. Ses yeux sont encore ouverts mais fatigués. (`public/media/illustrations/histoire-malo-01.webp`)
+  - Page 2 : Le coq dort, la tête sous son aile. Après sa tentative sur la branche, Malo est au sol et regarde le poisson dans le seau. (`public/media/illustrations/histoire-malo-02.webp`)
+  - Page 3 : Malo met une seule patte dans l’eau du seau et réagit au froid. Le poisson garde son œil ouvert ; le tapis de Malo est visible dans la maison. (`public/media/illustrations/histoire-malo-03.webp`)
+  - Page 4 : Malo dort en rond sur son tapis, les yeux fermés et le nez posé sur le bout de sa queue. La lune et les étoiles brillent dehors. (`public/media/illustrations/histoire-malo-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Acquérir les habiletés phonologiques et le principe alphabétique » (from-5) :**
 

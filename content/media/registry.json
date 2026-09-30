@@ -732,12 +732,47 @@
     {
       "id": "histoire-malo",
       "kind": "illustration",
-      "file": "illustrations/histoire-malo.svg",
-      "alt": "Malo, un petit chien couché en rond sur son tapis, les yeux fermés, sous la lune et les étoiles",
+      "file": "illustrations/histoire-malo-01.webp",
+      "alt": "Au coucher du soleil, Malo, petit chien doré aux oreilles brunes, regarde le coq perché sur une branche basse. Ses yeux sont encore ouverts mais fatigués.",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-malo-01.webp",
+            "alt": "Au coucher du soleil, Malo, petit chien doré aux oreilles brunes, regarde le coq perché sur une branche basse. Ses yeux sont encore ouverts mais fatigués.",
+            "width": 1200,
+            "height": 900,
+            "contentHash": "sha256:d63aad056d6b5e81693c5806b136909f921d48fd47fa4b80e6647efe3d8cb27d"
+          },
+          {
+            "file": "illustrations/histoire-malo-02.webp",
+            "alt": "Le coq dort, la tête sous son aile. Après sa tentative sur la branche, Malo est au sol et regarde le poisson dans le seau.",
+            "width": 1200,
+            "height": 900,
+            "contentHash": "sha256:e1b22323bf7587364bfc739f647d1340c9df322863df25c6da35c92fdf63900a"
+          },
+          {
+            "file": "illustrations/histoire-malo-03.webp",
+            "alt": "Malo met une seule patte dans l’eau du seau et réagit au froid. Le poisson garde son œil ouvert ; le tapis de Malo est visible dans la maison.",
+            "width": 1200,
+            "height": 900,
+            "contentHash": "sha256:f660ef33ab0a7a914beffa67e5b8de11e46021fffba1533b8b29af048adf3e20"
+          },
+          {
+            "file": "illustrations/histoire-malo-04.webp",
+            "alt": "Malo dort en rond sur son tapis, les yeux fermés et le nez posé sur le bout de sa queue. La lune et les étoiles brillent dehors.",
+            "width": 1200,
+            "height": 900,
+            "contentHash": "sha256:e863952424ae94b22f474b1a376c1493093920acc89401f35e2368d2a0f3d6bc"
+          }
+        ],
+        "pageFrames": [0, 1, 2, 3]
+      },
       "tags": ["malo", "chien", "dormir", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:1d24cfd5888c9272c68b8ecf5134f0070c0e11baacc855618f7cbefc3e23bf6a"
+      "provenance": "Séquence peinte originale produite avec ImageGen intégré à Codex, alignée sur les quatre pages canoniques de Malo ne veut pas dormir. Les scènes suivent les essais du chien auprès du coq et du poisson, puis son sommeil à la maison.",
+      "contentHash": "sha256:d63aad056d6b5e81693c5806b136909f921d48fd47fa4b80e6647efe3d8cb27d"
     },
     {
       "id": "comptine-compter",

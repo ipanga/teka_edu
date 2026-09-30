@@ -16,23 +16,35 @@ a dependency. `CODEX_TO_CLAUDE_CODE_HANDOFF.md` is historical; preserve its evid
 
 ## Current phase and next action
 
-Cailloux independently accepted without correction; owner relayed verdict on 2026-09-30.
-Reviewed freeze: 6220f1e1e8f1476018759b514d86a946f78d937e; documentation d63b661.
-Manifest: 415bbf536f244ae90ef13a3ab3e17a4887d04ad9f33c69598e801c7258e7365c.
-All 26 package files, runtime frames and reviewed content matched before restoration.
-Three accepted full-review entries (maternelle-3 weeks 2/3/4) recorded. Dry-run then established
-approve-week --lapsed-only=true restored ONLY m3-lang-08, m3-lang-14 and m3-lang-18.
-176 total/approved, zero review, 176 distinct current valid digests, zero stale/unexpected lapses;
-all 173 unaffected approval records unchanged. No digest copied from old records/evidence.
-External acceptance record: docs/review/verdicts/2026-09-30-cailloux.json.
-Frozen Cailloux and accepted Pluie packages unchanged. Pluie accepted baseline b4f242d;
-Pluie manifest 1ff3bd59ee4a2d6a89a8a153e98d0f2314d6faaabc64ce0045b6a9e5d037ec2b.
-Nineteen of twenty candidates independently complete, nine sequences, 31 retained SVGs.
-Next: validate/checkpoint/push accepted Cailloux, then verify final deferred histoire-malo
-from canonical audit before implementation. Generate rich coherent ImageGen scenes, keep text
-unchanged, lapse only true dependencies, validate/freeze/checkpoint/push, and STOP for a fresh
-independent Codex review. No Malo acceptance/history/restoration without separate final acceptance.
-Read docs/work/ACTIVE_TASK.md for validation freshness and exact checkpoint.
+Accepted Cailloux checkpoint cd4f39b95a234f0fed5c819a7e81db8a1138d936 validated/pushed/clean/
+remote-verified before Malo. Separate acceptance relayed by owner; three fresh lapsed-only
+restorations verified 176/176, 176 distinct valid digests, zero stale/unexpected lapses and
+173 unchanged unaffected approval records. Verdict docs/review/verdicts/2026-09-30-cailloux.json.
+Frozen Cailloux reviewed SHA 6220f1e1e8f1476018759b514d86a946f78d937e, manifest
+415bbf536f244ae90ef13a3ab3e17a4887d04ad9f33c69598e801c7258e7365c, preserved unchanged.
+Accepted Pluie package likewise preserved. Canonical audit confirmed Malo was the final deferred
+candidate. Malo is now integrated and frozen awaiting separate review, not accepted.
+Four 1200x900 WebPs, twelve unchanged canonical lines (3/3/3/3), pageFrames [0,1,2,3].
+Page 1 sleepy but awake dog/rooster; page 2 rooster head under wing, branch attempt aftermath
+and fish visit; page 3 one paw tests cold water, home visible; page 4 curled nose-to-tail sleep.
+README discloses moment choices; independent reviewer must judge against every canonical line.
+Current 173 approved / exactly 3 review: m3-lang-07, m3-lang-16, m3-lang-20. 176 distinct fresh
+digests, zero stale/unexpected lapses; 173 unaffected records unchanged against cd4f39b.
+All 50 unrelated assets/media, canonical text, review history and accepted frozen packages unchanged.
+20/20 integrated, 19/20 independently accepted, ten sequences, 31 intentionally retained SVGs.
+Package docs/review/histoire-malo/ has 26 hashed files plus manifest SHA-256:
+f76f81e72adef7810695da6cb2b29d6fde0aa4dc981e9abd43fc0f1289141603.
+Resolve freeze SHA: git log -1 --format=%H -- docs/review/histoire-malo.
+Next: complete final checkpoint/push, then STOP. Owner opens a fresh independent Codex session
+using docs/review/histoire-malo/REVIEWER_PROMPT.md. No self-acceptance or restoration.
+After final accepted verdict: reverify frozen bytes and exact impact; record external verdict
+via full-review history for maternelle-3 weeks 2/4/5. Dry-run then approve-week --lapsed-only=true.
+Compute fresh digests, never copy pending/prior values. Verify 176/176, 176 distinct current valid
+digests, zero stale/unexpected lapses, 173 unchanged unaffected records and 20/20 independently
+complete. Refresh current artifacts without changing frozen packages; validate/document/checkpoint/
+push feature only, report and STOP. PR/develop/staging/release work needs new owner authorization.
+No October or 2eme maternelle content work. Date rollover is continuation of September only.
+Read docs/work/ACTIVE_TASK.md for latest checkpoint and validation freshness.
 
 ## Policies
 
