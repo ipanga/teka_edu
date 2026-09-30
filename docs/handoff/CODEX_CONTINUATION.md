@@ -22,13 +22,29 @@ package: `docs/review/histoire-pluie/`. Resolve the implementation SHA with
 `git log -1 --format=%H -- docs/review/histoire-pluie`.
 Frozen implementation: `45b468301af2a9dae41e182d619ee9f024d56379`; clean at freeze.
 Manifest SHA-256: `1ff3bd59ee4a2d6a89a8a153e98d0f2314d6faaabc64ce0045b6a9e5d037ec2b`.
-Current state: 176 approved / 0 review / 176 distinct valid digests / zero stale or unexpected
+Accepted Pluie state: 176 approved / 0 review / 176 distinct valid digests / zero stale or unexpected
 lapses; seven fresh restorations, 169 unaffected records unchanged. Eighteen candidates
 independently complete, eight sequences, 31 retained SVGs. Canonical texts and media unchanged.
 Review history contains seven accepted full-review entries. The frozen package is preserved;
 acceptance evidence is `docs/review/verdicts/2026-09-30-pluie.json`.
-Next canonical candidate is histoire-cailloux, then histoire-malo. Begin Cailloux only after
-the accepted Pluie state is validated and checkpointed/pushed.
+Accepted Pluie checkpoint `b4f242d77ecde3b7e67bdba37e14dcbe56d6061c` is validated and pushed.
+Cailloux is frozen awaiting separate independent Codex review. Four 1200x900 WebPs map to
+eleven unchanged canonical lines (3/3/3/2), with visible counts 3/2/2/3. Exactly m3-lang-08,
+m3-lang-14 and m3-lang-18 are at review: 173 approved / 3 review / 176 distinct fresh digests /
+zero stale/unexpected lapses. All 173 unaffected approval records, 50 unrelated assets/media,
+canonical texts, review history and Pluie frozen evidence unchanged against accepted baseline.
+19/20 integrated, 18/20 independently accepted, nine sequences, 31 retained SVGs.
+Package: `docs/review/histoire-cailloux/`, 26 hashed files plus manifest. Manifest SHA-256:
+`415bbf536f244ae90ef13a3ab3e17a4887d04ad9f33c69598e801c7258e7365c`.
+Resolve freeze SHA: `git log -1 --format=%H -- docs/review/histoire-cailloux`.
+Owner opens a fresh session using `docs/review/histoire-cailloux/REVIEWER_PROMPT.md`.
+Stop: no Cailloux restoration/history before final explicit independent acceptance.
+After acceptance, reverify all bytes and impact, record separate verdict through full-review
+history for maternelle-3 weeks 2/3/4; dry-run then run approve-week with `--lapsed-only=true`.
+Compute fresh digests; never copy pending/prior values. Verify 176/176, 176 distinct valid
+digests, zero stale/unexpected lapses and 173 unchanged unaffected records. Refresh current
+audit/review/reference artifacts without touching frozen packages, validate, document and
+checkpoint/push only the feature. Malo remains deferred until that accepted checkpoint.
 Read `docs/work/ACTIVE_TASK.md` for the latest milestone and validation freshness.
 
 Canonical Pluie text: `la-pluie-sur-le-toit` in `content/texts/maternelle-3.json`.

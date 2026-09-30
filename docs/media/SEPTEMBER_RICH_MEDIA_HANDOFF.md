@@ -3,12 +3,14 @@
 ## Current Codex continuation — 2026-09-30
 
 Claude Code is unavailable; [Codex continuation](../handoff/CODEX_CONTINUATION.md) supersedes
-the former handoff. Pluie is independently accepted without correction and fully restored:
-18 WebP candidate IDs, eight sequences, 39 WebP plus 33 SVG runtime files (72 total),
-8,749,798 runtime bytes. Eighteen of twenty candidates are independently completed;
-31 SVGs are intentionally retained; Cailloux and Malo are untouched.
-September is 176 approved / 0 review / 176 distinct valid digests / zero stale approvals. Exact Pluie paths,
-hashes, mapping, uses and evidence are in [the isolated package](../review/histoire-pluie/README.md).
+the former handoff. Pluie is independently accepted, restored and pushed at b4f242d.
+Cailloux is integrated and frozen awaiting separate review: 19 WebP candidate IDs, nine sequences,
+43 WebP plus 32 SVG runtime files (75 total), 9,719,987 bytes. Eighteen of twenty candidates
+independently complete; 31 intentionally retained SVGs; Malo alone remains deferred and untouched.
+Cailloux counts are 3/2/2/3. September is 173 approved / 3 review / 176 distinct fresh digests /
+zero stale approvals. Only m3-lang-08, m3-lang-14 and m3-lang-18 lapsed; other 173 records unchanged.
+Exact evidence is in the isolated [Cailloux package](../review/histoire-cailloux/README.md) and
+preserved [Pluie package](../review/histoire-pluie/README.md).
 The dated September 28 inventory below preserves the verified pre-Pluie baseline.
 
 Date: 2026-09-28. Machine-readable runtime authority: `content/media/registry.json`. This file is a human handoff, not a second registry. Hashes below are SHA-256 values recomputed from tracked repository bytes.

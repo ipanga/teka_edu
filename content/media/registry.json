@@ -687,12 +687,47 @@
     {
       "id": "histoire-cailloux",
       "kind": "illustration",
-      "file": "illustrations/histoire-cailloux.svg",
-      "alt": "Trois cailloux différents : un rond, un plat et un pointu",
+      "file": "illustrations/histoire-cailloux-01.webp",
+      "alt": "Tito regarde les trois cailloux dans sa poche : un rond, un plat et un pointu.",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-cailloux-01.webp",
+            "alt": "Tito regarde les trois cailloux dans sa poche : un rond, un plat et un pointu.",
+            "width": 1200,
+            "height": 900,
+            "contentHash": "sha256:71061965c6d18961065baf6b1fba1ec11f21991552f3d0d720fdd73be12b2905"
+          },
+          {
+            "file": "illustrations/histoire-cailloux-02.webp",
+            "alt": "Deux cailloux restent sur la table, le rond et le plat. La grande sœur de Tito cache le pointu derrière son dos.",
+            "width": 1200,
+            "height": 900,
+            "contentHash": "sha256:6a84c8e998deb63e1d1b921fe369e1a596d0e8dba678e60c56461a0a6aff2621"
+          },
+          {
+            "file": "illustrations/histoire-cailloux-03.webp",
+            "alt": "Tito compte les deux cailloux sur la table et montre le plat. Le rond est là aussi ; le pointu reste caché derrière le dos de sa sœur.",
+            "width": 1200,
+            "height": 900,
+            "contentHash": "sha256:afa77e4ef630e065c49859a321f51d52e74c74809132dfa75b14df169e73ee45"
+          },
+          {
+            "file": "illustrations/histoire-cailloux-04.webp",
+            "alt": "La sœur de Tito ouvre sa main après avoir remis le caillou pointu. Les trois cailloux, le rond, le plat et le pointu, sont de nouveau sur la table.",
+            "width": 1200,
+            "height": 900,
+            "contentHash": "sha256:d47b00e2ced5dd7bf13023bc9afb024ef415cfdf0c35361aec30ff866bcdb238"
+          }
+        ],
+        "pageFrames": [0, 1, 2, 3]
+      },
       "tags": ["cailloux", "trois", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:df6458f051a0cab68852cf991c1dd70e811539eae00907d517033ff66936a317"
+      "provenance": "Séquence peinte originale produite avec ImageGen intégré à Codex, alignée sur les quatre pages canoniques des Trois cailloux de Tito. Les quantités visibles suivent trois, deux, deux, puis trois cailloux.",
+      "contentHash": "sha256:71061965c6d18961065baf6b1fba1ec11f21991552f3d0d720fdd73be12b2905"
     },
     {
       "id": "histoire-malo",

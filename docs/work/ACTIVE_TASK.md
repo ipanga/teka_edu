@@ -2,16 +2,16 @@
 
 ## Task
 
-September rich-media continuation: histoire-pluie
+September rich-media continuation: histoire-cailloux
 
 ## Objective
 
-Finish one four-page ImageGen sequence, preserve canonical pedagogy and freeze independent
-review evidence. Codex is the primary development environment; Claude Code is unavailable.
+Implement four canonical story frames with exact stone quantities and freeze evidence for a
+separate independent Codex review. Preserve lesson text, approval integrity and accepted media.
 
 ## Status
 
-`completed`
+`awaiting_review`
 
 ## Branch
 
@@ -19,7 +19,7 @@ review evidence. Codex is the primary development environment; Claude Code is un
 
 ## Base Branch
 
-Existing feature branch; recovery baseline `4b2648f462e4abd2467d3515a68822796c5005ee`.
+Accepted Pluie checkpoint `b4f242d77ecde3b7e67bdba37e14dcbe56d6061c`, clean and remote-verified.
 
 ## Started
 
@@ -27,106 +27,99 @@ Existing feature branch; recovery baseline `4b2648f462e4abd2467d3515a68822796c50
 
 ## Last Checkpoint
 
-Baseline verified locally and remotely at `4b2648f`: clean, 176/176 valid approvals,
-17/20 independently completed candidates, seven sequences, 31 retained SVGs, 69 hash-valid
-tracked runtime files. Four Pluie frames generated; final drop corrected to visibly fall.
-WebP delivery 1200x900 at quality 88; pages map [0, 1, 2, 3]; primary shared frame is page 2.
-Exactly seven approvals lapsed through the existing mechanism; no approval restored.
-Prior dated checkpoints preserved in `archive/2026-09-rich-media-batches-1-7.md`.
-
-Implementation and technical QA complete; frozen package: `docs/review/histoire-pluie/`.
-Frozen clean implementation checkpoint: `45b468301af2a9dae41e182d619ee9f024d56379`.
-Manifest SHA-256: `1ff3bd59ee4a2d6a89a8a153e98d0f2314d6faaabc64ce0045b6a9e5d037ec2b`.
-State at the original freeze: 169 approved / 7 review, 169 distinct valid standing approvals, all 176 current
-computed digests distinct, zero stale or unexpected lapses. All unaffected lesson records,
-50 unrelated media assets, canonical texts and review history match baseline.
-18 candidates integrated, 17 independently complete, eight sequences, 31 retained SVGs.
-72 runtime files decode/hash-validate; source PNGs retained locally.
+Pluie independently accepted and seven fresh approvals restored. 176 total/approved,
+176 distinct valid digests, zero review/stale/unexpected lapses, 169 unaffected records unchanged.
+Eighteen of twenty candidates independently complete, eight sequences, 31 retained SVGs.
+Cailloux four-frame package is now frozen: 173 approved / exactly 3 review, 176 distinct fresh
+digests, zero stale/unexpected lapses. All 173 unaffected records, 50 unrelated assets/media,
+canonical texts, review history and Pluie package unchanged against b4f242d. Malo untouched.
+Manifest SHA-256: 415bbf536f244ae90ef13a3ab3e17a4887d04ad9f33c69598e801c7258e7365c;
+26 package files verified. No Cailloux acceptance/history/restoration.
+Pluie completed record preserved in `archive/2026-09-pluie-accepted.md`.
 
 ## Scope
 
-Only histoire-pluie, its exact dependencies, evidence, validation and Codex continuation docs.
+Only histoire-cailloux, its three exact dependencies, generation, evidence and validation.
+Canonical text les-trois-cailloux-de-tito: 11 lines, four renderer pages (3/3/3/2), mapping
+[0,1,2,3]. Page 1 collects round/flat/pointed stones into pocket (three). Page 2 sister hides
+pointed stone behind her back (two visible). Page 3 Tito identifies round/flat and missing
+pointed stone (two visible). Page 4 sister reveals/returns pointed stone (three restored).
 
 ## Out of Scope
 
-Cailloux before Pluie review completes; Malo; October; 2eme maternelle; offline implementation;
-unrelated refactoring; TV support; PR; merge; staging/production deployment or data mutation.
+Malo before Cailloux review/restoration; October; 2eme maternelle; offline implementation;
+TV/Smart TV; unrelated refactoring; PR/merge; staging/production or database operations.
 
 ## Product Decisions
 
-Owner authorized Codex-only work, built-in ImageGen, feature checkpoints/pushes and fresh
-independent Codex review. Phone, tablet and laptop/MacBook only (ADR-050). Keep mixed SVG/WebP.
+Codex and built-in ImageGen only; preserve Tito from accepted Pluie, exact stone identities,
+warm preschool painted style and supported phone/tablet/laptop-MacBook matrix.
+Implementation cannot self-approve. Owner opens a fresh independent Codex session at freeze.
 
 ## Completed
 
-- Recovered authoritative Git, documentation, approval, audit, registry and review state.
-- Generated four coherent narrative frames from the unchanged ten canonical lines.
-- Retained source PNGs locally; exported optimized WebPs and registered page mapping.
-- Lapsed exactly m1-lang-09/10/15/20, m3-lang-03/21 and m3-art-04.
-- Content validation passes; no review-history acceptance was written.
+- Accepted/restored/validated/checkpointed/pushed Pluie at b4f242d.
+- Verified canonical continuation order, story text, page count and expected three-lesson impact.
+
+- Generated/inspected four rich frames at full size and 256 px; masters preserved locally.
+- Integrated optimized WebPs and lapsed exactly three dependencies through established tool.
+- Refreshed audit/review/reference artifacts; frozen isolated package and supported captures.
+- Passed 438 unit and 58 local browser tests, nine production-only checks skipped.
 
 ## In Progress
 
-None. Pluie independent acceptance recorded from owner-relayed verdict; exactly seven approvals
-restored with fresh digests. Verified 176 approved, zero review, 176 distinct valid digests,
-zero stale/unexpected lapses and 169 unchanged unaffected records. Accepted-state artifacts and
-validation complete. Frozen evidence remains byte-identical. Acceptance checkpoint is the commit
-containing this completed record and `docs/review/verdicts/2026-09-30-pluie.json`.
+Final formatting, integrity and checkpoint/push before stopping for independent review.
 
 ## Remaining
 
-- Start only Cailloux after this accepted checkpoint is pushed; stop at its independent review.
+- Final checkpoint/push and clean-tree verification.
+- Fresh independent review; restore nothing before final explicit acceptance.
+- After acceptance: fresh-digest lapsed-only weeks 2/3/4, verify 176/176 and preserve other 173
+  records, update artifacts/status, validate/checkpoint/push before considering Malo.
 
 ## Validation State
 
-| Check                            | Result  | At                                                                            |
-| -------------------------------- | ------- | ----------------------------------------------------------------------------- |
-| recovery content/media/digests   | PASS    | 4b2648f                                                                       |
-| integrated content validation    | PASS    | current four-frame implementation                                             |
-| unaffected records and media     | PASS    | 169 records and 50 assets match 4b2648f                                       |
-| format                           | PASS    | full repository; final checkpoint prose checked before commit                 |
-| lint                             | PASS    | current implementation                                                        |
-| typecheck                        | PASS    | Webpack build TypeScript check                                                |
-| unit tests                       | PASS    | 438/438; generated weekly/QA/pgTAP artifacts current                          |
-| database tests                   | NOT RUN | pgTAP not executed; generated reference assertions current; no DB operation   |
-| Docker                           | STALE   | no container configuration changed                                            |
-| secret scans                     | PASS    | 28 client files; all three fake server sentinels absent; no tracked .env      |
-| production build/bundle scan     | PASS    | final Webpack production build and sentinel scan                              |
-| E2E/responsive/visual inspection | PASS    | 42 existing tests plus 8 Pluie checks; 9 production-only skipped; 41 captures |
-| independent pedagogical review   | PASS    | accepted by separate Codex session; owner relayed and authorized restoration  |
+| Check              | Result  | At                                                          |
+| ------------------ | ------- | ----------------------------------------------------------- |
+| format             | PASS    | full repository Prettier check                              |
+| lint               | PASS    | current Cailloux implementation                             |
+| typecheck          | PASS    | current implementation                                      |
+| unit tests         | PASS    | 438/438 current implementation                              |
+| content validation | PASS    | 31 files; lapse dry run zero                                |
+| database tests     | NOT RUN | assertions regenerated, no DB operations                    |
+| build              | PASS    | production Webpack build, no deployment                     |
+| E2E                | PASS    | 58 local; eight Cailloux viewports; nine production skipped |
+| Docker             | STALE   | no container configuration changes                          |
+| secret scans       | PASS    | 28 client files, three fake sentinels absent                |
+| independent review | NOT RUN | frozen package; fresh session required                      |
 
 ## Database State
 
-No database operation or migration. Hosted DEV and PROD untouched.
+No operations; hosted DEV and PROD unchanged.
 
 ## Deployment State
 
-No deployment; last recorded production main is 51c83a22. No production verification claimed.
+No staging/production deployment. Production unchanged, no live verification claimed.
 
 ## Git State
 
-`45b468301af2a9dae41e182d619ee9f024d56379` is the frozen implementation checkpoint.
-Resolve it with `git log -1 --format=%H -- docs/review/histoire-pluie`. Feature durability push
-is authorized; no PR or merge authorized. Final clean state and remote SHA verified at push.
+Baseline b4f242d pushed and clean before this task. Feature checkpoints/pushes authorized.
+No PR or merge authorized. Generation masters retained locally in ignored evidence paths.
 
 ## Blockers
 
-None during implementation. Independent review is the required completion boundary.
+No implementation blocker. Separate independent acceptance required before restoration.
 
 ## User Decisions Needed
 
-None for Pluie. Owner supplied independent accepted verdict and restoration authorization.
+Independent verdict required for frozen Cailloux; no other decision.
 
 ## Exact Resume Point
 
-Pluie restoration validated: fresh format/lint/typecheck, 438 unit tests, 31 content files,
-production Webpack build, 28-file three-sentinel scan and eight responsive Pluie tests pass.
-No DB tests or Docker build run; no infrastructure changed. Push this acceptance checkpoint,
-then implement Cailloux from canonical text and stop at its independent-review boundary.
+Finish checkpoint/push and stop. Owner opens a fresh independent Codex session using
+docs/review/histoire-cailloux/REVIEWER_PROMPT.md. Do not approve Cailloux or start Malo.
 
 ## Resume Verification
 
-Read `docs/handoff/CODEX_CONTINUATION.md`, this checkpoint and recent Git history. Verify
-`git status --short --branch`, `git log -5 --oneline`,
-working tree, remote SHA, hashes and `node --import tsx scripts/lapse-approvals.ts --dry-run=true`.
-Node's tsx loader avoids the sandbox's tsx CLI IPC restriction.
+Read continuation and this checkpoint; run `git status --short --branch`, `git log -5 --oneline`,
+verify runtime/package hashes and `node --import tsx scripts/lapse-approvals.ts --dry-run=true`.

@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-30
-Branch:     codex/september-rich-media-pilot; histoire-pluie independently accepted and restored
-Commit:     reviewed freeze 45b4683; accepted-state checkpoint follows; production unchanged
+Branch:     codex/september-rich-media-pilot; histoire-cailloux frozen awaiting independent review
+Commit:     accepted Pluie b4f242d; Cailloux freeze checkpoint follows; production unchanged
 Updated by: Codex
 ```
 
@@ -41,7 +41,21 @@ checks pass (nine production-only tests skipped). Formatting, lint, TypeScript, 
 validation, zero-lapse dry run, Webpack production build and 28-file/three-sentinel bundle scan
 pass. All 169 unaffected records and 50 unrelated assets match baseline. No database tests were
 run; generated reference assertions are current. Phone vertical scrolling is verified reachable.
-No review-history acceptance, approval restoration, PR, merge, deployment or database operation.
+Accepted Pluie is committed/pushed at b4f242d77ecde3b7e67bdba37e14dcbe56d6061c.
+Cailloux now has four 1200x900 ImageGen WebPs aligned with eleven unchanged canonical lines
+(3/3/3/2), visible counts 3/2/2/3, pageFrames [0,1,2,3]. Exactly m3-lang-08, m3-lang-14 and
+m3-lang-18 intentionally lapsed: 173 approved / 3 review / 176 distinct fresh digests,
+zero stale/unexpected lapses; all 173 unaffected approval records unchanged. Fifty unrelated
+assets/media, canonical texts, review history and Pluie frozen evidence match accepted baseline.
+19/20 candidates integrated, 18/20 independently complete, nine sequences, 31 retained SVGs.
+Malo remains deferred. Frozen package docs/review/histoire-cailloux has 26 hashed files plus
+manifest SHA-256 415bbf536f244ae90ef13a3ab3e17a4887d04ad9f33c69598e801c7258e7365c.
+Current validation passed: 438 unit tests, 58 local browser checks including eight Cailloux
+viewports, 31 content files, lint, types, production Webpack build and 28-file/three-sentinel
+bundle scan. Nine production-only checks skipped. Full art, 256 px sheet and supported layouts
+inspected as implementation QA, not acceptance. Full repository formatting and frozen-file
+integrity also passed. No Cailloux acceptance/history/restoration, PR, merge, deployment or DB operation.
+Stop for a fresh independent Codex review.
 
 ## September rich-media visual upgrade — 2026-09-27
 

@@ -1502,7 +1502,7 @@ l’autre — l’appareil est alors le sien._
 
 _Frapper les syllabes de mots plus longs et compter combien il y en a._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Même jeu qu’en début de mois, avec des mots plus longs. On frappe, puis on compte les coups.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1551,7 +1551,12 @@ _Frapper les syllabes de mots plus longs et compter combien il y en a._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-cailloux` — Trois cailloux différents : un rond, un plat et un pointu (`public/media/illustrations/histoire-cailloux.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-cailloux`
+
+  - Page 1 : Tito regarde les trois cailloux dans sa poche : un rond, un plat et un pointu. (`public/media/illustrations/histoire-cailloux-01.webp`)
+  - Page 2 : Deux cailloux restent sur la table, le rond et le plat. La grande sœur de Tito cache le pointu derrière son dos. (`public/media/illustrations/histoire-cailloux-02.webp`)
+  - Page 3 : Tito compte les deux cailloux sur la table et montre le plat. Le rond est là aussi ; le pointu reste caché derrière le dos de sa sœur. (`public/media/illustrations/histoire-cailloux-03.webp`)
+  - Page 4 : La sœur de Tito ouvre sa main après avoir remis le caillou pointu. Les trois cailloux, le rond, le plat et le pointu, sont de nouveau sur la table. (`public/media/illustrations/histoire-cailloux-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 

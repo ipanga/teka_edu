@@ -5,7 +5,7 @@
   "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   "pilotBaselineCommit": "cbc1cf3",
   "scope": ["maternelle-1 September", "maternelle-3 September"],
-  "status": "rollout-batch-8-independently-reconfirmed",
+  "status": "rollout-batch-9-awaiting-independent-reconfirmation",
   "productionAssetsChanged": false,
   "localPilotAssetsChanged": true,
   "approvedLessonSemanticsChanged": false,
@@ -20,12 +20,13 @@
     "ifAllProposedWebpAssetsAreIntegrated": 53,
     "maternelle1": 27,
     "maternelle3": 26,
-    "currentImpact": 0,
-    "currentApproved": 176,
-    "currentReview": 0
+    "currentImpact": 3,
+    "currentApproved": 173,
+    "currentReview": 3
   },
   "notes": [
-    "Codex-only rollout batch 8 histoire-pluie was independently accepted without correction at frozen checkpoint 45b4683. Owner relayed the verdict and authorized restoration. Exactly seven approvals were restored by fresh-digest lapsed-only workflow; all 169 unaffected records remain identical. September is 176/176 approved, zero stale/unexpected lapses, 18/20 candidates independently completed. Cailloux and Malo remain deferred and untouched. Source masters are 1448x1086 except frame 2 at 1447x1087; delivery is 1200x900.",
+    "Batch 9 histoire-cailloux integrates four ImageGen frames aligned to eleven unchanged lines (3/3/3/2), with visible counts 3/2/2/3. Exactly m3-lang-08, m3-lang-14 and m3-lang-18 are intentionally at review. The other 173 approval records are unchanged and valid against accepted Pluie baseline b4f242d. Nineteen candidates integrated, eighteen independently accepted, nine sequences, 31 retained SVGs; Malo remains deferred. No self-review or restoration authorized before separate acceptance.",
+    "Accepted Pluie checkpoint b4f242d snapshot: batch 8 was independently accepted without correction at frozen checkpoint 45b4683. Owner relayed the verdict and authorized restoration. Exactly seven approvals restored with fresh-digest lapsed-only workflow; 169 unaffected records unchanged. At that checkpoint September was 176/176 approved, zero stale/unexpected lapses, 18/20 independently completed; Cailloux/Malo were deferred. Pluie source masters 1448x1086 except frame 2 at 1447x1087; delivery 1200x900. Current batch 9 state is reported separately above.",
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
     "A small story sequence is a presentation proposal tied to existing text pages. It must not alter story wording or progression.",
     "The five pilot assets are integrated locally. Their 18 dependent lessons lapsed through the existing mechanism and were restored only after independent acceptance.",
@@ -2625,7 +2626,7 @@
     {
       "id": "histoire-cailloux",
       "kind": "illustration",
-      "pedagogicalRole": "Trois cailloux différents : un rond, un plat et un pointu",
+      "pedagogicalRole": "Tito regarde les trois cailloux dans sa poche : un rond, un plat et un pointu.",
       "currentFile": "public/media/illustrations/histoire-cailloux.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -2659,15 +2660,50 @@
       "presentation": "4-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
-      "implementationState": "deferred-pending-imagegen",
-      "reviewState": "not-in-pilot",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "awaiting-independent-reconfirmation",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 3,
         "lessonIds": ["m3-lang-08", "m3-lang-14", "m3-lang-18"]
       },
       "beforeHash": "sha256:df6458f051a0cab68852cf991c1dd70e811539eae00907d517033ff66936a317",
-      "afterHash": null
+      "afterHash": "sha256:71061965c6d18961065baf6b1fba1ec11f21991552f3d0d720fdd73be12b2905",
+      "proposedFile": "public/media/illustrations/histoire-cailloux-01.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/histoire-cailloux/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 799,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-cailloux-01.webp",
+          "bytes": 261188
+        },
+        {
+          "file": "public/media/illustrations/histoire-cailloux-02.webp",
+          "bytes": 246446
+        },
+        {
+          "file": "public/media/illustrations/histoire-cailloux-03.webp",
+          "bytes": 226516
+        },
+        {
+          "file": "public/media/illustrations/histoire-cailloux-04.webp",
+          "bytes": 236838
+        }
+      ],
+      "currentDecision": "awaiting-independent-review; approvals-intentionally-lapsed"
     },
     {
       "id": "histoire-malo",

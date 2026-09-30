@@ -1171,7 +1171,7 @@ l’autre — l’appareil est alors le sien._
 
 _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les dire._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Servez-vous des mots de l’ordre : d’abord, ensuite, puis, à la fin. Ce sont eux qui structurent le récit.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C02-O06` — Restituer la chronologie des actions majeures d’une histoire simple. _(source : programme-2026)_
@@ -1221,7 +1221,12 @@ _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-cailloux` — Trois cailloux différents : un rond, un plat et un pointu (`public/media/illustrations/histoire-cailloux.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-cailloux`
+
+  - Page 1 : Tito regarde les trois cailloux dans sa poche : un rond, un plat et un pointu. (`public/media/illustrations/histoire-cailloux-01.webp`)
+  - Page 2 : Deux cailloux restent sur la table, le rond et le plat. La grande sœur de Tito cache le pointu derrière son dos. (`public/media/illustrations/histoire-cailloux-02.webp`)
+  - Page 3 : Tito compte les deux cailloux sur la table et montre le plat. Le rond est là aussi ; le pointu reste caché derrière le dos de sa sœur. (`public/media/illustrations/histoire-cailloux-03.webp`)
+  - Page 4 : La sœur de Tito ouvre sa main après avoir remis le caillou pointu. Les trois cailloux, le rond, le plat et le pointu, sont de nouveau sur la table. (`public/media/illustrations/histoire-cailloux-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « S’approprier la notion de chronologie » (from-5) :**
 
