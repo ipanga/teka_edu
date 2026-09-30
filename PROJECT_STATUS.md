@@ -7,7 +7,7 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-10-01
 Branch:     codex/september-rich-media-pilot; final September histoire-malo frozen awaiting review
-Commit:     accepted Cailloux cd4f39b; Malo freeze checkpoint follows; production unchanged
+Commit:     Malo frozen 8b5a865; accepted Cailloux cd4f39b; production unchanged
 Updated by: Codex
 ```
 
@@ -31,6 +31,8 @@ All 50 unrelated assets/media, canonical texts, review history, accepted Pluie/C
 match cd4f39b. All 20 candidates integrated, 19 accepted; ten sequences, 31 retained SVGs.
 Malo package docs/review/histoire-malo contains 26 hashed files plus manifest SHA-256
 f76f81e72adef7810695da6cb2b29d6fde0aa4dc981e9abd43fc0f1289141603.
+Frozen implementation 8b5a8655222e299fea90e7582906c3723b3eca79 pushed; remote SHA verified.
+This documentation-only follow-up leaves all frozen content, media and approvals unchanged.
 Actual frames/256 px sheet/phone-tablet-MacBook layouts inspected as implementation QA only.
 Frame 2 shows aftermath of branch attempt/fish visit; frame 3 highlights cold-water trial;
 reviewer must judge moment choices against all canonical lines, not just descriptions.

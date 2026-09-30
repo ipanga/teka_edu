@@ -34,8 +34,11 @@ All 50 unrelated assets/media, canonical text, review history and accepted froze
 20/20 integrated, 19/20 independently accepted, ten sequences, 31 intentionally retained SVGs.
 Package docs/review/histoire-malo/ has 26 hashed files plus manifest SHA-256:
 f76f81e72adef7810695da6cb2b29d6fde0aa4dc981e9abd43fc0f1289141603.
-Resolve freeze SHA: git log -1 --format=%H -- docs/review/histoire-malo.
-Next: complete final checkpoint/push, then STOP. Owner opens a fresh independent Codex session
+Frozen implementation SHA: 8b5a8655222e299fea90e7582906c3723b3eca79, pushed/remote-verified.
+Verify with git log -1 --format=%H -- docs/review/histoire-malo. Documentation-only follow-up
+records this exact SHA without changing frozen content/media/approvals. Working tree must be
+clean and final HEAD remote-verified at handoff.
+Next: STOP. Owner opens a fresh independent Codex session
 using docs/review/histoire-malo/REVIEWER_PROMPT.md. No self-acceptance or restoration.
 After final accepted verdict: reverify frozen bytes and exact impact; record external verdict
 via full-review history for maternelle-3 weeks 2/4/5. Dry-run then approve-week --lapsed-only=true.

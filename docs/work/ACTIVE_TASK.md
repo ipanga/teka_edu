@@ -27,7 +27,8 @@ Accepted Cailloux `cd4f39b95a234f0fed5c819a7e81db8a1138d936`; clean and remote-v
 
 ## Last Checkpoint
 
-Malo implementation frozen with 26 verified package files plus manifest
+Malo implementation frozen at 8b5a8655222e299fea90e7582906c3723b3eca79,
+pushed and remote-verified; 26 verified package files plus manifest
 f76f81e72adef7810695da6cb2b29d6fde0aa4dc981e9abd43fc0f1289141603.
 Current 173 approved / 3 review (m3-lang-07, m3-lang-16, m3-lang-20), 176 distinct fresh digests,
 zero stale/unexpected lapses, 173 unaffected records unchanged. Canonical content, history,
@@ -68,11 +69,10 @@ Implementation QA is not independent acceptance. Preserve all accepted media and
 
 ## In Progress
 
-Final formatting/integrity and checkpoint/push, then stop for fresh independent review.
+None. Implementation frozen/pushed; awaiting fresh independent review.
 
 ## Remaining
 
-- Final checkpoint/push and clean-tree verification.
 - Separate independent review; no restoration before explicit final accepted verdict.
 - After acceptance: fresh-digest lapsed-only weeks 2/4/5, verify 176/176 and unchanged173,
   refresh/validate/document/checkpoint/push and report 20/20 accepted; stop, no release work.
@@ -104,6 +104,9 @@ No staging/production deployment. No live verification claimed.
 ## Git State
 
 Accepted Cailloux cd4f39b pushed/clean/remote-verified before Malo.
+Malo frozen 8b5a865 pushed; remote SHA matches, clean tree before this documentation-only
+follow-up. No frozen content/media/evidence/approvals changed afterward. Resolve final
+documentation SHA with git log -1; final handoff requires pushed/clean/remote-verified HEAD.
 Feature checkpoints and pushes only. Masters retained under ignored private evidence paths.
 
 ## Blockers
@@ -116,7 +119,7 @@ Independent verdict required for Malo; no other decision.
 
 ## Exact Resume Point
 
-Finish checkpoint/push and stop. Owner opens fresh Codex with
+Stop at frozen 8b5a865. Owner opens fresh Codex with
 docs/review/histoire-malo/REVIEWER_PROMPT.md. Restore no Malo approvals before final acceptance.
 
 ## Resume Verification
