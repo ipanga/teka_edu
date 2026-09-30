@@ -11,7 +11,7 @@ review evidence. Codex is the primary development environment; Claude Code is un
 
 ## Status
 
-`awaiting_review`
+`completed`
 
 ## Branch
 
@@ -37,7 +37,7 @@ Prior dated checkpoints preserved in `archive/2026-09-rich-media-batches-1-7.md`
 Implementation and technical QA complete; frozen package: `docs/review/histoire-pluie/`.
 Frozen clean implementation checkpoint: `45b468301af2a9dae41e182d619ee9f024d56379`.
 Manifest SHA-256: `1ff3bd59ee4a2d6a89a8a153e98d0f2314d6faaabc64ce0045b6a9e5d037ec2b`.
-Current state: 169 approved / 7 review, 169 distinct valid standing approvals, all 176 current
+State at the original freeze: 169 approved / 7 review, 169 distinct valid standing approvals, all 176 current
 computed digests distinct, zero stale or unexpected lapses. All unaffected lesson records,
 50 unrelated media assets, canonical texts and review history match baseline.
 18 candidates integrated, 17 independently complete, eight sequences, 31 retained SVGs.
@@ -67,12 +67,15 @@ independent Codex review. Phone, tablet and laptop/MacBook only (ADR-050). Keep 
 
 ## In Progress
 
-None. Awaiting fresh independent review; no generation or validation process remains running.
+None. Pluie independent acceptance recorded from owner-relayed verdict; exactly seven approvals
+restored with fresh digests. Verified 176 approved, zero review, 176 distinct valid digests,
+zero stale/unexpected lapses and 169 unchanged unaffected records. Accepted-state artifacts and
+validation complete. Frozen evidence remains byte-identical. Acceptance checkpoint is the commit
+containing this completed record and `docs/review/verdicts/2026-09-30-pluie.json`.
 
 ## Remaining
 
-- Owner opens fresh independent Codex session; relay its verdict here.
-- Restore affected approvals only after final explicit independent acceptance.
+- Start only Cailloux after this accepted checkpoint is pushed; stop at its independent review.
 
 ## Validation State
 
@@ -90,7 +93,7 @@ None. Awaiting fresh independent review; no generation or validation process rem
 | secret scans                     | PASS    | 28 client files; all three fake server sentinels absent; no tracked .env      |
 | production build/bundle scan     | PASS    | final Webpack production build and sentinel scan                              |
 | E2E/responsive/visual inspection | PASS    | 42 existing tests plus 8 Pluie checks; 9 production-only skipped; 41 captures |
-| independent pedagogical review   | NOT RUN | pending frozen package                                                        |
+| independent pedagogical review   | PASS    | accepted by separate Codex session; owner relayed and authorized restoration  |
 
 ## Database State
 
@@ -112,14 +115,14 @@ None during implementation. Independent review is the required completion bounda
 
 ## User Decisions Needed
 
-Fresh independent review after the package is frozen; no routine implementation decision needed.
+None for Pluie. Owner supplied independent accepted verdict and restoration authorization.
 
 ## Exact Resume Point
 
-Owner opens a fresh Codex session in this repository and asks it to read and follow only
-`docs/review/histoire-pluie/REVIEWER_PROMPT.md`. It must verify the manifest and inspect images
-independently. Relay the verdict here. Restore nothing before final explicit acceptance;
-verify frozen hashes first. Do not self-approve or begin Cailloux.
+Pluie restoration validated: fresh format/lint/typecheck, 438 unit tests, 31 content files,
+production Webpack build, 28-file three-sentinel scan and eight responsive Pluie tests pass.
+No DB tests or Docker build run; no infrastructure changed. Push this acceptance checkpoint,
+then implement Cailloux from canonical text and stop at its independent-review boundary.
 
 ## Resume Verification
 

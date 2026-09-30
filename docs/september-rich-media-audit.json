@@ -5,7 +5,7 @@
   "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   "pilotBaselineCommit": "cbc1cf3",
   "scope": ["maternelle-1 September", "maternelle-3 September"],
-  "status": "rollout-batch-8-awaiting-independent-review",
+  "status": "rollout-batch-8-independently-reconfirmed",
   "productionAssetsChanged": false,
   "localPilotAssetsChanged": true,
   "approvedLessonSemanticsChanged": false,
@@ -20,12 +20,12 @@
     "ifAllProposedWebpAssetsAreIntegrated": 53,
     "maternelle1": 27,
     "maternelle3": 26,
-    "currentImpact": 7,
-    "currentApproved": 169,
-    "currentReview": 7
+    "currentImpact": 0,
+    "currentApproved": 176,
+    "currentReview": 0
   },
   "notes": [
-    "Codex-only rollout batch 8 integrates histoire-pluie as four canonical page frames, primary frame 2 for shared rhyme uses. Exactly seven approvals lapsed, 169 remain valid, and independent review is pending. Cailloux and Malo remain deferred and untouched. Source masters are 1448x1086 except frame 2 at 1447x1087; all delivery frames are 1200x900.",
+    "Codex-only rollout batch 8 histoire-pluie was independently accepted without correction at frozen checkpoint 45b4683. Owner relayed the verdict and authorized restoration. Exactly seven approvals were restored by fresh-digest lapsed-only workflow; all 169 unaffected records remain identical. September is 176/176 approved, zero stale/unexpected lapses, 18/20 candidates independently completed. Cailloux and Malo remain deferred and untouched. Source masters are 1448x1086 except frame 2 at 1447x1087; delivery is 1200x900.",
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
     "A small story sequence is a presentation proposal tied to existing text pages. It must not alter story wording or progression.",
     "The five pilot assets are integrated locally. Their 18 dependent lessons lapsed through the existing mechanism and were restored only after independent acceptance.",
@@ -2570,7 +2570,7 @@
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
       "implementationState": "integrated-local-rollout",
-      "reviewState": "awaiting-independent-reconfirmation",
+      "reviewState": "independently-reconfirmed",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 7,
@@ -2620,7 +2620,7 @@
           "bytes": 257786
         }
       ],
-      "currentDecision": "integrated; independent-review-pending; approvals-not-restored"
+      "currentDecision": "independent-review-accepted; lapsed-only-approval-restored"
     },
     {
       "id": "histoire-cailloux",

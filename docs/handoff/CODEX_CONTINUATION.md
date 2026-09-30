@@ -16,16 +16,19 @@ a dependency. `CODEX_TO_CLAUDE_CODE_HANDOFF.md` is historical; preserve its evid
 
 ## Current phase and next action
 
-Pluie implementation and technical QA are complete; independent review is pending. Frozen
+Pluie is independently accepted without correction; the owner relayed acceptance and explicitly
+authorized the seven restorations on 2026-09-30. Verified all frozen bytes before action. Frozen
 package: `docs/review/histoire-pluie/`. Resolve the implementation SHA with
 `git log -1 --format=%H -- docs/review/histoire-pluie`.
 Frozen implementation: `45b468301af2a9dae41e182d619ee9f024d56379`; clean at freeze.
 Manifest SHA-256: `1ff3bd59ee4a2d6a89a8a153e98d0f2314d6faaabc64ce0045b6a9e5d037ec2b`.
-Current state: 169 approved / 7 review / zero stale or unexpected lapses; 18 candidates
-integrated, 17 independently complete, eight sequences, 31 retained SVGs. All 169 unaffected
-lessons and 50 unrelated media assets match baseline; canonical texts/review history unchanged.
-Owner opens a fresh session to follow `docs/review/histoire-pluie/REVIEWER_PROMPT.md` and relays
-the verdict here. Do not begin Cailloux before Pluie completes review and restoration.
+Current state: 176 approved / 0 review / 176 distinct valid digests / zero stale or unexpected
+lapses; seven fresh restorations, 169 unaffected records unchanged. Eighteen candidates
+independently complete, eight sequences, 31 retained SVGs. Canonical texts and media unchanged.
+Review history contains seven accepted full-review entries. The frozen package is preserved;
+acceptance evidence is `docs/review/verdicts/2026-09-30-pluie.json`.
+Next canonical candidate is histoire-cailloux, then histoire-malo. Begin Cailloux only after
+the accepted Pluie state is validated and checkpointed/pushed.
 Read `docs/work/ACTIVE_TASK.md` for the latest milestone and validation freshness.
 
 Canonical Pluie text: `la-pluie-sur-le-toit` in `content/texts/maternelle-3.json`.

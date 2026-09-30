@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 7 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 8 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-15 — ChatGPT · `accepted` (ai-assisted)
@@ -98,6 +98,12 @@ Reconfirmation visuelle indépendante du lot 3 du déploiement rich-media de sep
 
 **Suites données :** Aucune correction demandée. Les deux conditions de vérification du reviewer ont été contrôlées dans le dépôt : les guidances adultes ne décrivent pas l’ancien SVG et restent compatibles avec les deux pages ; assetFingerprint inclut chaque description, chaque contentHash et la table pageFrames, puis approve-week calcule lessonDigest depuis ce fingerprint complet. Les SHA-256 finaux ont été revérifiés : page 1 b5df0ae7a10553a2c6bb3a8aa3dfea46da3006f185d843be0865049799572e9e ; page 2 c371fa360e91b67dfed28d0f2f16e5a8877bd71b218f658cecccfbb8bb425a54. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les deux approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
 
+### 2026-09-30 — Codex (session indépendante) · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 8, histoire-pluie, au checkpoint gelé 45b468301af2a9dae41e182d619ee9f024d56379. Le propriétaire a relayé le verdict accepted d’une session Codex séparée : quatre cadres WebP, texte canonique et correspondance pages/cadres, continuité de Tito, progression météorologique et narrative, cadre 2 partagé avec la comptine, rendu à 256 px, descriptions accessibles, SHA-256 et captures téléphone/tablette/laptop-MacBook vérifiés. Aucune correction requise. La session de relecture n’a modifié aucun fichier, média, contenu, digest, approbation ou déploiement.
+
+**Suites données :** Aucune. Le manifeste relu reste 1ff3bd59ee4a2d6a89a8a153e98d0f2314d6faaabc64ce0045b6a9e5d037ec2b ; les 30 fichiers et les quatre cadres runtime correspondent exactement au checkpoint. Le propriétaire autorise explicitement la restauration des seules sept approbations expirées m1-lang-09, m1-lang-10, m1-lang-15, m1-lang-20, m3-lang-03, m3-lang-21 et m3-art-04, par approve-week --lapsed-only=true avec des empreintes calculées à neuf. Aucun digest antérieur ne doit être copié. TV/Smart TV reste hors périmètre.
+
 ## Jour 20 — 2026-09-28
 
 **Durée totale : 30 min** · 4 séances · jour 20 du rythme
@@ -118,7 +124,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler avec l’adulte, entendre des mots et les redire._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 1/3
 - **Conseil au parent :** Trois courts moments : on se dit bonjour, on travaille un mot ou une histoire, on dit une comptine. Si l’enfant décroche, arrêtez-vous là : dix minutes vraiment vécues valent mieux que quinze subies.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

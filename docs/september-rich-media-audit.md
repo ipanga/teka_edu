@@ -17,8 +17,8 @@ Generated from the canonical media registry, September lessons and supplied text
 - Rollout batch 5 contains the four-frame histoire-kumu sequence. The corrected frame 3 and all four dependent lessons were independently accepted and restored with fresh digests. Five story candidates remain unimplemented.
 - Rollout batch 6 contains the four-frame histoire-bibi sequence. All four frames and all three dependent lessons were independently accepted and restored with fresh digests. Four story candidates remain unimplemented.
 - Rollout batch 7 contains the four-frame histoire-marche sequence. All four frames and all three dependent lessons were independently accepted and restored with fresh digests. The three remaining story candidates (histoire-pluie, histoire-cailloux, histoire-malo) keep their approved SVGs; their painted upgrade is deliberately deferred until ImageGen-quality generation is available.
-- Current batch 8 integrates histoire-pluie with four page frames and primary frame 2 for shared rhymes. Independent review is pending: 169 approved / 7 review; 17/20 independently completed candidates, eight integrated sequences, 31 retained SVGs. Cailloux and Malo remain untouched.
-- Manifest SHA-256: `536262d2090fa1c7b15cc46a58352e25aac74b6cce5d594df6e286aec22bd5b9`.
+- Batch 8 histoire-pluie is independently accepted without correction. Seven approvals restored with fresh digests: 176 approved / 0 review, 176 distinct valid digests, zero stale/unexpected lapses, 18/20 independently completed candidates, eight sequences, 31 retained SVGs. Cailloux and Malo remain untouched.
+- Manifest SHA-256: `9c009cf999e3df776473af793d54e5363714ef1f4e944e4d3b6f0bf9e24aa561`.
 
 The supplied screenshots validate the distinction: layout and scaling are sound, while the body, rhyme and story art remains visually schematic. Shapes, counting models and isolated objects do not share that defect.
 

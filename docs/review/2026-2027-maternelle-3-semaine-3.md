@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 9 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 10 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -115,6 +115,12 @@ Reconfirmation visuelle indépendante du lot 6 du déploiement rich-media de sep
 Reconfirmation visuelle indépendante du lot 7 du déploiement rich-media de septembre, couvrant exactement la séquence histoire-marche et trois leçons (m3-lang-06, m3-lang-12, m3-lang-19), à partir du dossier, de la planche comparative et de la consigne bornée gelés. ChatGPT GPT-5.6 Sol, relecteur externe indépendant de l’auteur des images et de la session d’implémentation, a d’abord conclu accepted-with-modifications en signalant six tomates sur le cadre 2. La session d’implémentation Claude Code a contesté ce bloqueur avec des preuves : le plateau pédagogique du cadre 2 contient exactement cinq tomates et trois oignons, en pleine résolution comme sur la vignette de 256 px. Après réinspection agrandie, ChatGPT GPT-5.6 Sol a confirmé cinq tomates et trois oignons, retiré le bloqueur et conclu accepted : les 10 lignes canoniques rendent quatre pages (3/3/3/1) associées aux cadres [0, 1, 2, 3] ; Mama Lelo, Ama, les vêtements, le panier, le marché, la cour, la lumière et le style restent cohérents ; les couleurs, le comptage et la comparaison de cinq tomates avec trois oignons, le tri et la fierté d’Ama sont clairs et adaptés à la maternelle.
 
 **Suites données :** Aucune correction : le seul bloqueur signalé provenait d’un comptage visuel erroné et a été retiré ; aucun média n’a été modifié ni régénéré. Les quatre WebP sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 4188ac69de8d39f7d742ea5f257cc888067217c28f53816d8afbccd446dbcb75, 0a674df545e61cb3868bf8be9fe54c1d220dad13dae7e33ada2a67f337c8bc39, c61a2d3efeb08b7af036d979e82ed3f1f324692e3c20f43f1c9df8b7a72bf9db et 5cb5137fb4c0a12641f185f5bd6a3f2dcedee3db556b7ca7c4615ceb423e2f00. AssetFingerprint couvre les quatre cadres, leurs descriptions et pageFrames, puis lessonDigest couvre cette empreinte complète. Aucun texte pédagogique, objectif, durée, matériel, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Le propriétaire a explicitement autorisé l’enregistrement de ce verdict externe et la restauration des trois approbations expirées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
+
+### 2026-09-30 — Codex (session indépendante) · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 8, histoire-pluie, au checkpoint gelé 45b468301af2a9dae41e182d619ee9f024d56379. Le propriétaire a relayé le verdict accepted d’une session Codex séparée : quatre cadres WebP, texte canonique et correspondance pages/cadres, continuité de Tito, progression météorologique et narrative, cadre 2 partagé avec la comptine, rendu à 256 px, descriptions accessibles, SHA-256 et captures téléphone/tablette/laptop-MacBook vérifiés. Aucune correction requise. La session de relecture n’a modifié aucun fichier, média, contenu, digest, approbation ou déploiement.
+
+**Suites données :** Aucune. Le manifeste relu reste 1ff3bd59ee4a2d6a89a8a153e98d0f2314d6faaabc64ce0045b6a9e5d037ec2b ; les 30 fichiers et les quatre cadres runtime correspondent exactement au checkpoint. Le propriétaire autorise explicitement la restauration des seules sept approbations expirées m1-lang-09, m1-lang-10, m1-lang-15, m1-lang-20, m3-lang-03, m3-lang-21 et m3-art-04, par approve-week --lapsed-only=true avec des empreintes calculées à neuf. Aucun digest antérieur ne doit être copié. TV/Smart TV reste hors périmètre.
 
 ## Jour 10 — 2026-09-14
 
@@ -1070,7 +1076,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Fabriquer des sons avec son corps et des objets, et les organiser._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** On fabrique la pluie avec les mains et les objets de la maison. Cherchez les sons avant de les organiser.
 - **Objectifs enseignés :**
   - `ART-S02-C02-O08` — Créer un paysage sonore en répondant à une consigne simple avec son corps, des objets ou des instruments. _(source : programme-2026)_

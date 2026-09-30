@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-30
-Branch:     codex/september-rich-media-pilot; histoire-pluie frozen for independent review
-Commit:     frozen implementation 45b4683; documentation durability checkpoint follows; production unchanged
+Branch:     codex/september-rich-media-pilot; histoire-pluie independently accepted and restored
+Commit:     reviewed freeze 45b4683; accepted-state checkpoint follows; production unchanged
 Updated by: Codex
 ```
 
@@ -28,8 +28,12 @@ handoff is historical. Current recovery instructions: `docs/handoff/CODEX_CONTIN
 Recovery verified 176 approved / zero review / 176 distinct valid digests / zero stale approvals,
 17/20 accepted candidates, seven sequences, 31 retained SVGs, and all 69 runtime hashes.
 Pluie is now integrated as four 1200x900 WebPs with unchanged 3/3/3/1 canonical pagination;
-page 2 is the primary shared rhyme frame. Exactly seven lessons are at review, 169 remain approved.
-Technical validation and isolated evidence are complete; independent acceptance is pending.
+page 2 is the primary shared rhyme frame. The separate Codex session accepted the frozen
+checkpoint without correction; the owner relayed that verdict and authorized restoration.
+All frozen bytes matched before action. Seven full-review history entries and the existing
+fresh-digest lapsed-only workflow restored exactly seven approvals: 176 approved / zero review,
+176 distinct valid digests, zero stale/unexpected lapses; all 169 unaffected records unchanged.
+Eighteen of twenty candidates are independently complete; Cailloux is next, then Malo.
 The frozen package is `docs/review/histoire-pluie/`: four full-resolution WebPs, before/after,
 256 px evidence, actual phone/tablet/MacBook captures, exact canonical mapping, approval impact
 and hashed manifest. All 438 unit tests pass; 42 existing browser tests plus eight targeted Pluie
@@ -440,12 +444,10 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 
 ### P0 — Next
 
-1. Owner opens a fresh independent Codex session to review frozen Pluie checkpoint `45b4683`
-   using `docs/review/histoire-pluie/REVIEWER_PROMPT.md`, then relays the verdict.
-2. After final explicit acceptance, restore only seven Pluie-dependent approvals with fresh
-   digests through the existing full-review/lapsed-only workflow.
-3. Process Cailloux, then Malo, one at a time through the same complete workflow.
-4. After 20/20 independently completed candidates and 176/176 valid approvals, stop for owner
+1. Validate and checkpoint/push the accepted Pluie restoration, then process Cailloux through
+   implementation, validation, frozen evidence and a separate independent Codex review.
+2. Restore Cailloux only after explicit independent acceptance; then process Malo in the same way.
+3. After 20/20 independently completed candidates and 176/176 valid approvals, stop for owner
    authorization to prepare a PR into develop and CI/staging. October, 2eme maternelle, offline
    implementation, PR opening, merge and production are outside current authorization.
 

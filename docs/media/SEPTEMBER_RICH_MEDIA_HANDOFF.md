@@ -3,11 +3,11 @@
 ## Current Codex continuation — 2026-09-30
 
 Claude Code is unavailable; [Codex continuation](../handoff/CODEX_CONTINUATION.md) supersedes
-the former handoff. Pluie is integrated and awaiting fresh independent Codex review:
+the former handoff. Pluie is independently accepted without correction and fully restored:
 18 WebP candidate IDs, eight sequences, 39 WebP plus 33 SVG runtime files (72 total),
-8,749,798 runtime bytes. Seventeen of twenty candidates remain independently completed;
+8,749,798 runtime bytes. Eighteen of twenty candidates are independently completed;
 31 SVGs are intentionally retained; Cailloux and Malo are untouched.
-September is 169 approved / 7 review / zero stale approvals. Exact current Pluie paths,
+September is 176 approved / 0 review / 176 distinct valid digests / zero stale approvals. Exact Pluie paths,
 hashes, mapping, uses and evidence are in [the isolated package](../review/histoire-pluie/README.md).
 The dated September 28 inventory below preserves the verified pre-Pluie baseline.
 
