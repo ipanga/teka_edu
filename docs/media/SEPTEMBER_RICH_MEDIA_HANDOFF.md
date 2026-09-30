@@ -1,8 +1,19 @@
 # September rich-media handoff inventory
 
+## Current Codex continuation — 2026-09-30
+
+Claude Code is unavailable; [Codex continuation](../handoff/CODEX_CONTINUATION.md) supersedes
+the former handoff. Pluie is integrated and awaiting fresh independent Codex review:
+18 WebP candidate IDs, eight sequences, 39 WebP plus 33 SVG runtime files (72 total),
+8,749,798 runtime bytes. Seventeen of twenty candidates remain independently completed;
+31 SVGs are intentionally retained; Cailloux and Malo are untouched.
+September is 169 approved / 7 review / zero stale approvals. Exact current Pluie paths,
+hashes, mapping, uses and evidence are in [the isolated package](../review/histoire-pluie/README.md).
+The dated September 28 inventory below preserves the verified pre-Pluie baseline.
+
 Date: 2026-09-28. Machine-readable runtime authority: `content/media/registry.json`. This file is a human handoff, not a second registry. Hashes below are SHA-256 values recomputed from tracked repository bytes.
 
-## Durable state
+## Baseline durable state — 2026-09-28
 
 - 51 registered media assets.
 - 17 candidate IDs currently use WebP; seven are story sequences. Those IDs resolve to 35 tracked WebP runtime files.

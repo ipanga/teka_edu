@@ -1,11 +1,11 @@
 {
   "task": "September rich-media visual upgrade — controlled rollout",
   "version": 2,
-  "generatedOn": "2026-09-27",
+  "generatedOn": "2026-09-30",
   "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   "pilotBaselineCommit": "cbc1cf3",
   "scope": ["maternelle-1 September", "maternelle-3 September"],
-  "status": "rollout-batch-7-independently-reconfirmed",
+  "status": "rollout-batch-8-awaiting-independent-review",
   "productionAssetsChanged": false,
   "localPilotAssetsChanged": true,
   "approvedLessonSemanticsChanged": false,
@@ -20,11 +20,12 @@
     "ifAllProposedWebpAssetsAreIntegrated": 53,
     "maternelle1": 27,
     "maternelle3": 26,
-    "currentImpact": 0,
-    "currentApproved": 176,
-    "currentReview": 0
+    "currentImpact": 7,
+    "currentApproved": 169,
+    "currentReview": 7
   },
   "notes": [
+    "Codex-only rollout batch 8 integrates histoire-pluie as four canonical page frames, primary frame 2 for shared rhyme uses. Exactly seven approvals lapsed, 169 remain valid, and independent review is pending. Cailloux and Malo remain deferred and untouched. Source masters are 1448x1086 except frame 2 at 1447x1087; all delivery frames are 1200x900.",
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
     "A small story sequence is a presentation proposal tied to existing text pages. It must not alter story wording or progression.",
     "The five pilot assets are integrated locally. Their 18 dependent lessons lapsed through the existing mechanism and were restored only after independent acceptance.",
@@ -2506,7 +2507,7 @@
     {
       "id": "histoire-pluie",
       "kind": "illustration",
-      "pedagogicalRole": "La pluie qui tombe d’un nuage sur le toit d’une maison",
+      "pedagogicalRole": "Tito ferme les yeux et écoute à l’abri pendant que la pluie frappe le toit",
       "currentFile": "public/media/illustrations/histoire-pluie.svg",
       "currentFormat": "svg",
       "childActuallySeesIt": true,
@@ -2568,8 +2569,8 @@
       "presentation": "4-image sequence aligned to existing story pages",
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
-      "implementationState": "deferred-pending-imagegen",
-      "reviewState": "not-in-pilot",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "awaiting-independent-reconfirmation",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 7,
@@ -2584,7 +2585,42 @@
         ]
       },
       "beforeHash": "sha256:3c1c57d6cc05e9c04d50e19fb044b11e3de377ec8a9d3290db7a9b0f33982561",
-      "afterHash": null
+      "afterHash": "sha256:27cd0ce7754ec0f3d45c278f5fcdf6ab1d124f6b921f2ffbb26d9951d3bdd703",
+      "proposedFile": "public/media/illustrations/histoire-pluie-02.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/histoire-pluie/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2414,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-pluie-01.webp",
+          "bytes": 290802
+        },
+        {
+          "file": "public/media/illustrations/histoire-pluie-02.webp",
+          "bytes": 322752
+        },
+        {
+          "file": "public/media/illustrations/histoire-pluie-03.webp",
+          "bytes": 283004
+        },
+        {
+          "file": "public/media/illustrations/histoire-pluie-04.webp",
+          "bytes": 257786
+        }
+      ],
+      "currentDecision": "integrated; independent-review-pending; approvals-not-restored"
     },
     {
       "id": "histoire-cailloux",

@@ -450,7 +450,7 @@ l’autre — l’appareil est alors le sien._
 
 _Reconnaitre un mot à partir de ses syllabes, puis repérer une rime._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 3/3
 - **Conseil au parent :** Jeu d’écoute pur. Dites les syllabes séparées et laissez l’enfant recoller le mot.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -500,7 +500,12 @@ _Reconnaitre un mot à partir de ses syllabes, puis repérer une rime._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe d’un nuage sur le toit d’une maison (`public/media/illustrations/histoire-pluie.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-pluie`
+
+  - Page 1 : Tito regarde les premières gouttes depuis la porte ; le ciel est gris et le vent pousse les feuilles (`public/media/illustrations/histoire-pluie-01.webp`)
+  - Page 2 : Tito ferme les yeux et écoute à l’abri pendant que la pluie frappe le toit (`public/media/illustrations/histoire-pluie-02.webp`)
+  - Page 3 : Après la pluie, l’eau coule entre les cailloux et une goutte brillante reste au bout d’une feuille (`public/media/illustrations/histoire-pluie-03.webp`)
+  - Page 4 : Tito est sorti ; son doigt est sous la feuille et la goutte tombe vers sa main ouverte (`public/media/illustrations/histoire-pluie-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 

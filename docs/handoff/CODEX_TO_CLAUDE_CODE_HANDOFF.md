@@ -1,5 +1,9 @@
 # Codex to Claude Code handoff
 
+> Historical handoff, superseded 2026-09-30. Claude Code is unavailable. Current
+> implementation and independent-review instructions are in [CODEX_CONTINUATION.md](CODEX_CONTINUATION.md).
+> The dated records below are preserved as historical evidence.
+
 ## Read this first
 
 This is the durable continuation state for a fresh Claude Code CLI session with no access to the

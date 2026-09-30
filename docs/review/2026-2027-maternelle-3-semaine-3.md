@@ -1070,7 +1070,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Fabriquer des sons avec son corps et des objets, et les organiser._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** On fabrique la pluie avec les mains et les objets de la maison. Cherchez les sons avant de les organiser.
 - **Objectifs enseignés :**
   - `ART-S02-C02-O08` — Créer un paysage sonore en répondant à une consigne simple avec son corps, des objets ou des instruments. _(source : programme-2026)_
@@ -1086,7 +1086,7 @@ _Fabriquer des sons avec son corps et des objets, et les organiser._
 - **Aide en anglais (optionnelle) :** « Make the sound of rain: soft, then loud, then nothing. »
 - **Images montrées à l'enfant (1) :**
 
-  - `histoire-pluie` — La pluie qui tombe d’un nuage sur le toit d’une maison (`public/media/illustrations/histoire-pluie.svg`)
+  - `histoire-pluie` — Tito ferme les yeux et écoute à l’abri pendant que la pluie frappe le toit (`public/media/illustrations/histoire-pluie-02.webp`)
 
 - **Objectifs travaillés :** `ART-S02-C02-O08` Créer un paysage sonore en répondant à une consigne simple avec son corps, des objets ou des instruments.
 

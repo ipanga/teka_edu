@@ -2,6 +2,11 @@
 
 Read this file first in every session. It holds **stable context and working rules only**.
 
+Codex is the primary implementation, QA and built-in ImageGen environment as of 2026-09-30.
+Claude Code is unavailable. Read `docs/handoff/CODEX_CONTINUATION.md` for current recovery
+instructions; the former Codex-to-Claude handoff is historical. Independent review uses a
+fresh Codex session opened by the owner. The authoring session never self-approves.
+
 | File                                            | Answers                                                                                      |
 | ----------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `CLAUDE.md`                                     | What to remember while working (this file)                                                   |
@@ -29,7 +34,7 @@ Read this file first in every session. It holds **stable context and working rul
 | `docs/REAL_SESSION_TESTING.md`                  | Running one real session with a child, and recording what happened                           |
 | `docs/RESUMABLE_WORKFLOW.md`                    | How a long task survives an interruption; checkpoints, Git, recovery                         |
 | `docs/work/ACTIVE_TASK.md`                      | The task in progress: what is done, what remains, the exact next action                      |
-| `docs/handoff/CODEX_TO_CLAUDE_CODE_HANDOFF.md`  | Durable September state and exact Claude Code continuation instructions                      |
+| `docs/handoff/CODEX_TO_CLAUDE_CODE_HANDOFF.md`  | Historical September Claude handoff; superseded by CODEX_CONTINUATION.md                     |
 | `docs/media/SEPTEMBER_RICH_MEDIA_HANDOFF.md`    | Durable inventory and review state for every September media candidate                       |
 | `docs/september-illustration-upgrade-plan.md`   | September visual upgrade: strategy, illustration/motion/audio style system, batches          |
 | `docs/september-illustration-audit.md`          | Generated audit of every September activity (`npm run visual:audit`)                         |
@@ -286,10 +291,10 @@ feature/*  -> develop  -> main
 14. Flag uncertain pedagogical content for review instead of presenting it as final.
 15. Preserve every accepted or integrated WebP byte in its tracked `public/media/` path. Never
     replace reviewed ImageGen artwork with a lower-quality SVG without a demonstrated defect.
-16. During a Claude-only period, author SVG only for visuals that vector art can communicate
-    clearly: shapes, counts, objects, matching, tracing and simple diagrams/scenes. Mark a complex
-    narrative illustration for later ImageGen enhancement when SVG would materially weaken it
-    (ADR-051: `histoire-pluie`, `histoire-cailloux`, `histoire-malo` keep their approved SVGs).
+16. Use built-in Codex ImageGen for complex narrative illustrations, processing one story through
+    independent review before the next. SVG remains appropriate for shapes, counts, objects,
+    matching, tracing and diagrams. ADR-051's generation deferral ended with the owner's
+    2026-09-30 authorization; accepted media remains preserved until each bounded upgrade.
     Never call a paid image API or add a runtime image-generation dependency.
 17. Any media byte, accessible description or story page mapping change follows ADR-048: compute
     impact, lapse only affected approvals, validate, freeze evidence, obtain explicit authorization
@@ -307,7 +312,7 @@ deployment, check the actual remote state — an interrupted session usually did
 remote operation.
 
 For the September rich-media continuation, also read
-`docs/handoff/CODEX_TO_CLAUDE_CODE_HANDOFF.md`,
+`docs/handoff/CODEX_CONTINUATION.md`,
 `docs/media/SEPTEMBER_RICH_MEDIA_HANDOFF.md`, and recent Git history before changing files. Update
 the active checkpoint and durable handoff before a long task ends or context is compacted.
 

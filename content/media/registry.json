@@ -642,12 +642,47 @@
     {
       "id": "histoire-pluie",
       "kind": "illustration",
-      "file": "illustrations/histoire-pluie.svg",
-      "alt": "La pluie qui tombe d’un nuage sur le toit d’une maison",
+      "file": "illustrations/histoire-pluie-02.webp",
+      "alt": "Tito ferme les yeux et écoute à l’abri pendant que la pluie frappe le toit",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-pluie-01.webp",
+            "alt": "Tito regarde les premières gouttes depuis la porte ; le ciel est gris et le vent pousse les feuilles",
+            "contentHash": "sha256:d381c358708fb376e2596dd14056f7fa6a14a4abe15a9977a67e47e034740edf",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-pluie-02.webp",
+            "alt": "Tito ferme les yeux et écoute à l’abri pendant que la pluie frappe le toit",
+            "contentHash": "sha256:27cd0ce7754ec0f3d45c278f5fcdf6ab1d124f6b921f2ffbb26d9951d3bdd703",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-pluie-03.webp",
+            "alt": "Après la pluie, l’eau coule entre les cailloux et une goutte brillante reste au bout d’une feuille",
+            "contentHash": "sha256:d10cc23fec5b294331e6f3b1bb7967989ba2447d39193202fc57a99a27c6508f",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-pluie-04.webp",
+            "alt": "Tito est sorti ; son doigt est sous la feuille et la goutte tombe vers sa main ouverte",
+            "contentHash": "sha256:e430c23a7c740cb0796ee18204ae78554f7e33e860319a8967ce5742a0ae5b3c",
+            "width": 1200,
+            "height": 900
+          }
+        ],
+        "pageFrames": [0, 1, 2, 3]
+      },
       "tags": ["pluie", "toit", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:3c1c57d6cc05e9c04d50e19fb044b11e3de377ec8a9d3290db7a9b0f33982561"
+      "provenance": "Séquence peinte originale produite avec ImageGen intégré à Codex, alignée sur les quatre pages canoniques de La pluie sur le toit. Le deuxième cadre sert aussi de référence aux comptines et activités qui partagent cette illustration.",
+      "contentHash": "sha256:27cd0ce7754ec0f3d45c278f5fcdf6ab1d124f6b921f2ffbb26d9951d3bdd703"
     },
     {
       "id": "histoire-cailloux",

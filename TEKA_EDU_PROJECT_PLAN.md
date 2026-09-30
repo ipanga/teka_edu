@@ -1,5 +1,12 @@
 # Teka Edu — Project Plan for Claude Code
 
+> Current execution policy (2026-09-30): Codex is the primary implementation, QA and built-in
+> ImageGen environment; Claude Code is unavailable. The historical title and dated plan below
+> are preserved. Current scope is the remaining September rich-media stories, one at a time,
+> with independent review in a fresh Codex session. SVG/WebP policy follows ADR-049; supported
+> devices are exactly phone, tablet and laptop/MacBook (ADR-050), excluding TV/Smart TV.
+> See `docs/handoff/CODEX_CONTINUATION.md` and `docs/work/ACTIVE_TASK.md` for live state.
+
 > ## Amendement — état courant et décisions qui prévalent (12 septembre 2026)
 >
 > **Ce plan reste le document d'origine du propriétaire et n'a pas été réécrit.** Les décisions

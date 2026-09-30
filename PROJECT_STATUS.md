@@ -5,10 +5,10 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-09-28
-Branch:     codex/september-rich-media-pilot (pushed as backup); Batch 7 accepted and restored
-Commit:     main 51c83a22 remains production; Batch 7 acceptance on top of handoff a675138
-Updated by: Claude Code
+Date:       2026-09-30
+Branch:     codex/september-rich-media-pilot; histoire-pluie frozen for independent review
+Commit:     verified recovery baseline 4b2648f, matching remote; production unchanged
+Updated by: Codex
 ```
 
 ## Supported devices — current policy
@@ -19,6 +19,25 @@ those device classes; a 1280–1440 px browser viewport represents laptop/MacBoo
 are outside acceptance, regression, release-readiness and media-review scope. Historical evidence
 that records past TV checks remains unchanged as an accurate record and creates no current support
 obligation.
+
+## Codex continuation — 2026-09-30
+
+The owner authorized completion of the three ADR-051 stories using built-in Codex ImageGen,
+one story through independent review before the next. Claude Code is unavailable and the prior
+handoff is historical. Current recovery instructions: `docs/handoff/CODEX_CONTINUATION.md`.
+Recovery verified 176 approved / zero review / 176 distinct valid digests / zero stale approvals,
+17/20 accepted candidates, seven sequences, 31 retained SVGs, and all 69 runtime hashes.
+Pluie is now integrated as four 1200x900 WebPs with unchanged 3/3/3/1 canonical pagination;
+page 2 is the primary shared rhyme frame. Exactly seven lessons are at review, 169 remain approved.
+Technical validation and isolated evidence are complete; independent acceptance is pending.
+The frozen package is `docs/review/histoire-pluie/`: four full-resolution WebPs, before/after,
+256 px evidence, actual phone/tablet/MacBook captures, exact canonical mapping, approval impact
+and hashed manifest. All 438 unit tests pass; 42 existing browser tests plus eight targeted Pluie
+checks pass (nine production-only tests skipped). Formatting, lint, TypeScript, 31-file content
+validation, zero-lapse dry run, Webpack production build and 28-file/three-sentinel bundle scan
+pass. All 169 unaffected records and 50 unrelated assets match baseline. No database tests were
+run; generated reference assertions are current. Phone vertical scrolling is verified reachable.
+No review-history acceptance, approval restoration, PR, merge, deployment or database operation.
 
 ## September rich-media visual upgrade — 2026-09-27
 

@@ -159,6 +159,13 @@ const rolloutBatch7 = {
   },
 };
 
+const rolloutBatch8 = {
+  "histoire-pluie": {
+    master: "private/astra-visual-evidence/september-rich-media-rollout-masters/histoire-pluie/",
+    source: [1448, 1086],
+  },
+};
+
 const oldFileSize = (file) =>
   execFileSync("git", ["show", `${baselineCommit}:public/media/${file}`], { cwd: root }).length;
 const delivery = async (asset) => {
@@ -243,7 +250,8 @@ const assets = await Promise.all(
       rolloutBatch4[asset.id] ??
       rolloutBatch5[asset.id] ??
       rolloutBatch6[asset.id] ??
-      rolloutBatch7[asset.id];
+      rolloutBatch7[asset.id] ??
+      rolloutBatch8[asset.id];
     const isPilot = pilot[asset.id] !== undefined;
     const isRolloutBatch2 = rolloutBatch2[asset.id] !== undefined;
     const isRolloutBatch3 = rolloutBatch3[asset.id] !== undefined;
@@ -251,6 +259,7 @@ const assets = await Promise.all(
     const isRolloutBatch5 = rolloutBatch5[asset.id] !== undefined;
     const isRolloutBatch6 = rolloutBatch6[asset.id] !== undefined;
     const isRolloutBatch7 = rolloutBatch7[asset.id] !== undefined;
+    const isRolloutBatch8 = rolloutBatch8[asset.id] !== undefined;
     return {
       id: asset.id,
       kind: asset.kind,
@@ -274,7 +283,11 @@ const assets = await Promise.all(
           ? // Owner decision 2026-09-28: the approved SVG stays until ImageGen-quality art exists.
             "deferred-pending-imagegen"
           : "not-started",
-      reviewState: selected ? "independently-reconfirmed" : "not-in-pilot",
+      reviewState: isRolloutBatch8
+        ? "awaiting-independent-reconfirmation"
+        : selected
+          ? "independently-reconfirmed"
+          : "not-in-pilot",
       approvalImpact:
         decision.decision === "audited-keep"
           ? { expected: "none", lessonCount: 0, lessonIds: [] }
@@ -294,19 +307,21 @@ const assets = await Promise.all(
             compression: { format: "WebP", quality: 88, smartSubsample: true },
             oldFileBytes: oldFileSize(before.file),
             deliveryFiles: await delivery(asset),
-            currentDecision: isRolloutBatch7
-              ? "independent-review-accepted; lapsed-only-approval-restored"
-              : isRolloutBatch6
+            currentDecision: isRolloutBatch8
+              ? "integrated; independent-review-pending; approvals-not-restored"
+              : isRolloutBatch7
                 ? "independent-review-accepted; lapsed-only-approval-restored"
-                : isRolloutBatch5
+                : isRolloutBatch6
                   ? "independent-review-accepted; lapsed-only-approval-restored"
-                  : isRolloutBatch4
+                  : isRolloutBatch5
                     ? "independent-review-accepted; lapsed-only-approval-restored"
-                    : isRolloutBatch3
+                    : isRolloutBatch4
                       ? "independent-review-accepted; lapsed-only-approval-restored"
-                      : isRolloutBatch2
+                      : isRolloutBatch3
                         ? "independent-review-accepted; lapsed-only-approval-restored"
-                        : "owner-accepted; independent-review-accepted",
+                        : isRolloutBatch2
+                          ? "independent-review-accepted; lapsed-only-approval-restored"
+                          : "owner-accepted; independent-review-accepted",
           }
         : {}),
     };
@@ -333,11 +348,11 @@ const proposedAffectedLessons = [
 const manifest = {
   task: "September rich-media visual upgrade — controlled rollout",
   version: 2,
-  generatedOn: "2026-09-27",
+  generatedOn: "2026-09-30",
   productionCommit: "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   pilotBaselineCommit: baselineCommit,
   scope: ["maternelle-1 September", "maternelle-3 September"],
-  status: "rollout-batch-7-independently-reconfirmed",
+  status: "rollout-batch-8-awaiting-independent-review",
   productionAssetsChanged: false,
   localPilotAssetsChanged: true,
   approvedLessonSemanticsChanged: false,
@@ -351,6 +366,7 @@ const manifest = {
     currentReview: [...lessons.values()].filter((lesson) => lesson.status === "review").length,
   },
   notes: [
+    "Codex-only rollout batch 8 integrates histoire-pluie as four canonical page frames, primary frame 2 for shared rhyme uses. Exactly seven approvals lapsed, 169 remain valid, and independent review is pending. Cailloux and Malo remain deferred and untouched. Source masters are 1448x1086 except frame 2 at 1447x1087; all delivery frames are 1200x900.",
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
     "A small story sequence is a presentation proposal tied to existing text pages. It must not alter story wording or progression.",
     "The five pilot assets are integrated locally. Their 18 dependent lessons lapsed through the existing mechanism and were restored only after independent acceptance.",
@@ -409,6 +425,7 @@ Generated from the canonical media registry, September lessons and supplied text
 - Rollout batch 5 contains the four-frame histoire-kumu sequence. The corrected frame 3 and all four dependent lessons were independently accepted and restored with fresh digests. Five story candidates remain unimplemented.
 - Rollout batch 6 contains the four-frame histoire-bibi sequence. All four frames and all three dependent lessons were independently accepted and restored with fresh digests. Four story candidates remain unimplemented.
 - Rollout batch 7 contains the four-frame histoire-marche sequence. All four frames and all three dependent lessons were independently accepted and restored with fresh digests. The three remaining story candidates (histoire-pluie, histoire-cailloux, histoire-malo) keep their approved SVGs; their painted upgrade is deliberately deferred until ImageGen-quality generation is available.
+- Current batch 8 integrates histoire-pluie with four page frames and primary frame 2 for shared rhymes. Independent review is pending: 169 approved / 7 review; 17/20 independently completed candidates, eight integrated sequences, 31 retained SVGs. Cailloux and Malo remain untouched.
 - Manifest SHA-256: \`${digest}\`.
 
 The supplied screenshots validate the distinction: layout and scaling are sound, while the body, rhyme and story art remains visually schematic. Shapes, counting models and isolated objects do not share that defect.

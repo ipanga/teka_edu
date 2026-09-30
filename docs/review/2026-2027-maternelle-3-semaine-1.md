@@ -829,7 +829,7 @@ l’autre — l’appareil est alors le sien._
 
 _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre expérience._
 
-- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Lisez l’histoire d’une traite, sans vous interrompre. Posez les questions seulement à la fin. Il n’y a pas de mauvaise réponse : l’enfant peut redire l’histoire avec ses mots.
 - **Objectifs enseignés :**
   - `LANG-S02-C03-O09` — Comprendre des histoires dont les actions sont organisées autour d’une structure répétitive (rencontres successives) et commencer à comprendre les informations implicites (émotions, états et sentiments des personnages). _(source : programme-2024-langage)_
@@ -914,7 +914,12 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe d’un nuage sur le toit d’une maison (`public/media/illustrations/histoire-pluie.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-pluie`
+
+  - Page 1 : Tito regarde les premières gouttes depuis la porte ; le ciel est gris et le vent pousse les feuilles (`public/media/illustrations/histoire-pluie-01.webp`)
+  - Page 2 : Tito ferme les yeux et écoute à l’abri pendant que la pluie frappe le toit (`public/media/illustrations/histoire-pluie-02.webp`)
+  - Page 3 : Après la pluie, l’eau coule entre les cailloux et une goutte brillante reste au bout d’une feuille (`public/media/illustrations/histoire-pluie-03.webp`)
+  - Page 4 : Tito est sorti ; son doigt est sous la feuille et la goutte tombe vers sa main ouverte (`public/media/illustrations/histoire-pluie-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
 

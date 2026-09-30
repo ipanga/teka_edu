@@ -1478,6 +1478,9 @@ removed solely because it also works on a wider display.
 
 **Status:** Accepted · **Date:** 2026-09-28 · **Decided by:** the product owner
 
+**Generation condition resolved 2026-09-30:** ADR-052 authorizes built-in Codex ImageGen
+and fresh-session independent review. The original rationale below is preserved.
+
 **Context:** Seventeen of the twenty audited September WebP candidates are integrated and
 independently accepted. The last three — `histoire-pluie`, `histoire-cailloux` and
 `histoire-malo` — are narrative stories that need expressive characters, animals, changing weather,
@@ -1495,3 +1498,25 @@ natural illustration. Accepted WebP assets are preserved byte for byte.
 **Consequences:** September is complete and fully approved (176/176) with 17 of 20 rich-media
 candidates finished. The rich-media audit marks the three stories `deferred-pending-imagegen`; this
 is a deliberate quality decision, not an unfinished lesson.
+
+---
+
+## ADR-052 — Codex-only continuation and fresh-session independent review
+
+**Status:** Accepted · **Date:** 2026-09-30 · **Decided by:** the product owner
+
+Claude Code is unavailable. Codex now implements, validates and generates authoring-time
+rich media using its built-in ImageGen capability. The generation condition in ADR-051 is
+resolved; process Pluie, Cailloux and Malo in canonical order, one story at a time through
+the complete ADR-048 workflow. Preserve accepted media and intentional SVGs.
+
+Freeze a clean implementation checkpoint and an isolated package containing canonical text,
+page mapping, final frames, comparisons, actual child-size/responsive evidence, affected IDs,
+hashes and approval impact. Stop at that boundary. The owner opens a fresh independent Codex
+session with a bounded prompt and relays accepted, accepted-with-modifications or rejected.
+The implementation session never self-approves. Restore only when a final explicit independent
+acceptance supports it, using existing review history and fresh lapsed-only digest computation.
+
+The previous Claude handoff is historical. `docs/handoff/CODEX_CONTINUATION.md` and the active
+task hold current recovery instructions. ADR-050, security invariants and DEV/PROD separation
+remain in force. Feature checkpoints/pushes are authorized; PR, merge and production are not.
