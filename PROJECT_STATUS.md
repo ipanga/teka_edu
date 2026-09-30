@@ -7,7 +7,7 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-09-30
 Branch:     codex/september-rich-media-pilot; histoire-pluie frozen for independent review
-Commit:     verified recovery baseline 4b2648f, matching remote; production unchanged
+Commit:     frozen implementation 45b4683; documentation durability checkpoint follows; production unchanged
 Updated by: Codex
 ```
 
@@ -439,6 +439,20 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 ## Next Tasks
 
 ### P0 — Next
+
+1. Owner opens a fresh independent Codex session to review frozen Pluie checkpoint `45b4683`
+   using `docs/review/histoire-pluie/REVIEWER_PROMPT.md`, then relays the verdict.
+2. After final explicit acceptance, restore only seven Pluie-dependent approvals with fresh
+   digests through the existing full-review/lapsed-only workflow.
+3. Process Cailloux, then Malo, one at a time through the same complete workflow.
+4. After 20/20 independently completed candidates and 176/176 valid approvals, stop for owner
+   authorization to prepare a PR into develop and CI/staging. October, 2eme maternelle, offline
+   implementation, PR opening, merge and production are outside current authorization.
+
+### Historical backlog before September completion
+
+The following dated priorities predate the completed September review and are retained as
+planning history. They do not override the current P0 task or owner authorization above.
 
 1. **1ère maternelle**: the full 2026–2027 annual progression first, then September daily lessons only. The routing, the renderers and the annual-plan machinery are level-agnostic, so it is content plus one annual plan — then the review gate.
 2. **Re-review of September Week 1** (ADR-047). The corrections materially changed the pedagogy, so the regenerated package goes back for a second pass before Week 1 can be recorded as accepted. Weeks 2–5 have not been reviewed at all.

@@ -35,6 +35,7 @@ Exactly seven approvals lapsed through the existing mechanism; no approval resto
 Prior dated checkpoints preserved in `archive/2026-09-rich-media-batches-1-7.md`.
 
 Implementation and technical QA complete; frozen package: `docs/review/histoire-pluie/`.
+Frozen clean implementation checkpoint: `45b468301af2a9dae41e182d619ee9f024d56379`.
 Manifest SHA-256: `1ff3bd59ee4a2d6a89a8a153e98d0f2314d6faaabc64ce0045b6a9e5d037ec2b`.
 Current state: 169 approved / 7 review, 169 distinct valid standing approvals, all 176 current
 computed digests distinct, zero stale or unexpected lapses. All unaffected lesson records,
@@ -101,7 +102,7 @@ No deployment; last recorded production main is 51c83a22. No production verifica
 
 ## Git State
 
-The commit adding `docs/review/histoire-pluie/` is the frozen implementation checkpoint.
+`45b468301af2a9dae41e182d619ee9f024d56379` is the frozen implementation checkpoint.
 Resolve it with `git log -1 --format=%H -- docs/review/histoire-pluie`. Feature durability push
 is authorized; no PR or merge authorized. Final clean state and remote SHA verified at push.
 

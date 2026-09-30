@@ -19,6 +19,7 @@ a dependency. `CODEX_TO_CLAUDE_CODE_HANDOFF.md` is historical; preserve its evid
 Pluie implementation and technical QA are complete; independent review is pending. Frozen
 package: `docs/review/histoire-pluie/`. Resolve the implementation SHA with
 `git log -1 --format=%H -- docs/review/histoire-pluie`.
+Frozen implementation: `45b468301af2a9dae41e182d619ee9f024d56379`; clean at freeze.
 Manifest SHA-256: `1ff3bd59ee4a2d6a89a8a153e98d0f2314d6faaabc64ce0045b6a9e5d037ec2b`.
 Current state: 169 approved / 7 review / zero stale or unexpected lapses; 18 candidates
 integrated, 17 independently complete, eight sequences, 31 retained SVGs. All 169 unaffected
