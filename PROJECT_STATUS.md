@@ -7,7 +7,7 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-09-30
 Branch:     codex/september-rich-media-pilot; histoire-cailloux frozen awaiting independent review
-Commit:     accepted Pluie b4f242d; Cailloux freeze checkpoint follows; production unchanged
+Commit:     Cailloux frozen 6220f1e; accepted Pluie b4f242d; production unchanged
 Updated by: Codex
 ```
 

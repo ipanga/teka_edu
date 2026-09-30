@@ -36,7 +36,10 @@ canonical texts, review history and Pluie frozen evidence unchanged against acce
 19/20 integrated, 18/20 independently accepted, nine sequences, 31 retained SVGs.
 Package: `docs/review/histoire-cailloux/`, 26 hashed files plus manifest. Manifest SHA-256:
 `415bbf536f244ae90ef13a3ab3e17a4887d04ad9f33c69598e801c7258e7365c`.
-Resolve freeze SHA: `git log -1 --format=%H -- docs/review/histoire-cailloux`.
+Frozen implementation SHA: `6220f1e1e8f1476018759b514d86a946f78d937e`.
+Pushed to the existing feature branch; remote SHA independently verified. Subsequent documentation
+checkpoint records this SHA without changing content, approvals, media or frozen evidence.
+Verify with `git log -1 --format=%H -- docs/review/histoire-cailloux`.
 Owner opens a fresh session using `docs/review/histoire-cailloux/REVIEWER_PROMPT.md`.
 Stop: no Cailloux restoration/history before final explicit independent acceptance.
 After acceptance, reverify all bytes and impact, record separate verdict through full-review

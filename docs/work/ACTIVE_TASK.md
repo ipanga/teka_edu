@@ -30,7 +30,8 @@ Accepted Pluie checkpoint `b4f242d77ecde3b7e67bdba37e14dcbe56d6061c`, clean and 
 Pluie independently accepted and seven fresh approvals restored. 176 total/approved,
 176 distinct valid digests, zero review/stale/unexpected lapses, 169 unaffected records unchanged.
 Eighteen of twenty candidates independently complete, eight sequences, 31 retained SVGs.
-Cailloux four-frame package is now frozen: 173 approved / exactly 3 review, 176 distinct fresh
+Cailloux frozen implementation: `6220f1e1e8f1476018759b514d86a946f78d937e`.
+Four-frame package is frozen: 173 approved / exactly 3 review, 176 distinct fresh
 digests, zero stale/unexpected lapses. All 173 unaffected records, 50 unrelated assets/media,
 canonical texts, review history and Pluie package unchanged against b4f242d. Malo untouched.
 Manifest SHA-256: 415bbf536f244ae90ef13a3ab3e17a4887d04ad9f33c69598e801c7258e7365c;
@@ -68,11 +69,10 @@ Implementation cannot self-approve. Owner opens a fresh independent Codex sessio
 
 ## In Progress
 
-Final formatting, integrity and checkpoint/push before stopping for independent review.
+None. Implementation frozen and pushed; awaiting fresh independent review.
 
 ## Remaining
 
-- Final checkpoint/push and clean-tree verification.
 - Fresh independent review; restore nothing before final explicit acceptance.
 - After acceptance: fresh-digest lapsed-only weeks 2/3/4, verify 176/176 and preserve other 173
   records, update artifacts/status, validate/checkpoint/push before considering Malo.
@@ -103,7 +103,9 @@ No staging/production deployment. Production unchanged, no live verification cla
 
 ## Git State
 
-Baseline b4f242d pushed and clean before this task. Feature checkpoints/pushes authorized.
+Frozen implementation 6220f1e pushed; remote SHA verified, tree clean before this documentation
+checkpoint. This follow-up changes only status documents, not frozen content or package bytes.
+Resolve latest documentation checkpoint with git log -1; it must be pushed and clean at handoff.
 No PR or merge authorized. Generation masters retained locally in ignored evidence paths.
 
 ## Blockers
@@ -116,7 +118,7 @@ Independent verdict required for frozen Cailloux; no other decision.
 
 ## Exact Resume Point
 
-Finish checkpoint/push and stop. Owner opens a fresh independent Codex session using
+Stop at frozen checkpoint 6220f1e. Owner opens a fresh independent Codex session using
 docs/review/histoire-cailloux/REVIEWER_PROMPT.md. Do not approve Cailloux or start Malo.
 
 ## Resume Verification
