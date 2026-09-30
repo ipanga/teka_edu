@@ -4,11 +4,12 @@
 
 Claude Code is unavailable; [Codex continuation](../handoff/CODEX_CONTINUATION.md) supersedes
 the former handoff. Pluie is independently accepted, restored and pushed at b4f242d.
-Cailloux is integrated and frozen awaiting separate review: 19 WebP candidate IDs, nine sequences,
-43 WebP plus 32 SVG runtime files (75 total), 9,719,987 bytes. Eighteen of twenty candidates
+Cailloux is independently accepted and restored: 19 WebP candidate IDs, nine sequences,
+43 WebP plus 32 SVG runtime files (75 total), 9,719,987 bytes. Nineteen of twenty candidates
 independently complete; 31 intentionally retained SVGs; Malo alone remains deferred and untouched.
-Cailloux counts are 3/2/2/3. September is 173 approved / 3 review / 176 distinct fresh digests /
-zero stale approvals. Only m3-lang-08, m3-lang-14 and m3-lang-18 lapsed; other 173 records unchanged.
+Cailloux counts are 3/2/2/3. September is 176 approved / 0 review / 176 distinct current valid digests /
+zero stale/unexpected lapses. Only m3-lang-08, m3-lang-14 and m3-lang-18 restored freshly;
+other 173 records unchanged. Both frozen packages preserved; acceptance recorded separately.
 Exact evidence is in the isolated [Cailloux package](../review/histoire-cailloux/README.md) and
 preserved [Pluie package](../review/histoire-pluie/README.md).
 The dated September 28 inventory below preserves the verified pre-Pluie baseline.

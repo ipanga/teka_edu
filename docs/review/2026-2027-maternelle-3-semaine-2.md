@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 11 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 12 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -121,6 +121,12 @@ Reconfirmation visuelle indépendante du lot 6 du déploiement rich-media de sep
 Reconfirmation visuelle indépendante du lot 7 du déploiement rich-media de septembre, couvrant exactement la séquence histoire-marche et trois leçons (m3-lang-06, m3-lang-12, m3-lang-19), à partir du dossier, de la planche comparative et de la consigne bornée gelés. ChatGPT GPT-5.6 Sol, relecteur externe indépendant de l’auteur des images et de la session d’implémentation, a d’abord conclu accepted-with-modifications en signalant six tomates sur le cadre 2. La session d’implémentation Claude Code a contesté ce bloqueur avec des preuves : le plateau pédagogique du cadre 2 contient exactement cinq tomates et trois oignons, en pleine résolution comme sur la vignette de 256 px. Après réinspection agrandie, ChatGPT GPT-5.6 Sol a confirmé cinq tomates et trois oignons, retiré le bloqueur et conclu accepted : les 10 lignes canoniques rendent quatre pages (3/3/3/1) associées aux cadres [0, 1, 2, 3] ; Mama Lelo, Ama, les vêtements, le panier, le marché, la cour, la lumière et le style restent cohérents ; les couleurs, le comptage et la comparaison de cinq tomates avec trois oignons, le tri et la fierté d’Ama sont clairs et adaptés à la maternelle.
 
 **Suites données :** Aucune correction : le seul bloqueur signalé provenait d’un comptage visuel erroné et a été retiré ; aucun média n’a été modifié ni régénéré. Les quatre WebP sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 4188ac69de8d39f7d742ea5f257cc888067217c28f53816d8afbccd446dbcb75, 0a674df545e61cb3868bf8be9fe54c1d220dad13dae7e33ada2a67f337c8bc39, c61a2d3efeb08b7af036d979e82ed3f1f324692e3c20f43f1c9df8b7a72bf9db et 5cb5137fb4c0a12641f185f5bd6a3f2dcedee3db556b7ca7c4615ceb423e2f00. AssetFingerprint couvre les quatre cadres, leurs descriptions et pageFrames, puis lessonDigest couvre cette empreinte complète. Aucun texte pédagogique, objectif, durée, matériel, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Le propriétaire a explicitement autorisé l’enregistrement de ce verdict externe et la restauration des trois approbations expirées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
+
+### 2026-09-30 — Codex (session indépendante) · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 9 histoire-cailloux au checkpoint gelé 6220f1e1e8f1476018759b514d86a946f78d937e, documentation d63b661f54c92177fff3ed9d16d32511fd5231e0. Le propriétaire a relayé accepted d’une session Codex séparée : quatre images réelles, correspondance canonique, silhouettes et identités des cailloux, quantités 3/2/2/3 sans révélation prématurée ni duplication, continuité de Tito avec Pluie, descriptions accessibles, rendu à 256 px, captures téléphone/tablette/laptop-MacBook et intégrité du manifeste vérifiés. Aucun défaut ni correction requis. La session indépendante n’a rien modifié.
+
+**Suites données :** Aucune. Manifeste 415bbf536f244ae90ef13a3ab3e17a4887d04ad9f33c69598e801c7258e7365c et 26 fichiers revérifiés identiques au gel ; médias runtime identiques. Le propriétaire autorise uniquement m3-lang-08, m3-lang-14 et m3-lang-18 via approve-week --lapsed-only=true avec digests calculés à neuf, jamais copiés. Les 173 autres approbations sont préservées. Téléphone/tablette/laptop-MacBook uniquement ; aucune opération de déploiement.
 
 ## Jour 5 — 2026-09-07
 
@@ -1138,7 +1144,7 @@ l’autre — l’appareil est alors le sien._
 
 _Employer « il » et « elle » pour parler de quelqu’un d’autre._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** L’enfant dit facilement « je ». Le travail du jour est de parler de quelqu’un d’autre : « il » ou « elle ». Donnez toujours le modèle avant de demander.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

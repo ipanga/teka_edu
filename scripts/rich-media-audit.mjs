@@ -292,11 +292,7 @@ const assets = await Promise.all(
           ? // Owner decision 2026-09-28: the approved SVG stays until ImageGen-quality art exists.
             "deferred-pending-imagegen"
           : "not-started",
-      reviewState: isRolloutBatch9
-        ? "awaiting-independent-reconfirmation"
-        : selected
-          ? "independently-reconfirmed"
-          : "not-in-pilot",
+      reviewState: selected ? "independently-reconfirmed" : "not-in-pilot",
       approvalImpact:
         decision.decision === "audited-keep"
           ? { expected: "none", lessonCount: 0, lessonIds: [] }
@@ -317,7 +313,7 @@ const assets = await Promise.all(
             oldFileBytes: oldFileSize(before.file),
             deliveryFiles: await delivery(asset),
             currentDecision: isRolloutBatch9
-              ? "awaiting-independent-review; approvals-intentionally-lapsed"
+              ? "independent-review-accepted; lapsed-only-approval-restored"
               : isRolloutBatch8
                 ? "independent-review-accepted; lapsed-only-approval-restored"
                 : isRolloutBatch7
@@ -363,7 +359,7 @@ const manifest = {
   productionCommit: "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   pilotBaselineCommit: baselineCommit,
   scope: ["maternelle-1 September", "maternelle-3 September"],
-  status: "rollout-batch-9-awaiting-independent-reconfirmation",
+  status: "rollout-batch-9-independently-reconfirmed",
   productionAssetsChanged: false,
   localPilotAssetsChanged: true,
   approvedLessonSemanticsChanged: false,
@@ -377,7 +373,7 @@ const manifest = {
     currentReview: [...lessons.values()].filter((lesson) => lesson.status === "review").length,
   },
   notes: [
-    "Batch 9 histoire-cailloux integrates four ImageGen frames aligned to eleven unchanged lines (3/3/3/2), with visible counts 3/2/2/3. Exactly m3-lang-08, m3-lang-14 and m3-lang-18 are intentionally at review. The other 173 approval records are unchanged and valid against accepted Pluie baseline b4f242d. Nineteen candidates integrated, eighteen independently accepted, nine sequences, 31 retained SVGs; Malo remains deferred. No self-review or restoration authorized before separate acceptance.",
+    "Batch 9 histoire-cailloux independently accepted without correction at frozen 6220f1e; owner relayed verdict and authorized exactly three fresh-digest lapsed-only restorations. September 176 approved / 0 review / 176 distinct current valid digests / zero stale or unexpected lapses. All 173 unaffected approval records unchanged; frozen Cailloux/Pluie packages preserved. Nineteen of twenty candidates independently complete, nine sequences, 31 retained SVGs; Malo is the final deferred candidate.",
     "Accepted Pluie checkpoint b4f242d snapshot: batch 8 was independently accepted without correction at frozen checkpoint 45b4683. Owner relayed the verdict and authorized restoration. Exactly seven approvals restored with fresh-digest lapsed-only workflow; 169 unaffected records unchanged. At that checkpoint September was 176/176 approved, zero stale/unexpected lapses, 18/20 independently completed; Cailloux/Malo were deferred. Pluie source masters 1448x1086 except frame 2 at 1447x1087; delivery 1200x900. Current batch 9 state is reported separately above.",
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
     "A small story sequence is a presentation proposal tied to existing text pages. It must not alter story wording or progression.",
@@ -438,7 +434,7 @@ Generated from the canonical media registry, September lessons and supplied text
 - Rollout batch 6 contains the four-frame histoire-bibi sequence. All four frames and all three dependent lessons were independently accepted and restored with fresh digests. Four story candidates remain unimplemented.
 - Rollout batch 7 contains the four-frame histoire-marche sequence. All four frames and all three dependent lessons were independently accepted and restored with fresh digests. The three remaining story candidates (histoire-pluie, histoire-cailloux, histoire-malo) keep their approved SVGs; their painted upgrade is deliberately deferred until ImageGen-quality generation is available.
 - Batch 8 histoire-pluie is independently accepted without correction. Seven approvals restored with fresh digests at b4f242d; its frozen evidence is preserved unchanged.
-- Batch 9 histoire-cailloux: four frames integrated, exactly three approvals intentionally at review, 173 unaffected valid approvals unchanged. Visible counts 3/2/2/3; 19/20 integrated, 18/20 independently complete, nine sequences, 31 retained SVGs. Awaiting independent review; Malo untouched.
+- Batch 9 histoire-cailloux: independently accepted without correction; exactly three fresh approvals restored, 173 unaffected records unchanged. September 176/176, zero stale/unexpected lapses, 176 distinct valid digests. 19/20 independently complete, nine sequences, 31 retained SVGs; Malo alone deferred.
 - Manifest SHA-256: \`${digest}\`.
 
 The supplied screenshots validate the distinction: layout and scaling are sound, while the body, rhyme and story art remains visually schematic. Shapes, counting models and isolated objects do not share that defect.

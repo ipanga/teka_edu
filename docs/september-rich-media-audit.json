@@ -5,7 +5,7 @@
   "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
   "pilotBaselineCommit": "cbc1cf3",
   "scope": ["maternelle-1 September", "maternelle-3 September"],
-  "status": "rollout-batch-9-awaiting-independent-reconfirmation",
+  "status": "rollout-batch-9-independently-reconfirmed",
   "productionAssetsChanged": false,
   "localPilotAssetsChanged": true,
   "approvedLessonSemanticsChanged": false,
@@ -20,12 +20,12 @@
     "ifAllProposedWebpAssetsAreIntegrated": 53,
     "maternelle1": 27,
     "maternelle3": 26,
-    "currentImpact": 3,
-    "currentApproved": 173,
-    "currentReview": 3
+    "currentImpact": 0,
+    "currentApproved": 176,
+    "currentReview": 0
   },
   "notes": [
-    "Batch 9 histoire-cailloux integrates four ImageGen frames aligned to eleven unchanged lines (3/3/3/2), with visible counts 3/2/2/3. Exactly m3-lang-08, m3-lang-14 and m3-lang-18 are intentionally at review. The other 173 approval records are unchanged and valid against accepted Pluie baseline b4f242d. Nineteen candidates integrated, eighteen independently accepted, nine sequences, 31 retained SVGs; Malo remains deferred. No self-review or restoration authorized before separate acceptance.",
+    "Batch 9 histoire-cailloux independently accepted without correction at frozen 6220f1e; owner relayed verdict and authorized exactly three fresh-digest lapsed-only restorations. September 176 approved / 0 review / 176 distinct current valid digests / zero stale or unexpected lapses. All 173 unaffected approval records unchanged; frozen Cailloux/Pluie packages preserved. Nineteen of twenty candidates independently complete, nine sequences, 31 retained SVGs; Malo is the final deferred candidate.",
     "Accepted Pluie checkpoint b4f242d snapshot: batch 8 was independently accepted without correction at frozen checkpoint 45b4683. Owner relayed the verdict and authorized restoration. Exactly seven approvals restored with fresh-digest lapsed-only workflow; 169 unaffected records unchanged. At that checkpoint September was 176/176 approved, zero stale/unexpected lapses, 18/20 independently completed; Cailloux/Malo were deferred. Pluie source masters 1448x1086 except frame 2 at 1447x1087; delivery 1200x900. Current batch 9 state is reported separately above.",
     "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
     "A small story sequence is a presentation proposal tied to existing text pages. It must not alter story wording or progression.",
@@ -2661,7 +2661,7 @@
       "animationValue": "page transition only; no movement inside the image",
       "audioUsefulness": "optional human narration",
       "implementationState": "integrated-local-rollout",
-      "reviewState": "awaiting-independent-reconfirmation",
+      "reviewState": "independently-reconfirmed",
       "approvalImpact": {
         "expected": "lapse-on-byte-or-association-change",
         "lessonCount": 3,
@@ -2703,7 +2703,7 @@
           "bytes": 236838
         }
       ],
-      "currentDecision": "awaiting-independent-review; approvals-intentionally-lapsed"
+      "currentDecision": "independent-review-accepted; lapsed-only-approval-restored"
     },
     {
       "id": "histoire-malo",

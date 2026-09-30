@@ -11,7 +11,7 @@ separate independent Codex review. Preserve lesson text, approval integrity and 
 
 ## Status
 
-`awaiting_review`
+`completed`
 
 ## Branch
 
@@ -35,7 +35,9 @@ Four-frame package is frozen: 173 approved / exactly 3 review, 176 distinct fres
 digests, zero stale/unexpected lapses. All 173 unaffected records, 50 unrelated assets/media,
 canonical texts, review history and Pluie package unchanged against b4f242d. Malo untouched.
 Manifest SHA-256: 415bbf536f244ae90ef13a3ab3e17a4887d04ad9f33c69598e801c7258e7365c;
-26 package files verified. No Cailloux acceptance/history/restoration.
+26 package files verified. Owner relayed separate accepted verdict; three full-review entries and fresh-digest lapsed-only
+restorations recorded. Current: 176/176 approved, 176 distinct current valid digests, zero stale
+or unexpected lapses; all 173 unaffected records unchanged. Both frozen packages preserved.
 Pluie completed record preserved in `archive/2026-09-pluie-accepted.md`.
 
 ## Scope
@@ -69,13 +71,12 @@ Implementation cannot self-approve. Owner opens a fresh independent Codex sessio
 
 ## In Progress
 
-None. Implementation frozen and pushed; awaiting fresh independent review.
+Accepted-state validation passed; checkpoint/push is the only remaining acceptance action.
 
 ## Remaining
 
-- Fresh independent review; restore nothing before final explicit acceptance.
-- After acceptance: fresh-digest lapsed-only weeks 2/3/4, verify 176/176 and preserve other 173
-  records, update artifacts/status, validate/checkpoint/push before considering Malo.
+- Validate/checkpoint/push accepted state, then verify final deferred Malo from repository.
+- Process Malo through implementation/validation/freeze/separate review; no self-approval.
 
 ## Validation State
 
@@ -91,7 +92,7 @@ None. Implementation frozen and pushed; awaiting fresh independent review.
 | E2E                | PASS    | 58 local; eight Cailloux viewports; nine production skipped |
 | Docker             | STALE   | no container configuration changes                          |
 | secret scans       | PASS    | 28 client files, three fake sentinels absent                |
-| independent review | NOT RUN | frozen package; fresh session required                      |
+| independent review | PASS    | separate accepted verdict relayed by owner; no correction   |
 
 ## Database State
 
@@ -103,23 +104,23 @@ No staging/production deployment. Production unchanged, no live verification cla
 
 ## Git State
 
-Frozen implementation 6220f1e pushed; remote SHA verified, tree clean before this documentation
-checkpoint. This follow-up changes only status documents, not frozen content or package bytes.
-Resolve latest documentation checkpoint with git log -1; it must be pushed and clean at handoff.
+Reviewed baseline d63b661 pushed and clean before restoration. Accepted-state checkpoint changes
+only three approval records, three history entries, verdict and current audit/status artifacts.
+No frozen media/evidence changed. Resolve accepted-state SHA with git log -1 after checkpoint.
 No PR or merge authorized. Generation masters retained locally in ignored evidence paths.
 
 ## Blockers
 
-No implementation blocker. Separate independent acceptance required before restoration.
+None. Cailloux accepted without required correction.
 
 ## User Decisions Needed
 
-Independent verdict required for frozen Cailloux; no other decision.
+None.
 
 ## Exact Resume Point
 
-Stop at frozen checkpoint 6220f1e. Owner opens a fresh independent Codex session using
-docs/review/histoire-cailloux/REVIEWER_PROMPT.md. Do not approve Cailloux or start Malo.
+Validate and checkpoint/push accepted Cailloux state, then confirm canonical remaining candidate
+and begin only Malo implementation. Do not start October or 2eme maternelle.
 
 ## Resume Verification
 

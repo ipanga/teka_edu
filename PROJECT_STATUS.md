@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-09-30
-Branch:     codex/september-rich-media-pilot; histoire-cailloux frozen awaiting independent review
-Commit:     Cailloux frozen 6220f1e; accepted Pluie b4f242d; production unchanged
+Branch:     codex/september-rich-media-pilot; histoire-cailloux independently accepted and restored
+Commit:     reviewed Cailloux 6220f1e; accepted-state checkpoint follows; production unchanged
 Updated by: Codex
 ```
 
@@ -21,6 +21,20 @@ that records past TV checks remains unchanged as an accurate record and creates 
 obligation.
 
 ## Codex continuation — 2026-09-30
+
+Current state supersedes the implementation snapshot below: Cailloux separately accepted
+without correction. Owner relayed verdict; all frozen hashes and runtime bytes matched before
+action. Exactly m3-lang-08, m3-lang-14 and m3-lang-18 restored by fresh-digest lapsed-only
+weeks 2/3/4 after dry-run. September 176 approved / 0 review / 176 distinct current valid digests,
+zero stale/unexpected lapses, 173 unaffected records unchanged. Three accepted full-review
+history entries and separate verdict artifact added; neither frozen Cailloux nor Pluie modified.
+19/20 independently complete, nine sequences, 31 retained SVGs. Final deferred candidate is
+Malo, only after accepted Cailloux validation/checkpoint/push. Accepted-state validation passed:
+formatting, lint, types, 438 unit tests, 31 content files, production build, bundle scan and eight
+targeted Cailloux viewports. Full 58-check regression baseline remains unchanged by restoration.
+No PR/merge/deployment/DB operation.
+
+### Preserved implementation snapshot
 
 The owner authorized completion of the three ADR-051 stories using built-in Codex ImageGen,
 one story through independent review before the next. Claude Code is unavailable and the prior
