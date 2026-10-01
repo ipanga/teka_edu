@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 6 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 7 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-15 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -104,6 +104,12 @@ Reconfirmation visuelle indépendante du lot 8, histoire-pluie, au checkpoint ge
 
 **Suites données :** Aucune. Le manifeste relu reste 1ff3bd59ee4a2d6a89a8a153e98d0f2314d6faaabc64ce0045b6a9e5d037ec2b ; les 30 fichiers et les quatre cadres runtime correspondent exactement au checkpoint. Le propriétaire autorise explicitement la restauration des seules sept approbations expirées m1-lang-09, m1-lang-10, m1-lang-15, m1-lang-20, m3-lang-03, m3-lang-21 et m3-art-04, par approve-week --lapsed-only=true avec des empreintes calculées à neuf. Aucun digest antérieur ne doit être copié. TV/Smart TV reste hors périmètre.
 
+### 2026-10-01 — Codex (session indépendante) · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot final 10 histoire-malo, gel 8b5a8655222e299fea90e7582906c3723b3eca79, documentation 1c3372298eaa9e3463aa7a889762bb9cc662db2b. Le propriétaire a relayé accepted sans correction d’une session Codex séparée. Quatre images réelles, douze lignes et correspondance canonique, comparaison, rendu 256 px, descriptions, dossier et treize captures originales vérifiés. Les scènes de conséquence après la branche et d’essai d’eau froide soutiennent les pages sans contradiction ; continuité, anatomie, un poisson dans l’eau à l’œil ouvert, une patte dans l’eau avec trois appuis, sommeil en rond nez sur la queue, progression soir-nuit et sécurité adaptés. Téléphone/tablette/laptop-MacBook uniquement. Aucune modification effectuée par le relecteur.
+
+**Suites données :** Aucune. Manifeste f76f81e72adef7810695da6cb2b29d6fde0aa4dc981e9abd43fc0f1289141603 et 26 fichiers revérifiés identiques au gel ; images runtime identiques. Le propriétaire autorise uniquement m3-lang-07, m3-lang-16, m3-lang-20 via approve-week --lapsed-only=true après dry-run, digests calculés à neuf, jamais repris. Les 173 autres approbations et les preuves acceptées Pluie/Cailloux sont préservées. Aucun merge, déploiement ou travail d’octobre autorisé.
+
 ## Jour 20 — 2026-09-28
 
 **Durée totale : 35 min** · 4 séances · jour 10 du rythme
@@ -124,7 +130,7 @@ l’autre — l’appareil est alors le sien._
 
 _Parler de ce qu’on a fait à quelqu’un qui ne l’a pas vu._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** L’enfant présente son dessin comme à quelqu’un qui ne sait rien. C’est ce qui l’oblige à employer des phrases complètes.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

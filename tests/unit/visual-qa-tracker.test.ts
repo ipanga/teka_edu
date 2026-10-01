@@ -32,11 +32,26 @@ const richMediaPilot = JSON.parse(
 describe("the final September visual QA tracker", () => {
   it("is committed up to date", async () => {
     const file = path.join(ROOT, QA_TRACKER_PATH);
-    const expected = await format(buildQaTracker(data, qa), {
+    const expected = await format(buildQaTracker(data, qa, richMediaPilot), {
       ...(await resolveConfig(file)),
       filepath: file,
     });
     expect(readFileSync(file, "utf8")).toBe(expected);
+  });
+
+  it("separates accepted current media from the historical SVG freeze", () => {
+    const tracker = buildQaTracker(data, qa, richMediaPilot);
+    expect(tracker).toContain("September lessons: 176 approved / 0 review.");
+    expect(tracker).toContain("Independently reconfirmed runtime assets: 20.");
+    expect(tracker).toContain("## Historical SVG QA Pass");
+    const mismatched = {
+      assets: richMediaPilot.assets.map((asset) =>
+        asset.id === "histoire-malo" ? { ...asset, afterHash: "sha256:wrong" } : asset,
+      ),
+    };
+    expect(buildQaTracker(data, qa, mismatched)).toContain(
+      "Independently reconfirmed runtime assets: 19.",
+    );
   });
 
   it("gives every shipped picture exactly one decision, and none to a picture that does not exist", () => {

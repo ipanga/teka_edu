@@ -1,0 +1,27 @@
+{
+  "candidate": "histoire-malo",
+  "reviewedCheckpoint": "8b5a8655222e299fea90e7582906c3723b3eca79",
+  "documentationCheckpoint": "1c3372298eaa9e3463aa7a889762bb9cc662db2b",
+  "manifestSha256": "f76f81e72adef7810695da6cb2b29d6fde0aa4dc981e9abd43fc0f1289141603",
+  "reviewer": "Codex (separate independent session; model not specified)",
+  "source": "Owner relayed accepted independent verdict without correction and authorized exactly three restorations on 2026-10-01.",
+  "verdict": "accepted",
+  "requiredCorrections": [],
+  "verifiedReviewScope": ["four full-size frames", "canonical page mapping", "comparison", "256 px", "accessibility descriptions", "reconfirmation dossier", "twelve original device/page captures", "phone return capture", "accepted Cailloux/Pluie evidence", "all manifest hashes/byte lengths", "registry/runtime identity", "page-2 aftermath and page-3 cold-water moment choices"],
+  "supportedDevices": ["phone", "tablet", "laptop/MacBook"],
+  "reviewSessionChangedFiles": false,
+  "implementationReverification": "All 26 package files and four runtime frames matched reviewed freeze; content/public/review diff empty and remote matched documentation checkpoint before action.",
+  "restoration": {
+    "mechanism": "scripts/approve-week.ts --lapsed-only=true; dry-run first; freshly computed lessonDigest",
+    "lessonIds": ["m3-lang-07", "m3-lang-16", "m3-lang-20"],
+    "weeks": [2, 4, 5],
+    "total": 176,
+    "approved": 176,
+    "review": 0,
+    "distinctValidDigests": 176,
+    "staleApprovals": 0,
+    "unexpectedLapses": 0,
+    "unaffectedApprovalRecordsUnchanged": 173,
+    "reusedOldDigests": 0
+  }
+}

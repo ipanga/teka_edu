@@ -1481,6 +1481,13 @@ removed solely because it also works on a wider display.
 **Generation condition resolved 2026-09-30:** ADR-052 authorizes built-in Codex ImageGen
 and fresh-session independent review. The original rationale below is preserved.
 
+**Deferral closed 2026-10-01:** Pluie, Cailloux and Malo independently accepted and restored.
+20/20 candidates complete, 176/176 current valid approvals; none deferred. Original context and
+consequences below are dated history, not current status. Final audit:
+`docs/media/SEPTEMBER_RICH_MEDIA_FINAL_AUDIT.json`. September finalization authorizes feature
+checkpoint/push only, then STOP. PR/develop, CI/staging, family pilot, production, infrastructure
+and curriculum expansion require new owner authorization.
+
 **Context:** Seventeen of the twenty audited September WebP candidates are integrated and
 independently accepted. The last three — `histoire-pluie`, `histoire-cailloux` and
 `histoire-malo` — are narrative stories that need expressive characters, animals, changing weather,

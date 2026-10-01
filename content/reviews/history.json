@@ -1403,6 +1403,42 @@
       "outcome": "accepted",
       "summary": "Reconfirmation visuelle indépendante du lot 9 histoire-cailloux au checkpoint gelé 6220f1e1e8f1476018759b514d86a946f78d937e, documentation d63b661f54c92177fff3ed9d16d32511fd5231e0. Le propriétaire a relayé accepted d’une session Codex séparée : quatre images réelles, correspondance canonique, silhouettes et identités des cailloux, quantités 3/2/2/3 sans révélation prématurée ni duplication, continuité de Tito avec Pluie, descriptions accessibles, rendu à 256 px, captures téléphone/tablette/laptop-MacBook et intégrité du manifeste vérifiés. Aucun défaut ni correction requis. La session indépendante n’a rien modifié.",
       "corrections": "Aucune. Manifeste 415bbf536f244ae90ef13a3ab3e17a4887d04ad9f33c69598e801c7258e7365c et 26 fichiers revérifiés identiques au gel ; médias runtime identiques. Le propriétaire autorise uniquement m3-lang-08, m3-lang-14 et m3-lang-18 via approve-week --lapsed-only=true avec digests calculés à neuf, jamais copiés. Les 173 autres approbations sont préservées. Téléphone/tablette/laptop-MacBook uniquement ; aucune opération de déploiement."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 2,
+      "reviewedOn": "2026-10-01",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Codex (session indépendante)",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle indépendante du lot final 10 histoire-malo, gel 8b5a8655222e299fea90e7582906c3723b3eca79, documentation 1c3372298eaa9e3463aa7a889762bb9cc662db2b. Le propriétaire a relayé accepted sans correction d’une session Codex séparée. Quatre images réelles, douze lignes et correspondance canonique, comparaison, rendu 256 px, descriptions, dossier et treize captures originales vérifiés. Les scènes de conséquence après la branche et d’essai d’eau froide soutiennent les pages sans contradiction ; continuité, anatomie, un poisson dans l’eau à l’œil ouvert, une patte dans l’eau avec trois appuis, sommeil en rond nez sur la queue, progression soir-nuit et sécurité adaptés. Téléphone/tablette/laptop-MacBook uniquement. Aucune modification effectuée par le relecteur.",
+      "corrections": "Aucune. Manifeste f76f81e72adef7810695da6cb2b29d6fde0aa4dc981e9abd43fc0f1289141603 et 26 fichiers revérifiés identiques au gel ; images runtime identiques. Le propriétaire autorise uniquement m3-lang-07, m3-lang-16, m3-lang-20 via approve-week --lapsed-only=true après dry-run, digests calculés à neuf, jamais repris. Les 173 autres approbations et les preuves acceptées Pluie/Cailloux sont préservées. Aucun merge, déploiement ou travail d’octobre autorisé."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 4,
+      "reviewedOn": "2026-10-01",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Codex (session indépendante)",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle indépendante du lot final 10 histoire-malo, gel 8b5a8655222e299fea90e7582906c3723b3eca79, documentation 1c3372298eaa9e3463aa7a889762bb9cc662db2b. Le propriétaire a relayé accepted sans correction d’une session Codex séparée. Quatre images réelles, douze lignes et correspondance canonique, comparaison, rendu 256 px, descriptions, dossier et treize captures originales vérifiés. Les scènes de conséquence après la branche et d’essai d’eau froide soutiennent les pages sans contradiction ; continuité, anatomie, un poisson dans l’eau à l’œil ouvert, une patte dans l’eau avec trois appuis, sommeil en rond nez sur la queue, progression soir-nuit et sécurité adaptés. Téléphone/tablette/laptop-MacBook uniquement. Aucune modification effectuée par le relecteur.",
+      "corrections": "Aucune. Manifeste f76f81e72adef7810695da6cb2b29d6fde0aa4dc981e9abd43fc0f1289141603 et 26 fichiers revérifiés identiques au gel ; images runtime identiques. Le propriétaire autorise uniquement m3-lang-07, m3-lang-16, m3-lang-20 via approve-week --lapsed-only=true après dry-run, digests calculés à neuf, jamais repris. Les 173 autres approbations et les preuves acceptées Pluie/Cailloux sont préservées. Aucun merge, déploiement ou travail d’octobre autorisé."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 5,
+      "reviewedOn": "2026-10-01",
+      "reviewKind": "ai-assisted",
+      "reviewer": "Codex (session indépendante)",
+      "scope": "full-review",
+      "outcome": "accepted",
+      "summary": "Reconfirmation visuelle indépendante du lot final 10 histoire-malo, gel 8b5a8655222e299fea90e7582906c3723b3eca79, documentation 1c3372298eaa9e3463aa7a889762bb9cc662db2b. Le propriétaire a relayé accepted sans correction d’une session Codex séparée. Quatre images réelles, douze lignes et correspondance canonique, comparaison, rendu 256 px, descriptions, dossier et treize captures originales vérifiés. Les scènes de conséquence après la branche et d’essai d’eau froide soutiennent les pages sans contradiction ; continuité, anatomie, un poisson dans l’eau à l’œil ouvert, une patte dans l’eau avec trois appuis, sommeil en rond nez sur la queue, progression soir-nuit et sécurité adaptés. Téléphone/tablette/laptop-MacBook uniquement. Aucune modification effectuée par le relecteur.",
+      "corrections": "Aucune. Manifeste f76f81e72adef7810695da6cb2b29d6fde0aa4dc981e9abd43fc0f1289141603 et 26 fichiers revérifiés identiques au gel ; images runtime identiques. Le propriétaire autorise uniquement m3-lang-07, m3-lang-16, m3-lang-20 via approve-week --lapsed-only=true après dry-run, digests calculés à neuf, jamais repris. Les 173 autres approbations et les preuves acceptées Pluie/Cailloux sont préservées. Aucun merge, déploiement ou travail d’octobre autorisé."
     }
   ]
 }

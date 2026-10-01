@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-10-01
-Branch:     codex/september-rich-media-pilot; final September histoire-malo frozen awaiting review
-Commit:     Malo frozen 8b5a865; accepted Cailloux cd4f39b; production unchanged
+Branch:     codex/september-rich-media-pilot; September rich-media complete; release not authorized
+Commit:     Final checkpoint: see docs/work/ACTIVE_TASK.md; production unchanged
 Updated by: Codex
 ```
 
@@ -22,29 +22,25 @@ obligation.
 
 ## Current September continuation — 2026-10-01
 
-Accepted Cailloux cd4f39b95a234f0fed5c819a7e81db8a1138d936 was fully validated, committed,
-pushed and remote-verified before Malo. Audit confirmed Malo alone deferred. It now has four
-1200x900 ImageGen WebPs for twelve unchanged lines (3/3/3/3), pageFrames [0,1,2,3].
-Exactly m3-lang-07, m3-lang-16 and m3-lang-20 intentionally lapsed: 173 approved / 3 review /
-176 distinct fresh digests / zero stale/unexpected lapses. Other 173 records unchanged.
-All 50 unrelated assets/media, canonical texts, review history, accepted Pluie/Cailloux evidence
-match cd4f39b. All 20 candidates integrated, 19 accepted; ten sequences, 31 retained SVGs.
-Malo package docs/review/histoire-malo contains 26 hashed files plus manifest SHA-256
-f76f81e72adef7810695da6cb2b29d6fde0aa4dc981e9abd43fc0f1289141603.
-Frozen implementation 8b5a8655222e299fea90e7582906c3723b3eca79 pushed; remote SHA verified.
-This documentation-only follow-up leaves all frozen content, media and approvals unchanged.
-Actual frames/256 px sheet/phone-tablet-MacBook layouts inspected as implementation QA only.
-Frame 2 shows aftermath of branch attempt/fish visit; frame 3 highlights cold-water trial;
-reviewer must judge moment choices against all canonical lines, not just descriptions.
-Validation passed: 438 unit tests, 66 local browser tests including eight Malo viewports;
-nine production-only checks skipped; 31 content files, types, lint, production Webpack build,
-28-file/three-sentinel bundle scan, zero additional lapse dry-run and full repository formatting.
-All frozen-file integrity checks passed. No Malo acceptance/history/restoration. Stop for fresh independent review.
-No PR/merge/staging/production/DB operation. Date rollover does not start October content work.
-
-## Accepted Cailloux checkpoint — 2026-09-30
-
-Accepted checkpoint state supersedes the implementation snapshot below: Cailloux separately accepted
+All three final stories independently accepted without correction; frozen bytes reverified.
+Exactly m3-lang-07, m3-lang-16 and m3-lang-20 restored after dry-run using fresh-digest,
+lapsed-only approvals. All 173 unaffected records unchanged against reviewed 1c337229.
+176/176 approved, zero review, 176 distinct valid digests, zero stale/unexpected lapses.
+20/20 candidates integrated and independently accepted; none pending or deferred.
+51 assets, ten sequences, 47 WebPs and 31 retained SVGs: 78 tracked files, 10,791,652 bytes.
+Canonical teaching content matches cbc1cf3; accepted media and all frozen packages preserved.
+Malo verdict: docs/review/verdicts/2026-10-01-malo.json. Reproducible final audit:
+docs/media/SEPTEMBER_RICH_MEDIA_FINAL_AUDIT.json. No temporary/master recovery dependency.
+Validation/checkpoint freshness: docs/work/ACTIVE_TASK.md; resume: docs/handoff/CODEX_CONTINUATION.md.
+Final validation passed: format/lint/types, 439 unit tests, 31 content files, zero-lapse dry-run,
+production Webpack build and 28-file/three-sentinel client scan. Browser suite: 66 passed,
+nine production-only checks skipped, including all eight widths for each final story.
+DB/Docker tests not run; generated pgTAP assertions do not imply database execution.
+STOP after feature checkpoint/push. No PR/merge/staging/production/database operation;
+no October, 2eme, infrastructure or unrelated features authorized.
+Recommended next phase, only with owner authorization: PR/develop CI/staging, supported-device
+owner inspection and small real-family pilot before curriculum expansion. Alternatives:
+offline reliability, owner-recorded audio, or reviewed 2eme/October content after pilot findings.
 without correction. Owner relayed verdict; all frozen hashes and runtime bytes matched before
 action. Exactly m3-lang-08, m3-lang-14 and m3-lang-18 restored by fresh-digest lapsed-only
 weeks 2/3/4 after dry-run. September 176 approved / 0 review / 176 distinct current valid digests,
@@ -265,7 +261,9 @@ change occurred during the gate. The next action is the owner's manual inspectio
 release; do not begin October work.
 Older phase summaries below are historical and may predate the September production release.
 
-## Current Phase
+## Historical Phase Snapshot
+
+This older snapshot is preserved as history. Current September completion is recorded above.
 
 ```text
 1ère maternelle — annual progression and September: IN PROGRESS
@@ -494,12 +492,9 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 
 ### P0 — Next
 
-1. Validate and checkpoint/push the accepted Pluie restoration, then process Cailloux through
-   implementation, validation, frozen evidence and a separate independent Codex review.
-2. Restore Cailloux only after explicit independent acceptance; then process Malo in the same way.
-3. After 20/20 independently completed candidates and 176/176 valid approvals, stop for owner
-   authorization to prepare a PR into develop and CI/staging. October, 2eme maternelle, offline
-   implementation, PR opening, merge and production are outside current authorization.
+1. Complete final September validation and feature checkpoint/push, then STOP.
+2. Owner decides whether to authorize PR/develop CI/staging and a small real-family pilot.
+3. October, 2eme, offline implementation, infrastructure, merge and production are not authorized.
 
 ### Historical backlog before September completion
 
@@ -989,7 +984,7 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = a729722 (merge
   - Production domain: still open. It is required for `NEXT_PUBLIC_APP_URL` before any production deployment.
 - **PD-013: Production approval**: **resolved.** The `production` environment requires the owner's approval (self-approval allowed).
 
-## Last Session Summary
+## Historical Session Summary
 
 ```text
 Completed:  SEPTEMBER VISUAL UPGRADE PRODUCTION RELEASE: SUCCESS.

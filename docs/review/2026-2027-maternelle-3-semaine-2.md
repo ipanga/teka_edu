@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 12 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 13 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -127,6 +127,12 @@ Reconfirmation visuelle indépendante du lot 7 du déploiement rich-media de sep
 Reconfirmation visuelle indépendante du lot 9 histoire-cailloux au checkpoint gelé 6220f1e1e8f1476018759b514d86a946f78d937e, documentation d63b661f54c92177fff3ed9d16d32511fd5231e0. Le propriétaire a relayé accepted d’une session Codex séparée : quatre images réelles, correspondance canonique, silhouettes et identités des cailloux, quantités 3/2/2/3 sans révélation prématurée ni duplication, continuité de Tito avec Pluie, descriptions accessibles, rendu à 256 px, captures téléphone/tablette/laptop-MacBook et intégrité du manifeste vérifiés. Aucun défaut ni correction requis. La session indépendante n’a rien modifié.
 
 **Suites données :** Aucune. Manifeste 415bbf536f244ae90ef13a3ab3e17a4887d04ad9f33c69598e801c7258e7365c et 26 fichiers revérifiés identiques au gel ; médias runtime identiques. Le propriétaire autorise uniquement m3-lang-08, m3-lang-14 et m3-lang-18 via approve-week --lapsed-only=true avec digests calculés à neuf, jamais copiés. Les 173 autres approbations sont préservées. Téléphone/tablette/laptop-MacBook uniquement ; aucune opération de déploiement.
+
+### 2026-10-01 — Codex (session indépendante) · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot final 10 histoire-malo, gel 8b5a8655222e299fea90e7582906c3723b3eca79, documentation 1c3372298eaa9e3463aa7a889762bb9cc662db2b. Le propriétaire a relayé accepted sans correction d’une session Codex séparée. Quatre images réelles, douze lignes et correspondance canonique, comparaison, rendu 256 px, descriptions, dossier et treize captures originales vérifiés. Les scènes de conséquence après la branche et d’essai d’eau froide soutiennent les pages sans contradiction ; continuité, anatomie, un poisson dans l’eau à l’œil ouvert, une patte dans l’eau avec trois appuis, sommeil en rond nez sur la queue, progression soir-nuit et sécurité adaptés. Téléphone/tablette/laptop-MacBook uniquement. Aucune modification effectuée par le relecteur.
+
+**Suites données :** Aucune. Manifeste f76f81e72adef7810695da6cb2b29d6fde0aa4dc981e9abd43fc0f1289141603 et 26 fichiers revérifiés identiques au gel ; images runtime identiques. Le propriétaire autorise uniquement m3-lang-07, m3-lang-16, m3-lang-20 via approve-week --lapsed-only=true après dry-run, digests calculés à neuf, jamais repris. Les 173 autres approbations et les preuves acceptées Pluie/Cailloux sont préservées. Aucun merge, déploiement ou travail d’octobre autorisé.
 
 ## Jour 5 — 2026-09-07
 
@@ -810,7 +816,7 @@ l’autre — l’appareil est alors le sien._
 
 _Deuxième corpus de mots : nommer les objets et les pièces de la maison._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Faites le tour de la maison en nommant. Chaque mot est dit avec son article, répété, puis employé dans une phrase courte.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
