@@ -29,7 +29,7 @@ import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { lessonDigest } from "@/domain/lessons/review";
-import { mediaDigestSource } from "@/domain/media/types";
+import { assetFingerprint, mediaDigestSource } from "@/domain/media/types";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const dryRun = process.argv.includes("--dry-run=true");
@@ -98,6 +98,7 @@ const registryNow = readJson("content/media/registry.json").assets as {
   kind: string;
   alt: string;
   contentHash: string;
+  sequence?: { frames: { alt: string; contentHash: string }[]; pageFrames: number[] };
 }[];
 const textsNow = Object.fromEntries(
   LEVELS.map((lv) => [lv, readJson(`content/texts/${lv}.json`).texts as Record<string, unknown>[]]),
@@ -175,7 +176,8 @@ for (const levelId of LEVELS) {
         if (differs) break;
         const b = thenRegistry.find((x) => x.id === mid);
         const n = registryNow.find((x) => x.id === mid);
-        if (!b || !n || b.kind !== n.kind || b.alt !== n.alt || b.contentHash !== n.contentHash) {
+        // The whole fingerprint, so a redrawn frame of a story sequence counts as a change too.
+        if (!b || !n || assetFingerprint(b) !== assetFingerprint(n)) {
           differs = `the picture "${mid}" changed`;
         }
       }

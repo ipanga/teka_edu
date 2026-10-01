@@ -97,7 +97,7 @@ test.describe("parent session", () => {
     expect(response?.status()).toBe(404);
   });
 
-  test("the session works on a phone and on a desktop", async ({ page }) => {
+  test("the session works on a phone and on a laptop/MacBook", async ({ page }) => {
     for (const viewport of [
       { width: 390, height: 844 },
       { width: 1280, height: 900 },

@@ -5,12 +5,11 @@ const viewports = [
   { name: "large phone", width: 430, height: 932 },
   { name: "tablet portrait", width: 768, height: 1024 },
   { name: "tablet landscape", width: 1024, height: 768 },
-  { name: "desktop", width: 1440, height: 900 },
-  { name: "TV", width: 1920, height: 1080 },
+  { name: "laptop / MacBook", width: 1440, height: 900 },
 ];
 
-test("four body words and the parent return control fit a TV screen", async ({ page }) => {
-  await page.setViewportSize({ width: 1920, height: 1080 });
+test("four body words and the parent return control fit a laptop/MacBook", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/maternelle/1/seance/18");
   await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
@@ -26,7 +25,7 @@ test("four body words and the parent return control fit a TV screen", async ({ p
   const back = await dialog
     .getByRole("button", { name: "Revenir au guide du parent" })
     .boundingBox();
-  expect(back!.y + back!.height).toBeLessThanOrEqual(1080);
+  expect(back!.y + back!.height).toBeLessThanOrEqual(900);
 });
 
 for (const viewport of viewports) {
@@ -50,7 +49,7 @@ for (const viewport of viewports) {
     expect(second!.x + second!.width).toBeLessThanOrEqual(viewport.width);
     expect((await cards.first().getByRole("img").boundingBox())!.width).toBeGreaterThanOrEqual(100);
     await page.getByRole("button", { name: "Jouer : je montre le mot", exact: true }).click();
-    await dialog.getByRole("button", { name: /Une main ouverte/ }).click();
+    await dialog.getByRole("button", { name: /Une main d’enfant ouverte/ }).click();
     await expect(dialog.getByRole("status")).toHaveText("Bravo !");
     await expect(dialog.getByRole("button", { name: "Encore un autre" })).toBeVisible();
     await page.getByRole("button", { name: "Revenir au guide du parent" }).click();
@@ -58,10 +57,10 @@ for (const viewport of viewports) {
   });
 }
 
-test("two TV observation pictures fill the stage; story text sits beside its picture", async ({
+test("two laptop observation pictures fill the stage; story text sits beside its picture", async ({
   page,
 }) => {
-  await page.setViewportSize({ width: 1920, height: 1080 });
+  await page.setViewportSize({ width: 1440, height: 900 });
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/maternelle/3/seance/5");
   await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
@@ -90,9 +89,15 @@ test("two TV observation pictures fill the stage; story text sits beside its pic
   expect(text!.x).toBeGreaterThan(image!.x + image!.width);
   expect(text!.y).toBeLessThan(image!.y + image!.height);
   await page.getByRole("button", { name: "Page suivante", exact: true }).click();
-  await expect(page.getByRole("dialog").getByRole("img")).toHaveCount(0);
+  await expect(page.getByRole("dialog").getByRole("img")).toHaveAttribute(
+    "src",
+    /histoire-seau-lisa-02\.webp$/,
+  );
   await page.getByRole("button", { name: "Page précédente", exact: true }).click();
-  await expect(page.getByRole("dialog").getByRole("img")).toHaveCount(1);
+  await expect(page.getByRole("dialog").getByRole("img")).toHaveAttribute(
+    "src",
+    /histoire-seau-lisa-01\.webp$/,
+  );
 });
 
 test("counting from ten to twenty on a phone is handed to the voice, not a 1-to-20 grid", async ({
@@ -125,8 +130,8 @@ test("counting from ten to twenty on a phone is handed to the voice, not a 1-to-
   await expect(dialog.getByRole("button", { name: "Recommencer", exact: true })).toHaveCount(0);
 });
 
-test("five TV word choices keep feedback and navigation on screen", async ({ page }) => {
-  await page.setViewportSize({ width: 1920, height: 1080 });
+test("five laptop word choices keep feedback and navigation on screen", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/maternelle/3/seance/2");
   await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
@@ -148,11 +153,11 @@ test("five TV word choices keep feedback and navigation on screen", async ({ pag
     for (const name of ["Revoir les mots", "Revenir au guide du parent"]) {
       const box = await dialog.getByRole("button", { name, exact: true }).boundingBox();
       expect(box!.y).toBeGreaterThanOrEqual(0);
-      expect(box!.y + box!.height).toBeLessThanOrEqual(1080);
+      expect(box!.y + box!.height).toBeLessThanOrEqual(900);
     }
     if (state !== "retry") {
       const box = await dialog.getByRole("button", { name: "Encore un autre" }).boundingBox();
-      expect(box!.y + box!.height).toBeLessThanOrEqual(1080);
+      expect(box!.y + box!.height).toBeLessThanOrEqual(900);
     }
   }
 });

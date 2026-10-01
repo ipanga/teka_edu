@@ -40,5 +40,5 @@ a rendering decision.
 
 1. Where audio comes from: recorded voice, or the browser's speech synthesis (PD-007).
 2. Whether `quantity` and `group-and-match` share one draggable-token component.
-3. How TV/projection mode changes layout (Plan §10.1).
+3. How the child surface adapts across phone, tablet, and laptop/MacBook (Plan §10.1; ADR-050).
 4. What a child sees when an activity is off-screen: nothing, a timer, or an illustration.

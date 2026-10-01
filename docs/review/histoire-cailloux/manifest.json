@@ -1,0 +1,137 @@
+{
+  "baseline": "b4f242d77ecde3b7e67bdba37e14dcbe56d6061c",
+  "candidate": "histoire-cailloux",
+  "verdict": "pending",
+  "files": [
+    {
+      "file": "canonical-and-impact.json",
+      "bytes": 18183,
+      "sha256": "695e7ca91a9b16cfa01dd6ba652f19b63337fc916d75755056e1f2fc6f569f01"
+    },
+    {
+      "file": "child-size-256.png",
+      "bytes": 586772,
+      "sha256": "298d03a41bfb3213e304f22ffe9cff231cf066004109edafdd6cd37df931552f"
+    },
+    {
+      "file": "comparison.png",
+      "bytes": 724670,
+      "sha256": "afa0c37a5c3c7f58b7ebb52b0c4f93564c1fdb1a321a2608a790d9f350fb8377"
+    },
+    {
+      "file": "frames/page-1.webp",
+      "bytes": 261188,
+      "sha256": "71061965c6d18961065baf6b1fba1ec11f21991552f3d0d720fdd73be12b2905"
+    },
+    {
+      "file": "frames/page-2.webp",
+      "bytes": 246446,
+      "sha256": "6a84c8e998deb63e1d1b921fe369e1a596d0e8dba678e60c56461a0a6aff2621"
+    },
+    {
+      "file": "frames/page-3.webp",
+      "bytes": 226516,
+      "sha256": "afa77e4ef630e065c49859a321f51d52e74c74809132dfa75b14df169e73ee45"
+    },
+    {
+      "file": "frames/page-4.webp",
+      "bytes": 236838,
+      "sha256": "d47b00e2ced5dd7bf13023bc9afb024ef415cfdf0c35361aec30ff866bcdb238"
+    },
+    {
+      "file": "macbook-1440-overview.png",
+      "bytes": 627084,
+      "sha256": "ba0bab8e2c4ded8e1a6a87c8883cb5203eb5aaf1878fc6bad7205ae79db8e631"
+    },
+    {
+      "file": "phone-390-overview.png",
+      "bytes": 855817,
+      "sha256": "97fd4fc64a9e67fe32a11c3d70c6752a72d2987e95f9a5d95d51414f7c8af0cc"
+    },
+    {
+      "file": "README.md",
+      "bytes": 3107,
+      "sha256": "0ed60d41020a7e4b45d961720f171f4479142e8e3867220759a79c70b08b160d"
+    },
+    {
+      "file": "reconfirmation-maternelle-3.md",
+      "bytes": 13640,
+      "sha256": "40f98c8fddad6688bfc5ae28921bf848790e19825bfc0db8214dfbad92b88de7"
+    },
+    {
+      "file": "REVIEWER_PROMPT.md",
+      "bytes": 3244,
+      "sha256": "31908c7deea8448b1061ca3e69ebb6d75374a4d2aca180e54339e58aefbb81a6"
+    },
+    {
+      "file": "screens/macbook-1440-page-1.png",
+      "bytes": 382128,
+      "sha256": "833186fa4943a92218f28089d379fab17b66fadf960b2e187a4ba5401b1aeabb"
+    },
+    {
+      "file": "screens/macbook-1440-page-2.png",
+      "bytes": 364780,
+      "sha256": "5ee003ea16725bb5e2eb30ece6e786a79931c44ced687746afb9e3e81832cd05"
+    },
+    {
+      "file": "screens/macbook-1440-page-3.png",
+      "bytes": 352336,
+      "sha256": "2acec1c5b12ee73fbee0a50d96c57253cbf986f08e16863539ec91b03d8518c6"
+    },
+    {
+      "file": "screens/macbook-1440-page-4.png",
+      "bytes": 363849,
+      "sha256": "4da8b30802d731b68e6ef2293797a45051c1c89ac9a72b93bdee190bce4514f4"
+    },
+    {
+      "file": "screens/phone-390-page-1.png",
+      "bytes": 170581,
+      "sha256": "99b2ddcacdff6e1628e6f9ebc486b6c8dc5a8bb46e5c6d97ad6838223810d090"
+    },
+    {
+      "file": "screens/phone-390-page-2-return.png",
+      "bytes": 164343,
+      "sha256": "0115e81f5639f2484bd6bf47fc7ff3ea501c833699482b14d0b2944491ffa011"
+    },
+    {
+      "file": "screens/phone-390-page-2.png",
+      "bytes": 164343,
+      "sha256": "0115e81f5639f2484bd6bf47fc7ff3ea501c833699482b14d0b2944491ffa011"
+    },
+    {
+      "file": "screens/phone-390-page-3.png",
+      "bytes": 160912,
+      "sha256": "1c5fc0ff0b11fa1812649f3e1e1731eb6c922f4d0bbc8a246e69013c832db242"
+    },
+    {
+      "file": "screens/phone-390-page-4.png",
+      "bytes": 164817,
+      "sha256": "3e100152b1408406bb3efcde6194db16bf8ec488c78dc6ac72113561a5ba7f86"
+    },
+    {
+      "file": "screens/tablet-portrait-page-1.png",
+      "bytes": 304033,
+      "sha256": "0168d7b7fb77442918a32ba14090e570b45c51c34aa0e08965a99742acadf29e"
+    },
+    {
+      "file": "screens/tablet-portrait-page-2.png",
+      "bytes": 287921,
+      "sha256": "86931fdff7dbac6a2a01595730959ead24cf60a7266d66d645812f05a51bd5f2"
+    },
+    {
+      "file": "screens/tablet-portrait-page-3.png",
+      "bytes": 283637,
+      "sha256": "24381ac7d454acb80d28b2d498f243392b11908dbd4f5936f6552cead78c1a0b"
+    },
+    {
+      "file": "screens/tablet-portrait-page-4.png",
+      "bytes": 289094,
+      "sha256": "fed93235dd52ead35199047174f14152a292a32ffcca77d2a24f7139d24d9f08"
+    },
+    {
+      "file": "tablet-portrait-overview.png",
+      "bytes": 478256,
+      "sha256": "7fe97024faedf9543d739d9608bca5831dccfa3310753809a0ab4b3a7c1bcf78"
+    }
+  ]
+}

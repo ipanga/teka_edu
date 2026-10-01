@@ -119,11 +119,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Claude Max / Opus 5.5",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "3908f5dc1bc27bd0",
-        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée, 2026-09-18 conséquence d’une autre relecture, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-27",
+        "reviewedDigest": "bde4c29e5a00de12",
+        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée, 2026-09-18 conséquence d’une autre relecture, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-27 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -252,11 +252,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Claude Max / Opus 5.5",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "54a62433828de743",
-        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée, 2026-09-18 conséquence d’une autre relecture, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-27",
+        "reviewedDigest": "cf372f72317eb1f2",
+        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée, 2026-09-18 conséquence d’une autre relecture, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-27 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -374,11 +374,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Codex (session indépendante)",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "1089aad545991309",
-        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée, 2026-09-18 conséquence d’une autre relecture, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-30",
+        "reviewedDigest": "3ecdeb2e79fa884c",
+        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée, 2026-09-18 conséquence d’une autre relecture, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-28 acceptée, 2026-09-30 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -478,11 +478,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Claude Max / Opus 5.5",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "e5baca5fff700bdf",
-        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée, 2026-09-18 conséquence d’une autre relecture, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-28",
+        "reviewedDigest": "01ca5e03223ba523",
+        "notes": "Semaine 1 : 2026-09-14 acceptée avec modifications, 2026-09-15 conséquence d’une autre relecture, 2026-09-16 acceptée avec modifications, 2026-09-17 acceptée avec modifications, 2026-09-17 acceptée, 2026-09-18 conséquence d’une autre relecture, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-28 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -603,11 +603,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Claude Max / Opus 5.5",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "15a216f4513944f6",
-        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-28",
+        "reviewedDigest": "aa79c806a0d0c2e6",
+        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-28 acceptée, 2026-09-28 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -711,11 +711,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "ChatGPT GPT-5.6 Sol",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "4043650626b0a620",
-        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-28",
+        "reviewedDigest": "16a251b9f0e23dd5",
+        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-28 acceptée, 2026-09-28 acceptée, 2026-09-28 acceptée. Décision de relecture : ChatGPT GPT-5.6 Sol, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -836,11 +836,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Codex (session indépendante)",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "5be87e6ddd584cad",
-        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-10-01",
+        "reviewedDigest": "3b5e37d2703afcc6",
+        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-28 acceptée, 2026-09-28 acceptée, 2026-09-28 acceptée, 2026-09-30 acceptée, 2026-10-01 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -955,11 +955,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Codex (session indépendante)",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "ce41c748bd5bc364",
-        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-30",
+        "reviewedDigest": "af1570d57733384d",
+        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-28 acceptée, 2026-09-28 acceptée, 2026-09-28 acceptée, 2026-09-30 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -1076,11 +1076,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Claude Max / Opus 5.5",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "8c37ab2283137854",
-        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-28",
+        "reviewedDigest": "451891f626cb1c8e",
+        "notes": "Semaine 2 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 acceptée avec modifications, 2026-09-18 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-28 acceptée, 2026-09-28 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -1202,11 +1202,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Claude Max / Opus 5.5",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "55a472d57c6c316d",
-        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-27",
+        "reviewedDigest": "7d0c34f35b7c83db",
+        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -1320,11 +1320,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Claude Max / Opus 5.5",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "120fa674c9caf1de",
-        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-27",
+        "reviewedDigest": "a2d885b1882cd729",
+        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -1429,11 +1429,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "Claude Max / Opus",
+        "reviewer": "ChatGPT GPT-5.6 Sol",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-26",
-        "reviewedDigest": "8f9822d3c5c6207b",
-        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-28",
+        "reviewedDigest": "202027a263e47884",
+        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée, 2026-09-28 acceptée, 2026-09-28 acceptée. Décision de relecture : ChatGPT GPT-5.6 Sol, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -1560,11 +1560,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "Claude Max / Opus",
+        "reviewer": "Claude Max / Opus 5.5",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-26",
-        "reviewedDigest": "7bedc9cf8cca00bf",
-        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-26 acceptée. Décision de relecture : Claude Max / Opus, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-28",
+        "reviewedDigest": "81abcaf7cf231f6f",
+        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée, 2026-09-28 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -1672,11 +1672,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Codex (session indépendante)",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "672242a9f479f471",
-        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-30",
+        "reviewedDigest": "94ac5ab627aef838",
+        "notes": "Semaine 3 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée avec modifications, 2026-09-19 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée, 2026-09-28 acceptée, 2026-09-28 acceptée, 2026-09-30 acceptée, 2026-09-30 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -1791,11 +1791,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Claude Max / Opus 5.5",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "130ed88e1ac28b96",
-        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-27",
+        "reviewedDigest": "57a2a6f6898a39f6",
+        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -1899,11 +1899,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Codex (session indépendante)",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "72018977ad536da7",
-        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-10-01",
+        "reviewedDigest": "ab809e84341e5fd0",
+        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-28 acceptée, 2026-09-28 acceptée, 2026-09-30 acceptée, 2026-10-01 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -2011,11 +2011,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Claude Max / Opus 5.5",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "29c801880e9a6e0e",
-        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-28",
+        "reviewedDigest": "4fbb6346ceb563a2",
+        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-28 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -2132,11 +2132,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Codex (session indépendante)",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "6fabbff0112db098",
-        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-30",
+        "reviewedDigest": "bea68d9dc19e2c35",
+        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-28 acceptée, 2026-09-28 acceptée, 2026-09-30 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -2252,11 +2252,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "ChatGPT GPT-5.6 Sol",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "4467cb52473735ae",
-        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-28",
+        "reviewedDigest": "58d1d1b59b1ecb25",
+        "notes": "Semaine 4 : 2026-09-16 conséquence d’une autre relecture, 2026-09-17 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 conséquence d’une autre relecture, 2026-09-19 acceptée avec modifications, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-26 acceptée, 2026-09-27 acceptée, 2026-09-27 acceptée, 2026-09-28 acceptée, 2026-09-28 acceptée. Décision de relecture : ChatGPT GPT-5.6 Sol, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -2373,11 +2373,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Codex (session indépendante)",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "c3ffca0ff1585a0f",
-        "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-10-01",
+        "reviewedDigest": "8a6ff0bc1dd386da",
+        "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-27 acceptée, 2026-09-30 acceptée, 2026-10-01 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -2487,11 +2487,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Codex (session indépendante)",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "b5ddbd9f6db298bf",
-        "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-30",
+        "reviewedDigest": "e330a10d4ee00199",
+        "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-27 acceptée, 2026-09-30 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     },
     {
@@ -2608,11 +2608,11 @@
       "review": {
         "reviewKind": "ai-assisted",
         "outcome": "accepted",
-        "reviewer": "ChatGPT",
+        "reviewer": "Claude Max / Opus 5.5",
         "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
-        "reviewedOn": "2026-09-23",
-        "reviewedDigest": "8a5880d7766b73cf",
-        "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+        "reviewedOn": "2026-09-27",
+        "reviewedDigest": "f4da1cf61710948c",
+        "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-27 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
     }
   ]

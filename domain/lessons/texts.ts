@@ -36,6 +36,18 @@ export function findText(texts: readonly TeachingText[], id: string): TeachingTe
   return texts.find((text) => text.id === id);
 }
 
+/** A story turns this many lines at a time; a rhyme is always one page, said in one breath. */
+export const STORY_LINES_PER_PAGE = 3;
+
+/**
+ * How many pages the parent turns through when reading a text. One rule, shared by the renderer
+ * and by the validation of story picture sequences, so a sequence can never be written for a
+ * pagination the screen does not use.
+ */
+export function narrativePageCount(text: { kind: TeachingTextKind; lines: readonly unknown[] }) {
+  return text.kind === "rhyme" ? 1 : Math.ceil(text.lines.length / STORY_LINES_PER_PAGE);
+}
+
 /**
  * Cross-file rule: every text a lesson names must exist, and a supplied text must not be
  * orphaned without anyone noticing. A read-aloud that points at a missing story would leave the

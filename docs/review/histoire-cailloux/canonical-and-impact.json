@@ -1,0 +1,439 @@
+{
+  "baseline": "b4f242d77ecde3b7e67bdba37e14dcbe56d6061c",
+  "approvalState": {
+    "approved": 173,
+    "review": 3,
+    "stale": 0,
+    "unaffectedByteIdentical": 173
+  },
+  "unrelatedRegistryAndMediaPreserved": 50,
+  "reviewHistoryUnchanged": true,
+  "story": {
+    "id": "les-trois-cailloux-de-tito",
+    "kind": "story",
+    "title": "Les trois cailloux de Tito",
+    "minutes": 2,
+    "illustrationId": "histoire-cailloux",
+    "audioId": null,
+    "origin": "teka-edu-created",
+    "provenance": "Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris.",
+    "lines": [
+      "Tito ramasse un caillou rond. Il le met dans sa poche.",
+      "Il ramasse un caillou plat. Il le met dans sa poche.",
+      "Il ramasse un caillou pointu. Il le met dans sa poche. Ça fait trois.",
+      "À la maison, il pose ses trois cailloux sur la table : le rond, le plat, le pointu.",
+      "Sa grande sœur en prend un et le cache derrière son dos.",
+      "« Il en reste combien ? » demande-t-elle.",
+      "Tito compte : un, deux. « Deux ! »",
+      "« Et qu’est-ce qui manque ? »",
+      "Tito regarde bien. Le rond est là. Le plat est là. « Le pointu ! »",
+      "Sa sœur ouvre la main : c’est bien le caillou pointu.",
+      "Il y avait trois cailloux. Sa sœur en cache un : il en reste deux. Quand elle le remet, les trois sont de nouveau là."
+    ]
+  },
+  "sharedTexts": [],
+  "pageFrames": [0, 1, 2, 3],
+  "pages": [
+    {
+      "page": 1,
+      "frame": 1,
+      "lines": [
+        "Tito ramasse un caillou rond. Il le met dans sa poche.",
+        "Il ramasse un caillou plat. Il le met dans sa poche.",
+        "Il ramasse un caillou pointu. Il le met dans sa poche. Ça fait trois."
+      ],
+      "delivery": {
+        "file": "illustrations/histoire-cailloux-01.webp",
+        "alt": "Tito regarde les trois cailloux dans sa poche : un rond, un plat et un pointu.",
+        "width": 1200,
+        "height": 900,
+        "contentHash": "sha256:71061965c6d18961065baf6b1fba1ec11f21991552f3d0d720fdd73be12b2905",
+        "packageFile": "frames/page-1.webp",
+        "bytes": 261188
+      }
+    },
+    {
+      "page": 2,
+      "frame": 2,
+      "lines": [
+        "À la maison, il pose ses trois cailloux sur la table : le rond, le plat, le pointu.",
+        "Sa grande sœur en prend un et le cache derrière son dos.",
+        "« Il en reste combien ? » demande-t-elle."
+      ],
+      "delivery": {
+        "file": "illustrations/histoire-cailloux-02.webp",
+        "alt": "Deux cailloux restent sur la table, le rond et le plat. La grande sœur de Tito cache le pointu derrière son dos.",
+        "width": 1200,
+        "height": 900,
+        "contentHash": "sha256:6a84c8e998deb63e1d1b921fe369e1a596d0e8dba678e60c56461a0a6aff2621",
+        "packageFile": "frames/page-2.webp",
+        "bytes": 246446
+      }
+    },
+    {
+      "page": 3,
+      "frame": 3,
+      "lines": [
+        "Tito compte : un, deux. « Deux ! »",
+        "« Et qu’est-ce qui manque ? »",
+        "Tito regarde bien. Le rond est là. Le plat est là. « Le pointu ! »"
+      ],
+      "delivery": {
+        "file": "illustrations/histoire-cailloux-03.webp",
+        "alt": "Tito compte les deux cailloux sur la table et montre le plat. Le rond est là aussi ; le pointu reste caché derrière le dos de sa sœur.",
+        "width": 1200,
+        "height": 900,
+        "contentHash": "sha256:afa77e4ef630e065c49859a321f51d52e74c74809132dfa75b14df169e73ee45",
+        "packageFile": "frames/page-3.webp",
+        "bytes": 226516
+      }
+    },
+    {
+      "page": 4,
+      "frame": 4,
+      "lines": [
+        "Sa sœur ouvre la main : c’est bien le caillou pointu.",
+        "Il y avait trois cailloux. Sa sœur en cache un : il en reste deux. Quand elle le remet, les trois sont de nouveau là."
+      ],
+      "delivery": {
+        "file": "illustrations/histoire-cailloux-04.webp",
+        "alt": "La sœur de Tito ouvre sa main après avoir remis le caillou pointu. Les trois cailloux, le rond, le plat et le pointu, sont de nouveau sur la table.",
+        "width": 1200,
+        "height": 900,
+        "contentHash": "sha256:d47b00e2ced5dd7bf13023bc9afb024ef415cfdf0c35361aec30ff866bcdb238",
+        "packageFile": "frames/page-4.webp",
+        "bytes": 236838
+      }
+    }
+  ],
+  "visibleStoneCounts": [3, 2, 2, 3],
+  "primaryFrame": 1,
+  "primaryReason": "Story-only asset; page 1 establishes the three collected stone identities.",
+  "affected": [
+    {
+      "id": "m3-lang-08",
+      "level": "maternelle-3",
+      "priorDigest": "ce41c748bd5bc364",
+      "pendingDigest": "af1570d57733384d",
+      "status": "review",
+      "review": null,
+      "canonicalLesson": {
+        "id": "m3-lang-08",
+        "curriculumId": "maternelle-cycle1-cd-2026",
+        "levelIds": ["maternelle-3"],
+        "domainCode": "LANG",
+        "title": "Qui fait quoi ?",
+        "summary": "Employer « il » et « elle » pour parler de quelqu’un d’autre.",
+        "objectiveCodes": [],
+        "supportingObjectiveCodes": [
+          "TIME-SPACE-S01-C01-O12",
+          "LANG-S01-C01-O03",
+          "LANG-S01-C02-O01",
+          "LANG-S01-C04-O11",
+          "LANG-S02-C03-O04"
+        ],
+        "stage": "practice",
+        "difficulty": 2,
+        "themeId": "ma-maison",
+        "parentGuidance": "L’enfant dit facilement « je ». Le travail du jour est de parler de quelqu’un d’autre : « il » ou « elle ». Donnez toujours le modèle avant de demander.",
+        "activities": [
+          {
+            "id": "m3-lang-08-a1",
+            "position": 1,
+            "type": "conversation",
+            "title": "Le rituel : la date et la révision",
+            "childInstruction": "Dis la date. Puis nomme-moi trois choses de ta maison.",
+            "adultGuidance": "Dites la date : « Aujourd’hui, nous sommes {{date}}. » Puis : « Hier, nous avons nommé des choses de la maison. Nomme-m’en trois. » Redites chaque mot avec son article : « la porte ».",
+            "minutes": 2,
+            "mode": "off-screen",
+            "role": "retrieval",
+            "mediaIds": [],
+            "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C01-O03"],
+            "materialCodes": ["aucun"],
+            "vocabulary": [],
+            "scaffolds": [
+              {
+                "language": "en",
+                "childInstruction": "Say the date, then name three things in your home."
+              }
+            ],
+            "payload": {
+              "prompts": [
+                "Dis la date.",
+                "Puis nomme-moi trois choses de ta maison."
+              ]
+            }
+          },
+          {
+            "id": "m3-lang-08-a2",
+            "position": 2,
+            "type": "conversation",
+            "title": "Il fait, elle fait",
+            "childInstruction": "Regarde autour de toi et dis-moi ce que fait quelqu’un : « Il… » ou « Elle… »",
+            "adultGuidance": "1. Montrez le modèle : « Regarde, elle balaie. » 2. Demandez à l’enfant de dire à son tour. 3. S’il dit « balaie », redites la phrase entière : « Oui, elle balaie. » 4. Parlez ensuite de personnes absentes : « Et ton voisin, que fait-il le matin ? »",
+            "minutes": 8,
+            "mode": "off-screen",
+            "role": "teach",
+            "mediaIds": [],
+            "objectiveCodes": ["LANG-S01-C02-O01", "LANG-S01-C04-O11"],
+            "materialCodes": ["aucun"],
+            "vocabulary": [
+              { "fr": "il", "en": "he" },
+              { "fr": "elle", "en": "she" }
+            ],
+            "scaffolds": [
+              {
+                "language": "en",
+                "childInstruction": "Look around and say what someone is doing: he… or she…"
+              }
+            ],
+            "payload": {
+              "prompts": [
+                "Que fait la personne près de toi ?",
+                "Et moi, qu’est-ce que je fais ?",
+                "Que fait ton voisin ou ta voisine le matin ?",
+                "Dans l’histoire, que fait Kumu ?"
+              ]
+            }
+          },
+          {
+            "id": "m3-lang-08-a3",
+            "position": 3,
+            "type": "read-aloud",
+            "title": "Le temps de lecture",
+            "childInstruction": "Écoute l’histoire jusqu’au bout. Aujourd’hui, il n’y a pas de question : on écoute pour le plaisir.",
+            "adultGuidance": "Lisez l’histoire à voix haute, doucement. Ne posez aucune question après : ce moment quotidien sert au plaisir d’écouter. Si l’enfant redemande la même histoire un autre jour, c’est bon signe.",
+            "minutes": 3,
+            "mode": "off-screen",
+            "role": "teach",
+            "mediaIds": [],
+            "objectiveCodes": ["LANG-S02-C03-O04"],
+            "materialCodes": ["aucun"],
+            "vocabulary": [],
+            "scaffolds": [
+              {
+                "language": "en",
+                "childInstruction": "Listen to the story. There are no questions today."
+              }
+            ],
+            "payload": { "textId": "les-trois-cailloux-de-tito" }
+          }
+        ],
+        "origin": "teka-edu-created"
+      }
+    },
+    {
+      "id": "m3-lang-14",
+      "level": "maternelle-3",
+      "priorDigest": "672242a9f479f471",
+      "pendingDigest": "94ac5ab627aef838",
+      "status": "review",
+      "review": null,
+      "canonicalLesson": {
+        "id": "m3-lang-14",
+        "curriculumId": "maternelle-cycle1-cd-2026",
+        "levelIds": ["maternelle-3"],
+        "domainCode": "LANG",
+        "title": "Je tape les syllabes",
+        "summary": "Frapper les syllabes de mots plus longs et compter combien il y en a.",
+        "objectiveCodes": [],
+        "supportingObjectiveCodes": [
+          "TIME-SPACE-S01-C01-O12",
+          "LANG-S02-C01-O03",
+          "LANG-S02-C03-O04"
+        ],
+        "stage": "practice",
+        "difficulty": 2,
+        "themeId": "objets-et-formes",
+        "parentGuidance": "Même jeu qu’en début de mois, avec des mots plus longs. On frappe, puis on compte les coups.",
+        "activities": [
+          {
+            "id": "m3-lang-14-a1",
+            "position": 1,
+            "type": "conversation",
+            "title": "Le rituel : la date et la révision",
+            "childInstruction": "Dis la date. Puis raconte-moi ce que nous avons appris cette semaine.",
+            "adultGuidance": "Dites la date : « Aujourd’hui, nous sommes {{date}}. » Puis reprenez la semaine : les mots du marché, les mots qui vont ensemble, l’histoire. Faites parler l’enfant le plus possible.",
+            "minutes": 3,
+            "mode": "off-screen",
+            "role": "consolidation",
+            "mediaIds": [],
+            "objectiveCodes": ["TIME-SPACE-S01-C01-O12"],
+            "materialCodes": ["aucun"],
+            "vocabulary": [],
+            "scaffolds": [
+              {
+                "language": "en",
+                "childInstruction": "Say the date, then tell me what we learned this week."
+              }
+            ],
+            "payload": {
+              "prompts": [
+                "Dis la date.",
+                "Puis raconte-moi ce que nous avons appris cette semaine."
+              ]
+            }
+          },
+          {
+            "id": "m3-lang-14-a2",
+            "position": 2,
+            "type": "phonology",
+            "title": "Combien de morceaux ?",
+            "childInstruction": "Frappe les morceaux du mot, puis dis combien il y en a.",
+            "adultGuidance": "1. Dites le mot lentement en frappant. 2. Faites refaire. 3. Demandez le nombre de coups. 4. Comparez : « ba-nane, deux coups ; a-na-nas, trois coups. Lequel est le plus long ? »",
+            "minutes": 7,
+            "mode": "off-screen",
+            "role": "teach",
+            "mediaIds": [],
+            "objectiveCodes": ["LANG-S02-C01-O03"],
+            "materialCodes": ["aucun"],
+            "vocabulary": [
+              { "fr": "la syllabe", "en": "the syllable" },
+              { "fr": "compter", "en": "to count" }
+            ],
+            "scaffolds": [
+              {
+                "language": "en",
+                "childInstruction": "Clap the parts of the word, then say how many."
+              }
+            ],
+            "payload": {
+              "words": ["ba-nane", "to-ma-te", "pa-nier", "mar-ché", "cha-peau"]
+            }
+          },
+          {
+            "id": "m3-lang-14-a3",
+            "position": 3,
+            "type": "read-aloud",
+            "title": "Le temps de lecture",
+            "childInstruction": "Écoute l’histoire jusqu’au bout. Aujourd’hui, il n’y a pas de question : on écoute pour le plaisir.",
+            "adultGuidance": "Lisez l’histoire à voix haute, doucement. Ne posez aucune question après : ce moment quotidien sert au plaisir d’écouter. Si l’enfant redemande la même histoire un autre jour, c’est bon signe.",
+            "minutes": 3,
+            "mode": "off-screen",
+            "role": "teach",
+            "mediaIds": [],
+            "objectiveCodes": ["LANG-S02-C03-O04"],
+            "materialCodes": ["aucun"],
+            "vocabulary": [],
+            "scaffolds": [
+              {
+                "language": "en",
+                "childInstruction": "Listen to the story. There are no questions today."
+              }
+            ],
+            "payload": { "textId": "les-trois-cailloux-de-tito" }
+          }
+        ],
+        "origin": "teka-edu-created"
+      }
+    },
+    {
+      "id": "m3-lang-18",
+      "level": "maternelle-3",
+      "priorDigest": "6fabbff0112db098",
+      "pendingDigest": "bea68d9dc19e2c35",
+      "status": "review",
+      "review": null,
+      "canonicalLesson": {
+        "id": "m3-lang-18",
+        "curriculumId": "maternelle-cycle1-cd-2026",
+        "levelIds": ["maternelle-3"],
+        "domainCode": "LANG",
+        "title": "Je raconte dans l’ordre",
+        "summary": "Remettre les moments d’une histoire ou d’une journée dans l’ordre et les dire.",
+        "objectiveCodes": ["TIME-SPACE-S01-C02-O06"],
+        "supportingObjectiveCodes": [
+          "TIME-SPACE-S01-C01-O12",
+          "LANG-S02-C01-O15",
+          "LANG-S02-C03-O04"
+        ],
+        "stage": "consolidation",
+        "difficulty": 2,
+        "themeId": "au-marche",
+        "parentGuidance": "Servez-vous des mots de l’ordre : d’abord, ensuite, puis, à la fin. Ce sont eux qui structurent le récit.",
+        "activities": [
+          {
+            "id": "m3-lang-18-a1",
+            "position": 1,
+            "type": "conversation",
+            "title": "Le rituel : la date et la révision",
+            "childInstruction": "Dis la date. Puis dis-moi deux mots qui riment.",
+            "adultGuidance": "Dites la date : « Aujourd’hui, nous sommes {{date}}. » Puis demandez deux mots qui riment. Acceptez les mots inventés : ce qui compte est d’entendre la fin pareille.",
+            "minutes": 2,
+            "mode": "off-screen",
+            "role": "retrieval",
+            "mediaIds": [],
+            "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S02-C01-O15"],
+            "materialCodes": ["aucun"],
+            "vocabulary": [],
+            "scaffolds": [
+              {
+                "language": "en",
+                "childInstruction": "Say the date, then give me two rhyming words."
+              }
+            ],
+            "payload": {
+              "prompts": ["Dis la date.", "Puis dis-moi deux mots qui riment."]
+            }
+          },
+          {
+            "id": "m3-lang-18-a2",
+            "position": 2,
+            "type": "conversation",
+            "title": "D’abord, ensuite, à la fin",
+            "childInstruction": "Raconte l’histoire des trois cailloux : d’abord, ensuite, à la fin.",
+            "adultGuidance": "1. Rappelez les trois moments. 2. Demandez de raconter avec « d’abord », « ensuite », « à la fin ». 3. Si l’ordre est mélangé, ne dites pas « non » : redites la suite correcte et faites recommencer. 4. Refaites le même jeu avec sa propre journée.",
+            "minutes": 8,
+            "mode": "off-screen",
+            "role": "teach",
+            "mediaIds": [],
+            "objectiveCodes": ["TIME-SPACE-S01-C02-O06"],
+            "materialCodes": ["aucun"],
+            "vocabulary": [
+              { "fr": "d’abord", "en": "first" },
+              { "fr": "ensuite", "en": "then" },
+              { "fr": "à la fin", "en": "at the end" }
+            ],
+            "scaffolds": [
+              {
+                "language": "en",
+                "childInstruction": "Tell the story of the three stones: first, then, at the end."
+              }
+            ],
+            "payload": {
+              "prompts": [
+                "Qu’est-ce qui se passe d’abord ?",
+                "Et ensuite ?",
+                "Et à la fin ?",
+                "Raconte ta journée de la même façon."
+              ]
+            }
+          },
+          {
+            "id": "m3-lang-18-a3",
+            "position": 3,
+            "type": "read-aloud",
+            "title": "Le temps de lecture",
+            "childInstruction": "Écoute l’histoire jusqu’au bout. Aujourd’hui, il n’y a pas de question : on écoute pour le plaisir.",
+            "adultGuidance": "Lisez l’histoire à voix haute, doucement. Ne posez aucune question après : ce moment quotidien sert au plaisir d’écouter. Si l’enfant redemande la même histoire un autre jour, c’est bon signe.",
+            "minutes": 3,
+            "mode": "off-screen",
+            "role": "teach",
+            "mediaIds": [],
+            "objectiveCodes": ["LANG-S02-C03-O04"],
+            "materialCodes": ["aucun"],
+            "vocabulary": [],
+            "scaffolds": [
+              {
+                "language": "en",
+                "childInstruction": "Listen to the story. There are no questions today."
+              }
+            ],
+            "payload": { "textId": "les-trois-cailloux-de-tito" }
+          }
+        ],
+        "origin": "teka-edu-created"
+      }
+    }
+  ]
+}

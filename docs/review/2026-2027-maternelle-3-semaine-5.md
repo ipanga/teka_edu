@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 4 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 7 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-15 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -91,6 +91,24 @@ Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2
 Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.
 
 **Suites données :** Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées.
+
+### 2026-09-27 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du pilote rich-media de septembre, couvrant exactement les 18 leçons affectées et les cinq familles d’images. La première passe Claude Max / Opus 5.5 a conclu accepted-with-modifications : les quatre familles corps-tete, animal-chevre, comptine-bonjour et histoire-mangue ainsi que 15 leçons étaient acceptées ; histoire-nsimba demandait une scène propre à la page 1 et une étiquette portant le prénom de Nsimba à la page 3. Après vérification indépendante, corrections minimales et régénération du paquet, la seconde passe a conclu accepted pour les 18 leçons et les cinq familles, sans autre correction.
+
+**Suites données :** histoire-nsimba utilise désormais cinq scènes pour cinq pages : la page 1 montre Nsimba inquiet sur le chemin en tenant la main de son adulte, et la page 2 seule montre le portail et la maitresse. La page 3 montre une étiquette lisible « Nsimba » et sa description accessible la nomme. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier ni consigne n’a changé. Les approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
+
+### 2026-09-30 — Codex (session indépendante) · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 8, histoire-pluie, au checkpoint gelé 45b468301af2a9dae41e182d619ee9f024d56379. Le propriétaire a relayé le verdict accepted d’une session Codex séparée : quatre cadres WebP, texte canonique et correspondance pages/cadres, continuité de Tito, progression météorologique et narrative, cadre 2 partagé avec la comptine, rendu à 256 px, descriptions accessibles, SHA-256 et captures téléphone/tablette/laptop-MacBook vérifiés. Aucune correction requise. La session de relecture n’a modifié aucun fichier, média, contenu, digest, approbation ou déploiement.
+
+**Suites données :** Aucune. Le manifeste relu reste 1ff3bd59ee4a2d6a89a8a153e98d0f2314d6faaabc64ce0045b6a9e5d037ec2b ; les 30 fichiers et les quatre cadres runtime correspondent exactement au checkpoint. Le propriétaire autorise explicitement la restauration des seules sept approbations expirées m1-lang-09, m1-lang-10, m1-lang-15, m1-lang-20, m3-lang-03, m3-lang-21 et m3-art-04, par approve-week --lapsed-only=true avec des empreintes calculées à neuf. Aucun digest antérieur ne doit être copié. TV/Smart TV reste hors périmètre.
+
+### 2026-10-01 — Codex (session indépendante) · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot final 10 histoire-malo, gel 8b5a8655222e299fea90e7582906c3723b3eca79, documentation 1c3372298eaa9e3463aa7a889762bb9cc662db2b. Le propriétaire a relayé accepted sans correction d’une session Codex séparée. Quatre images réelles, douze lignes et correspondance canonique, comparaison, rendu 256 px, descriptions, dossier et treize captures originales vérifiés. Les scènes de conséquence après la branche et d’essai d’eau froide soutiennent les pages sans contradiction ; continuité, anatomie, un poisson dans l’eau à l’œil ouvert, une patte dans l’eau avec trois appuis, sommeil en rond nez sur la queue, progression soir-nuit et sécurité adaptés. Téléphone/tablette/laptop-MacBook uniquement. Aucune modification effectuée par le relecteur.
+
+**Suites données :** Aucune. Manifeste f76f81e72adef7810695da6cb2b29d6fde0aa4dc981e9abd43fc0f1289141603 et 26 fichiers revérifiés identiques au gel ; images runtime identiques. Le propriétaire autorise uniquement m3-lang-07, m3-lang-16, m3-lang-20 via approve-week --lapsed-only=true après dry-run, digests calculés à neuf, jamais repris. Les 173 autres approbations et les preuves acceptées Pluie/Cailloux sont préservées. Aucun merge, déploiement ou travail d’octobre autorisé.
 
 ## Jour 20 — 2026-09-28
 
@@ -164,7 +182,12 @@ _Parler de ce qu’on a fait à quelqu’un qui ne l’a pas vu._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-malo` — Malo, un petit chien couché en rond sur son tapis, les yeux fermés, sous la lune et les étoiles (`public/media/illustrations/histoire-malo.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-malo`
+
+  - Page 1 : Au coucher du soleil, Malo, petit chien doré aux oreilles brunes, regarde le coq perché sur une branche basse. Ses yeux sont encore ouverts mais fatigués. (`public/media/illustrations/histoire-malo-01.webp`)
+  - Page 2 : Le coq dort, la tête sous son aile. Après sa tentative sur la branche, Malo est au sol et regarde le poisson dans le seau. (`public/media/illustrations/histoire-malo-02.webp`)
+  - Page 3 : Malo met une seule patte dans l’eau du seau et réagit au froid. Le poisson garde son œil ouvert ; le tapis de Malo est visible dans la maison. (`public/media/illustrations/histoire-malo-03.webp`)
+  - Page 4 : Malo dort en rond sur son tapis, les yeux fermés et le nez posé sur le bout de sa queue. La lune et les étoiles brillent dehors. (`public/media/illustrations/histoire-malo-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -494,7 +517,12 @@ _Reconnaitre un mot à partir de ses syllabes, puis repérer une rime._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe d’un nuage sur le toit d’une maison (`public/media/illustrations/histoire-pluie.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-pluie`
+
+  - Page 1 : Tito regarde les premières gouttes depuis la porte ; le ciel est gris et le vent pousse les feuilles (`public/media/illustrations/histoire-pluie-01.webp`)
+  - Page 2 : Tito ferme les yeux et écoute à l’abri pendant que la pluie frappe le toit (`public/media/illustrations/histoire-pluie-02.webp`)
+  - Page 3 : Après la pluie, l’eau coule entre les cailloux et une goutte brillante reste au bout d’une feuille (`public/media/illustrations/histoire-pluie-03.webp`)
+  - Page 4 : Tito est sorti ; son doigt est sous la feuille et la goutte tombe vers sa main ouverte (`public/media/illustrations/histoire-pluie-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -813,7 +841,12 @@ _Reprendre, en parlant, ce que le mois a apporté._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue entière, et trois morceaux de mangue coupés sur une assiette (`public/media/illustrations/histoire-mangue.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-mangue`
+
+  - Page 1 : Ilunga, assis sous le manguier, tient une grosse mangue dans ses deux mains (`public/media/illustrations/histoire-mangue-01.webp`)
+  - Page 2 : Ama et Tito arrivent et regardent la mangue ; Ilunga réfléchit (`public/media/illustrations/histoire-mangue-02.webp`)
+  - Page 3 : Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main (`public/media/illustrations/histoire-mangue-03.webp`)
+  - Page 4 : Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main (`public/media/illustrations/histoire-mangue-03.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 

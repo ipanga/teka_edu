@@ -1412,3 +1412,118 @@ words did not move, and the review history says why. That is the honest state: t
 different picture than the reviewer saw. The cost is one review round per level, with a contact
 sheet a reviewer can judge in minutes. The benefit is that the gate keeps meaning what ADR-035
 said it means.
+
+---
+
+## ADR-049 — Rich illustrations use committed WebP and bounded story sequences
+
+**Status:** Accepted · **Date:** 2026-09-27 · **Extends:** ADR-042, ADR-048 · **Scope:** media architecture; individual pilot assets still require owner visual review
+
+**Context:** The September audit found two valid visual needs. Exact shapes, diagrams and simple
+objects are best as small deterministic SVGs. People, body references, expressive animals, rhymes
+and story moments lose warmth, emotion and context when assembled from the same schematic vector
+primitives. One raster picture per story was also insufficient when the existing text pages move
+through materially different moments.
+
+**Decision:** Keep the mixed boundary: SVG for exact instructional graphics and optimized WebP for
+reviewed painted art. WebP rows record intrinsic width and height as well as the byte hash. A story
+illustration may declare 2–6 frames and one frame index for every existing narrative page. The
+sequence changes presentation only; it cannot change text, page count, lesson progression or
+duration. Validation requires every frame to exist, match its recorded hash and dimensions, be
+used, and align with the story’s actual page count. The renderer reserves the image aspect ratio
+and preloads only the next frame.
+
+Generation happens outside the product. Only the reviewed, optimized files enter `public/media/`;
+there is no runtime model, image API, secret, external URL or paid request. The approval digest
+fingerprints every frame description, byte hash and page mapping, so any visual or sequencing
+change lapses exactly the lessons that depend on it under ADR-048.
+
+**Consequences:** story screens can show coherent narrative progression without rewriting approved
+content, while shapes and diagrams stay exact and inexpensive. Painted assets are larger than SVGs,
+so each review records file sizes and checks real phone and desktop screens. This architecture does
+not authorize the remaining September candidates: the controlled five-asset pilot must receive the
+owner’s visual decision before any wider rollout.
+
+---
+
+## ADR-050 — Supported devices are phones, tablets, and laptops/MacBooks
+
+**Status:** Accepted · **Date:** 2026-09-28 · **Supersedes:** the TV/projection portions of the
+original plan and earlier device assumptions
+
+**Context:** Early planning treated projected television layouts as a target. The product owner has
+now narrowed the maintained product surface to devices families actually used to run Teka Edu:
+phones, tablets, and laptops/MacBooks. Keeping TV in current tests and acceptance language would
+create a support obligation that the product no longer has. Historical review evidence remains a
+truthful record of what was tested at the time and must not be rewritten.
+
+**Decision:** Teka Edu's supported device classes are **phones, tablets, and laptops/MacBooks**.
+TV and Smart TV are explicitly outside the supported-device scope and must not be introduced into
+acceptance, regression, release-readiness, pedagogical-media, or future implementation requirements
+unless the product owner explicitly reverses this decision.
+
+A 1280–1440 px browser viewport represents a laptop/MacBook in active tests. Tablet portrait and
+landscape variants may both be tested. Existing responsive CSS may continue to render at larger
+widths; incidental rendering does not create TV support. Historical screenshots, review manifests,
+release records, and archived audit tooling retain their original labels because they document past
+work rather than current requirements.
+
+**Consequences:** Active responsive tests and reusable audit tools cover phone, tablet, and
+laptop/MacBook only. Current project documentation uses those names. No ordinary responsive CSS is
+removed solely because it also works on a wider display.
+
+---
+
+## ADR-051 — Complex September story illustrations wait for ImageGen-quality art
+
+**Status:** Accepted · **Date:** 2026-09-28 · **Decided by:** the product owner
+
+**Generation condition resolved 2026-09-30:** ADR-052 authorizes built-in Codex ImageGen
+and fresh-session independent review. The original rationale below is preserved.
+
+**Deferral closed 2026-10-01:** Pluie, Cailloux and Malo independently accepted and restored.
+20/20 candidates complete, 176/176 current valid approvals; none deferred. Original context and
+consequences below are dated history, not current status. Final audit:
+`docs/media/SEPTEMBER_RICH_MEDIA_FINAL_AUDIT.json`. September finalization authorizes feature
+checkpoint/push only, then STOP. PR/develop, CI/staging, family pilot, production, infrastructure
+and curriculum expansion require new owner authorization.
+
+**Context:** Seventeen of the twenty audited September WebP candidates are integrated and
+independently accepted. The last three — `histoire-pluie`, `histoire-cailloux` and
+`histoire-malo` — are narrative stories that need expressive characters, animals, changing weather,
+exact quantities carried through character action, and continuity across four pages. ImageGen-quality
+raster generation is unavailable while Claude Code continues the work, and vector art cannot carry
+those scenes at the standard of the seven accepted painted story sequences.
+
+**Decision:** Keep each story's current approved SVG. Defer its painted sequence until
+ImageGen-quality generation is available again, and then run it through the ADR-048 workflow. Do not
+author a weaker SVG sequence to close the candidate. No runtime media changes, so no approval lapses.
+SVG stays appropriate for schematic educational content — shapes, colours, counting objects, matching,
+recognition cards, diagrams, tracing and simple scenes — and is never a substitute for a complex
+natural illustration. Accepted WebP assets are preserved byte for byte.
+
+**Consequences:** September is complete and fully approved (176/176) with 17 of 20 rich-media
+candidates finished. The rich-media audit marks the three stories `deferred-pending-imagegen`; this
+is a deliberate quality decision, not an unfinished lesson.
+
+---
+
+## ADR-052 — Codex-only continuation and fresh-session independent review
+
+**Status:** Accepted · **Date:** 2026-09-30 · **Decided by:** the product owner
+
+Claude Code is unavailable. Codex now implements, validates and generates authoring-time
+rich media using its built-in ImageGen capability. The generation condition in ADR-051 is
+resolved; process Pluie, Cailloux and Malo in canonical order, one story at a time through
+the complete ADR-048 workflow. Preserve accepted media and intentional SVGs.
+
+Freeze a clean implementation checkpoint and an isolated package containing canonical text,
+page mapping, final frames, comparisons, actual child-size/responsive evidence, affected IDs,
+hashes and approval impact. Stop at that boundary. The owner opens a fresh independent Codex
+session with a bounded prompt and relays accepted, accepted-with-modifications or rejected.
+The implementation session never self-approves. Restore only when a final explicit independent
+acceptance supports it, using existing review history and fresh lapsed-only digest computation.
+
+The previous Claude handoff is historical. `docs/handoff/CODEX_CONTINUATION.md` and the active
+task hold current recovery instructions. ADR-050, security invariants and DEV/PROD separation
+remain in force. Feature checkpoints/pushes are authorized; PR, merge and production are not.

@@ -19,7 +19,9 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { format, resolveConfig } from "prettier";
 import { shownPictureIds } from "@/domain/lessons/pictures";
+import { STORY_LINES_PER_PAGE } from "@/domain/lessons/texts";
 import type { ActivityType } from "@/domain/lessons/types";
+import { assetFingerprint } from "@/domain/media/types";
 import { REVIEW_PACKAGES } from "@/lib/content/review-packages";
 import { getReferenceData } from "@/lib/content/reference-data";
 import { dayOfLessonMap } from "@/lib/content/visual-audit";
@@ -36,14 +38,24 @@ const args = new Map(
 );
 const since = args.get("since") ?? "develop";
 const levels = args.has("level") ? [args.get("level")!] : ["maternelle-1", "maternelle-3"];
-const SHEET = "docs/review/media/septembre-avant-apres.png";
+const SHEET = args.get("sheet") ?? "docs/review/media/september-rich-media-rollout-comparison.png";
 const DOMAINS = ["lang", "math", "phys", "art", "time-space", "world"];
 
 const git = (a: string[]) => execFileSync("git", a, { cwd: ROOT, encoding: "utf8" });
 const readJson = (file: string) => JSON.parse(readFileSync(path.join(ROOT, file), "utf8"));
 const showJson = (file: string) => JSON.parse(git(["show", `${since}:${file}`]));
 
-type Asset = { id: string; kind: string; alt: string; contentHash: string };
+type Asset = {
+  id: string;
+  kind: string;
+  file: string;
+  alt: string;
+  contentHash: string;
+  sequence?: {
+    frames: { file: string; alt: string; contentHash: string }[];
+    pageFrames: number[];
+  };
+};
 type RawLesson = Record<string, unknown> & {
   id: string;
   title: string;
@@ -89,7 +101,8 @@ const registryNow = readJson("content/media/registry.json").assets as Asset[];
 const registryThen = showJson("content/media/registry.json").assets as Asset[];
 const changedAssets = registryNow.filter((a) => {
   const before = registryThen.find((b) => b.id === a.id);
-  return before === undefined || before.contentHash !== a.contentHash || before.alt !== a.alt;
+  // The whole fingerprint: a redrawn frame of a story sequence is a picture change to reconfirm.
+  return before === undefined || assetFingerprint(before) !== assetFingerprint(a);
 });
 if (changedAssets.length === 0) {
   console.log(`no picture changed since ${since}; nothing to reconfirm`);
@@ -183,8 +196,9 @@ for (const levelId of levels) {
   lines.push(
     `# Reconfirmation visuelle — ${levelName}, septembre ${year.slice(0, 4)}`,
     "",
-    "`SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION` — les images sont figées ; leurs empreintes",
-    "sont vérifiées par un test tant que la relecture n’a pas eu lieu (`docs/work/SEPTEMBER_VISUAL_QA.md`).",
+    "`SEPTEMBER_RICH_MEDIA_BATCH_FROZEN_FOR_REVIEW` — les images de ce lot sont figées ;",
+    "leurs fichiers, dimensions et empreintes exactes sont consignés dans",
+    "`docs/september-rich-media-audit.json` jusqu’à la décision du propriétaire.",
     "",
     "> **Ce document est généré** (`npm run review:visual`). Il ne demande pas une relecture",
     "> complète : les mots lus à l’enfant et à l’adulte, les objectifs, les durées et le matériel",
@@ -194,11 +208,11 @@ for (const levelId of levels) {
     "",
     "## Ce qui s’est passé",
     "",
-    "Les images de septembre ont été redessinées pour être plus chaleureuses, plus lisibles et",
-    "cohérentes entre elles (`docs/september-illustration-upgrade-plan.md`) : une seule encre, des",
-    "aplats avec une ombre, une peau brune pour les enfants et les parties du corps, un sol sous",
-    "chaque chose, un visage sur les personnes et les animaux seulement. Les huit formes",
-    "géométriques n’ont pas bougé.",
+    `${changedAssets.length} image(s) de septembre ont été remplacées localement par des illustrations`,
+    "WebP plus chaleureuses, expressives et proches d’un album préscolaire. Une histoire peut utiliser",
+    "une courte séquence alignée sur ses pages existantes. Aucun texte n’a été réécrit ; les personnages,",
+    "objets, quantités, actions et décors doivent être jugés contre le texte approuvé.",
+    `Les ${registryNow.length - changedAssets.length} autres images, dont toutes les formes géométriques, n’ont pas bougé.`,
     "",
     "L’empreinte d’une approbation couvre les octets de chaque image montrée à l’enfant (ISSUE-026).",
     `Les approbations de **${lapsed.length} leçon(s)** de cette classe ont donc été annulées — pas`,
@@ -223,6 +237,74 @@ for (const levelId of levels) {
     lines.push(
       `| \`${a.id}\` | ${a.kind} | ${before?.alt ?? "_nouvelle_"} | ${a.alt} | ${users.length} — ${users.join(", ")} |`,
     );
+  }
+  const sequencedHere = shownHere.filter((asset) => asset.sequence !== undefined);
+  if (sequencedHere.length > 0) {
+    lines.push(
+      "",
+      "## Séquences des histoires",
+      "",
+      "| Histoire | Page(s) | Fichier | SHA-256 | Description exacte de la scène |",
+      "| --- | --- | --- | --- | --- |",
+      ...sequencedHere.flatMap((asset) =>
+        asset.sequence!.frames.map((frame, index) => {
+          const pages = asset
+            .sequence!.pageFrames.flatMap((frameIndex, page) =>
+              frameIndex === index ? [page + 1] : [],
+            )
+            .join(", ");
+          return `| \`${asset.id}\` | ${pages} | \`public/media/${frame.file}\` | \`${frame.contentHash}\` | ${frame.alt} |`;
+        }),
+      ),
+      "",
+      "L’empreinte d’approbation ne se limite pas au hash principal affiché dans le tableau des",
+      "activités : `assetFingerprint` inclut la description et le SHA-256 de **chaque cadre**, puis",
+      "la table `pageFrames`. `lessonDigest` reçoit cette empreinte complète pour toute leçon qui",
+      "utilise l’image ; modifier n’importe quel cadre annule donc l’approbation.",
+    );
+  }
+  const reviewedTexts = data.texts.filter(
+    (text) =>
+      text.illustrationId !== null && shownHere.some((asset) => asset.id === text.illustrationId),
+  );
+  if (reviewedTexts.length > 0) {
+    lines.push(
+      "",
+      "## Texte approuvé et image montrée, page par page",
+      "",
+      "Ces extraits sont les mots canoniques réellement affichés dans l’application. Ils permettent",
+      "de juger chaque scène sans devoir consulter un autre fichier. Une histoire avance par groupes",
+      `de ${STORY_LINES_PER_PAGE} lignes ; une comptine tient sur une seule page.`,
+      "",
+    );
+    for (const text of reviewedTexts) {
+      const asset = shownHere.find((candidate) => candidate.id === text.illustrationId)!;
+      lines.push(`### \`${asset.id}\` — ${text.title}`, "");
+      const pages =
+        text.kind === "rhyme"
+          ? [text.lines]
+          : Array.from({ length: Math.ceil(text.lines.length / STORY_LINES_PER_PAGE) }, (_, page) =>
+              text.lines.slice(
+                page * STORY_LINES_PER_PAGE,
+                page * STORY_LINES_PER_PAGE + STORY_LINES_PER_PAGE,
+              ),
+            );
+      for (const [page, pageLines] of pages.entries()) {
+        // The real renderer pages a sequence only for a story. A rhyme or another text shows the
+        // asset's primary file, even when that asset also carries a story sequence.
+        const frameIndex = text.kind === "story" ? asset.sequence?.pageFrames[page] : undefined;
+        const frame = frameIndex === undefined ? undefined : asset.sequence?.frames[frameIndex];
+        const shownFile = frame?.file ?? asset.file;
+        const shownAlt = frame?.alt ?? asset.alt;
+        lines.push(
+          `- **Page ${page + 1} — image :** \`public/media/${shownFile}\``,
+          `  - Description accessible : ${shownAlt}`,
+          "  - Texte affiché :",
+          ...pageLines.map((line) => `    > ${line}`),
+          "",
+        );
+      }
+    }
   }
   const short = (h: string | undefined) => (h ? h.slice(7, 19) : "—");
   const levelLessons = [...lessonsNow.values()];
@@ -266,8 +348,11 @@ for (const levelId of levels) {
     "",
     "Pour chaque ligne : aucun texte lu à l’enfant, aucun texte lu à l’adulte, aucun objectif et",
     "aucune progression n’a changé (vérifié avant l’écriture de ce document). **La seule raison**",
-    "du changement d’empreinte est la ligne « image » : ses octets ont changé, et l’empreinte d’une",
-    "approbation couvre les octets de chaque image montrée (ISSUE-026, ADR-048).",
+    "du changement d’empreinte est la présentation visuelle : les octets des images, leurs descriptions",
+    "accessibles et, pour une séquence, sa table page-cadre participent à l’empreinte couverte par",
+    "l’approbation (ISSUE-026, ADR-048).",
+    "Pour une séquence, les colonnes « empreinte » ci-dessous abrègent le hash du cadre principal ;",
+    "la section « Séquences des histoires » donne tous les SHA-256 et explique l’empreinte complète.",
     "",
   );
   const byWeek = new Map<number, RawLesson[]>();
@@ -317,13 +402,15 @@ for (const levelId of levels) {
     "",
     "Pour chaque image de la planche, et en pensant à l’enfant qui la regarde pendant l’activité :",
     "",
-    "1. l’image montre-t-elle bien **la chose que la leçon nomme** — la main, le pied, Lisa, le seau,",
-    "   trois cailloux différents — sans rien qui détourne l’attention ?",
+    "1. l’image montre-t-elle bien **la chose, le geste ou la scène que la leçon nomme**, sans détail",
+    "   contradictoire ou distrayant ?",
     "2. est-elle **lisible à 72 px** quand elle est répétée dans une rangée à compter ?",
     "3. la description (`alt`, lue par une synthèse vocale à une famille francophone) dit-elle ce",
     "   que l’image montre ?",
-    "4. voyez-vous une image qui **contredit** ce qu’une leçon dit — un geste, un nombre, une",
-    "   orientation ?",
+    "4. voyez-vous une image qui **contredit** ce qu’une leçon dit — geste, quantité, personnage,",
+    "   objet, émotion, lieu ou ordre temporel ?",
+    "5. dans chaque histoire, l’identité, l’âge, la peau et les vêtements des personnages restent-ils",
+    "   cohérents, et chaque scène correspond-elle vraiment aux lignes de sa page ?",
     "",
     "Répondez **`accepted`** (les images conviennent), ou **`accepted-with-modifications`** en",
     "nommant l’image et ce qui doit changer.",

@@ -1,0 +1,3259 @@
+{
+  "task": "September rich-media visual upgrade — controlled rollout",
+  "version": 2,
+  "generatedOn": "2026-10-01",
+  "productionCommit": "51c83a229e1559e98dbf7127fb916c2c8d6a841b",
+  "pilotBaselineCommit": "cbc1cf3",
+  "scope": ["maternelle-1 September", "maternelle-3 September"],
+  "status": "september-rich-media-complete-independently-reconfirmed",
+  "productionAssetsChanged": false,
+  "localPilotAssetsChanged": true,
+  "approvedLessonSemanticsChanged": false,
+  "counts": {
+    "audited-keep": 31,
+    "audited-refine": 0,
+    "audited-redraw": 20,
+    "svg": 31,
+    "webp": 20
+  },
+  "anticipatedApprovalImpact": {
+    "ifAllProposedWebpAssetsAreIntegrated": 53,
+    "maternelle1": 27,
+    "maternelle3": 26,
+    "currentImpact": 0,
+    "currentApproved": 176,
+    "currentReview": 0
+  },
+  "notes": [
+    "Final batch 10 histoire-malo independently accepted without correction at 8b5a865; owner relayed verdict on 2026-10-01 and authorized three fresh-digest lapsed-only restorations after dry-run. September complete: 176 approved / 0 review / 176 distinct current valid digests / zero stale or unexpected lapses; 173 unaffected approvals unchanged. 20/20 integrated and independently accepted, ten sequences, 31 retained SVGs, no deferred or pending candidate. All frozen packages and accepted WebP bytes preserved. No merge or deployment; stop for new owner authorization.",
+    "Accepted batch 9 historical checkpoint: histoire-cailloux independently accepted without correction at frozen 6220f1e; owner relayed verdict and authorized exactly three fresh-digest lapsed-only restorations. September 176 approved / 0 review / 176 distinct current valid digests / zero stale or unexpected lapses. All 173 unaffected approval records unchanged; frozen Cailloux/Pluie packages preserved. Nineteen of twenty candidates independently complete, nine sequences, 31 retained SVGs; Malo is the final deferred candidate.",
+    "Accepted Pluie checkpoint b4f242d snapshot: batch 8 was independently accepted without correction at frozen checkpoint 45b4683. Owner relayed the verdict and authorized restoration. Exactly seven approvals restored with fresh-digest lapsed-only workflow; 169 unaffected records unchanged. At that checkpoint September was 176/176 approved, zero stale/unexpected lapses, 18/20 independently completed; Cailloux/Malo were deferred. Pluie source masters 1448x1086 except frame 2 at 1447x1087; delivery 1200x900. Final batch 10 state is reported separately above.",
+    "PNG has no selected delivery use; lossless PNG remains acceptable only as an untracked or archived generation master.",
+    "A small story sequence is a presentation proposal tied to existing text pages. It must not alter story wording or progression.",
+    "The five pilot assets are integrated locally. Their 18 dependent lessons lapsed through the existing mechanism and were restored only after independent acceptance.",
+    "All 158 unaffected approvals remained byte-for-byte unchanged from the pilot baseline.",
+    "Independent review accepted four asset families and requested two bounded Nsimba corrections: a dedicated page-1 walking scene and a visible Nsimba name card on page 3.",
+    "Both corrections were integrated without changing canonical lesson text; the second independent pass accepted all five asset families and all 18 affected lessons.",
+    "The standard lapsed-only workflow restored exactly 18 approvals with fresh digests; all 158 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
+    "Rollout batch 1 integrates corps-main, corps-pied, corps-ventre, animal-poule and animal-poussin. The first independent pass accepted four assets and requested a tighter belly crop; the corrected corps-ventre and all 10 dependent lessons were accepted on the second pass.",
+    "The lapsed-only workflow restored exactly 10 Batch-1 approvals with fresh digests. All 166 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
+    "Rollout batch 2 integrates comptine-mains and the currently unused comptine-cabri. Claude Max / Opus 5.5 independently accepted both assets and all nine dependent lessons without correction; comptine-cabri lapses no approval.",
+    "The lapsed-only workflow restored exactly nine Batch-2 approvals with fresh digests. All 167 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
+    "Rollout batch 3 integrates only the two-frame histoire-tika sequence. Claude Max / Opus 5.5 independently accepted both frames and both dependent lessons without correction; seven other story-sequence candidates remain untouched.",
+    "The lapsed-only workflow restored exactly two Batch-3 approvals with fresh digests. All 174 unaffected approval records remained byte-for-byte unchanged and zero stale approvals remain.",
+    "Rollout batch 4 integrates only the three-frame histoire-seau-lisa sequence. The first review accepted the images and requested corrected evidence; the corrected dossier explicitly maps the rhyme to primary frame 2 and exposes every frame hash. Claude Max / Opus 5.5 then accepted all eight dependent lessons.",
+    "The lapsed-only workflow restored exactly eight Batch-4 approvals with fresh digests. All 168 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain; six other story-sequence candidates remain untouched.",
+    "Rollout batch 5 integrates only the four-frame histoire-kumu sequence. The first independent review accepted frames 1, 2 and 4 but requested clearer closed eyelids on Kumu in frame 3 at 256 px. Only frame 3 was redrawn; the second review explicitly accepted the complete sequence. The lapsed-only workflow restored exactly four lessons with fresh digests; all 172 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain. Five other story-sequence candidates remain untouched.",
+    "Rollout batch 6 integrates only the four-frame histoire-bibi sequence. Claude Max / Opus 5.5 explicitly accepted the complete sequence and all three dependent lessons without correction. The lapsed-only workflow restored exactly three approvals with fresh digests; all 173 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain. Four other story-sequence candidates remain untouched.",
+    "Historical batch 7 checkpoint: integrates only the four-frame histoire-marche sequence. The 10 canonical lines render as four pages of three, three, three and one line and map exactly to frames 1–4. The external reviewer ChatGPT GPT-5.6 Sol first reported six tomatoes on frame 2; evidence and an enlarged reinspection confirmed exactly five tomatoes and three onions, the blocker was withdrawn, and the corrected verdict accepted the complete sequence without any media change. The lapsed-only workflow restored exactly three approvals with fresh digests; all 173 unaffected lesson records remain byte-for-byte unchanged and zero stale approvals remain. The three remaining story candidates keep their approved SVGs; their painted upgrade is deliberately deferred until ImageGen-quality generation is available."
+  ],
+  "assets": [
+    {
+      "id": "forme-carre",
+      "kind": "shape",
+      "pedagogicalRole": "Un carré",
+      "currentFile": "public/media/shapes/forme-carre.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m1-math-11",
+          "activityId": "m1-math-11-a1",
+          "activityTitle": "Les formes ensemble",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-math-13",
+          "activityId": "m1-math-13-a1",
+          "activityTitle": "Les formes ensemble",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-math-16",
+          "activityId": "m1-math-16-a1",
+          "activityTitle": "Les formes ensemble",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-math-19",
+          "activityId": "m1-math-19-a1",
+          "activityTitle": "Les formes ensemble",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-03",
+          "activityId": "m3-math-03-a1",
+          "activityTitle": "Je nomme les formes",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-03",
+          "activityId": "m3-math-03-a2",
+          "activityTitle": "Je range les formes",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-08",
+          "activityId": "m3-math-08-a1",
+          "activityTitle": "La même forme",
+          "activityType": "matching",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-08",
+          "activityId": "m3-math-08-a2",
+          "activityTitle": "Des formes dans la maison",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-18",
+          "activityId": "m3-math-18-a1",
+          "activityTitle": "La forme et l’objet",
+          "activityType": "matching",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "Exact geometry is the pedagogical content, so a compact deterministic SVG remains the best medium.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:b43caa434c57bf26e9fd57a361b3d52343ef911a3c9c627f2d894eca6caf1ec8",
+      "afterHash": null
+    },
+    {
+      "id": "forme-rectangle",
+      "kind": "shape",
+      "pedagogicalRole": "Un rectangle",
+      "currentFile": "public/media/shapes/forme-rectangle.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-math-03",
+          "activityId": "m3-math-03-a1",
+          "activityTitle": "Je nomme les formes",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-03",
+          "activityId": "m3-math-03-a2",
+          "activityTitle": "Je range les formes",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-08",
+          "activityId": "m3-math-08-a1",
+          "activityTitle": "La même forme",
+          "activityType": "matching",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-08",
+          "activityId": "m3-math-08-a2",
+          "activityTitle": "Des formes dans la maison",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-18",
+          "activityId": "m3-math-18-a1",
+          "activityTitle": "La forme et l’objet",
+          "activityType": "matching",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "Exact geometry is the pedagogical content, so a compact deterministic SVG remains the best medium.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:002764adc95d58be5e69452a9268e6bb5828ef43b1692a3ba6361f50e310b5bf",
+      "afterHash": null
+    },
+    {
+      "id": "forme-triangle",
+      "kind": "shape",
+      "pedagogicalRole": "Un triangle",
+      "currentFile": "public/media/shapes/forme-triangle.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-math-03",
+          "activityId": "m3-math-03-a1",
+          "activityTitle": "Je nomme les formes",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-03",
+          "activityId": "m3-math-03-a2",
+          "activityTitle": "Je range les formes",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-08",
+          "activityId": "m3-math-08-a1",
+          "activityTitle": "La même forme",
+          "activityType": "matching",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-08",
+          "activityId": "m3-math-08-a2",
+          "activityTitle": "Des formes dans la maison",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-18",
+          "activityId": "m3-math-18-a1",
+          "activityTitle": "La forme et l’objet",
+          "activityType": "matching",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "Exact geometry is the pedagogical content, so a compact deterministic SVG remains the best medium.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:80acc883518a11a5ba521929c2dad307e40a4115bb55305f3ac6bb87fa8db459",
+      "afterHash": null
+    },
+    {
+      "id": "forme-disque",
+      "kind": "shape",
+      "pedagogicalRole": "Un disque, tout rond",
+      "currentFile": "public/media/shapes/forme-disque.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m1-math-11",
+          "activityId": "m1-math-11-a1",
+          "activityTitle": "Les formes ensemble",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-math-13",
+          "activityId": "m1-math-13-a1",
+          "activityTitle": "Les formes ensemble",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-math-16",
+          "activityId": "m1-math-16-a1",
+          "activityTitle": "Les formes ensemble",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-math-19",
+          "activityId": "m1-math-19-a1",
+          "activityTitle": "Les formes ensemble",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-03",
+          "activityId": "m3-math-03-a1",
+          "activityTitle": "Je nomme les formes",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-03",
+          "activityId": "m3-math-03-a2",
+          "activityTitle": "Je range les formes",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-08",
+          "activityId": "m3-math-08-a1",
+          "activityTitle": "La même forme",
+          "activityType": "matching",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-08",
+          "activityId": "m3-math-08-a2",
+          "activityTitle": "Des formes dans la maison",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-18",
+          "activityId": "m3-math-18-a1",
+          "activityTitle": "La forme et l’objet",
+          "activityType": "matching",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "Exact geometry is the pedagogical content, so a compact deterministic SVG remains the best medium.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:979ad403ed9c1984aae9572befda615716b695f6f58f610de9e1aa20d609bc1e",
+      "afterHash": null
+    },
+    {
+      "id": "forme-carre-penche",
+      "kind": "shape",
+      "pedagogicalRole": "Un carré posé de biais, plus petit",
+      "currentFile": "public/media/shapes/forme-carre-penche.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-math-03",
+          "activityId": "m3-math-03-a1",
+          "activityTitle": "Je nomme les formes",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-03",
+          "activityId": "m3-math-03-a2",
+          "activityTitle": "Je range les formes",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-08",
+          "activityId": "m3-math-08-a1",
+          "activityTitle": "La même forme",
+          "activityType": "matching",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "Exact geometry is the pedagogical content, so a compact deterministic SVG remains the best medium.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:12b3d9268bda66c8f8ad0b1177ef7fc66e67a8456aba6c2493f9a32751504d61",
+      "afterHash": null
+    },
+    {
+      "id": "forme-rectangle-debout",
+      "kind": "shape",
+      "pedagogicalRole": "Un rectangle debout, plus haut que large",
+      "currentFile": "public/media/shapes/forme-rectangle-debout.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-math-03",
+          "activityId": "m3-math-03-a1",
+          "activityTitle": "Je nomme les formes",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-03",
+          "activityId": "m3-math-03-a2",
+          "activityTitle": "Je range les formes",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-08",
+          "activityId": "m3-math-08-a1",
+          "activityTitle": "La même forme",
+          "activityType": "matching",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "Exact geometry is the pedagogical content, so a compact deterministic SVG remains the best medium.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:f9c78eeb8e0e717093688b8052fcf582ee3eca56974188ea3f3b14262dbc3b34",
+      "afterHash": null
+    },
+    {
+      "id": "forme-triangle-quelconque",
+      "kind": "shape",
+      "pedagogicalRole": "Un triangle aux trois côtés différents, posé de travers",
+      "currentFile": "public/media/shapes/forme-triangle-quelconque.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-math-03",
+          "activityId": "m3-math-03-a1",
+          "activityTitle": "Je nomme les formes",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-03",
+          "activityId": "m3-math-03-a2",
+          "activityTitle": "Je range les formes",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-08",
+          "activityId": "m3-math-08-a1",
+          "activityTitle": "La même forme",
+          "activityType": "matching",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "Exact geometry is the pedagogical content, so a compact deterministic SVG remains the best medium.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:74a75a142e07a72b0030c91f80fa7786ee3001b5f09aec9afde544b7462f82c8",
+      "afterHash": null
+    },
+    {
+      "id": "forme-disque-petit",
+      "kind": "shape",
+      "pedagogicalRole": "Un petit disque, tout rond",
+      "currentFile": "public/media/shapes/forme-disque-petit.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-math-03",
+          "activityId": "m3-math-03-a1",
+          "activityTitle": "Je nomme les formes",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-03",
+          "activityId": "m3-math-03-a2",
+          "activityTitle": "Je range les formes",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-08",
+          "activityId": "m3-math-08-a1",
+          "activityTitle": "La même forme",
+          "activityType": "matching",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "Exact geometry is the pedagogical content, so a compact deterministic SVG remains the best medium.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:fc8aed028ba040a9778e64dd63d8b338a8366b15a68fdec30780dc5dbca63dfb",
+      "afterHash": null
+    },
+    {
+      "id": "objet-cuillere",
+      "kind": "object",
+      "pedagogicalRole": "Une cuillère",
+      "currentFile": "public/media/objects/objet-cuillere.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m1-math-04",
+          "activityId": "m1-math-04-a1",
+          "activityTitle": "Un, deux, trois",
+          "activityType": "counting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-math-06",
+          "activityId": "m1-math-06-a1",
+          "activityTitle": "Trois objets",
+          "activityType": "manipulation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-math-08",
+          "activityId": "m1-math-08-a1",
+          "activityTitle": "Donne-moi deux",
+          "activityType": "manipulation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-math-10",
+          "activityId": "m1-math-10-a1",
+          "activityTitle": "Donne-moi trois",
+          "activityType": "manipulation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-math-15",
+          "activityId": "m1-math-15-a1",
+          "activityTitle": "Donne-moi trois",
+          "activityType": "manipulation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-math-20",
+          "activityId": "m1-math-20-a1",
+          "activityTitle": "Un, deux, trois",
+          "activityType": "counting",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a simple isolated vocabulary or counting object that must stay crisp and recognizable at small repeated sizes; SVG remains appropriate.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:1bd21f627e19c7afabcc9df7905373a84020f1419645f1ea84aa007059d77672",
+      "afterHash": null
+    },
+    {
+      "id": "objet-crayon",
+      "kind": "object",
+      "pedagogicalRole": "Un crayon",
+      "currentFile": "public/media/objects/objet-crayon.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-02",
+          "activityId": "m3-lang-02-a2",
+          "activityTitle": "Je nomme les objets de l’école",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-19",
+          "activityId": "m3-lang-19-a2",
+          "activityTitle": "Trois catégories de mots",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a simple isolated vocabulary or counting object that must stay crisp and recognizable at small repeated sizes; SVG remains appropriate.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:4e7e6fcde76ccaa85ce468b7d0156c0a72cfcec00d1595df9b83d4da2739d782",
+      "afterHash": null
+    },
+    {
+      "id": "objet-cahier",
+      "kind": "object",
+      "pedagogicalRole": "Un cahier",
+      "currentFile": "public/media/objects/objet-cahier.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-02",
+          "activityId": "m3-lang-02-a2",
+          "activityTitle": "Je nomme les objets de l’école",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-19",
+          "activityId": "m3-lang-19-a2",
+          "activityTitle": "Trois catégories de mots",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a simple isolated vocabulary or counting object that must stay crisp and recognizable at small repeated sizes; SVG remains appropriate.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:66778d5feb533391c02eb640b39b88ce462b7a1e5ec5cb88f58c1e34d68deecd",
+      "afterHash": null
+    },
+    {
+      "id": "objet-sac",
+      "kind": "object",
+      "pedagogicalRole": "Un sac d’école",
+      "currentFile": "public/media/objects/objet-sac.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-02",
+          "activityId": "m3-lang-02-a2",
+          "activityTitle": "Je nomme les objets de l’école",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a simple isolated vocabulary or counting object that must stay crisp and recognizable at small repeated sizes; SVG remains appropriate.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:1d9ecb68ad9677eefe572d009df7c5b1cbe17e0e01d0655ffb9f5e3ad1c77a8d",
+      "afterHash": null
+    },
+    {
+      "id": "objet-table",
+      "kind": "object",
+      "pedagogicalRole": "Une table",
+      "currentFile": "public/media/objects/objet-table.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m1-lang-02",
+          "activityId": "m1-lang-02-a2",
+          "activityTitle": "Les mots de la maison",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-06",
+          "activityId": "m1-lang-06-a2",
+          "activityTitle": "Les quatre mots de la maison",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-02",
+          "activityId": "m3-lang-02-a2",
+          "activityTitle": "Je nomme les objets de l’école",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a simple isolated vocabulary or counting object that must stay crisp and recognizable at small repeated sizes; SVG remains appropriate.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:e84b16cb1220a2a537c30731cf7b5d46b149e2fdc676ff7c894f9ea27e788183",
+      "afterHash": null
+    },
+    {
+      "id": "objet-chaise",
+      "kind": "object",
+      "pedagogicalRole": "Une chaise",
+      "currentFile": "public/media/objects/objet-chaise.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m1-lang-02",
+          "activityId": "m1-lang-02-a2",
+          "activityTitle": "Les mots de la maison",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-06",
+          "activityId": "m1-lang-06-a2",
+          "activityTitle": "Les quatre mots de la maison",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-02",
+          "activityId": "m3-lang-02-a2",
+          "activityTitle": "Je nomme les objets de l’école",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a simple isolated vocabulary or counting object that must stay crisp and recognizable at small repeated sizes; SVG remains appropriate.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:259fda3c2a6024bd9a2e5082e65c232566ee67ea0b643f2f038df613e1c368fc",
+      "afterHash": null
+    },
+    {
+      "id": "objet-porte",
+      "kind": "object",
+      "pedagogicalRole": "Une porte",
+      "currentFile": "public/media/objects/objet-porte.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m1-lang-01",
+          "activityId": "m1-lang-01-a2",
+          "activityTitle": "Les mots de la maison",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-06",
+          "activityId": "m1-lang-06-a2",
+          "activityTitle": "Les quatre mots de la maison",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-22",
+          "activityId": "m1-lang-22-a2",
+          "activityTitle": "Tous les mots du mois",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-07",
+          "activityId": "m3-lang-07-a2",
+          "activityTitle": "Je nomme ce qu’il y a chez moi",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-19",
+          "activityId": "m3-lang-19-a2",
+          "activityTitle": "Trois catégories de mots",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a simple isolated vocabulary or counting object that must stay crisp and recognizable at small repeated sizes; SVG remains appropriate.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:74f41ecf12310e1ccde9ca788451cbf2d591631ceb2889777d66ef98f772eb08",
+      "afterHash": null
+    },
+    {
+      "id": "objet-fenetre",
+      "kind": "object",
+      "pedagogicalRole": "Une fenêtre",
+      "currentFile": "public/media/objects/objet-fenetre.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-07",
+          "activityId": "m3-lang-07-a2",
+          "activityTitle": "Je nomme ce qu’il y a chez moi",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a simple isolated vocabulary or counting object that must stay crisp and recognizable at small repeated sizes; SVG remains appropriate.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:ebab789795a79bfb2c6b7c8a1b80be8cd616c56928fdb6336781dca2d67de823",
+      "afterHash": null
+    },
+    {
+      "id": "objet-lit",
+      "kind": "object",
+      "pedagogicalRole": "Un lit",
+      "currentFile": "public/media/objects/objet-lit.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-07",
+          "activityId": "m3-lang-07-a2",
+          "activityTitle": "Je nomme ce qu’il y a chez moi",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a simple isolated vocabulary or counting object that must stay crisp and recognizable at small repeated sizes; SVG remains appropriate.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:be1fa2a2b1dd7341e4c7d181d726a9126c6294db281d5275c8fe6799f0fc1bce",
+      "afterHash": null
+    },
+    {
+      "id": "objet-marmite",
+      "kind": "object",
+      "pedagogicalRole": "Une marmite",
+      "currentFile": "public/media/objects/objet-marmite.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-07",
+          "activityId": "m3-lang-07-a2",
+          "activityTitle": "Je nomme ce qu’il y a chez moi",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-19",
+          "activityId": "m3-lang-19-a2",
+          "activityTitle": "Trois catégories de mots",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a simple isolated vocabulary or counting object that must stay crisp and recognizable at small repeated sizes; SVG remains appropriate.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:8a74ce5826a7815b1198e95241bda1cb69ac628b528f9ea1f54b3ef5eac63ffd",
+      "afterHash": null
+    },
+    {
+      "id": "objet-seau",
+      "kind": "object",
+      "pedagogicalRole": "Un seau",
+      "currentFile": "public/media/objects/objet-seau.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m1-lang-01",
+          "activityId": "m1-lang-01-a2",
+          "activityTitle": "Les mots de la maison",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-06",
+          "activityId": "m1-lang-06-a2",
+          "activityTitle": "Les quatre mots de la maison",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-22",
+          "activityId": "m1-lang-22-a2",
+          "activityTitle": "Tous les mots du mois",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-07",
+          "activityId": "m3-lang-07-a2",
+          "activityTitle": "Je nomme ce qu’il y a chez moi",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a simple isolated vocabulary or counting object that must stay crisp and recognizable at small repeated sizes; SVG remains appropriate.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:696835fb387b9779e4fc88b55590243f05d2add1ce0ef3a4742ef11f88392bdf",
+      "afterHash": null
+    },
+    {
+      "id": "objet-panier",
+      "kind": "object",
+      "pedagogicalRole": "Un panier",
+      "currentFile": "public/media/objects/objet-panier.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-13",
+          "activityId": "m3-lang-13-a2",
+          "activityTitle": "Au marché",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-19",
+          "activityId": "m3-lang-19-a2",
+          "activityTitle": "Trois catégories de mots",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a simple isolated vocabulary or counting object that must stay crisp and recognizable at small repeated sizes; SVG remains appropriate.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:370951e6875d48b92f1f1941a5a11ff4378dbb5cf1ff0661559f80673c38bafc",
+      "afterHash": null
+    },
+    {
+      "id": "objet-tomate",
+      "kind": "object",
+      "pedagogicalRole": "Une tomate",
+      "currentFile": "public/media/objects/objet-tomate.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-13",
+          "activityId": "m3-lang-13-a2",
+          "activityTitle": "Au marché",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-19",
+          "activityId": "m3-lang-19-a2",
+          "activityTitle": "Trois catégories de mots",
+          "activityType": "sorting",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a simple isolated vocabulary or counting object that must stay crisp and recognizable at small repeated sizes; SVG remains appropriate.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:1640e1af16df12c4ace21c8a28d00a6eecd1cddb51569cc6359f92a5dd16064b",
+      "afterHash": null
+    },
+    {
+      "id": "objet-banane",
+      "kind": "object",
+      "pedagogicalRole": "Une banane",
+      "currentFile": "public/media/objects/objet-banane.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-13",
+          "activityId": "m3-lang-13-a2",
+          "activityTitle": "Au marché",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a simple isolated vocabulary or counting object that must stay crisp and recognizable at small repeated sizes; SVG remains appropriate.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:611a92eea6ab28d5b145a798226696ecc735a2d276f85a18ea533d5d7d6e82ab",
+      "afterHash": null
+    },
+    {
+      "id": "objet-oignon",
+      "kind": "object",
+      "pedagogicalRole": "Un oignon",
+      "currentFile": "public/media/objects/objet-oignon.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-13",
+          "activityId": "m3-lang-13-a2",
+          "activityTitle": "Au marché",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a simple isolated vocabulary or counting object that must stay crisp and recognizable at small repeated sizes; SVG remains appropriate.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:f0b5cc0a9bec9d829cc136aac563b5255f0a781d24cade4ff2fcece49e07ccd8",
+      "afterHash": null
+    },
+    {
+      "id": "objet-monnaie",
+      "kind": "object",
+      "pedagogicalRole": "Deux billets simples et une pièce, la monnaie du marché",
+      "currentFile": "public/media/objects/objet-monnaie.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-13",
+          "activityId": "m3-lang-13-a2",
+          "activityTitle": "Au marché",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a simple isolated vocabulary or counting object that must stay crisp and recognizable at small repeated sizes; SVG remains appropriate.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation when used as vocabulary; otherwise unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:fed6b6600180e86f583121cd1ec85647959e4787c08e670d074a30c3f12fb019",
+      "afterHash": null
+    },
+    {
+      "id": "objet-caillou",
+      "kind": "object",
+      "pedagogicalRole": "Un caillou",
+      "currentFile": "public/media/objects/objet-caillou.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-math-01",
+          "activityId": "m3-math-01-a1",
+          "activityTitle": "Je compte les objets",
+          "activityType": "counting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-02",
+          "activityId": "m3-math-02-a1",
+          "activityTitle": "Qui en a le plus ?",
+          "activityType": "manipulation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-04",
+          "activityId": "m3-math-04-a2",
+          "activityTitle": "Le tas de dix",
+          "activityType": "manipulation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-05",
+          "activityId": "m3-math-05-a1",
+          "activityTitle": "Je range puis je compte",
+          "activityType": "counting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-07",
+          "activityId": "m3-math-07-a1",
+          "activityTitle": "Je déplace pour ne pas me tromper",
+          "activityType": "manipulation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-09",
+          "activityId": "m3-math-09-a1",
+          "activityTitle": "Le jeu du combien",
+          "activityType": "counting",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-10",
+          "activityId": "m3-math-10-a2",
+          "activityTitle": "Douze cailloux",
+          "activityType": "manipulation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-11",
+          "activityId": "m3-math-11-a1",
+          "activityTitle": "La main qui cache",
+          "activityType": "manipulation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-12",
+          "activityId": "m3-math-12-a1",
+          "activityTitle": "Six en deux tas",
+          "activityType": "manipulation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-17",
+          "activityId": "m3-math-17-a1",
+          "activityTitle": "Il en manque combien ?",
+          "activityType": "manipulation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-19",
+          "activityId": "m3-math-19-a2",
+          "activityTitle": "Le tas de vingt",
+          "activityType": "manipulation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-20",
+          "activityId": "m3-math-20-a1",
+          "activityTitle": "J’en ai enlevé",
+          "activityType": "manipulation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-math-22",
+          "activityId": "m3-math-22-a1",
+          "activityTitle": "Le grand jeu du comptage",
+          "activityType": "counting",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a simple isolated vocabulary or counting object that must stay crisp and recognizable at small repeated sizes; SVG remains appropriate.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:2fdff74f58b431b31c5d0afbe660e80121c2af196cbfe28ca7ca68ec940632f9",
+      "afterHash": null
+    },
+    {
+      "id": "corps-main",
+      "kind": "object",
+      "pedagogicalRole": "Une main d’enfant ouverte, la paume visible et les cinq doigts écartés",
+      "currentFile": "public/media/objects/corps-main.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m1-lang-11",
+          "activityId": "m1-lang-11-a2",
+          "activityTitle": "Les mots de mon corps",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-18",
+          "activityId": "m1-lang-18-a2",
+          "activityTitle": "Les quatre mots de mon corps",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-22",
+          "activityId": "m1-lang-22-a2",
+          "activityTitle": "Tous les mots du mois",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-world-02",
+          "activityId": "m1-world-02-a1",
+          "activityTitle": "Ma main, mon pied",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-world-20",
+          "activityId": "m1-world-20-a1",
+          "activityTitle": "Tout mon corps",
+          "activityType": "observation",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "A human body reference needs warmth and anatomical clarity; the current icon-like construction is visually weak at child-view scale.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation in vocabulary uses",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 5,
+        "lessonIds": ["m1-lang-11", "m1-lang-18", "m1-lang-22", "m1-world-02", "m1-world-20"]
+      },
+      "beforeHash": "sha256:abd0221e19a602427a98a7d1bae8ab17aa46e8f67bc24c849f6fa90e3b600923",
+      "afterHash": "sha256:b4322808c67f02dae6513d5be4af3370131cef5d88c134655346f71f528c9865",
+      "proposedFile": "public/media/objects/corps-main.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/corps-main.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 1946,
+      "deliveryFiles": [
+        {
+          "file": "public/media/objects/corps-main.webp",
+          "bytes": 39154
+        }
+      ],
+      "currentDecision": "owner-accepted; independent-review-accepted"
+    },
+    {
+      "id": "corps-pied",
+      "kind": "object",
+      "pedagogicalRole": "Un pied nu d’enfant, vu de dessus et légèrement de côté, avec ses cinq orteils",
+      "currentFile": "public/media/objects/corps-pied.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m1-lang-11",
+          "activityId": "m1-lang-11-a2",
+          "activityTitle": "Les mots de mon corps",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-18",
+          "activityId": "m1-lang-18-a2",
+          "activityTitle": "Les quatre mots de mon corps",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-world-02",
+          "activityId": "m1-world-02-a1",
+          "activityTitle": "Ma main, mon pied",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-world-20",
+          "activityId": "m1-world-20-a1",
+          "activityTitle": "Tout mon corps",
+          "activityType": "observation",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "A human body reference needs warmth and anatomical clarity; the current icon-like construction is visually weak at child-view scale.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation in vocabulary uses",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 4,
+        "lessonIds": ["m1-lang-11", "m1-lang-18", "m1-world-02", "m1-world-20"]
+      },
+      "beforeHash": "sha256:fa04bffa3bc7b0e251eec950229ed93c4b7af12572be9ea9f099183dd49ade90",
+      "afterHash": "sha256:2d2e0162e6c31797194a8dcd0a9246ebc541c559e5749eb26d371ff6c9ba01d5",
+      "proposedFile": "public/media/objects/corps-pied.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/corps-pied.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 1065,
+      "deliveryFiles": [
+        {
+          "file": "public/media/objects/corps-pied.webp",
+          "bytes": 38912
+        }
+      ],
+      "currentDecision": "owner-accepted; independent-review-accepted"
+    },
+    {
+      "id": "corps-tete",
+      "kind": "object",
+      "pedagogicalRole": "La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire",
+      "currentFile": "public/media/objects/corps-tete.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m1-lang-13",
+          "activityId": "m1-lang-13-a2",
+          "activityTitle": "Les mots de mon corps",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-18",
+          "activityId": "m1-lang-18-a2",
+          "activityTitle": "Les quatre mots de mon corps",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-22",
+          "activityId": "m1-lang-22-a2",
+          "activityTitle": "Tous les mots du mois",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-world-08",
+          "activityId": "m1-world-08-a1",
+          "activityTitle": "Ma tête, mon ventre",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-world-20",
+          "activityId": "m1-world-20-a1",
+          "activityTitle": "Tout mon corps",
+          "activityType": "observation",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "A human body reference needs warmth and anatomical clarity; the current icon-like construction is visually weak at child-view scale.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation in vocabulary uses",
+      "implementationState": "integrated-local-pilot",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 5,
+        "lessonIds": ["m1-lang-13", "m1-lang-18", "m1-lang-22", "m1-world-08", "m1-world-20"]
+      },
+      "beforeHash": "sha256:2aa04c3b557d1b0e3a7be2a20772c84cc81134f8ef9d78d2089b4e3e4759af39",
+      "afterHash": "sha256:ea479dea64fd092a84c9e7443791b939d36a821a27c9fd72de3b74770412e18f",
+      "proposedFile": "public/media/objects/corps-tete.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-benchmark-masters/corps-tete-master.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 1106,
+      "deliveryFiles": [
+        {
+          "file": "public/media/objects/corps-tete.webp",
+          "bytes": 173750
+        }
+      ],
+      "currentDecision": "owner-accepted; independent-review-accepted"
+    },
+    {
+      "id": "corps-ventre",
+      "kind": "object",
+      "pedagogicalRole": "Le ventre d’un enfant, une main posée dessus",
+      "currentFile": "public/media/objects/corps-ventre.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m1-lang-13",
+          "activityId": "m1-lang-13-a2",
+          "activityTitle": "Les mots de mon corps",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-18",
+          "activityId": "m1-lang-18-a2",
+          "activityTitle": "Les quatre mots de mon corps",
+          "activityType": "vocabulary",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-world-08",
+          "activityId": "m1-world-08-a1",
+          "activityTitle": "Ma tête, mon ventre",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-world-20",
+          "activityId": "m1-world-20-a1",
+          "activityTitle": "Tout mon corps",
+          "activityType": "observation",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "A human body reference needs warmth and anatomical clarity; the current icon-like construction is visually weak at child-view scale.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation in vocabulary uses",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 4,
+        "lessonIds": ["m1-lang-13", "m1-lang-18", "m1-world-08", "m1-world-20"]
+      },
+      "beforeHash": "sha256:25ad16ad5bda8d062870553846d666fc7cfca91155eb85beee1bde7700105f80",
+      "afterHash": "sha256:17ca288c56571be307dfa51555f2ebb8398ec3727278d538018fa444f4ed810a",
+      "proposedFile": "public/media/objects/corps-ventre.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/corps-ventre.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 1467,
+      "deliveryFiles": [
+        {
+          "file": "public/media/objects/corps-ventre.webp",
+          "bytes": 98932
+        }
+      ],
+      "currentDecision": "owner-accepted; independent-review-accepted"
+    },
+    {
+      "id": "animal-poule",
+      "kind": "animal",
+      "pedagogicalRole": "Une poule blanche avec une crête rouge, une aile repliée et des pattes bien visibles",
+      "currentFile": "public/media/animals/animal-poule.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-03",
+          "activityId": "m3-lang-03-a2",
+          "activityTitle": "L’histoire de Kumu",
+          "activityType": "listening-story",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-world-02",
+          "activityId": "m3-world-02-a1",
+          "activityTitle": "Les parties de l’animal",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-world-05",
+          "activityId": "m3-world-05-a1",
+          "activityTitle": "Pareil ou différent ?",
+          "activityType": "observation",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "An expressive animal character benefits from natural form, texture, and a stable identity across vocabulary and story scenes.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation in vocabulary uses; otherwise unnecessary",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 3,
+        "lessonIds": ["m3-lang-03", "m3-world-02", "m3-world-05"]
+      },
+      "beforeHash": "sha256:47dd2c1a16e9942332ad42865e4e922ff50b83469902f2399bca7723fa602408",
+      "afterHash": "sha256:d3007f43b420295f98986733e47ba7104aef900e4573acfb5ff7ec3bbd6e716c",
+      "proposedFile": "public/media/animals/animal-poule.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/animal-poule.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2025,
+      "deliveryFiles": [
+        {
+          "file": "public/media/animals/animal-poule.webp",
+          "bytes": 100128
+        }
+      ],
+      "currentDecision": "owner-accepted; independent-review-accepted"
+    },
+    {
+      "id": "animal-poussin",
+      "kind": "animal",
+      "pedagogicalRole": "Un jeune poussin jaune, duveteux, avec une petite aile et deux pattes fines",
+      "currentFile": "public/media/animals/animal-poussin.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-03",
+          "activityId": "m3-lang-03-a2",
+          "activityTitle": "L’histoire de Kumu",
+          "activityType": "listening-story",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-world-05",
+          "activityId": "m3-world-05-a1",
+          "activityTitle": "Pareil ou différent ?",
+          "activityType": "observation",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "An expressive animal character benefits from natural form, texture, and a stable identity across vocabulary and story scenes.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation in vocabulary uses; otherwise unnecessary",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 2,
+        "lessonIds": ["m3-lang-03", "m3-world-05"]
+      },
+      "beforeHash": "sha256:1200d55d4d710dba9341c0194289d79485c7aad667b6e8cfe89f0d17b10ae06e",
+      "afterHash": "sha256:7f1210316653dd49e3e4efb9c0df31869e3731a1f41a487d6a26de4253001eea",
+      "proposedFile": "public/media/animals/animal-poussin.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/animal-poussin.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 1553,
+      "deliveryFiles": [
+        {
+          "file": "public/media/animals/animal-poussin.webp",
+          "bytes": 64094
+        }
+      ],
+      "currentDecision": "owner-accepted; independent-review-accepted"
+    },
+    {
+      "id": "animal-chevre",
+      "kind": "animal",
+      "pedagogicalRole": "Une jeune chèvre blanche, avec ses cornes, sa barbichette et une oreille noire",
+      "currentFile": "public/media/animals/animal-chevre.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-09",
+          "activityId": "m3-lang-09-a2",
+          "activityTitle": "Comment se sent Bibi ?",
+          "activityType": "listening-story",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-world-02",
+          "activityId": "m3-world-02-a1",
+          "activityTitle": "Les parties de l’animal",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-world-05",
+          "activityId": "m3-world-05-a1",
+          "activityTitle": "Pareil ou différent ?",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-world-06",
+          "activityId": "m3-world-06-a2",
+          "activityTitle": "Je regarde et je raconte",
+          "activityType": "observation",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "An expressive animal character benefits from natural form, texture, and a stable identity across vocabulary and story scenes.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "important for pronunciation in vocabulary uses; otherwise unnecessary",
+      "implementationState": "integrated-local-pilot",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 4,
+        "lessonIds": ["m3-lang-09", "m3-world-02", "m3-world-05", "m3-world-06"]
+      },
+      "beforeHash": "sha256:62993dc9a45ae5703a0b64e2ee9a36f57520a58be73cecc3ef2044c59dc68477",
+      "afterHash": "sha256:9af0f57f755f83a20648cfcffd3f61d05c128a44bb6df50522f0c75c9821fab1",
+      "proposedFile": "public/media/animals/animal-chevre.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-benchmark-masters/bibi-character-master.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2120,
+      "deliveryFiles": [
+        {
+          "file": "public/media/animals/animal-chevre.webp",
+          "bytes": 109692
+        }
+      ],
+      "currentDecision": "owner-accepted; independent-review-accepted"
+    },
+    {
+      "id": "forme-maison-composee",
+      "kind": "illustration",
+      "pedagogicalRole": "Une maison composée d’un carré pour le mur et d’un triangle pour le toit, avec un disque pour le soleil",
+      "currentFile": "public/media/illustrations/forme-maison-composee.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-math-18",
+          "activityId": "m3-math-18-a2",
+          "activityTitle": "Je dessine avec des formes",
+          "activityType": "drawing",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a schematic instructional model whose exact geometry, count, or construction is the pedagogical content; the accepted SVG is clear and has no demonstrated defect.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:5183c91aca97b925a3618a8db130fed3c6f465b7fde1c9828392ed15e82ca02a",
+      "afterHash": null
+    },
+    {
+      "id": "histoire-seau-lisa",
+      "kind": "illustration",
+      "pedagogicalRole": "Lisa, en robe rouge, prend son seau bleu posé sur une chaise pendant que sa maman le lui montre",
+      "currentFile": "public/media/illustrations/histoire-seau-lisa.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m1-lang-03",
+          "activityId": "m1-lang-03-a2",
+          "activityTitle": "Le seau de Lisa",
+          "activityType": "listening-story",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-06",
+          "activityId": "m1-lang-06-a3",
+          "activityTitle": "Le petit seau",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-07",
+          "activityId": "m1-lang-07-a2",
+          "activityTitle": "Qui est-ce ?",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-08",
+          "activityId": "m1-lang-08-a3",
+          "activityTitle": "Le petit seau",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-14",
+          "activityId": "m1-lang-14-a3",
+          "activityTitle": "Le petit seau",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-15",
+          "activityId": "m1-lang-15-a2",
+          "activityTitle": "Le seau de Lisa",
+          "activityType": "listening-story",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-17",
+          "activityId": "m1-lang-17-a2",
+          "activityTitle": "Qui est-ce ?",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-18",
+          "activityId": "m1-lang-18-a3",
+          "activityTitle": "Le petit seau",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "The current single schematic SVG cannot carry the character, action, emotion, and narrative progression required by the approved story.",
+      "presentation": "3-image sequence aligned to existing story pages",
+      "animationValue": "page transition only; no movement inside the image",
+      "audioUsefulness": "optional human narration",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 8,
+        "lessonIds": [
+          "m1-lang-03",
+          "m1-lang-06",
+          "m1-lang-07",
+          "m1-lang-08",
+          "m1-lang-14",
+          "m1-lang-15",
+          "m1-lang-17",
+          "m1-lang-18"
+        ]
+      },
+      "beforeHash": "sha256:61b3f228a5b7c344e3bb919832e67d15a2bd3a8f93583a4b964a61d0070746a8",
+      "afterHash": "sha256:42b9840e6bde3fe7010e158037b85de701c8cf4998d2a4f2168d615f639f5d1c",
+      "proposedFile": "public/media/illustrations/histoire-seau-lisa-02.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 3204,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-seau-lisa-01.webp",
+          "bytes": 238978
+        },
+        {
+          "file": "public/media/illustrations/histoire-seau-lisa-02.webp",
+          "bytes": 298688
+        },
+        {
+          "file": "public/media/illustrations/histoire-seau-lisa-03.webp",
+          "bytes": 296364
+        }
+      ],
+      "currentDecision": "independent-review-accepted; lapsed-only-approval-restored"
+    },
+    {
+      "id": "histoire-tika",
+      "kind": "illustration",
+      "pedagogicalRole": "Le matin, Tika boit dans une tasse devant son bol ; des cubes et un ballon attendent près de lui pour jouer",
+      "currentFile": "public/media/illustrations/histoire-tika.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m1-lang-09",
+          "activityId": "m1-lang-09-a2",
+          "activityTitle": "Tika se lève",
+          "activityType": "listening-story",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-21",
+          "activityId": "m1-lang-21-a2",
+          "activityTitle": "Tika se lève",
+          "activityType": "listening-story",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "The current single schematic SVG cannot carry the character, action, emotion, and narrative progression required by the approved story.",
+      "presentation": "2-image sequence aligned to existing story pages",
+      "animationValue": "page transition only; no movement inside the image",
+      "audioUsefulness": "optional human narration",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 2,
+        "lessonIds": ["m1-lang-09", "m1-lang-21"]
+      },
+      "beforeHash": "sha256:c011c87cf0b38ea454a47932c505ca2e2e6e4ef773ad33e75a1762956853369e",
+      "afterHash": "sha256:b5df0ae7a10553a2c6bb3a8aa3dfea46da3006f185d843be0865049799572e9e",
+      "proposedFile": "public/media/illustrations/histoire-tika-01.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2720,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-tika-01.webp",
+          "bytes": 259586
+        },
+        {
+          "file": "public/media/illustrations/histoire-tika-02.webp",
+          "bytes": 205194
+        }
+      ],
+      "currentDecision": "independent-review-accepted; lapsed-only-approval-restored"
+    },
+    {
+      "id": "histoire-kumu",
+      "kind": "illustration",
+      "pedagogicalRole": "Kumu, petit poussin jaune, sort seul du poulailler ouvert tandis que sa maman poule reste derrière lui",
+      "currentFile": "public/media/illustrations/histoire-kumu.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-03",
+          "activityId": "m3-lang-03-a2",
+          "activityTitle": "L’histoire de Kumu",
+          "activityType": "listening-story",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-04",
+          "activityId": "m3-lang-04-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-09",
+          "activityId": "m3-lang-09-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-17",
+          "activityId": "m3-lang-17-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "The current single schematic SVG cannot carry the character, action, emotion, and narrative progression required by the approved story.",
+      "presentation": "4-image sequence aligned to existing story pages",
+      "animationValue": "page transition only; no movement inside the image",
+      "audioUsefulness": "optional human narration",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 4,
+        "lessonIds": ["m3-lang-03", "m3-lang-04", "m3-lang-09", "m3-lang-17"]
+      },
+      "beforeHash": "sha256:c5158e03e9af9a70cf733c12e6f9682c1abacc99030e84128e3d50233e083f77",
+      "afterHash": "sha256:027ee3b6119faf82c9b58d974846b73e5531b71d5309516b0d8446715f9542be",
+      "proposedFile": "public/media/illustrations/histoire-kumu-01.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/histoire-kumu/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2163,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-kumu-01.webp",
+          "bytes": 228070
+        },
+        {
+          "file": "public/media/illustrations/histoire-kumu-02.webp",
+          "bytes": 226634
+        },
+        {
+          "file": "public/media/illustrations/histoire-kumu-03.webp",
+          "bytes": 220702
+        },
+        {
+          "file": "public/media/illustrations/histoire-kumu-04.webp",
+          "bytes": 265564
+        }
+      ],
+      "currentDecision": "independent-review-accepted; lapsed-only-approval-restored"
+    },
+    {
+      "id": "histoire-nsimba",
+      "kind": "illustration",
+      "pedagogicalRole": "Sur le chemin de l’école, Nsimba serre la main de son adulte et avance avec une expression inquiète",
+      "currentFile": "public/media/illustrations/histoire-nsimba.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-01",
+          "activityId": "m3-lang-01-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-10",
+          "activityId": "m3-lang-10-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-15",
+          "activityId": "m3-lang-15-a2",
+          "activityTitle": "Nsimba a peur, puis ça va mieux",
+          "activityType": "listening-story",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-15",
+          "activityId": "m3-lang-15-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "The current single schematic SVG cannot carry the character, action, emotion, and narrative progression required by the approved story.",
+      "presentation": "5-image sequence aligned to existing story pages",
+      "animationValue": "page transition only; no movement inside the image",
+      "audioUsefulness": "optional human narration",
+      "implementationState": "integrated-local-pilot",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 3,
+        "lessonIds": ["m3-lang-01", "m3-lang-10", "m3-lang-15"]
+      },
+      "beforeHash": "sha256:4b4ab397cf3e41a88837778c3e6cf3eaf7fda336103040c1ddc4b1475cbeadab",
+      "afterHash": "sha256:9b6176698ba526e07710e1764881383293419b18f2a3f7cad83cdf4fb70d4a55",
+      "proposedFile": "public/media/illustrations/histoire-nsimba-00.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-pilot-masters/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2925,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-nsimba-00.webp",
+          "bytes": 265206
+        },
+        {
+          "file": "public/media/illustrations/histoire-nsimba-01.webp",
+          "bytes": 254756
+        },
+        {
+          "file": "public/media/illustrations/histoire-nsimba-02.webp",
+          "bytes": 134398
+        },
+        {
+          "file": "public/media/illustrations/histoire-nsimba-03.webp",
+          "bytes": 174514
+        },
+        {
+          "file": "public/media/illustrations/histoire-nsimba-04.webp",
+          "bytes": 185784
+        }
+      ],
+      "currentDecision": "owner-accepted; independent-review-accepted"
+    },
+    {
+      "id": "histoire-mangue",
+      "kind": "illustration",
+      "pedagogicalRole": "Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main",
+      "currentFile": "public/media/illustrations/histoire-mangue.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-02",
+          "activityId": "m3-lang-02-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-11",
+          "activityId": "m3-lang-11-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-22",
+          "activityId": "m3-lang-22-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "The current single schematic SVG cannot carry the character, action, emotion, and narrative progression required by the approved story.",
+      "presentation": "3-image sequence aligned to existing story pages",
+      "animationValue": "page transition only; no movement inside the image",
+      "audioUsefulness": "optional human narration",
+      "implementationState": "integrated-local-pilot",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 3,
+        "lessonIds": ["m3-lang-02", "m3-lang-11", "m3-lang-22"]
+      },
+      "beforeHash": "sha256:0c002c3d3fe6c146ab56eeffe8386c93cf6ac215d8c822faf11219f96c049c4c",
+      "afterHash": "sha256:bbc2f54f554ab59614cf55ab6513d103b54f3d6c44b632391c1f3c79472a8c67",
+      "proposedFile": "public/media/illustrations/histoire-mangue-03.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-pilot-masters/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2162,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-mangue-01.webp",
+          "bytes": 221788
+        },
+        {
+          "file": "public/media/illustrations/histoire-mangue-02.webp",
+          "bytes": 201520
+        },
+        {
+          "file": "public/media/illustrations/histoire-mangue-03.webp",
+          "bytes": 188624
+        }
+      ],
+      "currentDecision": "owner-accepted; independent-review-accepted"
+    },
+    {
+      "id": "histoire-bibi",
+      "kind": "illustration",
+      "pedagogicalRole": "Bibi, petite chèvre blanche avec une oreille noire, pousse la barrière du jardin et entre parmi les légumes",
+      "currentFile": "public/media/illustrations/histoire-bibi.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-05",
+          "activityId": "m3-lang-05-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-09",
+          "activityId": "m3-lang-09-a2",
+          "activityTitle": "Comment se sent Bibi ?",
+          "activityType": "listening-story",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-13",
+          "activityId": "m3-lang-13-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "The current single schematic SVG cannot carry the character, action, emotion, and narrative progression required by the approved story.",
+      "presentation": "4-image sequence aligned to existing story pages",
+      "animationValue": "page transition only; no movement inside the image",
+      "audioUsefulness": "optional human narration",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 3,
+        "lessonIds": ["m3-lang-05", "m3-lang-09", "m3-lang-13"]
+      },
+      "beforeHash": "sha256:115a43f2d89d096ea5dbfd1e3679633656487a36e3a61eb3f8c5615f6a29c87d",
+      "afterHash": "sha256:1e15939369feba99abb39e6b32d2d5b745638601d7e578935479f468066e48e4",
+      "proposedFile": "public/media/illustrations/histoire-bibi-01.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/histoire-bibi/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 3885,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-bibi-01.webp",
+          "bytes": 363462
+        },
+        {
+          "file": "public/media/illustrations/histoire-bibi-02.webp",
+          "bytes": 351624
+        },
+        {
+          "file": "public/media/illustrations/histoire-bibi-03.webp",
+          "bytes": 357738
+        },
+        {
+          "file": "public/media/illustrations/histoire-bibi-04.webp",
+          "bytes": 416538
+        }
+      ],
+      "currentDecision": "independent-review-accepted; lapsed-only-approval-restored"
+    },
+    {
+      "id": "histoire-marche",
+      "kind": "illustration",
+      "pedagogicalRole": "Mama Lelo et Ama arrivent ensemble au marché parmi les tomates, les feuilles vertes et les bananes",
+      "currentFile": "public/media/illustrations/histoire-marche.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-06",
+          "activityId": "m3-lang-06-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-12",
+          "activityId": "m3-lang-12-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-19",
+          "activityId": "m3-lang-19-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "The current single schematic SVG cannot carry the character, action, emotion, and narrative progression required by the approved story.",
+      "presentation": "4-image sequence aligned to existing story pages",
+      "animationValue": "page transition only; no movement inside the image",
+      "audioUsefulness": "optional human narration",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 3,
+        "lessonIds": ["m3-lang-06", "m3-lang-12", "m3-lang-19"]
+      },
+      "beforeHash": "sha256:7fbfdbccf8ea912ea13ca0e875eb4e0a61bda43ec7f9b29c10a48135d4caef6e",
+      "afterHash": "sha256:4188ac69de8d39f7d742ea5f257cc888067217c28f53816d8afbccd446dbcb75",
+      "proposedFile": "public/media/illustrations/histoire-marche-01.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/histoire-marche/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 1786,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-marche-01.webp",
+          "bytes": 347386
+        },
+        {
+          "file": "public/media/illustrations/histoire-marche-02.webp",
+          "bytes": 308602
+        },
+        {
+          "file": "public/media/illustrations/histoire-marche-03.webp",
+          "bytes": 345806
+        },
+        {
+          "file": "public/media/illustrations/histoire-marche-04.webp",
+          "bytes": 326694
+        }
+      ],
+      "currentDecision": "independent-review-accepted; lapsed-only-approval-restored"
+    },
+    {
+      "id": "histoire-pluie",
+      "kind": "illustration",
+      "pedagogicalRole": "Tito ferme les yeux et écoute à l’abri pendant que la pluie frappe le toit",
+      "currentFile": "public/media/illustrations/histoire-pluie.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m1-lang-09",
+          "activityId": "m1-lang-09-a3",
+          "activityTitle": "La pluie tombe",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-10",
+          "activityId": "m1-lang-10-a3",
+          "activityTitle": "La pluie tombe",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-15",
+          "activityId": "m1-lang-15-a3",
+          "activityTitle": "La pluie tombe",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-20",
+          "activityId": "m1-lang-20-a3",
+          "activityTitle": "La pluie tombe",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-art-04",
+          "activityId": "m3-art-04-a1",
+          "activityTitle": "Le bruit de la pluie",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-03",
+          "activityId": "m3-lang-03-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-21",
+          "activityId": "m3-lang-21-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "The current single schematic SVG cannot carry the character, action, emotion, and narrative progression required by the approved story.",
+      "presentation": "4-image sequence aligned to existing story pages",
+      "animationValue": "page transition only; no movement inside the image",
+      "audioUsefulness": "optional human narration",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 7,
+        "lessonIds": [
+          "m1-lang-09",
+          "m1-lang-10",
+          "m1-lang-15",
+          "m1-lang-20",
+          "m3-art-04",
+          "m3-lang-03",
+          "m3-lang-21"
+        ]
+      },
+      "beforeHash": "sha256:3c1c57d6cc05e9c04d50e19fb044b11e3de377ec8a9d3290db7a9b0f33982561",
+      "afterHash": "sha256:27cd0ce7754ec0f3d45c278f5fcdf6ab1d124f6b921f2ffbb26d9951d3bdd703",
+      "proposedFile": "public/media/illustrations/histoire-pluie-02.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/histoire-pluie/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2414,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-pluie-01.webp",
+          "bytes": 290802
+        },
+        {
+          "file": "public/media/illustrations/histoire-pluie-02.webp",
+          "bytes": 322752
+        },
+        {
+          "file": "public/media/illustrations/histoire-pluie-03.webp",
+          "bytes": 283004
+        },
+        {
+          "file": "public/media/illustrations/histoire-pluie-04.webp",
+          "bytes": 257786
+        }
+      ],
+      "currentDecision": "independent-review-accepted; lapsed-only-approval-restored"
+    },
+    {
+      "id": "histoire-cailloux",
+      "kind": "illustration",
+      "pedagogicalRole": "Tito regarde les trois cailloux dans sa poche : un rond, un plat et un pointu.",
+      "currentFile": "public/media/illustrations/histoire-cailloux.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-08",
+          "activityId": "m3-lang-08-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-14",
+          "activityId": "m3-lang-14-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-18",
+          "activityId": "m3-lang-18-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "The current single schematic SVG cannot carry the character, action, emotion, and narrative progression required by the approved story.",
+      "presentation": "4-image sequence aligned to existing story pages",
+      "animationValue": "page transition only; no movement inside the image",
+      "audioUsefulness": "optional human narration",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 3,
+        "lessonIds": ["m3-lang-08", "m3-lang-14", "m3-lang-18"]
+      },
+      "beforeHash": "sha256:df6458f051a0cab68852cf991c1dd70e811539eae00907d517033ff66936a317",
+      "afterHash": "sha256:71061965c6d18961065baf6b1fba1ec11f21991552f3d0d720fdd73be12b2905",
+      "proposedFile": "public/media/illustrations/histoire-cailloux-01.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/histoire-cailloux/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 799,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-cailloux-01.webp",
+          "bytes": 261188
+        },
+        {
+          "file": "public/media/illustrations/histoire-cailloux-02.webp",
+          "bytes": 246446
+        },
+        {
+          "file": "public/media/illustrations/histoire-cailloux-03.webp",
+          "bytes": 226516
+        },
+        {
+          "file": "public/media/illustrations/histoire-cailloux-04.webp",
+          "bytes": 236838
+        }
+      ],
+      "currentDecision": "independent-review-accepted; lapsed-only-approval-restored"
+    },
+    {
+      "id": "histoire-malo",
+      "kind": "illustration",
+      "pedagogicalRole": "Au coucher du soleil, Malo, petit chien doré aux oreilles brunes, regarde le coq perché sur une branche basse. Ses yeux sont encore ouverts mais fatigués.",
+      "currentFile": "public/media/illustrations/histoire-malo.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-lang-07",
+          "activityId": "m3-lang-07-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-16",
+          "activityId": "m3-lang-16-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-lang-20",
+          "activityId": "m3-lang-20-a3",
+          "activityTitle": "Le temps de lecture",
+          "activityType": "read-aloud",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "The current single schematic SVG cannot carry the character, action, emotion, and narrative progression required by the approved story.",
+      "presentation": "4-image sequence aligned to existing story pages",
+      "animationValue": "page transition only; no movement inside the image",
+      "audioUsefulness": "optional human narration",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 3,
+        "lessonIds": ["m3-lang-07", "m3-lang-16", "m3-lang-20"]
+      },
+      "beforeHash": "sha256:1d24cfd5888c9272c68b8ecf5134f0070c0e11baacc855618f7cbefc3e23bf6a",
+      "afterHash": "sha256:d63aad056d6b5e81693c5806b136909f921d48fd47fa4b80e6647efe3d8cb27d",
+      "proposedFile": "public/media/illustrations/histoire-malo-01.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/histoire-malo/",
+      "sourceDimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "deliveredDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2017,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/histoire-malo-01.webp",
+          "bytes": 278596
+        },
+        {
+          "file": "public/media/illustrations/histoire-malo-02.webp",
+          "bytes": 277702
+        },
+        {
+          "file": "public/media/illustrations/histoire-malo-03.webp",
+          "bytes": 273706
+        },
+        {
+          "file": "public/media/illustrations/histoire-malo-04.webp",
+          "bytes": 243678
+        }
+      ],
+      "currentDecision": "independent-review-accepted; lapsed-only-approval-restored"
+    },
+    {
+      "id": "comptine-compter",
+      "kind": "illustration",
+      "pedagogicalRole": "Une main qui montre trois doigts",
+      "currentFile": "public/media/illustrations/comptine-compter.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-art-02",
+          "activityId": "m3-art-02-a1",
+          "activityTitle": "J’apprends la comptine",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-art-04",
+          "activityId": "m3-art-04-a1",
+          "activityTitle": "Le bruit de la pluie",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a schematic instructional model whose exact geometry, count, or construction is the pedagogical content; the accepted SVG is clear and has no demonstrated defect.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:3e5e86f06d3c23e479c45f54ecc54acebf580da5e3b4dffac7fdeb3f3cb38aa0",
+      "afterHash": null
+    },
+    {
+      "id": "comptine-bonjour",
+      "kind": "illustration",
+      "pedagogicalRole": "Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines",
+      "currentFile": "public/media/illustrations/comptine-bonjour.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m1-lang-01",
+          "activityId": "m1-lang-01-a3",
+          "activityTitle": "Bonjour, petit",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-03",
+          "activityId": "m1-lang-03-a3",
+          "activityTitle": "Bonjour, petit",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-13",
+          "activityId": "m1-lang-13-a3",
+          "activityTitle": "Bonjour, petit",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-19",
+          "activityId": "m1-lang-19-a3",
+          "activityTitle": "Bonjour, petit",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "The rhyme benefits from a warm, expressive human or animal gesture rather than assembled vector primitives.",
+      "presentation": "single image",
+      "animationValue": "existing one-time frame entrance only",
+      "audioUsefulness": "recommended human rhyme recording",
+      "implementationState": "integrated-local-pilot",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 4,
+        "lessonIds": ["m1-lang-01", "m1-lang-03", "m1-lang-13", "m1-lang-19"]
+      },
+      "beforeHash": "sha256:01ec06b85bdcb93bfa880ec53b917ed4821f179e677f50e9cfac641335ed8e35",
+      "afterHash": "sha256:2d1ad0c5d999fd8f3c3ecf446ed5ddad79bde90dc7044449d1267718a190c621",
+      "proposedFile": "public/media/illustrations/comptine-bonjour.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-benchmark-masters/comptine-bonjour-master.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 4599,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/comptine-bonjour.webp",
+          "bytes": 102856
+        }
+      ],
+      "currentDecision": "owner-accepted; independent-review-accepted"
+    },
+    {
+      "id": "comptine-mains",
+      "kind": "illustration",
+      "pedagogicalRole": "Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre",
+      "currentFile": "public/media/illustrations/comptine-mains.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m1-art-04",
+          "activityId": "m1-art-04-a1",
+          "activityTitle": "Ma comptine",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-art-07",
+          "activityId": "m1-art-07-a1",
+          "activityTitle": "Ma comptine",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-art-11",
+          "activityId": "m1-art-11-a1",
+          "activityTitle": "Ma comptine",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-art-17",
+          "activityId": "m1-art-17-a1",
+          "activityTitle": "Ma comptine",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-02",
+          "activityId": "m1-lang-02-a3",
+          "activityTitle": "Un, deux, trois, mes mains",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-04",
+          "activityId": "m1-lang-04-a3",
+          "activityTitle": "Un, deux, trois, mes mains",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-11",
+          "activityId": "m1-lang-11-a3",
+          "activityTitle": "Un, deux, trois, mes mains",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-16",
+          "activityId": "m1-lang-16-a3",
+          "activityTitle": "Un, deux, trois, mes mains",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-22",
+          "activityId": "m1-lang-22-a3",
+          "activityTitle": "Un, deux, trois, mes mains",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "The rhyme benefits from a warm, expressive human or animal gesture rather than assembled vector primitives.",
+      "presentation": "single image",
+      "animationValue": "existing one-time frame entrance only",
+      "audioUsefulness": "recommended human rhyme recording",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 9,
+        "lessonIds": [
+          "m1-art-04",
+          "m1-art-07",
+          "m1-art-11",
+          "m1-art-17",
+          "m1-lang-02",
+          "m1-lang-04",
+          "m1-lang-11",
+          "m1-lang-16",
+          "m1-lang-22"
+        ]
+      },
+      "beforeHash": "sha256:ad1e83e04b06c8cdf2d548c650b89b4c669bc92338874800ecaa4f9ac6349cc1",
+      "afterHash": "sha256:36a5f61241200ce5fae6b6be0fd1a1d58f5ba092a8e8cc99c54165bff526b5e2",
+      "proposedFile": "public/media/illustrations/comptine-mains.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/comptine-mains.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 3611,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/comptine-mains.webp",
+          "bytes": 62312
+        }
+      ],
+      "currentDecision": "independent-review-accepted; lapsed-only-approval-restored"
+    },
+    {
+      "id": "comptine-semaine",
+      "kind": "illustration",
+      "pedagogicalRole": "Sept perles sur un fil : cinq rondes, puis deux carrées",
+      "currentFile": "public/media/illustrations/comptine-semaine.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": false,
+      "usages": [],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a schematic instructional model whose exact geometry, count, or construction is the pedagogical content; the accepted SVG is clear and has no demonstrated defect.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:f47ac915ed8f6f5c56cc26231671b0ae72052848fcd318a10bdf2352a6a74ccd",
+      "afterHash": null
+    },
+    {
+      "id": "comptine-cabri",
+      "kind": "illustration",
+      "pedagogicalRole": "Un jeune cabri blanc bondit, les quatre sabots en l’air au-dessus de l’herbe",
+      "currentFile": "public/media/illustrations/comptine-cabri.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": false,
+      "usages": [],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "webp",
+      "decision": "audited-redraw",
+      "reason": "The rhyme benefits from a warm, expressive human or animal gesture rather than assembled vector primitives.",
+      "presentation": "single image",
+      "animationValue": "existing one-time frame entrance only",
+      "audioUsefulness": "recommended human rhyme recording",
+      "implementationState": "integrated-local-rollout",
+      "reviewState": "independently-reconfirmed",
+      "approvalImpact": {
+        "expected": "lapse-on-byte-or-association-change",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:3a25a1fd6eb99194a440286105466a4ba97ed730a18ae65382587b00300d0b53",
+      "afterHash": "sha256:eca0deff35ee29631052202b90e5fc68f8ff75eb1790e85c91988dc5203c26b8",
+      "proposedFile": "public/media/illustrations/comptine-cabri.webp",
+      "sourceMaster": "private/astra-visual-evidence/september-rich-media-rollout-masters/comptine-cabri.png",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "deliveredDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "compression": {
+        "format": "WebP",
+        "quality": 88,
+        "smartSubsample": true
+      },
+      "oldFileBytes": 2791,
+      "deliveryFiles": [
+        {
+          "file": "public/media/illustrations/comptine-cabri.webp",
+          "bytes": 94518
+        }
+      ],
+      "currentDecision": "independent-review-accepted; lapsed-only-approval-restored"
+    },
+    {
+      "id": "comptine-formes",
+      "kind": "illustration",
+      "pedagogicalRole": "Les quatre formes qui dansent : rond, carré, rectangle, triangle",
+      "currentFile": "public/media/illustrations/comptine-formes.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-art-05",
+          "activityId": "m3-art-05-a1",
+          "activityTitle": "Je connais ma comptine",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-art-07",
+          "activityId": "m3-art-07-a1",
+          "activityTitle": "Ma comptine préférée",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a schematic instructional model whose exact geometry, count, or construction is the pedagogical content; the accepted SVG is clear and has no demonstrated defect.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:f0aeb22e2bfaf2c3042d2457c378e2869fa73b27bbb834da779d685823664618",
+      "afterHash": null
+    },
+    {
+      "id": "plante-parties",
+      "kind": "illustration",
+      "pedagogicalRole": "Une plante avec ses feuilles, sa tige et ses racines sous la terre",
+      "currentFile": "public/media/illustrations/plante-parties.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m3-world-03",
+          "activityId": "m3-world-03-a1",
+          "activityTitle": "Les parties de la plante",
+          "activityType": "observation",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-world-06",
+          "activityId": "m3-world-06-a2",
+          "activityTitle": "Je regarde et je raconte",
+          "activityType": "observation",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a schematic instructional model whose exact geometry, count, or construction is the pedagogical content; the accepted SVG is clear and has no demonstrated defect.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:a42b3838f45e10f4102964ee5733a71493be6401eedc63ad2f767a853757e5af",
+      "afterHash": null
+    },
+    {
+      "id": "bonhomme-articule",
+      "kind": "illustration",
+      "pedagogicalRole": "Un bonhomme dessiné au crayon sur une feuille, avec les bras et les jambes pliés",
+      "currentFile": "public/media/illustrations/bonhomme-articule.svg",
+      "currentFormat": "svg",
+      "childActuallySeesIt": true,
+      "usages": [
+        {
+          "lessonId": "m1-lang-05",
+          "activityId": "m1-lang-05-a3",
+          "activityTitle": "Je marche, je m’arrête",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-07",
+          "activityId": "m1-lang-07-a3",
+          "activityTitle": "Je marche, je m’arrête",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-12",
+          "activityId": "m1-lang-12-a3",
+          "activityTitle": "Je marche, je m’arrête",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-17",
+          "activityId": "m1-lang-17-a3",
+          "activityTitle": "Je marche, je m’arrête",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m1-lang-21",
+          "activityId": "m1-lang-21-a3",
+          "activityTitle": "Je marche, je m’arrête",
+          "activityType": "song-rhyme",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-world-01",
+          "activityId": "m3-world-01-a2",
+          "activityTitle": "Je me dessine en train de bouger",
+          "activityType": "drawing",
+          "mode": "off-screen"
+        },
+        {
+          "lessonId": "m3-world-04",
+          "activityId": "m3-world-04-a2",
+          "activityTitle": "Le bonhomme qui plie",
+          "activityType": "drawing",
+          "mode": "off-screen"
+        }
+      ],
+      "currentVisualStatus": "unknown",
+      "selectedFinalFormat": "svg",
+      "decision": "audited-keep",
+      "reason": "This is a schematic instructional model whose exact geometry, count, or construction is the pedagogical content; the accepted SVG is clear and has no demonstrated defect.",
+      "presentation": "single image",
+      "animationValue": "none",
+      "audioUsefulness": "unnecessary",
+      "implementationState": "not-started",
+      "reviewState": "not-in-pilot",
+      "approvalImpact": {
+        "expected": "none",
+        "lessonCount": 0,
+        "lessonIds": []
+      },
+      "beforeHash": "sha256:2308800c0f13fc6c770cdfc2f19bd0ee0102da28398182001a8533882a1351ce",
+      "afterHash": null
+    }
+  ]
+}

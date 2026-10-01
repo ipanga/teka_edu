@@ -111,6 +111,17 @@ export type SessionMedia = {
   alt: string;
   /** The words a lesson uses for it, so a renderer can ask for "le carré" by name. */
   tags: readonly string[];
+  /** Intrinsic size, when the picture is not drawn square; the page reserves its box from it. */
+  width?: number;
+  height?: number;
+  /**
+   * A story told in several pictures: its frames, and for each page of the story the frame it
+   * shows. Absent on every other picture, which shows `url` wherever it is used.
+   */
+  sequence?: {
+    frames: readonly { url: string; alt: string; width: number; height: number }[];
+    pageFrames: readonly number[];
+  };
 };
 
 export type SessionActivity = {
@@ -166,9 +177,29 @@ export type SessionDay = {
 function toMedia(id: string | null): SessionMedia | null {
   if (id === null) return null;
   const asset: MediaAsset | undefined = findAsset(getReferenceData().media, id);
-  return asset === undefined
-    ? null
-    : { id: asset.id, url: mediaUrl(asset), alt: asset.alt, tags: asset.tags };
+  if (asset === undefined) return null;
+  const media: SessionMedia = {
+    id: asset.id,
+    url: mediaUrl(asset),
+    alt: asset.alt,
+    tags: asset.tags,
+  };
+  if (asset.width !== undefined && asset.height !== undefined) {
+    media.width = asset.width;
+    media.height = asset.height;
+  }
+  if (asset.sequence !== undefined) {
+    media.sequence = {
+      frames: asset.sequence.frames.map((frame) => ({
+        url: mediaUrl(frame),
+        alt: frame.alt,
+        width: frame.width,
+        height: frame.height,
+      })),
+      pageFrames: asset.sequence.pageFrames,
+    };
+  }
+  return media;
 }
 
 const toSessionAudio = (asset: AudioAsset): SessionAudio => ({
@@ -223,10 +254,8 @@ function toActivity(activity: Activity): SessionActivity {
             audio: toAudio(text.audioId),
           },
     media: activity.mediaIds.flatMap((id) => {
-      const asset: MediaAsset | undefined = findAsset(getReferenceData().media, id);
-      return asset === undefined
-        ? []
-        : [{ id: asset.id, url: mediaUrl(asset), alt: asset.alt, tags: asset.tags }];
+      const media = toMedia(id);
+      return media === null ? [] : [media];
     }),
   };
 }

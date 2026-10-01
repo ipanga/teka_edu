@@ -2,7 +2,7 @@
 
 A French-first educational web app (PWA): a **parent-led after-school reinforcement platform** for preschool children (1ère, 2ème and 3ème maternelle) — a digital répétiteur guided by the parent. The child goes to school during the day; afterwards a parent opens Teka Edu and runs a structured **30-to-45-minute** session. It follows the official French Cycle 1 curriculum and the DRC school calendar, and does not replace school.
 
-> **Status:** Phase 3D (home screen, class selection, visual design, motion, audio). The school calendar, the 398 official Cycle 1 objectives, a year-long scope and sequence and **all 22 September days for 3ème maternelle** (88 lessons, 170 activities) and **for 1ère maternelle** (88 lessons, 132 activities) exist as validated data, with 44 illustrations. The app opens on the three maternelle classes; 2ème has no lessons and says so rather than borrowing another class's content. A parent can run a session on staging: `/`, `/maternelle/3`, `/maternelle/3/seance/<day>` and `/maternelle/3/calendrier`, plus `/api/health`, `/api/calendar/<date>` and `/api/programme/<year>/<level>/<day>`. **No lesson is approved yet**: September is written and corrected but has not completed the pedagogical review gate (ADR-047). See [`PROJECT_STATUS.md`](PROJECT_STATUS.md).
+> **Status:** September is complete on `codex/september-rich-media-pilot`: 176/176 approved lessons, 302 activities, 51 assets and 20/20 independently accepted rich-media candidates. The feature branch is not merged or deployed. 1ere and 3eme have September lessons; 2eme has no authored lessons. See [`PROJECT_STATUS.md`](PROJECT_STATUS.md) and [`Codex continuation`](docs/handoff/CODEX_CONTINUATION.md).
 
 ## Documentation
 
@@ -113,3 +113,11 @@ npm run docker:smoke     # health check + graceful-stop check
 - On `develop` and `main` it runs CI, then applies Supabase migrations, deploys the Vercel container and runs smoke tests.
 - Deployment is disabled until the services are configured (see [`docs/ENVIRONMENT_SETUP.md`](docs/ENVIRONMENT_SETUP.md)).
 - Details: [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md).
+
+## Accepted Media Architecture
+
+Schematic educational content retains SVG; complex narrative art uses optimized WebP with canonical
+page mapping and all frame bytes in approval digests (ADR-048/049). Ten sequences and 31 intentional
+SVG files are preserved. Separate independent review precedes fresh-digest, lapsed-only restoration.
+Supported: phone, tablet, laptop/MacBook. Unsupported: TV/Smart TV (ADR-050).
+See [final audit](docs/media/SEPTEMBER_RICH_MEDIA_FINAL_AUDIT.json) for durable runtime hashes.

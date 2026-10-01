@@ -134,7 +134,16 @@ export function buildQaRows(data: ReferenceData, qa: FinalQa): QaRow[] {
 
 const cell = (s: string) => s.replaceAll("|", "\\|").replaceAll("\n", " ");
 
-export function buildQaTracker(data: ReferenceData, qa: FinalQa): string {
+export type RichMediaQa = {
+  assets: {
+    id: string;
+    afterHash: string | null;
+    implementationState: string;
+    reviewState: string;
+  }[];
+};
+
+export function buildQaTracker(data: ReferenceData, qa: FinalQa, richMedia?: RichMediaQa): string {
   const rows = buildQaRows(data, qa);
   const count = (p: (r: QaRow) => boolean) => rows.filter(p).length;
   const lapsedLessons = new Set(
@@ -155,6 +164,24 @@ export function buildQaTracker(data: ReferenceData, qa: FinalQa): string {
   const lines: string[] = [
     `# September visual QA — the ${rows.length} pictures`,
     "",
+    ...(richMedia
+      ? [
+          "## Current Rich-Media State",
+          "",
+          `September lessons: ${data.lessons.filter((l) => l.status === "approved").length} approved / ${data.lessons.filter((l) => l.status === "review").length} review.`,
+          `Independently reconfirmed runtime assets: ${richMedia.assets.filter((a) => a.implementationState.startsWith("integrated-local") && a.reviewState === "independently-reconfirmed" && data.media.some((m) => m.id === a.id && m.contentHash === a.afterHash)).length}.`,
+          "Current frame hashes, digest integrity and acceptance evidence are in",
+          "docs/media/SEPTEMBER_RICH_MEDIA_FINAL_AUDIT.json; continuation is in docs/work/ACTIVE_TASK.md.",
+          "Supported: phone, tablet, laptop/MacBook. TV/Smart TV unsupported.",
+          "",
+          "## Historical SVG QA Pass",
+          "",
+          "The original decisions, resume point, questions and freeze comparisons below are historical.",
+          "A replacement differs from the old SVG freeze by design; the old refinement/redraw counts",
+          "are not current pending-work counts. Current accepted WebP state is reported above.",
+          "",
+        ]
+      : []),
     "> **Generated** by `npm run visual:audit` from canonical content and the `finalQa` block of",
     "> `docs/september-illustration-state.json`. Do not edit by hand: change a decision in the state",
     "> file and regenerate. A unit test fails when this file is stale and, once frozen, when any",

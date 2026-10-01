@@ -286,3 +286,13 @@ week, merge #80.
   pre-restoration commit. The accepted package itself is kept as reviewed.
 - Data migration regenerated as `20260923192024_september_visual_upgrade`; fresh local database:
   176 approved, 0 review, 152 pgTAP PASS.
+
+## 2026-10-01 — September Rich-Media Complete
+
+Malo separately accepted without correction; frozen bytes reverified, exactly three approvals
+restored using fresh lapsed-only digests. Final repository audit: 176/176 approved, 176 distinct
+valid digests, zero stale/unexpected lapses; 173 unaffected records unchanged. 20/20 candidates
+integrated and independently accepted; all 78 runtime files tracked, canonical content and
+accepted media preserved. See docs/media/SEPTEMBER_RICH_MEDIA_FINAL_AUDIT.json and
+docs/work/ACTIVE_TASK.md for actual validation/checkpoint freshness. Historical entries preserved.
+Feature checkpoint/push only, then STOP; no new phase authorized.

@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 6 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 11 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -97,6 +97,36 @@ Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régén�
 Reconfirmation pédagogique ciblée des 27 leçons affectées par les corrections de septembre. La première passe indépendante a conclu accepted-with-modifications : 25 leçons, le changement de renderer et objet-monnaie étaient acceptés ; m1-phys-22-a1 demandait une formulation française plus claire et forme-maison-composee un mur géométriquement carré avec une planche correctement identifiée. Après vérification indépendante et correction minimale, la seconde passe a conclu accepted pour les 27 leçons, les deux médias et le changement de renderer. Objectifs, progression, durées et sécurité sont inchangés.
 
 **Suites données :** m1-phys-22-a1 dit désormais « jouer ensemble en respectant la règle ». Le mur de forme-maison-composee mesure 82 × 82 unités et la planche porte l’identifiant canonique. Aucune autre correction demandée. Les approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
+
+### 2026-09-27 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du pilote rich-media de septembre, couvrant exactement les 18 leçons affectées et les cinq familles d’images. La première passe Claude Max / Opus 5.5 a conclu accepted-with-modifications : les quatre familles corps-tete, animal-chevre, comptine-bonjour et histoire-mangue ainsi que 15 leçons étaient acceptées ; histoire-nsimba demandait une scène propre à la page 1 et une étiquette portant le prénom de Nsimba à la page 3. Après vérification indépendante, corrections minimales et régénération du paquet, la seconde passe a conclu accepted pour les 18 leçons et les cinq familles, sans autre correction.
+
+**Suites données :** histoire-nsimba utilise désormais cinq scènes pour cinq pages : la page 1 montre Nsimba inquiet sur le chemin en tenant la main de son adulte, et la page 2 seule montre le portail et la maitresse. La page 3 montre une étiquette lisible « Nsimba » et sa description accessible la nomme. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier ni consigne n’a changé. Les approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
+
+### 2026-09-28 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 6 du déploiement rich-media de septembre, couvrant exactement la séquence histoire-bibi et trois leçons. Claude Max / Opus 5.5 a conclu accepted sans bloqueur : les 12 lignes canoniques rendent quatre pages et quatre cadres dans l’ordre ; Bibi, Mama Lelo, le jardin, la barrière, la lumière et le style restent cohérents ; l’entrée, les légumes mangés, l’intervention bienveillante et la résolution par un tas d’herbe séparé sont clairs à 256 px et adaptés à la maternelle.
+
+**Suites données :** Aucune correction demandée. Les quatre WebP finaux sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 1e15939369feba99abb39e6b32d2d5b745638601d7e578935479f468066e48e4, 7c6c8dadd01b16a11cb38bcc3df17f633581ec8ed6f1f14669f94449e1853112, b8f2d6bbbf0e3c54a8c06fc23147c233405afac65a0aa89465f8d68f268951ee et 7d39bca6f7dbd7181a1e492511ba4c632a0472bbbbc0916cb0710129a374db0e. AssetFingerprint couvre les quatre cadres, leurs descriptions et pageFrames, puis lessonDigest couvre cette empreinte complète. Aucun texte pédagogique, objectif, durée, matériel, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les trois approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
+
+### 2026-09-28 — ChatGPT GPT-5.6 Sol · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 7 du déploiement rich-media de septembre, couvrant exactement la séquence histoire-marche et trois leçons (m3-lang-06, m3-lang-12, m3-lang-19), à partir du dossier, de la planche comparative et de la consigne bornée gelés. ChatGPT GPT-5.6 Sol, relecteur externe indépendant de l’auteur des images et de la session d’implémentation, a d’abord conclu accepted-with-modifications en signalant six tomates sur le cadre 2. La session d’implémentation Claude Code a contesté ce bloqueur avec des preuves : le plateau pédagogique du cadre 2 contient exactement cinq tomates et trois oignons, en pleine résolution comme sur la vignette de 256 px. Après réinspection agrandie, ChatGPT GPT-5.6 Sol a confirmé cinq tomates et trois oignons, retiré le bloqueur et conclu accepted : les 10 lignes canoniques rendent quatre pages (3/3/3/1) associées aux cadres [0, 1, 2, 3] ; Mama Lelo, Ama, les vêtements, le panier, le marché, la cour, la lumière et le style restent cohérents ; les couleurs, le comptage et la comparaison de cinq tomates avec trois oignons, le tri et la fierté d’Ama sont clairs et adaptés à la maternelle.
+
+**Suites données :** Aucune correction : le seul bloqueur signalé provenait d’un comptage visuel erroné et a été retiré ; aucun média n’a été modifié ni régénéré. Les quatre WebP sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 4188ac69de8d39f7d742ea5f257cc888067217c28f53816d8afbccd446dbcb75, 0a674df545e61cb3868bf8be9fe54c1d220dad13dae7e33ada2a67f337c8bc39, c61a2d3efeb08b7af036d979e82ed3f1f324692e3c20f43f1c9df8b7a72bf9db et 5cb5137fb4c0a12641f185f5bd6a3f2dcedee3db556b7ca7c4615ceb423e2f00. AssetFingerprint couvre les quatre cadres, leurs descriptions et pageFrames, puis lessonDigest couvre cette empreinte complète. Aucun texte pédagogique, objectif, durée, matériel, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Le propriétaire a explicitement autorisé l’enregistrement de ce verdict externe et la restauration des trois approbations expirées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
+
+### 2026-09-30 — Codex (session indépendante) · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 8, histoire-pluie, au checkpoint gelé 45b468301af2a9dae41e182d619ee9f024d56379. Le propriétaire a relayé le verdict accepted d’une session Codex séparée : quatre cadres WebP, texte canonique et correspondance pages/cadres, continuité de Tito, progression météorologique et narrative, cadre 2 partagé avec la comptine, rendu à 256 px, descriptions accessibles, SHA-256 et captures téléphone/tablette/laptop-MacBook vérifiés. Aucune correction requise. La session de relecture n’a modifié aucun fichier, média, contenu, digest, approbation ou déploiement.
+
+**Suites données :** Aucune. Le manifeste relu reste 1ff3bd59ee4a2d6a89a8a153e98d0f2314d6faaabc64ce0045b6a9e5d037ec2b ; les 30 fichiers et les quatre cadres runtime correspondent exactement au checkpoint. Le propriétaire autorise explicitement la restauration des seules sept approbations expirées m1-lang-09, m1-lang-10, m1-lang-15, m1-lang-20, m3-lang-03, m3-lang-21 et m3-art-04, par approve-week --lapsed-only=true avec des empreintes calculées à neuf. Aucun digest antérieur ne doit être copié. TV/Smart TV reste hors périmètre.
+
+### 2026-09-30 — Codex (session indépendante) · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 9 histoire-cailloux au checkpoint gelé 6220f1e1e8f1476018759b514d86a946f78d937e, documentation d63b661f54c92177fff3ed9d16d32511fd5231e0. Le propriétaire a relayé accepted d’une session Codex séparée : quatre images réelles, correspondance canonique, silhouettes et identités des cailloux, quantités 3/2/2/3 sans révélation prématurée ni duplication, continuité de Tito avec Pluie, descriptions accessibles, rendu à 256 px, captures téléphone/tablette/laptop-MacBook et intégrité du manifeste vérifiés. Aucun défaut ni correction requis. La session indépendante n’a rien modifié.
+
+**Suites données :** Aucune. Manifeste 415bbf536f244ae90ef13a3ab3e17a4887d04ad9f33c69598e801c7258e7365c et 26 fichiers revérifiés identiques au gel ; médias runtime identiques. Le propriétaire autorise uniquement m3-lang-08, m3-lang-14 et m3-lang-18 via approve-week --lapsed-only=true avec digests calculés à neuf, jamais copiés. Les 173 autres approbations sont préservées. Téléphone/tablette/laptop-MacBook uniquement ; aucune opération de déploiement.
 
 ## Jour 10 — 2026-09-14
 
@@ -171,7 +201,13 @@ _Dire ce qu’on voit avec assez de mots pour être compris sans montrer du doig
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-nsimba` — Nsimba, un petit garçon avec son sac d’école sur le dos, devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-nsimba`
+
+  - Page 1 : Sur le chemin de l’école, Nsimba serre la main de son adulte et avance avec une expression inquiète (`public/media/illustrations/histoire-nsimba-00.webp`)
+  - Page 2 : Nsimba, son sac d’école sur le dos, tient la main de son adulte devant le portail de l’école ; la maitresse s’accroupit pour lui dire bonjour (`public/media/illustrations/histoire-nsimba-01.webp`)
+  - Page 3 : Nsimba entre dans la classe avec son sac ; la maitresse lui montre sa place et l’étiquette « Nsimba » sur la table (`public/media/illustrations/histoire-nsimba-02.webp`)
+  - Page 4 : Amina tend un crayon bleu à Nsimba, qui dessine une maison, un soleil et deux enfants (`public/media/illustrations/histoire-nsimba-03.webp`)
+  - Page 5 : Le soir, Nsimba sourit à côté de son adulte : demain, il retourne à l’école (`public/media/illustrations/histoire-nsimba-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -520,7 +556,12 @@ _Redire une histoire connue dans l’ordre, avec ses propres mots._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue entière, et trois morceaux de mangue coupés sur une assiette (`public/media/illustrations/histoire-mangue.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-mangue`
+
+  - Page 1 : Ilunga, assis sous le manguier, tient une grosse mangue dans ses deux mains (`public/media/illustrations/histoire-mangue-01.webp`)
+  - Page 2 : Ama et Tito arrivent et regardent la mangue ; Ilunga réfléchit (`public/media/illustrations/histoire-mangue-02.webp`)
+  - Page 3 : Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main (`public/media/illustrations/histoire-mangue-03.webp`)
+  - Page 4 : Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main (`public/media/illustrations/histoire-mangue-03.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -837,7 +878,12 @@ _Ranger les mots par catégories : ce qui se mange, ce qui sert à écrire, ce q
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-marche` — Un panier de marché avec des tomates, un régime de bananes et un oignon (`public/media/illustrations/histoire-marche.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-marche`
+
+  - Page 1 : Mama Lelo et Ama arrivent ensemble au marché parmi les tomates rouges, les feuilles vertes et les bananes jaunes (`public/media/illustrations/histoire-marche-01.webp`)
+  - Page 2 : Au marché, Mama Lelo et Ama comptent cinq tomates et trois oignons clairement séparés dans un plateau (`public/media/illustrations/histoire-marche-02.webp`)
+  - Page 3 : Dans la cour de la maison, Mama Lelo et Ama déposent ensemble le panier près de cinq tomates et trois oignons triés (`public/media/illustrations/histoire-marche-03.webp`)
+  - Page 4 : Mama Lelo félicite Ama, fière devant les cinq tomates et les trois oignons rangés en deux groupes (`public/media/illustrations/histoire-marche-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Enrichir son vocabulaire » (from-5) :**
 
@@ -1052,7 +1098,7 @@ _Fabriquer des sons avec son corps et des objets, et les organiser._
 - **Aide en anglais (optionnelle) :** « Make the sound of rain: soft, then loud, then nothing. »
 - **Images montrées à l'enfant (1) :**
 
-  - `histoire-pluie` — La pluie qui tombe d’un nuage sur le toit d’une maison (`public/media/illustrations/histoire-pluie.svg`)
+  - `histoire-pluie` — Tito ferme les yeux et écoute à l’abri pendant que la pluie frappe le toit (`public/media/illustrations/histoire-pluie-02.webp`)
 
 - **Objectifs travaillés :** `ART-S02-C02-O08` Créer un paysage sonore en répondant à une consigne simple avec son corps, des objets ou des instruments.
 
@@ -1175,7 +1221,12 @@ _Troisième corpus de mots : le marché, les fruits, les légumes, les quantité
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-bibi` — Bibi la chèvre, le nez dans un buisson, devant une barrière (`public/media/illustrations/histoire-bibi.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-bibi`
+
+  - Page 1 : Bibi, petite chèvre blanche avec une oreille noire, pousse la barrière du jardin et entre parmi les rangées de légumes (`public/media/illustrations/histoire-bibi-01.webp`)
+  - Page 2 : Dans le jardin, Bibi mange une feuille verte au milieu des légumes bien rangés, tandis que la barrière reste ouverte (`public/media/illustrations/histoire-bibi-02.webp`)
+  - Page 3 : Mama Lelo découvre les feuilles grignotées ; Bibi baisse la tête pendant que Mama Lelo réfléchit (`public/media/illustrations/histoire-bibi-03.webp`)
+  - Page 4 : Devant la barrière bien fermée, Mama Lelo donne un grand tas d’herbe à Bibi, qui mange son repas (`public/media/illustrations/histoire-bibi-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -1506,7 +1557,12 @@ _Frapper les syllabes de mots plus longs et compter combien il y en a._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-cailloux` — Trois cailloux différents : un rond, un plat et un pointu (`public/media/illustrations/histoire-cailloux.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-cailloux`
+
+  - Page 1 : Tito regarde les trois cailloux dans sa poche : un rond, un plat et un pointu. (`public/media/illustrations/histoire-cailloux-01.webp`)
+  - Page 2 : Deux cailloux restent sur la table, le rond et le plat. La grande sœur de Tito cache le pointu derrière son dos. (`public/media/illustrations/histoire-cailloux-02.webp`)
+  - Page 3 : Tito compte les deux cailloux sur la table et montre le plat. Le rond est là aussi ; le pointu reste caché derrière le dos de sa sœur. (`public/media/illustrations/histoire-cailloux-03.webp`)
+  - Page 4 : La sœur de Tito ouvre sa main après avoir remis le caillou pointu. Les trois cailloux, le rond, le plat et le pointu, sont de nouveau sur la table. (`public/media/illustrations/histoire-cailloux-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
