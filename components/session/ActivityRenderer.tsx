@@ -383,6 +383,8 @@ function ChooseOne({
   const [tries, setTries] = useState(0);
   const [state, setState] = useState<"idle" | "retry" | "done">("idle");
   const [revealed, setRevealed] = useState(false);
+  const childView = useContext(ChildViewContext);
+  const compactChildChoices = childView && media.length >= 5;
   const wanted = media[target]!;
   const nameOf = (item: SessionMedia) => {
     const at = media.indexOf(item);
@@ -396,7 +398,6 @@ function ChooseOne({
    * comparison is on what the picture *is* — its first tag — and falls back to the id when a
    * picture has no tags.
    */
-  const childView = useContext(ChildViewContext);
   const kindOf = (item: SessionMedia) => item.tags[0] ?? item.id;
   const isSameKind = (a: SessionMedia, b: SessionMedia) => kindOf(a) === kindOf(b);
 
@@ -426,10 +427,10 @@ function ChooseOne({
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className={`flex flex-col ${compactChildChoices ? "gap-2" : "gap-4"}`}>
       <Prompt>Trouve l’image pour « {nameOf(wanted)} ».</Prompt>
       <div
-        className={`teka-choice-grid ${childView ? "teka-choice-grid-child" : ""} ${childView && media.length >= 5 ? "teka-choice-grid-compact" : ""}`}
+        className={`teka-choice-grid ${childView ? "teka-choice-grid-child" : ""} ${compactChildChoices ? "teka-choice-grid-compact" : ""}`}
         style={
           {
             "--choice-columns": Math.min(media.length, 4),
@@ -449,7 +450,7 @@ function ChooseOne({
               className={`teka-stagger flex items-center justify-center rounded-3xl border-4 bg-stage p-3 transition ${
                 childView
                   ? media.length >= 5
-                    ? "min-h-40 sm:min-h-52 xl:min-h-56"
+                    ? "min-h-40 sm:min-h-52 xl:min-h-44"
                     : "min-h-40 sm:min-h-52 xl:min-h-72"
                   : "min-h-32 sm:min-h-40"
               } ${
@@ -848,13 +849,14 @@ function WordCards({ activity }: { activity: SessionActivity }) {
   const words = activity.vocabulary.map((entry) => entry.fr);
 
   if (playing && media.length > 1) {
+    const compactChildChoices = childView && media.length >= 5;
     return (
-      <div className="flex flex-col gap-4">
+      <div className={`flex flex-col ${compactChildChoices ? "gap-2" : "gap-4"}`}>
         <ChooseOne media={media} labels={words} />
         <button
           type="button"
           onClick={() => setPlaying(false)}
-          className="w-fit rounded-xl border-2 border-stone-300 px-4 py-2 text-base font-medium"
+          className={`w-fit rounded-xl border-2 border-stone-300 px-4 text-base font-medium ${compactChildChoices ? "py-1.5" : "py-2"}`}
         >
           Revoir les mots
         </button>
