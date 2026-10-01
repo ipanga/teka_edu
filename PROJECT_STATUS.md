@@ -7,7 +7,7 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-10-01
 Branch:     codex/september-rich-media-pilot; September rich-media complete; release not authorized
-Commit:     Final checkpoint: see docs/work/ACTIVE_TASK.md; production unchanged
+Commit:     Accepted September c796716; final docs HEAD: git log -1; production unchanged
 Updated by: Codex
 ```
 
@@ -21,6 +21,10 @@ that records past TV checks remains unchanged as an accurate record and creates 
 obligation.
 
 ## Current September continuation — 2026-10-01
+
+Accepted implementation checkpoint `c7967163dedd26fa4c69a68de5a34ccdd52ca1f1` validated/pushed/remote-verified.
+Documentation-only completion follow-up leaves validated implementation and evidence unchanged.
+Completed task archived in docs/work/archive/2026-10-september-rich-media-complete.md.
 
 All three final stories independently accepted without correction; frozen bytes reverified.
 Exactly m3-lang-07, m3-lang-16 and m3-lang-20 restored after dry-run using fresh-digest,

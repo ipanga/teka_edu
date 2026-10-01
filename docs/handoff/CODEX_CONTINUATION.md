@@ -16,6 +16,11 @@ a dependency. `CODEX_TO_CLAUDE_CODE_HANDOFF.md` is historical; preserve its evid
 
 ## Current phase and next action
 
+Accepted September implementation checkpoint: `c7967163dedd26fa4c69a68de5a34ccdd52ca1f1`, validated,
+pushed and remote-verified. The final documentation-only follow-up changes no validated bytes;
+resolve its SHA with `git log -1` and verify the clean tree and matching feature remote.
+Completed task archive: docs/work/archive/2026-10-september-rich-media-complete.md.
+
 September rich-media completion verified on 2026-10-01. The owner relayed separate independent
 acceptance of Malo without correction; the implementation session did not self-review.
 Frozen implementation 8b5a8655222e299fea90e7582906c3723b3eca79 and documentation checkpoint
