@@ -11,7 +11,7 @@ Resolve the duplicate-history conflicts between PR #86 on `develop` and the comp
 
 ## Status
 
-`in_progress`
+`awaiting_review`
 
 ## Branch
 
@@ -31,17 +31,21 @@ Accepted September reference branch `origin/codex/september-rich-media-pilot` at
 
 Controlled integration branch created from current `origin/develop`. The accepted feature branch
 remains unchanged. Merge conflicts were resolved semantically to preserve PR #86 corrections and the
-later independently accepted rich-media state. The only intentional difference from the accepted
-feature reference is the regenerated final-audit branch name.
+later independently accepted rich-media state. PR #88 is open against `develop`.
 
 Recomputed final audit on the integration branch:
 176/176 approved, zero review, 176 distinct valid digests, zero stale/unexpected lapses,
 20/20 candidates integrated and independently accepted, 78 tracked runtime media files.
 
+Final September database reconciliation is append-only:
+`20261001192741_media_asset_webp_paths.sql` permits repository-local `.webp` media paths, and
+generated migration `20261001192742_final_september_rich_media_reference.sql` reconciles final
+September reference data from `content/`. A fresh local Supabase reset and pgTAP run passed.
+
 ## Scope
 
-Conflict resolution, integration validation, comparison with both parents, integration branch push
-and PR creation into `develop`.
+Conflict resolution, integration validation, final reference-data migration, comparison with both
+parents, integration branch push and PR creation into `develop`.
 
 ## Out of Scope
 
@@ -61,14 +65,19 @@ Phone/tablet/laptop-MacBook only; TV/Smart TV unsupported (ADR-050).
 - Merged the accepted feature branch and resolved conflicts without changing accepted media bytes.
 - Removed one auto-merge duplicate registry row for `forme-maison-composee`.
 - Recomputed the final rich-media audit successfully on the integration branch.
+- Opened PR #88: https://github.com/ipanga/teka_edu/pull/88.
+- Added forward media path compatibility migration for `.webp` assets.
+- Generated final September reference-data reconciliation migration from `content/`.
+- Replayed local Supabase migrations from scratch and ran pgTAP successfully.
 
 ## In Progress
 
-Push integration branch and create the PR after validation.
+PR #88 is awaiting owner review and CI confirmation after the final migration update.
 
 ## Remaining
 
-Do not merge. Owner decision is required after PR/CI review.
+Do not merge. Owner decision is required after PR/CI review. Do not apply migrations to hosted
+DEV/PROD outside the deployment workflow.
 
 ## Validation State
 
@@ -81,19 +90,26 @@ Results below apply to the controlled integration branch.
 | typecheck          | PASS    | final acceptance and QA generator                          |
 | unit tests         | PASS    | 439/439; initial documentation syntax failure fixed        |
 | content validation | PASS    | 31 files                                                   |
-| database tests     | NOT RUN | no hosted DB mutation; migration inspected only            |
+| database tests     | PASS    | local db reset + pgTAP 152/152                             |
 | build              | PASS    | production Next build; no deployment                       |
 | E2E                | PASS    | 66 local passed; nine production checks skipped            |
 | Docker             | NOT RUN | no infrastructure operations authorized                    |
-| secret scans       | PASS    | 28 client files; three fake server sentinels absent        |
+| secret scans       | PASS    | 14 client files; three fake server sentinels absent        |
 | independent review | PASS    | separate session accepted; owner relayed, no correction    |
 | final media audit  | PASS    | 176 approvals; 20 accepted; 78 tracked files; unchanged173 |
 
 ## Database State
 
-No operations. `supabase/migrations/20260926173653_september_reconfirmation.sql` is already present
-from PR #86 and is generated/idempotent reference-data reconciliation. It was inspected but not
-applied to any hosted database. Hosted DEV/PROD unchanged.
+No hosted operations. `supabase/migrations/20260926173653_september_reconfirmation.sql` is already
+present from PR #86 and remains unchanged. The final PR #88 forward migrations are:
+
+- `supabase/migrations/20261001192741_media_asset_webp_paths.sql`: schema compatibility for
+  repository-local `.webp` media files.
+- `supabase/migrations/20261001192742_final_september_rich_media_reference.sql`: generated,
+  idempotent final September reference-data reconciliation from `content/`.
+
+Local `npm run db:reset` replayed all migrations from scratch and local `npm run db:test` passed
+152 pgTAP assertions. Hosted DEV/PROD unchanged.
 
 ## Deployment State
 
@@ -114,7 +130,7 @@ Owner decision required before merging the integration PR.
 
 ## Exact Resume Point
 
-Review the integration PR and CI. If accepted, owner authorization is still required before merge.
+Review PR #88 and CI. If accepted, owner authorization is still required before merge.
 
 ## Resume Verification
 

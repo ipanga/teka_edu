@@ -16,6 +16,17 @@ a dependency. `CODEX_TO_CLAUDE_CODE_HANDOFF.md` is historical; preserve its evid
 
 ## Current phase and next action
 
+Integration update, 2026-10-01: owner authorized the controlled integration and final September
+reference-data migration in PR #88. Work is on `codex/integrate-september-rich-media`, from
+`origin/develop` `5c8752876231bf3831173f64e996fb942104e06b`, with the accepted feature reference
+unchanged at `b4ca67cc8449ba4b5dae0ad7fd057591de2f833e`. PR #88 now contains forward-only
+migrations `20261001192741_media_asset_webp_paths.sql` and generated
+`20261001192742_final_september_rich_media_reference.sql`. The first only updates the
+`media_assets_file_check` constraint to allow repository-local `.webp` assets; the second is the
+generator output from `content/`. Local `npm run db:reset` and `npm run db:test` pass from a fresh
+replay (152 pgTAP assertions). No hosted DEV/PROD database mutation, production deploy or merge is
+authorized. Resume from `docs/work/ACTIVE_TASK.md` and PR #88 CI.
+
 Accepted September implementation checkpoint: `c7967163dedd26fa4c69a68de5a34ccdd52ca1f1`, validated,
 pushed and remote-verified. The final documentation-only follow-up changes no validated bytes;
 resolve its SHA with `git log -1` and verify the clean tree and matching feature remote.

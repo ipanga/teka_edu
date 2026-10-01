@@ -7,7 +7,7 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-10-01
 Branch:     codex/integrate-september-rich-media; controlled integration candidate
-Commit:     merge resolution pending commit; production unchanged
+Commit:     PR #88 final September migration update pending commit; production unchanged
 Updated by: Codex
 ```
 
@@ -22,15 +22,19 @@ obligation.
 
 ## Current September continuation — 2026-10-01
 
-Controlled integration is authorized and in progress on `codex/integrate-september-rich-media`,
-created from current `origin/develop` (`5c8752876231bf3831173f64e996fb942104e06b`). The accepted
-feature reference `origin/codex/september-rich-media-pilot` remains unchanged at
+Controlled integration is open as PR #88 from `codex/integrate-september-rich-media` into
+`develop`, created from `origin/develop` (`5c8752876231bf3831173f64e996fb942104e06b`). The
+accepted feature reference `origin/codex/september-rich-media-pilot` remains unchanged at
 `b4ca67cc8449ba4b5dae0ad7fd057591de2f833e`. Conflicts from PR #86's duplicate history were
 resolved to preserve both PR #86 corrections and the later accepted rich-media state. The final
 audit recomputes 176/176 approved, zero review, 176 distinct valid digests, zero stale/unexpected
 lapses, 20/20 candidates integrated and independently accepted, and 78 tracked runtime media files.
-No database, staging or production mutation has been performed; the integration PR must not be
-merged without owner authorization.
+PR #88 now adds forward-only migrations
+`20261001192741_media_asset_webp_paths.sql` and generated
+`20261001192742_final_september_rich_media_reference.sql`. Local `npm run db:reset` replays all
+migrations from scratch and local `npm run db:test` passes 152 pgTAP assertions. No hosted
+database, staging or production mutation has been performed; PR #88 must not be merged without
+owner authorization.
 
 Accepted implementation checkpoint `c7967163dedd26fa4c69a68de5a34ccdd52ca1f1` validated/pushed/remote-verified.
 Documentation-only completion follow-up leaves validated implementation and evidence unchanged.
