@@ -1,0 +1,124 @@
+{
+  "generatedOn": "2026-09-27",
+  "baselineCommit": "cbc1cf3",
+  "pilotAssetIds": [
+    "corps-tete",
+    "animal-chevre",
+    "comptine-bonjour",
+    "histoire-nsimba",
+    "histoire-mangue"
+  ],
+  "affectedLessonCount": 18,
+  "approvedCount": 18,
+  "reviewCount": 0,
+  "records": [
+    {
+      "lessonId": "m1-lang-01",
+      "status": "approved",
+      "reviewedDigest": "20befb4917a656dd",
+      "reviewRecordSha256": "05d94fc1c72c1228fc2335637526492fe5aca23e0e3f4eb2168cef9f47a788e0"
+    },
+    {
+      "lessonId": "m1-lang-03",
+      "status": "approved",
+      "reviewedDigest": "c68514189d98163a",
+      "reviewRecordSha256": "015f647e391176090faf1245f025596efd01a526e736b2eb2f0fc0fdcb1f8e67"
+    },
+    {
+      "lessonId": "m1-lang-13",
+      "status": "approved",
+      "reviewedDigest": "9b697de1c2b95969",
+      "reviewRecordSha256": "2fd9a03f5ac863083c6635b4a22949d36a0cfd75cf64a24d434eb23cd1d7e36f"
+    },
+    {
+      "lessonId": "m1-lang-18",
+      "status": "approved",
+      "reviewedDigest": "1efc334f2009787f",
+      "reviewRecordSha256": "d626e1a957058c27d9f62bb06854dae047a836597ed96e62586c0f8b3a69ecfc"
+    },
+    {
+      "lessonId": "m1-lang-19",
+      "status": "approved",
+      "reviewedDigest": "1aa4c55e69851f0a",
+      "reviewRecordSha256": "8fe36cd366e251a20ad1a4c6354db72ab398171c70288f742b0252bbd8e96790"
+    },
+    {
+      "lessonId": "m1-lang-22",
+      "status": "approved",
+      "reviewedDigest": "4aff1a3fbe38a007",
+      "reviewRecordSha256": "84204f61f0a7125f7ab4d50fa912ad0cc894be4fa37abbfbebbab78e91c5574a"
+    },
+    {
+      "lessonId": "m1-world-08",
+      "status": "approved",
+      "reviewedDigest": "bb608b509b8a3a78",
+      "reviewRecordSha256": "71f8db332c646892e8037e00bc8cac21734ff5a1329b2099be3484362dbfbef8"
+    },
+    {
+      "lessonId": "m1-world-20",
+      "status": "approved",
+      "reviewedDigest": "b43d0d6127199199",
+      "reviewRecordSha256": "8dc05b3b7d916473db5dc5c662acd41dcd2772a52ee38508c738573be20c9db8"
+    },
+    {
+      "lessonId": "m3-lang-01",
+      "status": "approved",
+      "reviewedDigest": "3908f5dc1bc27bd0",
+      "reviewRecordSha256": "e511dbf94abcc1d040dba25abdd45fc56e2ac737167eb0f62e44cceb0e1ed511"
+    },
+    {
+      "lessonId": "m3-lang-02",
+      "status": "approved",
+      "reviewedDigest": "54a62433828de743",
+      "reviewRecordSha256": "a5ce38226ca9ca5ea0e4228bba1ad13d0438228d3ad84795cf336b523cf875e2"
+    },
+    {
+      "lessonId": "m3-lang-09",
+      "status": "approved",
+      "reviewedDigest": "8c37ab2283137854",
+      "reviewRecordSha256": "49248afa699abd8ff0b6609dea709bb3d0540c76323bc2e352950fa69e62a0e9"
+    },
+    {
+      "lessonId": "m3-lang-10",
+      "status": "approved",
+      "reviewedDigest": "55a472d57c6c316d",
+      "reviewRecordSha256": "930e5d4e87d5ebe79ffb2f8cf74f41c2c4baaace2778acea3054fe287e1081bd"
+    },
+    {
+      "lessonId": "m3-lang-11",
+      "status": "approved",
+      "reviewedDigest": "120fa674c9caf1de",
+      "reviewRecordSha256": "24ff477c0ea8ed81e599ff29ac5d95b50194a25da8adc2f20798377d6bad5d8e"
+    },
+    {
+      "lessonId": "m3-lang-15",
+      "status": "approved",
+      "reviewedDigest": "130ed88e1ac28b96",
+      "reviewRecordSha256": "7811d0bd357e621e15870934672667b6cf96d2b73ff36b1891fa70ba908c8e8e"
+    },
+    {
+      "lessonId": "m3-lang-22",
+      "status": "approved",
+      "reviewedDigest": "8a5880d7766b73cf",
+      "reviewRecordSha256": "55bdc1ce7813ec0564540d1d6aad214c92fcdff7978cb401f8cbcdccd599f32b"
+    },
+    {
+      "lessonId": "m3-world-02",
+      "status": "approved",
+      "reviewedDigest": "b6cbb69ef33bbb7e",
+      "reviewRecordSha256": "b2bae28acb282eb4c5900267a541261528117c17658db283d6b6104e6b861fff"
+    },
+    {
+      "lessonId": "m3-world-05",
+      "status": "approved",
+      "reviewedDigest": "2af85159f78f91c1",
+      "reviewRecordSha256": "e29c8085032e7ed5586994156ac7e24c48fff5e8b9c7dea1abfb02adb8cfc8c1"
+    },
+    {
+      "lessonId": "m3-world-06",
+      "status": "approved",
+      "reviewedDigest": "d9454eaffc7ddf47",
+      "reviewRecordSha256": "3aadafeab3b2ada6fc97b409dc650f0d41eb362fa473adc2f29841ae62d1aa2b"
+    }
+  ]
+}

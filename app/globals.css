@@ -191,6 +191,9 @@ body {
   .teka-choice-grid-child img {
     max-width: 22rem;
   }
+  .teka-choice-grid-compact img {
+    max-width: 12rem;
+  }
   .teka-word-grid {
     display: grid;
     grid-template-columns: repeat(var(--word-columns), minmax(0, 20rem));

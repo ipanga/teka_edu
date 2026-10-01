@@ -1,0 +1,27 @@
+{
+  "candidate": "histoire-cailloux",
+  "reviewedCheckpoint": "6220f1e1e8f1476018759b514d86a946f78d937e",
+  "documentationCheckpoint": "d63b661f54c92177fff3ed9d16d32511fd5231e0",
+  "manifestSha256": "415bbf536f244ae90ef13a3ab3e17a4887d04ad9f33c69598e801c7258e7365c",
+  "reviewer": "Codex (separate independent session; model not specified)",
+  "source": "Owner relayed independent accepted verdict and explicitly authorized three restorations on 2026-09-30.",
+  "verdict": "accepted",
+  "requiredCorrections": [],
+  "verifiedReviewScope": ["four actual WebP frames", "canonical page mapping", "before/after comparison", "256 px child view", "stone identities and silhouettes", "visible counts 3/2/2/3", "Tito compatibility with accepted Pluie", "accessibility descriptions", "phone/tablet/laptop captures", "accepted Pluie evidence", "manifest hashes and byte lengths"],
+  "supportedDevices": ["phone", "tablet", "laptop/MacBook"],
+  "reviewSessionChangedFiles": false,
+  "implementationReverification": "All 26 package files and all four runtime frames match reviewed freeze; content/public/review diff empty before restoration; remote matched documentation checkpoint.",
+  "restoration": {
+    "mechanism": "scripts/approve-week.ts --lapsed-only=true, dry-run first; fresh lessonDigest",
+    "lessonIds": ["m3-lang-08", "m3-lang-14", "m3-lang-18"],
+    "weeks": [2, 3, 4],
+    "total": 176,
+    "approved": 176,
+    "review": 0,
+    "distinctValidDigests": 176,
+    "staleApprovals": 0,
+    "unexpectedLapses": 0,
+    "unaffectedApprovalRecordsUnchanged": 173,
+    "reusedOldDigests": 0
+  }
+}

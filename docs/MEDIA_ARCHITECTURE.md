@@ -1,7 +1,8 @@
 # Media
 
-What a child looks at, where it comes from, and why none of it costs anything. Decision: ADR-042
-(resolves PD-008). How it is used in a session: [`PARENT_SESSION.md`](PARENT_SESSION.md).
+What a child looks at, where it comes from, and why none of it costs anything. Decisions: ADR-042,
+ADR-049 (resolves PD-008). How it is used in a session:
+[`PARENT_SESSION.md`](PARENT_SESSION.md).
 
 ## The problem it solves
 
@@ -21,12 +22,13 @@ A digital répétiteur that asks a five-year-old to look at something has to sho
 **In the repository, as static files under `public/media/`, described by
 `content/media/registry.json`.** Nothing else.
 
-| Considered                       | Decision                                                                                                                                                                                                                                                                      |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Supabase Storage                 | **No.** It buys nothing here and costs complexity: the assets are small, static, versioned with the content they belong to, and must work offline. A bucket would add a network hop, a policy surface and a free-tier quota for no gain. Revisit only if parents ever upload. |
-| A CDN or image service           | **No.** Paid, and the Vercel build already serves `public/` from its edge.                                                                                                                                                                                                    |
-| Generated images from a paid API | **No.** Paid, non-deterministic, and unreviewable.                                                                                                                                                                                                                            |
-| SVG committed to Git             | **Yes.** A few kilobytes each, diffable, deterministic, scalable to a TV, works offline, costs nothing.                                                                                                                                                                       |
+| Considered                   | Decision                                                                                                                                                                                                                                                                      |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Supabase Storage             | **No.** It buys nothing here and costs complexity: the assets are small, static, versioned with the content they belong to, and must work offline. A bucket would add a network hop, a policy surface and a free-tier quota for no gain. Revisit only if parents ever upload. |
+| A CDN or image service       | **No.** Paid, and the Vercel build already serves `public/` from its edge.                                                                                                                                                                                                    |
+| Generated rich illustrations | **Only as reviewed source art.** They are generated outside the runtime, checked against canonical lesson facts, converted to committed WebP, hashed, and reviewed like any other changed picture. No API or credential enters the app.                                       |
+| SVG committed to Git         | **Yes for exact geometry, diagrams and simple objects.** It stays compact, deterministic and crisp.                                                                                                                                                                           |
+| WebP committed to Git        | **Yes for people, expressive animals, rhymes and contextual stories.** Intrinsic dimensions and byte hashes are mandatory.                                                                                                                                                    |
 
 Consequence: media ships **inside the release**, like the curriculum. No runtime fetch, no key,
 no quota, and a lesson cannot break because an external URL rotted.
@@ -81,6 +83,13 @@ npx tsx tools/media/build.ts     # rewrites public/media/**, then re-validate co
 
 The SVGs are committed. The generator exists for consistency and audit, exactly like
 `tools/annual-plan/build.ts`; it is not run at build time.
+
+Rich painted masters remain local review evidence. Production delivery files are optimized WebP
+under `public/media/`; the registry records their width, height and hash. The build tool preserves
+these hand-reviewed raster rows and refreshes their byte hashes and dimensions. A story may carry
+a bounded 2–6 frame sequence plus one frame index per existing text page. The sequence changes no
+story wording or pagination; validation rejects missing, unused, mismatched or wrongly sized
+frames. The renderer reserves the intrinsic aspect ratio and preloads only the next story frame.
 
 `npm run media:sheet` renders a before/after contact sheet of every picture that changed since a
 Git revision, at the three sizes the product uses (72, 128 and 256 px), with the same Chromium

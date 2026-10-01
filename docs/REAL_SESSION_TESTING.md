@@ -16,8 +16,10 @@ On your phone or tablet:
 
 Add it to your home screen if you want to find it again easily.
 
-The first screen asks which class. Tap **3ème maternelle** — it is the only one with lessons for
-now, and the other two say so rather than pretending.
+The first screen asks which class. Tap **3ème maternelle** for this procedure.
+Both 1ère and 3ème have September lessons; 2ème has no authored lessons.
+The completed rich-media feature branch is not deployed by its finalization. New staging/pilot
+testing needs owner authorization after integration; this procedure does not claim it was run.
 
 ## 2. Choose the day
 

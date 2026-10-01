@@ -19,7 +19,12 @@ import {
   deriveState,
   type VisualState,
 } from "@/lib/content/visual-audit";
-import { type FinalQa, QA_TRACKER_PATH, buildQaTracker } from "@/lib/content/visual-qa-tracker";
+import {
+  type FinalQa,
+  type RichMediaQa,
+  QA_TRACKER_PATH,
+  buildQaTracker,
+} from "@/lib/content/visual-qa-tracker";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const statePath = path.join(ROOT, VISUAL_STATE_PATH);
@@ -39,7 +44,14 @@ writeFileSync(auditPath, await pretty(auditPath, buildAuditDocument(data, nextSt
 const finalQa = (state as VisualState & { finalQa?: FinalQa }).finalQa;
 if (finalQa !== undefined) {
   const trackerPath = path.join(ROOT, QA_TRACKER_PATH);
-  writeFileSync(trackerPath, await pretty(trackerPath, buildQaTracker(data, finalQa)), "utf8");
+  const richMedia = JSON.parse(
+    readFileSync(path.join(ROOT, "docs/september-rich-media-audit.json"), "utf8"),
+  ) as RichMediaQa;
+  writeFileSync(
+    trackerPath,
+    await pretty(trackerPath, buildQaTracker(data, finalQa, richMedia)),
+    "utf8",
+  );
 }
 
 console.log(

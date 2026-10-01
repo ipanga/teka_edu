@@ -1,5 +1,12 @@
 # Teka Edu — Project Plan for Claude Code
 
+> Current execution policy (2026-09-30): Codex is the primary implementation, QA and built-in
+> ImageGen environment; Claude Code is unavailable. The historical title and dated plan below
+> are preserved. Current scope is the remaining September rich-media stories, one at a time,
+> with independent review in a fresh Codex session. SVG/WebP policy follows ADR-049; supported
+> devices are exactly phone, tablet and laptop/MacBook (ADR-050), excluding TV/Smart TV.
+> See `docs/handoff/CODEX_CONTINUATION.md` and `docs/work/ACTIVE_TASK.md` for live state.
+
 > ## Amendement — état courant et décisions qui prévalent (12 septembre 2026)
 >
 > **Ce plan reste le document d'origine du propriétaire et n'a pas été réécrit.** Les décisions
@@ -528,11 +535,11 @@ Design requirements:
 - calm visual design;
 - accessible typography;
 - sound controls;
-- full-screen lesson mode suitable for TV projection.
+- full-screen lesson mode suitable for a parent-controlled phone, tablet, or laptop/MacBook.
 
-### 10.1 TV / projection mode
+### 10.1 Supported responsive devices
 
-Implement a presentation mode:
+Support phone, tablet, and laptop/MacBook layouts:
 - fullscreen;
 - large text;
 - large images;
@@ -540,6 +547,9 @@ Implement a presentation mode:
 - previous/next activity;
 - read-aloud button;
 - no distracting navigation.
+
+TV and Smart TV are outside the supported-device scope (ADR-050). Incidental rendering at wider
+viewports does not create an acceptance or maintenance requirement.
 
 ---
 
@@ -1009,7 +1019,7 @@ Implement:
 - strong contrast;
 - large readable fonts;
 - large interaction targets;
-- keyboard operation for parent-controlled TV mode;
+- keyboard operation for parent-controlled laptop/MacBook use;
 - image alt text;
 - captions/transcripts where needed;
 - no external advertising;
@@ -1274,7 +1284,7 @@ V1 is complete when a parent can:
 9. record progress;
 10. return later and keep progress;
 11. use the app after losing Internet connection;
-12. navigate the app comfortably on a laptop and projected TV.
+12. navigate the app comfortably on a phone, tablet, and laptop/MacBook.
 
 ---
 
@@ -1300,7 +1310,7 @@ V1 is complete when a parent can:
 - child home;
 - today's lesson;
 - lesson player;
-- TV presentation mode;
+- responsive phone, tablet, and laptop/MacBook lesson mode;
 - speech synthesis.
 
 ### Phase 3 — Activity Engine

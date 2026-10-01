@@ -1,7 +1,9 @@
 "use client";
 
 import { createContext, useContext, useRef, useState } from "react";
+import { preload } from "react-dom";
 import { shownPictureIds } from "@/domain/lessons/pictures";
+import { STORY_LINES_PER_PAGE, narrativePageCount } from "@/domain/lessons/texts";
 import type { RendererFamily } from "@/domain/lessons/renderers";
 import type { SessionActivity, SessionAudio, SessionMedia } from "@/lib/programme/session-view";
 
@@ -53,20 +55,26 @@ type PictureSize = "sm" | "md" | "lg";
 const PICTURE: Record<PictureSize, { px: number; parent: string; child: string }> = {
   sm: { px: 80, parent: "max-w-20 sm:max-w-24", child: "max-w-24 sm:max-w-28 xl:max-w-36" },
   md: { px: 144, parent: "max-w-36 sm:max-w-44", child: "max-w-44 sm:max-w-52 xl:max-w-72" },
-  // On a television the story picture is what the whole room looks at: it may take the width.
+  // On a laptop/MacBook the story picture can use the available child-view width.
   lg: { px: 256, parent: "max-w-60 sm:max-w-72", child: "max-w-72 sm:max-w-96 xl:max-w-[30rem]" },
 };
 
 function Picture({ media, size = "md" }: { media: SessionMedia; size?: PictureSize }) {
   const childView = useContext(ChildViewContext);
   const { px, parent, child } = PICTURE[size];
+  // Painted art keeps its own proportions; the width and height attributes give the browser the
+  // aspect ratio before the file arrives, so nothing below the picture moves when it does.
+  const height =
+    media.width !== undefined && media.height !== undefined
+      ? Math.round((px * media.height) / media.width)
+      : px;
   return (
-    // eslint-disable-next-line @next/next/no-img-element -- SVG from public/, no optimisation needed
+    // eslint-disable-next-line @next/next/no-img-element -- SVG or WebP from public/, sized here
     <img
       src={media.url}
       alt={media.alt}
       width={px}
-      height={px}
+      height={height}
       loading="lazy"
       decoding="async"
       className={`h-auto w-full ${childView ? child : parent}`}
@@ -375,6 +383,8 @@ function ChooseOne({
   const [tries, setTries] = useState(0);
   const [state, setState] = useState<"idle" | "retry" | "done">("idle");
   const [revealed, setRevealed] = useState(false);
+  const childView = useContext(ChildViewContext);
+  const compactChildChoices = childView && media.length >= 5;
   const wanted = media[target]!;
   const nameOf = (item: SessionMedia) => {
     const at = media.indexOf(item);
@@ -388,7 +398,6 @@ function ChooseOne({
    * comparison is on what the picture *is* — its first tag — and falls back to the id when a
    * picture has no tags.
    */
-  const childView = useContext(ChildViewContext);
   const kindOf = (item: SessionMedia) => item.tags[0] ?? item.id;
   const isSameKind = (a: SessionMedia, b: SessionMedia) => kindOf(a) === kindOf(b);
 
@@ -418,10 +427,10 @@ function ChooseOne({
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className={`flex flex-col ${compactChildChoices ? "gap-2" : "gap-4"}`}>
       <Prompt>Trouve l’image pour « {nameOf(wanted)} ».</Prompt>
       <div
-        className={`teka-choice-grid ${childView ? "teka-choice-grid-child" : ""}`}
+        className={`teka-choice-grid ${childView ? "teka-choice-grid-child" : ""} ${compactChildChoices ? "teka-choice-grid-compact" : ""}`}
         style={
           {
             "--choice-columns": Math.min(media.length, 4),
@@ -439,7 +448,11 @@ function ChooseOne({
               aria-label={item.alt}
               style={{ "--i": index } as React.CSSProperties}
               className={`teka-stagger flex items-center justify-center rounded-3xl border-4 bg-stage p-3 transition ${
-                childView ? "min-h-40 sm:min-h-52 xl:min-h-72" : "min-h-32 sm:min-h-40"
+                childView
+                  ? media.length >= 5
+                    ? "min-h-40 sm:min-h-52 xl:min-h-44"
+                    : "min-h-40 sm:min-h-52 xl:min-h-72"
+                  : "min-h-32 sm:min-h-40"
               } ${
                 state === "done" && isAnswer
                   ? "teka-pop border-emerald-600"
@@ -836,13 +849,14 @@ function WordCards({ activity }: { activity: SessionActivity }) {
   const words = activity.vocabulary.map((entry) => entry.fr);
 
   if (playing && media.length > 1) {
+    const compactChildChoices = childView && media.length >= 5;
     return (
-      <div className="flex flex-col gap-4">
+      <div className={`flex flex-col ${compactChildChoices ? "gap-2" : "gap-4"}`}>
         <ChooseOne media={media} labels={words} />
         <button
           type="button"
           onClick={() => setPlaying(false)}
-          className="w-fit rounded-xl border-2 border-stone-300 px-4 py-2 text-base font-medium"
+          className={`w-fit rounded-xl border-2 border-stone-300 px-4 text-base font-medium ${compactChildChoices ? "py-1.5" : "py-2"}`}
         >
           Revoir les mots
         </button>
@@ -854,7 +868,7 @@ function WordCards({ activity }: { activity: SessionActivity }) {
     <div className="flex flex-col gap-4">
       <ul
         className={
-          // A two-word lesson on a television should not be two small cards in a corner.
+          // A two-word lesson on a laptop/MacBook should not be two small cards in a corner.
           childView ? "teka-word-grid justify-center" : "grid grid-cols-2 gap-3 sm:grid-cols-3"
         }
         aria-label="Les mots"
@@ -911,8 +925,8 @@ function Narrative({ activity }: { activity: SessionActivity }) {
   if (text === null) return null;
 
   const rhyme = text.kind === "rhyme";
-  const perPage = rhyme ? text.lines.length : 3;
-  const pages = Math.ceil(text.lines.length / perPage);
+  const perPage = rhyme ? text.lines.length : STORY_LINES_PER_PAGE;
+  const pages = narrativePageCount(text);
   const shown = text.lines.slice(page * perPage, page * perPage + perPage);
   const last = page >= pages - 1;
   // One rule for the whole product (domain/lessons/pictures.ts): a story's picture leads its
@@ -921,8 +935,23 @@ function Narrative({ activity }: { activity: SessionActivity }) {
     { type: activity.type, mediaIds: activity.media.map((m) => m.id) },
     { kind: text.kind, illustrationId: text.illustration?.id ?? null },
   );
-  const picture =
+  const lead =
     [text.illustration, ...activity.media].find((m) => m !== null && m.id === leadId) ?? null;
+  // A story told in several pictures shows, on every page, the frame the registry gives that page
+  // — with that frame's own description. Any other picture leads the first page only.
+  const sequence =
+    !rhyme && lead !== null && lead.id === text.illustration?.id ? lead.sequence : undefined;
+  const frameOf = (at: number) => sequence?.frames[sequence.pageFrames[at] ?? -1];
+  const frame = frameOf(page);
+  const picture =
+    lead !== null && frame !== undefined
+      ? { ...lead, url: frame.url, alt: frame.alt, width: frame.width, height: frame.height }
+      : page === 0
+        ? lead
+        : null;
+  // The next scene is fetched while this page is read, so turning the page shows it at once.
+  const upcoming = frameOf(page + 1);
+  if (upcoming !== undefined) preload(upcoming.url, { as: "image" });
 
   return (
     <div className="flex flex-col gap-4">
@@ -935,8 +964,8 @@ function Narrative({ activity }: { activity: SessionActivity }) {
             </span>
           )}
         </div>
-        <div className={childView && page === 0 && picture !== null ? "teka-narrative-layout" : ""}>
-          {page === 0 && picture !== null && (
+        <div className={childView && picture !== null ? "teka-narrative-layout" : ""}>
+          {picture !== null && (
             <div className="mb-5">
               <Showcase media={picture} />
             </div>

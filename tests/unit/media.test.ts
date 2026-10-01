@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 import { ACTIVITY_RENDERERS } from "@/domain/lessons/renderers";
 import {
   MEDIA_KINDS,
+  assetFiles,
   checkMedia,
   findAsset,
   mediaUrl,
@@ -12,6 +13,7 @@ import {
 import type { AudioAsset } from "@/domain/media/types";
 import type { MediaAsset } from "@/domain/media/types";
 import { getReferenceData } from "@/lib/content/reference-data";
+import { webpSize } from "@/lib/content/webp-size";
 
 const ROOT = path.resolve(import.meta.dirname, "../..");
 const data = getReferenceData();
@@ -42,14 +44,20 @@ describe("the media registry (ADR-042)", () => {
     }
   });
 
-  it("ships the file behind every id", () => {
+  it("ships the file behind every id, and every frame of a story sequence", () => {
     for (const asset of data.media) {
-      const file = path.join(ROOT, "public/media", asset.file);
-      expect(existsSync(file), `missing file for ${asset.id}: ${asset.file}`).toBe(true);
-      const svg = readFileSync(file, "utf8");
-      expect(svg.startsWith("<svg"), asset.id).toBe(true);
-      // Nothing may reach outside the release: no remote reference inside an asset either.
-      expect(svg, asset.id).not.toMatch(/https?:\/\/(?!www\.w3\.org)/);
+      for (const { file: name } of assetFiles(asset)) {
+        const file = path.join(ROOT, "public/media", name);
+        expect(existsSync(file), `missing file for ${asset.id}: ${name}`).toBe(true);
+        if (name.endsWith(".webp")) {
+          expect(webpSize(readFileSync(file)), `${asset.id}: ${name}`).not.toBeNull();
+          continue;
+        }
+        const svg = readFileSync(file, "utf8");
+        expect(svg.startsWith("<svg"), asset.id).toBe(true);
+        // Nothing may reach outside the release: no remote reference inside an asset either.
+        expect(svg, asset.id).not.toMatch(/https?:\/\/(?!www\.w3\.org)/);
+      }
     }
   });
 

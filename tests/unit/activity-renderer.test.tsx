@@ -291,6 +291,92 @@ describe("which picture leads a text", () => {
   });
 });
 
+describe("a story told in several pictures", () => {
+  const scene = (n: number, alt: string) => ({
+    url: `/media/illustrations/histoire-mangue-0${n}.webp`,
+    alt,
+    width: 1448,
+    height: 1086,
+  });
+  const mangue = {
+    id: "histoire-mangue",
+    url: "/media/illustrations/histoire-mangue-03.webp",
+    alt: "Trois enfants, un morceau chacun",
+    tags: ["mangue"],
+    width: 1448,
+    height: 1086,
+    sequence: {
+      frames: [
+        scene(1, "Ilunga tient la mangue"),
+        scene(2, "Ama et Tito regardent la mangue"),
+        scene(3, "Trois enfants, un morceau chacun"),
+      ],
+      pageFrames: [0, 1, 2, 2],
+    },
+  };
+  const story: SessionActivity = {
+    ...base,
+    id: "t-mangue",
+    title: "Le temps de lecture",
+    renderer: "audio-narrative",
+    type: "read-aloud",
+    vocabulary: [],
+    media: [],
+    payload: { textId: "la-mangue-partagee" },
+    text: {
+      title: "La mangue partagée",
+      kind: "story",
+      lines: Array.from({ length: 10 }, (_, i) => `Ligne ${i + 1}`),
+      illustration: mangue,
+      audio: null,
+    },
+  };
+  const next = () => fireEvent.click(screen.getByRole("button", { name: "Page suivante" }));
+  const shownAlt = (container: HTMLElement) =>
+    container.querySelector(".teka-stage img")?.getAttribute("alt");
+
+  it("shows on every page the frame the registry gives it, with that frame's description", () => {
+    const { container } = render(<ActivityRenderer activity={story} />);
+    expect(shownAlt(container)).toBe("Ilunga tient la mangue");
+    next();
+    expect(shownAlt(container)).toBe("Ama et Tito regardent la mangue");
+    next();
+    expect(shownAlt(container)).toBe("Trois enfants, un morceau chacun");
+    next();
+    expect(screen.getByText("4 / 4")).toBeTruthy();
+    expect(shownAlt(container)).toBe("Trois enfants, un morceau chacun");
+    expect(container.querySelectorAll(".teka-stage img")).toHaveLength(1);
+  });
+
+  it("reserves the picture's own proportions, so the text does not move when it loads", () => {
+    const { container } = render(<ActivityRenderer activity={story} />);
+    const img = container.querySelector(".teka-stage img")!;
+    expect(img.getAttribute("src")).toBe("/media/illustrations/histoire-mangue-01.webp");
+    expect(img.getAttribute("width")).toBe("256");
+    expect(img.getAttribute("height")).toBe(String(Math.round((256 * 1086) / 1448)));
+  });
+
+  it("shows the primary frame wherever the picture is used outside its story", () => {
+    render(
+      <ActivityRenderer
+        activity={{ ...base, renderer: "look-and-name", type: "observation", media: [mangue] }}
+      />,
+    );
+    const img = screen.getByAltText("Trois enfants, un morceau chacun");
+    expect(img.getAttribute("src")).toBe("/media/illustrations/histoire-mangue-03.webp");
+  });
+
+  it("keeps a single picture on the first page only, as before", () => {
+    const single = { ...mangue, sequence: undefined };
+    const { container } = render(
+      <ActivityRenderer activity={{ ...story, text: { ...story.text!, illustration: single } }} />,
+    );
+    expect(container.querySelector(".teka-stage img")).not.toBeNull();
+    next();
+    expect(container.querySelector(".teka-stage img")).toBeNull();
+  });
+});
+
 describe("counting again", () => {
   // A synthetic on-screen count: no September activity is one, but the family keeps the counter.
   const counting: SessionActivity = {

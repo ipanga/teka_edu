@@ -12,8 +12,7 @@ const sizes = [
   ["large-phone", 430, 932],
   ["tablet-portrait", 768, 1024],
   ["tablet-landscape", 1024, 768],
-  ["desktop", 1440, 900],
-  ["tv", 1920, 1080],
+  ["laptop-macbook", 1440, 900],
 ];
 const browser = await chromium.launch();
 const report = [];

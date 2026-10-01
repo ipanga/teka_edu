@@ -152,6 +152,6 @@ the child profile that does not exist yet.
 
 - Audio, images and a media registry (PD-008).
 - A child profile, so the English scaffold cannot yet be turned down as French improves.
-- TV / presentation mode.
+- TV / Smart TV support (explicitly outside the supported-device scope; ADR-050).
 - Any child-facing area separate from the parent's.
 - Offline (the PWA service worker).
