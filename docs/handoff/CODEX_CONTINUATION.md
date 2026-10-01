@@ -25,7 +25,9 @@ migrations `20261001192741_media_asset_webp_paths.sql` and generated
 `media_assets_file_check` constraint to allow repository-local `.webp` assets; the second is the
 generator output from `content/`. Local `npm run db:reset` and `npm run db:test` pass from a fresh
 replay (152 pgTAP assertions). No hosted DEV/PROD database mutation, production deploy or merge is
-authorized. Resume from `docs/work/ACTIVE_TASK.md` and PR #88 CI.
+authorized. Latest PR head `d54762d` is mergeable/clean with CI green: format/lint/typecheck/unit/
+content, build/client-bundle/E2E, Supabase migrations/database tests, and Docker images. `Promotion
+source` is skipped as expected. Resume from `docs/work/ACTIVE_TASK.md` and PR #88.
 
 Accepted September implementation checkpoint: `c7967163dedd26fa4c69a68de5a34ccdd52ca1f1`, validated,
 pushed and remote-verified. The final documentation-only follow-up changes no validated bytes;

@@ -72,7 +72,7 @@ Phone/tablet/laptop-MacBook only; TV/Smart TV unsupported (ADR-050).
 
 ## In Progress
 
-PR #88 is awaiting owner review and CI confirmation after the final migration update.
+PR #88 is awaiting owner review. CI is green on the latest pushed head.
 
 ## Remaining
 
@@ -83,20 +83,20 @@ DEV/PROD outside the deployment workflow.
 
 Results below apply to the controlled integration branch.
 
-| Check              | Result  | At                                                         |
-| ------------------ | ------- | ---------------------------------------------------------- |
-| format             | PASS    | full repository Prettier check                             |
-| lint               | PASS    | final acceptance and QA generator                          |
-| typecheck          | PASS    | final acceptance and QA generator                          |
-| unit tests         | PASS    | 439/439; initial documentation syntax failure fixed        |
-| content validation | PASS    | 31 files                                                   |
-| database tests     | PASS    | local db reset + pgTAP 152/152                             |
-| build              | PASS    | production Next build; no deployment                       |
-| E2E                | PASS    | 66 local passed; nine production checks skipped            |
-| Docker             | NOT RUN | no infrastructure operations authorized                    |
-| secret scans       | PASS    | 14 client files; three fake server sentinels absent        |
-| independent review | PASS    | separate session accepted; owner relayed, no correction    |
-| final media audit  | PASS    | 176 approvals; 20 accepted; 78 tracked files; unchanged173 |
+| Check              | Result | At                                                         |
+| ------------------ | ------ | ---------------------------------------------------------- |
+| format             | PASS   | full repository Prettier check                             |
+| lint               | PASS   | final acceptance and QA generator                          |
+| typecheck          | PASS   | final acceptance and QA generator                          |
+| unit tests         | PASS   | 439/439; initial documentation syntax failure fixed        |
+| content validation | PASS   | 31 files                                                   |
+| database tests     | PASS   | local db reset + pgTAP 152/152; CI Supabase job green      |
+| build              | PASS   | production Next build; no deployment                       |
+| E2E                | PASS   | 66 local passed; nine production checks skipped; CI green  |
+| Docker             | PASS   | CI portable + Vercel images                                |
+| secret scans       | PASS   | 14 client files; three fake server sentinels absent        |
+| independent review | PASS   | separate session accepted; owner relayed, no correction    |
+| final media audit  | PASS   | 176 approvals; 20 accepted; 78 tracked files; unchanged173 |
 
 ## Database State
 
@@ -118,7 +118,10 @@ Integration PR only; no merge or staging/production deployment. No current live 
 ## Git State
 
 Integration branch preserves the accepted feature branch history and does not rewrite
-`codex/september-rich-media-pilot`. No force-push. Merge to `develop` is not authorized here.
+`codex/september-rich-media-pilot`. Merge to `develop` is not authorized here.
+
+Latest pushed PR head: `d54762d` (`Tighten compact child choice layout`). PR #88 is mergeable and
+clean, with CI checks green except expected skipped `Promotion source`.
 
 ## Blockers
 

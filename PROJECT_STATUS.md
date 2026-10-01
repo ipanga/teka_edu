@@ -7,7 +7,7 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-10-01
 Branch:     codex/integrate-september-rich-media; controlled integration candidate
-Commit:     PR #88 final September migration update pending commit; production unchanged
+Commit:     d54762d; PR #88 green/mergeable; production unchanged
 Updated by: Codex
 ```
 
@@ -35,6 +35,10 @@ PR #88 now adds forward-only migrations
 migrations from scratch and local `npm run db:test` passes 152 pgTAP assertions. No hosted
 database, staging or production mutation has been performed; PR #88 must not be merged without
 owner authorization.
+
+Latest PR head `d54762d` is mergeable/clean. Required CI is green: format/lint/typecheck/unit/content,
+build/client-bundle/E2E, Supabase migrations/database tests, and Docker images. `Promotion source`
+is skipped as expected for a non-promotion PR.
 
 Accepted implementation checkpoint `c7967163dedd26fa4c69a68de5a34ccdd52ca1f1` validated/pushed/remote-verified.
 Documentation-only completion follow-up leaves validated implementation and evidence unchanged.
