@@ -429,7 +429,7 @@ function ChooseOne({
     <div className="flex flex-col gap-4">
       <Prompt>Trouve l’image pour « {nameOf(wanted)} ».</Prompt>
       <div
-        className={`teka-choice-grid ${childView ? "teka-choice-grid-child" : ""}`}
+        className={`teka-choice-grid ${childView ? "teka-choice-grid-child" : ""} ${childView && media.length >= 5 ? "teka-choice-grid-compact" : ""}`}
         style={
           {
             "--choice-columns": Math.min(media.length, 4),
@@ -447,7 +447,11 @@ function ChooseOne({
               aria-label={item.alt}
               style={{ "--i": index } as React.CSSProperties}
               className={`teka-stagger flex items-center justify-center rounded-3xl border-4 bg-stage p-3 transition ${
-                childView ? "min-h-40 sm:min-h-52 xl:min-h-72" : "min-h-32 sm:min-h-40"
+                childView
+                  ? media.length >= 5
+                    ? "min-h-40 sm:min-h-52 xl:min-h-56"
+                    : "min-h-40 sm:min-h-52 xl:min-h-72"
+                  : "min-h-32 sm:min-h-40"
               } ${
                 state === "done" && isAnswer
                   ? "teka-pop border-emerald-600"

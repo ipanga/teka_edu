@@ -11,7 +11,7 @@ Resolve the duplicate-history conflicts between PR #86 on `develop` and the comp
 
 ## Status
 
-`in-progress`
+`in_progress`
 
 ## Branch
 
