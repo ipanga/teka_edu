@@ -2899,8 +2899,8 @@
           "position": 2,
           "type": "conversation",
           "title": "Qui ? Où ? Que fait-il ?",
-          "childInstruction": "Fais une phrase avec qui, où, et ce qu’il fait.",
-          "adultGuidance": "Montrez une personne réelle ou imaginez Nsimba. Demandez : « Qui est là ? Où est-il ? Que fait-il ? » Puis assemblez : « Nsimba marche devant l’école. »",
+          "childInstruction": "Complète : « Quand Nsimba arrive à l’école, il… »",
+          "adultGuidance": "Imaginez Nsimba devant l’école. Donnez le modèle : « Quand Nsimba arrive à l’école, il dit bonjour. » Reprenez « Quand Nsimba arrive à l’école… » et laissez l’enfant choisir la suite. Reformulez son idée en une phrase liée, puis invitez-le à la redire. Une seule phrase suffit ; ne nommez aucune règle de grammaire.",
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
@@ -2924,7 +2924,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Make one sentence with who, where, and what happens."
+              "childInstruction": "Complete: When Nsimba arrives at school, he…"
             }
           ],
           "payload": {
@@ -2932,7 +2932,8 @@
               "Qui est là ?",
               "Où est-il ?",
               "Que fait-il ?",
-              "Maintenant, dis toute la phrase."
+              "Quand Nsimba arrive à l’école, que fait-il ?",
+              "Redis toute la phrase avec quand."
             ]
           }
         },
@@ -3013,8 +3014,8 @@
           "position": 2,
           "type": "vocabulary",
           "title": "Mon objet a des détails",
-          "childInstruction": "Choisis un objet et décris-le : il est…, il sert à…",
-          "adultGuidance": "Proposez un cahier, un seau, une marmite ou un panier. Faites nommer, décrire une qualité visible, puis dire l’usage. Donnez le modèle : « Le seau est rond. Il sert à porter l’eau. »",
+          "childInstruction": "Choisis un objet. Complète : « Je prends le… parce que… »",
+          "adultGuidance": "Proposez un cahier, un seau, une marmite ou un panier. Faites nommer l’objet et une qualité visible, puis son usage : « Il sert à… » Donnez le modèle : « Je prends le seau parce que je veux porter de l’eau. » Commencez la phrase et laissez l’enfant la compléter avec un usage qui convient. Reformulez avec parce que, sans demander une explication grammaticale.",
           "minutes": 7,
           "mode": "off-screen",
           "role": "teach",
@@ -3046,7 +3047,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Choose an object and describe it."
+              "childInstruction": "Choose an object. Complete: I take the… because…"
             }
           ],
           "payload": {
@@ -3195,7 +3196,11 @@
       "title": "J’entends ch et j",
       "summary": "L’enfant poursuit le jeu de prononciation avec ch/j dans des mots familiers.",
       "objectiveCodes": [],
-      "supportingObjectiveCodes": ["LANG-S01-C03-O04", "LANG-S02-C03-O04"],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C03-O04",
+        "LANG-S02-C03-O04"
+      ],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "octobre-je-grandis-en-francais",
@@ -3205,14 +3210,14 @@
           "id": "m3-lang-28-a1",
           "position": 1,
           "type": "phonology",
-          "title": "Je retrouve ch et s",
-          "childInstruction": "Redis : chèvre, seau. Puis dis lequel commence comme chat.",
-          "adultGuidance": "Rappelez le jeu ch/s en deux minutes. Félicitez l’écoute avant la justesse parfaite.",
+          "title": "Le rituel : date, puis ch et s",
+          "childInstruction": "Dis la date. Puis redis chèvre et seau : lequel commence comme chat ?",
+          "adultGuidance": "Dites : « Aujourd’hui, nous sommes {{date}}. » Laissez l’enfant redire la date, puis retrouvez ch/s avec chèvre, seau et chat. Gardez les deux moments dans les trois minutes ; félicitez l’écoute avant la justesse parfaite.",
           "minutes": 3,
           "mode": "off-screen",
           "role": "retrieval",
           "mediaIds": [],
-          "objectiveCodes": ["LANG-S01-C03-O04"],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C03-O04"],
           "materialCodes": ["aucun"],
           "vocabulary": [
             {
@@ -3223,7 +3228,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Repeat and find the word that starts like chat."
+              "childInstruction": "Say the date, then repeat and find the word that starts like chat."
             }
           ],
           "payload": {
@@ -3343,8 +3348,8 @@
           "position": 2,
           "type": "conversation",
           "title": "Mon petit récit",
-          "childInstruction": "Raconte une petite histoire : qui, où, hier ou demain.",
-          "adultGuidance": "Aidez l’enfant à produire trois phrases au maximum. Exemple : « Hier, Bibi est allée au jardin. Elle a regardé les feuilles. Demain, elle reviendra. » Gardez le jeu oral.",
+          "childInstruction": "Raconte une petite histoire avec hier ou demain et une phrase avec quand.",
+          "adultGuidance": "Aidez l’enfant à produire deux ou trois phrases au maximum. Exemple : « Hier, Bibi est allée au jardin. Quand elle a vu les feuilles, elle s’est arrêtée. Demain, elle reviendra. » Proposez « Quand Bibi a vu les feuilles… » et laissez l’enfant compléter. Acceptez son idée, puis redonnez un modèle lié sans nommer de règle.",
           "minutes": 7,
           "mode": "off-screen",
           "role": "consolidation",
@@ -3364,7 +3369,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Tell a short story with who, where, and yesterday or tomorrow."
+              "childInstruction": "Tell a short story with yesterday or tomorrow and one sentence with when."
             }
           ],
           "payload": {
@@ -3372,7 +3377,8 @@
               "Qui est dans ton histoire ?",
               "Où est-il ?",
               "Est-ce hier ou demain ?",
-              "Raconte avec deux ou trois phrases."
+              "Quand ton personnage arrive, que fait-il ?",
+              "Raconte avec deux ou trois phrases, dont une avec quand."
             ]
           }
         },

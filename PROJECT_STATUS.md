@@ -7,7 +7,7 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-10-02
 Branch:     codex/october-maternelle-3
-Commit:     October Batch 1 implementation checkpoint on this branch; planning checkpoint 1242f5a
+Commit:     October Batch 1 correction checkpoint on this branch; original implementation 5139cc8
 Updated by: Codex
 ```
 
@@ -24,6 +24,15 @@ obligation.
 
 ## Current October Batch 1 — 2026-10-02
 
+Independent review returned `accepted-with-modifications`. The seven owner-authorized corrections
+are applied, with three deterministic plant-stage SVGs and regenerated Week 6/7 packages.
+Freshness now fails the unit suite for any stale review package. Correction validation: 454/454
+unit tests, lint, typecheck, content validation, coverage 42/42, images 43/43, zero approval lapses,
+Webpack build and three-sentinel client scan passed. All 176 approved September lessons, 51
+existing registry rows and 98 tracked media files are unchanged. Day 30 is a teaching day deferred
+to the next authorized batch. October remains `review`; next action is independent reconfirmation.
+Correction evidence and validation caveats: `docs/work/OCTOBER_BATCH_1_CORRECTIONS.md`.
+
 Owner approved the October 3ème maternelle plan and authorized Batch 1 only. Work is on
 `codex/october-maternelle-3`, branched from current `origin/develop`
 `6b8ba9e87802d96c2f193fe73d3c9897e084ba9c`. The reconciled planning documents were committed
@@ -37,7 +46,7 @@ database migration, PR, merge or deployment has occurred. Review packages were g
 `docs/review/2026-2027-maternelle-3-semaine-6.md` and
 `docs/review/2026-2027-maternelle-3-semaine-7.md`.
 
-Batch evidence and media classification live in `docs/work/OCTOBER_BATCH_1.md`. Final validation
+Batch evidence and media classification live in `docs/work/OCTOBER_BATCH_1.md`. Original implementation validation
 passed: format, format check, lint, typecheck, 443 unit tests, content validation, programme report
 for days 23-30, coverage report through day 29 with 42/42 due objectives taught, media report with
 zero required image gaps, approval-lapse dry run with 0 lapses, Webpack production build with CI

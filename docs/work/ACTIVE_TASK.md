@@ -2,15 +2,14 @@
 
 ## Task
 
-Implement October 2026 — 3ème maternelle Batch 1
+Apply October 2026 — 3ème maternelle Batch 1 independent review corrections
 
 ## Objective
 
-Implement the first controlled October batch for 3ème maternelle: preserve the planning work on a
-feature branch from current `origin/develop`, author the canonical structure for the first two
-October instructional weeks, classify media requirements, prepare review packages, validate, commit
-and push. Do not generate rich ImageGen assets, author days 30-44, create migrations, open a PR,
-merge or deploy.
+Apply the seven demonstrated independent review corrections to days 23-29, regenerate and enforce
+freshness for all review packages, validate, commit and push the corrected checkpoint. Stop for
+independent reconfirmation. Do not approve lessons, generate rich ImageGen assets, author days
+30-44, create migrations, open a PR, merge or deploy.
 
 ## Status
 
@@ -36,14 +35,19 @@ planning checkpoint`). Batch 1 implementation is captured in `docs/work/OCTOBER_
 
 Current authored scope:
 
+- Independent review outcome: accepted-with-modifications; corrections applied, awaiting independent reconfirmation.
+- Evidence: `docs/work/OCTOBER_BATCH_1_CORRECTIONS.md`.
+- Three new deterministic plant-stage SVGs; no rich media. All September lesson/approval and media baselines preserved.
+- Correction validation: 454/454 tests, all review packages fresh, content/lint/typecheck, programme and coverage, media, zero-lapse dry run, Webpack build and client scan passed.
+
 - October instructional days 23-29, dates 2026-10-01 through 2026-10-09.
 - 28 new lessons: seven language, seven mathematics, seven physical activity, two arts, two world,
   three time-space.
-- Day 30 remains `no-content` by design.
+- Day 30, Monday October 12, is a teaching day intentionally deferred to the next authorized batch; it remains `no-content`.
 - All new lessons are `review` with `review: null`; no approval or self-review.
-- No new media bytes, no generated ImageGen assets, no migrations.
+- New media bytes are limited to the three plant-stage SVGs; no generated ImageGen assets or migrations.
 
-Final validation during implementation:
+Original validation during implementation:
 
 - `npm run format`: PASS.
 - `npm run format:check`: PASS.

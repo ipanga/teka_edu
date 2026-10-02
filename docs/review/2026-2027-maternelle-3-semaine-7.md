@@ -49,7 +49,7 @@ Aucune : cette semaine n’a encore jamais été relue.
 
 - **Temps d’interaction de l’enfant avec l’écran : 0 min** — aucune
   activité ne demande à l’enfant de toucher, choisir ou compter sur l’appareil.
-- **Temps où l’enfant regarde une image à l’écran : 2 min environ** —
+- **Temps où l’enfant regarde une image à l’écran : 3 min environ** —
   l’enfant ne fait rien sur l’appareil, mais il y regarde une illustration pendant que
   l’adulte lit ou nomme. Compté à la minute, jamais arrondi vers le bas.
 
@@ -84,11 +84,11 @@ _L’enfant enrichit une phrase orale avec qui, où et ce que fait la personne._
 
 #### 2. Qui ? Où ? Que fait-il ? — 7 min, sans interaction écran (conversation)
 
-- **Consigne à l’enfant :** « Fais une phrase avec qui, où, et ce qu’il fait. »
-- **Guidance adulte :** Montrez une personne réelle ou imaginez Nsimba. Demandez : « Qui est là ? Où est-il ? Que fait-il ? » Puis assemblez : « Nsimba marche devant l’école. »
+- **Consigne à l’enfant :** « Complète : « Quand Nsimba arrive à l’école, il… » »
+- **Guidance adulte :** Imaginez Nsimba devant l’école. Donnez le modèle : « Quand Nsimba arrive à l’école, il dit bonjour. » Reprenez « Quand Nsimba arrive à l’école… » et laissez l’enfant choisir la suite. Reformulez son idée en une phrase liée, puis invitez-le à la redire. Une seule phrase suffit ; ne nommez aucune règle de grammaire.
 - **Matériel :** Aucun matériel
 - **Lexique visé :** qui _(who)_ · où _(where)_ · faire _(to do)_
-- **Aide en anglais (optionnelle) :** « Make one sentence with who, where, and what happens. »
+- **Aide en anglais (optionnelle) :** « Complete: When Nsimba arrives at school, he… »
 - **Objectifs travaillés :** `LANG-S01-C02-O03` Formuler des énoncés de plus en plus complexes. ; `LANG-S01-C04-O11` Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
 
 #### 3. Le temps de lecture — 3 min, sans interaction écran (read-aloud)
@@ -344,7 +344,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 _Reconnaitre quelques étapes de la vie d’une plante._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
-- **Conseil au parent :** Utilisez une plante réelle si possible. L’image existante aide à nommer les parties, mais l’observation reste concrète.
+- **Conseil au parent :** Les trois images montrent la même sorte de plante à trois étapes : graine, pousse, jeune plante. Elles suffisent sans plante réelle. L’enfant regarde, nomme puis indique l’ordre ; l’adulte accompagne sans demander de lire.
 - **Objectifs enseignés :**
   - `WORLD-S01-C01-O09` — Reconnaitre les étapes de la vie d'un animal ou d'une plante. _(source : programme-2026)_
 - **Objectifs repris (déjà vus) :**
@@ -352,24 +352,32 @@ _Reconnaitre quelques étapes de la vie d’une plante._
 
 #### 1. Graine, pousse, plante — 4 min, sans interaction écran (observation)
 
-- **Consigne à l’enfant :** « Observe la plante et dis ce dont elle a besoin pour grandir. »
-- **Guidance adulte :** Montrez une plante, une graine ou l’illustration. Dites les étapes simplement : graine, petite pousse, plante. Reliez aux besoins : eau, lumière, soin.
+- **Consigne à l’enfant :** « Regarde les trois images : montre la graine, la pousse, puis la jeune plante. »
+- **Guidance adulte :** Montrez les trois images ensemble. Nommez la graine sans feuille, la pousse avec deux petites feuilles, puis la jeune plante avec une tige et davantage de feuilles. Invitez l’enfant à montrer et nommer chaque étape. Demandez ce qui aide la plante à grandir : de l’eau et la lumière qui lui convient.
 - **Matériel :** Aucun matériel
-- **Lexique visé :** la graine _(the seed)_ · grandir _(to grow)_
-- **Aide en anglais (optionnelle) :** « Look at the plant and say what it needs to grow. »
-- **Images montrées à l'enfant (1) :**
+- **Lexique visé :** la graine _(the seed)_ · la pousse _(the sprout)_ · la jeune plante _(the young plant)_ · grandir _(to grow)_
+- **Aide en anglais (optionnelle) :** « Look at the three pictures: show the seed, the sprout and the young plant. »
+- **Images montrées à l'enfant (3) :**
 
-  - `plante-parties` — Une plante avec ses feuilles, sa tige et ses racines sous la terre (`public/media/illustrations/plante-parties.svg`)
+  - `plante-graine` — Une graine de haricot dans la terre, sans racine ni feuille (`public/media/illustrations/plante-graine.svg`)
+  - `plante-pousse` — La graine de haricot a germé : une petite racine et une courte tige portant deux petites feuilles (`public/media/illustrations/plante-pousse.svg`)
+  - `plante-jeune` — Une jeune plante de haricot avec des racines, une tige plus haute et quatre feuilles (`public/media/illustrations/plante-jeune.svg`)
 
 - **Objectifs travaillés :** `WORLD-S01-C01-O09` Reconnaitre les étapes de la vie d'un animal ou d'une plante. ; `WORLD-S01-C01-O10` Décrire les besoins essentiels de quelques animaux ou de végétaux.
 
-#### 2. Ce qui vient après — 3 min, sans interaction écran (conversation)
+#### 2. Ce qui vient après — 3 min, sans interaction écran (observation)
 
-- **Consigne à l’enfant :** « Dis ce qui vient après la graine. »
-- **Guidance adulte :** Faites parler dans l’ordre : « D’abord la graine, ensuite la pousse, après la plante. » Ne cherchez pas tous les mots scientifiques.
+- **Consigne à l’enfant :** « Montre les images dans l’ordre de la croissance et nomme chaque étape. »
+- **Guidance adulte :** Les mêmes images sont présentées dans un autre ordre. L’enfant indique d’abord la graine, ensuite la pousse, enfin la jeune plante et les nomme. Il n’a rien à déplacer sur l’écran. S’il hésite, nommez la première étape et laissez-le trouver la suivante. Faites redire l’ordre en une phrase courte.
 - **Matériel :** Aucun matériel
 - **Lexique visé :** d’abord _(first)_ · ensuite _(then)_
-- **Aide en anglais (optionnelle) :** « Say what comes after the seed. »
+- **Aide en anglais (optionnelle) :** « Point to the pictures in growth order and name each stage. »
+- **Images montrées à l'enfant (3) :**
+
+  - `plante-jeune` — Une jeune plante de haricot avec des racines, une tige plus haute et quatre feuilles (`public/media/illustrations/plante-jeune.svg`)
+  - `plante-graine` — Une graine de haricot dans la terre, sans racine ni feuille (`public/media/illustrations/plante-graine.svg`)
+  - `plante-pousse` — La graine de haricot a germé : une petite racine et une courte tige portant deux petites feuilles (`public/media/illustrations/plante-pousse.svg`)
+
 - **Objectifs travaillés :** `WORLD-S01-C01-O09` Reconnaitre les étapes de la vie d'un animal ou d'une plante.
 
 **Réussites attendues — texte officiel pour la compétence « Découvrir les animaux et les végétaux » (from-5) :**
@@ -427,6 +435,7 @@ _L’enfant produit une phrase descriptive plus complète à partir d’un objet
   - `LANG-S01-C02-O03` — Formuler des énoncés de plus en plus complexes.
   - `LANG-S01-C01-O03` — Comprendre, mémoriser, réemployer les mots des corpus enseignés (3 par période).
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
+  - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : phrase complète — 3 min, sans interaction écran (conversation)
 
@@ -434,17 +443,17 @@ _L’enfant produit une phrase descriptive plus complète à partir d’un objet
 - **Guidance adulte :** Reprenez le jeu de la veille en une seule phrase. Si elle est courte, ajoutez un détail et faites répéter doucement.
 - **Matériel :** Aucun matériel
 - **Aide en anglais (optionnelle) :** « Say the date, then make one complete sentence. »
-- **Objectifs travaillés :** `LANG-S01-C02-O03` Formuler des énoncés de plus en plus complexes.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C02-O03` Formuler des énoncés de plus en plus complexes.
 
 #### 2. Mon objet a des détails — 7 min, sans interaction écran (vocabulary)
 
-- **Consigne à l’enfant :** « Choisis un objet et décris-le : il est…, il sert à… »
-- **Guidance adulte :** Proposez un cahier, un seau, une marmite ou un panier. Faites nommer, décrire une qualité visible, puis dire l’usage. Donnez le modèle : « Le seau est rond. Il sert à porter l’eau. »
+- **Consigne à l’enfant :** « Choisis un objet. Complète : « Je prends le… parce que… » »
+- **Guidance adulte :** Proposez un cahier, un seau, une marmite ou un panier. Faites nommer l’objet et une qualité visible, puis son usage : « Il sert à… » Donnez le modèle : « Je prends le seau parce que je veux porter de l’eau. » Commencez la phrase et laissez l’enfant la compléter avec un usage qui convient. Reformulez avec parce que, sans demander une explication grammaticale.
 - **Matériel :** Objets de la maison (coussins, chaises, bâton, tissu)
-- **Lexique visé :** décrire _(to describe)_ · il sert à _(it is used for)_
+- **Lexique visé :** le seau _(the bucket)_ · la marmite _(the cooking pot)_ · le panier _(the basket)_ · décrire _(to describe)_ · il sert à _(it is used for)_
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
-- **Aide en anglais (optionnelle) :** « Choose an object and describe it. »
+- **Aide en anglais (optionnelle) :** « Choose an object. Complete: I take the… because… »
 - **Images montrées à l'enfant (3) :**
 
   - `objet-seau` — Un seau (`public/media/objects/objet-seau.svg`)
@@ -517,6 +526,17 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 - Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
 - Raconter une histoire connue, dans son intégralité et sans support.
 - Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
+
+- Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
+- Dire : « Aujourd’hui, nous sommes lundi. », « Hier, c’était dimanche, j’étais à la maison. », « Demain, ce sera mardi, nous irons à la piscine. », « J’aurai bientôt fini mon dessin. »
+- Utiliser les outils de la classe pour composer la date (jour et mois) au tableau et l’énoncer.
+- Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
+- Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
+- Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
@@ -721,13 +741,13 @@ _Employer des repères proches pour parler d’un évènement futur._
 - **Aide en anglais (optionnelle) :** « Say one thing that will happen soon. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C01-O11` Continuer à s’approprier les temps conjugués (futur simple et futur antérieur) et les jours pour situer les évènements dans la semaine et situer un évènement qui va se produire. ; `LANG-S01-C02-O02` Construire à l’oral un système de temps de plus en plus efficace.
 
-#### 2. Aujourd’hui ou plus tard — 3 min, sans interaction écran (sorting)
+#### 2. Maintenant ou plus tard — 3 min, sans interaction écran (conversation)
 
-- **Consigne à l’enfant :** « Range les actions : aujourd’hui ou plus tard. »
-- **Guidance adulte :** Dites quatre actions simples : manger ce soir, aller dormir, aller à l’école demain, jouer maintenant. L’enfant classe oralement.
+- **Consigne à l’enfant :** « Dis pour chaque action : maintenant ou plus tard. »
+- **Guidance adulte :** Pendant la séance, dites quatre actions : parler ensemble maintenant, montrer ses mains maintenant, aller dormir plus tard ce soir, aller à l’école demain. L’enfant répond maintenant ou plus tard. Précisez que dormir ce soir est plus tard, même si ce sera encore aujourd’hui.
 - **Matériel :** Aucun matériel
-- **Lexique visé :** aujourd’hui _(today)_ · plus tard _(later)_
-- **Aide en anglais (optionnelle) :** « Sort the actions: today or later. »
+- **Lexique visé :** maintenant _(now)_ · plus tard _(later)_
+- **Aide en anglais (optionnelle) :** « For each action, say now or later. Bedtime tonight is later. »
 - **Objectifs travaillés :** `TIME-SPACE-S01-C01-O11` Continuer à s’approprier les temps conjugués (futur simple et futur antérieur) et les jours pour situer les évènements dans la semaine et situer un évènement qui va se produire.
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
@@ -800,6 +820,7 @@ _L’enfant écoute et prononce le contraste ch/s dans des mots connus._
 - **Objectifs repris (déjà vus) :**
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
   - `LANG-S01-C02-O03` — Formuler des énoncés de plus en plus complexes.
+  - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : je décris vite — 3 min, sans interaction écran (conversation)
 
@@ -809,7 +830,7 @@ _L’enfant écoute et prononce le contraste ch/s dans des mots connus._
 - **À défaut :** Coussins, pagne ou tissu, chaise, bâton, bouteille vide : ce que la maison a déjà.
 - **⚠ Sécurité :** Vérifiez que les meubles utilisés sont stables et que le sol est dégagé avant de commencer.
 - **Aide en anglais (optionnelle) :** « Say the date, then describe one object. »
-- **Objectifs travaillés :** `LANG-S01-C02-O03` Formuler des énoncés de plus en plus complexes.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C02-O03` Formuler des énoncés de plus en plus complexes.
 
 #### 2. Ch ou s ? — 7 min, sans interaction écran (phonology)
 
@@ -881,6 +902,17 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 
+**Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
+
+- Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
+- Dire : « Aujourd’hui, nous sommes lundi. », « Hier, c’était dimanche, j’étais à la maison. », « Demain, ce sera mardi, nous irons à la piscine. », « J’aurai bientôt fini mon dessin. »
+- Utiliser les outils de la classe pour composer la date (jour et mois) au tableau et l’énoncer.
+- Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
+- Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
+- Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Avis du relecteur / de la relectrice :**
 
 | Critère | OK / à revoir | Commentaire |
@@ -920,7 +952,7 @@ _Pratiquer l’idée du nombre suivant par ajout de un._
 - **Lexique visé :** prévoir _(to predict)_
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
-- **Aide en anglais (optionnelle) :** « If I add one, how many will there be? »
+- **Aide en anglais (optionnelle) :** « There are five. If I add one, how many will there be? »
 - **Objectifs travaillés :** `MATH-S01-C01-O11` Poursuivre la compréhension des faits suivants :
     • si on ajoute un objet à une collection, le nombre qui désigne sa quantité est le suivant dans la suite orale des noms des nombres ;
     • dans la suite orale des nombres, chaque nombre s’obtient en ajoutant un au nombre précédent. ; `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
@@ -1135,17 +1167,18 @@ _L’enfant poursuit le jeu de prononciation avec ch/j dans des mots familiers._
 - **Conseil au parent :** Comparez deux sons proches dans des mots très courts. L’enfant peut réussir en répétant correctement, sans nommer les sons.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
+  - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
   - `LANG-S01-C03-O04` — Prononcer correctement les couples de consonnes proches suivants : ch/s, ch/j, ch/z.
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
 
-#### 1. Je retrouve ch et s — 3 min, sans interaction écran (phonology)
+#### 1. Le rituel : date, puis ch et s — 3 min, sans interaction écran (phonology)
 
-- **Consigne à l’enfant :** « Redis : chèvre, seau. Puis dis lequel commence comme chat. »
-- **Guidance adulte :** Rappelez le jeu ch/s en deux minutes. Félicitez l’écoute avant la justesse parfaite.
+- **Consigne à l’enfant :** « Dis la date. Puis redis chèvre et seau : lequel commence comme chat ? »
+- **Guidance adulte :** Dites : « Aujourd’hui, nous sommes jeudi 8 octobre 2026. » Laissez l’enfant redire la date, puis retrouvez ch/s avec chèvre, seau et chat. Gardez les deux moments dans les trois minutes ; félicitez l’écoute avant la justesse parfaite.
 - **Matériel :** Aucun matériel
 - **Lexique visé :** retrouver _(to find again)_
-- **Aide en anglais (optionnelle) :** « Repeat and find the word that starts like chat. »
-- **Objectifs travaillés :** `LANG-S01-C03-O04` Prononcer correctement les couples de consonnes proches suivants : ch/s, ch/j, ch/z.
+- **Aide en anglais (optionnelle) :** « Say the date, then repeat and find the word that starts like chat. »
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C03-O04` Prononcer correctement les couples de consonnes proches suivants : ch/s, ch/j, ch/z.
 
 #### 2. Ch ou j ? — 7 min, sans interaction écran (phonology)
 
@@ -1188,6 +1221,17 @@ _L’enfant poursuit le jeu de prononciation avec ch/j dans des mots familiers._
   - Page 3 : Malo met une seule patte dans l’eau du seau et réagit au froid. Le poisson garde son œil ouvert ; le tapis de Malo est visible dans la maison. (`public/media/illustrations/histoire-malo-03.webp`)
   - Page 4 : Malo dort en rond sur son tapis, les yeux fermés et le nez posé sur le bout de sa queue. La lune et les étoiles brillent dehors. (`public/media/illustrations/histoire-malo-04.webp`)
 
+**Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
+
+- Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
+- Dire : « Aujourd’hui, nous sommes lundi. », « Hier, c’était dimanche, j’étais à la maison. », « Demain, ce sera mardi, nous irons à la piscine. », « J’aurai bientôt fini mon dessin. »
+- Utiliser les outils de la classe pour composer la date (jour et mois) au tableau et l’énoncer.
+- Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
+- Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
+- Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
 **Réussites attendues — texte officiel pour la compétence « Articuler distinctement » (from-5) :**
 
 - À partir d’un imagier composé de paires distinctives, notamment dans une situation de jeux traditionnels, prononcer correctement : chaud/seau ; mouche/mousse ; bijou/bisou ; manche/mange.
@@ -1219,12 +1263,12 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 > Décision : ☐ accepté ☐ accepté avec modifications ☐ à refaire — _à remplir par la personne qui relit_
 
-### Je compte à partir de — L’acquisition des premiers outils mathématiques (9 min)
+### Un objet de plus : je recompte — L’acquisition des premiers outils mathématiques (9 min)
 
-_Préparer le surcomptage en continuant la comptine numérique à partir d’un nombre donné._
+_Comparer une collection avant et après l’ajout d’un objet, puis recompter depuis un._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
-- **Conseil au parent :** Le surcomptage complet viendra ensuite. Ici, on installe l’idée de repartir d’un nombre connu.
+- **Conseil au parent :** Gardez l’ajout visible et recomptez toute la collection depuis un. Le surcomptage reste prévu plus tard, dans sa fenêtre des jours 34 à 44.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `MATH-S01-C01-O11` — Poursuivre la compréhension des faits suivants :
@@ -1232,26 +1276,28 @@ _Préparer le surcomptage en continuant la comptine numérique à partir d’un 
     • dans la suite orale des nombres, chaque nombre s’obtient en ajoutant un au nombre précédent.
   - `MATH-S01-C01-O20` — Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
 
-#### 1. Je continue après cinq — 4 min, sans interaction écran (counting)
+#### 1. Avant et après un ajout — 4 min, sans interaction écran (counting)
 
-- **Consigne à l’enfant :** « Je dis cinq. Continue : six, sept, huit. »
-- **Guidance adulte :** Commencez par un nombre de 3 à 6. L’enfant continue la suite orale trois nombres plus loin. Utilisez les doigts seulement si cela aide.
-- **Matériel :** Aucun matériel
-- **Lexique visé :** continuer _(to continue)_
-- **Aide en anglais (optionnelle) :** « I say five. You continue: six, seven, eight. »
-- **Objectifs travaillés :** `MATH-S01-C01-O11` Poursuivre la compréhension des faits suivants :
-    • si on ajoute un objet à une collection, le nombre qui désigne sa quantité est le suivant dans la suite orale des noms des nombres ;
-    • dans la suite orale des nombres, chaque nombre s’obtient en ajoutant un au nombre précédent.
-
-#### 2. Je pars du nombre connu — 5 min, sans interaction écran (manipulation)
-
-- **Consigne à l’enfant :** « Il y en a déjà quatre. Ajoute deux objets et continue à compter. »
-- **Guidance adulte :** Posez 4 objets déjà comptés. Dites : « On sait qu’il y en a quatre. » Ajoutez deux objets un par un : « cinq, six ». Si nécessaire, recomptez tout.
+- **Consigne à l’enfant :** « Compte les objets. J’en ajoute un : recompte-les tous depuis un. »
+- **Guidance adulte :** Posez 3 objets et laissez l’enfant compter depuis un. Ajoutez un objet sous ses yeux, puis faites recompter toute la collection depuis un. Faites dire : « Avant, il y en avait trois ; maintenant, quatre : un de plus. » Reprenez avec 4 puis 5 objets, sans demander de continuer à partir du nombre connu.
 - **Matériel :** Petits objets à compter (cailloux, capsules, haricots)
-- **Lexique visé :** déjà _(already)_
+- **Lexique visé :** un de plus _(one more)_
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
 - **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
-- **Aide en anglais (optionnelle) :** « There are already four. Add two and keep counting. »
+- **Aide en anglais (optionnelle) :** « Count the objects. I add one: count them all again from one. »
+- **Objectifs travaillés :** `MATH-S01-C01-O11` Poursuivre la compréhension des faits suivants :
+    • si on ajoute un objet à une collection, le nombre qui désigne sa quantité est le suivant dans la suite orale des noms des nombres ;
+    • dans la suite orale des nombres, chaque nombre s’obtient en ajoutant un au nombre précédent. ; `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
+
+#### 2. J’ajoute moi-même un objet — 5 min, sans interaction écran (manipulation)
+
+- **Consigne à l’enfant :** « Compte ton tas. Ajoute un objet, puis recompte tout depuis un. »
+- **Guidance adulte :** Donnez 4 objets. L’enfant les compte, ajoute lui-même un seul objet et recompte tout depuis un. Demandez ce qui a changé : « Il y en a un de plus. » Recommencez avec 5 objets si l’enfant le souhaite ; gardez chaque comparaison séparée.
+- **Matériel :** Petits objets à compter (cailloux, capsules, haricots)
+- **Lexique visé :** recompter _(to count again)_
+- **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
+- **⚠ Sécurité :** Restez près de l’enfant : les petits objets se portent à la bouche. Rangez-les hors de portée des enfants de moins de trois ans.
+- **Aide en anglais (optionnelle) :** « Count your pile. Add one object, then count them all again from one. »
 - **Objectifs travaillés :** `MATH-S01-C01-O11` Poursuivre la compréhension des faits suivants :
     • si on ajoute un objet à une collection, le nombre qui désigne sa quantité est le suivant dans la suite orale des noms des nombres ;
     • dans la suite orale des nombres, chaque nombre s’obtient en ajoutant un au nombre précédent. ; `MATH-S01-C01-O20` Dénombrer une collection d’objets (jusqu’à dix, voire au-delà).
@@ -1378,20 +1424,21 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 _Consolider le futur proche et les repères de semaine._
 
 - **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
-- **Conseil au parent :** Fin de semaine : l’enfant parle du week-end et du prochain jour d’école sans que le produit prétende connaitre la classe.
+- **Conseil au parent :** Partez du jour de la séance, puis situez les deux jours suivants. L’enfant les nomme et parle d’une action possible, sans que le produit prétende connaitre sa classe.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
   - `TIME-SPACE-S01-C01-O11` — Continuer à s’approprier les temps conjugués (futur simple et futur antérieur) et les jours pour situer les évènements dans la semaine et situer un évènement qui va se produire.
   - `TIME-SPACE-S01-C01-O10` — Situer un évènement dans la semaine.
+  - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
-#### 1. Après vendredi — 4 min, sans interaction écran (conversation)
+#### 1. Aujourd’hui et les deux jours suivants — 4 min, sans interaction écran (conversation)
 
-- **Consigne à l’enfant :** « Dis ce qui viendra après aujourd’hui. »
-- **Guidance adulte :** Aidez l’enfant à situer le week-end puis le prochain jour d’école. Gardez la phrase simple : « Après vendredi, il y aura samedi. »
+- **Consigne à l’enfant :** « Dis la date, puis le jour de demain et celui d’après-demain. »
+- **Guidance adulte :** Faites redire la date de la séance, puis partez de son jour : « Aujourd’hui, nous sommes jeudi. » Aidez l’enfant à nommer demain puis après-demain. Modélisez : « Demain, ce sera… ; après-demain, ce sera… » Laissez-le compléter les noms des jours, puis dire une action qu’il pourra faire demain.
 - **Matériel :** Aucun matériel
-- **Lexique visé :** après _(after)_ · week-end _(weekend)_
-- **Aide en anglais (optionnelle) :** « Say what will come after today. »
-- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O11` Continuer à s’approprier les temps conjugués (futur simple et futur antérieur) et les jours pour situer les évènements dans la semaine et situer un évènement qui va se produire. ; `TIME-SPACE-S01-C01-O10` Situer un évènement dans la semaine.
+- **Lexique visé :** après _(after)_ · après-demain _(the day after tomorrow)_
+- **Aide en anglais (optionnelle) :** « Say the date, then name tomorrow and the day after tomorrow. »
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O11` Continuer à s’approprier les temps conjugués (futur simple et futur antérieur) et les jours pour situer les évènements dans la semaine et situer un évènement qui va se produire. ; `TIME-SPACE-S01-C01-O10` Situer un évènement dans la semaine. ; `TIME-SPACE-S01-C01-O12` Énoncer la date.
 
 #### 2. Trois jours en ordre — 3 min, sans interaction écran (manipulation)
 
@@ -1458,6 +1505,7 @@ _L’enfant combine vocabulaire et phrase complexe pour raconter une petite acti
   - `LANG-S01-C02-O03` — Formuler des énoncés de plus en plus complexes.
   - `LANG-S01-C02-O02` — Construire à l’oral un système de temps de plus en plus efficace.
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
+  - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : bilan de la semaine — 3 min, sans interaction écran (conversation)
 
@@ -1466,15 +1514,15 @@ _L’enfant combine vocabulaire et phrase complexe pour raconter une petite acti
 - **Matériel :** Aucun matériel
 - **Lexique visé :** mieux _(better)_
 - **Aide en anglais (optionnelle) :** « Say the date, then tell one thing you can say better. »
-- **Objectifs travaillés :** `LANG-S01-C02-O02` Construire à l’oral un système de temps de plus en plus efficace. ; `LANG-S01-C02-O03` Formuler des énoncés de plus en plus complexes.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C02-O02` Construire à l’oral un système de temps de plus en plus efficace. ; `LANG-S01-C02-O03` Formuler des énoncés de plus en plus complexes.
 
 #### 2. Mon petit récit — 7 min, sans interaction écran (conversation)
 
-- **Consigne à l’enfant :** « Raconte une petite histoire : qui, où, hier ou demain. »
-- **Guidance adulte :** Aidez l’enfant à produire trois phrases au maximum. Exemple : « Hier, Bibi est allée au jardin. Elle a regardé les feuilles. Demain, elle reviendra. » Gardez le jeu oral.
+- **Consigne à l’enfant :** « Raconte une petite histoire avec hier ou demain et une phrase avec quand. »
+- **Guidance adulte :** Aidez l’enfant à produire deux ou trois phrases au maximum. Exemple : « Hier, Bibi est allée au jardin. Quand elle a vu les feuilles, elle s’est arrêtée. Demain, elle reviendra. » Proposez « Quand Bibi a vu les feuilles… » et laissez l’enfant compléter. Acceptez son idée, puis redonnez un modèle lié sans nommer de règle.
 - **Matériel :** Aucun matériel
 - **Lexique visé :** raconter _(to tell)_ · précis _(precise)_
-- **Aide en anglais (optionnelle) :** « Tell a short story with who, where, and yesterday or tomorrow. »
+- **Aide en anglais (optionnelle) :** « Tell a short story with yesterday or tomorrow and one sentence with when. »
 - **Objectifs travaillés :** `LANG-S01-C02-O03` Formuler des énoncés de plus en plus complexes. ; `LANG-S01-C02-O02` Construire à l’oral un système de temps de plus en plus efficace.
 
 #### 3. Le temps de lecture — 3 min, sans interaction écran (read-aloud)
@@ -1528,6 +1576,17 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 - Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
 - Raconter une histoire connue, dans son intégralité et sans support.
 - Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
+
+- Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
+- Dire : « Aujourd’hui, nous sommes lundi. », « Hier, c’était dimanche, j’étais à la maison. », « Demain, ce sera mardi, nous irons à la piscine. », « J’aurai bientôt fini mon dessin. »
+- Utiliser les outils de la classe pour composer la date (jour et mois) au tableau et l’énoncer.
+- Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
+- Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
+- Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 

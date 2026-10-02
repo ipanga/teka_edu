@@ -13,6 +13,7 @@ import {
   buildAuditDocument,
   buildAuditRows,
   deriveState,
+  septemberMedia,
   type VisualState,
 } from "@/lib/content/visual-audit";
 
@@ -62,8 +63,8 @@ describe("the September visual audit", () => {
     }
   });
 
-  it("gives every shipped asset a verdict, and names no asset that does not exist", () => {
-    const ids = new Set(data.media.map((asset) => asset.id));
+  it("gives every September asset a verdict, and names no asset that does not exist", () => {
+    const ids = new Set(septemberMedia(data).map((asset) => asset.id));
     for (const id of Object.keys(state.decisions.assets)) {
       expect(ids.has(id), `decision for unknown asset ${id}`).toBe(true);
     }

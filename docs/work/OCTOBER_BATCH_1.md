@@ -1,6 +1,6 @@
 # October 2026 — 3ème maternelle Batch 1
 
-Status: implementation batch authored, pending independent review. Do not approve, merge, deploy,
+Status: independent review returned accepted-with-modifications; corrections applied, pending independent reconfirmation. See `docs/work/OCTOBER_BATCH_1_CORRECTIONS.md`. Do not approve, merge, deploy,
 create database migrations or generate rich ImageGen assets from this document alone.
 
 ## Branch and baseline
@@ -27,7 +27,7 @@ Batch 1 authors the first two October instructional weeks only:
 
 - Week 6: days 23-24, 2026-10-01 and 2026-10-02.
 - Week 7: days 25-29, 2026-10-05 through 2026-10-09.
-- Day 30, 2026-10-12, intentionally remains `no-content`.
+- Day 30, Monday 2026-10-12, is a teaching day, not a holiday or structural gap. It intentionally remains `no-content`, deferred to the next authorized implementation batch.
 
 ## Authored lessons
 
@@ -73,10 +73,13 @@ Required/reused accepted assets:
 - `m3-lang-28`, read-aloud: `histoire-malo`.
 - `m3-lang-29`, read-aloud: `histoire-cailloux`.
 - `m3-math-23`, `m3-math-26`: `objet-caillou` as a simple counter reference.
-- `m3-world-08`: `plante-parties`.
+- `m3-world-08`: new deterministic `plante-graine`, `plante-pousse`, `plante-jeune` SVGs for both observation activities. The anatomy-only `plante-parties` is no longer associated with this lesson; its September bytes and uses are unchanged.
 - `m3-world-09`: `animal-poussin`, `animal-poule`.
 
-No required new SVG:
+Required new SVGs:
+
+- Three distinct growth-stage cards: seed without leaves, sprout with two leaves, young plant with four leaves. Same plant and soil reference across the set; text-free, 200 x 200, French accessibility descriptions, SHA-256 recorded in the registry.
+- Activity 1 names the visible stages; activity 2 presents them in a different order and asks the child to indicate growth order and name them. No screen interaction is required.
 
 - Numeral cards and day cards are made by the parent on paper in this batch.
 - The media report classifies some drawings/cards as useful but non-blocking; none leaves the child
@@ -91,10 +94,10 @@ No rich ImageGen pending for Batch 1:
 
 Media report after authoring:
 
-- required image activities: 42/42 with image
+- required image activities: 43/43 with image
 - required image gaps: 0
 - useful but non-blocking image ideas: 36
-- runtime media library unchanged: 31 SVG and 20 WebP registered assets
+- runtime media library: 34 SVG and 20 WebP registered assets; all 51 existing rows and all 98 previously tracked media files unchanged
 
 ## Review packages
 
@@ -110,7 +113,7 @@ Recommended independent review flow:
 3. If accepted or corrected to accepted, approve only affected October lessons with fresh digests.
 4. Do not alter September approvals during October approval.
 
-## Validation checkpoint
+## Original implementation validation checkpoint
 
 Final local validation performed during implementation:
 
@@ -137,5 +140,5 @@ Full suite status is recorded in `docs/work/ACTIVE_TASK.md` after final validati
 
 ## Next stop
 
-After validation and push, stop for owner-directed independent review. Do not generate images,
+After correction validation and push, stop for owner-directed independent reconfirmation. The original packages were stale despite the original passing suite; freshness now checks all packages and both October packages have been regenerated. Do not generate rich images,
 author days 30-44, create migrations, open a PR, merge or deploy.

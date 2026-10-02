@@ -215,8 +215,8 @@ _Associer une petite collection, son nom oral et son chiffre._
 
 #### 2. Je fabrique la quantité — 4 min, sans interaction écran (manipulation)
 
-- **Consigne à l’enfant :** « Regarde le chiffre, puis donne exactement ce nombre d’objets. »
-- **Guidance adulte :** Montrez un papier chiffre. L’enfant construit la collection. Faites vérifier en comptant à voix haute.
+- **Consigne à l’enfant :** « Regarde le chiffre, puis prends exactement ce nombre d’objets. »
+- **Guidance adulte :** Montrez un papier chiffre. L’enfant construit la collection : « Prends exactement ce nombre d’objets. » Faites vérifier en comptant à voix haute.
 - **Matériel :** Petits objets à compter (cailloux, capsules, haricots), Feuille de papier
 - **Lexique visé :** exactement _(exactly)_
 - **À défaut :** Cailloux, capsules, haricots, graines, bouchons : tout petit objet en nombre suffisant.
@@ -297,7 +297,7 @@ _Courir vite sur une courte distance et franchir un obstacle bas et sûr._
 #### 1. Vite, puis par-dessus — 6 min, sans interaction écran (movement)
 
 - **Consigne à l’enfant :** « Cours jusqu’au repère, passe par-dessus le tissu, puis arrête-toi. »
-- **Guidance adulte :** Dégagez l’espace. Placez un tissu roulé ou une ligne au sol. L’enfant court quelques pas, franchit, puis s’arrête. Recommencez trois ou quatre fois, jamais sur un sol glissant.
+- **Guidance adulte :** Dégagez l’espace. C’est vous qui déplacez les meubles; l’enfant attend sur le côté. Placez un tissu roulé ou une ligne au sol. L’enfant court quelques pas, franchit, puis s’arrête. Recommencez trois ou quatre fois, jamais sur un sol glissant.
 - **Matériel :** Espace dégagé pour bouger (à l’intérieur ou dehors), Un grand tissu (pagne, drap ou serviette), Un repère plat posé au sol (corde, bande de tissu ou trait tracé)
 - **Lexique visé :** obstacle _(obstacle)_ · franchir _(to go over)_
 - **À défaut :** Une pièce où l’on écarte une chaise et un tapis suffit : toutes les activités physiques ont une version à faire sur place, à l’intérieur, y compris le soir.
@@ -358,8 +358,8 @@ _Situer un évènement qui va se produire dans la semaine._
 
 #### 1. Ce qui va arriver — 4 min, sans interaction écran (conversation)
 
-- **Consigne à l’enfant :** « Dis ce qui va arriver demain ou plus tard dans la semaine. »
-- **Guidance adulte :** Utilisez la bande des jours si vous l’avez. Sinon, comptez sur les doigts : aujourd’hui, demain, après-demain. Faites une phrase au futur proche.
+- **Consigne à l’enfant :** « Dis la date, puis dis ce qui va arriver demain ou plus tard dans la semaine. »
+- **Guidance adulte :** Utilisez la bande des jours si vous l’avez. Sinon, comptez sur les doigts : aujourd’hui, demain, après-demain. Faites dire la date, puis une phrase au futur proche.
 - **Matériel :** Feuille de papier
 - **Lexique visé :** demain _(tomorrow)_ · plus tard _(later)_
 - **À défaut :** Une ardoise, le dos d’une feuille déjà utilisée ou le sol lissé conviennent aussi.
@@ -431,6 +431,7 @@ _L’enfant ordonne deux moments et emploie avant, après et demain dans une phr
   - `LANG-S01-C02-O02` — Construire à l’oral un système de temps de plus en plus efficace.
   - `TIME-SPACE-S01-C02-O08` — Repérer les différentes étapes d’un processus ou d’un évènement vécu et les ordonner.
   - `LANG-S02-C03-O04` — Comprendre des histoires où l’enchainement des actions peut être rattaché à des expériences connues de la vie quotidienne (le bain, le coucher, etc.).
+  - `TIME-SPACE-S01-C01-O12` — Énoncer la date.
 
 #### 1. Le rituel : je retrouve hier — 3 min, sans interaction écran (conversation)
 
@@ -439,7 +440,7 @@ _L’enfant ordonne deux moments et emploie avant, après et demain dans une phr
 - **Matériel :** Aucun matériel
 - **Lexique visé :** hier _(yesterday)_
 - **Aide en anglais (optionnelle) :** « Say the date and one sentence with yesterday. »
-- **Objectifs travaillés :** `LANG-S01-C02-O02` Construire à l’oral un système de temps de plus en plus efficace.
+- **Objectifs travaillés :** `TIME-SPACE-S01-C01-O12` Énoncer la date. ; `LANG-S01-C02-O02` Construire à l’oral un système de temps de plus en plus efficace.
 
 #### 2. Avant, après — 7 min, sans interaction écran (conversation)
 
@@ -509,6 +510,17 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 - Expliquer les motivations des personnages (vouloir grandir, être le plus fort, etc.), leurs émotions (être en colère, avoir peur, etc.), les expériences qu’ils vivent et leurs relations avec autrui (l’amitié, l’entraide, la ruse, etc.).
 - Raconter une histoire connue, dans son intégralité et sans support.
 - Transposer les émotions ressenties par les personnages à sa propre expérience.
+
+_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+
+**Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
+
+- Rappeler qu’on est allé « il y a trois jours » ou qu’on ira « dans trois jours » à tel endroit.
+- Dire : « Aujourd’hui, nous sommes lundi. », « Hier, c’était dimanche, j’étais à la maison. », « Demain, ce sera mardi, nous irons à la piscine. », « J’aurai bientôt fini mon dessin. »
+- Utiliser les outils de la classe pour composer la date (jour et mois) au tableau et l’énoncer.
+- Associer certains mois de l’année à un évènement marquant (anniversaires, fêtes, vacances).
+- Énoncer la plupart des mois de l’année dans l’ordre ou le désordre.
+- Nommer les saisons et citer quelques-unes de leurs caractéristiques selon le contexte local.
 
 _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
 

@@ -716,25 +716,33 @@
       "stage": "discovery",
       "difficulty": 2,
       "themeId": "octobre-je-grandis-en-francais",
-      "parentGuidance": "Utilisez une plante réelle si possible. L’image existante aide à nommer les parties, mais l’observation reste concrète.",
+      "parentGuidance": "Les trois images montrent la même sorte de plante à trois étapes : graine, pousse, jeune plante. Elles suffisent sans plante réelle. L’enfant regarde, nomme puis indique l’ordre ; l’adulte accompagne sans demander de lire.",
       "activities": [
         {
           "id": "m3-world-08-a1",
           "position": 1,
           "type": "observation",
           "title": "Graine, pousse, plante",
-          "childInstruction": "Observe la plante et dis ce dont elle a besoin pour grandir.",
-          "adultGuidance": "Montrez une plante, une graine ou l’illustration. Dites les étapes simplement : graine, petite pousse, plante. Reliez aux besoins : eau, lumière, soin.",
+          "childInstruction": "Regarde les trois images : montre la graine, la pousse, puis la jeune plante.",
+          "adultGuidance": "Montrez les trois images ensemble. Nommez la graine sans feuille, la pousse avec deux petites feuilles, puis la jeune plante avec une tige et davantage de feuilles. Invitez l’enfant à montrer et nommer chaque étape. Demandez ce qui aide la plante à grandir : de l’eau et la lumière qui lui convient.",
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
-          "mediaIds": ["plante-parties"],
+          "mediaIds": ["plante-graine", "plante-pousse", "plante-jeune"],
           "objectiveCodes": ["WORLD-S01-C01-O09", "WORLD-S01-C01-O10"],
           "materialCodes": ["aucun"],
           "vocabulary": [
             {
               "fr": "la graine",
               "en": "the seed"
+            },
+            {
+              "fr": "la pousse",
+              "en": "the sprout"
+            },
+            {
+              "fr": "la jeune plante",
+              "en": "the young plant"
             },
             {
               "fr": "grandir",
@@ -744,7 +752,7 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Look at the plant and say what it needs to grow."
+              "childInstruction": "Look at the three pictures: show the seed, the sprout and the young plant."
             }
           ],
           "payload": {
@@ -754,14 +762,14 @@
         {
           "id": "m3-world-08-a2",
           "position": 2,
-          "type": "conversation",
+          "type": "observation",
           "title": "Ce qui vient après",
-          "childInstruction": "Dis ce qui vient après la graine.",
-          "adultGuidance": "Faites parler dans l’ordre : « D’abord la graine, ensuite la pousse, après la plante. » Ne cherchez pas tous les mots scientifiques.",
+          "childInstruction": "Montre les images dans l’ordre de la croissance et nomme chaque étape.",
+          "adultGuidance": "Les mêmes images sont présentées dans un autre ordre. L’enfant indique d’abord la graine, ensuite la pousse, enfin la jeune plante et les nomme. Il n’a rien à déplacer sur l’écran. S’il hésite, nommez la première étape et laissez-le trouver la suivante. Faites redire l’ordre en une phrase courte.",
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
-          "mediaIds": [],
+          "mediaIds": ["plante-jeune", "plante-graine", "plante-pousse"],
           "objectiveCodes": ["WORLD-S01-C01-O09"],
           "materialCodes": ["aucun"],
           "vocabulary": [
@@ -777,14 +785,11 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Say what comes after the seed."
+              "childInstruction": "Point to the pictures in growth order and name each stage."
             }
           ],
           "payload": {
-            "prompts": [
-              "Qu’est-ce qui vient après la graine ?",
-              "De quoi la plante a-t-elle besoin ?"
-            ]
+            "focus": "ordonner et nommer graine, pousse et jeune plante"
           }
         }
       ],

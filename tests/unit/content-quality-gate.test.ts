@@ -317,9 +317,15 @@ describe("human review package", () => {
   const options = REVIEW_PACKAGES[0]!;
   const committed = readFileSync(path.join(ROOT, reviewPackagePath(options)), "utf8");
 
-  it("is up to date with the content (run `npm run review:package`)", () => {
-    expect(committed).toBe(buildReviewPackage(data, options));
-  });
+  it.each(REVIEW_PACKAGES)(
+    "is up to date: $levelId week $week (run `npm run review:package`)",
+    (week) => {
+      const file = reviewPackagePath(week);
+      expect(readFileSync(path.join(ROOT, file), "utf8"), file).toBe(
+        buildReviewPackage(data, week),
+      );
+    },
+  );
 
   it("carries what a reviewer needs, and no approval", () => {
     expect(committed).toContain("ne sont approuvées par**");

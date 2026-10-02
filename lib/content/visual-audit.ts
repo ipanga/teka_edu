@@ -25,6 +25,22 @@ export const VISUAL_AUDIT_PATH = "docs/september-illustration-audit.md";
 export const VISUAL_STATE_PATH = "docs/september-illustration-state.json";
 export const SEPTEMBER_VISUAL_AUDIT_LAST_DAY = 22;
 
+/** Retain the September library, including unused assets, but exclude later-only additions. */
+export function septemberMedia(data: ReferenceData): ReferenceData["media"] {
+  const september = new Set<string>();
+  const later = new Set<string>();
+  for (const programme of data.programmes) {
+    for (const [lessonId, day] of dayOfLessonMap(programme.levelId, data)) {
+      const lesson = data.lessons.find((item) => item.id === lessonId);
+      const ids = day <= SEPTEMBER_VISUAL_AUDIT_LAST_DAY ? september : later;
+      for (const activity of lesson?.activities ?? []) {
+        for (const id of picturesOf(activity, data)) ids.add(id);
+      }
+    }
+  }
+  return data.media.filter((asset) => september.has(asset.id) || !later.has(asset.id));
+}
+
 export const AUDIT_STATUSES = [
   "not-reviewed",
   "reviewed-no-change",
@@ -408,7 +424,7 @@ export function deriveState(
   }
   const assets: DerivedState["assets"] = {};
   const assetsByVerdict: Record<AssetVerdict, number> = { keep: 0, refine: 0, replace: 0 };
-  for (const asset of data.media) {
+  for (const asset of septemberMedia(data)) {
     const decision = state.decisions.assets[asset.id];
     const verdict = decision?.verdict ?? "keep";
     assetsByVerdict[verdict] += 1;
@@ -432,7 +448,7 @@ export function deriveState(
     counts: {
       lessons: lessonStatus.size,
       activities: rows.length,
-      assets: data.media.length,
+      assets: septemberMedia(data).length,
       byStatus,
       byAudioNeed,
       assetsByVerdict,
@@ -521,7 +537,7 @@ export function buildAuditDocument(data: ReferenceData, state: VisualState): str
     "| Image | Type | Verdict | Priorité | État | Utilisée par (leçons) | Pourquoi |",
     "| --- | --- | --- | --- | --- | --- | --- |",
   );
-  const assetsSorted = data.media
+  const assetsSorted = septemberMedia(data)
     .map((asset) => ({ asset, d: derived.assets[asset.id]! }))
     .sort(
       (a, b) =>

@@ -2466,52 +2466,52 @@
       "curriculumId": "maternelle-cycle1-cd-2026",
       "levelIds": ["maternelle-3"],
       "domainCode": "MATH",
-      "title": "Je compte à partir de",
-      "summary": "Préparer le surcomptage en continuant la comptine numérique à partir d’un nombre donné.",
+      "title": "Un objet de plus : je recompte",
+      "summary": "Comparer une collection avant et après l’ajout d’un objet, puis recompter depuis un.",
       "objectiveCodes": [],
       "supportingObjectiveCodes": ["MATH-S01-C01-O11", "MATH-S01-C01-O20"],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "octobre-je-grandis-en-francais",
-      "parentGuidance": "Le surcomptage complet viendra ensuite. Ici, on installe l’idée de repartir d’un nombre connu.",
+      "parentGuidance": "Gardez l’ajout visible et recomptez toute la collection depuis un. Le surcomptage reste prévu plus tard, dans sa fenêtre des jours 34 à 44.",
       "activities": [
         {
           "id": "m3-math-28-a1",
           "position": 1,
           "type": "counting",
-          "title": "Je continue après cinq",
-          "childInstruction": "Je dis cinq. Continue : six, sept, huit.",
-          "adultGuidance": "Commencez par un nombre de 3 à 6. L’enfant continue la suite orale trois nombres plus loin. Utilisez les doigts seulement si cela aide.",
+          "title": "Avant et après un ajout",
+          "childInstruction": "Compte les objets. J’en ajoute un : recompte-les tous depuis un.",
+          "adultGuidance": "Posez 3 objets et laissez l’enfant compter depuis un. Ajoutez un objet sous ses yeux, puis faites recompter toute la collection depuis un. Faites dire : « Avant, il y en avait trois ; maintenant, quatre : un de plus. » Reprenez avec 4 puis 5 objets, sans demander de continuer à partir du nombre connu.",
           "minutes": 4,
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["MATH-S01-C01-O11"],
-          "materialCodes": ["aucun"],
+          "objectiveCodes": ["MATH-S01-C01-O11", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
           "vocabulary": [
             {
-              "fr": "continuer",
-              "en": "to continue"
+              "fr": "un de plus",
+              "en": "one more"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "I say five. You continue: six, seven, eight."
+              "childInstruction": "Count the objects. I add one: count them all again from one."
             }
           ],
           "payload": {
-            "upTo": 10,
-            "objects": "suite orale des nombres"
+            "upTo": 6,
+            "objects": "petits objets avant et après un ajout"
           }
         },
         {
           "id": "m3-math-28-a2",
           "position": 2,
           "type": "manipulation",
-          "title": "Je pars du nombre connu",
-          "childInstruction": "Il y en a déjà quatre. Ajoute deux objets et continue à compter.",
-          "adultGuidance": "Posez 4 objets déjà comptés. Dites : « On sait qu’il y en a quatre. » Ajoutez deux objets un par un : « cinq, six ». Si nécessaire, recomptez tout.",
+          "title": "J’ajoute moi-même un objet",
+          "childInstruction": "Compte ton tas. Ajoute un objet, puis recompte tout depuis un.",
+          "adultGuidance": "Donnez 4 objets. L’enfant les compte, ajoute lui-même un seul objet et recompte tout depuis un. Demandez ce qui a changé : « Il y en a un de plus. » Recommencez avec 5 objets si l’enfant le souhaite ; gardez chaque comparaison séparée.",
           "minutes": 5,
           "mode": "off-screen",
           "role": "teach",
@@ -2520,14 +2520,14 @@
           "materialCodes": ["petits-objets"],
           "vocabulary": [
             {
-              "fr": "déjà",
-              "en": "already"
+              "fr": "recompter",
+              "en": "to count again"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "There are already four. Add two and keep counting."
+              "childInstruction": "Count your pile. Add one object, then count them all again from one."
             }
           ],
           "payload": {

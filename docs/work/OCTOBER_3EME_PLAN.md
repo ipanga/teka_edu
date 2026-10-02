@@ -3,6 +3,8 @@
 Status: plan approved for Batch 1. Batch 1 implementation details live in
 `docs/work/OCTOBER_BATCH_1.md`.
 
+Independent Batch 1 review returned accepted-with-modifications. The owner-authorized seven corrections are implemented and await independent reconfirmation; evidence is in `docs/work/OCTOBER_BATCH_1_CORRECTIONS.md`. Day 30 (Monday October 12) is a teaching day intentionally deferred to the next authorized batch. All October lessons remain in review.
+
 ## Repository baseline
 
 - `origin/main`: `ac3ebf9b9bd00662def3e7ec206aff1954f4694d`, September production release.

@@ -10,7 +10,12 @@
  * once the set is frozen, if any picture's bytes move.
  */
 import type { ReferenceData } from "./reference-data";
-import { SEPTEMBER_VISUAL_AUDIT_LAST_DAY, dayOfLessonMap, picturesOf } from "./visual-audit";
+import {
+  SEPTEMBER_VISUAL_AUDIT_LAST_DAY,
+  dayOfLessonMap,
+  picturesOf,
+  septemberMedia,
+} from "./visual-audit";
 
 export const QA_TRACKER_PATH = "docs/work/SEPTEMBER_VISUAL_QA.md";
 export const FREEZE_MARKER = "SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION";
@@ -90,7 +95,7 @@ const septemberVisualLessonIds = (data: ReferenceData): Set<string> => {
 export function buildQaRows(data: ReferenceData, qa: FinalQa): QaRow[] {
   const levelName = new Map(data.levels.map((l) => [l.id, l.name]));
   const septemberLessonIds = septemberVisualLessonIds(data);
-  return data.media.map((asset): QaRow => {
+  return septemberMedia(data).map((asset): QaRow => {
     const users = data.lessons.filter(
       (l) =>
         septemberLessonIds.has(l.id) &&

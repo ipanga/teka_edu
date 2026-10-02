@@ -955,9 +955,9 @@
           "id": "m3-time-10-a2",
           "position": 2,
           "type": "conversation",
-          "title": "Aujourd’hui ou plus tard",
-          "childInstruction": "Dis pour chaque action : aujourd’hui ou plus tard.",
-          "adultGuidance": "Dites quatre actions simples : manger ce soir, aller dormir, aller à l’école demain, jouer maintenant. L’enfant répond oralement aujourd’hui ou plus tard.",
+          "title": "Maintenant ou plus tard",
+          "childInstruction": "Dis pour chaque action : maintenant ou plus tard.",
+          "adultGuidance": "Pendant la séance, dites quatre actions : parler ensemble maintenant, montrer ses mains maintenant, aller dormir plus tard ce soir, aller à l’école demain. L’enfant répond maintenant ou plus tard. Précisez que dormir ce soir est plus tard, même si ce sera encore aujourd’hui.",
           "minutes": 3,
           "mode": "off-screen",
           "role": "teach",
@@ -966,8 +966,8 @@
           "materialCodes": ["aucun"],
           "vocabulary": [
             {
-              "fr": "aujourd’hui",
-              "en": "today"
+              "fr": "maintenant",
+              "en": "now"
             },
             {
               "fr": "plus tard",
@@ -977,15 +977,16 @@
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Sort the actions: today or later."
+              "childInstruction": "For each action, say now or later. Bedtime tonight is later."
             }
           ],
           "payload": {
             "prompts": [
-              "manger ce soir",
-              "aller dormir",
+              "parler ensemble maintenant",
+              "montrer ses mains maintenant",
+              "aller dormir plus tard ce soir",
               "aller à l’école demain",
-              "jouer maintenant"
+              "Est-ce maintenant ou plus tard ?"
             ]
           }
         }
@@ -1002,24 +1003,32 @@
       "title": "Je prépare les jours qui viennent",
       "summary": "Consolider le futur proche et les repères de semaine.",
       "objectiveCodes": [],
-      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O11", "TIME-SPACE-S01-C01-O10"],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O11",
+        "TIME-SPACE-S01-C01-O10",
+        "TIME-SPACE-S01-C01-O12"
+      ],
       "stage": "consolidation",
       "difficulty": 2,
       "themeId": "octobre-je-grandis-en-francais",
-      "parentGuidance": "Fin de semaine : l’enfant parle du week-end et du prochain jour d’école sans que le produit prétende connaitre la classe.",
+      "parentGuidance": "Partez du jour de la séance, puis situez les deux jours suivants. L’enfant les nomme et parle d’une action possible, sans que le produit prétende connaitre sa classe.",
       "activities": [
         {
           "id": "m3-time-11-a1",
           "position": 1,
           "type": "conversation",
-          "title": "Après vendredi",
-          "childInstruction": "Dis ce qui viendra après aujourd’hui.",
-          "adultGuidance": "Aidez l’enfant à situer le week-end puis le prochain jour d’école. Gardez la phrase simple : « Après vendredi, il y aura samedi. »",
+          "title": "Aujourd’hui et les deux jours suivants",
+          "childInstruction": "Dis la date, puis le jour de demain et celui d’après-demain.",
+          "adultGuidance": "Faites redire la date de la séance, puis partez de son jour : « Aujourd’hui, nous sommes {{jour}}. » Aidez l’enfant à nommer demain puis après-demain. Modélisez : « Demain, ce sera… ; après-demain, ce sera… » Laissez-le compléter les noms des jours, puis dire une action qu’il pourra faire demain.",
           "minutes": 4,
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": ["TIME-SPACE-S01-C01-O11", "TIME-SPACE-S01-C01-O10"],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O11",
+            "TIME-SPACE-S01-C01-O10",
+            "TIME-SPACE-S01-C01-O12"
+          ],
           "materialCodes": ["aucun"],
           "vocabulary": [
             {
@@ -1027,21 +1036,22 @@
               "en": "after"
             },
             {
-              "fr": "week-end",
-              "en": "weekend"
+              "fr": "après-demain",
+              "en": "the day after tomorrow"
             }
           ],
           "scaffolds": [
             {
               "language": "en",
-              "childInstruction": "Say what will come after today."
+              "childInstruction": "Say the date, then name tomorrow and the day after tomorrow."
             }
           ],
           "payload": {
             "prompts": [
               "Quel jour sommes-nous ?",
               "Quel jour viendra après ?",
-              "Quand sera le prochain jour d’école ?"
+              "Quel jour sera après-demain ?",
+              "Que pourras-tu faire demain ?"
             ]
           }
         },

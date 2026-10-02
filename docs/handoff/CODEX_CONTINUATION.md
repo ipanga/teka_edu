@@ -4,6 +4,13 @@ Current authorization: October 2026, 3ème maternelle Batch 1 only. Codex is the
 implementation, QA and authoring-time ImageGen environment. Claude Code is unavailable and is no
 longer a dependency. `CODEX_TO_CLAUDE_CODE_HANDOFF.md` is historical; preserve its evidence.
 
+Correction checkpoint: the independent review returned accepted-with-modifications. All seven
+owner-authorized corrections are applied; Week 6/7 packages match canonical content, and the
+freshness test covers every package. See `docs/work/OCTOBER_BATCH_1_CORRECTIONS.md` for exact
+affected activities, three new SVGs, visual evidence, validation and reconfirmation scope.
+All 28 October lessons remain `review`; no approvals were restored. Day 30 is a teaching day
+intentionally deferred to the next batch. Stop for independent reconfirmation.
+
 ## October planning baseline — 2026-10-02
 
 Read `docs/work/OCTOBER_3EME_PLAN.md` and `docs/work/OCTOBER_BATCH_1.md` before continuing October
@@ -20,9 +27,9 @@ only after owner authorization.
 
 Batch 1 branch: `codex/october-maternelle-3`. Planning checkpoint commit: `1242f5a`. Batch 1
 authors days 23-29 only and leaves day 30 as `no-content`. All new October lessons remain
-`review` with `review: null`; no independent acceptance has happened.
+`review` with `review: null`; independent review requested modifications, and corrected content awaits reconfirmation.
 
-Final local validation passed: format, format check, lint, typecheck, 443 unit tests, content
+Original implementation validation passed: format, format check, lint, typecheck, 443 unit tests, content
 validation, programme report for days 23-30, coverage report through day 29 with 42/42 due
 objectives taught, media report with zero required image gaps, approval-lapse dry run with 0 lapses,
 Webpack production build with CI fake server-only sentinels, and client-bundle scan over 28 files
