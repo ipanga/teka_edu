@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-10-02
-Branch:     develop; PR #89 merged, staging healthy
-Commit:     1c5c5aa; origin/develop verified; production unchanged
+Branch:     develop; final staging functional validation healthy
+Commit:     c325c65; origin/develop verified; production unchanged
 Updated by: Codex
 ```
 
@@ -52,6 +52,29 @@ preview `dpl_9YzWw1XsgwhSDT5VeyTppsqe38RG` to
 `teka-edu-staging.vercel.app`, and passed deployed smoke: 71 passed, nine skipped, zero failed.
 Production code and production data remain unchanged. Stop here until the owner explicitly
 authorizes production promotion or a new task.
+
+PR #90 recorded the healthy staging state in durable docs and was squash-merged as
+`c325c65e765984e5f8223b08e2ee00e99b4c6ecc`. The local `develop` divergence from the old
+docs-only commit `8823d05aac03c7f20ee17c072945aeaaebdf422e` was inspected, found superseded by
+PR #90, and removed by aligning local `develop` to `origin/develop`; no remote history was rewritten.
+Push-triggered staging workflow run `37048748582` deployed final `develop` to Vercel staging
+deployment `dpl_FwfCxXHYtNJrRV6H5G1CjZpegYaz` at
+`https://teka-6g69qd3wb-teka10.vercel.app`, aliased `teka-edu-staging.vercel.app`, verified
+`preview` / `READY`, app environment `staging`, expected Git SHA
+`c325c65e765984e5f8223b08e2ee00e99b4c6ecc`, and Supabase DEV. Final deployed smoke passed:
+71 passed, zero failed, nine production-only skipped.
+
+Final pre-production functional validation sampled representative parent-led September journeys:
+`m3-lang-01` full parent entry/completion and Nsimba story, `m3-lang-02` five-choice vocabulary and
+Mangue story, `m3-lang-03` Kumu story plus retained shape SVGs, `m3-lang-05` Bibi story and animal
+observation, `m3-lang-06` Marché story and recognition activity, `m3-math-10` counting handoff,
+`m3-world-02` animal body-part observation, `m1-lang-02` hands rhyme, `m1-lang-03` Seau de Lisa
+story, `m1-lang-06` shared bucket rhyme primary frame, `m1-lang-11` body word cards, and
+`m1-lang-18` four body word layout. Phone, tablet and laptop/MacBook classes were validated; TV and
+Smart TV remain excluded. No functional defect was found. September integrity rechecked at 176/176
+approved, 176 distinct valid digests, zero review, zero stale/unexpected lapses, 20/20 rich-media
+accepted and 78 runtime media files. Supabase DEV is up to date. Production code and production data
+remain unchanged; the remaining decision is owner authorization for any production promotion.
 
 Accepted implementation checkpoint `c7967163dedd26fa4c69a68de5a34ccdd52ca1f1` validated/pushed/remote-verified.
 Documentation-only completion follow-up leaves validated implementation and evidence unchanged.
