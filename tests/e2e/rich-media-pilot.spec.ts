@@ -1,6 +1,6 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test, type Locator, type Page } from "@playwright/test";
 
 const evidence = path.resolve(
   process.cwd(),
@@ -80,92 +80,119 @@ async function reachActivity(page: Page, item: (typeof cases)[number]) {
   throw new Error(`Activity not reached: ${item.path} / ${item.activity}`);
 }
 
-test("the controlled rich-media pilot works in real child screens at every target width", async ({
-  page,
-}) => {
-  mkdirSync(evidence, { recursive: true });
-  const metrics: Record<string, unknown>[] = [];
+async function assertImageLoaded(page: Page, image: Locator, expectedFile: string) {
+  await expect(image).toBeVisible();
+  await expect(image).toHaveAttribute("src", new RegExp(`${expectedFile}$`));
 
-  for (const viewport of viewports) {
+  const source = (await image.getAttribute("src"))!;
+  const url = new URL(source, page.url()).href;
+  const response = await page.evaluate(async (href) => {
+    const result = await fetch(href, { cache: "no-store" });
+    return {
+      contentType: result.headers.get("content-type"),
+      ok: result.ok,
+      status: result.status,
+    };
+  }, url);
+  expect(response, `HTTP response for ${expectedFile}`).toMatchObject({
+    ok: true,
+    status: 200,
+  });
+  expect(response.contentType ?? "", `content type for ${expectedFile}`).toContain("image/");
+
+  await expect
+    .poll(
+      () =>
+        image.evaluate(async (element: HTMLImageElement) => {
+          if (!element.complete || element.naturalWidth === 0) return 0;
+          await element.decode();
+          return element.naturalWidth;
+        }),
+      { message: `${expectedFile} should load and decode`, timeout: 15_000 },
+    )
+    .toBeGreaterThan(0);
+
+  return path.basename(new URL(source, "http://local").pathname);
+}
+
+for (const viewport of viewports) {
+  test(`the controlled rich-media pilot works on ${viewport.name}`, async ({ page }) => {
+    mkdirSync(evidence, { recursive: true });
+    const metrics: Record<string, unknown>[] = [];
+
     await page.setViewportSize({ width: viewport.width, height: viewport.height });
     await page.emulateMedia({ reducedMotion: "reduce" });
     for (const item of cases) {
-      await reachActivity(page, item);
-      await page.getByRole("button", { name: "Montrer à l’enfant", exact: true }).click();
-      const dialog = page.getByRole("dialog");
-      await expect(dialog).toBeVisible();
+      await test.step(`${viewport.name} / ${item.name}`, async () => {
+        await reachActivity(page, item);
+        await page.getByRole("button", { name: "Montrer à l’enfant", exact: true }).click();
+        const dialog = page.getByRole("dialog");
+        await expect(dialog).toBeVisible();
 
-      const actual: string[] = [];
-      if (item.expected.length === 1) {
-        const images = dialog.getByRole("img");
-        await expect(images.first()).toBeVisible();
-        await expect
-          .poll(async () =>
-            images.first().evaluate((image: HTMLImageElement) => image.naturalWidth),
-          )
-          .toBeGreaterThan(0);
-        for (const image of await images.all()) {
-          const source = new URL((await image.getAttribute("src"))!, "http://local").pathname;
-          actual.push(path.basename(source));
-          await image.evaluate((element: HTMLImageElement) => element.decode());
+        const actual: string[] = [];
+        if (item.expected.length === 1) {
+          const images = await dialog.getByRole("img").all();
+          for (const image of images) {
+            const source = new URL((await image.getAttribute("src"))!, "http://local").pathname;
+            const basename = path.basename(source);
+            actual.push(basename);
+            if (basename === item.expected[0])
+              await assertImageLoaded(page, image, item.expected[0]);
+          }
+          expect(actual).toContain(item.expected[0]);
+        } else {
+          for (let storyPage = 0; storyPage < item.expected.length; storyPage++) {
+            const image = dialog.getByRole("img").first();
+            const expectedFile = item.expected[storyPage];
+            if (!expectedFile) throw new Error(`Missing expected story asset for ${item.name}`);
+            actual.push(await assertImageLoaded(page, image, expectedFile));
+            if (storyPage >= item.expected.length - 1) continue;
+            await dialog.getByRole("button", { name: "Page suivante", exact: true }).click();
+          }
+          expect(actual).toEqual(item.expected);
         }
-        expect(actual).toContain(item.expected[0]);
-      } else {
-        for (let storyPage = 0; storyPage < item.expected.length; storyPage++) {
-          const image = dialog.getByRole("img").first();
-          await expect(image).toBeVisible();
-          await expect
-            .poll(async () => image.evaluate((element: HTMLImageElement) => element.naturalWidth))
-            .toBeGreaterThan(0);
-          const source = new URL((await image.getAttribute("src"))!, "http://local").pathname;
-          actual.push(path.basename(source));
-          await image.evaluate((element: HTMLImageElement) => element.decode());
-          if (storyPage >= item.expected.length - 1) continue;
-          await dialog.getByRole("button", { name: "Page suivante", exact: true }).click();
-        }
-        expect(actual).toEqual(item.expected);
-      }
 
-      const layout = await page.evaluate(() => {
-        const modal = document.querySelector<HTMLElement>("dialog")!;
-        const pictures = [...modal.querySelectorAll<HTMLImageElement>("img")];
-        return {
-          documentOverflow:
-            document.documentElement.scrollWidth - document.documentElement.clientWidth,
-          dialogOverflow: modal.scrollWidth - modal.clientWidth,
-          dialogScrollHeight: modal.scrollHeight,
-          pictures: pictures.map((picture) => {
-            const box = picture.getBoundingClientRect();
-            return {
-              naturalWidth: picture.naturalWidth,
-              naturalHeight: picture.naturalHeight,
-              renderedWidth: Math.round(box.width),
-              renderedHeight: Math.round(box.height),
-              left: Math.round(box.left),
-              right: Math.round(box.right),
-            };
-          }),
-        };
-      });
-      expect(layout.documentOverflow).toBeLessThanOrEqual(1);
-      expect(layout.dialogOverflow).toBeLessThanOrEqual(1);
-      for (const picture of layout.pictures) {
-        expect(picture.left).toBeGreaterThanOrEqual(0);
-        expect(picture.right).toBeLessThanOrEqual(viewport.width);
-      }
-
-      metrics.push({ viewport, asset: item.name, pages: actual, ...layout });
-      if (viewport.width === 390 || viewport.width === 1440) {
-        await page.screenshot({
-          path: path.join(evidence, `${viewport.name}-${item.name}.png`),
-          fullPage: true,
+        const layout = await page.evaluate(() => {
+          const modal = document.querySelector<HTMLElement>("dialog")!;
+          const pictures = [...modal.querySelectorAll<HTMLImageElement>("img")];
+          return {
+            documentOverflow:
+              document.documentElement.scrollWidth - document.documentElement.clientWidth,
+            dialogOverflow: modal.scrollWidth - modal.clientWidth,
+            dialogScrollHeight: modal.scrollHeight,
+            pictures: pictures.map((picture) => {
+              const box = picture.getBoundingClientRect();
+              return {
+                naturalWidth: picture.naturalWidth,
+                naturalHeight: picture.naturalHeight,
+                renderedWidth: Math.round(box.width),
+                renderedHeight: Math.round(box.height),
+                left: Math.round(box.left),
+                right: Math.round(box.right),
+              };
+            }),
+          };
         });
-      }
-    }
-  }
+        expect(layout.documentOverflow).toBeLessThanOrEqual(1);
+        expect(layout.dialogOverflow).toBeLessThanOrEqual(1);
+        for (const picture of layout.pictures) {
+          expect(picture.left).toBeGreaterThanOrEqual(0);
+          expect(picture.right).toBeLessThanOrEqual(viewport.width);
+        }
 
-  writeFileSync(
-    path.join(evidence, "metrics.json"),
-    `${JSON.stringify({ generatedOn: "2026-09-27", metrics }, null, 2)}\n`,
-  );
-});
+        metrics.push({ viewport, asset: item.name, pages: actual, ...layout });
+        if (viewport.width === 390 || viewport.width === 1440) {
+          await page.screenshot({
+            path: path.join(evidence, `${viewport.name}-${item.name}.png`),
+            fullPage: true,
+          });
+        }
+      });
+    }
+
+    writeFileSync(
+      path.join(evidence, `${viewport.name}-metrics.json`),
+      `${JSON.stringify({ generatedOn: "2026-09-27", metrics }, null, 2)}\n`,
+    );
+  });
+}

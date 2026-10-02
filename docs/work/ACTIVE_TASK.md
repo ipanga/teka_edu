@@ -12,15 +12,15 @@ and perform controlled staging validation.
 
 ## Status
 
-`staging_unhealthy`
+`in_progress`
 
 ## Branch
 
-`develop`
+`codex/fix-pr88-staging-smoke`
 
 ## Base Branch
 
-Base branch `origin/develop` at `5c8752876231bf3831173f64e996fb942104e06b`.
+Base branch `origin/develop` at `5249dadfcea596a49bbe058f674ef61e27462d87`.
 Accepted September reference branch `origin/codex/september-rich-media-pilot` at
 `b4ca67cc8449ba4b5dae0ad7fd057591de2f833e`.
 
@@ -106,7 +106,7 @@ Results below apply to the controlled integration branch.
 | content validation | PASS   | 31 files                                                                |
 | database tests     | PASS   | local db reset + pgTAP 152/152; CI Supabase job green                   |
 | build              | PASS   | production Next build; no deployment                                    |
-| E2E                | MIXED  | local pilot passed; PR CI green; staging smoke 65 pass/1 fail/9 skipped |
+| E2E                | FAIL   | local pilot passed; PR CI green; staging smoke 65 pass/1 fail/9 skipped |
 | Docker             | PASS   | CI portable + Vercel images                                             |
 | secret scans       | PASS   | 14 client files; three fake server sentinels absent                     |
 | independent review | PASS   | separate session accepted; owner relayed, no correction                 |

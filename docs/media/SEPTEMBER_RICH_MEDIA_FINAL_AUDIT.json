@@ -1,7 +1,7 @@
 {
   "generatedOn": "2026-10-01",
   "status": "september-rich-media-complete",
-  "branch": "develop",
+  "branch": "codex/fix-pr88-staging-smoke",
   "rolloutBaseline": "cbc1cf3",
   "reviewedDocumentation": "1c3372298eaa9e3463aa7a889762bb9cc662db2b",
   "frozenImplementation": "8b5a8655222e299fea90e7582906c3723b3eca79",
