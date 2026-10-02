@@ -20,7 +20,7 @@ and perform controlled staging validation.
 
 ## Base Branch
 
-Base branch `origin/develop` at `5249dadfcea596a49bbe058f674ef61e27462d87`.
+Base branch `origin/develop` at `c325c65e765984e5f8223b08e2ee00e99b4c6ecc`.
 Accepted September reference branch `origin/codex/september-rich-media-pilot` at
 `b4ca67cc8449ba4b5dae0ad7fd057591de2f833e`.
 
@@ -63,6 +63,26 @@ preview `dpl_9YzWw1XsgwhSDT5VeyTppsqe38RG` for commit
 `teka-edu-staging.vercel.app`, and passed final deployed smoke: 71 passed, nine skipped, zero
 failed. Production code and production data remain unchanged.
 
+PR #90 recorded the healthy staging state in durable docs and was squash-merged into `develop` as
+`c325c65e765984e5f8223b08e2ee00e99b4c6ecc`. Final pre-production functional validation was run
+from a clean local `develop` aligned to that remote SHA after discarding the superseded local-only
+docs commit `8823d05aac03c7f20ee17c072945aeaaebdf422e`, whose content was already represented by
+PR #90. Push-triggered staging run `37048748582` deployed
+`dpl_FwfCxXHYtNJrRV6H5G1CjZpegYaz` to `https://teka-6g69qd3wb-teka10.vercel.app`, aliased
+`teka-edu-staging.vercel.app`, verified target `preview`, app environment `staging`, expected Git
+SHA `c325c65e765984e5f8223b08e2ee00e99b4c6ecc`, and Supabase DEV through the protected workflow,
+then passed deployed smoke: 71 passed, nine production-only checks skipped, zero failed.
+
+The real-user functional sample covered parent entry and completion, pause/resume persistence,
+child-screen transitions and return controls, rich story sequences, shared rhyme primary frames,
+counting/numeracy handoff, language/vocabulary, matching/recognition, tracing/art-adjacent word-card
+interaction, retained SVG usage and accepted WebP usage. Representative lesson IDs validated by the
+staging browser suite were `m3-lang-01`, `m3-lang-02`, `m3-lang-03`, `m3-lang-05`, `m3-lang-06`,
+`m3-math-10`, `m3-world-02`, `m1-lang-02`, `m1-lang-03`, `m1-lang-06`, `m1-lang-11` and
+`m1-lang-18`. Supported device coverage remained phone, tablet and laptop/MacBook only; TV and
+Smart TV were not tested or treated as supported. No functional defects were found and no accepted
+educational content, approval history or media bytes were changed.
+
 ## Scope
 
 Conflict resolution, integration validation, final reference-data migration, comparison with both
@@ -93,7 +113,9 @@ Phone/tablet/laptop-MacBook only; TV/Smart TV unsupported (ADR-050).
 - Replayed local Supabase migrations from scratch and ran pgTAP successfully.
 - Applied the two final migrations to Supabase DEV through the normal staging workflow.
 - Fixed and merged PR #89 for the remaining rich-media pilot staging smoke timeout.
+- Merged PR #90 with durable healthy-staging documentation.
 - Deployed the final staging preview and verified Vercel did not create a production deployment.
+- Completed final pre-production functional validation of staging.
 
 ## In Progress
 
@@ -102,8 +124,7 @@ production operation has been performed.
 
 ## Remaining
 
-Stop here unless the owner explicitly authorizes production promotion or a new task. Do not apply
-migrations to hosted PROD.
+Owner must decide whether to authorize production promotion. Do not apply migrations to hosted PROD.
 
 ## Validation State
 
@@ -118,7 +139,7 @@ Results below apply to the controlled integration branch.
 | content validation | PASS   | 31 files                                                   |
 | database tests     | PASS   | local db reset + pgTAP 152/152; CI Supabase job green      |
 | build              | PASS   | production Next build; no deployment                       |
-| E2E                | PASS   | staging smoke 71 pass/0 fail/9 skipped after PR #89        |
+| E2E                | PASS   | final staging smoke 71 pass/0 fail/9 skipped at c325c65    |
 | Docker             | PASS   | CI portable + Vercel images                                |
 | secret scans       | PASS   | 14 client files; three fake server sentinels absent        |
 | independent review | PASS   | separate session accepted; owner relayed, no correction    |
@@ -135,17 +156,17 @@ present from PR #86 and remains unchanged. The final PR #88 forward migrations a
   idempotent final September reference-data reconciliation from `content/`.
 
 Local `npm run db:reset` replayed all migrations from scratch and local `npm run db:test` passed
-152 pgTAP assertions. Supabase DEV migration apply finished successfully in run `36926521934`; run
-`37046853410` confirmed the remote DEV database was already up to date. Production database
-unchanged.
+152 pgTAP assertions. Supabase DEV migration apply finished successfully in run `36926521934`; runs
+`37046853410` and `37048748582` confirmed the remote DEV database was already up to date.
+Production database unchanged.
 
 ## Deployment State
 
 Staging deployment exists and is not production:
 
-- Run: `37046853410`.
-- Deployment: `dpl_9YzWw1XsgwhSDT5VeyTppsqe38RG`.
-- Preview URL: `https://teka-4urqhl8pb-teka10.vercel.app`.
+- Run: `37048748582`.
+- Deployment: `dpl_FwfCxXHYtNJrRV6H5G1CjZpegYaz`.
+- Preview URL: `https://teka-6g69qd3wb-teka10.vercel.app`.
 - Stable alias: `teka-edu-staging.vercel.app`.
 - Target/state: `preview` / `READY`.
 - Final status: healthy; deployed smoke passed 71 checks, skipped nine production-only checks, and
@@ -155,7 +176,7 @@ Production unchanged.
 
 ## Git State
 
-`develop` is at `1c5c5aad9c6e9871d7cab83813cfbe34bc057bc7` on `origin/develop`.
+`develop` is at `c325c65e765984e5f8223b08e2ee00e99b4c6ecc` on `origin/develop`.
 The accepted feature branch history was not rewritten.
 
 ## Blockers
@@ -168,8 +189,8 @@ None for this task. Owner decision required before any production promotion.
 
 ## Exact Resume Point
 
-Start from `develop` at `1c5c5aad9c6e9871d7cab83813cfbe34bc057bc7`. Staging is healthy at
-`https://teka-4urqhl8pb-teka10.vercel.app` / `teka-edu-staging.vercel.app`; production remains
+Start from `develop` at `c325c65e765984e5f8223b08e2ee00e99b4c6ecc`. Staging is healthy at
+`https://teka-6g69qd3wb-teka10.vercel.app` / `teka-edu-staging.vercel.app`; production remains
 unchanged. Stop unless the owner authorizes the next release step.
 
 ## Resume Verification

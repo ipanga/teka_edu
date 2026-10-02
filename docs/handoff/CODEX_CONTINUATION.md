@@ -43,6 +43,26 @@ and `naturalWidth` directly. PR #89 CI passed and was squash-merged into `develo
 from `docs/work/ACTIVE_TASK.md`; stop unless the owner explicitly authorizes production promotion
 or a new task.
 
+PR #90 recorded the healthy staging state and was squash-merged into `develop` as
+`c325c65e765984e5f8223b08e2ee00e99b4c6ecc`. The previous local `develop` divergence was the
+superseded local-only docs commit `8823d05aac03c7f20ee17c072945aeaaebdf422e`; it was removed by
+aligning local `develop` to `origin/develop`, with no remote rewrite. Final pre-production
+functional validation used push-triggered staging run `37048748582`: Vercel deployment
+`dpl_FwfCxXHYtNJrRV6H5G1CjZpegYaz`, URL `https://teka-6g69qd3wb-teka10.vercel.app`, alias
+`teka-edu-staging.vercel.app`, target `preview`, state `READY`, expected Git SHA
+`c325c65e765984e5f8223b08e2ee00e99b4c6ecc`, app environment `staging`, Supabase DEV, deployed
+smoke 71 passed / 0 failed / 9 production-only skipped.
+
+Representative functional sample covered parent entry/completion, pause/resume persistence,
+child-screen transitions and return controls, story paging, shared rhyme primary frames, counting
+handoff, vocabulary/recognition interactions, retained SVGs and accepted WebPs across phone, tablet
+and laptop/MacBook. Lesson IDs: `m3-lang-01`, `m3-lang-02`, `m3-lang-03`, `m3-lang-05`,
+`m3-lang-06`, `m3-math-10`, `m3-world-02`, `m1-lang-02`, `m1-lang-03`, `m1-lang-06`, `m1-lang-11`,
+`m1-lang-18`. TV and Smart TV remain excluded. No defects were found; no accepted content, approval
+history or media bytes changed. September integrity rechecked: 176/176 approved, 176 distinct valid
+digests, zero review, zero stale/unexpected lapses, 20/20 rich-media accepted, 78 runtime media
+files. Production code and data remain unchanged. Stop for owner production decision.
+
 Accepted September implementation checkpoint: `c7967163dedd26fa4c69a68de5a34ccdd52ca1f1`, validated,
 pushed and remote-verified. The final documentation-only follow-up changes no validated bytes;
 resolve its SHA with `git log -1` and verify the clean tree and matching feature remote.
