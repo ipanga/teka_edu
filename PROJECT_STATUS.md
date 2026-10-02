@@ -5,9 +5,9 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-10-01
-Branch:     develop; PR #88 merged, staging deployed but smoke unhealthy
-Commit:     5249dad; origin/develop verified; production unchanged
+Date:       2026-10-02
+Branch:     develop; PR #89 merged, staging healthy
+Commit:     1c5c5aa; origin/develop verified; production unchanged
 Updated by: Codex
 ```
 
@@ -20,7 +20,7 @@ are outside acceptance, regression, release-readiness and media-review scope. Hi
 that records past TV checks remains unchanged as an accurate record and creates no current support
 obligation.
 
-## Current September continuation — 2026-10-01
+## Current September continuation — 2026-10-02
 
 PR #88 from `codex/integrate-september-rich-media` into `develop` was squash-merged on
 2026-10-01 after live verification that the head was unchanged at
@@ -36,17 +36,22 @@ adds forward-only migrations
 `20261001192742_final_september_rich_media_reference.sql`. Local `npm run db:reset` replays all
 migrations from scratch and local `npm run db:test` passes 152 pgTAP assertions.
 
-Controlled staging workflow run `36926521934` rerun passed its pre-deploy CI gates after one
-transient rich-media pilot timeout was rerun: format/lint/typecheck/unit/content, build/client-bundle
-secret check/E2E, Supabase local migrations/database tests, and Docker images passed; `Promotion
-source` skipped as expected. The staging job then applied the two final migrations to Supabase DEV
-successfully (`supabase db push --yes` finished), deployed Vercel preview
-`dpl_3mdGtH5GPsSCMYBgwaFZEbRLTaHE` for commit `5249dadfcea596a49bbe058f674ef61e27462d87` to
-`https://teka-aptb19rjm-teka10.vercel.app`, verified target `preview` and state `READY`, and aliased
-`teka-edu-staging.vercel.app`. Final staging smoke is unhealthy: 65 passed, nine skipped, and one
-failure in `tests/e2e/rich-media-pilot.spec.ts` because one pilot image's `naturalWidth` remained
-`0` before the 30 s timeout. The broader `rich-media-rollout` staging check passed. Production code
-and production data remain unchanged; do not promote to `main` until staging smoke is healthy.
+Controlled staging workflow run `36926521934` rerun passed its pre-deploy CI gates and applied the
+two final migrations to Supabase DEV successfully, but final staging smoke was unhealthy: 65 passed,
+nine skipped, and one failure in `tests/e2e/rich-media-pilot.spec.ts` because one pilot image's
+`naturalWidth` remained `0` before the 30 s test timeout. The broader `rich-media-rollout` staging
+check passed.
+
+PR #89 from `codex/fix-pr88-staging-smoke` into `develop` fixed that remaining smoke issue by
+splitting the rich-media pilot smoke into independent supported-device viewport tests and checking
+the expected image HTTP response, browser decode and `naturalWidth` directly. PR #89 CI passed and
+was squash-merged as `1c5c5aad9c6e9871d7cab83813cfbe34bc057bc7`. Controlled staging workflow run
+`37046853410` on `develop` passed CI, confirmed Supabase DEV was already up to date, deployed Vercel
+preview `dpl_9YzWw1XsgwhSDT5VeyTppsqe38RG` to
+`https://teka-4urqhl8pb-teka10.vercel.app`, verified target `preview` and state `READY`, aliased
+`teka-edu-staging.vercel.app`, and passed deployed smoke: 71 passed, nine skipped, zero failed.
+Production code and production data remain unchanged. Stop here until the owner explicitly
+authorizes production promotion or a new task.
 
 Accepted implementation checkpoint `c7967163dedd26fa4c69a68de5a34ccdd52ca1f1` validated/pushed/remote-verified.
 Documentation-only completion follow-up leaves validated implementation and evidence unchanged.

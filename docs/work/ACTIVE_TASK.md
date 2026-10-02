@@ -12,11 +12,11 @@ and perform controlled staging validation.
 
 ## Status
 
-`in_progress`
+`completed`
 
 ## Branch
 
-`codex/fix-pr88-staging-smoke`
+`develop`
 
 ## Base Branch
 
@@ -52,6 +52,17 @@ Post-merge deploy-staging run `36926521934` rerun reached the staging workflow. 
 failure in `tests/e2e/rich-media-pilot.spec.ts` because one image's `naturalWidth` stayed `0` before
 the 30 s test timeout. The broader rollout rich-media test passed on staging.
 
+PR #89 fixed the remaining staging smoke issue by splitting the rich-media pilot smoke into
+independent supported-device viewport tests and by checking the expected image HTTP response,
+browser decode and `naturalWidth` directly. PR #89 CI passed and was squash-merged into `develop`
+as `1c5c5aad9c6e9871d7cab83813cfbe34bc057bc7`. Controlled staging workflow run `37046853410` was
+manually dispatched on `develop`, confirmed Supabase DEV was already up to date, deployed Vercel
+preview `dpl_9YzWw1XsgwhSDT5VeyTppsqe38RG` for commit
+`1c5c5aad9c6e9871d7cab83813cfbe34bc057bc7` to
+`https://teka-4urqhl8pb-teka10.vercel.app`, verified target `preview` and state `READY`, aliased
+`teka-edu-staging.vercel.app`, and passed final deployed smoke: 71 passed, nine skipped, zero
+failed. Production code and production data remain unchanged.
+
 ## Scope
 
 Conflict resolution, integration validation, final reference-data migration, comparison with both
@@ -81,36 +92,37 @@ Phone/tablet/laptop-MacBook only; TV/Smart TV unsupported (ADR-050).
 - Generated final September reference-data reconciliation migration from `content/`.
 - Replayed local Supabase migrations from scratch and ran pgTAP successfully.
 - Applied the two final migrations to Supabase DEV through the normal staging workflow.
-- Deployed the staging preview and verified Vercel did not create a production deployment.
+- Fixed and merged PR #89 for the remaining rich-media pilot staging smoke timeout.
+- Deployed the final staging preview and verified Vercel did not create a production deployment.
 
 ## In Progress
 
-Staging is deployed but unhealthy because the deployed smoke suite fails one rich-media pilot image
-load assertion. No production operation has been performed.
+None. The authorized integration, smoke fix, PR merge and staging validation are complete. No
+production operation has been performed.
 
 ## Remaining
 
-Investigate and fix or harden `tests/e2e/rich-media-pilot.spec.ts` for deployed staging. Do not
-promote to `main` while staging smoke is unhealthy. Do not apply migrations to hosted PROD.
+Stop here unless the owner explicitly authorizes production promotion or a new task. Do not apply
+migrations to hosted PROD.
 
 ## Validation State
 
 Results below apply to the controlled integration branch.
 
-| Check              | Result | At                                                                      |
-| ------------------ | ------ | ----------------------------------------------------------------------- |
-| format             | PASS   | full repository Prettier check                                          |
-| lint               | PASS   | final acceptance and QA generator                                       |
-| typecheck          | PASS   | final acceptance and QA generator                                       |
-| unit tests         | PASS   | 439/439; initial documentation syntax failure fixed                     |
-| content validation | PASS   | 31 files                                                                |
-| database tests     | PASS   | local db reset + pgTAP 152/152; CI Supabase job green                   |
-| build              | PASS   | production Next build; no deployment                                    |
-| E2E                | FAIL   | local pilot passed; PR CI green; staging smoke 65 pass/1 fail/9 skipped |
-| Docker             | PASS   | CI portable + Vercel images                                             |
-| secret scans       | PASS   | 14 client files; three fake server sentinels absent                     |
-| independent review | PASS   | separate session accepted; owner relayed, no correction                 |
-| final media audit  | PASS   | 176 approvals; 20 accepted; 78 tracked files; unchanged173              |
+| Check              | Result | At                                                         |
+| ------------------ | ------ | ---------------------------------------------------------- |
+| format             | PASS   | full repository Prettier check                             |
+| lint               | PASS   | final acceptance and QA generator                          |
+| typecheck          | PASS   | final acceptance and QA generator                          |
+| unit tests         | PASS   | 439/439; initial documentation syntax failure fixed        |
+| content validation | PASS   | 31 files                                                   |
+| database tests     | PASS   | local db reset + pgTAP 152/152; CI Supabase job green      |
+| build              | PASS   | production Next build; no deployment                       |
+| E2E                | PASS   | staging smoke 71 pass/0 fail/9 skipped after PR #89        |
+| Docker             | PASS   | CI portable + Vercel images                                |
+| secret scans       | PASS   | 14 client files; three fake server sentinels absent        |
+| independent review | PASS   | separate session accepted; owner relayed, no correction    |
+| final media audit  | PASS   | 176 approvals; 20 accepted; 78 tracked files; unchanged173 |
 
 ## Database State
 
@@ -123,45 +135,42 @@ present from PR #86 and remains unchanged. The final PR #88 forward migrations a
   idempotent final September reference-data reconciliation from `content/`.
 
 Local `npm run db:reset` replayed all migrations from scratch and local `npm run db:test` passed
-152 pgTAP assertions. Supabase DEV migration apply finished successfully in run `36926521934`.
-Production database unchanged.
+152 pgTAP assertions. Supabase DEV migration apply finished successfully in run `36926521934`; run
+`37046853410` confirmed the remote DEV database was already up to date. Production database
+unchanged.
 
 ## Deployment State
 
 Staging deployment exists and is not production:
 
-- Run: `36926521934`.
-- Deployment: `dpl_3mdGtH5GPsSCMYBgwaFZEbRLTaHE`.
-- Preview URL: `https://teka-aptb19rjm-teka10.vercel.app`.
+- Run: `37046853410`.
+- Deployment: `dpl_9YzWw1XsgwhSDT5VeyTppsqe38RG`.
+- Preview URL: `https://teka-4urqhl8pb-teka10.vercel.app`.
 - Stable alias: `teka-edu-staging.vercel.app`.
 - Target/state: `preview` / `READY`.
-- Final status: unhealthy because deployed smoke failed one rich-media pilot image load assertion.
+- Final status: healthy; deployed smoke passed 71 checks, skipped nine production-only checks, and
+  failed zero checks.
 
 Production unchanged.
 
 ## Git State
 
-`develop` is at `5249dadfcea596a49bbe058f674ef61e27462d87` on `origin/develop`.
+`develop` is at `1c5c5aad9c6e9871d7cab83813cfbe34bc057bc7` on `origin/develop`.
 The accepted feature branch history was not rewritten.
 
 ## Blockers
 
-Staging smoke failed after deployment. The failing check is
-`tests/e2e/rich-media-pilot.spec.ts`; the deployed run reports `naturalWidth` remained `0` for one
-pilot image before timeout. The same spec passed locally in 14.7 s, and staging's broader
-rich-media rollout test passed.
+None.
 
 ## User Decisions Needed
 
-Owner decision required before any production promotion. Engineering next action is to diagnose the
-deployed smoke failure on staging.
+None for this task. Owner decision required before any production promotion.
 
 ## Exact Resume Point
 
-Start from `develop` at `5249dadfcea596a49bbe058f674ef61e27462d87`. Investigate staging smoke
-failure for `tests/e2e/rich-media-pilot.spec.ts` against
-`https://teka-aptb19rjm-teka10.vercel.app` / `teka-edu-staging.vercel.app`; keep production
-unchanged.
+Start from `develop` at `1c5c5aad9c6e9871d7cab83813cfbe34bc057bc7`. Staging is healthy at
+`https://teka-4urqhl8pb-teka10.vercel.app` / `teka-edu-staging.vercel.app`; production remains
+unchanged. Stop unless the owner authorizes the next release step.
 
 ## Resume Verification
 
