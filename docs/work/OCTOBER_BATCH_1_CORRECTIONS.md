@@ -5,6 +5,8 @@ Reviewed baseline: `5139cc89058447b59702b8784455983e7788535e`.
 Independent verdict: `accepted-with-modifications`. Owner authorized the seven corrections.
 Implementation is complete and awaits independent reconfirmation; this document is not acceptance.
 
+Focused handoff: [October Batch 1 reconfirmation dossier](../review/OCTOBER_BATCH_1_RECONFIRMATION.md), including frozen implementation SHA, exact package hashes, source identifiers, before/after summary and the fresh-session prompt.
+
 ## Corrected evidence
 
 | Issue                    | Affected content                                  | Correction                                                                                                                                                                                                                        |
