@@ -16,18 +16,26 @@ a dependency. `CODEX_TO_CLAUDE_CODE_HANDOFF.md` is historical; preserve its evid
 
 ## Current phase and next action
 
-Integration update, 2026-10-01: owner authorized the controlled integration and final September
-reference-data migration in PR #88. Work is on `codex/integrate-september-rich-media`, from
-`origin/develop` `5c8752876231bf3831173f64e996fb942104e06b`, with the accepted feature reference
-unchanged at `b4ca67cc8449ba4b5dae0ad7fd057591de2f833e`. PR #88 now contains forward-only
-migrations `20261001192741_media_asset_webp_paths.sql` and generated
+Integration update, 2026-10-01: owner authorized controlled PR #88 merge to `develop` and staging
+validation. PR #88 was squash-merged after live verification that the head was unchanged at
+`de045acd068c271730986b6e2c74cce3f0f70671`, clean/mergeable, and green. GitHub reports merge commit
+`5249dadfcea596a49bbe058f674ef61e27462d87`; `origin/develop` was fetched and verified at that SHA.
+The accepted feature reference remains unchanged at `b4ca67cc8449ba4b5dae0ad7fd057591de2f833e`.
+PR #88 contains forward-only migrations `20261001192741_media_asset_webp_paths.sql` and generated
 `20261001192742_final_september_rich_media_reference.sql`. The first only updates the
 `media_assets_file_check` constraint to allow repository-local `.webp` assets; the second is the
-generator output from `content/`. Local `npm run db:reset` and `npm run db:test` pass from a fresh
-replay (152 pgTAP assertions). No hosted DEV/PROD database mutation, production deploy or merge is
-authorized. Latest PR head `d54762d` is mergeable/clean with CI green: format/lint/typecheck/unit/
-content, build/client-bundle/E2E, Supabase migrations/database tests, and Docker images. `Promotion
-source` is skipped as expected. Resume from `docs/work/ACTIVE_TASK.md` and PR #88.
+generator output from `content/`. Local `npm run db:reset` and `npm run db:test` passed from a fresh
+replay (152 pgTAP assertions).
+
+Controlled staging workflow run `36926521934` rerun passed pre-deploy CI after an initial transient
+pilot E2E timeout was rerun. The staging job applied migrations to Supabase DEV successfully,
+deployed Vercel preview `dpl_3mdGtH5GPsSCMYBgwaFZEbRLTaHE` for commit
+`5249dadfcea596a49bbe058f674ef61e27462d87` to `https://teka-aptb19rjm-teka10.vercel.app`, verified
+target `preview` and state `READY`, and aliased `teka-edu-staging.vercel.app`. Final staging smoke
+is unhealthy: 65 passed, nine skipped, and one failure in `tests/e2e/rich-media-pilot.spec.ts`
+because one pilot image's `naturalWidth` remained `0` before the 30 s timeout. The broader
+`rich-media-rollout` staging check passed. Production code and production data remain unchanged.
+Resume from `docs/work/ACTIVE_TASK.md`; do not promote to `main` until staging smoke is healthy.
 
 Accepted September implementation checkpoint: `c7967163dedd26fa4c69a68de5a34ccdd52ca1f1`, validated,
 pushed and remote-verified. The final documentation-only follow-up changes no validated bytes;
@@ -75,7 +83,7 @@ curriculum expansion. Alternatives: offline reliability, owner-recorded audio, o
   session and relays `accepted`, `accepted-with-modifications` or `rejected`.
 - Restore only after an explicit final independent acceptance supports restoration;
   use existing full-review history and `approve-week --lapsed-only=true`, fresh digests.
-- No October, 2eme maternelle, offline implementation, unrelated refactoring, PR, merge
+- No October, 2eme maternelle, offline implementation, unrelated refactoring, production promotion
   or production deployment. Feature checkpoints and pushes are authorized.
 - Keep DEV/PROD separate, RLS intact, secrets private, `.env*` untracked and server secrets
   out of client bundles. No production data mutation or force-push.
