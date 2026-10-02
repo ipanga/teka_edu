@@ -1,6 +1,7 @@
 # October 2026 — 3ème maternelle planning baseline
 
-Status: planning-only, owner authorization required before implementation.
+Status: plan approved for Batch 1. Batch 1 implementation details live in
+`docs/work/OCTOBER_BATCH_1.md`.
 
 ## Repository baseline
 
@@ -119,3 +120,15 @@ Do not merge, deploy, mutate production, or create migrations during planning.
 ## Recommended first authorized task
 
 Authorize creation of `codex/october-maternelle-3` from `origin/develop` and implementation of the October 3ème maternelle content skeleton plus weeks 1-2 draft lessons and media requirements, stopping at `review` status with no generated rich media beyond approved planning needs.
+
+## Batch 1 authorization
+
+Owner authorized Batch 1 on 2026-10-02:
+
+- create `codex/october-maternelle-3` from current `origin/develop`;
+- preserve and reconcile the planning docs;
+- author Weeks 1-2 only;
+- keep new content in review;
+- classify media requirements;
+- do not generate final rich ImageGen illustrations;
+- do not create migrations, PRs, merges or deployments.

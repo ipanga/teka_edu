@@ -463,6 +463,110 @@
         "reviewedDigest": "6ab382a7cac0046f",
         "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
+    },
+    {
+      "id": "m3-art-08",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Notre dessin à deux",
+      "summary": "Participer à une œuvre collective simple avec le parent.",
+      "objectiveCodes": ["ART-S01-C01-O07"],
+      "supportingObjectiveCodes": ["ART-S01-C01-O05"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "À la maison, le collectif est parent-enfant. Dites clairement que l’objectif officiel est partiellement porté hors de la classe, mais que l’enfant peut s’exercer à coopérer.",
+      "activities": [
+        {
+          "id": "m3-art-08-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Un dessin commencé ensemble",
+          "childInstruction": "Je commence un dessin, puis tu ajoutes une partie.",
+          "adultGuidance": "Tracez une maison, un arbre ou un chemin. L’enfant ajoute une partie utile. Parlez : « Qu’est-ce qu’on garde ? Qu’est-ce qu’on ajoute ? »",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C01-O07", "ART-S01-C01-O05"],
+          "materialCodes": ["papier", "crayon", "crayons-couleur"],
+          "vocabulary": [
+            {
+              "fr": "ensemble",
+              "en": "together"
+            },
+            {
+              "fr": "ajouter",
+              "en": "to add"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "I start a drawing, then you add one part."
+            }
+          ],
+          "payload": {
+            "subject": "dessin collectif parent-enfant"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-art-09",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Nous résolvons le dessin",
+      "summary": "Continuer une production commune à partir d’un petit problème graphique.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["ART-S01-C01-O07", "ART-S01-C01-O06"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Le problème doit être concret : il manque un chemin, une porte, une place pour un personnage. L’enfant propose une solution dessinée.",
+      "activities": [
+        {
+          "id": "m3-art-09-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Il manque quelque chose",
+          "childInstruction": "Regarde le dessin. Que faut-il ajouter pour qu’il soit complet ?",
+          "adultGuidance": "Dessinez une scène incomplète : maison sans porte, jardin sans chemin, personnage sans ballon. L’enfant choisit quoi ajouter et explique sa solution.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C01-O07", "ART-S01-C01-O06"],
+          "materialCodes": ["papier", "crayon", "crayons-couleur"],
+          "vocabulary": [
+            {
+              "fr": "compléter",
+              "en": "to complete"
+            },
+            {
+              "fr": "solution",
+              "en": "solution"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Look at the drawing. What should we add?"
+            }
+          ],
+          "payload": {
+            "subject": "dessin collectif à compléter"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
     }
   ]
 }

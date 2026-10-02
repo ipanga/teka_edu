@@ -23,6 +23,7 @@ import { getProgramme } from "./reference-data";
 
 export const VISUAL_AUDIT_PATH = "docs/september-illustration-audit.md";
 export const VISUAL_STATE_PATH = "docs/september-illustration-state.json";
+export const SEPTEMBER_VISUAL_AUDIT_LAST_DAY = 22;
 
 export const AUDIT_STATUSES = [
   "not-reviewed",
@@ -211,7 +212,11 @@ export function buildAuditRows(data: ReferenceData, state: VisualState): AuditRo
     const levelName = data.levels.find((level) => level.id === levelId)?.name ?? levelId;
     const days = dayOfLessonMap(levelId, data);
     const lessons = data.lessons
-      .filter((lesson) => lesson.levelIds.includes(levelId))
+      .filter(
+        (lesson) =>
+          lesson.levelIds.includes(levelId) &&
+          (days.get(lesson.id) ?? Number.POSITIVE_INFINITY) <= SEPTEMBER_VISUAL_AUDIT_LAST_DAY,
+      )
       .sort((a, b) => (days.get(a.id) ?? 0) - (days.get(b.id) ?? 0) || a.id.localeCompare(b.id));
     for (const lesson of lessons) rows.push(...rowsOfLesson(lesson, levelId, levelName, days));
   }

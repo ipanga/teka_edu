@@ -1341,6 +1341,366 @@
         "reviewedDigest": "a21f1b73ac9d0f73",
         "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
+    },
+    {
+      "id": "m3-phys-23",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je cours et je passe l’obstacle",
+      "summary": "Courir vite sur une courte distance et franchir un obstacle bas et sûr.",
+      "objectiveCodes": ["PHYS-S01-C01-O11"],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O07"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Utilisez un obstacle très bas : tissu roulé, ligne au sol ou coussin plat. La sécurité prime.",
+      "activities": [
+        {
+          "id": "m3-phys-23-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Vite, puis par-dessus",
+          "childInstruction": "Cours jusqu’au repère, passe par-dessus le tissu, puis arrête-toi.",
+          "adultGuidance": "Dégagez l’espace. C’est vous qui déplacez les meubles; l’enfant attend sur le côté. Placez un tissu roulé ou une ligne au sol. L’enfant court quelques pas, franchit, puis s’arrête. Recommencez trois ou quatre fois, jamais sur un sol glissant.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "tissu", "repere-sol"],
+          "vocabulary": [
+            {
+              "fr": "obstacle",
+              "en": "obstacle"
+            },
+            {
+              "fr": "franchir",
+              "en": "to go over"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Run to the mark, go over the cloth, then stop."
+            }
+          ],
+          "payload": {
+            "moves": ["courir quelques pas", "franchir un tissu bas", "s’arrêter sans tomber"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-24",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je franchis sans tomber",
+      "summary": "Reprendre la course avec obstacle en cherchant l’équilibre.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Gardez le défi court et joyeux. Si l’enfant est fatigué, transformez la course en marche rapide.",
+      "activities": [
+        {
+          "id": "m3-phys-24-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Course courte et équilibre",
+          "childInstruction": "Cours, passe l’obstacle, puis reste immobile comme une statue.",
+          "adultGuidance": "Après chaque passage, demandez une statue de deux secondes. Cela garde l’activité sûre et travaille l’arrêt contrôlé.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "tissu"],
+          "vocabulary": [
+            {
+              "fr": "équilibre",
+              "en": "balance"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Run, go over the obstacle, then freeze like a statue."
+            }
+          ],
+          "payload": {
+            "moves": ["courir vite", "franchir", "tenir immobile deux secondes"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-25",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je lance puis je saute",
+      "summary": "Coordonner lancer et saut dans un enchainement simple.",
+      "objectiveCodes": ["PHYS-S01-C01-O12"],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O07"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Balle en papier seulement. Le saut se fait loin des meubles, pieds joints ou un pied après l’autre selon l’enfant.",
+      "activities": [
+        {
+          "id": "m3-phys-25-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Lancer et sauter",
+          "childInstruction": "Lance la balle dans le panier, puis saute jusqu’au repère.",
+          "adultGuidance": "Placez un panier proche. Après le lancer, l’enfant saute vers une ligne au sol. Ajustez la distance pour réussir sans danger.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["balle-papier", "boite", "repere-sol", "espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "lancer",
+              "en": "to throw"
+            },
+            {
+              "fr": "sauter",
+              "en": "to jump"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Throw the ball into the basket, then jump to the mark."
+            }
+          ],
+          "payload": {
+            "moves": ["lancer dans le panier", "sauter vers le repère", "revenir en marchant"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-26",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je lance plus haut",
+      "summary": "Ajuster son geste pour lancer vers une cible sûre.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "On améliore le geste, pas la performance. Gardez une cible basse ou moyenne, jamais fragile.",
+      "activities": [
+        {
+          "id": "m3-phys-26-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "La cible change",
+          "childInstruction": "Lance la balle dans la boîte. Puis recule d’un petit pas.",
+          "adultGuidance": "Après deux réussites, reculez un peu. Si l’enfant manque, rapprochez la boîte. Verbalisez : « Tu regardes la boîte, tu lances doucement. »",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["balle-papier", "boite", "espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "cible",
+              "en": "target"
+            },
+            {
+              "fr": "reculer",
+              "en": "to step back"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Throw into the box, then take one small step back."
+            }
+          ],
+          "payload": {
+            "moves": ["viser la boîte", "lancer", "reculer d’un petit pas"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-27",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je cours, je franchis, je lance",
+      "summary": "Combiner course courte, obstacle bas et lancer.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Un petit parcours suffit. Ne cherchez pas la vitesse si l’espace est petit.",
+      "activities": [
+        {
+          "id": "m3-phys-27-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Petit parcours",
+          "childInstruction": "Cours, passe l’obstacle, prends la balle et lance-la.",
+          "adultGuidance": "Préparez trois étapes : ligne de départ, tissu au sol, balle en papier près d’une boîte. L’enfant enchaine lentement puis un peu plus vite.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "tissu", "balle-papier", "boite"],
+          "vocabulary": [
+            {
+              "fr": "parcours",
+              "en": "course"
+            },
+            {
+              "fr": "enchaîner",
+              "en": "to link"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Run, go over the obstacle, take the ball and throw it."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "franchir", "prendre la balle", "lancer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-28",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je saute loin en sécurité",
+      "summary": "Coordonner ses actions pour sauter plus loin sans se mettre en danger.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Le saut se fait depuis le sol, jamais depuis une chaise. Le repère mesure le progrès sans compétition.",
+      "activities": [
+        {
+          "id": "m3-phys-28-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Jusqu’au repère",
+          "childInstruction": "Place tes pieds ici, plie les genoux, puis saute vers le repère.",
+          "adultGuidance": "Tracez une ligne ou posez un tissu. Montrez : pieds stables, genoux pliés, bras qui aident. Faites trois essais seulement.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["repere-sol", "espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "loin",
+              "en": "far"
+            },
+            {
+              "fr": "plier",
+              "en": "to bend"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put your feet here, bend your knees, then jump to the mark."
+            }
+          ],
+          "payload": {
+            "moves": ["placer ses pieds", "plier les genoux", "sauter vers le repère"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-phys-29",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Mon parcours de coordination",
+      "summary": "Consolider course, franchissement, lancer et saut dans un parcours court.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Fin de semaine : l’enfant choisit l’ordre du parcours avec vous. Gardez seulement ce qui est sûr dans votre espace.",
+      "activities": [
+        {
+          "id": "m3-phys-29-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je montre mon parcours",
+          "childInstruction": "Choisis trois actions : courir, sauter, lancer ou passer par-dessus.",
+          "adultGuidance": "Proposez quatre actions et laissez l’enfant en choisir trois. Faites verbaliser l’ordre avant de bouger : « D’abord…, ensuite…, après… »",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "tissu", "balle-papier", "boite"],
+          "vocabulary": [
+            {
+              "fr": "d’abord",
+              "en": "first"
+            },
+            {
+              "fr": "ensuite",
+              "en": "then"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Choose three actions and show your course."
+            }
+          ],
+          "payload": {
+            "moves": ["choisir trois actions", "dire l’ordre", "faire le parcours"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
     }
   ]
 }

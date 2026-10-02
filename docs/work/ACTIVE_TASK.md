@@ -2,26 +2,27 @@
 
 ## Task
 
-Plan October 2026 — 3ème maternelle
+Implement October 2026 — 3ème maternelle Batch 1
 
 ## Objective
 
-Close the September production milestone at the planning level and establish the next
-owner-authorized implementation plan for October 2026, 3ème maternelle, from the actual repository
-state. Do not implement October lessons, generate October rich media, create migrations, merge or
-deploy until the owner authorizes a follow-up implementation task.
+Implement the first controlled October batch for 3ème maternelle: preserve the planning work on a
+feature branch from current `origin/develop`, author the canonical structure for the first two
+October instructional weeks, classify media requirements, prepare review packages, validate, commit
+and push. Do not generate rich ImageGen assets, author days 30-44, create migrations, open a PR,
+merge or deploy.
 
 ## Status
 
-`planning-complete`
+`completed`
 
 ## Branch
 
-`codex/record-september-production-promotion`
+`codex/october-maternelle-3`
 
 ## Base Branch
 
-Authoritative implementation base for future October work: `origin/develop` at `6b8ba9e`.
+Authoritative implementation base: `origin/develop` at `6b8ba9e`.
 Production remains `origin/main` at `ac3ebf9b9bd00662def3e7ec206aff1954f4694d`.
 
 ## Started
@@ -30,14 +31,39 @@ Production remains `origin/main` at `ac3ebf9b9bd00662def3e7ec206aff1954f4694d`.
 
 ## Last Checkpoint
 
-October planning is captured in `docs/work/OCTOBER_3EME_PLAN.md`. Key result: October 2026 covers
-instructional days 23-44, exactly 22 teaching days and 88 expected lessons for 3ème maternelle.
-The current architecture supports October with canonical content and later generated reference-data
-migration; no schema change is currently indicated.
+Planning checkpoint was committed first on the October branch as `1242f5a` (`docs: add October
+planning checkpoint`). Batch 1 implementation is captured in `docs/work/OCTOBER_BATCH_1.md`.
 
-Stop boundary remains active: do not generate the October lesson set, create rich illustrations,
-mutate September canonical content/media/approvals, create database migrations, deploy, merge,
-start 2ème maternelle, offline support or recorded audio without owner authorization.
+Current authored scope:
+
+- October instructional days 23-29, dates 2026-10-01 through 2026-10-09.
+- 28 new lessons: seven language, seven mathematics, seven physical activity, two arts, two world,
+  three time-space.
+- Day 30 remains `no-content` by design.
+- All new lessons are `review` with `review: null`; no approval or self-review.
+- No new media bytes, no generated ImageGen assets, no migrations.
+
+Final validation during implementation:
+
+- `npm run format`: PASS.
+- `npm run format:check`: PASS.
+- `npm run lint`: PASS.
+- `npm run typecheck`: PASS.
+- `npm run test`: PASS, 34 files / 443 tests.
+- `npm run content:validate`: PASS.
+- `npm run programme:report -- --level=maternelle-3 --day=23 --to=30`: PASS.
+- `npm run coverage:report -- --level=maternelle-3 --day=29`: PASS, 42/42 expected objectives taught.
+- `npm run media:report -- --level=maternelle-3`: PASS, zero required image gaps.
+- `npm run review:lapse -- --dry-run=true`: PASS, 0 approvals lapsed.
+- `env ... npx next build --webpack`: PASS with CI fake server-only sentinels.
+- `env ... npm run check:client-bundle`: PASS, 28 client files scanned, 3 sentinels absent.
+
+Plain Turbopack `npm run build` passed once, then later reproduced the known local port-binding
+`EPERM` panic after a failed sentinel rebuild attempt. The Webpack production fallback passed.
+
+Stop boundary remains active: do not generate final October rich illustrations, mutate September
+canonical content/media/approvals, create database migrations, deploy, merge, open a PR, start 2ème
+maternelle, offline support or recorded audio without owner authorization.
 
 ## Previous September Production Checkpoint
 

@@ -1,14 +1,15 @@
 # Codex continuation
 
-Current authorization: planning-only October 2026, 3ème maternelle. Codex is the primary
+Current authorization: October 2026, 3ème maternelle Batch 1 only. Codex is the primary
 implementation, QA and authoring-time ImageGen environment. Claude Code is unavailable and is no
 longer a dependency. `CODEX_TO_CLAUDE_CODE_HANDOFF.md` is historical; preserve its evidence.
 
 ## October planning baseline — 2026-10-02
 
-Read `docs/work/OCTOBER_3EME_PLAN.md` before implementing October work. The authoritative future
-base is `origin/develop` at `6b8ba9e` after PR #93. Production remains healthy on `origin/main` at
-`ac3ebf9b9bd00662def3e7ec206aff1954f4694d`; do not redeploy production merely for documentation.
+Read `docs/work/OCTOBER_3EME_PLAN.md` and `docs/work/OCTOBER_BATCH_1.md` before continuing October
+work. The authoritative Batch 1 base is `origin/develop` at `6b8ba9e87802d96c2f193fe73d3c9897e084ba9c`.
+Production remains healthy on `origin/main` at `ac3ebf9b9bd00662def3e7ec206aff1954f4694d`; do not
+redeploy production merely for documentation.
 
 October 2026 for 3ème maternelle covers instructional days 23-44: 22 teaching days, no configured
 October public holidays, no observed holidays and no school vacation. Expected October content is
@@ -17,9 +18,21 @@ time-space lessons. The existing schema supports this; no October schema migrati
 indicated. Implementation should start from a dedicated branch such as `codex/october-maternelle-3`
 only after owner authorization.
 
-Stop boundary: do not generate the full October lesson set, create October rich media, modify
-September canonical content/media/approval history, create migrations, merge, deploy, start 2ème
-maternelle, offline support or recorded audio without explicit owner authorization.
+Batch 1 branch: `codex/october-maternelle-3`. Planning checkpoint commit: `1242f5a`. Batch 1
+authors days 23-29 only and leaves day 30 as `no-content`. All new October lessons remain
+`review` with `review: null`; no independent acceptance has happened.
+
+Final local validation passed: format, format check, lint, typecheck, 443 unit tests, content
+validation, programme report for days 23-30, coverage report through day 29 with 42/42 due
+objectives taught, media report with zero required image gaps, approval-lapse dry run with 0 lapses,
+Webpack production build with CI fake server-only sentinels, and client-bundle scan over 28 files
+with all three sentinels absent. Plain Turbopack `npm run build` passed once, then later reproduced
+the known local port-binding `EPERM` panic after a failed sentinel rebuild attempt; the Webpack
+fallback passed.
+
+Stop boundary: do not generate final October rich media, modify September canonical content/media
+or approval history, create migrations, open a PR, merge, deploy, start 2ème maternelle, offline
+support or recorded audio without explicit owner authorization.
 
 ## Verified recovery baseline
 

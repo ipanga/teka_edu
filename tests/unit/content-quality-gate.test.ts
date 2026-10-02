@@ -529,7 +529,7 @@ describe("human review package", () => {
     expect(committed).toContain("Une séance écourtée est une séance normale");
   });
 
-  it("covers its own week, and the five packages together cover September", () => {
+  it("covers its own week, and the packages together cover authored lessons", () => {
     for (let day = options.fromDay; day <= options.toDay; day++) {
       expect(committed).toContain(`## Jour ${day} —`);
     }
@@ -537,6 +537,11 @@ describe("human review package", () => {
       readFileSync(path.join(ROOT, reviewPackagePath(week)), "utf8"),
     ).join("\n");
     for (const l of data.lessons) expect(everyWeek, l.id).toContain(l.title);
-    expect(REVIEW_PACKAGES.at(-1)?.toDay).toBe(22);
+    const m3Last = Math.max(
+      ...REVIEW_PACKAGES.filter((week) => week.levelId === "maternelle-3").map(
+        (week) => week.toDay,
+      ),
+    );
+    expect(m3Last).toBe(29);
   });
 });

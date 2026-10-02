@@ -10,7 +10,7 @@
  * once the set is frozen, if any picture's bytes move.
  */
 import type { ReferenceData } from "./reference-data";
-import { dayOfLessonMap, picturesOf } from "./visual-audit";
+import { SEPTEMBER_VISUAL_AUDIT_LAST_DAY, dayOfLessonMap, picturesOf } from "./visual-audit";
 
 export const QA_TRACKER_PATH = "docs/work/SEPTEMBER_VISUAL_QA.md";
 export const FREEZE_MARKER = "SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION";
@@ -77,11 +77,24 @@ export type QaRow = {
 
 const short = (hash: string | null | undefined) => (hash ? hash.slice(7, 19) : "—");
 
+const septemberVisualLessonIds = (data: ReferenceData): Set<string> => {
+  const ids = new Set<string>();
+  for (const levelId of ["maternelle-1", "maternelle-3"]) {
+    for (const [lessonId, day] of dayOfLessonMap(levelId, data)) {
+      if (day <= SEPTEMBER_VISUAL_AUDIT_LAST_DAY) ids.add(lessonId);
+    }
+  }
+  return ids;
+};
+
 export function buildQaRows(data: ReferenceData, qa: FinalQa): QaRow[] {
   const levelName = new Map(data.levels.map((l) => [l.id, l.name]));
+  const septemberLessonIds = septemberVisualLessonIds(data);
   return data.media.map((asset): QaRow => {
-    const users = data.lessons.filter((l) =>
-      l.activities.some((a) => picturesOf(a, data).includes(asset.id)),
+    const users = data.lessons.filter(
+      (l) =>
+        septemberLessonIds.has(l.id) &&
+        l.activities.some((a) => picturesOf(a, data).includes(asset.id)),
     );
     const activities = users.flatMap((l) =>
       l.activities.filter((a) => picturesOf(a, data).includes(asset.id)).map((a) => a.id),
@@ -145,9 +158,11 @@ export type RichMediaQa = {
 
 export function buildQaTracker(data: ReferenceData, qa: FinalQa, richMedia?: RichMediaQa): string {
   const rows = buildQaRows(data, qa);
+  const septemberLessonIds = septemberVisualLessonIds(data);
+  const septemberLessons = data.lessons.filter((lesson) => septemberLessonIds.has(lesson.id));
   const count = (p: (r: QaRow) => boolean) => rows.filter(p).length;
   const lapsedLessons = new Set(
-    data.lessons
+    septemberLessons
       .filter((l) => l.status === "review")
       .filter((l) =>
         l.activities.some((a) =>
@@ -168,7 +183,7 @@ export function buildQaTracker(data: ReferenceData, qa: FinalQa, richMedia?: Ric
       ? [
           "## Current Rich-Media State",
           "",
-          `September lessons: ${data.lessons.filter((l) => l.status === "approved").length} approved / ${data.lessons.filter((l) => l.status === "review").length} review.`,
+          `September lessons: ${septemberLessons.filter((l) => l.status === "approved").length} approved / ${septemberLessons.filter((l) => l.status === "review").length} review.`,
           `Independently reconfirmed runtime assets: ${richMedia.assets.filter((a) => a.implementationState.startsWith("integrated-local") && a.reviewState === "independently-reconfirmed" && data.media.some((m) => m.id === a.id && m.contentHash === a.afterHash)).length}.`,
           "Current frame hashes, digest integrity and acceptance evidence are in",
           "docs/media/SEPTEMBER_RICH_MEDIA_FINAL_AUDIT.json; continuation is in docs/work/ACTIVE_TASK.md.",
@@ -206,7 +221,7 @@ export function buildQaTracker(data: ReferenceData, qa: FinalQa, richMedia?: Ric
     `| Changed since \`develop\` (what the reviewer approved) | ${count((r) => r.changed)} |`,
     `| Byte-identical to \`develop\` | ${count((r) => !r.changed)} |`,
     `| Lessons still awaiting reconfirmation for a changed picture | ${lapsedLessons.size} |`,
-    `| Lessons re-approved after the visual reconfirmation | ${data.lessons.filter((l) => l.status === "approved" && (l.review?.reviewedOn ?? "") >= qa.pass).length} |`,
+    `| Lessons re-approved after the visual reconfirmation | ${septemberLessons.filter((l) => l.status === "approved" && (l.review?.reviewedOn ?? "") >= qa.pass).length} |`,
     `| Pictures still \`needs-refinement\` or \`needs-redraw\` | ${count((r) => r.status === "needs-refinement" || r.status === "needs-redraw")} |`,
     "",
     "Groups describe this final pass: A is right as it stands (it may have been redrawn in the first",

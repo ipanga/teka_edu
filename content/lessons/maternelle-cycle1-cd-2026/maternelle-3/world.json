@@ -703,6 +703,179 @@
         "reviewedDigest": "a20d62a2f05374aa",
         "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
+    },
+    {
+      "id": "m3-world-08",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "La vie d’une plante",
+      "summary": "Reconnaitre quelques étapes de la vie d’une plante.",
+      "objectiveCodes": ["WORLD-S01-C01-O09"],
+      "supportingObjectiveCodes": ["WORLD-S01-C01-O10"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Utilisez une plante réelle si possible. L’image existante aide à nommer les parties, mais l’observation reste concrète.",
+      "activities": [
+        {
+          "id": "m3-world-08-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Graine, pousse, plante",
+          "childInstruction": "Observe la plante et dis ce dont elle a besoin pour grandir.",
+          "adultGuidance": "Montrez une plante, une graine ou l’illustration. Dites les étapes simplement : graine, petite pousse, plante. Reliez aux besoins : eau, lumière, soin.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["plante-parties"],
+          "objectiveCodes": ["WORLD-S01-C01-O09", "WORLD-S01-C01-O10"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "la graine",
+              "en": "the seed"
+            },
+            {
+              "fr": "grandir",
+              "en": "to grow"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Look at the plant and say what it needs to grow."
+            }
+          ],
+          "payload": {
+            "focus": "étapes simples de la vie d’une plante"
+          }
+        },
+        {
+          "id": "m3-world-08-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Ce qui vient après",
+          "childInstruction": "Dis ce qui vient après la graine.",
+          "adultGuidance": "Faites parler dans l’ordre : « D’abord la graine, ensuite la pousse, après la plante. » Ne cherchez pas tous les mots scientifiques.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C01-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "d’abord",
+              "en": "first"
+            },
+            {
+              "fr": "ensuite",
+              "en": "then"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say what comes after the seed."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Qu’est-ce qui vient après la graine ?",
+              "De quoi la plante a-t-elle besoin ?"
+            ]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-world-09",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "La poule et le poussin grandissent",
+      "summary": "Comparer les étapes visibles de la vie d’un animal connu.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["WORLD-S01-C01-O09", "WORLD-S01-C01-O10"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Restez avec des animaux déjà rencontrés en septembre. Les images de poule et poussin sont acceptées et utiles ici.",
+      "activities": [
+        {
+          "id": "m3-world-09-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Petit puis grand",
+          "childInstruction": "Regarde le poussin et la poule. Lequel est petit ? Lequel est grand ?",
+          "adultGuidance": "Montrez les deux images. Faites dire : poussin, poule. Expliquez simplement qu’un poussin grandit et devient une poule ou un coq.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": ["animal-poussin", "animal-poule"],
+          "objectiveCodes": ["WORLD-S01-C01-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "le poussin",
+              "en": "the chick"
+            },
+            {
+              "fr": "grandir",
+              "en": "to grow"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Look at the chick and the hen. Which one is small? Which one is grown?"
+            }
+          ],
+          "payload": {
+            "focus": "étapes visibles de la vie d’un animal"
+          }
+        },
+        {
+          "id": "m3-world-09-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Ce qu’il lui faut",
+          "childInstruction": "Dis ce qu’il faut au poussin pour grandir.",
+          "adultGuidance": "Faites répondre avec des mots simples : manger, boire, être protégé. Reliez aux soins vus en septembre.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C01-O09", "WORLD-S01-C01-O10"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "protéger",
+              "en": "to protect"
+            },
+            {
+              "fr": "nourrir",
+              "en": "to feed"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say what the chick needs to grow."
+            }
+          ],
+          "payload": {
+            "prompts": ["Que faut-il au poussin pour grandir ?", "Qui le protège ?"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
     }
   ]
 }

@@ -8,6 +8,7 @@ import {
   AUDIT_STATUSES,
   VISUAL_AUDIT_PATH,
   VISUAL_STATE_PATH,
+  SEPTEMBER_VISUAL_AUDIT_LAST_DAY,
   audioNeedOf,
   buildAuditDocument,
   buildAuditRows,
@@ -44,8 +45,13 @@ describe("the September visual audit", () => {
 
   it("covers every activity of both classes exactly once", () => {
     const rows = buildAuditRows(data, state);
+    const daysByLesson = new Map(rows.map((row) => [row.lessonId, row.day]));
     const activities = data.lessons
       .filter((l) => l.levelIds.includes("maternelle-1") || l.levelIds.includes("maternelle-3"))
+      .filter(
+        (l) =>
+          (daysByLesson.get(l.id) ?? Number.POSITIVE_INFINITY) <= SEPTEMBER_VISUAL_AUDIT_LAST_DAY,
+      )
       .flatMap((l) => l.activities);
     expect(rows.length).toBe(activities.length);
     expect(new Set(rows.map((row) => row.activityId)).size).toBe(rows.length);

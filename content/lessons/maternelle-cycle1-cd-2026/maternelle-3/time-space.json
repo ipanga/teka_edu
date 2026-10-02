@@ -818,6 +818,266 @@
         "reviewedDigest": "09c390cbeaf6e83b",
         "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
+    },
+    {
+      "id": "m3-time-09",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "TIME-SPACE",
+      "title": "Demain dans la semaine",
+      "summary": "Situer un évènement qui va se produire dans la semaine.",
+      "objectiveCodes": ["TIME-SPACE-S01-C01-O11"],
+      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O10", "TIME-SPACE-S01-C01-O12"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Travaillez avec les jours proches : demain, après-demain, plus tard dans la semaine.",
+      "activities": [
+        {
+          "id": "m3-time-09-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Ce qui va arriver",
+          "childInstruction": "Dis la date, puis dis ce qui va arriver demain ou plus tard dans la semaine.",
+          "adultGuidance": "Utilisez la bande des jours si vous l’avez. Sinon, comptez sur les doigts : aujourd’hui, demain, après-demain. Faites dire la date, puis une phrase au futur proche.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O11",
+            "TIME-SPACE-S01-C01-O10",
+            "TIME-SPACE-S01-C01-O12"
+          ],
+          "materialCodes": ["papier"],
+          "vocabulary": [
+            {
+              "fr": "demain",
+              "en": "tomorrow"
+            },
+            {
+              "fr": "plus tard",
+              "en": "later"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say what will happen tomorrow or later this week."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Dis la date d’aujourd’hui.",
+              "Que feras-tu demain ?",
+              "Que feras-tu plus tard dans la semaine ?"
+            ]
+          }
+        },
+        {
+          "id": "m3-time-09-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Je place demain",
+          "childInstruction": "Montre aujourd’hui, puis demain, puis le jour suivant.",
+          "adultGuidance": "Écrivez ou dites les jours dans l’ordre. L’enfant pointe aujourd’hui, demain, puis le jour suivant. Ne transformez pas cela en récitation longue.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O11", "TIME-SPACE-S01-C01-O10"],
+          "materialCodes": ["papier"],
+          "vocabulary": [
+            {
+              "fr": "suivant",
+              "en": "next"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Show today, tomorrow and the next day."
+            }
+          ],
+          "payload": {
+            "objects": "papiers des jours de la semaine"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-time-10",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "TIME-SPACE",
+      "title": "Ce sera bientôt",
+      "summary": "Employer des repères proches pour parler d’un évènement futur.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O11", "LANG-S01-C02-O02"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Reliez l’objectif au langage oral : l’enfant parle de ce qui va se produire avec une phrase claire.",
+      "activities": [
+        {
+          "id": "m3-time-10-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bientôt",
+          "childInstruction": "Dis une chose qui va se passer bientôt.",
+          "adultGuidance": "Donnez le modèle : « Bientôt, nous allons manger. » Puis demandez à l’enfant une phrase avec bientôt, demain ou après.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O11", "LANG-S01-C02-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "bientôt",
+              "en": "soon"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say one thing that will happen soon."
+            }
+          ],
+          "payload": {
+            "prompts": ["Qu’est-ce qui va se passer bientôt ?", "Dis la phrase entière."]
+          }
+        },
+        {
+          "id": "m3-time-10-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Aujourd’hui ou plus tard",
+          "childInstruction": "Dis pour chaque action : aujourd’hui ou plus tard.",
+          "adultGuidance": "Dites quatre actions simples : manger ce soir, aller dormir, aller à l’école demain, jouer maintenant. L’enfant répond oralement aujourd’hui ou plus tard.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O11"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "aujourd’hui",
+              "en": "today"
+            },
+            {
+              "fr": "plus tard",
+              "en": "later"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Sort the actions: today or later."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "manger ce soir",
+              "aller dormir",
+              "aller à l’école demain",
+              "jouer maintenant"
+            ]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-time-11",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "TIME-SPACE",
+      "title": "Je prépare les jours qui viennent",
+      "summary": "Consolider le futur proche et les repères de semaine.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O11", "TIME-SPACE-S01-C01-O10"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Fin de semaine : l’enfant parle du week-end et du prochain jour d’école sans que le produit prétende connaitre la classe.",
+      "activities": [
+        {
+          "id": "m3-time-11-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Après vendredi",
+          "childInstruction": "Dis ce qui viendra après aujourd’hui.",
+          "adultGuidance": "Aidez l’enfant à situer le week-end puis le prochain jour d’école. Gardez la phrase simple : « Après vendredi, il y aura samedi. »",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O11", "TIME-SPACE-S01-C01-O10"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "après",
+              "en": "after"
+            },
+            {
+              "fr": "week-end",
+              "en": "weekend"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say what will come after today."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Quel jour sommes-nous ?",
+              "Quel jour viendra après ?",
+              "Quand sera le prochain jour d’école ?"
+            ]
+          }
+        },
+        {
+          "id": "m3-time-11-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Trois jours en ordre",
+          "childInstruction": "Mets trois jours dans l’ordre : aujourd’hui, demain, après.",
+          "adultGuidance": "Utilisez trois papiers seulement. L’enfant les ordonne et dit une phrase pour chacun.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O11", "TIME-SPACE-S01-C01-O10"],
+          "materialCodes": ["papier"],
+          "vocabulary": [
+            {
+              "fr": "ordre",
+              "en": "order"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put three days in order: today, tomorrow, after."
+            }
+          ],
+          "payload": {
+            "objects": "trois papiers de jours"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
     }
   ]
 }

@@ -2614,6 +2614,796 @@
         "reviewedDigest": "f4da1cf61710948c",
         "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée, 2026-09-27 acceptée. Décision de relecture : Claude Max / Opus 5.5, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
+    },
+    {
+      "id": "m3-lang-23",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Hier, aujourd’hui, demain",
+      "summary": "L’enfant parle d’un évènement passé et d’un évènement à venir avec une phrase complète.",
+      "objectiveCodes": ["LANG-S01-C02-O02"],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S02-C03-O04",
+        "LANG-S01-C04-O11"
+      ],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Repartez du rituel de septembre. Le but n’est pas la grammaire : l’enfant apprend à parler du temps avec des phrases utiles.",
+      "activities": [
+        {
+          "id": "m3-lang-23-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Le rituel : date et rappel",
+          "childInstruction": "Dis la date, puis dis une chose que tu as faite hier.",
+          "adultGuidance": "Dites : « Aujourd’hui, nous sommes {{date}}. » Puis aidez l’enfant à commencer : « Hier, j’ai… » Reformulez en gardant son idée.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C02-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "hier",
+              "en": "yesterday"
+            },
+            {
+              "fr": "aujourd’hui",
+              "en": "today"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then tell one thing you did yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Quelle est la date aujourd’hui ?", "Qu’as-tu fait hier ?"]
+          }
+        },
+        {
+          "id": "m3-lang-23-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Je parle d’hier et de demain",
+          "childInstruction": "Dis : « Hier, j’ai… » Puis dis : « Demain, je vais… »",
+          "adultGuidance": "Faites deux phrases modèles. Si l’enfant répond par un mot, reprenez avec lui : « Oui, demain, tu vas jouer. » Ne corrigez pas comme une leçon de grammaire : donnez le bon modèle oral.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C02-O02", "LANG-S01-C04-O11"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "demain",
+              "en": "tomorrow"
+            },
+            {
+              "fr": "je vais",
+              "en": "I am going to"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say what you did yesterday and what you will do tomorrow."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Hier, qu’as-tu fait après l’école ?",
+              "Demain, que vas-tu faire ?",
+              "Redis la phrase entière."
+            ]
+          }
+        },
+        {
+          "id": "m3-lang-23-a3",
+          "position": 3,
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout. Aujourd’hui, on écoute pour le plaisir.",
+          "adultGuidance": "Lisez à voix haute, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises complètes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "le-premier-jour-de-nsimba"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-24",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Je raconte avant et après",
+      "summary": "L’enfant ordonne deux moments et emploie avant, après et demain dans une phrase.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C02-O02",
+        "TIME-SPACE-S01-C02-O08",
+        "LANG-S02-C03-O04",
+        "TIME-SPACE-S01-C01-O12"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Travaillez avec deux moments très proches de l’enfant. L’important est la phrase orale, pas une explication abstraite du temps.",
+      "activities": [
+        {
+          "id": "m3-lang-24-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Le rituel : je retrouve hier",
+          "childInstruction": "Dis la date. Puis redis une phrase avec hier.",
+          "adultGuidance": "Après la date, demandez : « Hier, qu’as-tu fait ? » Attendez une phrase. Reformulez si besoin, puis faites répéter sans insister.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C02-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "hier",
+              "en": "yesterday"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date and one sentence with yesterday."
+            }
+          ],
+          "payload": {
+            "prompts": ["Quelle est la date ?", "Dis une phrase avec hier."]
+          }
+        },
+        {
+          "id": "m3-lang-24-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Avant, après",
+          "childInstruction": "Raconte deux moments : avant, puis après.",
+          "adultGuidance": "Choisissez une action simple : se laver les mains, manger, ranger. Demandez : « Qu’est-ce qu’on fait avant ? Et après ? » Aidez l’enfant à répondre avec « avant » et « après ». ",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C02-O02", "TIME-SPACE-S01-C02-O08"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "avant",
+              "en": "before"
+            },
+            {
+              "fr": "après",
+              "en": "after"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Tell two moments: before, then after."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Qu’est-ce qu’on fait avant de manger ?",
+              "Qu’est-ce qu’on fait après ?",
+              "Redis avec avant et après."
+            ]
+          }
+        },
+        {
+          "id": "m3-lang-24-a3",
+          "position": 3,
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout. Aujourd’hui, on écoute pour le plaisir.",
+          "adultGuidance": "Lisez à voix haute, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises complètes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "la-pluie-sur-le-toit"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-25",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Je fais une phrase plus longue",
+      "summary": "L’enfant enrichit une phrase orale avec qui, où et ce que fait la personne.",
+      "objectiveCodes": ["LANG-S01-C02-O03"],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C04-O11",
+        "LANG-S02-C03-O04",
+        "LANG-S01-C02-O02"
+      ],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Prolongez les phrases sans demander une analyse. L’enfant entend et reprend des modèles plus complets.",
+      "activities": [
+        {
+          "id": "m3-lang-25-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Le rituel : je me souviens",
+          "childInstruction": "Dis la date, puis dis une phrase avec demain.",
+          "adultGuidance": "Faites rappeler la phrase de la veille : « Demain, je vais… » Acceptez une phrase simple, puis donnez une version un peu plus complète.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C02-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "demain",
+              "en": "tomorrow"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date and one sentence with tomorrow."
+            }
+          ],
+          "payload": {
+            "prompts": ["Quelle est la date ?", "Que vas-tu faire demain ?"]
+          }
+        },
+        {
+          "id": "m3-lang-25-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Qui ? Où ? Que fait-il ?",
+          "childInstruction": "Fais une phrase avec qui, où, et ce qu’il fait.",
+          "adultGuidance": "Montrez une personne réelle ou imaginez Nsimba. Demandez : « Qui est là ? Où est-il ? Que fait-il ? » Puis assemblez : « Nsimba marche devant l’école. »",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C02-O03", "LANG-S01-C04-O11"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "qui",
+              "en": "who"
+            },
+            {
+              "fr": "où",
+              "en": "where"
+            },
+            {
+              "fr": "faire",
+              "en": "to do"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Make one sentence with who, where, and what happens."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Qui est là ?",
+              "Où est-il ?",
+              "Que fait-il ?",
+              "Maintenant, dis toute la phrase."
+            ]
+          }
+        },
+        {
+          "id": "m3-lang-25-a3",
+          "position": 3,
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout. Aujourd’hui, on écoute pour le plaisir.",
+          "adultGuidance": "Lisez à voix haute, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises complètes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "kumu-le-petit-poussin"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-26",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Je décris un objet",
+      "summary": "L’enfant produit une phrase descriptive plus complète à partir d’un objet familier.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C02-O03",
+        "LANG-S01-C01-O03",
+        "LANG-S02-C03-O04",
+        "TIME-SPACE-S01-C01-O12"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Utilisez un objet réel de la maison. On cherche une phrase précise, pas une récitation.",
+      "activities": [
+        {
+          "id": "m3-lang-26-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Le rituel : phrase complète",
+          "childInstruction": "Dis la date, puis fais une phrase avec qui, où et fait.",
+          "adultGuidance": "Reprenez le jeu de la veille en une seule phrase. Si elle est courte, ajoutez un détail et faites répéter doucement.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then make one complete sentence."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis la date.", "Fais une phrase complète."]
+          }
+        },
+        {
+          "id": "m3-lang-26-a2",
+          "position": 2,
+          "type": "vocabulary",
+          "title": "Mon objet a des détails",
+          "childInstruction": "Choisis un objet et décris-le : il est…, il sert à…",
+          "adultGuidance": "Proposez un cahier, un seau, une marmite ou un panier. Faites nommer, décrire une qualité visible, puis dire l’usage. Donnez le modèle : « Le seau est rond. Il sert à porter l’eau. »",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-seau", "objet-marmite", "objet-panier"],
+          "objectiveCodes": ["LANG-S01-C02-O03", "LANG-S01-C01-O03"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [
+            {
+              "fr": "le seau",
+              "en": "the bucket"
+            },
+            {
+              "fr": "la marmite",
+              "en": "the cooking pot"
+            },
+            {
+              "fr": "le panier",
+              "en": "the basket"
+            },
+            {
+              "fr": "décrire",
+              "en": "to describe"
+            },
+            {
+              "fr": "il sert à",
+              "en": "it is used for"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Choose an object and describe it."
+            }
+          ],
+          "payload": {
+            "focus": "décrire un objet familier"
+          }
+        },
+        {
+          "id": "m3-lang-26-a3",
+          "position": 3,
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout. Aujourd’hui, on écoute pour le plaisir.",
+          "adultGuidance": "Lisez à voix haute, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises complètes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "le-marche-de-mama-lelo"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-27",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "J’entends ch et s",
+      "summary": "L’enfant écoute et prononce le contraste ch/s dans des mots connus.",
+      "objectiveCodes": ["LANG-S01-C03-O04"],
+      "supportingObjectiveCodes": [
+        "LANG-S02-C03-O04",
+        "LANG-S01-C02-O03",
+        "TIME-SPACE-S01-C01-O12"
+      ],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Restez dans le jeu sonore. Ne demandez pas de lire : l’enfant écoute, répète et compare les sons.",
+      "activities": [
+        {
+          "id": "m3-lang-27-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Le rituel : je décris vite",
+          "childInstruction": "Dis la date, puis décris un objet en une phrase.",
+          "adultGuidance": "Faites dire une seule phrase complète avec un objet proche. Reprenez le vocabulaire de description sans prolonger.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C02-O03"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then describe one object."
+            }
+          ],
+          "payload": {
+            "prompts": ["Quelle est la date ?", "Décris un objet en une phrase."]
+          }
+        },
+        {
+          "id": "m3-lang-27-a2",
+          "position": 2,
+          "type": "phonology",
+          "title": "Ch ou s ?",
+          "childInstruction": "Écoute : chat, sac. Redis doucement. Est-ce que ça commence pareil ?",
+          "adultGuidance": "Dites les mots lentement, sans exagérer. Faites sentir que la bouche ne fait pas la même chose. Utilisez des mots simples : chat, sac, chaise, soleil, chèvre, seau.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "écouter",
+              "en": "to listen"
+            },
+            {
+              "fr": "commencer",
+              "en": "to begin"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen and repeat: ch or s."
+            }
+          ],
+          "payload": {
+            "focusSound": "ch/s",
+            "words": ["chat", "sac", "chaise", "soleil", "chèvre", "seau"]
+          }
+        },
+        {
+          "id": "m3-lang-27-a3",
+          "position": 3,
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout. Aujourd’hui, on écoute pour le plaisir.",
+          "adultGuidance": "Lisez à voix haute, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises complètes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "bibi-la-chevre-curieuse"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-28",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "J’entends ch et j",
+      "summary": "L’enfant poursuit le jeu de prononciation avec ch/j dans des mots familiers.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["LANG-S01-C03-O04", "LANG-S02-C03-O04"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Comparez deux sons proches dans des mots très courts. L’enfant peut réussir en répétant correctement, sans nommer les sons.",
+      "activities": [
+        {
+          "id": "m3-lang-28-a1",
+          "position": 1,
+          "type": "phonology",
+          "title": "Je retrouve ch et s",
+          "childInstruction": "Redis : chèvre, seau. Puis dis lequel commence comme chat.",
+          "adultGuidance": "Rappelez le jeu ch/s en deux minutes. Félicitez l’écoute avant la justesse parfaite.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "retrouver",
+              "en": "to find again"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Repeat and find the word that starts like chat."
+            }
+          ],
+          "payload": {
+            "focusSound": "ch/s",
+            "words": ["chèvre", "seau", "chat", "sac"]
+          }
+        },
+        {
+          "id": "m3-lang-28-a2",
+          "position": 2,
+          "type": "phonology",
+          "title": "Ch ou j ?",
+          "childInstruction": "Écoute : joue, chou. Redis sans te presser.",
+          "adultGuidance": "Dites « joue » et « chou » plusieurs fois, puis d’autres paires possibles : jaune, chaud ; jardin, chapeau. Si un mot est difficile, revenez à la paire joue/chou.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "doucement",
+              "en": "slowly"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen and repeat: ch or j."
+            }
+          ],
+          "payload": {
+            "focusSound": "ch/j",
+            "words": ["joue", "chou", "jaune", "chaud", "jardin", "chapeau"]
+          }
+        },
+        {
+          "id": "m3-lang-28-a3",
+          "position": 3,
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout. Aujourd’hui, on écoute pour le plaisir.",
+          "adultGuidance": "Lisez à voix haute, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises complètes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "malo-ne-veut-pas-dormir"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-29",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Je dis une phrase plus précise",
+      "summary": "L’enfant combine vocabulaire et phrase complexe pour raconter une petite action.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "LANG-S01-C02-O03",
+        "LANG-S01-C02-O02",
+        "LANG-S02-C03-O04",
+        "TIME-SPACE-S01-C01-O12"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Fin de semaine : l’enfant reprend les phrases de temps et les phrases enrichies dans un petit récit oral.",
+      "activities": [
+        {
+          "id": "m3-lang-29-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Le rituel : bilan de la semaine",
+          "childInstruction": "Dis la date, puis raconte une chose que tu sais mieux dire.",
+          "adultGuidance": "Concluez la semaine sans évaluation. Faites nommer un progrès : parler d’hier, de demain, décrire, écouter ch/s.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C02-O02", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "mieux",
+              "en": "better"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then tell one thing you can say better."
+            }
+          ],
+          "payload": {
+            "prompts": ["Quelle est la date ?", "Qu’est-ce que tu sais mieux dire cette semaine ?"]
+          }
+        },
+        {
+          "id": "m3-lang-29-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Mon petit récit",
+          "childInstruction": "Raconte une petite histoire : qui, où, hier ou demain.",
+          "adultGuidance": "Aidez l’enfant à produire trois phrases au maximum. Exemple : « Hier, Bibi est allée au jardin. Elle a regardé les feuilles. Demain, elle reviendra. » Gardez le jeu oral.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C02-O03", "LANG-S01-C02-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "raconter",
+              "en": "to tell"
+            },
+            {
+              "fr": "précis",
+              "en": "precise"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Tell a short story with who, where, and yesterday or tomorrow."
+            }
+          ],
+          "payload": {
+            "prompts": [
+              "Qui est dans ton histoire ?",
+              "Où est-il ?",
+              "Est-ce hier ou demain ?",
+              "Raconte avec deux ou trois phrases."
+            ]
+          }
+        },
+        {
+          "id": "m3-lang-29-a3",
+          "position": 3,
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout. Aujourd’hui, on écoute pour le plaisir.",
+          "adultGuidance": "Lisez à voix haute, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises complètes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "les-trois-cailloux-de-tito"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
     }
   ]
 }

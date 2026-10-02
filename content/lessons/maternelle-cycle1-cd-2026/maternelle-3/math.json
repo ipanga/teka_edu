@@ -2050,6 +2050,572 @@
         "reviewedDigest": "848324a2967ca580",
         "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
+    },
+    {
+      "id": "m3-math-23",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Le nombre écrit dit combien",
+      "summary": "Associer une petite collection, son nom oral et son chiffre.",
+      "objectiveCodes": ["MATH-S01-C01-O08"],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O21"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Préparez de petits papiers avec les chiffres 1 à 5. Le chiffre est une étiquette pour la quantité, pas un dessin à recopier.",
+      "activities": [
+        {
+          "id": "m3-math-23-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Je compte et je choisis le chiffre",
+          "childInstruction": "Compte les objets, puis montre le chiffre qui dit combien.",
+          "adultGuidance": "Posez 1 à 5 cailloux ou haricots. Écrivez les chiffres 1 à 5 sur des papiers. L’enfant compte, dit le nombre, puis choisit le papier correspondant.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-caillou"],
+          "objectiveCodes": ["MATH-S01-C01-O08", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets", "papier", "crayon"],
+          "vocabulary": [
+            {
+              "fr": "le chiffre",
+              "en": "the numeral"
+            },
+            {
+              "fr": "combien",
+              "en": "how many"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count the objects, then point to the numeral."
+            }
+          ],
+          "payload": {
+            "upTo": 5,
+            "objects": "cailloux, capsules ou haricots"
+          }
+        },
+        {
+          "id": "m3-math-23-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Je fabrique la quantité",
+          "childInstruction": "Regarde le chiffre, puis prends exactement ce nombre d’objets.",
+          "adultGuidance": "Montrez un papier chiffre. L’enfant construit la collection : « Prends exactement ce nombre d’objets. » Faites vérifier en comptant à voix haute.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O08", "MATH-S01-C01-O21"],
+          "materialCodes": ["petits-objets", "papier"],
+          "vocabulary": [
+            {
+              "fr": "exactement",
+              "en": "exactly"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Look at the numeral and give exactly that many objects."
+            }
+          ],
+          "payload": {
+            "objects": "papiers chiffres 1 à 5 et petits objets"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-24",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Je retrouve le bon chiffre",
+      "summary": "Reprendre la correspondance quantité, mot-nombre et écriture chiffrée.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O08", "MATH-S01-C01-O20"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Variez la disposition des objets pour éviter que l’enfant reconnaisse seulement une forme de tas.",
+      "activities": [
+        {
+          "id": "m3-math-24-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Combien en tout ?",
+          "childInstruction": "Compte le tas, dis le nombre, puis trouve le chiffre.",
+          "adultGuidance": "Formez des collections de 2 à 6 objets. Après le comptage, demandez le chiffre. Si l’enfant hésite, replacez la bande 1 à 6 dans l’ordre.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O08", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets", "papier"],
+          "vocabulary": [
+            {
+              "fr": "en tout",
+              "en": "altogether"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count, say the number, then find the numeral."
+            }
+          ],
+          "payload": {
+            "upTo": 6,
+            "objects": "petits objets"
+          }
+        },
+        {
+          "id": "m3-math-24-a2",
+          "position": 2,
+          "type": "matching",
+          "title": "Je fais les paires",
+          "childInstruction": "Associe chaque tas avec son chiffre.",
+          "adultGuidance": "Faites trois petits tas et trois papiers chiffres. L’enfant met le bon papier devant chaque tas. Faites lire le chiffre par vous si besoin.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O08"],
+          "materialCodes": ["petits-objets", "papier"],
+          "vocabulary": [
+            {
+              "fr": "associer",
+              "en": "to match"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Match each pile with its numeral."
+            }
+          ],
+          "payload": {
+            "pairs": [
+              ["deux objets", "2"],
+              ["quatre objets", "4"],
+              ["six objets", "6"]
+            ]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-25",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Même quantité, même chiffre",
+      "summary": "Associer quantité et chiffre jusqu’à sept avec des objets différents.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O08", "MATH-S01-C01-O20", "MATH-S01-C01-O21"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Changez les objets pour que la quantité reste le critère principal.",
+      "activities": [
+        {
+          "id": "m3-math-25-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Cailloux ou capsules",
+          "childInstruction": "Compte les objets. Même si les objets changent, cherche le chiffre.",
+          "adultGuidance": "Faites une collection de capsules, puis une collection de cailloux de même nombre. Demandez si le chiffre change.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O08", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets", "papier"],
+          "vocabulary": [
+            {
+              "fr": "changer",
+              "en": "to change"
+            },
+            {
+              "fr": "même",
+              "en": "same"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count the objects and find the numeral, even when the objects change."
+            }
+          ],
+          "payload": {
+            "upTo": 7,
+            "objects": "capsules, cailloux ou haricots"
+          }
+        },
+        {
+          "id": "m3-math-25-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Je prépare le nombre demandé",
+          "childInstruction": "Prends le chiffre 7, puis prépare sept objets.",
+          "adultGuidance": "Montrez d’abord 5 ou 6 si 7 est difficile. Finissez par 7, lentement, en déplaçant chaque objet compté.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O08", "MATH-S01-C01-O21"],
+          "materialCodes": ["petits-objets", "papier"],
+          "vocabulary": [
+            {
+              "fr": "sept",
+              "en": "seven"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Take the numeral 7 and prepare seven objects."
+            }
+          ],
+          "payload": {
+            "objects": "papiers chiffres et petits objets"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-26",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "J’ajoute un",
+      "summary": "Découvrir que si l’on ajoute un objet, le nombre suivant arrive.",
+      "objectiveCodes": ["MATH-S01-C01-O11"],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O20", "MATH-S01-C01-O08"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Ne formalisez pas. L’enfant doit voir, compter, ajouter un objet, puis entendre que le nombre suivant arrive.",
+      "activities": [
+        {
+          "id": "m3-math-26-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Un de plus",
+          "childInstruction": "Compte les objets. J’en ajoute un : compte encore.",
+          "adultGuidance": "Commencez avec 3 objets. L’enfant compte. Ajoutez un seul objet, bien visible. Demandez : « Maintenant, combien ? » Recommencez avec 4 puis 5.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-caillou"],
+          "objectiveCodes": ["MATH-S01-C01-O11", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "un de plus",
+              "en": "one more"
+            },
+            {
+              "fr": "suivant",
+              "en": "next"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count. I add one. Count again."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "petits objets"
+          }
+        },
+        {
+          "id": "m3-math-26-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Le nombre suivant",
+          "childInstruction": "Montre le nombre suivant quand on ajoute un objet.",
+          "adultGuidance": "Avec une bande de chiffres 1 à 8, faites pointer le premier nombre, ajoutez un objet, puis faites pointer le nombre suivant.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O11", "MATH-S01-C01-O08"],
+          "materialCodes": ["petits-objets", "papier"],
+          "vocabulary": [
+            {
+              "fr": "suivant",
+              "en": "next"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Point to the next number when one object is added."
+            }
+          ],
+          "payload": {
+            "objects": "bande de chiffres et petits objets"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-27",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Encore un, c’est le suivant",
+      "summary": "Pratiquer l’idée du nombre suivant par ajout de un.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O11", "MATH-S01-C01-O08", "MATH-S01-C01-O20"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Restez sur de petites quantités. L’enfant anticipe peu à peu le nombre suivant avant de recompter.",
+      "activities": [
+        {
+          "id": "m3-math-27-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Je prévois le suivant",
+          "childInstruction": "Il y en a cinq. Si j’en ajoute un, combien y aura-t-il ?",
+          "adultGuidance": "Laissez l’enfant répondre avant de recompter. S’il se trompe, ajoutez l’objet et comptez ensemble sans marquer l’erreur.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O11", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "prévoir",
+              "en": "to predict"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "There are five. If I add one, how many will there be?"
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "petits objets"
+          }
+        },
+        {
+          "id": "m3-math-27-a2",
+          "position": 2,
+          "type": "matching",
+          "title": "Nombre et chiffre suivant",
+          "childInstruction": "Trouve le chiffre suivant.",
+          "adultGuidance": "Montrez 4 objets et le chiffre 4, ajoutez un objet, puis proposez les papiers 4, 5, 6. L’enfant choisit le bon chiffre.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O11", "MATH-S01-C01-O08"],
+          "materialCodes": ["petits-objets", "papier"],
+          "vocabulary": [
+            {
+              "fr": "choisir",
+              "en": "to choose"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Find the next numeral."
+            }
+          ],
+          "payload": {
+            "pairs": [
+              ["4 puis un de plus", "5"],
+              ["5 puis un de plus", "6"],
+              ["6 puis un de plus", "7"]
+            ]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-28",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Je compte à partir de",
+      "summary": "Préparer le surcomptage en continuant la comptine numérique à partir d’un nombre donné.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O11", "MATH-S01-C01-O20"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Le surcomptage complet viendra ensuite. Ici, on installe l’idée de repartir d’un nombre connu.",
+      "activities": [
+        {
+          "id": "m3-math-28-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Je continue après cinq",
+          "childInstruction": "Je dis cinq. Continue : six, sept, huit.",
+          "adultGuidance": "Commencez par un nombre de 3 à 6. L’enfant continue la suite orale trois nombres plus loin. Utilisez les doigts seulement si cela aide.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O11"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "continuer",
+              "en": "to continue"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "I say five. You continue: six, seven, eight."
+            }
+          ],
+          "payload": {
+            "upTo": 10,
+            "objects": "suite orale des nombres"
+          }
+        },
+        {
+          "id": "m3-math-28-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Je pars du nombre connu",
+          "childInstruction": "Il y en a déjà quatre. Ajoute deux objets et continue à compter.",
+          "adultGuidance": "Posez 4 objets déjà comptés. Dites : « On sait qu’il y en a quatre. » Ajoutez deux objets un par un : « cinq, six ». Si nécessaire, recomptez tout.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O11", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [
+            {
+              "fr": "déjà",
+              "en": "already"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "There are already four. Add two and keep counting."
+            }
+          ],
+          "payload": {
+            "objects": "petits objets"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-29",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Je relie quantité, chiffre et suivant",
+      "summary": "Consolider la première semaine de travail sur chiffres, quantités et +1.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O08", "MATH-S01-C01-O11", "MATH-S01-C01-O20"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Terminez par une situation de réussite. L’enfant montre ce qu’il sait faire avec le matériel, sans fiche.",
+      "activities": [
+        {
+          "id": "m3-math-29-a1",
+          "position": 1,
+          "type": "counting",
+          "title": "Je montre ce que je sais",
+          "childInstruction": "Compte le tas, trouve le chiffre, puis ajoute un objet.",
+          "adultGuidance": "Faites une petite collection. L’enfant compte, associe le chiffre, ajoute un objet et trouve le nouveau chiffre.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O08", "MATH-S01-C01-O11", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets", "papier"],
+          "vocabulary": [
+            {
+              "fr": "nouveau",
+              "en": "new"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Count, find the numeral, then add one object."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "petits objets"
+          }
+        },
+        {
+          "id": "m3-math-29-a2",
+          "position": 2,
+          "type": "manipulation",
+          "title": "Le défi de la semaine",
+          "childInstruction": "Prépare la quantité que je demande, puis montre son chiffre.",
+          "adultGuidance": "Demandez 3, 6 puis 8 objets. L’enfant prépare chaque collection, puis choisit le bon chiffre. Arrêtez sur une réussite.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O08", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets", "papier"],
+          "vocabulary": [
+            {
+              "fr": "défi",
+              "en": "challenge"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Prepare the quantity I ask for, then show its numeral."
+            }
+          ],
+          "payload": {
+            "objects": "petits objets et papiers chiffres"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
     }
   ]
 }

@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-10-02
-Branch:     main production promoted from validated develop; docs branch records outcome
-Commit:     ac3ebf9; origin/main verified; production deployment healthy
+Branch:     codex/october-maternelle-3
+Commit:     October Batch 1 implementation checkpoint on this branch; planning checkpoint 1242f5a
 Updated by: Codex
 ```
 
@@ -21,6 +21,29 @@ that records past TV checks remains unchanged as an accurate record and creates 
 obligation.
 
 ## Current September continuation — 2026-10-02
+
+## Current October Batch 1 — 2026-10-02
+
+Owner approved the October 3ème maternelle plan and authorized Batch 1 only. Work is on
+`codex/october-maternelle-3`, branched from current `origin/develop`
+`6b8ba9e87802d96c2f193fe73d3c9897e084ba9c`. The reconciled planning documents were committed
+first as `1242f5a`.
+
+Batch 1 authors October instructional days 23-29, dates 2026-10-01 through 2026-10-09: 28 new
+lessons across language, mathematics, physical activity and the rotating domains. Day 30
+intentionally remains `no-content`, preserving the stop boundary before Weeks 3-5. All new October
+lessons are `review` with no review record; no approval, self-approval, rich ImageGen generation,
+database migration, PR, merge or deployment has occurred. Review packages were generated for
+`docs/review/2026-2027-maternelle-3-semaine-6.md` and
+`docs/review/2026-2027-maternelle-3-semaine-7.md`.
+
+Batch evidence and media classification live in `docs/work/OCTOBER_BATCH_1.md`. Final validation
+passed: format, format check, lint, typecheck, 443 unit tests, content validation, programme report
+for days 23-30, coverage report through day 29 with 42/42 due objectives taught, media report with
+zero required image gaps, approval-lapse dry run with 0 lapses, Webpack production build with CI
+fake server-only sentinels, and client-bundle scan over 28 files with all three sentinels absent.
+Plain Turbopack `npm run build` passed once, then later reproduced the known local port-binding
+`EPERM` panic after a failed sentinel rebuild attempt; the Webpack fallback passed.
 
 Production promotion completed through the protected workflow. PR #92 (`develop` -> `main`) was
 opened only after `develop` was reverified at the authorized SHA

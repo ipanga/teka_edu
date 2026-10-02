@@ -245,7 +245,14 @@
         "m3-lang-19",
         "m3-lang-20",
         "m3-lang-21",
-        "m3-lang-22"
+        "m3-lang-22",
+        "m3-lang-23",
+        "m3-lang-24",
+        "m3-lang-25",
+        "m3-lang-26",
+        "m3-lang-27",
+        "m3-lang-28",
+        "m3-lang-29"
       ]
     },
     {
@@ -273,7 +280,14 @@
         "m3-math-19",
         "m3-math-20",
         "m3-math-21",
-        "m3-math-22"
+        "m3-math-22",
+        "m3-math-23",
+        "m3-math-24",
+        "m3-math-25",
+        "m3-math-26",
+        "m3-math-27",
+        "m3-math-28",
+        "m3-math-29"
       ]
     },
     {
@@ -301,7 +315,14 @@
         "m3-phys-19",
         "m3-phys-20",
         "m3-phys-21",
-        "m3-phys-22"
+        "m3-phys-22",
+        "m3-phys-23",
+        "m3-phys-24",
+        "m3-phys-25",
+        "m3-phys-26",
+        "m3-phys-27",
+        "m3-phys-28",
+        "m3-phys-29"
       ]
     },
     {
@@ -314,7 +335,9 @@
         "m3-art-04",
         "m3-art-05",
         "m3-art-06",
-        "m3-art-07"
+        "m3-art-07",
+        "m3-art-08",
+        "m3-art-09"
       ]
     },
     {
@@ -327,7 +350,9 @@
         "m3-world-04",
         "m3-world-05",
         "m3-world-06",
-        "m3-world-07"
+        "m3-world-07",
+        "m3-world-08",
+        "m3-world-09"
       ]
     },
     {
@@ -341,7 +366,10 @@
         "m3-time-05",
         "m3-time-06",
         "m3-time-07",
-        "m3-time-08"
+        "m3-time-08",
+        "m3-time-09",
+        "m3-time-10",
+        "m3-time-11"
       ]
     }
   ]

@@ -27,7 +27,7 @@ const lesson = (id: string) => {
 
 describe("September lessons (3ème maternelle)", () => {
   it("has one lesson per track slot of September, all authored by Teka Edu", () => {
-    expect(m3).toHaveLength(88);
+    expect(m3).toHaveLength(116);
     for (const l of m3) {
       expect(l.origin).toBe("teka-edu-created");
       expect(l.levelIds).toEqual(["maternelle-3"]);
@@ -57,7 +57,7 @@ describe("September lessons (3ème maternelle)", () => {
 
   it("traces every activity to an official objective of the curriculum", () => {
     const activities = m3.flatMap((l) => l.activities);
-    expect(activities).toHaveLength(170);
+    expect(activities).toHaveLength(224);
     for (const activity of activities) {
       expect(activity.objectiveCodes.length).toBeGreaterThan(0);
       for (const code of activity.objectiveCodes) {
@@ -108,7 +108,7 @@ describe("September lessons (3ème maternelle)", () => {
 
   it("includes the daily read-aloud the programme requires, without questions", () => {
     const language = m3.filter((l) => l.domainCode === "LANG");
-    expect(language).toHaveLength(22);
+    expect(language).toHaveLength(29);
     for (const l of language) {
       const readAloud = l.activities.filter((a) => a.type === "read-aloud");
       expect(readAloud, l.id).toHaveLength(1);
