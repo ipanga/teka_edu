@@ -109,6 +109,8 @@ jobs:
       - uses: supabase/setup-cli@v3
         with:
           version: 2.117.0
+      - name: Clear stale local database containers
+        run: supabase stop --no-backup || true
       - name: Start local database (applies all migrations and the dev seed)
         run: supabase db start
         env:

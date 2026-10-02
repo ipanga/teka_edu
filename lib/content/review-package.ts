@@ -121,7 +121,21 @@ function teachingTextBlock(activity: Activity, data: ReferenceData): string[] {
     `  _${text.provenance}_`,
     "",
   ];
-  if (picture !== undefined && picture !== null) {
+  if (picture?.sequence !== undefined && text.kind === "story") {
+    // A story told in several pictures: the reviewer sees which scene goes with which page.
+    const { frames, pageFrames } = picture.sequence;
+    lines.push(
+      `- **Images montrées pendant la lecture, page par page :** \`${picture.id}\``,
+      "",
+      ...pageFrames.map((index, page) => {
+        const frame = frames[index];
+        return frame === undefined
+          ? `  - Page ${page + 1} : image manquante`
+          : `  - Page ${page + 1} : ${frame.alt} (\`public/media/${frame.file}\`)`;
+      }),
+      "",
+    );
+  } else if (picture !== undefined && picture !== null) {
     lines.push(
       `- **Image montrée pendant la lecture :** \`${picture.id}\` — ${picture.alt} ` +
         `(\`public/media/${picture.file}\`)`,

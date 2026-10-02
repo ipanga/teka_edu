@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 6 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 10 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-14 — ChatGPT · `accepted-with-modifications` (ai-assisted)
@@ -97,6 +97,30 @@ Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2
 Reconfirmation visuelle de septembre acceptée (ADR-048), sur le paquet régénéré docs/review/2026-2027-maternelle-3-reconfirmation-visuelle.md, après l’audit complet de la refonte visuelle (49 images, gel SEPTEMBER_VISUAL_ASSETS_FROZEN_FOR_RECONFIRMATION), la correction de m3-art-04-a1 « Le bruit de la pluie » — histoire-pluie est désormais l’image principale montrée à l’enfant ; la référence à comptine-compter reste acceptable comme image secondaire liée à la comptine, qui ne doit pas mener l’écran — et l’audit ciblé de cohérence image / activité (110 activités, 184 images montrées), qui n’a trouvé aucune autre contradiction. Aucun texte pédagogique, objectif, durée, progression, programme ni calendrier n’appelle de nouvelle relecture.
 
 **Suites données :** Aucune. Les leçons de cette semaine dont l’approbation avait été annulée le 2026-09-22 pour une image redessinée retrouvent le statut « approved » par scripts/approve-week.ts --lapsed-only, avec des empreintes calculées à neuf sur les images gelées ; les leçons restées approuvées ne sont pas touchées.
+
+### 2026-09-27 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du pilote rich-media de septembre, couvrant exactement les 18 leçons affectées et les cinq familles d’images. La première passe Claude Max / Opus 5.5 a conclu accepted-with-modifications : les quatre familles corps-tete, animal-chevre, comptine-bonjour et histoire-mangue ainsi que 15 leçons étaient acceptées ; histoire-nsimba demandait une scène propre à la page 1 et une étiquette portant le prénom de Nsimba à la page 3. Après vérification indépendante, corrections minimales et régénération du paquet, la seconde passe a conclu accepted pour les 18 leçons et les cinq familles, sans autre correction.
+
+**Suites données :** histoire-nsimba utilise désormais cinq scènes pour cinq pages : la page 1 montre Nsimba inquiet sur le chemin en tenant la main de son adulte, et la page 2 seule montre le portail et la maitresse. La page 3 montre une étiquette lisible « Nsimba » et sa description accessible la nomme. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier ni consigne n’a changé. Les approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
+
+### 2026-09-27 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 1 du déploiement rich-media de septembre, couvrant exactement 10 leçons et cinq images. La première passe Claude Max / Opus 5.5 a conclu accepted-with-modifications : corps-main, corps-pied, animal-poule, animal-poussin et six leçons étaient acceptés ; corps-ventre devait devenir un gros plan du torse, sans visage, centré sur le ventre et lisible à 72 px. Après vérification indépendante, correction minimale et régénération du paquet, la seconde passe a conclu accepted pour corps-ventre, les quatre leçons bloquées et donc les 10 leçons du lot.
+
+**Suites données :** corps-ventre montre désormais un gros plan du torse, sans tête ni visage, avec le ventre centré et une seule main posée dessus ; sa description accessible correspond exactement à l’image. La planche complète intégrée au paquet et la planche corrective ont été régénérées sur les octets finaux. Les quatre autres images acceptées à la première passe sont restées octet pour octet identiques. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
+
+### 2026-09-28 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 5 du déploiement rich-media de septembre, couvrant exactement la séquence histoire-kumu et quatre leçons. La première passe Claude Max / Opus 5.5 a accepté les cadres 1, 2 et 4, la pagination canonique de 12 lignes en quatre pages et tous les champs pédagogiques, mais a demandé que les yeux fermés de Kumu restent clairement lisibles à 256 px dans le cadre 3. Après la correction bornée, la seconde passe a conclu accepted : les yeux fermés, la posture d’écoute, le tournant narratif, la continuité visuelle et l’adéquation préscolaire sont confirmés sans bloqueur.
+
+**Suites données :** Seul le cadre 3 a été régénéré ; Kumu ferme désormais visiblement les deux yeux et lève la tête vers le poulailler pour écouter. Les cadres 1, 2 et 4 sont restés octet pour octet identiques. Les quatre WebP sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 027ee3b6119faf82c9b58d974846b73e5531b71d5309516b0d8446715f9542be, 46c72911eec6b4765ccfa37e66ced474e13db28cd5c8144ec20d9517755723b9, 3d55d4687ed29f49b0fb5f6934edfb3e918cbba295464f1bfb15ddeb99e7dd95, 3c3a60bdd2fc1913b8394fb8643fa98a545a51ff91fb11d25abf56282b57b13a. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les quatre approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
+
+### 2026-09-30 — Codex (session indépendante) · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 8, histoire-pluie, au checkpoint gelé 45b468301af2a9dae41e182d619ee9f024d56379. Le propriétaire a relayé le verdict accepted d’une session Codex séparée : quatre cadres WebP, texte canonique et correspondance pages/cadres, continuité de Tito, progression météorologique et narrative, cadre 2 partagé avec la comptine, rendu à 256 px, descriptions accessibles, SHA-256 et captures téléphone/tablette/laptop-MacBook vérifiés. Aucune correction requise. La session de relecture n’a modifié aucun fichier, média, contenu, digest, approbation ou déploiement.
+
+**Suites données :** Aucune. Le manifeste relu reste 1ff3bd59ee4a2d6a89a8a153e98d0f2314d6faaabc64ce0045b6a9e5d037ec2b ; les 30 fichiers et les quatre cadres runtime correspondent exactement au checkpoint. Le propriétaire autorise explicitement la restauration des seules sept approbations expirées m1-lang-09, m1-lang-10, m1-lang-15, m1-lang-20, m3-lang-03, m3-lang-21 et m3-art-04, par approve-week --lapsed-only=true avec des empreintes calculées à neuf. Aucun digest antérieur ne doit être copié. TV/Smart TV reste hors périmètre.
 
 ## Jour 1 — 2026-09-01
 
@@ -170,7 +194,13 @@ _L’enfant salue, dit son nom et son âge, et parle des personnes qui vivent av
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-nsimba` — Nsimba, un petit garçon avec son sac d’école sur le dos, devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-nsimba`
+
+  - Page 1 : Sur le chemin de l’école, Nsimba serre la main de son adulte et avance avec une expression inquiète (`public/media/illustrations/histoire-nsimba-00.webp`)
+  - Page 2 : Nsimba, son sac d’école sur le dos, tient la main de son adulte devant le portail de l’école ; la maitresse s’accroupit pour lui dire bonjour (`public/media/illustrations/histoire-nsimba-01.webp`)
+  - Page 3 : Nsimba entre dans la classe avec son sac ; la maitresse lui montre sa place et l’étiquette « Nsimba » sur la table (`public/media/illustrations/histoire-nsimba-02.webp`)
+  - Page 4 : Amina tend un crayon bleu à Nsimba, qui dessine une maison, un soleil et deux enfants (`public/media/illustrations/histoire-nsimba-03.webp`)
+  - Page 5 : Le soir, Nsimba sourit à côté de son adulte : demain, il retourne à l’école (`public/media/illustrations/histoire-nsimba-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -524,7 +554,12 @@ _Premier corpus de mots : nommer et ranger les objets de l’école._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-mangue` — Une mangue entière, et trois morceaux de mangue coupés sur une assiette (`public/media/illustrations/histoire-mangue.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-mangue`
+
+  - Page 1 : Ilunga, assis sous le manguier, tient une grosse mangue dans ses deux mains (`public/media/illustrations/histoire-mangue-01.webp`)
+  - Page 2 : Ama et Tito arrivent et regardent la mangue ; Ilunga réfléchit (`public/media/illustrations/histoire-mangue-02.webp`)
+  - Page 3 : Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main (`public/media/illustrations/histoire-mangue-03.webp`)
+  - Page 4 : Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main (`public/media/illustrations/histoire-mangue-03.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -827,8 +862,8 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
 - **Aide en anglais (optionnelle) :** « Listen to Kumu’s story. I will ask you three questions after. »
 - **Images montrées à l'enfant (2) :**
 
-  - `animal-poussin` — Un petit poussin jaune, tout rond (`public/media/animals/animal-poussin.svg`)
-  - `animal-poule` — Une poule blanche, avec sa crête rouge (`public/media/animals/animal-poule.svg`)
+  - `animal-poussin` — Un jeune poussin jaune, duveteux, avec une petite aile et deux pattes fines (`public/media/animals/animal-poussin.webp`)
+  - `animal-poule` — Une poule blanche avec une crête rouge, une aile repliée et des pattes bien visibles (`public/media/animals/animal-poule.webp`)
 
 - **Objectifs travaillés :** `LANG-S02-C03-O09` Comprendre des histoires dont les actions sont organisées autour d’une structure répétitive (rencontres successives) et commencer à comprendre les informations implicites (émotions, états et sentiments des personnages). ; `LANG-S01-C04-O11` Participer à une conversation avec un adulte ou des pairs et reformuler son propos s’il n’a pas été compris.
 
@@ -849,7 +884,12 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-kumu` — Kumu, le petit poussin, qui sort tout seul du poulailler dont la porte est ouverte (`public/media/illustrations/histoire-kumu.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-kumu`
+
+  - Page 1 : Kumu, petit poussin jaune, sort seul du poulailler ouvert tandis que sa maman poule reste derrière lui, près d’un grand manguier et d’un grand seau bleu (`public/media/illustrations/histoire-kumu-01.webp`)
+  - Page 2 : Loin de la maison, Kumu s’arrête sur le chemin et appelle tandis qu’un petit lézard passe en courant (`public/media/illustrations/histoire-kumu-02.webp`)
+  - Page 3 : Une jeune chèvre mange une feuille pendant que Kumu ferme les yeux et écoute sa maman poule appeler près du poulailler (`public/media/illustrations/histoire-kumu-03.webp`)
+  - Page 4 : Devant le poulailler, Kumu se blottit au chaud sous l’aile ouverte de sa maman poule et la regarde (`public/media/illustrations/histoire-kumu-04.webp`)
 
 - **Questions posées à l’enfant après l’écoute (3) :**
 
@@ -880,7 +920,12 @@ _Écouter une histoire jusqu’au bout, puis en parler et la relier à sa propre
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-pluie` — La pluie qui tombe d’un nuage sur le toit d’une maison (`public/media/illustrations/histoire-pluie.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-pluie`
+
+  - Page 1 : Tito regarde les premières gouttes depuis la porte ; le ciel est gris et le vent pousse les feuilles (`public/media/illustrations/histoire-pluie-01.webp`)
+  - Page 2 : Tito ferme les yeux et écoute à l’abri pendant que la pluie frappe le toit (`public/media/illustrations/histoire-pluie-02.webp`)
+  - Page 3 : Après la pluie, l’eau coule entre les cailloux et une goutte brillante reste au bout d’une feuille (`public/media/illustrations/histoire-pluie-03.webp`)
+  - Page 4 : Tito est sorti ; son doigt est sous la feuille et la goutte tombe vers sa main ouverte (`public/media/illustrations/histoire-pluie-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (from-5) :**
 
@@ -1200,7 +1245,12 @@ _Frapper les syllabes des prénoms de la maison : entendre que les mots sont fai
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-kumu` — Kumu, le petit poussin, qui sort tout seul du poulailler dont la porte est ouverte (`public/media/illustrations/histoire-kumu.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-kumu`
+
+  - Page 1 : Kumu, petit poussin jaune, sort seul du poulailler ouvert tandis que sa maman poule reste derrière lui, près d’un grand manguier et d’un grand seau bleu (`public/media/illustrations/histoire-kumu-01.webp`)
+  - Page 2 : Loin de la maison, Kumu s’arrête sur le chemin et appelle tandis qu’un petit lézard passe en courant (`public/media/illustrations/histoire-kumu-02.webp`)
+  - Page 3 : Une jeune chèvre mange une feuille pendant que Kumu ferme les yeux et écoute sa maman poule appeler près du poulailler (`public/media/illustrations/histoire-kumu-03.webp`)
+  - Page 4 : Devant le poulailler, Kumu se blottit au chaud sous l’aile ouverte de sa maman poule et la regarde (`public/media/illustrations/histoire-kumu-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Acquérir les habiletés phonologiques et le principe alphabétique » (from-5) :**
 

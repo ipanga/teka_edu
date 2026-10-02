@@ -1,4 +1,5 @@
 import type { ContentOrigin } from "../curriculum/types";
+import { type TeachingTextKind, narrativePageCount } from "../lessons/texts";
 
 /**
  * A picture the child looks at (ADR-042, docs/MEDIA_ARCHITECTURE.md).
@@ -11,13 +12,55 @@ import type { ContentOrigin } from "../curriculum/types";
 export const MEDIA_KINDS = ["shape", "object", "animal", "illustration"] as const;
 export type MediaKind = (typeof MEDIA_KINDS)[number];
 
+/** A story sequence stays small: a few scenes aligned to pages, never a picture book per page. */
+export const MAX_SEQUENCE_FRAMES = 6;
+
+/** One picture of a story sequence. */
+export type MediaFrame = {
+  /** Path under public/media/, e.g. "illustrations/histoire-nsimba-02.webp". */
+  file: string;
+  /** What this scene shows, in French: it replaces the asset's own description on its pages. */
+  alt: string;
+  /** `sha256:<64 hex>` of the file's bytes, like `MediaAsset.contentHash`. */
+  contentHash: string;
+  /** Intrinsic size in pixels, so the page reserves the right box before the file arrives. */
+  width: number;
+  height: number;
+};
+
+/**
+ * A story told in a few pictures (the September rich-media pilot).
+ *
+ * The story's text is approved content and is not touched: the pages already exist, because the
+ * renderer turns a story three lines at a time (`narrativePageCount`). The registry only says,
+ * for each of those pages in order, which frame it shows. `pageFrames: [0, 0, 1, 2, 3]` gives a
+ * five-page story four pictures, the first held over two pages.
+ */
+export type MediaSequence = {
+  /** Every frame, in story order. The asset's own `file` is one of them: its primary frame. */
+  frames: readonly MediaFrame[];
+  /** One entry per page of the story the asset illustrates: the index of the frame to show. */
+  pageFrames: readonly number[];
+};
+
 export type MediaAsset = {
   id: string;
   kind: MediaKind;
-  /** Path under public/media/, e.g. "shapes/forme-carre.svg". */
+  /**
+   * Path under public/media/, e.g. "shapes/forme-carre.svg" or "objects/corps-tete.webp". For a
+   * sequence this is the primary frame: what any use other than paging through the story shows.
+   */
   file: string;
   /** French description, read aloud by assistive technology. Never empty. */
   alt: string;
+  /**
+   * Intrinsic size of `file` in pixels. Required for raster art, whose aspect ratio is not
+   * always square; absent for the SVG set, which is drawn square.
+   */
+  width?: number;
+  height?: number;
+  /** Present only on a story told in several pictures. */
+  sequence?: MediaSequence;
   /** Words a lesson might use for it, so the set can be searched while authoring. */
   tags: readonly string[];
   origin: ContentOrigin;
@@ -32,6 +75,34 @@ export type MediaAsset = {
    */
   contentHash: string;
 };
+
+/**
+ * The canonical fingerprint of one asset, as an approval covers it.
+ *
+ * Kind and description are part of it: a picture relabelled from "un seau" to "Lisa" is a
+ * different thing to a reviewer even if the bytes happened not to move. A sequence adds every
+ * frame's description and bytes, and which page shows which frame: a redrawn scene, a missing
+ * frame or a page moved to another picture all change what the child sees during the story.
+ *
+ * An asset without a sequence fingerprints exactly as it always has, so adding sequences to the
+ * model lapses no approval that does not use one. Dimensions are not in it: they follow from the
+ * bytes, and content validation checks them against the file.
+ */
+export function assetFingerprint(asset: {
+  kind: string;
+  alt: string;
+  contentHash: string;
+  sequence?: {
+    frames: readonly { alt: string; contentHash: string }[];
+    pageFrames: readonly number[];
+  };
+}): string {
+  const own = `${asset.kind}|${asset.alt}|${asset.contentHash}`;
+  if (asset.sequence === undefined) return own;
+  // U+241E between frames, as U+241F between lines of a text: no description can fake a boundary.
+  const frames = asset.sequence.frames.map((frame) => `${frame.alt}|${frame.contentHash}`);
+  return `${own}|sequence|${frames.join("␞")}|pages|${asset.sequence.pageFrames.join(",")}`;
+}
 
 /**
  * The media source an approval digest uses: an asset's canonical fingerprint, and the picture a
@@ -56,9 +127,7 @@ export function mediaDigestSource(
   return {
     fingerprint(mediaId) {
       const asset = byId.get(mediaId);
-      // Kind and description are part of it: a picture relabelled from "un seau" to "Lisa" is a
-      // different thing to a reviewer even if the bytes happened not to move.
-      return asset === undefined ? undefined : `${asset.kind}|${asset.alt}|${asset.contentHash}`;
+      return asset === undefined ? undefined : assetFingerprint(asset);
     },
     illustrationOf(textId) {
       return byTextId.get(textId)?.illustrationId ?? null;
@@ -86,9 +155,98 @@ export function mediaDigestSource(
   };
 }
 
-/** Public URL of an asset, as the browser requests it. */
-export function mediaUrl(asset: MediaAsset): string {
+/** Public URL of an asset (or of one frame of it), as the browser requests it. */
+export function mediaUrl(asset: { file: string }): string {
   return `/media/${asset.file}`;
+}
+
+/** Every file an asset ships — its own and its frames' — each once. */
+export function assetFiles(asset: MediaAsset): { file: string; contentHash: string }[] {
+  const files = [{ file: asset.file, contentHash: asset.contentHash }];
+  for (const frame of asset.sequence?.frames ?? []) {
+    if (!files.some((known) => known.file === frame.file)) files.push(frame);
+  }
+  return files;
+}
+
+/**
+ * Story sequences are bounded and tied to real pages (the September rich-media pilot):
+ *
+ *  - the primary file is one of the frames, with the same bytes, so an ordinary use of the id
+ *    shows a picture that belongs to the story;
+ *  - every frame is shown on at least one page, and every page names an existing frame;
+ *  - frames share one size, so turning a page never moves the text under the parent's eyes;
+ *  - the asset illustrates at least one story, and every story it illustrates has exactly as many
+ *    pages as `pageFrames` has entries. A non-story text may share the asset: it shows the primary
+ *    frame and never pages through the sequence. A story rewritten to another length makes this
+ *    fail rather than show the wrong scene on a page.
+ */
+export function checkMediaSequences(
+  assets: readonly MediaAsset[],
+  texts: readonly {
+    id: string;
+    kind: TeachingTextKind;
+    lines: readonly unknown[];
+    illustrationId: string | null;
+  }[],
+): string[] {
+  const problems: string[] = [];
+  for (const asset of assets) {
+    const sequence = asset.sequence;
+    const where = `media "${asset.id}"`;
+    if (sequence === undefined) continue;
+    const { frames, pageFrames } = sequence;
+    if (asset.kind !== "illustration") {
+      problems.push(`${where}: only an illustration has a sequence`);
+    }
+    if (frames.length < 2 || frames.length > MAX_SEQUENCE_FRAMES) {
+      problems.push(`${where}: a sequence has 2 to ${MAX_SEQUENCE_FRAMES} frames`);
+    }
+    const primary = frames.find((frame) => frame.file === asset.file);
+    if (primary === undefined) {
+      problems.push(`${where}: its file ${asset.file} must be one of its frames`);
+    } else if (primary.contentHash !== asset.contentHash) {
+      problems.push(`${where}: its file and its frame ${asset.file} record different bytes`);
+    } else if (primary.width !== asset.width || primary.height !== asset.height) {
+      problems.push(`${where}: its size and its frame ${asset.file}'s size differ`);
+    }
+    if (new Set(frames.map((frame) => frame.file)).size !== frames.length) {
+      problems.push(`${where}: a frame file is listed twice`);
+    }
+    for (const frame of frames) {
+      if (frame.alt.trim() === "") {
+        problems.push(`${where}: frame ${frame.file} needs French alt text`);
+      }
+      if (frame.width !== frames[0]?.width || frame.height !== frames[0]?.height) {
+        problems.push(`${where}: frame ${frame.file} is not the size of the first frame`);
+      }
+    }
+    pageFrames.forEach((index, page) => {
+      if (!Number.isInteger(index) || index < 0 || index >= frames.length) {
+        problems.push(`${where}: page ${page + 1} names frame ${index}, which does not exist`);
+      }
+    });
+    frames.forEach((frame, index) => {
+      if (!pageFrames.includes(index)) {
+        problems.push(`${where}: frame ${frame.file} is never shown on a page`);
+      }
+    });
+    const illustratedStories = texts.filter(
+      (text) => text.illustrationId === asset.id && text.kind === "story",
+    );
+    if (illustratedStories.length === 0) {
+      problems.push(`${where}: a sequence must illustrate at least one story`);
+    }
+    for (const text of illustratedStories) {
+      const pages = narrativePageCount(text);
+      if (pages !== pageFrames.length) {
+        problems.push(
+          `${where}: text "${text.id}" has ${pages} page(s); the sequence maps ${pageFrames.length}`,
+        );
+      }
+    }
+  }
+  return problems;
 }
 
 export function findAsset(assets: readonly MediaAsset[], id: string): MediaAsset | undefined {

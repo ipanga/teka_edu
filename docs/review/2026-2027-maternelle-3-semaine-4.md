@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 6 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 12 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-16 — correction héritée d’une autre semaine (pas une relecture de celle-ci)
@@ -110,6 +110,42 @@ Reconfirmation pédagogique ciblée des 27 leçons affectées par les correction
 
 **Suites données :** m1-phys-22-a1 dit désormais « jouer ensemble en respectant la règle ». Le mur de forme-maison-composee mesure 82 × 82 unités et la planche porte l’identifiant canonique. Aucune autre correction demandée. Les approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
 
+### 2026-09-27 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du pilote rich-media de septembre, couvrant exactement les 18 leçons affectées et les cinq familles d’images. La première passe Claude Max / Opus 5.5 a conclu accepted-with-modifications : les quatre familles corps-tete, animal-chevre, comptine-bonjour et histoire-mangue ainsi que 15 leçons étaient acceptées ; histoire-nsimba demandait une scène propre à la page 1 et une étiquette portant le prénom de Nsimba à la page 3. Après vérification indépendante, corrections minimales et régénération du paquet, la seconde passe a conclu accepted pour les 18 leçons et les cinq familles, sans autre correction.
+
+**Suites données :** histoire-nsimba utilise désormais cinq scènes pour cinq pages : la page 1 montre Nsimba inquiet sur le chemin en tenant la main de son adulte, et la page 2 seule montre le portail et la maitresse. La page 3 montre une étiquette lisible « Nsimba » et sa description accessible la nomme. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier ni consigne n’a changé. Les approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
+
+### 2026-09-27 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 1 du déploiement rich-media de septembre, couvrant exactement 10 leçons et cinq images. La première passe Claude Max / Opus 5.5 a conclu accepted-with-modifications : corps-main, corps-pied, animal-poule, animal-poussin et six leçons étaient acceptés ; corps-ventre devait devenir un gros plan du torse, sans visage, centré sur le ventre et lisible à 72 px. Après vérification indépendante, correction minimale et régénération du paquet, la seconde passe a conclu accepted pour corps-ventre, les quatre leçons bloquées et donc les 10 leçons du lot.
+
+**Suites données :** corps-ventre montre désormais un gros plan du torse, sans tête ni visage, avec le ventre centré et une seule main posée dessus ; sa description accessible correspond exactement à l’image. La planche complète intégrée au paquet et la planche corrective ont été régénérées sur les octets finaux. Les quatre autres images acceptées à la première passe sont restées octet pour octet identiques. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
+
+### 2026-09-28 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 5 du déploiement rich-media de septembre, couvrant exactement la séquence histoire-kumu et quatre leçons. La première passe Claude Max / Opus 5.5 a accepté les cadres 1, 2 et 4, la pagination canonique de 12 lignes en quatre pages et tous les champs pédagogiques, mais a demandé que les yeux fermés de Kumu restent clairement lisibles à 256 px dans le cadre 3. Après la correction bornée, la seconde passe a conclu accepted : les yeux fermés, la posture d’écoute, le tournant narratif, la continuité visuelle et l’adéquation préscolaire sont confirmés sans bloqueur.
+
+**Suites données :** Seul le cadre 3 a été régénéré ; Kumu ferme désormais visiblement les deux yeux et lève la tête vers le poulailler pour écouter. Les cadres 1, 2 et 4 sont restés octet pour octet identiques. Les quatre WebP sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 027ee3b6119faf82c9b58d974846b73e5531b71d5309516b0d8446715f9542be, 46c72911eec6b4765ccfa37e66ced474e13db28cd5c8144ec20d9517755723b9, 3d55d4687ed29f49b0fb5f6934edfb3e918cbba295464f1bfb15ddeb99e7dd95, 3c3a60bdd2fc1913b8394fb8643fa98a545a51ff91fb11d25abf56282b57b13a. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les quatre approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
+
+### 2026-09-28 — ChatGPT GPT-5.6 Sol · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 7 du déploiement rich-media de septembre, couvrant exactement la séquence histoire-marche et trois leçons (m3-lang-06, m3-lang-12, m3-lang-19), à partir du dossier, de la planche comparative et de la consigne bornée gelés. ChatGPT GPT-5.6 Sol, relecteur externe indépendant de l’auteur des images et de la session d’implémentation, a d’abord conclu accepted-with-modifications en signalant six tomates sur le cadre 2. La session d’implémentation Claude Code a contesté ce bloqueur avec des preuves : le plateau pédagogique du cadre 2 contient exactement cinq tomates et trois oignons, en pleine résolution comme sur la vignette de 256 px. Après réinspection agrandie, ChatGPT GPT-5.6 Sol a confirmé cinq tomates et trois oignons, retiré le bloqueur et conclu accepted : les 10 lignes canoniques rendent quatre pages (3/3/3/1) associées aux cadres [0, 1, 2, 3] ; Mama Lelo, Ama, les vêtements, le panier, le marché, la cour, la lumière et le style restent cohérents ; les couleurs, le comptage et la comparaison de cinq tomates avec trois oignons, le tri et la fierté d’Ama sont clairs et adaptés à la maternelle.
+
+**Suites données :** Aucune correction : le seul bloqueur signalé provenait d’un comptage visuel erroné et a été retiré ; aucun média n’a été modifié ni régénéré. Les quatre WebP sont 1200×900 et leurs SHA-256 ont été revérifiés localement : 4188ac69de8d39f7d742ea5f257cc888067217c28f53816d8afbccd446dbcb75, 0a674df545e61cb3868bf8be9fe54c1d220dad13dae7e33ada2a67f337c8bc39, c61a2d3efeb08b7af036d979e82ed3f1f324692e3c20f43f1c9df8b7a72bf9db et 5cb5137fb4c0a12641f185f5bd6a3f2dcedee3db556b7ca7c4615ceb423e2f00. AssetFingerprint couvre les quatre cadres, leurs descriptions et pageFrames, puis lessonDigest couvre cette empreinte complète. Aucun texte pédagogique, objectif, durée, matériel, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Le propriétaire a explicitement autorisé l’enregistrement de ce verdict externe et la restauration des trois approbations expirées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
+
+### 2026-09-30 — Codex (session indépendante) · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 9 histoire-cailloux au checkpoint gelé 6220f1e1e8f1476018759b514d86a946f78d937e, documentation d63b661f54c92177fff3ed9d16d32511fd5231e0. Le propriétaire a relayé accepted d’une session Codex séparée : quatre images réelles, correspondance canonique, silhouettes et identités des cailloux, quantités 3/2/2/3 sans révélation prématurée ni duplication, continuité de Tito avec Pluie, descriptions accessibles, rendu à 256 px, captures téléphone/tablette/laptop-MacBook et intégrité du manifeste vérifiés. Aucun défaut ni correction requis. La session indépendante n’a rien modifié.
+
+**Suites données :** Aucune. Manifeste 415bbf536f244ae90ef13a3ab3e17a4887d04ad9f33c69598e801c7258e7365c et 26 fichiers revérifiés identiques au gel ; médias runtime identiques. Le propriétaire autorise uniquement m3-lang-08, m3-lang-14 et m3-lang-18 via approve-week --lapsed-only=true avec digests calculés à neuf, jamais copiés. Les 173 autres approbations sont préservées. Téléphone/tablette/laptop-MacBook uniquement ; aucune opération de déploiement.
+
+### 2026-10-01 — Codex (session indépendante) · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot final 10 histoire-malo, gel 8b5a8655222e299fea90e7582906c3723b3eca79, documentation 1c3372298eaa9e3463aa7a889762bb9cc662db2b. Le propriétaire a relayé accepted sans correction d’une session Codex séparée. Quatre images réelles, douze lignes et correspondance canonique, comparaison, rendu 256 px, descriptions, dossier et treize captures originales vérifiés. Les scènes de conséquence après la branche et d’essai d’eau froide soutiennent les pages sans contradiction ; continuité, anatomie, un poisson dans l’eau à l’œil ouvert, une patte dans l’eau avec trois appuis, sommeil en rond nez sur la queue, progression soir-nuit et sécurité adaptés. Téléphone/tablette/laptop-MacBook uniquement. Aucune modification effectuée par le relecteur.
+
+**Suites données :** Aucune. Manifeste f76f81e72adef7810695da6cb2b29d6fde0aa4dc981e9abd43fc0f1289141603 et 26 fichiers revérifiés identiques au gel ; images runtime identiques. Le propriétaire autorise uniquement m3-lang-07, m3-lang-16, m3-lang-20 via approve-week --lapsed-only=true après dry-run, digests calculés à neuf, jamais repris. Les 173 autres approbations et les preuves acceptées Pluie/Cailloux sont préservées. Aucun merge, déploiement ou travail d’octobre autorisé.
+
 ## Jour 15 — 2026-09-21
 
 **Durée totale : 35 min** · 4 séances · jour 5 du rythme
@@ -175,7 +211,13 @@ _Comprendre ce que ressent un personnage et le comparer à ce qu’on a vécu so
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-nsimba` — Nsimba, un petit garçon avec son sac d’école sur le dos, devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-nsimba`
+
+  - Page 1 : Sur le chemin de l’école, Nsimba serre la main de son adulte et avance avec une expression inquiète (`public/media/illustrations/histoire-nsimba-00.webp`)
+  - Page 2 : Nsimba, son sac d’école sur le dos, tient la main de son adulte devant le portail de l’école ; la maitresse s’accroupit pour lui dire bonjour (`public/media/illustrations/histoire-nsimba-01.webp`)
+  - Page 3 : Nsimba entre dans la classe avec son sac ; la maitresse lui montre sa place et l’étiquette « Nsimba » sur la table (`public/media/illustrations/histoire-nsimba-02.webp`)
+  - Page 4 : Amina tend un crayon bleu à Nsimba, qui dessine une maison, un soleil et deux enfants (`public/media/illustrations/histoire-nsimba-03.webp`)
+  - Page 5 : Le soir, Nsimba sourit à côté de son adulte : demain, il retourne à l’école (`public/media/illustrations/histoire-nsimba-04.webp`)
 
 - **Questions posées à l’enfant après l’écoute (3) :**
 
@@ -209,7 +251,13 @@ _Comprendre ce que ressent un personnage et le comparer à ce qu’on a vécu so
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-nsimba` — Nsimba, un petit garçon avec son sac d’école sur le dos, devant la porte de l’école (`public/media/illustrations/histoire-nsimba.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-nsimba`
+
+  - Page 1 : Sur le chemin de l’école, Nsimba serre la main de son adulte et avance avec une expression inquiète (`public/media/illustrations/histoire-nsimba-00.webp`)
+  - Page 2 : Nsimba, son sac d’école sur le dos, tient la main de son adulte devant le portail de l’école ; la maitresse s’accroupit pour lui dire bonjour (`public/media/illustrations/histoire-nsimba-01.webp`)
+  - Page 3 : Nsimba entre dans la classe avec son sac ; la maitresse lui montre sa place et l’étiquette « Nsimba » sur la table (`public/media/illustrations/histoire-nsimba-02.webp`)
+  - Page 4 : Amina tend un crayon bleu à Nsimba, qui dessine une maison, un soleil et deux enfants (`public/media/illustrations/histoire-nsimba-03.webp`)
+  - Page 5 : Le soir, Nsimba sourit à côté de son adulte : demain, il retourne à l’école (`public/media/illustrations/histoire-nsimba-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -431,9 +479,9 @@ _Comparer deux animaux et dire ce qui les distingue._
 - **Aide en anglais (optionnelle) :** « Compare two animals: what is the same, what is different? »
 - **Images montrées à l'enfant (3) :**
 
-  - `animal-poule` — Une poule blanche, avec sa crête rouge (`public/media/animals/animal-poule.svg`)
-  - `animal-chevre` — Une chèvre blanche, avec ses cornes et sa barbichette (`public/media/animals/animal-chevre.svg`)
-  - `animal-poussin` — Un petit poussin jaune, tout rond (`public/media/animals/animal-poussin.svg`)
+  - `animal-poule` — Une poule blanche avec une crête rouge, une aile repliée et des pattes bien visibles (`public/media/animals/animal-poule.webp`)
+  - `animal-chevre` — Une jeune chèvre blanche, avec ses cornes, sa barbichette et une oreille noire (`public/media/animals/animal-chevre.webp`)
+  - `animal-poussin` — Un jeune poussin jaune, duveteux, avec une petite aile et deux pattes fines (`public/media/animals/animal-poussin.webp`)
 
 - **Objectifs travaillés :** `WORLD-S01-C01-O08` Identifier des éléments morphologiques spécifiques à une espèce végétale ou animale.
 
@@ -546,7 +594,12 @@ _Entendre que deux mots finissent pareil._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-malo` — Malo, un petit chien couché en rond sur son tapis, les yeux fermés, sous la lune et les étoiles (`public/media/illustrations/histoire-malo.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-malo`
+
+  - Page 1 : Au coucher du soleil, Malo, petit chien doré aux oreilles brunes, regarde le coq perché sur une branche basse. Ses yeux sont encore ouverts mais fatigués. (`public/media/illustrations/histoire-malo-01.webp`)
+  - Page 2 : Le coq dort, la tête sous son aile. Après sa tentative sur la branche, Malo est au sol et regarde le poisson dans le seau. (`public/media/illustrations/histoire-malo-02.webp`)
+  - Page 3 : Malo met une seule patte dans l’eau du seau et réagit au froid. Le poisson garde son œil ouvert ; le tapis de Malo est visible dans la maison. (`public/media/illustrations/histoire-malo-03.webp`)
+  - Page 4 : Malo dort en rond sur son tapis, les yeux fermés et le nez posé sur le bout de sa queue. La lune et les étoiles brillent dehors. (`public/media/illustrations/histoire-malo-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Acquérir les habiletés phonologiques et le principe alphabétique » (from-5) :**
 
@@ -876,7 +929,12 @@ _Produire un mot qui rime, après l’avoir reconnu._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-kumu` — Kumu, le petit poussin, qui sort tout seul du poulailler dont la porte est ouverte (`public/media/illustrations/histoire-kumu.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-kumu`
+
+  - Page 1 : Kumu, petit poussin jaune, sort seul du poulailler ouvert tandis que sa maman poule reste derrière lui, près d’un grand manguier et d’un grand seau bleu (`public/media/illustrations/histoire-kumu-01.webp`)
+  - Page 2 : Loin de la maison, Kumu s’arrête sur le chemin et appelle tandis qu’un petit lézard passe en courant (`public/media/illustrations/histoire-kumu-02.webp`)
+  - Page 3 : Une jeune chèvre mange une feuille pendant que Kumu ferme les yeux et écoute sa maman poule appeler près du poulailler (`public/media/illustrations/histoire-kumu-03.webp`)
+  - Page 4 : Devant le poulailler, Kumu se blottit au chaud sous l’aile ouverte de sa maman poule et la regarde (`public/media/illustrations/histoire-kumu-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -1180,7 +1238,12 @@ _Remettre les moments d’une histoire ou d’une journée dans l’ordre et les
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-cailloux` — Trois cailloux différents : un rond, un plat et un pointu (`public/media/illustrations/histoire-cailloux.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-cailloux`
+
+  - Page 1 : Tito regarde les trois cailloux dans sa poche : un rond, un plat et un pointu. (`public/media/illustrations/histoire-cailloux-01.webp`)
+  - Page 2 : Deux cailloux restent sur la table, le rond et le plat. La grande sœur de Tito cache le pointu derrière son dos. (`public/media/illustrations/histoire-cailloux-02.webp`)
+  - Page 3 : Tito compte les deux cailloux sur la table et montre le plat. Le rond est là aussi ; le pointu reste caché derrière le dos de sa sœur. (`public/media/illustrations/histoire-cailloux-03.webp`)
+  - Page 4 : La sœur de Tito ouvre sa main après avoir remis le caillou pointu. Les trois cailloux, le rond, le plat et le pointu, sont de nouveau sur la table. (`public/media/illustrations/histoire-cailloux-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « S’approprier la notion de chronologie » (from-5) :**
 
@@ -1491,7 +1554,12 @@ _Reprendre les catégories de mots du mois et y ranger des mots nouveaux._
 
   _Histoire originale écrite pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-marche` — Un panier de marché avec des tomates, un régime de bananes et un oignon (`public/media/illustrations/histoire-marche.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-marche`
+
+  - Page 1 : Mama Lelo et Ama arrivent ensemble au marché parmi les tomates rouges, les feuilles vertes et les bananes jaunes (`public/media/illustrations/histoire-marche-01.webp`)
+  - Page 2 : Au marché, Mama Lelo et Ama comptent cinq tomates et trois oignons clairement séparés dans un plateau (`public/media/illustrations/histoire-marche-02.webp`)
+  - Page 3 : Dans la cour de la maison, Mama Lelo et Ama déposent ensemble le panier près de cinq tomates et trois oignons triés (`public/media/illustrations/histoire-marche-03.webp`)
+  - Page 4 : Mama Lelo félicite Ama, fière devant les cinq tomates et les trois oignons rangés en deux groupes (`public/media/illustrations/histoire-marche-04.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Se repérer dans le temps » (from-5) :**
 
@@ -1714,7 +1782,7 @@ _Dire et faire ce qu’il faut pour qu’un être vivant aille bien._
 - **Images montrées à l'enfant (2) :**
 
   - `plante-parties` — Une plante avec ses feuilles, sa tige et ses racines sous la terre (`public/media/illustrations/plante-parties.svg`)
-  - `animal-chevre` — Une chèvre blanche, avec ses cornes et sa barbichette (`public/media/animals/animal-chevre.svg`)
+  - `animal-chevre` — Une jeune chèvre blanche, avec ses cornes, sa barbichette et une oreille noire (`public/media/animals/animal-chevre.webp`)
 
 - **Objectifs travaillés :** `WORLD-S01-C01-O10` Décrire les besoins essentiels de quelques animaux ou de végétaux.
 

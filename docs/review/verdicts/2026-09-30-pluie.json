@@ -1,0 +1,25 @@
+{
+  "candidate": "histoire-pluie",
+  "reviewedCheckpoint": "45b468301af2a9dae41e182d619ee9f024d56379",
+  "manifestSha256": "1ff3bd59ee4a2d6a89a8a153e98d0f2314d6faaabc64ce0045b6a9e5d037ec2b",
+  "reviewer": "Codex (separate independent session; model not specified)",
+  "source": "Owner relayed independent verdict and explicitly authorized restoration in implementation chat on 2026-09-30.",
+  "verdict": "accepted",
+  "requiredCorrections": [],
+  "verifiedReviewScope": ["four WebP frames", "canonical pages and mapping", "Tito continuity", "weather progression", "primary shared rhyme frame 2", "256 px child view", "accessibility descriptions", "SHA-256 and manifest", "phone/tablet/laptop captures"],
+  "supportedDevices": ["phone", "tablet", "laptop/MacBook"],
+  "reviewSessionChangedFiles": false,
+  "implementationReverification": "All 30 package files and runtime media match the reviewed freeze; content/public diff from freeze empty before restoration.",
+  "restoration": {
+    "mechanism": "scripts/approve-week.ts --lapsed-only=true; freshly computed lessonDigest",
+    "lessonIds": ["m1-lang-09", "m1-lang-10", "m1-lang-15", "m1-lang-20", "m3-lang-03", "m3-lang-21", "m3-art-04"],
+    "total": 176,
+    "approved": 176,
+    "review": 0,
+    "distinctValidDigests": 176,
+    "staleApprovals": 0,
+    "unexpectedLapses": 0,
+    "unaffectedApprovalRecordsUnchanged": 169,
+    "reusedOldDigests": 0
+  }
+}

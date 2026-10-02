@@ -254,72 +254,86 @@
     {
       "id": "corps-main",
       "kind": "object",
-      "file": "objects/corps-main.svg",
-      "alt": "Une main ouverte, les cinq doigts écartés",
+      "file": "objects/corps-main.webp",
+      "alt": "Une main d’enfant ouverte, la paume visible et les cinq doigts écartés",
       "tags": ["main", "corps"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:abd0221e19a602427a98a7d1bae8ab17aa46e8f67bc24c849f6fa90e3b600923"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré pour le déploiement contrôlé de septembre 2026.",
+      "contentHash": "sha256:b4322808c67f02dae6513d5be4af3370131cef5d88c134655346f71f528c9865",
+      "width": 1024,
+      "height": 1024
     },
     {
       "id": "corps-pied",
       "kind": "object",
-      "file": "objects/corps-pied.svg",
-      "alt": "Un pied nu, vu de dessus, avec ses cinq orteils",
+      "file": "objects/corps-pied.webp",
+      "alt": "Un pied nu d’enfant, vu de dessus et légèrement de côté, avec ses cinq orteils",
       "tags": ["pied", "corps"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:fa04bffa3bc7b0e251eec950229ed93c4b7af12572be9ea9f099183dd49ade90"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré pour le déploiement contrôlé de septembre 2026.",
+      "contentHash": "sha256:2d2e0162e6c31797194a8dcd0a9246ebc541c559e5749eb26d371ff6c9ba01d5",
+      "width": 1024,
+      "height": 1024
     },
     {
       "id": "corps-tete",
       "kind": "object",
-      "file": "objects/corps-tete.svg",
+      "file": "objects/corps-tete.webp",
       "alt": "La tête d’un enfant, avec ses cheveux, ses oreilles et son sourire",
+      "width": 1024,
+      "height": 1024,
       "tags": ["tête", "corps", "visage"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:2aa04c3b557d1b0e3a7be2a20772c84cc81134f8ef9d78d2089b4e3e4759af39"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré et retenue au banc d’essai visuel de septembre 2026 (docs/september-rich-media-benchmark.md).",
+      "contentHash": "sha256:ea479dea64fd092a84c9e7443791b939d36a821a27c9fd72de3b74770412e18f"
     },
     {
       "id": "corps-ventre",
       "kind": "object",
-      "file": "objects/corps-ventre.svg",
-      "alt": "Le ventre d’un enfant, avec le nombril, le tee-shirt relevé au-dessus et le short en dessous",
+      "file": "objects/corps-ventre.webp",
+      "alt": "Le ventre d’un enfant, une main posée dessus",
       "tags": ["ventre", "corps"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:25ad16ad5bda8d062870553846d666fc7cfca91155eb85beee1bde7700105f80"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré pour le déploiement contrôlé de septembre 2026.",
+      "contentHash": "sha256:17ca288c56571be307dfa51555f2ebb8398ec3727278d538018fa444f4ed810a",
+      "width": 1024,
+      "height": 1024
     },
     {
       "id": "animal-poule",
       "kind": "animal",
-      "file": "animals/animal-poule.svg",
-      "alt": "Une poule blanche, avec sa crête rouge",
+      "file": "animals/animal-poule.webp",
+      "alt": "Une poule blanche avec une crête rouge, une aile repliée et des pattes bien visibles",
       "tags": ["poule", "animal"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:47dd2c1a16e9942332ad42865e4e922ff50b83469902f2399bca7723fa602408"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré pour le déploiement contrôlé de septembre 2026.",
+      "contentHash": "sha256:d3007f43b420295f98986733e47ba7104aef900e4573acfb5ff7ec3bbd6e716c",
+      "width": 1024,
+      "height": 1024
     },
     {
       "id": "animal-poussin",
       "kind": "animal",
-      "file": "animals/animal-poussin.svg",
-      "alt": "Un petit poussin jaune, tout rond",
+      "file": "animals/animal-poussin.webp",
+      "alt": "Un jeune poussin jaune, duveteux, avec une petite aile et deux pattes fines",
       "tags": ["poussin", "animal", "kumu"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:1200d55d4d710dba9341c0194289d79485c7aad667b6e8cfe89f0d17b10ae06e"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré pour le déploiement contrôlé de septembre 2026.",
+      "contentHash": "sha256:7f1210316653dd49e3e4efb9c0df31869e3731a1f41a487d6a26de4253001eea",
+      "width": 1024,
+      "height": 1024
     },
     {
       "id": "animal-chevre",
       "kind": "animal",
-      "file": "animals/animal-chevre.svg",
-      "alt": "Une chèvre blanche, avec ses cornes et sa barbichette",
+      "file": "animals/animal-chevre.webp",
+      "alt": "Une jeune chèvre blanche, avec ses cornes, sa barbichette et une oreille noire",
+      "width": 1024,
+      "height": 1024,
       "tags": ["chèvre", "animal", "bibi"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:62993dc9a45ae5703a0b64e2ee9a36f57520a58be73cecc3ef2044c59dc68477"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré et retenue au banc d’essai visuel de septembre 2026 (docs/september-rich-media-benchmark.md).",
+      "contentHash": "sha256:9af0f57f755f83a20648cfcffd3f61d05c128a44bb6df50522f0c75c9821fab1"
     },
     {
       "id": "forme-maison-composee",
@@ -334,102 +348,431 @@
     {
       "id": "histoire-seau-lisa",
       "kind": "illustration",
-      "file": "illustrations/histoire-seau-lisa.svg",
-      "alt": "Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus",
+      "file": "illustrations/histoire-seau-lisa-02.webp",
+      "alt": "Lisa, en robe rouge, prend son seau bleu posé sur une chaise pendant que sa maman le lui montre",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-seau-lisa-01.webp",
+            "alt": "Lisa, en robe rouge, regarde sous la table vide pour chercher son seau",
+            "contentHash": "sha256:d57e220eab71297785635f5f8883e4cbd3ec67b7b58631566114e10ac31b1cd4",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-seau-lisa-02.webp",
+            "alt": "Lisa prend son seau bleu posé sur une chaise pendant que sa maman le lui montre",
+            "contentHash": "sha256:42b9840e6bde3fe7010e158037b85de701c8cf4998d2a4f2168d615f639f5d1c",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-seau-lisa-03.webp",
+            "alt": "Maman verse de l’eau d’une cruche dans le seau bleu posé au sol ; Lisa sourit à côté d’elle",
+            "contentHash": "sha256:effee2420f3c0202bcf3837fcb253321ffca7c3d2abe6e99f6a258bfd2dfd533",
+            "width": 1200,
+            "height": 900
+          }
+        ],
+        "pageFrames": [0, 1, 2]
+      },
       "tags": ["histoire", "lisa", "seau", "chaise", "personnage"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:61b3f228a5b7c344e3bb919832e67d15a2bd3a8f93583a4b964a61d0070746a8"
+      "provenance": "Séquence d’illustrations peintes originales pour Teka Edu, produite avec l’outil ImageGen intégré et alignée sur les trois pages existantes de l’histoire lors du déploiement rich-media contrôlé de septembre 2026.",
+      "contentHash": "sha256:42b9840e6bde3fe7010e158037b85de701c8cf4998d2a4f2168d615f639f5d1c"
     },
     {
       "id": "histoire-tika",
       "kind": "illustration",
-      "file": "illustrations/histoire-tika.svg",
-      "alt": "Un enfant qui s’étire dans son lit, le soleil à la fenêtre",
-      "tags": ["histoire", "matin", "lit"],
+      "file": "illustrations/histoire-tika-01.webp",
+      "alt": "Le matin, Tika boit dans une tasse devant son bol ; des cubes et un ballon attendent près de lui pour jouer",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-tika-01.webp",
+            "alt": "Le matin, Tika boit dans une tasse devant son bol ; des cubes et un ballon attendent près de lui pour jouer",
+            "contentHash": "sha256:b5df0ae7a10553a2c6bb3a8aa3dfea46da3006f185d843be0865049799572e9e",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-tika-02.webp",
+            "alt": "Le soir, Tika dort paisiblement dans son lit, les yeux fermés",
+            "contentHash": "sha256:c371fa360e91b67dfed28d0f2f16e5a8877bd71b218f658cecccfbb8bb425a54",
+            "width": 1200,
+            "height": 900
+          }
+        ],
+        "pageFrames": [0, 1]
+      },
+      "tags": ["tika", "histoire", "matin", "repas", "jeu", "soir", "lit"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:c011c87cf0b38ea454a47932c505ca2e2e6e4ef773ad33e75a1762956853369e"
+      "provenance": "Séquence d’illustrations peintes originales pour Teka Edu, produite avec l’outil ImageGen intégré et alignée sur les trois pages existantes de l’histoire lors du déploiement rich-media contrôlé de septembre 2026.",
+      "contentHash": "sha256:b5df0ae7a10553a2c6bb3a8aa3dfea46da3006f185d843be0865049799572e9e"
     },
     {
       "id": "histoire-kumu",
       "kind": "illustration",
-      "file": "illustrations/histoire-kumu.svg",
-      "alt": "Kumu, le petit poussin, qui sort tout seul du poulailler dont la porte est ouverte",
-      "tags": ["kumu", "poussin", "histoire"],
+      "file": "illustrations/histoire-kumu-01.webp",
+      "alt": "Kumu, petit poussin jaune, sort seul du poulailler ouvert tandis que sa maman poule reste derrière lui",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-kumu-01.webp",
+            "alt": "Kumu, petit poussin jaune, sort seul du poulailler ouvert tandis que sa maman poule reste derrière lui, près d’un grand manguier et d’un grand seau bleu",
+            "contentHash": "sha256:027ee3b6119faf82c9b58d974846b73e5531b71d5309516b0d8446715f9542be",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-kumu-02.webp",
+            "alt": "Loin de la maison, Kumu s’arrête sur le chemin et appelle tandis qu’un petit lézard passe en courant",
+            "contentHash": "sha256:46c72911eec6b4765ccfa37e66ced474e13db28cd5c8144ec20d9517755723b9",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-kumu-03.webp",
+            "alt": "Une jeune chèvre mange une feuille pendant que Kumu ferme les yeux et écoute sa maman poule appeler près du poulailler",
+            "contentHash": "sha256:3d55d4687ed29f49b0fb5f6934edfb3e918cbba295464f1bfb15ddeb99e7dd95",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-kumu-04.webp",
+            "alt": "Devant le poulailler, Kumu se blottit au chaud sous l’aile ouverte de sa maman poule et la regarde",
+            "contentHash": "sha256:3c3a60bdd2fc1913b8394fb8643fa98a545a51ff91fb11d25abf56282b57b13a",
+            "width": 1200,
+            "height": 900
+          }
+        ],
+        "pageFrames": [0, 1, 2, 3]
+      },
+      "tags": ["kumu", "poussin", "poule", "lézard", "chèvre", "poulailler", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:c5158e03e9af9a70cf733c12e6f9682c1abacc99030e84128e3d50233e083f77"
+      "provenance": "Séquence de quatre illustrations peintes originales pour Teka Edu, produite avec l’outil ImageGen intégré et alignée sur les quatre pages canoniques de l’histoire lors du déploiement rich-media contrôlé de septembre 2026.",
+      "contentHash": "sha256:027ee3b6119faf82c9b58d974846b73e5531b71d5309516b0d8446715f9542be"
     },
     {
       "id": "histoire-nsimba",
       "kind": "illustration",
-      "file": "illustrations/histoire-nsimba.svg",
-      "alt": "Nsimba, un petit garçon avec son sac d’école sur le dos, devant la porte de l’école",
+      "file": "illustrations/histoire-nsimba-00.webp",
+      "alt": "Sur le chemin de l’école, Nsimba serre la main de son adulte et avance avec une expression inquiète",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-nsimba-00.webp",
+            "alt": "Sur le chemin de l’école, Nsimba serre la main de son adulte et avance avec une expression inquiète",
+            "contentHash": "sha256:9b6176698ba526e07710e1764881383293419b18f2a3f7cad83cdf4fb70d4a55",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-nsimba-01.webp",
+            "alt": "Nsimba, son sac d’école sur le dos, tient la main de son adulte devant le portail de l’école ; la maitresse s’accroupit pour lui dire bonjour",
+            "contentHash": "sha256:f50ceb4a3ac04514dcfaf8e1b2a6a1788b5f1d4077653d675a51a69aa217d425",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-nsimba-02.webp",
+            "alt": "Nsimba entre dans la classe avec son sac ; la maitresse lui montre sa place et l’étiquette « Nsimba » sur la table",
+            "contentHash": "sha256:6aa2fd6c617d249baec33175dae8d3170e687c25d836c72a7bd957a8a4e549b0",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-nsimba-03.webp",
+            "alt": "Amina tend un crayon bleu à Nsimba, qui dessine une maison, un soleil et deux enfants",
+            "contentHash": "sha256:ab1550194330750c417e972e2b4c969cf35147baa6cc9604a6a201c7cf301a5e",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-nsimba-04.webp",
+            "alt": "Le soir, Nsimba sourit à côté de son adulte : demain, il retourne à l’école",
+            "contentHash": "sha256:c4d4619feaaffe8e26f3baeef16ddd04c523c8c00aebb955cc552ab873650c49",
+            "width": 1200,
+            "height": 900
+          }
+        ],
+        "pageFrames": [0, 1, 2, 3, 4]
+      },
       "tags": ["nsimba", "école", "rentrée", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:4b4ab397cf3e41a88837778c3e6cf3eaf7fda336103040c1ddc4b1475cbeadab"
+      "provenance": "Séquence d’illustrations peintes originales pour Teka Edu, alignée sur les pages de l’histoire (pilote visuel de septembre 2026, docs/september-rich-media-benchmark.md).",
+      "contentHash": "sha256:9b6176698ba526e07710e1764881383293419b18f2a3f7cad83cdf4fb70d4a55"
     },
     {
       "id": "histoire-mangue",
       "kind": "illustration",
-      "file": "illustrations/histoire-mangue.svg",
-      "alt": "Une mangue entière, et trois morceaux de mangue coupés sur une assiette",
+      "file": "illustrations/histoire-mangue-03.webp",
+      "alt": "Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-mangue-01.webp",
+            "alt": "Ilunga, assis sous le manguier, tient une grosse mangue dans ses deux mains",
+            "contentHash": "sha256:d34f5dbe3a621076f7645febb4f470a70ea85b802aa22a339c1d60a1bc43ea20",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-mangue-02.webp",
+            "alt": "Ama et Tito arrivent et regardent la mangue ; Ilunga réfléchit",
+            "contentHash": "sha256:57585c800134f3e992ca3fa446316baf8274e699b111283c9e992f9495e4e272",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-mangue-03.webp",
+            "alt": "Trois enfants sous le manguier, chacun avec un morceau de mangue dans la main",
+            "contentHash": "sha256:bbc2f54f554ab59614cf55ab6513d103b54f3d6c44b632391c1f3c79472a8c67",
+            "width": 1200,
+            "height": 900
+          }
+        ],
+        "pageFrames": [0, 1, 2, 2]
+      },
       "tags": ["mangue", "partage", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:0c002c3d3fe6c146ab56eeffe8386c93cf6ac215d8c822faf11219f96c049c4c"
+      "provenance": "Séquence d’illustrations peintes originales pour Teka Edu, alignée sur les pages de l’histoire (pilote visuel de septembre 2026, docs/september-rich-media-benchmark.md).",
+      "contentHash": "sha256:bbc2f54f554ab59614cf55ab6513d103b54f3d6c44b632391c1f3c79472a8c67"
     },
     {
       "id": "histoire-bibi",
       "kind": "illustration",
-      "file": "illustrations/histoire-bibi.svg",
-      "alt": "Bibi la chèvre, le nez dans un buisson, devant une barrière",
+      "file": "illustrations/histoire-bibi-01.webp",
+      "alt": "Bibi, petite chèvre blanche avec une oreille noire, pousse la barrière du jardin et entre parmi les légumes",
       "tags": ["bibi", "chèvre", "jardin", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:115a43f2d89d096ea5dbfd1e3679633656487a36e3a61eb3f8c5615f6a29c87d"
+      "provenance": "Séquence de quatre illustrations peintes originales pour Teka Edu, produite avec l’outil ImageGen intégré et alignée sur les quatre pages canoniques de l’histoire lors du déploiement rich-media contrôlé de septembre 2026.",
+      "contentHash": "sha256:1e15939369feba99abb39e6b32d2d5b745638601d7e578935479f468066e48e4",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-bibi-01.webp",
+            "alt": "Bibi, petite chèvre blanche avec une oreille noire, pousse la barrière du jardin et entre parmi les rangées de légumes",
+            "contentHash": "sha256:1e15939369feba99abb39e6b32d2d5b745638601d7e578935479f468066e48e4",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-bibi-02.webp",
+            "alt": "Dans le jardin, Bibi mange une feuille verte au milieu des légumes bien rangés, tandis que la barrière reste ouverte",
+            "contentHash": "sha256:7c6c8dadd01b16a11cb38bcc3df17f633581ec8ed6f1f14669f94449e1853112",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-bibi-03.webp",
+            "alt": "Mama Lelo découvre les feuilles grignotées ; Bibi baisse la tête pendant que Mama Lelo réfléchit",
+            "contentHash": "sha256:b8f2d6bbbf0e3c54a8c06fc23147c233405afac65a0aa89465f8d68f268951ee",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-bibi-04.webp",
+            "alt": "Devant la barrière bien fermée, Mama Lelo donne un grand tas d’herbe à Bibi, qui mange son repas",
+            "contentHash": "sha256:7d39bca6f7dbd7181a1e492511ba4c632a0472bbbbc0916cb0710129a374db0e",
+            "width": 1200,
+            "height": 900
+          }
+        ],
+        "pageFrames": [0, 1, 2, 3]
+      }
     },
     {
       "id": "histoire-marche",
       "kind": "illustration",
-      "file": "illustrations/histoire-marche.svg",
-      "alt": "Un panier de marché avec des tomates, un régime de bananes et un oignon",
+      "file": "illustrations/histoire-marche-01.webp",
+      "alt": "Mama Lelo et Ama arrivent ensemble au marché parmi les tomates, les feuilles vertes et les bananes",
       "tags": ["marché", "panier", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:7fbfdbccf8ea912ea13ca0e875eb4e0a61bda43ec7f9b29c10a48135d4caef6e"
+      "provenance": "Séquence de quatre illustrations peintes originales pour Teka Edu, produite avec l’outil ImageGen intégré et alignée sur les quatre pages canoniques de l’histoire lors du déploiement rich-media contrôlé de septembre 2026.",
+      "contentHash": "sha256:4188ac69de8d39f7d742ea5f257cc888067217c28f53816d8afbccd446dbcb75",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-marche-01.webp",
+            "alt": "Mama Lelo et Ama arrivent ensemble au marché parmi les tomates rouges, les feuilles vertes et les bananes jaunes",
+            "contentHash": "sha256:4188ac69de8d39f7d742ea5f257cc888067217c28f53816d8afbccd446dbcb75",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-marche-02.webp",
+            "alt": "Au marché, Mama Lelo et Ama comptent cinq tomates et trois oignons clairement séparés dans un plateau",
+            "contentHash": "sha256:0a674df545e61cb3868bf8be9fe54c1d220dad13dae7e33ada2a67f337c8bc39",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-marche-03.webp",
+            "alt": "Dans la cour de la maison, Mama Lelo et Ama déposent ensemble le panier près de cinq tomates et trois oignons triés",
+            "contentHash": "sha256:c61a2d3efeb08b7af036d979e82ed3f1f324692e3c20f43f1c9df8b7a72bf9db",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-marche-04.webp",
+            "alt": "Mama Lelo félicite Ama, fière devant les cinq tomates et les trois oignons rangés en deux groupes",
+            "contentHash": "sha256:5cb5137fb4c0a12641f185f5bd6a3f2dcedee3db556b7ca7c4615ceb423e2f00",
+            "width": 1200,
+            "height": 900
+          }
+        ],
+        "pageFrames": [0, 1, 2, 3]
+      }
     },
     {
       "id": "histoire-pluie",
       "kind": "illustration",
-      "file": "illustrations/histoire-pluie.svg",
-      "alt": "La pluie qui tombe d’un nuage sur le toit d’une maison",
+      "file": "illustrations/histoire-pluie-02.webp",
+      "alt": "Tito ferme les yeux et écoute à l’abri pendant que la pluie frappe le toit",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-pluie-01.webp",
+            "alt": "Tito regarde les premières gouttes depuis la porte ; le ciel est gris et le vent pousse les feuilles",
+            "contentHash": "sha256:d381c358708fb376e2596dd14056f7fa6a14a4abe15a9977a67e47e034740edf",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-pluie-02.webp",
+            "alt": "Tito ferme les yeux et écoute à l’abri pendant que la pluie frappe le toit",
+            "contentHash": "sha256:27cd0ce7754ec0f3d45c278f5fcdf6ab1d124f6b921f2ffbb26d9951d3bdd703",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-pluie-03.webp",
+            "alt": "Après la pluie, l’eau coule entre les cailloux et une goutte brillante reste au bout d’une feuille",
+            "contentHash": "sha256:d10cc23fec5b294331e6f3b1bb7967989ba2447d39193202fc57a99a27c6508f",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "file": "illustrations/histoire-pluie-04.webp",
+            "alt": "Tito est sorti ; son doigt est sous la feuille et la goutte tombe vers sa main ouverte",
+            "contentHash": "sha256:e430c23a7c740cb0796ee18204ae78554f7e33e860319a8967ce5742a0ae5b3c",
+            "width": 1200,
+            "height": 900
+          }
+        ],
+        "pageFrames": [0, 1, 2, 3]
+      },
       "tags": ["pluie", "toit", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:3c1c57d6cc05e9c04d50e19fb044b11e3de377ec8a9d3290db7a9b0f33982561"
+      "provenance": "Séquence peinte originale produite avec ImageGen intégré à Codex, alignée sur les quatre pages canoniques de La pluie sur le toit. Le deuxième cadre sert aussi de référence aux comptines et activités qui partagent cette illustration.",
+      "contentHash": "sha256:27cd0ce7754ec0f3d45c278f5fcdf6ab1d124f6b921f2ffbb26d9951d3bdd703"
     },
     {
       "id": "histoire-cailloux",
       "kind": "illustration",
-      "file": "illustrations/histoire-cailloux.svg",
-      "alt": "Trois cailloux différents : un rond, un plat et un pointu",
+      "file": "illustrations/histoire-cailloux-01.webp",
+      "alt": "Tito regarde les trois cailloux dans sa poche : un rond, un plat et un pointu.",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-cailloux-01.webp",
+            "alt": "Tito regarde les trois cailloux dans sa poche : un rond, un plat et un pointu.",
+            "width": 1200,
+            "height": 900,
+            "contentHash": "sha256:71061965c6d18961065baf6b1fba1ec11f21991552f3d0d720fdd73be12b2905"
+          },
+          {
+            "file": "illustrations/histoire-cailloux-02.webp",
+            "alt": "Deux cailloux restent sur la table, le rond et le plat. La grande sœur de Tito cache le pointu derrière son dos.",
+            "width": 1200,
+            "height": 900,
+            "contentHash": "sha256:6a84c8e998deb63e1d1b921fe369e1a596d0e8dba678e60c56461a0a6aff2621"
+          },
+          {
+            "file": "illustrations/histoire-cailloux-03.webp",
+            "alt": "Tito compte les deux cailloux sur la table et montre le plat. Le rond est là aussi ; le pointu reste caché derrière le dos de sa sœur.",
+            "width": 1200,
+            "height": 900,
+            "contentHash": "sha256:afa77e4ef630e065c49859a321f51d52e74c74809132dfa75b14df169e73ee45"
+          },
+          {
+            "file": "illustrations/histoire-cailloux-04.webp",
+            "alt": "La sœur de Tito ouvre sa main après avoir remis le caillou pointu. Les trois cailloux, le rond, le plat et le pointu, sont de nouveau sur la table.",
+            "width": 1200,
+            "height": 900,
+            "contentHash": "sha256:d47b00e2ced5dd7bf13023bc9afb024ef415cfdf0c35361aec30ff866bcdb238"
+          }
+        ],
+        "pageFrames": [0, 1, 2, 3]
+      },
       "tags": ["cailloux", "trois", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:df6458f051a0cab68852cf991c1dd70e811539eae00907d517033ff66936a317"
+      "provenance": "Séquence peinte originale produite avec ImageGen intégré à Codex, alignée sur les quatre pages canoniques des Trois cailloux de Tito. Les quantités visibles suivent trois, deux, deux, puis trois cailloux.",
+      "contentHash": "sha256:71061965c6d18961065baf6b1fba1ec11f21991552f3d0d720fdd73be12b2905"
     },
     {
       "id": "histoire-malo",
       "kind": "illustration",
-      "file": "illustrations/histoire-malo.svg",
-      "alt": "Malo, un petit chien couché en rond sur son tapis, les yeux fermés, sous la lune et les étoiles",
+      "file": "illustrations/histoire-malo-01.webp",
+      "alt": "Au coucher du soleil, Malo, petit chien doré aux oreilles brunes, regarde le coq perché sur une branche basse. Ses yeux sont encore ouverts mais fatigués.",
+      "width": 1200,
+      "height": 900,
+      "sequence": {
+        "frames": [
+          {
+            "file": "illustrations/histoire-malo-01.webp",
+            "alt": "Au coucher du soleil, Malo, petit chien doré aux oreilles brunes, regarde le coq perché sur une branche basse. Ses yeux sont encore ouverts mais fatigués.",
+            "width": 1200,
+            "height": 900,
+            "contentHash": "sha256:d63aad056d6b5e81693c5806b136909f921d48fd47fa4b80e6647efe3d8cb27d"
+          },
+          {
+            "file": "illustrations/histoire-malo-02.webp",
+            "alt": "Le coq dort, la tête sous son aile. Après sa tentative sur la branche, Malo est au sol et regarde le poisson dans le seau.",
+            "width": 1200,
+            "height": 900,
+            "contentHash": "sha256:e1b22323bf7587364bfc739f647d1340c9df322863df25c6da35c92fdf63900a"
+          },
+          {
+            "file": "illustrations/histoire-malo-03.webp",
+            "alt": "Malo met une seule patte dans l’eau du seau et réagit au froid. Le poisson garde son œil ouvert ; le tapis de Malo est visible dans la maison.",
+            "width": 1200,
+            "height": 900,
+            "contentHash": "sha256:f660ef33ab0a7a914beffa67e5b8de11e46021fffba1533b8b29af048adf3e20"
+          },
+          {
+            "file": "illustrations/histoire-malo-04.webp",
+            "alt": "Malo dort en rond sur son tapis, les yeux fermés et le nez posé sur le bout de sa queue. La lune et les étoiles brillent dehors.",
+            "width": 1200,
+            "height": 900,
+            "contentHash": "sha256:e863952424ae94b22f474b1a376c1493093920acc89401f35e2368d2a0f3d6bc"
+          }
+        ],
+        "pageFrames": [0, 1, 2, 3]
+      },
       "tags": ["malo", "chien", "dormir", "histoire"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:1d24cfd5888c9272c68b8ecf5134f0070c0e11baacc855618f7cbefc3e23bf6a"
+      "provenance": "Séquence peinte originale produite avec ImageGen intégré à Codex, alignée sur les quatre pages canoniques de Malo ne veut pas dormir. Les scènes suivent les essais du chien auprès du coq et du poisson, puis son sommeil à la maison.",
+      "contentHash": "sha256:d63aad056d6b5e81693c5806b136909f921d48fd47fa4b80e6647efe3d8cb27d"
     },
     {
       "id": "comptine-compter",
@@ -444,22 +787,26 @@
     {
       "id": "comptine-bonjour",
       "kind": "illustration",
-      "file": "illustrations/comptine-bonjour.svg",
-      "alt": "Le soleil qui se lève derrière la colline, et deux mains qui font bonjour",
+      "file": "illustrations/comptine-bonjour.webp",
+      "alt": "Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines",
+      "width": 1024,
+      "height": 1024,
       "tags": ["bonjour", "soleil", "comptine"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:01ec06b85bdcb93bfa880ec53b917ed4821f179e677f50e9cfac641335ed8e35"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré et retenue au banc d’essai visuel de septembre 2026 (docs/september-rich-media-benchmark.md).",
+      "contentHash": "sha256:2d1ad0c5d999fd8f3c3ecf446ed5ddad79bde90dc7044449d1267718a190c621"
     },
     {
       "id": "comptine-mains",
       "kind": "illustration",
-      "file": "illustrations/comptine-mains.svg",
-      "alt": "Deux mains ouvertes, levées, paumes vers toi",
+      "file": "illustrations/comptine-mains.webp",
+      "alt": "Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre",
       "tags": ["mains", "corps", "comptine"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:ad1e83e04b06c8cdf2d548c650b89b4c669bc92338874800ecaa4f9ac6349cc1"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré pour le déploiement contrôlé de septembre 2026.",
+      "contentHash": "sha256:36a5f61241200ce5fae6b6be0fd1a1d58f5ba092a8e8cc99c54165bff526b5e2",
+      "width": 1024,
+      "height": 1024
     },
     {
       "id": "comptine-semaine",
@@ -474,12 +821,14 @@
     {
       "id": "comptine-cabri",
       "kind": "illustration",
-      "file": "illustrations/comptine-cabri.svg",
-      "alt": "Un petit cabri qui saute, les quatre pattes en l’air, au-dessus de l’herbe",
+      "file": "illustrations/comptine-cabri.webp",
+      "alt": "Un jeune cabri blanc bondit, les quatre sabots en l’air au-dessus de l’herbe",
       "tags": ["cabri", "sauter", "comptine"],
       "origin": "teka-edu-created",
-      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      "contentHash": "sha256:3a25a1fd6eb99194a440286105466a4ba97ed730a18ae65382587b00300d0b53"
+      "provenance": "Illustration peinte originale pour Teka Edu, produite avec l’outil ImageGen intégré pour le déploiement contrôlé de septembre 2026.",
+      "contentHash": "sha256:eca0deff35ee29631052202b90e5fc68f8ff75eb1790e85c91988dc5203c26b8",
+      "width": 1024,
+      "height": 1024
     },
     {
       "id": "comptine-formes",

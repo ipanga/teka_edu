@@ -41,7 +41,7 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Cette semaine a déjà été relue 3 fois. Ce qui suit est l’historique,
+Cette semaine a déjà été relue 7 fois. Ce qui suit est l’historique,
 pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
 
 ### 2026-09-15 — ChatGPT · `accepted` (ai-assisted)
@@ -73,6 +73,30 @@ Reconfirmation visuelle de septembre (ADR-048), sur le paquet docs/review/2026-2
 Reconfirmation pédagogique ciblée des 27 leçons affectées par les corrections de septembre. La première passe indépendante a conclu accepted-with-modifications : 25 leçons, le changement de renderer et objet-monnaie étaient acceptés ; m1-phys-22-a1 demandait une formulation française plus claire et forme-maison-composee un mur géométriquement carré avec une planche correctement identifiée. Après vérification indépendante et correction minimale, la seconde passe a conclu accepted pour les 27 leçons, les deux médias et le changement de renderer. Objectifs, progression, durées et sécurité sont inchangés.
 
 **Suites données :** m1-phys-22-a1 dit désormais « jouer ensemble en respectant la règle ». Le mur de forme-maison-composee mesure 82 × 82 unités et la planche porte l’identifiant canonique. Aucune autre correction demandée. Les approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
+
+### 2026-09-27 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du pilote rich-media de septembre, couvrant exactement les 18 leçons affectées et les cinq familles d’images. La première passe Claude Max / Opus 5.5 a conclu accepted-with-modifications : les quatre familles corps-tete, animal-chevre, comptine-bonjour et histoire-mangue ainsi que 15 leçons étaient acceptées ; histoire-nsimba demandait une scène propre à la page 1 et une étiquette portant le prénom de Nsimba à la page 3. Après vérification indépendante, corrections minimales et régénération du paquet, la seconde passe a conclu accepted pour les 18 leçons et les cinq familles, sans autre correction.
+
+**Suites données :** histoire-nsimba utilise désormais cinq scènes pour cinq pages : la page 1 montre Nsimba inquiet sur le chemin en tenant la main de son adulte, et la page 2 seule montre le portail et la maitresse. La page 3 montre une étiquette lisible « Nsimba » et sa description accessible la nomme. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier ni consigne n’a changé. Les approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
+
+### 2026-09-27 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 1 du déploiement rich-media de septembre, couvrant exactement 10 leçons et cinq images. La première passe Claude Max / Opus 5.5 a conclu accepted-with-modifications : corps-main, corps-pied, animal-poule, animal-poussin et six leçons étaient acceptés ; corps-ventre devait devenir un gros plan du torse, sans visage, centré sur le ventre et lisible à 72 px. Après vérification indépendante, correction minimale et régénération du paquet, la seconde passe a conclu accepted pour corps-ventre, les quatre leçons bloquées et donc les 10 leçons du lot.
+
+**Suites données :** corps-ventre montre désormais un gros plan du torse, sans tête ni visage, avec le ventre centré et une seule main posée dessus ; sa description accessible correspond exactement à l’image. La planche complète intégrée au paquet et la planche corrective ont été régénérées sur les octets finaux. Les quatre autres images acceptées à la première passe sont restées octet pour octet identiques. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
+
+### 2026-09-27 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 2 du déploiement rich-media de septembre, couvrant exactement neuf leçons et deux illustrations de comptine. Claude Max / Opus 5.5 a conclu accepted : comptine-mains montre exactement deux mains levées, cinq doigts chacune et les pouces tournés vers l’intérieur, lisibles à 72, 128 et 256 px ; comptine-cabri montre un jeune cabri reconnaissable avec quatre sabots en l’air. Les deux images et les neuf leçons sont acceptées sans correction.
+
+**Suites données :** Aucune correction demandée. Les SHA-256 finaux ont été vérifiés contre les WebP gelés : comptine-mains 36a5f61241200ce5fae6b6be0fd1a1d58f5ba092a8e8cc99c54165bff526b5e2 et comptine-cabri eca0deff35ee29631052202b90e5fc68f8ff75eb1790e85c91988dc5203c26b8. Aucun texte pédagogique, comptine, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les neuf approbations expirées peuvent être restaurées avec scripts/approve-week.ts --lapsed-only et des empreintes calculées à neuf ; les approbations restées valides ne doivent pas être touchées.
+
+### 2026-09-27 — Claude Max / Opus 5.5 · `accepted` (ai-assisted)
+
+Reconfirmation visuelle indépendante du lot 4 du déploiement rich-media de septembre, couvrant exactement histoire-seau-lisa et huit leçons. Après une première conclusion accepted-with-modifications portant uniquement sur la preuve, le dossier corrigé montre les trois cadres avec leurs SHA-256 complets, associe la comptine au cadre principal 2 et conserve la progression 1–2–3 du récit. Claude Max / Opus 5.5 a conclu accepted pour les huit leçons.
+
+**Suites données :** Aucune correction pédagogique ou visuelle demandée. Seul le dossier de preuve a été corrigé : la comptine Le petit seau y affiche désormais histoire-seau-lisa-02.webp et les trois SHA-256 complets sont exposés. Les octets des trois WebP ont été revérifiés contre ces valeurs ; assetFingerprint couvre chaque cadre et pageFrames, puis lessonDigest reçoit cette empreinte complète. Aucun texte pédagogique, objectif, durée, progression, programme, calendrier, consigne ni règle de sécurité n’a changé. Les approbations expirées peuvent être restaurées par le mécanisme lapsed-only avec des empreintes calculées à neuf.
 
 ## Jour 1 — 2026-09-01
 
@@ -142,7 +166,7 @@ _Oser dire bonjour à l’adulte, et entendre les premiers mots du mois._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `comptine-bonjour` — Le soleil qui se lève derrière la colline, et deux mains qui font bonjour (`public/media/illustrations/comptine-bonjour.svg`)
+- **Image montrée pendant la lecture :** `comptine-bonjour` — Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines (`public/media/illustrations/comptine-bonjour.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -418,7 +442,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains ouvertes, levées, paumes vers toi (`public/media/illustrations/comptine-mains.svg`)
+- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre (`public/media/illustrations/comptine-mains.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -603,8 +627,8 @@ _Nommer son corps et se servir de ses sens._
 - **Aide en anglais (optionnelle) :** « Show me your hand. »
 - **Images montrées à l'enfant (2) :**
 
-  - `corps-main` — Une main ouverte, les cinq doigts écartés (`public/media/objects/corps-main.svg`)
-  - `corps-pied` — Un pied nu, vu de dessus, avec ses cinq orteils (`public/media/objects/corps-pied.svg`)
+  - `corps-main` — Une main d’enfant ouverte, la paume visible et les cinq doigts écartés (`public/media/objects/corps-main.webp`)
+  - `corps-pied` — Un pied nu d’enfant, vu de dessus et légèrement de côté, avec ses cinq orteils (`public/media/objects/corps-pied.webp`)
 
 - **Objectifs travaillés :** `WORLD-S01-C02-O01` Nommer et représenter quelques parties du corps humain.
 
@@ -694,7 +718,11 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `histoire-seau-lisa` — Lisa, une petite fille en robe rouge, debout à côté d’une chaise, avec son seau bleu posé dessus (`public/media/illustrations/histoire-seau-lisa.svg`)
+- **Images montrées pendant la lecture, page par page :** `histoire-seau-lisa`
+
+  - Page 1 : Lisa, en robe rouge, regarde sous la table vide pour chercher son seau (`public/media/illustrations/histoire-seau-lisa-01.webp`)
+  - Page 2 : Lisa prend son seau bleu posé sur une chaise pendant que sa maman le lui montre (`public/media/illustrations/histoire-seau-lisa-02.webp`)
+  - Page 3 : Maman verse de l’eau d’une cruche dans le seau bleu posé au sol ; Lisa sourit à côté d’elle (`public/media/illustrations/histoire-seau-lisa-03.webp`)
 
 - **Questions posées à l’enfant après l’écoute (1) :**
 
@@ -717,7 +745,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `comptine-bonjour` — Le soleil qui se lève derrière la colline, et deux mains qui font bonjour (`public/media/illustrations/comptine-bonjour.svg`)
+- **Image montrée pendant la lecture :** `comptine-bonjour` — Un enfant qui fait bonjour de la main et lève un pied, devant le soleil qui se lève derrière les collines (`public/media/illustrations/comptine-bonjour.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Écouter et comprendre différentes formes d’écrits » (before-4) :**
 
@@ -988,7 +1016,7 @@ _Parler avec l’adulte, entendre des mots et les redire._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains ouvertes, levées, paumes vers toi (`public/media/illustrations/comptine-mains.svg`)
+- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre (`public/media/illustrations/comptine-mains.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Produire des discours variés » (before-4) :**
 
@@ -1180,7 +1208,7 @@ _Dire des comptines et laisser une trace._
 
   _Texte original écrit pour Teka Edu. Aucun texte extérieur n’est repris._
 
-- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains ouvertes, levées, paumes vers toi (`public/media/illustrations/comptine-mains.svg`)
+- **Image montrée pendant la lecture :** `comptine-mains` — Deux mains d’enfant ouvertes et levées, paumes vers nous, pouces tournés l’un vers l’autre (`public/media/illustrations/comptine-mains.webp`)
 
 **Réussites attendues — texte officiel pour la compétence « Jouer avec sa voix et acquérir un répertoire de comptines et de chansons » (before-4) :**
 

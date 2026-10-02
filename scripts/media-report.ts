@@ -180,6 +180,22 @@ const byKind = new Map<string, number>();
 for (const asset of data.media) byKind.set(asset.kind, (byKind.get(asset.kind) ?? 0) + 1);
 for (const [kind, total] of [...byKind].sort()) console.log(`  ${kind.padEnd(12)} ${pad(total)}`);
 console.log(`  textes        ${pad(data.texts.length)} (histoires et comptines)`);
+const painted = data.media.filter((asset) => asset.file.endsWith(".webp")).length;
+console.log(`  formats       ${pad(data.media.length - painted)} SVG · ${pad(painted)} WebP`);
+
+// A story told in several pictures: which scene each page shows (the registry's `pageFrames`).
+const sequenced = data.media.filter((asset) => asset.sequence !== undefined);
+if (sequenced.length > 0) {
+  console.log("\nHistoires en plusieurs images");
+  for (const asset of sequenced) {
+    const { frames, pageFrames } = asset.sequence!;
+    const stories = data.texts.filter((text) => text.illustrationId === asset.id);
+    console.log(
+      `  ${asset.id.padEnd(18)} ${frames.length} images · ${pageFrames.length} pages ` +
+        `[${pageFrames.join(", ")}] · ${stories.map((text) => text.id).join(", ") || "aucune histoire"}`,
+    );
+  }
+}
 
 // An asset is used if an activity names it *or* if a story or rhyme carries it as its
 // illustration — the second route is how all 14 text pictures reach the screen, so counting
@@ -192,6 +208,8 @@ const unused = data.media.filter(
     !illustrated.has(asset.id) && !rows.some((row) => row.activity.mediaIds.includes(asset.id)),
 );
 if (unused.length > 0) {
-  console.log(`\n  Assets jamais utilisés : ${unused.map((asset) => asset.id).join(", ")}`);
+  console.log(
+    `\n  Assets jamais utilisés dans cette classe : ${unused.map((asset) => asset.id).join(", ")}`,
+  );
 }
 console.log("");

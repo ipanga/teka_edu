@@ -64,4 +64,10 @@ exist, the listen controls appear with no code change.
 
 ## Resolved
 
-None yet.
+The earlier issue list is historical. Current September rich-media deferrals are closed below.
+
+## Current Rich-Media Resolution — 2026-10-01
+
+All 20 candidates integrated and independently accepted; no ImageGen deferral remains.
+See docs/media/SEPTEMBER_RICH_MEDIA_FINAL_AUDIT.json. Earlier dated issue descriptions remain
+historical evidence. Audio and other project backlog are not completed by this milestone.

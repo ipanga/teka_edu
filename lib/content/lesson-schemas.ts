@@ -19,7 +19,13 @@ import {
   REVIEW_OUTCOMES,
   REVIEW_SCOPES,
 } from "@/domain/lessons/review";
-import { AUDIO_KINDS, type AudioAsset, MEDIA_KINDS, type MediaAsset } from "@/domain/media/types";
+import {
+  AUDIO_KINDS,
+  type AudioAsset,
+  MAX_SEQUENCE_FRAMES,
+  MEDIA_KINDS,
+  type MediaAsset,
+} from "@/domain/media/types";
 import type { TeachingText } from "@/domain/lessons/texts";
 import {
   ACTIVITY_MODES,
@@ -151,24 +157,58 @@ export const reviewHistoryFileSchema = z.strictObject({
 
 // ---- content/media/registry.json -------------------------------------------------------------
 
+// A path under public/media/, never a URL: lessons must not depend on an outside host. SVG for
+// shapes, diagrams and simple objects; WebP for rich painted art
+// (docs/september-rich-media-benchmark.md).
+const mediaFile = z.string().regex(/^[a-z0-9-]+\/[a-z0-9-]+\.(svg|webp)$/, {
+  message: "must be <folder>/<name>.svg or <folder>/<name>.webp",
+});
+const mediaHash = z
+  .string()
+  .regex(/^sha256:[0-9a-f]{64}$/, { message: "must be sha256:<64 hex digits>" });
+const pixels = z.number().int().min(1).max(8192);
+
 export const mediaRegistryFileSchema = z.strictObject({
   assets: z
     .array(
-      z.strictObject({
-        id: slug,
-        kind: z.enum(MEDIA_KINDS),
-        // A path under public/media/, never a URL: lessons must not depend on an outside host.
-        file: z
-          .string()
-          .regex(/^[a-z0-9-]+\/[a-z0-9-]+\.svg$/, { message: "must be <folder>/<id>.svg" }),
-        alt: french,
-        tags: z.array(french),
-        origin: z.enum(CONTENT_ORIGINS),
-        provenance: french,
-        contentHash: z
-          .string()
-          .regex(/^sha256:[0-9a-f]{64}$/, { message: "must be sha256:<64 hex digits>" }),
-      }) satisfies z.ZodType<MediaAsset>,
+      z
+        .strictObject({
+          id: slug,
+          kind: z.enum(MEDIA_KINDS),
+          file: mediaFile,
+          alt: french,
+          width: pixels.optional(),
+          height: pixels.optional(),
+          sequence: z
+            .strictObject({
+              frames: z
+                .array(
+                  z.strictObject({
+                    file: mediaFile,
+                    alt: french,
+                    contentHash: mediaHash,
+                    width: pixels,
+                    height: pixels,
+                  }),
+                )
+                .min(2)
+                .max(MAX_SEQUENCE_FRAMES),
+              pageFrames: z.array(z.number().int().min(0)).min(1),
+            })
+            .optional(),
+          tags: z.array(french),
+          origin: z.enum(CONTENT_ORIGINS),
+          provenance: french,
+          contentHash: mediaHash,
+        })
+        // Raster art is not always square: without its size the page cannot reserve its box, and
+        // the text jumps when the picture arrives.
+        .refine((asset) => asset.file.endsWith(".svg") || (asset.width && asset.height), {
+          message: "raster art must declare its width and height",
+        })
+        .refine((asset) => (asset.width === undefined) === (asset.height === undefined), {
+          message: "declare width and height together",
+        }) satisfies z.ZodType<MediaAsset>,
     )
     .min(1),
   // Sound, where sound is the point. Empty until a trustworthy recording exists: a synthetic

@@ -1,0 +1,121 @@
+# Codex continuation
+
+Current authorization: owner-controlled September integration and staging validation. Codex is the
+primary implementation, QA and authoring-time ImageGen environment. Claude Code is unavailable and
+is no longer a dependency. `CODEX_TO_CLAUDE_CODE_HANDOFF.md` is historical; preserve its evidence.
+
+## Verified recovery baseline
+
+- Branch: `codex/september-rich-media-pilot`.
+- HEAD and remote: `4b2648f462e4abd2467d3515a68822796c5005ee`; clean before work.
+- September: 176 approved, 0 review, 176 distinct valid digests, 0 stale approvals.
+- 51 assets, 69 tracked runtime files, all SHA-256 values verified; 7,597,868 bytes.
+- 17/20 independently completed candidates; seven sequences; 31 retained SVGs.
+- Remaining canonical order: `histoire-pluie`, `histoire-cailloux`, `histoire-malo`.
+- Recovery validation: 31 content files valid; lapse dry run zero.
+
+## Current phase and next action
+
+Integration update, 2026-10-01: owner authorized controlled PR #88 merge to `develop` and staging
+validation. PR #88 was squash-merged after live verification that the head was unchanged at
+`de045acd068c271730986b6e2c74cce3f0f70671`, clean/mergeable, and green. GitHub reports merge commit
+`5249dadfcea596a49bbe058f674ef61e27462d87`; `origin/develop` was fetched and verified at that SHA.
+The accepted feature reference remains unchanged at `b4ca67cc8449ba4b5dae0ad7fd057591de2f833e`.
+PR #88 contains forward-only migrations `20261001192741_media_asset_webp_paths.sql` and generated
+`20261001192742_final_september_rich_media_reference.sql`. The first only updates the
+`media_assets_file_check` constraint to allow repository-local `.webp` assets; the second is the
+generator output from `content/`. Local `npm run db:reset` and `npm run db:test` passed from a fresh
+replay (152 pgTAP assertions).
+
+Controlled staging workflow run `36926521934` rerun passed pre-deploy CI and applied migrations to
+Supabase DEV successfully, but final staging smoke was unhealthy: 65 passed, nine skipped, and one
+failure in `tests/e2e/rich-media-pilot.spec.ts` because one pilot image's `naturalWidth` remained
+`0` before the 30 s timeout. The broader `rich-media-rollout` staging check passed.
+
+PR #89 fixed that remaining smoke issue by splitting the rich-media pilot smoke into independent
+phone/tablet/laptop-MacBook viewport tests and checking expected image HTTP response, browser decode
+and `naturalWidth` directly. PR #89 CI passed and was squash-merged into `develop` as
+`1c5c5aad9c6e9871d7cab83813cfbe34bc057bc7`. Controlled staging workflow run `37046853410` on
+`develop` passed CI, confirmed Supabase DEV was already up to date, deployed Vercel preview
+`dpl_9YzWw1XsgwhSDT5VeyTppsqe38RG` to `https://teka-4urqhl8pb-teka10.vercel.app`, verified target
+`preview` and state `READY`, aliased `teka-edu-staging.vercel.app`, and passed deployed smoke:
+71 passed, nine skipped, zero failed. Production code and production data remain unchanged. Resume
+from `docs/work/ACTIVE_TASK.md`; stop unless the owner explicitly authorizes production promotion
+or a new task.
+
+PR #90 recorded the healthy staging state and was squash-merged into `develop` as
+`c325c65e765984e5f8223b08e2ee00e99b4c6ecc`. The previous local `develop` divergence was the
+superseded local-only docs commit `8823d05aac03c7f20ee17c072945aeaaebdf422e`; it was removed by
+aligning local `develop` to `origin/develop`, with no remote rewrite. Final pre-production
+functional validation used push-triggered staging run `37048748582`: Vercel deployment
+`dpl_FwfCxXHYtNJrRV6H5G1CjZpegYaz`, URL `https://teka-6g69qd3wb-teka10.vercel.app`, alias
+`teka-edu-staging.vercel.app`, target `preview`, state `READY`, expected Git SHA
+`c325c65e765984e5f8223b08e2ee00e99b4c6ecc`, app environment `staging`, Supabase DEV, deployed
+smoke 71 passed / 0 failed / 9 production-only skipped.
+
+Representative functional sample covered parent entry/completion, pause/resume persistence,
+child-screen transitions and return controls, story paging, shared rhyme primary frames, counting
+handoff, vocabulary/recognition interactions, retained SVGs and accepted WebPs across phone, tablet
+and laptop/MacBook. Lesson IDs: `m3-lang-01`, `m3-lang-02`, `m3-lang-03`, `m3-lang-05`,
+`m3-lang-06`, `m3-math-10`, `m3-world-02`, `m1-lang-02`, `m1-lang-03`, `m1-lang-06`, `m1-lang-11`,
+`m1-lang-18`. TV and Smart TV remain excluded. No defects were found; no accepted content, approval
+history or media bytes changed. September integrity rechecked: 176/176 approved, 176 distinct valid
+digests, zero review, zero stale/unexpected lapses, 20/20 rich-media accepted, 78 runtime media
+files. Production code and data remain unchanged. Stop for owner production decision.
+
+Accepted September implementation checkpoint: `c7967163dedd26fa4c69a68de5a34ccdd52ca1f1`, validated,
+pushed and remote-verified. The final documentation-only follow-up changes no validated bytes;
+resolve its SHA with `git log -1` and verify the clean tree and matching feature remote.
+Completed task archive: docs/work/archive/2026-10-september-rich-media-complete.md.
+
+September rich-media completion verified on 2026-10-01. The owner relayed separate independent
+acceptance of Malo without correction; the implementation session did not self-review.
+Frozen implementation 8b5a8655222e299fea90e7582906c3723b3eca79 and documentation checkpoint
+1c3372298eaa9e3463aa7a889762bb9cc662db2b were reverified before restoration.
+All 26 Malo package hashes and byte lengths matched; manifest SHA-256
+f76f81e72adef7810695da6cb2b29d6fde0aa4dc981e9abd43fc0f1289141603.
+Only m3-lang-07, m3-lang-16 and m3-lang-20 restored, after dry-run, through
+approve-week --lapsed-only=true with newly computed digests. All 173 unaffected records unchanged.
+176 lessons / 176 approved / zero review / 176 distinct current valid digests / zero stale or
+unexpected lapses. Twenty candidates integrated and independently accepted; none deferred/pending.
+51 registered assets, ten sequences, 47 WebPs and 31 retained SVGs: 78 tracked runtime files,
+10,791,652 bytes. Canonical teaching content matches rollout baseline cbc1cf3; accepted media
+and all three committed frozen packages are preserved byte for byte. No temporary/chat/master
+dependency is required for recovery.
+Accepted verdict: docs/review/verdicts/2026-10-01-malo.json. Repository-derived checks:
+docs/media/SEPTEMBER_RICH_MEDIA_FINAL_AUDIT.json, regenerated by
+node --import tsx scripts/final-rich-media-audit.mjs.
+Final validation/checkpoint freshness is recorded in docs/work/ACTIVE_TASK.md.
+STOP after the authorized feature checkpoint/push. No PR, merge, deployment, database operation,
+October, 2eme maternelle, infrastructure or unrelated feature work is authorized.
+Recommended next phase, only after owner authorization: PR to develop, CI/staging, owner
+phone/tablet/laptop-MacBook inspection and a small real parent-child September pilot before
+curriculum expansion. Alternatives: offline reliability, owner-recorded audio, or reviewed
+2eme/October content after pilot findings. No alternative has started.
+
+## Policies
+
+- Phone, tablet, laptop/MacBook only (ADR-050); TV/Smart TV excluded. Representative
+  widths: 320/360/390/430, 768/1024, 1280/1440.
+- Built-in ImageGen for complex story scenes; retain high-quality local masters under
+  ignored `private/astra-visual-evidence/`. Commit optimized WebP application assets.
+- Preserve accepted WebPs and 31 intentional SVGs. No paid API or runtime generation.
+- Canonical text controls images; never change pedagogy to accommodate generated art.
+- Calculate exact media dependencies, lapse only affected approvals, preserve unaffected
+  records, validate fresh digests and zero unintended stale approvals (ADR-048).
+- Freeze canonical mapping, comparison, final frames, 256 px and responsive evidence,
+  hashes and approval impact in a committed isolated package.
+- The implementation session cannot self-approve. Owner opens a fresh independent Codex
+  session and relays `accepted`, `accepted-with-modifications` or `rejected`.
+- Restore only after an explicit final independent acceptance supports restoration;
+  use existing full-review history and `approve-week --lapsed-only=true`, fresh digests.
+- No October, 2eme maternelle, offline implementation, unrelated refactoring, production promotion
+  or production deployment. Feature checkpoints and pushes are authorized.
+- Keep DEV/PROD separate, RLS intact, secrets private, `.env*` untracked and server secrets
+  out of client bundles. No production data mutation or force-push.
+
+## Completion boundary
+
+September rich-media rollout is complete. Report, checkpoint/push feature only and STOP.
+No new phase starts without an owner decision. Resolve the final checkpoint with git log -1,
+verify a clean tree and matching remote SHA, then read ACTIVE_TASK.md before any action.

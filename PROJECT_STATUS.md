@@ -5,11 +5,257 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-09-26
-Branch:     codex/september-astra-visual-review, PR #86 → develop
-Commit:     release checkpoint 73bfb63; PR-status update pending
-Updated by: Codex technical lead
+Date:       2026-10-02
+Branch:     develop; final staging functional validation healthy
+Commit:     c325c65; origin/develop verified; production unchanged
+Updated by: Codex
 ```
+
+## Supported devices — current policy
+
+ADR-050 supersedes the former TV/projection assumption. The supported matrix is exactly **phone,
+tablet, and laptop/MacBook**. Active Playwright tests and reusable responsive audit scripts use
+those device classes; a 1280–1440 px browser viewport represents laptop/MacBook. TV and Smart TV
+are outside acceptance, regression, release-readiness and media-review scope. Historical evidence
+that records past TV checks remains unchanged as an accurate record and creates no current support
+obligation.
+
+## Current September continuation — 2026-10-02
+
+PR #88 from `codex/integrate-september-rich-media` into `develop` was squash-merged on
+2026-10-01 after live verification that the head was unchanged at
+`de045acd068c271730986b6e2c74cce3f0f70671`, clean/mergeable, and green. GitHub reports merge commit
+`5249dadfcea596a49bbe058f674ef61e27462d87`; `origin/develop` was fetched and verified at that SHA.
+The accepted feature reference `origin/codex/september-rich-media-pilot` remains unchanged at
+`b4ca67cc8449ba4b5dae0ad7fd057591de2f833e`. Conflicts from PR #86's duplicate history were resolved
+to preserve both PR #86 corrections and the later accepted rich-media state. The final audit
+recomputes 176/176 approved, zero review, 176 distinct valid digests, zero stale/unexpected lapses,
+20/20 candidates integrated and independently accepted, and 78 tracked runtime media files. PR #88
+adds forward-only migrations
+`20261001192741_media_asset_webp_paths.sql` and generated
+`20261001192742_final_september_rich_media_reference.sql`. Local `npm run db:reset` replays all
+migrations from scratch and local `npm run db:test` passes 152 pgTAP assertions.
+
+Controlled staging workflow run `36926521934` rerun passed its pre-deploy CI gates and applied the
+two final migrations to Supabase DEV successfully, but final staging smoke was unhealthy: 65 passed,
+nine skipped, and one failure in `tests/e2e/rich-media-pilot.spec.ts` because one pilot image's
+`naturalWidth` remained `0` before the 30 s test timeout. The broader `rich-media-rollout` staging
+check passed.
+
+PR #89 from `codex/fix-pr88-staging-smoke` into `develop` fixed that remaining smoke issue by
+splitting the rich-media pilot smoke into independent supported-device viewport tests and checking
+the expected image HTTP response, browser decode and `naturalWidth` directly. PR #89 CI passed and
+was squash-merged as `1c5c5aad9c6e9871d7cab83813cfbe34bc057bc7`. Controlled staging workflow run
+`37046853410` on `develop` passed CI, confirmed Supabase DEV was already up to date, deployed Vercel
+preview `dpl_9YzWw1XsgwhSDT5VeyTppsqe38RG` to
+`https://teka-4urqhl8pb-teka10.vercel.app`, verified target `preview` and state `READY`, aliased
+`teka-edu-staging.vercel.app`, and passed deployed smoke: 71 passed, nine skipped, zero failed.
+Production code and production data remain unchanged. Stop here until the owner explicitly
+authorizes production promotion or a new task.
+
+PR #90 recorded the healthy staging state in durable docs and was squash-merged as
+`c325c65e765984e5f8223b08e2ee00e99b4c6ecc`. The local `develop` divergence from the old
+docs-only commit `8823d05aac03c7f20ee17c072945aeaaebdf422e` was inspected, found superseded by
+PR #90, and removed by aligning local `develop` to `origin/develop`; no remote history was rewritten.
+Push-triggered staging workflow run `37048748582` deployed final `develop` to Vercel staging
+deployment `dpl_FwfCxXHYtNJrRV6H5G1CjZpegYaz` at
+`https://teka-6g69qd3wb-teka10.vercel.app`, aliased `teka-edu-staging.vercel.app`, verified
+`preview` / `READY`, app environment `staging`, expected Git SHA
+`c325c65e765984e5f8223b08e2ee00e99b4c6ecc`, and Supabase DEV. Final deployed smoke passed:
+71 passed, zero failed, nine production-only skipped.
+
+Final pre-production functional validation sampled representative parent-led September journeys:
+`m3-lang-01` full parent entry/completion and Nsimba story, `m3-lang-02` five-choice vocabulary and
+Mangue story, `m3-lang-03` Kumu story plus retained shape SVGs, `m3-lang-05` Bibi story and animal
+observation, `m3-lang-06` Marché story and recognition activity, `m3-math-10` counting handoff,
+`m3-world-02` animal body-part observation, `m1-lang-02` hands rhyme, `m1-lang-03` Seau de Lisa
+story, `m1-lang-06` shared bucket rhyme primary frame, `m1-lang-11` body word cards, and
+`m1-lang-18` four body word layout. Phone, tablet and laptop/MacBook classes were validated; TV and
+Smart TV remain excluded. No functional defect was found. September integrity rechecked at 176/176
+approved, 176 distinct valid digests, zero review, zero stale/unexpected lapses, 20/20 rich-media
+accepted and 78 runtime media files. Supabase DEV is up to date. Production code and production data
+remain unchanged; the remaining decision is owner authorization for any production promotion.
+
+Accepted implementation checkpoint `c7967163dedd26fa4c69a68de5a34ccdd52ca1f1` validated/pushed/remote-verified.
+Documentation-only completion follow-up leaves validated implementation and evidence unchanged.
+Completed task archived in docs/work/archive/2026-10-september-rich-media-complete.md.
+
+All three final stories independently accepted without correction; frozen bytes reverified.
+Exactly m3-lang-07, m3-lang-16 and m3-lang-20 restored after dry-run using fresh-digest,
+lapsed-only approvals. All 173 unaffected records unchanged against reviewed 1c337229.
+176/176 approved, zero review, 176 distinct valid digests, zero stale/unexpected lapses.
+20/20 candidates integrated and independently accepted; none pending or deferred.
+51 assets, ten sequences, 47 WebPs and 31 retained SVGs: 78 tracked files, 10,791,652 bytes.
+Canonical teaching content matches cbc1cf3; accepted media and all frozen packages preserved.
+Malo verdict: docs/review/verdicts/2026-10-01-malo.json. Reproducible final audit:
+docs/media/SEPTEMBER_RICH_MEDIA_FINAL_AUDIT.json. No temporary/master recovery dependency.
+Validation/checkpoint freshness: docs/work/ACTIVE_TASK.md; resume: docs/handoff/CODEX_CONTINUATION.md.
+Final validation passed: format/lint/types, 439 unit tests, 31 content files, zero-lapse dry-run,
+production Webpack build and 28-file/three-sentinel client scan. Browser suite: 66 passed,
+nine production-only checks skipped, including all eight widths for each final story.
+DB/Docker tests not run; generated pgTAP assertions do not imply database execution.
+STOP after feature checkpoint/push. No PR/merge/staging/production/database operation;
+no October, 2eme, infrastructure or unrelated features authorized.
+Recommended next phase, only with owner authorization: PR/develop CI/staging, supported-device
+owner inspection and small real-family pilot before curriculum expansion. Alternatives:
+offline reliability, owner-recorded audio, or reviewed 2eme/October content after pilot findings.
+without correction. Owner relayed verdict; all frozen hashes and runtime bytes matched before
+action. Exactly m3-lang-08, m3-lang-14 and m3-lang-18 restored by fresh-digest lapsed-only
+weeks 2/3/4 after dry-run. September 176 approved / 0 review / 176 distinct current valid digests,
+zero stale/unexpected lapses, 173 unaffected records unchanged. Three accepted full-review
+history entries and separate verdict artifact added; neither frozen Cailloux nor Pluie modified.
+19/20 independently complete, nine sequences, 31 retained SVGs. Final deferred candidate is
+Malo, only after accepted Cailloux validation/checkpoint/push. Accepted-state validation passed:
+formatting, lint, types, 438 unit tests, 31 content files, production build, bundle scan and eight
+targeted Cailloux viewports. Full 58-check regression baseline remains unchanged by restoration.
+No PR/merge/deployment/DB operation.
+
+### Preserved implementation snapshot
+
+The owner authorized completion of the three ADR-051 stories using built-in Codex ImageGen,
+one story through independent review before the next. Claude Code is unavailable and the prior
+handoff is historical. Current recovery instructions: `docs/handoff/CODEX_CONTINUATION.md`.
+Recovery verified 176 approved / zero review / 176 distinct valid digests / zero stale approvals,
+17/20 accepted candidates, seven sequences, 31 retained SVGs, and all 69 runtime hashes.
+Pluie is now integrated as four 1200x900 WebPs with unchanged 3/3/3/1 canonical pagination;
+page 2 is the primary shared rhyme frame. The separate Codex session accepted the frozen
+checkpoint without correction; the owner relayed that verdict and authorized restoration.
+All frozen bytes matched before action. Seven full-review history entries and the existing
+fresh-digest lapsed-only workflow restored exactly seven approvals: 176 approved / zero review,
+176 distinct valid digests, zero stale/unexpected lapses; all 169 unaffected records unchanged.
+Eighteen of twenty candidates are independently complete; Cailloux is next, then Malo.
+The frozen package is `docs/review/histoire-pluie/`: four full-resolution WebPs, before/after,
+256 px evidence, actual phone/tablet/MacBook captures, exact canonical mapping, approval impact
+and hashed manifest. All 438 unit tests pass; 42 existing browser tests plus eight targeted Pluie
+checks pass (nine production-only tests skipped). Formatting, lint, TypeScript, 31-file content
+validation, zero-lapse dry run, Webpack production build and 28-file/three-sentinel bundle scan
+pass. All 169 unaffected records and 50 unrelated assets match baseline. No database tests were
+run; generated reference assertions are current. Phone vertical scrolling is verified reachable.
+Accepted Pluie is committed/pushed at b4f242d77ecde3b7e67bdba37e14dcbe56d6061c.
+Cailloux now has four 1200x900 ImageGen WebPs aligned with eleven unchanged canonical lines
+(3/3/3/2), visible counts 3/2/2/3, pageFrames [0,1,2,3]. Exactly m3-lang-08, m3-lang-14 and
+m3-lang-18 intentionally lapsed: 173 approved / 3 review / 176 distinct fresh digests,
+zero stale/unexpected lapses; all 173 unaffected approval records unchanged. Fifty unrelated
+assets/media, canonical texts, review history and Pluie frozen evidence match accepted baseline.
+19/20 candidates integrated, 18/20 independently complete, nine sequences, 31 retained SVGs.
+Malo remains deferred. Frozen package docs/review/histoire-cailloux has 26 hashed files plus
+manifest SHA-256 415bbf536f244ae90ef13a3ab3e17a4887d04ad9f33c69598e801c7258e7365c.
+Current validation passed: 438 unit tests, 58 local browser checks including eight Cailloux
+viewports, 31 content files, lint, types, production Webpack build and 28-file/three-sentinel
+bundle scan. Nine production-only checks skipped. Full art, 256 px sheet and supported layouts
+inspected as implementation QA, not acceptance. Full repository formatting and frozen-file
+integrity also passed. No Cailloux acceptance/history/restoration, PR, merge, deployment or DB operation.
+Stop for a fresh independent Codex review.
+
+## September rich-media visual upgrade — 2026-09-27
+
+The owner’s live screenshots started a new post-release visual phase. The responsive application and approved
+content remain correct, but human, body, rhyme and narrative SVGs still look schematic at large child-view
+sizes. Phase A reused the existing 176-lesson / 302-activity audit and reclassified all 51 registered assets by
+pedagogical purpose and delivery medium: 31 stay SVG and 20 are proposed as WebP. The exact asset, activity,
+format, sequence, audio/motion and approval-impact matrix is in
+[`docs/september-rich-media-audit.md`](docs/september-rich-media-audit.md) and its JSON manifest.
+
+A non-integrated Phase B benchmark now covers seven required categories. The existing bucket is the retained
+simple-object SVG control; six ImageGen candidates cover body vocabulary, Nsimba’s character reference, a
+Nsimba story page, a greeting rhyme, Bibi the goat and the resolution of « La mangue partagée ». Two first
+drafts were rejected and corrected: Nsimba’s dark vignette and extra mangoes that contradicted « une seule ».
+The accepted contact sheet is `docs/review/media/september-rich-benchmark.png`; proposed WebPs are 124–376 KiB.
+
+No candidate is registered, rendered by the application, included in a lesson digest or deployed. Current
+approval impact is therefore zero. A full rollout would affect 53 unique lessons (27 in 1ère, 26 in 3ème) and
+must use small batches plus the existing lapse and independent reconfirmation mechanism. Claude Max is logged
+in, but automatic approval review rejected sending the newly supplied screenshots and expanded repository
+context because earlier disclosure authorization covered a different completed audit. The next gate is the
+owner’s visual-direction decision; no October work begins.
+
+The owner subsequently accepted the Phase B direction and authorized the controlled rollout. The five-asset
+pilot, five-asset rollout batch 1 and two-asset rollout batch 2 are now integrated locally and independently
+accepted. Batch 2 adds `comptine-mains` plus the currently unused `comptine-cabri`; Claude Max / Opus 5.5
+accepted both illustrations and all nine dependent lessons without correction. The repository’s lapsed-only
+workflow restored exactly those nine lessons with fresh digests, while all 167 unaffected approval records
+remained byte-for-byte unchanged. September is 176 approved / 0 review with 176 distinct valid digests and no
+stale approval. Eight story-sequence candidates remain unimplemented; production is unchanged and October has
+not started.
+
+Rollout batch 3 is independently accepted. It changes only `histoire-tika`, replacing the
+single schematic SVG with two page-aligned 1200×900 WebP scenes. The fixed six-line story renders as two pages;
+content validation rejected an initial three-frame map before any approval changed, so no global pagination or
+content was altered. Claude Max / Opus 5.5 explicitly accepted both frames and both affected lessons without
+correction. The lapsed-only mechanism restored exactly `m1-lang-09` and `m1-lang-21` with fresh digests;
+September is 176 approved / 0 review with 176 distinct valid digests, all 174 unaffected approval records remain
+byte-for-byte unchanged from checkpoint `ebf2372`, and zero stale approvals remain. Formatting, lint, typecheck,
+438 tests, content validation, Webpack build and the phone/tablet/desktop/TV story page-turn E2E pass. Production
+remains unchanged.
+
+Rollout batch 4 is independently accepted locally. It replaces the shared `histoire-seau-lisa` SVG with
+a three-page painted story sequence while retaining a meaningful primary bucket frame for the rhyme and
+observation uses. A narrow tested validator update permits a sequence asset to be shared by non-story text only
+when it still illustrates at least one correctly mapped story; the renderer already pages stories only. Exactly
+eight 1ère maternelle lessons moved to `review` during integration, and all 168 unaffected lesson records
+remained byte-for-byte unchanged from the pre-Batch-4 baseline. Formatting, lint, typecheck, 438 tests, content validation, Webpack
+build, all three story page turns and the rhyme primary frame pass responsive QA. Six story candidates remain;
+production is unchanged.
+
+The first Batch-4 Opus 5.5 review accepted all three final images but returned
+`accepted-with-modifications` for an evidence-generator defect: the page-by-page dossier showed frame 1 beside
+the rhyme while the real UI and weekly evidence correctly showed primary frame 2. The generator now follows the
+renderer’s story-only paging rule, lists every frame SHA-256 and explains the full sequence fingerprint used by
+lesson digests. Targeted package, sequence, content and lapse validation pass. No media, lesson or approval byte
+changed during that evidence correction. The corrected bounded pass then returned `accepted`. Local verification
+matched every reviewed SHA-256 to the actual WebP files, four full-review entries cover weeks 1–4, and the
+standard lapsed-only mechanism restored exactly the eight affected lessons with fresh digests. September is
+176 approved / 0 review with 176 distinct digests; all 168 unaffected lesson records are byte-for-byte unchanged
+and zero stale approvals remain. The next local batch is the four-page `histoire-kumu` sequence; fresh owner
+authorization is still required before its eventual independent-review package is transmitted.
+
+Rollout batch 5 is independently accepted and fully reapproved. The first Claude Max / Opus 5.5 pass accepted
+frames 1, 2 and 4 and requested clearer closed eyelids on Kumu in frame 3 at 256 px. Only frame 3 was
+regenerated; the second bounded pass explicitly returned `accepted` with no blocker. Local verification confirms
+all four WebPs are 1200×900, match the reviewed hashes, and frames 1, 2 and 4 remained byte-identical. Accepted
+full-review entries cover 3ème maternelle weeks 1, 2 and 4. The standard lapsed-only mechanism restored exactly
+`m3-lang-03`, `m3-lang-04`, `m3-lang-09` and `m3-lang-17` with fresh digests. September is 176 approved / 0 review
+with 176 distinct valid digests, zero stale approvals and all 172 unaffected records byte-for-byte unchanged.
+Fifteen of twenty rich-media candidates are independently complete; five untouched story candidates remain.
+
+Rollout batch 6 is independently accepted and fully reapproved. Claude Max / Opus 5.5 explicitly accepted all
+four `histoire-bibi` frames and all three dependent lessons without correction, confirming the chronology,
+character and garden continuity, positive resolution, preschool suitability and readability at 256 px. Local
+verification confirms all four WebPs are 1200×900, match the reviewed hashes and map `[0, 1, 2, 3]` to the 12
+canonical lines. Accepted full-review entries cover 3ème maternelle weeks 2 and 3. The lapsed-only mechanism
+restored exactly `m3-lang-05`, `m3-lang-09` and `m3-lang-13` with fresh digests. September is 176 approved / 0
+review with 176 distinct valid digests, zero stale approvals and all 173 unaffected records byte-for-byte
+unchanged. Sixteen of twenty rich-media candidates are independently complete; four untouched stories remain.
+
+Rollout batch 7 is frozen locally for independent review. Canonical repository order selected
+`histoire-marche`; its 10 unchanged lines render as four pages of 3, 3, 3 and 1 line, correcting the older
+three-frame estimate. Four 1200×900 WebP scenes now show Mama Lelo and Ama arriving at the market, comparing
+exactly five tomatoes with three onions, carrying and sorting the same produce at home, and celebrating the
+completed groups. Character, clothing, basket, daylight and setting transitions remain continuous; the exact
+quantities remain legible in the 256 px contact sheet and responsive application captures. Exactly
+`m3-lang-06`, `m3-lang-12` and `m3-lang-19` moved to `review`; September is 173 approved / 3 review with 173
+distinct standing digests, zero additional lapses and all 173 unaffected records byte-for-byte unchanged from
+the accepted Batch-6 state. Formatting, lint, typecheck, 438 tests, content validation, Webpack build,
+three-sentinel bundle scan and the then-current four-width E2E pass. The isolated three-file review package is
+ready locally. The owner explicitly authorized its bounded Claude Max review on 2026-09-28, but automatic
+approval review blocked transmission before any file was sent; Batch 7 therefore remains unreviewed and no
+approval was restored. Claude Code took over on 2026-09-28, re-verified every count above, revalidated on
+phone, tablet and laptop/MacBook (42 E2E passed, 9 production-only skips) and committed the handoff
+(`a675138`). Production remains unchanged.
+
+**Batch 7 independently accepted and restored — 2026-09-28.** The owner submitted the frozen three-file package
+to the external reviewer **ChatGPT GPT-5.6 Sol**. Its first pass (`accepted-with-modifications`) reported six
+tomatoes on frame 2; Claude Code showed, at full resolution and on the 256 px tile, that the tray holds exactly
+five tomatoes and three onions. After an enlarged reinspection the reviewer withdrew the blocker and returned
+`accepted`. No media byte changed. Accepted `full-review` entries for 3ème weeks 2–4 were recorded under the
+owner's explicit authorization, and `approve-week --lapsed-only` restored exactly `m3-lang-06`, `m3-lang-12` and
+`m3-lang-19` with freshly computed digests (none reused). September is **176 approved / 0 review, 176 distinct
+valid digests, 0 stale**, and all 173 unaffected records are byte-for-byte unchanged from accepted Batch 6.
+Derived from the regenerated manifest: **17 of 20** WebP candidates are independently complete, 31 SVGs are
+deliberately retained, seven story sequences are integrated. The last three candidates — `histoire-pluie`,
+`histoire-cailloux`, `histoire-malo` — **keep their approved SVGs; their painted upgrade is deliberately deferred
+until ImageGen-quality generation is available** (ADR-051). They are valid, approved lessons, not incomplete
+work. October and 2ème maternelle have not started; no production data was touched.
 
 ## Independent September visual/UX review — 2026-09-26
 
@@ -43,13 +289,39 @@ format, lint, typecheck, 414 unit tests, content validation, deterministic repor
 build, a 28-file client-bundle scan, 41 E2E tests (9 production-only skipped), all migrations replayed from
 scratch, 152 pgTAP/RLS assertions, and both portable and Vercel container builds and smoke tests. The local
 Turbopack port-binding `EPERM` is unchanged; Turbopack succeeds inside both Linux containers. The generated
-reconfirmation migration is the only migration pending on DEV and PROD. Branch and environment protections,
+reconfirmation migration was applied to DEV and was the only migration pending on PROD. Branch and environment protections,
 secret scanning, push protection and the production owner-review gate are active. The feature branch is
-published as PR #86 into `develop`; CI is pending and nothing has merged or deployed. No October work has
-started.
+published as PR #86 into `develop`; all four required checks passed and it was squash-merged as `5c875287`.
+Staging run `36261271043` deployed exact SHA `5c875287` as Preview deployment
+`dpl_Af851j9qzLcbcdW12sBEsr6TPoNg`, applied only `20260926173653_september_reconfirmation.sql`
+to Supabase DEV, passed 41 live E2E tests (9 production-only skipped), retained Vercel Authentication,
+and passed targeted visual inspection of both classes and the corrected September activities. Production
+remained healthy at `28dcb0a` through the promotion preflight. No October work has started.
+
+Promotion PR #87 then passed all five required checks and was merged with a merge commit as main SHA
+`51c83a229e1559e98dbf7127fb916c2c8d6a841b`. After the owner approved the protected `production`
+Environment gate, the same production run `36276270999` resumed and succeeded. Its PROD preflight found
+`teka-edu-prod` `ACTIVE_HEALTHY`, 42 applied migrations and only
+`20260926173653_september_reconfirmation.sql` pending; it applied only that migration. Vercel deployment
+`dpl_tQqUb2FwkBTyifiQBuMRKajAvxPK` is Ready with target `production`, exact main SHA `51c83a2` and canonical
+URL https://teka-edu.vercel.app. Health reports `production`, that SHA and PROD ref
+`eganrivpkjhozkkahyxy`, with no DEV ref. The workflow smoke suite passed 41 tests (9 production-only
+skipped), and a separate clean anonymous public run passed 9/9.
+
+Post-release read-only verification reports PROD still `ACTIVE_HEALTHY`, 43 migrations, zero public tables
+with RLS disabled and exact approval totals of 176 lessons / 176 approved / 0 review / 176 distinct valid
+digests / 0 stale or lapsed, split 88/88 for each class. Manual production QA covered phone, tablet portrait,
+tablet landscape, desktop and TV, including both classes, representative September sessions, child and
+parent surfaces, completion/reporting, corrected off-screen activities, `objet-monnaie` and
+`forme-maison-composee`; it found no blocker or actionable visual defect. Staging remains protected by
+Vercel Authentication and production is public. No unexpected commit, migration, deployment or environment
+change occurred during the gate. The next action is the owner's manual inspection of the live September
+release; do not begin October work.
 Older phase summaries below are historical and may predate the September production release.
 
-## Current Phase
+## Historical Phase Snapshot
+
+This older snapshot is preserved as history. Current September completion is recorded above.
 
 ```text
 1ère maternelle — annual progression and September: IN PROGRESS
@@ -158,24 +430,24 @@ Objective: A verified year for the youngest class, then one month, then the revi
 
 Values: `NOT STARTED` · `IN PROGRESS` · `CONFIGURED` · `VERIFIED` · `BLOCKED`.
 
-| Area                            | Status                                          | Evidence / remaining                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Git repository                  | **VERIFIED**                                    | Initialised 2026-09-11 with no force push (the remote was empty beforehand). `origin/main` = `1b95480`, a merge commit of `3df64bf` + `4abe26e`; `origin/develop` = `4abe26e`. Both branches have identical trees.                                                                                                                                                                                                                         |
-| Docker                          | **VERIFIED**                                    | Both images build, report healthy, run as user `node`, and exit on SIGTERM with code 143, both locally (arm64) and on GitHub runners (x86_64).                                                                                                                                                                                                                                                                                             |
-| GitHub Actions                  | **VERIFIED**                                    | Push-triggered CI: VERIFIED (runs 34610713969, 34610729923, 34611359891, 34612999684, 34617650743 on the promotion merge; deploy jobs skipped as designed). PR-triggered CI: VERIFIED (PR #1, run 34612652962, Linux x86_64). No GitHub environments exist yet.                                                                                                                                                                            |
-| Branch protection               | **VERIFIED**                                    | GitHub Rulesets active for `develop` and `main` (re-verified after the promotion; `main` accepted PR #5 only with all 5 checks green, merge commit only): PR required, 0 approvals, conversations resolved, 4 quality checks required (+ `Promotion source` on `main`), force push and deletion blocked, no bypass actors. A direct push to `develop` was rejected (GH013). Details: `docs/DEPLOYMENT.md`, ADR-022.                        |
-| Supabase local                  | **VERIFIED**                                    | `db start` / `db reset` / `test db` (PASS) / `stop` all work. Full `supabase start` confirmed `sb_publishable_…` / `sb_secret_…` local keys, and the env validation accepts them.                                                                                                                                                                                                                                                          |
-| Supabase DEV (`teka-edu-dev`)   | **VERIFIED**                                    | Ref `quyhkkizsmosybavoewd`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Working copy linked. `db push` up to date (no migrations), remote pgTAP RLS test PASS, 0 public tables without RLS, security advisors clean. Pooled `DATABASE_URL` connects. CI secrets are in GitHub `staging`; runtime values are in the owner's Keychain.                                                                                                     |
-| Supabase PROD (`teka-edu-prod`) | **VERIFIED**                                    | Ref `eganrivpkjhozkkahyxy`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Read-only checks only: migration list empty, 0 public tables without RLS, security advisors clean; pooled `DATABASE_URL` connects. Nothing pushed or seeded. CI secrets are in GitHub `production`; runtime values are in the owner's Keychain.                                                                                                                  |
-| GitHub environments             | **CONFIGURED**                                  | `staging` (branch `develop`): Supabase + Vercel secrets (incl. the project-scoped `VERCEL_TOKEN`) and `STAGING_DOMAIN`. `production` (branch `main`, required reviewer): Supabase secrets, `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` / bypass secret, **no `VERCEL_TOKEN`**.                                                                                                                                                                   |
-| Database migrations             | **VERIFIED**                                    | Six migrations (Phase 1 schema + data, Phase 2 schema + data, Phase 2.5 quality gate + data). Local: `db reset` + 128 pgTAP assertions pass. DEV: all six migrations applied and local/remote lists match; row counts checked read-only (20 lessons, all `review`, 0 approved; 398 objectives; 529 success examples). Security and performance advisors: no issues. PROD: untouched.                                                       |
-| Vercel staging                  | **VERIFIED**                                    | Project `teka-edu` (Hobby, `container` preset, `cdg1`, no Git link). First verified deployment: run 34635262697, `dpl_99QEWbwtBTV53u5HzdudDaKndjgy` (Preview, READY, commit `e2f8f69`), alias https://teka-edu-staging.vercel.app. `/api/health` reports `staging` and the DEV ref; region `cdg1` confirmed by `x-vercel-id`. Protection returns 302 without auth. Browser bundle and logs are secret-free. `STAGING_DEPLOY_ENABLED=true`. |
-| Vercel production               | **LIVE (September visual upgrade, 2026-09-24)** | Public at https://teka-edu.vercel.app, deployment `dpl_22DjVFzGbinNs4xkCrEzgMM5Svh7`, commit `28dcb0a`, Supabase PROD (42 migrations). Run 35983628116. Anonymous public suite 9/9; 49/49 pictures served with their frozen hashes. Staging, team alias and generated URLs protected (302). Record: `docs/releases/SEPTEMBER_VISUAL_UPGRADE_RELEASE.md`.                                                                                   |
-| Environment variables           | **CONFIGURED**                                  | Validation and Markdown inventory complete. Environment-file cleanup is VERIFIED on both `develop` and `main`: no `.env*` file in either tree, and the public default branch shows none (ADR-023). No hosted values exist yet.                                                                                                                                                                                                             |
-| develop → main promotion        | **VERIFIED**                                    | PR #5, merged 2026-09-11 as merge commit `1b95480`. `Promotion source` passed on a real event ("'develop' from ipanga/teka_edu may be promoted to main", run 34617296272), and all 4 quality checks passed. The merge-triggered `Deploy production` run 34617650743 skipped its deploy job. There are no GitHub deployments or environments.                                                                                               |
-| Repository security             | **VERIFIED**                                    | No real secret in the full Git history (gitleaks, all refs + pattern scan). Secret scanning and push protection enabled (no alerts). Fork PR workflows need owner approval for all external contributors. `Promotion source` checks the repository identity.                                                                                                                                                                               |
-| Free-tier compliance            | **VERIFIED**                                    | Vercel Hobby with no payment method on file (no billing possible); Supabase DEV and PROD on Free; no add-ons. Platform cost **$0/month**. Limits and classification: `docs/FREE_TIER.md`.                                                                                                                                                                                                                                                  |
-| Deployment documentation        | **CONFIGURED**                                  | Written. Must be re-checked against the first real staging and production deployments.                                                                                                                                                                                                                                                                                                                                                     |
+| Area                            | Status                                               | Evidence / remaining                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Git repository                  | **VERIFIED**                                         | `origin/main` = `51c83a229e1559e98dbf7127fb916c2c8d6a841b`; `origin/develop` = `5c8752876231bf3831173f64e996fb942104e06b`. Main is promotion PR #87's merge commit and both branches have identical trees. Force push and deletion remain blocked.                                                                                                                                                                                         |
+| Docker                          | **VERIFIED**                                         | Both images build, report healthy, run as user `node`, and exit on SIGTERM with code 143, both locally (arm64) and on GitHub runners (x86_64).                                                                                                                                                                                                                                                                                             |
+| GitHub Actions                  | **VERIFIED**                                         | PR #86 CI run `36261115195`, staging run `36261271043`, all five promotion PR #87 checks, and production run `36276270999` succeeded. The production deploy resumed after its required environment approval; no replacement workflow was created.                                                                                                                                                                                          |
+| Branch protection               | **VERIFIED**                                         | GitHub Rulesets remain active for `develop` and `main`: PR required, conversations resolved, 4 quality checks required plus `Promotion source` on `main`, force push and deletion blocked, no bypass actors. PR #87 was accepted only after all five checks passed and used the required merge-commit strategy. Details: `docs/DEPLOYMENT.md`, ADR-022.                                                                                    |
+| Supabase local                  | **VERIFIED**                                         | `db start` / `db reset` / `test db` (PASS) / `stop` all work. Full `supabase start` confirmed `sb_publishable_…` / `sb_secret_…` local keys, and the env validation accepts them.                                                                                                                                                                                                                                                          |
+| Supabase DEV (`teka-edu-dev`)   | **VERIFIED**                                         | Ref `quyhkkizsmosybavoewd`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Working copy linked. `db push` up to date (no migrations), remote pgTAP RLS test PASS, 0 public tables without RLS, security advisors clean. Pooled `DATABASE_URL` connects. CI secrets are in GitHub `staging`; runtime values are in the owner's Keychain.                                                                                                     |
+| Supabase PROD (`teka-edu-prod`) | **VERIFIED**                                         | Ref `eganrivpkjhozkkahyxy`, Paris `eu-west-3`, Free plan, ACTIVE_HEALTHY. Production run `36276270999` applied only `20260926173653_september_reconfirmation.sql`; 43 migrations are now present. Post-release read-only checks report 0 public tables without RLS and approval integrity at 176/176. CI secrets are in GitHub `production`; runtime values are in the owner's Keychain.                                                   |
+| GitHub environments             | **CONFIGURED**                                       | `staging` (branch `develop`): Supabase + Vercel secrets (incl. the project-scoped `VERCEL_TOKEN`) and `STAGING_DOMAIN`. `production` (branch `main`, required reviewer): Supabase secrets, `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` / bypass secret, **no `VERCEL_TOKEN`**.                                                                                                                                                                   |
+| Database migrations             | **VERIFIED**                                         | PROD has 43 migrations after the September release. The protected workflow's before-state, dry-run and after-state prove that only pending migration `20260926173653_september_reconfirmation.sql` was applied. Fresh local replay and 152 pgTAP/RLS assertions passed before release; the deployed database reports zero public tables with RLS disabled.                                                                                 |
+| Vercel staging                  | **VERIFIED**                                         | Project `teka-edu` (Hobby, `container` preset, `cdg1`, no Git link). First verified deployment: run 34635262697, `dpl_99QEWbwtBTV53u5HzdudDaKndjgy` (Preview, READY, commit `e2f8f69`), alias https://teka-edu-staging.vercel.app. `/api/health` reports `staging` and the DEV ref; region `cdg1` confirmed by `x-vercel-id`. Protection returns 302 without auth. Browser bundle and logs are secret-free. `STAGING_DEPLOY_ENABLED=true`. |
+| Vercel production               | **LIVE (September reconfirmed release, 2026-09-27)** | Public at https://teka-edu.vercel.app, deployment `dpl_tQqUb2FwkBTyifiQBuMRKajAvxPK`, exact main commit `51c83a2`, target Production, Supabase PROD (43 migrations). Run 36276270999. Anonymous public suite 9/9; responsive visual QA passed phone, tablet, desktop and TV. Staging remains protected (302).                                                                                                                              |
+| Environment variables           | **CONFIGURED**                                       | Validation and Markdown inventory complete. Environment-file cleanup is VERIFIED on both `develop` and `main`: no `.env*` file in either tree, and the public default branch shows none (ADR-023). No hosted values exist yet.                                                                                                                                                                                                             |
+| develop → main promotion        | **VERIFIED**                                         | PR #87 merged `develop` to `main` as merge commit `51c83a2` after `Promotion source` and all four quality checks passed. The merge-triggered production run `36276270999` passed the same four CI jobs, paused at the protected environment gate, resumed after owner approval and completed successfully.                                                                                                                                 |
+| Repository security             | **VERIFIED**                                         | No real secret in the full Git history (gitleaks, all refs + pattern scan). Secret scanning and push protection enabled (no alerts). Fork PR workflows need owner approval for all external contributors. `Promotion source` checks the repository identity.                                                                                                                                                                               |
+| Free-tier compliance            | **VERIFIED**                                         | Vercel Hobby with no payment method on file (no billing possible); Supabase DEV and PROD on Free; no add-ons. Platform cost **$0/month**. Limits and classification: `docs/FREE_TIER.md`.                                                                                                                                                                                                                                                  |
+| Deployment documentation        | **VERIFIED**                                         | Release tracking records the successful September staging and production deployments, environment gates, exact SHAs, migrations and live verification.                                                                                                                                                                                                                                                                                     |
 
 ## In Progress
 
@@ -278,10 +550,20 @@ Relevant files: domain/lessons/review.ts, domain/lessons/renderers.ts, lib/conte
 
 ### P0 — Next
 
+1. Complete final September validation and feature checkpoint/push, then STOP.
+2. Owner decides whether to authorize PR/develop CI/staging and a small real-family pilot.
+3. October, 2eme, offline implementation, infrastructure, merge and production are not authorized.
+
+### Historical backlog before September completion
+
+The following dated priorities predate the completed September review and are retained as
+planning history. They do not override the current P0 task or owner authorization above.
+
 1. **1ère maternelle**: the full 2026–2027 annual progression first, then September daily lessons only. The routing, the renderers and the annual-plan machinery are level-agnostic, so it is content plus one annual plan — then the review gate.
 2. **Re-review of September Week 1** (ADR-047). The corrections materially changed the pedagogy, so the regenerated package goes back for a second pass before Week 1 can be recorded as accepted. Weeks 2–5 have not been reviewed at all.
 3. **October and beyond for 3ème maternelle**, once September has completed the gate and been tested by real families — authoring a second month before either would multiply any mistake by two.
-4. **TV presentation mode** and the offline service worker (`docs/PHASE3_RENDERER_PLAN.md`).
+4. **Offline service worker** (`docs/PHASE3_RENDERER_PLAN.md`). TV/Smart TV is explicitly out of scope
+   under ADR-050.
 
 ### Deferred — production (not in the current phase, ADR-027)
 
@@ -706,7 +988,7 @@ Curriculum: version `maternelle-cycle1-cd-2026`, six verified domains, **398 off
 Local:      Runs: npm run dev, npm run start (standalone), Docker image
 Docker:     Verified locally (arm64) and in GitHub CI (x86_64), both Dockerfiles
 Staging:    LIVE https://teka-edu-staging.vercel.app (Vercel Preview, container, cdg1, Supabase DEV); auto-deploys from develop
-Production: LIVE https://teka-edu.vercel.app (September visual upgrade, 2026-09-24, 28dcb0a; container, cdg1, Supabase PROD).
+Production: LIVE https://teka-edu.vercel.app (September reconfirmed release, 2026-09-27, 51c83a2; deployment dpl_tQqUb2FwkBTyifiQBuMRKajAvxPK, container, cdg1, Supabase PROD).
             The team-scoped alias teka-edu-teka10.vercel.app and all generated URLs stay protected
 CI:         Verified on GitHub for push and pull_request events; required by the develop/main rulesets;
             first production promotion PR #5 green
@@ -760,7 +1042,7 @@ Remote:     github.com/ipanga/teka_edu (public). main (default) = a729722 (merge
   - Production domain: still open. It is required for `NEXT_PUBLIC_APP_URL` before any production deployment.
 - **PD-013: Production approval**: **resolved.** The `production` environment requires the owner's approval (self-approval allowed).
 
-## Last Session Summary
+## Historical Session Summary
 
 ```text
 Completed:  SEPTEMBER VISUAL UPGRADE PRODUCTION RELEASE: SUCCESS.
@@ -902,3 +1184,95 @@ Local follow-up browser suite: 40 E2E passed, 9 production-only tests skipped, a
   Eight final captures verify the corrected rule wording and square house at phone, tablet, desktop and TV.
 - The default Turbopack build retains the known local port-binding `EPERM`; the Webpack production build
   succeeds. No push, PR, merge, staging, production, production-data operation or October work occurred.
+
+### 2026-09-27 — Controlled September rich-media pilot ready for owner review (local)
+
+- Integrated five representative WebP assets: body vocabulary (`corps-tete`), expressive animal
+  (`animal-chevre`), rhyme (`comptine-bonjour`), four-frame Nsimba story and three-frame mango story. The
+  story sequences map to existing pages and leave every approved word, objective, duration and progression
+  unchanged. The other 15 candidates remain untouched pending owner direction.
+- Added sequence-aware registry schemas, approval fingerprints, frame validation, intrinsic layout sizing,
+  next-frame preload, review-package rendering, contact sheets and deterministic media generation. ADR-049
+  records the mixed SVG/WebP boundary. Source masters remain ignored locally; optimized delivery totals
+  1,773,178 bytes across ten files at WebP quality 88.
+- The standard integrity flow lapsed exactly 18 dependent lessons: 8 in 1ère and 10 in 3ème. Current state is
+  176 total, 158 approved and 18 at `review`; all 158 unaffected approval records are byte-for-byte unchanged
+  and the follow-up lapse dry-run reports zero stale approvals. No approval or digest was restored.
+- The five-item comparison sheet, per-class reconfirmation packages and durable rich-media manifest are
+  current. Actual child screens pass at 320, 390, 430, 1280 and 1440 px with zero horizontal overflow,
+  no clipped image and exact story page/frame sequences. Representative phone and desktop captures are held
+  in ignored local evidence for owner inspection.
+- Claude Max / Opus 5.5 implemented the bounded sequence plumbing under the owner’s authorization. Astra
+  independently reviewed the diff, corrected two alt descriptions, supplied and checked all seven story
+  frames, optimized delivery, strengthened the freeze test and ran the final validation.
+- Final checks: format, lint, typecheck, 438 unit tests, 31-file content validation, Webpack production build,
+  three-sentinel client-bundle scan and 42 local E2E tests pass; nine production-only E2E tests are skipped.
+  Default Turbopack still reproduces the host-only worker-port `EPERM` documented in prior checkpoints.
+- Branch is `codex/september-rich-media-pilot`; implementation checkpoint is `7abc18e` (`Implement September
+rich-media pilot`). Work is local only. No push, PR, merge, staging, production, database migration,
+  production-data operation or October work occurred. Next gate is the owner’s visual decision on the pilot;
+  full rollout and approval restoration remain unauthorized.
+
+### 2026-09-27 — Rich-media pilot reconfirmation evidence strengthened (local)
+
+- The owner accepted the pilot direction and authorized the controlled September rollout, subject first to
+  independent acceptance of the exact 18 pilot-affected lessons.
+- Claude Max / Opus rejected the first review dossier because it lacked the canonical story/rhyme lines and
+  showed non-primary story frames at 128 px. Independent repository checks found no resulting media defect:
+  both greeting rhymes match the hand/foot pose, the Kumu lesson’s mango item is a separate daily read-aloud,
+  recurring characters remain continuous, and the Nsimba and mango frames support their assigned pages.
+- The generated packages now quote every canonical line beside its exact page image, and the comparison sheet
+  renders all seven story frames at 256 px. No lesson, text, media file, association, objective, duration,
+  progression, digest or approval changed while strengthening this evidence.
+- The bounded retry has not run: an invalid API-key environment override produced a pre-input 401 with zero
+  tokens and $0 cost, while the Max subscription session is signed out when that override is removed. The
+  official Claude.ai OAuth flow is open for the owner to complete privately in Chrome.
+- State remains exactly 176 total, 158 approved and 18 review. The remaining 15 candidates are untouched;
+  no push, PR, merge, staging, production, database, deployment or October work occurred.
+
+### 2026-09-27 — Rich-media pilot independently accepted (local)
+
+- Diagnosed an inherited `ANTHROPIC_API_KEY` reference in `~/.zshrc` overriding the existing Claude Max
+  credential-store session. Unsetting it only for Claude processes confirmed `claude.ai` / Max authentication;
+  no credential, shell configuration or repository environment file was changed or exposed.
+- Claude Max / Opus 5.5 accepted four pilot families and requested two precise Nsimba corrections. Added a
+  page-1 walk-to-school frame and corrected page 3 with a readable `Nsimba` card; the five-page story now has
+  five chronology-aligned frames. The final isolated pass accepted all five families and all 18 lessons.
+- Recorded ten full-review acceptance entries and restored exactly 18 lessons through `approve-week.ts
+--lapsed-only`. September is 176 approved / 0 review with 176 distinct valid digests; all restored digests
+  are fresh, all 158 unaffected approval records are unchanged, and the lapse dry-run reports zero stale.
+- Formatting, lint, typecheck, all 438 unit tests, 31-file content validation, a Webpack production build, the
+  four-width rich-media E2E, client-bundle secret scan and approval-lapse dry-run pass. Work remains local; no
+  push, PR, merge, staging, production, database, deployment or October work occurred. The next authorized
+  phase is the remaining 15 rich-media candidates in small batches.
+
+### 2026-09-27 — Rich-media rollout batch 1 independently accepted (local)
+
+- Integrated five single-image references: `corps-main`, `corps-pied`, `corps-ventre`, `animal-poule` and
+  `animal-poussin`. All use 1024×1024 WebP delivery; no canonical lesson wording, objective, duration,
+  progression, programme, calendar or safety guidance changed.
+- Generated a batch-only before/after sheet and both class reconfirmation packages against accepted checkpoint
+  `4862ac0`. The sheet verifies recognition at 72, 128 and 256 px and names every dependent activity.
+- The first independent Opus 5.5 pass accepted four assets and six lessons, and requested a tighter
+  `corps-ventre` crop. The finding was independently confirmed; the corrected torso-only card passed responsive
+  verification, and the second pass explicitly accepted the asset, four blocked lessons and complete batch.
+- Eight accepted full-review entries authorized restoration of exactly 10 lessons through `approve-week.ts
+--lapsed-only`. September is 176 approved / 0 review with 176 distinct current digests; all 166 unaffected
+  approval records are byte-for-byte unchanged and the lapse dry-run reports zero stale approvals.
+- Formatting, lint, all 438 unit tests, 31-file content validation, a Webpack production build and child-screen
+  E2E across phone, tablet, desktop and TV pass.
+- Work remains local. Production and staging are unchanged; no push, PR, merge, deployment, database or October
+  work occurred.
+
+### 2026-09-27 — Rich-media rollout batch 2 frozen for independent review (local)
+
+- Integrated `comptine-mains` and the currently unused `comptine-cabri` as 1024×1024 WebP rhyme illustrations.
+  The hands image shows exactly two raised palms with five digits each; the cabri matches the accepted goat
+  character and has all four hooves visibly airborne.
+- The standard lapse mechanism moved exactly nine `comptine-mains` lessons to `review`; 167 lessons remain
+  approved. `comptine-cabri` has no September lesson use and lapsed no approval.
+- The batch-only sheet renders both images at 72, 128 and 256 px. Formatting, lint, typecheck, all 438 unit
+  tests, 31-file content validation, Webpack production build and child-screen E2E on phone, tablet, desktop and
+  TV pass. Independent acceptance is still required before restoring the nine approvals.
+- Work remains local. Production and staging are unchanged; no push, PR, merge, deployment, database or October
+  work occurred.

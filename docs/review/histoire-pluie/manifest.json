@@ -1,0 +1,157 @@
+{
+  "baseline": "4b2648f462e4abd2467d3515a68822796c5005ee",
+  "candidate": "histoire-pluie",
+  "verdict": "pending",
+  "files": [
+    {
+      "file": "canonical-and-impact.json",
+      "bytes": 33987,
+      "sha256": "7ef047b00ce18769b4b7703902906dbb1f41734c8721a778e6533262751d48b7"
+    },
+    {
+      "file": "child-size-256.png",
+      "bytes": 606848,
+      "sha256": "32e6868c2dddd9d60f4bd1804b5af820ead76371fe704207abced256f85133c2"
+    },
+    {
+      "file": "comparison.png",
+      "bytes": 731165,
+      "sha256": "8648fb571793365bf22577369031c650aa8aa05a695628cbdcd31dbe9984ae3e"
+    },
+    {
+      "file": "frames/page-1.webp",
+      "bytes": 290802,
+      "sha256": "d381c358708fb376e2596dd14056f7fa6a14a4abe15a9977a67e47e034740edf"
+    },
+    {
+      "file": "frames/page-2.webp",
+      "bytes": 322752,
+      "sha256": "27cd0ce7754ec0f3d45c278f5fcdf6ab1d124f6b921f2ffbb26d9951d3bdd703"
+    },
+    {
+      "file": "frames/page-3.webp",
+      "bytes": 283004,
+      "sha256": "d10cc23fec5b294331e6f3b1bb7967989ba2447d39193202fc57a99a27c6508f"
+    },
+    {
+      "file": "frames/page-4.webp",
+      "bytes": 257786,
+      "sha256": "e430c23a7c740cb0796ee18204ae78554f7e33e860319a8967ce5742a0ae5b3c"
+    },
+    {
+      "file": "macbook-1440-overview.png",
+      "bytes": 624405,
+      "sha256": "2eb2a7595d608c786389e2449915e8738354c1c00f304e79a236fa0dcf2e84b1"
+    },
+    {
+      "file": "phone-390-overview.png",
+      "bytes": 851762,
+      "sha256": "063ac53100e01c406c3b8a6220565b07448bd6b5e90d1733bc404fef7b83ae7a"
+    },
+    {
+      "file": "README.md",
+      "bytes": 3655,
+      "sha256": "205d2a8e5d3f68b15c9b0abde58c0f645b77092acde65a4c185475649edbf84d"
+    },
+    {
+      "file": "reconfirmation-maternelle-1.md",
+      "bytes": 14526,
+      "sha256": "7fa8cd13b9b3e01993c0e72b9ed21e3744a23396f731d784df2e2d383f672c71"
+    },
+    {
+      "file": "reconfirmation-maternelle-3.md",
+      "bytes": 13426,
+      "sha256": "b3822cb13d299706b24c27f7466ee9a0dd0c3c61240f37783742558867d93889"
+    },
+    {
+      "file": "REVIEWER_PROMPT.md",
+      "bytes": 2728,
+      "sha256": "309c8d1cb45356ba53b8f40e4ba7b51a4887eaea18dd938570791c29d346d48d"
+    },
+    {
+      "file": "screens/macbook-1440-page-1.png",
+      "bytes": 360860,
+      "sha256": "86c2dfea6b8bce14832533d997231b8bdd6142c95b201171cc1932da04767699"
+    },
+    {
+      "file": "screens/macbook-1440-page-2.png",
+      "bytes": 380186,
+      "sha256": "3b20a4f8240abf7331bd6406221f2367bbf499eed8b202185797d423ee69e7a0"
+    },
+    {
+      "file": "screens/macbook-1440-page-3.png",
+      "bytes": 386470,
+      "sha256": "0279780e1db32c4ff24d2c392c58d252173c37cc0c4785cb691958aae61798c2"
+    },
+    {
+      "file": "screens/macbook-1440-page-4.png",
+      "bytes": 359826,
+      "sha256": "fdeadcb2739457a2665c7f7078197df8952832ecae42d19c8177864987cb2d61"
+    },
+    {
+      "file": "screens/macbook-1440-rhyme.png",
+      "bytes": 353519,
+      "sha256": "2be1571e8dfcf0244a54715c9e27e46c9d50f97416db3c55c9f76365a18aafc5"
+    },
+    {
+      "file": "screens/phone-390-page-1.png",
+      "bytes": 161686,
+      "sha256": "ca04177dd0dcc2ccaf7da89e8c8688df3caf24f4ad4ab94825f50409785e0a74"
+    },
+    {
+      "file": "screens/phone-390-page-2-return.png",
+      "bytes": 167213,
+      "sha256": "0221890bed861ddc452a12a00f2a5b45149c2aba9b2b1197615f5dd927f8d1bf"
+    },
+    {
+      "file": "screens/phone-390-page-2.png",
+      "bytes": 164166,
+      "sha256": "7aac2b1b31718892844656c945180770681a6efe4e3d67d23a1286a0080fb80d"
+    },
+    {
+      "file": "screens/phone-390-page-3.png",
+      "bytes": 174824,
+      "sha256": "0ba28e46d797974f58737a81ab90b4428a670a61427627569441cf869c0413df"
+    },
+    {
+      "file": "screens/phone-390-page-4.png",
+      "bytes": 163589,
+      "sha256": "c91aa95916d059455a0935ea42b3cb4c5697a24f7753e6335cefff09e73d5a01"
+    },
+    {
+      "file": "screens/phone-390-rhyme.png",
+      "bytes": 155021,
+      "sha256": "f0db51e86cc5b1128065539abcd931923df91d37c35f2a83944557cc8289a9cc"
+    },
+    {
+      "file": "screens/tablet-portrait-page-1.png",
+      "bytes": 288719,
+      "sha256": "db3ccaa7f1fc5864a4ca31aea34c8446928e6413ea3685261f564dd8553751f3"
+    },
+    {
+      "file": "screens/tablet-portrait-page-2.png",
+      "bytes": 302505,
+      "sha256": "37d6009c184c09270b797be3c98719056a5211cd3a2822a7dc3ddec248fc7894"
+    },
+    {
+      "file": "screens/tablet-portrait-page-3.png",
+      "bytes": 307520,
+      "sha256": "a5a69d025fbf1231d13586229e20572a04f7aa12b1f23eaa3da98973ad8a123f"
+    },
+    {
+      "file": "screens/tablet-portrait-page-4.png",
+      "bytes": 294533,
+      "sha256": "379cf4f920bdd0f20d590e2fde0f7b434f0d00e8c65969cb3619ae181d26458c"
+    },
+    {
+      "file": "screens/tablet-portrait-rhyme.png",
+      "bytes": 291955,
+      "sha256": "b5da3c3b0d58caff63f9f8d0c794533399f15f7121fabd77edd76484da206e29"
+    },
+    {
+      "file": "tablet-portrait-overview.png",
+      "bytes": 478143,
+      "sha256": "f4d925f908cdac3e58675232135f1be4f2b53950582a3f77f184a159fc9e3309"
+    }
+  ]
+}

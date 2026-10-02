@@ -21,7 +21,7 @@ await page.screenshot({ path: `${out}/body-candidates.png`, fullPage: true });
 await page.close();
 for (const [name, width, height] of [
   ["phone", 320, 740],
-  ["tv", 1920, 1080],
+  ["laptop-macbook", 1440, 900],
 ]) {
   const context = await browser.newContext({
     viewport: { width, height },

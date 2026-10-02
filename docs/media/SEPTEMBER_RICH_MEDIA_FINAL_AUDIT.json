@@ -1,0 +1,573 @@
+{
+  "generatedOn": "2026-10-01",
+  "status": "september-rich-media-complete",
+  "branch": "develop",
+  "rolloutBaseline": "cbc1cf3",
+  "reviewedDocumentation": "1c3372298eaa9e3463aa7a889762bb9cc662db2b",
+  "frozenImplementation": "8b5a8655222e299fea90e7582906c3723b3eca79",
+  "approvals": {
+    "total": 176,
+    "approved": 176,
+    "review": 0,
+    "distinctCurrentValidDigests": 176,
+    "stale": 0,
+    "unexpectedLapses": 0,
+    "unaffectedRecordsUnchanged": 173,
+    "restoration": [
+      {
+        "id": "m3-lang-07",
+        "currentDigest": "3b5e37d2703afcc6",
+        "previousApprovedDigest": "5be87e6ddd584cad"
+      },
+      {
+        "id": "m3-lang-16",
+        "currentDigest": "ab809e84341e5fd0",
+        "previousApprovedDigest": "72018977ad536da7"
+      },
+      {
+        "id": "m3-lang-20",
+        "currentDigest": "8a6ff0bc1dd386da",
+        "previousApprovedDigest": "c3ffca0ff1585a0f"
+      }
+    ]
+  },
+  "richMedia": {
+    "candidateCount": 20,
+    "integrated": 20,
+    "independentlyAccepted": 20,
+    "pending": 0,
+    "deferred": 0,
+    "registeredAssets": 51,
+    "sequences": 10,
+    "runtimeFiles": 78,
+    "webpFiles": 47,
+    "retainedSvgFiles": 31,
+    "runtimeBytes": 10791652,
+    "allMediaTracked": true,
+    "acceptedMediaPreserved": true
+  },
+  "canonicalTeachingUnchanged": true,
+  "previousReviewHistoryPreserved": true,
+  "supportedDevices": ["phone", "tablet", "laptop/MacBook"],
+  "temporaryRecoveryPackageRequired": false,
+  "reviewEvidence": "Permanent tracked historical packages remain frozen/pending as originally submitted; separate verdict artifacts record acceptance. Ignored masters and chat history are not recovery dependencies.",
+  "acceptedCandidates": [
+    {
+      "id": "corps-main",
+      "acceptedHistoryEntries": 8,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "corps-pied",
+      "acceptedHistoryEntries": 8,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "corps-tete",
+      "acceptedHistoryEntries": 10,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "corps-ventre",
+      "acceptedHistoryEntries": 8,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "animal-poule",
+      "acceptedHistoryEntries": 8,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "animal-poussin",
+      "acceptedHistoryEntries": 8,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "animal-chevre",
+      "acceptedHistoryEntries": 10,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "histoire-seau-lisa",
+      "acceptedHistoryEntries": 4,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "histoire-tika",
+      "acceptedHistoryEntries": 2,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "histoire-kumu",
+      "acceptedHistoryEntries": 3,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "histoire-nsimba",
+      "acceptedHistoryEntries": 10,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "histoire-mangue",
+      "acceptedHistoryEntries": 10,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "histoire-bibi",
+      "acceptedHistoryEntries": 2,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "histoire-marche",
+      "acceptedHistoryEntries": 3,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "histoire-pluie",
+      "acceptedHistoryEntries": 12,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "histoire-cailloux",
+      "acceptedHistoryEntries": 3,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "histoire-malo",
+      "acceptedHistoryEntries": 3,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "comptine-bonjour",
+      "acceptedHistoryEntries": 10,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "comptine-mains",
+      "acceptedHistoryEntries": 5,
+      "reviewState": "independently-reconfirmed"
+    },
+    {
+      "id": "comptine-cabri",
+      "acceptedHistoryEntries": 5,
+      "reviewState": "independently-reconfirmed"
+    }
+  ],
+  "packages": [
+    {
+      "candidate": "histoire-pluie",
+      "verdict": "accepted",
+      "reviewedCheckpoint": "45b468301af2a9dae41e182d619ee9f024d56379",
+      "manifestSha256": "1ff3bd59ee4a2d6a89a8a153e98d0f2314d6faaabc64ce0045b6a9e5d037ec2b",
+      "verifiedFiles": 30
+    },
+    {
+      "candidate": "histoire-cailloux",
+      "verdict": "accepted",
+      "reviewedCheckpoint": "6220f1e1e8f1476018759b514d86a946f78d937e",
+      "manifestSha256": "415bbf536f244ae90ef13a3ab3e17a4887d04ad9f33c69598e801c7258e7365c",
+      "verifiedFiles": 26
+    },
+    {
+      "candidate": "histoire-malo",
+      "verdict": "accepted",
+      "reviewedCheckpoint": "8b5a8655222e299fea90e7582906c3723b3eca79",
+      "manifestSha256": "f76f81e72adef7810695da6cb2b29d6fde0aa4dc981e9abd43fc0f1289141603",
+      "verifiedFiles": 26
+    }
+  ],
+  "runtimeFiles": [
+    {
+      "file": "public/media/animals/animal-chevre.webp",
+      "bytes": 109692,
+      "sha256": "9af0f57f755f83a20648cfcffd3f61d05c128a44bb6df50522f0c75c9821fab1"
+    },
+    {
+      "file": "public/media/animals/animal-poule.webp",
+      "bytes": 100128,
+      "sha256": "d3007f43b420295f98986733e47ba7104aef900e4573acfb5ff7ec3bbd6e716c"
+    },
+    {
+      "file": "public/media/animals/animal-poussin.webp",
+      "bytes": 64094,
+      "sha256": "7f1210316653dd49e3e4efb9c0df31869e3731a1f41a487d6a26de4253001eea"
+    },
+    {
+      "file": "public/media/illustrations/bonhomme-articule.svg",
+      "bytes": 1132,
+      "sha256": "2308800c0f13fc6c770cdfc2f19bd0ee0102da28398182001a8533882a1351ce"
+    },
+    {
+      "file": "public/media/illustrations/comptine-bonjour.webp",
+      "bytes": 102856,
+      "sha256": "2d1ad0c5d999fd8f3c3ecf446ed5ddad79bde90dc7044449d1267718a190c621"
+    },
+    {
+      "file": "public/media/illustrations/comptine-cabri.webp",
+      "bytes": 94518,
+      "sha256": "eca0deff35ee29631052202b90e5fc68f8ff75eb1790e85c91988dc5203c26b8"
+    },
+    {
+      "file": "public/media/illustrations/comptine-compter.svg",
+      "bytes": 1870,
+      "sha256": "3e5e86f06d3c23e479c45f54ecc54acebf580da5e3b4dffac7fdeb3f3cb38aa0"
+    },
+    {
+      "file": "public/media/illustrations/comptine-formes.svg",
+      "bytes": 1083,
+      "sha256": "f0aeb22e2bfaf2c3042d2457c378e2869fa73b27bbb834da779d685823664618"
+    },
+    {
+      "file": "public/media/illustrations/comptine-mains.webp",
+      "bytes": 62312,
+      "sha256": "36a5f61241200ce5fae6b6be0fd1a1d58f5ba092a8e8cc99c54165bff526b5e2"
+    },
+    {
+      "file": "public/media/illustrations/comptine-semaine.svg",
+      "bytes": 1329,
+      "sha256": "f47ac915ed8f6f5c56cc26231671b0ae72052848fcd318a10bdf2352a6a74ccd"
+    },
+    {
+      "file": "public/media/illustrations/forme-maison-composee.svg",
+      "bytes": 611,
+      "sha256": "5183c91aca97b925a3618a8db130fed3c6f465b7fde1c9828392ed15e82ca02a"
+    },
+    {
+      "file": "public/media/illustrations/histoire-bibi-01.webp",
+      "bytes": 363462,
+      "sha256": "1e15939369feba99abb39e6b32d2d5b745638601d7e578935479f468066e48e4"
+    },
+    {
+      "file": "public/media/illustrations/histoire-bibi-02.webp",
+      "bytes": 351624,
+      "sha256": "7c6c8dadd01b16a11cb38bcc3df17f633581ec8ed6f1f14669f94449e1853112"
+    },
+    {
+      "file": "public/media/illustrations/histoire-bibi-03.webp",
+      "bytes": 357738,
+      "sha256": "b8f2d6bbbf0e3c54a8c06fc23147c233405afac65a0aa89465f8d68f268951ee"
+    },
+    {
+      "file": "public/media/illustrations/histoire-bibi-04.webp",
+      "bytes": 416538,
+      "sha256": "7d39bca6f7dbd7181a1e492511ba4c632a0472bbbbc0916cb0710129a374db0e"
+    },
+    {
+      "file": "public/media/illustrations/histoire-cailloux-01.webp",
+      "bytes": 261188,
+      "sha256": "71061965c6d18961065baf6b1fba1ec11f21991552f3d0d720fdd73be12b2905"
+    },
+    {
+      "file": "public/media/illustrations/histoire-cailloux-02.webp",
+      "bytes": 246446,
+      "sha256": "6a84c8e998deb63e1d1b921fe369e1a596d0e8dba678e60c56461a0a6aff2621"
+    },
+    {
+      "file": "public/media/illustrations/histoire-cailloux-03.webp",
+      "bytes": 226516,
+      "sha256": "afa77e4ef630e065c49859a321f51d52e74c74809132dfa75b14df169e73ee45"
+    },
+    {
+      "file": "public/media/illustrations/histoire-cailloux-04.webp",
+      "bytes": 236838,
+      "sha256": "d47b00e2ced5dd7bf13023bc9afb024ef415cfdf0c35361aec30ff866bcdb238"
+    },
+    {
+      "file": "public/media/illustrations/histoire-kumu-01.webp",
+      "bytes": 228070,
+      "sha256": "027ee3b6119faf82c9b58d974846b73e5531b71d5309516b0d8446715f9542be"
+    },
+    {
+      "file": "public/media/illustrations/histoire-kumu-02.webp",
+      "bytes": 226634,
+      "sha256": "46c72911eec6b4765ccfa37e66ced474e13db28cd5c8144ec20d9517755723b9"
+    },
+    {
+      "file": "public/media/illustrations/histoire-kumu-03.webp",
+      "bytes": 220702,
+      "sha256": "3d55d4687ed29f49b0fb5f6934edfb3e918cbba295464f1bfb15ddeb99e7dd95"
+    },
+    {
+      "file": "public/media/illustrations/histoire-kumu-04.webp",
+      "bytes": 265564,
+      "sha256": "3c3a60bdd2fc1913b8394fb8643fa98a545a51ff91fb11d25abf56282b57b13a"
+    },
+    {
+      "file": "public/media/illustrations/histoire-malo-01.webp",
+      "bytes": 278596,
+      "sha256": "d63aad056d6b5e81693c5806b136909f921d48fd47fa4b80e6647efe3d8cb27d"
+    },
+    {
+      "file": "public/media/illustrations/histoire-malo-02.webp",
+      "bytes": 277702,
+      "sha256": "e1b22323bf7587364bfc739f647d1340c9df322863df25c6da35c92fdf63900a"
+    },
+    {
+      "file": "public/media/illustrations/histoire-malo-03.webp",
+      "bytes": 273706,
+      "sha256": "f660ef33ab0a7a914beffa67e5b8de11e46021fffba1533b8b29af048adf3e20"
+    },
+    {
+      "file": "public/media/illustrations/histoire-malo-04.webp",
+      "bytes": 243678,
+      "sha256": "e863952424ae94b22f474b1a376c1493093920acc89401f35e2368d2a0f3d6bc"
+    },
+    {
+      "file": "public/media/illustrations/histoire-mangue-01.webp",
+      "bytes": 221788,
+      "sha256": "d34f5dbe3a621076f7645febb4f470a70ea85b802aa22a339c1d60a1bc43ea20"
+    },
+    {
+      "file": "public/media/illustrations/histoire-mangue-02.webp",
+      "bytes": 201520,
+      "sha256": "57585c800134f3e992ca3fa446316baf8274e699b111283c9e992f9495e4e272"
+    },
+    {
+      "file": "public/media/illustrations/histoire-mangue-03.webp",
+      "bytes": 188624,
+      "sha256": "bbc2f54f554ab59614cf55ab6513d103b54f3d6c44b632391c1f3c79472a8c67"
+    },
+    {
+      "file": "public/media/illustrations/histoire-marche-01.webp",
+      "bytes": 347386,
+      "sha256": "4188ac69de8d39f7d742ea5f257cc888067217c28f53816d8afbccd446dbcb75"
+    },
+    {
+      "file": "public/media/illustrations/histoire-marche-02.webp",
+      "bytes": 308602,
+      "sha256": "0a674df545e61cb3868bf8be9fe54c1d220dad13dae7e33ada2a67f337c8bc39"
+    },
+    {
+      "file": "public/media/illustrations/histoire-marche-03.webp",
+      "bytes": 345806,
+      "sha256": "c61a2d3efeb08b7af036d979e82ed3f1f324692e3c20f43f1c9df8b7a72bf9db"
+    },
+    {
+      "file": "public/media/illustrations/histoire-marche-04.webp",
+      "bytes": 326694,
+      "sha256": "5cb5137fb4c0a12641f185f5bd6a3f2dcedee3db556b7ca7c4615ceb423e2f00"
+    },
+    {
+      "file": "public/media/illustrations/histoire-nsimba-00.webp",
+      "bytes": 265206,
+      "sha256": "9b6176698ba526e07710e1764881383293419b18f2a3f7cad83cdf4fb70d4a55"
+    },
+    {
+      "file": "public/media/illustrations/histoire-nsimba-01.webp",
+      "bytes": 254756,
+      "sha256": "f50ceb4a3ac04514dcfaf8e1b2a6a1788b5f1d4077653d675a51a69aa217d425"
+    },
+    {
+      "file": "public/media/illustrations/histoire-nsimba-02.webp",
+      "bytes": 134398,
+      "sha256": "6aa2fd6c617d249baec33175dae8d3170e687c25d836c72a7bd957a8a4e549b0"
+    },
+    {
+      "file": "public/media/illustrations/histoire-nsimba-03.webp",
+      "bytes": 174514,
+      "sha256": "ab1550194330750c417e972e2b4c969cf35147baa6cc9604a6a201c7cf301a5e"
+    },
+    {
+      "file": "public/media/illustrations/histoire-nsimba-04.webp",
+      "bytes": 185784,
+      "sha256": "c4d4619feaaffe8e26f3baeef16ddd04c523c8c00aebb955cc552ab873650c49"
+    },
+    {
+      "file": "public/media/illustrations/histoire-pluie-01.webp",
+      "bytes": 290802,
+      "sha256": "d381c358708fb376e2596dd14056f7fa6a14a4abe15a9977a67e47e034740edf"
+    },
+    {
+      "file": "public/media/illustrations/histoire-pluie-02.webp",
+      "bytes": 322752,
+      "sha256": "27cd0ce7754ec0f3d45c278f5fcdf6ab1d124f6b921f2ffbb26d9951d3bdd703"
+    },
+    {
+      "file": "public/media/illustrations/histoire-pluie-03.webp",
+      "bytes": 283004,
+      "sha256": "d10cc23fec5b294331e6f3b1bb7967989ba2447d39193202fc57a99a27c6508f"
+    },
+    {
+      "file": "public/media/illustrations/histoire-pluie-04.webp",
+      "bytes": 257786,
+      "sha256": "e430c23a7c740cb0796ee18204ae78554f7e33e860319a8967ce5742a0ae5b3c"
+    },
+    {
+      "file": "public/media/illustrations/histoire-seau-lisa-01.webp",
+      "bytes": 238978,
+      "sha256": "d57e220eab71297785635f5f8883e4cbd3ec67b7b58631566114e10ac31b1cd4"
+    },
+    {
+      "file": "public/media/illustrations/histoire-seau-lisa-02.webp",
+      "bytes": 298688,
+      "sha256": "42b9840e6bde3fe7010e158037b85de701c8cf4998d2a4f2168d615f639f5d1c"
+    },
+    {
+      "file": "public/media/illustrations/histoire-seau-lisa-03.webp",
+      "bytes": 296364,
+      "sha256": "effee2420f3c0202bcf3837fcb253321ffca7c3d2abe6e99f6a258bfd2dfd533"
+    },
+    {
+      "file": "public/media/illustrations/histoire-tika-01.webp",
+      "bytes": 259586,
+      "sha256": "b5df0ae7a10553a2c6bb3a8aa3dfea46da3006f185d843be0865049799572e9e"
+    },
+    {
+      "file": "public/media/illustrations/histoire-tika-02.webp",
+      "bytes": 205194,
+      "sha256": "c371fa360e91b67dfed28d0f2f16e5a8877bd71b218f658cecccfbb8bb425a54"
+    },
+    {
+      "file": "public/media/illustrations/plante-parties.svg",
+      "bytes": 1197,
+      "sha256": "a42b3838f45e10f4102964ee5733a71493be6401eedc63ad2f767a853757e5af"
+    },
+    {
+      "file": "public/media/objects/corps-main.webp",
+      "bytes": 39154,
+      "sha256": "b4322808c67f02dae6513d5be4af3370131cef5d88c134655346f71f528c9865"
+    },
+    {
+      "file": "public/media/objects/corps-pied.webp",
+      "bytes": 38912,
+      "sha256": "2d2e0162e6c31797194a8dcd0a9246ebc541c559e5749eb26d371ff6c9ba01d5"
+    },
+    {
+      "file": "public/media/objects/corps-tete.webp",
+      "bytes": 173750,
+      "sha256": "ea479dea64fd092a84c9e7443791b939d36a821a27c9fd72de3b74770412e18f"
+    },
+    {
+      "file": "public/media/objects/corps-ventre.webp",
+      "bytes": 98932,
+      "sha256": "17ca288c56571be307dfa51555f2ebb8398ec3727278d538018fa444f4ed810a"
+    },
+    {
+      "file": "public/media/objects/objet-banane.svg",
+      "bytes": 614,
+      "sha256": "611a92eea6ab28d5b145a798226696ecc735a2d276f85a18ea533d5d7d6e82ab"
+    },
+    {
+      "file": "public/media/objects/objet-cahier.svg",
+      "bytes": 805,
+      "sha256": "66778d5feb533391c02eb640b39b88ce462b7a1e5ec5cb88f58c1e34d68deecd"
+    },
+    {
+      "file": "public/media/objects/objet-caillou.svg",
+      "bytes": 558,
+      "sha256": "2fdff74f58b431b31c5d0afbe660e80121c2af196cbfe28ca7ca68ec940632f9"
+    },
+    {
+      "file": "public/media/objects/objet-chaise.svg",
+      "bytes": 1329,
+      "sha256": "259fda3c2a6024bd9a2e5082e65c232566ee67ea0b643f2f038df613e1c368fc"
+    },
+    {
+      "file": "public/media/objects/objet-crayon.svg",
+      "bytes": 903,
+      "sha256": "4e7e6fcde76ccaa85ce468b7d0156c0a72cfcec00d1595df9b83d4da2739d782"
+    },
+    {
+      "file": "public/media/objects/objet-cuillere.svg",
+      "bytes": 599,
+      "sha256": "1bd21f627e19c7afabcc9df7905373a84020f1419645f1ea84aa007059d77672"
+    },
+    {
+      "file": "public/media/objects/objet-fenetre.svg",
+      "bytes": 1172,
+      "sha256": "ebab789795a79bfb2c6b7c8a1b80be8cd616c56928fdb6336781dca2d67de823"
+    },
+    {
+      "file": "public/media/objects/objet-lit.svg",
+      "bytes": 1357,
+      "sha256": "be1fa2a2b1dd7341e4c7d181d726a9126c6294db281d5275c8fe6799f0fc1bce"
+    },
+    {
+      "file": "public/media/objects/objet-marmite.svg",
+      "bytes": 1124,
+      "sha256": "8a74ce5826a7815b1198e95241bda1cb69ac628b528f9ea1f54b3ef5eac63ffd"
+    },
+    {
+      "file": "public/media/objects/objet-monnaie.svg",
+      "bytes": 1173,
+      "sha256": "fed6b6600180e86f583121cd1ec85647959e4787c08e670d074a30c3f12fb019"
+    },
+    {
+      "file": "public/media/objects/objet-oignon.svg",
+      "bytes": 756,
+      "sha256": "f0b5cc0a9bec9d829cc136aac563b5255f0a781d24cade4ff2fcece49e07ccd8"
+    },
+    {
+      "file": "public/media/objects/objet-panier.svg",
+      "bytes": 769,
+      "sha256": "370951e6875d48b92f1f1941a5a11ff4378dbb5cf1ff0661559f80673c38bafc"
+    },
+    {
+      "file": "public/media/objects/objet-porte.svg",
+      "bytes": 787,
+      "sha256": "74f41ecf12310e1ccde9ca788451cbf2d591631ceb2889777d66ef98f772eb08"
+    },
+    {
+      "file": "public/media/objects/objet-sac.svg",
+      "bytes": 872,
+      "sha256": "1d9ecb68ad9677eefe572d009df7c5b1cbe17e0e01d0655ffb9f5e3ad1c77a8d"
+    },
+    {
+      "file": "public/media/objects/objet-seau.svg",
+      "bytes": 655,
+      "sha256": "696835fb387b9779e4fc88b55590243f05d2add1ce0ef3a4742ef11f88392bdf"
+    },
+    {
+      "file": "public/media/objects/objet-table.svg",
+      "bytes": 896,
+      "sha256": "e84b16cb1220a2a537c30731cf7b5d46b149e2fdc676ff7c894f9ea27e788183"
+    },
+    {
+      "file": "public/media/objects/objet-tomate.svg",
+      "bytes": 684,
+      "sha256": "1640e1af16df12c4ace21c8a28d00a6eecd1cddb51569cc6359f92a5dd16064b"
+    },
+    {
+      "file": "public/media/shapes/forme-carre-penche.svg",
+      "bytes": 252,
+      "sha256": "12b3d9268bda66c8f8ad0b1177ef7fc66e67a8456aba6c2493f9a32751504d61"
+    },
+    {
+      "file": "public/media/shapes/forme-carre.svg",
+      "bytes": 223,
+      "sha256": "b43caa434c57bf26e9fd57a361b3d52343ef911a3c9c627f2d894eca6caf1ec8"
+    },
+    {
+      "file": "public/media/shapes/forme-disque-petit.svg",
+      "bytes": 204,
+      "sha256": "fc8aed028ba040a9778e64dd63d8b338a8366b15a68fdec30780dc5dbca63dfb"
+    },
+    {
+      "file": "public/media/shapes/forme-disque.svg",
+      "bytes": 204,
+      "sha256": "979ad403ed9c1984aae9572befda615716b695f6f58f610de9e1aa20d609bc1e"
+    },
+    {
+      "file": "public/media/shapes/forme-rectangle-debout.svg",
+      "bytes": 222,
+      "sha256": "f9c78eeb8e0e717093688b8052fcf582ee3eca56974188ea3f3b14262dbc3b34"
+    },
+    {
+      "file": "public/media/shapes/forme-rectangle.svg",
+      "bytes": 222,
+      "sha256": "002764adc95d58be5e69452a9268e6bb5828ef43b1692a3ba6361f50e310b5bf"
+    },
+    {
+      "file": "public/media/shapes/forme-triangle-quelconque.svg",
+      "bytes": 233,
+      "sha256": "74a75a142e07a72b0030c91f80fa7786ee3001b5f09aec9afde544b7462f82c8"
+    },
+    {
+      "file": "public/media/shapes/forme-triangle.svg",
+      "bytes": 235,
+      "sha256": "80acc883518a11a5ba521929c2dad307e40a4115bb55305f3ac6bb87fa8db459"
+    }
+  ],
+  "deployment": "Feature branch only; no PR, merge, staging/production deployment or database operation performed by finalization.",
+  "nextAction": "STOP. Owner authorization required for PR/develop/staging and family testing; no October, 2eme maternelle, infrastructure or unrelated work."
+}
