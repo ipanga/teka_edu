@@ -6,8 +6,8 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-10-02
-Branch:     develop; final staging functional validation healthy
-Commit:     c325c65; origin/develop verified; production unchanged
+Branch:     main production promoted from validated develop; docs branch records outcome
+Commit:     ac3ebf9; origin/main verified; production deployment healthy
 Updated by: Codex
 ```
 
@@ -21,6 +21,35 @@ that records past TV checks remains unchanged as an accurate record and creates 
 obligation.
 
 ## Current September continuation — 2026-10-02
+
+Production promotion completed through the protected workflow. PR #92 (`develop` -> `main`) was
+opened only after `develop` was reverified at the authorized SHA
+`57deea9d807605b81af0131c1e11109554261c93`, the worktree was clean, production deployment was
+enabled, the required production secret names were present, and the public production URL returned
+HTTP 200. PR #92 CI passed five required checks: Promotion source, Format/lint/typecheck/unit/content,
+Build/client-bundle/E2E smoke, Supabase migrations/database tests, and Docker images. It was merged
+with a merge commit at `ac3ebf9b9bd00662def3e7ec206aff1954f4694d`.
+
+Production workflow run `37055002824` for `ac3ebf9b9bd00662def3e7ec206aff1954f4694d` completed
+successfully. The production job verified required secrets by name, reached Vercel project
+`teka-edu`, verified Supabase project `teka-edu-prod` was `ACTIVE_HEALTHY` and not DEV, dry-ran
+exactly two pending migrations, then applied them to Supabase PROD:
+
+- `20261001192741_media_asset_webp_paths.sql`
+- `20261001192742_final_september_rich_media_reference.sql`
+
+The workflow deployed Vercel production deployment `dpl_A43iQuRrzzJLRm2PdCf9CWmdedz5` at
+`https://teka-dzw8t0mwf-teka10.vercel.app`, verified target `production`, and aliased
+`https://teka-edu.vercel.app`. Exact-deployment production smoke passed 71 checks and skipped nine
+production-public checks. The separate public canonical smoke command
+`PRODUCTION_PUBLIC_URL=https://teka-edu.vercel.app npm run test:e2e:public` passed 9/9 checks
+against the public alias, including production-domain, no-login front door, both written classes,
+1ere and 3eme September sessions, promised pictures, no visible development environment,
+production health/database reporting, and phone no-sideways-scroll.
+
+Production data impact: the applied migrations changed only canonical reference/schema data for the
+September release. No auth, user, child, or progress table mutation was performed. No rollback or
+forward fix was needed.
 
 PR #88 from `codex/integrate-september-rich-media` into `develop` was squash-merged on
 2026-10-01 after live verification that the head was unchanged at

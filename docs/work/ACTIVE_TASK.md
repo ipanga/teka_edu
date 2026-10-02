@@ -2,13 +2,14 @@
 
 ## Task
 
-Integrate completed September rich-media work into develop
+Integrate completed September rich-media work through production
 
 ## Objective
 
 Resolve the duplicate-history conflicts between PR #86 on `develop` and the completed
 `codex/september-rich-media-pilot` branch, merge the validated integration PR into `develop`,
-and perform controlled staging validation.
+perform controlled staging validation, then promote the validated September release to production
+after explicit owner authorization.
 
 ## Status
 
@@ -83,16 +84,29 @@ staging browser suite were `m3-lang-01`, `m3-lang-02`, `m3-lang-03`, `m3-lang-05
 Smart TV were not tested or treated as supported. No functional defects were found and no accepted
 educational content, approval history or media bytes were changed.
 
+Production promotion was explicitly authorized after final staging validation. PR #92
+(`develop` -> `main`) was opened from authorized `develop` SHA
+`57deea9d807605b81af0131c1e11109554261c93`, passed all five required PR checks, and merged with a
+merge commit as `ac3ebf9b9bd00662def3e7ec206aff1954f4694d` at 2026-10-02T19:34:29Z. Production
+workflow run `37055002824` completed successfully for that SHA after the GitHub `production`
+environment gate was approved. The workflow verified Vercel project `teka-edu` and Supabase project
+`teka-edu-prod` (`ACTIVE_HEALTHY`), dry-ran then applied exactly
+`20261001192741_media_asset_webp_paths.sql` and
+`20261001192742_final_september_rich_media_reference.sql` to Supabase PROD, deployed
+`dpl_A43iQuRrzzJLRm2PdCf9CWmdedz5` to `https://teka-dzw8t0mwf-teka10.vercel.app`, verified target
+`production`, and aliased `https://teka-edu.vercel.app`. Exact-deployment smoke passed 71 checks
+and skipped nine production-public checks. Public alias smoke passed 9/9 with
+`PRODUCTION_PUBLIC_URL=https://teka-edu.vercel.app npm run test:e2e:public`.
+
 ## Scope
 
 Conflict resolution, integration validation, final reference-data migration, comparison with both
-parents, integration branch push, PR creation, merge into `develop`, and controlled staging
-validation.
+parents, integration branch push, PR creation, merge into `develop`, controlled staging validation,
+and protected production promotion.
 
 ## Out of Scope
 
-Production deployment, production database mutation, `develop` to `main`, October, 2eme maternelle,
-offline implementation, additional curriculum and unrelated features.
+October, 2eme maternelle, offline implementation, additional curriculum and unrelated features.
 
 ## Product Decisions
 
@@ -116,34 +130,40 @@ Phone/tablet/laptop-MacBook only; TV/Smart TV unsupported (ADR-050).
 - Merged PR #90 with durable healthy-staging documentation.
 - Deployed the final staging preview and verified Vercel did not create a production deployment.
 - Completed final pre-production functional validation of staging.
+- Promoted the validated September release to production through PR #92 and workflow run
+  `37055002824`.
+- Applied the two final September migrations to Supabase PROD through the established production
+  workflow.
+- Verified the production deployment and public canonical alias.
 
 ## In Progress
 
-None. The authorized integration, smoke fix, PR merge and staging validation are complete. No
-production operation has been performed.
+None. The authorized integration, smoke fix, PR merge, staging validation and production promotion
+are complete.
 
 ## Remaining
 
-Owner must decide whether to authorize production promotion. Do not apply migrations to hosted PROD.
+None for the September production promotion. Future curriculum expansion still requires fresh owner
+authorization.
 
 ## Validation State
 
 Results below apply to the controlled integration branch.
 
-| Check              | Result | At                                                         |
-| ------------------ | ------ | ---------------------------------------------------------- |
-| format             | PASS   | full repository Prettier check                             |
-| lint               | PASS   | final acceptance and QA generator                          |
-| typecheck          | PASS   | final acceptance and QA generator                          |
-| unit tests         | PASS   | 439/439; initial documentation syntax failure fixed        |
-| content validation | PASS   | 31 files                                                   |
-| database tests     | PASS   | local db reset + pgTAP 152/152; CI Supabase job green      |
-| build              | PASS   | production Next build; no deployment                       |
-| E2E                | PASS   | final staging smoke 71 pass/0 fail/9 skipped at c325c65    |
-| Docker             | PASS   | CI portable + Vercel images                                |
-| secret scans       | PASS   | 14 client files; three fake server sentinels absent        |
-| independent review | PASS   | separate session accepted; owner relayed, no correction    |
-| final media audit  | PASS   | 176 approvals; 20 accepted; 78 tracked files; unchanged173 |
+| Check              | Result | At                                                          |
+| ------------------ | ------ | ----------------------------------------------------------- |
+| format             | PASS   | full repository Prettier check                              |
+| lint               | PASS   | final acceptance and QA generator                           |
+| typecheck          | PASS   | final acceptance and QA generator                           |
+| unit tests         | PASS   | 439/439; initial documentation syntax failure fixed         |
+| content validation | PASS   | 31 files                                                    |
+| database tests     | PASS   | local db reset + pgTAP 152/152; CI Supabase job green       |
+| build              | PASS   | production Next build and Vercel production deploy          |
+| E2E                | PASS   | production smoke 71 pass/0 fail/9 skipped; public smoke 9/9 |
+| Docker             | PASS   | CI portable + Vercel images                                 |
+| secret scans       | PASS   | 14 client files; three fake server sentinels absent         |
+| independent review | PASS   | separate session accepted; owner relayed, no correction     |
+| final media audit  | PASS   | 176 approvals; 20 accepted; 78 tracked files; unchanged173  |
 
 ## Database State
 
@@ -157,8 +177,10 @@ present from PR #86 and remains unchanged. The final PR #88 forward migrations a
 
 Local `npm run db:reset` replayed all migrations from scratch and local `npm run db:test` passed
 152 pgTAP assertions. Supabase DEV migration apply finished successfully in run `36926521934`; runs
-`37046853410` and `37048748582` confirmed the remote DEV database was already up to date.
-Production database unchanged.
+`37046853410` and `37048748582` confirmed the remote DEV database was already up to date. Supabase
+PROD applied both final September migrations through production workflow run `37055002824`. No auth,
+user, child or progress table mutation was performed; the migration review and schema evidence
+classify the changes as canonical reference/schema data only.
 
 ## Deployment State
 
@@ -172,12 +194,22 @@ Staging deployment exists and is not production:
 - Final status: healthy; deployed smoke passed 71 checks, skipped nine production-only checks, and
   failed zero checks.
 
-Production unchanged.
+Production is healthy:
+
+- Run: `37055002824`.
+- Deployment: `dpl_A43iQuRrzzJLRm2PdCf9CWmdedz5`.
+- Production URL: `https://teka-dzw8t0mwf-teka10.vercel.app`.
+- Public alias: `https://teka-edu.vercel.app`.
+- Git SHA: `ac3ebf9b9bd00662def3e7ec206aff1954f4694d`.
+- Target/state: `production` / healthy workflow result.
+- Smoke: 71 passed, zero failed, nine public-production checks skipped on exact deployment; 9/9
+  public canonical checks passed on the alias.
 
 ## Git State
 
-`develop` is at `c325c65e765984e5f8223b08e2ee00e99b4c6ecc` on `origin/develop`.
-The accepted feature branch history was not rewritten.
+`origin/main` is at production merge commit `ac3ebf9b9bd00662def3e7ec206aff1954f4694d`.
+`origin/develop` remains at validated release commit `57deea9d807605b81af0131c1e11109554261c93`
+before this documentation follow-up. The accepted feature branch history was not rewritten.
 
 ## Blockers
 
@@ -185,13 +217,14 @@ None.
 
 ## User Decisions Needed
 
-None for this task. Owner decision required before any production promotion.
+None for this task.
 
 ## Exact Resume Point
 
-Start from `develop` at `c325c65e765984e5f8223b08e2ee00e99b4c6ecc`. Staging is healthy at
-`https://teka-6g69qd3wb-teka10.vercel.app` / `teka-edu-staging.vercel.app`; production remains
-unchanged. Stop unless the owner authorizes the next release step.
+Start from `main` at `ac3ebf9b9bd00662def3e7ec206aff1954f4694d` for production evidence, or from
+the docs branch `codex/record-september-production-promotion` for this documentation follow-up.
+Production is healthy at `https://teka-edu.vercel.app`. Stop unless the owner authorizes a new
+post-September task.
 
 ## Resume Verification
 
