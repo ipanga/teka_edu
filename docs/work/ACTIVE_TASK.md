@@ -2,34 +2,44 @@
 
 ## Task
 
-Integrate completed September rich-media work through production
+Plan October 2026 — 3ème maternelle
 
 ## Objective
 
-Resolve the duplicate-history conflicts between PR #86 on `develop` and the completed
-`codex/september-rich-media-pilot` branch, merge the validated integration PR into `develop`,
-perform controlled staging validation, then promote the validated September release to production
-after explicit owner authorization.
+Close the September production milestone at the planning level and establish the next
+owner-authorized implementation plan for October 2026, 3ème maternelle, from the actual repository
+state. Do not implement October lessons, generate October rich media, create migrations, merge or
+deploy until the owner authorizes a follow-up implementation task.
 
 ## Status
 
-`completed`
+`planning-complete`
 
 ## Branch
 
-`develop`
+`codex/record-september-production-promotion`
 
 ## Base Branch
 
-Base branch `origin/develop` at `c325c65e765984e5f8223b08e2ee00e99b4c6ecc`.
-Accepted September reference branch `origin/codex/september-rich-media-pilot` at
-`b4ca67cc8449ba4b5dae0ad7fd057591de2f833e`.
+Authoritative implementation base for future October work: `origin/develop` at `6b8ba9e`.
+Production remains `origin/main` at `ac3ebf9b9bd00662def3e7ec206aff1954f4694d`.
 
 ## Started
 
-2026-10-01
+2026-10-02
 
 ## Last Checkpoint
+
+October planning is captured in `docs/work/OCTOBER_3EME_PLAN.md`. Key result: October 2026 covers
+instructional days 23-44, exactly 22 teaching days and 88 expected lessons for 3ème maternelle.
+The current architecture supports October with canonical content and later generated reference-data
+migration; no schema change is currently indicated.
+
+Stop boundary remains active: do not generate the October lesson set, create rich illustrations,
+mutate September canonical content/media/approvals, create database migrations, deploy, merge,
+start 2ème maternelle, offline support or recorded audio without owner authorization.
+
+## Previous September Production Checkpoint
 
 PR #88 was squash-merged into `develop` after live reverification that the PR head was unchanged at
 `de045acd068c271730986b6e2c74cce3f0f70671`, the PR was clean/mergeable, and required CI was green.

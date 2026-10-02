@@ -1,8 +1,25 @@
 # Codex continuation
 
-Current authorization: owner-controlled September integration and staging validation. Codex is the
-primary implementation, QA and authoring-time ImageGen environment. Claude Code is unavailable and
-is no longer a dependency. `CODEX_TO_CLAUDE_CODE_HANDOFF.md` is historical; preserve its evidence.
+Current authorization: planning-only October 2026, 3ème maternelle. Codex is the primary
+implementation, QA and authoring-time ImageGen environment. Claude Code is unavailable and is no
+longer a dependency. `CODEX_TO_CLAUDE_CODE_HANDOFF.md` is historical; preserve its evidence.
+
+## October planning baseline — 2026-10-02
+
+Read `docs/work/OCTOBER_3EME_PLAN.md` before implementing October work. The authoritative future
+base is `origin/develop` at `6b8ba9e` after PR #93. Production remains healthy on `origin/main` at
+`ac3ebf9b9bd00662def3e7ec206aff1954f4694d`; do not redeploy production merely for documentation.
+
+October 2026 for 3ème maternelle covers instructional days 23-44: 22 teaching days, no configured
+October public holidays, no observed holidays and no school vacation. Expected October content is
+88 lessons: 22 language, 22 mathematics, 22 physical activity, seven arts, seven world and eight
+time-space lessons. The existing schema supports this; no October schema migration is currently
+indicated. Implementation should start from a dedicated branch such as `codex/october-maternelle-3`
+only after owner authorization.
+
+Stop boundary: do not generate the full October lesson set, create October rich media, modify
+September canonical content/media/approval history, create migrations, merge, deploy, start 2ème
+maternelle, offline support or recorded audio without explicit owner authorization.
 
 ## Verified recovery baseline
 
