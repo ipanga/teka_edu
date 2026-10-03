@@ -1,3 +1,4 @@
+import { expectHonestOfferedSession } from "./helpers/offered-session";
 import { expect, test } from "@playwright/test";
 
 // The parent-led session (ADR-039): a parent opens Teka Edu after school and runs the day's
@@ -7,7 +8,7 @@ import { expect, test } from "@playwright/test";
 test.describe("parent session", () => {
   test("today's page says what to do and how long it takes", async ({ page }) => {
     await page.goto("/maternelle/3");
-    await expect(page.getByRole("heading", { name: "Aujourd’hui" })).toBeVisible();
+    await expectHonestOfferedSession(page);
     // Either today's lesson or, outside school days, the most recent session.
     await expect(page.getByRole("link", { name: /Commencer la leçon/ })).toBeVisible();
     await expect(page.getByText(/3ème maternelle/)).toBeVisible();

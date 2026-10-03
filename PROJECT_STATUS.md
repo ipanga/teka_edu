@@ -5,11 +5,29 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-10-02
-Branch:     main production promoted from validated develop; docs branch records outcome
-Commit:     ac3ebf9; origin/main verified; production deployment healthy
+Date:       2026-10-03
+Branch:     codex/parent-child-ux-p1; October expansion frozen
+Commit:     UX base 6b8ba9e; implementation 0a17729; PR #94 open
 Updated by: Codex
 ```
+
+## Mandatory P1 UX gate — 2026-10-03
+
+The accepted October Batch 1 is frozen on `codex/october-maternelle-3` at
+`2170413173b4a7aa2e6e8b2245af0fcf4c52b0bc`; corrected implementation
+`461e946e3ef4d7a63909bd1e720d5876dd568bf4`. The owner relayed fresh independent
+`accepted` reconfirmation. This records that verdict without changing canonical approval state.
+
+Separate branch `codex/parent-child-ux-p1` started from fetched `origin/develop`
+`6b8ba9e87802d96c2f193fe73d3c9897e084ba9c`. It fixes the five demonstrated P1 defects:
+activity state isolation, year/class/day storage, truthful offered dates, handoff/pause continuity,
+and immediate instruction scroll/focus. All 467 unit tests and 79 local browser tests passed;
+nine production-only checks were intentionally skipped. All eight exact supported sizes passed.
+375 protected files are byte-identical to the base. PR [#94](https://github.com/ipanga/teka_edu/pull/94) is open; required CI/integration are pending.
+
+See `docs/work/PARENT_CHILD_UX_P1.md` and `docs/work/ACTIVE_TASK.md` for exact evidence and resume
+state. October Day 30 and Weeks 3–5 remain unauthorized until this gate and post-integration
+integrity verification complete. No DB, canonical approval, content/media, or production changes.
 
 ## Supported devices — current policy
 
