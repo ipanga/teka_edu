@@ -7,9 +7,27 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-10-03
 Branch:     codex/october-maternelle-3; UX-corrected develop reconciliation
-Commit:     reconciliation 61fa079; develop 603efdc; accepted 2170413 preserved
+Commit:     authoring base 1ada5f2; develop 603efdc; accepted 2170413 preserved
 Updated by: Codex
 ```
+
+## October Weeks 3–5 authoring — 2026-10-03
+
+Owner chose canonical rotation for days 30–44 from verified `1ada5f2`: 60 lessons, 15 each
+LANG/MATH/PHYS, 5 ART, 4 WORLD, 6 TIME-SPACE. All are review/null; Day 30 is complete. No rhythm
+override. Frozen Batch 1 contributes 2/2/3 rotating lessons, making actual October totals 7/6/9,
+not the prompt's 7/7/8. Preserve the authoritative rotation and accepted Batch 1.
+
+All 204 pre-existing lesson objects/digests and 395 protected files remain unchanged; all five P1 runtime
+fixes are preserved. Only the P1 day-30 availability test fixture changes; every other date assertion
+is frozen. Weeks 8–10 are generated; all 15 packages match regeneration. Current checks pass:
+491 unit tests, lint/typecheck, 31-file validation, 56/56 due-objective coverage, 59/59 required-media
+coverage, zero lapses, Webpack build, 28-file client scan and 87 local browser tests (nine production-only
+skips). All eight supported sizes and P1 journeys passed; representative screenshots are retained.
+See `docs/work/OCTOBER_WEEKS_3_5.md` and its generated 115-activity media/source inventory.
+Implementation is review-ready; the frozen Git checkpoint is supplied in the completion summary.
+Stop for one fresh independent review.
+No rich generation, approval, migration, database write, PR, merge or deployment.
 
 ## Mandatory P1 UX gate — 2026-10-03
 

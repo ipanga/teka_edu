@@ -58,11 +58,11 @@ describe("daily programme generator", () => {
     );
     expect(new Set(used).size).toBe(used.length);
     expect(used).toHaveLength(20);
-    // September and the first October batch are authored; the next October day is not.
+    // September and October are authored; the first November day remains deferred.
     expect(dayPlan(23).status).toBe("complete");
-    expect(dayPlan(30).status).toBe("no-content");
-    expect(dayPlan(30).sessions.every((s) => s.lesson === null)).toBe(true);
-    expect(dayPlan(30).totalMinutes).toBe(0);
+    expect(dayPlan(45).status).toBe("no-content");
+    expect(dayPlan(45).sessions.every((s) => s.lesson === null)).toBe(true);
+    expect(dayPlan(45).totalMinutes).toBe(0);
   });
 
   it("produces a balanced pilot week", () => {

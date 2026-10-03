@@ -548,6 +548,6 @@ describe("human review package", () => {
         (week) => week.toDay,
       ),
     );
-    expect(m3Last).toBe(29);
+    expect(m3Last).toBe(44);
   });
 });

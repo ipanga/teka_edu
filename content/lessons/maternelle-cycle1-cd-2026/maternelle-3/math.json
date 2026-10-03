@@ -2616,6 +2616,1092 @@
       "origin": "teka-edu-created",
       "status": "review",
       "review": null
+    },
+    {
+      "id": "m3-math-30",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Le tas change de place",
+      "summary": "Manipuler des collections réelles et expliquer leur quantité.",
+      "objectiveCodes": ["MATH-S01-C01-O18"],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O20"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.",
+      "activities": [
+        {
+          "type": "counting",
+          "title": "Même cinq objets",
+          "childInstruction": "Compte les objets. Je les étale : combien y en a-t-il ?",
+          "adultGuidance": "Faites compter cinq objets en tas, puis déplacez-les en ligne, sous les yeux de l’enfant, sans ajout ni retrait. Demandez si la quantité change. Faites vérifier par un comptage depuis un et dire : « Il y en a toujours cinq. »",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O18", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Use real objects and count aloud."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "cailloux, capsules ou haricots"
+          },
+          "id": "m3-math-30-a1",
+          "position": 1
+        },
+        {
+          "type": "manipulation",
+          "title": "Je déplace sans ajouter",
+          "childInstruction": "Fais un rond avec les mêmes objets. Vérifie combien.",
+          "adultGuidance": "L’enfant place les cinq mêmes objets en rond. Faites dire ce qui a changé et ce qui reste pareil. Recomptez ensemble si besoin ; ne jugez pas à la longueur occupée.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O18", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets", "papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move the real objects and explain."
+            }
+          ],
+          "payload": {
+            "objects": "collections réelles et papiers chiffres préparés par l’adulte"
+          },
+          "id": "m3-math-30-a2",
+          "position": 2
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-31",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Cailloux et capsules, même nombre",
+      "summary": "Manipuler des collections réelles et expliquer leur quantité.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O18", "MATH-S01-C01-O20", "MATH-S01-C01-O21"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.",
+      "activities": [
+        {
+          "type": "counting",
+          "title": "Deux sortes d’objets",
+          "childInstruction": "Compte cinq cailloux et cinq capsules. Est-ce pareil ?",
+          "adultGuidance": "Préparez deux collections de cinq de natures différentes. Faites une correspondance un à un puis comptez. Même quantité, même si la taille ou la matière diffère ; ne comparez pas le poids.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O18", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Use real objects and count aloud."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "cailloux, capsules ou haricots"
+          },
+          "id": "m3-math-31-a1",
+          "position": 1
+        },
+        {
+          "type": "manipulation",
+          "title": "Je fabrique autant",
+          "childInstruction": "Prépare autant de capsules que de cailloux.",
+          "adultGuidance": "Donnez une collection de quatre à six cailloux. L’enfant constitue autant de capsules en les appariant. Écartez une collection sans changer ses objets puis faites vérifier le même nombre.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O18", "MATH-S01-C01-O21"],
+          "materialCodes": ["petits-objets", "papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move the real objects and explain."
+            }
+          ],
+          "payload": {
+            "objects": "collections réelles et papiers chiffres préparés par l’adulte"
+          },
+          "id": "m3-math-31-a2",
+          "position": 2
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-32",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Un de plus, même quand on étale",
+      "summary": "Manipuler des collections réelles et expliquer leur quantité.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O11",
+        "MATH-S01-C01-O18",
+        "MATH-S01-C01-O20",
+        "MATH-S01-C01-O08"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.",
+      "activities": [
+        {
+          "type": "counting",
+          "title": "Avant et après",
+          "childInstruction": "Compte, ajoute un objet, puis recompte tout depuis un.",
+          "adultGuidance": "Partez de quatre objets. L’enfant compte, ajoute un seul objet bien visible, puis recompte depuis un. Rapprochez les mêmes cinq objets et faites vérifier : le déplacement ne change pas le nombre.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O11", "MATH-S01-C01-O18", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Use real objects and count aloud."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "cailloux, capsules ou haricots"
+          },
+          "id": "m3-math-32-a1",
+          "position": 1
+        },
+        {
+          "type": "manipulation",
+          "title": "Le chiffre reste le même",
+          "childInstruction": "Trouve le chiffre pour ton tas, puis écarte les objets.",
+          "adultGuidance": "Posez les papiers 4, 5, 6. L’enfant compte cinq objets et choisit 5. Il les écarte puis vérifie que le même chiffre convient. Revenez au comptage complet si nécessaire.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O08", "MATH-S01-C01-O18", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets", "papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move the real objects and explain."
+            }
+          ],
+          "payload": {
+            "objects": "collections réelles et papiers chiffres préparés par l’adulte"
+          },
+          "id": "m3-math-32-a2",
+          "position": 2
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-33",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Je conserve la quantité",
+      "summary": "Manipuler des collections réelles et expliquer leur quantité.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O18", "MATH-S01-C01-O20", "MATH-S01-C01-O08"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.",
+      "activities": [
+        {
+          "type": "counting",
+          "title": "Six en ligne et en rond",
+          "childInstruction": "Compte six objets, puis fais un rond avec les mêmes.",
+          "adultGuidance": "L’enfant compte les six objets et vous regarde les réorganiser. Demandez une prévision puis vérifiez tous les objets depuis un. Ne dissimulez rien et ne récompensez pas une réponse devinée.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O18", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Use real objects and count aloud."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "cailloux, capsules ou haricots"
+          },
+          "id": "m3-math-33-a1",
+          "position": 1
+        },
+        {
+          "type": "manipulation",
+          "title": "Je montre ce qui reste pareil",
+          "childInstruction": "Change la place des objets. Dis combien il y en a.",
+          "adultGuidance": "L’enfant transforme la ligne en deux petits groupes sans ajouter ni retirer. Faites nommer le total et choisir son chiffre parmi 5, 6, 7.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O18", "MATH-S01-C01-O08"],
+          "materialCodes": ["petits-objets", "papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move the real objects and explain."
+            }
+          ],
+          "payload": {
+            "objects": "collections réelles et papiers chiffres préparés par l’adulte"
+          },
+          "id": "m3-math-33-a2",
+          "position": 2
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-34",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Je compte à partir de quatre",
+      "summary": "Manipuler des collections réelles et expliquer leur quantité.",
+      "objectiveCodes": ["MATH-S01-C01-O24"],
+      "supportingObjectiveCodes": ["MATH-S01-C01-O11", "MATH-S01-C01-O20", "MATH-S01-C01-O18"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.",
+      "activities": [
+        {
+          "type": "counting",
+          "title": "Quatre, puis encore un",
+          "childInstruction": "Il y en a quatre. J’en ajoute un : dis quatre, puis cinq.",
+          "adultGuidance": "Faites d’abord vérifier quatre objets. Gardez-les visibles et dites quatre en les entourant du geste. Ajoutez un objet et dites cinq ; l’enfant reprend quatre, cinq. Si nécessaire, recomptez tout depuis un, puis remodélisez ce départ connu. Première rencontre du surcomptage, seulement au jour 34.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O24", "MATH-S01-C01-O11", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Use real objects and count aloud."
+            }
+          ],
+          "payload": {
+            "upTo": 6,
+            "objects": "cailloux, capsules ou haricots"
+          },
+          "id": "m3-math-34-a1",
+          "position": 1
+        },
+        {
+          "type": "manipulation",
+          "title": "Mon bilan : déplacer ou ajouter",
+          "childInstruction": "Déplace ton tas, puis ajoute un objet. Qu’est-ce qui change ?",
+          "adultGuidance": "Reprenez une collection de quatre. La déplacer garde quatre ; ajouter un donne cinq. Vérifiez en comptant et faites nommer la différence entre changement de place et ajout. Le surcomptage reste une proposition accompagnée.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O18", "MATH-S01-C01-O11", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets", "papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move the real objects and explain."
+            }
+          ],
+          "payload": {
+            "objects": "collections réelles et papiers chiffres préparés par l’adulte"
+          },
+          "id": "m3-math-34-a2",
+          "position": 2
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-35",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Quatre, cinq, six",
+      "summary": "Manipuler des collections réelles et expliquer leur quantité.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O24",
+        "MATH-S01-C01-O11",
+        "MATH-S01-C01-O20",
+        "MATH-S01-C01-O08"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.",
+      "activities": [
+        {
+          "type": "counting",
+          "title": "Deux ajouts visibles",
+          "childInstruction": "Pars de quatre. Compte les deux objets que j’ajoute.",
+          "adultGuidance": "Faites vérifier quatre objets. Ajoutez deux objets, un par un : quatre, cinq, six. L’enfant montre chaque nouvel objet en disant son nombre. S’il perd le fil, recomptez toute la collection puis reprenez une seule addition.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O24", "MATH-S01-C01-O11", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Use real objects and count aloud."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "cailloux, capsules ou haricots"
+          },
+          "id": "m3-math-35-a1",
+          "position": 1
+        },
+        {
+          "type": "manipulation",
+          "title": "Je choisis le total",
+          "childInstruction": "Pars de trois, ajoute deux, puis trouve le chiffre.",
+          "adultGuidance": "Vérifiez trois objets, ajoutez-en deux visibles en disant trois, quatre, cinq. Proposez les papiers 4, 5, 6. Faites vérifier cinq en recomptant tout si besoin.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O24", "MATH-S01-C01-O08", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets", "papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move the real objects and explain."
+            }
+          ],
+          "payload": {
+            "objects": "collections réelles et papiers chiffres préparés par l’adulte"
+          },
+          "id": "m3-math-35-a2",
+          "position": 2
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-36",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Même quantité, autre disposition",
+      "summary": "Manipuler des collections réelles et expliquer leur quantité.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O18",
+        "MATH-S01-C01-O20",
+        "MATH-S01-C01-O24",
+        "MATH-S01-C01-O11"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.",
+      "activities": [
+        {
+          "type": "counting",
+          "title": "Six serrés ou écartés",
+          "childInstruction": "Regarde les six objets. Je les écarte : combien ?",
+          "adultGuidance": "Faites vérifier six puis écartez-les sans rien changer. L’enfant explique et recompte au besoin. Reformez une rangée courte : toujours six, malgré une longueur différente.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O18", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Use real objects and count aloud."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "cailloux, capsules ou haricots"
+          },
+          "id": "m3-math-36-a1",
+          "position": 1
+        },
+        {
+          "type": "manipulation",
+          "title": "Je pars du nombre connu",
+          "childInstruction": "Vérifie cinq objets, puis compte l’objet ajouté.",
+          "adultGuidance": "Après vérification de cinq, l’enfant ajoute un et dit cinq, six. Variez la disposition seulement après avoir établi le total. Acceptez le comptage depuis un comme appui.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O24", "MATH-S01-C01-O18", "MATH-S01-C01-O11"],
+          "materialCodes": ["petits-objets", "papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move the real objects and explain."
+            }
+          ],
+          "payload": {
+            "objects": "collections réelles et papiers chiffres préparés par l’adulte"
+          },
+          "id": "m3-math-36-a2",
+          "position": 2
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-37",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Je prépare et j’ajoute",
+      "summary": "Manipuler des collections réelles et expliquer leur quantité.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O24",
+        "MATH-S01-C01-O21",
+        "MATH-S01-C01-O20",
+        "MATH-S01-C01-O08",
+        "MATH-S01-C01-O18"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.",
+      "activities": [
+        {
+          "type": "counting",
+          "title": "Je pars de cinq",
+          "childInstruction": "Il y en a cinq. Ajoute deux objets en comptant.",
+          "adultGuidance": "L’enfant compte la base de cinq. Il ajoute un puis un en disant cinq, six, sept. La base reste visible et aucun objet n’est caché. Recomptez depuis un si la suite n’est pas stable.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O24", "MATH-S01-C01-O21", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Use real objects and count aloud."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "cailloux, capsules ou haricots"
+          },
+          "id": "m3-math-37-a1",
+          "position": 1
+        },
+        {
+          "type": "manipulation",
+          "title": "Le bon chiffre pour sept",
+          "childInstruction": "Prépare sept objets et trouve leur chiffre.",
+          "adultGuidance": "Montrez 7 sur un papier. L’enfant prépare sept objets, vérifie le total, puis change leur place sans changer leur nombre. Faites expliquer pourquoi le chiffre reste 7.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O08", "MATH-S01-C01-O21", "MATH-S01-C01-O18"],
+          "materialCodes": ["petits-objets", "papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move the real objects and explain."
+            }
+          ],
+          "payload": {
+            "objects": "collections réelles et papiers chiffres préparés par l’adulte"
+          },
+          "id": "m3-math-37-a2",
+          "position": 2
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-38",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "À partir de six",
+      "summary": "Manipuler des collections réelles et expliquer leur quantité.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O24",
+        "MATH-S01-C01-O11",
+        "MATH-S01-C01-O20",
+        "MATH-S01-C01-O18",
+        "MATH-S01-C01-O08"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.",
+      "activities": [
+        {
+          "type": "counting",
+          "title": "Six et deux de plus",
+          "childInstruction": "Pars de six et compte les deux nouveaux objets.",
+          "adultGuidance": "Vérifiez six objets ensemble. Ajoutez les deux nouveaux un à un : six, sept, huit. Faites pointer uniquement les ajouts pendant le surcomptage. Revenir à une base de trois reste possible.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O24", "MATH-S01-C01-O11", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Use real objects and count aloud."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "cailloux, capsules ou haricots"
+          },
+          "id": "m3-math-38-a1",
+          "position": 1
+        },
+        {
+          "type": "manipulation",
+          "title": "Huit autrement",
+          "childInstruction": "Fais une autre forme avec les huit mêmes objets.",
+          "adultGuidance": "L’enfant réorganise les huit objets sans ajout ni retrait puis associe le chiffre 8. Vérifiez depuis un si nécessaire. Ne demandez pas une décomposition écrite.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O18", "MATH-S01-C01-O08", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets", "papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move the real objects and explain."
+            }
+          ],
+          "payload": {
+            "objects": "collections réelles et papiers chiffres préparés par l’adulte"
+          },
+          "id": "m3-math-38-a2",
+          "position": 2
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-39",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Mon bilan de quantité",
+      "summary": "Manipuler des collections réelles et expliquer leur quantité.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O24",
+        "MATH-S01-C01-O20",
+        "MATH-S01-C01-O18",
+        "MATH-S01-C01-O21"
+      ],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.",
+      "activities": [
+        {
+          "type": "counting",
+          "title": "Mon départ choisi",
+          "childInstruction": "Choisis trois ou cinq objets, puis ajoute-en deux en comptant.",
+          "adultGuidance": "Faites vérifier la base choisie, puis modélisez le départ à ce nombre. L’enfant ajoute deux objets visibles et nomme le total ; accepte de tout recompter si nécessaire. Ne chronométrez pas.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O24", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Use real objects and count aloud."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "cailloux, capsules ou haricots"
+          },
+          "id": "m3-math-39-a1",
+          "position": 1
+        },
+        {
+          "type": "manipulation",
+          "title": "Même nombre, autre matière",
+          "childInstruction": "Fais une collection de capsules aussi grande que ton tas.",
+          "adultGuidance": "L’enfant prépare le même nombre de capsules que le tas de la première activité. Appariez pour vérifier puis écartez les capsules. Faites redire : même nombre malgré la matière et la place.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O18", "MATH-S01-C01-O21"],
+          "materialCodes": ["petits-objets", "papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move the real objects and explain."
+            }
+          ],
+          "payload": {
+            "objects": "collections réelles et papiers chiffres préparés par l’adulte"
+          },
+          "id": "m3-math-39-a2",
+          "position": 2
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-40",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Je retrouve le nombre de départ",
+      "summary": "Manipuler des collections réelles et expliquer leur quantité.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O24",
+        "MATH-S01-C01-O11",
+        "MATH-S01-C01-O20",
+        "MATH-S01-C01-O18"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.",
+      "activities": [
+        {
+          "type": "counting",
+          "title": "Quatre avant les ajouts",
+          "childInstruction": "Compte quatre objets, puis continue sur les nouveaux.",
+          "adultGuidance": "L’enfant vérifie quatre et nomme ce départ. Ajoutez deux objets un par un, cinq puis six. Comparez le total avant/après. Soutenez par un comptage complet plutôt que d’exiger une réponse rapide.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O24", "MATH-S01-C01-O11", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Use real objects and count aloud."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "cailloux, capsules ou haricots"
+          },
+          "id": "m3-math-40-a1",
+          "position": 1
+        },
+        {
+          "type": "manipulation",
+          "title": "Six, même en deux groupes",
+          "childInstruction": "Partage les six objets en deux groupes. Combien en tout ?",
+          "adultGuidance": "Gardez tous les objets visibles. L’enfant sépare puis rassemble la même collection de six. Faites vérifier le total depuis un et nommer l’invariance, sans calcul formel.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O18", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets", "papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move the real objects and explain."
+            }
+          ],
+          "payload": {
+            "objects": "collections réelles et papiers chiffres préparés par l’adulte"
+          },
+          "id": "m3-math-40-a2",
+          "position": 2
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-41",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Le nombre ne dépend pas de l’objet",
+      "summary": "Manipuler des collections réelles et expliquer leur quantité.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O18",
+        "MATH-S01-C01-O20",
+        "MATH-S01-C01-O24",
+        "MATH-S01-C01-O08",
+        "MATH-S01-C01-O21"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.",
+      "activities": [
+        {
+          "type": "counting",
+          "title": "Sept différents",
+          "childInstruction": "Compte sept objets de sortes différentes.",
+          "adultGuidance": "Mélangez cailloux et capsules, sept en tout. L’enfant compte tous les objets une seule fois. Réorganisez-les en lignes par nature : toujours sept. Vérifiez plutôt que juger à la taille.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O18", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Use real objects and count aloud."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "cailloux, capsules ou haricots"
+          },
+          "id": "m3-math-41-a1",
+          "position": 1
+        },
+        {
+          "type": "manipulation",
+          "title": "Je prends un départ plus petit",
+          "childInstruction": "Prépare quatre objets, puis ajoute un et encore un.",
+          "adultGuidance": "Faites nommer quatre après vérification ; cinq et six sont dits sur les nouveaux objets. L’enfant associe le chiffre 6. Revenir à un seul ajout est un appui normal.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O24", "MATH-S01-C01-O08", "MATH-S01-C01-O21"],
+          "materialCodes": ["petits-objets", "papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move the real objects and explain."
+            }
+          ],
+          "payload": {
+            "objects": "collections réelles et papiers chiffres préparés par l’adulte"
+          },
+          "id": "m3-math-41-a2",
+          "position": 2
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-42",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "J’ajoute et je garde le total",
+      "summary": "Manipuler des collections réelles et expliquer leur quantité.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O24",
+        "MATH-S01-C01-O20",
+        "MATH-S01-C01-O18",
+        "MATH-S01-C01-O08"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.",
+      "activities": [
+        {
+          "type": "counting",
+          "title": "Cinq puis trois",
+          "childInstruction": "Pars de cinq, puis compte les trois objets nouveaux.",
+          "adultGuidance": "Faites vérifier cinq. Ajoutez un à un trois objets : cinq, six, sept, huit. Si trois ajouts sont difficiles, restez à un ou deux. Toute la collection reste visible.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O24", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Use real objects and count aloud."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "cailloux, capsules ou haricots"
+          },
+          "id": "m3-math-42-a1",
+          "position": 1
+        },
+        {
+          "type": "manipulation",
+          "title": "Je retrouve huit en rond",
+          "childInstruction": "Mets les huit mêmes objets en rond et trouve leur chiffre.",
+          "adultGuidance": "Vérifiez huit avec l’enfant puis réorganisez en rond. Le papier 8 reste correct. Demandez de justifier en montrant qu’aucun objet n’a été ajouté ou enlevé.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O18", "MATH-S01-C01-O08", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets", "papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move the real objects and explain."
+            }
+          ],
+          "payload": {
+            "objects": "collections réelles et papiers chiffres préparés par l’adulte"
+          },
+          "id": "m3-math-42-a2",
+          "position": 2
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-43",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Je prépare pour demain",
+      "summary": "Manipuler des collections réelles et expliquer leur quantité.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O24",
+        "MATH-S01-C01-O11",
+        "MATH-S01-C01-O20",
+        "MATH-S01-C01-O21",
+        "MATH-S01-C01-O08",
+        "MATH-S01-C01-O18"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.",
+      "activities": [
+        {
+          "type": "counting",
+          "title": "Un de plus dans mon panier",
+          "childInstruction": "Compte cinq objets, puis compte les deux ajouts.",
+          "adultGuidance": "Faites vérifier cinq objets dans une boîte ouverte. Posez les deux ajouts à côté, visibles, puis mettez-les un par un dans la boîte en disant cinq, six, sept. Pas de mémorisation d’une collection cachée.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O24", "MATH-S01-C01-O11", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Use real objects and count aloud."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "cailloux, capsules ou haricots"
+          },
+          "id": "m3-math-43-a1",
+          "position": 1
+        },
+        {
+          "type": "manipulation",
+          "title": "Je construis la demande",
+          "childInstruction": "Prépare huit objets. Change leur place sans changer le nombre.",
+          "adultGuidance": "Montrez un papier 8. L’enfant prépare huit et vérifie ; il réorganise librement. Faites choisir le même chiffre après déplacement.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O21", "MATH-S01-C01-O08", "MATH-S01-C01-O18"],
+          "materialCodes": ["petits-objets", "papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move the real objects and explain."
+            }
+          ],
+          "payload": {
+            "objects": "collections réelles et papiers chiffres préparés par l’adulte"
+          },
+          "id": "m3-math-43-a2",
+          "position": 2
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-math-44",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "MATH",
+      "title": "Je relie tout ce que je sais",
+      "summary": "Manipuler des collections réelles et expliquer leur quantité.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "MATH-S01-C01-O24",
+        "MATH-S01-C01-O11",
+        "MATH-S01-C01-O20",
+        "MATH-S01-C01-O08",
+        "MATH-S01-C01-O18"
+      ],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.",
+      "activities": [
+        {
+          "type": "counting",
+          "title": "Mon petit défi accompagné",
+          "childInstruction": "Compte ton tas, puis compte les objets que tu ajoutes.",
+          "adultGuidance": "L’enfant choisit une base de trois à six, la vérifie, puis ajoute un ou deux objets en partant de ce nombre. Faites nommer le total et choisir son chiffre. Recompter depuis un reste accepté ; terminez sur une réussite.",
+          "minutes": 5,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": [
+            "MATH-S01-C01-O24",
+            "MATH-S01-C01-O11",
+            "MATH-S01-C01-O20",
+            "MATH-S01-C01-O08"
+          ],
+          "materialCodes": ["petits-objets"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Use real objects and count aloud."
+            }
+          ],
+          "payload": {
+            "upTo": 8,
+            "objects": "cailloux, capsules ou haricots"
+          },
+          "id": "m3-math-44-a1",
+          "position": 1
+        },
+        {
+          "type": "manipulation",
+          "title": "Mon nombre reste pareil",
+          "childInstruction": "Déplace les mêmes objets. Explique pourquoi le nombre reste pareil.",
+          "adultGuidance": "Reprenez le tas de la première activité et faites changer sa forme. L’enfant explique qu’aucun objet n’est ajouté ou retiré, puis vérifie. Ne transformez pas ce bilan en épreuve.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["MATH-S01-C01-O18", "MATH-S01-C01-O20"],
+          "materialCodes": ["petits-objets", "papier", "crayon"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move the real objects and explain."
+            }
+          ],
+          "payload": {
+            "objects": "collections réelles et papiers chiffres préparés par l’adulte"
+          },
+          "id": "m3-math-44-a2",
+          "position": 2
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
     }
   ]
 }

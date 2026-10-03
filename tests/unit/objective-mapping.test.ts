@@ -769,7 +769,7 @@ describe("a consolidation week still has to do the work it claims", () => {
     // facing each of the adult's — so the rule asks for a collection to appear, not for a
     // cardinal to be spoken.
     const produces =
-      /donne-moi|donne-m’en|fais un tas|pose autant|pose (deux|trois|quatre|cinq|six|sept|huit|neuf|dix)|prends|apporte|remets|reconstitu\w*|\bautant\b|devant chacun|en face de chacun/i;
+      /donne-moi|donne-m’en|fais un tas|fais une collection|pose autant|pose (deux|trois|quatre|cinq|six|sept|huit|neuf|dix)|prends|apporte|remets|reconstitu\w*|\bautant\b|devant chacun|en face de chacun|prépare (deux|trois|quatre|cinq|six|sept|huit|neuf|dix) objets|ajoute (un|deux) objets/i;
     const constituting = claiming(/^Constituer une collection/i);
     expect(constituting.length).toBeGreaterThan(0);
     for (const activity of constituting) {

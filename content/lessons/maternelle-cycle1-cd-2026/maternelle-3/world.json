@@ -881,6 +881,279 @@
       "origin": "teka-edu-created",
       "status": "review",
       "review": null
+    },
+    {
+      "id": "m3-world-10",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "Je prends soin du vivant",
+      "summary": "Choisis avec moi une action pour protéger une plante. Dis pourquoi nous laissons la plante grandir.",
+      "objectiveCodes": ["WORLD-S01-C01-O11"],
+      "supportingObjectiveCodes": ["WORLD-S01-C01-O10", "LANG-S01-C02-O03"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte supervise le soin d’une plante connue. Distinguez action faite et projet. Cette aide à domicile ne remplace pas l’action collective scolaire.",
+      "activities": [
+        {
+          "id": "m3-world-10-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Une action pour une plante",
+          "childInstruction": "Choisis avec moi une action pour protéger une plante.",
+          "adultGuidance": "Avec une plante réelle déjà disponible, décidez ensemble de ne pas arracher les feuilles et d’arroser seulement si nécessaire. L’adulte dose l’eau et tient le récipient ; l’enfant aide doucement. Sans plante accessible, convenez de laisser intact un coin de végétation lors d’une prochaine sortie accompagnée et dites que l’action reste prévue, pas faite. Une action parent-enfant prépare une action collective autour de l’école ; elle ne prétend pas l’avoir remplacée.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C01-O11", "WORLD-S01-C01-O10"],
+          "materialCodes": ["boite"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Choose with me one action to protect a plant."
+            }
+          ],
+          "payload": {
+            "prompts": ["Choisis avec moi une action pour protéger une plante."]
+          }
+        },
+        {
+          "id": "m3-world-10-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Pourquoi la laisser vivre ?",
+          "childInstruction": "Dis pourquoi nous laissons la plante grandir.",
+          "adultGuidance": "Modélisez : « Nous la protégeons parce qu’elle est vivante. » L’enfant redonne son idée. On ne capture aucun animal, ne ramasse aucun déchet inconnu et ne touche pas une plante non identifiée ; l’adulte supervise.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C01-O11", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say why we let the plant grow."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis pourquoi nous laissons la plante grandir."]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-world-11",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "J’ai été un bébé",
+      "summary": "Dis une chose qu’un bébé fait avec l’aide d’un adulte. Raconte : d’abord bébé, puis petit enfant, puis enfant plus grand.",
+      "objectiveCodes": ["WORLD-S01-C02-O10"],
+      "supportingObjectiveCodes": ["LANG-S01-C02-O03"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Décrivez les étapes oralement, sans photo obligatoire ni comparaison entre enfants. Le développement varie ; aucune performance à un âge précis n’est exigée.",
+      "activities": [
+        {
+          "id": "m3-world-11-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bébé, puis plus grand",
+          "childInstruction": "Dis une chose qu’un bébé fait avec l’aide d’un adulte.",
+          "adultGuidance": "Décrivez oralement trois étapes : bébé nourri et porté par un adulte ; petit enfant accompagné qui apprend à se déplacer et jouer ; enfant plus grand qui parle, dessine et se prépare pour l’école. L’enfant peut évoquer son histoire sans photo obligatoire. Les acquisitions arrivent à des moments différents : aucune date de réussite n’est imposée.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C02-O10"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say one thing a baby does with an adult helping."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis une chose qu’un bébé fait avec l’aide d’un adulte."]
+          }
+        },
+        {
+          "id": "m3-world-11-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Jusqu’à six ans",
+          "childInstruction": "Raconte : d’abord bébé, puis petit enfant, puis enfant plus grand.",
+          "adultGuidance": "Aidez l’enfant à redire ces étapes en ordre jusqu’à environ six ans. Vers six ans, on grandit encore et l’école continue ; ce n’est ni la fin de la croissance ni une liste de compétences à réussir. Accueillez toutes les situations de développement sans comparer les enfants.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C02-O10", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Tell the order: baby, small child, older child."
+            }
+          ],
+          "payload": {
+            "prompts": ["Raconte : d’abord bébé, puis petit enfant, puis enfant plus grand."]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-world-12",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "Je grandis et je protège le vivant",
+      "summary": "Redis les étapes de bébé à enfant plus grand. Dis ce que nous avons fait ou prévu pour la plante.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "WORLD-S01-C02-O10",
+        "LANG-S01-C02-O03",
+        "WORLD-S01-C01-O11",
+        "WORLD-S01-C01-O10"
+      ],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte supervise le soin d’une plante connue. Distinguez action faite et projet. Cette aide à domicile ne remplace pas l’action collective scolaire.",
+      "activities": [
+        {
+          "id": "m3-world-12-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Mon récit de croissance",
+          "childInstruction": "Redis les étapes de bébé à enfant plus grand.",
+          "adultGuidance": "Reprenez les trois étapes du jour 35. L’enfant les raconte dans l’ordre ; l’adulte complète sans imposer une performance liée à l’âge. Donnez un exemple d’aide encore utile à six ans.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C02-O10", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Retell the stages from baby to older child."
+            }
+          ],
+          "payload": {
+            "prompts": ["Redis les étapes de bébé à enfant plus grand."]
+          }
+        },
+        {
+          "id": "m3-world-12-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Notre action de soin",
+          "childInstruction": "Dis ce que nous avons fait ou prévu pour la plante.",
+          "adultGuidance": "Revenez à l’action du jour 31. Distinguez ce qui a réellement été fait et ce qui reste prévu. L’enfant dit pourquoi laisser la plante et son habitat intacts. L’aspect collectif scolaire demeure à vivre avec l’école ; aucun groupe fictif n’est déclaré.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C01-O11", "WORLD-S01-C01-O10", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say what we did or planned for the plant."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis ce que nous avons fait ou prévu pour la plante."]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-world-13",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "Un objet pour une fonction",
+      "summary": "Montre l’objet pour porter de l’eau, puis celui pour porter des objets. Dis pourquoi tu choisis le seau pour porter de l’eau.",
+      "objectiveCodes": ["WORLD-S02-C01-O09"],
+      "supportingObjectiveCodes": ["LANG-S01-C02-O03"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Comparez des fonctions avec les images acceptées ou des objets sûrs disponibles. Pas d’eau à verser, d’outil chaud ou pointu ; accueillez plusieurs solutions adaptées.",
+      "activities": [
+        {
+          "id": "m3-world-13-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Porter l’eau ou les objets",
+          "childInstruction": "Montre l’objet pour porter de l’eau, puis celui pour porter des objets.",
+          "adultGuidance": "Les images acceptées montrent un seau et un panier. Faites nommer leurs fonctions : le seau intact retient l’eau ; un panier ouvert transporte des objets solides mais laisse passer l’eau. Expliquez avec des objets réels si disponibles, sans imposer de remplir ni verser. Le choix dépend de la fonction ; d’autres récipients étanches peuvent aussi convenir.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-seau", "objet-panier"],
+          "objectiveCodes": ["WORLD-S02-C01-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Show what carries water and what carries solid objects."
+            }
+          ],
+          "payload": {
+            "focus": "fonction technique du seau et du panier"
+          }
+        },
+        {
+          "id": "m3-world-13-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Je justifie la solution",
+          "childInstruction": "Dis pourquoi tu choisis le seau pour porter de l’eau.",
+          "adultGuidance": "Modélisez : « Je choisis le seau parce qu’il garde l’eau. » L’enfant explique puis choisit pour porter des cailloux. Acceptez plusieurs solutions adaptées et vérifiez leur fonction avec des objets sûrs ; aucun ustensile chaud ou pointu.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S02-C01-O09", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say why you choose the bucket to carry water."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis pourquoi tu choisis le seau pour porter de l’eau."]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
     }
   ]
 }

@@ -172,7 +172,7 @@ describe("September 2026 (3ème maternelle)", () => {
     expect(firstOctober.status).toBe("complete");
 
     const afterBatch = generateDailyPlan(
-      days.find((d) => d.instructionalDay === 30)!,
+      days.find((d) => d.instructionalDay === 45)!,
       programme,
       data.lessons,
     );

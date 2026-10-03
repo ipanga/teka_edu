@@ -2,15 +2,16 @@
 
 ## Task
 
-Complete the mandatory parent/child P1 UX gate and frozen October reconciliation.
+Author October Weeks 3–5 for 3ème maternelle, then stop for independent review.
 
 ## Objective
 
-Verify the merged P1 UX fixes on the accepted October branch without changing accepted content, media, packages or history. Prepare a Weeks 3–5 continuation prompt only after every gate succeeds, then stop.
+Complete days 30–44 with 60 review/null lessons, canonical rotation and Weeks 8–10 packages.
+Preserve September, accepted Batch 1 and the five merged P1 UX fixes. Freeze and push the checkpoint.
 
 ## Status
 
-`completed`
+`awaiting_review`
 
 ## Branch
 
@@ -18,8 +19,8 @@ Verify the merged P1 UX fixes on the accepted October branch without changing ac
 
 ## Base Branch
 
-UX-corrected `origin/develop`: `603efdc14de535ea78f9dbe4488ff3e49ccc5186` (PR #94).
-Original UX base: `6b8ba9e87802d96c2f193fe73d3c9897e084ba9c`.
+Verified authoring base `1ada5f2dbd258adea9ca4e913729c4620958074c`; accepted `2170413`
+and merged UX develop `603efdc` remain ancestors.
 
 ## Started
 
@@ -27,97 +28,106 @@ Original UX base: `6b8ba9e87802d96c2f193fe73d3c9897e084ba9c`.
 
 ## Last Checkpoint
 
-Frozen October local/remote/clean HEAD: `2170413173b4a7aa2e6e8b2245af0fcf4c52b0bc`.
-Corrected implementation: `461e946e3ef4d7a63909bd1e720d5876dd568bf4`.
-The owner relayed fresh independent `accepted` reconfirmation. All 28 lessons remain review/null.
-UX implementation checkpoint: `0a177296680d6e62c8dc856903f67fdf2adb7af5`; final PR head:
-`438e33a51ba22520864d2217740d8f8e527bc7bb`. PR #94 merged after all four required checks passed.
-Reconciliation merge `61fa0791dad7e8d45fbfc2c2cfef24822f6817cd` retains both parents
-`2170413` and `603efdc`; committed and pushed without force. Only PROJECT_STATUS and
-ACTIVE_TASK needed semantic doc resolution. All gate checks completed; this final checkpoint is documentation only.
+All 60 lessons exist on days 30–44. Counts: 15 LANG, 15 MATH, 15 PHYS, 5 ART, 4 WORLD,
+6 TIME-SPACE. Every day is complete and 35 minutes; Day 45 remains no-content.
+Current evidence is in OCTOBER_WEEKS_3_5.md and docs/review/OCTOBER_WEEKS_3_5_MEDIA.md.
+Freeze proof: 204 unchanged existing lesson objects/digests, 395 byte-identical protected files,
+one exact P1 day-30 fixture transformation, all 15 registered packages exactly fresh.
 
 ## Scope
 
-Five P1 fixes, regression and supported-device tests, fresh-parent checkpoint, develop integration,
-non-destructive October reconciliation and accepted Batch 1 verification.
+October 12–30, instructional days 30–44 only. One independent-review batch, three canonical weekly packages.
 
 ## Out of Scope
 
-Day 30/Weeks 3–5 authoring, canonical content/media/review/approval edits, P2/P3 design, migrations,
-DEV/PROD mutation, main merge and production deployment. No TV/Smart TV.
+Approvals, migrations, DEV/PROD writes, final rich generation, PRs, merge, deployment, P2/P3, TV,
+November and later days.
 
 ## Product Decisions
 
-Activity state belongs to its session/activity ID. Browser keys use year/level/day/field.
-Ambiguous legacy keys are retained and ignored. In-memory renderer state survives handoff/pause;
-reload restores the activity bookmark. Immediate scroll/focus occurs only on activity navigation.
+Owner chose canonical rotation, including TIME-SPACE on day 40. The prompt's full-month 7/7/8
+rotating totals conflict with frozen Batch 1 (2/2/3); the actual preserved October totals are
+7 ART / 6 WORLD / 9 TIME-SPACE. No scheduling override.
+All 45 existing daily lessons preserved except m3-lang-44-a2's English two-things correction.
+Home-partial and school-only limits remain explicit; aquatic safety reminders are not aquatic teaching.
+All new activities are classified: 99 no media required, 16 reuse accepted asset, no final assets generated.
 
 ## Completed
 
-All five P1 fixes; 467 unit tests; 79 browser tests; all eight exact sizes; fresh-parent manual
-390px walkthrough; immutable UX-base comparison; PR #94 and green required CI; develop integration.
-Initial October post-merge comparison: all 385 frozen protected files byte-identical.
+Fifteen rotating lessons appended; programme track IDs appended without rhythm changes.
+Weeks 8–10 generated/registered; all-package freshness hard gate preserved. Source/media inventory,
+nine representative screenshots, regression proof and ready-to-paste review prompt prepared.
+All applicable validation is green; this document belongs to the review-ready implementation checkpoint.
 
 ## In Progress
 
-None. Stop boundary reached.
+None in authoring. Awaiting fresh independent review; no review performed here.
 
 ## Remaining
 
-None in the mandatory P1 task. Day 30 and Weeks 3–5 remain unimplemented. A ready-to-paste future
-implementation prompt is recorded in PARENT_CHILD_UX_P1.md; it requires a new owner instruction.
+Fresh independent review by an owner-opened separate session. No self-approval or release work.
 
 ## Validation State
 
-| Check                       | State                                                                                    |
-| --------------------------- | ---------------------------------------------------------------------------------------- |
-| format                      | PASS                                                                                     |
-| lint                        | PASS                                                                                     |
-| typecheck                   | PASS                                                                                     |
-| unit tests                  | PASS: combined 482/482, 37 files                                                         |
-| content validation          | PASS: 31 JSON files                                                                      |
-| database tests              | PASS: PR CI disposable DB only                                                           |
-| build                       | PASS: combined production webpack build; UX required CI standard build                   |
-| E2E                         | PASS: combined 79 passed, 9 production-only skipped; all eight sizes                     |
-| Docker                      | PASS: PR CI portable + Vercel build and smoke                                            |
-| secret scans                | PASS: combined 28 client files, 3 sentinels absent                                       |
-| protected integrity         | PASS: all 385 frozen files identical; September 176 objects/51 rows/98 files unchanged   |
-| package freshness / October | PASS: 12/12 exact packages; 28 review/null lessons; days 23-29 35 min; day 30 no-content |
+| Check              | State                                                                                   |
+| ------------------ | --------------------------------------------------------------------------------------- |
+| format             | PASS formatting and final documentation format check                                    |
+| lint               | PASS new authoring                                                                      |
+| typecheck          | PASS new authoring, including production build typecheck                                |
+| unit tests         | PASS 38 files, 491/491 tests                                                            |
+| content validation | PASS 31 registered JSON files                                                           |
+| database tests     | NOT RUN: no database operation authorized; SQL test mirror regenerated only             |
+| build              | PASS documented Webpack fallback; no fresh Turbopack attempt                            |
+| E2E                | PASS 87 tests, 9 production-only checks skipped; eight supported sizes, all P1 journeys |
+| Docker             | NOT RUN: content-only authoring                                                         |
+| secret scans       | PASS client bundle: 28 files, three fake server-only sentinels absent                   |
+| programme          | PASS days 30–44 complete, 35 minutes each                                               |
+| coverage           | PASS 56/56 due by day 44; zero missing                                                  |
+| media              | PASS 59/59 required image activities; zero required gaps                                |
+| package freshness  | PASS all 15 exact regenerated strings; Week 8–10 hashes in generated inventory          |
+| approvals          | PASS dry run, zero lapses                                                               |
+| integrity          | PASS 204 lesson objects and 395 files; P1 date test exact expected fixture-only update  |
+
+Initial browser run: 79 passed, nine skipped, eight new tests failed on a strict selector matching
+both heading and parent date. Corrected the new selector; complete rerun passed 87 with nine skips.
+Initial authoring assertions had stale counts/availability fixtures; updated to actual canonical content.
+A temporary ART mapping to an unintroduced objective was rejected by validation and removed;
+the final lessons claim only the drawing objectives their prompts actually support. Final full tests passed.
+Chromium/local listener required sandbox escalation. Webpack fallback was used directly.
+Local verification server on port 3103 was stopped after capture; no running verification session remains.
 
 ## Database State
 
-No migration/reference-data delta. Prior exact-base staging run 37057383122 reported DEV already up
-to date in dry-run and apply. Merged staging run 37098065260 also reports DEV already up to date in both dry-run and apply;
-zero migrations applied. PROD untouched, main remains ac3ebf9.
+Unchanged; no migration, DEV/PROD write or approval write. Only repository pgTAP reference test mirror regenerated.
 
 ## Deployment State
 
-Staging run 37098065260 passed on exact develop 603efdc: preview deployment
-dpl_DHGrtZ3MbivY28VGWUw5jyVh9DaZ, READY, target preview,
-https://teka-gwh8r6og5-teka10.vercel.app; stable alias teka-edu-staging.vercel.app.
-Smoke: 79 passed, 9 production-only skipped. No workflow/settings changes or production deployment.
+Unchanged; no release PR, merge or deployment authorized or performed.
 
 ## Git State
 
-October reconciliation `61fa079` pushed with both accepted 2170413 and develop 603efdc as parents.
-All 385 protected files unchanged; no history rewrite/force-push. Final checkpoint changes only docs.
-UX PR #94 merged; branch retained. Production main remains ac3ebf9.
+All changes are bounded authoring/evidence/test updates. This file belongs to the feature-branch checkpoint;
+verify local/remote HEAD and clean tree. Its frozen SHA is supplied in the completion summary;
+do not embed a self-referential SHA inside its own commit.
 
 ## Blockers
 
-None. All requested gates passed. No new independent reconfirmation is required for unchanged evidence.
+No implementation blocker. Record the incompatible full-month arithmetic in independent review
+without changing frozen Batch 1 or the owner-selected canonical rotation.
 
 ## User Decisions Needed
 
-None for the authorized gate. New authoring requires a separate user instruction after completion.
+None before independent review. Acceptance and any later release/generation require separate authorization.
 
 ## Exact Resume Point
 
-STOP. On a new explicit instruction, use the Ready-to-Paste Weeks 3–5 Implementation Prompt in
-PARENT_CHILD_UX_P1.md. Reverify current branch/remote and immutable accepted state first. Do not
-start authoring merely because the gate completed.
+Run git status and git log, confirm the pushed review-ready checkpoint and clean tree, then read
+OCTOBER_WEEKS_3_5.md plus generated media/source inventory and Weeks 8–10 packages.
+Open one fresh independent review for all days 30–44 using the saved prompt. Stop after its verdict;
+do not author November, approve lessons, write migrations, mutate databases or deploy.
 
 ## Resume Verification
 
-Read CLAUDE.md; run `git status` and inspect merge state and exact refs. Verify 2170413 and 603efdc remain ancestors.
-Never modify accepted protected files. Stop if accepted evidence changes.
+Run git status and git log. Verify authoring base 1ada5f2, accepted 2170413 and UX 603efdc ancestry.
+Run node --import tsx scripts/check-october-frozen.ts and verify all 15 registered packages exactly
+match regeneration. Never overwrite frozen state or unrelated edits on unexpected drift.

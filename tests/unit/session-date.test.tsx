@@ -9,7 +9,7 @@ describe("honest offered session dates", () => {
   const latest = sessionForDay("maternelle-3", authoredDays("maternelle-3").at(-1)!)!.date;
   it.each([
     ["2026-09-01", true, "2026-09-01"],
-    ["2026-10-12", false, latest],
+    ["2026-10-12", true, "2026-10-12"],
     ["2026-09-05", false, "2026-09-04"],
     ["2026-08-31", false, "2026-09-01"],
     ["2026-11-01", false, latest],

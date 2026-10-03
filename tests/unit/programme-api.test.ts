@@ -71,8 +71,8 @@ describe("GET /api/programme/[schoolYear]/[level]/[day]", () => {
   });
 
   it("reports a day whose content is not written yet without inventing one", async () => {
-    // The first October batch is authored to instructional day 29; day 30 is not written yet.
-    const body = await (await call("2026-2027", "maternelle-3", "30")).json();
+    // October ends at day 44; November is outside the authoring boundary.
+    const body = await (await call("2026-2027", "maternelle-3", "45")).json();
     expect(body.status).toBe("no-content");
     expect(body.sessions.every((s: { lesson: unknown }) => s.lesson === null)).toBe(true);
   });

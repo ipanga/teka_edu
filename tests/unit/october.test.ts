@@ -38,7 +38,7 @@ describe("October 2026 batch 1 (3ème maternelle)", () => {
     ]);
   });
 
-  it("authored days 23-29 and leaves day 30 for a later batch", () => {
+  it("preserves days 23-29 and now authors formerly deferred day 30", () => {
     for (const plan of plans) {
       expect(plan.status, `day ${plan.instructionalDay}`).toBe("complete");
       expect(plan.sessions).toHaveLength(4);
@@ -55,8 +55,9 @@ describe("October 2026 batch 1 (3ème maternelle)", () => {
       programme,
       data.lessons,
     );
-    expect(day30.status).toBe("no-content");
-    expect(day30.sessions.every((session) => session.lesson === null)).toBe(true);
+    expect(day30.status).toBe("complete");
+    expect(day30.sessions.every((session) => session.lesson !== null)).toBe(true);
+    expect(day30.totalMinutes).toBe(35);
   });
 
   it("keeps new October lessons in review with no approval record", () => {

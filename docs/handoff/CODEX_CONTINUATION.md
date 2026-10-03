@@ -1,5 +1,19 @@
 # Codex continuation
 
+Current task: October Weeks 3–5 authoring, authorized 2026-10-03 from verified `1ada5f2`.
+Owner chose canonical rotation: all 60 lessons now exist, ART/WORLD/TIME-SPACE 5/4/6, no Day-40
+exception. Full October rotating totals are 7/6/9 because frozen Batch 1 is 2/2/3.
+All new lessons remain review/null. Weeks 8–10 packages and 115-activity media inventory are generated;
+491 unit tests, content/reports, lint/typecheck, build/client and 87 browser tests pass (nine production-only
+skips). All eight supported sizes and P1 journeys passed. See ACTIVE_TASK.md and OCTOBER_WEEKS_3_5.md.
+Freeze proof protects 204 lesson objects and 395 files, with the exact P1 day-30 fixture-only update.
+The review-ready checkpoint is the commit containing this handoff; verify local/remote HEAD and a clean
+tree before one fresh independent review of days 30–44.
+Preserve all frozen objects/media/packages and P1 fixes. No approvals, later authoring, migration,
+database writes, PR, merge or deployment.
+
+## Historical completed P1 gate
+
 Current authorization: complete the mandatory P1 UX gate and reconcile frozen October Batch 1.
 PR [#94](https://github.com/ipanga/teka_edu/pull/94) passed all four required checks and merged
 into develop at `603efdc14de535ea78f9dbe4488ff3e49ccc5186`. Accepted October content at `2170413`

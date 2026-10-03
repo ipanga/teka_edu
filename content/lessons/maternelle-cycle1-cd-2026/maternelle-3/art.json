@@ -567,6 +567,221 @@
       "origin": "teka-edu-created",
       "status": "review",
       "review": null
+    },
+    {
+      "id": "m3-art-10",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Je nomme les gestes du dessin",
+      "summary": "Trace une ligne, puis le contour d’une feuille.",
+      "objectiveCodes": ["ART-S01-C01-O08"],
+      "supportingObjectiveCodes": ["ART-S01-C01-O05"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Dessinez sur papier avec des outils adaptés et nommez les gestes. Le motif de maison est un appui ; le répertoire collectif de la classe reste à reprendre avec l’école, sans prétendre le remplacer.",
+      "activities": [
+        {
+          "id": "m3-art-10-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Je nomme les gestes du dessin",
+          "childInstruction": "Trace une ligne, puis le contour d’une feuille.",
+          "adultGuidance": "Tracez avec l’enfant une ligne simple puis un contour de feuille imaginée. Nommez ligne, contour, couleur, trait. L’enfant désigne ces éléments dans son dessin et les redonne ; ne demandez pas un vocabulaire technique récité.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C01-O08", "ART-S01-C01-O05"],
+          "materialCodes": ["papier", "crayon", "crayons-couleur"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Draw a line and the outline of a leaf."
+            }
+          ],
+          "payload": {
+            "subject": "Je nomme les gestes du dessin"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-art-11",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Mon dessin de la semaine",
+      "summary": "Dessine une plante et nomme une ligne et son contour.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["ART-S01-C01-O08"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Dessinez sur papier avec des outils adaptés et nommez les gestes. Le motif de maison est un appui ; le répertoire collectif de la classe reste à reprendre avec l’école, sans prétendre le remplacer.",
+      "activities": [
+        {
+          "id": "m3-art-11-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Mon dessin de la semaine",
+          "childInstruction": "Dessine une plante et nomme une ligne et son contour.",
+          "adultGuidance": "Reprenez le vocabulaire du jour 32 et la graine/pousse/plante des cartes acceptées. Le dessin reste sur papier, libre et simple. Demandez une ligne, un contour et une couleur, sans note ni copie parfaite.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C01-O08"],
+          "materialCodes": ["papier", "crayon", "crayons-couleur"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Draw a plant and name a line and its outline."
+            }
+          ],
+          "payload": {
+            "subject": "Mon dessin de la semaine"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-art-12",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Je transforme un motif connu",
+      "summary": "Reprends ce motif, puis change-le à ta façon.",
+      "objectiveCodes": ["ART-S01-C02-O07"],
+      "supportingObjectiveCodes": ["ART-S01-C01-O08", "ART-S01-C01-O05"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Dessinez sur papier avec des outils adaptés et nommez les gestes. Le motif de maison est un appui ; le répertoire collectif de la classe reste à reprendre avec l’école, sans prétendre le remplacer.",
+      "activities": [
+        {
+          "id": "m3-art-12-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Je transforme un motif connu",
+          "childInstruction": "Reprends ce motif, puis change-le à ta façon.",
+          "adultGuidance": "L’adulte dessine deux feuilles simples, rappel de la plante déjà vue. L’enfant reprend le motif puis le transforme : plus grand, tourné ou d’une autre couleur. Parlez de l’effet produit. Un motif réellement rapporté de la classe peut être choisi, mais vous ne prétendez pas connaitre son répertoire ; le motif de maison est un appui.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C02-O07", "ART-S01-C01-O08", "ART-S01-C01-O05"],
+          "materialCodes": ["papier", "crayon", "crayons-couleur"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Copy this familiar pattern and change it your way."
+            }
+          ],
+          "payload": {
+            "subject": "Je transforme un motif connu"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-art-13",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Le même motif devient autre chose",
+      "summary": "Transforme la feuille en une nouvelle forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["ART-S01-C02-O07", "ART-S01-C01-O08", "ART-S01-C01-O06"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Dessinez sur papier avec des outils adaptés et nommez les gestes. Le motif de maison est un appui ; le répertoire collectif de la classe reste à reprendre avec l’école, sans prétendre le remplacer.",
+      "activities": [
+        {
+          "id": "m3-art-13-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Le même motif devient autre chose",
+          "childInstruction": "Transforme la feuille en une nouvelle forme.",
+          "adultGuidance": "Reprenez le motif feuille du jour 37. L’enfant change son orientation, ajoute des traits ou le détourne en poisson imaginaire. Nommez contour, ligne et couleur et faites expliquer l’effet. Aucun modèle numérique n’est requis : vous tracez le point de départ sur papier.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C02-O07", "ART-S01-C01-O08", "ART-S01-C01-O06"],
+          "materialCodes": ["papier", "crayon", "crayons-couleur"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Change the leaf into a new shape."
+            }
+          ],
+          "payload": {
+            "subject": "Le même motif devient autre chose"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-art-14",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Mes motifs d’octobre",
+      "summary": "Choisis un motif connu et transforme-le encore.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["ART-S01-C02-O07", "ART-S01-C01-O08"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Dessinez sur papier avec des outils adaptés et nommez les gestes. Le motif de maison est un appui ; le répertoire collectif de la classe reste à reprendre avec l’école, sans prétendre le remplacer.",
+      "activities": [
+        {
+          "id": "m3-art-14-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Mes motifs d’octobre",
+          "childInstruction": "Choisis un motif connu et transforme-le encore.",
+          "adultGuidance": "L’enfant choisit la feuille ou un motif réellement connu de sa classe, le dessine puis le transforme. Faites expliquer ce qui est gardé et changé avec ligne, contour, couleur. Une seule transformation suffit pour ce bilan ; n’inventez pas de répertoire scolaire.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C02-O07", "ART-S01-C01-O08"],
+          "materialCodes": ["papier", "crayon", "crayons-couleur"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Choose a familiar pattern and change it again."
+            }
+          ],
+          "payload": {
+            "subject": "Mes motifs d’octobre"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
     }
   ]
 }

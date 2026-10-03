@@ -252,7 +252,22 @@
         "m3-lang-26",
         "m3-lang-27",
         "m3-lang-28",
-        "m3-lang-29"
+        "m3-lang-29",
+        "m3-lang-30",
+        "m3-lang-31",
+        "m3-lang-32",
+        "m3-lang-33",
+        "m3-lang-34",
+        "m3-lang-35",
+        "m3-lang-36",
+        "m3-lang-37",
+        "m3-lang-38",
+        "m3-lang-39",
+        "m3-lang-40",
+        "m3-lang-41",
+        "m3-lang-42",
+        "m3-lang-43",
+        "m3-lang-44"
       ]
     },
     {
@@ -287,7 +302,22 @@
         "m3-math-26",
         "m3-math-27",
         "m3-math-28",
-        "m3-math-29"
+        "m3-math-29",
+        "m3-math-30",
+        "m3-math-31",
+        "m3-math-32",
+        "m3-math-33",
+        "m3-math-34",
+        "m3-math-35",
+        "m3-math-36",
+        "m3-math-37",
+        "m3-math-38",
+        "m3-math-39",
+        "m3-math-40",
+        "m3-math-41",
+        "m3-math-42",
+        "m3-math-43",
+        "m3-math-44"
       ]
     },
     {
@@ -322,7 +352,22 @@
         "m3-phys-26",
         "m3-phys-27",
         "m3-phys-28",
-        "m3-phys-29"
+        "m3-phys-29",
+        "m3-phys-30",
+        "m3-phys-31",
+        "m3-phys-32",
+        "m3-phys-33",
+        "m3-phys-34",
+        "m3-phys-35",
+        "m3-phys-36",
+        "m3-phys-37",
+        "m3-phys-38",
+        "m3-phys-39",
+        "m3-phys-40",
+        "m3-phys-41",
+        "m3-phys-42",
+        "m3-phys-43",
+        "m3-phys-44"
       ]
     },
     {
@@ -337,7 +382,12 @@
         "m3-art-06",
         "m3-art-07",
         "m3-art-08",
-        "m3-art-09"
+        "m3-art-09",
+        "m3-art-10",
+        "m3-art-11",
+        "m3-art-12",
+        "m3-art-13",
+        "m3-art-14"
       ]
     },
     {
@@ -352,7 +402,11 @@
         "m3-world-06",
         "m3-world-07",
         "m3-world-08",
-        "m3-world-09"
+        "m3-world-09",
+        "m3-world-10",
+        "m3-world-11",
+        "m3-world-12",
+        "m3-world-13"
       ]
     },
     {
@@ -369,7 +423,13 @@
         "m3-time-08",
         "m3-time-09",
         "m3-time-10",
-        "m3-time-11"
+        "m3-time-11",
+        "m3-time-12",
+        "m3-time-13",
+        "m3-time-14",
+        "m3-time-15",
+        "m3-time-16",
+        "m3-time-17"
       ]
     }
   ]

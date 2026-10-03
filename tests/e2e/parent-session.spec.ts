@@ -94,8 +94,8 @@ test.describe("parent session", () => {
   });
 
   test("a day that has no session is not invented", async ({ page }) => {
-    // Day 30 remains intentionally unauthored, including after accepted October Batch 1.
-    const response = await page.goto("/maternelle/3/seance/30");
+    // Day 45 remains intentionally unauthored after the full October checkpoint.
+    const response = await page.goto("/maternelle/3/seance/45");
     expect(response?.status()).toBe(404);
   });
 

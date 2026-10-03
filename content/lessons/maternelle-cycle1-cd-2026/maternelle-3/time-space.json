@@ -1088,6 +1088,422 @@
       "origin": "teka-edu-created",
       "status": "review",
       "review": null
+    },
+    {
+      "id": "m3-time-12",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "TIME-SPACE",
+      "title": "Octobre dans mon année",
+      "summary": "Dis le mois, puis une chose qui arrive ce mois-ci. Dis un mois que tu connais et ce qu’il te rappelle.",
+      "objectiveCodes": ["TIME-SPACE-S01-C01-O13"],
+      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O12"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Partez de la date et de repères réels de la famille. Aidez les réponses oralement ; aucune lecture, récitation parfaite ni saison universelle liée aux mois n’est exigée.",
+      "activities": [
+        {
+          "id": "m3-time-12-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Mon mois et un évènement",
+          "childInstruction": "Dis le mois, puis une chose qui arrive ce mois-ci.",
+          "adultGuidance": "Après la date, faites redire octobre. Rappelez septembre, le mois de la rentrée dans ce calendrier. L’enfant choisit un évènement réel ou prévu en octobre, même très simple. N’inventez ni anniversaire ni fête de sa famille.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O13", "TIME-SPACE-S01-C01-O12"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the month and one real event this month."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis le mois, puis une chose qui arrive ce mois-ci."]
+          }
+        },
+        {
+          "id": "m3-time-12-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Un autre repère",
+          "childInstruction": "Dis un mois que tu connais et ce qu’il te rappelle.",
+          "adultGuidance": "Proposez septembre pour la rentrée, puis laissez l’enfant choisir un autre mois. Vous fournissez le nom si besoin. Une association vraie pour la famille suffit ; ne demandez pas tous les mois dès cette première rencontre.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O13"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say a month you know and what it reminds you of."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis un mois que tu connais et ce qu’il te rappelle."]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-time-13",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "TIME-SPACE",
+      "title": "Je découvre les douze mois",
+      "summary": "Écoute les mois, puis redis ceux que tu connais. Retrouve septembre et octobre dans les mois que je dis.",
+      "objectiveCodes": ["TIME-SPACE-S01-C01-O14"],
+      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O13"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Partez de la date et de repères réels de la famille. Aidez les réponses oralement ; aucune lecture, récitation parfaite ni saison universelle liée aux mois n’est exigée.",
+      "activities": [
+        {
+          "id": "m3-time-13-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Des noms dans l’année",
+          "childInstruction": "Écoute les mois, puis redis ceux que tu connais.",
+          "adultGuidance": "Dites janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre. Redites-les par petits groupes et laissez l’enfant retrouver les noms entendus, sans exiger douze réponses ni lecture.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O14"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the months and repeat the ones you know."
+            }
+          ],
+          "payload": {
+            "prompts": ["Écoute les mois, puis redis ceux que tu connais."]
+          }
+        },
+        {
+          "id": "m3-time-13-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Mes repères parmi les mois",
+          "childInstruction": "Retrouve septembre et octobre dans les mois que je dis.",
+          "adultGuidance": "Redites trois ou quatre noms de mois dont septembre et octobre. L’enfant les retrouve et rappelle rentrée et évènement familial choisi. Faites découvrir d’autres noms progressivement, en acceptant l’aide.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O14", "TIME-SPACE-S01-C01-O13"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Find September and October among the months I say."
+            }
+          ],
+          "payload": {
+            "prompts": ["Retrouve septembre et octobre dans les mois que je dis."]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-time-14",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "TIME-SPACE",
+      "title": "Les mois reviennent",
+      "summary": "Redis les mois dont tu te souviens. Dis un souvenir et le mois qui lui convient.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["TIME-SPACE-S01-C01-O14", "TIME-SPACE-S01-C01-O13"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Partez de la date et de repères réels de la famille. Aidez les réponses oralement ; aucune lecture, récitation parfaite ni saison universelle liée aux mois n’est exigée.",
+      "activities": [
+        {
+          "id": "m3-time-14-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Je retrouve des noms de mois",
+          "childInstruction": "Redis les mois dont tu te souviens.",
+          "adultGuidance": "Redonnez la liste des douze mois oralement, puis faites rappeler ceux que l’enfant connait. Soutenez les noms encore difficiles. Variez l’ordre des demandes ; aucun résultat chiffré ni récitation parfaite n’est attendu.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O14"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the months you remember."
+            }
+          ],
+          "payload": {
+            "prompts": ["Redis les mois dont tu te souviens."]
+          }
+        },
+        {
+          "id": "m3-time-14-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Un mois pour un souvenir",
+          "childInstruction": "Dis un souvenir et le mois qui lui convient.",
+          "adultGuidance": "Utilisez un souvenir dont l’adulte connait le mois, ou reprenez la rentrée en septembre. Si aucun autre souvenir n’a de date connue, restez à septembre/octobre. Ne faites pas deviner une date familiale inconnue.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O13", "TIME-SPACE-S01-C01-O14"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say a memory and the month it belongs to."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis un souvenir et le mois qui lui convient."]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-time-15",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "TIME-SPACE",
+      "title": "Les saisons près de chez nous",
+      "summary": "Parle d’un moment où il pleut souvent et d’un moment plus sec. Dis ce qui change quand les pluies sont plus fréquentes.",
+      "objectiveCodes": ["TIME-SPACE-S01-C01-O15"],
+      "supportingObjectiveCodes": ["LANG-S01-C02-O03"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Partez de la date et de repères réels de la famille. Aidez les réponses oralement ; aucune lecture, récitation parfaite ni saison universelle liée aux mois n’est exigée.",
+      "activities": [
+        {
+          "id": "m3-time-15-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Pluie et saison",
+          "childInstruction": "Parle d’un moment où il pleut souvent et d’un moment plus sec.",
+          "adultGuidance": "Présentez saison des pluies et saison sèche selon votre région. Les pluies varient d’une région de RDC à l’autre ; près de l’équateur il peut y avoir plusieurs périodes de pluie. Aucun calendrier européen automne/hiver n’est imposé. Une journée de pluie ne suffit pas à déterminer une saison.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O15"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Talk about a rainy period and a drier period."
+            }
+          ],
+          "payload": {
+            "prompts": ["Parle d’un moment où il pleut souvent et d’un moment plus sec."]
+          }
+        },
+        {
+          "id": "m3-time-15-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Ce qui change autour de nous",
+          "childInstruction": "Dis ce qui change quand les pluies sont plus fréquentes.",
+          "adultGuidance": "L’adulte donne un exemple local connu : sol plus humide, végétation ou vêtements pour rester à l’abri. L’enfant propose un changement. Faites distinguer le temps de ce jour et une période habituelle ; ne fixez pas les mêmes mois pour toute la RDC.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O15", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say what changes when rain is more frequent."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis ce qui change quand les pluies sont plus fréquentes."]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-time-16",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "TIME-SPACE",
+      "title": "Mois et saisons, deux repères",
+      "summary": "Dis octobre et un autre mois que tu connais. Parle d’une saison que tu connais chez toi.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O14",
+        "TIME-SPACE-S01-C01-O13",
+        "TIME-SPACE-S01-C01-O15"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Partez de la date et de repères réels de la famille. Aidez les réponses oralement ; aucune lecture, récitation parfaite ni saison universelle liée aux mois n’est exigée.",
+      "activities": [
+        {
+          "id": "m3-time-16-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Mon mois actuel",
+          "childInstruction": "Dis octobre et un autre mois que tu connais.",
+          "adultGuidance": "Reprenez la date et les douze noms en petits groupes. Faites retrouver septembre/octobre puis d’autres mois selon l’aisance. Le nom du mois n’annonce pas à lui seul le temps qu’il fera chez vous.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O14", "TIME-SPACE-S01-C01-O13"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say October and another month you know."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis octobre et un autre mois que tu connais."]
+          }
+        },
+        {
+          "id": "m3-time-16-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Ma région et ses saisons",
+          "childInstruction": "Parle d’une saison que tu connais chez toi.",
+          "adultGuidance": "Reprenez saison sèche et saison des pluies avec un exemple de votre région. Si l’enfant ne sait pas, donnez un exemple réel. Ne demandez ni relevés météorologiques ni association universelle mois/saison.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O15"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Talk about a season where you live."
+            }
+          ],
+          "payload": {
+            "prompts": ["Parle d’une saison que tu connais chez toi."]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-time-17",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "TIME-SPACE",
+      "title": "Je prépare le mois suivant",
+      "summary": "Dis le mois actuel et celui qui vient après. Dis une chose qui peut changer avec la saison.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O14",
+        "TIME-SPACE-S01-C01-O13",
+        "LANG-S01-C02-O02",
+        "TIME-SPACE-S01-C01-O15",
+        "LANG-S01-C02-O03"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Partez de la date et de repères réels de la famille. Aidez les réponses oralement ; aucune lecture, récitation parfaite ni saison universelle liée aux mois n’est exigée.",
+      "activities": [
+        {
+          "id": "m3-time-17-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Octobre puis novembre",
+          "childInstruction": "Dis le mois actuel et celui qui vient après.",
+          "adultGuidance": "Après la date, dites : « Après octobre, vient novembre. » L’enfant redonne ce petit repère puis un projet possible, sans supposer vacances, fête ni jour d’école. Retrouvez quelques autres mois avec votre modèle oral.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": [
+            "TIME-SPACE-S01-C01-O14",
+            "TIME-SPACE-S01-C01-O13",
+            "LANG-S01-C02-O02"
+          ],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the current month and the next month."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis le mois actuel et celui qui vient après."]
+          }
+        },
+        {
+          "id": "m3-time-17-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Je garde un repère local",
+          "childInstruction": "Dis une chose qui peut changer avec la saison.",
+          "adultGuidance": "Reprenez un changement local de pluie ou de sécheresse connu. Aidez une phrase avec quand. Rappelez qu’un seul jour de pluie ne prouve pas un changement de saison et que novembre ne signifie pas la même météo partout.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O15", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say one thing that can change with the season."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis une chose qui peut changer avec la saison."]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
     }
   ]
 }

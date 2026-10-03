@@ -55,7 +55,7 @@ describe("levels", () => {
     // Writing September for 1ère maternelle turned its card on by itself: nothing was flipped.
     const expectedAuthoredDays = new Map([
       ["1", 22],
-      ["3", 29],
+      ["3", 44],
     ]);
     for (const slug of ["1", "3"]) {
       const level = levels.find((candidate) => candidate.slug === slug)!;
@@ -78,7 +78,7 @@ describe("levels", () => {
       ["3", "maternelle-3"],
     ] as const) {
       const days = authoredDays(levelId);
-      expect(days.length, levelId).toBe(levelId === "maternelle-3" ? 29 : 22);
+      expect(days.length, levelId).toBe(levelId === "maternelle-3" ? 44 : 22);
       for (const day of days) {
         const session = sessionForDay(levelId, day);
         expect(session, `${levelId} day ${day}`).toBeDefined();

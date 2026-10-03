@@ -3410,6 +3410,1452 @@
       "origin": "teka-edu-created",
       "status": "review",
       "review": null
+    },
+    {
+      "id": "m3-lang-30",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Je lie mes idées",
+      "summary": "Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C02-O03",
+        "LANG-S02-C03-O04"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.",
+      "activities": [
+        {
+          "type": "conversation",
+          "title": "Le rituel : date et rappel",
+          "childInstruction": "Dis la date. Complète une phrase avec quand.",
+          "adultGuidance": "Dites : « Aujourd’hui, nous sommes {{date}}. » Laissez l’enfant redire la date, puis reprenez brièvement un exemple déjà rencontré. Donnez un modèle si nécessaire et gardez les deux moments dans trois minutes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then recall one example."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis la date. Complète une phrase avec quand."]
+          },
+          "id": "m3-lang-30-a1",
+          "position": 1
+        },
+        {
+          "type": "conversation",
+          "title": "Je lie mes idées",
+          "childInstruction": "Complète : « Quand je rentre, je… »",
+          "adultGuidance": "Reprenez le modèle entendu avec Nsimba : « Quand je rentre, je pose mon sac. » Proposez un autre geste familier. Laissez l’enfant compléter et redire toute sa phrase ; une seule idée liée suffit.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Complete or tell one linked sentence."
+            }
+          ],
+          "payload": {
+            "prompts": ["Complète : « Quand je rentre, je… »"]
+          },
+          "id": "m3-lang-30-a2",
+          "position": 2
+        },
+        {
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout, pour le plaisir.",
+          "adultGuidance": "Lisez le texte fourni avec ses images, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "le-premier-jour-de-nsimba"
+          },
+          "id": "m3-lang-30-a3",
+          "position": 3
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-31",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Ch et z dans mes mots",
+      "summary": "Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C02-O03",
+        "LANG-S01-C03-O04",
+        "LANG-S02-C03-O04"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.",
+      "activities": [
+        {
+          "type": "conversation",
+          "title": "Le rituel : date et rappel",
+          "childInstruction": "Dis la date. Redis une phrase avec quand.",
+          "adultGuidance": "Dites : « Aujourd’hui, nous sommes {{date}}. » Laissez l’enfant redire la date, puis reprenez brièvement un exemple déjà rencontré. Donnez un modèle si nécessaire et gardez les deux moments dans trois minutes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then recall one example."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis la date. Redis une phrase avec quand."]
+          },
+          "id": "m3-lang-31-a1",
+          "position": 1
+        },
+        {
+          "type": "phonology",
+          "title": "Ch et z dans mes mots",
+          "childInstruction": "Redis doucement : chat, zéro.",
+          "adultGuidance": "Dites chat puis zéro. Faites écouter le début et redire sans forcer la bouche. Alternez chaud et zoo, puis chat et zéro. Expliquez zoo comme un lieu où l’on voit des animaux ; le mot n’exige pas d’y être allé. Revenez à une paire si nécessaire.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C03-O04"],
+          "materialCodes": ["crayon", "papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen and repeat slowly."
+            }
+          ],
+          "payload": {
+            "focusSound": "ch/z",
+            "words": ["chat", "zéro", "chaud", "zoo"]
+          },
+          "id": "m3-lang-31-a2",
+          "position": 2
+        },
+        {
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout, pour le plaisir.",
+          "adultGuidance": "Lisez le texte fourni avec ses images, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "la-pluie-sur-le-toit"
+          },
+          "id": "m3-lang-31-a3",
+          "position": 3
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-32",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Je raconte pourquoi",
+      "summary": "Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C03-O04",
+        "LANG-S01-C02-O03",
+        "LANG-S02-C03-O04"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.",
+      "activities": [
+        {
+          "type": "conversation",
+          "title": "Le rituel : date et rappel",
+          "childInstruction": "Dis la date. Redis chat et zéro doucement.",
+          "adultGuidance": "Dites : « Aujourd’hui, nous sommes {{date}}. » Laissez l’enfant redire la date, puis reprenez brièvement un exemple déjà rencontré. Donnez un modèle si nécessaire et gardez les deux moments dans trois minutes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then recall one example."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis la date. Redis chat et zéro doucement."]
+          },
+          "id": "m3-lang-32-a1",
+          "position": 1
+        },
+        {
+          "type": "conversation",
+          "title": "Je raconte pourquoi",
+          "childInstruction": "Complète : « Je prends mon panier parce que… »",
+          "adultGuidance": "Reprenez l’usage du seau vu au jour 26. Avec un panier réel ou accepté comme exemple, modélisez : « Je prends mon panier parce que je veux porter des fruits. » L’enfant propose un autre objet et son usage ; reformulez sa phrase sans imposer une récitation.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C02-O03"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Complete or tell one linked sentence."
+            }
+          ],
+          "payload": {
+            "prompts": ["Complète : « Je prends mon panier parce que… »"]
+          },
+          "id": "m3-lang-32-a2",
+          "position": 2
+        },
+        {
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout, pour le plaisir.",
+          "adultGuidance": "Lisez le texte fourni avec ses images, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "le-marche-de-mama-lelo"
+          },
+          "id": "m3-lang-32-a3",
+          "position": 3
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-33",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Br et cr, deux sons ensemble",
+      "summary": "Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir.",
+      "objectiveCodes": ["LANG-S01-C03-O05"],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C02-O03",
+        "LANG-S02-C03-O04"
+      ],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.",
+      "activities": [
+        {
+          "type": "conversation",
+          "title": "Le rituel : date et rappel",
+          "childInstruction": "Dis la date. Redis pourquoi tu prends un panier.",
+          "adultGuidance": "Dites : « Aujourd’hui, nous sommes {{date}}. » Laissez l’enfant redire la date, puis reprenez brièvement un exemple déjà rencontré. Donnez un modèle si nécessaire et gardez les deux moments dans trois minutes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then recall one example."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis la date. Redis pourquoi tu prends un panier."]
+          },
+          "id": "m3-lang-33-a1",
+          "position": 1
+        },
+        {
+          "type": "phonology",
+          "title": "Br et cr, deux sons ensemble",
+          "childInstruction": "Écoute et redis : bras, crayon.",
+          "adultGuidance": "Montrez votre bras et un crayon réel. Dites les mots naturellement puis lentement. Faites redire bras, bruit, crayon, creux, avec le début br/cr sans ajouter une voyelle entre les consonnes. Expliquez creux avec la paume ouverte ; deux mots réussis suffisent.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C03-O05"],
+          "materialCodes": ["crayon", "papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen and repeat slowly."
+            }
+          ],
+          "payload": {
+            "focusSound": "br/cr",
+            "words": ["bras", "bruit", "crayon", "creux"]
+          },
+          "id": "m3-lang-33-a2",
+          "position": 2
+        },
+        {
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout, pour le plaisir.",
+          "adultGuidance": "Lisez le texte fourni avec ses images, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "bibi-la-chevre-curieuse"
+          },
+          "id": "m3-lang-33-a3",
+          "position": 3
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-34",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Mes phrases de la semaine",
+      "summary": "Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C03-O05",
+        "LANG-S01-C02-O03",
+        "LANG-S02-C03-O04"
+      ],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.",
+      "activities": [
+        {
+          "type": "conversation",
+          "title": "Le rituel : date et rappel",
+          "childInstruction": "Dis la date. Redis bras et crayon.",
+          "adultGuidance": "Dites : « Aujourd’hui, nous sommes {{date}}. » Laissez l’enfant redire la date, puis reprenez brièvement un exemple déjà rencontré. Donnez un modèle si nécessaire et gardez les deux moments dans trois minutes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C03-O05"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then recall one example."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis la date. Redis bras et crayon."]
+          },
+          "id": "m3-lang-34-a1",
+          "position": 1
+        },
+        {
+          "type": "conversation",
+          "title": "Mes phrases de la semaine",
+          "childInstruction": "Raconte avec quand, puis dis pourquoi.",
+          "adultGuidance": "L’enfant choisit une petite action connue. Modélisez deux phrases : « Quand je dessine, je prends un crayon. Je prends le bleu parce que je dessine de l’eau. » Aidez au besoin avec le début seulement ; deux phrases suffisent. Finissez par bras/crayon doucement.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Complete or tell one linked sentence."
+            }
+          ],
+          "payload": {
+            "prompts": ["Raconte avec quand, puis dis pourquoi."]
+          },
+          "id": "m3-lang-34-a2",
+          "position": 2
+        },
+        {
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout, pour le plaisir.",
+          "adultGuidance": "Lisez le texte fourni avec ses images, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "les-trois-cailloux-de-tito"
+          },
+          "id": "m3-lang-34-a3",
+          "position": 3
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-35",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Bl et pl dans la maison",
+      "summary": "Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C02-O03",
+        "LANG-S01-C03-O05",
+        "LANG-S02-C03-O04"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.",
+      "activities": [
+        {
+          "type": "conversation",
+          "title": "Le rituel : date et rappel",
+          "childInstruction": "Dis la date. Redis une phrase avec quand.",
+          "adultGuidance": "Dites : « Aujourd’hui, nous sommes {{date}}. » Laissez l’enfant redire la date, puis reprenez brièvement un exemple déjà rencontré. Donnez un modèle si nécessaire et gardez les deux moments dans trois minutes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then recall one example."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis la date. Redis une phrase avec quand."]
+          },
+          "id": "m3-lang-35-a1",
+          "position": 1
+        },
+        {
+          "type": "phonology",
+          "title": "Bl et pl dans la maison",
+          "childInstruction": "Écoute et redis : bleu, plante.",
+          "adultGuidance": "Nommez quelque chose de bleu, réel ou imaginé, puis la plante des cartes déjà vues. Faites redire bleu, blouse, plante, plat. Montrez une assiette pour expliquer plat et décrivez la blouse comme un vêtement. Gardez bl/pl ensemble ; accompagnez plutôt que de corriger longtemps.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C03-O05"],
+          "materialCodes": ["crayon", "papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen and repeat slowly."
+            }
+          ],
+          "payload": {
+            "focusSound": "bl/pl",
+            "words": ["bleu", "blouse", "plante", "plat"]
+          },
+          "id": "m3-lang-35-a2",
+          "position": 2
+        },
+        {
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout, pour le plaisir.",
+          "adultGuidance": "Lisez le texte fourni avec ses images, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "kumu-le-petit-poussin"
+          },
+          "id": "m3-lang-35-a3",
+          "position": 3
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-36",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Je décris pour être compris",
+      "summary": "Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C03-O05",
+        "LANG-S01-C02-O03",
+        "LANG-S02-C03-O04"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.",
+      "activities": [
+        {
+          "type": "conversation",
+          "title": "Le rituel : date et rappel",
+          "childInstruction": "Dis la date. Redis bleu et plante.",
+          "adultGuidance": "Dites : « Aujourd’hui, nous sommes {{date}}. » Laissez l’enfant redire la date, puis reprenez brièvement un exemple déjà rencontré. Donnez un modèle si nécessaire et gardez les deux moments dans trois minutes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C03-O05"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then recall one example."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis la date. Redis bleu et plante."]
+          },
+          "id": "m3-lang-36-a1",
+          "position": 1
+        },
+        {
+          "type": "conversation",
+          "title": "Je décris pour être compris",
+          "childInstruction": "Décris un objet pour que je le retrouve.",
+          "adultGuidance": "Disposez un crayon, un panier et un cahier. Modélisez une description : « Je cherche ce qui sert à écrire. » L’enfant donne une qualité et un usage sans nommer l’objet ; vous le retrouvez. Aidez : « Je le choisis parce que… » puis échangez les rôles.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C02-O03"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Complete or tell one linked sentence."
+            }
+          ],
+          "payload": {
+            "prompts": ["Décris un objet pour que je le retrouve."]
+          },
+          "id": "m3-lang-36-a2",
+          "position": 2
+        },
+        {
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout, pour le plaisir.",
+          "adultGuidance": "Lisez le texte fourni avec ses images, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "la-mangue-partagee"
+          },
+          "id": "m3-lang-36-a3",
+          "position": 3
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-37",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Sl dans un mot nouveau",
+      "summary": "Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C02-O03",
+        "LANG-S01-C03-O05",
+        "LANG-S02-C03-O04"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.",
+      "activities": [
+        {
+          "type": "conversation",
+          "title": "Le rituel : date et rappel",
+          "childInstruction": "Dis la date. Décris un objet en une phrase.",
+          "adultGuidance": "Dites : « Aujourd’hui, nous sommes {{date}}. » Laissez l’enfant redire la date, puis reprenez brièvement un exemple déjà rencontré. Donnez un modèle si nécessaire et gardez les deux moments dans trois minutes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then recall one example."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis la date. Décris un objet en une phrase."]
+          },
+          "id": "m3-lang-37-a1",
+          "position": 1
+        },
+        {
+          "type": "phonology",
+          "title": "Sl dans un mot nouveau",
+          "childInstruction": "Écoute et redis : slalom, puis glisse entre les repères.",
+          "adultGuidance": "Expliquez slalom : avancer en passant entre des repères. Dites slalom puis un slalom, lentement, sans ajouter une voyelle entre s et l. Comparez avec le début de plante et bleu. Faites deux répétitions, puis trois pas entre deux repères plats, sans course ; le but reste la parole.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C03-O05"],
+          "materialCodes": ["crayon", "papier", "repere-sol"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen and repeat slowly."
+            }
+          ],
+          "payload": {
+            "focusSound": "sl/bl/pl",
+            "words": ["slalom", "bleu", "plante"]
+          },
+          "id": "m3-lang-37-a2",
+          "position": 2
+        },
+        {
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout, pour le plaisir.",
+          "adultGuidance": "Lisez le texte fourni avec ses images, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "le-premier-jour-de-nsimba"
+          },
+          "id": "m3-lang-37-a3",
+          "position": 3
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-38",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Je parle du temps qui change",
+      "summary": "Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C03-O05",
+        "LANG-S01-C02-O03",
+        "LANG-S01-C02-O02",
+        "LANG-S02-C03-O04"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.",
+      "activities": [
+        {
+          "type": "conversation",
+          "title": "Le rituel : date et rappel",
+          "childInstruction": "Dis la date. Redis slalom et plante.",
+          "adultGuidance": "Dites : « Aujourd’hui, nous sommes {{date}}. » Laissez l’enfant redire la date, puis reprenez brièvement un exemple déjà rencontré. Donnez un modèle si nécessaire et gardez les deux moments dans trois minutes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C03-O05"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then recall one example."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis la date. Redis slalom et plante."]
+          },
+          "id": "m3-lang-38-a1",
+          "position": 1
+        },
+        {
+          "type": "conversation",
+          "title": "Je parle du temps qui change",
+          "childInstruction": "Complète : « Quand il pleut, je… »",
+          "adultGuidance": "Partez du temps observé chez vous, sans inventer une pluie. Donnez un modèle adapté : « Quand il pleut, je reste à l’abri. » L’enfant propose une action possible, puis une raison avec parce que. Reprenez hier/demain si l’enfant veut raconter une expérience.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C02-O03", "LANG-S01-C02-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Complete or tell one linked sentence."
+            }
+          ],
+          "payload": {
+            "prompts": ["Complète : « Quand il pleut, je… »"]
+          },
+          "id": "m3-lang-38-a2",
+          "position": 2
+        },
+        {
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout, pour le plaisir.",
+          "adultGuidance": "Lisez le texte fourni avec ses images, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "malo-ne-veut-pas-dormir"
+          },
+          "id": "m3-lang-38-a3",
+          "position": 3
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-39",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Je raconte et je prononce",
+      "summary": "Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C02-O03",
+        "LANG-S01-C02-O02",
+        "LANG-S02-C03-O04"
+      ],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.",
+      "activities": [
+        {
+          "type": "conversation",
+          "title": "Le rituel : date et rappel",
+          "childInstruction": "Dis la date. Redis une phrase avec quand il pleut.",
+          "adultGuidance": "Dites : « Aujourd’hui, nous sommes {{date}}. » Laissez l’enfant redire la date, puis reprenez brièvement un exemple déjà rencontré. Donnez un modèle si nécessaire et gardez les deux moments dans trois minutes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then recall one example."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis la date. Redis une phrase avec quand il pleut."]
+          },
+          "id": "m3-lang-39-a1",
+          "position": 1
+        },
+        {
+          "type": "conversation",
+          "title": "Je raconte et je prononce",
+          "childInstruction": "Raconte une petite histoire avec une plante et un crayon.",
+          "adultGuidance": "Deux ou trois phrases au maximum : « Hier, j’ai dessiné une plante. Quand je prends mon crayon, je trace doucement. » L’enfant complète ou invente ; reformulez sa liaison. Faites redire plante, crayon et slalom une fois chacun, sans test de prononciation.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C02-O03", "LANG-S01-C02-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Complete or tell one linked sentence."
+            }
+          ],
+          "payload": {
+            "prompts": ["Raconte une petite histoire avec une plante et un crayon."]
+          },
+          "id": "m3-lang-39-a2",
+          "position": 2
+        },
+        {
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout, pour le plaisir.",
+          "adultGuidance": "Lisez le texte fourni avec ses images, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "la-pluie-sur-le-toit"
+          },
+          "id": "m3-lang-39-a3",
+          "position": 3
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-40",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Br et bl, je retrouve",
+      "summary": "Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C02-O03",
+        "LANG-S01-C03-O05",
+        "LANG-S02-C03-O04"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.",
+      "activities": [
+        {
+          "type": "conversation",
+          "title": "Le rituel : date et rappel",
+          "childInstruction": "Dis la date. Redis une phrase avec parce que.",
+          "adultGuidance": "Dites : « Aujourd’hui, nous sommes {{date}}. » Laissez l’enfant redire la date, puis reprenez brièvement un exemple déjà rencontré. Donnez un modèle si nécessaire et gardez les deux moments dans trois minutes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then recall one example."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis la date. Redis une phrase avec parce que."]
+          },
+          "id": "m3-lang-40-a1",
+          "position": 1
+        },
+        {
+          "type": "phonology",
+          "title": "Br et bl, je retrouve",
+          "childInstruction": "Redis bras, puis bleu.",
+          "adultGuidance": "Reprenez deux débuts déjà entendus. Montrez le bras et un objet dont vous pouvez nommer la couleur. Alternez bras/bleu et bruit/blouse. L’enfant écoute et répète ; donnez un modèle calme si le groupe consonantique reste difficile.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C03-O05"],
+          "materialCodes": ["crayon", "papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen and repeat slowly."
+            }
+          ],
+          "payload": {
+            "focusSound": "br/bl",
+            "words": ["bras", "bleu", "bruit", "blouse"]
+          },
+          "id": "m3-lang-40-a2",
+          "position": 2
+        },
+        {
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout, pour le plaisir.",
+          "adultGuidance": "Lisez le texte fourni avec ses images, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "bibi-la-chevre-curieuse"
+          },
+          "id": "m3-lang-40-a3",
+          "position": 3
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-41",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "J’explique un choix",
+      "summary": "Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C03-O05",
+        "LANG-S01-C02-O03",
+        "LANG-S02-C03-O04"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.",
+      "activities": [
+        {
+          "type": "conversation",
+          "title": "Le rituel : date et rappel",
+          "childInstruction": "Dis la date. Redis bras et bleu.",
+          "adultGuidance": "Dites : « Aujourd’hui, nous sommes {{date}}. » Laissez l’enfant redire la date, puis reprenez brièvement un exemple déjà rencontré. Donnez un modèle si nécessaire et gardez les deux moments dans trois minutes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C03-O05"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then recall one example."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis la date. Redis bras et bleu."]
+          },
+          "id": "m3-lang-41-a1",
+          "position": 1
+        },
+        {
+          "type": "conversation",
+          "title": "J’explique un choix",
+          "childInstruction": "Dis ce que tu choisis et pourquoi.",
+          "adultGuidance": "Proposez porter quelques objets dans un panier ou dans ses mains. Modélisez : « Je prends le panier parce que les objets restent ensemble. » L’enfant choisit et explique ; acceptez une autre solution adaptée. Faites redire la phrase liée et rappelez le lexique seau/panier.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C02-O03"],
+          "materialCodes": ["objets-maison"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Complete or tell one linked sentence."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis ce que tu choisis et pourquoi."]
+          },
+          "id": "m3-lang-41-a2",
+          "position": 2
+        },
+        {
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout, pour le plaisir.",
+          "adultGuidance": "Lisez le texte fourni avec ses images, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "le-marche-de-mama-lelo"
+          },
+          "id": "m3-lang-41-a3",
+          "position": 3
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-42",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Cr et pl dans mon dessin",
+      "summary": "Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C02-O03",
+        "LANG-S01-C03-O05",
+        "LANG-S02-C03-O04"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.",
+      "activities": [
+        {
+          "type": "conversation",
+          "title": "Le rituel : date et rappel",
+          "childInstruction": "Dis la date. Redis pourquoi tu choisis un panier.",
+          "adultGuidance": "Dites : « Aujourd’hui, nous sommes {{date}}. » Laissez l’enfant redire la date, puis reprenez brièvement un exemple déjà rencontré. Donnez un modèle si nécessaire et gardez les deux moments dans trois minutes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then recall one example."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis la date. Redis pourquoi tu choisis un panier."]
+          },
+          "id": "m3-lang-42-a1",
+          "position": 1
+        },
+        {
+          "type": "phonology",
+          "title": "Cr et pl dans mon dessin",
+          "childInstruction": "Redis crayon et plante, puis dis ce que tu dessines.",
+          "adultGuidance": "Avec un crayon et les cartes de plante déjà acceptées, donnez le modèle naturel crayon/plante. L’enfant répète, puis dit : « Quand je prends mon crayon, je dessine une plante. » N’exigez ni lecture ni lettres ; reprenez juste le début du mot si besoin.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C03-O05"],
+          "materialCodes": ["crayon", "papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen and repeat slowly."
+            }
+          ],
+          "payload": {
+            "focusSound": "cr/pl",
+            "words": ["crayon", "creux", "plante", "plat"]
+          },
+          "id": "m3-lang-42-a2",
+          "position": 2
+        },
+        {
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout, pour le plaisir.",
+          "adultGuidance": "Lisez le texte fourni avec ses images, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "les-trois-cailloux-de-tito"
+          },
+          "id": "m3-lang-42-a3",
+          "position": 3
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-43",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Je prépare demain en paroles",
+      "summary": "Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C03-O05",
+        "LANG-S01-C02-O03",
+        "LANG-S01-C02-O02",
+        "LANG-S02-C03-O04"
+      ],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.",
+      "activities": [
+        {
+          "type": "conversation",
+          "title": "Le rituel : date et rappel",
+          "childInstruction": "Dis la date. Redis crayon et plante.",
+          "adultGuidance": "Dites : « Aujourd’hui, nous sommes {{date}}. » Laissez l’enfant redire la date, puis reprenez brièvement un exemple déjà rencontré. Donnez un modèle si nécessaire et gardez les deux moments dans trois minutes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C03-O05"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then recall one example."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis la date. Redis crayon et plante."]
+          },
+          "id": "m3-lang-43-a1",
+          "position": 1
+        },
+        {
+          "type": "conversation",
+          "title": "Je prépare demain en paroles",
+          "childInstruction": "Dis une phrase avec demain et une avec quand.",
+          "adultGuidance": "Donnez : « Demain, je vais dessiner. Quand je dessine, je prends mon crayon. » L’enfant choisit une activité possible sans supposer un jour d’école. Reformulez son futur puis laissez-le reprendre. Deux phrases courtes suffisent.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C02-O03", "LANG-S01-C02-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Complete or tell one linked sentence."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis une phrase avec demain et une avec quand."]
+          },
+          "id": "m3-lang-43-a2",
+          "position": 2
+        },
+        {
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout, pour le plaisir.",
+          "adultGuidance": "Lisez le texte fourni avec ses images, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "la-mangue-partagee"
+          },
+          "id": "m3-lang-43-a3",
+          "position": 3
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
+    },
+    {
+      "id": "m3-lang-44",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "LANG",
+      "title": "Je raconte mes progrès d’octobre",
+      "summary": "Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "TIME-SPACE-S01-C01-O12",
+        "LANG-S01-C02-O02",
+        "LANG-S01-C02-O03",
+        "LANG-S02-C03-O04"
+      ],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.",
+      "activities": [
+        {
+          "type": "conversation",
+          "title": "Le rituel : date et rappel",
+          "childInstruction": "Dis la date. Redis une phrase avec demain.",
+          "adultGuidance": "Dites : « Aujourd’hui, nous sommes {{date}}. » Laissez l’enfant redire la date, puis reprenez brièvement un exemple déjà rencontré. Donnez un modèle si nécessaire et gardez les deux moments dans trois minutes.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["TIME-SPACE-S01-C01-O12", "LANG-S01-C02-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say the date, then recall one example."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis la date. Redis une phrase avec demain."]
+          },
+          "id": "m3-lang-44-a1",
+          "position": 1
+        },
+        {
+          "type": "conversation",
+          "title": "Je raconte mes progrès d’octobre",
+          "childInstruction": "Raconte deux choses que tu sais mieux dire.",
+          "adultGuidance": "Reprenez une phrase avec hier/demain et une avec quand ou parce que. L’enfant choisit ses sujets. Aidez par un début de phrase, puis faites redire deux mots de son choix parmi bras, crayon, bleu, plante et slalom. Aucun score ni perfection attendue.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S01-C02-O03", "LANG-S01-C02-O02"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Tell two things you can say better now."
+            }
+          ],
+          "payload": {
+            "prompts": ["Raconte deux choses que tu sais mieux dire."]
+          },
+          "id": "m3-lang-44-a2",
+          "position": 2
+        },
+        {
+          "type": "read-aloud",
+          "title": "Le temps de lecture",
+          "childInstruction": "Écoute l’histoire jusqu’au bout, pour le plaisir.",
+          "adultGuidance": "Lisez le texte fourni avec ses images, sans question après. Gardez une voix calme et laissez l’enfant entendre les phrases françaises.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["LANG-S02-C03-O04"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Listen to the story for pleasure."
+            }
+          ],
+          "payload": {
+            "textId": "kumu-le-petit-poussin"
+          },
+          "id": "m3-lang-44-a3",
+          "position": 3
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "review",
+      "review": null
     }
   ]
 }
