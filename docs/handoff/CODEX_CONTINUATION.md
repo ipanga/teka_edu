@@ -4,6 +4,20 @@ Current authorization: owner-controlled September integration and staging valida
 primary implementation, QA and authoring-time ImageGen environment. Claude Code is unavailable and
 is no longer a dependency. `CODEX_TO_CLAUDE_CODE_HANDOFF.md` is historical; preserve its evidence.
 
+## Current authorization override — mandatory P1 UX gate, 2026-10-03
+
+The latest owner instruction supersedes the historical September continuation below. Implement
+only five P1 UI/browser-state fixes on `codex/parent-child-ux-p1` based on exact develop `6b8ba9e`.
+Accepted October Batch 1 is frozen at `2170413` (corrected content `461e946`, independently
+reconfirmed `accepted`). Preserve content, media, packages, approval history and accepted branch
+history. Do not author Day 30 or Weeks 3–5, add migrations, mutate DEV/PROD, or promote production.
+
+Implementation and local validation have passed. Next: focused PR, required CI, eligible develop
+integration, then merge new develop into October without force-push and reverify frozen evidence.
+If merge cannot respect the no-DEV-mutation boundary, stop ready to merge. Do not supply a Weeks
+3–5 continuation prompt until every gate succeeds. Exact resume state is in
+`docs/work/ACTIVE_TASK.md`; evidence is in `docs/work/PARENT_CHILD_UX_P1.md`.
+
 ## Verified recovery baseline
 
 - Branch: `codex/september-rich-media-pilot`.

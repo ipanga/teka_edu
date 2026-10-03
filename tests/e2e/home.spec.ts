@@ -1,3 +1,4 @@
+import { expectHonestOfferedSession } from "./helpers/offered-session";
 import { expect, test } from "@playwright/test";
 
 // The front door (ADR-044): a parent picks the class, and a class with no lessons says so rather
@@ -37,14 +38,14 @@ test.describe("home and class selection", () => {
 
     await page.getByRole("link", { name: /3ème maternelle/ }).click();
     await expect(page).toHaveURL(/\/maternelle\/3$/);
-    await expect(page.getByRole("heading", { name: "Aujourd’hui" })).toBeVisible();
+    await expectHonestOfferedSession(page);
   });
 
   test("the youngest class opens on its own September", async ({ page }) => {
     await page.goto("/");
     await page.getByRole("link", { name: /1ère maternelle/ }).click();
     await expect(page).toHaveURL(/\/maternelle\/1$/);
-    await expect(page.getByRole("heading", { name: "Aujourd’hui" })).toBeVisible();
+    await expectHonestOfferedSession(page);
     // Its own content, never 3ème's: the two months share no lesson.
     const body = (await page.locator("body").textContent()) ?? "";
     expect(body).not.toMatch(/Kumu|Nsimba|Bibi/);
