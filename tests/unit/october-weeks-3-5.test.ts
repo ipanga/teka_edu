@@ -3,6 +3,8 @@ import { generateSchoolDays } from "@/domain/calendar/school-days";
 import { generateDailyPlan } from "@/domain/programme/daily-plan";
 import { entriesDueBy } from "@/domain/programme/annual-plan";
 import { getProgramme, getReferenceData } from "@/lib/content/reference-data";
+import { checkLessonReview } from "@/domain/lessons/review";
+import { mediaDigestSource } from "@/domain/media/types";
 
 const data = getReferenceData();
 const programme = getProgramme("maternelle-3", "2026-2027", data)!;
@@ -22,7 +24,7 @@ const through44 = days
   .map((d) => generateDailyPlan(d, programme, data.lessons));
 
 describe("October Weeks 3–5 authoring boundary", () => {
-  it("authors exactly fifteen complete days and sixty distinct review/null lessons", () => {
+  it("authors exactly fifteen complete days and sixty independently approved lessons", () => {
     expect(plans).toHaveLength(15);
     expect(plans[0]?.date).toBe("2026-10-12");
     expect(plans.at(-1)?.date).toBe("2026-10-30");
@@ -37,8 +39,10 @@ describe("October Weeks 3–5 authoring boundary", () => {
       ).toEqual([13, 9, 6, 7]);
     }
     for (const l of lessons) {
-      expect(l.status, l.id).toBe("review");
-      expect(l.review, l.id).toBeNull();
+      expect(l.status, l.id).toBe("approved");
+      expect(l.review?.outcome, l.id).toBe("accepted");
+      const canonical = data.lessons.find((candidate) => candidate.id === l.id)!;
+      expect(checkLessonReview(canonical, mediaDigestSource(data.media, data.texts))).toEqual([]);
     }
     const after = generateDailyPlan(
       days.find((d) => d.instructionalDay === 45)!,

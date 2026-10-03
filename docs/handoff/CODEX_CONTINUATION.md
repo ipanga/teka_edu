@@ -1,5 +1,18 @@
 # Codex continuation
 
+Current task: finalize owner-authorized October integration after independent accepted verdict
+at `1f573c508b30ddd0ade57d7a8cd8329d5eb901ce`. All 88 lessons now approved via approve-week
+(new approvals, not lapsed-only), with fresh distinct digests and owner-relayed history.
+Read ACTIVE_TASK.md and OCTOBER_FINAL_AUDIT.md for current validation and exact next action.
+Only approval metadata differs from accepted content; September/Batch 1 pedagogy, accepted
+media/history and P1 are preserved. Generated reference migration was replayed only locally.
+Current validation: 504 units, 154 pgTAP, 87 browser passes/nine production-only skips,
+15 fresh packages, zero lapses, build/client scan and both Docker smoke checks pass.
+Stop after validation, clean checkpoint/push and focused PR to develop. No hosted migration,
+merge, staging/production deploy, November, P2/P3 or 2ème maternelle.
+
+## Historical correction checkpoint
+
 Current follow-up: all four authorized PHYS corrections from reviewed `61b2e07` are green.
 Days 33/38/42/44 differ only by O11 mapping removals; no actions or safety changes. Weeks 8/9/10
 regenerated; all 15 packages exact. Current targeted 70/70, full 503/503, reports/integrity,

@@ -14,6 +14,7 @@ import path from "node:path";
 import { format, resolveConfig } from "prettier";
 import { lessonDigest } from "@/domain/lessons/review";
 import { mediaDigestSource } from "@/domain/media/types";
+import { lessonsFileSchema } from "@/lib/content/lesson-schemas";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const dryRun = process.argv.includes("--dry-run=true");
@@ -35,6 +36,10 @@ for (const levelId of LEVELS) {
       `content/lessons/maternelle-cycle1-cd-2026/${levelId}/${domain}.json`,
     );
     const parsed = JSON.parse(readFileSync(file, "utf8"));
+    // Approval hashes schema-normalized content; raw whitespace must not invent a lapse.
+    const canonical = new Map(
+      lessonsFileSchema.parse(parsed).lessons.map((lesson) => [lesson.id, lesson]),
+    );
     let touched = false;
     for (const raw of parsed.lessons as {
       id: string;
@@ -42,7 +47,7 @@ for (const levelId of LEVELS) {
       review: { reviewedDigest: string } | null;
     }[]) {
       if (raw.status !== "approved" || raw.review === null) continue;
-      if (lessonDigest(raw as never, media) === raw.review.reviewedDigest) continue;
+      if (lessonDigest(canonical.get(raw.id)!, media) === raw.review.reviewedDigest) continue;
       raw.status = "review";
       raw.review = null;
       lapsed.push(raw.id);

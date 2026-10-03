@@ -1,5 +1,16 @@
 # October 2026 — 3ème maternelle Weeks 3–5
 
+## Final integration preparation — 2026-10-03
+
+Independent reconfirmation returned accepted at corrected `1f573c5`, relayed by the owner.
+The four PHYS mapping-only corrections are preserved; their historical dossier remains unchanged.
+Weeks 8–10 now hold fresh generated approvals, as do Batch 1 Weeks 6–7: 88/88 October approved.
+Accepted pedagogical fields, media, P1 and all September approval records/digests remain unchanged.
+Packages were regenerated to include independent history and final approval state; all 15 are exact.
+Current final hashes/audit: OCTOBER_FINAL_AUDIT.md. Validation, migration and stop: ACTIVE_TASK.md.
+
+## Historical authoring evidence
+
 Owner authorization: 2026-10-03. Author days 30–44 only, stop for independent review.
 Base: local and fetched remote `1ada5f2dbd258adea9ca4e913729c4620958074c`.
 Accepted `2170413` and UX-corrected develop `603efdc` remain ancestors.

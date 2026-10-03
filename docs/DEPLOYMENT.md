@@ -1,5 +1,13 @@
 # Deployment
 
+## October integration preparation — 2026-10-03
+
+Generated reference-only migration `20261003195954_october_maternelle_3_approved.sql` mirrors
+the final independently accepted/approved October canonical state via the existing deterministic
+generator. No schema change or auth/user/child/progress mutation. It is locally validated only;
+hosted DEV/PROD are not migrated by this task. The next release action requires separate owner
+authorization; do not merge or deploy from the preparation checkpoint.
+
 This document covers how code moves from a feature branch to production, what each pipeline does, how to roll back, and what to do when something fails.
 
 - Configuration of the services: [ENVIRONMENT_SETUP.md](ENVIRONMENT_SETUP.md).

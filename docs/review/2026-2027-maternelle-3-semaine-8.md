@@ -41,7 +41,20 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Aucune : cette semaine n’a encore jamais été relue.
+Cette semaine a déjà été relue 2 fois. Ce qui suit est l’historique,
+pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
+
+### 2026-10-03 — Codex (session indépendante) · `accepted-with-modifications` (ai-assisted)
+
+Relecture indépendante des semaines 8–10 au baseline 61b2e07e9b1f3fbc793cf230291215feef3991fd, verdict relayé par le propriétaire. Dossier docs/work/OCTOBER_PHYS_CORRECTIONS.md ; corrections PHYS requises sans course artificielle.
+
+**Suites données :** Retrait de PHYS-S01-C01-O11 pour m3-phys-33-a1 et m3-phys-44-a1. Le test renforcé a exposé m3-phys-38-a1 et m3-phys-42-a1 ; ces deux retraits ont été explicitement autorisés. Aucun autre champ pédagogique modifié.
+
+### 2026-10-03 — Codex (session indépendante) · `accepted` (ai-assisted)
+
+Reconfirmation indépendante finale accepted au checkpoint 1f573c508b30ddd0ade57d7a8cd8329d5eb901ce, baseline 61b2e07e9b1f3fbc793cf230291215feef3991fd. Verdict relayé par le propriétaire : quatre retraits O11 seulement ; actions/objectifs restants, sécurité, matériel, six minutes, scaffolds et alternatives inchangés ; 15 packages exacts ; course/cours/courir reconnus sans parcours/parcourir ; intégrité gelée et 88 review/null vérifiés, zéro lapse. Le relecteur n’a modifié aucun fichier ni approbation.
+
+**Suites données :** Aucune correction supplémentaire requise. Le propriétaire autorise le 2026-10-03 la consignation du verdict et les nouvelles approbations hebdomadaires avec digests calculés à neuf. Pas d’auto-relecture ni certification par un enseignant. Aucun hosted DEV/PROD, merge ou déploiement autorisé.
 
 ## Jour 30 — 2026-10-12
 
@@ -63,7 +76,7 @@ l’autre — l’appareil est alors le sien._
 
 _Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -176,7 +189,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Manipuler des collections réelles et expliquer leur quantité._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O18` — Poursuivre la compréhension qu’une quantité d’objets ne dépend ni de la nature de ces objets ni de leur organisation spatiale. _(source : programme-2024-mathematiques)_
@@ -267,7 +280,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger dans un espace sûr, coordonner ses actions et nommer ses indices._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.
 - **Objectifs enseignés :**
   - `PHYS-S01-C01-O13` — Se situer dans un milieu moins connu grâce à des indices prélevés dans l’environnement. _(source : programme-2026)_
@@ -330,7 +343,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dis le mois, puis une chose qui arrive ce mois-ci. Dis un mois que tu connais et ce qu’il te rappelle._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Partez de la date et de repères réels de la famille. Aidez les réponses oralement ; aucune lecture, récitation parfaite ni saison universelle liée aux mois n’est exigée.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C01-O13` — Utiliser des mois qui servent de repères pour se situer dans l’année. _(source : programme-2026)_
@@ -401,7 +414,7 @@ l’autre — l’appareil est alors le sien._
 
 _Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -519,7 +532,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Manipuler des collections réelles et expliquer leur quantité._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -611,7 +624,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger dans un espace sûr, coordonner ses actions et nommer ses indices._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -674,7 +687,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Choisis avec moi une action pour protéger une plante. Dis pourquoi nous laissons la plante grandir._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** L’adulte supervise le soin d’une plante connue. Distinguez action faite et projet. Cette aide à domicile ne remplace pas l’action collective scolaire.
 - **Objectifs enseignés :**
   - `WORLD-S01-C01-O11` — Contribuer à une action collective favorable à la préservation de la biodiversité dans un milieu proche de l’école. _(source : programme-2026)_
@@ -762,7 +775,7 @@ l’autre — l’appareil est alors le sien._
 
 _Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -880,7 +893,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Manipuler des collections réelles et expliquer leur quantité._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -977,7 +990,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger dans un espace sûr, coordonner ses actions et nommer ses indices._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1040,7 +1053,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Trace une ligne, puis le contour d’une feuille._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Dessinez sur papier avec des outils adaptés et nommez les gestes. Le motif de maison est un appui ; le répertoire collectif de la classe reste à reprendre avec l’école, sans prétendre le remplacer.
 - **Objectifs enseignés :**
   - `ART-S01-C01-O08` — Utiliser le vocabulaire spécifique au dessin. _(source : programme-2026)_
@@ -1105,7 +1118,7 @@ l’autre — l’appareil est alors le sien._
 
 _Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.
 - **Objectifs enseignés :**
   - `LANG-S01-C03-O05` — Prononcer correctement les doubles consonnes : br/cr/bl/pl/sl. _(source : programme-2024-langage)_
@@ -1225,7 +1238,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Manipuler des collections réelles et expliquer leur quantité._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1317,7 +1330,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger dans un espace sûr, coordonner ses actions et nommer ses indices._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1380,7 +1393,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Écoute les mois, puis redis ceux que tu connais. Retrouve septembre et octobre dans les mois que je dis._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Partez de la date et de repères réels de la famille. Aidez les réponses oralement ; aucune lecture, récitation parfaite ni saison universelle liée aux mois n’est exigée.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C01-O14` — Nommer la plupart des mois de l’année. _(source : programme-2026)_
@@ -1451,7 +1464,7 @@ l’autre — l’appareil est alors le sien._
 
 _Reprendre le français oral avec un modèle court, puis une lecture pour le plaisir._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Une phrase liée ou deux mots redits suffisent. Ne demandez pas de règle de grammaire ni de lecture autonome.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1568,7 +1581,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Manipuler des collections réelles et expliquer leur quantité._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Travaillez avec des objets visibles. Si l’enfant hésite, comptez toute la collection depuis un ; le surcomptage est accompagné et commence au jour 34.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O24` — Surcompter (c’est-à-dire compter de un en un à partir d’un nombre donné). _(source : programme-2024-mathematiques)_
@@ -1667,7 +1680,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Bouger dans un espace sûr, coordonner ses actions et nommer ses indices._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1731,7 +1744,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Dessine une plante et nomme une ligne et son contour._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Dessinez sur papier avec des outils adaptés et nommez les gestes. Le motif de maison est un appui ; le répertoire collectif de la classe reste à reprendre avec l’école, sans prétendre le remplacer.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

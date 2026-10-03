@@ -30,9 +30,9 @@ All registered packages are compared as complete UTF-8 strings against in-memory
 
 | Package | Days | Equality | SHA-256 |
 | --- | --- | --- | --- |
-| [Week 8](2026-2027-maternelle-3-semaine-8.md) | 30-34 | exact | `87028abf637090c96a058dbb8cee2e947d0886abdc169e8d2cca7e7eaf6a6d27` |
-| [Week 9](2026-2027-maternelle-3-semaine-9.md) | 35-39 | exact | `a9c3bd13a6d14109d24cbf2cc3c85828534929d7e8909e58a51b86cb9dd66f11` |
-| [Week 10](2026-2027-maternelle-3-semaine-10.md) | 40-44 | exact | `049d7cc1c3381ed30b7c1dd546c83917d58c046bbabeb952d6a6dea458acc790` |
+| [Week 8](2026-2027-maternelle-3-semaine-8.md) | 30-34 | exact | `13bf8d5faf86c7b9b74efa0a9812b65d1d29149d61d6b202a11e1d889bf8be87` |
+| [Week 9](2026-2027-maternelle-3-semaine-9.md) | 35-39 | exact | `123a1794ca4d24da7a04146bc64236ecd7ea66cc9b13439674a306bb4b3d10b7` |
+| [Week 10](2026-2027-maternelle-3-semaine-10.md) | 40-44 | exact | `c338e195f1e08b845b9d37e1c0278199aa8e4891052d30ba9293b32910ada2ee` |
 
 All 15 registered packages are fresh. The three weekly packages form one independent-review batch, not three separate approval gates.
 

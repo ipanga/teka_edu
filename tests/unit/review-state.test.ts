@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { checkLessonReview, lessonDigest, weekReviewState } from "@/domain/lessons/review";
@@ -6,6 +7,18 @@ import { mediaDigestSource } from "@/domain/media/types";
 import { getReferenceData } from "@/lib/content/reference-data";
 
 const ROOT = process.cwd();
+
+it("the lapse dry run hashes the same normalized canonical text as approval", () => {
+  const file = path.join(ROOT, "content/lessons/maternelle-cycle1-cd-2026/maternelle-3/lang.json");
+  const before = readFileSync(file, "utf8");
+  const output = execFileSync(
+    process.execPath,
+    ["--import", "tsx", "scripts/lapse-approvals.ts", "--dry-run=true"],
+    { cwd: ROOT, encoding: "utf8" },
+  );
+  expect(output.trim()).toBe("[dry run] 0 approval(s) lapsed");
+  expect(readFileSync(file, "utf8")).toBe(before);
+});
 
 /**
  * A generated document may only claim what the content's state supports.
@@ -112,6 +125,11 @@ describe("an approval can only come from a full review that accepted the week", 
     3: ["m3-math-10", "m3-lang-10"],
     4: ["m3-lang-16", "m3-math-16"],
     5: ["m3-lang-21", "m3-math-21"],
+    6: ["m3-lang-23", "m3-math-23"],
+    7: ["m3-lang-25", "m3-math-25"],
+    8: ["m3-lang-30", "m3-math-30"],
+    9: ["m3-lang-35", "m3-math-35"],
+    10: ["m3-lang-40", "m3-math-40"],
   };
   const lessonsOfWeek = (week: number) =>
     WEEK_LESSONS[week]!.map((id) => m3.find((l) => l.id === id)!);
@@ -128,7 +146,7 @@ describe("an approval can only come from a full review that accepted the week", 
     // weeks are approved one by one.
     const accepted = (week: number) =>
       historyOf(week).some((r) => r.scope === "full-review" && r.outcome === "accepted");
-    for (const week of [1, 2, 3, 4, 5]) {
+    for (const week of Object.keys(WEEK_LESSONS).map(Number)) {
       const lessons = lessonsOfWeek(week);
       expect(lessons.length, `week ${week} has no lessons`).toBeGreaterThan(0);
       const isApproved = lessons.some((l) => l.status === "approved");

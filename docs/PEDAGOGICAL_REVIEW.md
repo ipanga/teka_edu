@@ -1,5 +1,15 @@
 # Pedagogical review
 
+## October 2026 final approval — 2026-10-03
+
+The owner relayed independent Codex accepted verdicts for Batch 1 (corrected `461e946`,
+accepted checkpoint `2170413`) and Weeks 8–10 (corrected `1f573c5`). Prior modification passes
+and final accepted passes are appended to canonical history per week, without rewriting
+September records. `approve-week.ts` approved all 88 October lessons with freshly computed
+digests in new-approval mode, not lapsed restoration. This is AI-assisted pedagogical review,
+not a named teacher's certification; ISSUE-017 remains future assurance.
+See `work/OCTOBER_FINAL_AUDIT.md` and `work/ACTIVE_TASK.md` for current integrity and validation.
+
 How Teka Edu content is reviewed, the register of reviews performed, and what each decided. The
 gate itself is in [`CONTENT_QUALITY_GATE.md`](CONTENT_QUALITY_GATE.md); the decision is
 **ADR-047**.

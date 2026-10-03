@@ -41,7 +41,20 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Aucune : cette semaine n’a encore jamais été relue.
+Cette semaine a déjà été relue 2 fois. Ce qui suit est l’historique,
+pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
+
+### 2026-10-02 — Codex (session indépendante) · `accepted-with-modifications` (ai-assisted)
+
+Relecture indépendante du Batch 1, semaines 6–7, verdict relayé par le propriétaire ; baseline 5139cc89058447b59702b8784455983e7788535e. Provenance conservée dans docs/work/OCTOBER_BATCH_1_CORRECTIONS.md et docs/review/OCTOBER_BATCH_1_RECONFIRMATION.md.
+
+**Suites données :** Sept corrections autorisées : fraîcheur des packages, contraste maintenant/plus tard, date/jour, phrases quand/parce que, trois SVG de croissance, rituel initial et retrait du surcomptage prématuré. Voir les preuves historiques conservées.
+
+### 2026-10-03 — Codex (session indépendante) · `accepted` (ai-assisted)
+
+Reconfirmation indépendante accepted du Batch 1 corrigé 461e946e3ef4d7a63909bd1e720d5876dd568bf4, gel accepté 2170413173b4a7aa2e6e8b2245af0fcf4c52b0bc. Verdict relayé par le propriétaire, déjà préservé dans OCTOBER_3EME_PLAN.md et PROJECT_STATUS.md. Aucun enseignant nommé ni validation humaine revendiquée.
+
+**Suites données :** Aucune correction supplémentaire requise. Le propriétaire autorise le 2026-10-03 la consignation du verdict et les nouvelles approbations hebdomadaires avec digests calculés à neuf. Pas d’auto-relecture ni certification par un enseignant. Aucun hosted DEV/PROD, merge ou déploiement autorisé.
 
 ## Jour 25 — 2026-10-05
 
@@ -63,7 +76,7 @@ l’autre — l’appareil est alors le sien._
 
 _L’enfant enrichit une phrase orale avec qui, où et ce que fait la personne._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Prolongez les phrases sans demander une analyse. L’enfant entend et reprend des modèles plus complets.
 - **Objectifs enseignés :**
   - `LANG-S01-C02-O03` — Formuler des énoncés de plus en plus complexes. _(source : programme-2024-langage)_
@@ -187,7 +200,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Associer quantité et chiffre jusqu’à sept avec des objets différents._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Changez les objets pour que la quantité reste le critère principal.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -281,7 +294,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Coordonner lancer et saut dans un enchainement simple._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Balle en papier seulement. Le saut se fait loin des meubles, pieds joints ou un pied après l’autre selon l’enfant.
 - **Objectifs enseignés :**
   - `PHYS-S01-C01-O12` — Coordonner ses actions et ses déplacements pour lancer et pour sauter haut ou loin. _(source : programme-2026)_
@@ -343,7 +356,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Reconnaitre quelques étapes de la vie d’une plante._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Les trois images montrent la même sorte de plante à trois étapes : graine, pousse, jeune plante. Elles suffisent sans plante réelle. L’enfant regarde, nomme puis indique l’ordre ; l’adulte accompagne sans demander de lire.
 - **Objectifs enseignés :**
   - `WORLD-S01-C01-O09` — Reconnaitre les étapes de la vie d'un animal ou d'une plante. _(source : programme-2026)_
@@ -428,7 +441,7 @@ l’autre — l’appareil est alors le sien._
 
 _L’enfant produit une phrase descriptive plus complète à partir d’un objet familier._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Utilisez un objet réel de la maison. On cherche une phrase précise, pas une récitation.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -561,7 +574,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Découvrir que si l’on ajoute un objet, le nombre suivant arrive._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Ne formalisez pas. L’enfant doit voir, compter, ajouter un objet, puis entendre que le nombre suivant arrive.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O11` — Poursuivre la compréhension des faits suivants :
@@ -664,7 +677,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Ajuster son geste pour lancer vers une cible sûre._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** On améliore le geste, pas la performance. Gardez une cible basse ou moyenne, jamais fragile.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -725,7 +738,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Employer des repères proches pour parler d’un évènement futur._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Reliez l’objectif au langage oral : l’enfant parle de ce qui va se produire avec une phrase claire.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -813,7 +826,7 @@ l’autre — l’appareil est alors le sien._
 
 _L’enfant écoute et prononce le contraste ch/s dans des mots connus._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Restez dans le jeu sonore. Ne demandez pas de lire : l’enfant écoute, répète et compare les sons.
 - **Objectifs enseignés :**
   - `LANG-S01-C03-O04` — Prononcer correctement les couples de consonnes proches suivants : ch/s, ch/j, ch/z. _(source : programme-2024-langage)_
@@ -934,7 +947,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Pratiquer l’idée du nombre suivant par ajout de un._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Restez sur de petites quantités. L’enfant anticipe peu à peu le nombre suivant avant de recompter.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1033,7 +1046,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Combiner course courte, obstacle bas et lancer._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Un petit parcours suffit. Ne cherchez pas la vitesse si l’espace est petit.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1097,7 +1110,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Continuer une production commune à partir d’un petit problème graphique._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Le problème doit être concret : il manque un chemin, une porte, une place pour un personnage. L’enfant propose une solution dessinée.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1163,7 +1176,7 @@ l’autre — l’appareil est alors le sien._
 
 _L’enfant poursuit le jeu de prononciation avec ch/j dans des mots familiers._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Comparez deux sons proches dans des mots très courts. L’enfant peut réussir en répétant correctement, sans nommer les sons.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1267,7 +1280,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Comparer une collection avant et après l’ajout d’un objet, puis recompter depuis un._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Gardez l’ajout visible et recomptez toute la collection depuis un. Le surcomptage reste prévu plus tard, dans sa fenêtre des jours 34 à 44.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1364,7 +1377,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Coordonner ses actions pour sauter plus loin sans se mettre en danger._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Le saut se fait depuis le sol, jamais depuis une chaise. Le repère mesure le progrès sans compétition.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1423,7 +1436,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Consolider le futur proche et les repères de semaine._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Partez du jour de la séance, puis situez les deux jours suivants. L’enfant les nomme et parle d’une action possible, sans que le produit prétende connaitre sa classe.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1498,7 +1511,7 @@ l’autre — l’appareil est alors le sien._
 
 _L’enfant combine vocabulaire et phrase complexe pour raconter une petite action._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Fin de semaine : l’enfant reprend les phrases de temps et les phrases enrichies dans un petit récit oral.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1611,7 +1624,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Consolider la première semaine de travail sur chiffres, quantités et +1._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Terminez par une situation de réussite. L’enfant montre ce qu’il sait faire avec le matériel, sans fiche.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1709,7 +1722,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Consolider course, franchissement, lancer et saut dans un parcours court._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** consolidation · **difficulté :** 2/3
 - **Conseil au parent :** Fin de semaine : l’enfant choisit l’ordre du parcours avec vous. Gardez seulement ce qui est sûr dans votre espace.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -1773,7 +1786,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Comparer les étapes visibles de la vie d’un animal connu._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Restez avec des animaux déjà rencontrés en septembre. Les images de poule et poussin sont acceptées et utiles ici.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**

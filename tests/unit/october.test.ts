@@ -3,6 +3,8 @@ import { generateSchoolDays } from "@/domain/calendar/school-days";
 import { entriesDueBy } from "@/domain/programme/annual-plan";
 import { generateDailyPlan } from "@/domain/programme/daily-plan";
 import { getProgramme, getReferenceData } from "@/lib/content/reference-data";
+import { checkLessonReview } from "@/domain/lessons/review";
+import { mediaDigestSource } from "@/domain/media/types";
 
 const data = getReferenceData();
 const calendar = data.calendars.find((c) => c.schoolYear.id === "2026-2027")!;
@@ -60,15 +62,17 @@ describe("October 2026 batch 1 (3ème maternelle)", () => {
     expect(day30.totalMinutes).toBe(35);
   });
 
-  it("keeps new October lessons in review with no approval record", () => {
+  it("holds independently accepted October approvals with fresh digests", () => {
     const octoberLessons = plans.flatMap((plan) =>
       plan.sessions.flatMap((session) => (session.lesson ? [session.lesson] : [])),
     );
     expect(octoberLessons).toHaveLength(28);
     expect(new Set(octoberLessons.map((lesson) => lesson.id)).size).toBe(28);
     for (const lesson of octoberLessons) {
-      expect(lesson.status, lesson.id).toBe("review");
-      expect(lesson.review, lesson.id).toBeNull();
+      expect(lesson.status, lesson.id).toBe("approved");
+      expect(lesson.review?.outcome, lesson.id).toBe("accepted");
+      const canonical = data.lessons.find((candidate) => candidate.id === lesson.id)!;
+      expect(checkLessonReview(canonical, mediaDigestSource(data.media, data.texts))).toEqual([]);
     }
   });
 

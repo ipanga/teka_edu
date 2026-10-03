@@ -13,6 +13,23 @@ Updated by: Codex
 
 ## October Weeks 3–5 authoring — 2026-10-03
 
+Final integration preparation: owner relayed independent `accepted` at corrected
+`1f573c508b30ddd0ade57d7a8cd8329d5eb901ce`, authorizing history and new approvals.
+All 88 October lessons are now approved with fresh distinct digests; zero review.
+Ten history records preserve modification and accepted passes for Weeks 6–10, with actual
+owner-relayed provenance. No pedagogy/media changes. Canonical full-month counts: 22/22/22
+LANG/MATH/PHYS, 7 ART, 6 WORLD, 9 TIME-SPACE. Days 23–44 complete at 35 minutes, Day 45 absent.
+Final audit: `docs/work/OCTOBER_FINAL_AUDIT.md`; current integration validation/checkpoint:
+`docs/work/ACTIVE_TASK.md`. Generated migration `20261003195954_october_maternelle_3_approved.sql`
+mirrors 36 canonical/reference tables only. Local reset performed; hosted DEV/PROD untouched.
+Current full validation: 504/504 units, 154/154 pgTAP, 87 local browser passes/nine production-only
+skips, all 15 packages fresh, zero lapses, production build/client scan and both local Docker
+image build/health/SIGTERM checks pass. September 176 objects/digests and 290 protected files/P1
+remain unchanged. Review evidence is AI-assisted, not teacher certification.
+Stop after clean checkpoint/push and PR to develop. No merge, deployment or later authoring.
+
+### Historical correction checkpoint
+
 Current follow-up: all four owner-authorized PHYS days 33/38/42/44 corrected from reviewed
 `61b2e07`, preserving prior uncommitted corrections. Exactly four mapping-only changes; no
 artificial running. Current validation: 503/503 units, targeted 70/70, format/check, lint/types,

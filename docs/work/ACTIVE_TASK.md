@@ -2,15 +2,16 @@
 
 ## Task
 
-Apply four authorized October Weeks 3–5 PHYS mapping corrections; stop for reconfirmation.
+Finalize October 3ème maternelle approvals and prepare integration.
 
 ## Objective
 
-Freeze a fully validated mapping-only correction checkpoint without changing frozen content.
+Record owner-relayed independent acceptance, approve 88 lessons with fresh digests, generate
+the final reference migration, validate locally and prepare a develop PR without hosted writes.
 
 ## Status
 
-`awaiting_review`
+`awaiting_ci`
 
 ## Branch
 
@@ -18,8 +19,9 @@ Freeze a fully validated mapping-only correction checkpoint without changing fro
 
 ## Base Branch
 
-Reviewed `61b2e07e9b1f3fbc793cf230291215feef3991fd`; authoring base `1ada5f2`,
-accepted Batch 1 `2170413` and merged P1 UX `603efdc` remain ancestors.
+Accepted correction checkpoint `1f573c508b30ddd0ade57d7a8cd8329d5eb901ce`.
+Reviewed baseline `61b2e07`; accepted Batch 1 `2170413`, corrected Batch 1 `461e946`,
+authoring base `1ada5f2` and merged P1 develop `603efdc` remain ancestors.
 
 ## Started
 
@@ -27,100 +29,122 @@ accepted Batch 1 `2170413` and merged P1 UX `603efdc` remain ancestors.
 
 ## Last Checkpoint
 
-This document belongs to the green corrected checkpoint; exact SHA is in the completion summary.
-Owner authorized additional Days 38/42 after the stronger test exposed them. Previous partial
-Days 33/44 edits were preserved. All four O11 removals now pass full validation.
-See OCTOBER_PHYS_CORRECTIONS.md for evidence, hashes and the focused read-only review prompt.
+Owner relayed independent accepted verdict at 1f573c5 and explicitly authorized history,
+new October approvals, generated migration, local DB reset/pgTAP, checkpoint/push and PR.
+Pre-write verification passed: exact local/remote SHA, clean tree, all 15 fresh packages,
+88 review/null and both historical frozen/correction guards. This file belongs to the
+integration-ready checkpoint; exact committed SHA and PR URL are in the completion summary.
+Final evidence: OCTOBER_FINAL_AUDIT.md. Historical correction dossier remains unchanged.
 
 ## Scope
 
-Exactly m3-phys-33-a1, m3-phys-38-a1, m3-phys-42-a1 and m3-phys-44-a1;
-necessary generated packages, inventory, SQL test mirror and regression/integrity proof.
+October days 23–44, 88 lessons. Approval metadata/history, five generated packages, inventory,
+deterministic reference migration and bounded validation/test fixes. No accepted pedagogy edit.
 
 ## Out of Scope
 
-Approvals, accepted history, migration, DB writes, PR, merge, deployment, media generation,
-November, P2/P3 and TV support.
+Hosted DEV/PROD writes, merge, staging/production deployment, new media generation,
+November, P2/P3, 2ème maternelle and TV/Smart TV support.
 
 ## Product Decisions
 
-Mappings must match actual tasks; no artificial running added. Preserve canonical rotation
-and all existing actions, safety, duration, home alternatives, scaffolds and unrelated objectives.
-O11 uses letter O. No new product/architecture decision.
+Canonical rotation gives 22 LANG / 22 MATH / 22 PHYS / 7 ART / 6 WORLD / 9 TIME-SPACE.
+Do not revert to obsolete 7/7/8 planning totals. Phone, tablet and laptop/MacBook only.
+AI-assisted pedagogical review, not teacher certification; ISSUE-017 remains future assurance.
 
 ## Completed
 
-Four mapping-only corrections, stronger running detector with eight token cases and four direct
-day checks, generated Weeks 8/9/10 evidence, 15-package freshness, current validation and durable
-reconfirmation dossier. Earlier 500/501 blocker resolved by explicit authorization, not exemptions.
+Ten owner-relayed history records appended (modifications and accepted verdicts per Week 6–10).
+88 new approvals through approve-week, after dry runs, without --lapsed-only or manual JSON stamps.
+Fresh independent digests, regenerated Weeks 6–10 and inventory, final audit and generated
+reference migration. Local reset, reference-data idempotence, RLS/pgTAP and current full technical
+validation pass. Historical review evidence and accepted media/P1 remain unchanged.
 
 ## In Progress
 
-None. Independent reconfirmation has not been performed by this authoring session.
+None locally. PR CI is a separate remote gate; its live state must be read before integration.
+This task stops after the checkpoint/push and focused PR, not after merge or deployment.
 
 ## Remaining
 
-Owner opens one fresh read-only independent reconfirmation session. No self-approval or release work.
+Confirm PR required checks/review, then obtain separate owner authorization for any merge/release.
+No further authoring or hosted database operation is authorized.
 
 ## Validation State
 
-All PASS rows were rerun on the corrected checkpoint's content/code, not inherited from 61b2e07.
+All PASS rows were rerun for this final content/code. No inherited result substitutes for a check.
 
-| Check              | State                                                                                          |
-| ------------------ | ---------------------------------------------------------------------------------------------- |
-| format             | PASS scoped formatting and full format check                                                   |
-| lint               | PASS                                                                                           |
-| typecheck          | PASS                                                                                           |
-| unit tests         | PASS targeted 70/70; full 503/503 across 38 files                                              |
-| content validation | PASS 31 files                                                                                  |
-| database tests     | NOT RUN no database operation authorized; SQL test mirror regenerated only                     |
-| build              | PASS current production Webpack build; Turbopack NOT RUN documented local restriction          |
-| E2E                | PASS current 87 local Chromium checks; nine production-public skips, no production URL         |
-| Docker             | NOT RUN content-only correction                                                                |
-| secret scans       | PASS current client scan, 28 files, three server-only values absent                            |
-| programme          | PASS days 30–44 complete, 35 minutes each                                                      |
-| coverage           | PASS 56/56 due, zero missing                                                                   |
-| media              | PASS 59/59 required, zero required gaps                                                        |
-| package freshness  | PASS all 15 exact; three hashes in correction dossier/inventory                                |
-| approvals          | PASS lapse dry run zero; 88 October review/null                                                |
-| integrity          | PASS 204 frozen objects/395 files; strict baseline four-only diff, 260 other lessons/286 files |
+| Check              | State                                                                                                             |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| format             | PASS scoped formatting and full format check                                                                      |
+| lint               | PASS zero warnings                                                                                                |
+| typecheck          | PASS                                                                                                              |
+| unit tests         | PASS 504/504 across 38 files; targeted approval/mapping tests passed                                              |
+| content validation | PASS 31 registered JSON files                                                                                     |
+| database tests     | PASS fresh local reset, reference-data mirror/idempotence and 154 pgTAP assertions across four files              |
+| build              | PASS sentinel production Webpack build; Docker Turbopack build also PASS                                          |
+| E2E                | PASS 87 local Chromium tests; nine production-public tests skipped without a configured production URL            |
+| Docker             | PASS portable and Vercel images built locally; both health/SIGTERM smoke checks pass                              |
+| secret scans       | PASS 28 client files, three server-only sentinel values absent                                                    |
+| programme          | PASS days 23–44 complete at 35 minutes; Day 30 authored; Day 45 no-content                                        |
+| coverage           | PASS 56/56 objectives due through Day 44, zero missing                                                            |
+| media              | PASS 59/59 required for authored m3 corpus; zero gaps, 56 useful-only nonblocking ideas unchanged                 |
+| package freshness  | PASS all 15 exact; ten September packages unchanged; five final hashes in OCTOBER_FINAL_AUDIT.md                  |
+| approvals          | PASS 88 approved/zero review, 88 distinct valid digests; 264 total distinct; lapse dry run zero                   |
+| integrity          | PASS 176 September objects/digests, accepted October pedagogy, prior history and 290 protected files/P1 unchanged |
 
-Sandbox tsx CLI IPC denied; equivalent node --import tsx reporting passed.
-Browser listener/Chromium used authorized sandbox escalation. Verification server stopped.
-No inherited evidence substitutes for required current checks.
+Full browser suite includes eight exact supported phone/tablet/laptop sizes and P1 journeys.
+Local verification server stopped and Docker smoke containers cleaned up. The existing local
+Supabase database remains local; no hosted command was used. No remote production smoke claimed.
+
+Initial pgTAP failed because a September-only 88-count assertion counted all m3 months. Scoped it
+to the five original September themes without reducing the expected 88, adding two explicit
+October loaded/approved checks (152 became 154). Full rerun passes.
+Initial lapse dry run incorrectly flagged m3-lang-24: raw accepted text has a pre-existing trailing
+space, while approval hashes schema-normalized canonical text. Lapse now uses the same schema
+normalization; accepted raw text/digest unchanged. Added a non-mutating regression; zero lapses.
+Resolved-date daily plans are not used for canonical digest checks.
+No suppressions, relaxed running assertions, media generation or pedagogical edits.
 
 ## Database State
 
-Unchanged. No migration, DEV/PROD or approval write. Repository SQL test mirror only.
+Generated `20261003195954_october_maternelle_3_approved.sql` via generate-reference-sql,
+exact payload verified against referenceSyncSql and test mirror against referenceTestSql.
+36 canonical/reference tables only; no schema/auth/user/child/progress mutation.
+Applied only through fresh local reset. Hosted DEV and PROD unchanged.
 
 ## Deployment State
 
-Unchanged. No PR, merge or deployment.
+No merge or deployment. Focused develop PR is authorized; required CI/review is separate.
+No staging/production action is authorized by this checkpoint.
 
 ## Git State
 
-This file belongs to the corrected feature-branch checkpoint. Exact committed SHA and verified
-push/local-remote equality are reported in the completion summary. Verify actual Git before trusting
-the checkpoint; do not embed a self-referential SHA inside its own commit.
+This document belongs to the final integration-ready feature checkpoint. Completion summary
+records exact SHA, push verification and PR URL. Verify clean tree and local/remote equality.
+No self-referential SHA embedded inside its own commit.
 
 ## Blockers
 
-None in current validation. No further mapping defect found; report any new demonstrated instance
-instead of extending correction scope.
+No local validation blocker. Nine production-public tests are intentionally skipped.
+PR CI/review and explicit merge/release authorization remain separate gates.
 
 ## User Decisions Needed
 
-Only the next independent verdict. No further correction-scope decision remains pending.
-Acceptance/release authorization remains separate.
+Only separate authorization for the next integration/release stage after PR review/checks.
+Do not interpret accepted pedagogical review as deployment permission.
 
 ## Exact Resume Point
 
-Open a fresh independent read-only session using the completion summary's corrected SHA and
-OCTOBER_PHYS_CORRECTIONS.md prompt. Verify all four activities and package/frozen integrity;
-return one verdict and stop. Do not edit files, approvals or begin later implementation.
+Read OCTOBER_FINAL_AUDIT.md and this checkpoint. Verify clean local/remote HEAD and inspect
+the develop PR's live required checks/review. Stop for owner merge/release authorization;
+do not auto-merge, deploy, migrate hosted DEV/PROD or begin later content.
 
 ## Resume Verification
 
-Run git status, git log and git branch --show-current; verify clean tree and local/remote HEAD.
-Compare against reviewed 61b2e07. Run node --import tsx scripts/check-october-frozen.ts and
-node --import tsx scripts/check-october-phys-corrections.ts. Preserve unexpected unrelated edits.
+Run git status, git log and git branch --show-current. Verify remote feature SHA and PR head.
+Run node --import tsx scripts/check-october-final.ts and lapse-approvals.ts --dry-run=true.
+The old check-october-frozen.ts and check-october-phys-corrections.ts are historical pre-approval
+guards preserved unchanged: they intentionally require review/null and old history/packages,
+so do not run them against final approved state or weaken them to bypass approval differences.
+The final audit strictly permits only October status/review changes relative to accepted 1f573c5.

@@ -8,6 +8,8 @@ import { getProgramme, getReferenceData } from "../lib/content/reference-data";
 import { REVIEW_PACKAGES, reviewPackagePath } from "../lib/content/review-packages";
 import { buildReviewPackage } from "../lib/content/review-package";
 import { picturesOf } from "../lib/content/visual-audit";
+import { checkLessonReview } from "../domain/lessons/review";
+import { mediaDigestSource } from "../domain/media/types";
 
 const data = getReferenceData();
 const programme = getProgramme("maternelle-3", "2026-2027", data)!;
@@ -27,8 +29,9 @@ for (const p of plans) {
   assert.equal(p.totalMinutes, 35);
 }
 for (const l of lessons) {
-  assert.equal(l.status, "review");
-  assert.equal(l.review, null);
+  assert.equal(l.status, "approved");
+  const canonical = data.lessons.find((lesson) => lesson.id === l.id)!;
+  assert.deepEqual(checkLessonReview(canonical, mediaDigestSource(data.media, data.texts)), []);
 }
 const lines = [
   "# October Weeks 3–5 source and media inventory",

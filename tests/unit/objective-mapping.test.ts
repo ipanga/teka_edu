@@ -689,8 +689,8 @@ describe("the task proves the objective, not the other way round", () => {
       expect(lesson.supportingObjectiveCodes).not.toContain("PHYS-S01-C01-O11");
       expect(lesson.activities[0]!.objectiveCodes).not.toContain("PHYS-S01-C01-O11");
       expect(lesson.activities[0]!.minutes).toBe(6);
-      expect(lesson.status).toBe("review");
-      expect(lesson.review).toBeNull();
+      expect(lesson.status).toBe("approved");
+      expect(lesson.review?.outcome).toBe("accepted");
     },
   );
 

@@ -41,7 +41,20 @@ les leçons, les consignes et les activités sont rédigées par Teka Edu.
 
 ## Relectures précédentes
 
-Aucune : cette semaine n’a encore jamais été relue.
+Cette semaine a déjà été relue 2 fois. Ce qui suit est l’historique,
+pour que vous sachiez ce qui a déjà été demandé et ce qui a changé depuis.
+
+### 2026-10-02 — Codex (session indépendante) · `accepted-with-modifications` (ai-assisted)
+
+Relecture indépendante du Batch 1, semaines 6–7, verdict relayé par le propriétaire ; baseline 5139cc89058447b59702b8784455983e7788535e. Provenance conservée dans docs/work/OCTOBER_BATCH_1_CORRECTIONS.md et docs/review/OCTOBER_BATCH_1_RECONFIRMATION.md.
+
+**Suites données :** Sept corrections autorisées : fraîcheur des packages, contraste maintenant/plus tard, date/jour, phrases quand/parce que, trois SVG de croissance, rituel initial et retrait du surcomptage prématuré. Voir les preuves historiques conservées.
+
+### 2026-10-03 — Codex (session indépendante) · `accepted` (ai-assisted)
+
+Reconfirmation indépendante accepted du Batch 1 corrigé 461e946e3ef4d7a63909bd1e720d5876dd568bf4, gel accepté 2170413173b4a7aa2e6e8b2245af0fcf4c52b0bc. Verdict relayé par le propriétaire, déjà préservé dans OCTOBER_3EME_PLAN.md et PROJECT_STATUS.md. Aucun enseignant nommé ni validation humaine revendiquée.
+
+**Suites données :** Aucune correction supplémentaire requise. Le propriétaire autorise le 2026-10-03 la consignation du verdict et les nouvelles approbations hebdomadaires avec digests calculés à neuf. Pas d’auto-relecture ni certification par un enseignant. Aucun hosted DEV/PROD, merge ou déploiement autorisé.
 
 ## Jour 23 — 2026-10-01
 
@@ -63,7 +76,7 @@ l’autre — l’appareil est alors le sien._
 
 _L’enfant parle d’un évènement passé et d’un évènement à venir avec une phrase complète._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Repartez du rituel de septembre. Le but n’est pas la grammaire : l’enfant apprend à parler du temps avec des phrases utiles.
 - **Objectifs enseignés :**
   - `LANG-S01-C02-O02` — Construire à l’oral un système de temps de plus en plus efficace. _(source : programme-2024-langage)_
@@ -188,7 +201,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Associer une petite collection, son nom oral et son chiffre._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Préparez de petits papiers avec les chiffres 1 à 5. Le chiffre est une étiquette pour la quantité, pas un dessin à recopier.
 - **Objectifs enseignés :**
   - `MATH-S01-C01-O08` — Associer une quantité, le nom d’un nombre et une écriture chiffrée. _(source : programme-2024-mathematiques)_
@@ -287,7 +300,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Courir vite sur une courte distance et franchir un obstacle bas et sûr._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Utilisez un obstacle très bas : tissu roulé, ligne au sol ou coussin plat. La sécurité prime.
 - **Objectifs enseignés :**
   - `PHYS-S01-C01-O11` — Courir vite et franchir un obstacle sur une distance courte. _(source : programme-2026)_
@@ -348,7 +361,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Situer un évènement qui va se produire dans la semaine._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** Travaillez avec les jours proches : demain, après-demain, plus tard dans la semaine.
 - **Objectifs enseignés :**
   - `TIME-SPACE-S01-C01-O11` — Continuer à s’approprier les temps conjugués (futur simple et futur antérieur) et les jours pour situer les évènements dans la semaine et situer un évènement qui va se produire. _(source : programme-2026)_
@@ -424,7 +437,7 @@ l’autre — l’appareil est alors le sien._
 
 _L’enfant ordonne deux moments et emploie avant, après et demain dans une phrase._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Travaillez avec deux moments très proches de l’enfant. L’important est la phrase orale, pas une explication abstraite du temps.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -545,7 +558,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Reprendre la correspondance quantité, mot-nombre et écriture chiffrée._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Variez la disposition des objets pour éviter que l’enfant reconnaisse seulement une forme de tas.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -638,7 +651,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Reprendre la course avec obstacle en cherchant l’équilibre._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** practice · **difficulté :** 2/3
 - **Conseil au parent :** Gardez le défi court et joyeux. Si l’enfant est fatigué, transformez la course en marche rapide.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
@@ -698,7 +711,7 @@ _Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le p
 
 _Participer à une œuvre collective simple avec le parent._
 
-- **Statut :** `review` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
+- **Statut :** `approved` · **origine :** teka-edu-created · **étape :** discovery · **difficulté :** 2/3
 - **Conseil au parent :** À la maison, le collectif est parent-enfant. Dites clairement que l’objectif officiel est partiellement porté hors de la classe, mais que l’enfant peut s’exercer à coopérer.
 - **Objectifs enseignés :**
   - `ART-S01-C01-O07` — Participer à la réalisation d’une œuvre collective à partir d’une consigne ou d’un problème à résoudre. _(source : programme-2026)_

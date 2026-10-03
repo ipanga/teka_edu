@@ -1,5 +1,17 @@
 # October 2026 — 3ème maternelle planning baseline
 
+## Final October state — 2026-10-03
+
+Owner relayed independent accepted reconfirmation at `1f573c5` and authorized integration
+preparation. Canonical October is fully authored, independently accepted and approved:
+88 lessons on days 23–44, 22 LANG / 22 MATH / 22 PHYS / 7 ART / 6 WORLD / 9 TIME-SPACE.
+Day 30 is authored; Day 45 has no content. Preserve canonical rotation, not the earlier 7/7/8
+planning assumption. All days are 35 minutes; 56/56 objectives due through Day 44 covered.
+See OCTOBER_FINAL_AUDIT.md and ACTIVE_TASK.md for approval integrity, migration and current
+integration validation. No hosted DEV/PROD migration, merge or deployment authorized.
+
+## Historical planning and gates
+
 Status: plan approved for Batch 1. Batch 1 implementation details live in
 `docs/work/OCTOBER_BATCH_1.md`.
 
