@@ -2,12 +2,11 @@
 
 ## Task
 
-Author October Weeks 3–5 for 3ème maternelle, then stop for independent review.
+Apply four authorized October Weeks 3–5 PHYS mapping corrections; stop for reconfirmation.
 
 ## Objective
 
-Complete days 30–44 with 60 review/null lessons, canonical rotation and Weeks 8–10 packages.
-Preserve September, accepted Batch 1 and the five merged P1 UX fixes. Freeze and push the checkpoint.
+Freeze a fully validated mapping-only correction checkpoint without changing frozen content.
 
 ## Status
 
@@ -19,8 +18,8 @@ Preserve September, accepted Batch 1 and the five merged P1 UX fixes. Freeze and
 
 ## Base Branch
 
-Verified authoring base `1ada5f2dbd258adea9ca4e913729c4620958074c`; accepted `2170413`
-and merged UX develop `603efdc` remain ancestors.
+Reviewed `61b2e07e9b1f3fbc793cf230291215feef3991fd`; authoring base `1ada5f2`,
+accepted Batch 1 `2170413` and merged P1 UX `603efdc` remain ancestors.
 
 ## Started
 
@@ -28,106 +27,100 @@ and merged UX develop `603efdc` remain ancestors.
 
 ## Last Checkpoint
 
-All 60 lessons exist on days 30–44. Counts: 15 LANG, 15 MATH, 15 PHYS, 5 ART, 4 WORLD,
-6 TIME-SPACE. Every day is complete and 35 minutes; Day 45 remains no-content.
-Current evidence is in OCTOBER_WEEKS_3_5.md and docs/review/OCTOBER_WEEKS_3_5_MEDIA.md.
-Freeze proof: 204 unchanged existing lesson objects/digests, 395 byte-identical protected files,
-one exact P1 day-30 fixture transformation, all 15 registered packages exactly fresh.
+This document belongs to the green corrected checkpoint; exact SHA is in the completion summary.
+Owner authorized additional Days 38/42 after the stronger test exposed them. Previous partial
+Days 33/44 edits were preserved. All four O11 removals now pass full validation.
+See OCTOBER_PHYS_CORRECTIONS.md for evidence, hashes and the focused read-only review prompt.
 
 ## Scope
 
-October 12–30, instructional days 30–44 only. One independent-review batch, three canonical weekly packages.
+Exactly m3-phys-33-a1, m3-phys-38-a1, m3-phys-42-a1 and m3-phys-44-a1;
+necessary generated packages, inventory, SQL test mirror and regression/integrity proof.
 
 ## Out of Scope
 
-Approvals, migrations, DEV/PROD writes, final rich generation, PRs, merge, deployment, P2/P3, TV,
-November and later days.
+Approvals, accepted history, migration, DB writes, PR, merge, deployment, media generation,
+November, P2/P3 and TV support.
 
 ## Product Decisions
 
-Owner chose canonical rotation, including TIME-SPACE on day 40. The prompt's full-month 7/7/8
-rotating totals conflict with frozen Batch 1 (2/2/3); the actual preserved October totals are
-7 ART / 6 WORLD / 9 TIME-SPACE. No scheduling override.
-All 45 existing daily lessons preserved except m3-lang-44-a2's English two-things correction.
-Home-partial and school-only limits remain explicit; aquatic safety reminders are not aquatic teaching.
-All new activities are classified: 99 no media required, 16 reuse accepted asset, no final assets generated.
+Mappings must match actual tasks; no artificial running added. Preserve canonical rotation
+and all existing actions, safety, duration, home alternatives, scaffolds and unrelated objectives.
+O11 uses letter O. No new product/architecture decision.
 
 ## Completed
 
-Fifteen rotating lessons appended; programme track IDs appended without rhythm changes.
-Weeks 8–10 generated/registered; all-package freshness hard gate preserved. Source/media inventory,
-nine representative screenshots, regression proof and ready-to-paste review prompt prepared.
-All applicable validation is green; this document belongs to the review-ready implementation checkpoint.
+Four mapping-only corrections, stronger running detector with eight token cases and four direct
+day checks, generated Weeks 8/9/10 evidence, 15-package freshness, current validation and durable
+reconfirmation dossier. Earlier 500/501 blocker resolved by explicit authorization, not exemptions.
 
 ## In Progress
 
-None in authoring. Awaiting fresh independent review; no review performed here.
+None. Independent reconfirmation has not been performed by this authoring session.
 
 ## Remaining
 
-Fresh independent review by an owner-opened separate session. No self-approval or release work.
+Owner opens one fresh read-only independent reconfirmation session. No self-approval or release work.
 
 ## Validation State
 
-| Check              | State                                                                                   |
-| ------------------ | --------------------------------------------------------------------------------------- |
-| format             | PASS formatting and final documentation format check                                    |
-| lint               | PASS new authoring                                                                      |
-| typecheck          | PASS new authoring, including production build typecheck                                |
-| unit tests         | PASS 38 files, 491/491 tests                                                            |
-| content validation | PASS 31 registered JSON files                                                           |
-| database tests     | NOT RUN: no database operation authorized; SQL test mirror regenerated only             |
-| build              | PASS documented Webpack fallback; no fresh Turbopack attempt                            |
-| E2E                | PASS 87 tests, 9 production-only checks skipped; eight supported sizes, all P1 journeys |
-| Docker             | NOT RUN: content-only authoring                                                         |
-| secret scans       | PASS client bundle: 28 files, three fake server-only sentinels absent                   |
-| programme          | PASS days 30–44 complete, 35 minutes each                                               |
-| coverage           | PASS 56/56 due by day 44; zero missing                                                  |
-| media              | PASS 59/59 required image activities; zero required gaps                                |
-| package freshness  | PASS all 15 exact regenerated strings; Week 8–10 hashes in generated inventory          |
-| approvals          | PASS dry run, zero lapses                                                               |
-| integrity          | PASS 204 lesson objects and 395 files; P1 date test exact expected fixture-only update  |
+All PASS rows were rerun on the corrected checkpoint's content/code, not inherited from 61b2e07.
 
-Initial browser run: 79 passed, nine skipped, eight new tests failed on a strict selector matching
-both heading and parent date. Corrected the new selector; complete rerun passed 87 with nine skips.
-Initial authoring assertions had stale counts/availability fixtures; updated to actual canonical content.
-A temporary ART mapping to an unintroduced objective was rejected by validation and removed;
-the final lessons claim only the drawing objectives their prompts actually support. Final full tests passed.
-Chromium/local listener required sandbox escalation. Webpack fallback was used directly.
-Local verification server on port 3103 was stopped after capture; no running verification session remains.
+| Check              | State                                                                                          |
+| ------------------ | ---------------------------------------------------------------------------------------------- |
+| format             | PASS scoped formatting and full format check                                                   |
+| lint               | PASS                                                                                           |
+| typecheck          | PASS                                                                                           |
+| unit tests         | PASS targeted 70/70; full 503/503 across 38 files                                              |
+| content validation | PASS 31 files                                                                                  |
+| database tests     | NOT RUN no database operation authorized; SQL test mirror regenerated only                     |
+| build              | PASS current production Webpack build; Turbopack NOT RUN documented local restriction          |
+| E2E                | PASS current 87 local Chromium checks; nine production-public skips, no production URL         |
+| Docker             | NOT RUN content-only correction                                                                |
+| secret scans       | PASS current client scan, 28 files, three server-only values absent                            |
+| programme          | PASS days 30–44 complete, 35 minutes each                                                      |
+| coverage           | PASS 56/56 due, zero missing                                                                   |
+| media              | PASS 59/59 required, zero required gaps                                                        |
+| package freshness  | PASS all 15 exact; three hashes in correction dossier/inventory                                |
+| approvals          | PASS lapse dry run zero; 88 October review/null                                                |
+| integrity          | PASS 204 frozen objects/395 files; strict baseline four-only diff, 260 other lessons/286 files |
+
+Sandbox tsx CLI IPC denied; equivalent node --import tsx reporting passed.
+Browser listener/Chromium used authorized sandbox escalation. Verification server stopped.
+No inherited evidence substitutes for required current checks.
 
 ## Database State
 
-Unchanged; no migration, DEV/PROD write or approval write. Only repository pgTAP reference test mirror regenerated.
+Unchanged. No migration, DEV/PROD or approval write. Repository SQL test mirror only.
 
 ## Deployment State
 
-Unchanged; no release PR, merge or deployment authorized or performed.
+Unchanged. No PR, merge or deployment.
 
 ## Git State
 
-All changes are bounded authoring/evidence/test updates. This file belongs to the feature-branch checkpoint;
-verify local/remote HEAD and clean tree. Its frozen SHA is supplied in the completion summary;
-do not embed a self-referential SHA inside its own commit.
+This file belongs to the corrected feature-branch checkpoint. Exact committed SHA and verified
+push/local-remote equality are reported in the completion summary. Verify actual Git before trusting
+the checkpoint; do not embed a self-referential SHA inside its own commit.
 
 ## Blockers
 
-No implementation blocker. Record the incompatible full-month arithmetic in independent review
-without changing frozen Batch 1 or the owner-selected canonical rotation.
+None in current validation. No further mapping defect found; report any new demonstrated instance
+instead of extending correction scope.
 
 ## User Decisions Needed
 
-None before independent review. Acceptance and any later release/generation require separate authorization.
+Only the next independent verdict. No further correction-scope decision remains pending.
+Acceptance/release authorization remains separate.
 
 ## Exact Resume Point
 
-Run git status and git log, confirm the pushed review-ready checkpoint and clean tree, then read
-OCTOBER_WEEKS_3_5.md plus generated media/source inventory and Weeks 8–10 packages.
-Open one fresh independent review for all days 30–44 using the saved prompt. Stop after its verdict;
-do not author November, approve lessons, write migrations, mutate databases or deploy.
+Open a fresh independent read-only session using the completion summary's corrected SHA and
+OCTOBER_PHYS_CORRECTIONS.md prompt. Verify all four activities and package/frozen integrity;
+return one verdict and stop. Do not edit files, approvals or begin later implementation.
 
 ## Resume Verification
 
-Run git status and git log. Verify authoring base 1ada5f2, accepted 2170413 and UX 603efdc ancestry.
-Run node --import tsx scripts/check-october-frozen.ts and verify all 15 registered packages exactly
-match regeneration. Never overwrite frozen state or unrelated edits on unexpected drift.
+Run git status, git log and git branch --show-current; verify clean tree and local/remote HEAD.
+Compare against reviewed 61b2e07. Run node --import tsx scripts/check-october-frozen.ts and
+node --import tsx scripts/check-october-phys-corrections.ts. Preserve unexpected unrelated edits.

@@ -13,6 +13,16 @@ Updated by: Codex
 
 ## October Weeks 3–5 authoring — 2026-10-03
 
+Current follow-up: all four owner-authorized PHYS days 33/38/42/44 corrected from reviewed
+`61b2e07`, preserving prior uncommitted corrections. Exactly four mapping-only changes; no
+artificial running. Current validation: 503/503 units, targeted 70/70, format/check, lint/types,
+content/reports, zero lapses, all 15 fresh packages, Webpack build, client scan and 87 local
+browser passes (nine production-public skips). Frozen proof preserves 204 objects/395 files;
+strict reviewed-baseline proof preserves 260 other lessons/286 files. All 88 October review/null.
+See `docs/work/OCTOBER_PHYS_CORRECTIONS.md` and ACTIVE_TASK.md for hashes and the fresh-session
+reconfirmation prompt. Stop for focused independent reconfirmation; no self-approval or release.
+The authoring evidence below is historical, not substituted for current correction checks.
+
 Owner chose canonical rotation for days 30–44 from verified `1ada5f2`: 60 lessons, 15 each
 LANG/MATH/PHYS, 5 ART, 4 WORLD, 6 TIME-SPACE. All are review/null; Day 30 is complete. No rhythm
 override. Frozen Batch 1 contributes 2/2/3 rotating lessons, making actual October totals 7/6/9,

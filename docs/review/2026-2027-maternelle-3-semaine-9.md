@@ -1350,7 +1350,6 @@ _Bouger dans un espace sûr, coordonner ses actions et nommer ses indices._
 - **Conseil au parent :** L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
-  - `PHYS-S01-C01-O11` — Courir vite et franchir un obstacle sur une distance courte.
   - `PHYS-S02-C01-O07` — Respecter les règles de sécurité pour soi et pour les autres.
 
 #### 1. Je passe un repère plat — 6 min, sans interaction écran (movement)
@@ -1367,17 +1366,7 @@ _Bouger dans un espace sûr, coordonner ses actions et nommer ses indices._
 - **À défaut :** Une balle en papier froissé ou une chaussette roulée. Une petite balle souple convient aussi si la maison en a déjà une.
 - **⚠ Sécurité :** Rien de rempli de petits objets (sac de graines, de haricots) : cela s’ouvre. Une balle en papier ou une chaussette roulée ne blesse personne et ne coûte rien.
 - **Aide en anglais (optionnelle) :** « Move in a clear, dry space with an adult. »
-- **Objectifs travaillés :** `PHYS-S01-C01-O11` Courir vite et franchir un obstacle sur une distance courte. ; `PHYS-S02-C01-O07` Respecter les règles de sécurité pour soi et pour les autres.
-
-**Réussites attendues — texte officiel pour la compétence « Manipuler, courir, sauter, lancer, s’orienter » (from-5) :**
-
-- Lancer une balle lestée, un anneau, un cerceau, un petit javelot avec élan (quelques pas de déplacement), pour atteindre une zone de plus en plus éloignée.
-- Courir en limitant les arrêts sur une durée d’effort matérialisée par un support musical ou un sablier.
-- Courir vite et franchir une rivière matérialisée avec des lattes sans ralentir.
-- Courir puis sauter haut ou loin après une impulsion sur un pied pour franchir un obstacle et se réceptionner sur deux pieds.
-- Trouver au moins cinq éléments remarquables et repérables sur plusieurs photographies prises par les professeurs dans un lieu extérieur à l’école (cour de récréation, terrain de sport, stade, parc…), en l’absence des élèves ou lors d’une séance précédente.
-
-_Ces exemples illustrent toute la compétence, pas seulement cette leçon ; le programme précise qu’ils ne sont pas exhaustifs._
+- **Objectifs travaillés :** `PHYS-S02-C01-O07` Respecter les règles de sécurité pour soi et pour les autres.
 
 **Réussites attendues — texte officiel pour la compétence « Tourner, se suspendre, se renverser, grimper, rouler, glisser, nager » (from-5) :**
 

@@ -1321,7 +1321,6 @@ _Bouger dans un espace sûr, coordonner ses actions et nommer ses indices._
 - **Conseil au parent :** L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.
 - **Objectifs enseignés :**
 - **Objectifs repris (déjà vus) :**
-  - `PHYS-S01-C01-O11` — Courir vite et franchir un obstacle sur une distance courte.
   - `PHYS-S01-C01-O12` — Coordonner ses actions et ses déplacements pour lancer et pour sauter haut ou loin.
   - `PHYS-S02-C01-O07` — Respecter les règles de sécurité pour soi et pour les autres.
 
@@ -1339,7 +1338,7 @@ _Bouger dans un espace sûr, coordonner ses actions et nommer ses indices._
 - **À défaut :** Une balle en papier froissé ou une chaussette roulée. Une petite balle souple convient aussi si la maison en a déjà une.
 - **⚠ Sécurité :** Rien de rempli de petits objets (sac de graines, de haricots) : cela s’ouvre. Une balle en papier ou une chaussette roulée ne blesse personne et ne coûte rien.
 - **Aide en anglais (optionnelle) :** « Move in a clear, dry space with an adult. »
-- **Objectifs travaillés :** `PHYS-S01-C01-O11` Courir vite et franchir un obstacle sur une distance courte. ; `PHYS-S01-C01-O12` Coordonner ses actions et ses déplacements pour lancer et pour sauter haut ou loin. ; `PHYS-S02-C01-O07` Respecter les règles de sécurité pour soi et pour les autres.
+- **Objectifs travaillés :** `PHYS-S01-C01-O12` Coordonner ses actions et ses déplacements pour lancer et pour sauter haut ou loin. ; `PHYS-S02-C01-O07` Respecter les règles de sécurité pour soi et pour les autres.
 
 **Réussites attendues — texte officiel pour la compétence « Manipuler, courir, sauter, lancer, s’orienter » (from-5) :**
 

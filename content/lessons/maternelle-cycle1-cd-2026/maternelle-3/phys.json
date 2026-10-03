@@ -1851,7 +1851,7 @@
       "title": "Je cours et je m’arrête avant de lancer",
       "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
       "objectiveCodes": [],
-      "supportingObjectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "octobre-je-grandis-en-francais",
@@ -1866,7 +1866,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "objectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
           "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
           "vocabulary": [],
           "scaffolds": [
@@ -2086,7 +2086,7 @@
       "title": "Je passe un repère plat",
       "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
       "objectiveCodes": [],
-      "supportingObjectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S02-C01-O07"],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O07"],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "octobre-je-grandis-en-francais",
@@ -2101,7 +2101,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S02-C01-O07"],
+          "objectiveCodes": ["PHYS-S02-C01-O07"],
           "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
           "vocabulary": [],
           "scaffolds": [
@@ -2274,7 +2274,7 @@
       "title": "Je passe et je retrouve mon chemin",
       "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
       "objectiveCodes": [],
-      "supportingObjectiveCodes": ["PHYS-S01-C01-O13", "PHYS-S01-C01-O11", "PHYS-S02-C01-O07"],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O13", "PHYS-S02-C01-O07"],
       "stage": "practice",
       "difficulty": 2,
       "themeId": "octobre-je-grandis-en-francais",
@@ -2289,7 +2289,7 @@
           "mode": "off-screen",
           "role": "teach",
           "mediaIds": [],
-          "objectiveCodes": ["PHYS-S01-C01-O13", "PHYS-S01-C01-O11", "PHYS-S02-C01-O07"],
+          "objectiveCodes": ["PHYS-S01-C01-O13", "PHYS-S02-C01-O07"],
           "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
           "vocabulary": [],
           "scaffolds": [
@@ -2368,12 +2368,7 @@
       "title": "Mon parcours d’octobre",
       "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
       "objectiveCodes": [],
-      "supportingObjectiveCodes": [
-        "PHYS-S01-C01-O12",
-        "PHYS-S01-C01-O13",
-        "PHYS-S01-C01-O11",
-        "PHYS-S02-C01-O07"
-      ],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S01-C01-O13", "PHYS-S02-C01-O07"],
       "stage": "consolidation",
       "difficulty": 2,
       "themeId": "octobre-je-grandis-en-francais",
@@ -2388,12 +2383,7 @@
           "mode": "off-screen",
           "role": "consolidation",
           "mediaIds": [],
-          "objectiveCodes": [
-            "PHYS-S01-C01-O12",
-            "PHYS-S01-C01-O13",
-            "PHYS-S01-C01-O11",
-            "PHYS-S02-C01-O07"
-          ],
+          "objectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S01-C01-O13", "PHYS-S02-C01-O07"],
           "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
           "vocabulary": [],
           "scaffolds": [

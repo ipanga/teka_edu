@@ -1,5 +1,15 @@
 # Codex continuation
 
+Current follow-up: all four authorized PHYS corrections from reviewed `61b2e07` are green.
+Days 33/38/42/44 differ only by O11 mapping removals; no actions or safety changes. Weeks 8/9/10
+regenerated; all 15 packages exact. Current targeted 70/70, full 503/503, reports/integrity,
+Webpack build/client scan and 87 local browser passes (nine production-public skips).
+All 88 October lessons remain review/null. Read ACTIVE_TASK.md and OCTOBER_PHYS_CORRECTIONS.md.
+This handoff belongs to the corrected checkpoint; verify its SHA, clean tree and local/remote
+equality using the completion summary. Owner opens a fresh read-only focused reconfirmation
+for all four days. No self-review/approval, PR, DB write, migration, merge, deployment, November
+or P2/P3. Historical authoring evidence follows.
+
 Current task: October Weeks 3–5 authoring, authorized 2026-10-03 from verified `1ada5f2`.
 Owner chose canonical rotation: all 60 lessons now exist, ART/WORLD/TIME-SPACE 5/4/6, no Day-40
 exception. Full October rotating totals are 7/6/9 because frozen Batch 1 is 2/2/3.
