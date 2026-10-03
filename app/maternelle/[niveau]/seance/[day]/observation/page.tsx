@@ -30,7 +30,7 @@ export default async function ObservationPage({
       </header>
 
       <ObservationForm
-        day={session.instructionalDay}
+        identity={session}
         dateLabel={session.dateLabel}
         plannedMinutes={session.totalMinutes}
       />

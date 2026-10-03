@@ -1,3 +1,4 @@
+import { expectHonestOfferedSession } from "./helpers/offered-session";
 import { expect, test } from "@playwright/test";
 
 // Smoke tests: run in CI against the local build and after each deployment against the
@@ -81,6 +82,6 @@ test("home page is served in French and offers the classes", async ({ page }) =>
 
   // …and the class that has lessons offers today's session.
   await page.goto("/maternelle/3");
-  await expect(page.getByRole("heading", { name: "Aujourd’hui" })).toBeVisible();
+  await expectHonestOfferedSession(page);
   await expect(page.getByRole("link", { name: /Commencer la leçon/ })).toBeVisible();
 });

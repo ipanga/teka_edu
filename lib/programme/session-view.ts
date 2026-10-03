@@ -160,6 +160,7 @@ export type SessionStep = {
 };
 
 export type SessionDay = {
+  schoolYearId: string;
   instructionalDay: number;
   levelId: string;
   date: CalendarDate;
@@ -280,6 +281,7 @@ export function sessionForDay(levelId: string, day: number): SessionDay | undefi
   if (plan.status === "no-content" || plan.status === "not-instructional") return undefined;
 
   return {
+    schoolYearId: SCHOOL_YEAR_ID,
     instructionalDay: day,
     levelId,
     date: schoolDay.date,
@@ -334,6 +336,7 @@ export function todaysSession(levelId: string): {
   today: CalendarDate;
   todayLabel: string;
   isInstructional: boolean;
+  isCurrentSession: boolean;
   reason: string | null;
   session: SessionDay | undefined;
 } {
@@ -349,13 +352,15 @@ export function todaysSession(levelId: string): {
         today,
         todayLabel: formatFrenchDate(today),
         isInstructional: true,
+        isCurrentSession: true,
         reason: null,
         session,
       };
     }
   }
-  const reason =
-    day === undefined
+  const reason = day?.instructional
+    ? "La séance de cette date n’est pas encore disponible."
+    : day === undefined
       ? "Cette date ne fait pas partie de l’année scolaire 2026-2027."
       : (day.reasons[0]?.name ??
         (day.reasons[0]?.code === "weekend"
@@ -375,6 +380,7 @@ export function todaysSession(levelId: string): {
     today,
     todayLabel: formatFrenchDate(today),
     isInstructional: day?.instructional ?? false,
+    isCurrentSession: false,
     reason,
     session: fallback === undefined ? undefined : sessionForDay(levelId, fallback),
   };

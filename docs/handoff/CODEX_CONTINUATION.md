@@ -1,17 +1,17 @@
 # Codex continuation
 
-Current authorization: October 2026, 3ème maternelle Batch 1 only. Codex is the primary
-implementation, QA and authoring-time ImageGen environment. Claude Code is unavailable and is no
-longer a dependency. `CODEX_TO_CLAUDE_CODE_HANDOFF.md` is historical; preserve its evidence.
+Current authorization: complete the mandatory P1 UX gate and reconcile frozen October Batch 1.
+PR [#94](https://github.com/ipanga/teka_edu/pull/94) passed all four required checks and merged
+into develop at `603efdc14de535ea78f9dbe4488ff3e49ccc5186`. Accepted October content at `2170413`
+(corrected implementation `461e946`) has fresh independent `accepted` reconfirmation, relayed by
+the owner. October is being updated by a non-destructive merge; content/media/package hashes
+remain identical. Combined verification and staging no-op checks are pending. Do not author Day
+30 or Weeks 3–5, change approvals, mutate DEV/PROD, add migrations or deploy production.
 
-Correction checkpoint: the independent review returned accepted-with-modifications. All seven
-owner-authorized corrections are applied; Week 6/7 packages match canonical content, and the
-freshness test covers every package. See `docs/work/OCTOBER_BATCH_1_CORRECTIONS.md` for exact
-affected activities, three new SVGs, visual evidence, validation and reconfirmation scope.
-All 28 October lessons remain `review`; no approvals were restored. Day 30 is a teaching day
-intentionally deferred to the next batch. Stop for independent reconfirmation.
+Read `docs/work/ACTIVE_TASK.md` and `docs/work/PARENT_CHILD_UX_P1.md` for exact resume information.
+The dated evidence below is historical and remains preserved; it does not supersede this instruction.
 
-## October planning baseline — 2026-10-02
+## Historical October planning baseline — 2026-10-02
 
 Read `docs/work/OCTOBER_3EME_PLAN.md` and `docs/work/OCTOBER_BATCH_1.md` before continuing October
 work. The authoritative Batch 1 base is `origin/develop` at `6b8ba9e87802d96c2f193fe73d3c9897e084ba9c`.
@@ -40,6 +40,20 @@ fallback passed.
 Stop boundary: do not generate final October rich media, modify September canonical content/media
 or approval history, create migrations, open a PR, merge, deploy, start 2ème maternelle, offline
 support or recorded audio without explicit owner authorization.
+
+## Current authorization override — mandatory P1 UX gate, 2026-10-03
+
+The latest owner instruction supersedes the historical September continuation below. Implement
+only five P1 UI/browser-state fixes on `codex/parent-child-ux-p1` based on exact develop `6b8ba9e`.
+Accepted October Batch 1 is frozen at `2170413` (corrected content `461e946`, independently
+reconfirmed `accepted`). Preserve content, media, packages, approval history and accepted branch
+history. Do not author Day 30 or Weeks 3–5, add migrations, mutate DEV/PROD, or promote production.
+
+Implementation, local validation and required CI passed. PR #94 is merged; finish combined
+October/UX verification and the non-destructive reconciliation without force-push.
+If merge cannot respect the no-DEV-mutation boundary, stop ready to merge. Do not supply a Weeks
+3–5 continuation prompt until every gate succeeds. Exact resume state is in
+`docs/work/ACTIVE_TASK.md`; evidence is in `docs/work/PARENT_CHILD_UX_P1.md`.
 
 ## Verified recovery baseline
 

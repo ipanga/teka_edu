@@ -5,6 +5,21 @@ Status: plan approved for Batch 1. Batch 1 implementation details live in
 
 Independent Batch 1 review returned accepted-with-modifications. The owner-authorized seven corrections are implemented and await independent reconfirmation; evidence is in `docs/work/OCTOBER_BATCH_1_CORRECTIONS.md`. Day 30 (Monday October 12) is a teaching day intentionally deferred to the next authorized batch. All October lessons remain in review.
 
+## Current gate — 2026-10-03
+
+The owner relayed fresh independent `accepted` reconfirmation of corrected Batch 1 `461e946`
+and froze checkpoint `2170413173b4a7aa2e6e8b2245af0fcf4c52b0bc`. Canonical lessons remain
+`review` with `review: null`; this is not an approval-state change.
+
+Mandatory five-P1 UX work was isolated on `codex/parent-child-ux-p1`, passed local/device/fresh-parent
+checks and four required CI jobs, and merged as PR #94 into develop
+`603efdc14de535ea78f9dbe4488ff3e49ccc5186`. A non-destructive October merge is being verified.
+All 385 frozen protected files initially compare byte-identically. See
+`docs/work/PARENT_CHILD_UX_P1.md` for evidence and exact completion state.
+
+Do not author Day 30 or Weeks 3–5 until the gate completes and the owner issues the next task.
+No accepted Batch 1 re-authoring, migrations, database mutation or production deployment here.
+
 ## Repository baseline
 
 - `origin/main`: `ac3ebf9b9bd00662def3e7ec206aff1954f4694d`, September production release.

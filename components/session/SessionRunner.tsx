@@ -4,6 +4,13 @@ import Link from "next/link";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { SessionDay } from "@/lib/programme/session-view";
 import { ActivityRenderer, ChildSurfaceContext, ChildViewContext } from "./ActivityRenderer";
+import { ActivityStateProvider } from "./ActivityState";
+import {
+  readSessionPosition,
+  readSessionProgress,
+  writeSessionValue,
+  type SessionIdentity,
+} from "@/lib/programme/session-storage";
 
 /**
  * The parent runs the session from here: prepare, then one activity at a time, with a break when
@@ -20,48 +27,6 @@ import { ActivityRenderer, ChildSurfaceContext, ChildViewContext } from "./Activ
  * child. Nothing is sent anywhere (docs/PARENT_SESSION.md). Reading it can throw in a private
  * window, so every access is guarded.
  */
-
-type Progress = "not_started" | "in_progress" | "completed";
-
-const progressKey = (day: number) => `teka-edu.session.${day}`;
-const positionKey = (day: number) => `teka-edu.session.${day}.position`;
-
-function readProgress(day: number): Progress {
-  try {
-    const value = window.localStorage.getItem(progressKey(day));
-    return value === "in_progress" || value === "completed" ? value : "not_started";
-  } catch {
-    return "not_started";
-  }
-}
-
-function writeProgress(day: number, progress: Progress): void {
-  try {
-    window.localStorage.setItem(progressKey(day), progress);
-  } catch {
-    // A private window or blocked storage is not a reason to interrupt a lesson.
-  }
-}
-
-/** Where the session had got to, so a refresh or a phone call does not send you back to the start. */
-function readPosition(day: number): number | null {
-  try {
-    const raw = window.localStorage.getItem(positionKey(day));
-    if (raw === null) return null;
-    const value = Number(raw);
-    return Number.isInteger(value) ? value : null;
-  } catch {
-    return null;
-  }
-}
-
-function writePosition(day: number, index: number): void {
-  try {
-    window.localStorage.setItem(positionKey(day), String(index));
-  } catch {
-    // Same: losing the bookmark must never interrupt the session.
-  }
-}
 
 function subscribeToStorage(onChange: () => void): () => void {
   window.addEventListener("storage", onChange);
@@ -84,11 +49,23 @@ const DOMAIN_LABEL: Record<string, string> = {
 };
 
 export function SessionRunner({ session, levelSlug }: { session: SessionDay; levelSlug: string }) {
+  return (
+    <ActivityStateProvider
+      key={JSON.stringify([session.schoolYearId, session.levelId, session.instructionalDay])}
+    >
+      <SessionFlow session={session} levelSlug={levelSlug} />
+    </ActivityStateProvider>
+  );
+}
+
+function SessionFlow({ session, levelSlug }: { session: SessionDay; levelSlug: string }) {
   const activities = session.steps.flatMap((step) =>
     step.activities.map((activity) => ({ ...activity, step })),
   );
   // -1 is the preparation screen; activities.length is the end.
   const [index, setIndex] = useState(-1);
+  const activityHeading = useRef<HTMLHeadingElement | null>(null);
+  const revealInstruction = useRef(false);
   const [showGuidance, setShowGuidance] = useState(false);
   const [showEnglish, setShowEnglish] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
@@ -101,7 +78,7 @@ export function SessionRunner({ session, levelSlug }: { session: SessionDay; lev
   // server renders nothing and the client fills it in on hydration.
   const savedPosition = useSyncExternalStore(
     subscribeToStorage,
-    () => readPosition(session.instructionalDay),
+    () => readSessionPosition(session, activities.length),
     () => null,
   );
   // Offer to pick the session up where it stopped, rather than deciding for the parent.
@@ -115,22 +92,30 @@ export function SessionRunner({ session, levelSlug }: { session: SessionDay; lev
 
   const goTo = useCallback(
     (next: number) => {
+      revealInstruction.current = next >= 0 && next < activities.length;
       setIndex(next);
       setShowGuidance(false);
       setShowEnglish(false);
       setChildView(false);
       setDismissedResume(true);
-      writePosition(session.instructionalDay, next);
+      writeSessionValue(session, "position", String(next));
     },
-    [session.instructionalDay],
+    [session, activities.length],
   );
 
   useEffect(() => {
     if (index >= 0 && index < activities.length) {
-      writeProgress(session.instructionalDay, "in_progress");
+      writeSessionValue(session, "progress", "in_progress");
     }
-    if (index >= activities.length) writeProgress(session.instructionalDay, "completed");
-  }, [index, activities.length, session.instructionalDay]);
+    if (index >= activities.length) writeSessionValue(session, "progress", "completed");
+  }, [index, activities.length, session]);
+
+  useEffect(() => {
+    if (!revealInstruction.current || activityHeading.current === null) return;
+    revealInstruction.current = false;
+    activityHeading.current.focus({ preventScroll: true });
+    activityHeading.current.scrollIntoView({ block: "start", behavior: "instant" });
+  }, [index]);
 
   // ---- preparation ---------------------------------------------------------------------------
   if (index === -1) {
@@ -381,7 +366,7 @@ export function SessionRunner({ session, levelSlug }: { session: SessionDay; lev
         </p>
       )}
 
-      <h2 id="activite" className="text-2xl font-bold">
+      <h2 ref={activityHeading} tabIndex={-1} id="activite" className="text-2xl font-bold">
         {activity.title}
       </h2>
 
@@ -569,12 +554,12 @@ function ChildScreen({
 }
 
 /** Shows, on the calendar, what the browser remembers about a day. */
-export function ProgressBadge({ day }: { day: number }) {
+export function ProgressBadge({ identity }: { identity: SessionIdentity }) {
   // Browser-only state: the server renders nothing, and the client fills it in on hydration.
   const progress = useSyncExternalStore(
     subscribeToStorage,
-    () => readProgress(day),
-    () => "not_started" as Progress,
+    () => readSessionProgress(identity),
+    () => "not_started" as const,
   );
   if (progress === "not_started") return null;
   return (
