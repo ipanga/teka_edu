@@ -3,7 +3,7 @@
 Status: plan approved for Batch 1. Batch 1 implementation details live in
 `docs/work/OCTOBER_BATCH_1.md`.
 
-Independent Batch 1 review returned accepted-with-modifications. The owner-authorized seven corrections are implemented and await independent reconfirmation; evidence is in `docs/work/OCTOBER_BATCH_1_CORRECTIONS.md`. Day 30 (Monday October 12) is a teaching day intentionally deferred to the next authorized batch. All October lessons remain in review.
+Independent Batch 1 review first returned accepted-with-modifications. The seven owner-authorized corrections were independently reconfirmed `accepted`, relayed by the owner on 2026-10-03; unchanged correction evidence is in `docs/work/OCTOBER_BATCH_1_CORRECTIONS.md`. Day 30 (Monday October 12) is a teaching day intentionally deferred to the next authorized batch. All October lessons remain in review.
 
 ## Current gate — 2026-10-03
 
@@ -13,17 +13,22 @@ and froze checkpoint `2170413173b4a7aa2e6e8b2245af0fcf4c52b0bc`. Canonical lesso
 
 Mandatory five-P1 UX work was isolated on `codex/parent-child-ux-p1`, passed local/device/fresh-parent
 checks and four required CI jobs, and merged as PR #94 into develop
-`603efdc14de535ea78f9dbe4488ff3e49ccc5186`. A non-destructive October merge is being verified.
-All 385 frozen protected files initially compare byte-identically. See
+`603efdc14de535ea78f9dbe4488ff3e49ccc5186`. Non-destructive October reconciliation `61fa079` is committed and pushed.
+All 385 frozen protected files compare byte-identically; 482 unit tests, 79 browser tests,
+all 12 package strings and all reports/build/client scan passed. Staging run 37098065260 passed
+with DEV migration no-ops and preview smoke green. Every gate is complete; stop before authoring. See
 `docs/work/PARENT_CHILD_UX_P1.md` for evidence and exact completion state.
 
-Do not author Day 30 or Weeks 3–5 until the gate completes and the owner issues the next task.
+Do not author Day 30 or Weeks 3–5 until the owner issues the next task. The ready-to-paste
+implementation prompt is in PARENT_CHILD_UX_P1.md; it covers days 30–44 only and preserves Batch 1.
 No accepted Batch 1 re-authoring, migrations, database mutation or production deployment here.
 
 ## Repository baseline
 
 - `origin/main`: `ac3ebf9b9bd00662def3e7ec206aff1954f4694d`, September production release.
-- `origin/develop`: `6b8ba9e`, post-production documentation from PR #93.
+- Original Batch 1 base: `6b8ba9e`, post-production documentation from PR #93.
+- Current `origin/develop`: `603efdc14de535ea78f9dbe4488ff3e49ccc5186`, P1 UX PR #94.
+- October reconciliation: `61fa0791dad7e8d45fbfc2c2cfef24822f6817cd`, accepted history retained.
 - No production redeploy is needed merely to synchronize documentation.
 - Supported devices remain exactly phone, tablet and laptop/MacBook. TV and Smart TV are unsupported.
 
@@ -134,7 +139,7 @@ Use:
 
 Do not merge, deploy, mutate production, or create migrations during planning.
 
-## Recommended first authorized task
+## Historical first authorization recommendation — 2026-10-02
 
 Authorize creation of `codex/october-maternelle-3` from `origin/develop` and implementation of the October 3ème maternelle content skeleton plus weeks 1-2 draft lessons and media requirements, stopping at `review` status with no generated rich media beyond approved planning needs.
 

@@ -10,7 +10,7 @@ Verify the merged P1 UX fixes on the accepted October branch without changing ac
 
 ## Status
 
-`in_progress`
+`completed`
 
 ## Branch
 
@@ -32,7 +32,9 @@ Corrected implementation: `461e946e3ef4d7a63909bd1e720d5876dd568bf4`.
 The owner relayed fresh independent `accepted` reconfirmation. All 28 lessons remain review/null.
 UX implementation checkpoint: `0a177296680d6e62c8dc856903f67fdf2adb7af5`; final PR head:
 `438e33a51ba22520864d2217740d8f8e527bc7bb`. PR #94 merged after all four required checks passed.
-October merge retains both histories; only PROJECT_STATUS and ACTIVE_TASK needed semantic doc resolution.
+Reconciliation merge `61fa0791dad7e8d45fbfc2c2cfef24822f6817cd` retains both parents
+`2170413` and `603efdc`; committed and pushed without force. Only PROJECT_STATUS and
+ACTIVE_TASK needed semantic doc resolution. All gate checks completed; this final checkpoint is documentation only.
 
 ## Scope
 
@@ -58,13 +60,12 @@ Initial October post-merge comparison: all 385 frozen protected files byte-ident
 
 ## In Progress
 
-Combined October/UX verification passed; record and push the non-destructive merge.
-Monitor staging run `37098065260` on exact develop `603efdc` for DEV no-op and healthy preview.
+None. Stop boundary reached.
 
 ## Remaining
 
-Merge commit/push, staging no-op verification, final durable checkpoint and
-conditional ready-to-paste Weeks 3–5 prompt. No authoring in this task.
+None in the mandatory P1 task. Day 30 and Weeks 3–5 remain unimplemented. A ready-to-paste future
+implementation prompt is recorded in PARENT_CHILD_UX_P1.md; it requires a new owner instruction.
 
 ## Validation State
 
@@ -86,20 +87,25 @@ conditional ready-to-paste Weeks 3–5 prompt. No authoring in this task.
 ## Database State
 
 No migration/reference-data delta. Prior exact-base staging run 37057383122 reported DEV already up
-to date in dry-run and apply. Monitor the merged run and require the same no-op. PROD untouched.
+to date in dry-run and apply. Merged staging run 37098065260 also reports DEV already up to date in both dry-run and apply;
+zero migrations applied. PROD untouched, main remains ac3ebf9.
 
 ## Deployment State
 
-Develop push runs the existing staging workflow; no workflow/settings changes. No production deployment.
+Staging run 37098065260 passed on exact develop 603efdc: preview deployment
+dpl_DHGrtZ3MbivY28VGWUw5jyVh9DaZ, READY, target preview,
+https://teka-gwh8r6og5-teka10.vercel.app; stable alias teka-edu-staging.vercel.app.
+Smoke: 79 passed, 9 production-only skipped. No workflow/settings changes or production deployment.
 
 ## Git State
 
-Non-destructive `--no-ff --no-commit` merge of develop into October; both accepted and UX histories
-retained. No force-push. Current merge awaits combined validation and commit.
+October reconciliation `61fa079` pushed with both accepted 2170413 and develop 603efdc as parents.
+All 385 protected files unchanged; no history rewrite/force-push. Final checkpoint changes only docs.
+UX PR #94 merged; branch retained. Production main remains ac3ebf9.
 
 ## Blockers
 
-None; combined validation and staging no-op verification pending.
+None. All requested gates passed. No new independent reconfirmation is required for unchanged evidence.
 
 ## User Decisions Needed
 
@@ -107,8 +113,9 @@ None for the authorized gate. New authoring requires a separate user instruction
 
 ## Exact Resume Point
 
-Commit/push the validated merge; verify staging run 37098065260 logs report DEV already up to date
-and healthy preview smoke. Save completion checkpoint and the conditional continuation prompt. See PARENT_CHILD_UX_P1.md.
+STOP. On a new explicit instruction, use the Ready-to-Paste Weeks 3–5 Implementation Prompt in
+PARENT_CHILD_UX_P1.md. Reverify current branch/remote and immutable accepted state first. Do not
+start authoring merely because the gate completed.
 
 ## Resume Verification
 

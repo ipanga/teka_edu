@@ -7,7 +7,7 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-10-03
 Branch:     codex/october-maternelle-3; UX-corrected develop reconciliation
-Commit:     develop 603efdc; accepted October checkpoint 2170413 retained in history
+Commit:     reconciliation 61fa079; develop 603efdc; accepted 2170413 preserved
 Updated by: Codex
 ```
 
@@ -23,11 +23,12 @@ Separate branch `codex/parent-child-ux-p1` started from fetched `origin/develop`
 activity state isolation, year/class/day storage, truthful offered dates, handoff/pause continuity,
 and immediate instruction scroll/focus. All 467 unit tests and 79 local browser tests passed;
 nine production-only checks were intentionally skipped. All eight exact supported sizes passed.
-375 UX-base protected files remained identical. PR [#94](https://github.com/ipanga/teka_edu/pull/94) passed all four required checks and was squash-merged to develop at `603efdc14de535ea78f9dbe4488ff3e49ccc5186`. A non-destructive merge into October is in progress; all 385 frozen October protected files are already byte-identical. Only status/checkpoint documentation conflicted; shared UI and tests merged cleanly. Post-integration validation and staging verification are pending.
+375 UX-base protected files remained identical. PR [#94](https://github.com/ipanga/teka_edu/pull/94) passed all four required checks and was squash-merged to develop at `603efdc14de535ea78f9dbe4488ff3e49ccc5186`. October reconciliation `61fa0791dad7e8d45fbfc2c2cfef24822f6817cd` is committed and pushed with both accepted checkpoint and new develop as parents. All 385 frozen protected files remain identical. Combined validation passed 482 unit tests and 79 browser tests (nine production-only skips), all 12 package freshness checks, reports/build/client scan and zero-lapse dry run. Staging run `37098065260` passed with DEV migration no-ops, preview target READY and 79 smoke tests. No production deployment or DB changes. The mandatory gate is complete; stop before new October authoring.
 
 See `docs/work/PARENT_CHILD_UX_P1.md` and `docs/work/ACTIVE_TASK.md` for exact evidence and resume
-state. October Day 30 and Weeks 3–5 remain unauthorized until this gate and post-integration
-integrity verification complete. No DB, canonical approval, content/media, or production changes.
+state and the ready-to-paste continuation prompt. October Day 30 and Weeks 3–5 are unimplemented
+and require the next explicit owner instruction. No DB, canonical approval, content/media or
+production changes.
 
 ## Supported devices — current policy
 
