@@ -2,24 +2,26 @@
 
 ## Task
 
-Finalize October 3ème maternelle approvals and prepare integration.
+Complete owner-authorized October DEV/staging integration and stop before production.
 
 ## Objective
 
-Record owner-relayed independent acceptance, approve 88 lessons with fresh digests, generate
-the final reference migration, validate locally and prepare a develop PR without hosted writes.
+Merge reviewed PR #95 into develop, observe the normal DEV/staging workflow, verify hosted
+reference data and deployed smoke, preserve October/September/P1, and record the production gate.
 
 ## Status
 
-`awaiting_ci`
+`blocked`
 
 ## Branch
 
-`codex/october-maternelle-3`
+`codex/october-integration-checkpoint`
 
 ## Base Branch
 
-Accepted correction checkpoint `1f573c508b30ddd0ade57d7a8cd8329d5eb901ce`.
+Integrated develop `ae07c243d4c1dd8ce710edf8d9c93e8582649448`.
+Reviewed PR head `f059cb18daa4579c1db2f659260cd5bf3baf516f`; accepted correction checkpoint
+`1f573c508b30ddd0ade57d7a8cd8329d5eb901ce`.
 Reviewed baseline `61b2e07`; accepted Batch 1 `2170413`, corrected Batch 1 `461e946`,
 authoring base `1ada5f2` and merged P1 develop `603efdc` remain ancestors.
 
@@ -29,22 +31,25 @@ authoring base `1ada5f2` and merged P1 develop `603efdc` remain ancestors.
 
 ## Last Checkpoint
 
-Owner relayed independent accepted verdict at 1f573c5 and explicitly authorized history,
-new October approvals, generated migration, local DB reset/pgTAP, checkpoint/push and PR.
-Pre-write verification passed: exact local/remote SHA, clean tree, all 15 fresh packages,
-88 review/null and both historical frozen/correction guards. This file belongs to the
-integration-ready checkpoint; exact committed SHA and PR URL are in the completion summary.
-Final evidence: OCTOBER_FINAL_AUDIT.md. Historical correction dossier remains unchanged.
+Owner explicitly authorized merge with normal automatic DEV migration and staging workflow.
+Pre-merge checks passed immediately: open, exact expected head, develop target, CLEAN/mergeable,
+nine expected commits, four required checks green. PR #95 merged 2026-10-03T20:57:24Z;
+remote develop verified at ae07c243d4c1dd8ce710edf8d9c93e8582649448.
+Before merge, actual read-only DEV listing matched all prior migrations; only 20261003195954
+was pending. No manual DEV mutation. Staging run 37153385137 FAILED before hosted writes:
+public.ecr.aws/supabase/pg_prove:3.36 pull timed out three times. Local reset succeeded;
+pgTAP assertions did not execute. Deploy job skipped. Final DEV listing remains unchanged.
+Integrated tree exactly equals reviewed head; final audit/media report pass again.
 
 ## Scope
 
-October days 23–44, 88 lessons. Approval metadata/history, five generated packages, inventory,
-deterministic reference migration and bounded validation/test fixes. No accepted pedagogy edit.
+Authorized PR #95 merge, normal DEV migration/staging workflow, validation and three checkpoint
+files. No accepted pedagogy, media, schema or runtime edits.
 
 ## Out of Scope
 
-Hosted DEV/PROD writes, merge, staging/production deployment, new media generation,
-November, P2/P3, 2ème maternelle and TV/Smart TV support.
+Manual DEV mutation outside the established workflow, main merge, PROD migration/deployment,
+new media generation, November, P2/P3, 2ème maternelle and TV/Smart TV support.
 
 ## Product Decisions
 
@@ -62,17 +67,21 @@ validation pass. Historical review evidence and accepted media/P1 remain unchang
 
 ## In Progress
 
-None locally. PR CI is a separate remote gate; its live state must be read before integration.
-This task stops after the checkpoint/push and focused PR, not after merge or deployment.
+None. Staging run 37153385137 completed with failure; no automatic retry.
 
 ## Remaining
 
-Confirm PR required checks/review, then obtain separate owner authorization for any merge/release.
-No further authoring or hosted database operation is authorized.
+After owner-directed infrastructure retry, observe workflow listing/apply, deployment and smoke;
+verify actual DEV reference rows. Production authorization remains blocked on staging health.
 
 ## Validation State
 
-All PASS rows were rerun for this final content/code. No inherited result substitutes for a check.
+The table below is the preserved final-content local validation evidence, not a claim that staging
+passed. Integrated tree equals reviewed head; audit/coverage/media/lapse were recomputed.
+Integrated CI: quality/504 units PASS, build/client/E2E 87 PASS (nine production-public SKIP),
+Docker images/smoke PASS; database FAIL before pgTAP because the runner image pull timed out.
+Local migration/reset succeeded. PR-head 154 pgTAP PASS remains historical, not integrated-run
+success. Hosted reference validation and deployed smoke NOT RUN because deploy was skipped.
 
 | Check              | State                                                                                                             |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------- |
@@ -111,38 +120,46 @@ No suppressions, relaxed running assertions, media generation or pedagogical edi
 Generated `20261003195954_october_maternelle_3_approved.sql` via generate-reference-sql,
 exact payload verified against referenceSyncSql and test mirror against referenceTestSql.
 36 canonical/reference tables only; no schema/auth/user/child/progress mutation.
-Applied only through fresh local reset. Hosted DEV and PROD unchanged.
+Before merge: DEV linked ref quyhkkizsmosybavoewd, all prior migrations matched, only expected
+20261003195954 pending. Final read-only listing confirms identical history and October still
+pending. Hosted workflow listing/dry-run/apply NOT RUN: deploy job skipped after CI failure.
+No manual writes, schema changes or auth/user/child/progress mutation performed. PROD untouched.
 
 ## Deployment State
 
-No merge or deployment. Focused develop PR is authorized; required CI/review is separate.
-No staging/production action is authorized by this checkpoint.
+PR #95 merged; staging run 37153385137 FAILED at integrated develop ae07c243.
+Deploy job SKIPPED; no new Vercel deployment ID/preview URL/alias or deployed smoke.
+Latest GitHub staging deployment record remains 6823484316 at previous develop 603efdc,
+created 2026-10-03T04:57:35Z. Prior successful staging run 37098065260 is not October evidence.
+Main remains ac3ebf9b9bd00662def3e7ec206aff1954f4694d; no production action performed.
 
 ## Git State
 
-This document belongs to the final integration-ready feature checkpoint. Completion summary
-records exact SHA, push verification and PR URL. Verify clean tree and local/remote equality.
-No self-referential SHA embedded inside its own commit.
+Documentation branch codex/october-integration-checkpoint starts at integrated develop ae07c243.
+Only these three checkpoint files may change. Do not push to develop or trigger another deployment.
 
 ## Blockers
 
-No local validation blocker. Nine production-public tests are intentionally skipped.
-PR CI/review and explicit merge/release authorization remain separate gates.
+Infrastructure failure: public.ecr.aws/v2 and token/manifest endpoints timed out while pulling
+supabase/pg_prove:3.36, after CLI retries at 4s and 8s. No failing SQL assertion or migration error.
+Do not change content, migration, tests or workflow without evidence of a reproducible code defect.
 
 ## User Decisions Needed
 
-Only separate authorization for the next integration/release stage after PR review/checks.
-Do not interpret accepted pedagogical review as deployment permission.
+Whether to retry failed jobs of staging run 37153385137 after registry connectivity recovers.
+Separate production-promotion authorization only after DEV/staging is fully verified.
 
 ## Exact Resume Point
 
-Read OCTOBER_FINAL_AUDIT.md and this checkpoint. Verify clean local/remote HEAD and inspect
-the develop PR's live required checks/review. Stop for owner merge/release authorization;
-do not auto-merge, deploy, migrate hosted DEV/PROD or begin later content.
+STOP at diagnosed infrastructure failure. Recommended next action: owner-directed retry of failed
+jobs on run 37153385137 without code changes, preserving successful checks and exact SHA.
+Before retry verify live run/develop and DEV listing. Then verify database assertions, workflow
+listing/dry-run/apply, actual deployment target/health/smoke and read-only hosted canonical rows.
+Do not dispatch another develop push, manually apply DEV, promote production or begin later work.
 
 ## Resume Verification
 
-Run git status, git log and git branch --show-current. Verify remote feature SHA and PR head.
+Run git status, git log and git branch --show-current. Verify remote develop and merged PR #95.
 Run node --import tsx scripts/check-october-final.ts and lapse-approvals.ts --dry-run=true.
 The old check-october-frozen.ts and check-october-phys-corrections.ts are historical pre-approval
 guards preserved unchanged: they intentionally require review/null and old history/packages,

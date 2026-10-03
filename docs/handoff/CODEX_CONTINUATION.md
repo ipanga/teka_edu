@@ -1,5 +1,25 @@
 # Codex continuation
 
+Current task: owner-authorized PR #95 DEV/staging integration. PR merged at
+2026-10-03T20:57:24Z into develop ae07c243d4c1dd8ce710edf8d9c93e8582649448.
+Reviewed head f059cb18daa4579c1db2f659260cd5bf3baf516f and integrated tree are identical.
+All immediate merge gates passed. DEV read-only listing showed only 20261003195954 pending;
+no manual mutation. Staging run 37153385137 FAILED before hosted writes: pgTAP runner image
+public.ecr.aws/supabase/pg_prove:3.36 could not be pulled after three registry/network timeouts.
+Local migration/reset succeeded, but pgTAP never ran. Quality/504 units, build/bundle/87 local
+browser passes (nine production-only skips), portable/Vercel Docker checks passed.
+Deploy job SKIPPED: October remains pending in final DEV listing; no new deployment or smoke.
+STOP. Recommend owner-directed retry of failed jobs on the same run after registry recovery;
+do not alter tests/migrations for this infrastructure failure or manually apply DEV migration.
+After a successful retry, verify workflow listing, apply, hosted canonical rows and deployed smoke.
+Integrated final audit passes; September/Batch 1/P1 preserved. Documentation branch:
+codex/october-integration-checkpoint. See ACTIVE_TASK.md for current live result.
+Production is untouched and unauthorized; main stays ac3ebf9b9bd00662def3e7ec206aff1954f4694d.
+October is NOT ready for production authorization until DEV/staging verification succeeds.
+Stop before main/PROD, November, P2/P3 or 2eme.
+
+## Historical approval preparation
+
 Current task: finalize owner-authorized October integration after independent accepted verdict
 at `1f573c508b30ddd0ade57d7a8cd8329d5eb901ce`. All 88 lessons now approved via approve-week
 (new approvals, not lapsed-only), with fresh distinct digests and owner-relayed history.

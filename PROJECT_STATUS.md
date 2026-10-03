@@ -6,12 +6,34 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-10-03
-Branch:     codex/october-maternelle-3; UX-corrected develop reconciliation
-Commit:     authoring base 1ada5f2; develop 603efdc; accepted 2170413 preserved
+Branch:     codex/october-integration-checkpoint
+Commit:     integrated develop ae07c243d4c1dd8ce710edf8d9c93e8582649448
 Updated by: Codex
 ```
 
-## October Weeks 3–5 authoring — 2026-10-03
+## October DEV/staging integration — 2026-10-03
+
+Owner explicitly authorized PR #95 merge with normal DEV migration/staging effects.
+Immediate gates passed: exact head f059cb18daa4579c1db2f659260cd5bf3baf516f, open PR,
+develop target, CLEAN/mergeable, nine expected commits and all four required checks green.
+PR #95 merged at 2026-10-03T20:57:24Z; remote develop is
+ae07c243d4c1dd8ce710edf8d9c93e8582649448. Integrated tree exactly equals reviewed head.
+Read-only DEV listing before merge showed every prior migration matched and only
+20261003195954 pending. No manual DEV mutation. Automatic staging run 37153385137 failed
+before hosted writes: CI could not pull public.ecr.aws/supabase/pg_prove:3.36 after three
+network timeouts. Local migration/reset succeeded; pgTAP assertions never ran in this run.
+Quality (504 units), build/bundle/E2E (87 passes, nine production-only skips) and both Docker
+checks passed. Deploy job skipped: no hosted migration, new deployment or deployed smoke.
+Final DEV listing is unchanged, with October still pending. No new staging deployment record.
+Integrated final audit passes: 88 fresh approvals, zero review/stale, 56/56 objectives,
+59/59 required media, all 15 packages fresh, September/Batch 1/P1 preserved.
+Production untouched; main remains ac3ebf9b9bd00662def3e7ec206aff1954f4694d.
+STOP at the diagnosed infrastructure failure. Recommend retrying failed jobs of the same run
+after registry connectivity recovers, then validating DEV/reference and actual deployed smoke.
+No automatic retry, workflow/test weakening, production promotion or later authoring.
+Exact live result and next boundary: docs/work/ACTIVE_TASK.md.
+
+## Historical October integration preparation — 2026-10-03
 
 Final integration preparation: owner relayed independent `accepted` at corrected
 `1f573c508b30ddd0ade57d7a8cd8329d5eb901ce`, authorizing history and new approvals.
