@@ -18,7 +18,8 @@ test.describe("parent session", () => {
   test("the September calendar distinguishes sessions, weekends and catch-up", async ({ page }) => {
     await page.goto("/maternelle/3/calendrier");
     await expect(page.getByRole("heading", { name: "Septembre 2026" })).toBeVisible();
-    await expect(page.getByText("22 séances", { exact: false })).toBeVisible();
+    // September stays at 22 available sessions even after later batches are authored.
+    await expect(page.getByRole("link", { name: /septembre 2026 séance/ })).toHaveCount(22);
     // Weekends are shown as such, never as a missing lesson.
     await expect(page.getByText("week-end").first()).toBeVisible();
     // An earlier session can be opened to catch up.
@@ -93,8 +94,8 @@ test.describe("parent session", () => {
   });
 
   test("a day that has no session is not invented", async ({ page }) => {
-    // Instructional day 23 is October: not authored yet.
-    const response = await page.goto("/maternelle/3/seance/23");
+    // Day 45 remains intentionally unauthored after the full October checkpoint.
+    const response = await page.goto("/maternelle/3/seance/45");
     expect(response?.status()).toBe(404);
   });
 

@@ -317,9 +317,15 @@ describe("human review package", () => {
   const options = REVIEW_PACKAGES[0]!;
   const committed = readFileSync(path.join(ROOT, reviewPackagePath(options)), "utf8");
 
-  it("is up to date with the content (run `npm run review:package`)", () => {
-    expect(committed).toBe(buildReviewPackage(data, options));
-  });
+  it.each(REVIEW_PACKAGES)(
+    "is up to date: $levelId week $week (run `npm run review:package`)",
+    (week) => {
+      const file = reviewPackagePath(week);
+      expect(readFileSync(path.join(ROOT, file), "utf8"), file).toBe(
+        buildReviewPackage(data, week),
+      );
+    },
+  );
 
   it("carries what a reviewer needs, and no approval", () => {
     expect(committed).toContain("ne sont approuvées par**");
@@ -529,7 +535,7 @@ describe("human review package", () => {
     expect(committed).toContain("Une séance écourtée est une séance normale");
   });
 
-  it("covers its own week, and the five packages together cover September", () => {
+  it("covers its own week, and the packages together cover authored lessons", () => {
     for (let day = options.fromDay; day <= options.toDay; day++) {
       expect(committed).toContain(`## Jour ${day} —`);
     }
@@ -537,6 +543,11 @@ describe("human review package", () => {
       readFileSync(path.join(ROOT, reviewPackagePath(week)), "utf8"),
     ).join("\n");
     for (const l of data.lessons) expect(everyWeek, l.id).toContain(l.title);
-    expect(REVIEW_PACKAGES.at(-1)?.toDay).toBe(22);
+    const m3Last = Math.max(
+      ...REVIEW_PACKAGES.filter((week) => week.levelId === "maternelle-3").map(
+        (week) => week.toDay,
+      ),
+    );
+    expect(m3Last).toBe(44);
   });
 });

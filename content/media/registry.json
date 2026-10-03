@@ -859,6 +859,36 @@
       "origin": "teka-edu-created",
       "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
       "contentHash": "sha256:2308800c0f13fc6c770cdfc2f19bd0ee0102da28398182001a8533882a1351ce"
+    },
+    {
+      "id": "plante-graine",
+      "kind": "illustration",
+      "file": "illustrations/plante-graine.svg",
+      "alt": "Une graine de haricot dans la terre, sans racine ni feuille",
+      "tags": ["plante", "graine", "croissance"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:e5fb20101e4c2532c1fef46b146a8e41ece93e294e6a009ca7d4c48d0a0e6c6b"
+    },
+    {
+      "id": "plante-pousse",
+      "kind": "illustration",
+      "file": "illustrations/plante-pousse.svg",
+      "alt": "La graine de haricot a germé : une petite racine et une courte tige portant deux petites feuilles",
+      "tags": ["plante", "pousse", "croissance"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:c66b12eaabf6442b2f2161e6ce153aca6edce01cbb85d8246dfa8b193748f769"
+    },
+    {
+      "id": "plante-jeune",
+      "kind": "illustration",
+      "file": "illustrations/plante-jeune.svg",
+      "alt": "Une jeune plante de haricot avec des racines, une tige plus haute et quatre feuilles",
+      "tags": ["plante", "jeune plante", "croissance"],
+      "origin": "teka-edu-created",
+      "provenance": "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+      "contentHash": "sha256:0d70193177c39ab74abaf7482527c6012b870ca526e0d871cd339c0bb368c1f3"
     }
   ]
 }

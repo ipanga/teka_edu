@@ -1341,6 +1341,1247 @@
         "reviewedDigest": "a21f1b73ac9d0f73",
         "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
+    },
+    {
+      "id": "m3-phys-23",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je cours et je passe l’obstacle",
+      "summary": "Courir vite sur une courte distance et franchir un obstacle bas et sûr.",
+      "objectiveCodes": ["PHYS-S01-C01-O11"],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O07"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Utilisez un obstacle très bas : tissu roulé, ligne au sol ou coussin plat. La sécurité prime.",
+      "activities": [
+        {
+          "id": "m3-phys-23-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Vite, puis par-dessus",
+          "childInstruction": "Cours jusqu’au repère, passe par-dessus le tissu, puis arrête-toi.",
+          "adultGuidance": "Dégagez l’espace. C’est vous qui déplacez les meubles; l’enfant attend sur le côté. Placez un tissu roulé ou une ligne au sol. L’enfant court quelques pas, franchit, puis s’arrête. Recommencez trois ou quatre fois, jamais sur un sol glissant.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "tissu", "repere-sol"],
+          "vocabulary": [
+            {
+              "fr": "obstacle",
+              "en": "obstacle"
+            },
+            {
+              "fr": "franchir",
+              "en": "to go over"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Run to the mark, go over the cloth, then stop."
+            }
+          ],
+          "payload": {
+            "moves": ["courir quelques pas", "franchir un tissu bas", "s’arrêter sans tomber"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "51f693203b5ae95c",
+        "notes": "Semaine 6 : 2026-10-02 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-24",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je franchis sans tomber",
+      "summary": "Reprendre la course avec obstacle en cherchant l’équilibre.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Gardez le défi court et joyeux. Si l’enfant est fatigué, transformez la course en marche rapide.",
+      "activities": [
+        {
+          "id": "m3-phys-24-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Course courte et équilibre",
+          "childInstruction": "Cours, passe l’obstacle, puis reste immobile comme une statue.",
+          "adultGuidance": "Après chaque passage, demandez une statue de deux secondes. Cela garde l’activité sûre et travaille l’arrêt contrôlé.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "tissu"],
+          "vocabulary": [
+            {
+              "fr": "équilibre",
+              "en": "balance"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Run, go over the obstacle, then freeze like a statue."
+            }
+          ],
+          "payload": {
+            "moves": ["courir vite", "franchir", "tenir immobile deux secondes"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "967d5ca8521ab19e",
+        "notes": "Semaine 6 : 2026-10-02 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-25",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je lance puis je saute",
+      "summary": "Coordonner lancer et saut dans un enchainement simple.",
+      "objectiveCodes": ["PHYS-S01-C01-O12"],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O07"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Balle en papier seulement. Le saut se fait loin des meubles, pieds joints ou un pied après l’autre selon l’enfant.",
+      "activities": [
+        {
+          "id": "m3-phys-25-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Lancer et sauter",
+          "childInstruction": "Lance la balle dans le panier, puis saute jusqu’au repère.",
+          "adultGuidance": "Placez un panier proche. Après le lancer, l’enfant saute vers une ligne au sol. Ajustez la distance pour réussir sans danger.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["balle-papier", "boite", "repere-sol", "espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "lancer",
+              "en": "to throw"
+            },
+            {
+              "fr": "sauter",
+              "en": "to jump"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Throw the ball into the basket, then jump to the mark."
+            }
+          ],
+          "payload": {
+            "moves": ["lancer dans le panier", "sauter vers le repère", "revenir en marchant"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "10bdff617f495189",
+        "notes": "Semaine 7 : 2026-10-02 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-26",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je lance plus haut",
+      "summary": "Ajuster son geste pour lancer vers une cible sûre.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "On améliore le geste, pas la performance. Gardez une cible basse ou moyenne, jamais fragile.",
+      "activities": [
+        {
+          "id": "m3-phys-26-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "La cible change",
+          "childInstruction": "Lance la balle dans la boîte. Puis recule d’un petit pas.",
+          "adultGuidance": "Après deux réussites, reculez un peu. Si l’enfant manque, rapprochez la boîte. Verbalisez : « Tu regardes la boîte, tu lances doucement. »",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["balle-papier", "boite", "espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "cible",
+              "en": "target"
+            },
+            {
+              "fr": "reculer",
+              "en": "to step back"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Throw into the box, then take one small step back."
+            }
+          ],
+          "payload": {
+            "moves": ["viser la boîte", "lancer", "reculer d’un petit pas"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "e26b80ca9d941f08",
+        "notes": "Semaine 7 : 2026-10-02 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-27",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je cours, je franchis, je lance",
+      "summary": "Combiner course courte, obstacle bas et lancer.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Un petit parcours suffit. Ne cherchez pas la vitesse si l’espace est petit.",
+      "activities": [
+        {
+          "id": "m3-phys-27-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Petit parcours",
+          "childInstruction": "Cours, passe l’obstacle, prends la balle et lance-la.",
+          "adultGuidance": "Préparez trois étapes : ligne de départ, tissu au sol, balle en papier près d’une boîte. L’enfant enchaine lentement puis un peu plus vite.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "tissu", "balle-papier", "boite"],
+          "vocabulary": [
+            {
+              "fr": "parcours",
+              "en": "course"
+            },
+            {
+              "fr": "enchaîner",
+              "en": "to link"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Run, go over the obstacle, take the ball and throw it."
+            }
+          ],
+          "payload": {
+            "moves": ["courir", "franchir", "prendre la balle", "lancer"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "0fc275d607408770",
+        "notes": "Semaine 7 : 2026-10-02 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-28",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je saute loin en sécurité",
+      "summary": "Coordonner ses actions pour sauter plus loin sans se mettre en danger.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Le saut se fait depuis le sol, jamais depuis une chaise. Le repère mesure le progrès sans compétition.",
+      "activities": [
+        {
+          "id": "m3-phys-28-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Jusqu’au repère",
+          "childInstruction": "Place tes pieds ici, plie les genoux, puis saute vers le repère.",
+          "adultGuidance": "Tracez une ligne ou posez un tissu. Montrez : pieds stables, genoux pliés, bras qui aident. Faites trois essais seulement.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["repere-sol", "espace-degage"],
+          "vocabulary": [
+            {
+              "fr": "loin",
+              "en": "far"
+            },
+            {
+              "fr": "plier",
+              "en": "to bend"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Put your feet here, bend your knees, then jump to the mark."
+            }
+          ],
+          "payload": {
+            "moves": ["placer ses pieds", "plier les genoux", "sauter vers le repère"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "a7ec7a4bee25d393",
+        "notes": "Semaine 7 : 2026-10-02 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-29",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Mon parcours de coordination",
+      "summary": "Consolider course, franchissement, lancer et saut dans un parcours court.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Fin de semaine : l’enfant choisit l’ordre du parcours avec vous. Gardez seulement ce qui est sûr dans votre espace.",
+      "activities": [
+        {
+          "id": "m3-phys-29-a1",
+          "position": 1,
+          "type": "movement",
+          "title": "Je montre mon parcours",
+          "childInstruction": "Choisis trois actions : courir, sauter, lancer ou passer par-dessus.",
+          "adultGuidance": "Proposez quatre actions et laissez l’enfant en choisir trois. Faites verbaliser l’ordre avant de bouger : « D’abord…, ensuite…, après… »",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O11", "PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "tissu", "balle-papier", "boite"],
+          "vocabulary": [
+            {
+              "fr": "d’abord",
+              "en": "first"
+            },
+            {
+              "fr": "ensuite",
+              "en": "then"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Choose three actions and show your course."
+            }
+          ],
+          "payload": {
+            "moves": ["choisir trois actions", "dire l’ordre", "faire le parcours"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "927a44e254375734",
+        "notes": "Semaine 7 : 2026-10-02 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-30",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je trouve un chemin avec des indices",
+      "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
+      "objectiveCodes": ["PHYS-S01-C01-O13"],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O07"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.",
+      "activities": [
+        {
+          "type": "movement",
+          "title": "Je trouve un chemin avec des indices",
+          "childInstruction": "Suis le tissu, puis tourne vers la boîte.",
+          "adultGuidance": "Changez deux repères dans une zone sûre de la maison. Marchez avec l’enfant une première fois ; il utilise le tissu et la boîte comme indices puis refait le chemin. Cela prépare l’orientation ; un vrai milieu moins connu reste à explorer avec l’école ou un adulte, sans prétendre l’avoir fait ici.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O13", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move in a clear, dry space with an adult."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "Dire ou montrer les repères",
+              "Réaliser le petit parcours avec l’adulte",
+              "S’arrêter et reprendre calmement"
+            ]
+          },
+          "id": "m3-phys-30-a1",
+          "position": 1
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "05910160f7e4a65e",
+        "notes": "Semaine 8 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-31",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je lance puis je rejoins mon repère",
+      "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.",
+      "activities": [
+        {
+          "type": "movement",
+          "title": "Je lance puis je rejoins mon repère",
+          "childInstruction": "Lance dans la boîte, puis rejoins le tissu.",
+          "adultGuidance": "Reprenez le lancer du jour 29. Placez une boîte proche, utilisez une balle en papier puis faites deux petits sauts jusqu’au tissu. Ajustez pour réussir. À l’intérieur, faites les sauts sur place puis un pas vers le repère.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move in a clear, dry space with an adult."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "Dire ou montrer les repères",
+              "Réaliser le petit parcours avec l’adulte",
+              "S’arrêter et reprendre calmement"
+            ]
+          },
+          "id": "m3-phys-31-a1",
+          "position": 1
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "8be5d5eaf9b020fa",
+        "notes": "Semaine 8 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-32",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je reconnais les indices du trajet",
+      "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O13", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.",
+      "activities": [
+        {
+          "type": "movement",
+          "title": "Je reconnais les indices du trajet",
+          "childInstruction": "Trouve la boîte en passant par le tissu.",
+          "adultGuidance": "Déplacez le tissu et la boîte seulement avant l’activité. L’enfant dit son trajet, puis marche. Refaites en changeant le point de départ. L’adulte reste à côté ; à l’intérieur, trois pas suffisent. Préparation partielle à un milieu moins connu, pas une autonomie dehors.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O13", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move in a clear, dry space with an adult."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "Dire ou montrer les repères",
+              "Réaliser le petit parcours avec l’adulte",
+              "S’arrêter et reprendre calmement"
+            ]
+          },
+          "id": "m3-phys-32-a1",
+          "position": 1
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "a1d84e902af3bb7a",
+        "notes": "Semaine 8 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-33",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je cours et je m’arrête avant de lancer",
+      "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.",
+      "activities": [
+        {
+          "type": "movement",
+          "title": "Je cours et je m’arrête avant de lancer",
+          "childInstruction": "Cours jusqu’au trait, arrête-toi, puis lance.",
+          "adultGuidance": "Dégagez trois à quatre pas de distance et une cible proche. L’enfant fait une courte course, s’arrête derrière un trait plat puis lance une balle en papier. À l’intérieur étroit, remplacez la course par des pas rapides sur place puis lancez à courte distance.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move in a clear, dry space with an adult."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "Dire ou montrer les repères",
+              "Réaliser le petit parcours avec l’adulte",
+              "S’arrêter et reprendre calmement"
+            ]
+          },
+          "id": "m3-phys-33-a1",
+          "position": 1
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "4fa2d96fdb0c311f",
+        "notes": "Semaine 8 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-34",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je choisis mon parcours de la semaine",
+      "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O13", "PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.",
+      "activities": [
+        {
+          "type": "movement",
+          "title": "Je choisis mon parcours de la semaine",
+          "childInstruction": "Choisis un trajet, puis dis ses repères.",
+          "adultGuidance": "Reprenez les deux repères connus, changez leur place avant le départ. L’enfant annonce l’ordre, marche puis lance dans la boîte. Deux passages suffisent. À l’intérieur, faites le trajet en trois pas. Ce bilan porte sur les indices à la maison, pas sur la maîtrise d’un espace inconnu.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O13", "PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move in a clear, dry space with an adult."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "Dire ou montrer les repères",
+              "Réaliser le petit parcours avec l’adulte",
+              "S’arrêter et reprendre calmement"
+            ]
+          },
+          "id": "m3-phys-34-a1",
+          "position": 1
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "05b48680c3a9ce54",
+        "notes": "Semaine 8 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-35",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je saute sur le sol, puis je lance",
+      "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.",
+      "activities": [
+        {
+          "type": "movement",
+          "title": "Je saute sur le sol, puis je lance",
+          "childInstruction": "Saute sur place, puis lance dans la boîte.",
+          "adultGuidance": "Reprenez deux petits sauts et un lancer souple. Gardez les appuis sur un sol sec, loin de l’eau. À l’intérieur, faites tout sur place. L’objectif officiel PHYS-S02-C01-O06, explorer le milieu aquatique, est scolaire : seule une séance d’eau réellement encadrée par des professionnels le travaille. Ces mouvements au sec ne remplacent ni la nage ni cet apprentissage ; ne proposez aucun exercice dans une baignoire, bassine, rivière ou piscine à la maison.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move in a clear, dry space with an adult."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "Dire ou montrer les repères",
+              "Réaliser le petit parcours avec l’adulte",
+              "S’arrêter et reprendre calmement"
+            ]
+          },
+          "id": "m3-phys-35-a1",
+          "position": 1
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "ce47798fe272b96f",
+        "notes": "Semaine 9 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-36",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je marche vers un indice choisi",
+      "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O13", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.",
+      "activities": [
+        {
+          "type": "movement",
+          "title": "Je marche vers un indice choisi",
+          "childInstruction": "Va vers le tissu, puis vers la boîte.",
+          "adultGuidance": "L’enfant choisit entre deux trajets dans la zone dégagée. Changez le départ et demandez quel indice permet de retrouver la boîte. Marchez avec lui si besoin. À l’intérieur, utilisez deux repères plats séparés de quelques pas. Le milieu moins connu demeure un prolongement accompagné, préparation partielle à la maison.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O13", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move in a clear, dry space with an adult."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "Dire ou montrer les repères",
+              "Réaliser le petit parcours avec l’adulte",
+              "S’arrêter et reprendre calmement"
+            ]
+          },
+          "id": "m3-phys-36-a1",
+          "position": 1
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "1fe108248a29d990",
+        "notes": "Semaine 9 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-37",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je vise après un petit saut",
+      "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.",
+      "activities": [
+        {
+          "type": "movement",
+          "title": "Je vise après un petit saut",
+          "childInstruction": "Fais un petit saut, stabilise-toi, puis lance.",
+          "adultGuidance": "Montrez genoux souples, réception stable, puis lancer d’une balle en papier vers une boîte proche. Trois essais seulement ; rapprochez la cible en cas de difficulté. À l’intérieur, sautez sur place sans obstacle surélevé.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move in a clear, dry space with an adult."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "Dire ou montrer les repères",
+              "Réaliser le petit parcours avec l’adulte",
+              "S’arrêter et reprendre calmement"
+            ]
+          },
+          "id": "m3-phys-37-a1",
+          "position": 1
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "bc66b1a03f98cee4",
+        "notes": "Semaine 9 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-38",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je passe un repère plat",
+      "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.",
+      "activities": [
+        {
+          "type": "movement",
+          "title": "Je passe un repère plat",
+          "childInstruction": "Avance vite, passe le trait, puis reste immobile.",
+          "adultGuidance": "Posez un tissu à plat. L’enfant avance quelques pas rapides, franchit le trait puis tient une statue deux secondes. Ne cherchez pas une grande hauteur. À l’intérieur étroit, faites deux pas sur place et un petit pas par-dessus un trait de craie.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move in a clear, dry space with an adult."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "Dire ou montrer les repères",
+              "Réaliser le petit parcours avec l’adulte",
+              "S’arrêter et reprendre calmement"
+            ]
+          },
+          "id": "m3-phys-38-a1",
+          "position": 1
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "f3860dfabf890bb8",
+        "notes": "Semaine 9 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-39",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je montre un trajet et un lancer",
+      "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O13", "PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.",
+      "activities": [
+        {
+          "type": "movement",
+          "title": "Je montre un trajet et un lancer",
+          "childInstruction": "Dis ton chemin, puis marche et lance.",
+          "adultGuidance": "L’enfant annonce les repères, parcourt un trajet court et lance sa balle en papier. Reprenez ensemble si un indice manque. À l’intérieur, trois pas suffisent. Orientation : préparation préparation partielle à la maison. L’apprentissage aquatique PHYS-S02-C01-O06 reste réservé à l’école ; aucun exercice d’eau domestique ni validation de nage dans ce bilan.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O13", "PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move in a clear, dry space with an adult."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "Dire ou montrer les repères",
+              "Réaliser le petit parcours avec l’adulte",
+              "S’arrêter et reprendre calmement"
+            ]
+          },
+          "id": "m3-phys-39-a1",
+          "position": 1
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "52400095f20c42dd",
+        "notes": "Semaine 9 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-40",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je retrouve le trajet autrement",
+      "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O13", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.",
+      "activities": [
+        {
+          "type": "movement",
+          "title": "Je retrouve le trajet autrement",
+          "childInstruction": "Pars d’ici et rejoins la boîte par le tissu.",
+          "adultGuidance": "Changez le point de départ dans l’espace familier ; laissez l’enfant repérer le tissu, puis la boîte. Marchez à côté de lui. À l’intérieur, limitez à deux ou trois pas. Nommer des indices chez soi prépare un milieu moins connu sans en déclarer la maîtrise.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O13", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move in a clear, dry space with an adult."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "Dire ou montrer les repères",
+              "Réaliser le petit parcours avec l’adulte",
+              "S’arrêter et reprendre calmement"
+            ]
+          },
+          "id": "m3-phys-40-a1",
+          "position": 1
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "861b8dd69ac01aec",
+        "notes": "Semaine 10 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-41",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je coordonne mes deux actions",
+      "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.",
+      "activities": [
+        {
+          "type": "movement",
+          "title": "Je coordonne mes deux actions",
+          "childInstruction": "Lance doucement, puis saute sur place.",
+          "adultGuidance": "Montrez le lancer vers une boîte proche, attendez l’arrêt de la balle puis deux petits sauts sur place. L’enfant récupère la balle seulement à votre signal. À l’intérieur, gardez la même version sur place et rapprochez la boîte.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move in a clear, dry space with an adult."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "Dire ou montrer les repères",
+              "Réaliser le petit parcours avec l’adulte",
+              "S’arrêter et reprendre calmement"
+            ]
+          },
+          "id": "m3-phys-41-a1",
+          "position": 1
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "3ad263733511ed63",
+        "notes": "Semaine 10 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-42",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je passe et je retrouve mon chemin",
+      "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O13", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.",
+      "activities": [
+        {
+          "type": "movement",
+          "title": "Je passe et je retrouve mon chemin",
+          "childInstruction": "Passe le trait, puis retrouve le tissu.",
+          "adultGuidance": "Le trajet comporte un trait au sol et un tissu repère. L’enfant annonce ce qu’il voit, fait quelques pas rapides puis franchit à plat et s’arrête. À l’intérieur, marchez lentement en trois pas ; la sécurité prime sur la vitesse. Le transfert à un milieu moins connu reste accompagné.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O13", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move in a clear, dry space with an adult."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "Dire ou montrer les repères",
+              "Réaliser le petit parcours avec l’adulte",
+              "S’arrêter et reprendre calmement"
+            ]
+          },
+          "id": "m3-phys-42-a1",
+          "position": 1
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "2ab937c1f695f3f5",
+        "notes": "Semaine 10 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-43",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Je saute vers une cible proche",
+      "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.",
+      "activities": [
+        {
+          "type": "movement",
+          "title": "Je saute vers une cible proche",
+          "childInstruction": "Saute vers le trait, puis lance dans la boîte.",
+          "adultGuidance": "Placez la ligne très près. L’enfant saute à deux pieds, se stabilise et lance. Ne demandez pas un record de distance. À l’intérieur ou le soir, un saut sur place puis le lancer à faible distance suffisent. Aucun jeu d’eau : l’objectif aquatique officiel reste à l’école.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move in a clear, dry space with an adult."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "Dire ou montrer les repères",
+              "Réaliser le petit parcours avec l’adulte",
+              "S’arrêter et reprendre calmement"
+            ]
+          },
+          "id": "m3-phys-43-a1",
+          "position": 1
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "50ba07fbbe774f6b",
+        "notes": "Semaine 10 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-phys-44",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "PHYS",
+      "title": "Mon parcours d’octobre",
+      "summary": "Bouger dans un espace sûr, coordonner ses actions et nommer ses indices.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S01-C01-O13", "PHYS-S02-C01-O07"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte dégage l’espace et déplace les meubles lui-même. Aucun saut depuis un meuble. L’orientation à domicile est une préparation partielle ; l’exploration aquatique est réservée à un encadrement scolaire adapté.",
+      "activities": [
+        {
+          "type": "movement",
+          "title": "Mon parcours d’octobre",
+          "childInstruction": "Choisis marcher, franchir, sauter ou lancer : montre trois actions.",
+          "adultGuidance": "L’enfant choisit trois actions, dit leur ordre et réalise le petit parcours avec l’adulte. Utilisez des repères plats et une balle en papier. À l’intérieur, tout se fait sur place ou en trois pas. Le bilan observe coordination et indices dans la maison ; il ne certifie ni orientation dehors ni apprentissage aquatique PHYS-S02-C01-O06, réservé à un encadrement scolaire adapté.",
+          "minutes": 6,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["PHYS-S01-C01-O12", "PHYS-S01-C01-O13", "PHYS-S02-C01-O07"],
+          "materialCodes": ["espace-degage", "repere-sol", "tissu", "boite", "balle-papier"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Move in a clear, dry space with an adult."
+            }
+          ],
+          "payload": {
+            "moves": [
+              "Dire ou montrer les repères",
+              "Réaliser le petit parcours avec l’adulte",
+              "S’arrêter et reprendre calmement"
+            ]
+          },
+          "id": "m3-phys-44-a1",
+          "position": 1
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "43605193e3686f6b",
+        "notes": "Semaine 10 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     }
   ]
 }

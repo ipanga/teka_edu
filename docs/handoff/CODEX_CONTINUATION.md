@@ -1,8 +1,85 @@
 # Codex continuation
 
-Current authorization: owner-controlled September integration and staging validation. Codex is the
-primary implementation, QA and authoring-time ImageGen environment. Claude Code is unavailable and
-is no longer a dependency. `CODEX_TO_CLAUDE_CODE_HANDOFF.md` is historical; preserve its evidence.
+Current task: finalize owner-authorized October integration after independent accepted verdict
+at `1f573c508b30ddd0ade57d7a8cd8329d5eb901ce`. All 88 lessons now approved via approve-week
+(new approvals, not lapsed-only), with fresh distinct digests and owner-relayed history.
+Read ACTIVE_TASK.md and OCTOBER_FINAL_AUDIT.md for current validation and exact next action.
+Only approval metadata differs from accepted content; September/Batch 1 pedagogy, accepted
+media/history and P1 are preserved. Generated reference migration was replayed only locally.
+Current validation: 504 units, 154 pgTAP, 87 browser passes/nine production-only skips,
+15 fresh packages, zero lapses, build/client scan and both Docker smoke checks pass.
+Stop after validation, clean checkpoint/push and focused PR to develop. No hosted migration,
+merge, staging/production deploy, November, P2/P3 or 2ème maternelle.
+
+## Historical correction checkpoint
+
+Current follow-up: all four authorized PHYS corrections from reviewed `61b2e07` are green.
+Days 33/38/42/44 differ only by O11 mapping removals; no actions or safety changes. Weeks 8/9/10
+regenerated; all 15 packages exact. Current targeted 70/70, full 503/503, reports/integrity,
+Webpack build/client scan and 87 local browser passes (nine production-public skips).
+All 88 October lessons remain review/null. Read ACTIVE_TASK.md and OCTOBER_PHYS_CORRECTIONS.md.
+This handoff belongs to the corrected checkpoint; verify its SHA, clean tree and local/remote
+equality using the completion summary. Owner opens a fresh read-only focused reconfirmation
+for all four days. No self-review/approval, PR, DB write, migration, merge, deployment, November
+or P2/P3. Historical authoring evidence follows.
+
+Current task: October Weeks 3–5 authoring, authorized 2026-10-03 from verified `1ada5f2`.
+Owner chose canonical rotation: all 60 lessons now exist, ART/WORLD/TIME-SPACE 5/4/6, no Day-40
+exception. Full October rotating totals are 7/6/9 because frozen Batch 1 is 2/2/3.
+All new lessons remain review/null. Weeks 8–10 packages and 115-activity media inventory are generated;
+491 unit tests, content/reports, lint/typecheck, build/client and 87 browser tests pass (nine production-only
+skips). All eight supported sizes and P1 journeys passed. See ACTIVE_TASK.md and OCTOBER_WEEKS_3_5.md.
+Freeze proof protects 204 lesson objects and 395 files, with the exact P1 day-30 fixture-only update.
+The review-ready checkpoint is the commit containing this handoff; verify local/remote HEAD and a clean
+tree before one fresh independent review of days 30–44.
+Preserve all frozen objects/media/packages and P1 fixes. No approvals, later authoring, migration,
+database writes, PR, merge or deployment.
+
+## Historical completed P1 gate
+
+Current authorization: complete the mandatory P1 UX gate and reconcile frozen October Batch 1.
+PR [#94](https://github.com/ipanga/teka_edu/pull/94) passed all four required checks and merged
+into develop at `603efdc14de535ea78f9dbe4488ff3e49ccc5186`. Accepted October content at `2170413`
+(corrected implementation `461e946`) has fresh independent `accepted` reconfirmation, relayed by
+the owner. October reconciliation `61fa079` is committed and pushed without rewriting history;
+content/media/package hashes remain identical. Combined checks passed: 482 unit tests, 79 browser
+tests with nine production-only skips, 12 fresh packages and zero approval lapses. Staging run
+37098065260 passed on develop 603efdc: DEV already up to date (zero migrations), preview READY,
+79 smoke tests passed. Every gate is complete. Stop and await the next explicit instruction. Do not author Day
+30 or Weeks 3–5, change approvals, mutate DEV/PROD, add migrations or deploy production.
+
+Read `docs/work/ACTIVE_TASK.md` and `docs/work/PARENT_CHILD_UX_P1.md` for exact resume information.
+The dated evidence below is historical and remains preserved; it does not supersede this instruction.
+
+## Historical October planning baseline — 2026-10-02
+
+Read `docs/work/OCTOBER_3EME_PLAN.md` and `docs/work/OCTOBER_BATCH_1.md` before continuing October
+work. The authoritative Batch 1 base is `origin/develop` at `6b8ba9e87802d96c2f193fe73d3c9897e084ba9c`.
+Production remains healthy on `origin/main` at `ac3ebf9b9bd00662def3e7ec206aff1954f4694d`; do not
+redeploy production merely for documentation.
+
+October 2026 for 3ème maternelle covers instructional days 23-44: 22 teaching days, no configured
+October public holidays, no observed holidays and no school vacation. Expected October content is
+88 lessons: 22 language, 22 mathematics, 22 physical activity, seven arts, seven world and eight
+time-space lessons. The existing schema supports this; no October schema migration is currently
+indicated. Implementation should start from a dedicated branch such as `codex/october-maternelle-3`
+only after owner authorization.
+
+Batch 1 branch: `codex/october-maternelle-3`. Planning checkpoint commit: `1242f5a`. Batch 1
+authors days 23-29 only and leaves day 30 as `no-content`. All new October lessons remain
+`review` with `review: null`; independent review requested modifications, and corrected content awaits reconfirmation.
+
+Original implementation validation passed: format, format check, lint, typecheck, 443 unit tests, content
+validation, programme report for days 23-30, coverage report through day 29 with 42/42 due
+objectives taught, media report with zero required image gaps, approval-lapse dry run with 0 lapses,
+Webpack production build with CI fake server-only sentinels, and client-bundle scan over 28 files
+with all three sentinels absent. Plain Turbopack `npm run build` passed once, then later reproduced
+the known local port-binding `EPERM` panic after a failed sentinel rebuild attempt; the Webpack
+fallback passed.
+
+Stop boundary: do not generate final October rich media, modify September canonical content/media
+or approval history, create migrations, open a PR, merge, deploy, start 2ème maternelle, offline
+support or recorded audio without explicit owner authorization.
 
 ## Current authorization override — mandatory P1 UX gate, 2026-10-03
 
@@ -12,8 +89,8 @@ Accepted October Batch 1 is frozen at `2170413` (corrected content `461e946`, in
 reconfirmed `accepted`). Preserve content, media, packages, approval history and accepted branch
 history. Do not author Day 30 or Weeks 3–5, add migrations, mutate DEV/PROD, or promote production.
 
-Implementation and local validation have passed. Next: focused PR, required CI, eligible develop
-integration, then merge new develop into October without force-push and reverify frozen evidence.
+Implementation, local validation and required CI passed. PR #94 is merged; non-destructive October reconciliation 61fa079 and combined
+verification are complete. Use the ready-to-paste future prompt only after the owner issues it.
 If merge cannot respect the no-DEV-mutation boundary, stop ready to merge. Do not supply a Weeks
 3–5 continuation prompt until every gate succeeds. Exact resume state is in
 `docs/work/ACTIVE_TASK.md`; evidence is in `docs/work/PARENT_CHILD_UX_P1.md`.

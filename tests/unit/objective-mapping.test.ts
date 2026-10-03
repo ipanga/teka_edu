@@ -652,6 +652,63 @@ describe("the task proves the objective, not the other way round", () => {
   const claiming = (matcher: RegExp) =>
     activities.filter((a) => a.objectiveCodes.some((c) => matcher.test(statementOf(c))));
 
+  const runningWords = new Set([
+    "cours",
+    "court",
+    "courir",
+    "courent",
+    "courons",
+    "courez",
+    "course",
+    "courses",
+    "trottine",
+    "trottiner",
+    "trottinent",
+    "trottinez",
+    "trottinant",
+    "galop",
+    "galope",
+    "galoper",
+    "galopent",
+    "galopez",
+    "galopant",
+  ]);
+  const namesRunning = (body: string) =>
+    (
+      body
+        .normalize("NFC")
+        .toLocaleLowerCase("fr")
+        .match(/\p{L}+/gu) ?? []
+    ).some((word) => runningWords.has(word));
+
+  it.each(["m3-phys-33", "m3-phys-38", "m3-phys-42", "m3-phys-44"])(
+    "%s does not claim the unsupported combined running/obstacle objective",
+    (id) => {
+      const lesson = lessons.find((candidate) => candidate.id === id)!;
+      expect(lesson.objectiveCodes).not.toContain("PHYS-S01-C01-O11");
+      expect(lesson.supportingObjectiveCodes).not.toContain("PHYS-S01-C01-O11");
+      expect(lesson.activities[0]!.objectiveCodes).not.toContain("PHYS-S01-C01-O11");
+      expect(lesson.activities[0]!.minutes).toBe(6);
+      expect(lesson.status).toBe("approved");
+      expect(lesson.review?.outcome).toBe("accepted");
+    },
+  );
+
+  it.each([
+    "Cours jusqu’au trait.",
+    "Une courte course.",
+    "Courir quelques pas.",
+    "Trottine.",
+    "Galopez.",
+  ])("recognizes an explicit running action: %s", (body) => expect(namesRunning(body)).toBe(true));
+  it.each([
+    "Réaliser le petit parcours avec l’adulte.",
+    "Parcours, puis arrête-toi.",
+    "Parcourir la pièce.",
+  ])("does not invent running from a shared substring: %s", (body) =>
+    expect(namesRunning(body)).toBe(false),
+  );
+
   const LIVED = /processus ou d’un évènement vécu/;
   const STORY_CHRONOLOGY = /chronologie des actions majeures d’une histoire/;
   const A_STORY = /\bhistoire\b|\bconte\b/i;
@@ -690,13 +747,12 @@ describe("the task proves the objective, not the other way round", () => {
     // « D'un animal à l'autre » claimed « courir de plus en plus longtemps sans s'arrêter »
     // while telling the child to cross the room « comme le lézard » — on all fours. Crossing a
     // room is not running, and a lizard does not run.
-    const runs = /cours|court|courir|courent|trottin|galop/i;
     const onAllFours = /à quatre pattes|ramp\w*|à plat ventre/i;
     const running = claiming(/^Courir/);
     expect(running.length).toBeGreaterThan(0);
     for (const activity of running) {
       const body = withMoves(activity);
-      expect(runs.test(body), `${activity.id}: claims running, names no run`).toBe(true);
+      expect.soft(namesRunning(body), `${activity.id}: claims running, names no run`).toBe(true);
       // « on ne se met ni à quatre pattes ni au sol » rules it out; it does not ask for it.
       const asksForIt = new RegExp(`(?<!ni |pas )${onAllFours.source}`, "i");
       expect(
@@ -769,7 +825,7 @@ describe("a consolidation week still has to do the work it claims", () => {
     // facing each of the adult's — so the rule asks for a collection to appear, not for a
     // cardinal to be spoken.
     const produces =
-      /donne-moi|donne-m’en|fais un tas|pose autant|pose (deux|trois|quatre|cinq|six|sept|huit|neuf|dix)|prends|apporte|remets|reconstitu\w*|\bautant\b|devant chacun|en face de chacun/i;
+      /donne-moi|donne-m’en|fais un tas|fais une collection|pose autant|pose (deux|trois|quatre|cinq|six|sept|huit|neuf|dix)|prends|apporte|remets|reconstitu\w*|\bautant\b|devant chacun|en face de chacun|prépare (deux|trois|quatre|cinq|six|sept|huit|neuf|dix) objets|ajoute (un|deux) objets/i;
     const constituting = claiming(/^Constituer une collection/i);
     expect(constituting.length).toBeGreaterThan(0);
     for (const activity of constituting) {
