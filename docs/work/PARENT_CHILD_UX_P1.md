@@ -84,7 +84,9 @@ migration/reference-data delta. Required CI/merge eligibility and the enabled st
 workflow's DEV no-op outcome must be verified at integration. No DEV/PROD mutation or
 production deployment is authorized. No workflow or repository variable has been changed.
 
-PR, new develop SHA, October reconciliation and post-integration checks: pending.
+PR: [#94](https://github.com/ipanga/teka_edu/pull/94), open into develop. Implementation checkpoint:
+`0a177296680d6e62c8dc856903f67fdf2adb7af5`. Local/remote clean after push. Required CI is in
+progress; no merge yet. New develop SHA, October reconciliation and post-integration checks: pending.
 
 ## Deferred findings and stop boundary
 

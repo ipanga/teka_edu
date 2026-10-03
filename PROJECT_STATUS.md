@@ -7,7 +7,7 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-10-03
 Branch:     codex/parent-child-ux-p1; October expansion frozen
-Commit:     UX base 6b8ba9e; validated work awaiting focused PR
+Commit:     UX base 6b8ba9e; implementation 0a17729; PR #94 open
 Updated by: Codex
 ```
 
@@ -23,7 +23,7 @@ Separate branch `codex/parent-child-ux-p1` started from fetched `origin/develop`
 activity state isolation, year/class/day storage, truthful offered dates, handoff/pause continuity,
 and immediate instruction scroll/focus. All 467 unit tests and 79 local browser tests passed;
 nine production-only checks were intentionally skipped. All eight exact supported sizes passed.
-375 protected files are byte-identical to the base. PR/CI/integration are pending.
+375 protected files are byte-identical to the base. PR [#94](https://github.com/ipanga/teka_edu/pull/94) is open; required CI/integration are pending.
 
 See `docs/work/PARENT_CHILD_UX_P1.md` and `docs/work/ACTIVE_TASK.md` for exact evidence and resume
 state. October Day 30 and Weeks 3–5 remain unauthorized until this gate and post-integration

@@ -50,7 +50,7 @@ All five P1 fixes and regression coverage are implemented; focused PR preparatio
 
 ## Remaining
 
-Commit/push/PR/required CI; conditional develop integration, October reconciliation and post-integration integrity.
+PR #94 is open; required CI; conditional develop integration, October reconciliation and post-integration integrity.
 
 ## Validation State
 
@@ -81,7 +81,7 @@ No production deployment. The develop push workflow has staging enabled and runs
 
 ## Git State
 
-UX branch based on `6b8ba9e`; October branch remains `2170413`. Initial worktree clean. Implementation validated, uncommitted; required CI pending.
+UX branch based on `6b8ba9e`; October branch remains `2170413`. Initial worktree clean. Implementation checkpoint 0a177296680d6e62c8dc856903f67fdf2adb7af5 pushed; PR #94 open; required CI pending.
 
 ## Blockers
 
@@ -93,7 +93,7 @@ None for implementing, validating or opening the requested PR. If merge cannot r
 
 ## Exact Resume Point
 
-Commit the validated UX changes and open the focused develop PR. See PARENT_CHILD_UX_P1.md for validation and frozen-content evidence. Do not author October content.
+Inspect required CI for PR #94 at its latest exact head, then merge only if eligible and the no-DEV-mutation boundary is respected. See PARENT_CHILD_UX_P1.md for validation and frozen-content evidence. Do not author October content.
 
 ## Resume Verification
 
