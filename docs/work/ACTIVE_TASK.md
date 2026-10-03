@@ -11,7 +11,7 @@ reference data and deployed smoke, preserve October/September/P1, and record the
 
 ## Status
 
-`blocked`
+`awaiting_user`
 
 ## Branch
 
@@ -30,6 +30,18 @@ authoring base `1ada5f2` and merged P1 develop `603efdc` remain ancestors.
 2026-10-03
 
 ## Last Checkpoint
+
+Owner authorized failed-job retry only, with no application/SQL/test/workflow changes.
+Remote develop remains exact ae07c243d4c1dd8ce710edf8d9c93e8582649448; previous failure
+reconfirmed as registry timeout before assertions. Pre-retry DEV listing unchanged, only
+20261003195954 pending. gh run rerun 37153385137 --failed started attempt 2 at the same SHA;
+database job 111297974423 and deploy job 111298348789. Attempt 2 SUCCEEDED: database pgTAP,
+normal DEV listing/dry-run/apply, preview deployment and deployed smoke all passed.
+Final read-only DEV listing matches all versions, including October; none pending.
+GET-only hosted comparison matches every canonical row/column: 36 tables and 6,170 rows.
+Alias health reports staging, exact integrated SHA and DEV ref. Three October SVGs byte-identical.
+No code/migration/test/workflow changes or manual DEV mutation. Stop for separate production
+authorization. The initial failed attempt evidence below is historical, not current status.
 
 Owner explicitly authorized merge with normal automatic DEV migration and staging workflow.
 Pre-merge checks passed immediately: open, exact expected head, develop target, CLEAN/mergeable,
@@ -67,21 +79,24 @@ validation pass. Historical review evidence and accepted media/P1 remain unchang
 
 ## In Progress
 
-None. Staging run 37153385137 completed with failure; no automatic retry.
+None. Attempt 2 completed successfully. Production remains unauthorized.
 
 ## Remaining
 
-After owner-directed infrastructure retry, observe workflow listing/apply, deployment and smoke;
-verify actual DEV reference rows. Production authorization remains blocked on staging health.
+Owner decision on separate production promotion. No remaining October DEV/staging blocker.
 
 ## Validation State
 
 The table below is the preserved final-content local validation evidence, not a claim that staging
 passed. Integrated tree equals reviewed head; audit/coverage/media/lapse were recomputed.
 Integrated CI: quality/504 units PASS, build/client/E2E 87 PASS (nine production-public SKIP),
-Docker images/smoke PASS; database FAIL before pgTAP because the runner image pull timed out.
-Local migration/reset succeeded. PR-head 154 pgTAP PASS remains historical, not integrated-run
-success. Hosted reference validation and deployed smoke NOT RUN because deploy was skipped.
+Docker images/smoke PASS. Attempt 1 database image pull FAIL; attempt 2 database pgTAP PASS:
+pg_prove:3.36 downloaded successfully, four files / 154 assertions, Result: PASS.
+Attempt 2 hosted migration/deployment/smoke PASS: 87 deployed tests, zero failures, nine
+production-public skips. Hosted reference comparison PASS (36/36 tables,
+6,170 rows), stable alias health PASS, all three October growth SVG deployed bytes PASS.
+Eight supported phone/tablet/laptop-MacBook sizes and P1 journeys are covered by the deployed
+full E2E suite. No production smoke claimed. Local checkpoint format/structure checks rerun.
 
 | Check              | State                                                                                                             |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------- |
@@ -121,16 +136,24 @@ Generated `20261003195954_october_maternelle_3_approved.sql` via generate-refere
 exact payload verified against referenceSyncSql and test mirror against referenceTestSql.
 36 canonical/reference tables only; no schema/auth/user/child/progress mutation.
 Before merge: DEV linked ref quyhkkizsmosybavoewd, all prior migrations matched, only expected
-20261003195954 pending. Final read-only listing confirms identical history and October still
-pending. Hosted workflow listing/dry-run/apply NOT RUN: deploy job skipped after CI failure.
-No manual writes, schema changes or auth/user/child/progress mutation performed. PROD untouched.
+20261003195954 pending. Attempt 2 workflow dry-run logged exactly this migration and no other;
+normal apply finished successfully at 2026-10-03T21:36:02Z.
+Final linked DEV listing: all prior versions unchanged, October matched, zero pending.
+Independent GET-only comparison against referenceTables(getReferenceData()): 36/36 canonical
+tables and 6,170 rows exactly equal, including lessons, approvals/digests, activities/media and
+objectives. No manual writes. Generated migration remains reference-only; no schema or
+auth/user/child/progress mutation in its SQL. PROD untouched.
 
 ## Deployment State
 
-PR #95 merged; staging run 37153385137 FAILED at integrated develop ae07c243.
-Deploy job SKIPPED; no new Vercel deployment ID/preview URL/alias or deployed smoke.
-Latest GitHub staging deployment record remains 6823484316 at previous develop 603efdc,
-created 2026-10-03T04:57:35Z. Prior successful staging run 37098065260 is not October evidence.
+PR #95 merged; staging run 37153385137 attempt 2 SUCCEEDED at integrated develop ae07c243.
+Database job 111297974423; deploy job 111298348789. GitHub staging deployment record 6833399953.
+Vercel deployment dpl_6N4jG4aCeaJxqfRSFVK4ceAZ8QDv, target preview, READY.
+Preview https://teka-1y4i9trp9-teka10.vercel.app; stable alias https://teka-edu-staging.vercel.app.
+Normal deployed Smoke tests step PASS (87 passed / nine production-only skipped, 3.9 minutes).
+Independent vercel curl alias health: status ok,
+environment staging, commit ae07c243d4c1dd8ce710edf8d9c93e8582649448, DEV quyhkkizsmosybavoewd.
+Accepted plante-graine/plante-pousse/plante-jeune SVGs fetched via alias match repository bytes.
 Main remains ac3ebf9b9bd00662def3e7ec206aff1954f4694d; no production action performed.
 
 ## Git State
@@ -140,22 +163,21 @@ Only these three checkpoint files may change. Do not push to develop or trigger 
 
 ## Blockers
 
-Infrastructure failure: public.ecr.aws/v2 and token/manifest endpoints timed out while pulling
-supabase/pg_prove:3.36, after CLI retries at 4s and 8s. No failing SQL assertion or migration error.
-Do not change content, migration, tests or workflow without evidence of a reproducible code defect.
+No blocking October integration failure. Previous pg_prove image timeout resolved on retry.
+Nonblocking registry warning: dedicated VERCEL_VCR_TOKEN image-list request returned 404;
+capacity could not be checked, no pruning occurred. Deployment succeeded; monitor headroom.
 
 ## User Decisions Needed
 
-Whether to retry failed jobs of staging run 37153385137 after registry connectivity recovers.
-Separate production-promotion authorization only after DEV/staging is fully verified.
+Separate production-promotion authorization. DEV/staging is now fully verified; production
+remains untouched and unauthorized. No later content/UX work authorized.
 
 ## Exact Resume Point
 
-STOP at diagnosed infrastructure failure. Recommended next action: owner-directed retry of failed
-jobs on run 37153385137 without code changes, preserving successful checks and exact SHA.
-Before retry verify live run/develop and DEV listing. Then verify database assertions, workflow
-listing/dry-run/apply, actual deployment target/health/smoke and read-only hosted canonical rows.
-Do not dispatch another develop push, manually apply DEV, promote production or begin later work.
+STOP at production decision boundary. Recommend separate owner authorization for October
+production promotion, subject to fresh promotion-source/required CI/PROD migration gates.
+Do not rerun successful staging, push develop, manually apply DEV, merge main, migrate/deploy
+PROD or begin later work without the relevant explicit authorization.
 
 ## Resume Verification
 

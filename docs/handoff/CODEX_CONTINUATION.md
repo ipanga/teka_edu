@@ -1,5 +1,21 @@
 # Codex continuation
 
+Latest result: owner-authorized failed-job retry of 37153385137, attempt 2, SUCCEEDED at unchanged
+develop ae07c243d4c1dd8ce710edf8d9c93e8582649448. Database job 111297974423 passed; deploy
+job 111298348789 applied the sole pending October migration and passed deployed smoke:
+87 passes, zero failures, nine production-only skips. Retry pgTAP 154/154 PASS.
+Final DEV listing matches all versions; GET-only canonical validation matches 36 tables / 6,170
+rows. Preview dpl_6N4jG4aCeaJxqfRSFVK4ceAZ8QDv READY:
+https://teka-1y4i9trp9-teka10.vercel.app; alias https://teka-edu-staging.vercel.app.
+Independent alias health reports exact integrated SHA, staging and DEV ref; three new SVG bytes
+match accepted assets. Audit/coverage/media/lapse pass, all 15 packages fresh, September/Batch 1/P1
+preserved. No application/SQL/tests/workflow changes or manual DEV mutation. Registry listing
+404 warning prevented capacity check/prune; monitor headroom, not a failed deployment.
+STOP: October is ready for separate production-promotion authorization. Nothing authorizes main,
+PROD, November, P2/P3 or 2eme. ACTIVE_TASK.md holds the current checkpoint; history follows.
+
+## Historical attempt 1
+
 Current task: owner-authorized PR #95 DEV/staging integration. PR merged at
 2026-10-03T20:57:24Z into develop ae07c243d4c1dd8ce710edf8d9c93e8582649448.
 Reviewed head f059cb18daa4579c1db2f659260cd5bf3baf516f and integrated tree are identical.

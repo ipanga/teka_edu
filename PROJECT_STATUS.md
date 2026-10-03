@@ -13,6 +13,27 @@ Updated by: Codex
 
 ## October DEV/staging integration — 2026-10-03
 
+Retry result: owner authorized failed jobs only. Verified unchanged develop ae07c243,
+registry-only failure and unchanged DEV history (only October pending), then reran
+37153385137 --failed. Attempt 2 SUCCEEDED at the same SHA; database job 111297974423 and
+deploy job 111298348789 passed. Normal workflow listed/dry-ran/applied the October migration.
+Final DEV listing has every migration matched and none pending. Independent GET-only validation
+matched all 36 canonical tables / 6,170 rows to integrated content; no manual DEV mutation.
+Vercel preview dpl_6N4jG4aCeaJxqfRSFVK4ceAZ8QDv is READY at
+https://teka-1y4i9trp9-teka10.vercel.app, aliased to https://teka-edu-staging.vercel.app.
+Deployed smoke passed: 87 tests, zero failures, nine production-only skips; pgTAP 154/154 PASS.
+Workflow dry-run listed only 20261003195954; hosted apply finished 2026-10-03T21:36:02Z.
+Stable health independently reports staging, exact ae07c243 SHA and DEV
+ref quyhkkizsmosybavoewd. Three October growth SVGs fetched from staging match accepted bytes.
+Final audit/coverage/media/lapse checks pass again; all 15 packages fresh, zero lapses.
+No application, SQL, migration, test or workflow edits. Registry listing returned 404, so its
+capacity check could not run; deploy succeeded and no prune occurred. Monitor registry headroom.
+October is ready for separate production-promotion authorization, not automatically authorized.
+Production untouched. STOP before main/PROD. Prior attempt evidence below is historical.
+ACTIVE_TASK.md holds exact evidence and the owner decision boundary.
+
+### Historical attempt 1
+
 Owner explicitly authorized PR #95 merge with normal DEV migration/staging effects.
 Immediate gates passed: exact head f059cb18daa4579c1db2f659260cd5bf3baf516f, open PR,
 develop target, CLEAN/mergeable, nine expected commits and all four required checks green.
