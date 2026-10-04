@@ -11,7 +11,7 @@ reference data, deployment, non-destructive smoke and supported devices; then st
 
 ## Status
 
-`awaiting_ci`
+`completed`
 
 ## Branch
 
@@ -31,6 +31,20 @@ authoring base `1ada5f2` and merged P1 develop `603efdc` remain ancestors.
 
 ## Last Checkpoint
 
+FINAL 2026-10-04: production promotion complete. PR #96 passed all five required checks and
+merged 2026-10-04T06:24:26Z; main 81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05, exact validated
+develop tree. Production run 37182712879 SUCCEEDED; deploy job 111378801348, GitHub deployment 6837715908. Normal workflow preflights and sole pending October migration apply passed.
+Final PROD history 46 versions matched, zero pending. GET-only verification matches 36 canonical
+tables / 6,170 rows. No user tables queried or manual writes. Actual public health exact main/PROD.
+READY production dpl_HkEkuSvjzXs5wkh6aW7GtHnxyZkL, https://teka-me63jfn92-teka10.vercel.app,
+canonical https://teka-edu.vercel.app. Deployed smoke 87 PASS / zero failures / nine public-only
+skips; separate anonymous public suite 9/9 PASS. All 22 October API payloads equal repository,
+88 distinct lessons, Day 45 no-content. All 54 media assets HTTP 200/hash-identical (34 SVG/20 WebP).
+Repository audit/coverage/media/lapse/packages pass; September/Batch 1/P1 preserved. No rollback
+or fix-forward. Three documentation files only, protected develop PR from checkpoint branch;
+no automatic docs merge/extra staging deployment. STOP for owner review or a newly authorized task.
+The chronological gate records below are historical, not current in-progress operations.
+
 2026-10-04: owner explicitly authorized controlled production promotion with gates. All remotes
 fetched, clean tree, develop unchanged ae07c243, main ac3ebf9. Main->develop diff reviewed:
 91 files, validated P1 #94/October #95/prior release docs only. Required production secret names
@@ -39,7 +53,19 @@ Actual read-only PROD history: all prior versions match, only 20261003195954 pen
 Recovery: READY dpl_A43iQuRrzzJLRm2PdCf9CWmdedz5, alias https://teka-edu.vercel.app,
 generated https://teka-dzw8t0mwf-teka10.vercel.app, healthy exact main and PROD ref eganrivpkjhozkkahyxy.
 Application rollback available; no database backup/PITR verified, reference-only forward-fix policy.
-PR #96 open at exact source; CI 37182500231 pending, Promotion source PASS. No mutation yet.
+PR #96 passed all five required checks in CI 37182500231, then exact-head guarded merge-commit
+at 2026-10-04T06:24:26Z. Main 81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05 verified remotely,
+tree identical to validated develop. Production run 37182712879 running merge-commit CI.
+Protected environment approval/preflight/hosted listing/apply/deployment still pending.
+Merge-commit CI subsequently passed all four technical jobs; Promotion source appropriately
+skipped on push (passed on PR). Immediately before approval, main reverified exact 81b759f and
+fresh PROD listing showed all prior versions matched, only 20261003195954 pending.
+Used normal pending_deployments reviewer API as authenticated owner ipanga under explicit
+owner release authorization; no protection bypass/change. GitHub production deployment record
+6837715908 at exact main. Normal workflow preflight/listing/apply/deployment/smoke running.
+PROD preflights and normal migration apply subsequently PASS; application deployment still
+running. Independent read-only PROD comparison PASS: all 36 canonical/reference tables and
+6,170 rows equal promoted content, no user tables queried. Do not infer deployed health yet.
 Staging health still validated SHA/DEV; final audit/lapse rerun PASS. Prior phase evidence follows.
 
 Owner authorized failed-job retry only, with no application/SQL/test/workflow changes.
@@ -90,13 +116,23 @@ validation pass. Historical review evidence and accepted media/P1 remain unchang
 
 ## In Progress
 
-PR #96 CI run 37182500231. Production unchanged until all required checks pass and guarded merge.
+None. Production run 37182712879 completed successfully; release verification complete.
 
 ## Remaining
 
-Complete authorized production gates, deployment and actual safe verification; stop on failure.
+No production release work remains. Owner may review/integrate the docs-only protected develop PR.
+Do not treat that artifact as permission for another deployment or later product/content work.
 
 ## Validation State
+
+Production evidence PASS: workflow run 37182712879, 87 deployed tests (zero failures, nine
+public-only skips), separate anonymous public 9/9, 36/36 canonical tables / 6,170 rows,
+46 matched migration versions, 22 exact October API days / Day 45 absent, all 54 asset hashes.
+Full deployed suite includes phone 320/360/390/430, tablet portrait/landscape and laptop 1280 /
+MacBook 1440; entry/navigation/child mode/resume/focus/rich-media decode/P1 regressions pass.
+Repository-derived freshness/coverage/approval/freeze assertions pass; actual PROD rows, API
+payloads, health, assets and browser smoke independently corroborate promoted content/runtime.
+No application, content, media, SQL, migration, test or workflow edits in this release task.
 
 The table below is the preserved final-content local validation evidence, not a claim that staging
 passed. Integrated tree equals reviewed head; audit/coverage/media/lapse were recomputed.
@@ -128,6 +164,7 @@ full E2E suite. No production smoke claimed. Local checkpoint format/structure c
 | approvals          | PASS 88 approved/zero review, 88 distinct valid digests; 264 total distinct; lapse dry run zero                   |
 | integrity          | PASS 176 September objects/digests, accepted October pedagogy, prior history and 290 protected files/P1 unchanged |
 
+Historical local evidence follows; current hosted production results are above.
 Full browser suite includes eight exact supported phone/tablet/laptop sizes and P1 journeys.
 Local verification server stopped and Docker smoke containers cleaned up. The existing local
 Supabase database remains local; no hosted command was used. No remote production smoke claimed.
@@ -153,7 +190,13 @@ Final linked DEV listing: all prior versions unchanged, October matched, zero pe
 Independent GET-only comparison against referenceTables(getReferenceData()): 36/36 canonical
 tables and 6,170 rows exactly equal, including lessons, approvals/digests, activities/media and
 objectives. No manual writes. Generated migration remains reference-only; no schema or
-auth/user/child/progress mutation in its SQL. PROD untouched.
+auth/user/child/progress/submission/session mutation in its SQL.
+PROD: workflow actual dry-run showed only 20261003195954; applied 2026-10-04T06:29:45Z.
+Final PROD history: 46 matching versions, zero pending. All 36 canonical tables / 6,170 rows match
+promoted repository through independent GET-only validation. No user data queried or manual edits.
+Recovery baseline recorded before mutation: previous main ac3ebf9 and production dpl_A43iQuRrzzJLRm2PdCf9CWmdedz5.
+Application rollback available; no backup/export/PITR recovery point verified. Forward-fix policy,
+never destructive automatic SQL rollback. No recovery action required.
 
 ## Deployment State
 
@@ -165,35 +208,43 @@ Normal deployed Smoke tests step PASS (87 passed / nine production-only skipped,
 Independent vercel curl alias health: status ok,
 environment staging, commit ae07c243d4c1dd8ce710edf8d9c93e8582649448, DEV quyhkkizsmosybavoewd.
 Accepted plante-graine/plante-pousse/plante-jeune SVGs fetched via alias match repository bytes.
-Main remains ac3ebf9b9bd00662def3e7ec206aff1954f4694d; no production action performed.
+Production: PR #96 merged 2026-10-04T06:24:26Z; main 81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05.
+Run 37182712879 SUCCESS; deployment dpl_HkEkuSvjzXs5wkh6aW7GtHnxyZkL READY/production.
+Generated https://teka-me63jfn92-teka10.vercel.app; aliases https://teka-edu.vercel.app and
+https://teka-edu-teka10.vercel.app (team/generated URLs protected by design, canonical is public).
+Production smoke 87 PASS/nine public-only SKIP, separate public suite 9 PASS. Exact SHA/PROD ref
+verified at canonical health. All October APIs and 54 media files match promoted repository.
 
 ## Git State
 
 Documentation branch codex/october-integration-checkpoint starts at integrated develop ae07c243.
-Only these three checkpoint files may change. Do not push to develop or trigger another deployment.
+Only these three checkpoint files changed. Committed/pushed through docs-only protected develop
+PR; no direct protected branch push. Do not merge docs automatically and trigger another deployment.
 
 ## Blockers
 
-No blocking October integration failure. Previous pg_prove image timeout resolved on retry.
+No blocking product/release failure. Previous staging pg_prove image timeout resolved on retry.
 Nonblocking registry warning: dedicated VERCEL_VCR_TOKEN image-list request returned 404;
-capacity could not be checked, no pruning occurred. Deployment succeeded; monitor headroom.
+capacity could not be checked, no pruning occurred. Production workflow has no registry listing
+or pruning step, so the 404 was not exercised or proved resolved. Production image publishing and
+all assets succeeded; no broad cleanup. Capacity remains an operational watch item.
 
 ## User Decisions Needed
 
-Production promotion authorized subject to gates; no later content/UX work authorized.
+Review/integration of docs-only checkpoint PR, or authorization of a new bounded task.
+October release complete; no later content/UX/offline/audio/refactoring work authorized.
 
 ## Exact Resume Point
 
-Read live PR #96 checks/run 37182500231; verify source still exact ae07c243 and base/main state.
-If all five required checks green, merge normally with exact head guard. Record new main and run;
-follow production environment approval/preflight and actual migration listing/dry-run. Expected
-only 20261003195954; stop on discrepancy. No manual PROD writes or blind retry. Verify all 36
-canonical tables GET-only, deployment, health, smoke/public entry and supported devices; document
-results through normal protected docs PR. Once October healthy in production, STOP.
+STOP: October healthy in production. Do not retry, redeploy, migrate or begin later work.
+For a future authorized task, read this checkpoint and live main/develop/PR/run/deployment states;
+do not overwrite accepted content/media/approvals or interpret documentation changes as a release.
+Find the docs-only PR by head codex/october-integration-checkpoint and base develop for review.
 
 ## Resume Verification
 
-Run git status, git log and git branch --show-current. Verify remote develop and merged PR #95.
+Run git status, git log and git branch --show-current. Verify remote main 81b759f, develop ae07c243,
+merged PR #96, successful production run 37182712879 and current canonical health/deployment.
 Run node --import tsx scripts/check-october-final.ts and lapse-approvals.ts --dry-run=true.
 The old check-october-frozen.ts and check-october-phys-corrections.ts are historical pre-approval
 guards preserved unchanged: they intentionally require review/null and old history/packages,

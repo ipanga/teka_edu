@@ -7,11 +7,38 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-10-04
 Branch:     codex/october-integration-checkpoint
-Commit:     integrated develop ae07c243d4c1dd8ce710edf8d9c93e8582649448
+Commit:     production main 81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05
 Updated by: Codex
 ```
 
 ## October controlled production promotion — 2026-10-04
+
+COMPLETE: October is healthy in production. PR #96 passed all five required checks and merged
+2026-10-04T06:24:26Z (08:24:26 Africa/Lubumbashi) into main
+81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05, tree identical to validated develop ae07c243.
+Production run 37182712879 SUCCEEDED after normal protected environment approval/preflights.
+Only 20261003195954_october_maternelle_3_approved.sql was pending; normal workflow applied it
+at 2026-10-04T06:29:45Z. Actual PROD history: 46 matched versions, zero pending. GET-only
+reference verification: all 36 canonical tables / 6,170 rows exactly match promoted content;
+no user data queried or manual table writes. Migration remains reference-only, no schema change.
+Production deployment dpl_HkEkuSvjzXs5wkh6aW7GtHnxyZkL READY, target production;
+https://teka-me63jfn92-teka10.vercel.app, canonical public alias https://teka-edu.vercel.app.
+Workflow production smoke 87 PASS / zero failures / nine public-only skips; separate anonymous
+public suite 9/9 PASS. Health reports exact main SHA and PROD ref eganrivpkjhozkkahyxy.
+All 22 October API payloads match repository exactly; Day 45 no-content. All 54 media assets
+HTTP 200 with accepted hashes (34 SVG, 20 WebP), including October growth SVGs.
+Repository audit: 88 approved, zero review/stale/lapses, 88 valid distinct digests, 56/56 due
+objectives, 59/59 required media, 15 fresh packages. Actual PROD rows/API/media corroborate content;
+package freshness/coverage/freeze proof are repository-derived. September/Batch 1/P1 preserved.
+Eight supported phone/tablet/laptop-MacBook sizes and P1 journeys passed in deployed smoke.
+No rollback/fix-forward needed. No verified database backup/PITR; forward-fix policy remains.
+Production workflow has no registry-listing/pruning step: prior staging 404 not exercised, not
+proved resolved. Image publishing succeeded, all assets verified; no broad cleanup performed.
+Checkpoint edits are documentation-only, submitted through a protected develop PR on
+codex/october-integration-checkpoint; not merged automatically because that would trigger staging.
+STOP: no November, 2eme, P2/P3, offline/PWA, audio or refactoring without new owner authorization.
+
+### Historical promotion gates
 
 Owner explicitly authorized promotion of exact develop ae07c243d4c1dd8ce710edf8d9c93e8582649448.
 Fetch/clean-tree/remote checks pass; main ac3ebf9b9bd00662def3e7ec206aff1954f4694d.
@@ -22,9 +49,12 @@ Required production secret names verified. Recovery point: READY production depl
 dpl_A43iQuRrzzJLRm2PdCf9CWmdedz5, https://teka-edu.vercel.app, generated URL
 https://teka-dzw8t0mwf-teka10.vercel.app. Application rollback to this production deployment;
 database forward-fix only, no backup/PITR recovery point verified or claimed.
-Production PR #96 develop -> main is open; CI run 37182500231 pending. Promotion source passed.
+Production PR #96 develop -> main passed all five required checks in CI run 37182500231.
+Merged 2026-10-04T06:24:26Z, main 81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05;
+remote verified, resulting tree exactly matches validated develop. Production run 37182712879
+is running merge-commit CI; protected production environment approval and hosted changes pending.
 Staging health still exact validated SHA and DEV ref. Repository October final audit/lapse pass.
-No production mutation yet. See ACTIVE_TASK.md for live release gate and result.
+This gate checkpoint predates application; final verified result is above and in ACTIVE_TASK.md.
 
 ## Historical October DEV/staging integration — 2026-10-03
 
