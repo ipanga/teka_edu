@@ -3,7 +3,7 @@ import path from "node:path";
 import { format, resolveConfig } from "prettier";
 import { describe, expect, it } from "vitest";
 import { getReferenceData } from "@/lib/content/reference-data";
-import { VISUAL_STATE_PATH } from "@/lib/content/visual-audit";
+import { VISUAL_STATE_PATH, septemberMedia } from "@/lib/content/visual-audit";
 import {
   type FinalQa,
   QA_TRACKER_PATH,
@@ -54,8 +54,8 @@ describe("the final September visual QA tracker", () => {
     );
   });
 
-  it("gives every shipped picture exactly one decision, and none to a picture that does not exist", () => {
-    const ids = new Set(data.media.map((a) => a.id));
+  it("gives every September picture exactly one decision, and none to a picture that does not exist", () => {
+    const ids = new Set(septemberMedia(data).map((a) => a.id));
     expect(Object.keys(qa.assets).sort()).toEqual([...ids].sort());
     expect(Object.keys(qa.baselineHashes).sort()).toEqual([...ids].sort());
   });
@@ -93,7 +93,7 @@ describe("the final September visual QA tracker", () => {
         )
         .flatMap((asset) => asset.approvalImpact.lessonIds),
     );
-    for (const asset of data.media) {
+    for (const asset of septemberMedia(data)) {
       if (asset.contentHash === qa.frozenHashes[asset.id]) continue;
       const pilot = richMediaPilot.assets.find((candidate) => candidate.id === asset.id);
       expect(

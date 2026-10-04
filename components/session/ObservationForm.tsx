@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { writeSessionValue, type SessionIdentity } from "@/lib/programme/session-storage";
 
 /**
  * After a real session: what actually happened (docs/REAL_SESSION_TESTING.md).
@@ -29,8 +30,6 @@ const LEVELS: { value: Level; label: string }[] = [
   { value: "juste", label: "Juste" },
   { value: "trop-difficile", label: "Trop difficile" },
 ];
-
-const storageKey = (day: number) => `teka-edu.observation.${day}`;
 
 function Choice<T extends string>({
   legend,
@@ -68,14 +67,15 @@ function Choice<T extends string>({
 }
 
 export function ObservationForm({
-  day,
+  identity,
   dateLabel,
   plannedMinutes,
 }: {
-  day: number;
+  identity: SessionIdentity;
   dateLabel: string;
   plannedMinutes: number;
 }) {
+  const day = identity.instructionalDay;
   const [actualMinutes, setActualMinutes] = useState("");
   const [guidanceClear, setGuidanceClear] = useState<Scale>("");
   const [improvised, setImprovised] = useState<Scale>("");
@@ -135,15 +135,7 @@ export function ObservationForm({
     }
   };
 
-  const save = () => {
-    try {
-      window.localStorage.setItem(storageKey(day), report);
-      setSaved(true);
-    } catch {
-      // A private window must not lose the tester's work silently: the text stays on screen.
-      setSaved(false);
-    }
-  };
+  const save = () => setSaved(writeSessionValue(identity, "observation", report));
 
   return (
     <form className="flex flex-col gap-7" onSubmit={(event) => event.preventDefault()}>

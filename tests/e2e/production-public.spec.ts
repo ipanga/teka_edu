@@ -1,3 +1,4 @@
+import { expectHonestOfferedSession } from "./helpers/offered-session";
 import { expect, test, type APIResponse, type Browser } from "@playwright/test";
 
 /**
@@ -110,7 +111,7 @@ test.describe("Teka Edu in production, seen by someone with no account", () => {
       const response = await page.goto(path, { waitUntil: "domcontentloaded" });
 
       expect(response?.status()).toBe(200);
-      await expect(page.getByRole("heading", { name: "Aujourd’hui" })).toBeVisible();
+      await expectHonestOfferedSession(page);
       if (label === "1ère") {
         // Its own month, never 3ème's characters.
         const body = (await page.locator("body").textContent()) ?? "";

@@ -8,6 +8,7 @@ import {
   levelAvailability,
   levelIdFromSlug,
   schoolDays,
+  SCHOOL_YEAR_ID,
 } from "@/lib/programme/session-view";
 
 // September, day by day, so a parent can catch up on a session they missed. School days without
@@ -55,7 +56,13 @@ export default async function CalendarPage({
                 >
                   <span className="text-lg">{formatFrenchDate(day.date)}</span>
                   <span className="flex items-center gap-2">
-                    <ProgressBadge day={day.instructionalDay ?? 0} />
+                    <ProgressBadge
+                      identity={{
+                        schoolYearId: SCHOOL_YEAR_ID,
+                        levelId,
+                        instructionalDay: day.instructionalDay ?? 0,
+                      }}
+                    />
                     <span className="text-sm text-stone-500">séance {day.instructionalDay}</span>
                   </span>
                 </Link>

@@ -2,7 +2,7 @@
 -- Every change is rolled back. Run with `npm run db:test`.
 begin;
 set constraints all immediate;
-select plan(45);
+select plan(47);
 
 -- ---- Imported official data ------------------------------------------------------------------
 
@@ -59,8 +59,23 @@ select results_eq(
 select is(
   (select count(*)::int from public.lessons l
      join public.lesson_levels ll on ll.lesson_id = l.id
-    where ll.level_id = 'maternelle-3'),
+    where ll.level_id = 'maternelle-3'
+      and l.theme_id in ('la-rentree', 'ma-maison', 'objets-et-formes', 'au-marche', 'je-montre-ce-que-je-sais')),
   88, 'the 88 September lessons of 3ème maternelle are loaded'
+);
+select is(
+  (select count(*)::int from public.lessons l
+     join public.lesson_levels ll on ll.lesson_id = l.id
+    where ll.level_id = 'maternelle-3' and l.theme_id = 'octobre-je-grandis-en-francais'),
+  88, 'the 88 October lessons of 3ème maternelle are loaded'
+);
+select is(
+  (select count(*)::int from public.lessons l
+     join public.lesson_levels ll on ll.lesson_id = l.id
+    where ll.level_id = 'maternelle-3' and l.theme_id = 'octobre-je-grandis-en-francais'
+      and l.status = 'approved' and l.review_outcome = 'accepted'
+      and l.reviewed_digest is not null),
+  88, 'all October lessons carry accepted approvals and digests'
 );
 select is(
   (select count(*)::int from public.lessons l

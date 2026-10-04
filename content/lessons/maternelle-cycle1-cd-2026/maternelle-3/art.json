@@ -463,6 +463,381 @@
         "reviewedDigest": "6ab382a7cac0046f",
         "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée, 2026-09-22 conséquence d’une autre relecture, 2026-09-23 acceptée avec modifications, 2026-09-23 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
+    },
+    {
+      "id": "m3-art-08",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Notre dessin à deux",
+      "summary": "Participer à une œuvre collective simple avec le parent.",
+      "objectiveCodes": ["ART-S01-C01-O07"],
+      "supportingObjectiveCodes": ["ART-S01-C01-O05"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "À la maison, le collectif est parent-enfant. Dites clairement que l’objectif officiel est partiellement porté hors de la classe, mais que l’enfant peut s’exercer à coopérer.",
+      "activities": [
+        {
+          "id": "m3-art-08-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Un dessin commencé ensemble",
+          "childInstruction": "Je commence un dessin, puis tu ajoutes une partie.",
+          "adultGuidance": "Tracez une maison, un arbre ou un chemin. L’enfant ajoute une partie utile. Parlez : « Qu’est-ce qu’on garde ? Qu’est-ce qu’on ajoute ? »",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C01-O07", "ART-S01-C01-O05"],
+          "materialCodes": ["papier", "crayon", "crayons-couleur"],
+          "vocabulary": [
+            {
+              "fr": "ensemble",
+              "en": "together"
+            },
+            {
+              "fr": "ajouter",
+              "en": "to add"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "I start a drawing, then you add one part."
+            }
+          ],
+          "payload": {
+            "subject": "dessin collectif parent-enfant"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "2528cac723aefc97",
+        "notes": "Semaine 6 : 2026-10-02 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-art-09",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Nous résolvons le dessin",
+      "summary": "Continuer une production commune à partir d’un petit problème graphique.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["ART-S01-C01-O07", "ART-S01-C01-O06"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Le problème doit être concret : il manque un chemin, une porte, une place pour un personnage. L’enfant propose une solution dessinée.",
+      "activities": [
+        {
+          "id": "m3-art-09-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Il manque quelque chose",
+          "childInstruction": "Regarde le dessin. Que faut-il ajouter pour qu’il soit complet ?",
+          "adultGuidance": "Dessinez une scène incomplète : maison sans porte, jardin sans chemin, personnage sans ballon. L’enfant choisit quoi ajouter et explique sa solution.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C01-O07", "ART-S01-C01-O06"],
+          "materialCodes": ["papier", "crayon", "crayons-couleur"],
+          "vocabulary": [
+            {
+              "fr": "compléter",
+              "en": "to complete"
+            },
+            {
+              "fr": "solution",
+              "en": "solution"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Look at the drawing. What should we add?"
+            }
+          ],
+          "payload": {
+            "subject": "dessin collectif à compléter"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "58a16a975a4891b7",
+        "notes": "Semaine 7 : 2026-10-02 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-art-10",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Je nomme les gestes du dessin",
+      "summary": "Trace une ligne, puis le contour d’une feuille.",
+      "objectiveCodes": ["ART-S01-C01-O08"],
+      "supportingObjectiveCodes": ["ART-S01-C01-O05"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Dessinez sur papier avec des outils adaptés et nommez les gestes. Le motif de maison est un appui ; le répertoire collectif de la classe reste à reprendre avec l’école, sans prétendre le remplacer.",
+      "activities": [
+        {
+          "id": "m3-art-10-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Je nomme les gestes du dessin",
+          "childInstruction": "Trace une ligne, puis le contour d’une feuille.",
+          "adultGuidance": "Tracez avec l’enfant une ligne simple puis un contour de feuille imaginée. Nommez ligne, contour, couleur, trait. L’enfant désigne ces éléments dans son dessin et les redonne ; ne demandez pas un vocabulaire technique récité.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C01-O08", "ART-S01-C01-O05"],
+          "materialCodes": ["papier", "crayon", "crayons-couleur"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Draw a line and the outline of a leaf."
+            }
+          ],
+          "payload": {
+            "subject": "Je nomme les gestes du dessin"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "42eaada105f82dd5",
+        "notes": "Semaine 8 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-art-11",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Mon dessin de la semaine",
+      "summary": "Dessine une plante et nomme une ligne et son contour.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["ART-S01-C01-O08"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Dessinez sur papier avec des outils adaptés et nommez les gestes. Le motif de maison est un appui ; le répertoire collectif de la classe reste à reprendre avec l’école, sans prétendre le remplacer.",
+      "activities": [
+        {
+          "id": "m3-art-11-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Mon dessin de la semaine",
+          "childInstruction": "Dessine une plante et nomme une ligne et son contour.",
+          "adultGuidance": "Reprenez le vocabulaire du jour 32 et la graine/pousse/plante des cartes acceptées. Le dessin reste sur papier, libre et simple. Demandez une ligne, un contour et une couleur, sans note ni copie parfaite.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C01-O08"],
+          "materialCodes": ["papier", "crayon", "crayons-couleur"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Draw a plant and name a line and its outline."
+            }
+          ],
+          "payload": {
+            "subject": "Mon dessin de la semaine"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "ba35067b3ef1edd3",
+        "notes": "Semaine 8 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-art-12",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Je transforme un motif connu",
+      "summary": "Reprends ce motif, puis change-le à ta façon.",
+      "objectiveCodes": ["ART-S01-C02-O07"],
+      "supportingObjectiveCodes": ["ART-S01-C01-O08", "ART-S01-C01-O05"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Dessinez sur papier avec des outils adaptés et nommez les gestes. Le motif de maison est un appui ; le répertoire collectif de la classe reste à reprendre avec l’école, sans prétendre le remplacer.",
+      "activities": [
+        {
+          "id": "m3-art-12-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Je transforme un motif connu",
+          "childInstruction": "Reprends ce motif, puis change-le à ta façon.",
+          "adultGuidance": "L’adulte dessine deux feuilles simples, rappel de la plante déjà vue. L’enfant reprend le motif puis le transforme : plus grand, tourné ou d’une autre couleur. Parlez de l’effet produit. Un motif réellement rapporté de la classe peut être choisi, mais vous ne prétendez pas connaitre son répertoire ; le motif de maison est un appui.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C02-O07", "ART-S01-C01-O08", "ART-S01-C01-O05"],
+          "materialCodes": ["papier", "crayon", "crayons-couleur"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Copy this familiar pattern and change it your way."
+            }
+          ],
+          "payload": {
+            "subject": "Je transforme un motif connu"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "984ffa0eff691454",
+        "notes": "Semaine 9 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-art-13",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Le même motif devient autre chose",
+      "summary": "Transforme la feuille en une nouvelle forme.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["ART-S01-C02-O07", "ART-S01-C01-O08", "ART-S01-C01-O06"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Dessinez sur papier avec des outils adaptés et nommez les gestes. Le motif de maison est un appui ; le répertoire collectif de la classe reste à reprendre avec l’école, sans prétendre le remplacer.",
+      "activities": [
+        {
+          "id": "m3-art-13-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Le même motif devient autre chose",
+          "childInstruction": "Transforme la feuille en une nouvelle forme.",
+          "adultGuidance": "Reprenez le motif feuille du jour 37. L’enfant change son orientation, ajoute des traits ou le détourne en poisson imaginaire. Nommez contour, ligne et couleur et faites expliquer l’effet. Aucun modèle numérique n’est requis : vous tracez le point de départ sur papier.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C02-O07", "ART-S01-C01-O08", "ART-S01-C01-O06"],
+          "materialCodes": ["papier", "crayon", "crayons-couleur"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Change the leaf into a new shape."
+            }
+          ],
+          "payload": {
+            "subject": "Le même motif devient autre chose"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "1c59584570f8736d",
+        "notes": "Semaine 10 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-art-14",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "ART",
+      "title": "Mes motifs d’octobre",
+      "summary": "Choisis un motif connu et transforme-le encore.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["ART-S01-C02-O07", "ART-S01-C01-O08"],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Dessinez sur papier avec des outils adaptés et nommez les gestes. Le motif de maison est un appui ; le répertoire collectif de la classe reste à reprendre avec l’école, sans prétendre le remplacer.",
+      "activities": [
+        {
+          "id": "m3-art-14-a1",
+          "position": 1,
+          "type": "drawing",
+          "title": "Mes motifs d’octobre",
+          "childInstruction": "Choisis un motif connu et transforme-le encore.",
+          "adultGuidance": "L’enfant choisit la feuille ou un motif réellement connu de sa classe, le dessine puis le transforme. Faites expliquer ce qui est gardé et changé avec ligne, contour, couleur. Une seule transformation suffit pour ce bilan ; n’inventez pas de répertoire scolaire.",
+          "minutes": 7,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["ART-S01-C02-O07", "ART-S01-C01-O08"],
+          "materialCodes": ["papier", "crayon", "crayons-couleur"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Choose a familiar pattern and change it again."
+            }
+          ],
+          "payload": {
+            "subject": "Mes motifs d’octobre"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "50d50e7bbbedb28b",
+        "notes": "Semaine 10 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 A French-first educational web app (PWA): a **parent-led after-school reinforcement platform** for preschool children (1ère, 2ème and 3ème maternelle) — a digital répétiteur guided by the parent. The child goes to school during the day; afterwards a parent opens Teka Edu and runs a structured **30-to-45-minute** session. It follows the official French Cycle 1 curriculum and the DRC school calendar, and does not replace school.
 
-> **Status:** September is complete on `codex/september-rich-media-pilot`: 176/176 approved lessons, 302 activities, 51 assets and 20/20 independently accepted rich-media candidates. The feature branch is not merged or deployed. 1ere and 3eme have September lessons; 2eme has no authored lessons. See [`PROJECT_STATUS.md`](PROJECT_STATUS.md) and [`Codex continuation`](docs/handoff/CODEX_CONTINUATION.md).
+> **Status:** The validated September release is live in production as of 2026-10-02. `main` was promoted from `develop` by PR #92 at merge commit `ac3ebf9b9bd00662def3e7ec206aff1954f4694d`; production deployment `dpl_A43iQuRrzzJLRm2PdCf9CWmdedz5` is aliased to `https://teka-edu.vercel.app`. 1ere and 3eme have September lessons; 2eme has no authored lessons. See [`PROJECT_STATUS.md`](PROJECT_STATUS.md) and [`Codex continuation`](docs/handoff/CODEX_CONTINUATION.md).
 
 ## Documentation
 

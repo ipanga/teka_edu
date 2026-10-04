@@ -1,3 +1,4 @@
+import { expectHonestOfferedSession } from "./helpers/offered-session";
 import { expect, test } from "@playwright/test";
 
 // The parent-led session (ADR-039): a parent opens Teka Edu after school and runs the day's
@@ -7,7 +8,7 @@ import { expect, test } from "@playwright/test";
 test.describe("parent session", () => {
   test("today's page says what to do and how long it takes", async ({ page }) => {
     await page.goto("/maternelle/3");
-    await expect(page.getByRole("heading", { name: "Aujourd’hui" })).toBeVisible();
+    await expectHonestOfferedSession(page);
     // Either today's lesson or, outside school days, the most recent session.
     await expect(page.getByRole("link", { name: /Commencer la leçon/ })).toBeVisible();
     await expect(page.getByText(/3ème maternelle/)).toBeVisible();
@@ -17,7 +18,8 @@ test.describe("parent session", () => {
   test("the September calendar distinguishes sessions, weekends and catch-up", async ({ page }) => {
     await page.goto("/maternelle/3/calendrier");
     await expect(page.getByRole("heading", { name: "Septembre 2026" })).toBeVisible();
-    await expect(page.getByText("22 séances", { exact: false })).toBeVisible();
+    // September stays at 22 available sessions even after later batches are authored.
+    await expect(page.getByRole("link", { name: /septembre 2026 séance/ })).toHaveCount(22);
     // Weekends are shown as such, never as a missing lesson.
     await expect(page.getByText("week-end").first()).toBeVisible();
     // An earlier session can be opened to catch up.
@@ -92,8 +94,8 @@ test.describe("parent session", () => {
   });
 
   test("a day that has no session is not invented", async ({ page }) => {
-    // Instructional day 23 is October: not authored yet.
-    const response = await page.goto("/maternelle/3/seance/23");
+    // Day 45 remains intentionally unauthored after the full October checkpoint.
+    const response = await page.goto("/maternelle/3/seance/45");
     expect(response?.status()).toBe(404);
   });
 

@@ -163,13 +163,20 @@ describe("September 2026 (3ème maternelle)", () => {
     }
   });
 
-  it("does not author October: content stops where the month stops", () => {
-    const october = generateDailyPlan(
+  it("continues into the authorized October batch and then stops", () => {
+    const firstOctober = generateDailyPlan(
       days.find((d) => d.instructionalDay === LAST_DAY + 1)!,
       programme,
       data.lessons,
     );
-    expect(october.status).toBe("no-content");
+    expect(firstOctober.status).toBe("complete");
+
+    const afterBatch = generateDailyPlan(
+      days.find((d) => d.instructionalDay === 45)!,
+      programme,
+      data.lessons,
+    );
+    expect(afterBatch.status).toBe("no-content");
   });
 });
 

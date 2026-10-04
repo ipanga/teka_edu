@@ -8,10 +8,12 @@ import {
   AUDIT_STATUSES,
   VISUAL_AUDIT_PATH,
   VISUAL_STATE_PATH,
+  SEPTEMBER_VISUAL_AUDIT_LAST_DAY,
   audioNeedOf,
   buildAuditDocument,
   buildAuditRows,
   deriveState,
+  septemberMedia,
   type VisualState,
 } from "@/lib/content/visual-audit";
 
@@ -44,8 +46,13 @@ describe("the September visual audit", () => {
 
   it("covers every activity of both classes exactly once", () => {
     const rows = buildAuditRows(data, state);
+    const daysByLesson = new Map(rows.map((row) => [row.lessonId, row.day]));
     const activities = data.lessons
       .filter((l) => l.levelIds.includes("maternelle-1") || l.levelIds.includes("maternelle-3"))
+      .filter(
+        (l) =>
+          (daysByLesson.get(l.id) ?? Number.POSITIVE_INFINITY) <= SEPTEMBER_VISUAL_AUDIT_LAST_DAY,
+      )
       .flatMap((l) => l.activities);
     expect(rows.length).toBe(activities.length);
     expect(new Set(rows.map((row) => row.activityId)).size).toBe(rows.length);
@@ -56,8 +63,8 @@ describe("the September visual audit", () => {
     }
   });
 
-  it("gives every shipped asset a verdict, and names no asset that does not exist", () => {
-    const ids = new Set(data.media.map((asset) => asset.id));
+  it("gives every September asset a verdict, and names no asset that does not exist", () => {
+    const ids = new Set(septemberMedia(data).map((asset) => asset.id));
     for (const id of Object.keys(state.decisions.assets)) {
       expect(ids.has(id), `decision for unknown asset ${id}`).toBe(true);
     }

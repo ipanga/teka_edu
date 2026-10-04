@@ -5,11 +5,75 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-10-02
-Branch:     develop; final staging functional validation healthy
-Commit:     c325c65; origin/develop verified; production unchanged
+Date:       2026-10-03
+Branch:     codex/october-maternelle-3; UX-corrected develop reconciliation
+Commit:     authoring base 1ada5f2; develop 603efdc; accepted 2170413 preserved
 Updated by: Codex
 ```
+
+## October Weeks 3–5 authoring — 2026-10-03
+
+Final integration preparation: owner relayed independent `accepted` at corrected
+`1f573c508b30ddd0ade57d7a8cd8329d5eb901ce`, authorizing history and new approvals.
+All 88 October lessons are now approved with fresh distinct digests; zero review.
+Ten history records preserve modification and accepted passes for Weeks 6–10, with actual
+owner-relayed provenance. No pedagogy/media changes. Canonical full-month counts: 22/22/22
+LANG/MATH/PHYS, 7 ART, 6 WORLD, 9 TIME-SPACE. Days 23–44 complete at 35 minutes, Day 45 absent.
+Final audit: `docs/work/OCTOBER_FINAL_AUDIT.md`; current integration validation/checkpoint:
+`docs/work/ACTIVE_TASK.md`. Generated migration `20261003195954_october_maternelle_3_approved.sql`
+mirrors 36 canonical/reference tables only. Local reset performed; hosted DEV/PROD untouched.
+Current full validation: 504/504 units, 154/154 pgTAP, 87 local browser passes/nine production-only
+skips, all 15 packages fresh, zero lapses, production build/client scan and both local Docker
+image build/health/SIGTERM checks pass. September 176 objects/digests and 290 protected files/P1
+remain unchanged. Review evidence is AI-assisted, not teacher certification.
+Stop after clean checkpoint/push and PR to develop. No merge, deployment or later authoring.
+
+### Historical correction checkpoint
+
+Current follow-up: all four owner-authorized PHYS days 33/38/42/44 corrected from reviewed
+`61b2e07`, preserving prior uncommitted corrections. Exactly four mapping-only changes; no
+artificial running. Current validation: 503/503 units, targeted 70/70, format/check, lint/types,
+content/reports, zero lapses, all 15 fresh packages, Webpack build, client scan and 87 local
+browser passes (nine production-public skips). Frozen proof preserves 204 objects/395 files;
+strict reviewed-baseline proof preserves 260 other lessons/286 files. All 88 October review/null.
+See `docs/work/OCTOBER_PHYS_CORRECTIONS.md` and ACTIVE_TASK.md for hashes and the fresh-session
+reconfirmation prompt. Stop for focused independent reconfirmation; no self-approval or release.
+The authoring evidence below is historical, not substituted for current correction checks.
+
+Owner chose canonical rotation for days 30–44 from verified `1ada5f2`: 60 lessons, 15 each
+LANG/MATH/PHYS, 5 ART, 4 WORLD, 6 TIME-SPACE. All are review/null; Day 30 is complete. No rhythm
+override. Frozen Batch 1 contributes 2/2/3 rotating lessons, making actual October totals 7/6/9,
+not the prompt's 7/7/8. Preserve the authoritative rotation and accepted Batch 1.
+
+All 204 pre-existing lesson objects/digests and 395 protected files remain unchanged; all five P1 runtime
+fixes are preserved. Only the P1 day-30 availability test fixture changes; every other date assertion
+is frozen. Weeks 8–10 are generated; all 15 packages match regeneration. Current checks pass:
+491 unit tests, lint/typecheck, 31-file validation, 56/56 due-objective coverage, 59/59 required-media
+coverage, zero lapses, Webpack build, 28-file client scan and 87 local browser tests (nine production-only
+skips). All eight supported sizes and P1 journeys passed; representative screenshots are retained.
+See `docs/work/OCTOBER_WEEKS_3_5.md` and its generated 115-activity media/source inventory.
+Implementation is review-ready; the frozen Git checkpoint is supplied in the completion summary.
+Stop for one fresh independent review.
+No rich generation, approval, migration, database write, PR, merge or deployment.
+
+## Mandatory P1 UX gate — 2026-10-03
+
+The accepted October Batch 1 is frozen on `codex/october-maternelle-3` at
+`2170413173b4a7aa2e6e8b2245af0fcf4c52b0bc`; corrected implementation
+`461e946e3ef4d7a63909bd1e720d5876dd568bf4`. The owner relayed fresh independent
+`accepted` reconfirmation. This records that verdict without changing canonical approval state.
+
+Separate branch `codex/parent-child-ux-p1` started from fetched `origin/develop`
+`6b8ba9e87802d96c2f193fe73d3c9897e084ba9c`. It fixes the five demonstrated P1 defects:
+activity state isolation, year/class/day storage, truthful offered dates, handoff/pause continuity,
+and immediate instruction scroll/focus. All 467 unit tests and 79 local browser tests passed;
+nine production-only checks were intentionally skipped. All eight exact supported sizes passed.
+375 UX-base protected files remained identical. PR [#94](https://github.com/ipanga/teka_edu/pull/94) passed all four required checks and was squash-merged to develop at `603efdc14de535ea78f9dbe4488ff3e49ccc5186`. October reconciliation `61fa0791dad7e8d45fbfc2c2cfef24822f6817cd` is committed and pushed with both accepted checkpoint and new develop as parents. All 385 frozen protected files remain identical. Combined validation passed 482 unit tests and 79 browser tests (nine production-only skips), all 12 package freshness checks, reports/build/client scan and zero-lapse dry run. Staging run `37098065260` passed with DEV migration no-ops, preview target READY and 79 smoke tests. No production deployment or DB changes. The mandatory gate is complete; stop before new October authoring.
+
+See `docs/work/PARENT_CHILD_UX_P1.md` and `docs/work/ACTIVE_TASK.md` for exact evidence and resume
+state and the ready-to-paste continuation prompt. October Day 30 and Weeks 3–5 are unimplemented
+and require the next explicit owner instruction. No DB, canonical approval, content/media or
+production changes.
 
 ## Supported devices — current policy
 
@@ -21,6 +85,67 @@ that records past TV checks remains unchanged as an accurate record and creates 
 obligation.
 
 ## Current September continuation — 2026-10-02
+
+## Historical October correction checkpoint — 2026-10-02
+
+Independent review returned `accepted-with-modifications`. The seven owner-authorized corrections
+are applied, with three deterministic plant-stage SVGs and regenerated Week 6/7 packages.
+Freshness now fails the unit suite for any stale review package. Correction validation: 454/454
+unit tests, lint, typecheck, content validation, coverage 42/42, images 43/43, zero approval lapses,
+Webpack build and three-sentinel client scan passed. All 176 approved September lessons, 51
+existing registry rows and 98 tracked media files are unchanged. Day 30 is a teaching day deferred
+to the next authorized batch. October remains `review`; next action is independent reconfirmation.
+Correction evidence and validation caveats: `docs/work/OCTOBER_BATCH_1_CORRECTIONS.md`.
+
+Owner approved the October 3ème maternelle plan and authorized Batch 1 only. Work is on
+`codex/october-maternelle-3`, branched from current `origin/develop`
+`6b8ba9e87802d96c2f193fe73d3c9897e084ba9c`. The reconciled planning documents were committed
+first as `1242f5a`.
+
+Batch 1 authors October instructional days 23-29, dates 2026-10-01 through 2026-10-09: 28 new
+lessons across language, mathematics, physical activity and the rotating domains. Day 30
+intentionally remains `no-content`, preserving the stop boundary before Weeks 3-5. All new October
+lessons are `review` with no review record; no approval, self-approval, rich ImageGen generation,
+database migration, PR, merge or deployment has occurred. Review packages were generated for
+`docs/review/2026-2027-maternelle-3-semaine-6.md` and
+`docs/review/2026-2027-maternelle-3-semaine-7.md`.
+
+Batch evidence and media classification live in `docs/work/OCTOBER_BATCH_1.md`. Original implementation validation
+passed: format, format check, lint, typecheck, 443 unit tests, content validation, programme report
+for days 23-30, coverage report through day 29 with 42/42 due objectives taught, media report with
+zero required image gaps, approval-lapse dry run with 0 lapses, Webpack production build with CI
+fake server-only sentinels, and client-bundle scan over 28 files with all three sentinels absent.
+Plain Turbopack `npm run build` passed once, then later reproduced the known local port-binding
+`EPERM` panic after a failed sentinel rebuild attempt; the Webpack fallback passed.
+
+Production promotion completed through the protected workflow. PR #92 (`develop` -> `main`) was
+opened only after `develop` was reverified at the authorized SHA
+`57deea9d807605b81af0131c1e11109554261c93`, the worktree was clean, production deployment was
+enabled, the required production secret names were present, and the public production URL returned
+HTTP 200. PR #92 CI passed five required checks: Promotion source, Format/lint/typecheck/unit/content,
+Build/client-bundle/E2E smoke, Supabase migrations/database tests, and Docker images. It was merged
+with a merge commit at `ac3ebf9b9bd00662def3e7ec206aff1954f4694d`.
+
+Production workflow run `37055002824` for `ac3ebf9b9bd00662def3e7ec206aff1954f4694d` completed
+successfully. The production job verified required secrets by name, reached Vercel project
+`teka-edu`, verified Supabase project `teka-edu-prod` was `ACTIVE_HEALTHY` and not DEV, dry-ran
+exactly two pending migrations, then applied them to Supabase PROD:
+
+- `20261001192741_media_asset_webp_paths.sql`
+- `20261001192742_final_september_rich_media_reference.sql`
+
+The workflow deployed Vercel production deployment `dpl_A43iQuRrzzJLRm2PdCf9CWmdedz5` at
+`https://teka-dzw8t0mwf-teka10.vercel.app`, verified target `production`, and aliased
+`https://teka-edu.vercel.app`. Exact-deployment production smoke passed 71 checks and skipped nine
+production-public checks. The separate public canonical smoke command
+`PRODUCTION_PUBLIC_URL=https://teka-edu.vercel.app npm run test:e2e:public` passed 9/9 checks
+against the public alias, including production-domain, no-login front door, both written classes,
+1ere and 3eme September sessions, promised pictures, no visible development environment,
+production health/database reporting, and phone no-sideways-scroll.
+
+Production data impact: the applied migrations changed only canonical reference/schema data for the
+September release. No auth, user, child, or progress table mutation was performed. No rollback or
+forward fix was needed.
 
 PR #88 from `codex/integrate-september-rich-media` into `develop` was squash-merged on
 2026-10-01 after live verification that the head was unchanged at

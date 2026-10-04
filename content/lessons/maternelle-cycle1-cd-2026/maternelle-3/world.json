@@ -703,6 +703,505 @@
         "reviewedDigest": "a20d62a2f05374aa",
         "notes": "Semaine 5 : 2026-09-15 conséquence d’une autre relecture, 2026-09-16 conséquence d’une autre relecture, 2026-09-20 conséquence d’une autre relecture, 2026-09-20 acceptée avec modifications, 2026-09-20 acceptée. Décision de relecture : ChatGPT, indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
       }
+    },
+    {
+      "id": "m3-world-08",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "La vie d’une plante",
+      "summary": "Reconnaitre quelques étapes de la vie d’une plante.",
+      "objectiveCodes": ["WORLD-S01-C01-O09"],
+      "supportingObjectiveCodes": ["WORLD-S01-C01-O10"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Les trois images montrent la même sorte de plante à trois étapes : graine, pousse, jeune plante. Elles suffisent sans plante réelle. L’enfant regarde, nomme puis indique l’ordre ; l’adulte accompagne sans demander de lire.",
+      "activities": [
+        {
+          "id": "m3-world-08-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Graine, pousse, plante",
+          "childInstruction": "Regarde les trois images : montre la graine, la pousse, puis la jeune plante.",
+          "adultGuidance": "Montrez les trois images ensemble. Nommez la graine sans feuille, la pousse avec deux petites feuilles, puis la jeune plante avec une tige et davantage de feuilles. Invitez l’enfant à montrer et nommer chaque étape. Demandez ce qui aide la plante à grandir : de l’eau et la lumière qui lui convient.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["plante-graine", "plante-pousse", "plante-jeune"],
+          "objectiveCodes": ["WORLD-S01-C01-O09", "WORLD-S01-C01-O10"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "la graine",
+              "en": "the seed"
+            },
+            {
+              "fr": "la pousse",
+              "en": "the sprout"
+            },
+            {
+              "fr": "la jeune plante",
+              "en": "the young plant"
+            },
+            {
+              "fr": "grandir",
+              "en": "to grow"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Look at the three pictures: show the seed, the sprout and the young plant."
+            }
+          ],
+          "payload": {
+            "focus": "étapes simples de la vie d’une plante"
+          }
+        },
+        {
+          "id": "m3-world-08-a2",
+          "position": 2,
+          "type": "observation",
+          "title": "Ce qui vient après",
+          "childInstruction": "Montre les images dans l’ordre de la croissance et nomme chaque étape.",
+          "adultGuidance": "Les mêmes images sont présentées dans un autre ordre. L’enfant indique d’abord la graine, ensuite la pousse, enfin la jeune plante et les nomme. Il n’a rien à déplacer sur l’écran. S’il hésite, nommez la première étape et laissez-le trouver la suivante. Faites redire l’ordre en une phrase courte.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["plante-jeune", "plante-graine", "plante-pousse"],
+          "objectiveCodes": ["WORLD-S01-C01-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "d’abord",
+              "en": "first"
+            },
+            {
+              "fr": "ensuite",
+              "en": "then"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Point to the pictures in growth order and name each stage."
+            }
+          ],
+          "payload": {
+            "focus": "ordonner et nommer graine, pousse et jeune plante"
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "4f511d1932e3d36d",
+        "notes": "Semaine 7 : 2026-10-02 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-world-09",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "La poule et le poussin grandissent",
+      "summary": "Comparer les étapes visibles de la vie d’un animal connu.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": ["WORLD-S01-C01-O09", "WORLD-S01-C01-O10"],
+      "stage": "practice",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Restez avec des animaux déjà rencontrés en septembre. Les images de poule et poussin sont acceptées et utiles ici.",
+      "activities": [
+        {
+          "id": "m3-world-09-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Petit puis grand",
+          "childInstruction": "Regarde le poussin et la poule. Lequel est petit ? Lequel est grand ?",
+          "adultGuidance": "Montrez les deux images. Faites dire : poussin, poule. Expliquez simplement qu’un poussin grandit et devient une poule ou un coq.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "retrieval",
+          "mediaIds": ["animal-poussin", "animal-poule"],
+          "objectiveCodes": ["WORLD-S01-C01-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "le poussin",
+              "en": "the chick"
+            },
+            {
+              "fr": "grandir",
+              "en": "to grow"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Look at the chick and the hen. Which one is small? Which one is grown?"
+            }
+          ],
+          "payload": {
+            "focus": "étapes visibles de la vie d’un animal"
+          }
+        },
+        {
+          "id": "m3-world-09-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Ce qu’il lui faut",
+          "childInstruction": "Dis ce qu’il faut au poussin pour grandir.",
+          "adultGuidance": "Faites répondre avec des mots simples : manger, boire, être protégé. Reliez aux soins vus en septembre.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C01-O09", "WORLD-S01-C01-O10"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [
+            {
+              "fr": "protéger",
+              "en": "to protect"
+            },
+            {
+              "fr": "nourrir",
+              "en": "to feed"
+            }
+          ],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say what the chick needs to grow."
+            }
+          ],
+          "payload": {
+            "prompts": ["Que faut-il au poussin pour grandir ?", "Qui le protège ?"]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "245f65d9bf61ea01",
+        "notes": "Semaine 7 : 2026-10-02 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-world-10",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "Je prends soin du vivant",
+      "summary": "Choisis avec moi une action pour protéger une plante. Dis pourquoi nous laissons la plante grandir.",
+      "objectiveCodes": ["WORLD-S01-C01-O11"],
+      "supportingObjectiveCodes": ["WORLD-S01-C01-O10", "LANG-S01-C02-O03"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte supervise le soin d’une plante connue. Distinguez action faite et projet. Cette aide à domicile ne remplace pas l’action collective scolaire.",
+      "activities": [
+        {
+          "id": "m3-world-10-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Une action pour une plante",
+          "childInstruction": "Choisis avec moi une action pour protéger une plante.",
+          "adultGuidance": "Avec une plante réelle déjà disponible, décidez ensemble de ne pas arracher les feuilles et d’arroser seulement si nécessaire. L’adulte dose l’eau et tient le récipient ; l’enfant aide doucement. Sans plante accessible, convenez de laisser intact un coin de végétation lors d’une prochaine sortie accompagnée et dites que l’action reste prévue, pas faite. Une action parent-enfant prépare une action collective autour de l’école ; elle ne prétend pas l’avoir remplacée.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C01-O11", "WORLD-S01-C01-O10"],
+          "materialCodes": ["boite"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Choose with me one action to protect a plant."
+            }
+          ],
+          "payload": {
+            "prompts": ["Choisis avec moi une action pour protéger une plante."]
+          }
+        },
+        {
+          "id": "m3-world-10-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Pourquoi la laisser vivre ?",
+          "childInstruction": "Dis pourquoi nous laissons la plante grandir.",
+          "adultGuidance": "Modélisez : « Nous la protégeons parce qu’elle est vivante. » L’enfant redonne son idée. On ne capture aucun animal, ne ramasse aucun déchet inconnu et ne touche pas une plante non identifiée ; l’adulte supervise.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C01-O11", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say why we let the plant grow."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis pourquoi nous laissons la plante grandir."]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "a00fe9c19de32c41",
+        "notes": "Semaine 8 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-world-11",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "J’ai été un bébé",
+      "summary": "Dis une chose qu’un bébé fait avec l’aide d’un adulte. Raconte : d’abord bébé, puis petit enfant, puis enfant plus grand.",
+      "objectiveCodes": ["WORLD-S01-C02-O10"],
+      "supportingObjectiveCodes": ["LANG-S01-C02-O03"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Décrivez les étapes oralement, sans photo obligatoire ni comparaison entre enfants. Le développement varie ; aucune performance à un âge précis n’est exigée.",
+      "activities": [
+        {
+          "id": "m3-world-11-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Bébé, puis plus grand",
+          "childInstruction": "Dis une chose qu’un bébé fait avec l’aide d’un adulte.",
+          "adultGuidance": "Décrivez oralement trois étapes : bébé nourri et porté par un adulte ; petit enfant accompagné qui apprend à se déplacer et jouer ; enfant plus grand qui parle, dessine et se prépare pour l’école. L’enfant peut évoquer son histoire sans photo obligatoire. Les acquisitions arrivent à des moments différents : aucune date de réussite n’est imposée.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C02-O10"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say one thing a baby does with an adult helping."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis une chose qu’un bébé fait avec l’aide d’un adulte."]
+          }
+        },
+        {
+          "id": "m3-world-11-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Jusqu’à six ans",
+          "childInstruction": "Raconte : d’abord bébé, puis petit enfant, puis enfant plus grand.",
+          "adultGuidance": "Aidez l’enfant à redire ces étapes en ordre jusqu’à environ six ans. Vers six ans, on grandit encore et l’école continue ; ce n’est ni la fin de la croissance ni une liste de compétences à réussir. Accueillez toutes les situations de développement sans comparer les enfants.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C02-O10", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Tell the order: baby, small child, older child."
+            }
+          ],
+          "payload": {
+            "prompts": ["Raconte : d’abord bébé, puis petit enfant, puis enfant plus grand."]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "39c4f2d3549ff4d3",
+        "notes": "Semaine 9 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-world-12",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "Je grandis et je protège le vivant",
+      "summary": "Redis les étapes de bébé à enfant plus grand. Dis ce que nous avons fait ou prévu pour la plante.",
+      "objectiveCodes": [],
+      "supportingObjectiveCodes": [
+        "WORLD-S01-C02-O10",
+        "LANG-S01-C02-O03",
+        "WORLD-S01-C01-O11",
+        "WORLD-S01-C01-O10"
+      ],
+      "stage": "consolidation",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "L’adulte supervise le soin d’une plante connue. Distinguez action faite et projet. Cette aide à domicile ne remplace pas l’action collective scolaire.",
+      "activities": [
+        {
+          "id": "m3-world-12-a1",
+          "position": 1,
+          "type": "conversation",
+          "title": "Mon récit de croissance",
+          "childInstruction": "Redis les étapes de bébé à enfant plus grand.",
+          "adultGuidance": "Reprenez les trois étapes du jour 35. L’enfant les raconte dans l’ordre ; l’adulte complète sans imposer une performance liée à l’âge. Donnez un exemple d’aide encore utile à six ans.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C02-O10", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Retell the stages from baby to older child."
+            }
+          ],
+          "payload": {
+            "prompts": ["Redis les étapes de bébé à enfant plus grand."]
+          }
+        },
+        {
+          "id": "m3-world-12-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Notre action de soin",
+          "childInstruction": "Dis ce que nous avons fait ou prévu pour la plante.",
+          "adultGuidance": "Revenez à l’action du jour 31. Distinguez ce qui a réellement été fait et ce qui reste prévu. L’enfant dit pourquoi laisser la plante et son habitat intacts. L’aspect collectif scolaire demeure à vivre avec l’école ; aucun groupe fictif n’est déclaré.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "consolidation",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S01-C01-O11", "WORLD-S01-C01-O10", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say what we did or planned for the plant."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis ce que nous avons fait ou prévu pour la plante."]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "aaf49dfe945ab554",
+        "notes": "Semaine 9 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
+    },
+    {
+      "id": "m3-world-13",
+      "curriculumId": "maternelle-cycle1-cd-2026",
+      "levelIds": ["maternelle-3"],
+      "domainCode": "WORLD",
+      "title": "Un objet pour une fonction",
+      "summary": "Montre l’objet pour porter de l’eau, puis celui pour porter des objets. Dis pourquoi tu choisis le seau pour porter de l’eau.",
+      "objectiveCodes": ["WORLD-S02-C01-O09"],
+      "supportingObjectiveCodes": ["LANG-S01-C02-O03"],
+      "stage": "discovery",
+      "difficulty": 2,
+      "themeId": "octobre-je-grandis-en-francais",
+      "parentGuidance": "Comparez des fonctions avec les images acceptées ou des objets sûrs disponibles. Pas d’eau à verser, d’outil chaud ou pointu ; accueillez plusieurs solutions adaptées.",
+      "activities": [
+        {
+          "id": "m3-world-13-a1",
+          "position": 1,
+          "type": "observation",
+          "title": "Porter l’eau ou les objets",
+          "childInstruction": "Montre l’objet pour porter de l’eau, puis celui pour porter des objets.",
+          "adultGuidance": "Les images acceptées montrent un seau et un panier. Faites nommer leurs fonctions : le seau intact retient l’eau ; un panier ouvert transporte des objets solides mais laisse passer l’eau. Expliquez avec des objets réels si disponibles, sans imposer de remplir ni verser. Le choix dépend de la fonction ; d’autres récipients étanches peuvent aussi convenir.",
+          "minutes": 4,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": ["objet-seau", "objet-panier"],
+          "objectiveCodes": ["WORLD-S02-C01-O09"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Show what carries water and what carries solid objects."
+            }
+          ],
+          "payload": {
+            "focus": "fonction technique du seau et du panier"
+          }
+        },
+        {
+          "id": "m3-world-13-a2",
+          "position": 2,
+          "type": "conversation",
+          "title": "Je justifie la solution",
+          "childInstruction": "Dis pourquoi tu choisis le seau pour porter de l’eau.",
+          "adultGuidance": "Modélisez : « Je choisis le seau parce qu’il garde l’eau. » L’enfant explique puis choisit pour porter des cailloux. Acceptez plusieurs solutions adaptées et vérifiez leur fonction avec des objets sûrs ; aucun ustensile chaud ou pointu.",
+          "minutes": 3,
+          "mode": "off-screen",
+          "role": "teach",
+          "mediaIds": [],
+          "objectiveCodes": ["WORLD-S02-C01-O09", "LANG-S01-C02-O03"],
+          "materialCodes": ["aucun"],
+          "vocabulary": [],
+          "scaffolds": [
+            {
+              "language": "en",
+              "childInstruction": "Say why you choose the bucket to carry water."
+            }
+          ],
+          "payload": {
+            "prompts": ["Dis pourquoi tu choisis le seau pour porter de l’eau."]
+          }
+        }
+      ],
+      "origin": "teka-edu-created",
+      "status": "approved",
+      "review": {
+        "reviewKind": "ai-assisted",
+        "outcome": "accepted",
+        "reviewer": "Codex (session indépendante)",
+        "reviewerRole": "relecture pédagogique indépendante assistée par IA, contre le programme officiel Cycle 1",
+        "reviewedOn": "2026-10-03",
+        "reviewedDigest": "88e9381ee35f1702",
+        "notes": "Semaine 10 : 2026-10-03 acceptée avec modifications, 2026-10-03 acceptée. Décision de relecture : Codex (session indépendante), indépendante de l’auteur du contenu. Relecture par une personne qui enseigne à cet âge : non faite (ISSUE-017)."
+      }
     }
   ]
 }

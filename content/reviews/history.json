@@ -1439,6 +1439,126 @@
       "outcome": "accepted",
       "summary": "Reconfirmation visuelle indépendante du lot final 10 histoire-malo, gel 8b5a8655222e299fea90e7582906c3723b3eca79, documentation 1c3372298eaa9e3463aa7a889762bb9cc662db2b. Le propriétaire a relayé accepted sans correction d’une session Codex séparée. Quatre images réelles, douze lignes et correspondance canonique, comparaison, rendu 256 px, descriptions, dossier et treize captures originales vérifiés. Les scènes de conséquence après la branche et d’essai d’eau froide soutiennent les pages sans contradiction ; continuité, anatomie, un poisson dans l’eau à l’œil ouvert, une patte dans l’eau avec trois appuis, sommeil en rond nez sur la queue, progression soir-nuit et sécurité adaptés. Téléphone/tablette/laptop-MacBook uniquement. Aucune modification effectuée par le relecteur.",
       "corrections": "Aucune. Manifeste f76f81e72adef7810695da6cb2b29d6fde0aa4dc981e9abd43fc0f1289141603 et 26 fichiers revérifiés identiques au gel ; images runtime identiques. Le propriétaire autorise uniquement m3-lang-07, m3-lang-16, m3-lang-20 via approve-week --lapsed-only=true après dry-run, digests calculés à neuf, jamais repris. Les 173 autres approbations et les preuves acceptées Pluie/Cailloux sont préservées. Aucun merge, déploiement ou travail d’octobre autorisé."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 6,
+      "reviewKind": "ai-assisted",
+      "reviewer": "Codex (session indépendante)",
+      "scope": "full-review",
+      "reviewedOn": "2026-10-02",
+      "outcome": "accepted-with-modifications",
+      "summary": "Relecture indépendante du Batch 1, semaines 6–7, verdict relayé par le propriétaire ; baseline 5139cc89058447b59702b8784455983e7788535e. Provenance conservée dans docs/work/OCTOBER_BATCH_1_CORRECTIONS.md et docs/review/OCTOBER_BATCH_1_RECONFIRMATION.md.",
+      "corrections": "Sept corrections autorisées : fraîcheur des packages, contraste maintenant/plus tard, date/jour, phrases quand/parce que, trois SVG de croissance, rituel initial et retrait du surcomptage prématuré. Voir les preuves historiques conservées."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 6,
+      "reviewKind": "ai-assisted",
+      "reviewer": "Codex (session indépendante)",
+      "scope": "full-review",
+      "reviewedOn": "2026-10-03",
+      "outcome": "accepted",
+      "summary": "Reconfirmation indépendante accepted du Batch 1 corrigé 461e946e3ef4d7a63909bd1e720d5876dd568bf4, gel accepté 2170413173b4a7aa2e6e8b2245af0fcf4c52b0bc. Verdict relayé par le propriétaire, déjà préservé dans OCTOBER_3EME_PLAN.md et PROJECT_STATUS.md. Aucun enseignant nommé ni validation humaine revendiquée.",
+      "corrections": "Aucune correction supplémentaire requise. Le propriétaire autorise le 2026-10-03 la consignation du verdict et les nouvelles approbations hebdomadaires avec digests calculés à neuf. Pas d’auto-relecture ni certification par un enseignant. Aucun hosted DEV/PROD, merge ou déploiement autorisé."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 7,
+      "reviewKind": "ai-assisted",
+      "reviewer": "Codex (session indépendante)",
+      "scope": "full-review",
+      "reviewedOn": "2026-10-02",
+      "outcome": "accepted-with-modifications",
+      "summary": "Relecture indépendante du Batch 1, semaines 6–7, verdict relayé par le propriétaire ; baseline 5139cc89058447b59702b8784455983e7788535e. Provenance conservée dans docs/work/OCTOBER_BATCH_1_CORRECTIONS.md et docs/review/OCTOBER_BATCH_1_RECONFIRMATION.md.",
+      "corrections": "Sept corrections autorisées : fraîcheur des packages, contraste maintenant/plus tard, date/jour, phrases quand/parce que, trois SVG de croissance, rituel initial et retrait du surcomptage prématuré. Voir les preuves historiques conservées."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 7,
+      "reviewKind": "ai-assisted",
+      "reviewer": "Codex (session indépendante)",
+      "scope": "full-review",
+      "reviewedOn": "2026-10-03",
+      "outcome": "accepted",
+      "summary": "Reconfirmation indépendante accepted du Batch 1 corrigé 461e946e3ef4d7a63909bd1e720d5876dd568bf4, gel accepté 2170413173b4a7aa2e6e8b2245af0fcf4c52b0bc. Verdict relayé par le propriétaire, déjà préservé dans OCTOBER_3EME_PLAN.md et PROJECT_STATUS.md. Aucun enseignant nommé ni validation humaine revendiquée.",
+      "corrections": "Aucune correction supplémentaire requise. Le propriétaire autorise le 2026-10-03 la consignation du verdict et les nouvelles approbations hebdomadaires avec digests calculés à neuf. Pas d’auto-relecture ni certification par un enseignant. Aucun hosted DEV/PROD, merge ou déploiement autorisé."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 8,
+      "reviewKind": "ai-assisted",
+      "reviewer": "Codex (session indépendante)",
+      "scope": "full-review",
+      "reviewedOn": "2026-10-03",
+      "outcome": "accepted-with-modifications",
+      "summary": "Relecture indépendante des semaines 8–10 au baseline 61b2e07e9b1f3fbc793cf230291215feef3991fd, verdict relayé par le propriétaire. Dossier docs/work/OCTOBER_PHYS_CORRECTIONS.md ; corrections PHYS requises sans course artificielle.",
+      "corrections": "Retrait de PHYS-S01-C01-O11 pour m3-phys-33-a1 et m3-phys-44-a1. Le test renforcé a exposé m3-phys-38-a1 et m3-phys-42-a1 ; ces deux retraits ont été explicitement autorisés. Aucun autre champ pédagogique modifié."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 8,
+      "reviewKind": "ai-assisted",
+      "reviewer": "Codex (session indépendante)",
+      "scope": "full-review",
+      "reviewedOn": "2026-10-03",
+      "outcome": "accepted",
+      "summary": "Reconfirmation indépendante finale accepted au checkpoint 1f573c508b30ddd0ade57d7a8cd8329d5eb901ce, baseline 61b2e07e9b1f3fbc793cf230291215feef3991fd. Verdict relayé par le propriétaire : quatre retraits O11 seulement ; actions/objectifs restants, sécurité, matériel, six minutes, scaffolds et alternatives inchangés ; 15 packages exacts ; course/cours/courir reconnus sans parcours/parcourir ; intégrité gelée et 88 review/null vérifiés, zéro lapse. Le relecteur n’a modifié aucun fichier ni approbation.",
+      "corrections": "Aucune correction supplémentaire requise. Le propriétaire autorise le 2026-10-03 la consignation du verdict et les nouvelles approbations hebdomadaires avec digests calculés à neuf. Pas d’auto-relecture ni certification par un enseignant. Aucun hosted DEV/PROD, merge ou déploiement autorisé."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 9,
+      "reviewKind": "ai-assisted",
+      "reviewer": "Codex (session indépendante)",
+      "scope": "full-review",
+      "reviewedOn": "2026-10-03",
+      "outcome": "accepted-with-modifications",
+      "summary": "Relecture indépendante des semaines 8–10 au baseline 61b2e07e9b1f3fbc793cf230291215feef3991fd, verdict relayé par le propriétaire. Dossier docs/work/OCTOBER_PHYS_CORRECTIONS.md ; corrections PHYS requises sans course artificielle.",
+      "corrections": "Retrait de PHYS-S01-C01-O11 pour m3-phys-33-a1 et m3-phys-44-a1. Le test renforcé a exposé m3-phys-38-a1 et m3-phys-42-a1 ; ces deux retraits ont été explicitement autorisés. Aucun autre champ pédagogique modifié."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 9,
+      "reviewKind": "ai-assisted",
+      "reviewer": "Codex (session indépendante)",
+      "scope": "full-review",
+      "reviewedOn": "2026-10-03",
+      "outcome": "accepted",
+      "summary": "Reconfirmation indépendante finale accepted au checkpoint 1f573c508b30ddd0ade57d7a8cd8329d5eb901ce, baseline 61b2e07e9b1f3fbc793cf230291215feef3991fd. Verdict relayé par le propriétaire : quatre retraits O11 seulement ; actions/objectifs restants, sécurité, matériel, six minutes, scaffolds et alternatives inchangés ; 15 packages exacts ; course/cours/courir reconnus sans parcours/parcourir ; intégrité gelée et 88 review/null vérifiés, zéro lapse. Le relecteur n’a modifié aucun fichier ni approbation.",
+      "corrections": "Aucune correction supplémentaire requise. Le propriétaire autorise le 2026-10-03 la consignation du verdict et les nouvelles approbations hebdomadaires avec digests calculés à neuf. Pas d’auto-relecture ni certification par un enseignant. Aucun hosted DEV/PROD, merge ou déploiement autorisé."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 10,
+      "reviewKind": "ai-assisted",
+      "reviewer": "Codex (session indépendante)",
+      "scope": "full-review",
+      "reviewedOn": "2026-10-03",
+      "outcome": "accepted-with-modifications",
+      "summary": "Relecture indépendante des semaines 8–10 au baseline 61b2e07e9b1f3fbc793cf230291215feef3991fd, verdict relayé par le propriétaire. Dossier docs/work/OCTOBER_PHYS_CORRECTIONS.md ; corrections PHYS requises sans course artificielle.",
+      "corrections": "Retrait de PHYS-S01-C01-O11 pour m3-phys-33-a1 et m3-phys-44-a1. Le test renforcé a exposé m3-phys-38-a1 et m3-phys-42-a1 ; ces deux retraits ont été explicitement autorisés. Aucun autre champ pédagogique modifié."
+    },
+    {
+      "levelId": "maternelle-3",
+      "schoolYearId": "2026-2027",
+      "week": 10,
+      "reviewKind": "ai-assisted",
+      "reviewer": "Codex (session indépendante)",
+      "scope": "full-review",
+      "reviewedOn": "2026-10-03",
+      "outcome": "accepted",
+      "summary": "Reconfirmation indépendante finale accepted au checkpoint 1f573c508b30ddd0ade57d7a8cd8329d5eb901ce, baseline 61b2e07e9b1f3fbc793cf230291215feef3991fd. Verdict relayé par le propriétaire : quatre retraits O11 seulement ; actions/objectifs restants, sécurité, matériel, six minutes, scaffolds et alternatives inchangés ; 15 packages exacts ; course/cours/courir reconnus sans parcours/parcourir ; intégrité gelée et 88 review/null vérifiés, zéro lapse. Le relecteur n’a modifié aucun fichier ni approbation.",
+      "corrections": "Aucune correction supplémentaire requise. Le propriétaire autorise le 2026-10-03 la consignation du verdict et les nouvelles approbations hebdomadaires avec digests calculés à neuf. Pas d’auto-relecture ni certification par un enseignant. Aucun hosted DEV/PROD, merge ou déploiement autorisé."
     }
   ]
 }

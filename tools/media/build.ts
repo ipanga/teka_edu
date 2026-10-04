@@ -864,6 +864,36 @@ const ILLUSTRATIONS: [id: string, alt: string, tags: string[], body: string][] =
       <path d="M100 44 q10 -22 30 -12 q-8 20 -30 12 z" fill="${base("leaf")}" ${OUTLINE}/>`,
   ],
   [
+    "plante-graine",
+    "Une graine de haricot dans la terre, sans racine ni feuille",
+    ["plante", "graine", "croissance"],
+    `<rect x="20" y="132" width="160" height="48" rx="4" fill="${shade("skin")}"/>
+      <line x1="20" y1="132" x2="180" y2="132" ${OUTLINE}/>
+      <path d="M100 141 c-27 -12 -43 22 -20 30 c17 7 34 -1 34 -14 c0 -8 -5 -13 -14 -16 z" fill="${base("sun")}" ${OUTLINE}/>
+      <path d="M98 150 q-8 6 -5 13" stroke="${LINE}" stroke-width="4" stroke-linecap="round"/>`,
+  ],
+  [
+    "plante-pousse",
+    "La graine de haricot a germé : une petite racine et une courte tige portant deux petites feuilles",
+    ["plante", "pousse", "croissance"],
+    `<rect x="20" y="132" width="160" height="48" rx="4" fill="${shade("skin")}"/>
+      <line x1="20" y1="132" x2="180" y2="132" ${OUTLINE}/>
+      <path d="M100 141 c-27 -12 -43 22 -20 30 c17 7 34 -1 34 -14 c0 -8 -5 -13 -14 -16 z" fill="${base("sun")}" ${OUTLINE}/>
+      <path d="M100 154 q12 12 7 23" stroke="${base("stone")}" stroke-width="5" stroke-linecap="round"/>
+      <path d="M100 143 v-40" stroke="${shade("leaf")}" stroke-width="8" stroke-linecap="round"/>
+      <path d="M100 109 q-23 -29 -43 -17 q12 25 43 17 z M100 109 q23 -29 43 -17 q-12 25 -43 17 z" fill="${base("leaf")}" ${OUTLINE}/>`,
+  ],
+  [
+    "plante-jeune",
+    "Une jeune plante de haricot avec des racines, une tige plus haute et quatre feuilles",
+    ["plante", "jeune plante", "croissance"],
+    `<rect x="20" y="132" width="160" height="48" rx="4" fill="${shade("skin")}"/>
+      <line x1="20" y1="132" x2="180" y2="132" ${OUTLINE}/>
+      <path d="M100 132 v43 M100 145 l-22 19 M100 153 l24 17" stroke="${base("stone")}" stroke-width="5" stroke-linecap="round"/>
+      <path d="M100 132 V50" stroke="${shade("leaf")}" stroke-width="8" stroke-linecap="round"/>
+      <path d="M100 109 q-30 -30 -53 -14 q18 27 53 14 z M100 109 q30 -30 53 -14 q-18 27 -53 14 z M100 66 q-24 -34 -43 -22 q10 28 43 22 z M100 66 q24 -34 43 -22 q-10 28 -43 22 z" fill="${base("leaf")}" ${OUTLINE}/>`,
+  ],
+  [
     "bonhomme-articule",
     "Un bonhomme dessiné au crayon sur une feuille, avec les bras et les jambes pliés",
     ["bonhomme", "corps", "articulation", "dessin", "bouger", "marcher"],
@@ -944,9 +974,18 @@ async function main() {
   );
 
   const seen = new Set<string>();
+  // A targeted addition preserves every accepted row and byte outside the requested ids.
+  const requested = process.argv
+    .find((arg) => arg.startsWith("--ids="))
+    ?.slice(6)
+    .split(",");
+  if (requested?.some((id) => !assets.some((asset) => asset.id === id))) {
+    throw new Error("unknown media id in --ids");
+  }
   for (const asset of assets) {
     if (seen.has(asset.id)) throw new Error(`duplicate media id: ${asset.id}`);
     seen.add(asset.id);
+    if (requested !== undefined && !requested.includes(asset.id)) continue;
     if (raster.has(asset.id)) continue;
     const target = path.join(OUT, asset.file);
     mkdirSync(path.dirname(target), { recursive: true });
@@ -975,29 +1014,37 @@ async function main() {
     };
   };
 
-  const generated = assets.map(({ id, kind, file, alt, tags }) => {
-    const kept = raster.get(id);
-    if (kept !== undefined) return refreshRaster(kept);
-    return {
-      id,
-      kind,
-      file,
-      alt,
-      tags,
-      origin: "teka-edu-created",
-      provenance: "Tracé original produit par tools/media/build.ts pour Teka Edu.",
-      contentHash: hashOf(file),
-    };
-  });
+  const generated = assets
+    .filter((asset) => requested === undefined || requested.includes(asset.id))
+    .map(({ id, kind, file, alt, tags }) => {
+      const kept = raster.get(id);
+      if (kept !== undefined) return refreshRaster(kept);
+      return {
+        id,
+        kind,
+        file,
+        alt,
+        tags,
+        origin: "teka-edu-created",
+        provenance: "Tracé original produit par tools/media/build.ts pour Teka Edu.",
+        contentHash: hashOf(file),
+      };
+    });
   const registry = {
     // Audio is authored by hand, never generated: a recording needs a human voice (ADR-046).
     // The generator preserves whatever is already declared.
     audio: previous.audio ?? [],
-    assets: [
-      ...generated,
-      // Painted art with no drawing here at all is kept too, after the drawn set.
-      ...[...raster.values()].filter((row) => !seen.has(row.id)).map(refreshRaster),
-    ],
+    assets:
+      requested !== undefined
+        ? [
+            ...previous.assets.map((row) => generated.find((asset) => asset.id === row.id) ?? row),
+            ...generated.filter((asset) => !previous.assets.some((row) => row.id === asset.id)),
+          ]
+        : [
+            ...generated,
+            // Painted art with no drawing here at all is kept too, after the drawn set.
+            ...[...raster.values()].filter((row) => !seen.has(row.id)).map(refreshRaster),
+          ],
   };
   // Formatted the way `npm run format:check` expects. Writing raw JSON.stringify output left the
   // committed file and the generator's output permanently one `prettier --write` apart, so
@@ -1010,7 +1057,7 @@ async function main() {
     }),
     "utf8",
   );
-  console.log(`Wrote ${assets.length} assets and content/media/registry.json`);
+  console.log(`Wrote ${generated.length} assets and content/media/registry.json`);
 }
 
 await main();

@@ -29,20 +29,22 @@ export default async function LevelHomePage({ params }: PageProps<"/maternelle/[
     );
   }
 
-  const { todayLabel, isInstructional, reason, session } = todaysSession(levelId);
+  const { todayLabel, isCurrentSession, reason, session } = todaysSession(levelId);
 
   return (
     <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-8 px-5 py-8">
       <header className="flex flex-col gap-2">
         <HomeLink />
         <p className="text-sm font-semibold tracking-wide text-stone-500 uppercase">{level.name}</p>
-        <h1 className="text-3xl font-bold">Aujourd’hui</h1>
+        <h1 className="text-3xl font-bold">
+          {isCurrentSession ? "Aujourd’hui" : "Séances disponibles"}
+        </h1>
         <p className="text-xl text-stone-700">{todayLabel}</p>
       </header>
 
-      {!isInstructional && (
+      {!isCurrentSession && (
         <p className="rounded-2xl bg-amber-50 px-5 py-4 text-lg">
-          {reason} {session !== undefined && "Vous pouvez tout de même reprendre une séance."}
+          {reason} {session !== undefined && "Vous pouvez ouvrir une autre séance disponible."}
         </p>
       )}
 
@@ -54,7 +56,7 @@ export default async function LevelHomePage({ params }: PageProps<"/maternelle/[
         <section className="teka-rise flex flex-col gap-4 rounded-3xl bg-white px-6 py-6 shadow-sm">
           <div>
             <h2 className="text-2xl font-bold">
-              {isInstructional ? "Leçon du jour" : `Séance du ${session.dateLabel}`}
+              {isCurrentSession ? "Leçon du jour" : `Séance du ${session.dateLabel}`}
             </h2>
             <p className="mt-1 text-stone-600">
               environ {session.totalMinutes} minutes

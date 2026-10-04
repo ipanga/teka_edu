@@ -10,7 +10,12 @@
 import type { Activity } from "@/domain/lessons/types";
 import { ACTIVITY_RENDERERS } from "@/domain/lessons/renderers";
 import type { ReferenceData } from "./reference-data";
-import { type AudioNeed, audioNeedOf, dayOfLessonMap } from "./visual-audit";
+import {
+  SEPTEMBER_VISUAL_AUDIT_LAST_DAY,
+  type AudioNeed,
+  audioNeedOf,
+  dayOfLessonMap,
+} from "./visual-audit";
 
 export const RECORDING_BRIEF_PATH = "docs/audio/septembre-script-enregistrement.md";
 
@@ -117,7 +122,11 @@ export function buildRecordingBrief(data: ReferenceData): string {
     const levelName = data.levels.find((l) => l.id === levelId)?.name ?? levelId;
     const days = dayOfLessonMap(levelId, data);
     const lessons = data.lessons
-      .filter((l) => l.levelIds.includes(levelId))
+      .filter(
+        (l) =>
+          l.levelIds.includes(levelId) &&
+          (days.get(l.id) ?? Number.POSITIVE_INFINITY) <= SEPTEMBER_VISUAL_AUDIT_LAST_DAY,
+      )
       .sort((a, b) => (days.get(a.id) ?? 0) - (days.get(b.id) ?? 0) || a.id.localeCompare(b.id));
     for (const lesson of lessons) {
       for (const activity of lesson.activities) {

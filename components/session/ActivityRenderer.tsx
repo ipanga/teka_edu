@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useRef, useState } from "react";
+import { ActivityStateScope, useActivityState } from "./ActivityState";
 import { preload } from "react-dom";
 import { shownPictureIds } from "@/domain/lessons/pictures";
 import { STORY_LINES_PER_PAGE, narrativePageCount } from "@/domain/lessons/texts";
@@ -379,10 +380,10 @@ function ChooseOne({
   /** What to call each picture, when the lesson's own word is better than the asset's tag. */
   labels?: readonly string[];
 }) {
-  const [target, setTarget] = useState(0);
-  const [tries, setTries] = useState(0);
-  const [state, setState] = useState<"idle" | "retry" | "done">("idle");
-  const [revealed, setRevealed] = useState(false);
+  const [target, setTarget] = useActivityState("choice.target", 0);
+  const [tries, setTries] = useActivityState("choice.tries", 0);
+  const [state, setState] = useActivityState<"idle" | "retry" | "done">("choice.feedback", "idle");
+  const [revealed, setRevealed] = useActivityState("choice.revealed", false);
   const childView = useContext(ChildViewContext);
   const compactChildChoices = childView && media.length >= 5;
   const wanted = media[target]!;
@@ -492,7 +493,7 @@ function ChooseOne({
  * — the screen does the same job as moving cailloux from one pile to another.
  */
 function CountTogether({ upTo, media }: { upTo: number; media: SessionMedia | undefined }) {
-  const [counted, setCounted] = useState(0);
+  const [counted, setCounted] = useActivityState("count.counted", 0);
   const childView = useContext(ChildViewContext);
   const showInstruction = useContext(ChildSurfaceContext);
   const total = Math.min(Math.max(upTo, 1), 20);
@@ -574,8 +575,8 @@ function SortIntoGroups({
   media: readonly SessionMedia[];
 }) {
   const childView = useContext(ChildViewContext);
-  const [placed, setPlaced] = useState<Record<string, string>>({});
-  const [picked, setPicked] = useState<string | null>(null);
+  const [placed, setPlaced] = useActivityState<Record<string, string>>("sort.placed", {});
+  const [picked, setPicked] = useActivityState<string | null>("sort.picked", null);
   const remaining = media.filter((item) => placed[item.id] === undefined);
 
   return (
@@ -648,6 +649,14 @@ function SortIntoGroups({
 // ---- the families ----------------------------------------------------------------------------
 
 export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
+  return (
+    <ActivityStateScope id={activity.id}>
+      <ActivityContent key={activity.id} activity={activity} />
+    </ActivityStateScope>
+  );
+}
+
+function ActivityContent({ activity }: { activity: SessionActivity }) {
   const family: RendererFamily = activity.renderer;
   const media = activity.media;
   const offScreen = activity.mode === "off-screen";
@@ -843,7 +852,7 @@ export function ActivityRenderer({ activity }: { activity: SessionActivity }) {
  * (ADR-046). Until then the parent says the word, which is the design.
  */
 function WordCards({ activity }: { activity: SessionActivity }) {
-  const [playing, setPlaying] = useState(false);
+  const [playing, setPlaying] = useActivityState("words.playing", false);
   const childView = useContext(ChildViewContext);
   const media = activity.media;
   const words = activity.vocabulary.map((entry) => entry.fr);
@@ -921,7 +930,7 @@ function Narrative({ activity }: { activity: SessionActivity }) {
   const childView = useContext(ChildViewContext);
   const text = activity.text;
   const questions = asStrings(activity.payload["questions"]);
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useActivityState("narrative.page", 0);
   if (text === null) return null;
 
   const rhyme = text.kind === "rhyme";
