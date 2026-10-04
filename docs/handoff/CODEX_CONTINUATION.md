@@ -1,13 +1,15 @@
 # Codex continuation
 
 Current task override: owner-authorized exact navigation production promotion, 2026-10-04.
-Develop 047de0f14e18f9bb03b589c77478d409c6da2932 unchanged; main still 81b759f.
-Protected production PR #99 OPEN; CI run 37229831365 pending, Promotion source passed.
+Develop 047de0f14e18f9bb03b589c77478d409c6da2932 unchanged. PR #99 MERGED by guarded
+merge commit after all five required checks in run 37229831365 passed.
+Main ac003f8580ca81dcfb426a70c45c02102b8e0551, tree identical to authorized develop;
+merged 2026-10-04T19:55:58Z. Automatic production run 37230143801 running merge CI.
 PROD preflight history 46 matched and dry-run no-op; no hosted mutation/deployment yet.
 Recovery deployment dpl_HkEkuSvjzXs5wkh6aW7GtHnxyZkL READY at old main.
 Documentation-only branch codex/navigation-production-checkpoint preserves completed staging
 evidence without changing release source. Read ACTIVE_TASK's current override first.
-Next: all-five-check gate, guarded merge commit, normal production workflow, production-safe
+Next: normal workflow/environment approval (no duplicate dispatch), production-safe
 smoke/browser/device/integrity checks. Stop on unexpected migration/failure and after healthy
 release. Earlier no-production-authorization boundaries below are superseded only for this
 exact owner-authorized release. No unrelated scope is authorized.

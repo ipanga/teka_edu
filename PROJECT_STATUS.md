@@ -7,14 +7,16 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-10-04
 Branch:     codex/navigation-production-checkpoint
-Commit:     integrated develop 047de0f14e18f9bb03b589c77478d409c6da2932; production unchanged 81b759f
+Commit:     develop 047de0f; promoted main ac003f8580ca81dcfb426a70c45c02102b8e0551; deployment pending
 Updated by: Codex
 ```
 
 ## Navigation production promotion — 2026-10-04
 
 IN PROGRESS, explicitly owner-authorized: exact develop 047de0f is unchanged and staging green.
-Protected PR #99 develop -> main OPEN; CI run 37229831365 pending (Promotion source passed).
+Protected PR #99 develop -> main MERGED 2026-10-04T19:55:58Z after all five required checks
+passed in run 37229831365. Remote main ac003f8580ca81dcfb426a70c45c02102b8e0551 has the
+exact authorized develop tree. Automatic production run 37230143801 is running merge CI.
 Full release delta is validated navigation and related documentation only; frozen curriculum,
 accepted media/approvals, objectives, schema/migrations, workflows/environment unchanged.
 PROD read-only listing/dry-run: 46 matched migrations, no pending migrations/seeds/roles.
