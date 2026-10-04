@@ -6,12 +6,24 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-10-04
-Branch:     codex/flexible-parent-navigation-ux
-Commit:     UX branch based on develop ae07c243; production unchanged 81b759f
+Branch:     codex/navigation-staging-checkpoint
+Commit:     integrated develop 047de0f14e18f9bb03b589c77478d409c6da2932; production unchanged 81b759f
 Updated by: Codex
 ```
 
-## Flexible parent navigation — 2026-10-04
+## Navigation staging integration — 2026-10-04
+
+IN PROGRESS: owner authorized retiring superseded PR #97 and integrating PR #98 into develop.
+#97 closed without merge; branch retained. Production archive is byte-identical to #97's
+ACTIVE_TASK and all historical production information remains in the other durable files.
+#98 passed four required checks at exact head 069fe163 and squash-merged 2026-10-04T16:04:03Z
+into develop 047de0f14e18f9bb03b589c77478d409c6da2932; trees are identical.
+Read-only preflight DEV listing: 46 matched migrations, zero pending. No new migration/schema,
+canonical content/media/approval changes or manual hosted writes. Staging run 37215383441 is
+running merge-commit CI; deployment and deployed UX validation pending. Production main stays
+81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05. STOP before production promotion and later work.
+
+## Historical flexible parent navigation implementation — 2026-10-04
 
 AWAITING OWNER REVIEW: real read-only production audit confirmed September-only navigation despite
 deployed October, misleading month totals, weak resume/replay hierarchy and buried phone

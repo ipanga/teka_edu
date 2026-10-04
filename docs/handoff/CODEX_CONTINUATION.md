@@ -1,5 +1,19 @@
 # Codex continuation
 
+Current task override: owner-authorized navigation staging integration, 2026-10-04.
+PR #97 CLOSED without merge, historical branch retained; its production checkpoint is fully
+preserved (archive byte-identical). PR #98 MERGED by protected squash at 2026-10-04T16:04:03Z
+into develop 047de0f14e18f9bb03b589c77478d409c6da2932, tree equals reviewed head 069fe163.
+Four required PR checks passed. DEV preflight: 46 matched migrations, zero pending.
+Run 37215383441 is performing merge-commit CI before normal staging. Observe listing/dry-run:
+STOP on any unexpected pending migration, never manually apply. Then validate actual deployed
+parent/month/session journeys and all eight supported sizes. Documentation branch is
+codex/navigation-staging-checkpoint. No application/content/schema/workflow changes.
+Production main remains 81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05; production promotion is
+NOT authorized. Read ACTIVE_TASK for current live state; preceding checkpoints are historical.
+
+## Historical UX implementation checkpoint
+
 Current task override, 2026-10-04: authorized live parent UX/navigation improvement on
 codex/flexible-parent-navigation-ux from develop ae07c243. Audit complete; implementation
 and final format/lint/types/520-unit/content/lapse/freeze/build/client checks pass; full local
