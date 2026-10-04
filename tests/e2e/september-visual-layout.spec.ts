@@ -12,8 +12,8 @@ test("four body words and the parent return control fit a laptop/MacBook", async
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/maternelle/1/seance/18");
-  await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
-  await page.getByRole("button", { name: "Terminé", exact: true }).click();
+  await page.getByRole("button", { name: "Commencer la séance", exact: true }).click();
+  await page.getByRole("button", { name: "Activité terminée", exact: true }).click();
   await page.getByRole("button", { name: "Montrer à l’enfant", exact: true }).click();
   const dialog = page.getByRole("dialog");
   const cards = dialog.getByRole("list", { name: "Les mots", exact: true }).locator(":scope > li");
@@ -33,8 +33,8 @@ for (const viewport of viewports) {
     await page.setViewportSize(viewport);
     await page.emulateMedia({ reducedMotion: "reduce" });
     await page.goto("/maternelle/1/seance/11");
-    await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
-    await page.getByRole("button", { name: "Terminé", exact: true }).click();
+    await page.getByRole("button", { name: "Commencer la séance", exact: true }).click();
+    await page.getByRole("button", { name: "Activité terminée", exact: true }).click();
     await page.getByRole("button", { name: "Montrer à l’enfant", exact: true }).click();
     const dialog = page.getByRole("dialog");
     const cards = dialog
@@ -63,10 +63,10 @@ test("two laptop observation pictures fill the stage; story text sits beside its
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/maternelle/3/seance/5");
-  await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
+  await page.getByRole("button", { name: "Commencer la séance", exact: true }).click();
   // m3-world-02-a1, the seventh activity: an off-screen observation of two animals.
   for (let i = 0; i < 6; i++) {
-    await page.getByRole("button", { name: /^(Suivant|Terminé)$/ }).click();
+    await page.getByRole("button", { name: /^(Activité suivante|Activité terminée)$/ }).click();
   }
   await page.getByRole("button", { name: "Montrer à l’enfant", exact: true }).click();
   const dialog = page.getByRole("dialog");
@@ -79,8 +79,8 @@ test("two laptop observation pictures fill the stage; story text sits beside its
   await expect(dialog.getByRole("button")).toHaveCount(1);
   await expect(dialog.getByText(/Trouve l’image pour/)).toHaveCount(0);
   await page.goto("/maternelle/1/seance/3");
-  await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
-  await page.getByRole("button", { name: "Terminé", exact: true }).click();
+  await page.getByRole("button", { name: "Commencer la séance", exact: true }).click();
+  await page.getByRole("button", { name: "Activité terminée", exact: true }).click();
   await page.getByRole("button", { name: "Montrer à l’enfant", exact: true }).click();
   const image = await page.getByRole("dialog").getByRole("img").boundingBox();
   const text = await page
@@ -106,11 +106,11 @@ test("counting from ten to twenty on a phone is handed to the voice, not a 1-to-
   await page.setViewportSize({ width: 320, height: 740 });
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/maternelle/3/seance/10");
-  await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
+  await page.getByRole("button", { name: "Commencer la séance", exact: true }).click();
   // m3-math-10-a1, « De dix à vingt »: an off-screen count said aloud, with fingers and words.
   for (let i = 0; i < 8; i++) {
     if ((await page.locator("h2#activite").textContent()) === "De dix à vingt") break;
-    await page.getByRole("button", { name: /^(Suivant|Terminé)$/ }).click();
+    await page.getByRole("button", { name: /^(Activité suivante|Activité terminée)$/ }).click();
   }
   await expect(page.locator("h2#activite")).toHaveText("De dix à vingt");
   const instruction = "« Compte avec moi de dix jusqu’à vingt. »";
@@ -134,8 +134,8 @@ test("five laptop word choices keep feedback and navigation on screen", async ({
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/maternelle/3/seance/2");
-  await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
-  await page.getByRole("button", { name: "Terminé", exact: true }).click();
+  await page.getByRole("button", { name: "Commencer la séance", exact: true }).click();
+  await page.getByRole("button", { name: "Activité terminée", exact: true }).click();
   await page.getByRole("button", { name: "Montrer à l’enfant", exact: true }).click();
   const dialog = page.getByRole("dialog");
   await dialog.getByRole("button", { name: "Jouer : je montre le mot", exact: true }).click();

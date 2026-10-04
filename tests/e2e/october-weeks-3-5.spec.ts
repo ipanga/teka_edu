@@ -19,21 +19,21 @@ for (const device of devices) {
     // Previously deferred day 30 is now an actual complete session.
     await page.goto("/maternelle/3/seance/30");
     await expect(page.getByRole("heading", { name: "À préparer" })).toBeVisible();
-    await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
+    await page.getByRole("button", { name: "Commencer la séance", exact: true }).click();
     await expect(page.getByRole("blockquote")).toContainText("Dis la date");
     await page.getByRole("button", { name: "Afficher le conseil au parent" }).click();
     const parentDate = page.getByText(/^Dites : « Aujourd’hui, nous sommes/);
     await expect(parentDate).toBeVisible();
     await expect(parentDate).toContainText("lundi 12 octobre 2026");
-    await page.getByRole("button", { name: "Terminé", exact: true }).click();
+    await page.getByRole("button", { name: "Activité terminée", exact: true }).click();
     await expect(page.locator("#activite")).toBeFocused();
     await expect(page.getByRole("blockquote")).toBeInViewport();
 
     // New count-on remains a real-object handoff, with the correct supplied story sequence.
     await page.goto("/maternelle/3/seance/34");
-    await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
+    await page.getByRole("button", { name: "Commencer la séance", exact: true }).click();
     for (let i = 0; i < 2; i++)
-      await page.getByRole("button", { name: "Terminé", exact: true }).click();
+      await page.getByRole("button", { name: "Activité terminée", exact: true }).click();
     await expect(page.getByText("1 / 4", { exact: true })).toBeVisible();
     await page.getByRole("button", { name: "Page suivante", exact: true }).click();
     await page.getByRole("button", { name: "Montrer à l’enfant" }).click();
@@ -45,7 +45,7 @@ for (const device of devices) {
     }
     await page.screenshot({ path: info.outputPath("october-story.png") });
     await page.getByRole("button", { name: "Revenir au guide du parent" }).click();
-    await page.getByRole("button", { name: "Terminé", exact: true }).click();
+    await page.getByRole("button", { name: "Activité terminée", exact: true }).click();
     await expect(page.locator("#activite")).toBeFocused();
     await expect(page.getByRole("blockquote")).toContainText("Il y en a quatre");
     await page.getByRole("button", { name: "Montrer à l’enfant" }).click();
@@ -55,7 +55,7 @@ for (const device of devices) {
       await page.evaluate(() => document.documentElement.scrollWidth - innerWidth),
     ).toBeLessThanOrEqual(1);
     await page.getByRole("button", { name: "Revenir au guide du parent" }).click();
-    await page.getByRole("button", { name: "Faire une petite pause" }).click();
+    await page.getByRole("button", { name: "Mettre la séance en pause" }).click();
     await page.reload();
     await page
       .getByRole("button", {
@@ -68,9 +68,9 @@ for (const device of devices) {
 
     // Technical-function evidence uses the accepted objects and remains ungraded observation.
     await page.goto("/maternelle/3/seance/41");
-    await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
+    await page.getByRole("button", { name: "Commencer la séance", exact: true }).click();
     for (let i = 0; i < 6; i++)
-      await page.getByRole("button", { name: "Terminé", exact: true }).click();
+      await page.getByRole("button", { name: "Activité terminée", exact: true }).click();
     await page.getByRole("button", { name: "Montrer à l’enfant" }).click();
     await expect(dialog.locator("img")).toHaveCount(2);
     for (const img of await dialog.locator("img").all()) {

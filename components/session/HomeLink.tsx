@@ -8,7 +8,7 @@ export function HomeLink({ label = "Accueil" }: { label?: string }) {
   return (
     <Link
       href="/"
-      className="flex w-fit items-center gap-2 text-base font-medium text-emerald-800 underline"
+      className="flex min-h-11 w-fit items-center gap-2 text-base font-medium text-emerald-800 underline"
     >
       <span aria-hidden="true">←</span> {label}
     </Link>
