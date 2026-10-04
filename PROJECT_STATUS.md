@@ -13,11 +13,15 @@ Updated by: Codex
 
 ## Flexible parent navigation — 2026-10-04
 
-IN PROGRESS: real read-only production audit confirmed September-only navigation despite
+AWAITING OWNER REVIEW: real read-only production audit confirmed September-only navigation despite
 deployed October, misleading month totals, weak resume/replay hierarchy and buried phone
 class selection. Dedicated UX branch from authoritative develop; data-derived month/list
-navigation and explicit session actions implemented. See docs/ux/PARENT_NAVIGATION_ARCHITECTURE.md
-and ACTIVE_TASK for final validation progress. Canonical content/media/reference data unchanged.
+navigation and explicit session actions implemented. Local format/lint/types, 520 unit tests,
+content/integrity/lapse, Webpack build/client scan and 96 browser tests pass (nine production-only
+skips). Eight supported sizes and all P1 journeys pass; manual fresh-parent phone journey verified.
+See docs/ux/PARENT_NAVIGATION_ARCHITECTURE.md for before/after screenshots. PR #98 into develop
+is the UX review boundary; verify final-head CI before any integration decision.
+Canonical content/media/reference data unchanged: 420 files identical, 15 packages fresh.
 PR #97 remains open: three required checks pass, DB failed on ECR rate limit before assertions.
 Its production documentation is retained and archived, not silently discarded or merged.
 No hosted write, migration, merge or deployment authorized in this task.

@@ -108,7 +108,10 @@ test.describe("parent session", () => {
     ]) {
       await page.setViewportSize(viewport);
       await page.goto("/maternelle/3/seance/6");
-      await page.getByRole("button", { name: "Commencer la séance" }).click();
+      // Later viewport visits retain activity-zero progress: deliberately restart for this layout check.
+      await page
+        .getByRole("button", { name: /^(Commencer la séance|Recommencer depuis le début)$/ })
+        .click();
       await expect(page.getByText("Activité 1 sur")).toBeVisible();
       // Nothing overflows sideways on a phone.
       const overflow = await page.evaluate(

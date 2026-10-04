@@ -2,10 +2,13 @@
 
 Current task override, 2026-10-04: authorized live parent UX/navigation improvement on
 codex/flexible-parent-navigation-ux from develop ae07c243. Audit complete; implementation
-and initial 520-unit/content/lapse/freeze checks pass; final build/browser validation pending.
+and final format/lint/types/520-unit/content/lapse/freeze/build/client checks pass; full local
+browser suite 96 passed, zero failed, nine production-only skips. All eight supported sizes,
+P1 and new navigation journeys pass; fresh-origin manual phone journey/evidence reviewed.
 Read docs/ux/PARENT_NAVIGATION_ARCHITECTURE.md and ACTIVE_TASK. Production stays read-only;
-no merge/deploy/DB write/curriculum changes. Finish local verification, push focused develop
-PR and STOP for owner review. PR #97 is OPEN/untouched, its DB CI failed on ECR rate exceeded;
+no merge/deploy/DB write/curriculum changes. PR #98 is the focused develop UX review boundary.
+STOP for owner review; check final-head CI before integration, never infer it from local tests.
+PR #97 is OPEN/untouched, its DB CI failed on ECR rate exceeded;
 verified production evidence preserved below and in work/archive/2026-10-october-production-promotion.md.
 Owner must reconcile #97 documentation overlap before UX integration.
 

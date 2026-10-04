@@ -111,4 +111,40 @@ owner reviews UX and resolves #97 documentation overlap before authorizing integ
 
 ## Validation and evidence
 
-In progress. See ACTIVE_TASK for fresh results and final screenshot links.
+Final local validation: formatting/lint/typecheck PASS; 520/520 unit tests in 39 files;
+31 content JSON files valid; zero approval lapses; 420 protected files identical, aggregate
+`1937cce2157e1f6a52b7ba785331efcc780a1f8a764a2f485f00b08b2884bc45`.
+88 October approved/zero review/zero stale/88 fresh distinct digests; all 176 September
+approved objects and Batch 1 unchanged. Days 23-44 complete; 45 absent; 56/56 objectives,
+59/59 required media, 15/15 exact packages. No required rich media pending.
+Webpack production build PASS; 28 client files scanned, all three CI server sentinels absent.
+Full local production-build Chromium suite: 96 passed, zero failed, nine public-production
+tests appropriately skipped on localhost. Includes eight new full fresh-parent journeys,
+eight P1 journeys and all existing September/October media/layout checks.
+
+Initial draft CI 37213308072: quality, DB (154 pgTAP assertions) and Docker passed;
+build/E2E failed only because an older viewport loop expected a fresh start on its second
+visit to the same unfinished activity-zero session. It now explicitly chooses restart for
+that layout test. Full local suite rerun passes; no assertion removed or timeout increased.
+Final PR checks must be inspected at the final head, not inferred from this older run.
+
+Manual after journey used a fresh `localhost:3001` origin (zero initial progress) at 390x844:
+home -> 3eme -> October -> September -> October -> preparation/safety -> parent -> child ->
+next -> pause -> reload -> primary activity-two resume -> completion -> October list ->
+completed-session guard. No browser Back, account, report submission or hosted write.
+Keyboard month activation and unavailable parameter handling also pass.
+
+At 320x740, class links now start at 252px/524px (previously 468px/1152px); both fully fit
+the first viewport. Class primary action starts at 336px, month links at 594px, and all-lessons
+link at 655px (previous September-only link 824px). Navigation targets measured 44-48px,
+primary 52px. No horizontal overflow at any of the eight supported sizes.
+
+| Device           | Before home/class/calendar                                                                                                          | After home/class/October                                                                                                       |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Phone 390x844    | [Home](evidence/before-phone-home.png), [class](evidence/before-phone-class.png), [calendar](evidence/before-phone-calendar.png)    | [Home](evidence/after-phone-home.png), [class](evidence/after-phone-class.png), [October](evidence/after-phone-october.png)    |
+| Tablet 768x1024  | [Home](evidence/before-tablet-home.png), [class](evidence/before-tablet-class.png), [calendar](evidence/before-tablet-calendar.png) | [Home](evidence/after-tablet-home.png), [class](evidence/after-tablet-class.png), [October](evidence/after-tablet-october.png) |
+| MacBook 1440x900 | [Home](evidence/before-laptop-home.png), [class](evidence/before-laptop-class.png), [calendar](evidence/before-laptop-calendar.png) | [Home](evidence/after-laptop-home.png), [class](evidence/after-laptop-class.png), [October](evidence/after-laptop-october.png) |
+
+All-size preparation/handoff/completion screenshots are also produced by the committed
+Playwright test in ignored local `test-results/`. Evidence was inspected visually.
+Review PR [#98](https://github.com/ipanga/teka_edu/pull/98); do not merge or deploy.

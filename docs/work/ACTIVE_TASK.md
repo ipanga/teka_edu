@@ -11,7 +11,7 @@ Preserve October/September curriculum and P1 state behavior; stop at a pushed de
 
 ## Status
 
-`in_progress`
+`awaiting_review`
 
 ## Branch
 
@@ -28,11 +28,16 @@ Main remains `81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05`.
 
 ## Last Checkpoint
 
-Live production audit complete, initial UI and architecture implemented.
-520 unit tests, lint, content and scoped freeze/lapse proof pass.
-New browser tests exposed two test-harness mistakes: CSS uppercase count parsing and a
-month-link navigation race. Assertions corrected without weakening behavioral guarantees.
-Full final build/browser validation remains to run.
+FINAL LOCAL 2026-10-04: implementation/fresh-parent journey complete. Format/lint/typecheck,
+520/520 units, content, zero lapse, scoped 420-file freeze, all 15 package strings, Webpack
+production build and three-sentinel client scan PASS. Full production-build Chromium:
+96 passed, zero failed, nine production-only skipped, all eight supported sizes and P1.
+Fresh-origin manual phone journey and 18 tracked before/after screenshots inspected.
+PR #98 is open into develop; final-head CI must be verified before integration.
+No canonical/reference/schema/workflow change, hosted write, merge or deployment.
+Initial draft run 37213308072 quality/DB/Docker passed; build/E2E reproduced the old repeated-
+viewport fresh-start assertion. Fixed to explicitly restart the saved activity-zero session;
+full local rerun green. Assertions retained, no timeout increase.
 
 ## Scope
 
@@ -63,29 +68,34 @@ first future. Reopening complete requires explicit replay. Bookmarks remain clas
 
 ## In Progress
 
-Browser regression/fresh-parent verification, full final validation and evidence selection.
+None in implementation. Final feature-branch checkpoint and PR readiness/CI recording only.
 
 ## Remaining
 
-Finish full validation; inspect screenshots and repeat manual fresh-parent journey.
-Update results; commit/push and open focused develop PR; report CI state then stop.
+Owner reviews PR #98, screenshot evidence and final-head required checks.
+Resolve #97 documentation overlap, then separately authorize integration. No automatic merge.
 
 ## Validation State
 
-| Check              | State                                                                             |
-| ------------------ | --------------------------------------------------------------------------------- |
-| format             | NOT RUN final formatting                                                          |
-| lint               | PASS initial implementation                                                       |
-| typecheck          | PASS initial implementation; STALE after new tests                                |
-| unit tests         | PASS 520/520; STALE after phase focus change                                      |
-| content validation | PASS 31 registered JSON files                                                     |
-| database tests     | N/A no database/reference/schema changes; hosted operations forbidden             |
-| build              | NOT RUN final build                                                               |
-| E2E                | NOT RUN full final suite; first new run failed harness assertions                 |
-| Docker             | N/A no Docker/deployment configuration changes                                    |
-| secret scans       | NOT RUN final bundle scan                                                         |
-| approval/integrity | PASS zero lapse; 420 files identical; 88 October approvals/digests, 176 September |
-| packages/media     | PASS 15 fresh; 59/59 required media, zero missing                                 |
+| Check                | State                                                                                   |
+| -------------------- | --------------------------------------------------------------------------------------- |
+| format               | PASS final full repository check                                                        |
+| lint                 | PASS                                                                                    |
+| typecheck            | PASS including validated CalendarDate test fixtures                                     |
+| unit tests           | PASS 520/520 in 39 files                                                                |
+| content validation   | PASS 31 registered JSON files                                                           |
+| database tests       | PASS draft CI 37213308072 at 8da382c, 154 pgTAP; N/A hosted operations                  |
+| build                | PASS Webpack production, application unchanged since build                              |
+| E2E                  | PASS 96 / zero fail / nine production-only skips, all eight supported sizes             |
+| Docker               | PASS draft CI at 8da382c; no app/Docker configuration change since                      |
+| secret scans         | PASS 28 client files, all three server-only CI sentinels absent                         |
+| approval/integrity   | PASS zero lapse; 420 identical files; 88 October approved/fresh distinct, 176 September |
+| packages/media       | PASS 15 exact packages; 59/59 required images, zero missing                             |
+| GitHub final-head CI | NOT RUN final-head checks at this pre-push checkpoint; inspect PR #98                   |
+
+The old final October audit passed before edits. Its authorized UI byte freeze is now STALE;
+it is preserved, not weakened. The new content/reference freeze and full P1 behavioral suite
+prove the appropriate scope. No public-prod smoke runs against un-deployed new UI.
 
 ## Database State
 
@@ -96,13 +106,14 @@ Both hosted environments are outside this implementation boundary.
 ## Deployment State
 
 No deployment performed. Production remains the validated October main 81b759f.
-Local development server: http://127.0.0.1:3001 (temporary verification only).
+Local production-build preview: http://127.0.0.1:3001 (not a deployment).
 
 ## Git State
 
 Dedicated branch from develop. PR #97 remains open/unchanged at ceae6c1; its verified docs were
 carried forward before new checkpoint edits. Archive retains full release evidence.
-UX PR not opened yet. Owner must reconcile overlapping #97 docs before integrating UX.
+PR #98 open: https://github.com/ipanga/teka_edu/pull/98. Implementation 8da382c plus final
+validation/checkpoint commit; verify actual HEAD. Owner must reconcile overlapping #97 docs.
 
 ## Blockers
 
@@ -116,9 +127,10 @@ Resolve documentation-only PR #97 overlap deliberately; no automatic merge or de
 
 ## Exact Resume Point
 
-Finish the local browser suite and inspect before/after evidence, rerun format/lint/types/units,
-content/freeze/lapse/build/client scan. Commit/push the UX branch and open the focused PR into
-develop. Stop for owner review, without merging or deploying either environment.
+STOP for owner review of PR #98 and before/after screenshots. Verify its exact head and required
+checks, reconcile #97 documentation overlap, and obtain separate merge authorization before
+integration. Do not merge either PR or deploy staging/production in this task. No curriculum
+expansion, hosted write or migration authorized.
 
 ## Resume Verification
 
