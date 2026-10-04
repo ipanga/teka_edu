@@ -10,16 +10,16 @@ test.describe("parent session", () => {
     await page.goto("/maternelle/3");
     await expectHonestOfferedSession(page);
     // Either today's lesson or, outside school days, the most recent session.
-    await expect(page.getByRole("link", { name: /Commencer la leçon/ })).toBeVisible();
+    await expect(page.getByRole("link", { name: /Voir la préparation/ })).toBeVisible();
     await expect(page.getByText(/3ème maternelle/)).toBeVisible();
     await expect(page.getByText(/environ \d+ minutes/)).toBeVisible();
   });
 
   test("the September calendar distinguishes sessions, weekends and catch-up", async ({ page }) => {
-    await page.goto("/maternelle/3/calendrier");
+    await page.goto("/maternelle/3/calendrier?mois=2026-09");
     await expect(page.getByRole("heading", { name: "Septembre 2026" })).toBeVisible();
     // September stays at 22 available sessions even after later batches are authored.
-    await expect(page.getByRole("link", { name: /septembre 2026 séance/ })).toHaveCount(22);
+    await expect(page.getByRole("link", { name: /septembre 2026/ })).toHaveCount(22);
     // Weekends are shown as such, never as a missing lesson.
     await expect(page.getByText("week-end").first()).toBeVisible();
     // An earlier session can be opened to catch up.
@@ -39,7 +39,7 @@ test.describe("parent session", () => {
     await page.getByRole("button", { name: /Je n’ai pas tout/ }).click();
     await expect(page.getByText("À défaut :").first()).toBeVisible();
 
-    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page.getByRole("button", { name: "Commencer la séance" }).click();
     await expect(page.getByText("Activité 1 sur")).toBeVisible();
     // The child's part and the parent's part are now distinct zones on the screen.
     await expect(page.getByText("La part de l’enfant")).toBeVisible();
@@ -53,19 +53,19 @@ test.describe("parent session", () => {
 
     // Moving on folds it away again: each activity starts from the French instruction.
     await page
-      .getByRole("button", { name: /Suivant|Terminé/ })
+      .getByRole("button", { name: /Activité suivante|Activité terminée/ })
       .first()
       .click();
     await expect(page.getByText("Activité 2 sur")).toBeVisible();
     await expect(page.getByRole("button", { name: "Afficher le conseil au parent" })).toBeVisible();
 
-    await page.getByRole("button", { name: "Précédent" }).click();
+    await page.getByRole("button", { name: "Activité précédente" }).click();
     await expect(page.getByText("Activité 1 sur")).toBeVisible();
   });
 
   test("English help stays hidden until the parent asks for it", async ({ page }) => {
     await page.goto("/maternelle/3/seance/1");
-    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page.getByRole("button", { name: "Commencer la séance" }).click();
     const help = page.getByRole("button", { name: "Besoin d’aide en anglais ?" });
     await expect(help).toBeVisible();
     // The English sentence itself is not on the page yet.
@@ -76,12 +76,14 @@ test.describe("parent session", () => {
 
   test("the session offers a pause and then an end", async ({ page }) => {
     await page.goto("/maternelle/3/seance/1");
-    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page.getByRole("button", { name: "Commencer la séance" }).click();
 
     let sawPause = false;
     for (let step = 0; step < 12; step++) {
       if (await page.getByText("Bon moment pour faire une pause").isVisible()) sawPause = true;
-      const next = page.getByRole("button", { name: /Suivant|Terminé|Terminer/ }).first();
+      const next = page
+        .getByRole("button", { name: /Activité suivante|Activité terminée|Terminer/ })
+        .first();
       if (!(await next.isVisible())) break;
       await next.click();
       if (await page.getByRole("heading", { name: /C’est fini pour aujourd’hui/ }).isVisible()) {
@@ -90,7 +92,7 @@ test.describe("parent session", () => {
     }
     expect(sawPause).toBe(true);
     await expect(page.getByRole("heading", { name: /C’est fini pour aujourd’hui/ })).toBeVisible();
-    await expect(page.getByRole("link", { name: "Voir le calendrier" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Retour aux leçons du mois" })).toBeVisible();
   });
 
   test("a day that has no session is not invented", async ({ page }) => {
@@ -106,7 +108,7 @@ test.describe("parent session", () => {
     ]) {
       await page.setViewportSize(viewport);
       await page.goto("/maternelle/3/seance/6");
-      await page.getByRole("button", { name: "Commencer la leçon" }).click();
+      await page.getByRole("button", { name: "Commencer la séance" }).click();
       await expect(page.getByText("Activité 1 sur")).toBeVisible();
       // Nothing overflows sideways on a phone.
       const overflow = await page.evaluate(
@@ -118,7 +120,7 @@ test.describe("parent session", () => {
 
   test("the child's screen never shows curriculum codes", async ({ page }) => {
     await page.goto("/maternelle/3/seance/3");
-    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page.getByRole("button", { name: "Commencer la séance" }).click();
     const body = (await page.locator("body").textContent()) ?? "";
     expect(body).not.toMatch(/LANG-S\d{2}|MATH-S\d{2}|exemples? de réussite/i);
   });
@@ -128,11 +130,11 @@ test.describe("parent session", () => {
   }) => {
     // The defect this phase existed to fix: « Regarde les formes » with nothing on the screen.
     await page.goto("/maternelle/3/seance/3");
-    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page.getByRole("button", { name: "Commencer la séance" }).click();
     for (let step = 0; step < 6; step++) {
       if (await page.getByText("Je nomme les formes").isVisible()) break;
       await page
-        .getByRole("button", { name: /Suivant|Terminé/ })
+        .getByRole("button", { name: /Activité suivante|Activité terminée/ })
         .first()
         .click();
     }
@@ -158,11 +160,11 @@ test.describe("parent session", () => {
 
   test("the September count is done with real objects, not on the screen", async ({ page }) => {
     await page.goto("/maternelle/3/seance/1");
-    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page.getByRole("button", { name: "Commencer la séance" }).click();
     for (let step = 0; step < 8; step++) {
       if ((await page.locator("h2#activite").textContent()) === "Je compte les objets") break;
       await page
-        .getByRole("button", { name: /Suivant|Terminé/ })
+        .getByRole("button", { name: /Activité suivante|Activité terminée/ })
         .first()
         .click();
     }
@@ -183,14 +185,16 @@ test.describe("parent session", () => {
 
   test("an off-screen activity asks the parent to put the screen down", async ({ page }) => {
     await page.goto("/maternelle/3/seance/1");
-    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page.getByRole("button", { name: "Commencer la séance" }).click();
     let sawOffScreen = false;
     for (let step = 0; step < 10; step++) {
       if (await page.getByText(/Posez l’écran/).isVisible()) {
         sawOffScreen = true;
         break;
       }
-      const next = page.getByRole("button", { name: /Suivant|Terminé/ }).first();
+      const next = page
+        .getByRole("button", { name: /Activité suivante|Activité terminée/ })
+        .first();
       if (!(await next.isVisible())) break;
       await next.click();
     }
@@ -199,9 +203,9 @@ test.describe("parent session", () => {
 
   test("a story is read page by page, not as one wall of text", async ({ page }) => {
     await page.goto("/maternelle/3/seance/3");
-    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page.getByRole("button", { name: "Commencer la séance" }).click();
     await page
-      .getByRole("button", { name: /Suivant|Terminé/ })
+      .getByRole("button", { name: /Activité suivante|Activité terminée/ })
       .first()
       .click();
     await expect(page.getByText("Kumu, le petit poussin")).toBeVisible();
@@ -238,20 +242,20 @@ test.describe("parent session", () => {
 
   test("the parent can pause, stop early, and pick the session up again", async ({ page }) => {
     await page.goto("/maternelle/3/seance/4");
-    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page.getByRole("button", { name: "Commencer la séance" }).click();
     await page
-      .getByRole("button", { name: /Suivant|Terminé/ })
+      .getByRole("button", { name: /Activité suivante|Activité terminée/ })
       .first()
       .click();
 
     // A break is one tap away, and coming back is not a restart.
-    await page.getByRole("button", { name: "Faire une petite pause" }).click();
+    await page.getByRole("button", { name: "Mettre la séance en pause" }).click();
     await expect(page.getByRole("heading", { name: "Petite pause." })).toBeVisible();
     await page.getByRole("button", { name: "Continuer" }).click();
     await expect(page.getByText("Activité 2 sur")).toBeVisible();
 
     // Stopping early is offered as a normal thing to do, never as a failure.
-    await page.getByRole("button", { name: "Terminer pour aujourd’hui" }).click();
+    await page.getByRole("button", { name: "Arrêter et reprendre plus tard" }).click();
     await expect(page.getByRole("heading", { name: /On s’arrête là/ })).toBeVisible();
     const body = (await page.locator("body").textContent()) ?? "";
     expect(body).not.toMatch(/échec|abandon|incomplet/i);
@@ -266,7 +270,7 @@ test.describe("parent session", () => {
   test("the child's screen can fill the phone, with no parent chrome on it", async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/maternelle/3/seance/3");
-    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page.getByRole("button", { name: "Commencer la séance" }).click();
     await page.getByRole("button", { name: "Montrer à l’enfant" }).click();
 
     const childScreen = page.getByRole("dialog", { name: "Écran de l’enfant" });
@@ -283,9 +287,9 @@ test.describe("parent session", () => {
 
   test("a story shows its own picture", async ({ page }) => {
     await page.goto("/maternelle/3/seance/3");
-    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page.getByRole("button", { name: "Commencer la séance" }).click();
     await page
-      .getByRole("button", { name: /Suivant|Terminé/ })
+      .getByRole("button", { name: /Activité suivante|Activité terminée/ })
       .first()
       .click();
     await expect(page.getByText("Kumu, le petit poussin")).toBeVisible();
@@ -296,11 +300,11 @@ test.describe("parent session", () => {
     const context = await browser.newContext({ reducedMotion: "reduce" });
     const page = await context.newPage();
     await page.goto("/maternelle/3/seance/3");
-    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page.getByRole("button", { name: "Commencer la séance" }).click();
     for (let step = 0; step < 6; step++) {
       if (await page.getByText("Je nomme les formes").isVisible()) break;
       await page
-        .getByRole("button", { name: /Suivant|Terminé/ })
+        .getByRole("button", { name: /Activité suivante|Activité terminée/ })
         .first()
         .click();
     }
@@ -321,11 +325,11 @@ test.describe("parent session", () => {
   test("a staggered list is readable from its first frame, never invisible", async ({ page }) => {
     // 1ère maternelle, day 11, the last activity is the rhyme « Un, deux, trois, mes mains ».
     await page.goto("/maternelle/1/seance/11");
-    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page.getByRole("button", { name: "Commencer la séance" }).click();
     for (let step = 0; step < 8; step++) {
       if ((await page.locator("h2#activite").textContent()) === "Ma comptine") break;
       await page
-        .getByRole("button", { name: /Suivant|Terminé/ })
+        .getByRole("button", { name: /Activité suivante|Activité terminée/ })
         .first()
         .click();
     }

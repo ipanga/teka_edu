@@ -18,14 +18,14 @@ async function reach(page: Page, route: string, title: string) {
   await page.goto("/");
   await page.evaluate(() => localStorage.clear());
   await page.goto(route);
-  await page.getByRole("button", { name: "Commencer la leçon", exact: true }).click();
+  await page.getByRole("button", { name: "Commencer la séance", exact: true }).click();
   for (let step = 0; step < 20; step++) {
     if ((await page.locator("h2#activite").textContent()) === title) return;
     const resume = page.getByRole("button", { name: "Continuer", exact: true });
     if (await resume.isVisible()) await resume.click();
     else
       await page
-        .getByRole("button", { name: /^(Suivant|Terminé)$/ })
+        .getByRole("button", { name: /^(Activité suivante|Activité terminée)$/ })
         .first()
         .click();
   }

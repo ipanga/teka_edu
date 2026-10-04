@@ -2,149 +2,126 @@
 
 ## Task
 
-Finalize October 3ème maternelle approvals and prepare integration.
+Live parent UX audit and flexible month/navigation implementation.
 
 ## Objective
 
-Record owner-relayed independent acceptance, approve 88 lessons with fresh digests, generate
-the final reference migration, validate locally and prepare a develop PR without hosted writes.
+Make Home -> Class -> Month -> Lessons -> Session discoverable without explanation.
+Preserve October/September curriculum and P1 state behavior; stop at a pushed develop PR.
 
 ## Status
 
-`awaiting_ci`
+`in_progress`
 
 ## Branch
 
-`codex/october-maternelle-3`
+`codex/flexible-parent-navigation-ux`
 
 ## Base Branch
 
-Accepted correction checkpoint `1f573c508b30ddd0ade57d7a8cd8329d5eb901ce`.
-Reviewed baseline `61b2e07`; accepted Batch 1 `2170413`, corrected Batch 1 `461e946`,
-authoring base `1ada5f2` and merged P1 develop `603efdc` remain ancestors.
+`origin/develop` at `ae07c243d4c1dd8ce710edf8d9c93e8582649448`.
+Main remains `81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05`.
 
 ## Started
 
-2026-10-03
+2026-10-04
 
 ## Last Checkpoint
 
-Owner relayed independent accepted verdict at 1f573c5 and explicitly authorized history,
-new October approvals, generated migration, local DB reset/pgTAP, checkpoint/push and PR.
-Pre-write verification passed: exact local/remote SHA, clean tree, all 15 fresh packages,
-88 review/null and both historical frozen/correction guards. This file belongs to the
-integration-ready checkpoint; exact committed SHA and PR URL are in the completion summary.
-Final evidence: OCTOBER_FINAL_AUDIT.md. Historical correction dossier remains unchanged.
+Live production audit complete, initial UI and architecture implemented.
+520 unit tests, lint, content and scoped freeze/lapse proof pass.
+New browser tests exposed two test-harness mistakes: CSS uppercase count parsing and a
+month-link navigation race. Assertions corrected without weakening behavioral guarantees.
+Full final build/browser validation remains to run.
 
 ## Scope
 
-October days 23–44, 88 lessons. Approval metadata/history, five generated packages, inventory,
-deterministic reference migration and bounded validation/test fixes. No accepted pedagogy edit.
+Home/class/month/list/session navigation, browser-local status/replay, outcome-specific labels,
+eight supported sizes, tests, screenshots and durable architecture note.
 
 ## Out of Scope
 
-Hosted DEV/PROD writes, merge, staging/production deployment, new media generation,
-November, P2/P3, 2ème maternelle and TV/Smart TV support.
+Canonical wording/objectives/media/review/digests, migration/schema, hosted DEV/PROD writes,
+merges, staging/production deployment, November, 2eme, unrelated P2/P3, TV/Smart TV.
 
 ## Product Decisions
 
-Canonical rotation gives 22 LANG / 22 MATH / 22 PHYS / 7 ART / 6 WORLD / 9 TIME-SPACE.
-Do not revert to obsolete 7/7/8 planning totals. Phone, tablet and laptop/MacBook only.
-AI-assisted pedagogical review, not teacher certification; ISSUE-017 remains future assurance.
+See [architecture](../ux/PARENT_NAVIGATION_ARCHITECTURE.md).
+Monthly list primary; calendar secondary shares derivation/status.
+Only complete approved plans are discoverable. Resume > true today > latest unfinished past >
+first future. Reopening complete requires explicit replay. Bookmarks remain class/year scoped.
 
 ## Completed
 
-Ten owner-relayed history records appended (modifications and accepted verdicts per Week 6–10).
-88 new approvals through approve-week, after dry runs, without --lapsed-only or manual JSON stamps.
-Fresh independent digests, regenerated Weeks 6–10 and inventory, final audit and generated
-reference migration. Local reset, reference-data idempotence, RLS/pgTAP and current full technical
-validation pass. Historical review evidence and accepted media/P1 remain unchanged.
+- PR #97 state inspected: OPEN, three checks passed, database infrastructure rate-limit failure.
+- Created UX branch from fetched authoritative develop, retained verified #97 documentation.
+- Live complete parent journey and screenshots/DOM at all eight requested sizes.
+- Removed fixed September class link/calendar filter, added derived monthly browsing.
+- Preparation/completion retain month context; resume/replay guarded; P1 ownership retained.
+- 420 protected files byte-identical to integrated October, all 15 packages fresh.
+- Archived complete production checkpoint without discarding its evidence.
 
 ## In Progress
 
-None locally. PR CI is a separate remote gate; its live state must be read before integration.
-This task stops after the checkpoint/push and focused PR, not after merge or deployment.
+Browser regression/fresh-parent verification, full final validation and evidence selection.
 
 ## Remaining
 
-Confirm PR required checks/review, then obtain separate owner authorization for any merge/release.
-No further authoring or hosted database operation is authorized.
+Finish full validation; inspect screenshots and repeat manual fresh-parent journey.
+Update results; commit/push and open focused develop PR; report CI state then stop.
 
 ## Validation State
 
-All PASS rows were rerun for this final content/code. No inherited result substitutes for a check.
-
-| Check              | State                                                                                                             |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------- |
-| format             | PASS scoped formatting and full format check                                                                      |
-| lint               | PASS zero warnings                                                                                                |
-| typecheck          | PASS                                                                                                              |
-| unit tests         | PASS 504/504 across 38 files; targeted approval/mapping tests passed                                              |
-| content validation | PASS 31 registered JSON files                                                                                     |
-| database tests     | PASS fresh local reset, reference-data mirror/idempotence and 154 pgTAP assertions across four files              |
-| build              | PASS sentinel production Webpack build; Docker Turbopack build also PASS                                          |
-| E2E                | PASS 87 local Chromium tests; nine production-public tests skipped without a configured production URL            |
-| Docker             | PASS portable and Vercel images built locally; both health/SIGTERM smoke checks pass                              |
-| secret scans       | PASS 28 client files, three server-only sentinel values absent                                                    |
-| programme          | PASS days 23–44 complete at 35 minutes; Day 30 authored; Day 45 no-content                                        |
-| coverage           | PASS 56/56 objectives due through Day 44, zero missing                                                            |
-| media              | PASS 59/59 required for authored m3 corpus; zero gaps, 56 useful-only nonblocking ideas unchanged                 |
-| package freshness  | PASS all 15 exact; ten September packages unchanged; five final hashes in OCTOBER_FINAL_AUDIT.md                  |
-| approvals          | PASS 88 approved/zero review, 88 distinct valid digests; 264 total distinct; lapse dry run zero                   |
-| integrity          | PASS 176 September objects/digests, accepted October pedagogy, prior history and 290 protected files/P1 unchanged |
-
-Full browser suite includes eight exact supported phone/tablet/laptop sizes and P1 journeys.
-Local verification server stopped and Docker smoke containers cleaned up. The existing local
-Supabase database remains local; no hosted command was used. No remote production smoke claimed.
-
-Initial pgTAP failed because a September-only 88-count assertion counted all m3 months. Scoped it
-to the five original September themes without reducing the expected 88, adding two explicit
-October loaded/approved checks (152 became 154). Full rerun passes.
-Initial lapse dry run incorrectly flagged m3-lang-24: raw accepted text has a pre-existing trailing
-space, while approval hashes schema-normalized canonical text. Lapse now uses the same schema
-normalization; accepted raw text/digest unchanged. Added a non-mutating regression; zero lapses.
-Resolved-date daily plans are not used for canonical digest checks.
-No suppressions, relaxed running assertions, media generation or pedagogical edits.
+| Check              | State                                                                             |
+| ------------------ | --------------------------------------------------------------------------------- |
+| format             | NOT RUN final formatting                                                          |
+| lint               | PASS initial implementation                                                       |
+| typecheck          | PASS initial implementation; STALE after new tests                                |
+| unit tests         | PASS 520/520; STALE after phase focus change                                      |
+| content validation | PASS 31 registered JSON files                                                     |
+| database tests     | N/A no database/reference/schema changes; hosted operations forbidden             |
+| build              | NOT RUN final build                                                               |
+| E2E                | NOT RUN full final suite; first new run failed harness assertions                 |
+| Docker             | N/A no Docker/deployment configuration changes                                    |
+| secret scans       | NOT RUN final bundle scan                                                         |
+| approval/integrity | PASS zero lapse; 420 files identical; 88 October approvals/digests, 176 September |
+| packages/media     | PASS 15 fresh; 59/59 required media, zero missing                                 |
 
 ## Database State
 
-Generated `20261003195954_october_maternelle_3_approved.sql` via generate-reference-sql,
-exact payload verified against referenceSyncSql and test mirror against referenceTestSql.
-36 canonical/reference tables only; no schema/auth/user/child/progress mutation.
-Applied only through fresh local reset. Hosted DEV and PROD unchanged.
+No DB impact. No migration or schema changes; no hosted connections/writes in this task.
+Production promotion completed earlier through normal workflow; see archived checkpoint.
+Both hosted environments are outside this implementation boundary.
 
 ## Deployment State
 
-No merge or deployment. Focused develop PR is authorized; required CI/review is separate.
-No staging/production action is authorized by this checkpoint.
+No deployment performed. Production remains the validated October main 81b759f.
+Local development server: http://127.0.0.1:3001 (temporary verification only).
 
 ## Git State
 
-This document belongs to the final integration-ready feature checkpoint. Completion summary
-records exact SHA, push verification and PR URL. Verify clean tree and local/remote equality.
-No self-referential SHA embedded inside its own commit.
+Dedicated branch from develop. PR #97 remains open/unchanged at ceae6c1; its verified docs were
+carried forward before new checkpoint edits. Archive retains full release evidence.
+UX PR not opened yet. Owner must reconcile overlapping #97 docs before integrating UX.
 
 ## Blockers
 
-No local validation blocker. Nine production-public tests are intentionally skipped.
-PR CI/review and explicit merge/release authorization remain separate gates.
+None in implementation. PR #97 required DB check failed ECR storage-api:v1.72.1 rate exceeded
+before assertions; not retried in this task, no workflow changes.
 
 ## User Decisions Needed
 
-Only separate authorization for the next integration/release stage after PR review/checks.
-Do not interpret accepted pedagogical review as deployment permission.
+Review proposed UX and the focused PR after validation.
+Resolve documentation-only PR #97 overlap deliberately; no automatic merge or deployment.
 
 ## Exact Resume Point
 
-Read OCTOBER_FINAL_AUDIT.md and this checkpoint. Verify clean local/remote HEAD and inspect
-the develop PR's live required checks/review. Stop for owner merge/release authorization;
-do not auto-merge, deploy, migrate hosted DEV/PROD or begin later content.
+Finish the local browser suite and inspect before/after evidence, rerun format/lint/types/units,
+content/freeze/lapse/build/client scan. Commit/push the UX branch and open the focused PR into
+develop. Stop for owner review, without merging or deploying either environment.
 
 ## Resume Verification
 
-Run git status, git log and git branch --show-current. Verify remote feature SHA and PR head.
-Run node --import tsx scripts/check-october-final.ts and lapse-approvals.ts --dry-run=true.
-The old check-october-frozen.ts and check-october-phys-corrections.ts are historical pre-approval
-guards preserved unchanged: they intentionally require review/null and old history/packages,
-so do not run them against final approved state or weaken them to bypass approval differences.
-The final audit strictly permits only October status/review changes relative to accepted 1f573c5.
+Run git status --short --branch and git log -5; fetch refs and verify develop/main and PR #97.
+Read architecture note and this checkpoint, then inspect actual running local sessions before
+trusting test freshness. Never rerun changed UX tests against old production UI.

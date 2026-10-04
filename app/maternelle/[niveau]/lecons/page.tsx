@@ -6,15 +6,14 @@ import { sessionCatalogue } from "@/lib/programme/session-catalogue";
 import {
   levelAvailability,
   levelIdFromSlug,
-  schoolDays,
   SCHOOL_YEAR_ID,
   todaysSession,
 } from "@/lib/programme/session-view";
 
-export default async function CalendarPage({
+export default async function LessonsPage({
   params,
   searchParams,
-}: PageProps<"/maternelle/[niveau]/calendrier">) {
+}: PageProps<"/maternelle/[niveau]/lecons">) {
   const { niveau } = await params;
   const { mois } = await searchParams;
   const levelId = levelIdFromSlug(niveau);
@@ -35,16 +34,10 @@ export default async function CalendarPage({
         <ParentNavigation levelSlug={niveau} levelName={level.name} />
         <h1 className="mt-3 text-3xl font-bold">{selected.label}</h1>
         <p className="mt-1 text-stone-600">
-          Calendrier · {level.name} · {SCHOOL_YEAR_ID}
+          {level.name} · {SCHOOL_YEAR_ID}
         </p>
       </header>
-      <MonthBrowser
-        months={months}
-        selected={selected.key}
-        levelSlug={niveau}
-        today={today}
-        calendarDays={schoolDays().filter((day) => day.date.slice(0, 7) === selected.key)}
-      />
+      <MonthBrowser months={months} selected={selected.key} levelSlug={niveau} today={today} />
     </main>
   );
 }
