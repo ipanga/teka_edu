@@ -48,37 +48,37 @@ describe("P1 story state and handoff", () => {
     "isolates consecutive stories (%i then %i pages), including previous/re-entry",
     (pages, nextPages) => {
       render(<SessionRunner session={twoStories(pages, nextPages)} levelSlug="3" />);
-      click("Commencer la leçon");
+      click("Commencer la séance");
       for (let i = 1; i < pages; i++) click("Page suivante");
       expect(screen.getByText(`${pages} / ${pages}`)).toBeInTheDocument();
-      click("Terminé");
+      click("Activité terminée");
       expect(screen.getByText(`1 / ${nextPages}`)).toBeInTheDocument();
       expect(screen.getByText("story-b line 1")).toBeInTheDocument();
       click("Page suivante");
-      click("Précédent");
+      click("Activité précédente");
       expect(screen.getByText(`${pages} / ${pages}`)).toBeInTheDocument();
-      click("Terminé");
+      click("Activité terminée");
       expect(screen.getByText(`2 / ${nextPages}`)).toBeInTheDocument();
     },
   );
 
   it("keeps page 2 through parent/child return and pause/resume", () => {
     render(<SessionRunner session={twoStories(4, 4)} levelSlug="3" />);
-    click("Commencer la leçon");
+    click("Commencer la séance");
     click("Page suivante");
     click("Montrer à l’enfant");
     expect(screen.getByText("2 / 4")).toBeInTheDocument();
     click("Revenir au guide du parent");
     expect(screen.getByText("2 / 4")).toBeInTheDocument();
-    click("Faire une petite pause");
+    click("Mettre la séance en pause");
     click("Continuer");
     expect(screen.getByText("2 / 4")).toBeInTheDocument();
   });
 
   it("preserves game target and feedback across handoff and pause", () => {
     render(<SessionRunner session={sessionForDay("maternelle-1", 1)!} levelSlug="1" />);
-    click("Commencer la leçon");
-    click("Terminé");
+    click("Commencer la séance");
+    click("Activité terminée");
     click("Jouer : je montre le mot");
     click("Une porte");
     expect(screen.getByRole("status")).toHaveTextContent("Bravo");
@@ -90,7 +90,7 @@ describe("P1 story state and handoff", () => {
     click("Revenir au guide du parent");
     expect(screen.getByText("Trouve l’image pour « le seau ».")).toBeInTheDocument();
     expect(screen.getByRole("status")).toHaveTextContent("Essaie encore");
-    click("Faire une petite pause");
+    click("Mettre la séance en pause");
     click("Continuer");
     expect(screen.getByRole("status")).toHaveTextContent("Essaie encore");
     click("Un seau");
@@ -109,7 +109,7 @@ describe("P1 story state and handoff", () => {
     };
     const session = { ...original, steps: [{ ...original.steps[0]!, activities: [activity] }] };
     render(<SessionRunner session={session} levelSlug="3" />);
-    click("Commencer la leçon");
+    click("Commencer la séance");
     click("Un disque");
     click("Montrer à l’enfant");
     expect(screen.getByRole("button", { name: "Un disque" })).toHaveAttribute(
@@ -127,13 +127,13 @@ describe("P1 story state and handoff", () => {
 
   it("reveals/focuses a new instruction, but does not scroll within the activity", () => {
     render(<SessionRunner session={twoStories(4, 4)} levelSlug="3" />);
-    click("Commencer la leçon");
+    click("Commencer la séance");
     expect(document.activeElement).toBe(document.querySelector("#activite"));
     expect(scroll).toHaveBeenLastCalledWith({ block: "start", behavior: "instant" });
     scroll.mockClear();
     click("Page suivante");
     expect(scroll).not.toHaveBeenCalled();
-    click("Terminé");
+    click("Activité terminée");
     expect(scroll).toHaveBeenCalledTimes(1);
     expect(document.activeElement).toBe(document.querySelector("#activite"));
   });
@@ -144,8 +144,8 @@ describe("P1 isolated completion and observations", () => {
     const third = sessionForDay("maternelle-3", 1)!;
     const first = sessionForDay("maternelle-1", 1)!;
     const view = render(<SessionRunner session={twoStories(4, 4)} levelSlug="3" />);
-    click("Commencer la leçon");
-    click("Terminé");
+    click("Commencer la séance");
+    click("Activité terminée");
     click("Terminer la séance");
     view.unmount();
     // Fixture was session 3; keep real calendar identity for this assertion.
@@ -168,7 +168,7 @@ describe("P1 isolated completion and observations", () => {
     writeSessionValue(first, "position", "99");
     render(<SessionRunner session={first} levelSlug="1" />);
     expect(screen.queryByRole("button", { name: /Reprendre où/ })).not.toBeInTheDocument();
-    click("Commencer la leçon");
+    click("Commencer la séance");
     expect(screen.getByText("Activité 1 sur 6")).toBeInTheDocument();
   });
 

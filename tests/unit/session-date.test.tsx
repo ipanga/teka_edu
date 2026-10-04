@@ -26,7 +26,7 @@ describe("honest offered session dates", () => {
         searchParams: Promise.resolve({}),
       }),
     );
-    expect(screen.queryByRole("heading", { name: "Aujourd’hui" }) !== null).toBe(current);
+    expect(screen.queryByText("Aujourd’hui") !== null).toBe(current);
     expect(screen.queryByRole("heading", { name: "Leçon du jour" }) !== null).toBe(current);
     if (!current) {
       expect(

@@ -18,13 +18,14 @@ test.describe("home and class selection", () => {
     // sentence, on the front door — and nothing that collects anything.
     await page.goto("/");
     await expect(page.getByText("Beta", { exact: true })).toBeVisible();
+    await page.getByText("À propos de cette version d’essai", { exact: true }).click();
     await expect(page.getByText(/Version d’essai/)).toBeVisible();
     // It invites a note and promises nothing is sent: that is the whole feedback mechanism.
     await expect(page.getByText(/Rien n’est envoyé automatiquement/)).toBeVisible();
 
     // The child's screen is the lesson and nothing else (ADR-043): no badge follows it there.
     await page.goto("/maternelle/3/seance/1");
-    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page.getByRole("button", { name: "Commencer la séance" }).click();
     await expect(page.getByText("Beta", { exact: true })).toHaveCount(0);
   });
 
@@ -57,7 +58,7 @@ test.describe("home and class selection", () => {
     await expect(page.getByText(/en préparation/)).toBeVisible();
     // No fallback: nothing from 3ème maternelle leaks in.
     const body = (await page.locator("body").textContent()) ?? "";
-    expect(body).not.toMatch(/Commencer la leçon|séance \d/);
+    expect(body).not.toMatch(/Commencer la séance|séance \d/);
     await expect(page.getByRole("link", { name: /Choisir une autre classe/ })).toBeVisible();
   });
 
@@ -70,7 +71,7 @@ test.describe("home and class selection", () => {
     await page.goto("/maternelle/3/seance/1");
     await expect(page.getByRole("link", { name: /Accueil/ })).toBeVisible();
 
-    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page.getByRole("button", { name: "Commencer la séance" }).click();
     await page.getByRole("button", { name: "Montrer à l’enfant" }).click();
     await expect(page.getByRole("dialog", { name: "Écran de l’enfant" })).toBeVisible();
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { HomeLink } from "@/components/session/HomeLink";
+import { ParentNavigation } from "@/components/session/ParentNavigation";
+import { monthLabel } from "@/lib/programme/navigation";
 import { SessionRunner } from "@/components/session/SessionRunner";
 import { authoredDays, levelIdFromSlug, sessionForDay } from "@/lib/programme/session-view";
 
@@ -23,15 +24,11 @@ export default async function SessionPage({
   return (
     <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-6 px-5 py-8">
       <header className="flex flex-col gap-1">
-        <div className="flex items-center gap-4">
-          <HomeLink />
-          <Link
-            href={`/maternelle/${niveau}`}
-            className="text-base font-medium text-emerald-800 underline"
-          >
-            {session.levelName}
-          </Link>
-        </div>
+        <ParentNavigation
+          levelSlug={niveau}
+          levelName={session.levelName}
+          month={{ key: session.date.slice(0, 7), label: monthLabel(session.date.slice(0, 7)) }}
+        />
         <h1 className="mt-2 text-2xl font-bold">{session.dateLabel}</h1>
         <p className="text-stone-600">
           séance {session.instructionalDay} · environ {session.totalMinutes} minutes
@@ -40,7 +37,10 @@ export default async function SessionPage({
 
       <SessionRunner session={session} levelSlug={niveau} />
 
-      <nav className="mt-4 flex justify-between gap-3 border-t border-stone-200 pt-4">
+      <nav
+        aria-label="Autres séances"
+        className="mt-4 flex flex-wrap justify-between gap-3 border-t border-stone-200 pt-4"
+      >
         {previous === undefined ? (
           <span />
         ) : (

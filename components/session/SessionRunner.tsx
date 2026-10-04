@@ -9,6 +9,7 @@ import {
   readSessionPosition,
   readSessionProgress,
   writeSessionValue,
+  subscribeToSessionStorage,
   type SessionIdentity,
 } from "@/lib/programme/session-storage";
 
@@ -27,11 +28,6 @@ import {
  * child. Nothing is sent anywhere (docs/PARENT_SESSION.md). Reading it can throw in a private
  * window, so every access is guarded.
  */
-
-function subscribeToStorage(onChange: () => void): () => void {
-  window.addEventListener("storage", onChange);
-  return () => window.removeEventListener("storage", onChange);
-}
 
 const ROLE_LABEL: Record<string, string> = {
   retrieval: "Révision rapide",
@@ -65,6 +61,7 @@ function SessionFlow({ session, levelSlug }: { session: SessionDay; levelSlug: s
   // -1 is the preparation screen; activities.length is the end.
   const [index, setIndex] = useState(-1);
   const activityHeading = useRef<HTMLHeadingElement | null>(null);
+  const phaseHeading = useRef<HTMLHeadingElement | null>(null);
   const revealInstruction = useRef(false);
   const [showGuidance, setShowGuidance] = useState(false);
   const [showEnglish, setShowEnglish] = useState(false);
@@ -73,19 +70,26 @@ function SessionFlow({ session, levelSlug }: { session: SessionDay; levelSlug: s
   const [paused, setPaused] = useState(false);
   const [stopped, setStopped] = useState(false);
   const [dismissedResume, setDismissedResume] = useState(false);
+  const [replayAllowed, setReplayAllowed] = useState(false);
+  const savedProgress = useSyncExternalStore(
+    subscribeToSessionStorage,
+    () => readSessionProgress(session),
+    () => "not_started" as const,
+  );
 
   // Where the browser remembers we were. Read through the store rather than in an effect: the
   // server renders nothing and the client fills it in on hydration.
   const savedPosition = useSyncExternalStore(
-    subscribeToStorage,
+    subscribeToSessionStorage,
     () => readSessionPosition(session, activities.length),
     () => null,
   );
   // Offer to pick the session up where it stopped, rather than deciding for the parent.
   const resumable =
     !dismissedResume &&
+    savedProgress !== "completed" &&
     savedPosition !== null &&
-    savedPosition > 0 &&
+    savedPosition >= 0 &&
     savedPosition < activities.length
       ? savedPosition
       : null;
@@ -117,7 +121,37 @@ function SessionFlow({ session, levelSlug }: { session: SessionDay; levelSlug: s
     activityHeading.current.scrollIntoView({ block: "start", behavior: "instant" });
   }, [index]);
 
+  useEffect(() => {
+    if (index < 0 || (!paused && !stopped && index < activities.length)) return;
+    phaseHeading.current?.focus({ preventScroll: true });
+    phaseHeading.current?.scrollIntoView({ block: "start", behavior: "instant" });
+  }, [index, paused, stopped, activities.length]);
+
   // ---- preparation ---------------------------------------------------------------------------
+  const monthHref = `/maternelle/${levelSlug}/lecons?mois=${session.date.slice(0, 7)}`;
+  if (index === -1 && savedProgress === "completed" && !replayAllowed) {
+    return (
+      <section className="flex flex-col items-start gap-4" aria-labelledby="terminee">
+        <h2 id="terminee" className="text-2xl font-bold">
+          Séance terminée
+        </h2>
+        <p className="text-lg">Vous avez déjà terminé cette séance.</p>
+        <Link
+          href={monthHref}
+          className="rounded-lg bg-emerald-700 px-5 py-3 text-lg font-semibold text-white"
+        >
+          Retour aux leçons du mois
+        </Link>
+        <button
+          type="button"
+          onClick={() => setReplayAllowed(true)}
+          className="rounded-lg border-2 border-stone-300 px-5 py-3 text-lg font-medium"
+        >
+          Rejouer la séance
+        </button>
+      </section>
+    );
+  }
   if (index === -1) {
     return (
       <section className="flex flex-col gap-6" aria-labelledby="preparation">
@@ -129,6 +163,23 @@ function SessionFlow({ session, levelSlug }: { session: SessionDay; levelSlug: s
             Environ {session.totalMinutes} minutes, en une fois ou en deux.
           </p>
         </div>
+
+        {resumable !== null && (
+          <button
+            type="button"
+            onClick={() => goTo(resumable)}
+            className="rounded-lg bg-emerald-700 px-5 py-3 text-lg font-semibold text-white"
+          >
+            Reprendre où nous nous étions arrêtés (activité {resumable + 1})
+          </button>
+        )}
+        <ul className="flex flex-col gap-2 text-base text-stone-700" aria-label="Au programme">
+          {session.steps.map((step) => (
+            <li key={step.position}>
+              <span className="font-semibold">{step.lessonTitle}</span> · {step.lessonSummary}
+            </li>
+          ))}
+        </ul>
 
         {session.materials.length === 0 ? (
           <p className="text-lg">Rien à préparer : tout se fait avec ce que vous avez.</p>
@@ -186,20 +237,14 @@ function SessionFlow({ session, levelSlug }: { session: SessionDay; levelSlug: s
         <button
           type="button"
           onClick={() => goTo(0)}
-          className="rounded-2xl bg-emerald-700 px-6 py-4 text-xl font-semibold text-white shadow-sm hover:bg-emerald-800"
+          className={
+            resumable === null
+              ? "rounded-lg bg-emerald-700 px-6 py-4 text-xl font-semibold text-white hover:bg-emerald-800"
+              : "rounded-lg border-2 border-stone-300 px-6 py-3 text-lg font-medium"
+          }
         >
-          Commencer la leçon
+          {resumable === null ? "Commencer la séance" : "Recommencer depuis le début"}
         </button>
-
-        {resumable !== null && (
-          <button
-            type="button"
-            onClick={() => goTo(resumable)}
-            className="rounded-2xl border-2 border-emerald-700 px-6 py-3 text-lg font-medium text-emerald-800"
-          >
-            Reprendre où nous nous étions arrêtés (activité {resumable + 1})
-          </button>
-        )}
       </section>
     );
   }
@@ -208,7 +253,7 @@ function SessionFlow({ session, levelSlug }: { session: SessionDay; levelSlug: s
   if (stopped) {
     return (
       <section className="flex flex-col items-start gap-5" aria-labelledby="arret">
-        <h2 id="arret" className="text-3xl font-bold">
+        <h2 ref={phaseHeading} tabIndex={-1} id="arret" className="text-3xl font-bold">
           On s’arrête là pour aujourd’hui.
         </h2>
         {index === 0 ? (
@@ -246,7 +291,7 @@ function SessionFlow({ session, levelSlug }: { session: SessionDay; levelSlug: s
   if (index >= activities.length) {
     return (
       <section className="flex flex-col items-start gap-5" aria-labelledby="fin">
-        <h2 id="fin" className="text-3xl font-bold">
+        <h2 ref={phaseHeading} tabIndex={-1} id="fin" className="text-3xl font-bold">
           C’est fini pour aujourd’hui !
         </h2>
         <p className="text-lg">
@@ -268,10 +313,16 @@ function SessionFlow({ session, levelSlug }: { session: SessionDay; levelSlug: s
             Noter comment ça s’est passé
           </Link>
           <Link
-            href={`/maternelle/${levelSlug}/calendrier`}
+            href={monthHref}
             className="rounded-2xl border-2 border-stone-300 px-5 py-3 text-lg font-medium"
           >
-            Voir le calendrier
+            Retour aux leçons du mois
+          </Link>
+          <Link
+            href={`/maternelle/${levelSlug}`}
+            className="inline-flex min-h-11 items-center font-medium text-emerald-800 underline"
+          >
+            Retour à la classe
           </Link>
         </div>
       </section>
@@ -288,7 +339,7 @@ function SessionFlow({ session, levelSlug }: { session: SessionDay; levelSlug: s
   if (paused) {
     return (
       <section className="flex flex-col items-start gap-5" aria-labelledby="pause">
-        <h2 id="pause" className="text-3xl font-bold">
+        <h2 ref={phaseHeading} tabIndex={-1} id="pause" className="text-3xl font-bold">
           Petite pause.
         </h2>
         <p className="text-lg">
@@ -311,7 +362,7 @@ function SessionFlow({ session, levelSlug }: { session: SessionDay; levelSlug: s
             }}
             className="rounded-2xl border-2 border-stone-300 px-5 py-3 text-lg font-medium"
           >
-            Terminer pour aujourd’hui
+            Arrêter et reprendre plus tard
           </button>
         </div>
       </section>
@@ -441,13 +492,13 @@ function SessionFlow({ session, levelSlug }: { session: SessionDay; levelSlug: s
         </p>
       )}
 
-      <div className="mt-2 flex items-center justify-between gap-3">
+      <div className="mt-2 flex flex-wrap items-center justify-between gap-3">
         <button
           type="button"
           onClick={() => goTo(index - 1)}
           className="rounded-2xl border-2 border-stone-300 px-5 py-3 text-lg font-medium"
         >
-          Précédent
+          Activité précédente
         </button>
         <button
           type="button"
@@ -459,8 +510,8 @@ function SessionFlow({ session, levelSlug }: { session: SessionDay; levelSlug: s
             : // The app cannot see a child run, speak or draw. For those, finishing is the
               // parent's word, and the button says so rather than implying a verdict.
               activity.mode === "off-screen"
-              ? "Terminé"
-              : "Suivant"}
+              ? "Activité terminée"
+              : "Activité suivante"}
         </button>
       </div>
 
@@ -471,14 +522,14 @@ function SessionFlow({ session, levelSlug }: { session: SessionDay; levelSlug: s
           onClick={() => setPaused(true)}
           className="rounded-xl border-2 border-stone-300 px-4 py-2 text-base font-medium"
         >
-          Faire une petite pause
+          Mettre la séance en pause
         </button>
         <button
           type="button"
           onClick={() => setStopped(true)}
           className="rounded-xl border-2 border-stone-300 px-4 py-2 text-base font-medium"
         >
-          Terminer pour aujourd’hui
+          Arrêter et reprendre plus tard
         </button>
       </div>
     </section>
@@ -557,7 +608,7 @@ function ChildScreen({
 export function ProgressBadge({ identity }: { identity: SessionIdentity }) {
   // Browser-only state: the server renders nothing, and the client fills it in on hydration.
   const progress = useSyncExternalStore(
-    subscribeToStorage,
+    subscribeToSessionStorage,
     () => readSessionProgress(identity),
     () => "not_started" as const,
   );

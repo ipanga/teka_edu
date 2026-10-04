@@ -20,6 +20,7 @@ import {
 import { generateDailyPlan } from "@/domain/programme/daily-plan";
 import type { DailyPlan } from "@/domain/programme/types";
 import { getProgramme, getReferenceData } from "@/lib/content/reference-data";
+import { sessionCatalogue } from "./session-catalogue";
 
 /**
  * Turns the canonical content into what the parent's screen needs, and nothing more.
@@ -278,7 +279,11 @@ export function sessionForDay(levelId: string, day: number): SessionDay | undefi
     return undefined;
 
   const plan = generateDailyPlan(schoolDay, programme, data.lessons);
-  if (plan.status === "no-content" || plan.status === "not-instructional") return undefined;
+  if (
+    plan.status !== "complete" ||
+    plan.sessions.some((step) => step.lesson?.status !== "approved")
+  )
+    return undefined;
 
   return {
     schoolYearId: SCHOOL_YEAR_ID,
@@ -315,16 +320,9 @@ export function sessionForDay(levelId: string, day: number): SessionDay | undefi
 
 /** Instructional days that already have a session for this class, in order. */
 export function authoredDays(levelId: string): number[] {
-  const days: number[] = [];
-  for (const day of schoolDays()) {
-    if (
-      day.instructionalDay !== null &&
-      sessionForDay(levelId, day.instructionalDay) !== undefined
-    ) {
-      days.push(day.instructionalDay);
-    }
-  }
-  return days;
+  return sessionCatalogue(levelId, SCHOOL_YEAR_ID).flatMap((month) =>
+    month.sessions.map((session) => session.instructionalDay),
+  );
 }
 
 /**
@@ -361,7 +359,7 @@ export function todaysSession(levelId: string): {
   const reason = day?.instructional
     ? "La séance de cette date n’est pas encore disponible."
     : day === undefined
-      ? "Cette date ne fait pas partie de l’année scolaire 2026-2027."
+      ? `Cette date ne fait pas partie de l’année scolaire ${SCHOOL_YEAR_ID}.`
       : (day.reasons[0]?.name ??
         (day.reasons[0]?.code === "weekend"
           ? "C’est le week-end : il n’y a pas de séance aujourd’hui."

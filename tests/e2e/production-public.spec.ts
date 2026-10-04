@@ -129,9 +129,9 @@ test.describe("Teka Edu in production, seen by someone with no account", () => {
     await page.goto("/maternelle/3/seance/3");
 
     // The pictures live inside the session, not on its cover: a parent presses start first.
-    await page.getByRole("button", { name: "Commencer la leçon" }).click();
+    await page.getByRole("button", { name: "Commencer la séance" }).click();
     await page
-      .getByRole("button", { name: /Suivant|Terminé/ })
+      .getByRole("button", { name: /Activité suivante|Activité terminée/ })
       .first()
       .click();
 

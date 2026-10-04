@@ -1,5 +1,94 @@
 # Codex continuation
 
+Current task override, 2026-10-04: authorized live parent UX/navigation improvement on
+codex/flexible-parent-navigation-ux from develop ae07c243. Audit complete; implementation
+and final format/lint/types/520-unit/content/lapse/freeze/build/client checks pass; full local
+browser suite 96 passed, zero failed, nine production-only skips. All eight supported sizes,
+P1 and new navigation journeys pass; fresh-origin manual phone journey/evidence reviewed.
+Read docs/ux/PARENT_NAVIGATION_ARCHITECTURE.md and ACTIVE_TASK. Production stays read-only;
+no merge/deploy/DB write/curriculum changes. PR #98 is the focused develop UX review boundary.
+STOP for owner review; check final-head CI before integration, never infer it from local tests.
+PR #97 is OPEN/untouched, its DB CI failed on ECR rate exceeded;
+verified production evidence preserved below and in work/archive/2026-10-october-production-promotion.md.
+Owner must reconcile #97 documentation overlap before UX integration.
+
+## Previous completed production release
+
+Current release COMPLETE, 2026-10-04: October healthy in production. PR #96 merged after all five
+required checks; main 81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05, tree equals validated develop
+ae07c243. Production run 37182712879 SUCCEEDED. Only expected October migration pending/applied
+through normal workflow; final PROD listing 46 matching versions, zero pending. GET-only
+reference verification matches 36 tables / 6,170 rows; no user data queried or manual PROD writes.
+Deployment dpl_HkEkuSvjzXs5wkh6aW7GtHnxyZkL READY/production, generated URL
+https://teka-me63jfn92-teka10.vercel.app; public canonical https://teka-edu.vercel.app.
+Deployed smoke 87 PASS / zero failures / nine public-only skips, separate public 9/9 PASS.
+All 22 October API payloads match repository; Day 45 absent; all 54 media assets match hashes,
+34 SVG/20 WebP, no 404/500. Eight supported sizes/P1 journeys passed. Repository final audit,
+coverage/media/packages/lapse pass; actual PROD canonical rows preserve approvals/digests/content.
+No rollback/fix-forward required. Recovery remains previous production dpl_A43iQuRrzzJLRm2PdCf9CWmdedz5;
+no verified database backup/PITR. Prior staging registry 404 not exercised by production workflow;
+publishing/assets passed, no cleanup. Docs-only protected develop PR carries the checkpoint on
+codex/october-integration-checkpoint; do not merge automatically and trigger extra staging.
+STOP and await owner decision: documentation PR review/integration or a new bounded task.
+No production redeploy, November, 2eme, P2/P3, offline/PWA, audio or refactoring authorized.
+Read ACTIVE_TASK.md and live remote state before any action; previous gates below are historical.
+
+## Historical promotion preparation
+
+Current task: owner-authorized controlled production promotion, 2026-10-04. PR #96 promoted
+exact validated develop ae07c243d4c1dd8ce710edf8d9c93e8582649448 to main after all five
+required checks passed in run 37182500231. Merge 2026-10-04T06:24:26Z gives main
+81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05, tree identical to develop. Production run
+37182712879 is running merge-commit CI; hosted changes not started yet.
+All pre-production gates passed: clean tree, unchanged develop, reviewed main diff,
+production secret names, one expected PROD pending migration 20261003195954, generator safety.
+Recovery point: main ac3ebf9b9bd00662def3e7ec206aff1954f4694d, production deployment
+dpl_A43iQuRrzzJLRm2PdCf9CWmdedz5 at https://teka-edu.vercel.app. No verified database backup
+or PITR; use forward correction, never destructive automatic SQL rollback. No mutation yet.
+Observe actual PR CI; stop on any failure/change. If green, guarded normal merge commit into main,
+then protected production workflow/preflight/listing/dry-run/apply, canonical read-only validation,
+deployment and non-destructive smoke/public-device verification. No new code/content/migrations.
+After healthy October production, STOP; no November, 2eme, P2/P3, offline/PWA, audio or refactor.
+ACTIVE_TASK.md holds live state; previous staging evidence below is historical.
+
+## Historical staging checkpoint
+
+Latest result: owner-authorized failed-job retry of 37153385137, attempt 2, SUCCEEDED at unchanged
+develop ae07c243d4c1dd8ce710edf8d9c93e8582649448. Database job 111297974423 passed; deploy
+job 111298348789 applied the sole pending October migration and passed deployed smoke:
+87 passes, zero failures, nine production-only skips. Retry pgTAP 154/154 PASS.
+Final DEV listing matches all versions; GET-only canonical validation matches 36 tables / 6,170
+rows. Preview dpl_6N4jG4aCeaJxqfRSFVK4ceAZ8QDv READY:
+https://teka-1y4i9trp9-teka10.vercel.app; alias https://teka-edu-staging.vercel.app.
+Independent alias health reports exact integrated SHA, staging and DEV ref; three new SVG bytes
+match accepted assets. Audit/coverage/media/lapse pass, all 15 packages fresh, September/Batch 1/P1
+preserved. No application/SQL/tests/workflow changes or manual DEV mutation. Registry listing
+404 warning prevented capacity check/prune; monitor headroom, not a failed deployment.
+STOP: October is ready for separate production-promotion authorization. Nothing authorizes main,
+PROD, November, P2/P3 or 2eme. ACTIVE_TASK.md holds the current checkpoint; history follows.
+
+## Historical attempt 1
+
+Current task: owner-authorized PR #95 DEV/staging integration. PR merged at
+2026-10-03T20:57:24Z into develop ae07c243d4c1dd8ce710edf8d9c93e8582649448.
+Reviewed head f059cb18daa4579c1db2f659260cd5bf3baf516f and integrated tree are identical.
+All immediate merge gates passed. DEV read-only listing showed only 20261003195954 pending;
+no manual mutation. Staging run 37153385137 FAILED before hosted writes: pgTAP runner image
+public.ecr.aws/supabase/pg_prove:3.36 could not be pulled after three registry/network timeouts.
+Local migration/reset succeeded, but pgTAP never ran. Quality/504 units, build/bundle/87 local
+browser passes (nine production-only skips), portable/Vercel Docker checks passed.
+Deploy job SKIPPED: October remains pending in final DEV listing; no new deployment or smoke.
+STOP. Recommend owner-directed retry of failed jobs on the same run after registry recovery;
+do not alter tests/migrations for this infrastructure failure or manually apply DEV migration.
+After a successful retry, verify workflow listing, apply, hosted canonical rows and deployed smoke.
+Integrated final audit passes; September/Batch 1/P1 preserved. Documentation branch:
+codex/october-integration-checkpoint. See ACTIVE_TASK.md for current live result.
+Production is untouched and unauthorized; main stays ac3ebf9b9bd00662def3e7ec206aff1954f4694d.
+October is NOT ready for production authorization until DEV/staging verification succeeds.
+Stop before main/PROD, November, P2/P3 or 2eme.
+
+## Historical approval preparation
+
 Current task: finalize owner-authorized October integration after independent accepted verdict
 at `1f573c508b30ddd0ade57d7a8cd8329d5eb901ce`. All 88 lessons now approved via approve-week
 (new approvals, not lapsed-only), with fresh distinct digests and owner-relayed history.
