@@ -13,15 +13,30 @@ Updated by: Codex
 
 ## Navigation staging integration — 2026-10-04
 
-IN PROGRESS: owner authorized retiring superseded PR #97 and integrating PR #98 into develop.
+STAGING VALIDATED: owner authorized retiring superseded PR #97 and integrating PR #98 into develop.
 #97 closed without merge; branch retained. Production archive is byte-identical to #97's
 ACTIVE_TASK and all historical production information remains in the other durable files.
 #98 passed four required checks at exact head 069fe163 and squash-merged 2026-10-04T16:04:03Z
 into develop 047de0f14e18f9bb03b589c77478d409c6da2932; trees are identical.
 Read-only preflight DEV listing: 46 matched migrations, zero pending. No new migration/schema,
-canonical content/media/approval changes or manual hosted writes. Staging run 37215383441 is
-running merge-commit CI; deployment and deployed UX validation pending. Production main stays
-81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05. STOP before production promotion and later work.
+canonical content/media/approval changes or manual hosted writes. Staging run 37215383441
+SUCCEEDED: quality (520 units), build/client/E2E, DB (154 pgTAP), Docker and deployed smoke
+96 PASS / zero failures / nine production-only skips. DEV dry-run/apply both reported already
+up to date; final read-only history has 46 matched versions, zero pending, no migration applied.
+Deployment dpl_6Zfr3NRw3URZ7HTzcDuSBEaaPxqw is READY/preview:
+https://teka-d3s6v9qxm-teka10.vercel.app; stable https://teka-edu-staging.vercel.app.
+Health confirms exact integrated SHA, staging and DEV quyhkkizsmosybavoewd.
+Recovered completed workflow after browser approval interruption; no duplicate merge/deploy.
+Fresh browser now works. Independent clean-origin phone journey completed, 22 October sessions
+directly listed, September/October switching/calendar/replay/context/resume/P1 story isolation
+verified. All eight supported home/list sizes have zero overflow; keyboard month switching passes.
+Five actual staging screenshots recorded in docs/ux/evidence. Targeted units 39/39, zero lapse,
+420-file educational freeze and all 15 packages pass again. No application/test/workflow change.
+GET-only deployed verification: all 22 October API payloads plus Day 45 exactly match repository
+route output; all 81 distinct accepted media files/frame bytes and SHA-256 hashes match (HTTP 200).
+Existing VCR registry-listing 404 prevents capacity check/prune; deployment succeeded, monitor risk.
+Production health/main remain 81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05. STOP: UX release is
+ready for separate owner production-promotion authorization, not automatically authorized.
 
 ## Historical flexible parent navigation implementation — 2026-10-04
 

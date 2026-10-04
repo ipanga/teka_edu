@@ -148,3 +148,36 @@ primary 52px. No horizontal overflow at any of the eight supported sizes.
 All-size preparation/handoff/completion screenshots are also produced by the committed
 Playwright test in ignored local `test-results/`. Evidence was inspected visually.
 Review PR [#98](https://github.com/ipanga/teka_edu/pull/98); do not merge or deploy.
+
+## Deployed staging acceptance - 2026-10-04
+
+The implementation review boundary above is historical. Owner authorized integration:
+PR #97 closed without merge (production archive byte-identical), PR #98 squash-merged at
+2026-10-04T16:04:03Z into develop 047de0f14e18f9bb03b589c77478d409c6da2932.
+Staging run [37215383441](https://github.com/ipanga/teka_edu/actions/runs/37215383441) succeeded:
+all four merge-commit CI jobs, 520 units, 154 pgTAP, both Docker image smokes; deployed full suite
+96 passed, zero failed, nine production-only skipped. All eight new navigation and P1 journeys
+passed. DEV listing/dry-run/apply were already up to date; no migration applied, 46 matched versions.
+
+Actual READY preview dpl_6Zfr3NRw3URZ7HTzcDuSBEaaPxqw:
+https://teka-d3s6v9qxm-teka10.vercel.app, alias https://teka-edu-staging.vercel.app.
+Health matches exact integrated SHA, staging and DEV ref quyhkkizsmosybavoewd.
+Recovery after stuck browser approval used a fresh ordinary browser request, no CDP/protection change,
+duplicate merge or deployment. Independent clean-origin phone journey completed through October
+preparation/child/next/pause/reload/class-resume/completion/month return/completed guard/replay.
+September and October have 22 links each; calendar agrees. Sunday catch-up is honest, resume wins,
+other class stays 0/22. Kumu page 2 survives handoff/pause; next story starts at 1. Keyboard month
+switching works. Home and October list measured at all eight sizes: zero overflow; third phone
+class fully visible even at 320x740 (top 524px, bottom 638px). Viewport override reset.
+
+| Phone home                                    | Phone class                                    | Phone October                                    | Tablet October                                    | Laptop October                                    |
+| --------------------------------------------- | ---------------------------------------------- | ------------------------------------------------ | ------------------------------------------------- | ------------------------------------------------- |
+| [Screenshot](evidence/staging-phone-home.jpg) | [Screenshot](evidence/staging-phone-class.jpg) | [Screenshot](evidence/staging-phone-october.jpg) | [Screenshot](evidence/staging-tablet-october.jpg) | [Screenshot](evidence/staging-laptop-october.jpg) |
+
+420-file educational freeze, all 15 packages, zero lapses and targeted navigation/storage/P1 units
+39/39 pass again. Production main and GET health stay 81b759f; no PROD mutation.
+GET-only comparison: all 22 October API payloads plus Day 45 match repository route output;
+all 81 distinct accepted media files (including sequence frames) are HTTP 200 and byte/hash exact.
+Existing registry listing 404 still prevents headroom check/prune, although deploy succeeded.
+No real-parent/child study claimed. STOP: ready for separate owner production-promotion authorization,
+not authorized to promote, expand curriculum or implement deferred P2/P3.

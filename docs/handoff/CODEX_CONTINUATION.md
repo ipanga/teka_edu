@@ -5,10 +5,19 @@ PR #97 CLOSED without merge, historical branch retained; its production checkpoi
 preserved (archive byte-identical). PR #98 MERGED by protected squash at 2026-10-04T16:04:03Z
 into develop 047de0f14e18f9bb03b589c77478d409c6da2932, tree equals reviewed head 069fe163.
 Four required PR checks passed. DEV preflight: 46 matched migrations, zero pending.
-Run 37215383441 is performing merge-commit CI before normal staging. Observe listing/dry-run:
-STOP on any unexpected pending migration, never manually apply. Then validate actual deployed
-parent/month/session journeys and all eight supported sizes. Documentation branch is
-codex/navigation-staging-checkpoint. No application/content/schema/workflow changes.
+Run 37215383441 SUCCEEDED: all four merge-commit CI jobs (520 units, 154 pgTAP, build/client/E2E,
+Docker) plus deployed 96 PASS / zero failures / nine public-production skips.
+DEV listing/dry-run/apply all up to date; final 46 matching versions, none pending/applied.
+READY preview dpl_6Zfr3NRw3URZ7HTzcDuSBEaaPxqw at https://teka-d3s6v9qxm-teka10.vercel.app;
+alias https://teka-edu-staging.vercel.app health matches exact SHA, staging and DEV ref.
+Browser request recovered after stuck approval; actual clean-origin phone journey, monthly list,
+calendar/context/replay/resume, P1 story-page handoff/isolation and eight home/list sizes verified.
+Five staging screenshots in docs/ux/evidence. Targeted units 39/39, educational freeze/15 packages,
+zero lapse pass. No repeated merge/deploy or application/content/schema/workflow change.
+GET-only corroboration matches 22 October API payloads plus absent Day 45, and all 81 distinct
+accepted media files/frame bytes and hashes return HTTP 200 unchanged.
+Documentation branch codex/navigation-staging-checkpoint. Existing VCR listing 404 means headroom
+check/prune did not run, although deploy succeeded. STOP for separate production authorization.
 Production main remains 81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05; production promotion is
 NOT authorized. Read ACTIVE_TASK for current live state; preceding checkpoints are historical.
 
