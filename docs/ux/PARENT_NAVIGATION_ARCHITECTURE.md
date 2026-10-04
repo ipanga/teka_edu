@@ -4,6 +4,24 @@ Date: 2026-10-04. Scope: navigation, presentation and browser-local state only.
 Base: develop `ae07c243d4c1dd8ce710edf8d9c93e8582649448`.
 Production audit: `https://teka-edu.vercel.app`, main `81b759f`.
 
+## Current release boundary - production attempt
+
+2026-10-04: PR #99 promoted exact owner-authorized develop 047de0f to main
+`ac003f8580ca81dcfb426a70c45c02102b8e0551` after all five required checks passed.
+The normal production run [37230143801](https://github.com/ipanga/teka_edu/actions/runs/37230143801)
+FAILED after successful app/container build: VCR rejected the manifest because the repository
+had reached its maximum allowed image count. Failed deployment dpl_Hjk6B3F9C9wPuT9FThxwMr7LXrfr
+never became READY. This is infrastructure capacity, not demonstrated UX or database regression.
+Migration listing/dry-run/apply were no-op (46 matched, zero applied); PROD canonical 36 tables /
+6,170 rows remain exact. No user/child/progress table queried or manual hosted mutation.
+The public URL still serves healthy old main 81b759f; the navigation described below is healthy
+on staging but NOT live/accepted in production. New deployed production smoke/device/session
+acceptance is unrun, not passed. All earlier implementation/staging evidence remains valid.
+Fresh targeted units 31/31 include synthetic future-month discovery, honest Today/Catch-up,
+resume priority, deliberate replay and P1 state preservation.
+STOP pending owner-authorized bounded registry remediation and same-SHA failed-job retry.
+No image deletion, privilege change, code/test/SQL modification, retry or rollback performed.
+
 ## Live audit before changes
 
 Fresh-parent journey actually followed: home, 3eme class, only browsing link, September

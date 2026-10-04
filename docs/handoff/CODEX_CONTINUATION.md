@@ -1,18 +1,25 @@
 # Codex continuation
 
-Current task override: owner-authorized exact navigation production promotion, 2026-10-04.
-Develop 047de0f14e18f9bb03b589c77478d409c6da2932 unchanged. PR #99 MERGED by guarded
-merge commit after all five required checks in run 37229831365 passed.
-Main ac003f8580ca81dcfb426a70c45c02102b8e0551, tree identical to authorized develop;
-merged 2026-10-04T19:55:58Z. Automatic production run 37230143801 running merge CI.
-PROD preflight history 46 matched and dry-run no-op; no hosted mutation/deployment yet.
-Recovery deployment dpl_HkEkuSvjzXs5wkh6aW7GtHnxyZkL READY at old main.
-Documentation-only branch codex/navigation-production-checkpoint preserves completed staging
-evidence without changing release source. Read ACTIVE_TASK's current override first.
-Next: normal workflow/environment approval (no duplicate dispatch), production-safe
-smoke/browser/device/integrity checks. Stop on unexpected migration/failure and after healthy
-release. Earlier no-production-authorization boundaries below are superseded only for this
-exact owner-authorized release. No unrelated scope is authorized.
+Current task override: STOPPED ON PRODUCTION REGISTRY CAPACITY, 2026-10-04.
+PR #99 MERGED by guarded merge commit after all five checks in 37229831365 passed.
+Main ac003f8580ca81dcfb426a70c45c02102b8e0551, exact authorized develop 047de0f tree;
+merged 2026-10-04T19:55:58Z. Automatic production run 37230143801 FAILED, job 111518388259.
+All merge-commit CI green; normal production reviewer approval, no protection bypass.
+App/image build succeeded; VCR manifest push denied because repository reached maximum
+allowed image count. NOT transient network/SQL/content failure. No retry/cleanup/code change.
+Failed deployment dpl_Hjk6B3F9C9wPuT9FThxwMr7LXrfr ERROR at ac003f8; no new smoke or UX
+production acceptance. Canonical https://teka-edu.vercel.app still healthy on old main
+81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05, PROD identity. Live/recovery
+dpl_HkEkuSvjzXs5wkh6aW7GtHnxyZkL retained READY. No rollback/revert needed/performed.
+Workflow migration dry-run/apply both no-op; final PROD 46 matched, zero pending. GET-only
+all 36 canonical tables / 6,170 rows exact, no user tables/manual writes. 420-file freeze,
+176/88 approvals, zero stale/lapses, 15 packages preserved; fresh targeted units 31/31.
+Documentation branch codex/navigation-production-checkpoint pushed; no healthy-release docs PR
+while failed. Read ACTIVE_TASK first. Owner must authorize bounded registry-capacity inspection/
+remediation preserving live and rollback dependencies, then same-main failed-job retry.
+Do not delete images, expand permissions, retry, weaken tests, or change SQL/application under
+this stopped task. After an authorized successful retry, finish new production acceptance/docs.
+No November/2eme/P2/P3/offline/audio/redesign authorized.
 
 ## Completed staging checkpoint
 

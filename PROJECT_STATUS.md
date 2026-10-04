@@ -7,21 +7,36 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-10-04
 Branch:     codex/navigation-production-checkpoint
-Commit:     develop 047de0f; promoted main ac003f8580ca81dcfb426a70c45c02102b8e0551; deployment pending
+Commit:     main ac003f8580ca81dcfb426a70c45c02102b8e0551; public production still 81b759f
 Updated by: Codex
 ```
 
 ## Navigation production promotion — 2026-10-04
 
-IN PROGRESS, explicitly owner-authorized: exact develop 047de0f is unchanged and staging green.
+STOPPED ON REGISTRY CAPACITY; new navigation is NOT LIVE in production.
+Explicitly owner-authorized exact develop 047de0f unchanged and staging green.
 Protected PR #99 develop -> main MERGED 2026-10-04T19:55:58Z after all five required checks
 passed in run 37229831365. Remote main ac003f8580ca81dcfb426a70c45c02102b8e0551 has the
-exact authorized develop tree. Automatic production run 37230143801 is running merge CI.
+exact authorized develop tree. Automatic production run 37230143801 FAILED in deploy job
+111518388259 after all merge-commit CI passed (520 units, 154 pgTAP, build/client/E2E/Docker).
+Normal production reviewer approval used; no approval/protection bypass.
 Full release delta is validated navigation and related documentation only; frozen curriculum,
 accepted media/approvals, objectives, schema/migrations, workflows/environment unchanged.
 PROD read-only listing/dry-run: 46 matched migrations, no pending migrations/seeds/roles.
-No new production deployment or hosted mutation yet; health remains main 81b759f.
-See ACTIVE_TASK for guarded merge/deploy/smoke recovery point and exact stop boundary.
+Workflow migration dry-run/apply both reported already up to date; zero migrations applied.
+Failed Vercel dpl_Hjk6B3F9C9wPuT9FThxwMr7LXrfr ERROR at new main ac003f8. App/image build
+succeeded; manifest push rejected: repository reached maximum allowed number of images.
+This is registry image-count capacity, NOT a network timeout or application/SQL regression.
+New production smoke skipped; new UX/device acceptance not run. No retry/cleanup/rollback.
+Canonical public health remains old main 81b759f/production/PROD, previous READY live deployment
+dpl_HkEkuSvjzXs5wkh6aW7GtHnxyZkL retained. Final PROD listing/dry-run 46 matched, zero pending.
+GET-only actual PROD reference rows match all 36 canonical tables / 6,170 rows. No user tables
+queried/manual writes; protected 420-file freeze, 176/88 approvals, zero stale/lapses, 15 packages.
+Fresh targeted units 31/31, including synthetic future-month regression, pass.
+Owner must authorize bounded registry capacity remediation preserving live/recovery images,
+then a same-SHA failed-job retry. No image deletion, privilege change or blind retry authorized.
+Checkpoint pushed on documentation branch; healthy-release docs PR deferred because deploy failed.
+See ACTIVE_TASK for exact recovery IDs and stop boundary; no expansion/P2/P3 work started.
 
 ## Navigation staging integration — 2026-10-04
 
