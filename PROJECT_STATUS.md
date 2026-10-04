@@ -6,10 +6,20 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 
 ```text
 Date:       2026-10-04
-Branch:     codex/navigation-staging-checkpoint
+Branch:     codex/navigation-production-checkpoint
 Commit:     integrated develop 047de0f14e18f9bb03b589c77478d409c6da2932; production unchanged 81b759f
 Updated by: Codex
 ```
+
+## Navigation production promotion — 2026-10-04
+
+IN PROGRESS, explicitly owner-authorized: exact develop 047de0f is unchanged and staging green.
+Protected PR #99 develop -> main OPEN; CI run 37229831365 pending (Promotion source passed).
+Full release delta is validated navigation and related documentation only; frozen curriculum,
+accepted media/approvals, objectives, schema/migrations, workflows/environment unchanged.
+PROD read-only listing/dry-run: 46 matched migrations, no pending migrations/seeds/roles.
+No new production deployment or hosted mutation yet; health remains main 81b759f.
+See ACTIVE_TASK for guarded merge/deploy/smoke recovery point and exact stop boundary.
 
 ## Navigation staging integration — 2026-10-04
 

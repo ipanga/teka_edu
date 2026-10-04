@@ -1,5 +1,19 @@
 # Codex continuation
 
+Current task override: owner-authorized exact navigation production promotion, 2026-10-04.
+Develop 047de0f14e18f9bb03b589c77478d409c6da2932 unchanged; main still 81b759f.
+Protected production PR #99 OPEN; CI run 37229831365 pending, Promotion source passed.
+PROD preflight history 46 matched and dry-run no-op; no hosted mutation/deployment yet.
+Recovery deployment dpl_HkEkuSvjzXs5wkh6aW7GtHnxyZkL READY at old main.
+Documentation-only branch codex/navigation-production-checkpoint preserves completed staging
+evidence without changing release source. Read ACTIVE_TASK's current override first.
+Next: all-five-check gate, guarded merge commit, normal production workflow, production-safe
+smoke/browser/device/integrity checks. Stop on unexpected migration/failure and after healthy
+release. Earlier no-production-authorization boundaries below are superseded only for this
+exact owner-authorized release. No unrelated scope is authorized.
+
+## Completed staging checkpoint
+
 Current task override: owner-authorized navigation staging integration, 2026-10-04.
 PR #97 CLOSED without merge, historical branch retained; its production checkpoint is fully
 preserved (archive byte-identical). PR #98 MERGED by protected squash at 2026-10-04T16:04:03Z

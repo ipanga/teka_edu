@@ -1,5 +1,30 @@
 # Active Task
 
+## Current production promotion override
+
+2026-10-04: owner explicitly authorized controlled production promotion of exact develop
+`047de0f14e18f9bb03b589c77478d409c6da2932`. The staging checkpoint below is completed history.
+Current documentation branch: `codex/navigation-production-checkpoint`.
+Production PR #99: https://github.com/ipanga/teka_edu/pull/99, develop -> main, OPEN.
+Base `81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05`; exact head verified, mergeable.
+Production PR CI run `37229831365`: Promotion source passed; other four checks pending.
+Do not merge before all five required checks pass; use guarded merge commit, never squash.
+
+Preflight: clean working tree, fetched all remotes; develop unchanged. Full release delta is
+validated UX and related docs only. Canonical/objective/media/approval/schema/migration,
+workflow/environment/dependency paths are identical. PROD read-only history: 46 matched;
+dry-run upToDate=true, migrations/seeds/roles empty. No hosted mutation or deploy yet.
+Recovery deployment: `dpl_HkEkuSvjzXs5wkh6aW7GtHnxyZkL`, READY/production at old main,
+https://teka-me63jfn92-teka10.vercel.app; canonical https://teka-edu.vercel.app.
+Staging run `37215383441` reverified successful; no repeated staging deploy.
+
+Exact next action: inspect PR #99 final-head required checks, guard exact head/base and merge
+only when green; observe normal protected production workflow with DB apply expected no-op.
+Then verify production-safe smoke, eight devices, actual browser journey and integrity.
+Stop on a new failure or unexpected migration. After healthy production, finalize these docs
+through a protected develop PR; do not automatically merge the documentation PR or start
+November, 2eme, P2/P3, offline/PWA, audio or unrelated polish.
+
 ## Task
 
 Recover and complete parent-navigation staging UX validation after browser approval interruption.
