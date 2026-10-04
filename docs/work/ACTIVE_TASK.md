@@ -2,16 +2,16 @@
 
 ## Task
 
-Complete owner-authorized October DEV/staging integration and stop before production.
+Controlled production promotion of exact validated October release; stop when healthy.
 
 ## Objective
 
-Merge reviewed PR #95 into develop, observe the normal DEV/staging workflow, verify hosted
-reference data and deployed smoke, preserve October/September/P1, and record the production gate.
+Promote exact develop ae07c243 through PR #96 and protected production workflow; verify PROD
+reference data, deployment, non-destructive smoke and supported devices; then stop.
 
 ## Status
 
-`awaiting_user`
+`awaiting_ci`
 
 ## Branch
 
@@ -30,6 +30,17 @@ authoring base `1ada5f2` and merged P1 develop `603efdc` remain ancestors.
 2026-10-03
 
 ## Last Checkpoint
+
+2026-10-04: owner explicitly authorized controlled production promotion with gates. All remotes
+fetched, clean tree, develop unchanged ae07c243, main ac3ebf9. Main->develop diff reviewed:
+91 files, validated P1 #94/October #95/prior release docs only. Required production secret names
+verified; main allows merge-commit PR only, five required checks, production reviewer gate.
+Actual read-only PROD history: all prior versions match, only 20261003195954 pending.
+Recovery: READY dpl_A43iQuRrzzJLRm2PdCf9CWmdedz5, alias https://teka-edu.vercel.app,
+generated https://teka-dzw8t0mwf-teka10.vercel.app, healthy exact main and PROD ref eganrivpkjhozkkahyxy.
+Application rollback available; no database backup/PITR verified, reference-only forward-fix policy.
+PR #96 open at exact source; CI 37182500231 pending, Promotion source PASS. No mutation yet.
+Staging health still validated SHA/DEV; final audit/lapse rerun PASS. Prior phase evidence follows.
 
 Owner authorized failed-job retry only, with no application/SQL/test/workflow changes.
 Remote develop remains exact ae07c243d4c1dd8ce710edf8d9c93e8582649448; previous failure
@@ -55,13 +66,13 @@ Integrated tree exactly equals reviewed head; final audit/media report pass agai
 
 ## Scope
 
-Authorized PR #95 merge, normal DEV migration/staging workflow, validation and three checkpoint
-files. No accepted pedagogy, media, schema or runtime edits.
+Authorized exact October production PR/merge, normal protected PROD workflow, read-only PROD
+reference validation, non-destructive browser/media/device checks and protected checkpoint docs PR.
 
 ## Out of Scope
 
-Manual DEV mutation outside the established workflow, main merge, PROD migration/deployment,
-new media generation, November, P2/P3, 2ème maternelle and TV/Smart TV support.
+Manual PROD table edits, unexpected migrations, new feature/content/media/UX/schema changes,
+November, P2/P3, 2ème maternelle, offline/PWA, audio, refactoring and TV/Smart TV support.
 
 ## Product Decisions
 
@@ -79,11 +90,11 @@ validation pass. Historical review evidence and accepted media/P1 remain unchang
 
 ## In Progress
 
-None. Attempt 2 completed successfully. Production remains unauthorized.
+PR #96 CI run 37182500231. Production unchanged until all required checks pass and guarded merge.
 
 ## Remaining
 
-Owner decision on separate production promotion. No remaining October DEV/staging blocker.
+Complete authorized production gates, deployment and actual safe verification; stop on failure.
 
 ## Validation State
 
@@ -169,15 +180,16 @@ capacity could not be checked, no pruning occurred. Deployment succeeded; monito
 
 ## User Decisions Needed
 
-Separate production-promotion authorization. DEV/staging is now fully verified; production
-remains untouched and unauthorized. No later content/UX work authorized.
+Production promotion authorized subject to gates; no later content/UX work authorized.
 
 ## Exact Resume Point
 
-STOP at production decision boundary. Recommend separate owner authorization for October
-production promotion, subject to fresh promotion-source/required CI/PROD migration gates.
-Do not rerun successful staging, push develop, manually apply DEV, merge main, migrate/deploy
-PROD or begin later work without the relevant explicit authorization.
+Read live PR #96 checks/run 37182500231; verify source still exact ae07c243 and base/main state.
+If all five required checks green, merge normally with exact head guard. Record new main and run;
+follow production environment approval/preflight and actual migration listing/dry-run. Expected
+only 20261003195954; stop on discrepancy. No manual PROD writes or blind retry. Verify all 36
+canonical tables GET-only, deployment, health, smoke/public entry and supported devices; document
+results through normal protected docs PR. Once October healthy in production, STOP.
 
 ## Resume Verification
 

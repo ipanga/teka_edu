@@ -1,5 +1,20 @@
 # Codex continuation
 
+Current task: owner-authorized controlled production promotion, 2026-10-04. PR #96 promotes
+exact validated develop ae07c243d4c1dd8ce710edf8d9c93e8582649448 to main; CI run 37182500231
+pending. All pre-production gates passed: clean tree, unchanged develop, reviewed main diff,
+production secret names, one expected PROD pending migration 20261003195954, generator safety.
+Recovery point: main ac3ebf9b9bd00662def3e7ec206aff1954f4694d, production deployment
+dpl_A43iQuRrzzJLRm2PdCf9CWmdedz5 at https://teka-edu.vercel.app. No verified database backup
+or PITR; use forward correction, never destructive automatic SQL rollback. No mutation yet.
+Observe actual PR CI; stop on any failure/change. If green, guarded normal merge commit into main,
+then protected production workflow/preflight/listing/dry-run/apply, canonical read-only validation,
+deployment and non-destructive smoke/public-device verification. No new code/content/migrations.
+After healthy October production, STOP; no November, 2eme, P2/P3, offline/PWA, audio or refactor.
+ACTIVE_TASK.md holds live state; previous staging evidence below is historical.
+
+## Historical staging checkpoint
+
 Latest result: owner-authorized failed-job retry of 37153385137, attempt 2, SUCCEEDED at unchanged
 develop ae07c243d4c1dd8ce710edf8d9c93e8582649448. Database job 111297974423 passed; deploy
 job 111298348789 applied the sole pending October migration and passed deployed smoke:

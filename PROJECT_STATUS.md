@@ -5,13 +5,28 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-10-03
+Date:       2026-10-04
 Branch:     codex/october-integration-checkpoint
 Commit:     integrated develop ae07c243d4c1dd8ce710edf8d9c93e8582649448
 Updated by: Codex
 ```
 
-## October DEV/staging integration — 2026-10-03
+## October controlled production promotion — 2026-10-04
+
+Owner explicitly authorized promotion of exact develop ae07c243d4c1dd8ce710edf8d9c93e8582649448.
+Fetch/clean-tree/remote checks pass; main ac3ebf9b9bd00662def3e7ec206aff1954f4694d.
+Reviewed all 91 changed files/commit scope from main: validated October, P1 PR #94 and prior
+release documentation only. One PROD pending migration: 20261003195954, exact generated
+36-table reference payload; no schema or auth/user/child/progress/submission/session changes.
+Required production secret names verified. Recovery point: READY production deployment
+dpl_A43iQuRrzzJLRm2PdCf9CWmdedz5, https://teka-edu.vercel.app, generated URL
+https://teka-dzw8t0mwf-teka10.vercel.app. Application rollback to this production deployment;
+database forward-fix only, no backup/PITR recovery point verified or claimed.
+Production PR #96 develop -> main is open; CI run 37182500231 pending. Promotion source passed.
+Staging health still exact validated SHA and DEV ref. Repository October final audit/lapse pass.
+No production mutation yet. See ACTIVE_TASK.md for live release gate and result.
+
+## Historical October DEV/staging integration — 2026-10-03
 
 Retry result: owner authorized failed jobs only. Verified unchanged develop ae07c243,
 registry-only failure and unchanged DEV history (only October pending), then reran
