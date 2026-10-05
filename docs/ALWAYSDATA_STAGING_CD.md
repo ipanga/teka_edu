@@ -129,9 +129,15 @@ health/media and96 supported-device browser tests pass (nine production-only ski
 workstation artifact remained local and is not deployable to Linux. macOS tar metadata was
 correctly rejected; a clean local test archive used `COPYFILE_DISABLE=1`.
 
-At3563e33, exact-head PostgreSQL16, quality and original Supabase CI pass. Linux build/artifact/
-E2E and Docker jobs were cancelled before execution because no hosted runner could be acquired during the [GitHub Actions incident](https://www.githubstatus.com/incidents/3q1yb5m7ltvb).
-Check the current-head PR checks before activation; do not count queued jobs as PASS.
+Final code at `e3cb6d1916a81e7c8e82e4d0f5f1730f43ce90a4` passes all applicable
+[CI checks](https://github.com/ipanga/teka_edu/actions/runs/37374845868): PostgreSQL16,
+quality, original Supabase tests, Linux build/client scan/artifact packaging/startup/E2E,
+and both Docker images. Promotion source correctly skips for develop. Earlier build/Docker
+jobs were cancelled before execution during the recorded Actions incident; that infrastructure
+failure is preserved in evidence and is superseded by this successful run. The GitHub Linux
+archive checksum was independently verified. It remains review evidence from the PR merge
+checkout; develop must build its own actual commit SHA for deployment. Check current-head
+PR checks before integration; the following checkpoint changes only documentation/evidence.
 Credentials are scoped only to the deployment step, outside checkout/npm installation.
 
 ## Current state and exact resume

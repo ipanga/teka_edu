@@ -22,8 +22,8 @@ New opt-in develop-only CD implements Linux standalone packaging, immutable SSH 
 atomic pointers, site1083502-only restart, exact-SHA health, eight supported-device smoke and
 A→B→A→B application rollback proof. Owner GitHub Alwaysdata credentials and site command
 are missing; no app activation occurred. Local packaged runtime passes strict staging health/media and96 browser tests (9 production-only
-skips). At3563e33 PG16/quality/Supabase CI pass; Linux build/Docker cancelled before execution during major Actions
-outage. Owner is configuring GitHub; no deployment enabled. Current public staging TLS
+skips). All applicable CI at final codee3cb6d1 PASS, including Linux artifact boot/E2E and both
+Docker images. Earlier runner outage evidence is preserved. Owner is configuring GitHub; no deployment enabled. Current public staging TLS
 valid/HTTP502. PROD,
 Vercel and hosted Supabase remain intact; no merge or retirement.
 See [report](docs/migration/alwaysdata/PORTABILITY_REPORT.md),
