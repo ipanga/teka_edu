@@ -83,7 +83,7 @@ async function main() {
     failing.close();
     assert.equal(
       await session.json<boolean>(
-        "select not exists(select 1 from pg_namespace where nspname='teka_rollback_probe');",
+        "select to_jsonb(not exists(select 1 from pg_namespace where nspname='teka_rollback_probe'));",
       ),
       true,
     );

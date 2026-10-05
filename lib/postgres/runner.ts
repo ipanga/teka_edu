@@ -48,7 +48,7 @@ export async function initialize(session: Session, connection: Connection) {
 }
 export async function history(session: Session): Promise<History[]> {
   const exists = await session.json<boolean>(
-    "select to_regclass('teka_migrations.history') is not null;",
+    "select to_jsonb(to_regclass('teka_migrations.history') is not null);",
   );
   if (!exists) return [];
   return session.json<History[]>(
