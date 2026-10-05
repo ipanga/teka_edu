@@ -114,6 +114,7 @@ export function assertStagingGates(
   replayPath: string | undefined,
   rollbackPath: string | undefined,
   approved: boolean,
+  releaseSha?: string,
 ) {
   if (!replayPath || !rollbackPath || !approved)
     throw new Error(
@@ -122,6 +123,7 @@ export function assertStagingGates(
   const replay = JSON.parse(readFileSync(replayPath, "utf8"));
   if (
     replay.status !== "PASS" ||
+    replay.release_sha !== releaseSha ||
     replay.tooling_sha256 !== toolingDigest() ||
     replay.schema_baseline_comparison !== true ||
     replay.server.version < 160000 ||
@@ -149,7 +151,8 @@ export function assertStagingGates(
     rollback.pre_migration_tables !== 0 ||
     !rollback.dump_path ||
     !/^[a-f0-9]{64}$/.test(rollback.dump_sha256) ||
-    rollback.restore_verified !== true ||
+    rollback.dump_verified !== true ||
+    rollback.coverage !== "atomic-apply-and-protected-empty-dev-dump" ||
     rollback.production_touched !== false
   )
     throw new Error("Empty-DEV backup/restore coverage is insufficient");

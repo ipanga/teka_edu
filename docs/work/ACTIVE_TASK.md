@@ -69,7 +69,7 @@ Obtain CI candidate schema, review/commit it and rerun exact-checkout CI; prepar
 
 ## Database State
 
-Prior audit: targets empty; DEV and PROD isolated. No mutation in this phase yet.
+2026-10-05 read-only DEV identity: PostgreSQL16.15, TLS verify-full PASS, zero public tables, PROD CONNECT denied, btree_gist available, pgTAP unavailable. Protected empty-DEV dump created/manifest extracted; latest provider backup lacks this DB. No DB mutation.
 
 ## Deployment State
 
@@ -77,11 +77,11 @@ No application deployment. New staging HTTPS valid at edge, HTTP 502; origin con
 
 ## Git State
 
-Feature checkpoint prepared; first push/PR pending. Prior audit evidence retained.
+Pushed bf83c3e and a6d54f4; draft PR #100 into develop. Prior audit evidence retained.
 
 ## Blockers
 
-None established for independent tooling implementation. DEV apply remains gated on replay and rollback coverage.
+CI replay reached canonical/integrity/access checks but re-sync counter check failed; diagnosing transaction statistics. Docker build exposed migration-only JSON imports omitted from app context; administrative modules now explicitly excluded. DEV apply remains gated.
 
 ## User Decisions Needed
 
@@ -89,7 +89,7 @@ No production action authorized. Rollback coverage must be concretely reviewable
 
 ## Exact Resume Point
 
-Push first checkpoint and open draft PR into develop. Inspect portability artifact/logs; repair failures, review candidate baseline, rerun CI. DEV must remain untouched until gates pass.
+Inspect next CI replay statistics, repair without weakening guarantees, review/commit schema baseline, rerun exact-head CI. DEV must remain untouched until replay and owner-approved rollback gates pass.
 
 ## Resume Verification
 

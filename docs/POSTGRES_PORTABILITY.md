@@ -77,8 +77,8 @@ An error rolls back extension/schema/table/data/history creation together. A sec
 executes no historical migrations.
 
 First staging apply additionally requires a reviewed PostgreSQL16 schema baseline, successful
-CI evidence matching migration execution copies, and an operator-approved pre-mutation
-backup/restore record for the still-empty DEV database:
+CI evidence matching the exact checkout SHA, tooling digest and migration execution copies, and an operator-approved pre-mutation
+rollback record for the still-empty DEV database:
 
 ```sh
 npm run db:migrate -- apply --target staging \
@@ -90,9 +90,12 @@ npm run db:migrate -- apply --target staging \
 
 The approval flag is an operator attestation, not an automatic approval. The record names the
 exact database/login, confirms zero pre-migration application tables, identifies a protected
-dump and its SHA-256, records a successful restore rehearsal and confirms production untouched.
+dump and its SHA-256, records successful archive verification and confirms production untouched.
 Check these claims against real evidence before approving. Inspect platform backup availability
-and create/rehearse an explicit empty-DEV dump as necessary. Dumps stay outside Git/public paths.
+and create a protected custom-format empty-DEV dump; verify its manifest and full SQL extraction.
+Failed apply rolls back its single transaction. After a successful commit, returning to empty DEV
+requires a separately approved reset/restore operation; a provider backup is not assumed. A tested
+restore rehearsal remains mandatory before future PROD work. Dumps stay outside Git/public paths.
 
 ## Reproducible CI and equivalent managed checks
 

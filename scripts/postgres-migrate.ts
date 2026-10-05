@@ -28,6 +28,7 @@ async function main() {
       value("--replay-evidence"),
       value("--rollback-record"),
       args.includes("--rollback-approved"),
+      value("--release-sha"),
     );
   const session = new Session(connection);
   try {

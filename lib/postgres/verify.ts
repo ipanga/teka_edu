@@ -164,12 +164,18 @@ export async function syncIdempotency(session: Session) {
     await verifyCanonical(session);
     if ((await session.query("show track_counts;")) !== "on")
       throw new Error("Idempotency verification requires PostgreSQL track_counts");
+    const counters =
+      "select coalesce(jsonb_object_agg(relname,n_tup_ins+n_tup_upd+n_tup_del),'{}') from pg_stat_xact_user_tables where schemaname='public';";
+    const before = await session.json<Record<string, number>>(counters);
     await session.query(referenceSyncSql(getReferenceData()));
     await verifyCanonical(session);
-    const changes = await session.json<number>(
-      "select coalesce(sum(n_tup_ins+n_tup_upd+n_tup_del),0)::integer from pg_stat_xact_user_tables where schemaname='public';",
-    );
-    if (changes !== 0) throw new Error("Canonical re-sync unexpectedly mutated rows");
+    const after = await session.json<Record<string, number>>(counters);
+    const mutations = Object.entries(after)
+      .map(([table, count]) => ({ table, changes: count - (before[table] ?? 0) }))
+      .filter(({ changes }) => changes !== 0);
+    const changes = mutations.reduce((sum, table) => sum + table.changes, 0);
+    if (mutations.length !== 0)
+      throw new Error(`Canonical re-sync unexpectedly mutated rows: ${JSON.stringify(mutations)}`);
     return { changed_rows: changes };
   } finally {
     await session.query("rollback;");

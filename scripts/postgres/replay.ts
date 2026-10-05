@@ -15,9 +15,10 @@ async function main() {
   mkdirSync(directory, { recursive: true });
   const connection = connectionFor("local", process.env);
   const migrations = loadMigrations();
-  const releaseSha =
-    process.env.GITHUB_SHA ??
-    spawnSync("git", ["rev-parse", "HEAD"], { cwd: ROOT, encoding: "utf8" }).stdout.trim();
+  const releaseSha = spawnSync("git", ["rev-parse", "HEAD"], {
+    cwd: ROOT,
+    encoding: "utf8",
+  }).stdout.trim();
   const session = new Session(connection);
   try {
     const server = await initialize(session, connection);

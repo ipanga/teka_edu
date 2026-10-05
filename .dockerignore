@@ -31,3 +31,8 @@ tests
 Dockerfile
 Dockerfile.vercel
 .dockerignore
+
+# Separate migration administration is not part of the application build/runtime.
+lib/postgres
+scripts/postgres
+scripts/postgres-migrate.ts
