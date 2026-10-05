@@ -34,9 +34,6 @@ jobs:
       ALWAYSDATA_SSH_KNOWN_HOSTS: ${{ secrets.ALWAYSDATA_SSH_KNOWN_HOSTS }}
       ALWAYSDATA_API_TOKEN: ${{ secrets.ALWAYSDATA_API_TOKEN }}
       PGPASSWORD: ${{ secrets.ALWAYSDATA_DEV_PGPASSWORD }}
-      ARTIFACT_DIR: ${{ runner.temp }}/alwaysdata-artifact
-      REPLAY_DIR: ${{ runner.temp }}/postgres-replay
-      EVIDENCE_DIR: ${{ runner.temp }}/alwaysdata-evidence
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -47,13 +44,17 @@ jobs:
       - uses: actions/download-artifact@v8
         with:
           name: alwaysdata-release-${{ github.sha }}
-          path: ${{ env.ARTIFACT_DIR }}
+          path: ${{ runner.temp }}/alwaysdata-artifact
       - uses: actions/download-artifact@v8
         with:
           name: postgres16-portability-${{ github.sha }}
-          path: ${{ env.REPLAY_DIR }}
+          path: ${{ runner.temp }}/postgres-replay
       - run: npx playwright install --with-deps chromium
       - name: Guarded DEV verification, SSH release, exact staging restart and acceptance
+        env:
+          ARTIFACT_DIR: ${{ runner.temp }}/alwaysdata-artifact
+          REPLAY_DIR: ${{ runner.temp }}/postgres-replay
+          EVIDENCE_DIR: ${{ runner.temp }}/alwaysdata-evidence
         run: bash scripts/alwaysdata/deploy.sh
       - name: Keep deployment and rollback evidence
         if: always()
@@ -61,6 +62,6 @@ jobs:
         with:
           name: alwaysdata-staging-evidence-${{ github.sha }}
           path: |
-            ${{ env.EVIDENCE_DIR }}/
+            ${{ runner.temp }}/alwaysdata-evidence/
             playwright-report/
           retention-days: 14
