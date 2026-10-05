@@ -129,6 +129,19 @@ jobs:
       - name: Client bundle secret check
         env: *sentinels
         run: npm run check:client-bundle
+      - name: Package immutable alwaysdata standalone artifact
+        env: *sentinels
+        run: node scripts/alwaysdata/package.mjs "$RUNNER_TEMP/alwaysdata-release" "$(git rev-parse HEAD)"
+      - name: Boot and verify packaged Linux artifact
+        run: node scripts/alwaysdata/verify-artifact.mjs "$RUNNER_TEMP/alwaysdata-release"
+      - name: Upload verified standalone artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: alwaysdata-release-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/alwaysdata-release/release.tar.gz
+            ${{ runner.temp }}/alwaysdata-release/artifact.json
+          retention-days: 14
       - name: Install Playwright browser
         run: npx playwright install --with-deps chromium
       - name: E2E smoke tests

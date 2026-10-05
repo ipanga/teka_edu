@@ -1,8 +1,8 @@
 # PostgreSQL 16 portability verification report
 
 Implementation is reviewable in [draft PR #100](https://github.com/ipanga/teka_edu/pull/100).
-The database-only tooling and clean PostgreSQL 16 replay pass. Managed DEV is deliberately
-unapplied while the owner-required rollback approval is pending; overall status is BLOCKED.
+The database-only tooling and clean PostgreSQL 16 replay pass. Managed DEV has now been migrated under explicit owner authorization and passes every
+required managed check; PostgreSQL portability status is COMPLETE.
 
 ## Git and scope
 
@@ -16,8 +16,8 @@ unchanged. Docker excludes separate administrative tooling from application buil
 ## Clean PostgreSQL 16 replay
 
 [Machine evidence](postgres16-replay.json) records exact tested checkout
-`35b7c3f7d37da8696cc921e9899793f6bafa29e1`, runner/source/execution hashes and timestamp.
-[CI run](https://github.com/ipanga/teka_edu/actions/runs/37362083561) successfully replays
+`2315600fc0db4bfe67769afb2eb4727983c91bb6`, runner/source/execution hashes and timestamp.
+[CI run](https://github.com/ipanga/teka_edu/actions/runs/37363307208) successfully replays
 46 migrations under a non-superuser login on PostgreSQL 16.15. Four execution copies are
 adapted. `btree_gist` 1.7 is installed in `extensions`; plpgsql 1.0 is preserved.
 
@@ -35,10 +35,10 @@ adapted. `btree_gist` 1.7 is installed in `extensions`; plpgsql 1.0 is preserved
 | Managed assertion equivalents in CI                        | PASS: original 30 foundation + 47 curriculum assertions                                                                                                |
 | Negative regressions                                       | PASS: lock contention, history recheck after lock, SQL rollback/ON_ERROR_STOP, real unprivileged read denial and incorrect managed assertions rejected |
 
-All applicable existing jobs and the added PostgreSQL check PASS at `35b7c3f` in the
+All applicable existing jobs and the added PostgreSQL check PASS at `2315600` in the
 linked CI run. Promotion source is correctly skipped for a PR into develop. The final
 documentation checkpoint is tracked separately in PR checks.
-Local current quality: format/lint/typecheck, 541 unit tests and 31 content files PASS.
+Local current quality: format/lint/typecheck, 546 unit tests and 31 content files PASS.
 The local Turbopack worker-port restriction is recorded separately; the Linux build, client
 secret sentinel check, browser smoke, Docker images and original Supabase tests passed in CI.
 
@@ -56,30 +56,40 @@ reference data remain intact. Unexpected block shapes/role constructs fail close
 
 ## Managed Alwaysdata DEV
 
-[Read-only preflight](dev-preflight.json) passes for exact database/login, PostgreSQL 16.15,
-actual TLS and full CA/hostname verification. It reports zero history, 46 pending migrations,
-zero public tables/private functions and trusted available `btree_gist`. Actual extension
-installation permission remains unproved until controlled apply. pgTAP is unavailable.
-DEV is denied PROD CONNECT. Managed integrity/access/canonical/idempotency checks are NOT RUN
-because no migration was applied; [managed report](managed-dev-verification.json) records
-that distinction. Neither the clean CI replay nor read-only preflight is mislabelled as managed
-acceptance. CLI `list`/`preflight` PASS; managed `apply`/`verify` remain gated.
+Explicit human approval for the protected DEV rollback coverage was recorded in
+[rollback record](dev-rollback-record.json). All nine safeguards were rechecked immediately
+before execution: exact database/login/16.15, verify-full TLS, PROD CONNECT denial, protected
+snapshot mode/hash, empty application schema/history, exact reviewed runner/baseline/CI SHA,
+green portability CI, frozen 46-file chain and no unexpected schema/object drift.
+[Preflight](dev-preflight.json) and [drift evidence](dev-drift-preflight.json) preserve this state.
 
-The latest provider backup lacks this new database. A protected 1130-byte custom dump with
-mode 0600 has successful manifest/full extraction verification. [Rollback plan](dev-rollback-plan.md)
-and [record](dev-rollback-record.json) identify its exact path/hash and coverage. No restore
-rehearsal was claimed. The owner's request explicitly requires “operator-approved rollback
-coverage PASS”; approval was requested and remains pending. The runner additionally checks
-the actual protected dump's permissions/hash and requires matching CI SHA/tooling/baseline.
+[Guarded apply](dev-apply.json) committed all 46 reviewed migrations in one transaction.
+[History](dev-history.json) records 46 applied / zero pending. [Managed verification](managed-dev-verification.json)
+is PASS: 36 canonical tables / 6,170 exact selected rows, full structural baseline equality,
+213 columns / 247 constraints / 80 indexes / three triggers / two private functions,
+required extensions, RLS/table/schema/function ACLs, PROD isolation, 77 original managed
+assertions and zero-row canonical re-sync. No failure or reset occurred.
+
+Managed pgTAP is unavailable; the reviewed equivalent assertions passed. CI additionally
+ran all four portable pgTAP suites. This is the documented capability difference, with no
+unexpected deviation from CI portability evidence.
+
+The approved 1130-byte custom empty-state dump is protected with mode 0600 and SHA-256
+`07bd94f2de13750d13e0c6a859c9eaa57306bf183bb450f468d12232f5ebb14d`.
+Manifest/full extraction verification passed; no actual restore rehearsal is claimed.
+[Rollback plan](dev-rollback-plan.md) remains the reference. Any post-commit reset requires
+separate authorization; none was run. The latest provider backup does not contain this new
+DB. Retain the protected dump and approval record.
 
 ## Canonical comparison and runtime
 
-Expected 36 tables / 6,170 rows: clean CI PASS; Alwaysdata DEV unapplied/zero public tables.
+Expected 36 tables / 6,170 rows: clean CI PASS; managed Alwaysdata DEV PASS.
 The preserved [earlier read-only audit](migration-audit.json) records Supabase DEV and PROD
 all 36/6,170 selected values matching this unchanged canonical state. Those are earlier
 observations, not fresh hosted queries during implementation.
 
-Both Alwaysdata app roots remain empty. No app/site/GitHub Environment values were written.
+The staging app root remains empty. No app/site/GitHub Environment values were written.
+No production root inspection was needed during the approved DEV apply.
 Credentials enter only the private administrative command environment; no runtime SQL/Supabase
 values are configured by this phase. Frozen runtime guards are unchanged, cloud sync and AI
 remain false, browser-local progress is unchanged. Alwaysdata permission-panel/API saves can
@@ -96,16 +106,12 @@ Vercel staging alias. No DNS, cache, certificate, runtime command or production 
 
 PROD database writes: 0. PROD deployments: 0. Vercel retirement: NO. Supabase retirement: NO.
 
-## Remaining authorized boundary
+## Application boundary
 
-After explicit operator rollback approval and all CI gates, recheck empty DEV, use the
-verified runner to apply only `congofoot_teka_edu_dev`, verify 36 / 6,170 values and every
-integrity/access/idempotency guarantee, and preserve separate managed evidence. Stop if any
-required managed capability/identity/security check fails. Do not change site runtime.
+DEV database acceptance is complete. The new [staging CD implementation](../../ALWAYSDATA_STAGING_CD.md)
+adds Linux artifact builds, guarded immutable SSH releases, staging-only restart, strict
+health, supported-device smoke and application rollback proof. Owner GitHub credentials,
+site configuration and separately authorized first activation are pending. No application
+has been deployed. Keep Vercel and hosted Supabase intact; no PROD operation is authorized.
 
-Only after that acceptance, recommend a separately authorized next phase to build the Linux
-standalone artifact and deploy the frozen candidate to Alwaysdata staging. Current Cloudflare
-502 is a later deployment prerequisite; no app deployment or provider retirement is authorized
-by this portability phase.
-
-POSTGRESQL 16 PORTABILITY STATUS: BLOCKED
+POSTGRESQL 16 PORTABILITY STATUS: COMPLETE

@@ -21,10 +21,14 @@ test("health endpoint reports ok", async ({ request }) => {
   if (expectedSupabaseRef) {
     expect(body.supabaseProjectRef).toBe(expectedSupabaseRef);
   }
-  // ...and that this exact commit is live (skipped if the build did not receive the SHA).
+  // An expected deployment SHA must be present and exact, including on standalone hosts.
   const expectedCommit = process.env.EXPECTED_GIT_SHA;
-  if (expectedCommit && body.commit !== null) {
+  if (expectedCommit) {
     expect(body.commit).toBe(expectedCommit);
+  }
+  if (process.env.EXPECTED_INFRA_PROVIDER === "alwaysdata") {
+    expect(body.supabaseProjectRef).toBeNull();
+    expect(process.env.VERCEL_AUTOMATION_BYPASS_SECRET).toBeUndefined();
   }
 });
 

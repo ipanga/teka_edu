@@ -36,3 +36,4 @@ Dockerfile.vercel
 lib/postgres
 scripts/postgres
 scripts/postgres-migrate.ts
+scripts/alwaysdata

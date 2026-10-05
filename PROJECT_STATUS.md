@@ -7,24 +7,24 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-10-05
 Branch:     feature/alwaysdata-postgres-portability
-Commit:     Tooling/baseline35b7c3f; no managed DB mutation
+Commit:     Reviewed DEV runner2315600; staging CD checkpoint in branch log
 Updated by: Codex
 ```
 
 ## PostgreSQL 16 portability — 2026-10-05
 
-AWAITING OWNER ROLLBACK APPROVAL: portability tooling and clean PostgreSQL 16.15 replay pass
-at 35b7c3f, including committed baseline comparison, all 46 original migration hashes/four exact
-adapters,36 tables / 6,170 canonical rows,156 pgTAP assertions,77 managed equivalent assertions,
-access, history/lock/checksum failures and idempotency. All541 unit tests pass; existing CI passed
-at 41e4a9c and final-head checks are tracked in PR #100. Read-only managed DEV identity/TLS
-preflight passes; zero history/46 pending, `btree_gist` available/trusted, pgTAP unavailable,
-PROD CONNECT denied. Protected empty-DEV snapshot and rollback plan prepared; no migration
-applied because the request requires explicit operator approval. Canonical staging is
-https://staging-tekaedu.tootiye.com (two resolvers agree, edge TLS passes, HTTP 502). Both app
-roots remain empty. No app/PROD deployment or provider retirement.
+DEV ACCEPTED; STAGING CD PENDING ACTIVATION: explicit protected-rollback approval recorded;
+all nine fresh safeguards passed. Reviewed runner2315600 committed all46 DEV migrations on
+PostgreSQL16.15 with verify-full TLS. History46 applied/zero pending; canonical36 tables/6,170
+exact rows, schema/integrity/access/RLS/ACL/PROD isolation/idempotency PASS. No reset or
+unexpected CI deviation. Managed pgTAP unavailable; reviewed77 equivalents PASS.
+New opt-in develop-only CD implements Linux standalone packaging, immutable SSH releases,
+atomic pointers, site1083502-only restart, exact-SHA health, eight supported-device smoke and
+A→B→A→B application rollback proof. Owner GitHub Alwaysdata credentials and site command
+are missing; no app activation occurred. Current public staging TLS valid/HTTP502. PROD,
+Vercel and hosted Supabase remain intact; no merge or retirement.
 See [report](docs/migration/alwaysdata/PORTABILITY_REPORT.md),
-[runbook](docs/POSTGRES_PORTABILITY.md) and [checkpoint](docs/work/ACTIVE_TASK.md).
+[CD setup and resume](docs/ALWAYSDATA_STAGING_CD.md) and [checkpoint](docs/work/ACTIVE_TASK.md).
 
 ## Flexible parent navigation — 2026-10-04
 

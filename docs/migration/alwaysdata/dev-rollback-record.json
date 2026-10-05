@@ -18,6 +18,12 @@
   "restore_rehearsal": "NOT RUN; required before future PROD work",
   "coverage": "atomic-apply-and-protected-empty-dev-dump",
   "production_touched": false,
-  "operator_approval": "pending",
+  "operator_approval": {
+    "status": "approved",
+    "recorded_at": "2026-10-05T20:32:03.822976+00:00",
+    "source": "Explicit human approval in this chat",
+    "scope": "Guarded Alwaysdata DEV migration only; no PROD operation, destructive rollback or automatic post-commit reset",
+    "reviewed_release_sha": "2315600fc0db4bfe67769afb2eb4727983c91bb6"
+  },
   "plan": "docs/migration/alwaysdata/dev-rollback-plan.md"
 }

@@ -2,15 +2,16 @@
 
 ## Task
 
-PostgreSQL 16 portability and controlled Alwaysdata DEV tooling.
+Approved Alwaysdata DEV migration and gated staging CD.
 
 ## Objective
 
-Replay all 46 unchanged historical migrations; implement guarded provider-neutral tooling and equivalent integrity/access tests; validate DEV only.
+Complete DEV acceptance and reviewable Linux standalone CD, then live staging smoke and
+application rollback after owner configuration/activation. Keep all PROD/providers intact.
 
 ## Status
 
-`awaiting_user`
+`in_progress`
 
 ## Branch
 
@@ -26,71 +27,94 @@ Replay all 46 unchanged historical migrations; implement guarded provider-neutra
 
 ## Last Checkpoint
 
-Portability and committed-baseline replay PASS at 35b7c3f. All541 local unit tests and quality checks PASS. Read-only managed DEV preflight and protected snapshot prepared; no DB mutation. Owner rollback approval pending.
+Explicit human rollback approval recorded; nine fresh safeguards passed; reviewed2315600
+runner committed46 DEV migrations and verified every managed guarantee. No reset or PROD
+operation. New CD implementation is under validation; no staging app activation.
 
 ## Scope
 
-PostgreSQL 16 CI replay, adapters, runner, managed DEV verification and staging deployment prerequisites.
+DEV migration/managed acceptance and gated develop-only staging CD implementation.
 
 ## Out of Scope
 
-PROD writes/deployments, application deployment, provider retirement, runtime database access, content/media changes.
+PROD operations/deployments, DNS cutover, Auth/Storage, provider retirement, automatic reset,
+destructive rollback and unrelated app/content changes. First app activation awaits owner setup.
 
 ## Product Decisions
 
-Canonical staging is https://staging-tekaedu.tootiye.com. Old dotted hostname is obsolete; historical evidence is retained.
+Canonical staging is https://staging-tekaedu.tootiye.com. Cloud sync/AI remain disabled,
+browser-local progress and content/media unchanged. TV unsupported.
 
 ## Completed
 
-Branch from accepted main; preserved prior audit; 46 source hashes frozen; four exact adapters; target/TLS/history/lock guards; canonical/schema/ACL/integrity verification; portable pgTAP and regression CI.
+Explicit approval recorded; exact DEV/login16.15/TLS verify-full/denied PROD, protected
+snapshot600/hash, empty schema/history, exact runner/baseline/green CI/frozen46 chain/no drift
+all freshly passed. Guarded apply committed46; managed verify/list PASS with0pending,
+36tables/6,170 exact rows, complete schema/extensions,77 integrity assertions,
+access/RLS/ACL/isolation and0-row canonical re-sync. Managed pgTAP unavailable as expected;
+reviewed equivalents PASS without CI deviations. No failure, reset or PROD operation.
 
 ## In Progress
 
-Final documentation/evidence checkpoint. DEV mutation is held for explicit operator rollback approval.
+Opt-in staging workflow, Linux Node22 artifact inventory/checksum/boot, SSH pinned host keys,
+immutable releases and atomic current/previous, exact site1083502-only restart, strict
+staging SHA/null-Supabase health, full supported-device smoke and A→B→A→B application proof.
+Local functional archive/pointer guards pass. Linux validation follows via exact-head CI.
 
 ## Remaining
 
-Obtain CI candidate schema, review/commit it and rerun exact-checkout CI; prepare DEV preflight and rollback evidence; controlled apply only after owner-approved coverage and every gate passes.
+Finish exact-head CI; owner GitHub credentials/site setup and separately authorized first
+activation through reviewed develop integration. Two distinct reviewed releases required for
+live rollback proof. Do not repeat empty-state apply:46 reviewed DEV migrations exist now.
 
 ## Validation State
 
-| Check              | Verdict                                                                 |
-| ------------------ | ----------------------------------------------------------------------- |
-| format             | PASS at 35b7c3f plus final-doc local verification                       |
-| lint               | PASS at 35b7c3f plus final-doc local verification                       |
-| typecheck          | PASS at 35b7c3f plus final-doc local verification                       |
-| unit tests         | PASS at 35b7c3f plus final-doc local verification                       |
-| content validation | PASS at 35b7c3f plus final-doc local verification                       |
-| database tests     | PASS PG16 baseline + Supabase at 35b7c3f                                |
-| build              | PASS Linux CI at 35b7c3f; local Turbopack port restriction              |
-| E2E                | PASS Linux CI at 35b7c3f                                                |
-| Docker             | PASS CI at 35b7c3f                                                      |
-| secret scans       | PASS CI client sentinel check at 35b7c3f; supplied-credential scan PASS |
+| Check              | Verdict                                                                      |
+| ------------------ | ---------------------------------------------------------------------------- |
+| format             | PASS local current implementation                                            |
+| lint               | PASS local current implementation                                            |
+| typecheck          | PASS local current implementation                                            |
+| unit tests         | PASS546 local current implementation                                         |
+| content validation | PASS31 files via Node tsx loader                                             |
+| database tests     | PASS reviewed2315600 PG16/Supabase CI; managed DEV PASS                      |
+| build              | PASS reviewed2315600 Linux CI; new artifact check NOT RUN yet                |
+| E2E                | PASS reviewed2315600 Linux CI; actual Alwaysdata staging NOT RUN             |
+| Docker             | PASS reviewed2315600 CI; current implementation NOT RUN yet                  |
+| secret scans       | PASS reviewed2315600 CI client sentinels; new full-artifact scan NOT RUN yet |
 
 ## Database State
 
-2026-10-05 read-only DEV identity: PostgreSQL 16.15, TLS verify-full PASS, zero public tables, PROD CONNECT denied, btree_gist available, pgTAP unavailable. Protected empty-DEV dump created/manifest extracted; latest provider backup lacks this DB. No DB mutation.
+Accepted DEV PostgreSQL16.15:46 history rows/zero pending/36tables/6,170 exact canonical rows.
+All managed verification PASS. Snapshot remains protected; post-commit reset needs separate
+approval. No PROD connection/operation this phase.
 
 ## Deployment State
 
-No application deployment. New staging HTTPS valid at edge, HTTP 502; origin configuration verification pending.
+Staging undeployed; latest edge TLS valid/HTTP502. Live smoke/rollback NOT RUN.
 
 ## Git State
 
-Pushed bf83c3e, a6d54f4, 41e4a9c and 35b7c3f; draft PR #100 into develop. Final evidence checkpoint follows these implementation commits; its SHA is in the branch log. No merge.
+PR #100 into develop remains draft; implementation/evidence checkpoint pending. No merge.
 
 ## Blockers
 
-Owner-required rollback coverage approval is pending. Baseline replay/build+E2E/Supabase PASS at 35b7c3f; All applicable CI jobs PASS at that head; Promotion source correctly skipped for develop. No managed apply may proceed until approval and CI gates pass.
+GitHub staging Environment lacks Alwaysdata credentials. Staging site command must be
+configured at activation. First release alone cannot prove rollback; second distinct release
+required. See `docs/ALWAYSDATA_STAGING_CD.md` for exact owner setup.
 
 ## User Decisions Needed
 
-Pending async decision: approve documented protected empty-DEV rollback coverage and conditional DEV apply, or retain read-only DEV. See docs/migration/alwaysdata/dev-rollback-plan.md. The owner request requires “operator-approved rollback coverage PASS”.
+Provision named GitHub secrets/variables privately and authorize the application activation
+boundary. Keep repository opt-in false until ready. No PROD decision requested.
 
 ## Exact Resume Point
 
-Read PR #100/final-head CI and pending owner approval before any action. If approved and CI passes, transfer its exact replay JSON to the private admin root, rerun DEV preflight, invoke guarded apply with matching release SHA and rollback record/approval flag, then verify and record managed evidence. Otherwise retain empty DEV. No application deployment.
+Inspect git status and exact-head PR100 CI; read the staging CD setup document. Do not repeat
+empty-state migration. Configure GitHub/site prerequisites, review/integrate through develop
+only after activation authorization; validate first release and distinct successor including
+live rollback proof. Stop before any PROD operation or provider retirement.
 
 ## Resume Verification
 
-Read docs/ALWAYSDATA_MIGRATION.md and docs/migration/alwaysdata/migration-audit.json. Inspect `git status` and remote CI before rerunning any mutation.
+Run `git status` and `git log`; confirm branch, PR100 current-head checks and managed evidence.
+Read `docs/ALWAYSDATA_STAGING_CD.md` and `docs/migration/alwaysdata/PORTABILITY_REPORT.md`.

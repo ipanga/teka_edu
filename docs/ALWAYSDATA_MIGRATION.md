@@ -94,6 +94,11 @@ is registry image-count capacity; this audit did not rerun or modify that deploy
 
 ## 4. PostgreSQL portability result
 
+The findings below are the preserved initial read-only audit. They are superseded for DEV by
+[managed acceptance](migration/alwaysdata/PORTABILITY_REPORT.md):46 applied / zero pending,
+36 tables /6,170 canonical rows, all checks PASS. See [staging CD](ALWAYSDATA_STAGING_CD.md)
+for the application activation boundary. No new PROD operation was performed.
+
 **Raw historical SQL is not immediately portable. PostgreSQL 16 replay is not yet validated.**
 There are 46 ordered migration files, totalling 42,000,673 bytes. Forty-two have no detected
 Supabase-specific executable references. Four assume objects supplied by Supabase:

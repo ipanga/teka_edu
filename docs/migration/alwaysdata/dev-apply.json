@@ -1,17 +1,8 @@
 {
-  "recorded_at": "2026-10-05T20:36:07.753Z",
+  "recorded_at": "2026-10-05T20:34:58.004Z",
   "target": "staging",
-  "command": "verify",
-  "identity": {
-    "tls": true,
-    "login": "congofoot_user_teka_edu_dev",
-    "version": 160015,
-    "database": "congofoot_teka_edu_dev",
-    "superuser": false,
-    "create_public": true,
-    "create_database": true
-  },
-  "history": 46,
+  "command": "apply",
+  "applied": 46,
   "canonical": {
     "tables": 36,
     "rows": 6170,
@@ -8361,14 +8352,5 @@
       "filename": "curriculum_lessons.test.sql",
       "assertions": 47
     }
-  ],
-  "idempotency": {
-    "changed_rows": 0
-  },
-  "status": "PASS",
-  "reviewed_tooling_sha": "2315600fc0db4bfe67769afb2eb4727983c91bb6",
-  "pgtap": "UNAVAILABLE; managed equivalent assertions PASS",
-  "production_writes": 0,
-  "production_deployments": 0,
-  "automatic_reset": false
+  ]
 }
