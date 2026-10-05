@@ -7,20 +7,24 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ```text
 Date:       2026-10-05
 Branch:     feature/alwaysdata-postgres-portability
-Commit:     Portability branch based on main ac003f8; no hosted mutation
+Commit:     Tooling/baseline35b7c3f; no managed DB mutation
 Updated by: Codex
 ```
 
 ## PostgreSQL 16 portability — 2026-10-05
 
-AWAITING CI: provider-neutral tooling preserves all 46 source migrations, adapts four exact
-Supabase role revocation blocks, and guards DEV identity/TLS/history/checksums/transactions.
-The new PostgreSQL16 CI job will establish a reviewed schema baseline and run portable pgTAP
-plus managed equivalents, canonical values, access and idempotency checks. Local quality tests
-pass; managed DEV apply is conditional on all CI gates and operator-approved rollback coverage.
-Canonical staging is https://staging-tekaedu.tootiye.com (edge TLS passes; HTTP 502). The old
-dotted hostname is obsolete. No application/PROD deployment or provider retirement.
-See [runbook](docs/POSTGRES_PORTABILITY.md) and [checkpoint](docs/work/ACTIVE_TASK.md).
+AWAITING OWNER ROLLBACK APPROVAL: portability tooling and clean PostgreSQL 16.15 replay pass
+at 35b7c3f, including committed baseline comparison, all 46 original migration hashes/four exact
+adapters,36 tables / 6,170 canonical rows,156 pgTAP assertions,77 managed equivalent assertions,
+access, history/lock/checksum failures and idempotency. All541 unit tests pass; existing CI passed
+at 41e4a9c and final-head checks are tracked in PR #100. Read-only managed DEV identity/TLS
+preflight passes; zero history/46 pending, `btree_gist` available/trusted, pgTAP unavailable,
+PROD CONNECT denied. Protected empty-DEV snapshot and rollback plan prepared; no migration
+applied because the request requires explicit operator approval. Canonical staging is
+https://staging-tekaedu.tootiye.com (two resolvers agree, edge TLS passes, HTTP 502). Both app
+roots remain empty. No app/PROD deployment or provider retirement.
+See [report](docs/migration/alwaysdata/PORTABILITY_REPORT.md),
+[runbook](docs/POSTGRES_PORTABILITY.md) and [checkpoint](docs/work/ACTIVE_TASK.md).
 
 ## Flexible parent navigation — 2026-10-04
 

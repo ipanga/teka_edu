@@ -484,9 +484,9 @@ databases are isolated at CONNECT privilege level; Cloudflare proxy DNS resolves
 
 Still needed, through secure dashboards/settings rather than secret values in chat:
 
-- In Cloudflare SSL/TLS → Edge Certificates, active certificate coverage for
-  `staging.tekaedu.tootiye.com` (Advanced/custom/Total TLS as supported), and confirmation
-  of the origin TLS mode/certificate without disrupting other zone sites.
+- The earlier dotted-host certificate request is obsolete. Active staging is now
+  `staging-tekaedu.tootiye.com`, with edge TLS verified. Validate origin behavior after the
+  separately authorized staging deployment; the current response is HTTP 502.
 - Alwaysdata staging command/environment alignment with the standalone layout above.
   Keep PROD unchanged. Staging must explicitly say `staging`, its URL and the frozen full SHA;
   Supabase/database runtime variables stay unset, cloud sync and AI false.
@@ -507,8 +507,10 @@ Still needed, through secure dashboards/settings rather than secret values in ch
 The old hostname certificate issue is superseded by the owner-authorized hostname change. First
 complete PostgreSQL 16 portability and managed DEV validation using the linked runbook;
 prepare reviewed PostgreSQL 16 portability tooling/tests and opt-in staging packaging/CI with
-secure dashboard-provisioned credentials. Once those gates pass, deploy the verified frozen
-`ac003f8580ca81dcfb426a70c45c02102b8e0551` **to staging only** and record fresh acceptance.
+secure dashboard-provisioned credentials. Once those gates pass, recommend a separately
+authorized phase to build a Linux artifact and deploy the verified frozen
+`ac003f8580ca81dcfb426a70c45c02102b8e0551` **to staging only**, recording fresh acceptance.
+Do not start that application deployment automatically in the portability phase.
 No production cutover or provider removal is authorized by successful staging alone.
 
 ## 21. Resume information and validation record

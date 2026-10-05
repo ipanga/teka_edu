@@ -45,7 +45,9 @@ PGSSLMODE=verify-full
 PGSSLROOTCERT=/path/to/trusted/provider-ca-bundle
 ```
 
-Use `PGPASSFILE` with mode 0600, or inject `PGPASSWORD` from a secure environment. Never put
+A bundled administrative copy can set `TEKA_POSTGRES_ROOT` to its protected tool directory;
+that directory must contain the exact reviewed sources/assertions/baseline, never a website
+release payload. Use `PGPASSFILE` with mode 0600, or inject `PGPASSWORD` from a secure environment. Never put
 the password in arguments, reports, fixtures or artifacts. `verify-full` checks the certificate
 chain and hostname; the runner also queries `pg_stat_ssl` and refuses staging without actual
 TLS. The trusted CA bundle path must exist and be verified for the client being used. No

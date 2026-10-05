@@ -10,7 +10,7 @@ Replay all 46 unchanged historical migrations; implement guarded provider-neutra
 
 ## Status
 
-`awaiting_ci`
+`awaiting_user`
 
 ## Branch
 
@@ -26,7 +26,7 @@ Replay all 46 unchanged historical migrations; implement guarded provider-neutra
 
 ## Last Checkpoint
 
-Implemented guarded runner and PostgreSQL16 replay CI. Local format/lint/types/unit/content pass; CI clean replay passed at 41e4a9c; reviewed baseline committed next. Managed DEV gates pending. New hostname edge TLS passes, HTTP 502.
+Portability and committed-baseline replay PASS at 35b7c3f. All541 local unit tests and quality checks PASS. Read-only managed DEV preflight and protected snapshot prepared; no DB mutation. Owner rollback approval pending.
 
 ## Scope
 
@@ -46,7 +46,7 @@ Branch from accepted main; preserved prior audit; 46 source hashes frozen; four 
 
 ## In Progress
 
-Reviewed PostgreSQL16 structural baseline: 36 tables, 213 columns, 247 constraints, 80 indexes, three triggers and two private functions. Rerun comparison CI; no hosted mutation.
+Final documentation/evidence checkpoint. DEV mutation is held for explicit operator rollback approval.
 
 ## Remaining
 
@@ -54,22 +54,22 @@ Obtain CI candidate schema, review/commit it and rerun exact-checkout CI; prepar
 
 ## Validation State
 
-| Check              | Verdict                                                |
-| ------------------ | ------------------------------------------------------ |
-| format             | PASS at first feature checkpoint                       |
-| lint               | PASS at first feature checkpoint                       |
-| typecheck          | PASS at first feature checkpoint                       |
-| unit tests         | PASS at first feature checkpoint                       |
-| content validation | PASS at first feature checkpoint                       |
-| database tests     | PASS portable PG16 at 41e4a9c; Supabase CI pending     |
-| build              | FAIL local sandbox worker-port restriction; CI pending |
-| E2E                | NOT RUN                                                |
-| Docker             | PASS CI at 41e4a9c                                     |
-| secret scans       | NOT RUN                                                |
+| Check              | Verdict                                                                 |
+| ------------------ | ----------------------------------------------------------------------- |
+| format             | PASS at 35b7c3f plus final-doc local verification                       |
+| lint               | PASS at 35b7c3f plus final-doc local verification                       |
+| typecheck          | PASS at 35b7c3f plus final-doc local verification                       |
+| unit tests         | PASS at 35b7c3f plus final-doc local verification                       |
+| content validation | PASS at 35b7c3f plus final-doc local verification                       |
+| database tests     | PASS PG16 baseline + Supabase at 35b7c3f                                |
+| build              | PASS Linux CI at 35b7c3f; local Turbopack port restriction              |
+| E2E                | PASS Linux CI at 35b7c3f                                                |
+| Docker             | PASS CI at 35b7c3f                                                      |
+| secret scans       | PASS CI client sentinel check at 35b7c3f; supplied-credential scan PASS |
 
 ## Database State
 
-2026-10-05 read-only DEV identity: PostgreSQL16.15, TLS verify-full PASS, zero public tables, PROD CONNECT denied, btree_gist available, pgTAP unavailable. Protected empty-DEV dump created/manifest extracted; latest provider backup lacks this DB. No DB mutation.
+2026-10-05 read-only DEV identity: PostgreSQL 16.15, TLS verify-full PASS, zero public tables, PROD CONNECT denied, btree_gist available, pgTAP unavailable. Protected empty-DEV dump created/manifest extracted; latest provider backup lacks this DB. No DB mutation.
 
 ## Deployment State
 
@@ -77,19 +77,19 @@ No application deployment. New staging HTTPS valid at edge, HTTP 502; origin con
 
 ## Git State
 
-Pushed bf83c3e and a6d54f4; draft PR #100 into develop. Prior audit evidence retained.
+Pushed bf83c3e, a6d54f4, 41e4a9c and 35b7c3f; draft PR #100 into develop. Final evidence checkpoint follows these implementation commits; its SHA is in the branch log. No merge.
 
 ## Blockers
 
-First scalar encoding and transaction-counter issues repaired. CI portability and Docker checks pass at 41e4a9c. Remaining gates: reviewed baseline comparison, final-head full CI and owner-approved rollback coverage.
+Owner-required rollback coverage approval is pending. Baseline replay/build+E2E/Supabase PASS at 35b7c3f; All applicable CI jobs PASS at that head; Promotion source correctly skipped for develop. No managed apply may proceed until approval and CI gates pass.
 
 ## User Decisions Needed
 
-No production action authorized. Rollback coverage must be concretely reviewable before DEV apply.
+Pending async decision: approve documented protected empty-DEV rollback coverage and conditional DEV apply, or retain read-only DEV. See docs/migration/alwaysdata/dev-rollback-plan.md. The owner request requires “operator-approved rollback coverage PASS”.
 
 ## Exact Resume Point
 
-Inspect final-head CI baseline comparison and all existing checks. Approval question pending for documented protected empty-DEV rollback plan. DEV apply remains forbidden until every gate and owner approval passes.
+Read PR #100/final-head CI and pending owner approval before any action. If approved and CI passes, transfer its exact replay JSON to the private admin root, rerun DEV preflight, invoke guarded apply with matching release SHA and rollback record/approval flag, then verify and record managed evidence. Otherwise retain empty DEV. No application deployment.
 
 ## Resume Verification
 
