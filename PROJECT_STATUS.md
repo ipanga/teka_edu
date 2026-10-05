@@ -5,11 +5,22 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-10-04
-Branch:     codex/flexible-parent-navigation-ux
-Commit:     UX branch based on develop ae07c243; production unchanged 81b759f
+Date:       2026-10-05
+Branch:     feature/alwaysdata-postgres-portability
+Commit:     Portability branch based on main ac003f8; no hosted mutation
 Updated by: Codex
 ```
+
+## PostgreSQL 16 portability — 2026-10-05
+
+AWAITING CI: provider-neutral tooling preserves all 46 source migrations, adapts four exact
+Supabase role revocation blocks, and guards DEV identity/TLS/history/checksums/transactions.
+The new PostgreSQL16 CI job will establish a reviewed schema baseline and run portable pgTAP
+plus managed equivalents, canonical values, access and idempotency checks. Local quality tests
+pass; managed DEV apply is conditional on all CI gates and operator-approved rollback coverage.
+Canonical staging is https://staging-tekaedu.tootiye.com (edge TLS passes; HTTP 502). The old
+dotted hostname is obsolete. No application/PROD deployment or provider retirement.
+See [runbook](docs/POSTGRES_PORTABILITY.md) and [checkpoint](docs/work/ACTIVE_TASK.md).
 
 ## Flexible parent navigation — 2026-10-04
 

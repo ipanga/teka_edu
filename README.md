@@ -49,6 +49,13 @@ npm run db:start      # prints the local URL and keys for .env.local
 npm run db:stop
 ```
 
+## PostgreSQL portability transition
+
+See [the PostgreSQL 16 runbook](docs/POSTGRES_PORTABILITY.md) for `npm run db:migrate --
+list|preflight|apply|verify --target local|staging` and the clean CI replay
+`npm run db:portability`. Production commands remain blocked; application runtime SQL/Supabase
+configuration is unchanged. Canonical Alwaysdata staging is `https://staging-tekaedu.tootiye.com`.
+
 ## Commands
 
 | Command                                                                       | Purpose                                                                                                |

@@ -1,5 +1,15 @@
 # Environment Setup
 
+Current transition tooling: [POSTGRES_PORTABILITY.md](POSTGRES_PORTABILITY.md). Active Alwaysdata
+staging is `https://staging-tekaedu.tootiye.com`; application deployment remains a later phase.
+
+## Alwaysdata transition audit — 2026-10-05
+
+The owner supplied staging/production Node site IDs and separate PostgreSQL 16 databases.
+Verified identities, site command, secure configuration locations and Cloudflare TLS gates
+are in [ALWAYSDATA_MIGRATION.md](ALWAYSDATA_MIGRATION.md). No provider settings were changed
+by the audit; the existing setup below remains active during the transition.
+
 This guide takes the project owner step by step through configuring every environment. You do not need to have written the code to follow it.
 
 - What each variable means: [ENVIRONMENT_VARIABLES.md](ENVIRONMENT_VARIABLES.md), the authoritative inventory.

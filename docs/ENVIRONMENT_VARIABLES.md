@@ -1,5 +1,17 @@
 # Environment Variable Inventory
 
+Current transition tooling: [POSTGRES_PORTABILITY.md](POSTGRES_PORTABILITY.md). Active Alwaysdata
+staging is `https://staging-tekaedu.tootiye.com`; application deployment remains a later phase.
+
+## Alwaysdata transition mapping — 2026-10-05
+
+The proposed provider-neutral mapping is in
+[ALWAYSDATA_MIGRATION.md, section 10](ALWAYSDATA_MIGRATION.md#10-environment-variable-mapping).
+It is a design, not implemented runtime or workflow configuration. The frozen app needs
+no Supabase/database runtime values; its existing database guard rejects alwaysdata URLs.
+Use separately scoped migration credentials in secure deployment settings. No `.env*`
+file or secret value is added to Git. Existing variables below remain valid for rollback.
+
 This is the **single source of truth** for every environment variable Teka Edu uses.
 
 > **Repository policy (ADR-023):** no file whose name starts with `.env` is ever tracked by Git. That includes `.env.example`-style templates. Real values live only in:

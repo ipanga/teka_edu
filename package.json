@@ -44,7 +44,9 @@
     "media:sheet": "tsx scripts/media-contact-sheet.ts",
     "review:lapse": "tsx scripts/lapse-approvals.ts",
     "review:visual": "tsx scripts/visual-reconfirmation.ts",
-    "audio:brief": "tsx scripts/recording-brief.ts"
+    "audio:brief": "tsx scripts/recording-brief.ts",
+    "db:migrate": "node --import tsx scripts/postgres-migrate.ts",
+    "db:portability": "node --import tsx scripts/postgres/replay.ts"
   },
   "dependencies": {
     "next": "16.3.4",
