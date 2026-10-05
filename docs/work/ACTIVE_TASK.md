@@ -11,7 +11,7 @@ application rollback after owner configuration/activation. Keep all PROD/provide
 
 ## Status
 
-`in_progress`
+`awaiting_ci`
 
 ## Branch
 
@@ -29,7 +29,8 @@ application rollback after owner configuration/activation. Keep all PROD/provide
 
 Explicit human rollback approval recorded; nine fresh safeguards passed; reviewed2315600
 runner committed46 DEV migrations and verified every managed guarantee. No reset or PROD
-operation. New CD implementation is under validation; no staging app activation.
+operation. New CD implementation is ready for review; Linux build/Docker runners were not acquired during a major Actions outage; jobs cancelled
+before execution. Owner is configuring GitHub; no staging app activation.
 
 ## Scope
 
@@ -59,7 +60,9 @@ reviewed equivalents PASS without CI deviations. No failure, reset or PROD opera
 Opt-in staging workflow, Linux Node22 artifact inventory/checksum/boot, SSH pinned host keys,
 immutable releases and atomic current/previous, exact site1083502-only restart, strict
 staging SHA/null-Supabase health, full supported-device smoke and A→B→A→B application proof.
-Local functional archive/pointer guards pass. Linux validation follows via exact-head CI.
+Local functional archive/pointer guards pass. Local packaged staging startup/media and96 supported-device browser tests PASS,9 production-only
+skips. This is a workstation artifact, not a Linux deployable or live staging acceptance.
+Linux validation follows via exact-head CI.
 
 ## Remaining
 
@@ -69,18 +72,18 @@ live rollback proof. Do not repeat empty-state apply:46 reviewed DEV migrations 
 
 ## Validation State
 
-| Check              | Verdict                                                                      |
-| ------------------ | ---------------------------------------------------------------------------- |
-| format             | PASS local current implementation                                            |
-| lint               | PASS local current implementation                                            |
-| typecheck          | PASS local current implementation                                            |
-| unit tests         | PASS546 local current implementation                                         |
-| content validation | PASS31 files via Node tsx loader                                             |
-| database tests     | PASS reviewed2315600 PG16/Supabase CI; managed DEV PASS                      |
-| build              | PASS reviewed2315600 Linux CI; new artifact check NOT RUN yet                |
-| E2E                | PASS reviewed2315600 Linux CI; actual Alwaysdata staging NOT RUN             |
-| Docker             | PASS reviewed2315600 CI; current implementation NOT RUN yet                  |
-| secret scans       | PASS reviewed2315600 CI client sentinels; new full-artifact scan NOT RUN yet |
+| Check              | Verdict                                                                                     |
+| ------------------ | ------------------------------------------------------------------------------------------- |
+| format             | PASS local current implementation                                                           |
+| lint               | PASS local current implementation                                                           |
+| typecheck          | PASS local current implementation                                                           |
+| unit tests         | PASS546 local current implementation                                                        |
+| content validation | PASS31 files via Node tsx loader                                                            |
+| database tests     | PASS3563e33 PG16/Supabase CI; managed DEV PASS                                              |
+| build              | PASS local Webpack/packaged startup; Linux artifact CI CANCELLED before execution at3563e33 |
+| E2E                | PASS96 local packaged staging tests; live Alwaysdata NOT RUN                                |
+| Docker             | PASS reviewed2315600 CI;3563e33 Docker CI CANCELLED before execution                        |
+| secret scans       | PASS local28-file/3-sentinel scan; Linux full-artifact scan NOT RUN (runner outage)         |
 
 ## Database State
 
@@ -94,11 +97,13 @@ Staging undeployed; latest edge TLS valid/HTTP502. Live smoke/rollback NOT RUN.
 
 ## Git State
 
-PR #100 into develop remains draft; implementation/evidence checkpoint pending. No merge.
+PR #100 into develop remains draft; implementation a7b9004 and syntax correction3563e33 pushed; final credential/evidence checkpoint
+follows in branch log. No merge.
 
 ## Blockers
 
-GitHub staging Environment lacks Alwaysdata credentials. Staging site command must be
+GitHub staging Environment lacks Alwaysdata credentials at latest names-only read; owner
+is configuring them. Actions reports a major outage; Linux build/Docker jobs were cancelled before execution. Staging site command must be
 configured at activation. First release alone cannot prove rollback; second distinct release
 required. See `docs/ALWAYSDATA_STAGING_CD.md` for exact owner setup.
 

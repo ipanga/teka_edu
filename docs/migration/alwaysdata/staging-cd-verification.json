@@ -1,0 +1,77 @@
+{
+  "recorded_at": "2026-10-05T21:16:22.435211+00:00",
+  "status": "IMPLEMENTED; LIVE ACCEPTANCE BLOCKED BY OWNER SETUP AND LINUX CI",
+  "reviewed_dev_runner_sha": "2315600fc0db4bfe67769afb2eb4727983c91bb6",
+  "tested_implementation_sha": "3563e33731e75c11ef51671919cab52c5c24454a",
+  "dev": {
+    "status": "PASS",
+    "history": 46,
+    "pending": 0,
+    "canonical_tables": 36,
+    "canonical_rows": 6170,
+    "managed_verification": "managed-dev-verification.json",
+    "automatic_reset": false
+  },
+  "local": {
+    "format": "PASS",
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "unit_tests": 546,
+    "content_files": 31,
+    "shell_syntax": "PASS",
+    "python_archive_pointer_tests": 4,
+    "administrative_bundle": "PASS",
+    "webpack_build": "PASS",
+    "client_bundle_files": 28,
+    "client_secret_sentinels_absent": 3,
+    "packaged_startup_and_strict_health": "PASS",
+    "public_media_checksum": "PASS",
+    "staging_runtime_device_smoke_passed": 96,
+    "production_only_smoke_skipped": 9,
+    "platform": "darwin",
+    "deployable_to_alwaysdata": false,
+    "notes": "Workstation artifact remained local. macOS tar metadata was rejected; clean local tar used COPYFILE_DISABLE=1. Required deployment artifact must be built and verified in Linux GitHub CI."
+  },
+  "ci": {
+    "run": "https://github.com/ipanga/teka_edu/actions/runs/37372988509",
+    "sha": "3563e33731e75c11ef51671919cab52c5c24454a",
+    "postgres16": "PASS",
+    "quality": "PASS",
+    "supabase_database_tests": "PASS",
+    "linux_build_artifact_e2e": "CANCELLED BEFORE EXECUTION (hosted runner unavailable)",
+    "docker": "CANCELLED BEFORE EXECUTION (hosted runner unavailable)",
+    "promotion_source": "SKIPPED (develop)",
+    "external_blocker": "GitHub Actions major outage; both jobs had no assigned runner and were cancelled after multiple acquisition attempts",
+    "incident": "https://www.githubstatus.com/incidents/3q1yb5m7ltvb",
+    "current_head_note": "Credential step scoping and a platform-neutral diagnostic are included in the following checkpoint; check PR current-head CI before activation.",
+    "conclusion": "FAILURE caused by runner acquisition/internal server error"
+  },
+  "staging": {
+    "site_id": 1083502,
+    "url": "https://staging-tekaedu.tootiye.com",
+    "deployment": "NOT RUN",
+    "live_health": "Latest observation: TLS verified; HTTP502",
+    "live_smoke": "NOT RUN",
+    "live_application_rollback": "NOT RUN",
+    "local_pointer_rollback_tests": "PASS; not live proof",
+    "github_setup_observed": "No ALWAYSDATA staging secrets/variables or repository opt-in present at latest names-only read; owner is configuring them."
+  },
+  "owner_secrets": [
+    "ALWAYSDATA_SSH_PRIVATE_KEY",
+    "ALWAYSDATA_SSH_KNOWN_HOSTS",
+    "ALWAYSDATA_API_TOKEN",
+    "ALWAYSDATA_DEV_PGPASSWORD"
+  ],
+  "owner_environment_variables": [
+    "ALWAYSDATA_SSH_HOST",
+    "ALWAYSDATA_SSH_PORT",
+    "ALWAYSDATA_SSH_USER",
+    "ALWAYSDATA_DEV_MIGRATIONS_APPROVED"
+  ],
+  "repository_activation_variable": "ALWAYSDATA_STAGING_DEPLOY_ENABLED",
+  "production_operations": 0,
+  "production_deployments": 0,
+  "vercel_retirement": false,
+  "supabase_retirement": false,
+  "resume": "Check current-head CI after the Actions incident, confirm owner GitHub/site setup, and complete the application activation boundary through reviewed develop integration. Validate two distinct Linux releases and live A\u2192B\u2192A\u2192B health proof. Do not repeat empty-state DEV migration or reset DEV. No PROD/provider retirement."
+}

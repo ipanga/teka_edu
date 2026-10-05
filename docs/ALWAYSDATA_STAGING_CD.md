@@ -119,6 +119,21 @@ restart and strict health checks. Validate metadata/inventory and site identity 
 use a database reset for application rollback. Do not roll back to the retained Vercel provider
 or change DNS automatically.
 
+## Implementation validation
+
+[Checkpoint evidence](migration/alwaysdata/staging-cd-verification.json) distinguishes actual
+managed DEV acceptance, local artifact tests and live application acceptance. Local format,
+lint, typecheck,546 unit tests,31 content files, archive/pointer guards and administrative
+bundling pass. A local Webpack build,28-file/three-sentinel client scan, packaged strict staging
+health/media and96 supported-device browser tests pass (nine production-only skips). That
+workstation artifact remained local and is not deployable to Linux. macOS tar metadata was
+correctly rejected; a clean local test archive used `COPYFILE_DISABLE=1`.
+
+At3563e33, exact-head PostgreSQL16, quality and original Supabase CI pass. Linux build/artifact/
+E2E and Docker jobs were cancelled before execution because no hosted runner could be acquired during the [GitHub Actions incident](https://www.githubstatus.com/incidents/3q1yb5m7ltvb).
+Check the current-head PR checks before activation; do not count queued jobs as PASS.
+Credentials are scoped only to the deployment step, outside checkout/npm installation.
+
 ## Current state and exact resume
 
 DEV is accepted. Staging application remains undeployed; latest public check is TLS valid,

@@ -30,10 +30,6 @@ jobs:
       ALWAYSDATA_SSH_HOST: ${{ vars.ALWAYSDATA_SSH_HOST }}
       ALWAYSDATA_SSH_PORT: ${{ vars.ALWAYSDATA_SSH_PORT }}
       ALWAYSDATA_SSH_USER: ${{ vars.ALWAYSDATA_SSH_USER }}
-      ALWAYSDATA_SSH_PRIVATE_KEY: ${{ secrets.ALWAYSDATA_SSH_PRIVATE_KEY }}
-      ALWAYSDATA_SSH_KNOWN_HOSTS: ${{ secrets.ALWAYSDATA_SSH_KNOWN_HOSTS }}
-      ALWAYSDATA_API_TOKEN: ${{ secrets.ALWAYSDATA_API_TOKEN }}
-      PGPASSWORD: ${{ secrets.ALWAYSDATA_DEV_PGPASSWORD }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -52,6 +48,10 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - name: Guarded DEV verification, SSH release, exact staging restart and acceptance
         env:
+          ALWAYSDATA_SSH_PRIVATE_KEY: ${{ secrets.ALWAYSDATA_SSH_PRIVATE_KEY }}
+          ALWAYSDATA_SSH_KNOWN_HOSTS: ${{ secrets.ALWAYSDATA_SSH_KNOWN_HOSTS }}
+          ALWAYSDATA_API_TOKEN: ${{ secrets.ALWAYSDATA_API_TOKEN }}
+          PGPASSWORD: ${{ secrets.ALWAYSDATA_DEV_PGPASSWORD }}
           ARTIFACT_DIR: ${{ runner.temp }}/alwaysdata-artifact
           REPLAY_DIR: ${{ runner.temp }}/postgres-replay
           EVIDENCE_DIR: ${{ runner.temp }}/alwaysdata-evidence

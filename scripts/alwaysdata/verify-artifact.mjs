@@ -56,7 +56,7 @@ m.install(pathlib.Path(sys.argv[2]),pathlib.Path(sys.argv[3]),sys.argv[4],sys.ar
   if (!response.ok || hash(Buffer.from(await response.arrayBuffer())) !== media.sha256)
     throw new Error("Artifact public media serving differs from manifest");
   console.log(
-    "PASS: immutable Linux artifact, Node22 startup, strict staging health and public media",
+    "PASS: immutable standalone artifact, Node22 startup, strict staging health and public media",
   );
 } finally {
   if (server && server.exitCode === null) {

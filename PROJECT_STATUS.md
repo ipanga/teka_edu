@@ -21,7 +21,10 @@ unexpected CI deviation. Managed pgTAP unavailable; reviewed77 equivalents PASS.
 New opt-in develop-only CD implements Linux standalone packaging, immutable SSH releases,
 atomic pointers, site1083502-only restart, exact-SHA health, eight supported-device smoke and
 A→B→A→B application rollback proof. Owner GitHub Alwaysdata credentials and site command
-are missing; no app activation occurred. Current public staging TLS valid/HTTP502. PROD,
+are missing; no app activation occurred. Local packaged runtime passes strict staging health/media and96 browser tests (9 production-only
+skips). At3563e33 PG16/quality/Supabase CI pass; Linux build/Docker cancelled before execution during major Actions
+outage. Owner is configuring GitHub; no deployment enabled. Current public staging TLS
+valid/HTTP502. PROD,
 Vercel and hosted Supabase remain intact; no merge or retirement.
 See [report](docs/migration/alwaysdata/PORTABILITY_REPORT.md),
 [CD setup and resume](docs/ALWAYSDATA_STAGING_CD.md) and [checkpoint](docs/work/ACTIVE_TASK.md).
