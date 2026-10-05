@@ -26,7 +26,7 @@ Replay all 46 unchanged historical migrations; implement guarded provider-neutra
 
 ## Last Checkpoint
 
-Implemented guarded runner and PostgreSQL16 replay CI. Local format/lint/types/unit/content pass; CI clean replay and managed DEV gates pending. New hostname edge TLS passes, HTTP 502.
+Implemented guarded runner and PostgreSQL16 replay CI. Local format/lint/types/unit/content pass; CI clean replay passed at 41e4a9c; reviewed baseline committed next. Managed DEV gates pending. New hostname edge TLS passes, HTTP 502.
 
 ## Scope
 
@@ -46,7 +46,7 @@ Branch from accepted main; preserved prior audit; 46 source hashes frozen; four 
 
 ## In Progress
 
-First feature commit and draft PR for clean PostgreSQL16 replay; no hosted mutation.
+Reviewed PostgreSQL16 structural baseline: 36 tables, 213 columns, 247 constraints, 80 indexes, three triggers and two private functions. Rerun comparison CI; no hosted mutation.
 
 ## Remaining
 
@@ -61,10 +61,10 @@ Obtain CI candidate schema, review/commit it and rerun exact-checkout CI; prepar
 | typecheck          | PASS at first feature checkpoint                       |
 | unit tests         | PASS at first feature checkpoint                       |
 | content validation | PASS at first feature checkpoint                       |
-| database tests     | NOT RUN                                                |
+| database tests     | PASS portable PG16 at 41e4a9c; Supabase CI pending     |
 | build              | FAIL local sandbox worker-port restriction; CI pending |
 | E2E                | NOT RUN                                                |
-| Docker             | NOT RUN                                                |
+| Docker             | PASS CI at 41e4a9c                                     |
 | secret scans       | NOT RUN                                                |
 
 ## Database State
@@ -81,7 +81,7 @@ Pushed bf83c3e and a6d54f4; draft PR #100 into develop. Prior audit evidence ret
 
 ## Blockers
 
-CI replay reached canonical/integrity/access checks but re-sync counter check failed; diagnosing transaction statistics. Docker build exposed migration-only JSON imports omitted from app context; administrative modules now explicitly excluded. DEV apply remains gated.
+First scalar encoding and transaction-counter issues repaired. CI portability and Docker checks pass at 41e4a9c. Remaining gates: reviewed baseline comparison, final-head full CI and owner-approved rollback coverage.
 
 ## User Decisions Needed
 
@@ -89,7 +89,7 @@ No production action authorized. Rollback coverage must be concretely reviewable
 
 ## Exact Resume Point
 
-Inspect next CI replay statistics, repair without weakening guarantees, review/commit schema baseline, rerun exact-head CI. DEV must remain untouched until replay and owner-approved rollback gates pass.
+Inspect final-head CI baseline comparison and all existing checks. Approval question pending for documented protected empty-DEV rollback plan. DEV apply remains forbidden until every gate and owner approval passes.
 
 ## Resume Verification
 

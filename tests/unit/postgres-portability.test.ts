@@ -1,5 +1,13 @@
 import { describe, it, expect } from "vitest";
-import { readFileSync, mkdtempSync, cpSync, appendFileSync, rmSync } from "node:fs";
+import {
+  readFileSync,
+  mkdtempSync,
+  cpSync,
+  appendFileSync,
+  rmSync,
+  writeFileSync,
+  chmodSync,
+} from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import {
@@ -9,11 +17,12 @@ import {
   assertTransactional,
   ROOT,
   sha256,
+  toolingDigest,
   type History,
 } from "@/lib/postgres/migrations";
 import { connectionFor, assertIdentity, STAGING_URL } from "@/lib/postgres/target";
 import { canonicalTables, managedAssertionCopy } from "@/lib/postgres/verify";
-import { assertStagingGates } from "@/lib/postgres/runner";
+import { assertStagingGates, metadata } from "@/lib/postgres/runner";
 
 const migrations = loadMigrations();
 const history = migrations.map((m) => ({
@@ -182,6 +191,74 @@ describe("target and server identity", () => {
     expect(STAGING_URL).toBe("https://staging-tekaedu.tootiye.com"));
   it("fails closed without operator-approved replay and rollback coverage", () =>
     expect(() => assertStagingGates(migrations, undefined, undefined, false)).toThrow(/operator/));
+  it("binds approval to the tested tooling/SHA/baseline and an actual protected dump", () => {
+    const directory = mkdtempSync(path.join(tmpdir(), "teka-gate-fixtures-"));
+    try {
+      const dump = path.join(directory, "fixture.dump");
+      const replayPath = path.join(directory, "replay.json");
+      const rollbackPath = path.join(directory, "rollback.json");
+      const release = history[0]!.release_sha;
+      const bytes = "empty-dev-archive-fixture";
+      writeFileSync(dump, bytes, { mode: 0o600 });
+      const replay = {
+        status: "PASS",
+        release_sha: release,
+        tooling_sha256: toolingDigest(),
+        server: { version: 160015 },
+        migrations: metadata(migrations),
+        canonical: { tables: 36, rows: 6170 },
+        gates: {
+          integrity: true,
+          access: true,
+          idempotency: true,
+          pgtap: true,
+          negative_tests: true,
+        },
+        schema_baseline_comparison: true,
+        schema_sha256: sha256(
+          JSON.stringify(
+            JSON.parse(
+              readFileSync(
+                path.join(ROOT, "docs/migration/alwaysdata/expected-schema.json"),
+                "utf8",
+              ),
+            ),
+          ),
+        ),
+      };
+      const rollback = {
+        database: staging.PGDATABASE,
+        login: staging.PGUSER,
+        pre_migration_tables: 0,
+        dump_path: dump,
+        dump_sha256: sha256(bytes),
+        dump_verified: true,
+        coverage: "atomic-apply-and-protected-empty-dev-dump",
+        production_touched: false,
+      };
+      const check = () => assertStagingGates(migrations, replayPath, rollbackPath, true, release);
+      writeFileSync(replayPath, JSON.stringify(replay));
+      writeFileSync(rollbackPath, JSON.stringify(rollback));
+      expect(check).not.toThrow();
+      for (const patch of [
+        { tooling_sha256: "0".repeat(64) },
+        { release_sha: "0".repeat(40) },
+        { schema_baseline_comparison: false },
+        { schema_sha256: "0".repeat(64) },
+      ]) {
+        writeFileSync(replayPath, JSON.stringify({ ...replay, ...patch }));
+        expect(check).toThrow();
+      }
+      writeFileSync(replayPath, JSON.stringify(replay));
+      chmodSync(dump, 0o644);
+      expect(check).toThrow(/readable by others/);
+      chmodSync(dump, 0o600);
+      appendFileSync(dump, "changed");
+      expect(check).toThrow(/differs/);
+    } finally {
+      rmSync(directory, { recursive: true });
+    }
+  });
 });
 describe("canonical and managed assertion sources", () => {
   it("uses the audited canonical generator, 36 tables and 6170 rows", () => {

@@ -1,4 +1,4 @@
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, statSync } from "node:fs";
 import path from "node:path";
 import { isDeepStrictEqual } from "node:util";
 import { Session, literal } from "./session";
@@ -156,6 +156,14 @@ export function assertStagingGates(
     rollback.production_touched !== false
   )
     throw new Error("Empty-DEV backup/restore coverage is insufficient");
+  if (
+    !existsSync(rollback.dump_path) ||
+    (statSync(rollback.dump_path).mode & 0o077) !== 0 ||
+    sha256(readFileSync(rollback.dump_path)) !== rollback.dump_sha256
+  )
+    throw new Error(
+      "Protected rollback dump is absent, readable by others or differs from its record",
+    );
 }
 
 export async function apply(

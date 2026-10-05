@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-10-05T19:07:55Z",
+  "database": "congofoot_teka_edu_dev",
+  "login": "congofoot_user_teka_edu_dev",
+  "pre_migration_tables": 0,
+  "pre_migration_private_objects": 0,
+  "dump_path": "/home/congofoot/admin/tmp/teka-postgres-portability-bf83c3e/dev-before-migration.dump",
+  "dump_sha256": "07bd94f2de13750d13e0c6a859c9eaa57306bf183bb450f468d12232f5ebb14d",
+  "dump_bytes": 1130,
+  "dump_mode": "0600",
+  "dump_client": "18.4",
+  "source_server": "16.15",
+  "dump_verified": true,
+  "verification": [
+    "pg_restore --list: existing public schema only",
+    "pg_restore --file=/dev/null: successful full extraction"
+  ],
+  "restore_rehearsal": "NOT RUN; required before future PROD work",
+  "coverage": "atomic-apply-and-protected-empty-dev-dump",
+  "production_touched": false,
+  "operator_approval": "pending",
+  "plan": "docs/migration/alwaysdata/dev-rollback-plan.md"
+}
