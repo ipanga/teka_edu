@@ -1,5 +1,8 @@
-import { describe, expect, it } from "vitest";
-import { readFileSync } from "node:fs";
+import { describe, expect, it, vi } from "vitest";
+import { readFileSync, statSync, existsSync, mkdtempSync, rmSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { tmpdir } from "node:os";
+import { execFileSync, type ExecFileSyncOptions } from "node:child_process";
 import {
   assertPreflightConfig,
   inspectPreflightApi,
@@ -7,6 +10,13 @@ import {
   validateReadOnlyDatabase,
   sshArguments,
   digest,
+  preflight,
+  databaseAuthSql,
+  databaseCheck,
+  rootCheck,
+  validateRootResponse,
+  validateDatabaseAuthentication,
+  classifySshFailure,
 } from "../../scripts/alwaysdata/preflight.mjs";
 import { readOnlyPayload } from "../../scripts/alwaysdata/preflight-sql";
 // Scan executable tokens, excluding SQL literals/comments, independently of the helper.
@@ -244,5 +254,284 @@ describe("verification-only alwaysdata preflight", () => {
     expect(workflow).not.toMatch(
       /upload-artifact|deploy\.sh|db:migrate|scp |rsync |restart\/|contents: write/,
     );
+  });
+});
+const authIdentity = {
+  database: "congofoot_teka_edu_dev",
+  login: "congofoot_user_teka_edu_dev",
+  version: 160015,
+  tls: true,
+  read_only: "on",
+  default_read_only: "on",
+  isolation: "repeatable read",
+};
+const rootIdentity = {
+  ok: true,
+  identity: "congofoot",
+  root: "/home/congofoot/www/tekaedu-staging",
+  root_empty: true,
+  current_exists: false,
+  credential_files: false,
+  node: "v22.22.2",
+};
+type DiagnosticEvidence = Awaited<ReturnType<typeof preflight>>;
+const diagnosticEnv = {
+  NODE_ENV: "test" as const,
+  ...env,
+  PATH: process.env.PATH,
+  GITHUB_SHA: "d".repeat(40),
+};
+async function diagnosticFixture(stop = "", detail = "") {
+  const payload = await readOnlyPayload();
+  const history = Array.from({ length: 46 }, (_, i) => ({
+    version: String(i).padStart(14, "0"),
+    filename: `fixture-${i}.sql`,
+    source_sha256: "a".repeat(64),
+    execution_sha256: "b".repeat(64),
+    adapter_version: "fixture",
+  }));
+  const schema = { tables: [{ name: "fixture", rls: true }] };
+  const expected = {
+    ...payload.expected,
+    migrations_sha256: digest(history),
+    schema_sha256: digest(schema),
+  };
+  const access = Object.fromEntries(
+    [
+      "rls",
+      "policies",
+      "table_privileges",
+      "function_privileges",
+      "schema_privileges",
+      "public_schema_create",
+      "cross_environment_isolation",
+      "btree_gist",
+    ].map((k) => [k, true]),
+  );
+  const rows = [
+    { read_only: "on", isolation: "repeatable read", prod_connect: false },
+    { ...authIdentity, superuser: false },
+    history.map((h) => ({
+      ...h,
+      target: "staging",
+      release_sha: "2315600fc0db4bfe67769afb2eb4727983c91bb6",
+    })),
+    schema,
+    access,
+    [],
+    ...payload.expected.counts.map((c) => ({ ...c, exact: true })),
+  ];
+  const calls: { bin: string; args: string[]; input?: string }[] = [];
+  const reports: DiagnosticEvidence[] = [];
+  const rawError = Object.assign(new Error("fixture-password raw-provider-secret"), {
+    status: 255,
+    stderr: detail + " fixture-password",
+  });
+  const run = (bin: string, args: string[], options: ExecFileSyncOptions) => {
+    calls.push({
+      bin,
+      args,
+      input: typeof options?.input === "string" ? options.input : undefined,
+    });
+    if (bin === "ssh-keygen") {
+      if (args.includes("-y")) {
+        expect(options.stdio?.[1]).toBe("ignore");
+        expect(statSync(args.at(-1)!).mode & 0o777).toBe(0o600);
+        if (stop === "key") throw rawError;
+        return "derived-public-key-never-print";
+      }
+      if (args.includes("-F")) {
+        if (stop === "pin-entry") throw rawError;
+        return "# Host found\nssh-congofoot.alwaysdata.net ssh-ed25519 matching-pin-never-print\n";
+      }
+      if (stop === "pin-syntax") throw rawError;
+      expect(options.stdio?.[1]).toBe("ignore");
+      return "fingerprint-never-print";
+    }
+    if (bin === "ssh") {
+      const command = args.at(-1)!;
+      if (command === "id -un") {
+        if (stop === "auth") throw rawError;
+        return stop === "identity" ? "root\n" : "congofoot\n";
+      }
+      if (command.includes("pathlib"))
+        return JSON.stringify(
+          stop === "root" ? { ok: false, invariant: detail || "ROOT_EMPTY" } : rootIdentity,
+        );
+      const input = JSON.parse(options.input as string);
+      expect(input.password).toBe("fixture-password");
+      expect(args.join(" ")).not.toContain("fixture-password");
+      if (input.sql === databaseAuthSql)
+        return JSON.stringify(
+          stop === "db-auth"
+            ? { ok: false, invariant: detail || "DEV_AUTHENTICATION" }
+            : { ok: true, rows: [JSON.stringify(authIdentity)] },
+        );
+      expect(input.sql).toBe(payload.sql);
+      const actual = structuredClone(rows);
+      if (stop === "full") actual[2] = [];
+      return JSON.stringify({ ok: true, rows: actual.map((r) => JSON.stringify(r)) });
+    }
+    return JSON.stringify({ sql: payload.sql, expected });
+  };
+  let count = 0;
+  const fetcher = async () =>
+    new Response(JSON.stringify(++count === 1 ? [{ name: "congofoot" }] : site));
+  return { calls, reports, run, fetcher, emit: (r: DiagnosticEvidence) => reports.push(r) };
+}
+describe("separate sanitized diagnostic phases", () => {
+  it("retains all eleven PASS/limit statuses on success and orders minimal auth before full SELECT", async () => {
+    const f = await diagnosticFixture();
+    const report = await preflight(diagnosticEnv, f);
+    expect(Object.keys(report.checks)).toHaveLength(11);
+    expect(Object.values(report.checks).slice(0, 10)).toEqual(Array(10).fill("PASS"));
+    expect(report.checks.RESTART_PERMISSION).toBe("NOT PROVED");
+    expect(f.calls.filter((c) => c.bin === "ssh")).toHaveLength(4);
+    expect(f.calls.filter((c) => c.bin === "ssh")[0]!.args.at(-1)).toBe("id -un");
+    const queries = f.calls.filter((c) => c.input).map((c) => JSON.parse(c.input!).sql);
+    expect(queries[0]).toBe(databaseAuthSql);
+    expect(queries[1]).not.toBe(databaseAuthSql);
+    expect(report.database?.canonical_rows).toBe(6170);
+  });
+  it.each([
+    ["key", "", "SSH_PRIVATE_KEY_FORMAT", "KEY_FORMAT_OR_PASSPHRASE", 0],
+    ["pin-entry", "", "KNOWN_HOSTS_ENTRY", "KNOWN_HOSTS_HOST_ENTRY", 0],
+    ["pin-syntax", "", "KNOWN_HOSTS_ENTRY", "KNOWN_HOSTS_SYNTAX", 0],
+    ["auth", "Host key verification failed", "SSH_AUTH", "HOST_KEY_VALIDATION", 1],
+    ["auth", "Permission denied (publickey)", "SSH_AUTH", "SSH_AUTHENTICATION", 1],
+    ["auth", "Connection timed out", "SSH_AUTH", "SSH_CONNECTION", 1],
+    ["identity", "", "SSH_AUTH", "LOGIN_IDENTITY", 1],
+    ["root", "ROOT_EMPTY", "SSH_ROOT_RUNTIME", "ROOT_EMPTY", 2],
+    ["db-auth", "DEV_AUTHENTICATION", "DEV_DB_AUTH_TLS", "DEV_AUTHENTICATION", 3],
+    ["db-auth", "DEV_TLS", "DEV_DB_AUTH_TLS", "DEV_TLS", 3],
+    ["full", "", "DEV_READONLY_VERIFY", "HISTORY_CHAIN", 4],
+  ])(
+    "stops %s with its own safe invariant and no later phase",
+    async (stop, detail, phase, invariant, sshCalls) => {
+      const f = await diagnosticFixture(String(stop), String(detail));
+      await expect(preflight(diagnosticEnv, f)).rejects.toThrow(String(invariant));
+      const report = f.reports[0]!;
+      expect(report.failure).toEqual({ phase, invariant });
+      expect(report.checks[phase]).toBe("FAIL");
+      expect(report.checks.API_AUTH).toBe("PASS");
+      const phases = Object.keys(report.checks).slice(0, 10);
+      for (const p of phases.slice(phases.indexOf(String(phase)) + 1))
+        expect(report.checks[p]).toBe("NOT REACHED");
+      expect(f.calls.filter((c) => c.bin === "ssh")).toHaveLength(Number(sshCalls));
+      if (phase !== "DEV_READONLY_VERIFY")
+        expect(f.calls.some((c) => c.bin === process.execPath)).toBe(false);
+      for (const text of [
+        "fixture-password",
+        "raw-provider-secret",
+        "derived-public-key-never-print",
+        "matching-pin-never-print",
+        "fingerprint-never-print",
+      ])
+        expect(JSON.stringify(report)).not.toContain(text);
+      const key = f.calls.find((c) => c.bin === "ssh-keygen")!.args.at(-1)!;
+      expect(existsSync(dirname(key))).toBe(false);
+    },
+  );
+  it("rejects each minimal DEV identity/TLS/read-only drift before full verification", () => {
+    expect(validateDatabaseAuthentication(authIdentity).sslmode).toBe("verify-full");
+    for (const delta of [
+      { database: "congofoot_teka_edu_prod" },
+      { login: "other" },
+      { version: 160014 },
+      { tls: false },
+      { read_only: "off" },
+      { default_read_only: "off" },
+      { isolation: "read committed" },
+    ])
+      expect(() => validateDatabaseAuthentication({ ...authIdentity, ...delta })).toThrow();
+    expect(executableSql(databaseAuthSql)).not.toMatch(
+      /\b(insert|update|delete|create|alter|drop|grant|revoke|copy|call)\b/i,
+    );
+    expect(databaseAuthSql).toContain("begin isolation level repeatable read read only");
+    expect(databaseCheck).toContain("'PGSSLMODE':'verify-full'");
+    expect(databaseCheck).toContain("'PGOPTIONS':'-c default_transaction_read_only=on'");
+    expect(databaseCheck).not.toContain("congofoot_teka_edu_prod");
+    expect(rootCheck).not.toMatch(/\b(mkdir|chmod|symlink)\(/);
+    execFileSync(
+      "python3",
+      [
+        "-c",
+        "import json,sys;[compile(p,'fixed-read-only-program','exec') for p in json.load(sys.stdin)]",
+      ],
+      { input: JSON.stringify([rootCheck, databaseCheck]), stdio: ["pipe", "ignore", "pipe"] },
+    );
+  });
+  it("rejects unknown remote diagnostics and arbitrary runtime output", () => {
+    expect(() => validateRootResponse({ ok: false, invariant: "raw-provider-secret" })).toThrow(
+      "CHECK_FAILED",
+    );
+    expect(() => validateRootResponse({ ...rootIdentity, node: "raw-provider-secret" })).toThrow(
+      "REMOTE_RESPONSE",
+    );
+    expect(classifySshFailure({ status: 255, stderr: "raw-provider-secret" })).toBe(
+      "SSH_TRANSPORT",
+    );
+  });
+  it("writes a partial failure summary without exposing stderr and cleans local keys", async () => {
+    const f = await diagnosticFixture("auth", "Permission denied (publickey)");
+    const dir = mkdtempSync(join(tmpdir(), "teka-summary-test-"));
+    const spy = vi.spyOn(console, "log").mockImplementation(() => {});
+    try {
+      await expect(
+        preflight(
+          { ...diagnosticEnv, GITHUB_STEP_SUMMARY: join(dir, "summary") },
+          { run: f.run, fetcher: f.fetcher },
+        ),
+      ).rejects.toThrow("SSH_AUTHENTICATION");
+      const summary = readFileSync(join(dir, "summary"), "utf8");
+      expect(summary).toContain("| SSH_AUTH | FAIL |");
+      expect(summary).toContain("| DEV_DB_AUTH_TLS | NOT REACHED |");
+      expect(summary).toContain("| RESTART_PERMISSION | NOT PROVED |");
+      expect(summary).not.toContain("fixture-password");
+      expect(summary).not.toContain("raw-provider-secret");
+      expect(spy.mock.calls).toHaveLength(1);
+    } finally {
+      spy.mockRestore();
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+  it("checks a real local key and only matching host entries with OpenSSH, without network access", async () => {
+    const dir = mkdtempSync(join(tmpdir(), "teka-key-test-"));
+    try {
+      const source = join(dir, "fixture");
+      execFileSync("ssh-keygen", ["-q", "-t", "ed25519", "-N", "", "-f", source], {
+        stdio: "ignore",
+      });
+      const key = readFileSync(source, "utf8");
+      const pin = "ssh-congofoot.alwaysdata.net " + readFileSync(source + ".pub", "utf8");
+      for (const [privateKey, pins, phase] of [
+        [key, pin, "SSH_ROOT_RUNTIME"],
+        ["broken-key", pin, "SSH_PRIVATE_KEY_FORMAT"],
+        [key, "other.example.com " + readFileSync(source + ".pub", "utf8"), "KNOWN_HOSTS_ENTRY"],
+        [key, "ssh-congofoot.alwaysdata.net ssh-ed25519 invalid\n", "KNOWN_HOSTS_ENTRY"],
+      ]) {
+        const f = await diagnosticFixture("root", "ROOT_EMPTY");
+        const mockRun = f.run;
+        f.run = (bin, args, options) =>
+          bin === "ssh-keygen"
+            ? String(execFileSync(bin, args, options) ?? "")
+            : mockRun(bin, args, options);
+        await expect(
+          preflight(
+            {
+              ...diagnosticEnv,
+              ALWAYSDATA_SSH_PRIVATE_KEY: privateKey!,
+              ALWAYSDATA_SSH_KNOWN_HOSTS: pins!,
+            },
+            f,
+          ),
+        ).rejects.toThrow();
+        expect(f.reports[0]!.failure!.phase).toBe(phase);
+        expect(JSON.stringify(f.reports[0])).not.toContain(key.trim());
+        expect(JSON.stringify(f.reports[0])).not.toContain(pin.trim());
+      }
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
   });
 });
