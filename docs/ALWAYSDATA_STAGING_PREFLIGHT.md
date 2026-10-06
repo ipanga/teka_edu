@@ -36,6 +36,33 @@ DEV must match all 46 historical checksums and the frozen schema and 36-table/6,
 canonical values. Behavioral integrity fixtures and idempotency re-sync are excluded because
 they execute DML even when rolled back.
 
+## Sanitized diagnostic phases
+
+The summary now records each check separately and retains completed PASS statuses when a
+later phase fails. Later phases remain NOT REACHED. Activation/API authentication, normalized
+site configuration and forbidden site-environment validation remain first. Before every SSH
+network call, the runner validates the private key noninteractively with `ssh-keygen -y`
+(stdout discarded) and finds/syntax-checks only pinned entries for the exact SSH hostname.
+All temporary key/pin files are 0600 under a private local runner directory and cleaned up
+on success or failure. No replacement trust material or fingerprint is printed.
+
+Pinned SSH then runs only `id -un`; authentication and exact login must pass before the fixed
+root/runtime read. The root check reports only failed invariant names, such as ROOT_EMPTY
+or NODE_VERSION. Only after root/runtime success does a separate minimal SELECT prove exact
+DEV identity/version, TLS verify-full, transaction/default read-only and repeatable-read
+isolation. Only after that succeeds does the unchanged full SELECT payload verify migration
+history/checksums, schema/access and canonical values. Every query remains DEV-only with
+PGOPTIONS default_transaction_read_only=on and an explicit read-only transaction.
+
+The eleven summary entries are ACTIVATION_GUARD, API_AUTH, SITE_CONFIG, SITE_ENVIRONMENT,
+SSH_PRIVATE_KEY_FORMAT, KNOWN_HOSTS_ENTRY, SSH_AUTH, SSH_ROOT_RUNTIME, DEV_DB_AUTH_TLS,
+DEV_READONLY_VERIFY and RESTART_PERMISSION. Local key-format failure can include an unusable
+passphrase-protected key; it does not claim password-free parse success. Host-pin entry PASS
+means local matching/syntax; the subsequent SSH_AUTH must pass to prove live pinned trust
+and authentication. SSH and libpq stderr are classified internally into fixed allowlisted
+codes and never printed. Unknown errors remain explicit within the failing phase.
+No generic combined SSH/DEV error remains. Restart permission stays independently NOT PROVED.
+
 ## Restart permission limit
 
 The documented site/account/token GET fields do not establish effective restart permission.
