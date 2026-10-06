@@ -73,6 +73,47 @@ describe("verification-only alwaysdata preflight", () => {
       }
     }
   });
+  it("accepts the actual provider root-address payload and the no-slash representation", () => {
+    const providerSite = {
+      id: 1083502,
+      type: "nodejs",
+      nodejs_version: "22",
+      addresses: ["staging-tekaedu.tootiye.com/"],
+      working_directory: "www/tekaedu-staging",
+      command: "/usr/alwaysdata/nodejs/22/bin/node current/runtime.mjs",
+    };
+    expect(validatePreflightSite(providerSite).addresses).toEqual(site.addresses);
+    expect(validatePreflightSite(site).addresses).toEqual(site.addresses);
+  });
+  it("rejects non-root identities, malformed or additional addresses and changed commands", () => {
+    for (const addresses of [
+      ["other.example.com"],
+      ["staging-tekaedu.tootiye.com.evil.example"],
+      ["staging-tekaedu.tootiye.com/path"],
+      ["staging-tekaedu.tootiye.com/path/"],
+      ["staging-tekaedu.tootiye.com//"],
+      ["staging-tekaedu.tootiye.com?query=1"],
+      ["staging-tekaedu.tootiye.com#fragment"],
+      ["https://staging-tekaedu.tootiye.com/"],
+      ["http://staging-tekaedu.tootiye.com/"],
+      ["ftp://staging-tekaedu.tootiye.com/"],
+      ["staging-tekaedu.tootiye.com:443/"],
+      ["staging-tekaedu.tootiye.com:8080"],
+      ["staging-tekaedu.tootiye.com", "other.example.com"],
+      ["staging-tekaedu.tootiye.com/", "staging-tekaedu.tootiye.com"],
+      [""],
+      ["/"],
+      [],
+      [null],
+      null,
+      "staging-tekaedu.tootiye.com/",
+    ])
+      expect(() => validatePreflightSite({ ...site, addresses })).toThrow(/addresses/);
+    for (const command of ["npm run start", site.command + " ", site.command + " --port 3000"])
+      expect(() =>
+        validatePreflightSite({ ...site, addresses: [site.addresses[0] + "/"], command }),
+      ).toThrow(/command/);
+  });
   it("uses only account/site GETs and does not equate authentication with restart permission", async () => {
     const calls: { url: string; method?: string; redirect?: RequestRedirect }[] = [];
     const fakeFetch = async (url: string | URL | Request, init?: RequestInit) => {

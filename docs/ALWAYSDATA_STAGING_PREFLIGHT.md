@@ -24,6 +24,12 @@ files. The five-file adaptation receives its own isolated PR review and CI.
 
 The live site must match account `congofoot`, site 1083502, Node.js 22, sole address
 `staging-tekaedu.tootiye.com`, staging root and reviewed `current/runtime.mjs` command.
+The owner's direct API query confirmed that Alwaysdata serializes the configured root address
+as `staging-tekaedu.tootiye.com/`. Validation removes exactly one terminal slash before exact
+comparison with `staging-tekaedu.tootiye.com`. Both forms identify the same intended root.
+Other hosts, subpaths, duplicate/additional addresses, empty/malformed values, schemes and
+ports remain rejected. No scheme-qualified serialization has been evidenced, so none is
+accepted. The startup command remains an exact comparison and the provider site is unchanged.
 Mismatches stop without correction and identify fields without printing possibly sensitive
 values. The staging root must still be empty; a new release requires separate review.
 DEV must match all 46 historical checksums and the frozen schema and 36-table/6,170-row
