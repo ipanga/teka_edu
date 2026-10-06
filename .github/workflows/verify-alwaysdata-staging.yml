@@ -1,0 +1,50 @@
+name: Verify alwaysdata staging (read-only)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: verify-alwaysdata-staging
+  cancel-in-progress: false
+jobs:
+  disabled:
+    name: Require repository deployment switch disabled
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    steps:
+      - name: Check repository switch before accessing Environment secrets
+        env:
+          DEPLOY_SWITCH: ${{ vars.ALWAYSDATA_STAGING_DEPLOY_ENABLED }}
+        run: |
+          case "$DEPLOY_SWITCH" in
+            ''|false) echo 'PASS: repository deployment switch disabled' ;;
+            *) echo 'FAIL: repository deployment switch must be unset or false'; exit 1 ;;
+          esac
+  verify:
+    name: SSH, API site identity and SELECT-only DEV verification
+    needs: disabled
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    environment: staging
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Verify using actual staging secrets without activation
+        env:
+          ALWAYSDATA_STAGING_DEPLOY_ENABLED: ${{ vars.ALWAYSDATA_STAGING_DEPLOY_ENABLED }}
+          ALWAYSDATA_DEV_MIGRATIONS_APPROVED: ${{ vars.ALWAYSDATA_DEV_MIGRATIONS_APPROVED }}
+          ALWAYSDATA_SSH_HOST: ${{ vars.ALWAYSDATA_SSH_HOST }}
+          ALWAYSDATA_SSH_PORT: ${{ vars.ALWAYSDATA_SSH_PORT }}
+          ALWAYSDATA_SSH_USER: ${{ vars.ALWAYSDATA_SSH_USER }}
+          ALWAYSDATA_SSH_PRIVATE_KEY: ${{ secrets.ALWAYSDATA_SSH_PRIVATE_KEY }}
+          ALWAYSDATA_SSH_KNOWN_HOSTS: ${{ secrets.ALWAYSDATA_SSH_KNOWN_HOSTS }}
+          ALWAYSDATA_API_TOKEN: ${{ secrets.ALWAYSDATA_API_TOKEN }}
+          ALWAYSDATA_DEV_PGPASSWORD: ${{ secrets.ALWAYSDATA_DEV_PGPASSWORD }}
+        run: node scripts/alwaysdata/preflight.mjs
+      # Deliberately no artifacts, application build, deployment, uploads or restart.
