@@ -67,3 +67,41 @@ must prove A → B → A → B. DEV reset, PROD operations and provider retireme
 References: [manual workflow requirements](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow),
 [Alwaysdata token permissions](https://help.alwaysdata.com/en/docs/admin-billing/profile/tokens/),
 [API fields](https://api.alwaysdata.com/doc/).
+
+## Live preflight checkpoint — 2026-10-06
+
+Protected integration completed through [PR #101](https://github.com/ipanga/teka_edu/pull/101)
+and [promotion PR #102](https://github.com/ipanga/teka_edu/pull/102), with all required CI green.
+Exactly the five authorized files were integrated. Develop is
+`9137e5c2a0593fb800f9c32525803a0bb48edf0f`; main registration is
+`df2c417858d6807f3975f9740e0fb7214ba7fd4c`. The Environment still permits only develop.
+Existing staging and production mutation jobs were explicitly SKIPPED in runs
+37519840802 and 37520463093. Their repository deployment switches remain false;
+Alwaysdata activation remains unset. Services/providers were not retired.
+
+Manual [run 37520558325](https://github.com/ipanga/teka_edu/actions/runs/37520558325)
+was dispatched against develop at the exact SHA above. Its disabled-switch guard passed.
+The secret-bearing step authenticated its API account/site GETs and stopped with:
+
+```text
+Site 1083502 fields differ from expected values: addresses, command
+```
+
+Account congofoot and site ID/type/Node 22/working-directory checks matched. Full SITE CONFIG
+is FAIL because addresses and command differ. Expected sole address is
+`staging-tekaedu.tootiye.com`; expected command is
+`/usr/alwaysdata/nodejs/22/bin/node current/runtime.mjs`. Actual field values were suppressed
+rather than risk exposing credentials embedded in a malformed command. The site environment
+check, SSH authentication/pins/root and DEV password/SELECT checks were NOT REACHED. Their
+status is NOT VERIFIED, not PASS. Restart permission remains NOT PROVED. This is a genuine
+site-configuration failure, not the expected exit-2 limitation after passing connections.
+
+No corrections or rerun were attempted. Site writes/restarts, remote uploads, DEV DML/DDL,
+PROD connections, DNS writes and provider retirements: zero. No credential-bearing artifact
+or actual secret value was printed. PR #100 remains open/draft at
+`8105565a29571f86d4782787f071cf09114e6f00` and was not merged or updated.
+
+Owner action: resolve the address/start-command discrepancies while respecting the no-start
+boundary, then resume verification-only dispatch on develop with all deployment switches
+still off. Do not authorize PR #100 merge or application activation on this incomplete
+credential/site/DEV evidence. Recheck branch SHAs/settings before any later authorized action.
