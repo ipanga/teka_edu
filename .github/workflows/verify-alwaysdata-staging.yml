@@ -17,8 +17,21 @@ jobs:
           DEPLOY_SWITCH: ${{ vars.ALWAYSDATA_STAGING_DEPLOY_ENABLED }}
         run: |
           case "$DEPLOY_SWITCH" in
-            ''|false) echo 'PASS: repository deployment switch disabled' ;;
-            *) echo 'FAIL: repository deployment switch must be unset or false'; exit 1 ;;
+            ''|false)
+              echo 'PASS: repository deployment switch disabled'
+              echo 'ACTIVATION_GUARD=PASS' >> "$GITHUB_STEP_SUMMARY"
+              ;;
+            *)
+              echo 'FAIL: repository deployment switch must be unset or false'
+              {
+                echo 'ACTIVATION_GUARD=FAIL'
+                for phase in API_AUTH SITE_CONFIG SITE_ENVIRONMENT SSH_PRIVATE_KEY_FORMAT KNOWN_HOSTS_ENTRY SSH_AUTH SSH_ROOT_RUNTIME DEV_DB_AUTH_TLS DEV_READONLY_VERIFY; do
+                  echo "${phase}=NOT REACHED"
+                done
+                echo 'RESTART_PERMISSION=NOT PROVED'
+              } >> "$GITHUB_STEP_SUMMARY"
+              exit 1
+              ;;
           esac
   verify:
     name: SSH, API site identity and SELECT-only DEV verification
