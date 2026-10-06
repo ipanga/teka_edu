@@ -73,3 +73,45 @@ must prove A → B → A → B. DEV reset, PROD operations and provider retireme
 References: [manual workflow requirements](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow),
 [Alwaysdata token permissions](https://help.alwaysdata.com/en/docs/admin-billing/profile/tokens/),
 [API fields](https://api.alwaysdata.com/doc/).
+
+## Normalized live preflight checkpoint — 2026-10-06
+
+The owner's API evidence showed the root address serialized with one terminal slash. The
+scoped correction accepts that representation through explicit normalization and keeps exact
+site identity, sole root and command validation. Regressions reject unrelated hosts, suffixes,
+paths, schemes, ports, duplicate/additional and malformed/empty addresses and changed commands.
+Node 22 formatting/lint/typecheck, eight targeted tests and all 528 unit tests passed.
+
+Protected [PR #103](https://github.com/ipanga/teka_edu/pull/103) merged into develop at
+`19fba2a0cdbf70bc46987cceab054828856985e2`; protected
+[promotion PR #104](https://github.com/ipanga/teka_edu/pull/104) merged into main at
+`7819e2f86c0bb4573dbebd4fa8c4b53f35b9c2d8`. Both had green required CI. The exact
+promotion tree diff contained only the three preflight script/test/documentation files.
+Main and develop trees match. Environment staging remains develop-only and all deployment
+switches remain off (Alwaysdata unset; staging/production provider switches false).
+
+Manual [run 37530362603](https://github.com/ipanga/teka_edu/actions/runs/37530362603) executed
+on corrected develop at the exact SHA above. The disabled-switch guard passed. Execution
+advanced past API authentication, account congofoot, all normalized site 1083502 fields and
+forbidden-environment validation, establishing PASS for those checks. It then stopped with:
+
+```text
+Pinned-key SSH/read-only remote check failed; diagnostics suppressed
+```
+
+The shared SSH wrapper suppresses diagnostics for both the initial root/runtime read and
+subsequent DEV query. This message alone cannot distinguish SSH key/pin/authentication or
+root/runtime failure from a later DEV access/query failure. No independent SSH private-key,
+known-hosts, root/runtime or DEV credential/database PASS is established by this run. The
+DEV version/identity/TLS/history/checksum/canonical/schema/access assertions therefore remain
+NOT PROVED through GitHub credentials. Restart permission also remains NOT PROVED; no POST
+was issued. Exit 1 is the remote-check failure, not the expected restart-limit exit 2.
+
+Site writes, uploads, starts/restarts, DML/DDL, PROD connections and DNS changes: zero.
+No actual secret values or credential-bearing artifacts were exposed. The staging provider
+mutation job was SKIPPED. PR #100 remains open/draft and unchanged at
+`8105565a29571f86d4782787f071cf09114e6f00`, still CONFLICTING/DIRTY; no reconciliation
+was attempted. First activation is not ready. The next separate step is verification-only
+diagnostics that distinguish the SSH/root phase from the DEV query phase, preserving all
+mutation boundaries. First-release application rollback remains NOT PROVED until a distinct
+second release supports A → B → A → B.
