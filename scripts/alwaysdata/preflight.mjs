@@ -52,6 +52,13 @@ export function validatePreflightSite(site) {
   const actual = {
     ...site,
     nodejs_version: String(site.nodejs_version),
+    // Alwaysdata serializes a root address with a trailing slash. Remove only that
+    // single terminal slash; exact comparison still rejects schemes, ports and paths.
+    addresses: Array.isArray(site.addresses)
+      ? site.addresses.map((address) =>
+          typeof address === "string" ? address.replace(/\/$/, "") : address,
+        )
+      : site.addresses,
     working_directory: (site.working_directory ?? "")
       .replace(/^\/home\/congofoot\//, "")
       .replace(/\/$/, ""),
