@@ -224,28 +224,38 @@ export function validateReadOnlyDatabase(lines, expected) {
   };
 }
 // Fixed programs run read-only over SSH; no files are written on the server.
-export const rootCheck = `import os,pathlib,pwd,json,subprocess,re
+export const rootCheck = `import os,pathlib,pwd,json,subprocess,re,stat
 
 def fail(name):
  print(json.dumps({'ok':False,'invariant':name}));raise SystemExit(0)
+def read(name,operation):
+ try:return operation()
+ except Exception:fail(name)
 try:
  r=pathlib.Path('/home/congofoot/www/tekaedu-staging')
- u=pwd.getpwuid(os.getuid()).pw_name
+ u=read('LOGIN_IDENTITY',lambda:pwd.getpwuid(os.getuid()).pw_name)
  if u!='congofoot':fail('LOGIN_IDENTITY')
- if not r.exists():fail('ROOT_EXISTS')
- if not r.is_dir():fail('ROOT_DIRECTORY')
- if r.is_symlink():fail('ROOT_SYMLINK')
- if str(r.resolve())!=str(r):fail('ROOT_REAL_PATH')
- if pwd.getpwuid(r.stat().st_uid).pw_name!='congofoot':fail('ROOT_OWNER')
- if not os.access(r,os.W_OK):fail('ROOT_WRITABLE')
- if os.path.lexists(r/'current'):fail('CURRENT_EXISTS')
- if list(r.iterdir()):fail('ROOT_EMPTY')
+ if not read('ROOT_EXISTS',r.exists):fail('ROOT_EXISTS')
+ metadata=read('ROOT_STAT',r.stat)
+ if not read('ROOT_DIRECTORY',lambda:stat.S_ISDIR(metadata.st_mode)):fail('ROOT_DIRECTORY')
+ if read('ROOT_SYMLINK',r.is_symlink):fail('ROOT_SYMLINK')
+ resolved=read('ROOT_RESOLVE',r.resolve)
+ if read('ROOT_REAL_PATH',lambda:str(resolved))!='/home/congofoot/www/tekaedu-staging':fail('ROOT_REAL_PATH')
+ uid=read('ROOT_OWNER_STAT',lambda:metadata.st_uid)
+ owner=read('ROOT_OWNER_LOOKUP',lambda:pwd.getpwuid(uid).pw_name)
+ if owner!='congofoot':fail('ROOT_OWNER_MISMATCH')
+ if not read('ROOT_WRITABLE',lambda:os.access(r,os.W_OK)):fail('ROOT_WRITABLE')
+ if read('CURRENT_EXISTS',lambda:os.path.lexists(r/'current')):fail('CURRENT_EXISTS')
+ entries=read('ROOT_LIST',lambda:list(r.iterdir()))
+ if entries:fail('ROOT_EMPTY')
  node='/usr/alwaysdata/nodejs/22/bin/node'
- if not os.path.isfile(node) or not os.access(node,os.X_OK):fail('NODE_EXECUTABLE')
- v=subprocess.check_output([node,'--version'],text=True,stderr=subprocess.PIPE).strip()
- if not re.fullmatch(r'v22\\.\\d+\\.\\d+',v):fail('NODE_VERSION')
+ if not read('NODE_FILE',lambda:os.path.isfile(node)):fail('NODE_FILE')
+ if not read('NODE_EXECUTABLE',lambda:os.access(node,os.X_OK)):fail('NODE_EXECUTABLE')
+ version=read('NODE_EXEC',lambda:subprocess.check_output([node,'--version'],text=True,stderr=subprocess.PIPE))
+ v=read('NODE_VERSION',lambda:version.strip())
+ if not read('NODE_VERSION',lambda:re.fullmatch(r'v22\\.\\d+\\.\\d+',v)):fail('NODE_VERSION')
  print(json.dumps({'ok':True,'identity':u,'root':str(r),'root_empty':True,'current_exists':False,'credential_files':False,'node':v}))
-except Exception:fail('ROOT_READ')`;
+except Exception:fail('ROOT_UNEXPECTED')`;
 export const databaseCheck = `import sys,json,os,subprocess,re
 
 def fail(name):
@@ -319,16 +329,23 @@ const invariantNames = new Set([
   "REMOTE_COMMAND",
   "LOGIN_IDENTITY",
   "ROOT_EXISTS",
+  "ROOT_STAT",
   "ROOT_DIRECTORY",
   "ROOT_SYMLINK",
   "ROOT_REAL_PATH",
-  "ROOT_OWNER",
+  "ROOT_RESOLVE",
+  "ROOT_OWNER_STAT",
+  "ROOT_OWNER_LOOKUP",
+  "ROOT_OWNER_MISMATCH",
   "ROOT_WRITABLE",
   "CURRENT_EXISTS",
+  "ROOT_LIST",
   "ROOT_EMPTY",
+  "NODE_FILE",
   "NODE_EXECUTABLE",
+  "NODE_EXEC",
   "NODE_VERSION",
-  "ROOT_READ",
+  "ROOT_UNEXPECTED",
   "REMOTE_RESPONSE",
   "DEV_AUTHENTICATION",
   "DEV_TLS",
