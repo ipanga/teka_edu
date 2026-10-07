@@ -117,3 +117,52 @@ must prove A → B → A → B. DEV reset, PROD operations and provider retireme
 References: [manual workflow requirements](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow),
 [Alwaysdata token permissions](https://help.alwaysdata.com/en/docs/admin-billing/profile/tokens/),
 [API fields](https://api.alwaysdata.com/doc/).
+
+## Node-only diagnostic checkpoint (2026-10-07)
+
+A separately authorized read-only diagnostic used the Mac's configured SSH alias with
+strict local host pins, exact congofoot identity, batch authentication and forwarding disabled.
+The encrypted Mac key used its existing local agent; no GitHub secret values were retrieved.
+This is direct SSH evidence, not a new GitHub preflight run. Staging-root evidence remains
+from run 37658416705; no root correction or database connection occurred in this diagnostic.
+
+| Invocation                                   | Result                                               | Version         |
+| -------------------------------------------- | ---------------------------------------------------- | --------------- |
+| command -v node                              | /home/congofoot/.nvm/versions/node/v20.19.5/bin/node | PATH resolution |
+| node --version                               | PASS                                                 | v20.19.5        |
+| /usr/bin/node --version                      | PASS                                                 | v22.23.3        |
+| /usr/alwaysdata/nodejs/22/bin/node --version | PASS                                                 | v22.23.3        |
+
+All three candidates exist, resolve to regular files and have executable access.
+The NVM Node 20 file is not a symlink. /usr/bin/node is a symlink to /usr/bin/alwrapper.
+The reviewed Node binary itself is not a symlink; its resolved path is
+/usr/alwaysdata/nodejs/22.23.3/bin/node through the version directory mapping.
+No executable-not-found, permissions, loader, library, nonzero, signal or timeout failure
+occurred in these version probes. Raw stderr was captured internally and never printed.
+
+The actual Python is 3.6.15. Reproducing the reviewed text=True invocation
+returned the fixed code PYTHON_SUBPROCESS_TEXT_UNSUPPORTED, while the same binary
+executed successfully with universal_newlines=True. The preflight blocker is therefore a
+Python subprocess API incompatibility, not a failed Node executable.
+[Python documentation](https://docs.python.org/3/library/subprocess.html) records that text
+and capture_output were added in 3.7. Both remote programs require 3.6-compatible arguments:
+universal_newlines=True, and explicit stdout/stderr pipes instead of capture_output=True.
+The local preparation changes only those arguments; SSH logic, exact Node path, site command
+validation and all SQL/TLS/DEV guards remain unchanged. Local regressions execute both programs
+against legacy subprocess signatures with no actual psql/database process.
+
+[Alwaysdata documents node or /usr/bin/node as its supported entry point](https://help.alwaysdata.com/en/docs/web-hosting/languages/nodejs/configuration/).
+The provider wrapper /usr/bin/node is the preferred future mechanism with the site's Node 22
+selection. Bare node is unsuitable in this observed SSH PATH because NVM selects Node 20.
+The reviewed absolute path works now; a wrapper/site expectation change is separate from the
+necessary Python fix and requires owner authorization. No site command has been changed.
+
+Stop boundary: remote diagnosis ended after these probes. No application upload, server file
+creation, chmod, symlink change, restart, DB connection, PROD access, DNS action or retirement.
+All switches remain UNSET/false/false and the staging Environment policy stays develop-only.
+PR #100 remains excluded. No compatibility integration/dispatch or DEV verification is
+included in this task; owner authorization is required for protected integration and a later
+verification-only rerun.
+
+Resume base: develop 917da52e560914fec048cbd536a9acdeedbfb585, prior preflight run
+37658416705, local preparation branch codex/alwaysdata-python36-preflight-compat.
