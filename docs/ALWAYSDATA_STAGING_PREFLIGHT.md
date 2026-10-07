@@ -63,6 +63,23 @@ and authentication. SSH and libpq stderr are classified internally into fixed al
 codes and never printed. Unknown errors remain explicit within the failing phase.
 No generic combined SSH/DEV error remains. Restart permission stays independently NOT PROVED.
 
+## Root/runtime operation diagnostics
+
+The fixed root/runtime probe now names every bounded read operation. ROOT_EXISTS, ROOT_STAT,
+ROOT_DIRECTORY and ROOT_SYMLINK preserve the exact directory checks; ROOT_RESOLVE distinguishes
+resolution failure from ROOT_REAL_PATH mismatch. ROOT_OWNER_STAT, ROOT_OWNER_LOOKUP and
+ROOT_OWNER_MISMATCH separate reading the UID, resolving its name and comparing the owner.
+ROOT_WRITABLE still uses access inspection only. CURRENT_EXISTS must remain false. ROOT_LIST
+captures enumeration failure separately from ROOT_EMPTY finding entries; no listing is emitted.
+
+NODE_FILE requires the expected regular runtime file, NODE_EXECUTABLE checks executable access,
+NODE_EXEC covers failure to complete `node --version`, and NODE_VERSION requires `v22.x.x`.
+Exceptions are caught at each operation and emit only its allowlisted invariant. The final
+ROOT_UNEXPECTED defense covers genuinely unclassified conditions; no ROOT_READ collapse
+remains. SSH credentials/pinning/login and all DEV queries are unchanged. A failure stops
+before DEV checks and produces only fixed JSON, without exception text, UID numbers, arbitrary
+paths/listings, environment values or stderr. The probe never corrects a failing invariant.
+
 ## Restart permission limit
 
 The documented site/account/token GET fields do not establish effective restart permission.
