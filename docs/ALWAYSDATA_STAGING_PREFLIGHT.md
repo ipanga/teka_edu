@@ -13,13 +13,72 @@ performed. Ephemeral key/pin files exist only on the runner with mode 0600 under
 temporary directory and are removed. No artifact upload step exists. API redirects and raw
 provider/SSH diagnostics are suppressed to prevent credential disclosure.
 
+The isolated five-file integration uses existing application reference-data helpers and
+self-contained SELECT SQL. It does not import the unmerged PostgreSQL runner or baseline
+files from PR #100. Frozen SHA-256 bindings from the reviewed
+`2315600fc0db4bfe67769afb2eb4727983c91bb6` baseline cover the complete schema, all 46
+history entries (including source/execution hashes and adapter version), and the historical
+SQL source inventory. Canonical values retain their reviewed full-data hash. This preserves
+the verification contract without integrating migration tooling/evidence or other PR #100
+files. The five-file adaptation receives its own isolated PR review and CI.
+
 The live site must match account `congofoot`, site 1083502, Node.js 22, sole address
 `staging-tekaedu.tootiye.com`, staging root and reviewed `current/runtime.mjs` command.
+The owner's direct API query confirmed that Alwaysdata serializes the configured root address
+as `staging-tekaedu.tootiye.com/`. Validation removes exactly one terminal slash before exact
+comparison with `staging-tekaedu.tootiye.com`. Both forms identify the same intended root.
+Other hosts, subpaths, duplicate/additional addresses, empty/malformed values, schemes and
+ports remain rejected. No scheme-qualified serialization has been evidenced, so none is
+accepted. The startup command remains an exact comparison and the provider site is unchanged.
 Mismatches stop without correction and identify fields without printing possibly sensitive
 values. The staging root must still be empty; a new release requires separate review.
 DEV must match all 46 historical checksums and the frozen schema and 36-table/6,170-row
 canonical values. Behavioral integrity fixtures and idempotency re-sync are excluded because
 they execute DML even when rolled back.
+
+## Sanitized diagnostic phases
+
+The summary now records each check separately and retains completed PASS statuses when a
+later phase fails. Later phases remain NOT REACHED. Activation/API authentication, normalized
+site configuration and forbidden site-environment validation remain first. Before every SSH
+network call, the runner validates the private key noninteractively with `ssh-keygen -y`
+(stdout discarded) and finds/syntax-checks only pinned entries for the exact SSH hostname.
+All temporary key/pin files are 0600 under a private local runner directory and cleaned up
+on success or failure. No replacement trust material or fingerprint is printed.
+
+Pinned SSH then runs only `id -un`; authentication and exact login must pass before the fixed
+root/runtime read. The root check reports only failed invariant names, such as ROOT_EMPTY
+or NODE_VERSION. Only after root/runtime success does a separate minimal SELECT prove exact
+DEV identity/version, TLS verify-full, transaction/default read-only and repeatable-read
+isolation. Only after that succeeds does the unchanged full SELECT payload verify migration
+history/checksums, schema/access and canonical values. Every query remains DEV-only with
+PGOPTIONS default_transaction_read_only=on and an explicit read-only transaction.
+
+The eleven summary entries are ACTIVATION_GUARD, API_AUTH, SITE_CONFIG, SITE_ENVIRONMENT,
+SSH_PRIVATE_KEY_FORMAT, KNOWN_HOSTS_ENTRY, SSH_AUTH, SSH_ROOT_RUNTIME, DEV_DB_AUTH_TLS,
+DEV_READONLY_VERIFY and RESTART_PERMISSION. Local key-format failure can include an unusable
+passphrase-protected key; it does not claim password-free parse success. Host-pin entry PASS
+means local matching/syntax; the subsequent SSH_AUTH must pass to prove live pinned trust
+and authentication. SSH and libpq stderr are classified internally into fixed allowlisted
+codes and never printed. Unknown errors remain explicit within the failing phase.
+No generic combined SSH/DEV error remains. Restart permission stays independently NOT PROVED.
+
+## Root/runtime operation diagnostics
+
+The fixed root/runtime probe now names every bounded read operation. ROOT_EXISTS, ROOT_STAT,
+ROOT_DIRECTORY and ROOT_SYMLINK preserve the exact directory checks; ROOT_RESOLVE distinguishes
+resolution failure from ROOT_REAL_PATH mismatch. ROOT_OWNER_STAT, ROOT_OWNER_LOOKUP and
+ROOT_OWNER_MISMATCH separate reading the UID, resolving its name and comparing the owner.
+ROOT_WRITABLE still uses access inspection only. CURRENT_EXISTS must remain false. ROOT_LIST
+captures enumeration failure separately from ROOT_EMPTY finding entries; no listing is emitted.
+
+NODE_FILE requires the expected regular runtime file, NODE_EXECUTABLE checks executable access,
+NODE_EXEC covers failure to complete `node --version`, and NODE_VERSION requires `v22.x.x`.
+Exceptions are caught at each operation and emit only its allowlisted invariant. The final
+ROOT_UNEXPECTED defense covers genuinely unclassified conditions; no ROOT_READ collapse
+remains. SSH credentials/pinning/login and all DEV queries are unchanged. A failure stops
+before DEV checks and produces only fixed JSON, without exception text, UID numbers, arbitrary
+paths/listings, environment values or stderr. The probe never corrects a failing invariant.
 
 ## Restart permission limit
 
@@ -30,22 +89,21 @@ connection checks, retaining sanitized stdout/job-summary evidence. An owner mus
 reviewable read-only evidence of the linked profile's site-management permission. No restart
 POST or token listing is used; token listings can themselves expose credentials.
 
-## Current execution blocker
+## Registration and integration boundary
 
 The repository default branch is `main`; Environment `staging` permits only `develop`.
 GitHub requires `workflow_dispatch` workflows to exist on the default branch. This authorized
-change exists only on PR #100's feature branch. Therefore it cannot safely run using the
-actual Environment secrets under the current restrictions. No dispatch or policy change is
-attempted, and PR #100 stays unmerged. Ordinary PR CI tests this implementation with fixtures;
-that is not a live secret-backed preflight.
+workflow must therefore be registered on `main` through protected PRs and dispatched only on
+`develop`. The owner authorized integrating exactly the five preflight files independently
+of PR #100, which remains open/draft. The Environment policy stays unchanged. Ordinary PR CI
+uses fixtures and must not be represented as live credential evidence.
 
-An owner decision is required: separately authorize review/integration of only the preflight
-files through the repository's normal `develop`/`main` promotion path, with the activation
-switch disabled, then dispatch the reviewed preflight on `develop`. That path preserves the
-Environment policy and excludes the application migration/CD changes in PR #100. It is not
-authorized by the feature-branch-only instruction. Alternatively retain the current stop and
-provide independently obtained read-only evidence; that alternative does not prove the exact
-GitHub-stored credentials were consumed by Actions.
+The existing `STAGING_DEPLOY_ENABLED` and `PRODUCTION_DEPLOY_ENABLED` repository switches
+were observed enabled. Both are held `false` for this preflight-only integration so protected
+merges cannot trigger Vercel/Supabase mutation jobs. The Alwaysdata switch remains unset.
+No deployment workflow is modified and no provider is retired. Do not restore or enable any
+deployment switch without separate owner authorization. Inspect the `main..develop` tree
+diff before promotion; only the five authorized files may cross this integration boundary.
 
 ## Activation and first-release boundary
 
@@ -59,3 +117,52 @@ must prove A → B → A → B. DEV reset, PROD operations and provider retireme
 References: [manual workflow requirements](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow),
 [Alwaysdata token permissions](https://help.alwaysdata.com/en/docs/admin-billing/profile/tokens/),
 [API fields](https://api.alwaysdata.com/doc/).
+
+## Node-only diagnostic checkpoint (2026-10-07)
+
+A separately authorized read-only diagnostic used the Mac's configured SSH alias with
+strict local host pins, exact congofoot identity, batch authentication and forwarding disabled.
+The encrypted Mac key used its existing local agent; no GitHub secret values were retrieved.
+This is direct SSH evidence, not a new GitHub preflight run. Staging-root evidence remains
+from run 37658416705; no root correction or database connection occurred in this diagnostic.
+
+| Invocation                                   | Result                                               | Version         |
+| -------------------------------------------- | ---------------------------------------------------- | --------------- |
+| command -v node                              | /home/congofoot/.nvm/versions/node/v20.19.5/bin/node | PATH resolution |
+| node --version                               | PASS                                                 | v20.19.5        |
+| /usr/bin/node --version                      | PASS                                                 | v22.23.3        |
+| /usr/alwaysdata/nodejs/22/bin/node --version | PASS                                                 | v22.23.3        |
+
+All three candidates exist, resolve to regular files and have executable access.
+The NVM Node 20 file is not a symlink. /usr/bin/node is a symlink to /usr/bin/alwrapper.
+The reviewed Node binary itself is not a symlink; its resolved path is
+/usr/alwaysdata/nodejs/22.23.3/bin/node through the version directory mapping.
+No executable-not-found, permissions, loader, library, nonzero, signal or timeout failure
+occurred in these version probes. Raw stderr was captured internally and never printed.
+
+The actual Python is 3.6.15. Reproducing the reviewed text=True invocation
+returned the fixed code PYTHON_SUBPROCESS_TEXT_UNSUPPORTED, while the same binary
+executed successfully with universal_newlines=True. The preflight blocker is therefore a
+Python subprocess API incompatibility, not a failed Node executable.
+[Python documentation](https://docs.python.org/3/library/subprocess.html) records that text
+and capture_output were added in 3.7. Both remote programs require 3.6-compatible arguments:
+universal_newlines=True, and explicit stdout/stderr pipes instead of capture_output=True.
+The local preparation changes only those arguments; SSH logic, exact Node path, site command
+validation and all SQL/TLS/DEV guards remain unchanged. Local regressions execute both programs
+against legacy subprocess signatures with no actual psql/database process.
+
+[Alwaysdata documents node or /usr/bin/node as its supported entry point](https://help.alwaysdata.com/en/docs/web-hosting/languages/nodejs/configuration/).
+The provider wrapper /usr/bin/node is the preferred future mechanism with the site's Node 22
+selection. Bare node is unsuitable in this observed SSH PATH because NVM selects Node 20.
+The reviewed absolute path works now; a wrapper/site expectation change is separate from the
+necessary Python fix and requires owner authorization. No site command has been changed.
+
+Stop boundary: remote diagnosis ended after these probes. No application upload, server file
+creation, chmod, symlink change, restart, DB connection, PROD access, DNS action or retirement.
+All switches remain UNSET/false/false and the staging Environment policy stays develop-only.
+PR #100 remains excluded. No compatibility integration/dispatch or DEV verification is
+included in this task; owner authorization is required for protected integration and a later
+verification-only rerun.
+
+Resume base: develop 917da52e560914fec048cbd536a9acdeedbfb585, prior preflight run
+37658416705, local preparation branch codex/alwaysdata-python36-preflight-compat.

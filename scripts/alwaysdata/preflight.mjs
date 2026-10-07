@@ -4,6 +4,22 @@ import { join } from "node:path";
 import { execFileSync } from "node:child_process";
 import { isDeepStrictEqual } from "node:util";
 import { pathToFileURL } from "node:url";
+import { createHash } from "node:crypto";
+
+const normalize = (v) =>
+  Array.isArray(v)
+    ? v.map(normalize)
+    : v !== null && typeof v === "object"
+      ? Object.fromEntries(
+          Object.entries(v)
+            .sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0))
+            .map(([k, x]) => [k, normalize(x)]),
+        )
+      : v;
+export const digest = (v) =>
+  createHash("sha256")
+    .update(JSON.stringify(normalize(v)))
+    .digest("hex");
 
 const secretNames = [
   "ALWAYSDATA_SSH_PRIVATE_KEY",
@@ -24,7 +40,7 @@ export function assertPreflightConfig(env) {
   for (const name of secretNames)
     if (!env[name]?.trim()) throw new Error(`Missing secret: ${name}`);
 }
-export function validatePreflightSite(site) {
+export function validatePreflightSiteConfig(site) {
   const expected = {
     id: 1083502,
     type: "nodejs",
@@ -36,6 +52,13 @@ export function validatePreflightSite(site) {
   const actual = {
     ...site,
     nodejs_version: String(site.nodejs_version),
+    // Alwaysdata serializes a root address with a trailing slash. Remove only that
+    // single terminal slash; exact comparison still rejects schemes, ports and paths.
+    addresses: Array.isArray(site.addresses)
+      ? site.addresses.map((address) =>
+          typeof address === "string" ? address.replace(/\/$/, "") : address,
+        )
+      : site.addresses,
     working_directory: (site.working_directory ?? "")
       .replace(/^\/home\/congofoot\//, "")
       .replace(/\/$/, ""),
@@ -46,15 +69,27 @@ export function validatePreflightSite(site) {
   // Report field names only: a malformed command/field could itself contain a credential.
   if (mismatches.length)
     throw new Error(`Site 1083502 fields differ from expected values: ${mismatches.join(", ")}`);
+  return expected;
+}
+export function validatePreflightSiteEnvironment(site) {
   if (typeof site.environment !== "string" && site.environment != null)
     throw new Error("Unexpected site environment representation");
   if (/\b(PG\w*|\w*DATABASE_URL|\w*SUPABASE\w*|\w*VERCEL\w*)\s*=/i.test(site.environment ?? ""))
     throw new Error(
       "Forbidden DB/Supabase/Vercel assignment in site environment (values suppressed)",
     );
+  return true;
+}
+export function validatePreflightSite(site) {
+  const expected = validatePreflightSiteConfig(site);
+  validatePreflightSiteEnvironment(site);
   return expected;
 }
-export async function inspectPreflightApi(token, fetcher = fetch) {
+export async function inspectPreflightApi(
+  token,
+  fetcher = fetch,
+  check = async (_name, action) => action(),
+) {
   const headers = {
     Authorization: "Basic " + Buffer.from(`${token} account=congofoot:`).toString("base64"),
   };
@@ -77,10 +112,26 @@ export async function inspectPreflightApi(token, fetcher = fetch) {
       throw new Error(`API GET ${path}: invalid JSON`);
     }
   }
-  const accounts = await get("account/");
-  if (!Array.isArray(accounts) || accounts.filter((a) => a.name === "congofoot").length !== 1)
-    throw new Error("API intended account congofoot not identified");
-  const site = validatePreflightSite(await get("site/1083502/"));
+  const rawSite = await check(
+    "API_AUTH",
+    async () => {
+      const accounts = await get("account/");
+      if (!Array.isArray(accounts) || accounts.filter((a) => a.name === "congofoot").length !== 1)
+        throw new Error("API intended account congofoot not identified");
+      return get("site/1083502/");
+    },
+    "API_ACCESS_OR_IDENTITY",
+  );
+  const site = await check(
+    "SITE_CONFIG",
+    () => validatePreflightSiteConfig(rawSite),
+    "SITE_FIELDS",
+  );
+  await check(
+    "SITE_ENVIRONMENT",
+    () => validatePreflightSiteEnvironment(rawSite),
+    "SITE_ENVIRONMENT",
+  );
   // The documented token/site/account GET schemas expose no effective restart ACL.
   // Never request token listings (they may contain keys), and never test by POST.
   return {
@@ -94,29 +145,34 @@ export async function inspectPreflightApi(token, fetcher = fetch) {
 }
 export function validateReadOnlyDatabase(lines, expected) {
   const [state, identity, history, schema, access, , ...canonical] = lines;
-  if (
-    state?.read_only !== "on" ||
-    state.isolation !== "repeatable read" ||
-    state.prod_connect !== false ||
-    identity?.version !== 160015 ||
-    identity.database !== "congofoot_teka_edu_dev" ||
-    identity.login !== "congofoot_user_teka_edu_dev" ||
-    identity.tls !== true ||
-    identity.superuser !== false
-  )
-    throw new Error("Read-only DEV identity/TLS/PROD isolation failed");
+  for (const [name, ok] of [
+    ["TRANSACTION_READ_ONLY", state?.read_only === "on"],
+    ["ISOLATION", state?.isolation === "repeatable read"],
+    ["PROD_CONNECT_DENIED", state?.prod_connect === false],
+    ["POSTGRES_VERSION", identity?.version === 160015],
+    ["DATABASE_IDENTITY", identity?.database === "congofoot_teka_edu_dev"],
+    ["LOGIN_IDENTITY", identity?.login === "congofoot_user_teka_edu_dev"],
+    ["DEV_TLS", identity?.tls === true],
+    ["DEV_NON_SUPERUSER", identity?.superuser === false],
+  ])
+    if (!ok) throw new DiagnosticFailure(name);
   const keys = ["version", "filename", "source_sha256", "execution_sha256", "adapter_version"];
   if (
     history?.length !== 46 ||
-    expected.migrations.length !== 46 ||
+    !/^[a-f0-9]{64}$/.test(expected.migrations_sha256) ||
     history.some(
-      (row, i) =>
+      (row) =>
         row.target !== "staging" ||
         row.release_sha !== "2315600fc0db4bfe67769afb2eb4727983c91bb6" ||
-        keys.some((key) => row[key] !== expected.migrations[i][key]),
+        keys.some((key) => typeof row[key] !== "string"),
     )
   )
-    throw new Error("DEV history differs from reviewed 46-migration chain");
+    throw new DiagnosticFailure("HISTORY_CHAIN");
+  if (
+    digest(history.map((row) => Object.fromEntries(keys.map((key) => [key, row[key]])))) !==
+    expected.migrations_sha256
+  )
+    throw new DiagnosticFailure("HISTORY_CHECKSUM");
   const accessKeys = [
     "rls",
     "policies",
@@ -128,11 +184,11 @@ export function validateReadOnlyDatabase(lines, expected) {
     "btree_gist",
   ];
   if (
-    !isDeepStrictEqual(schema, expected.schema) ||
+    digest(schema) !== expected.schema_sha256 ||
     !access ||
     accessKeys.some((key) => access[key] !== true)
   )
-    throw new Error("DEV schema/access drift");
+    throw new DiagnosticFailure("SCHEMA_ACCESS");
   if (
     canonical.length !== 36 ||
     expected.counts.length !== 36 ||
@@ -144,10 +200,16 @@ export function validateReadOnlyDatabase(lines, expected) {
     ) ||
     canonical.reduce((n, row) => n + row.rows, 0) !== 6170
   )
-    throw new Error("DEV canonical row/value mismatch");
+    throw new DiagnosticFailure("CANONICAL_VALUES");
   return {
     authentication: "PASS",
-    identity,
+    identity: {
+      version: 160015,
+      database: "congofoot_teka_edu_dev",
+      login: "congofoot_user_teka_edu_dev",
+      tls: true,
+      superuser: false,
+    },
     transaction_read_only: true,
     sslmode: "verify-full",
     prod_connect: false,
@@ -161,22 +223,64 @@ export function validateReadOnlyDatabase(lines, expected) {
     idempotency: "NOT RERUN (DML forbidden)",
   };
 }
-// Fixed scripts streamed as command arguments/stdin; nothing is written on the server.
-const rootCheck = `import os,pathlib,pwd,json,subprocess
-r=pathlib.Path('/home/congofoot/www/tekaedu-staging')
-u=pwd.getpwuid(os.getuid()).pw_name
-assert u=='congofoot' and r.is_dir() and not r.is_symlink() and str(r.resolve())==str(r)
-assert pwd.getpwuid(r.stat().st_uid).pw_name=='congofoot' and os.access(r,os.W_OK)
-assert not list(r.iterdir()), 'Staging root is no longer empty; separate review required'
-v=subprocess.check_output(['/usr/alwaysdata/nodejs/22/bin/node','--version'],text=True).strip()
-assert v.startswith('v22.')
-print(json.dumps({'identity':u,'root':str(r),'root_empty':True,'current_exists':False,'credential_files':False,'node':v}))`;
-const databaseCheck = `import sys,json,os,subprocess
-p=json.load(sys.stdin)
-e={'PATH':os.environ['PATH'],'PGHOST':'postgresql-congofoot.alwaysdata.net','PGPORT':'5432','PGDATABASE':'congofoot_teka_edu_dev','PGUSER':'congofoot_user_teka_edu_dev','PGPASSWORD':p['password'],'PGSSLMODE':'verify-full','PGSSLROOTCERT':'/etc/ssl/certs/ca-certificates.crt','PGCONNECT_TIMEOUT':'15','PGGSSENCMODE':'disable','PGOPTIONS':'-c default_transaction_read_only=on'}
-r=subprocess.run(['psql','-X','-qAt','--no-password','-v','ON_ERROR_STOP=1'],env=e,input=p['sql'],text=True,capture_output=True)
-if r.returncode: print('Read-only DEV query failed; server diagnostics suppressed',file=sys.stderr);sys.exit(1)
-sys.stdout.write(r.stdout)`;
+// Fixed programs run read-only over SSH; no files are written on the server.
+export const rootCheck = `import os,pathlib,pwd,json,subprocess,re,stat
+
+def fail(name):
+ print(json.dumps({'ok':False,'invariant':name}));raise SystemExit(0)
+def read(name,operation):
+ try:return operation()
+ except Exception:fail(name)
+try:
+ r=pathlib.Path('/home/congofoot/www/tekaedu-staging')
+ u=read('LOGIN_IDENTITY',lambda:pwd.getpwuid(os.getuid()).pw_name)
+ if u!='congofoot':fail('LOGIN_IDENTITY')
+ if not read('ROOT_EXISTS',r.exists):fail('ROOT_EXISTS')
+ metadata=read('ROOT_STAT',r.stat)
+ if not read('ROOT_DIRECTORY',lambda:stat.S_ISDIR(metadata.st_mode)):fail('ROOT_DIRECTORY')
+ if read('ROOT_SYMLINK',r.is_symlink):fail('ROOT_SYMLINK')
+ resolved=read('ROOT_RESOLVE',r.resolve)
+ if read('ROOT_REAL_PATH',lambda:str(resolved))!='/home/congofoot/www/tekaedu-staging':fail('ROOT_REAL_PATH')
+ uid=read('ROOT_OWNER_STAT',lambda:metadata.st_uid)
+ owner=read('ROOT_OWNER_LOOKUP',lambda:pwd.getpwuid(uid).pw_name)
+ if owner!='congofoot':fail('ROOT_OWNER_MISMATCH')
+ if not read('ROOT_WRITABLE',lambda:os.access(r,os.W_OK)):fail('ROOT_WRITABLE')
+ if read('CURRENT_EXISTS',lambda:os.path.lexists(r/'current')):fail('CURRENT_EXISTS')
+ entries=read('ROOT_LIST',lambda:list(r.iterdir()))
+ if entries:fail('ROOT_EMPTY')
+ node='/usr/alwaysdata/nodejs/22/bin/node'
+ if not read('NODE_FILE',lambda:os.path.isfile(node)):fail('NODE_FILE')
+ if not read('NODE_EXECUTABLE',lambda:os.access(node,os.X_OK)):fail('NODE_EXECUTABLE')
+ version=read('NODE_EXEC',lambda:subprocess.check_output([node,'--version'],universal_newlines=True,stderr=subprocess.PIPE))
+ v=read('NODE_VERSION',lambda:version.strip())
+ if not read('NODE_VERSION',lambda:re.fullmatch(r'v22\\.\\d+\\.\\d+',v)):fail('NODE_VERSION')
+ print(json.dumps({'ok':True,'identity':u,'root':str(r),'root_empty':True,'current_exists':False,'credential_files':False,'node':v}))
+except Exception:fail('ROOT_UNEXPECTED')`;
+export const databaseCheck = `import sys,json,os,subprocess,re
+
+def fail(name):
+ print(json.dumps({'ok':False,'invariant':name}));raise SystemExit(0)
+try:
+ p=json.load(sys.stdin)
+ e={'PATH':os.environ['PATH'],'PGHOST':'postgresql-congofoot.alwaysdata.net','PGPORT':'5432','PGDATABASE':'congofoot_teka_edu_dev','PGUSER':'congofoot_user_teka_edu_dev','PGPASSWORD':p['password'],'PGSSLMODE':'verify-full','PGSSLROOTCERT':'/etc/ssl/certs/ca-certificates.crt','PGCONNECT_TIMEOUT':'15','PGGSSENCMODE':'disable','PGOPTIONS':'-c default_transaction_read_only=on'}
+ r=subprocess.run(['psql','-X','-qAt','--no-password','-v','ON_ERROR_STOP=1'],env=e,input=p['sql'],universal_newlines=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=150)
+ if r.returncode:
+  if re.search(r'password authentication failed|no password supplied|authentication failed',r.stderr,re.I):fail('DEV_AUTHENTICATION')
+  if re.search(r'certificate|sslrootcert|SSL error|TLS',r.stderr,re.I):fail('DEV_TLS')
+  if re.search(r'could not translate host name|Connection refused|Connection timed out|Network is unreachable|No route to host',r.stderr,re.I):fail('DEV_CONNECTION')
+  fail('DEV_QUERY')
+ print(json.dumps({'ok':True,'rows':r.stdout.strip().splitlines()}))
+except FileNotFoundError:fail('PSQL_UNAVAILABLE')
+except subprocess.TimeoutExpired:fail('DEV_TIMEOUT')
+except Exception:fail('DEV_REMOTE_READ')`;
+export const databaseAuthSql = `begin isolation level repeatable read read only;
+select jsonb_build_object('database',current_database(),'login',current_user,
+'version',current_setting('server_version_num')::integer,
+'read_only',current_setting('transaction_read_only'),
+'default_read_only',current_setting('default_transaction_read_only'),
+'isolation',current_setting('transaction_isolation'),
+ 'tls',coalesce((select ssl from pg_stat_ssl where pid=pg_backend_pid()),false));
+rollback;`;
 const shellQuote = (s) => "'" + s.replaceAll("'", "'\\''") + "'";
 export function sshArguments(dir) {
   return [
@@ -209,13 +313,188 @@ export function sshArguments(dir) {
     "congofoot@ssh-congofoot.alwaysdata.net",
   ];
 }
-export async function preflight(env = process.env) {
-  assertPreflightConfig(env);
+const invariantNames = new Set([
+  "CHECK_FAILED",
+  "CONFIGURATION",
+  "API_ACCESS_OR_IDENTITY",
+  "SITE_FIELDS",
+  "SITE_ENVIRONMENT",
+  "KEY_FORMAT_OR_PASSPHRASE",
+  "KNOWN_HOSTS_HOST_ENTRY",
+  "KNOWN_HOSTS_SYNTAX",
+  "HOST_KEY_VALIDATION",
+  "SSH_AUTHENTICATION",
+  "SSH_CONNECTION",
+  "SSH_TRANSPORT",
+  "REMOTE_COMMAND",
+  "LOGIN_IDENTITY",
+  "ROOT_EXISTS",
+  "ROOT_STAT",
+  "ROOT_DIRECTORY",
+  "ROOT_SYMLINK",
+  "ROOT_REAL_PATH",
+  "ROOT_RESOLVE",
+  "ROOT_OWNER_STAT",
+  "ROOT_OWNER_LOOKUP",
+  "ROOT_OWNER_MISMATCH",
+  "ROOT_WRITABLE",
+  "CURRENT_EXISTS",
+  "ROOT_LIST",
+  "ROOT_EMPTY",
+  "NODE_FILE",
+  "NODE_EXECUTABLE",
+  "NODE_EXEC",
+  "NODE_VERSION",
+  "ROOT_UNEXPECTED",
+  "REMOTE_RESPONSE",
+  "DEV_AUTHENTICATION",
+  "DEV_TLS",
+  "DEV_CONNECTION",
+  "DEV_QUERY",
+  "PSQL_UNAVAILABLE",
+  "DEV_TIMEOUT",
+  "DEV_REMOTE_READ",
+  "DATABASE_IDENTITY",
+  "POSTGRES_VERSION",
+  "TRANSACTION_READ_ONLY",
+  "DEFAULT_READ_ONLY",
+  "ISOLATION",
+  "HISTORY_CHAIN",
+  "HISTORY_CHECKSUM",
+  "SCHEMA_ACCESS",
+  "CANONICAL_VALUES",
+  "PAYLOAD_GENERATION",
+  "LOCAL_CLEANUP",
+  "PROD_CONNECT_DENIED",
+  "DEV_NON_SUPERUSER",
+]);
+export class DiagnosticFailure extends Error {
+  constructor(invariant) {
+    const safe = invariantNames.has(invariant) ? invariant : "CHECK_FAILED";
+    super(safe);
+    this.invariant = safe;
+  }
+}
+export function classifySshFailure(error) {
+  const stderr = Buffer.isBuffer(error?.stderr)
+    ? error.stderr.toString("utf8")
+    : typeof error?.stderr === "string"
+      ? error.stderr
+      : "";
+  if (
+    /Host key verification failed|REMOTE HOST IDENTIFICATION HAS CHANGED|No .* host key is known/i.test(
+      stderr,
+    )
+  )
+    return "HOST_KEY_VALIDATION";
+  if (/Permission denied|sign_and_send_pubkey|Load key .*invalid format/i.test(stderr))
+    return "SSH_AUTHENTICATION";
+  if (
+    /Could not resolve hostname|Connection timed out|Connection refused|Network is unreachable|No route to host|Connection (closed|reset)/i.test(
+      stderr,
+    )
+  )
+    return "SSH_CONNECTION";
+  return error?.status === 255 || error?.code === "ETIMEDOUT" ? "SSH_TRANSPORT" : "REMOTE_COMMAND";
+}
+export function validateRootResponse(value) {
+  if (value?.ok === false) throw new DiagnosticFailure(value.invariant);
+  if (
+    value?.ok !== true ||
+    value.identity !== "congofoot" ||
+    value.root !== "/home/congofoot/www/tekaedu-staging" ||
+    value.root_empty !== true ||
+    value.current_exists !== false ||
+    value.credential_files !== false ||
+    !/^v22\.\d+\.\d+$/.test(value.node ?? "")
+  )
+    throw new DiagnosticFailure("REMOTE_RESPONSE");
+  return {
+    identity: "congofoot",
+    root: value.root,
+    root_empty: true,
+    current_exists: false,
+    credential_files: false,
+    node: value.node,
+  };
+}
+export function validateDatabaseAuthentication(value) {
+  for (const [name, ok] of [
+    ["DATABASE_IDENTITY", value?.database === "congofoot_teka_edu_dev"],
+    ["LOGIN_IDENTITY", value?.login === "congofoot_user_teka_edu_dev"],
+    ["POSTGRES_VERSION", value?.version === 160015],
+    ["DEV_TLS", value?.tls === true],
+    ["TRANSACTION_READ_ONLY", value?.read_only === "on"],
+    ["DEFAULT_READ_ONLY", value?.default_read_only === "on"],
+    ["ISOLATION", value?.isolation === "repeatable read"],
+  ])
+    if (!ok) throw new DiagnosticFailure(name);
+  return {
+    database: value.database,
+    login: value.login,
+    version: 160015,
+    tls: true,
+    sslmode: "verify-full",
+    transaction_read_only: true,
+    default_transaction_read_only: true,
+  };
+}
+const phaseNames = [
+  "ACTIVATION_GUARD",
+  "API_AUTH",
+  "SITE_CONFIG",
+  "SITE_ENVIRONMENT",
+  "SSH_PRIVATE_KEY_FORMAT",
+  "KNOWN_HOSTS_ENTRY",
+  "SSH_AUTH",
+  "SSH_ROOT_RUNTIME",
+  "DEV_DB_AUTH_TLS",
+  "DEV_READONLY_VERIFY",
+];
+function publishEvidence(evidence, env) {
+  const safe = JSON.stringify(evidence, null, 2);
+  if (secretNames.some((name) => env[name] && safe.includes(env[name])))
+    throw new DiagnosticFailure("REMOTE_RESPONSE");
+  console.log(safe);
+  if (env.GITHUB_STEP_SUMMARY) {
+    const rows = Object.entries(evidence.checks)
+      .map(([name, status]) => `| ${name} | ${status} |`)
+      .join("\n");
+    appendFileSync(
+      env.GITHUB_STEP_SUMMARY,
+      `| Read-only check | Status |\n| --- | --- |\n${rows}\n\n\`\`\`json\n${safe}\n\`\`\`\n`,
+    );
+  }
+}
+/**
+ * @typedef {Object} PreflightEvidence
+ * @property {string} recorded_at
+ * @property {string} commit
+ * @property {string} deployment_switch
+ * @property {string[]} secret_names
+ * @property {Record<string, string>} checks
+ * @property {{application_upload: boolean, site_restart: boolean, database_dml_ddl: boolean, prod_connection: boolean}} mutations
+ * @property {{phase: string, invariant: string}} [failure]
+ * @property {Awaited<ReturnType<typeof inspectPreflightApi>>} [api]
+ * @property {ReturnType<typeof validateRootResponse> & {private_key?: string, known_hosts?: string}} [ssh]
+ * @property {ReturnType<typeof validateDatabaseAuthentication>} [database_auth]
+ * @property {ReturnType<typeof validateReadOnlyDatabase>} [database]
+ * @property {string} [status]
+ */
+export async function preflight(env = process.env, options = {}) {
+  const run = options.run ?? execFileSync;
+  /** @type {PreflightEvidence} */
   const evidence = {
     recorded_at: new Date().toISOString(),
-    commit: env.GITHUB_SHA,
-    deployment_switch: env.ALWAYSDATA_STAGING_DEPLOY_ENABLED || "UNSET",
+    commit: /^[a-f0-9]{40}$/.test(env.GITHUB_SHA ?? "") ? env.GITHUB_SHA : "INVALID",
+    deployment_switch: ["", "false"].includes(env.ALWAYSDATA_STAGING_DEPLOY_ENABLED ?? "")
+      ? env.ALWAYSDATA_STAGING_DEPLOY_ENABLED || "UNSET"
+      : "ENABLED_OR_INVALID",
     secret_names: secretNames,
+    checks: {
+      ...Object.fromEntries(phaseNames.map((name) => [name, "NOT REACHED"])),
+      RESTART_PERMISSION: "NOT PROVED",
+    },
     mutations: {
       application_upload: false,
       site_restart: false,
@@ -223,24 +502,82 @@ export async function preflight(env = process.env) {
       prod_connection: false,
     },
   };
-  if (!/^[a-f0-9]{40}$/.test(evidence.commit ?? ""))
-    throw new Error("Exact workflow commit SHA required");
-  // API identity mismatch stops before remote checks. No restart-capable helper is imported.
-  evidence.api = await inspectPreflightApi(env.ALWAYSDATA_API_TOKEN);
-  const payload = JSON.parse(
-    execFileSync(process.execPath, ["--import", "tsx", "scripts/alwaysdata/preflight-sql.ts"], {
-      env: { PATH: env.PATH },
-      encoding: "utf8",
-      maxBuffer: 32 * 1024 * 1024,
-    }),
-  );
-  const dir = mkdtempSync(join(tmpdir(), "teka-preflight-")); // mkdtemp creates mode 0700.
+  let dir;
+  async function check(name, action, invariant = "CHECK_FAILED") {
+    evidence.checks[name] = "FAIL";
+    try {
+      const result = await action();
+      evidence.checks[name] = "PASS";
+      return result;
+    } catch (error) {
+      evidence.failure = {
+        phase: name,
+        invariant: error instanceof DiagnosticFailure ? error.invariant : invariant,
+      };
+      throw new DiagnosticFailure(evidence.failure.invariant);
+    }
+  }
+  const parse = (text) => {
+    try {
+      return JSON.parse(text);
+    } catch {
+      throw new DiagnosticFailure("REMOTE_RESPONSE");
+    }
+  };
   try {
+    await check(
+      "ACTIVATION_GUARD",
+      () => {
+        assertPreflightConfig(env);
+        if (!/^[a-f0-9]{40}$/.test(env.GITHUB_SHA ?? ""))
+          throw new DiagnosticFailure("CONFIGURATION");
+      },
+      "CONFIGURATION",
+    );
+    // API/site checks stay first; local key/pin validation precedes every network SSH call.
+    evidence.api = await inspectPreflightApi(
+      env.ALWAYSDATA_API_TOKEN,
+      options.fetcher ?? fetch,
+      check,
+    );
+    dir = mkdtempSync(join(tmpdir(), "teka-preflight-"));
     writeFileSync(join(dir, "key"), env.ALWAYSDATA_SSH_PRIVATE_KEY + "\n", { mode: 0o600 });
     writeFileSync(join(dir, "known_hosts"), env.ALWAYSDATA_SSH_KNOWN_HOSTS + "\n", { mode: 0o600 });
-    const ssh = (program, input) => {
+    const local = { env: { PATH: env.PATH }, timeout: 15000, stdio: ["ignore", "ignore", "pipe"] };
+    await check(
+      "SSH_PRIVATE_KEY_FORMAT",
+      () => {
+        // Empty passphrase is explicit: no prompt, public key or fingerprint output.
+        run("ssh-keygen", ["-y", "-P", "", "-f", join(dir, "key")], local);
+      },
+      "KEY_FORMAT_OR_PASSPHRASE",
+    );
+    await check(
+      "KNOWN_HOSTS_ENTRY",
+      () => {
+        let found;
+        try {
+          found = run(
+            "ssh-keygen",
+            ["-F", "ssh-congofoot.alwaysdata.net", "-f", join(dir, "known_hosts")],
+            { ...local, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] },
+          );
+        } catch {
+          throw new DiagnosticFailure("KNOWN_HOSTS_HOST_ENTRY");
+        }
+        const entries = String(found)
+          .split("\n")
+          .filter((line) => line.trim() && !line.trimStart().startsWith("#"));
+        if (!entries.length) throw new DiagnosticFailure("KNOWN_HOSTS_HOST_ENTRY");
+        // Validate only matching entries; another host's valid key cannot mask a bad pin.
+        writeFileSync(join(dir, "matched_known_hosts"), entries.join("\n") + "\n", { mode: 0o600 });
+        run("ssh-keygen", ["-l", "-f", join(dir, "matched_known_hosts")], local);
+      },
+      "KNOWN_HOSTS_SYNTAX",
+    );
+    const ssh = (command, input) => {
       try {
-        return execFileSync("ssh", [...sshArguments(dir), "python3 -c " + shellQuote(program)], {
+        return run("ssh", [...sshArguments(dir), command], {
           env: { PATH: env.PATH },
           input,
           encoding: "utf8",
@@ -248,45 +585,78 @@ export async function preflight(env = process.env) {
           timeout: 180000,
           stdio: ["pipe", "pipe", "pipe"],
         });
-      } catch {
-        throw new Error("Pinned-key SSH/read-only remote check failed; diagnostics suppressed");
+      } catch (error) {
+        throw new DiagnosticFailure(classifySshFailure(error));
       }
     };
-    evidence.ssh = { ...JSON.parse(ssh(rootCheck)), private_key: "PASS", known_hosts: "PASS" };
-    const output = ssh(
-      databaseCheck,
-      JSON.stringify({ password: env.ALWAYSDATA_DEV_PGPASSWORD, sql: payload.sql }),
+    await check("SSH_AUTH", () => {
+      if (!/^congofoot\r?\n?$/.test(ssh("id -un"))) throw new DiagnosticFailure("LOGIN_IDENTITY");
+    });
+    evidence.ssh = await check("SSH_ROOT_RUNTIME", () =>
+      validateRootResponse(parse(ssh("python3 -c " + shellQuote(rootCheck)))),
     );
-    evidence.database = validateReadOnlyDatabase(
-      output.trim().split("\n").map(JSON.parse),
-      payload.expected,
-    );
+    evidence.ssh.private_key = "PASS";
+    evidence.ssh.known_hosts = "PASS";
+    const query = (sql) => {
+      const value = parse(
+        ssh(
+          "python3 -c " + shellQuote(databaseCheck),
+          JSON.stringify({ password: env.ALWAYSDATA_DEV_PGPASSWORD, sql }),
+        ),
+      );
+      if (value?.ok === false) throw new DiagnosticFailure(value.invariant);
+      if (
+        value?.ok !== true ||
+        !Array.isArray(value.rows) ||
+        value.rows.some((row) => typeof row !== "string")
+      )
+        throw new DiagnosticFailure("REMOTE_RESPONSE");
+      return value.rows.map(parse);
+    };
+    evidence.database_auth = await check("DEV_DB_AUTH_TLS", () => {
+      const rows = query(databaseAuthSql);
+      if (rows.length !== 1) throw new DiagnosticFailure("REMOTE_RESPONSE");
+      return validateDatabaseAuthentication(rows[0]);
+    });
+    evidence.database = await check("DEV_READONLY_VERIFY", () => {
+      let payload;
+      try {
+        payload = parse(
+          run(process.execPath, ["--import", "tsx", "scripts/alwaysdata/preflight-sql.ts"], {
+            env: { PATH: env.PATH },
+            encoding: "utf8",
+            maxBuffer: 32 * 1024 * 1024,
+          }),
+        );
+      } catch {
+        throw new DiagnosticFailure("PAYLOAD_GENERATION");
+      }
+      return validateReadOnlyDatabase(query(payload.sql), payload.expected);
+    });
     evidence.status = "CONNECTIONS PASS; RESTART PERMISSION NOT PROVED";
-    const safe = JSON.stringify(evidence, null, 2);
-    // Defense in depth: refuse all output if any credential accidentally entered evidence.
-    for (const name of secretNames)
-      if (safe.includes(env[name])) throw new Error("Evidence rejected by secret exposure check");
-    console.log(safe);
-    if (env.GITHUB_STEP_SUMMARY)
-      appendFileSync(env.GITHUB_STEP_SUMMARY, "```json\n" + safe + "\n```\n");
-    return evidence;
+  } catch {
+    evidence.failure ??= { phase: "LOCAL_SETUP", invariant: "CHECK_FAILED" };
+    evidence.status = "VERIFICATION FAILED";
   } finally {
-    rmSync(dir, { recursive: true, force: true });
+    if (dir) {
+      try {
+        rmSync(dir, { recursive: true, force: true });
+      } catch {
+        evidence.failure = { phase: "LOCAL_CLEANUP", invariant: "LOCAL_CLEANUP" };
+        evidence.status = "VERIFICATION FAILED";
+      }
+    }
+    (options.emit ?? ((value) => publishEvidence(value, env)))(evidence);
   }
+  if (evidence.failure) throw new DiagnosticFailure(evidence.failure.invariant);
+  return evidence;
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   preflight()
     .then(() => {
       process.exitCode = 2;
     })
-    .catch((error) => {
-      // All errors above are fixed text or field names, never raw provider/SSH responses.
-      const message = error instanceof Error ? error.message : "Preflight failed";
-      console.error(
-        secretNames.some((name) => process.env[name] && message.includes(process.env[name]))
-          ? "Preflight failed (diagnostics suppressed)"
-          : message,
-      );
+    .catch(() => {
       process.exitCode = 1;
     });
 }
