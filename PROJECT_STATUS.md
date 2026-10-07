@@ -5,11 +5,29 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-10-04
-Branch:     codex/flexible-parent-navigation-ux
-Commit:     UX branch based on develop ae07c243; production unchanged 81b759f
+Date:       2026-10-05
+Branch:     feature/alwaysdata-postgres-portability
+Commit:     Reviewed DEV runner2315600; staging CD checkpoint in branch log
 Updated by: Codex
 ```
+
+## PostgreSQL 16 portability — 2026-10-05
+
+DEV ACCEPTED; STAGING CD PENDING ACTIVATION: explicit protected-rollback approval recorded;
+all nine fresh safeguards passed. Reviewed runner2315600 committed all46 DEV migrations on
+PostgreSQL16.15 with verify-full TLS. History46 applied/zero pending; canonical36 tables/6,170
+exact rows, schema/integrity/access/RLS/ACL/PROD isolation/idempotency PASS. No reset or
+unexpected CI deviation. Managed pgTAP unavailable; reviewed77 equivalents PASS.
+New opt-in develop-only CD implements Linux standalone packaging, immutable SSH releases,
+atomic pointers, site1083502-only restart, exact-SHA health, eight supported-device smoke and
+A→B→A→B application rollback proof. Owner GitHub Alwaysdata credentials and site command
+are missing; no app activation occurred. Local packaged runtime passes strict staging health/media and96 browser tests (9 production-only
+skips). All applicable CI at final codee3cb6d1 PASS, including Linux artifact boot/E2E and both
+Docker images. Earlier runner outage evidence is preserved. Owner is configuring GitHub; no deployment enabled. Current public staging TLS
+valid/HTTP502. PROD,
+Vercel and hosted Supabase remain intact; no merge or retirement.
+See [report](docs/migration/alwaysdata/PORTABILITY_REPORT.md),
+[CD setup and resume](docs/ALWAYSDATA_STAGING_CD.md) and [checkpoint](docs/work/ACTIVE_TASK.md).
 
 ## Flexible parent navigation — 2026-10-04
 

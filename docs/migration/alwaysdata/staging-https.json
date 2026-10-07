@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-10-05T19:17:58Z",
+  "url": "https://staging-tekaedu.tootiye.com",
+  "old_dotted_hostname": "obsolete",
+  "dns_resolvers": ["1.1.1.1", "8.8.8.8"],
+  "ipv4_answers": ["172.67.160.228", "104.21.81.126"],
+  "tls_certificate_verification": "PASS",
+  "curl_tls_verify_result": 0,
+  "http_status": 502,
+  "server": "cloudflare",
+  "cache_control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+  "origin_readiness": "NOT READY: empty application root; no app deployed by this phase",
+  "existing_github_staging_domain": "teka-edu-staging.vercel.app",
+  "github_environment_mutations": 0
+}

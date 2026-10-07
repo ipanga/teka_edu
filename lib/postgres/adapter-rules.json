@@ -1,0 +1,30 @@
+{
+  "20260911203000_educational_foundation.sql": [
+    {
+      "from": "revoke all on schema private from public, anon, authenticated;",
+      "to": "revoke all on schema private from public;"
+    },
+    {
+      "from": "revoke all on table\n  public.education_stages,\n  public.school_levels,\n  public.curricula,\n  public.curriculum_levels,\n  public.curriculum_domains,\n  public.school_years,\n  public.school_periods,\n  public.public_holidays,\n  public.calendar_exceptions,\n  public.school_year_curricula\nfrom anon, authenticated;",
+      "to": "revoke all on table\n  public.education_stages,\n  public.school_levels,\n  public.curricula,\n  public.curriculum_levels,\n  public.curriculum_domains,\n  public.school_years,\n  public.school_periods,\n  public.public_holidays,\n  public.calendar_exceptions,\n  public.school_year_curricula\nfrom public;"
+    }
+  ],
+  "20260911222600_curriculum_objectives_and_lessons.sql": [
+    {
+      "from": "revoke all on table\n  public.curriculum_sources,\n  public.curriculum_source_domains,\n  public.curriculum_age_bands,\n  public.curriculum_subdomains,\n  public.curriculum_competencies,\n  public.learning_objectives,\n  public.learning_objective_age_bands,\n  public.success_examples,\n  public.materials,\n  public.activity_types,\n  public.lessons,\n  public.lesson_levels,\n  public.lesson_objectives,\n  public.activities,\n  public.activity_objectives,\n  public.activity_materials,\n  public.activity_vocabulary,\n  public.activity_scaffolds\nfrom anon, authenticated;",
+      "to": "revoke all on table\n  public.curriculum_sources,\n  public.curriculum_source_domains,\n  public.curriculum_age_bands,\n  public.curriculum_subdomains,\n  public.curriculum_competencies,\n  public.learning_objectives,\n  public.learning_objective_age_bands,\n  public.success_examples,\n  public.materials,\n  public.activity_types,\n  public.lessons,\n  public.lesson_levels,\n  public.lesson_objectives,\n  public.activities,\n  public.activity_objectives,\n  public.activity_materials,\n  public.activity_vocabulary,\n  public.activity_scaffolds\nfrom public;"
+    }
+  ],
+  "20260912120000_september_programme.sql": [
+    {
+      "from": "revoke all on table\n  public.teaching_texts,\n  public.teaching_text_lines,\n  public.annual_plans,\n  public.annual_plan_phases,\n  public.annual_plan_entries\n  from anon, authenticated;",
+      "to": "revoke all on table\n  public.teaching_texts,\n  public.teaching_text_lines,\n  public.annual_plans,\n  public.annual_plan_phases,\n  public.annual_plan_entries\n  from public;"
+    }
+  ],
+  "20260912200000_media_assets.sql": [
+    {
+      "from": "revoke all on table\n  public.media_assets,\n  public.media_asset_tags,\n  public.activity_media\n  from anon, authenticated;",
+      "to": "revoke all on table\n  public.media_assets,\n  public.media_asset_tags,\n  public.activity_media\n  from public;"
+    }
+  ]
+}

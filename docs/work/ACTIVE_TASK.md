@@ -1,139 +1,140 @@
 # Active Task
 
+## Current reconciliation checkpoint — 2026-10-07
+
+This checkpoint supersedes the earlier configuration blockers and CI counts below.
+PR #100 is being reconciled with develop `ccb0e2f92032e90554d844c8add6bec24c24f8f4`
+using a normal merge. The five independently integrated preflight files are preserved exactly.
+Owner-provided non-secret evidence proves token-linked profile Sites permission for congofoot;
+no restart POST was issued. See [current CD checkpoint](../ALWAYSDATA_STAGING_CD.md).
+Successful read-only run 37665326854 proves the configured GitHub credentials, site, SSH,
+Node22 and DEV baseline. No new provider or database check is needed for reconciliation.
+Full reconciled-head CI and final diff review precede any ready-for-review recommendation.
+Keep PR #100 draft and all switches disabled. No merge of PR #100, upload, restart, activation,
+DEV/PROD operation or retirement. First-release rollback is NOT PROVED BY DESIGN; distinct
+reviewed A → B → A → B is a later acceptance requirement, separate from health/smoke.
+
 ## Task
 
-Live parent UX audit and flexible month/navigation implementation.
+Approved Alwaysdata DEV migration and gated staging CD.
 
 ## Objective
 
-Make Home -> Class -> Month -> Lessons -> Session discoverable without explanation.
-Preserve October/September curriculum and P1 state behavior; stop at a pushed develop PR.
+Complete DEV acceptance and reviewable Linux standalone CD, then live staging smoke and
+application rollback after owner configuration/activation. Keep all PROD/providers intact.
 
 ## Status
 
-`awaiting_review`
+`awaiting_user`
 
 ## Branch
 
-`codex/flexible-parent-navigation-ux`
+`feature/alwaysdata-postgres-portability`
 
 ## Base Branch
 
-`origin/develop` at `ae07c243d4c1dd8ce710edf8d9c93e8582649448`.
-Main remains `81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05`.
+`origin/main` at `ac003f8580ca81dcfb426a70c45c02102b8e0551`.
 
 ## Started
 
-2026-10-04
+2026-10-05, Africa/Lubumbashi.
 
 ## Last Checkpoint
 
-FINAL LOCAL 2026-10-04: implementation/fresh-parent journey complete. Format/lint/typecheck,
-520/520 units, content, zero lapse, scoped 420-file freeze, all 15 package strings, Webpack
-production build and three-sentinel client scan PASS. Full production-build Chromium:
-96 passed, zero failed, nine production-only skipped, all eight supported sizes and P1.
-Fresh-origin manual phone journey and 18 tracked before/after screenshots inspected.
-PR #98 is open into develop; final-head CI must be verified before integration.
-No canonical/reference/schema/workflow change, hosted write, merge or deployment.
-Initial draft run 37213308072 quality/DB/Docker passed; build/E2E reproduced the old repeated-
-viewport fresh-start assertion. Fixed to explicitly restart the saved activity-zero session;
-full local rerun green. Assertions retained, no timeout increase.
+Explicit human rollback approval recorded; nine fresh safeguards passed; reviewed2315600
+runner committed46 DEV migrations and verified every managed guarantee. Final codee3cb6d1
+passes all applicable GitHub CI, including Linux artifact startup and both Docker images.
+Independent Linux archive checksum PASS. Owner is configuring GitHub; latest names-only
+read has no Alwaysdata entries. No staging app activation or PROD operation.
 
 ## Scope
 
-Home/class/month/list/session navigation, browser-local status/replay, outcome-specific labels,
-eight supported sizes, tests, screenshots and durable architecture note.
+DEV migration/managed acceptance and gated develop-only staging CD implementation.
 
 ## Out of Scope
 
-Canonical wording/objectives/media/review/digests, migration/schema, hosted DEV/PROD writes,
-merges, staging/production deployment, November, 2eme, unrelated P2/P3, TV/Smart TV.
+PROD operations/deployments, DNS cutover, Auth/Storage, provider retirement, automatic reset,
+destructive rollback and unrelated app/content changes. First app activation awaits owner setup.
 
 ## Product Decisions
 
-See [architecture](../ux/PARENT_NAVIGATION_ARCHITECTURE.md).
-Monthly list primary; calendar secondary shares derivation/status.
-Only complete approved plans are discoverable. Resume > true today > latest unfinished past >
-first future. Reopening complete requires explicit replay. Bookmarks remain class/year scoped.
+Canonical staging is https://staging-tekaedu.tootiye.com. Cloud sync/AI remain disabled,
+browser-local progress and content/media unchanged. TV unsupported.
 
 ## Completed
 
-- PR #97 state inspected: OPEN, three checks passed, database infrastructure rate-limit failure.
-- Created UX branch from fetched authoritative develop, retained verified #97 documentation.
-- Live complete parent journey and screenshots/DOM at all eight requested sizes.
-- Removed fixed September class link/calendar filter, added derived monthly browsing.
-- Preparation/completion retain month context; resume/replay guarded; P1 ownership retained.
-- 420 protected files byte-identical to integrated October, all 15 packages fresh.
-- Archived complete production checkpoint without discarding its evidence.
+Explicit approval recorded; exact DEV/login16.15/TLS verify-full/denied PROD, protected
+snapshot600/hash, empty schema/history, exact runner/baseline/green CI/frozen46 chain/no drift
+all freshly passed. Guarded apply committed46; managed verify/list PASS with0pending,
+36tables/6,170 exact rows, complete schema/extensions,77 integrity assertions,
+access/RLS/ACL/isolation and0-row canonical re-sync. Managed pgTAP unavailable as expected;
+reviewed equivalents PASS without CI deviations. No failure, reset or PROD operation.
 
 ## In Progress
 
-None in implementation. Final feature-branch checkpoint and PR readiness/CI recording only.
+Opt-in staging workflow, Linux Node22 artifact inventory/checksum/boot, SSH pinned host keys,
+immutable releases and atomic current/previous, exact site1083502-only restart, strict
+staging SHA/null-Supabase health, full supported-device smoke and A→B→A→B application proof.
+Local functional archive/pointer guards pass. Local packaged staging startup/media and96 supported-device browser tests PASS,9 production-only
+skips. This is a workstation artifact, not a Linux deployable or live staging acceptance.
+All applicable Linux CI checks PASS at e3cb6d1; the following checkpoint changes only docs/evidence.
 
 ## Remaining
 
-Owner reviews PR #98, screenshot evidence and final-head required checks.
-Resolve #97 documentation overlap, then separately authorize integration. No automatic merge.
+Owner GitHub credentials/site setup and separately authorized first
+activation through reviewed develop integration. Two distinct reviewed releases required for
+live rollback proof. Do not repeat empty-state apply:46 reviewed DEV migrations exist now.
 
 ## Validation State
 
-| Check                | State                                                                                   |
-| -------------------- | --------------------------------------------------------------------------------------- |
-| format               | PASS final full repository check                                                        |
-| lint                 | PASS                                                                                    |
-| typecheck            | PASS including validated CalendarDate test fixtures                                     |
-| unit tests           | PASS 520/520 in 39 files                                                                |
-| content validation   | PASS 31 registered JSON files                                                           |
-| database tests       | PASS draft CI 37213308072 at 8da382c, 154 pgTAP; N/A hosted operations                  |
-| build                | PASS Webpack production, application unchanged since build                              |
-| E2E                  | PASS 96 / zero fail / nine production-only skips, all eight supported sizes             |
-| Docker               | PASS draft CI at 8da382c; no app/Docker configuration change since                      |
-| secret scans         | PASS 28 client files, all three server-only CI sentinels absent                         |
-| approval/integrity   | PASS zero lapse; 420 identical files; 88 October approved/fresh distinct, 176 September |
-| packages/media       | PASS 15 exact packages; 59/59 required images, zero missing                             |
-| GitHub final-head CI | NOT RUN final-head checks at this pre-push checkpoint; inspect PR #98                   |
-
-The old final October audit passed before edits. Its authorized UI byte freeze is now STALE;
-it is preserved, not weakened. The new content/reference freeze and full P1 behavioral suite
-prove the appropriate scope. No public-prod smoke runs against un-deployed new UI.
+| Check              | Verdict                                                       |
+| ------------------ | ------------------------------------------------------------- |
+| format             | PASS local current implementation                             |
+| lint               | PASS local current implementation                             |
+| typecheck          | PASS local current implementation                             |
+| unit tests         | PASS546 local current implementation                          |
+| content validation | PASS31 files via Node tsx loader                              |
+| database tests     | PASS e3cb6d1 PG16/Supabase CI; managed DEV PASS               |
+| build              | PASS e3cb6d1 Linux build/package/startup/media CI             |
+| E2E                | PASS e3cb6d1 browser CI +96 local staging tests; live NOT RUN |
+| Docker             | PASS e3cb6d1 portable/Vercel Docker CI                        |
+| secret scans       | PASS e3cb6d1 client/full-artifact sentinel CI                 |
 
 ## Database State
 
-No DB impact. No migration or schema changes; no hosted connections/writes in this task.
-Production promotion completed earlier through normal workflow; see archived checkpoint.
-Both hosted environments are outside this implementation boundary.
+Accepted DEV PostgreSQL16.15:46 history rows/zero pending/36tables/6,170 exact canonical rows.
+All managed verification PASS. Snapshot remains protected; post-commit reset needs separate
+approval. No PROD connection/operation this phase.
 
 ## Deployment State
 
-No deployment performed. Production remains the validated October main 81b759f.
-Local production-build preview: http://127.0.0.1:3001 (not a deployment).
+Staging undeployed; latest edge TLS valid/HTTP502. Live smoke/rollback NOT RUN.
 
 ## Git State
 
-Dedicated branch from develop. PR #97 remains open/unchanged at ceae6c1; its verified docs were
-carried forward before new checkpoint edits. Archive retains full release evidence.
-PR #98 open: https://github.com/ipanga/teka_edu/pull/98. Implementation 8da382c plus final
-validation/checkpoint commit; verify actual HEAD. Owner must reconcile overlapping #97 docs.
+PR #100 into develop remains draft; implementation a7b9004 and syntax correction3563e33 pushed; final credential/evidence checkpoint
+follows in branch log. No merge.
 
 ## Blockers
 
-None in implementation. PR #97 required DB check failed ECR storage-api:v1.72.1 rate exceeded
-before assertions; not retried in this task, no workflow changes.
+GitHub staging Environment lacks Alwaysdata credentials at latest names-only read; owner
+is configuring them. Earlier Actions outage prevented runner acquisition; final-code CI has since passed. Staging site command must be
+configured at activation. First release alone cannot prove rollback; second distinct release
+required. See `docs/ALWAYSDATA_STAGING_CD.md` for exact owner setup.
 
 ## User Decisions Needed
 
-Review proposed UX and the focused PR after validation.
-Resolve documentation-only PR #97 overlap deliberately; no automatic merge or deployment.
+Provision named GitHub secrets/variables privately and authorize the application activation
+boundary. Keep repository opt-in false until ready. No PROD decision requested.
 
 ## Exact Resume Point
 
-STOP for owner review of PR #98 and before/after screenshots. Verify its exact head and required
-checks, reconcile #97 documentation overlap, and obtain separate merge authorization before
-integration. Do not merge either PR or deploy staging/production in this task. No curriculum
-expansion, hosted write or migration authorized.
+Inspect git status and exact-head PR100 CI; read the staging CD setup document. Do not repeat
+empty-state migration. Configure GitHub/site prerequisites, review/integrate through develop
+only after activation authorization; validate first release and distinct successor including
+live rollback proof. Stop before any PROD operation or provider retirement.
 
 ## Resume Verification
 
-Run git status --short --branch and git log -5; fetch refs and verify develop/main and PR #97.
-Read architecture note and this checkpoint, then inspect actual running local sessions before
-trusting test freshness. Never rerun changed UX tests against old production UI.
+Run `git status` and `git log`; confirm branch, PR100 current-head checks and managed evidence.
+Read `docs/ALWAYSDATA_STAGING_CD.md` and `docs/migration/alwaysdata/PORTABILITY_REPORT.md`.

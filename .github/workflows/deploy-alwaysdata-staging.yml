@@ -1,0 +1,67 @@
+# Opt-in develop-only provider path; existing Vercel and production workflows are retained.
+name: Deploy alwaysdata staging
+on:
+  push:
+    branches: [develop]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: deploy-alwaysdata-staging
+  cancel-in-progress: false
+jobs:
+  ci:
+    if: github.ref == 'refs/heads/develop' && vars.ALWAYSDATA_STAGING_DEPLOY_ENABLED == 'true'
+    name: CI
+    uses: ./.github/workflows/ci.yml
+  deploy:
+    name: Verify DEV, install immutable staging release, smoke and rollback proof
+    needs: ci
+    if: github.ref == 'refs/heads/develop' && vars.ALWAYSDATA_STAGING_DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    environment:
+      name: staging
+      url: https://staging-tekaedu.tootiye.com
+    env:
+      ALWAYSDATA_STAGING_DEPLOY_ENABLED: ${{ vars.ALWAYSDATA_STAGING_DEPLOY_ENABLED }}
+      ALWAYSDATA_DEV_MIGRATIONS_APPROVED: ${{ vars.ALWAYSDATA_DEV_MIGRATIONS_APPROVED }}
+      ALWAYSDATA_SSH_HOST: ${{ vars.ALWAYSDATA_SSH_HOST }}
+      ALWAYSDATA_SSH_PORT: ${{ vars.ALWAYSDATA_SSH_PORT }}
+      ALWAYSDATA_SSH_USER: ${{ vars.ALWAYSDATA_SSH_USER }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - uses: actions/download-artifact@v8
+        with:
+          name: alwaysdata-release-${{ github.sha }}
+          path: ${{ runner.temp }}/alwaysdata-artifact
+      - uses: actions/download-artifact@v8
+        with:
+          name: postgres16-portability-${{ github.sha }}
+          path: ${{ runner.temp }}/postgres-replay
+      - run: npx playwright install --with-deps chromium
+      - name: Guarded DEV verification, SSH release, exact staging restart and acceptance
+        env:
+          ALWAYSDATA_SSH_PRIVATE_KEY: ${{ secrets.ALWAYSDATA_SSH_PRIVATE_KEY }}
+          ALWAYSDATA_SSH_KNOWN_HOSTS: ${{ secrets.ALWAYSDATA_SSH_KNOWN_HOSTS }}
+          ALWAYSDATA_API_TOKEN: ${{ secrets.ALWAYSDATA_API_TOKEN }}
+          PGPASSWORD: ${{ secrets.ALWAYSDATA_DEV_PGPASSWORD }}
+          ARTIFACT_DIR: ${{ runner.temp }}/alwaysdata-artifact
+          REPLAY_DIR: ${{ runner.temp }}/postgres-replay
+          EVIDENCE_DIR: ${{ runner.temp }}/alwaysdata-evidence
+        run: bash scripts/alwaysdata/deploy.sh
+      - name: Keep deployment and rollback evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: alwaysdata-staging-evidence-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/alwaysdata-evidence/
+            playwright-report/
+          retention-days: 14

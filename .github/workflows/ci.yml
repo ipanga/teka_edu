@@ -22,6 +22,54 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
+  postgres-portability:
+    name: PostgreSQL 16 portability and managed equivalents
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:16-bookworm
+        env:
+          POSTGRES_DB: teka_portability
+          POSTGRES_HOST_AUTH_METHOD: trust
+        ports: ["127.0.0.1:5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres -d teka_portability"
+          --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      PGHOST: 127.0.0.1
+      PGPORT: "5432"
+      PGDATABASE: teka_portability
+      PGUSER: teka_migrator
+      PGSSLMODE: disable
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Install portable pgTAP and client (isolated CI service only)
+        env:
+          POSTGRES_CONTAINER: ${{ job.services.postgres.id }}
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y postgresql-client libtap-parser-sourcehandler-pgtap-perl
+          docker exec -u root "$POSTGRES_CONTAINER" bash -c 'apt-get update -qq && apt-get install -y postgresql-16-pgtap'
+          psql -X -v ON_ERROR_STOP=1 -U postgres -d postgres -c 'CREATE ROLE teka_migrator LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE; CREATE ROLE teka_probe LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE;'
+          psql -X -v ON_ERROR_STOP=1 -U postgres -c 'ALTER DATABASE teka_portability OWNER TO teka_migrator; GRANT CREATE ON SCHEMA public TO teka_migrator; CREATE SCHEMA extensions AUTHORIZATION teka_migrator; CREATE EXTENSION pgtap WITH SCHEMA extensions;'
+      - name: Replay and verify exact checkout, then repeat and test failure guards
+        run: npm run db:portability -- --output-dir "$RUNNER_TEMP/teka-postgres-evidence"
+      - name: Upload PostgreSQL verification evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: postgres16-portability-${{ github.sha }}
+          path: ${{ runner.temp }}/teka-postgres-evidence/
+          retention-days: 14
+
   # Required check on main (ruleset "Protect main"). Keep the job name unchanged.
   promotion-source:
     name: Promotion source
@@ -81,6 +129,19 @@ jobs:
       - name: Client bundle secret check
         env: *sentinels
         run: npm run check:client-bundle
+      - name: Package immutable alwaysdata standalone artifact
+        env: *sentinels
+        run: node scripts/alwaysdata/package.mjs "$RUNNER_TEMP/alwaysdata-release" "$(git rev-parse HEAD)"
+      - name: Boot and verify packaged Linux artifact
+        run: node scripts/alwaysdata/verify-artifact.mjs "$RUNNER_TEMP/alwaysdata-release"
+      - name: Upload verified standalone artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: alwaysdata-release-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/alwaysdata-release/release.tar.gz
+            ${{ runner.temp }}/alwaysdata-release/artifact.json
+          retention-days: 14
       - name: Install Playwright browser
         run: npx playwright install --with-deps chromium
       - name: E2E smoke tests

@@ -1527,3 +1527,24 @@ acceptance supports it, using existing review history and fresh lapsed-only dige
 The previous Claude handoff is historical. `docs/handoff/CODEX_CONTINUATION.md` and the active
 task hold current recovery instructions. ADR-050, security invariants and DEV/PROD separation
 remain in force. Feature checkpoints/pushes are authorized; PR, merge and production are not.
+
+---
+
+## ADR-053 — PostgreSQL 16 execution copies and controlled DEV migration
+
+**Status:** Accepted for implementation · **Date:** 2026-10-05 · **Decided by:** the product owner
+
+Preserve the 46 historical Supabase migrations byte-for-byte. A versioned adapter matches the
+four audited revocation blocks exactly and produces PostgreSQL execution copies, retaining RLS,
+private function revocations and all integrity rules. Separate CLI tooling owns guarded DEV
+credentials; the application runtime remains independent of SQL/Supabase.
+
+A clean PostgreSQL16 CI replay establishes canonical values and a reviewed structural baseline.
+The runner uses a protected history schema, source/execution checksums, a transaction advisory
+lock and a history recheck after acquiring it. Its current transactional chain and history are
+committed together only after canonical/integrity/access checks. Staging apply requires matching
+CI evidence, verified target/TLS and operator-approved empty-DEV rollback coverage. Production
+is rejected by the CLI. Managed assertion equivalents reuse the existing test SQL; pgTAP remains
+in disposable CI only. See [runbook](docs/POSTGRES_PORTABILITY.md).
+
+Application deployment, public cutover and provider retirement require a later authorized phase.

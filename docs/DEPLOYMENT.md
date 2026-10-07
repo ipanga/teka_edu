@@ -1,5 +1,16 @@
 # Deployment
 
+Current transition tooling: [POSTGRES_PORTABILITY.md](POSTGRES_PORTABILITY.md). Active Alwaysdata
+staging is `https://staging-tekaedu.tootiye.com`; application deployment remains a later phase.
+
+## Controlled alwaysdata migration audit — 2026-10-05
+
+The owner is preparing an alwaysdata replacement with Cloudflare retained. See
+[ALWAYSDATA_MIGRATION.md](ALWAYSDATA_MIGRATION.md) for the verified dependency audit,
+PostgreSQL 16 prerequisites, staging-only design and cutover/rollback sequence. This is
+documentation preparation: neither deployment workflow nor hosting was changed. Existing
+provider instructions below remain the operational rollback path until replacement validation.
+
 ## October integration preparation — 2026-10-03
 
 Generated reference-only migration `20261003195954_october_maternelle_3_approved.sql` mirrors

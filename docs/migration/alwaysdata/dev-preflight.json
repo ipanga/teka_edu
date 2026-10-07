@@ -1,0 +1,445 @@
+{
+  "recorded_at": "2026-10-05T20:33:35.234Z",
+  "target": "staging",
+  "command": "preflight",
+  "identity": {
+    "tls": true,
+    "login": "congofoot_user_teka_edu_dev",
+    "version": 160015,
+    "database": "congofoot_teka_edu_dev",
+    "superuser": false,
+    "create_public": true,
+    "create_database": true
+  },
+  "applied": 0,
+  "pending": 46,
+  "migrations": [
+    {
+      "version": "20260911203000",
+      "filename": "20260911203000_educational_foundation.sql",
+      "source_sha256": "32c6e15fb8dce9529c3cf2fff613ed728cb537df2c0fcf0fc51aa69b53c33b6d",
+      "execution_sha256": "913642d9e730921ca131e68c7ee34212b78c18ffee8236534cb77cac100c890f",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": true,
+      "status": "pending"
+    },
+    {
+      "version": "20260911204157",
+      "filename": "20260911204157_reference_data_2026_2027.sql",
+      "source_sha256": "c70ae78234c90ca470b57d564e249bf31b8a5184a4f5f74c145473a39c6b2038",
+      "execution_sha256": "c70ae78234c90ca470b57d564e249bf31b8a5184a4f5f74c145473a39c6b2038",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260911222600",
+      "filename": "20260911222600_curriculum_objectives_and_lessons.sql",
+      "source_sha256": "2c8faaa8682814b7d98b5b56e55540e8d2bad1c2eedafe42f99c744bbf95fc22",
+      "execution_sha256": "868649167867ff84a3efc3a2ba73d76ce7f1c80040ece3edb19beb50e4ad160d",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": true,
+      "status": "pending"
+    },
+    {
+      "version": "20260911222858",
+      "filename": "20260911222858_curriculum_objectives_and_pilot_lessons.sql",
+      "source_sha256": "99da4b59d1c36c6781148556c95cb15acc712e4fa14733771675fd807b298513",
+      "execution_sha256": "99da4b59d1c36c6781148556c95cb15acc712e4fa14733771675fd807b298513",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260912002000",
+      "filename": "20260912002000_content_quality_gate.sql",
+      "source_sha256": "f80102a17557efb9479b9001203279dcad1bf431299b52e0b2b81b883940082d",
+      "execution_sha256": "f80102a17557efb9479b9001203279dcad1bf431299b52e0b2b81b883940082d",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260912091922",
+      "filename": "20260912091922_content_quality_gate_data.sql",
+      "source_sha256": "2e751019def6ccc269ae02968f174b7ef0a59e1f670822acd1a4ad2031435408",
+      "execution_sha256": "2e751019def6ccc269ae02968f174b7ef0a59e1f670822acd1a4ad2031435408",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260912120000",
+      "filename": "20260912120000_september_programme.sql",
+      "source_sha256": "084ac84b2195d7e6049439eaa97a353462af758250a67b5af5fe27fd730775fc",
+      "execution_sha256": "cd2039c779437c1ab337d51adafccc1c423860ca1e5583ac07a88b17e8860d9b",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": true,
+      "status": "pending"
+    },
+    {
+      "version": "20260912175902",
+      "filename": "20260912175902_september_programme_data.sql",
+      "source_sha256": "925b3d43ea6ac9f22a4d81d966f7cfa1f7f80da61f14946471c1237fb2319fd0",
+      "execution_sha256": "925b3d43ea6ac9f22a4d81d966f7cfa1f7f80da61f14946471c1237fb2319fd0",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260912200000",
+      "filename": "20260912200000_media_assets.sql",
+      "source_sha256": "27aada16e31c9af3fc0812e8425c8f9a61f1a0ba5d4846b24973195b8fcd373e",
+      "execution_sha256": "9070a7167dc58da123a270a6de94d23885d511810eea1cfcb8717b7d3cf10fba",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": true,
+      "status": "pending"
+    },
+    {
+      "version": "20260912202935",
+      "filename": "20260912202935_media_registry_data.sql",
+      "source_sha256": "261e5e7a8b2a1e2176c76f544db934d05aa237ea0b353700385fcfb84b1321f8",
+      "execution_sha256": "261e5e7a8b2a1e2176c76f544db934d05aa237ea0b353700385fcfb84b1321f8",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260913060000",
+      "filename": "20260913060000_media_illustrations.sql",
+      "source_sha256": "18ab64e1249737575508e1bb45c0e9a5dc387b084d74175b6aac0a4991b91c7d",
+      "execution_sha256": "18ab64e1249737575508e1bb45c0e9a5dc387b084d74175b6aac0a4991b91c7d",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260913065828",
+      "filename": "20260913065828_media_illustrations_data.sql",
+      "source_sha256": "0d313fbe502348d5aa620d130a717ff92bdab9331f3e2b53604b6e06dad537ef",
+      "execution_sha256": "0d313fbe502348d5aa620d130a717ff92bdab9331f3e2b53604b6e06dad537ef",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260914200033",
+      "filename": "20260914200033_week1_review_corrections.sql",
+      "source_sha256": "38375e7cfcf008a6779ee595f4cb5c4c43fec057c8aca2a8568c0ecb38c42f2e",
+      "execution_sha256": "38375e7cfcf008a6779ee595f4cb5c4c43fec057c8aca2a8568c0ecb38c42f2e",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260915090000",
+      "filename": "20260915090000_review_kind.sql",
+      "source_sha256": "7bb5ce5ac7b1499ebc6b9079afb9a8fb105f3b389e02c4964de7e016f15a8886",
+      "execution_sha256": "7bb5ce5ac7b1499ebc6b9079afb9a8fb105f3b389e02c4964de7e016f15a8886",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260915100000",
+      "filename": "20260915100000_maternelle_1_september.sql",
+      "source_sha256": "a57be556588aa91df13e558f58da9b7d581108404441dc1d4d08b0c43417fb81",
+      "execution_sha256": "a57be556588aa91df13e558f58da9b7d581108404441dc1d4d08b0c43417fb81",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260915110000",
+      "filename": "20260915110000_maternelle_1_week_1_corrections.sql",
+      "source_sha256": "6cf8d3200c675cab716353ea210bdd6ccae112d9a5a3bc9cf2c0d56171e0befc",
+      "execution_sha256": "6cf8d3200c675cab716353ea210bdd6ccae112d9a5a3bc9cf2c0d56171e0befc",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260915120000",
+      "filename": "20260915120000_week_1_approved_and_progression.sql",
+      "source_sha256": "9c005b21c2e914aacfa5e8b633c0a5dc02430536c0b1f605b0180eedd94c64b3",
+      "execution_sha256": "9c005b21c2e914aacfa5e8b633c0a5dc02430536c0b1f605b0180eedd94c64b3",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260915130000",
+      "filename": "20260915130000_week_2_corrections.sql",
+      "source_sha256": "28621ce8b2454f809cdd2f9943e088322d7cdc81515a725539be661714093684",
+      "execution_sha256": "28621ce8b2454f809cdd2f9943e088322d7cdc81515a725539be661714093684",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260915140000",
+      "filename": "20260915140000_weeks_1_2_approved.sql",
+      "source_sha256": "d403c683824b52b7e6fd7497b68e8f602ebc9396a6128ef0e6404a62d3aad68e",
+      "execution_sha256": "d403c683824b52b7e6fd7497b68e8f602ebc9396a6128ef0e6404a62d3aad68e",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260915150000",
+      "filename": "20260915150000_week_3_corrections.sql",
+      "source_sha256": "bec9ac17433eb9617fff24bf5d737b2fc7d616f9b0cc2b7ed17df6c5843cbca2",
+      "execution_sha256": "bec9ac17433eb9617fff24bf5d737b2fc7d616f9b0cc2b7ed17df6c5843cbca2",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260915160000",
+      "filename": "20260915160000_week_3_approved.sql",
+      "source_sha256": "2f19406665d78e9243388b48c3c7c8c9179b2ab8d6d00b70c4d33a8bad9f6450",
+      "execution_sha256": "2f19406665d78e9243388b48c3c7c8c9179b2ab8d6d00b70c4d33a8bad9f6450",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260915170000",
+      "filename": "20260915170000_week_4_corrections.sql",
+      "source_sha256": "2ac5bc8ad9074703ea4f3ea26fb70065e0b1a46648f30adb2effe3ce958b9c6c",
+      "execution_sha256": "2ac5bc8ad9074703ea4f3ea26fb70065e0b1a46648f30adb2effe3ce958b9c6c",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260915180000",
+      "filename": "20260915180000_lisa_visual_and_approved_debt.sql",
+      "source_sha256": "50e3b0568ae100a9aa15c570919dbe7317bfd3577703164c9ed4a7903bd41732",
+      "execution_sha256": "50e3b0568ae100a9aa15c570919dbe7317bfd3577703164c9ed4a7903bd41732",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260915190000",
+      "filename": "20260915190000_media_fingerprint_and_weeks_1_4.sql",
+      "source_sha256": "f3b82d06ebf76cee189648927ae33c27bb50106ba192f476a8f08e04c26c1fb1",
+      "execution_sha256": "f3b82d06ebf76cee189648927ae33c27bb50106ba192f476a8f08e04c26c1fb1",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260915200000",
+      "filename": "20260915200000_week_5_corrections.sql",
+      "source_sha256": "05a72df338c627cbbe057b59da3be181de9fb1957fb7ae0f30c25f8c337bd442",
+      "execution_sha256": "05a72df338c627cbbe057b59da3be181de9fb1957fb7ae0f30c25f8c337bd442",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260915210000",
+      "filename": "20260915210000_week_5_approved.sql",
+      "source_sha256": "bd3c73b3e83630def7eeea7dd4834bed82398b66dca5c07e3f79a5232a508efd",
+      "execution_sha256": "bd3c73b3e83630def7eeea7dd4834bed82398b66dca5c07e3f79a5232a508efd",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260916183458",
+      "filename": "20260916183458_week1_review_corrections_m3.sql",
+      "source_sha256": "b696a9e1770c52eed9a44a26ea96eae14add493b2c6c1672c98f2a5527d7720c",
+      "execution_sha256": "b696a9e1770c52eed9a44a26ea96eae14add493b2c6c1672c98f2a5527d7720c",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260917132516",
+      "filename": "20260917132516_week1_safety_and_review_scope.sql",
+      "source_sha256": "f5263fb3e18e0c8d8d0328a4d9c54aa2641527d7820f44b67ba3eb9ccbfa82df",
+      "execution_sha256": "f5263fb3e18e0c8d8d0328a4d9c54aa2641527d7820f44b67ba3eb9ccbfa82df",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260917185354",
+      "filename": "20260917185354_approve_maternelle_3_week_1.sql",
+      "source_sha256": "8b7846833af7e5d85cf0cdfe3e4e90f843cb35af5ca98a7cf82a24b84edfd39f",
+      "execution_sha256": "8b7846833af7e5d85cf0cdfe3e4e90f843cb35af5ca98a7cf82a24b84edfd39f",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260917205257",
+      "filename": "20260917205257_week2_review_corrections.sql",
+      "source_sha256": "a2c68e3f6425526ca410b8d1a029ea5286abf899b55929002c2fe5a91734a190",
+      "execution_sha256": "a2c68e3f6425526ca410b8d1a029ea5286abf899b55929002c2fe5a91734a190",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260918173226",
+      "filename": "20260918173226_week2_second_review_and_text_digest.sql",
+      "source_sha256": "a40239298d97c9438e58db638a07f67816d4c63720d851ca9b289da17fd260d7",
+      "execution_sha256": "a40239298d97c9438e58db638a07f67816d4c63720d851ca9b289da17fd260d7",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260919114821",
+      "filename": "20260919114821_week2_final_corrections.sql",
+      "source_sha256": "b3eb5845f90c33dacb6070b67ff72a77d5979115f662e3afb7e7c81f32f77f69",
+      "execution_sha256": "b3eb5845f90c33dacb6070b67ff72a77d5979115f662e3afb7e7c81f32f77f69",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260919122247",
+      "filename": "20260919122247_approve_maternelle_3_week_2.sql",
+      "source_sha256": "13b6f6556b7e1f043437bdaaa96309fdaee91dd912f1b9132dfca9f61554cccf",
+      "execution_sha256": "13b6f6556b7e1f043437bdaaa96309fdaee91dd912f1b9132dfca9f61554cccf",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260919130752",
+      "filename": "20260919130752_week3_review_corrections.sql",
+      "source_sha256": "fa5c031db75ad0f056175a7b115f6ac4a32746f5ad19c266a0b457c551090043",
+      "execution_sha256": "fa5c031db75ad0f056175a7b115f6ac4a32746f5ad19c266a0b457c551090043",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260919174810",
+      "filename": "20260919174810_week3_second_review.sql",
+      "source_sha256": "a3c5530dba9d879eb119da905a5e01b13478f8ad60fe248a2fa9482525e6fdda",
+      "execution_sha256": "a3c5530dba9d879eb119da905a5e01b13478f8ad60fe248a2fa9482525e6fdda",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260919182510",
+      "filename": "20260919182510_approve_maternelle_3_week_3.sql",
+      "source_sha256": "ed7013e46663aa75c99690c19b602d1ef815fcaecc2da5cb09843ea039dd5656",
+      "execution_sha256": "ed7013e46663aa75c99690c19b602d1ef815fcaecc2da5cb09843ea039dd5656",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260919194738",
+      "filename": "20260919194738_week4_review_corrections.sql",
+      "source_sha256": "ddaa31ad8861702047d09e49d99e0f32106dc83b4ef23ba1a2e8d288b14afc2e",
+      "execution_sha256": "ddaa31ad8861702047d09e49d99e0f32106dc83b4ef23ba1a2e8d288b14afc2e",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260920083109",
+      "filename": "20260920083109_week4_second_review_corrections.sql",
+      "source_sha256": "6be344954d1ba0ec3d8f8b7d767b2ec323fbf498d7ca2223d38a26b5d5031fbd",
+      "execution_sha256": "6be344954d1ba0ec3d8f8b7d767b2ec323fbf498d7ca2223d38a26b5d5031fbd",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260920134804",
+      "filename": "20260920134804_approve_maternelle_3_week_4.sql",
+      "source_sha256": "d6176684dca244fe700bd99697aa4a52ad1427a47b07946317a1cdf3b6798f8f",
+      "execution_sha256": "d6176684dca244fe700bd99697aa4a52ad1427a47b07946317a1cdf3b6798f8f",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260920200532",
+      "filename": "20260920200532_week5_review_corrections.sql",
+      "source_sha256": "fd527b8d2575c47c82b723e5d6d92c9621363e2a422bc453b4268d4f89416549",
+      "execution_sha256": "fd527b8d2575c47c82b723e5d6d92c9621363e2a422bc453b4268d4f89416549",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260920204404",
+      "filename": "20260920204404_approve_maternelle_3_week_5.sql",
+      "source_sha256": "a561ed70f15495eebad9f68fe2e21350907979736fe0bc0dcb77e88a4eebeed5",
+      "execution_sha256": "a561ed70f15495eebad9f68fe2e21350907979736fe0bc0dcb77e88a4eebeed5",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260923192024",
+      "filename": "20260923192024_september_visual_upgrade.sql",
+      "source_sha256": "7aa9a63e8a36da13da10fb1f3104bca8c0a003a815365adb94eb060f956b012d",
+      "execution_sha256": "7aa9a63e8a36da13da10fb1f3104bca8c0a003a815365adb94eb060f956b012d",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20260926173653",
+      "filename": "20260926173653_september_reconfirmation.sql",
+      "source_sha256": "0d4f9c66c522939940db11ed9c74b0dab2ddf042136ed52995d1df1e2f3c5514",
+      "execution_sha256": "0d4f9c66c522939940db11ed9c74b0dab2ddf042136ed52995d1df1e2f3c5514",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20261001192741",
+      "filename": "20261001192741_media_asset_webp_paths.sql",
+      "source_sha256": "1fa87e57eab9e762192594bddf47274e7c659cca130224de4e1ae7ad99edec1b",
+      "execution_sha256": "1fa87e57eab9e762192594bddf47274e7c659cca130224de4e1ae7ad99edec1b",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20261001192742",
+      "filename": "20261001192742_final_september_rich_media_reference.sql",
+      "source_sha256": "f270514f1c2318425f3b9f983dacbb0c4b3fbb80a38b2c5802417058dc6c730b",
+      "execution_sha256": "f270514f1c2318425f3b9f983dacbb0c4b3fbb80a38b2c5802417058dc6c730b",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    },
+    {
+      "version": "20261003195954",
+      "filename": "20261003195954_october_maternelle_3_approved.sql",
+      "source_sha256": "4c30ab7eb5f9812b341c0bf93a55863bdfaa63e1464cd668e70e26eb8a40f1d9",
+      "execution_sha256": "4c30ab7eb5f9812b341c0bf93a55863bdfaa63e1464cd668e70e26eb8a40f1d9",
+      "adapter_version": "postgres16-public-revocations-v1",
+      "adapted": false,
+      "status": "pending"
+    }
+  ],
+  "capabilities": {
+    "tables": 0,
+    "trusted": true,
+    "available": true,
+    "extensions": [
+      {
+        "name": "plpgsql",
+        "version": "1.0"
+      }
+    ],
+    "private_objects": 0
+  },
+  "install_permission": "not proved by read-only preflight"
+}

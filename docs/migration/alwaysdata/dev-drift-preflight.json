@@ -1,0 +1,7 @@
+{
+  "schemas": ["public"],
+  "functions": 0,
+  "relations": 0,
+  "custom_types": 0,
+  "prod_connect": false
+}
