@@ -251,7 +251,7 @@ try:
  node='/usr/alwaysdata/nodejs/22/bin/node'
  if not read('NODE_FILE',lambda:os.path.isfile(node)):fail('NODE_FILE')
  if not read('NODE_EXECUTABLE',lambda:os.access(node,os.X_OK)):fail('NODE_EXECUTABLE')
- version=read('NODE_EXEC',lambda:subprocess.check_output([node,'--version'],text=True,stderr=subprocess.PIPE))
+ version=read('NODE_EXEC',lambda:subprocess.check_output([node,'--version'],universal_newlines=True,stderr=subprocess.PIPE))
  v=read('NODE_VERSION',lambda:version.strip())
  if not read('NODE_VERSION',lambda:re.fullmatch(r'v22\\.\\d+\\.\\d+',v)):fail('NODE_VERSION')
  print(json.dumps({'ok':True,'identity':u,'root':str(r),'root_empty':True,'current_exists':False,'credential_files':False,'node':v}))
@@ -263,7 +263,7 @@ def fail(name):
 try:
  p=json.load(sys.stdin)
  e={'PATH':os.environ['PATH'],'PGHOST':'postgresql-congofoot.alwaysdata.net','PGPORT':'5432','PGDATABASE':'congofoot_teka_edu_dev','PGUSER':'congofoot_user_teka_edu_dev','PGPASSWORD':p['password'],'PGSSLMODE':'verify-full','PGSSLROOTCERT':'/etc/ssl/certs/ca-certificates.crt','PGCONNECT_TIMEOUT':'15','PGGSSENCMODE':'disable','PGOPTIONS':'-c default_transaction_read_only=on'}
- r=subprocess.run(['psql','-X','-qAt','--no-password','-v','ON_ERROR_STOP=1'],env=e,input=p['sql'],text=True,capture_output=True,timeout=150)
+ r=subprocess.run(['psql','-X','-qAt','--no-password','-v','ON_ERROR_STOP=1'],env=e,input=p['sql'],universal_newlines=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=150)
  if r.returncode:
   if re.search(r'password authentication failed|no password supplied|authentication failed',r.stderr,re.I):fail('DEV_AUTHENTICATION')
   if re.search(r'certificate|sslrootcert|SSL error|TLS',r.stderr,re.I):fail('DEV_TLS')

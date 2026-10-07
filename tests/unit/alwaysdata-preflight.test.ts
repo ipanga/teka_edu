@@ -314,9 +314,9 @@ def access(path,mode):
   return case!='root_not_writable'
  assert path==node and mode==1
  return case!='node_not_executable'
-def execute(args,**kwargs):
+def execute(args,universal_newlines=False,stderr=None):
  assert args==[node,'--version']
- assert kwargs=={'text':True,'stderr':subprocess.PIPE}
+ assert universal_newlines is True and stderr==subprocess.PIPE
  if case=='node_nonzero':raise subprocess.CalledProcessError(1,args,stderr=private)
  if case=='node_spawn_error':raise OSError(private)
  if case=='node_argument_error':raise TypeError(private)
@@ -378,7 +378,7 @@ describe("executed read-only root/runtime invariants", () => {
     expect(result).toEqual({ ok: false, invariant });
     expect(() => validateRootResponse(result)).toThrow(invariant);
   });
-  it("executes the successful root/runtime probe and preserves its exact identity", () => {
+  it("executes the successful root/runtime probe with a Python 3.6 subprocess signature", () => {
     const result = executeRootFixture("success");
     expect(result).toEqual(rootIdentity);
     expect(validateRootResponse(result)).toMatchObject({
@@ -389,6 +389,53 @@ describe("executed read-only root/runtime invariants", () => {
     expect(rootCheck).not.toContain("ROOT_READ");
     expect(rootCheck).not.toMatch(/\b(mkdir|chmod|symlink)\(/);
   });
+});
+it.each([
+  ["success", null],
+  ["authentication", "DEV_AUTHENTICATION"],
+  ["tls", "DEV_TLS"],
+  ["connection", "DEV_CONNECTION"],
+  ["query", "DEV_QUERY"],
+  ["missing", "PSQL_UNAVAILABLE"],
+  ["timeout", "DEV_TIMEOUT"],
+  ["unexpected", "DEV_REMOTE_READ"],
+])("executes the Python 3.6 DEV transport for %s without starting psql", (testCase, invariant) => {
+  // Both text and capture_output were added after Python 3.6. This stub intentionally
+  // cannot accept either keyword; the shipped program must work with the old API.
+  const harness = `import json,sys,io,subprocess
+from types import SimpleNamespace
+from unittest.mock import patch
+fixture=json.load(sys.stdin)
+case=fixture['case']
+private='raw-fixture-private-error'
+sys.stdin=io.StringIO(json.dumps({'password':'fixture-private-password','sql':'begin read only; select 1; rollback;'}))
+def run(args,env=None,input=None,universal_newlines=False,stdout=None,stderr=None,timeout=None):
+ assert args==['psql','-X','-qAt','--no-password','-v','ON_ERROR_STOP=1']
+ assert universal_newlines is True and stdout==subprocess.PIPE and stderr==subprocess.PIPE
+ assert env['PGDATABASE']=='congofoot_teka_edu_dev' and env['PGUSER']=='congofoot_user_teka_edu_dev'
+ assert env['PGSSLMODE']=='verify-full' and env['PGOPTIONS']=='-c default_transaction_read_only=on'
+ assert env['PGPASSWORD']=='fixture-private-password'
+ assert input=='begin read only; select 1; rollback;' and timeout==150
+ if case=='missing':raise FileNotFoundError(private)
+ if case=='timeout':raise subprocess.TimeoutExpired(args,timeout,output=private,stderr=private)
+ if case=='unexpected':raise RuntimeError(private)
+ errors={'authentication':'password authentication failed','tls':'SSL error','connection':'Connection refused','query':'query failed'}
+ if case in errors:return SimpleNamespace(returncode=1,stdout='private-untrusted-stdout',stderr=errors[case]+' '+private)
+ return SimpleNamespace(returncode=0,stdout='1\\n',stderr='')
+with patch('subprocess.run',new=run):exec(fixture['program'],{})
+`;
+  const stdout = execFileSync("python3", ["-c", harness], {
+    input: JSON.stringify({ program: databaseCheck, case: testCase }),
+    encoding: "utf8",
+    stdio: ["pipe", "pipe", "pipe"],
+  });
+  expect(JSON.parse(stdout)).toEqual(
+    invariant ? { ok: false, invariant } : { ok: true, rows: ["1"] },
+  );
+  expect(stdout).not.toContain("fixture-private-password");
+  expect(stdout).not.toContain("raw-fixture-private-error");
+  expect(stdout).not.toContain("private-untrusted-stdout");
+  expect(stdout).not.toContain("Traceback");
 });
 type DiagnosticEvidence = Awaited<ReturnType<typeof preflight>>;
 const diagnosticEnv = {
