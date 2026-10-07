@@ -274,6 +274,122 @@ const rootIdentity = {
   credential_files: false,
   node: "v22.22.2",
 };
+// Execute the shipped Python probe with bounded read operations replaced by fixtures.
+// No remote paths are inspected and no actual Node subprocess is started by the probe.
+const rootProbeHarness = `import json,sys,stat,subprocess
+from types import SimpleNamespace
+from unittest.mock import MagicMock,patch
+from contextlib import ExitStack
+
+fixture=json.load(sys.stdin)
+case=fixture['case']
+expected='/home/congofoot/www/tekaedu-staging'
+node='/usr/alwaysdata/nodejs/22/bin/node'
+private='raw-fixture-private-error'
+root=MagicMock()
+root.__str__.return_value=expected
+root.exists.return_value=case!='root_missing'
+root.stat.return_value=SimpleNamespace(st_uid=42000,st_mode=stat.S_IFDIR|0o755)
+root.is_symlink.return_value=case=='root_symlink'
+root.resolve.return_value=expected if case!='root_real_path' else '/arbitrary-private-path'
+root.__truediv__.return_value=expected+'/current'
+root.iterdir.return_value=iter([private] if case=='root_nonempty' else [])
+if case=='root_stat':root.stat.side_effect=OSError(private)
+if case=='root_directory':root.stat.return_value.st_mode=stat.S_IFREG|0o644
+if case=='root_resolve':root.resolve.side_effect=OSError(private)
+if case=='root_list':root.iterdir.side_effect=OSError(private)
+if case=='root_owner_stat':
+ class UnreadableOwner:
+  st_mode=stat.S_IFDIR|0o755
+  @property
+  def st_uid(self):raise OSError(private)
+ root.stat.return_value=UnreadableOwner()
+
+def owner(uid):
+ if uid==42000 and case=='root_owner_lookup':raise KeyError(private)
+ return SimpleNamespace(pw_name='other-private-owner' if uid==42000 and case=='root_owner_mismatch' else 'congofoot')
+def access(path,mode):
+ if mode==2:
+  assert path is root
+  return case!='root_not_writable'
+ assert path==node and mode==1
+ return case!='node_not_executable'
+def execute(args,**kwargs):
+ assert args==[node,'--version']
+ assert kwargs=={'text':True,'stderr':subprocess.PIPE}
+ if case=='node_nonzero':raise subprocess.CalledProcessError(1,args,stderr=private)
+ if case=='node_spawn_error':raise OSError(private)
+ if case=='node_argument_error':raise TypeError(private)
+ return 'v24.1.0' if case=='node_version' else 'v22.22.2\\n'
+
+with ExitStack() as stack:
+ path=stack.enter_context(patch('pathlib.Path',return_value=root))
+ if case=='unexpected':path.side_effect=RuntimeError(private)
+ stack.enter_context(patch('os.getuid',return_value=10000))
+ stack.enter_context(patch('pwd.getpwuid',side_effect=owner))
+ stack.enter_context(patch('os.access',side_effect=access))
+ stack.enter_context(patch('os.path.lexists',return_value=case=='current_exists'))
+ stack.enter_context(patch('os.path.isfile',return_value=case!='node_missing'))
+ stack.enter_context(patch('subprocess.check_output',side_effect=execute))
+ try:exec(fixture['program'],{})
+ except SystemExit as result:
+  assert result.code==0
+`;
+function executeRootFixture(testCase: string) {
+  const stdout = execFileSync("python3", ["-c", rootProbeHarness], {
+    input: JSON.stringify({ program: rootCheck, case: testCase }),
+    encoding: "utf8",
+    stdio: ["pipe", "pipe", "pipe"],
+  });
+  for (const forbidden of [
+    "raw-fixture-private-error",
+    "arbitrary-private-path",
+    "other-private-owner",
+    "42000",
+    "Traceback",
+  ])
+    expect(stdout).not.toContain(forbidden);
+  return JSON.parse(stdout);
+}
+describe("executed read-only root/runtime invariants", () => {
+  it.each([
+    ["root_missing", "ROOT_EXISTS"],
+    ["root_stat", "ROOT_STAT"],
+    ["root_directory", "ROOT_DIRECTORY"],
+    ["root_symlink", "ROOT_SYMLINK"],
+    ["root_resolve", "ROOT_RESOLVE"],
+    ["root_real_path", "ROOT_REAL_PATH"],
+    ["root_owner_stat", "ROOT_OWNER_STAT"],
+    ["root_owner_lookup", "ROOT_OWNER_LOOKUP"],
+    ["root_owner_mismatch", "ROOT_OWNER_MISMATCH"],
+    ["root_not_writable", "ROOT_WRITABLE"],
+    ["current_exists", "CURRENT_EXISTS"],
+    ["root_list", "ROOT_LIST"],
+    ["root_nonempty", "ROOT_EMPTY"],
+    ["node_missing", "NODE_FILE"],
+    ["node_not_executable", "NODE_EXECUTABLE"],
+    ["node_nonzero", "NODE_EXEC"],
+    ["node_spawn_error", "NODE_EXEC"],
+    ["node_argument_error", "NODE_EXEC"],
+    ["node_version", "NODE_VERSION"],
+    ["unexpected", "ROOT_UNEXPECTED"],
+  ])("maps %s to only %s", (testCase, invariant) => {
+    const result = executeRootFixture(testCase);
+    expect(result).toEqual({ ok: false, invariant });
+    expect(() => validateRootResponse(result)).toThrow(invariant);
+  });
+  it("executes the successful root/runtime probe and preserves its exact identity", () => {
+    const result = executeRootFixture("success");
+    expect(result).toEqual(rootIdentity);
+    expect(validateRootResponse(result)).toMatchObject({
+      identity: rootIdentity.identity,
+      root: rootIdentity.root,
+      node: rootIdentity.node,
+    });
+    expect(rootCheck).not.toContain("ROOT_READ");
+    expect(rootCheck).not.toMatch(/\b(mkdir|chmod|symlink)\(/);
+  });
+});
 type DiagnosticEvidence = Awaited<ReturnType<typeof preflight>>;
 const diagnosticEnv = {
   NODE_ENV: "test" as const,
