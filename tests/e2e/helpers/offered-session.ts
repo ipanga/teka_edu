@@ -1,5 +1,5 @@
 import { expect, type Page } from "@playwright/test";
-import nationalCalendar from "../../../content/calendars/cd/national.json";
+import nationalCalendar from "../../../content/calendars/cd/national.json" with { type: "json" };
 import { calendarDateInTimeZone, formatFrenchDate } from "../../../domain/calendar/date";
 
 // Match the server's canonical school date, including the hour when the two
