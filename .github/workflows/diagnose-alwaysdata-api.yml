@@ -1,0 +1,42 @@
+name: Diagnose alwaysdata API (anonymous read-only)
+on:
+  pull_request:
+    branches: [develop]
+    paths:
+      - .github/workflows/diagnose-alwaysdata-api.yml
+      - scripts/alwaysdata/diagnose-api.mjs
+      - scripts/alwaysdata/site.mjs
+      - tests/unit/alwaysdata-api-diagnostic.test.ts
+      - tests/unit/alwaysdata-api.test.ts
+permissions:
+  contents: read
+concurrency:
+  group: diagnose-alwaysdata-api-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+jobs:
+  diagnose:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    # No Environment or secret access: staging remains restricted to develop.
+    env:
+      DIAGNOSTIC_READ_ONLY: "true"
+      DIAGNOSTIC_ALLOW_DEPLOYMENT: "false"
+      ALWAYSDATA_STAGING_DEPLOY_ENABLED: ${{ vars.ALWAYSDATA_STAGING_DEPLOY_ENABLED }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+      - name: Bounded anonymous DNS, TLS and GET probes after diagnostic guard
+        run: node scripts/alwaysdata/diagnose-api.mjs > "$RUNNER_TEMP/alwaysdata-api-diagnostic.json"
+      - name: Retain sanitized transport evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: alwaysdata-api-diagnostic-${{ github.event.pull_request.head.sha }}
+          path: ${{ runner.temp }}/alwaysdata-api-diagnostic.json
+          retention-days: 14
