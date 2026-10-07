@@ -49,14 +49,34 @@ describe("alwaysdata staging acceptance guards", () => {
       { addresses: [...site.addresses, "other.example"] },
       { environment: "PGPASSWORD=value" },
       { environment: "NEXT_PUBLIC_SUPABASE_URL=value" },
+      { environment: "VERCEL_URL=value" },
+      { environment: "NEXT_PUBLIC_DATABASE_URL=value" },
+      { environment: ["PGPASSWORD=value"] },
     ])
       expect(() => assertSite({ ...site, ...delta })).toThrow();
+  });
+  it("accepts only the provider's single root slash without weakening the exact host", () => {
+    expect(() =>
+      assertSite({ ...site, addresses: ["staging-tekaedu.tootiye.com/"] }),
+    ).not.toThrow();
+    for (const address of [
+      "staging-tekaedu.tootiye.com//",
+      "https://staging-tekaedu.tootiye.com/",
+      "staging-tekaedu.tootiye.com:443/",
+      "staging-tekaedu.tootiye.com/path/",
+      "staging-tekaedu.tootiye.com.evil.example/",
+      "tekaedu.tootiye.com/",
+    ])
+      expect(() => assertSite({ ...site, addresses: [address] })).toThrow();
   });
   it("validates site GET before sending only the staging restart POST", async () => {
     vi.stubEnv("ALWAYSDATA_API_TOKEN", "fake-unit-only");
     const fetcher = vi
       .fn()
-      .mockResolvedValueOnce({ ok: true, json: async () => site })
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({ ...site, addresses: ["staging-tekaedu.tootiye.com/"] }),
+      })
       .mockResolvedValueOnce({ ok: true });
     vi.stubGlobal("fetch", fetcher);
     await siteAction("restart");

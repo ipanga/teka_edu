@@ -1,32 +1,11 @@
 import { pathToFileURL } from "node:url";
+import { validatePreflightSite } from "./preflight.mjs";
 export const SITE_ID = 1083502;
 export const STAGING_URL = "https://staging-tekaedu.tootiye.com";
 export const SITE_COMMAND = "/usr/alwaysdata/nodejs/22/bin/node current/runtime.mjs";
+// Deployment uses the independently verified, redacted site contract from develop.
 export function assertSite(site) {
-  const directory = (site.working_directory ?? "")
-    .replace(/^\/home\/congofoot\//, "")
-    .replace(/^\//, "")
-    .replace(/\/$/, "");
-  if (
-    site.id !== SITE_ID ||
-    site.type !== "nodejs" ||
-    directory !== "www/tekaedu-staging" ||
-    site.command !== SITE_COMMAND ||
-    String(site.nodejs_version) !== "22" ||
-    !Array.isArray(site.addresses) ||
-    site.addresses.length !== 1 ||
-    site.addresses[0] !== "staging-tekaedu.tootiye.com"
-  )
-    throw new Error(
-      "Expected staging site identity/runtime does not match; owner configuration required",
-    );
-  const environment = site.environment ?? "";
-  if (
-    /\b(PG\w*|DATABASE_URL|DIRECT_DATABASE_URL|SUPABASE_\w*|NEXT_PUBLIC_SUPABASE_\w*)\s*=/.test(
-      environment,
-    )
-  )
-    throw new Error("Site environment contains SQL/Supabase runtime configuration");
+  validatePreflightSite(site);
 }
 export function assertHealth(body, sha) {
   if (

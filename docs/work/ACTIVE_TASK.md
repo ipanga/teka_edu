@@ -1,5 +1,19 @@
 # Active Task
 
+## Current reconciliation checkpoint — 2026-10-07
+
+This checkpoint supersedes the earlier configuration blockers and CI counts below.
+PR #100 is being reconciled with develop `ccb0e2f92032e90554d844c8add6bec24c24f8f4`
+using a normal merge. The five independently integrated preflight files are preserved exactly.
+Owner-provided non-secret evidence proves token-linked profile Sites permission for congofoot;
+no restart POST was issued. See [current CD checkpoint](../ALWAYSDATA_STAGING_CD.md).
+Successful read-only run 37665326854 proves the configured GitHub credentials, site, SSH,
+Node22 and DEV baseline. No new provider or database check is needed for reconciliation.
+Full reconciled-head CI and final diff review precede any ready-for-review recommendation.
+Keep PR #100 draft and all switches disabled. No merge of PR #100, upload, restart, activation,
+DEV/PROD operation or retirement. First-release rollback is NOT PROVED BY DESIGN; distinct
+reviewed A → B → A → B is a later acceptance requirement, separate from health/smoke.
+
 ## Task
 
 Approved Alwaysdata DEV migration and gated staging CD.

@@ -1,7 +1,39 @@
 # Alwaysdata staging CD
 
-DEV migration and managed verification are complete. Application activation is pending owner
-configuration and authorization. Production, Vercel and hosted Supabase remain intact.
+DEV migration and managed verification are complete. Application activation awaits separate
+owner authorization. Production, Vercel and hosted Supabase remain intact.
+
+## Reconciliation checkpoint — 2026-10-07
+
+PR #100 merges authoritative develop `ccb0e2f92032e90554d844c8add6bec24c24f8f4`
+into the existing feature history without rewriting commits. All five verification-only
+preflight files remain byte-identical to develop. The deployment site guard now delegates to
+that verified contract, including single-terminal-slash normalization and rejection of
+DB/Supabase/Vercel assignments. All other deployment mechanisms and frozen migration tooling
+are retained. Full CI must pass on the reconciled head before review/activation authorization.
+
+Verification-only [run 37665326854](https://github.com/ipanga/teka_edu/actions/runs/37665326854)
+on that develop SHA passed all connection, site, SSH, Node `v22.23.3` and read-only DEV checks.
+It proved 46 applied / zero pending, exact history/checksums, 36 canonical tables / 6,170 exact
+rows and schema/access/RLS/ACL baseline. Behavioral integrity/idempotency were not rerun in
+this read-only preflight; their managed acceptance and clean CI replay remain separate evidence.
+
+`RESTART_PERMISSION = PROVED BY LINKED PROFILE SITES PERMISSION`.
+Source: owner attestation in this task on 2026-10-07 after inspecting Alwaysdata admin UI.
+The owner identified profile `ipanga@icloud.com`, account `congofoot`, enabled “Tous les droits
+(comptes)” and “Tous les droits (serveurs)”, access to Web > Sites and visible site management /
+restart controls, and confirmed the GitHub `ALWAYSDATA_API_TOKEN` was created from that same
+profile. This proves the linked profile permission; no restart POST was used to test it.
+No credential value was provided or recorded.
+
+All deployment switches remain disabled: Alwaysdata unset, existing staging false, production
+false. Environment policy remains unchanged. No upload, restart, `current` creation, database
+operation, DNS change or provider retirement is authorized by reconciliation.
+First-release rollback remains **NOT PROVED BY DESIGN**: a healthy/smoked first release can
+exist without a distinct previous Alwaysdata release. Full staging acceptance later requires
+reviewed releases A and B and recorded A → B → A → B. The existing deployment job deliberately
+reports incomplete acceptance for a first/same-SHA release; that status must be distinguished
+from successful health and smoke results.
 
 ## Reviewed DEV acceptance
 
@@ -50,8 +82,9 @@ Configure names through GitHub settings; never paste values into chat or commit 
 | Environment `staging`, variable | `ALWAYSDATA_DEV_MIGRATIONS_APPROVED` | `true`, operator attestation for the reviewed frozen chain and protected rollback record                                |
 | Repository variable             | `ALWAYSDATA_STAGING_DEPLOY_ENABLED`  | Activation switch; keep unset/false until separately authorized                                                         |
 
-The audited GitHub staging Environment currently lacks these Alwaysdata entries. Existing
-Vercel/Supabase secrets and `STAGING_DOMAIN` are retained. They are not passed to this new
+The owner has configured these entries; verification run 37665326854 exercised the actual
+GitHub staging credentials and variables. Existing Vercel/Supabase secrets and `STAGING_DOMAIN`
+are retained. They are not passed to this new
 job or runtime. The DEV host, database/login, site ID, web root and hostname are hardcoded
 allowlists; no redundant owner variables are needed. Keep existing Environment protections
 and configure any desired reviewer gate before enabling this workflow.
@@ -66,9 +99,8 @@ Only site **1083502** is eligible. Configure its sole address as
 /usr/alwaysdata/nodejs/22/bin/node current/runtime.mjs
 ```
 
-The previous `npm run start` command is not accepted by the CD site guard. Coordinate the
-site save with the separately authorized first activation: `current` does not exist yet.
-No site setting has been saved by this implementation. The runtime derives configuration
+The owner has configured this command and verification run 37665326854 confirmed the exact
+site contract. `current` does not exist yet. No site setting was changed by this reconciliation. The runtime derives configuration
 from the release's metadata and binds `HOSTNAME` to provider `IP`, and provider `PORT`.
 It requires Node 22 and `NODE_ENV=production` and rejects SQL/Supabase environment variables.
 The API authenticates with the token and account `congofoot`; it verifies the exact site
@@ -144,12 +176,12 @@ Credentials are scoped only to the deployment step, outside checkout/npm install
 
 DEV is accepted. Staging application remains undeployed; latest public check is TLS valid,
 HTTP 502. Actual staging browser smoke and application rollback are NOT RUN. Local pointer
-tests are not evidence of a live restart/rollback. GitHub credential/site configuration and
+tests are not evidence of a live restart/rollback. Current-head CI/review and separately authorized
 first application activation are the remaining boundary. PROD operations/deployments: zero;
 Vercel/Supabase retirement: no.
 
-Review PR #100 and its current exact-head CI, provision the listed owner settings, configure
-the staging site at the activation boundary, and authorize application activation through
+Review reconciled PR #100 and its current exact-head CI, then separately authorize application
+activation through
 the normal reviewed `develop` integration path. First validate release A, then a distinct
 reviewed release B and record A→B→A→B health proof. Retain both existing providers. Stop
 before any PROD migration/deployment, DNS cutover or provider retirement.
