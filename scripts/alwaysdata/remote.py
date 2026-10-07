@@ -1,5 +1,5 @@
 """Restricted release installer and atomic pointers; never restarts or resets a database."""
-import argparse, hashlib, json, os, pathlib, re, tarfile, tempfile
+import argparse, hashlib, json, os, pathlib, re, shutil, tarfile, tempfile
 ROOT = pathlib.Path('/home/congofoot/www/tekaedu-staging')
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -29,8 +29,9 @@ def install(root, archive, sha, checksum):
         # Marker is outside payload inventory; remove from comparison scope by design below.
         validate_release(destination,sha)
         return destination
-    with tempfile.TemporaryDirectory(prefix='.incoming-',dir=releases) as temporary:
-        candidate=pathlib.Path(temporary)
+    candidate=pathlib.Path(tempfile.mkdtemp(prefix='.incoming-',dir=str(releases)))
+    transferred=False
+    try:
         with tarfile.open(archive,'r:gz') as package:
             members=package.getmembers()
             for member in members:
@@ -42,6 +43,14 @@ def install(root, archive, sha, checksum):
         validate_release(candidate,sha)
         (candidate/'artifact.sha256').write_text(checksum+'\n')
         os.rename(candidate,destination)
+        transferred=True
+    finally:
+        # A successful rename transfers ownership to the immutable release.
+        if not transferred:
+            try:
+                shutil.rmtree(candidate)
+            except OSError:
+                raise ValueError('INSTALL_TEMP_DIRECTORY_CLEANUP') from None
     return destination
 
 def switch(root, sha):
