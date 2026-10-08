@@ -5,6 +5,7 @@ import { resolve } from "node:path";
 import {
   formatSiteFailure,
   siteAction,
+  waitHealth,
   SITE_COMMAND,
   SITE_ID,
 } from "../../scripts/alwaysdata/site.mjs";
@@ -28,6 +29,7 @@ const networkError = (...codes: string[]) =>
 beforeEach(() => vi.stubEnv("ALWAYSDATA_API_TOKEN", token));
 afterEach(() => {
   vi.unstubAllEnvs();
+  vi.unstubAllGlobals();
   vi.useRealTimers();
 });
 
@@ -264,6 +266,34 @@ describe("bounded Alwaysdata site API transport", () => {
     );
     expect(hostileFetch).toHaveBeenCalledTimes(1);
   });
+
+  it.each(["http", "identity"])(
+    "keeps application health failure separate from API transport (%s)",
+    async (failure) => {
+      const fetcher = vi.fn().mockResolvedValue(
+        failure === "http"
+          ? new Response(token, { status: 503 })
+          : new Response(
+              JSON.stringify({
+                status: "ok",
+                environment: "staging",
+                commit: "b".repeat(40),
+                supabaseProjectRef: null,
+              }),
+            ),
+      );
+      vi.stubGlobal("fetch", fetcher);
+      const error = await waitHealth("a".repeat(40), 1).catch((error) => error);
+      expect(formatSiteFailure(error)).toBe("APPLICATION_HEALTH / EXPECTED_RELEASE_NOT_HEALTHY");
+      expect(fetcher).toHaveBeenCalledOnce();
+      expect(fetcher.mock.calls[0]![0]).toBe(
+        "https://staging-tekaedu.tootiye.com/api/health?release=" + "a".repeat(40),
+      );
+      expect(fetcher.mock.calls[0]![1]).not.toHaveProperty("headers");
+      expect(String(error)).not.toContain(token);
+      expect(String(error)).not.toContain(basic);
+    },
+  );
 
   it("redacts nested messages, unknown codes, token, Basic encoding and raw CLI stack", async () => {
     const fetcher = vi.fn().mockRejectedValue(

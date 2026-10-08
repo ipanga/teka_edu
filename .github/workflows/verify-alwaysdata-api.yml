@@ -1,4 +1,4 @@
-# Prepared only: register on the default branch before a separately authorized develop dispatch.
+# Manual GET-only verification; deployment switches must all be false before Environment access.
 name: Verify alwaysdata API (authenticated read-only)
 on:
   workflow_dispatch:
@@ -18,6 +18,8 @@ env:
   DIAGNOSTIC_ALLOW_DEPLOYMENT: "false"
   API_VERIFICATION_READ_ONLY_ACK: ${{ inputs.confirm_read_only }}
   ALWAYSDATA_STAGING_DEPLOY_ENABLED: ${{ vars.ALWAYSDATA_STAGING_DEPLOY_ENABLED }}
+  STAGING_DEPLOY_ENABLED: ${{ vars.STAGING_DEPLOY_ENABLED }}
+  PRODUCTION_DEPLOY_ENABLED: ${{ vars.PRODUCTION_DEPLOY_ENABLED }}
 jobs:
   disabled:
     name: Validate disabled deployment before Environment access

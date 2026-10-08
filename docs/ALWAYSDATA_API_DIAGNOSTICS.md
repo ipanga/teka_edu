@@ -71,25 +71,31 @@ families and received HTTP 401. Default fetch reached HTTP 401 on its first atte
 both environments. Both reported `autoSelectFamily=true` and a 250 ms attempt interval.
 The GitHub runner's separate diagnostic artifact and the PR record carry its measured result.
 
-## Prepared authenticated verification
+## Independently integrated authenticated verification
 
-The owner explicitly requires separate authorization before authenticated diagnostics.
-There is no approved local token source. Do not retrieve, copy or export the GitHub secret.
+The GET-only verifier was integrated independently through protected PRs
+[#113](https://github.com/ipanga/teka_edu/pull/113),
+[#114](https://github.com/ipanga/teka_edu/pull/114) and
+[#115](https://github.com/ipanga/teka_edu/pull/115). Its authoritative develop baseline is
+`b7e69fa14aa69c7865aa9aa33db7f51f251c3481`. The identical manual workflow is registered
+on main at `1578847d02d025286af92af48c691bbfafd84c10`.
 
-`.github/workflows/verify-alwaysdata-api.yml` is a separate, manual verification workflow.
-Its initial job must require the actual repository Alwaysdata deployment switch unset/false,
-the develop ref and the explicit read-only confirmation before the job using Environment
-`staging` can start. The secret-bearing job uses only `ALWAYSDATA_API_TOKEN` and performs
-fixed-site identity GET verification. It has no SSH/database credentials, deployment,
-restart, upload or pointer actions. `scripts/alwaysdata/verify-api.mjs` repeats its guards
-before invoking the GET-only inspection and reports only sanitized status/attempt metadata.
+The workflow requires all three actual repository switches to equal `false`, the exact
+develop ref, manual dispatch and explicit read-only acknowledgement before staging Environment
+access. `verify-api.mjs` repeats those guards and uses only the fixed GET-only `api-get.mjs`,
+with no dependency on the deployment action module. The staging Environment remains develop-only.
+Only its existing `ALWAYSDATA_API_TOKEN` is used; no token is retrieved, copied or exported locally.
 
-The staging Environment remains restricted to develop. Feature PR diagnostics cannot use
-its token. The current repository activation switch remains true, so authenticated
-verification is deliberately disabled. Running it later requires a separately authorized
-integration and switch/dispatch decision. The new `workflow_dispatch` file must also be
-registered on the default branch (`main`); preparing this PR does not perform that integration.
-Do not weaken Environment policy or merge the transport fix merely to obtain token access.
+Separately authorized run
+[37828705977](https://github.com/ipanga/teka_edu/actions/runs/37828705977) succeeded on that
+exact develop SHA: deployment guard, staging Environment access, token access, authentication,
+normal TLS/hostname validation, account `congofoot`, site `1083502` and exact configuration all
+PASS. HTTP 200 took one attempt and zero retries. Restart POSTs, provider mutations and database
+connections were all zero. This successful observation does not prove the underlying cause of
+the previous TCP failure or that a future restart succeeds.
+
+The current reconciliation task does not dispatch this authenticated workflow again.
+All three repository switches remain false, with no Environment switch overrides.
 
 ## Transport correction
 
@@ -106,6 +112,13 @@ The restart POST is sent at most once, after validated GET success. A response f
 reports `RESTART_NOT_CONFIRMED` and requires read-only state inspection before any separately
 authorized action. The code never retries that POST or performs automatic recovery.
 
+GET transport errors carry `API_SITE_GET`; HTTP 401/403 identify authorization rejection;
+site validation errors carry `SITE_IDENTITY_INVALID`; failed restart responses carry
+`API_RESTART_POST / RESTART_NOT_CONFIRMED`. Application health exhaustion now retains the
+sanitized `APPLICATION_HEALTH / EXPECTED_RELEASE_NOT_HEALTHY` stage instead of being collapsed
+into the generic CLI fallback. Its health retries, exact SHA checks and response requirements
+are unchanged. No raw health body or credential reaches that diagnostic.
+
 Focused tests cover GET success, transient timeout recovery, bounded exhaustion, stalled
 headers/body, DNS/IPv4/IPv6/TLS failures, invalid site identity, rejected HTTP statuses,
 one-shot POST failures/ambiguous outcomes, credential redaction and both diagnostic guards.
@@ -120,7 +133,7 @@ The installed B artifact cannot gain this code correction while keeping its immu
    this fix. The installer validates the already present B and refuses replacement. The
    workflow also repeats managed DEV verification. No such rerun is authorized here.
 2. **Transport-fix release C:** merging the reviewed fix into develop creates a distinct
-   SHA and automatically triggers staging while the repository switch remains true. The
+   SHA. Staging stays disabled until separately authorized switch activation. The
    workflow records current A as the rollback target, so the proof becomes A → C → A → C.
    This requires separate merge/activation authorization and explicit acceptance of that
    distinct release identity. It must never be reported as A → B → A → B.
@@ -132,6 +145,72 @@ The preferred next release path is a separately reviewed C with the bounded tran
 correction and a complete distinct-release rollback proof. A no-code B retry is a separate
 owner choice, not an automatic response to successful anonymous probes.
 
-Stop after diagnosis, tests and PR preparation. Keep A active. No merge, authenticated
-diagnostic dispatch, deployment rerun, restart, database action or provider retirement is
-authorized by this preparation task.
+## Reconciliation decisions and scope
+
+Merge develop into the existing PR #112 feature branch without rewriting either history.
+The original reviewed PR head is `838fd4ff9701cc04d75cb732baa445b305b9a0c0`.
+Resolve the three add/add conflicts individually:
+
+| File                                             | Decision                                                                                                          |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| `.github/workflows/verify-alwaysdata-api.yml`    | Preserve develop byte-for-byte: actual three-switch guard before Environment access.                              |
+| `scripts/alwaysdata/verify-api.mjs`              | Preserve develop byte-for-byte: GET-only dependency, result validation and independent sanitized classifications. |
+| `tests/unit/alwaysdata-api-verification.test.ts` | Preserve develop byte-for-byte: stronger switch, result, hostile-error and forbidden-action regressions.          |
+
+Also preserve `api-get.mjs` and its tests byte-for-byte. Deployment resilience remains
+independently scoped to `site.mjs`; the verifier does not acquire a restart-capable dependency.
+The existing deployment workflow, installer, preflight/site validators and administrative
+DEV tooling remain unchanged. The only added reconciliation code correction is retaining
+application-health failure classification, covered by HTTP and wrong-SHA regressions.
+
+The final diff against develop is limited to these eight files:
+
+- `.github/workflows/diagnose-alwaysdata-api.yml`
+- `docs/ALWAYSDATA_API_DIAGNOSTICS.md`
+- `scripts/alwaysdata/diagnose-api.mjs`
+- `scripts/alwaysdata/site.mjs`
+- `tests/e2e/helpers/offered-session.ts`
+- `tests/unit/alwaysdata-api-diagnostic.test.ts`
+- `tests/unit/alwaysdata-api.test.ts`
+- `tests/unit/offered-session-date.test.ts`
+
+The offered-session test helper now reads the canonical calendar's `Africa/Kinshasa` timezone,
+matching the application's existing reference-data path. Seven boundary tests cover the UTC
+hour where Kinshasa and Lubumbashi dates differ. Exact route-date/title assertions remain.
+Application scheduling, lessons, curriculum, approvals, media and migration/seed files are unchanged.
+
+## Controlled Release C proof plan — not executed
+
+The PR head is a review identity, not a deployed Release C identity. The eventual release must
+be rebuilt from the resulting protected develop merge SHA. PR CI packages its synthetic merge
+checkout; that archive is Linux validation evidence and must not be relabelled or uploaded as
+an eventual develop release. Exact reconciled head, CI IDs and downloaded archive checksum are
+recorded in the PR description and preparation resume evidence after CI completes.
+
+Before a separately authorized activation, recheck all switch/Environment/secret/site/SSH/DEV
+safeguards and the exact reviewed head/green CI, then confirm A health and both immutable releases.
+The reviewed deployment procedure must prove **A → C → A → C**:
+
+1. Confirm A's HTTP 200, staging identity and full SHA before transition.
+2. Build/install immutable C from the actual develop merge SHA and activate it.
+3. Restart only site 1083502, verify exact C health, and run phone/tablet/laptop-MacBook
+   navigation and media smoke tests.
+4. Switch to A, restart that same site and verify A's exact SHA and health.
+5. Restore C, restart that same site and verify C's exact SHA and health.
+6. Accept the sequence only with all transition health evidence and supported-device smoke;
+   leave C active only after the complete proof succeeds.
+
+If any identity GET or restart API transport fails, stop at the failed stage. A GET failure
+before POST means no restart was issued by that call; a POST response failure means the restart
+outcome is unconfirmed. Do not retry the POST, replay deployment or move pointers automatically.
+Perform read-only pointer/manifest/API/health inspection, retain evidence and obtain separate
+recovery authorization following the manual application recovery boundary in
+[the staging CD procedure](ALWAYSDATA_STAGING_CD.md#release-integrity-and-rollback).
+Filesystem pointers alone never prove a running release or successful rollback. No database
+rollback/reset, DNS change, provider retirement or PROD action belongs to application recovery.
+
+Keep PR #112 open and unmerged, with auto-merge disabled. Stop after reconciliation, tests,
+CI and PR preparation. Keep A active and all three deployment switches false. No authenticated
+diagnostic dispatch, deployment rerun, upload, restart, pointer mutation, managed database
+operation or provider retirement is authorized by this preparation task. Staging acceptance
+remains BLOCKED until the distinct-release application rollback sequence is actually proved.

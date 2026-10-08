@@ -28,7 +28,7 @@ export async function waitHealth(sha, attempts = 30) {
       return;
     } catch {
       if (i === attempts - 1)
-        throw new Error("Staging did not become healthy for expected full SHA");
+        throw new ApiFailure("APPLICATION_HEALTH", "EXPECTED_RELEASE_NOT_HEALTHY");
       await new Promise((resolve) => setTimeout(resolve, 2000));
     }
   }
