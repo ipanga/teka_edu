@@ -2,7 +2,13 @@
 
 A French-first educational web app (PWA): a **parent-led after-school reinforcement platform** for preschool children (1ère, 2ème and 3ème maternelle) — a digital répétiteur guided by the parent. The child goes to school during the day; afterwards a parent opens Teka Edu and runs a structured **30-to-45-minute** session. It follows the official French Cycle 1 curriculum and the DRC school calendar, and does not replace school.
 
-> **Status:** The validated September release is live in production as of 2026-10-02. `main` was promoted from `develop` by PR #92 at merge commit `ac3ebf9b9bd00662def3e7ec206aff1954f4694d`; production deployment `dpl_A43iQuRrzzJLRm2PdCf9CWmdedz5` is aliased to `https://teka-edu.vercel.app`. 1ere and 3eme have September lessons; 2eme has no authored lessons. See [`PROJECT_STATUS.md`](PROJECT_STATUS.md) and [`Codex continuation`](docs/handoff/CODEX_CONTINUATION.md).
+> **Status (2026-10-08):** Accepted September/October content is live on Vercel production
+> at `81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05`. Alwaysdata staging C is ACCEPTED,
+> healthy, with A → C → A → C application rollback proved. All deployment switches are false.
+> Current parent navigation is integrated in main/develop and staging; live Vercel PROD is older.
+> Alwaysdata production migration is NOT STARTED; provider retirement is NOT AUTHORIZED.
+> See [production readiness audit](docs/ALWAYSDATA_PRODUCTION_READINESS.md) and
+> [PROJECT_STATUS](PROJECT_STATUS.md).
 
 ## Documentation
 

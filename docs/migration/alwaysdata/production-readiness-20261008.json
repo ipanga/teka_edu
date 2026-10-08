@@ -1,0 +1,665 @@
+{
+  "recorded_utc": "2026-10-08T21:12:43.049843+00:00",
+  "scope": "Production readiness audit, read-only; production migration NOT STARTED",
+  "production_readiness": "BLOCKED; P0 incomplete",
+  "repository": "ipanga/teka_edu",
+  "staging": {
+    "acceptance": "ACCEPTED",
+    "release_C": "813c56197f0d0fb353b39238b65c27dd08e6e5bc",
+    "release_A": "8b4667d529f906906b3d40f6cabbcde234f4cb33",
+    "release_B": "553e3e9cbaa4ba2d9b131c00441e5ca17cd2764a",
+    "current": "813c56197f0d0fb353b39238b65c27dd08e6e5bc",
+    "previous": "8b4667d529f906906b3d40f6cabbcde234f4cb33",
+    "health": "PASS (fresh HTTP 200/exact SHA/staging/null Supabase ref)",
+    "manifests": "PASS (fresh A/B/C, 1426 files each)",
+    "application_rollback": "PROVED in accepted run: A -> C -> A -> C",
+    "run": 37835289864,
+    "run_url": "https://github.com/ipanga/teka_edu/actions/runs/37835289864",
+    "archive_sha256": "44524ca5d75750d14a026e61679d3d376b461f7ae8bfd859c82ceb8f1f1391a8",
+    "retained_evidence_integrity": {
+      "files": 31,
+      "index_sha256": "43dfeb769382dfda69bd8cd33c362d33ff727969995dd612d73116f393e71c68",
+      "hash_verification": "PASS",
+      "mismatches": []
+    },
+    "DEV": {
+      "basis": "Accepted deployment evidence; not rerun by this audit",
+      "postgres": "16.15",
+      "applied": 46,
+      "pending": 0,
+      "canonical_tables": 36,
+      "canonical_rows": 6170,
+      "schema_access_integrity_isolation": "PASS",
+      "idempotency_changed_rows": 0
+    }
+  },
+  "guards": {
+    "recorded_utc": "2026-10-08T20:54:59.463591+00:00",
+    "release_C": "813c56197f0d0fb353b39238b65c27dd08e6e5bc",
+    "switches": {
+      "ALWAYSDATA_STAGING_DEPLOY_ENABLED": "false",
+      "STAGING_DEPLOY_ENABLED": "false",
+      "PRODUCTION_DEPLOY_ENABLED": "false"
+    },
+    "environment_overrides": "NONE",
+    "staging_policy": "develop-only",
+    "merge_triggered_runs": [
+      {
+        "run": 37834637692,
+        "workflow_id": 355860915,
+        "workflow": "Deploy staging",
+        "conclusion": "success",
+        "entire_workflow_skipped_no_jobs": false,
+        "mutation_jobs": [
+          {
+            "id": 113509709123,
+            "name": "Migrate Supabase DEV, deploy Vercel staging, smoke test",
+            "conclusion": "skipped"
+          }
+        ]
+      },
+      {
+        "run": 37834637695,
+        "workflow_id": 375807316,
+        "workflow": "Deploy alwaysdata staging",
+        "conclusion": "skipped",
+        "entire_workflow_skipped_no_jobs": false,
+        "mutation_jobs": [
+          {
+            "id": 113508490984,
+            "name": "Verify DEV, install immutable staging release, smoke and rollback proof",
+            "conclusion": "skipped"
+          }
+        ]
+      }
+    ],
+    "all_merge_triggered_runs_finished": true,
+    "merge_triggered_deployment_jobs_skipped": true,
+    "older_or_concurrent_deployment_workflows": []
+  },
+  "production": {
+    "public_origin": "https://teka-edu.vercel.app",
+    "health": "PASS",
+    "deployed_sha": "81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05",
+    "current_main": "1578847d02d025286af92af48c691bbfafd84c10",
+    "current_develop": "813c56197f0d0fb353b39238b65c27dd08e6e5bc",
+    "vercel_deployment": "dpl_HkEkuSvjzXs5wkh6aW7GtHnxyZkL",
+    "vercel_state": "READY/production",
+    "vercel_Git_link": null,
+    "vercel_json_Git_deployment_enabled": false,
+    "navigation_branch_status": "PR98 merged develop; PR99 merged main; newer than deployed SHA",
+    "environment": {
+      "branch": "main only",
+      "required_reviewers": 1,
+      "prevent_self_review": false,
+      "dedicated_Alwaysdata_secret_names_present": false
+    }
+  },
+  "branch_comparison": {
+    "main": "1578847d02d025286af92af48c691bbfafd84c10",
+    "develop": "813c56197f0d0fb353b39238b65c27dd08e6e5bc",
+    "merge_base": "1578847d02d025286af92af48c691bbfafd84c10",
+    "main_only_commits": 0,
+    "develop_only_commits": 19,
+    "changed_files": 63,
+    "insertions": 31647,
+    "deletions": 82,
+    "new_content_media_UX_SQL_migrations": 0,
+    "classification": {
+      "Portability / staging CD / build tooling": [
+        ".dockerignore",
+        ".github/workflows/ci.yml",
+        ".github/workflows/deploy-alwaysdata-staging.yml",
+        "lib/postgres/adapter-rules.json",
+        "lib/postgres/migrations.ts",
+        "lib/postgres/runner.ts",
+        "lib/postgres/session.ts",
+        "lib/postgres/target.ts",
+        "lib/postgres/verify.ts",
+        "package.json",
+        "scripts/alwaysdata/db-stage.mjs",
+        "scripts/alwaysdata/deploy.sh",
+        "scripts/alwaysdata/package.mjs",
+        "scripts/alwaysdata/remote.py",
+        "scripts/alwaysdata/runtime.mjs",
+        "scripts/alwaysdata/verify-artifact.mjs",
+        "scripts/postgres-migrate.ts",
+        "scripts/postgres/access-inventory.sql",
+        "scripts/postgres/access.test.sql",
+        "scripts/postgres/assertions.sql",
+        "scripts/postgres/inventory.sql",
+        "scripts/postgres/replay.ts"
+      ],
+      "API GET transport / diagnostics": [
+        ".github/workflows/diagnose-alwaysdata-api.yml",
+        "scripts/alwaysdata/api-get.mjs",
+        "scripts/alwaysdata/diagnose-api.mjs",
+        "scripts/alwaysdata/site.mjs",
+        "scripts/alwaysdata/verify-api.mjs"
+      ],
+      "Documentation / historical evidence": [
+        "DECISIONS.md",
+        "PROJECT_STATUS.md",
+        "README.md",
+        "docs/ALWAYSDATA_API_DIAGNOSTICS.md",
+        "docs/ALWAYSDATA_MIGRATION.md",
+        "docs/ALWAYSDATA_STAGING_CD.md",
+        "docs/DEPLOYMENT.md",
+        "docs/ENVIRONMENT_SETUP.md",
+        "docs/ENVIRONMENT_VARIABLES.md",
+        "docs/POSTGRES_PORTABILITY.md",
+        "docs/migration/alwaysdata/PORTABILITY_REPORT.md",
+        "docs/migration/alwaysdata/canonical-sha256.json",
+        "docs/migration/alwaysdata/dev-apply.json",
+        "docs/migration/alwaysdata/dev-drift-preflight.json",
+        "docs/migration/alwaysdata/dev-history.json",
+        "docs/migration/alwaysdata/dev-preflight.json",
+        "docs/migration/alwaysdata/dev-rollback-plan.md",
+        "docs/migration/alwaysdata/dev-rollback-record.json",
+        "docs/migration/alwaysdata/expected-schema.json",
+        "docs/migration/alwaysdata/managed-dev-verification.json",
+        "docs/migration/alwaysdata/migration-audit.json",
+        "docs/migration/alwaysdata/postgres16-replay.json",
+        "docs/migration/alwaysdata/previous-audit-checkpoint.md",
+        "docs/migration/alwaysdata/staging-cd-verification.json",
+        "docs/migration/alwaysdata/staging-https.json",
+        "docs/work/ACTIVE_TASK.md"
+      ],
+      "Tests": [
+        "tests/e2e/helpers/offered-session.ts",
+        "tests/e2e/smoke.spec.ts",
+        "tests/unit/alwaysdata-api-diagnostic.test.ts",
+        "tests/unit/alwaysdata-api-get.test.ts",
+        "tests/unit/alwaysdata-api-verification.test.ts",
+        "tests/unit/alwaysdata-api.test.ts",
+        "tests/unit/alwaysdata.test.ts",
+        "tests/unit/alwaysdata_remote_test.py",
+        "tests/unit/offered-session-date.test.ts",
+        "tests/unit/postgres-portability.test.ts"
+      ]
+    }
+  },
+  "supabase_PROD": {
+    "project_ref": "eganrivpkjhozkkahyxy",
+    "name": "teka-edu-prod",
+    "provider_metadata": "ACTIVE_HEALTHY / eu-west-3 / build 17.6.1.166",
+    "SQL_version": "17.6",
+    "database_bytes_at_read": 24054931,
+    "history": {
+      "recorded_utc": "2026-10-08T21:05:09.327782+00:00",
+      "project_ref": "eganrivpkjhozkkahyxy",
+      "applied": 46,
+      "pending": [],
+      "unexpected_versions": [],
+      "exact_version_name_match": true,
+      "statement_byte_comparison": "NOT VERIFIED: large response timed out; stored hashes are inventory only, not equality with repository SHA-256",
+      "auth_identities": 0,
+      "auth_users": 0,
+      "public_policies": 0,
+      "storage_buckets": 0,
+      "storage_objects": 0
+    },
+    "canonical": {
+      "recorded_utc": "2026-10-08T21:01:34.386871+00:00",
+      "project_ref": "eganrivpkjhozkkahyxy",
+      "tables": 36,
+      "rows": 6170,
+      "exact": true,
+      "counts": [
+        {
+          "table": "education_stages",
+          "rows": 1,
+          "exact": true,
+          "normalized_sha256": "9a3ef72cf426f108bc83bbe0d9476e240d06f146802b68a5e980b942eb0a26f6"
+        },
+        {
+          "table": "school_levels",
+          "rows": 3,
+          "exact": true,
+          "normalized_sha256": "9a881705e5212e1dc7da9e983a91eef72e279bd04d721db1d8e6c91eab949264"
+        },
+        {
+          "table": "school_years",
+          "rows": 1,
+          "exact": true,
+          "normalized_sha256": "56901dc71a0f8e8a8c6dc7551c605a2f10bbc3d0a5ce5d5893a331a44cdb3c35"
+        },
+        {
+          "table": "school_periods",
+          "rows": 6,
+          "exact": true,
+          "normalized_sha256": "7cf76532fb1fb1acc2ad2d04179c85ffdabc99e4bed97b6fe62cc5ff0059c427"
+        },
+        {
+          "table": "public_holidays",
+          "rows": 10,
+          "exact": true,
+          "normalized_sha256": "cb09bd78ca825bc28ef57477ed3823e1e8b2a7d1c6fce7d959f60fff4a512e16"
+        },
+        {
+          "table": "calendar_exceptions",
+          "rows": 4,
+          "exact": true,
+          "normalized_sha256": "efe31c9113de6ba9ba12f25b721be3f39a4ec255dfeb645ee66b31d4b3dfb1a1"
+        },
+        {
+          "table": "curricula",
+          "rows": 1,
+          "exact": true,
+          "normalized_sha256": "d6a260888690019fe1e49e208ac5c44b8dc74729069dc62801c15ca8ad589fe3"
+        },
+        {
+          "table": "curriculum_age_bands",
+          "rows": 3,
+          "exact": true,
+          "normalized_sha256": "e34ac20017c8b2ff173aea9d1ee997120b746ed52e5cd43758a347f1bebfdded"
+        },
+        {
+          "table": "curriculum_levels",
+          "rows": 3,
+          "exact": true,
+          "normalized_sha256": "ee30a28f5d70e0a88ee0af92bea9607b9f8d450e061b5923ed004fa6b6eac62c"
+        },
+        {
+          "table": "curriculum_domains",
+          "rows": 6,
+          "exact": true,
+          "normalized_sha256": "aba50bb6039d55b9eac4201efb46aab667ec823bf3ceefdc9dfe8214efe96c56"
+        },
+        {
+          "table": "curriculum_sources",
+          "rows": 3,
+          "exact": true,
+          "normalized_sha256": "9afc3e8904d0c6cb039af9a1c50468e6c174b5743a65b40b52feb0e3de29ac9a"
+        },
+        {
+          "table": "curriculum_source_domains",
+          "rows": 6,
+          "exact": true,
+          "normalized_sha256": "9a1f5f0d28ae030e69e12298cc228dc21d8f39a00c032302f726964b7a811606"
+        },
+        {
+          "table": "curriculum_subdomains",
+          "rows": 19,
+          "exact": true,
+          "normalized_sha256": "6201256c0a86fb63ebf0d2edd78502ee7ffd5e717eeff8a9e5da330b2fda5a3d"
+        },
+        {
+          "table": "curriculum_competencies",
+          "rows": 38,
+          "exact": true,
+          "normalized_sha256": "2f77d505c2fcc05192588101b434534ce87b614cfff60a39d514ae1c8fcfdaa8"
+        },
+        {
+          "table": "learning_objectives",
+          "rows": 398,
+          "exact": true,
+          "normalized_sha256": "17d66d482c97508d26d0a5b7de004aec82ce49fa54cfb0e732845994ce8d99a4"
+        },
+        {
+          "table": "learning_objective_age_bands",
+          "rows": 417,
+          "exact": true,
+          "normalized_sha256": "98c34ec3f7d8f0acb0397fd72265f057a150f0406ffcf781cfd7ad158edc37e0"
+        },
+        {
+          "table": "success_examples",
+          "rows": 529,
+          "exact": true,
+          "normalized_sha256": "971fe2961dc96cbc3ae8987ad42612c1aa8b62c4ed3b5dc59f14b2eba17a7c8e"
+        },
+        {
+          "table": "materials",
+          "rows": 19,
+          "exact": true,
+          "normalized_sha256": "c2029eaa093114e75a3678d0a65a29964c2e01880accb2b961467037b9585996"
+        },
+        {
+          "table": "activity_types",
+          "rows": 15,
+          "exact": true,
+          "normalized_sha256": "e6dfcfcf54f2b5bed3d04c455207924f7791d5355165b35a67a5761946dbd346"
+        },
+        {
+          "table": "lessons",
+          "rows": 264,
+          "exact": true,
+          "normalized_sha256": "fe45eb0ce892f4a42f259519db4dfc8bc505b10205c7fdd5e7879bcf4d187d79"
+        },
+        {
+          "table": "lesson_levels",
+          "rows": 264,
+          "exact": true,
+          "normalized_sha256": "6dd3f601dba2bf61b054209fd121dc933094353267d56c6295455f346727fc3f"
+        },
+        {
+          "table": "lesson_objectives",
+          "rows": 620,
+          "exact": true,
+          "normalized_sha256": "b6eeda7dc536c0c324195139b481823ab9e94f2f5f477cdf8af7cba06470a6d1"
+        },
+        {
+          "table": "activities",
+          "rows": 471,
+          "exact": true,
+          "normalized_sha256": "60ccb4403ecbd757fdb264d60943ce543161965faff714a958b428ba922c2698"
+        },
+        {
+          "table": "media_assets",
+          "rows": 54,
+          "exact": true,
+          "normalized_sha256": "5f509a88a237c005478f5a9325171edb55bdd5b996f8ad9f21c4e43afab035b4"
+        },
+        {
+          "table": "media_asset_tags",
+          "rows": 178,
+          "exact": true,
+          "normalized_sha256": "f66ccb9624aa073e74137e37cb51761d2678e7dee06e09bc3e568722e4f77fab"
+        },
+        {
+          "table": "activity_media",
+          "rows": 140,
+          "exact": true,
+          "normalized_sha256": "83c24bbdec0713792994aa86c1bc11123da94bd49a960b712fbc3a4332a736f8"
+        },
+        {
+          "table": "activity_objectives",
+          "rows": 706,
+          "exact": true,
+          "normalized_sha256": "005a55acd60665f52f3b7110c19e219598adc7e494e6d2257eb575fbec59abb7"
+        },
+        {
+          "table": "activity_materials",
+          "rows": 653,
+          "exact": true,
+          "normalized_sha256": "7a9c73c189fa99ddf8ffdccff9910447bbe484df933c23ad42b497a508fe2dde"
+        },
+        {
+          "table": "activity_vocabulary",
+          "rows": 388,
+          "exact": true,
+          "normalized_sha256": "2f07aaca17deda59f99ab9edcd68b14d42e07b06ca3b7643a73dcf127d6efb17"
+        },
+        {
+          "table": "activity_scaffolds",
+          "rows": 463,
+          "exact": true,
+          "normalized_sha256": "b74516456fcf0de71bd7ba1b7d2d0e62714e80523e5ee08eabb249b30c3df199"
+        },
+        {
+          "table": "teaching_texts",
+          "rows": 21,
+          "exact": true,
+          "normalized_sha256": "003e7aa11d9a45753eec1250113ca68d55f44291851410865ec55958d0e4c0f8"
+        },
+        {
+          "table": "teaching_text_lines",
+          "rows": 173,
+          "exact": true,
+          "normalized_sha256": "f0d36d17620c39e3e23a4e22334f310dca7e5404cf77e721e9699840d5eb262f"
+        },
+        {
+          "table": "annual_plans",
+          "rows": 2,
+          "exact": true,
+          "normalized_sha256": "a6477953b808a9a5e00cffaa019b66d5379f15369dfdcb7e8d87a2538a5f3a89"
+        },
+        {
+          "table": "annual_plan_phases",
+          "rows": 12,
+          "exact": true,
+          "normalized_sha256": "3d331ffc76c36a7be2f1b9b146d1436389064f06c94ebd50793f54f987fabb20"
+        },
+        {
+          "table": "annual_plan_entries",
+          "rows": 278,
+          "exact": true,
+          "normalized_sha256": "120c080f9f0a35620326a6851c351e3f719ecf3b3e593ea35dcba70b1fb6fefb"
+        },
+        {
+          "table": "school_year_curricula",
+          "rows": 1,
+          "exact": true,
+          "normalized_sha256": "d4e314c2416059ff28583d0a3cdfbd33783f9b4f6c0627b9b271179a8bc6c515"
+        }
+      ],
+      "method": "SELECT-only frozen-reference columns; JSON objects normalized and row multisets compared in memory"
+    },
+    "schema_comparison": {
+      "app_tables_exact": true,
+      "private_functions_exact": true,
+      "source_schemas": ["extensions", "private", "public"],
+      "target_baseline_schemas": ["extensions", "private", "public", "teka_migrations"],
+      "source_extensions": [
+        {
+          "name": "btree_gist",
+          "schema": "extensions",
+          "version": "1.7"
+        },
+        {
+          "name": "plpgsql",
+          "schema": "pg_catalog",
+          "version": "1.0"
+        }
+      ],
+      "target_baseline_extensions": [
+        {
+          "name": "btree_gist",
+          "schema": "extensions",
+          "version": "1.7"
+        },
+        {
+          "name": "plpgsql",
+          "schema": "pg_catalog",
+          "version": "1.0"
+        }
+      ],
+      "differences": []
+    },
+    "ACL_summary": {
+      "function": {
+        "objects": 2,
+        "grantees": ["postgres"],
+        "privileges": ["EXECUTE"]
+      },
+      "schema": {
+        "objects": 3,
+        "grantees": [
+          "PUBLIC",
+          "anon",
+          "authenticated",
+          "dashboard_user",
+          "pg_database_owner",
+          "postgres",
+          "service_role"
+        ],
+        "privileges": ["CREATE", "USAGE"]
+      },
+      "table": {
+        "objects": 36,
+        "grantees": ["postgres", "service_role"],
+        "privileges": [
+          "DELETE",
+          "INSERT",
+          "MAINTAIN",
+          "REFERENCES",
+          "SELECT",
+          "TRIGGER",
+          "TRUNCATE",
+          "UPDATE"
+        ]
+      }
+    },
+    "backup_metadata": {
+      "backups": null,
+      "physical_backup_data": {},
+      "pitr_enabled": false,
+      "region": "eu-west-3",
+      "walg_enabled": true
+    },
+    "runtime": "Bundled content; no Supabase SDK/DB/Auth/Storage client implementation",
+    "read_method": "Existing CLI login, explicit PROD ref, SELECT only; DEV link unchanged",
+    "user_records_accessed": false,
+    "anonymous_runtime_observation": {
+      "recorded_utc": "2026-10-08T21:12:32.138Z",
+      "context": "fresh anonymous isolated profile; no existing parent data or session interactions",
+      "pages": [
+        {
+          "path": "/",
+          "status": 200,
+          "final_url": "https://teka-edu.vercel.app/"
+        },
+        {
+          "path": "/maternelle/3",
+          "status": 200,
+          "final_url": "https://teka-edu.vercel.app/maternelle/3"
+        },
+        {
+          "path": "/maternelle/3/seance/1",
+          "status": 200,
+          "final_url": "https://teka-edu.vercel.app/maternelle/3/seance/1"
+        }
+      ],
+      "requests": 41,
+      "hosts": ["teka-edu.vercel.app"],
+      "supabase_requests": 0,
+      "POST_requests": 0
+    }
+  },
+  "alwaysdata_PROD": {
+    "admin_site_list": {
+      "recorded_utc": "2026-10-08T21:06:30.272658+00:00",
+      "source": "existing authenticated Alwaysdata admin Sites list (native browser read-only)",
+      "account": "congofoot",
+      "production_site_id": 1083500,
+      "address": "tekaedu.tootiye.com",
+      "type": "Node.js",
+      "not_verified": [
+        "live Node version",
+        "working-directory site setting",
+        "startup command",
+        "site Environment assignments",
+        "per-account resources/quotas",
+        "dedicated PROD API permissions",
+        "production database catalog/version/owner/ACL/state"
+      ]
+    },
+    "root": {
+      "path": "/home/congofoot/www/tekaedu-prod",
+      "exists": true,
+      "login": "congofoot",
+      "directory": true,
+      "owner": "congofoot",
+      "mode": "0o770",
+      "access": [true, true, true],
+      "entries": 0,
+      "current_exists": false,
+      "previous_exists": false,
+      "credential_like_names": 0
+    },
+    "transport": {
+      "recorded_utc": "2026-10-08T21:01:57.258860+00:00",
+      "probes": [
+        {
+          "connection": "public-Cloudflare",
+          "exit": 0,
+          "http": 502,
+          "tls_verify_result": 0,
+          "remote_ip": "2606:4700:3033::6815:517e",
+          "total_seconds": 1.100267
+        },
+        {
+          "connection": "alwaysdata-direct-origin",
+          "exit": 0,
+          "http": 502,
+          "tls_verify_result": 0,
+          "remote_ip": "185.31.40.13",
+          "total_seconds": 0.681731
+        }
+      ]
+    },
+    "backup_files": {
+      "exists": true,
+      "prod_files": [
+        {
+          "name": "2026-10-06/postgresql/congofoot_teka_edu_prod.sql.zst",
+          "bytes": 727,
+          "mode": "0o666",
+          "modified_utc": "2026-10-05T23:29:47.733346Z"
+        },
+        {
+          "name": "2026-10-07/postgresql/congofoot_teka_edu_prod.sql.zst",
+          "bytes": 729,
+          "mode": "0o666",
+          "modified_utc": "2026-10-06T23:26:59.071683Z"
+        },
+        {
+          "name": "2026-10-08/postgresql/congofoot_teka_edu_prod.sql.zst",
+          "bytes": 729,
+          "mode": "0o666",
+          "modified_utc": "2026-10-07T23:29:25.426813Z"
+        },
+        {
+          "name": "latest/postgresql/congofoot_teka_edu_prod.sql.zst",
+          "bytes": 729,
+          "mode": "0o666",
+          "modified_utc": "2026-10-07T23:29:25.426813Z"
+        }
+      ],
+      "bounded_directory_inspection": true,
+      "date_directory_count": 32
+    },
+    "backup_parent_modes": [
+      {
+        "path": "/home/congofoot",
+        "mode": "0o1770",
+        "symlink": false
+      },
+      {
+        "path": "/home/congofoot/admin",
+        "mode": "0o755",
+        "symlink": false
+      },
+      {
+        "path": "/home/congofoot/admin/backup",
+        "mode": "0o770",
+        "symlink": true
+      },
+      {
+        "path": "/home/congofoot/admin/backup/latest",
+        "mode": "0o770",
+        "symlink": true
+      },
+      {
+        "path": "/home/congofoot/admin/backup/latest/postgresql",
+        "mode": "0o770",
+        "symlink": false
+      }
+    ],
+    "intended_database": "congofoot_teka_edu_prod",
+    "intended_login": "congofoot_user_teka_edu_prod",
+    "SQL_connection": "NOT ATTEMPTED; identity/version/state/ACL NOT VERIFIED",
+    "credential_reuse": "No staging credentials used for production",
+    "resources": "NOT VERIFIED"
+  },
+  "progress": {
+    "storage": "localStorage, teka-edu.session.v2 class/year/day-scoped",
+    "IndexedDB": "Not implemented",
+    "export_import": "Not implemented",
+    "old_origin": "https://teka-edu.vercel.app",
+    "proposed_origin": "https://tekaedu.tootiye.com",
+    "cross_origin_continuity": "Not automatic; retained old origin plus separately approved local export/import proposed",
+    "real_parent_browser_data_accessed": false
+  },
+  "provider_mutations": 0,
+  "database_writes": 0,
+  "restart_POSTs": 0,
+  "deployments": 0,
+  "pointer_changes": 0,
+  "DNS_changes": 0,
+  "switch_changes": 0,
+  "secret_changes": 0,
+  "provider_retirement": "NOT AUTHORIZED",
+  "HTTP_POST_note": "Supabase SELECT query transport may use POST; no write SQL/provider mutation",
+  "next_task": "Complete remaining P0 read-only Alwaysdata PROD/Cloudflare inventory; propose bounded P1; no implementation"
+}

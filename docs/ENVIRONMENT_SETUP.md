@@ -1,7 +1,11 @@
 # Environment Setup
 
-Current transition tooling: [POSTGRES_PORTABILITY.md](POSTGRES_PORTABILITY.md). Active Alwaysdata
-staging is `https://staging-tekaedu.tootiye.com`; application deployment remains a later phase.
+## Current checkpoint — 2026-10-08
+
+The staging configuration has been exercised successfully; Vercel/Supabase production remain
+active. All deployment switches are false. Current verified configuration and missing PROD
+prerequisites are recorded in the [readiness audit](ALWAYSDATA_PRODUCTION_READINESS.md).
+Dated setup snapshots below retain their historical context.
 
 ## Alwaysdata transition audit — 2026-10-05
 
@@ -136,7 +140,12 @@ Notes:
 
 ---
 
-## 6. Vercel project (done 2026-09-11)
+## 6. Historical Vercel setup (2026-09-11)
+
+The setup snapshot below predates the October production release. Production is now live
+at the SHA in the current checkpoint, and production secret names are present. Its old
+failed-first-deployment/token statements are historical; current source metadata is in the
+[readiness audit](ALWAYSDATA_PRODUCTION_READINESS.md).
 
 |                       |                                                                                                                                                                                 |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -170,7 +179,7 @@ Only `develop` is ever deployed to Preview, so Preview **is** staging. The value
 
 **Never** add `VERCEL_TOKEN`, `SUPABASE_ACCESS_TOKEN`, `SUPABASE_DB_PASSWORD` or any other CI credential to Vercel.
 
-## 8. Vercel Production variables (prepared, not deployed)
+## 8. Historical Vercel Production variable preparation (2026-09-11)
 
 - [x] `NEXT_PUBLIC_APP_ENV` = `production`, `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` = **PROD** (`teka-edu-prod`), `PORT` = `3000`
 - [ ] `NEXT_PUBLIC_APP_URL` = the production domain. This is **intentionally unset** until the domain is decided (PD-012). Without it, a production container refuses to start (env guard), which is a safe failure.

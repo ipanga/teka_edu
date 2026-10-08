@@ -1,9 +1,21 @@
 # Alwaysdata staging CD
 
-DEV migration and managed verification are complete. Application activation awaits separate
-owner authorization. Production, Vercel and hosted Supabase remain intact.
+## Current acceptance — 2026-10-08
 
-## Reconciliation checkpoint — 2026-10-07
+Alwaysdata staging is **ACCEPTED** at release C
+`813c56197f0d0fb353b39238b65c27dd08e6e5bc`, run
+[37835289864](https://github.com/ipanga/teka_edu/actions/runs/37835289864).
+Current C/previous A, exact health/manifests and A → C → A → C rollback are proved.
+All three deployment switches are false. Production remains on Vercel at
+`81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05`; Alwaysdata production migration is
+**NOT STARTED**, provider retirement **NOT AUTHORIZED**.
+See [production readiness audit](ALWAYSDATA_PRODUCTION_READINESS.md) for fresh facts,
+unverified prerequisites and separate P0–P4 gates. Older observations below are historical.
+
+The following reconciliation and first-release validation records retain their original dates.
+They do not describe the current accepted staging state.
+
+## Historical reconciliation checkpoint — 2026-10-07
 
 PR #100 merges authoritative develop `ccb0e2f92032e90554d844c8add6bec24c24f8f4`
 into the existing feature history without rewriting commits. All five verification-only
@@ -151,7 +163,7 @@ restart and strict health checks. Validate metadata/inventory and site identity 
 use a database reset for application rollback. Do not roll back to the retained Vercel provider
 or change DNS automatically.
 
-## Implementation validation
+## Historical implementation validation — 2026-10-05
 
 [Checkpoint evidence](migration/alwaysdata/staging-cd-verification.json) distinguishes actual
 managed DEV acceptance, local artifact tests and live application acceptance. Local format,
@@ -172,7 +184,7 @@ checkout; develop must build its own actual commit SHA for deployment. Check cur
 PR checks before integration; the following checkpoint changes only documentation/evidence.
 Credentials are scoped only to the deployment step, outside checkout/npm installation.
 
-## Current state and exact resume
+## Historical pre-activation state and resume — superseded
 
 DEV is accepted. Staging application remains undeployed; latest public check is TLS valid,
 HTTP 502. Actual staging browser smoke and application rollback are NOT RUN. Local pointer
@@ -185,3 +197,9 @@ activation through
 the normal reviewed `develop` integration path. First validate release A, then a distinct
 reviewed release B and record A→B→A→B health proof. Retain both existing providers. Stop
 before any PROD migration/deployment, DNS cutover or provider retirement.
+
+## Current resume boundary
+
+Staging acceptance is complete; do not repeat activation/rollback merely to update docs.
+Review the production readiness audit and complete missing P0 facts read-only. Keep all
+switches false and STOP before any production migration/deployment or provider retirement.

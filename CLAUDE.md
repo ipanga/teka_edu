@@ -138,6 +138,15 @@ Dependency direction: `app/`, `components/` → `domain/` ← `lib/`. `domain/` 
 
 ## Infrastructure and environments (summary)
 
+**Current operational checkpoint (2026-10-08):** Alwaysdata staging C is accepted with live
+application rollback proved. Production remains the earlier Vercel October SHA; main already
+contains current parent navigation. Session persistence is implemented with localStorage;
+IndexedDB/cloud sync remain planned. Supabase PROD has 36 reference tables/6,170 exact rows
+and zero Auth/Storage usage at the read-only audit. All deployment switches are false.
+Historical initial-setup statements below about production being deferred/empty or missing
+tokens are superseded by [production readiness](docs/ALWAYSDATA_PRODUCTION_READINESS.md).
+Alwaysdata PROD migration and provider retirement remain unauthorized.
+
 Details are in `docs/`. Decisions are ADR-012 to ADR-021.
 
 - **Environments:** local (Next.js dev + Supabase CLI stack in Docker), staging (`develop` → Supabase `teka-edu-dev` + Vercel Preview/staging), production (`main` → Supabase `teka-edu-prod` + Vercel Production). DEV and PROD never share credentials or databases. `lib/env` enforces this.

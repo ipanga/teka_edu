@@ -2,11 +2,15 @@
 
 Audit date: 2026-10-05, Africa/Lubumbashi. The observations below are the original read-only audit.
 
-Current phase: [PostgreSQL 16 portability tooling](POSTGRES_PORTABILITY.md). Canonical staging is now
-**https://staging-tekaedu.tootiye.com**; the old dotted hostname is obsolete. New edge TLS was
-verified successfully, with HTTP 502 from the still-unvalidated origin. Historical TLS/DNS
-observations below describe the original audit, not the current active hostname. No application
-deployment has occurred.
+## Current checkpoint — 2026-10-08
+
+Alwaysdata staging acceptance is complete. The [production readiness audit](ALWAYSDATA_PRODUCTION_READINESS.md)
+now records the current source/target facts, missing P0 evidence and separate authorization
+gates. Production migration has not started; provider retirement remains unauthorized.
+
+Canonical staging is **https://staging-tekaedu.tootiye.com**; the old dotted hostname is
+obsolete. The original empty-root/502/application-not-deployed observations below are
+historical 2026-10-05 evidence, retained without altering the original audit results.
 
 The owner supplied the SSH alias, PostgreSQL 16 target, corrected database names, two Node
 site screenshots, and Cloudflare DNS configuration. These are configuration evidence.
