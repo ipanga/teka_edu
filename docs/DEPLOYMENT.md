@@ -1,7 +1,11 @@
 # Deployment
 
-Current transition tooling: [POSTGRES_PORTABILITY.md](POSTGRES_PORTABILITY.md). Active Alwaysdata
-staging is `https://staging-tekaedu.tootiye.com`; application deployment remains a later phase.
+## Current checkpoint — 2026-10-08
+
+Alwaysdata staging is accepted; the production replacement is not started. All deployment
+switches remain false. See the [production readiness audit](ALWAYSDATA_PRODUCTION_READINESS.md)
+for current release/rollback evidence and P0–P4 boundaries. The dated provider instructions
+below preserve historical observations and retained recovery paths.
 
 ## Controlled alwaysdata migration audit — 2026-10-05
 
@@ -60,7 +64,10 @@ main ──► deploy-production.yml
 | Staging     | `develop` | `teka-edu-dev`           | Preview (or `staging` Custom Environment) | `deploy-staging.yml`    |
 | Production  | `main`    | `teka-edu-prod`          | Production                                | `deploy-production.yml` |
 
-Persistent state never lives in the container. Postgres, and later Auth and Storage, live in Supabase. Child progress stays in the browser's IndexedDB until cloud sync is implemented (ADR-006, ADR-018).
+Persistent state never lives in the container. The current Supabase PROD database contains
+only the canonical reference mirror; Auth/Storage counts are zero in this audit. Session progress,
+position and observations use browser localStorage. IndexedDB/cloud sync are not implemented.
+The provider workflows below are retained recovery paths, currently disabled by repository switches.
 
 ## Branch lifecycles
 

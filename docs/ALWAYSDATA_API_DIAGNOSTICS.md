@@ -1,8 +1,13 @@
 # Alwaysdata API transport diagnosis and retry boundary
 
-This is preparation for a reviewed staging change. Release A remains live and healthy;
-Release B remains installed. No restart, pointer switch, deployment rerun, hosted database
-operation, provider setting change or secret export is part of these diagnostics.
+## Current outcome — 2026-10-08
+
+PR #112 is merged and the Release C activation/rollback proof succeeded. Current acceptance
+is recorded in [staging CD](ALWAYSDATA_STAGING_CD.md#current-acceptance--2026-10-08);
+all deployment switches are false and production activation remains unauthorized.
+
+The diagnosis and planned proof below retain their original historical context. Deployment
+GET attempt counts were not logged and must not be inferred from successful restart POSTs.
 
 ## Observed failure
 
@@ -179,7 +184,7 @@ matching the application's existing reference-data path. Seven boundary tests co
 hour where Kinshasa and Lubumbashi dates differ. Exact route-date/title assertions remain.
 Application scheduling, lessons, curriculum, approvals, media and migration/seed files are unchanged.
 
-## Controlled Release C proof plan — not executed
+## Historical controlled Release C proof plan — subsequently executed
 
 The PR head is a review identity, not a deployed Release C identity. The eventual release must
 be rebuilt from the resulting protected develop merge SHA. PR CI packages its synthetic merge

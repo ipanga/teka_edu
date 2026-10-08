@@ -5,11 +5,34 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-10-05
-Branch:     feature/alwaysdata-postgres-portability
-Commit:     Reviewed DEV runner2315600; staging CD checkpoint in branch log
+Date:       2026-10-08
+Branch:     codex/production-readiness-audit
+Commit:     Audit base accepted C 813c561; documentation PR checkpoint in branch log
 Updated by: Codex
 ```
+
+## Current infrastructure checkpoint — 2026-10-08
+
+Alwaysdata staging ACCEPTED at C `813c56197f0d0fb353b39238b65c27dd08e6e5bc`, successful
+run 37835289864. Exact Linux artifact, managed DEV 46/zero pending and 36/6,170 canonical
+values, supported-device smoke, and live A → C → A → C rollback passed. Fresh audit confirms
+C healthy/current, previous A, intact A/B/C manifests and all three deployment switches false.
+Production remains healthy on Vercel at `81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05`.
+Main `1578847` already includes PR98/99 parent navigation; this is newer than running PROD.
+Supabase PROD fresh SELECT-only inventory: 46 expected versions/names, zero pending,
+36 tables/6,170 exact rows, exact table/function baseline, zero Auth users/identities and
+Storage buckets/objects. No listed physical backups/PITR; restoration NOT PROVED.
+Alwaysdata PROD site1083500/root/TLS observed; root empty, hostname HTTP502, SQL state,
+exact site fields/environment/resources still NOT VERIFIED. Production migration NOT STARTED.
+See [readiness report](docs/ALWAYSDATA_PRODUCTION_READINESS.md) and
+[active checkpoint](docs/work/ACTIVE_TASK.md). P0 incomplete; separate P1–P4 approvals required.
+No provider mutation occurred in this audit; no main merge or retirement authorized.
+
+### Historical status checkpoints
+
+The dated entries below preserve earlier observations; the current checkpoint above supersedes
+their pending/undeployed/awaiting-review statements. PR98/99/100/112 are now merged. Frozen
+portability evidence remains unchanged.
 
 ## PostgreSQL 16 portability — 2026-10-05
 

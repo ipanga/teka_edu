@@ -1,140 +1,121 @@
 # Active Task
 
-## Current reconciliation checkpoint — 2026-10-07
-
-This checkpoint supersedes the earlier configuration blockers and CI counts below.
-PR #100 is being reconciled with develop `ccb0e2f92032e90554d844c8add6bec24c24f8f4`
-using a normal merge. The five independently integrated preflight files are preserved exactly.
-Owner-provided non-secret evidence proves token-linked profile Sites permission for congofoot;
-no restart POST was issued. See [current CD checkpoint](../ALWAYSDATA_STAGING_CD.md).
-Successful read-only run 37665326854 proves the configured GitHub credentials, site, SSH,
-Node22 and DEV baseline. No new provider or database check is needed for reconciliation.
-Full reconciled-head CI and final diff review precede any ready-for-review recommendation.
-Keep PR #100 draft and all switches disabled. No merge of PR #100, upload, restart, activation,
-DEV/PROD operation or retirement. First-release rollback is NOT PROVED BY DESIGN; distinct
-reviewed A → B → A → B is a later acceptance requirement, separate from health/smoke.
-
 ## Task
 
-Approved Alwaysdata DEV migration and gated staging CD.
+Read-only Alwaysdata production migration readiness audit after accepted staging.
 
 ## Objective
 
-Complete DEV acceptance and reviewable Linux standalone CD, then live staging smoke and
-application rollback after owner configuration/activation. Keep all PROD/providers intact.
+Establish source/target facts and propose separate P0–P4 gates; stop at a protected docs PR.
 
 ## Status
 
-`awaiting_user`
+`awaiting_review`
 
 ## Branch
 
-`feature/alwaysdata-postgres-portability`
+`codex/production-readiness-audit`
 
 ## Base Branch
 
-`origin/main` at `ac003f8580ca81dcfb426a70c45c02102b8e0551`.
+`origin/develop` at `813c56197f0d0fb353b39238b65c27dd08e6e5bc`.
+Main at `1578847d02d025286af92af48c691bbfafd84c10`.
 
 ## Started
 
-2026-10-05, Africa/Lubumbashi.
+2026-10-08
 
 ## Last Checkpoint
 
-Explicit human rollback approval recorded; nine fresh safeguards passed; reviewed2315600
-runner committed46 DEV migrations and verified every managed guarantee. Final codee3cb6d1
-passes all applicable GitHub CI, including Linux artifact startup and both Docker images.
-Independent Linux archive checksum PASS. Owner is configuring GitHub; latest names-only
-read has no Alwaysdata entries. No staging app activation or PROD operation.
+Read-only audit/report/evidence complete. Scoped format, links, secret scan and 10 active-task
+protocol tests pass. Protected docs PR/required CI are the remaining review boundary.
+See [readiness report](../ALWAYSDATA_PRODUCTION_READINESS.md) and its evidence summary.
+Staging C remains healthy, current C/previous A, all manifests intact; accepted run
+37835289864 and 31 retained evidence hashes verified. All three deployment switches false.
 
 ## Scope
 
-DEV migration/managed acceptance and gated develop-only staging CD implementation.
+Read-only provider/database catalog/reference/aggregate inventory, branch comparison,
+origin-progress risks, backup/CD/DNS design, accurate current documentation and docs-only PR.
 
 ## Out of Scope
 
-PROD operations/deployments, DNS cutover, Auth/Storage, provider retirement, automatic reset,
-destructive rollback and unrelated app/content changes. First app activation awaits owner setup.
+Production migration/provisioning/data writes; deployments/restarts/pointers/DNS;
+switch/secret/provider changes; main merge; retirement; content/media/UX implementation.
 
 ## Product Decisions
 
-Canonical staging is https://staging-tekaedu.tootiye.com. Cloud sync/AI remain disabled,
-browser-local progress and content/media unchanged. TV unsupported.
+No new architecture/product decision adopted. Local export/import continuity and P0–P4
+production preparation remain proposals requiring separate approval.
 
 ## Completed
 
-Explicit approval recorded; exact DEV/login16.15/TLS verify-full/denied PROD, protected
-snapshot600/hash, empty schema/history, exact runner/baseline/green CI/frozen46 chain/no drift
-all freshly passed. Guarded apply committed46; managed verify/list PASS with0pending,
-36tables/6,170 exact rows, complete schema/extensions,77 integrity assertions,
-access/RLS/ACL/isolation and0-row canonical re-sync. Managed pgTAP unavailable as expected;
-reviewed equivalents PASS without CI deviations. No failure, reset or PROD operation.
+- Fresh staging health/manifests/guards and accepted run/rollback evidence.
+- Vercel metadata/public health agree on deployed production SHA 81b759f.
+- Supabase PROD SELECT-only verification: 46 versions/names, zero pending, 36/6170 exact,
+  source table/function baseline, zero Auth users/identities/Storage buckets/objects.
+- Alwaysdata production root empty; site ID/address/type and TLS/502 observed.
+- Main/develop 0/19 commits; 63 tooling/docs/tests files, no new app/content/media/SQL.
+- Old parent-navigation checkpoint archived with verified PR98/99 integration status.
 
 ## In Progress
 
-Opt-in staging workflow, Linux Node22 artifact inventory/checksum/boot, SSH pinned host keys,
-immutable releases and atomic current/previous, exact site1083502-only restart, strict
-staging SHA/null-Supabase health, full supported-device smoke and A→B→A→B application proof.
-Local functional archive/pointer guards pass. Local packaged staging startup/media and96 supported-device browser tests PASS,9 production-only
-skips. This is a workstation artifact, not a Linux deployable or live staging acceptance.
-All applicable Linux CI checks PASS at e3cb6d1; the following checkpoint changes only docs/evidence.
+Docs PR #116 is OPEN into develop; inspect final-head required CI in PR metadata. Deployment remains disabled;
+no provider operation is running.
 
 ## Remaining
 
-Owner GitHub credentials/site setup and separately authorized first
-activation through reviewed develop integration. Two distinct reviewed releases required for
-live rollback proof. Do not repeat empty-state apply:46 reviewed DEV migrations exist now.
+Inspect required PR CI, publish reviewable report, preserve durable resume and STOP.
+P0 missing target SQL/site Environment/resources/Cloudflare/restore facts remain explicit.
 
 ## Validation State
 
-| Check              | Verdict                                                       |
-| ------------------ | ------------------------------------------------------------- |
-| format             | PASS local current implementation                             |
-| lint               | PASS local current implementation                             |
-| typecheck          | PASS local current implementation                             |
-| unit tests         | PASS546 local current implementation                          |
-| content validation | PASS31 files via Node tsx loader                              |
-| database tests     | PASS e3cb6d1 PG16/Supabase CI; managed DEV PASS               |
-| build              | PASS e3cb6d1 Linux build/package/startup/media CI             |
-| E2E                | PASS e3cb6d1 browser CI +96 local staging tests; live NOT RUN |
-| Docker             | PASS e3cb6d1 portable/Vercel Docker CI                        |
-| secret scans       | PASS e3cb6d1 client/full-artifact sentinel CI                 |
+| Check              | State                                                          |
+| ------------------ | -------------------------------------------------------------- |
+| format             | PASS all 13 changed documentation files                        |
+| lint               | NOT RUN audit docs only; accepted C CI PASS                    |
+| typecheck          | NOT RUN audit docs only; accepted C CI PASS                    |
+| unit tests         | PASS 10 active-task protocol tests; accepted C 703 PASS        |
+| content validation | NOT RUN audit docs only; accepted C 31 files PASS              |
+| database tests     | NOT RUN against PROD; SELECT-only catalog/reference audit PASS |
+| build              | NOT RUN audit docs only; accepted C CI PASS                    |
+| E2E                | NOT RUN release suite in audit; accepted staging 96 + 29 PASS  |
+| Docker             | NOT RUN audit docs only; accepted C CI PASS                    |
+| secret scans       | PASS changed documentation, no credential values               |
 
 ## Database State
 
-Accepted DEV PostgreSQL16.15:46 history rows/zero pending/36tables/6,170 exact canonical rows.
-All managed verification PASS. Snapshot remains protected; post-commit reset needs separate
-approval. No PROD connection/operation this phase.
+No database writes or fixtures. Source Supabase PROD inventory only; Alwaysdata PROD SQL
+not connected. DEV results are accepted run evidence, not a new audit execution.
 
 ## Deployment State
 
-Staging undeployed; latest edge TLS valid/HTTP502. Live smoke/rollback NOT RUN.
+No deployment/restart/pointer operation. Staging accepted C. Production still Vercel
+81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05. All three deployment switches false.
 
 ## Git State
 
-PR #100 into develop remains draft; implementation a7b9004 and syntax correction3563e33 pushed; final credential/evidence checkpoint
-follows in branch log. No merge.
+Dedicated docs branch based on accepted C; no main/develop merge. Primary checkout's edited
+preflight document remains untouched. PR #116 is OPEN: https://github.com/ipanga/teka_edu/pull/116. It is unmerged; exact final
+head belongs to branch log, not a self-reference.
 
 ## Blockers
 
-GitHub staging Environment lacks Alwaysdata credentials at latest names-only read; owner
-is configuring them. Earlier Actions outage prevented runner acquisition; final-code CI has since passed. Staging site command must be
-configured at activation. First release alone cannot prove rollback; second distinct release
-required. See `docs/ALWAYSDATA_STAGING_CD.md` for exact owner setup.
+Production readiness BLOCKED: P0 facts incomplete, no tested restore, no production CD,
+no browser-progress continuity decision, target custom hostname returns HTTP 502.
 
 ## User Decisions Needed
 
-Provision named GitHub secrets/variables privately and authorize the application activation
-boundary. Keep repository opt-in false until ready. No PROD decision requested.
+Complete P0 inventory, then separately approve bounded P1 backup/least-privilege preparation.
+No migration, deployment, cutover or provider retirement authorized by the audit.
 
 ## Exact Resume Point
 
-Inspect git status and exact-head PR100 CI; read the staging CD setup document. Do not repeat
-empty-state migration. Configure GitHub/site prerequisites, review/integrate through develop
-only after activation authorization; validate first release and distinct successor including
-live rollback proof. Stop before any PROD operation or provider retirement.
+Inspect final-head required CI for docs-only PR #116 without merging or dispatching deployment.
+Verify required CI and retain checksummed audit evidence; then STOP. Subsequent work is the
+remaining read-only P0 inventory, followed by a separate P1 proposal; keep switches false.
 
 ## Resume Verification
 
-Run `git status` and `git log`; confirm branch, PR100 current-head checks and managed evidence.
-Read `docs/ALWAYSDATA_STAGING_CD.md` and `docs/migration/alwaysdata/PORTABILITY_REPORT.md`.
+Run git status --short --branch and git log -5; fetch main/develop and inspect audit PR/checks.
+Read report/evidence and verify live staging C/current/previous, guards and accepted run 37835289864. Compare actual Vercel production health SHA with main before any future action.

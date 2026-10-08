@@ -1,5 +1,15 @@
 # Free-Tier Operation (current development phase)
 
+## Current audit checkpoint — 2026-10-08
+
+The current Supabase PROD source has 36 reference tables/6,170 exact canonical rows and zero
+Auth users/identities/Storage buckets/objects. It is not an empty database. Backup metadata
+lists no physical backups and PITR disabled; the logical backup design below is not a proved
+restore. Current provider plans/limits were not freshly verified; earlier Free/Hobby entries
+are historical setup facts. Alwaysdata target resource quotas and backup retention are also
+NOT VERIFIED. No plan purchase, upgrade or paid capability is authorized by this audit.
+See [production readiness](ALWAYSDATA_PRODUCTION_READINESS.md).
+
 **Constraint (ADR-027):** during the current development phase Teka Edu runs only on **Vercel Hobby** and **Supabase Free** (`teka-edu-dev` and `teka-edu-prod`). The target platform cost is **$0/month**. Nothing is upgraded, no add-on is bought, and no billing information is entered. When a need cannot be met for free, the limitation is documented and a free workaround is preferred.
 
 This page was reviewed on 2026-09-11 against official documentation. Re-check it before a public production launch, because free-tier terms change.
