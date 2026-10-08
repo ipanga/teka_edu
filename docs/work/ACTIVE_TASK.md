@@ -60,7 +60,8 @@ production preparation remain proposals requiring separate approval.
 
 ## In Progress
 
-Protected docs PR publication/CI, with deployment disabled; no provider operation running.
+Docs PR #116 is OPEN into develop; inspect final-head required CI in PR metadata. Deployment remains disabled;
+no provider operation is running.
 
 ## Remaining
 
@@ -95,7 +96,8 @@ No deployment/restart/pointer operation. Staging accepted C. Production still Ve
 ## Git State
 
 Dedicated docs branch based on accepted C; no main/develop merge. Primary checkout's edited
-preflight document remains untouched. Protected docs PR publication pending; exact head belongs to branch log, not a self-reference.
+preflight document remains untouched. PR #116 is OPEN: https://github.com/ipanga/teka_edu/pull/116. It is unmerged; exact final
+head belongs to branch log, not a self-reference.
 
 ## Blockers
 
@@ -109,7 +111,7 @@ No migration, deployment, cutover or provider retirement authorized by the audit
 
 ## Exact Resume Point
 
-Validate and publish this documentation-only branch to a protected develop PR with no merge.
+Inspect final-head required CI for docs-only PR #116 without merging or dispatching deployment.
 Verify required CI and retain checksummed audit evidence; then STOP. Subsequent work is the
 remaining read-only P0 inventory, followed by a separate P1 proposal; keep switches false.
 

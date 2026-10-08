@@ -4,7 +4,7 @@
 
 PR #112 is merged and the Release C activation/rollback proof succeeded. Current acceptance
 is recorded in [staging CD](ALWAYSDATA_STAGING_CD.md#current-acceptance--2026-10-08);
-all deployment switches are false and production work remains unauthorized.
+all deployment switches are false and production activation remains unauthorized.
 
 The diagnosis and planned proof below retain their original historical context. Deployment
 GET attempt counts were not logged and must not be inferred from successful restart POSTs.

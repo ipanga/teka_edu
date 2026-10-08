@@ -147,7 +147,8 @@ Target database/login supplied by owner are `congofoot_teka_edu_prod` /
 `congofoot_user_teka_edu_prod` on `postgresql-congofoot.alwaysdata.net`. These names are
 allowlist inputs, not proof of live identity or empty state. No Alwaysdata PROD SQL connection
 was attempted; staging credentials were not reused and no new PROD credential was introduced.
-The live admin configuration read was not completed; no local approved Alwaysdata API token
+The live admin configuration read was not completed: native browser access was blocked by
+the computer-use policy for the current URL, and automation stopped. No local approved Alwaysdata API token
 exists, and the GitHub staging token was not retrieved or reused for production.
 
 Separate staging/production roots prevent accidental path overlap but both use the congofoot
