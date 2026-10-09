@@ -1,5 +1,31 @@
 # P1-A design checkpoint
 
+## Current correction — 2026-10-09
+
+Owner-independent verdict on PR118 head `4d705f9864198eda12641ea3585a5af27c3482d5`:
+**CHANGES REQUIRED; previous catalog not approved for execution.** Definition deparsers
+can invoke type-output routines. The revised restricted catalog query removes those
+renderers and all definition hashes, keeps exact guard/privilege diagnostics and projects
+OIDs/flags/presence only. See the [fresh review packet](../migration/alwaysdata/p1a/REVIEW.md).
+
+New catalog SHA256: `288442fc6bd44520e4cb0b16f6d73e64c01ad4e3e91592915958bdadb47d2bbf`.
+Previous catalog SHA256 `e5f576c1c6f4e88a0bea8a6fb58db7f3648c416a75e333affbe632efe4ff1943`
+is **SUPERSEDED / NOT APPROVED FOR EXECUTION**. Identity SQL remains byte-identical;
+its successful16.15/verify-full/read-only result is accepted by the owner. No identity rerun.
+
+Offline PG16 syntax/SELECT/session-guard validation passes;127 safety regressions refused.
+This correction performs zero SQL executions/connections or provider mutations. PR118
+stays draft/unmerged; deployment switches remainfalse. Fresh independent exact-SQL review
+is pending; obtain it before requesting a new catalog-only UTC execution window. Schema
+equivalence, data presence, history contents and full strict privilege acceptance remain
+unverified; production migration remains BLOCKED.
+
+Resume: exact draft PR118 head/CI plus primary
+`private/astra-visual-evidence/production-catalog-revision-20261009/resume.json`.
+Previous preparation scripts pin the superseded digest and must remain unused.
+
+## Historical checkpoint — preserved, superseded by the correction above
+
 This additive checkpoint preserves PR116/117's overlapping ACTIVE_TASK/PROJECT_STATUS reports.
 
 ## Task

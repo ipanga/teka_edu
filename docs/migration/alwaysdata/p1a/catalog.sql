@@ -1,8 +1,11 @@
--- P1-A PROPOSAL ONLY: catalog metadata; no application rows/functions executed.
+-- P1-A PROPOSAL ONLY: direct catalog metadata; no definition/type deparsing.
 -- Requires a separately authorized identity.sql PASS plus client TLS verify-full proof.
 -- Guard mismatch returns one BLOCKED record, never an empty inventory interpreted as PASS.
 -- One SELECT gives one MVCC catalog snapshot. Missing/denied catalogs mean NOT VERIFIED.
 -- Role/database name scope excludes unrelated shared-cluster tenants.
+-- Fixed guard retains reviewed pg_roles/pg_stat_ssl system metadata views only.
+-- Expression bodies, raw node trees, routine source and definition hashes are not read out.
+-- Object OIDs/presence/flags do not establish definition equality or schema equivalence.
 WITH
 guard AS MATERIALIZED (
   SELECT (
@@ -30,22 +33,31 @@ guard AS MATERIALIZED (
   ) IS TRUE AS ok
 ),
 roles AS MATERIALIZED (
-  SELECT r.* FROM pg_catalog.pg_roles r
+  SELECT r.oid, r.rolname, r.rolcanlogin, r.rolsuper, r.rolcreatedb, r.rolcreaterole,
+    r.rolreplication, r.rolbypassrls, r.rolinherit, r.rolconnlimit
+  FROM pg_catalog.pg_roles r
   WHERE r.rolname IN (
     SESSION_USER, 'congofoot_user_teka_edu_prod', 'congofoot_user_teka_edu_dev'
   )
 ),
 schemas AS MATERIALIZED (
-  SELECT n.* FROM pg_catalog.pg_namespace n
+  SELECT n.oid, n.nspname, n.nspowner, n.nspacl FROM pg_catalog.pg_namespace n
   WHERE n.nspname <> 'information_schema' AND n.nspname !~ '^pg_'
 ),
 relations AS MATERIALIZED (
-  SELECT c.*, n.nspname, am.amname
+  SELECT c.oid, c.relname, c.relkind, c.relowner, c.relacl, c.relpersistence,
+    c.relispartition, c.relrowsecurity, c.relforcerowsecurity, c.reltuples,
+    n.nspname, am.amname
   FROM pg_catalog.pg_class c JOIN schemas n ON n.oid = c.relnamespace
   LEFT JOIN pg_catalog.pg_am am ON am.oid = c.relam
 ),
 routines AS MATERIALIZED (
-  SELECT p.*, n.nspname, l.lanname
+  SELECT p.oid, p.proname, p.proowner, p.prokind, p.prosecdef, p.provolatile,
+    p.proacl, p.pronargs, p.pronargdefaults, p.proargtypes, p.proallargtypes,
+    p.proargmodes, p.prorettype, p.provariadic,
+    p.proconfig IS NOT NULL AS has_configuration,
+    p.proargdefaults IS NOT NULL AS has_argument_defaults,
+    p.prosqlbody IS NOT NULL AS has_sql_body, n.nspname, l.lanname
   FROM pg_catalog.pg_proc p
   JOIN pg_catalog.pg_namespace n ON n.oid = p.pronamespace
   JOIN pg_catalog.pg_language l ON l.oid = p.prolang
@@ -62,7 +74,7 @@ ELSE pg_catalog.jsonb_build_object(
   'status', 'METADATA_ONLY_NOT_DATABASE_ACCEPTANCE',
   'captured_at', pg_catalog.statement_timestamp(),
   'roles', COALESCE((SELECT pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(
-    'name', r.rolname, 'login', r.rolcanlogin, 'superuser', r.rolsuper,
+    'oid', r.oid, 'name', r.rolname, 'login', r.rolcanlogin, 'superuser', r.rolsuper,
     'createdb', r.rolcreatedb, 'createrole', r.rolcreaterole,
     'replication', r.rolreplication, 'bypassrls', r.rolbypassrls,
     'inherit', r.rolinherit, 'connection_limit', r.rolconnlimit,
@@ -83,7 +95,8 @@ ELSE pg_catalog.jsonb_build_object(
     WHERE a.oid <> b.oid AND pg_catalog.pg_has_role(a.oid,b.oid,'MEMBER')
   ), '[]'::pg_catalog.jsonb),
   'databases', COALESCE((SELECT pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(
-    'name', d.datname, 'owner', pg_catalog.pg_get_userbyid(d.datdba),
+    'oid', d.oid, 'name', d.datname, 'owner_oid', d.datdba,
+    'owner', pg_catalog.pg_get_userbyid(d.datdba),
     'allow_connections', d.datallowconn, 'acl', d.datacl,
     'effective_connect', pg_catalog.has_database_privilege(r.oid,d.oid,'CONNECT'),
     'effective_create', pg_catalog.has_database_privilege(r.oid,d.oid,'CREATE'),
@@ -100,7 +113,8 @@ ELSE pg_catalog.jsonb_build_object(
          AND pg_catalog.has_database_privilege(r.oid,d.oid,'CONNECT')))
     ORDER BY r.rolname) FROM roles r), '[]'::pg_catalog.jsonb),
   'schemas', COALESCE((SELECT pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(
-    'name', n.nspname, 'owner', pg_catalog.pg_get_userbyid(n.nspowner),
+    'oid', n.oid, 'name', n.nspname, 'owner_oid', n.nspowner,
+    'owner', pg_catalog.pg_get_userbyid(n.nspowner),
     'acl', n.nspacl,
     'audit_usage', pg_catalog.has_schema_privilege(SESSION_USER,n.oid,'USAGE'),
     'audit_create', pg_catalog.has_schema_privilege(SESSION_USER,n.oid,'CREATE'),
@@ -111,8 +125,8 @@ ELSE pg_catalog.jsonb_build_object(
       FROM roles r WHERE r.rolname='congofoot_user_teka_edu_prod')
   ) ORDER BY n.nspname) FROM schemas n), '[]'::pg_catalog.jsonb),
   'relations', COALESCE((SELECT pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(
-    'schema', c.nspname, 'name', c.relname, 'kind', c.relkind,
-    'owner', pg_catalog.pg_get_userbyid(c.relowner), 'acl', c.relacl,
+    'oid', c.oid, 'schema', c.nspname, 'name', c.relname, 'kind', c.relkind,
+    'owner_oid', c.relowner, 'owner', pg_catalog.pg_get_userbyid(c.relowner), 'acl', c.relacl,
     'table_access_method', c.amname, 'persistence', c.relpersistence,
     'partition', c.relispartition, 'rls', c.relrowsecurity,
     'force_rls', c.relforcerowsecurity,
@@ -144,72 +158,105 @@ ELSE pg_catalog.jsonb_build_object(
        FROM roles r WHERE r.rolname='congofoot_user_teka_edu_prod') ELSE NULL END
   ) ORDER BY c.nspname,c.relname) FROM relations c), '[]'::pg_catalog.jsonb),
   'columns', COALESCE((SELECT pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(
-    'schema', c.nspname, 'table', c.relname, 'name', a.attname,
+    'relation_oid', c.oid, 'schema', c.nspname, 'table', c.relname, 'name', a.attname,
     'number', a.attnum, 'type_oid', a.atttypid, 'type_modifier', a.atttypmod,
     'not_null', a.attnotnull, 'identity', a.attidentity, 'generated', a.attgenerated,
     'acl', a.attacl,
-    'default_expression_md5', pg_catalog.md5(pg_catalog.pg_get_expr(d.adbin,d.adrelid))
+    'default_oid', d.oid, 'has_default_expression', d.adbin IS NOT NULL,
+    'collation_oid', a.attcollation
   ) ORDER BY c.nspname,c.relname,a.attnum)
     FROM relations c JOIN pg_catalog.pg_attribute a ON a.attrelid=c.oid
     LEFT JOIN pg_catalog.pg_attrdef d ON d.adrelid=a.attrelid AND d.adnum=a.attnum
     WHERE a.attnum>0 AND NOT a.attisdropped
   ), '[]'::pg_catalog.jsonb),
   'types', COALESCE((SELECT pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(
-    'schema', n.nspname, 'name', t.typname, 'kind', t.typtype,
-    'owner', pg_catalog.pg_get_userbyid(t.typowner), 'acl', t.typacl
+    'oid', t.oid, 'schema', n.nspname, 'name', t.typname, 'kind', t.typtype,
+    'owner_oid', t.typowner, 'owner', pg_catalog.pg_get_userbyid(t.typowner), 'acl', t.typacl,
+    'base_type_oid', t.typbasetype, 'element_type_oid', t.typelem,
+    'relation_oid', t.typrelid, 'collation_oid', t.typcollation,
+    'input_function_oid', t.typinput::pg_catalog.oid,
+    'output_function_oid', t.typoutput::pg_catalog.oid,
+    'receive_function_oid', t.typreceive::pg_catalog.oid,
+    'send_function_oid', t.typsend::pg_catalog.oid
   ) ORDER BY n.nspname,t.typname) FROM pg_catalog.pg_type t
     JOIN schemas n ON n.oid=t.typnamespace), '[]'::pg_catalog.jsonb),
   'constraints', COALESCE((SELECT pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(
-    'schema', n.nspname, 'name', x.conname, 'kind', x.contype,
+    'oid', x.oid, 'schema', n.nspname, 'name', x.conname, 'kind', x.contype,
     'relation_oid', x.conrelid, 'domain_oid', x.contypid,
-    'validated', x.convalidated, 'definition_md5',
-    pg_catalog.md5(pg_catalog.pg_get_constraintdef(x.oid))
+    'validated', x.convalidated, 'deferrable', x.condeferrable,
+    'initially_deferred', x.condeferred, 'local', x.conislocal,
+    'no_inherit', x.connoinherit, 'parent_constraint_oid', x.conparentid,
+    'index_oid', x.conindid, 'referenced_relation_oid', x.confrelid,
+    'column_numbers', x.conkey, 'referenced_column_numbers', x.confkey,
+    'update_action', x.confupdtype, 'delete_action', x.confdeltype,
+    'match_type', x.confmatchtype, 'pk_fk_operator_oids', x.conpfeqop,
+    'pk_pk_operator_oids', x.conppeqop, 'fk_fk_operator_oids', x.conffeqop,
+    'exclusion_operator_oids', x.conexclop, 'has_check_expression', x.conbin IS NOT NULL
   ) ORDER BY n.nspname,x.conname,x.oid) FROM pg_catalog.pg_constraint x
     JOIN schemas n ON n.oid=x.connamespace), '[]'::pg_catalog.jsonb),
   'triggers', COALESCE((SELECT pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(
+    'oid', t.oid, 'relation_oid', t.tgrelid,
     'schema', c.nspname, 'table', c.relname, 'name', t.tgname,
     'enabled', t.tgenabled, 'function_oid', t.tgfoid,
-    'definition_md5', pg_catalog.md5(pg_catalog.pg_get_triggerdef(t.oid))
+    'type_bits', t.tgtype, 'parent_trigger_oid', t.tgparentid,
+    'constraint_oid', t.tgconstraint, 'deferrable', t.tgdeferrable,
+    'initially_deferred', t.tginitdeferred, 'argument_count', t.tgnargs,
+    'column_numbers', t.tgattr, 'has_when_expression', t.tgqual IS NOT NULL,
+    'has_old_transition_table', t.tgoldtable IS NOT NULL,
+    'has_new_transition_table', t.tgnewtable IS NOT NULL
   ) ORDER BY c.nspname,c.relname,t.tgname) FROM pg_catalog.pg_trigger t
     JOIN relations c ON c.oid=t.tgrelid WHERE NOT t.tgisinternal), '[]'::pg_catalog.jsonb),
   'indexes', COALESCE((SELECT pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(
-    'schema', c.nspname, 'name', c.relname, 'table_oid', i.indrelid,
+    'oid', i.indexrelid, 'schema', c.nspname, 'name', c.relname, 'table_oid', i.indrelid,
     'valid', i.indisvalid, 'ready', i.indisready,
-    'definition_md5', pg_catalog.md5(pg_catalog.pg_get_indexdef(i.indexrelid))
+    'live', i.indislive, 'unique', i.indisunique, 'primary', i.indisprimary,
+    'exclusion', i.indisexclusion, 'nulls_not_distinct', i.indnullsnotdistinct,
+    'immediate', i.indimmediate, 'replica_identity', i.indisreplident,
+    'attribute_count', i.indnatts, 'key_attribute_count', i.indnkeyatts,
+    'column_numbers', i.indkey, 'collation_oids', i.indcollation,
+    'operator_class_oids', i.indclass, 'option_bits', i.indoption,
+    'has_expressions', i.indexprs IS NOT NULL, 'has_predicate', i.indpred IS NOT NULL
   ) ORDER BY c.nspname,c.relname) FROM pg_catalog.pg_index i
     JOIN relations c ON c.oid=i.indexrelid), '[]'::pg_catalog.jsonb),
   'rewrite_rules', COALESCE((SELECT pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(
+    'oid', x.oid, 'relation_oid', x.ev_class,
     'schema', c.nspname, 'relation', c.relname, 'name', x.rulename,
-    'definition_md5', pg_catalog.md5(pg_catalog.pg_get_ruledef(x.oid))
+    'event_type', x.ev_type, 'enabled', x.ev_enabled, 'instead', x.is_instead,
+    'has_qualification_tree', x.ev_qual IS NOT NULL,
+    'has_action_tree', x.ev_action IS NOT NULL
   ) ORDER BY c.nspname,c.relname,x.rulename) FROM pg_catalog.pg_rewrite x
     JOIN relations c ON c.oid=x.ev_class), '[]'::pg_catalog.jsonb),
   'policies', COALESCE((SELECT pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(
+    'oid', p.oid, 'relation_oid', p.polrelid,
     'schema', c.nspname, 'table', c.relname, 'name', p.polname,
     'command', p.polcmd, 'permissive', p.polpermissive,
+    'role_oids', p.polroles,
     'roles', (SELECT pg_catalog.jsonb_agg(CASE WHEN x=0 THEN 'PUBLIC'
       ELSE pg_catalog.pg_get_userbyid(x)::pg_catalog.text END ORDER BY x)
       FROM pg_catalog.unnest(p.polroles) x),
-    'using_md5', pg_catalog.md5(pg_catalog.pg_get_expr(p.polqual,p.polrelid)),
-    'check_md5', pg_catalog.md5(pg_catalog.pg_get_expr(p.polwithcheck,p.polrelid))
+    'has_using_expression', p.polqual IS NOT NULL,
+    'has_check_expression', p.polwithcheck IS NOT NULL
   ) ORDER BY c.nspname,c.relname,p.polname)
     FROM pg_catalog.pg_policy p JOIN relations c ON c.oid=p.polrelid
   ), '[]'::pg_catalog.jsonb),
   'extensions', COALESCE((SELECT pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(
-    'name', e.extname, 'version', e.extversion, 'schema', n.nspname,
-    'owner', pg_catalog.pg_get_userbyid(e.extowner)
+    'oid', e.oid, 'name', e.extname, 'version', e.extversion, 'schema', n.nspname,
+    'owner_oid', e.extowner, 'owner', pg_catalog.pg_get_userbyid(e.extowner)
   ) ORDER BY e.extname) FROM pg_catalog.pg_extension e
     JOIN pg_catalog.pg_namespace n ON n.oid=e.extnamespace), '[]'::pg_catalog.jsonb),
   'routines', COALESCE((SELECT pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(
-    'schema', p.nspname, 'name', p.proname,
-    'arguments', pg_catalog.pg_get_function_identity_arguments(p.oid),
+    'oid', p.oid, 'schema', p.nspname, 'name', p.proname,
+    'input_argument_type_oids', p.proargtypes, 'all_argument_type_oids', p.proallargtypes,
+    'argument_modes', p.proargmodes, 'input_argument_count', p.pronargs,
+    'default_argument_count', p.pronargdefaults, 'return_type_oid', p.prorettype,
+    'variadic_type_oid', p.provariadic, 'has_argument_defaults', p.has_argument_defaults,
+    'has_sql_body', p.has_sql_body,
     'kind', p.prokind, 'language', p.lanname,
-    'owner', pg_catalog.pg_get_userbyid(p.proowner), 'acl', p.proacl,
+    'owner_oid', p.proowner, 'owner', pg_catalog.pg_get_userbyid(p.proowner), 'acl', p.proacl,
     'security_definer', p.prosecdef, 'volatility', p.provolatile,
-    'body_md5_NOT_PORTABILITY_PROOF', pg_catalog.md5(p.prosrc),
     'audit_execute', pg_catalog.has_function_privilege(SESSION_USER,p.oid,'EXECUTE'),
     'audit_execute_grant_option', pg_catalog.has_function_privilege(SESSION_USER,p.oid,'EXECUTE WITH GRANT OPTION'),
-    'configuration_names', (SELECT pg_catalog.jsonb_agg(pg_catalog.split_part(x,'=',1)
-      ORDER BY pg_catalog.split_part(x,'=',1)) FROM pg_catalog.unnest(p.proconfig) x)
+    'has_configuration', p.has_configuration
   ) ORDER BY p.nspname,p.proname,p.oid) FROM routines p), '[]'::pg_catalog.jsonb),
   'default_acls', COALESCE((SELECT pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(
     'owner', pg_catalog.pg_get_userbyid(a.defaclrole),
@@ -242,6 +289,8 @@ ELSE pg_catalog.jsonb_build_object(
   ) ORDER BY i.inhrelid,i.inhseqno) FROM pg_catalog.pg_inherits i
     WHERE i.inhrelid IN (SELECT oid FROM relations)), '[]'::pg_catalog.jsonb),
   'data_read', 'NOT_READ; estimates/permission denial/RLS zeros are never emptiness proof',
+  'definition_fingerprints', 'NOT_COLLECTED; no deparsing, routine-body hashes or expression hashes',
+  'schema_equivalence', 'NOT_VERIFIED; OIDs, structural metadata and expression-presence flags are not semantic definitions',
   'tls_verify_full', 'CLIENT_EVIDENCE_REQUIRED; pg_stat_ssl proves encryption only',
   'isolation', 'ACL_METADATA_ONLY; no DEV connection attempted',
   'missing_roles', (SELECT pg_catalog.jsonb_agg(w.name ORDER BY w.name)

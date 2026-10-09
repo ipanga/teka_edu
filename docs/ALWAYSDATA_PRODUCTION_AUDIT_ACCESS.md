@@ -1,5 +1,20 @@
 # P1-A — existing Alwaysdata PROD read-only audit login
 
+**Current correction, 2026-10-09:** the owner accepted the successful identity-only
+result (exact PROD/audit role, server/client16.15, verify-full TLS1.3, read-only
+settings, no elevated attributes, one SELECT/no retry). It remains accepted evidence;
+do not repeat it without demonstrated need and separate authorization.
+The owner independently returned **CHANGES REQUIRED** for catalog digest
+`e5f576c1c6f4e88a0bea8a6fb58db7f3648c416a75e333affbe632efe4ff1943` at PR118
+head `4d705f9864198eda12641ea3585a5af27c3482d5`: definition deparsing can invoke
+type-output routines indirectly. That catalog digest is **SUPERSEDED / NOT APPROVED
+FOR EXECUTION**. The revised [restricted inventory review](migration/alwaysdata/p1a/REVIEW.md)
+removes definition/type renderers, expression/routine hashes and raw expression values.
+It requires a fresh independent exact-SQL review before any new execution-window request.
+No catalog connection, credential change or provider action is authorized.
+The design/observation snapshot below predates the accepted identity result; its unproved
+identity/TLS rows do not revoke the later owner-accepted evidence.
+
 **Design only, 2026-10-09. Production readiness remains BLOCKED.** No PROD connection,
 account/grant/secret creation, provider setting change, backup, service action or deployment
 is authorized by this plan. The SELECT files were prepared and statically reviewed, not executed
@@ -157,7 +172,7 @@ Current SQL proposals (not executable approvals):
 
 ```text
 identity.sql SHA256: 4201f3612525a634db1b5c39a28dfc6d0c44a10f087f90dfab97e91c15e62e63
-catalog.sql SHA256:  e5f576c1c6f4e88a0bea8a6fb58db7f3648c416a75e333affbe632efe4ff1943
+catalog.sql SHA256:  288442fc6bd44520e4cb0b16f6d73e64c01ad4e3e91592915958bdadb47d2bbf
 ```
 
 The proposed name `congofoot_user_teka_edu_prod_audit` and its old digests are **SUPERSEDED;
@@ -166,13 +181,14 @@ NOT VALID FOR EXECUTION**. They remain in dated archives and the earlier evidenc
 ```text
 superseded identity.sql: 5d8b3c25cca02b98030c10d0822347110703ff305d88edb0aaafab871ed67926
 superseded catalog.sql:  caed00e50f13468941fc9b8672ca82be546a374e8f43b6584df26db68afbe9dd
+superseded catalog.sql:  e5f576c1c6f4e88a0bea8a6fb58db7f3648c416a75e333affbe632efe4ff1943
 ```
 
 Neither old nor current hashes grant execution permission. Offline
 [validator/regression fixtures](migration/alwaysdata/p1a/validate_offline.py) use PostgreSQL16
 grammar and enforce fixed identities, unchanged session guards, catalog-only relations and
 an explicit safe built-in allowlist. No database driver, credentials or network operation is used.
-Both queries and all56 unsafe/guard/diagnostic regressions pass offline validation. Run
+Both queries and all127 unsafe/guard/diagnostic/indirect-rendering regressions pass offline validation. Run
 `python3 -B docs/migration/alwaysdata/p1a/validate_offline.py` using the reviewed pglast6.16
 environment. Local validation requires that already available environment; do not install project
 dependencies or infer hosted permission/TLS proof from syntax/AST success.
@@ -192,6 +208,8 @@ No secrets in chat. SQL itself cannot prove the provider account association or 
    [identity.sql](migration/alwaysdata/p1a/identity.sql) alone. Require exactly one result and
    `server_side_identity_guard=true`; record actual16.x patch version and compare provider evidence.
    Wrong version/name/role/port/settings, timeout or missing TLS stops before catalog/data reads.
+   This identity phase has since succeeded and been owner-accepted; do not rerun it
+   for the present correction or future catalog-only authorization.
 3. Record client libpq `sslmode=verify-full`, explicit trusted `sslrootcert` and normal
    hostname verification already enforced before step2 opens a connection. Capture the non-secret
    config fingerprint, client version and successful verified connection evidence. `pg_stat_ssl` confirms encryption/cipher, **not verify-full**.
@@ -204,8 +222,10 @@ No secrets in chat. SQL itself cannot prove the provider account association or 
    ACLs, audit ownership, history candidates, foreign/event/large-object presence and inheritance.
    Sequence SELECT and grant options, table/column SELECT grant options, schema USAGE grant
    options, function EXECUTE grant options and reachable-role REPLICATION are now explicit.
-   Raw function bodies/default/policy expressions and arbitrary setting values are not exported;
-   MD5 fingerprints are diagnostic, not SHA256 migration provenance or whole-row equality proof.
+   Defaults/checks/index expressions/trigger WHEN/rules/policies retain expression-presence
+   flags only; function signatures use type OIDs and modes. Raw bodies/node trees/configuration
+   values, deparsed definitions and all definition/body hashes are excluded. No definition
+   equality, cross-database OID equivalence, schema equivalence or portability is established.
 5. Compare effective rights against the strict contract, not just the dashboard read-only label.
    Retain actual audit/deployment/DEV CONNECT checks; PUBLIC and membership rights are additive.
    Database CREATE/TEMP, schema CREATE, table/column writes, sequence USAGE/UPDATE, ownership,
@@ -398,9 +418,11 @@ PR116/117 heads/reports, previous indexed evidence, application/workflows/migrat
 and all deployment guards remain preserved. The previous owner-evidence JSON is dated history;
 new audit-user facts/digest succession have a separate JSON attestation. No self-approval.
 
-Next: independently review PR118 and the exact current SQL hashes, approve owner-controlled
-protected credential storage only if needed, then separately authorize the bounded two-connection
-identity/catalog procedure at the fixed login/target/CA/source/time window. The existing full-rights
+Next: independently review the revised exact catalog SQL in draft PR118. The accepted identity
+gate is retained. Only after a fresh independent PASS may a NEW UTC window for one bounded
+catalog-only connection be requested; previous identity windows and local old-digest supervisors
+are invalid for this revision. No execution authority is granted by review, CI or a digest.
+The existing full-rights
 login is excluded. P1-A has NOT PASSED; production remains BLOCKED. No provider permission repair,
 credential access/write, SQL connection, backup/restore, hosting/restart/deploy, switch, DNS or
 retirement is authorized in this task. Resume from the [checkpoint](work/PRODUCTION_P1A_ACCESS_PLAN.md)
