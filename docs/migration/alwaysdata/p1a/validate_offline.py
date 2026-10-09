@@ -159,6 +159,11 @@ def validate(sql, name):
                     require(len(node.get('args', [])) <= 100, 'POSTGRESQL_FUNCTION_ARGUMENT_LIMIT')
                 if kind == 'ColumnRef':
                     require(all('String' in part for part in node['fields']), 'WILDCARD_CATALOG_ROW')
+                    if len(node['fields']) == 1:
+                        # oid is the direct CTE field; x is the scalar unnest(polroles)
+                        # alias. A bare relation alias would serialize a whole record.
+                        require(node['fields'][0]['String']['sval'] in {'oid', 'x'},
+                                'WHOLE_RECORD_OR_UNREVIEWED_UNQUALIFIED_VALUE')
                     column = node['fields'][-1]['String']['sval']
                     require(column not in FORBIDDEN_VALUE_COLUMNS, 'SENSITIVE_CATALOG_VALUE')
                     if column in PRESENCE_ONLY_COLUMNS:
@@ -306,6 +311,7 @@ def main():
         'indirect_type_cast': "'x'::pg_catalog.regtype",
         'indirect_user_type_cast': "'x'::public.unreviewed_type",
         'whole_catalog_row': 'p.*',
+        'implicit_whole_catalog_row': 'p',
     }.items():
         candidate = sqls['catalog.sql'].replace(
             "'captured_at', pg_catalog.statement_timestamp(),",

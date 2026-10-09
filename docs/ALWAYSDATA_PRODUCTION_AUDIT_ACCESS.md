@@ -26,7 +26,7 @@ This does not prove live catalog permissions/function signatures or client TLS. 
 
 Read both authoritative reports at their unchanged PR heads:
 [PR116 readiness](https://github.com/ipanga/teka_edu/blob/16ce45ee19e97c7b957200b60a184da67fcf5fe6/docs/ALWAYSDATA_PRODUCTION_READINESS.md)
-and [PR117 P0 inventory](https://github.com/ipanga/teka_edu/blob/50b22f0c40281960f6af71274bf9d4c1197b9787/docs/ALWAYSDATA_PRODUCTION_P0.md).
+and [PR117 P0 inventory](https://github.com/ipanga/teka_edu/blob/50b22f0c40281960f6af71284bf9d4c1197b9787/docs/ALWAYSDATA_PRODUCTION_P0.md).
 Neither report/checkpoint is overwritten here. The later P0 statement-representation evidence
 supersedes the earlier report's unresolved history-digest observation, not original-byte provenance.
 
@@ -50,7 +50,7 @@ The PROD hostname already points to Alwaysdata; no future DNS record change is a
 GitHub read at 2026-10-09T18:00:35Z: develop remains exact C; main is
 `1578847d02d025286af92af48c691bbfafd84c10`. PR116 OPEN, non-draft, exact
 `16ce45ee19e97c7b957200b60a184da67fcf5fe6`; PR117 OPEN/DRAFT, exact
-`50b22f0c40281960f6af71274bf9d4c1197b9787`. Both target develop, unmerged, auto-merge off;
+`50b22f0c40281960f6af71284bf9d4c1197b9787`. Both target develop, unmerged, auto-merge off;
 all five applicable CI jobs PASS, Promotion source expected SKIPPED:
 [116 CI](https://github.com/ipanga/teka_edu/actions/runs/37846020545),
 [117 CI](https://github.com/ipanga/teka_edu/actions/runs/37961705701).
@@ -188,7 +188,7 @@ Neither old nor current hashes grant execution permission. Offline
 [validator/regression fixtures](migration/alwaysdata/p1a/validate_offline.py) use PostgreSQL16
 grammar and enforce fixed identities, unchanged session guards, catalog-only relations and
 an explicit safe built-in allowlist. No database driver, credentials or network operation is used.
-Both queries and all127 unsafe/guard/diagnostic/indirect-rendering regressions pass offline validation. Run
+Both queries and all128 unsafe/guard/diagnostic/indirect-rendering regressions pass offline validation. Run
 `python3 -B docs/migration/alwaysdata/p1a/validate_offline.py` using the reviewed pglast6.16
 environment. Local validation requires that already available environment; do not install project
 dependencies or infer hosted permission/TLS proof from syntax/AST success.

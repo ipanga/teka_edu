@@ -105,7 +105,7 @@ Run the existing offline pglast6.16 environment, using PostgreSQL16 grammar:
 python -B docs/migration/alwaysdata/p1a/validate_offline.py
 ```
 
-Both files are one SELECT and retain exact fixed/session guards.127 regressions
+Both files are one SELECT and retain exact fixed/session guards.128 regressions
 reject writes, locking, identity/TLS downgrades, removed diagnostics, indirect
 renderers, raw expression/configuration/body values, unsafe casts and wildcard
 catalog rows. Raw-tree presence tests remain permitted. The validator never opens

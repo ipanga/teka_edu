@@ -13,7 +13,7 @@ Previous catalog SHA256 `e5f576c1c6f4e88a0bea8a6fb58db7f3648c416a75e333affbe632e
 is **SUPERSEDED / NOT APPROVED FOR EXECUTION**. Identity SQL remains byte-identical;
 its successful16.15/verify-full/read-only result is accepted by the owner. No identity rerun.
 
-Offline PG16 syntax/SELECT/session-guard validation passes;127 safety regressions refused.
+Offline PG16 syntax/SELECT/session-guard validation passes;128 safety regressions refused.
 This correction performs zero SQL executions/connections or provider mutations. PR118
 stays draft/unmerged; deployment switches remainfalse. Fresh independent exact-SQL review
 is pending; obtain it before requesting a new catalog-only UTC execution window. Schema
