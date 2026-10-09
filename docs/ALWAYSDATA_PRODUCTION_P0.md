@@ -140,8 +140,8 @@ of an earlier manual history alteration. The private diagnostic lexer is retaine
 it is never migration execution tooling and is not integrated as an application/code change.
 
 Canonical comparisons use only the frozen reference columns and row multisets, retaining counts
-and hashes rather than response rows. Source schema catalog and ACL are byte-for-byte equal as
-structured JSON to the prior audit:36 RLS-enabled tables,2 private functions,41 ACL objects,
+and hashes rather than response rows. Source schema catalog and ACL are exactly equal as
+structured catalog objects to the prior audit:36 RLS-enabled tables,2 private functions,41 ACL objects,
 594 grants. Table/function baseline comparison from the prior audit remains valid with no drift.
 Provider roles and PG17 MAINTAIN privileges still require reviewed mapping to portable PG16;
 matching source ACL does not establish target ACL. No hosted idempotency/fixture writes were used.
@@ -170,6 +170,17 @@ Storage object bytes. Live plan/access is unverified. [Supabase backups](https:/
 PITR is a separately billed add-on; published7-day pricing is approximately$100/month plus
 other plan/compute costs and is not covered by the spend cap. No upgrade/add-on is proposed as
 an automatic action. [PITR pricing](https://supabase.com/docs/guides/platform/manage-your-usage/point-in-time-recovery)
+
+The proposed P1-B source capture uses a compatible PostgreSQL17 `pg_dump` client and a
+consistent logical snapshot of the explicitly approved application/reference schemas, private
+functions, required extension definitions and migration history, plus a separate ownership/ACL
+manifest without passwords. Freeze the reviewed scope and record capture start/end and snapshot
+identity. Fresh aggregate checks must still show zero Auth/Storage use; any new private data or
+unexpected schema stops capture for separate scope approval. Provider-internal cluster state,
+configuration and Storage bytes are separate coverage decisions; an application-scope dump must
+not be labeled a full managed-provider backup. Capture of the target pre-change state is separately
+authorized only after its identity, RLS read visibility and exact object/data scope are known.
+No source/target command is executed by this proposal.
 
 **All source/target restoration, measured RPO and measured RTO remain NOT PROVED.**
 No dump, download, storage provisioning, backup creation, restoration or production recovery was run.
