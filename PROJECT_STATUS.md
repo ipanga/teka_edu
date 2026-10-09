@@ -5,11 +5,26 @@ Live implementation status. Read after `CLAUDE.md`. Update at the end of every m
 ## Last Updated
 
 ```text
-Date:       2026-10-05
-Branch:     feature/alwaysdata-postgres-portability
-Commit:     Reviewed DEV runner2315600; staging CD checkpoint in branch log
+Date:       2026-10-09
+Branch:     codex/production-p0-inventory
+Commit:     Base accepted C813c561; separate documentation checkpoint in branch log
 Updated by: Codex
 ```
+
+## Current P0 production checkpoint — 2026-10-09
+
+Authorized read-only inventory is complete within available access; P0 remains INCOMPLETE and
+production migration BLOCKED / NOT STARTED. PR116 is unchanged at reviewed16ce45e, OPEN,
+all applicable CI green. New evidence and P1-A/B/C/D proposals are a separate docs checkpoint:
+[P0 report](docs/ALWAYSDATA_PRODUCTION_P0.md). No P1 implementation or provider change.
+Fresh staging C/current C/previous A and Vercel PROD81b759f are healthy; all three switches false.
+Supabase PROD17.6/46/36 tables/6170 exact reference rows and zero Auth/Storage confirmed;
+46 stored statement representations match repository SQL, original file bytes NOT PROVED.
+Source schema/ACL unchanged. Alwaysdata PROD root empty; valid TLS/expected502; no target
+SQL connection. Owner site/Cloudflare/capacity/backup plan evidence and separate least-privilege
+target access authorization remain necessary. Restore/RPO/RTO NOT PROVED; progress continuity
+undecided. PR116 history and accepted A→C→A→C proof remain intact. No merge/deploy/DNS/retirement.
+Earlier dated status entries below remain historical; this checkpoint supersedes pending-stage claims.
 
 ## PostgreSQL 16 portability — 2026-10-05
 

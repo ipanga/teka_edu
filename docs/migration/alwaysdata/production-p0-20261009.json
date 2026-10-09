@@ -1,0 +1,1338 @@
+{
+  "recorded_utc": "2026-10-09T16:40:48.121781+00:00",
+  "client_date": "2026-10-09",
+  "scope": "P0 read-only; P1 proposal only; no target SQL connection",
+  "status": "P0_INCOMPLETE_PRODUCTION_BLOCKED",
+  "PR116": {
+    "autoMergeRequest": null,
+    "baseRefName": "develop",
+    "headRefName": "codex/production-readiness-audit",
+    "headRefOid": "16ce45ee19e97c7b957200b60a184da67fcf5fe6",
+    "isDraft": false,
+    "mergeStateStatus": "CLEAN",
+    "number": 116,
+    "reviewDecision": "",
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-08T21:21:14Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ipanga/teka_edu/actions/runs/37846020545/job/113546981998",
+        "name": "PostgreSQL 16 portability and managed equivalents",
+        "startedAt": "2026-10-08T21:20:06Z",
+        "status": "COMPLETED",
+        "workflowName": "CI"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-08T21:20:03Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/ipanga/teka_edu/actions/runs/37846020545/job/113546983266",
+        "name": "Promotion source",
+        "startedAt": "2026-10-08T21:20:03Z",
+        "status": "COMPLETED",
+        "workflowName": "CI"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-08T21:21:02Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ipanga/teka_edu/actions/runs/37846020545/job/113546981816",
+        "name": "Format, lint, typecheck, unit tests, content",
+        "startedAt": "2026-10-08T21:20:06Z",
+        "status": "COMPLETED",
+        "workflowName": "CI"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-08T21:23:21Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ipanga/teka_edu/actions/runs/37846020545/job/113546981440",
+        "name": "Build, client-bundle secret check, E2E smoke",
+        "startedAt": "2026-10-08T21:20:06Z",
+        "status": "COMPLETED",
+        "workflowName": "CI"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-08T21:22:23Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ipanga/teka_edu/actions/runs/37846020545/job/113546981804",
+        "name": "Supabase migrations and database tests",
+        "startedAt": "2026-10-08T21:20:06Z",
+        "status": "COMPLETED",
+        "workflowName": "CI"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-08T21:21:12Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ipanga/teka_edu/actions/runs/37846020545/job/113546981822",
+        "name": "Docker images (portable + Vercel)",
+        "startedAt": "2026-10-08T21:20:06Z",
+        "status": "COMPLETED",
+        "workflowName": "CI"
+      }
+    ],
+    "url": "https://github.com/ipanga/teka_edu/pull/116"
+  },
+  "branches": {
+    "main": "1578847d02d025286af92af48c691bbfafd84c10",
+    "develop": "813c56197f0d0fb353b39238b65c27dd08e6e5bc"
+  },
+  "required_checks": [
+    "Format, lint, typecheck, unit tests, content",
+    "Build, client-bundle secret check, E2E smoke",
+    "Supabase migrations and database tests",
+    "Docker images (portable + Vercel)"
+  ],
+  "environments": {
+    "staging": {
+      "branch_allowlist": ["develop"],
+      "required_reviewer_count": 0,
+      "prevent_self_review": null,
+      "secret_names": [
+        "ALWAYSDATA_API_TOKEN",
+        "ALWAYSDATA_DEV_PGPASSWORD",
+        "ALWAYSDATA_SSH_KNOWN_HOSTS",
+        "ALWAYSDATA_SSH_PRIVATE_KEY",
+        "SUPABASE_ACCESS_TOKEN",
+        "SUPABASE_DB_PASSWORD",
+        "SUPABASE_PROJECT_ID",
+        "VERCEL_AUTOMATION_BYPASS_SECRET",
+        "VERCEL_ORG_ID",
+        "VERCEL_PROJECT_ID",
+        "VERCEL_TOKEN",
+        "VERCEL_VCR_TOKEN"
+      ],
+      "variable_names": [
+        "ALWAYSDATA_DEV_MIGRATIONS_APPROVED",
+        "ALWAYSDATA_SSH_HOST",
+        "ALWAYSDATA_SSH_PORT",
+        "ALWAYSDATA_SSH_USER",
+        "STAGING_DOMAIN"
+      ]
+    },
+    "production": {
+      "branch_allowlist": ["main"],
+      "required_reviewer_count": 1,
+      "prevent_self_review": false,
+      "secret_names": [
+        "SUPABASE_ACCESS_TOKEN",
+        "SUPABASE_DB_PASSWORD",
+        "SUPABASE_PROJECT_ID",
+        "VERCEL_AUTOMATION_BYPASS_SECRET",
+        "VERCEL_ORG_ID",
+        "VERCEL_PROJECT_ID",
+        "VERCEL_TOKEN"
+      ],
+      "variable_names": []
+    }
+  },
+  "guards": {
+    "recorded_utc": "2026-10-09T16:24:02.693207+00:00",
+    "release_C": "813c56197f0d0fb353b39238b65c27dd08e6e5bc",
+    "switches": {
+      "ALWAYSDATA_STAGING_DEPLOY_ENABLED": "false",
+      "STAGING_DEPLOY_ENABLED": "false",
+      "PRODUCTION_DEPLOY_ENABLED": "false"
+    },
+    "environment_overrides": "NONE",
+    "staging_policy": "develop-only",
+    "merge_triggered_runs": [
+      {
+        "run": 37834637695,
+        "workflow_id": 375807316,
+        "workflow": "Deploy alwaysdata staging",
+        "conclusion": "skipped",
+        "entire_workflow_skipped_no_jobs": false,
+        "mutation_jobs": [
+          {
+            "id": 113508490984,
+            "name": "Verify DEV, install immutable staging release, smoke and rollback proof",
+            "conclusion": "skipped"
+          }
+        ]
+      },
+      {
+        "run": 37834637692,
+        "workflow_id": 355860915,
+        "workflow": "Deploy staging",
+        "conclusion": "success",
+        "entire_workflow_skipped_no_jobs": false,
+        "mutation_jobs": [
+          {
+            "id": 113509709123,
+            "name": "Migrate Supabase DEV, deploy Vercel staging, smoke test",
+            "conclusion": "skipped"
+          }
+        ]
+      }
+    ],
+    "all_merge_triggered_runs_finished": true,
+    "merge_triggered_deployment_jobs_skipped": true,
+    "older_or_concurrent_deployment_workflows": []
+  },
+  "staging": {
+    "recorded_utc": "2026-10-09T16:33:15.160242+00:00",
+    "read_only": true,
+    "health": {
+      "http_status": "200",
+      "curl_exit": 0,
+      "application": {
+        "status": "ok",
+        "environment": "staging",
+        "commit": "813c56197f0d0fb353b39238b65c27dd08e6e5bc",
+        "supabaseProjectRef": null
+      }
+    },
+    "filesystem": {
+      "login": "congofoot",
+      "pointers": {
+        "current": "813c56197f0d0fb353b39238b65c27dd08e6e5bc",
+        "previous": "8b4667d529f906906b3d40f6cabbcde234f4cb33"
+      },
+      "releases": [
+        {
+          "sha": "8b4667d529f906906b3d40f6cabbcde234f4cb33",
+          "files": 1426,
+          "manifest": "PASS",
+          "archive_sha256": "767674be486e1df37a07c52d564a88e0e34d5db76e79c0aa14b6eec8638d517e"
+        },
+        {
+          "sha": "553e3e9cbaa4ba2d9b131c00441e5ca17cd2764a",
+          "files": 1426,
+          "manifest": "PASS",
+          "archive_sha256": "da863e9904974eb790f0998450e8ed8568213392b046fc3220ba6d105993fb8e"
+        },
+        {
+          "sha": "813c56197f0d0fb353b39238b65c27dd08e6e5bc",
+          "files": 1426,
+          "manifest": "PASS",
+          "archive_sha256": "44524ca5d75750d14a026e61679d3d376b461f7ae8bfd859c82ceb8f1f1391a8"
+        }
+      ],
+      "incoming_release_directories": 0
+    },
+    "actual_running_SHA_from_HTTP_separate_from_pointers": true
+  },
+  "public_transport": {
+    "recorded_utc": "2026-10-09T16:26:52.592474+00:00",
+    "health": [
+      {
+        "host": "teka-edu.vercel.app",
+        "direct_origin": null,
+        "curl_exit": 0,
+        "status_tls": "200 TLS:0",
+        "headers": {
+          "age": "0",
+          "cache-control": "no-store",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=63072000; includeSubDomains; preload"
+        },
+        "application": {
+          "status": "ok",
+          "environment": "production",
+          "commit": "81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05",
+          "supabaseProjectRef": "eganrivpkjhozkkahyxy"
+        }
+      },
+      {
+        "host": "staging-tekaedu.tootiye.com",
+        "direct_origin": null,
+        "curl_exit": 0,
+        "status_tls": "200 TLS:0",
+        "headers": {
+          "cache-control": "no-store",
+          "cf-cache-status": "DYNAMIC",
+          "server": "cloudflare"
+        },
+        "application": {
+          "status": "ok",
+          "environment": "staging",
+          "commit": "813c56197f0d0fb353b39238b65c27dd08e6e5bc",
+          "supabaseProjectRef": null
+        }
+      },
+      {
+        "host": "tekaedu.tootiye.com",
+        "direct_origin": null,
+        "curl_exit": 0,
+        "status_tls": "502 TLS:0",
+        "headers": {
+          "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+          "server": "cloudflare"
+        },
+        "application": {
+          "status": null,
+          "environment": null,
+          "commit": null,
+          "supabaseProjectRef": null
+        }
+      },
+      {
+        "host": "tekaedu.tootiye.com",
+        "direct_origin": "185.31.40.13",
+        "curl_exit": 0,
+        "status_tls": "502 TLS:0",
+        "headers": {},
+        "application": {
+          "status": null,
+          "environment": null,
+          "commit": null,
+          "supabaseProjectRef": null
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "host": "tekaedu.tootiye.com",
+        "direct_origin": null,
+        "normal_chain_hostname_validation": "PASS",
+        "protocol": "TLSv1.2",
+        "issuer": [
+          [["countryName", "US"]],
+          [["organizationName", "Let's Encrypt"]],
+          [["commonName", "YE2"]]
+        ],
+        "not_before": "Oct  5 16:44:14 2026 GMT",
+        "not_after": "Jan  3 16:44:13 2027 GMT",
+        "hostname_SAN_match": true
+      },
+      {
+        "host": "tekaedu.tootiye.com",
+        "direct_origin": "185.31.40.13",
+        "normal_chain_hostname_validation": "PASS",
+        "protocol": "TLSv1.2",
+        "issuer": [
+          [["countryName", "US"]],
+          [["organizationName", "Let's Encrypt"]],
+          [["commonName", "YR1"]]
+        ],
+        "not_before": "Oct  4 20:06:36 2026 GMT",
+        "not_after": "Jan  2 20:06:35 2027 GMT",
+        "hostname_SAN_match": true
+      }
+    ],
+    "public_DNS_NOT_origin_configuration": {
+      "tekaedu.tootiye.com": {
+        "A": ["172.67.160.228", "104.21.81.126"],
+        "AAAA": ["2606:4700:3033::6815:517e", "2606:4700:3036::ac43:a0e4"],
+        "CNAME": []
+      },
+      "staging-tekaedu.tootiye.com": {
+        "A": ["172.67.160.228", "104.21.81.126"],
+        "AAAA": ["2606:4700:3036::ac43:a0e4", "2606:4700:3033::6815:517e"],
+        "CNAME": []
+      },
+      "congofoot.alwaysdata.net": {
+        "A": ["185.31.40.13"],
+        "AAAA": ["2a00:b6e0:1:20:4::1"],
+        "CNAME": []
+      }
+    }
+  },
+  "vercel": {
+    "deployment": {
+      "http_status": "200",
+      "curl_exit": 0,
+      "id": "dpl_HkEkuSvjzXs5wkh6aW7GtHnxyZkL",
+      "target": "production",
+      "readyState": "READY",
+      "git_sha": "81b759ffe7ffb8d6bc44a6b3774dd81e4a4c7d05"
+    },
+    "project": {
+      "http_status": "200",
+      "curl_exit": 0,
+      "id": "prj_cJcoXbMF0fi3Uf4SejFnRH6uCmph",
+      "name": "teka-edu",
+      "framework": "container",
+      "link": null,
+      "resourceConfig": {
+        "fluid": true,
+        "functionDefaultRegions": ["cdg1"],
+        "buildMachineType": "basic",
+        "buildMachineSelection": "fixed"
+      },
+      "environment_names": [
+        "NEXT_PUBLIC_APP_ENV",
+        "NEXT_PUBLIC_APP_ENV",
+        "NEXT_PUBLIC_APP_URL",
+        "NEXT_PUBLIC_APP_URL",
+        "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY",
+        "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY",
+        "NEXT_PUBLIC_SUPABASE_URL",
+        "NEXT_PUBLIC_SUPABASE_URL",
+        "PORT",
+        "PORT"
+      ]
+    },
+    "recorded_utc": "2026-10-09T16:33:00.960438+00:00",
+    "previous_python_metadata_get": "HTTP403; normal curl transport used with existing approved CLI auth, no browser access"
+  },
+  "alwaysdata": {
+    "recorded_utc": "2026-10-09T16:26:36.449336Z",
+    "login": "congofoot",
+    "prod_root": {
+      "path": "/home/congofoot/www/tekaedu-prod",
+      "mode": "0o770",
+      "owner": "congofoot",
+      "directory": true,
+      "symlink": false,
+      "resolved_exact": true,
+      "read": true,
+      "write": true,
+      "execute": true,
+      "entries": 0,
+      "current_exists": false,
+      "previous_exists": false,
+      "credential_like_files": 0
+    },
+    "staging_owner": "congofoot",
+    "same_Unix_owner": true,
+    "backup_files": [
+      {
+        "path": "/home/congofoot/admin/backup/2026-10-06/postgresql/congofoot_teka_edu_prod.sql.zst",
+        "bytes": 727,
+        "mode": "0o666",
+        "owner": "root",
+        "modified_utc": "2026-10-05T23:29:47.733346Z"
+      },
+      {
+        "path": "/home/congofoot/admin/backup/2026-10-07/postgresql/congofoot_teka_edu_prod.sql.zst",
+        "bytes": 729,
+        "mode": "0o666",
+        "owner": "root",
+        "modified_utc": "2026-10-06T23:26:59.071683Z"
+      },
+      {
+        "path": "/home/congofoot/admin/backup/2026-10-08/postgresql/congofoot_teka_edu_prod.sql.zst",
+        "bytes": 729,
+        "mode": "0o666",
+        "owner": "root",
+        "modified_utc": "2026-10-07T23:29:25.426813Z"
+      },
+      {
+        "path": "/home/congofoot/admin/backup/2026-10-09/postgresql/congofoot_teka_edu_prod.sql.zst",
+        "bytes": 727,
+        "mode": "0o666",
+        "owner": "root",
+        "modified_utc": "2026-10-08T23:31:52.818118Z"
+      }
+    ],
+    "backup_date_directories": 30,
+    "backup_parent_metadata": [
+      {
+        "path": "/home/congofoot",
+        "mode": "0o1770",
+        "owner": "root",
+        "directory": true,
+        "symlink": false
+      },
+      {
+        "path": "/home/congofoot/admin",
+        "mode": "0o755",
+        "owner": "root",
+        "directory": true,
+        "symlink": false
+      },
+      {
+        "path": "/home/congofoot/admin/backup",
+        "mode": "0o777",
+        "owner": "root",
+        "directory": true,
+        "symlink": true
+      },
+      {
+        "path": "/home/congofoot/admin/backup/latest",
+        "mode": "0o777",
+        "owner": "root",
+        "directory": true,
+        "symlink": true
+      },
+      {
+        "path": "/home/congofoot/admin/backup/latest/postgresql",
+        "mode": "0o770",
+        "owner": "congofoot",
+        "directory": true,
+        "symlink": false
+      }
+    ],
+    "backup_contents_read": false,
+    "OS_session_rlimits": {
+      "RLIMIT_CPU": {
+        "soft": -1,
+        "hard": -1,
+        "minus_one_means": "unlimited OS rlimit; NOT account plan entitlement"
+      },
+      "RLIMIT_AS": {
+        "soft": -1,
+        "hard": -1,
+        "minus_one_means": "unlimited OS rlimit; NOT account plan entitlement"
+      },
+      "RLIMIT_NPROC": {
+        "soft": 8192,
+        "hard": 8192,
+        "minus_one_means": "unlimited OS rlimit; NOT account plan entitlement"
+      },
+      "RLIMIT_NOFILE": {
+        "soft": 65536,
+        "hard": 65536,
+        "minus_one_means": "unlimited OS rlimit; NOT account plan entitlement"
+      }
+    },
+    "shared_filesystem_available_bytes": 608828391424,
+    "shared_filesystem_space_is_NOT_account_quota": true
+  },
+  "access_boundaries": {
+    "local_environment_names_present": [],
+    "approved_target_PROD_read_only_SQL_mechanism": "NONE documented",
+    "target_database_connected": false,
+    "browser_restriction_preserved": true,
+    "staging_secrets_reused": false,
+    "credential_values_printed": false
+  },
+  "expected_target_database": {
+    "host": "postgresql-congofoot.alwaysdata.net",
+    "database": "congofoot_teka_edu_prod",
+    "login": "congofoot_user_teka_edu_prod",
+    "identities_verified": false,
+    "connection_attempts": 0
+  },
+  "source_identity": {
+    "recorded_utc": "2026-10-09T16:25:20.846387+00:00",
+    "project_ref": "eganrivpkjhozkkahyxy",
+    "local_DEV_link_unchanged": true,
+    "rows": [
+      {
+        "auth_identities": 0,
+        "auth_users": 0,
+        "database": "postgres",
+        "login": "postgres",
+        "public_policies": 0,
+        "public_tables": 36,
+        "storage_buckets": 0,
+        "storage_objects": 0,
+        "version": "17.6"
+      }
+    ],
+    "database_writes": 0
+  },
+  "source_canonical": {
+    "recorded_utc": "2026-10-09T16:29:14.819099+00:00",
+    "project_ref": "eganrivpkjhozkkahyxy",
+    "tables": 36,
+    "rows": 6170,
+    "exact": true,
+    "counts": [
+      {
+        "table": "education_stages",
+        "rows": 1,
+        "exact": true,
+        "normalized_sha256": "9a3ef72cf426f108bc83bbe0d9476e240d06f146802b68a5e980b942eb0a26f6"
+      },
+      {
+        "table": "school_levels",
+        "rows": 3,
+        "exact": true,
+        "normalized_sha256": "434a937d8629e5d92236e1f2509a6270acbbd0f4156f90f62ee99101656936c3"
+      },
+      {
+        "table": "school_years",
+        "rows": 1,
+        "exact": true,
+        "normalized_sha256": "56901dc71a0f8e8a8c6dc7551c605a2f10bbc3d0a5ce5d5893a331a44cdb3c35"
+      },
+      {
+        "table": "school_periods",
+        "rows": 6,
+        "exact": true,
+        "normalized_sha256": "52e2d2f5ecc3de8a3bb40f3e2f9fca3d31f3e24350d2a2843898551c7f90dc3c"
+      },
+      {
+        "table": "public_holidays",
+        "rows": 10,
+        "exact": true,
+        "normalized_sha256": "bfda80b57e0c6c83ebb75dd9f8d4b12ed1f2d348bf2ef98ba0e33344dd8cc827"
+      },
+      {
+        "table": "calendar_exceptions",
+        "rows": 4,
+        "exact": true,
+        "normalized_sha256": "1f396e23826fb5e0c3cad7c4493d11623755ca8cb9b58a170cb996d61c07e99a"
+      },
+      {
+        "table": "curricula",
+        "rows": 1,
+        "exact": true,
+        "normalized_sha256": "d6a260888690019fe1e49e208ac5c44b8dc74729069dc62801c15ca8ad589fe3"
+      },
+      {
+        "table": "curriculum_age_bands",
+        "rows": 3,
+        "exact": true,
+        "normalized_sha256": "249e58766f9d5e1f646da67adffc89fc7b941e9936314fadd84422851bc03f35"
+      },
+      {
+        "table": "curriculum_levels",
+        "rows": 3,
+        "exact": true,
+        "normalized_sha256": "e66aa70eeb25d776e498c1add69532f30d5898b92272d6b2c0c09734b6805231"
+      },
+      {
+        "table": "curriculum_domains",
+        "rows": 6,
+        "exact": true,
+        "normalized_sha256": "aa292c97bdce167fade1d62f44571c635fe881d5b68cf21f8343e217067c231a"
+      },
+      {
+        "table": "curriculum_sources",
+        "rows": 3,
+        "exact": true,
+        "normalized_sha256": "3a37571d9b8290bb43d3afab381b77b9c788523cf71f29383d3e6e2d6708ec79"
+      },
+      {
+        "table": "curriculum_source_domains",
+        "rows": 6,
+        "exact": true,
+        "normalized_sha256": "2879a71de88d470c2ecd2454cead090971c113c1932d11beb4900f72624dc359"
+      },
+      {
+        "table": "curriculum_subdomains",
+        "rows": 19,
+        "exact": true,
+        "normalized_sha256": "858979d4a1838d169c886881c4f1a19183209960f7e3656eb32abb96b5e5dafd"
+      },
+      {
+        "table": "curriculum_competencies",
+        "rows": 38,
+        "exact": true,
+        "normalized_sha256": "5aefb1979e657326a9fde458d8905937174c76a6a4dcc611cd08ba66f037581c"
+      },
+      {
+        "table": "learning_objectives",
+        "rows": 398,
+        "exact": true,
+        "normalized_sha256": "c55b201df8c8a60fff92dba75c982cf66f70f97d34ec750c5f7eff135c314e95"
+      },
+      {
+        "table": "learning_objective_age_bands",
+        "rows": 417,
+        "exact": true,
+        "normalized_sha256": "113991f1367711462d8d401c7e0eedd10cb4e1d3c270e714c4cf269099ab6a9f"
+      },
+      {
+        "table": "success_examples",
+        "rows": 529,
+        "exact": true,
+        "normalized_sha256": "8392c246a6983a9575d1649ce20717fa66545b07383f738a287cdb5cd79e93fb"
+      },
+      {
+        "table": "materials",
+        "rows": 19,
+        "exact": true,
+        "normalized_sha256": "efa7028ab55a3271acad2a6fa5b6a8913b9793d0435824dd2432361866483985"
+      },
+      {
+        "table": "activity_types",
+        "rows": 15,
+        "exact": true,
+        "normalized_sha256": "431e686a090301e0a3bfbd2ba5709fce560c10888080431d10c856576b8a7092"
+      },
+      {
+        "table": "lessons",
+        "rows": 264,
+        "exact": true,
+        "normalized_sha256": "983b2ba7065a7e655be92c7df1b867e6b26d78a15107c323e7b109ac38a5265a"
+      },
+      {
+        "table": "lesson_levels",
+        "rows": 264,
+        "exact": true,
+        "normalized_sha256": "fa9bc8896adebc1d571bb50eabc8bb86e08ad5d392b0e87120949c10e7fc4b52"
+      },
+      {
+        "table": "lesson_objectives",
+        "rows": 620,
+        "exact": true,
+        "normalized_sha256": "30b48842008cb82ce32ae59cb98f81d2bd7a543fc598f24083c636966e3fd803"
+      },
+      {
+        "table": "activities",
+        "rows": 471,
+        "exact": true,
+        "normalized_sha256": "cabe144a3bc8799e58198d8b8782b57afc0ff9f82e46e0e8a1087ccf4686b3f4"
+      },
+      {
+        "table": "media_assets",
+        "rows": 54,
+        "exact": true,
+        "normalized_sha256": "4abed5867e1f162f0401d04386a94f2b44ac74630d784820a1983b46a4b32b2d"
+      },
+      {
+        "table": "media_asset_tags",
+        "rows": 178,
+        "exact": true,
+        "normalized_sha256": "dfb5a8c9514e5e70b53925ad0dcaef2a6867a4497de04e03e774c565c4c0d8b4"
+      },
+      {
+        "table": "activity_media",
+        "rows": 140,
+        "exact": true,
+        "normalized_sha256": "36f0d5203ee23a6b31584b70754ecb0ed0a67ee0b3534accaec614b6cae72c2d"
+      },
+      {
+        "table": "activity_objectives",
+        "rows": 706,
+        "exact": true,
+        "normalized_sha256": "eccef514ee9d8531e8eac6895beb6009e5582f0c8456fa8d6c26d0131b54ce19"
+      },
+      {
+        "table": "activity_materials",
+        "rows": 653,
+        "exact": true,
+        "normalized_sha256": "9a029faf228b77aa4edaf365316df0d9095984164b5c70878799d4de4e6ad5ef"
+      },
+      {
+        "table": "activity_vocabulary",
+        "rows": 388,
+        "exact": true,
+        "normalized_sha256": "a508479cf80935ba802a5baa105f0fbd9bc99d38e68fb980d662fcf02bfefb58"
+      },
+      {
+        "table": "activity_scaffolds",
+        "rows": 463,
+        "exact": true,
+        "normalized_sha256": "e36e7ff33387c12dfd30448e501b2194e1bb82ce82c22db468910bb3598e7aaf"
+      },
+      {
+        "table": "teaching_texts",
+        "rows": 21,
+        "exact": true,
+        "normalized_sha256": "392f7bbf21b5ad368592e6e3d2e135266d60f289f399772c135899d8067e2bec"
+      },
+      {
+        "table": "teaching_text_lines",
+        "rows": 173,
+        "exact": true,
+        "normalized_sha256": "527a0756842e130f587002b07bc3bf30bd0e2721ba5a8e279c0bd7e093d84bfe"
+      },
+      {
+        "table": "annual_plans",
+        "rows": 2,
+        "exact": true,
+        "normalized_sha256": "c62c3d8e4190ccfcc73d9d4685a2614b7dc783c7e6c9c8272c96f5d666a1e1c9"
+      },
+      {
+        "table": "annual_plan_phases",
+        "rows": 12,
+        "exact": true,
+        "normalized_sha256": "145f55372713fb1901e5241708bab5e02e0f78d64b48e7ae403477f0089deabe"
+      },
+      {
+        "table": "annual_plan_entries",
+        "rows": 278,
+        "exact": true,
+        "normalized_sha256": "1592df27512e5c9b412fc0cb93aaaeef447b6d006ef0a18b796adebf1dfb274a"
+      },
+      {
+        "table": "school_year_curricula",
+        "rows": 1,
+        "exact": true,
+        "normalized_sha256": "d4e314c2416059ff28583d0a3cdfbd33783f9b4f6c0627b9b271179a8bc6c515"
+      }
+    ],
+    "private_records_read": false,
+    "method": "SELECT known canonical reference columns only; row multisets compared to frozen local reference; raw query rows not retained"
+  },
+  "source_schema_access": {
+    "recorded_utc": "2026-10-09T16:29:27.635457+00:00",
+    "schema_catalog_exact_to_20261008": true,
+    "schema_catalog_sha256": "060e7e28eb0b8d0d4037ab5aa8e5106c58e80a001fbf592ed5255aac69b6cc56",
+    "ACL_catalog_exact_to_20261008": true,
+    "ACL_catalog_sha256": "bb724fb2a9f798b2b9ec6faf6daa7996c8315f4bb7d2e1a8496e816d070224a2",
+    "tables": 36,
+    "private_functions": 2,
+    "RLS_tables": 36,
+    "ACL_objects": 41,
+    "grants": 594,
+    "source_owner_set": ["pg_database_owner", "postgres"],
+    "source_grantees": [
+      "PUBLIC",
+      "anon",
+      "authenticated",
+      "dashboard_user",
+      "pg_database_owner",
+      "postgres",
+      "service_role"
+    ]
+  },
+  "supabase_backup_metadata": {
+    "recorded_utc": "2026-10-09T16:25:34.475846+00:00",
+    "project_ref": "eganrivpkjhozkkahyxy",
+    "backups": null,
+    "physical_backup_data": {},
+    "pitr_enabled": false,
+    "region": "eu-west-3",
+    "walg_enabled": true
+  },
+  "prior_evidence_integrity": [
+    {
+      "directory": "production-readiness-20261008",
+      "files": 38,
+      "exact": true,
+      "index_sha256": "cfb1b86f70a1869a7618733a5d86c8a05899f7276ed528011defe9ce026b1477"
+    },
+    {
+      "directory": "alwaysdata-release-c-20261008",
+      "files": 31,
+      "exact": true,
+      "index_sha256": "43dfeb769382dfda69bd8cd33c362d33ff727969995dd612d73116f393e71c68"
+    }
+  ],
+  "unverified": [
+    "Exact current site1083500 account/type/address list/Node/workdir/startup command/inherited and site environment names/forbidden assignments",
+    "Production API token/profile site1083500 permission/restart scope; no GET/POST issued",
+    "Target SQL version/database/login/TLS/owner/object/data/history/privileges/reciprocal isolation",
+    "Original historical migration file byte provenance; stored representation verified separately",
+    "Actual account CPU/RAM/disk/process/request/connection/bandwidth quota, usage, plan and billing",
+    "Supabase live plan/retention/accessible recovery points, backup ownership/restore permissions, independent offsite package",
+    "Alwaysdata backup contents/hash/coverage and contractual retention/plan",
+    "Source or target restore, measured RPO/RTO, independent encrypted protected package",
+    "Cloudflare exact origin/records/proxy/TTL/SSL mode/cert renewal/cache/WAF/redirect/health bypass/fallback and unrelated-host inventory",
+    "Family local-progress usage and continuity decision",
+    "Dedicated production credential validity/restrictions, hardened SSH/API blast radius, production runtime/CD implementation"
+  ],
+  "mutation_counts": {
+    "hosting": 0,
+    "database_writes": 0,
+    "target_PROD_SQL_connections": 0,
+    "dump_backup_restore": 0,
+    "deployment_restart_pointer": 0,
+    "DNS_cache_WAF_redirect": 0,
+    "activation_switch_or_secret_or_policy": 0,
+    "P1_implementation": 0
+  },
+  "GitHub_documentation_publication": "separate documentation branch/PR only; no merge",
+  "secret_exposure": false,
+  "source_history_comparison": {
+    "versions_names_exact": true,
+    "applied": 46,
+    "pending": 0,
+    "matching_stored_representations": 46,
+    "exact_original_file_bytes": "NOT PROVED; original delimiters/boundary whitespace lost",
+    "method": "Diagnostic lexer preserves comments/quotes; removes top-level statement terminators, trims boundary whitespace, joins statements with LF; never executes SQL",
+    "portable_adapter_version": "postgres16-public-revocations-v1",
+    "adapted_files": 4,
+    "tooling_digest": "3a7a87413c881a1ea12cc7262c7a29281300b6ed517c3807215b89d935fcb959",
+    "migrations": [
+      {
+        "version": "20260911203000",
+        "file": "20260911203000_educational_foundation.sql",
+        "statement_count": 50,
+        "stored_join_md5": "6b8bc29c3052e115b8203c986b138acf",
+        "stored_join_sha256": "40516e854fe448f3fb3566aa73f4074b695576940e977345e9ac78c4bafba6d4",
+        "representation_exact": true,
+        "reviewed_source_sha256": "32c6e15fb8dce9529c3cf2fff613ed728cb537df2c0fcf0fc51aa69b53c33b6d",
+        "portable_execution_sha256": "913642d9e730921ca131e68c7ee34212b78c18ffee8236534cb77cac100c890f",
+        "adapted": true
+      },
+      {
+        "version": "20260911204157",
+        "file": "20260911204157_reference_data_2026_2027.sql",
+        "statement_count": 20,
+        "stored_join_md5": "33b9d22b040c84ca0190bab44103ca40",
+        "stored_join_sha256": "6ee50974277acfa479bc2a385b911670523e1af634d769e3f2502d65da4fe86b",
+        "representation_exact": true,
+        "reviewed_source_sha256": "c70ae78234c90ca470b57d564e249bf31b8a5184a4f5f74c145473a39c6b2038",
+        "portable_execution_sha256": "c70ae78234c90ca470b57d564e249bf31b8a5184a4f5f74c145473a39c6b2038",
+        "adapted": false
+      },
+      {
+        "version": "20260911222600",
+        "file": "20260911222600_curriculum_objectives_and_lessons.sql",
+        "statement_count": 71,
+        "stored_join_md5": "992692e35f400f9ad9a60489883f2482",
+        "stored_join_sha256": "ece9a506a0cd98ef2b78c5201d1c721388260d38e28729d36a6e2ef8720d71ec",
+        "representation_exact": true,
+        "reviewed_source_sha256": "2c8faaa8682814b7d98b5b56e55540e8d2bad1c2eedafe42f99c744bbf95fc22",
+        "portable_execution_sha256": "868649167867ff84a3efc3a2ba73d76ce7f1c80040ece3edb19beb50e4ad160d",
+        "adapted": true
+      },
+      {
+        "version": "20260911222858",
+        "file": "20260911222858_curriculum_objectives_and_pilot_lessons.sql",
+        "statement_count": 56,
+        "stored_join_md5": "fa876ca30625a4396ea52a609516b24e",
+        "stored_join_sha256": "599f46cdbcbe12bf0b9c453e4ff2b366613f3e77e39fdcb3dfde91e9ed1e225d",
+        "representation_exact": true,
+        "reviewed_source_sha256": "99da4b59d1c36c6781148556c95cb15acc712e4fa14733771675fd807b298513",
+        "portable_execution_sha256": "99da4b59d1c36c6781148556c95cb15acc712e4fa14733771675fd807b298513",
+        "adapted": false
+      },
+      {
+        "version": "20260912002000",
+        "file": "20260912002000_content_quality_gate.sql",
+        "statement_count": 17,
+        "stored_join_md5": "c4f1ed29e4f9adb965cbf89c23205497",
+        "stored_join_sha256": "da0e325c01673bad02339f9c1f3b80107bd1e144c8c9c155aa70826d379c0d50",
+        "representation_exact": true,
+        "reviewed_source_sha256": "f80102a17557efb9479b9001203279dcad1bf431299b52e0b2b81b883940082d",
+        "portable_execution_sha256": "f80102a17557efb9479b9001203279dcad1bf431299b52e0b2b81b883940082d",
+        "adapted": false
+      },
+      {
+        "version": "20260912091922",
+        "file": "20260912091922_content_quality_gate_data.sql",
+        "statement_count": 56,
+        "stored_join_md5": "c3d92be77e976473512760090f7bb26c",
+        "stored_join_sha256": "b2116711d73446c2139ee3aa86b2ab6c1f315ee36597df9bcae0405fcd8d4b1d",
+        "representation_exact": true,
+        "reviewed_source_sha256": "2e751019def6ccc269ae02968f174b7ef0a59e1f670822acd1a4ad2031435408",
+        "portable_execution_sha256": "2e751019def6ccc269ae02968f174b7ef0a59e1f670822acd1a4ad2031435408",
+        "adapted": false
+      },
+      {
+        "version": "20260912120000",
+        "file": "20260912120000_september_programme.sql",
+        "statement_count": 19,
+        "stored_join_md5": "a613d866ddde4e7cb5e82edf9e0d4876",
+        "stored_join_sha256": "c67baf691e6e7ebd5167e78e09f8368c2d1b0a729d721e6abc0902060dc0df45",
+        "representation_exact": true,
+        "reviewed_source_sha256": "084ac84b2195d7e6049439eaa97a353462af758250a67b5af5fe27fd730775fc",
+        "portable_execution_sha256": "cd2039c779437c1ab337d51adafccc1c423860ca1e5583ac07a88b17e8860d9b",
+        "adapted": true
+      },
+      {
+        "version": "20260912175902",
+        "file": "20260912175902_september_programme_data.sql",
+        "statement_count": 66,
+        "stored_join_md5": "591768a5d28fdf389926b0911233efc2",
+        "stored_join_sha256": "8204cb54a3ba8e7985d5a3a8ceb03df17484c8a710969b8a2a8c31d3d884abe9",
+        "representation_exact": true,
+        "reviewed_source_sha256": "925b3d43ea6ac9f22a4d81d966f7cfa1f7f80da61f14946471c1237fb2319fd0",
+        "portable_execution_sha256": "925b3d43ea6ac9f22a4d81d966f7cfa1f7f80da61f14946471c1237fb2319fd0",
+        "adapted": false
+      },
+      {
+        "version": "20260912200000",
+        "file": "20260912200000_media_assets.sql",
+        "statement_count": 11,
+        "stored_join_md5": "47cacc592a15b973c1f5bac66cce8abb",
+        "stored_join_sha256": "73097d44551256de6144dd79102ca562942283d8e849b857ccdd06f6d9bfc343",
+        "representation_exact": true,
+        "reviewed_source_sha256": "27aada16e31c9af3fc0812e8425c8f9a61f1a0ba5d4846b24973195b8fcd373e",
+        "portable_execution_sha256": "9070a7167dc58da123a270a6de94d23885d511810eea1cfcb8717b7d3cf10fba",
+        "adapted": true
+      },
+      {
+        "version": "20260912202935",
+        "file": "20260912202935_media_registry_data.sql",
+        "statement_count": 72,
+        "stored_join_md5": "46a18f5efabe4a159bfa2558545ba454",
+        "stored_join_sha256": "5a184e7ffd566cbaea7aec5cf1a5c91f93462db8f9a1f9c83ce1f69005b140de",
+        "representation_exact": true,
+        "reviewed_source_sha256": "261e5e7a8b2a1e2176c76f544db934d05aa237ea0b353700385fcfb84b1321f8",
+        "portable_execution_sha256": "261e5e7a8b2a1e2176c76f544db934d05aa237ea0b353700385fcfb84b1321f8",
+        "adapted": false
+      },
+      {
+        "version": "20260913060000",
+        "file": "20260913060000_media_illustrations.sql",
+        "statement_count": 4,
+        "stored_join_md5": "e1bdabef5e6de44bc009781735d64112",
+        "stored_join_sha256": "38df5ccb1aae884e649efe302284723c19ce50ad099075ba4e40d35d16090565",
+        "representation_exact": true,
+        "reviewed_source_sha256": "18ab64e1249737575508e1bb45c0e9a5dc387b084d74175b6aac0a4991b91c7d",
+        "portable_execution_sha256": "18ab64e1249737575508e1bb45c0e9a5dc387b084d74175b6aac0a4991b91c7d",
+        "adapted": false
+      },
+      {
+        "version": "20260913065828",
+        "file": "20260913065828_media_illustrations_data.sql",
+        "statement_count": 72,
+        "stored_join_md5": "391d6f8ad0b57d146c04f86308bd07ac",
+        "stored_join_sha256": "9b1d51aed7b0ac7920402fd52260d678fb356f1e5292b9d4c1927db317b848e7",
+        "representation_exact": true,
+        "reviewed_source_sha256": "0d313fbe502348d5aa620d130a717ff92bdab9331f3e2b53604b6e06dad537ef",
+        "portable_execution_sha256": "0d313fbe502348d5aa620d130a717ff92bdab9331f3e2b53604b6e06dad537ef",
+        "adapted": false
+      },
+      {
+        "version": "20260914200033",
+        "file": "20260914200033_week1_review_corrections.sql",
+        "statement_count": 72,
+        "stored_join_md5": "893c61ba5aa1d955d26f1e260bb231f3",
+        "stored_join_sha256": "a3316e3f4007ece055ac8fb130c979b037f886b4751e22035f4c722af05311ea",
+        "representation_exact": true,
+        "reviewed_source_sha256": "38375e7cfcf008a6779ee595f4cb5c4c43fec057c8aca2a8568c0ecb38c42f2e",
+        "portable_execution_sha256": "38375e7cfcf008a6779ee595f4cb5c4c43fec057c8aca2a8568c0ecb38c42f2e",
+        "adapted": false
+      },
+      {
+        "version": "20260915090000",
+        "file": "20260915090000_review_kind.sql",
+        "statement_count": 7,
+        "stored_join_md5": "1ed316494d1f2fc97fc20eb5350ba407",
+        "stored_join_sha256": "f2f227b4d215c41f748640ccd33c1d7138b4f400b9de065ba73f805516fd9d40",
+        "representation_exact": true,
+        "reviewed_source_sha256": "7bb5ce5ac7b1499ebc6b9079afb9a8fb105f3b389e02c4964de7e016f15a8886",
+        "portable_execution_sha256": "7bb5ce5ac7b1499ebc6b9079afb9a8fb105f3b389e02c4964de7e016f15a8886",
+        "adapted": false
+      },
+      {
+        "version": "20260915100000",
+        "file": "20260915100000_maternelle_1_september.sql",
+        "statement_count": 72,
+        "stored_join_md5": "a7ab34cff1f1a0a90997e7cc75e8ef37",
+        "stored_join_sha256": "26267605b6d613946694debaafe2d781e85c4b2cc4edae1609ac82b46a3a48b0",
+        "representation_exact": true,
+        "reviewed_source_sha256": "a57be556588aa91df13e558f58da9b7d581108404441dc1d4d08b0c43417fb81",
+        "portable_execution_sha256": "a57be556588aa91df13e558f58da9b7d581108404441dc1d4d08b0c43417fb81",
+        "adapted": false
+      },
+      {
+        "version": "20260915110000",
+        "file": "20260915110000_maternelle_1_week_1_corrections.sql",
+        "statement_count": 72,
+        "stored_join_md5": "816e55dafbee1bc40c944f2e367c5b3f",
+        "stored_join_sha256": "942cec5b9c5f04541ea419839b79d7c558b5e849f957c8f727506cd2deaf5d3c",
+        "representation_exact": true,
+        "reviewed_source_sha256": "6cf8d3200c675cab716353ea210bdd6ccae112d9a5a3bc9cf2c0d56171e0befc",
+        "portable_execution_sha256": "6cf8d3200c675cab716353ea210bdd6ccae112d9a5a3bc9cf2c0d56171e0befc",
+        "adapted": false
+      },
+      {
+        "version": "20260915120000",
+        "file": "20260915120000_week_1_approved_and_progression.sql",
+        "statement_count": 72,
+        "stored_join_md5": "d3d23957572f4f6c8489d7aafda12e74",
+        "stored_join_sha256": "6a269a96e29ceb7f01d9e59ab2a050782a920b174f0f7f63df669c08125fbeaa",
+        "representation_exact": true,
+        "reviewed_source_sha256": "9c005b21c2e914aacfa5e8b633c0a5dc02430536c0b1f605b0180eedd94c64b3",
+        "portable_execution_sha256": "9c005b21c2e914aacfa5e8b633c0a5dc02430536c0b1f605b0180eedd94c64b3",
+        "adapted": false
+      },
+      {
+        "version": "20260915130000",
+        "file": "20260915130000_week_2_corrections.sql",
+        "statement_count": 72,
+        "stored_join_md5": "6051416a352bd454e91cdfc395e03a77",
+        "stored_join_sha256": "abdc453077a5048ac6b600065191c8007f268eca7be2e4d25126605e8efb4fa7",
+        "representation_exact": true,
+        "reviewed_source_sha256": "28621ce8b2454f809cdd2f9943e088322d7cdc81515a725539be661714093684",
+        "portable_execution_sha256": "28621ce8b2454f809cdd2f9943e088322d7cdc81515a725539be661714093684",
+        "adapted": false
+      },
+      {
+        "version": "20260915140000",
+        "file": "20260915140000_weeks_1_2_approved.sql",
+        "statement_count": 72,
+        "stored_join_md5": "d0670413129f916cfbbef2b0aeb3f253",
+        "stored_join_sha256": "d0f206ffa19c14fc7afd0b5e425e8720c339471c2108dd22fb99c15669069f0b",
+        "representation_exact": true,
+        "reviewed_source_sha256": "d403c683824b52b7e6fd7497b68e8f602ebc9396a6128ef0e6404a62d3aad68e",
+        "portable_execution_sha256": "d403c683824b52b7e6fd7497b68e8f602ebc9396a6128ef0e6404a62d3aad68e",
+        "adapted": false
+      },
+      {
+        "version": "20260915150000",
+        "file": "20260915150000_week_3_corrections.sql",
+        "statement_count": 72,
+        "stored_join_md5": "63745746df6e0df437913ceb85dbdc99",
+        "stored_join_sha256": "ec8f4725c7a39f5792e6488288ed5f5e39929b0942cdda835334e75cd51ded35",
+        "representation_exact": true,
+        "reviewed_source_sha256": "bec9ac17433eb9617fff24bf5d737b2fc7d616f9b0cc2b7ed17df6c5843cbca2",
+        "portable_execution_sha256": "bec9ac17433eb9617fff24bf5d737b2fc7d616f9b0cc2b7ed17df6c5843cbca2",
+        "adapted": false
+      },
+      {
+        "version": "20260915160000",
+        "file": "20260915160000_week_3_approved.sql",
+        "statement_count": 72,
+        "stored_join_md5": "1ad4572a94d8ee4e611c956aebc7c070",
+        "stored_join_sha256": "144ec126836967c199e4a7211f607153438bf151dcec380e9586a181604919bf",
+        "representation_exact": true,
+        "reviewed_source_sha256": "2f19406665d78e9243388b48c3c7c8c9179b2ab8d6d00b70c4d33a8bad9f6450",
+        "portable_execution_sha256": "2f19406665d78e9243388b48c3c7c8c9179b2ab8d6d00b70c4d33a8bad9f6450",
+        "adapted": false
+      },
+      {
+        "version": "20260915170000",
+        "file": "20260915170000_week_4_corrections.sql",
+        "statement_count": 72,
+        "stored_join_md5": "683a09f5418f9f3d32bd44e7b321784c",
+        "stored_join_sha256": "f434227654edc1638d7a9500de58a4a9f5d6fa5b164ea51300fa4c1737f1c7a5",
+        "representation_exact": true,
+        "reviewed_source_sha256": "2ac5bc8ad9074703ea4f3ea26fb70065e0b1a46648f30adb2effe3ce958b9c6c",
+        "portable_execution_sha256": "2ac5bc8ad9074703ea4f3ea26fb70065e0b1a46648f30adb2effe3ce958b9c6c",
+        "adapted": false
+      },
+      {
+        "version": "20260915180000",
+        "file": "20260915180000_lisa_visual_and_approved_debt.sql",
+        "statement_count": 72,
+        "stored_join_md5": "2cc8481e0e710e9c7643d6af6a48cf68",
+        "stored_join_sha256": "fff5120a60caa5396b842f589c109b8a7dcca6d1403bac48b792bc310f3f8663",
+        "representation_exact": true,
+        "reviewed_source_sha256": "50e3b0568ae100a9aa15c570919dbe7317bfd3577703164c9ed4a7903bd41732",
+        "portable_execution_sha256": "50e3b0568ae100a9aa15c570919dbe7317bfd3577703164c9ed4a7903bd41732",
+        "adapted": false
+      },
+      {
+        "version": "20260915190000",
+        "file": "20260915190000_media_fingerprint_and_weeks_1_4.sql",
+        "statement_count": 72,
+        "stored_join_md5": "ca89124a2f1b9ee0d79d8465d4b890e5",
+        "stored_join_sha256": "4ed79511a327b12d6d1755a908e524e5604fe433d79fab5989bc50e8260392e0",
+        "representation_exact": true,
+        "reviewed_source_sha256": "f3b82d06ebf76cee189648927ae33c27bb50106ba192f476a8f08e04c26c1fb1",
+        "portable_execution_sha256": "f3b82d06ebf76cee189648927ae33c27bb50106ba192f476a8f08e04c26c1fb1",
+        "adapted": false
+      },
+      {
+        "version": "20260915200000",
+        "file": "20260915200000_week_5_corrections.sql",
+        "statement_count": 72,
+        "stored_join_md5": "bb2d53e134e951469592e59ef1e709c7",
+        "stored_join_sha256": "6bf17c0bf45f4cf5a8b7018d1adbb82bc9a0033211a68500884bd953287fc938",
+        "representation_exact": true,
+        "reviewed_source_sha256": "05a72df338c627cbbe057b59da3be181de9fb1957fb7ae0f30c25f8c337bd442",
+        "portable_execution_sha256": "05a72df338c627cbbe057b59da3be181de9fb1957fb7ae0f30c25f8c337bd442",
+        "adapted": false
+      },
+      {
+        "version": "20260915210000",
+        "file": "20260915210000_week_5_approved.sql",
+        "statement_count": 72,
+        "stored_join_md5": "8335d7c02e8fb0060491e660c4fec1d8",
+        "stored_join_sha256": "ef1cd7b85c8917220c3c8fcc58bf2b5c4e66e9d605718937ecb4526a1fb82baf",
+        "representation_exact": true,
+        "reviewed_source_sha256": "bd3c73b3e83630def7eeea7dd4834bed82398b66dca5c07e3f79a5232a508efd",
+        "portable_execution_sha256": "bd3c73b3e83630def7eeea7dd4834bed82398b66dca5c07e3f79a5232a508efd",
+        "adapted": false
+      },
+      {
+        "version": "20260916183458",
+        "file": "20260916183458_week1_review_corrections_m3.sql",
+        "statement_count": 72,
+        "stored_join_md5": "98fc69203980562277d253e900f1c91c",
+        "stored_join_sha256": "7dfd88fccbf554e0ea4cf3cf40c6327fcd25e81b8c4f2f9b4873eccb251afdb7",
+        "representation_exact": true,
+        "reviewed_source_sha256": "b696a9e1770c52eed9a44a26ea96eae14add493b2c6c1672c98f2a5527d7720c",
+        "portable_execution_sha256": "b696a9e1770c52eed9a44a26ea96eae14add493b2c6c1672c98f2a5527d7720c",
+        "adapted": false
+      },
+      {
+        "version": "20260917132516",
+        "file": "20260917132516_week1_safety_and_review_scope.sql",
+        "statement_count": 72,
+        "stored_join_md5": "bb350cd5e54e2a07d4ab9fd256b40815",
+        "stored_join_sha256": "59be92fe02aae375fdb475f89719c2e76b508d98712efa8a8645e4fd2ef0049c",
+        "representation_exact": true,
+        "reviewed_source_sha256": "f5263fb3e18e0c8d8d0328a4d9c54aa2641527d7820f44b67ba3eb9ccbfa82df",
+        "portable_execution_sha256": "f5263fb3e18e0c8d8d0328a4d9c54aa2641527d7820f44b67ba3eb9ccbfa82df",
+        "adapted": false
+      },
+      {
+        "version": "20260917185354",
+        "file": "20260917185354_approve_maternelle_3_week_1.sql",
+        "statement_count": 72,
+        "stored_join_md5": "b0352bc0a59b9337e6a05448cafa74b3",
+        "stored_join_sha256": "739724d8b93198f0717287ea638f55df42344d744aa23314d5af0ea2e5815102",
+        "representation_exact": true,
+        "reviewed_source_sha256": "8b7846833af7e5d85cf0cdfe3e4e90f843cb35af5ca98a7cf82a24b84edfd39f",
+        "portable_execution_sha256": "8b7846833af7e5d85cf0cdfe3e4e90f843cb35af5ca98a7cf82a24b84edfd39f",
+        "adapted": false
+      },
+      {
+        "version": "20260917205257",
+        "file": "20260917205257_week2_review_corrections.sql",
+        "statement_count": 72,
+        "stored_join_md5": "c4906fb40fe2d8434b716e657ae74b8f",
+        "stored_join_sha256": "dc6d43800953a833d2c97b84ac720bc8143cfb54fcb9a3dec38522c2c307da89",
+        "representation_exact": true,
+        "reviewed_source_sha256": "a2c68e3f6425526ca410b8d1a029ea5286abf899b55929002c2fe5a91734a190",
+        "portable_execution_sha256": "a2c68e3f6425526ca410b8d1a029ea5286abf899b55929002c2fe5a91734a190",
+        "adapted": false
+      },
+      {
+        "version": "20260918173226",
+        "file": "20260918173226_week2_second_review_and_text_digest.sql",
+        "statement_count": 72,
+        "stored_join_md5": "62896d959a0b036a41b45f995aced214",
+        "stored_join_sha256": "5cf28f82ea92e30b0807517f902d5917dee25eea485595a232ed3f2273e1c0b6",
+        "representation_exact": true,
+        "reviewed_source_sha256": "a40239298d97c9438e58db638a07f67816d4c63720d851ca9b289da17fd260d7",
+        "portable_execution_sha256": "a40239298d97c9438e58db638a07f67816d4c63720d851ca9b289da17fd260d7",
+        "adapted": false
+      },
+      {
+        "version": "20260919114821",
+        "file": "20260919114821_week2_final_corrections.sql",
+        "statement_count": 72,
+        "stored_join_md5": "08c5dfe8d47ce22c18b0f9b52d84ad35",
+        "stored_join_sha256": "0afa498fa34b7993124b82a7767ee28e35c0de061c619fa251d3d2b98242c423",
+        "representation_exact": true,
+        "reviewed_source_sha256": "b3eb5845f90c33dacb6070b67ff72a77d5979115f662e3afb7e7c81f32f77f69",
+        "portable_execution_sha256": "b3eb5845f90c33dacb6070b67ff72a77d5979115f662e3afb7e7c81f32f77f69",
+        "adapted": false
+      },
+      {
+        "version": "20260919122247",
+        "file": "20260919122247_approve_maternelle_3_week_2.sql",
+        "statement_count": 72,
+        "stored_join_md5": "9b9ff2d6d7c924f418b079d36002bb8f",
+        "stored_join_sha256": "03bce192ec0e06dea23819071f2b694e7c0f412b1003a7a4eb43961002870882",
+        "representation_exact": true,
+        "reviewed_source_sha256": "13b6f6556b7e1f043437bdaaa96309fdaee91dd912f1b9132dfca9f61554cccf",
+        "portable_execution_sha256": "13b6f6556b7e1f043437bdaaa96309fdaee91dd912f1b9132dfca9f61554cccf",
+        "adapted": false
+      },
+      {
+        "version": "20260919130752",
+        "file": "20260919130752_week3_review_corrections.sql",
+        "statement_count": 72,
+        "stored_join_md5": "359a9f599d9493a180c0ba7f364b453c",
+        "stored_join_sha256": "96c0783e36fbcf184e2dd09174d7a12d928078a220d4e28d773e97aed19a183d",
+        "representation_exact": true,
+        "reviewed_source_sha256": "fa5c031db75ad0f056175a7b115f6ac4a32746f5ad19c266a0b457c551090043",
+        "portable_execution_sha256": "fa5c031db75ad0f056175a7b115f6ac4a32746f5ad19c266a0b457c551090043",
+        "adapted": false
+      },
+      {
+        "version": "20260919174810",
+        "file": "20260919174810_week3_second_review.sql",
+        "statement_count": 72,
+        "stored_join_md5": "686f88789e23d546873233cff2a632d8",
+        "stored_join_sha256": "f77770150c52f8b4710c9fc7828b688202aec0a35871252037d9964961dcb1f4",
+        "representation_exact": true,
+        "reviewed_source_sha256": "a3c5530dba9d879eb119da905a5e01b13478f8ad60fe248a2fa9482525e6fdda",
+        "portable_execution_sha256": "a3c5530dba9d879eb119da905a5e01b13478f8ad60fe248a2fa9482525e6fdda",
+        "adapted": false
+      },
+      {
+        "version": "20260919182510",
+        "file": "20260919182510_approve_maternelle_3_week_3.sql",
+        "statement_count": 72,
+        "stored_join_md5": "a72a5aef9a955c52f85a1d3ecd035fbd",
+        "stored_join_sha256": "5e42ec35b348570052e8511dc26102d023f8cd03f3abecad3dfb8b586fd574e5",
+        "representation_exact": true,
+        "reviewed_source_sha256": "ed7013e46663aa75c99690c19b602d1ef815fcaecc2da5cb09843ea039dd5656",
+        "portable_execution_sha256": "ed7013e46663aa75c99690c19b602d1ef815fcaecc2da5cb09843ea039dd5656",
+        "adapted": false
+      },
+      {
+        "version": "20260919194738",
+        "file": "20260919194738_week4_review_corrections.sql",
+        "statement_count": 72,
+        "stored_join_md5": "c3602f32a307e034875c355caced7226",
+        "stored_join_sha256": "1e4f0d971aea65efc41e81aeb058d1b0154a1269b6b5b3e68fd61d4953340f32",
+        "representation_exact": true,
+        "reviewed_source_sha256": "ddaa31ad8861702047d09e49d99e0f32106dc83b4ef23ba1a2e8d288b14afc2e",
+        "portable_execution_sha256": "ddaa31ad8861702047d09e49d99e0f32106dc83b4ef23ba1a2e8d288b14afc2e",
+        "adapted": false
+      },
+      {
+        "version": "20260920083109",
+        "file": "20260920083109_week4_second_review_corrections.sql",
+        "statement_count": 72,
+        "stored_join_md5": "03c87024e70525ef2ff064e51f0f8c16",
+        "stored_join_sha256": "caebc1429fdeb032332b54ce9f42b304169913d89a2b20ebfed431a1d283c6c3",
+        "representation_exact": true,
+        "reviewed_source_sha256": "6be344954d1ba0ec3d8f8b7d767b2ec323fbf498d7ca2223d38a26b5d5031fbd",
+        "portable_execution_sha256": "6be344954d1ba0ec3d8f8b7d767b2ec323fbf498d7ca2223d38a26b5d5031fbd",
+        "adapted": false
+      },
+      {
+        "version": "20260920134804",
+        "file": "20260920134804_approve_maternelle_3_week_4.sql",
+        "statement_count": 72,
+        "stored_join_md5": "ce0cfc9b8f3e41cc63d4b92068c41a26",
+        "stored_join_sha256": "780a9617c8df3ece374523ced51903716a7009484eba947d60d7a739c9cb0994",
+        "representation_exact": true,
+        "reviewed_source_sha256": "d6176684dca244fe700bd99697aa4a52ad1427a47b07946317a1cdf3b6798f8f",
+        "portable_execution_sha256": "d6176684dca244fe700bd99697aa4a52ad1427a47b07946317a1cdf3b6798f8f",
+        "adapted": false
+      },
+      {
+        "version": "20260920200532",
+        "file": "20260920200532_week5_review_corrections.sql",
+        "statement_count": 72,
+        "stored_join_md5": "dd9787f60cde7ff3540734fbb8e1f49c",
+        "stored_join_sha256": "59aeb22e8699d4f024223732a4e9eff8b73755d0b3fc3459d3a1c31b099b5048",
+        "representation_exact": true,
+        "reviewed_source_sha256": "fd527b8d2575c47c82b723e5d6d92c9621363e2a422bc453b4268d4f89416549",
+        "portable_execution_sha256": "fd527b8d2575c47c82b723e5d6d92c9621363e2a422bc453b4268d4f89416549",
+        "adapted": false
+      },
+      {
+        "version": "20260920204404",
+        "file": "20260920204404_approve_maternelle_3_week_5.sql",
+        "statement_count": 72,
+        "stored_join_md5": "9ed26d659740d4719029cba2383ef63d",
+        "stored_join_sha256": "8f317b0fa1041f697b614dd2259e174235f285703f4dcf25d0023688e3f4cc1d",
+        "representation_exact": true,
+        "reviewed_source_sha256": "a561ed70f15495eebad9f68fe2e21350907979736fe0bc0dcb77e88a4eebeed5",
+        "portable_execution_sha256": "a561ed70f15495eebad9f68fe2e21350907979736fe0bc0dcb77e88a4eebeed5",
+        "adapted": false
+      },
+      {
+        "version": "20260923192024",
+        "file": "20260923192024_september_visual_upgrade.sql",
+        "statement_count": 72,
+        "stored_join_md5": "b56543844134d96df0e03d8f6798c6ce",
+        "stored_join_sha256": "5be43a8f87d0ec75eaea98dafe1f8e694f81397893913215849676c96c5c0360",
+        "representation_exact": true,
+        "reviewed_source_sha256": "7aa9a63e8a36da13da10fb1f3104bca8c0a003a815365adb94eb060f956b012d",
+        "portable_execution_sha256": "7aa9a63e8a36da13da10fb1f3104bca8c0a003a815365adb94eb060f956b012d",
+        "adapted": false
+      },
+      {
+        "version": "20260926173653",
+        "file": "20260926173653_september_reconfirmation.sql",
+        "statement_count": 72,
+        "stored_join_md5": "ee6324dc6bc5bda7ef583d29a23d62d9",
+        "stored_join_sha256": "66002f8a8773d8fbfa9a904d25ac78099ddca73e8c06e68d72fea5b6eb716c6b",
+        "representation_exact": true,
+        "reviewed_source_sha256": "0d4f9c66c522939940db11ed9c74b0dab2ddf042136ed52995d1df1e2f3c5514",
+        "portable_execution_sha256": "0d4f9c66c522939940db11ed9c74b0dab2ddf042136ed52995d1df1e2f3c5514",
+        "adapted": false
+      },
+      {
+        "version": "20261001192741",
+        "file": "20261001192741_media_asset_webp_paths.sql",
+        "statement_count": 2,
+        "stored_join_md5": "b18477f199ae1913f74fe70a329c714a",
+        "stored_join_sha256": "1f96940291c0fe67425d67de67cac88549a61a5fd4fa335a2c0efff5ffae6487",
+        "representation_exact": true,
+        "reviewed_source_sha256": "1fa87e57eab9e762192594bddf47274e7c659cca130224de4e1ae7ad99edec1b",
+        "portable_execution_sha256": "1fa87e57eab9e762192594bddf47274e7c659cca130224de4e1ae7ad99edec1b",
+        "adapted": false
+      },
+      {
+        "version": "20261001192742",
+        "file": "20261001192742_final_september_rich_media_reference.sql",
+        "statement_count": 72,
+        "stored_join_md5": "2888dd2d896a56684e8b6b952a026685",
+        "stored_join_sha256": "4db799acc43c0090b28df1a7188d07b3df24a483f26eb0ff086e8c8ee1b14607",
+        "representation_exact": true,
+        "reviewed_source_sha256": "f270514f1c2318425f3b9f983dacbb0c4b3fbb80a38b2c5802417058dc6c730b",
+        "portable_execution_sha256": "f270514f1c2318425f3b9f983dacbb0c4b3fbb80a38b2c5802417058dc6c730b",
+        "adapted": false
+      },
+      {
+        "version": "20261003195954",
+        "file": "20261003195954_october_maternelle_3_approved.sql",
+        "statement_count": 72,
+        "stored_join_md5": "86d48c8acf2e31e2d2ea90e736559da7",
+        "stored_join_sha256": "fa6d93b038b540efd1649d9e87c97a6c7251addff01086cb5abaf4d067c75c1e",
+        "representation_exact": true,
+        "reviewed_source_sha256": "4c30ab7eb5f9812b341c0bf93a55863bdfaa63e1464cd668e70e26eb8a40f1d9",
+        "portable_execution_sha256": "4c30ab7eb5f9812b341c0bf93a55863bdfaa63e1464cd668e70e26eb8a40f1d9",
+        "adapted": false
+      }
+    ]
+  }
+}
