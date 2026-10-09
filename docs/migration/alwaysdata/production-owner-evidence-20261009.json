@@ -1,0 +1,106 @@
+{
+  "recorded_at": "2026-10-09T18:04:55.277049+00:00",
+  "classification": "OWNER UI VERIFIED",
+  "provenance": {
+    "source": "Owner-provided manual administration-interface inspection, supplied in this task",
+    "source_sha256": "4a2551e0841ae72e854d119f911403aa9e499f7af56634dfd9610c7778059cee",
+    "inspection_time": "NOT SUPPLIED",
+    "independent_provider_api_or_sql_reverification": false
+  },
+  "production_status": "BLOCKED / NOT STARTED",
+  "alwaysdata_site": {
+    "account": "congofoot",
+    "site_id": 1083500,
+    "hostname": "tekaedu.tootiye.com",
+    "type": "nodejs",
+    "nodejs_version": "22",
+    "command": "/usr/alwaysdata/nodejs/22/bin/node current/runtime.mjs",
+    "working_directory": "/home/congofoot/www/tekaedu-prod",
+    "site_environment_field": "EMPTY",
+    "global_or_inherited_environment": "NOT PROVED",
+    "hot_restart": "UNSUPPORTED",
+    "annotation": "Teka Edu - Production"
+  },
+  "hosting_subscription": {
+    "product": "Alwaysdata Public Cloud",
+    "plan_label": "20 GB",
+    "annual_price": {
+      "amount": 132,
+      "currency": "EUR",
+      "tax": "EXCLUDED"
+    },
+    "renewal_date": "2027-03-03",
+    "usage_headroom_and_enforced_limits": "NOT PROVED"
+  },
+  "postgresql_provider_configuration": {
+    "host": "postgresql-congofoot.alwaysdata.net",
+    "major_version": 16,
+    "database": "congofoot_teka_edu_prod",
+    "existing_privileged_login": "congofoot_user_teka_edu_prod",
+    "permission_label": "ALL RIGHTS / PERMISSIONS (OWNER REPORT)",
+    "actual_sql_identity_patch_version_acl_rls_contents_tls_isolation": "NOT PROVED",
+    "audit_login_availability": "NOT PROVED"
+  },
+  "cloudflare": {
+    "zone": "tootiye.com",
+    "plan": "Free",
+    "records": [
+      {
+        "name": "staging-tekaedu.tootiye.com",
+        "type": "CNAME",
+        "target": "congofoot.alwaysdata.net",
+        "proxied": true,
+        "ttl": "Auto"
+      },
+      {
+        "name": "tekaedu.tootiye.com",
+        "type": "CNAME",
+        "target": "congofoot.alwaysdata.net",
+        "proxied": true,
+        "ttl": "Auto"
+      }
+    ],
+    "ssl_tls_mode": "Full (strict)",
+    "production_hostname_already_routes_to_alwaysdata": true,
+    "future_dns_record_change_required": "NOT ASSUMED",
+    "cache_waf_redirect_origin_routing_certificate_renewal_fallback": "NOT PROVED"
+  },
+  "backup_ui": {
+    "supabase_prod_plan": "Free",
+    "scheduled_backups_included": false,
+    "accessible_scheduled_backup_shown": false,
+    "alwaysdata_restore_points_include": [
+      "2026-10-04",
+      "2026-10-05",
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09"
+    ],
+    "date_list_is_complete_or_retention_entitlement": "NOT PROVED",
+    "full_supabase_source_recovery_package": "NOT PROVED",
+    "independent_off_site_backup": "NOT PROVED",
+    "alwaysdata_prod_database_backup_contents": "NOT PROVED",
+    "isolated_restoration": "NOT PROVED",
+    "measured_rpo_rto": "NOT PROVED"
+  },
+  "query_proposals": {
+    "identity.sql": {
+      "sha256": "5d8b3c25cca02b98030c10d0822347110703ff305d88edb0aaafab871ed67926",
+      "status": "PROPOSAL ONLY / NOT EXECUTED"
+    },
+    "catalog.sql": {
+      "sha256": "caed00e50f13468941fc9b8672ca82be546a374e8f43b6584df26db68afbe9dd",
+      "status": "PROPOSAL ONLY / NOT EXECUTED"
+    }
+  },
+  "github_guard_at": "2026-10-09T18:00:35.965379+00:00",
+  "github_switches": {
+    "ALWAYSDATA_STAGING_DEPLOY_ENABLED": "false",
+    "STAGING_DEPLOY_ENABLED": "false",
+    "PRODUCTION_DEPLOY_ENABLED": "false"
+  },
+  "provider_mutations": 0,
+  "prod_sql_connections": 0,
+  "credentials_or_permissions_created_or_modified": 0
+}
