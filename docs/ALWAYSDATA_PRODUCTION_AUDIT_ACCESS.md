@@ -1,4 +1,4 @@
-# P1-A — proposed Alwaysdata PROD read-only audit access
+# P1-A — existing Alwaysdata PROD read-only audit login
 
 **Design only, 2026-10-09. Production readiness remains BLOCKED.** No PROD connection,
 account/grant/secret creation, provider setting change, backup, service action or deployment
@@ -22,15 +22,15 @@ Alwaysdata restore-point dates are **OWNER UI VERIFIED**, not live API/SQL obser
 Global/inherited environment, capacity, recoverable contents and live SQL state remain NOT PROVED.
 The PROD hostname already points to Alwaysdata; no future DNS record change is assumed.
 
-| Target                           | Evidence status                                                                                                                |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Provider account                 | `congofoot` — OWNER UI VERIFIED provider association; no live API/SQL observation here                                         |
-| PostgreSQL host                  | `postgresql-congofoot.alwaysdata.net` — OWNER UI VERIFIED; direct5432 is documented provider mechanism                         |
-| Database                         | `congofoot_teka_edu_prod` — OWNER UI VERIFIED configuration; authenticated SQL identity/state NOT PROVED                       |
-| Existing privileged login        | `congofoot_user_teka_edu_prod` — OWNER UI VERIFIED association/all-rights label; actual grants/attributes/isolation NOT PROVED |
-| Candidate audit login, if needed | `congofoot_user_teka_edu_prod_audit` — PROPOSAL ONLY; not created or authenticated                                             |
-| Server version                   | Major16 OWNER UI VERIFIED; exact target SQL patch version unknown (DEV16.15 is not proof)                                      |
-| Staging acceptance               | Historical accepted C `813c56197f0d0fb353b39238b65c27dd08e6e5bc`; not re-probed here                                           |
+| Target                    | Evidence status                                                                                                                                                                      |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Provider account          | `congofoot` — OWNER UI VERIFIED provider association; no live API/SQL observation here                                                                                               |
+| PostgreSQL host           | `postgresql-congofoot.alwaysdata.net` — OWNER UI VERIFIED; direct5432 is documented provider mechanism                                                                               |
+| Database                  | `congofoot_teka_edu_prod` — OWNER UI VERIFIED configuration; authenticated SQL identity/state NOT PROVED                                                                             |
+| Existing privileged login | `congofoot_user_teka_edu_prod` — OWNER UI VERIFIED association/all-rights label; actual grants/attributes/isolation NOT PROVED                                                       |
+| Existing audit login      | `congofoot_readonly_user_teka_edu_prod` — account creation OWNER CONFIRMED; PROD-only association/read-only preset OWNER UI VERIFIED; authentication and effective rights NOT PROVED |
+| Server version            | Major16 OWNER UI VERIFIED; exact target SQL patch version unknown (DEV16.15 is not proof)                                                                                            |
+| Staging acceptance        | Historical accepted C `813c56197f0d0fb353b39238b65c27dd08e6e5bc`; not re-probed here                                                                                                 |
 
 GitHub read at 2026-10-09T18:00:35Z: develop remains exact C; main is
 `1578847d02d025286af92af48c691bbfafd84c10`. PR116 OPEN, non-draft, exact
@@ -45,18 +45,24 @@ and no active runs of the three deployment workflows. No GitHub setting was writ
 
 ## Provider-supported mechanism and least-privilege decision
 
-First prefer an **existing owner-approved, production-only read-only database login** whose
-effective permissions satisfy the contract below. No suitable mechanism was documented in
-P0; existence is still unknown. The owner now reports the existing PROD login has all rights,
-which excludes it from the normal least-privilege audit recommendation. Do not reuse that login, account-wide `congofoot`
-login, DEV credentials, a staging GitHub secret or an earlier chat password.
+Adopt the owner's existing dedicated audit login **`congofoot_readonly_user_teka_edu_prod`**.
+The owner confirms account creation and dashboard association only with `congofoot_teka_edu_prod`,
+using the provider read-only preset. These are OWNER CONFIRMED / OWNER UI VERIFIED, not SQL
+authentication or effective-privilege proof. No new account is proposed. The fixed allowlist is
+host `postgresql-congofoot.alwaysdata.net`, port `5432`, database `congofoot_teka_edu_prod`,
+login `congofoot_readonly_user_teka_edu_prod`; both SQL guards use this exact literal.
+There is no dynamic login selector or privileged-login fallback. Do not reuse
+`congofoot_user_teka_edu_prod`, account-wide `congofoot`, DEV credentials, GitHub staging secrets
+or earlier chat passwords. The owner created the account; Codex created or modified no provider resource.
+See [the new audit-user attestation](migration/alwaysdata/production-audit-user-evidence-20261009.json);
+the earlier owner-evidence JSON remains an immutable dated observation.
 
 Alwaysdata offers per-database read-only user permissions. Its documented preset grants CONNECT,
 schema USAGE, SELECT on tables/sequences and EXECUTE on functions, including default privileges
 for future objects. It also warns that saving database-user permissions in its UI/API resets
 custom SQL privileges. Thus **the preset is a candidate, not proof of the exact minimal contract**.
-Owner must confirm the account's per-database selection and whether narrower custom rights can
-be applied and preserved without a subsequent provider permission save. Do not save the form now.
+PROD-only selection/read-only preset are now owner-confirmed; stricter custom-rights feasibility
+and persistence remain NOT PROVED. Do not save the form now.
 Shared PostgreSQL catalogs can expose other tenants' database/role names; queries here restrict
 named database output to congofoot and roles to the three target identities/reachable memberships.
 Other database CONNECT rights are counted without naming other tenants. A nonzero count needs
@@ -77,17 +83,11 @@ provider authentication/allowlist evidence; ACLs alone cannot then prove target-
 | Ownership/defaults      | Own no database/schema/table/function/other application object; no grant options; no future-object default grants. No `pg_read_all_data`, `pg_write_all_data`, `pg_monitor` or file/server/program roles |
 | Writes                  | No effective table or column INSERT/UPDATE/DELETE/TRUNCATE/REFERENCES/TRIGGER; no schema/database/TEMP create or owner/membership-derived DDL capabilities                                               |
 
-Illustrative **owner-only permission diff**, not an executable setup script and not authorization:
+No GRANT/REVOKE or account-creation script is supplied for the existing user. The contract is
+a comparison gate. Any discovered excess requires a separately reviewed owner-approved permission
+diff; do not save the provider form, alter grants or broaden permissions to make the audit pass.
 
-```sql
-GRANT CONNECT ON DATABASE congofoot_teka_edu_prod TO congofoot_user_teka_edu_prod_audit;
--- Only if this existing schema/table is independently inspected and approved:
-GRANT USAGE ON SCHEMA teka_migrations TO congofoot_user_teka_edu_prod_audit;
-GRANT SELECT ON TABLE teka_migrations.history TO congofoot_user_teka_edu_prod_audit;
--- Any canonical-table SELECT requires its own explicit list; no ALL TABLES/default grants.
-```
-
-These grants alone cannot remove inherited/PUBLIC/owner rights. PostgreSQL privileges are
+The provider preset cannot establish absence of inherited/PUBLIC/owner rights. PostgreSQL privileges are
 additive: no per-user DENY overrides PUBLIC CONNECT, TEMP or routine EXECUTE. NOINHERIT also
 does not prevent SET ROLE. Do not revoke PUBLIC privileges account-wide or change DEV ACLs to
 make this pass: that affects other users and needs a separate reviewed impact/owner/provider
@@ -138,23 +138,63 @@ read policy, transfer ownership, grant BYPASSRLS or join an owner role to make c
   Neither is part of this minimal audit-login approval. Owner-role results must name their actual
   identity and cannot be mislabeled audit-role results. FORCE RLS can constrain owners too.
 
+## P1-A status and digest retirement
+
+| Check                                          | Current status                                 |
+| ---------------------------------------------- | ---------------------------------------------- |
+| Audit account creation                         | OWNER CONFIRMED: completed by owner, not Codex |
+| PROD-only database association                 | OWNER UI VERIFIED                              |
+| Provider read-only preset                      | OWNER UI VERIFIED                              |
+| Authenticated SQL login / server patch version | NOT PROVED                                     |
+| Effective privileges / strict contract         | NOT PROVED                                     |
+| Client TLS verify-full / actual session TLS    | NOT PROVED                                     |
+| DEV/other database isolation                   | NOT PROVED                                     |
+| Target schema/data/history state               | NOT PROVED                                     |
+| Approved secure credential source / execution  | NOT APPROVED / NOT RUN                         |
+| P1-A SQL gate / production readiness           | NOT PASSED / BLOCKED                           |
+
+Current SQL proposals (not executable approvals):
+
+```text
+identity.sql SHA256: 4201f3612525a634db1b5c39a28dfc6d0c44a10f087f90dfab97e91c15e62e63
+catalog.sql SHA256:  e5f576c1c6f4e88a0bea8a6fb58db7f3648c416a75e333affbe632efe4ff1943
+```
+
+The proposed name `congofoot_user_teka_edu_prod_audit` and its old digests are **SUPERSEDED;
+NOT VALID FOR EXECUTION**. They remain in dated archives and the earlier evidence JSON only:
+
+```text
+superseded identity.sql: 5d8b3c25cca02b98030c10d0822347110703ff305d88edb0aaafab871ed67926
+superseded catalog.sql:  caed00e50f13468941fc9b8672ca82be546a374e8f43b6584df26db68afbe9dd
+```
+
+Neither old nor current hashes grant execution permission. Offline
+[validator/regression fixtures](migration/alwaysdata/p1a/validate_offline.py) use PostgreSQL16
+grammar and enforce fixed identities, unchanged session guards, catalog-only relations and
+an explicit safe built-in allowlist. No database driver, credentials or network operation is used.
+Both queries and all56 unsafe/guard/diagnostic regressions pass offline validation. Run
+`python3 -B docs/migration/alwaysdata/p1a/validate_offline.py` using the reviewed pglast6.16
+environment. Local validation requires that already available environment; do not install project
+dependencies or infer hosted permission/TLS proof from syntax/AST success.
+
 ## SELECT-only verification sequence (not run)
 
 Separate connection authorization must name the exact host/port/DB/audit login, protected
 credential-source **identifier**, client/TLS settings, approved SQL file digests and time window.
 No secrets in chat. SQL itself cannot prove the provider account association or CA/hostname checks.
 
-1. Owner confirms the live target association and provider permission mechanism without saving.
+1. Reconfirm the owner-attested fixed audit user/target association and provider mechanism without saving.
    Recheck all false GitHub switches; no conflicting deployment job. Validate protected connection
-   config against the exact allowlist **before opening a socket**; reject pooler5433, DEV/fallback
+   config against the exact allowlist **before opening a socket**; enforce verify-full,
+   trusted CA and hostname verification; reject pooler5433, DEV/fallback
    DB, account-wide/deployment login, sslmode downgrade, ambient overrides or missing trusted CA.
-2. Only after explicit approval, connect once to direct5432 and execute
+2. Only after explicit approval, open the first bounded connection to direct5432 and execute
    [identity.sql](migration/alwaysdata/p1a/identity.sql) alone. Require exactly one result and
    `server_side_identity_guard=true`; record actual16.x patch version and compare provider evidence.
    Wrong version/name/role/port/settings, timeout or missing TLS stops before catalog/data reads.
-3. Establish client libpq `sslmode=verify-full` and explicit trusted `sslrootcert` with normal
-   hostname verification. Capture non-secret config fingerprint, client version and successful
-   verified connection evidence. `pg_stat_ssl` confirms encryption/cipher, **not verify-full**.
+3. Record client libpq `sslmode=verify-full`, explicit trusted `sslrootcert` and normal
+   hostname verification already enforced before step2 opens a connection. Capture the non-secret
+   config fingerprint, client version and successful verified connection evidence. `pg_stat_ssl` confirms encryption/cipher, **not verify-full**.
    Never use `require`, `verify-ca`, `-k`, certificate bypass or a hostname-less hostaddr override.
    [libpq TLS verification](https://www.postgresql.org/docs/16/libpq-ssl.html).
 4. Execute [catalog.sql](migration/alwaysdata/p1a/catalog.sql) separately after the identity/TLS
@@ -162,9 +202,19 @@ No secrets in chat. SQL itself cannot prove the provider account association or 
    ACLs, schemas, relations/columns/types/constraints/indexes/triggers/rules, RLS/policies,
    extension/function owners/permissions (including extension routines in pg_catalog), default
    ACLs, audit ownership, history candidates, foreign/event/large-object presence and inheritance.
+   Sequence SELECT and grant options, table/column SELECT grant options, schema USAGE grant
+   options, function EXECUTE grant options and reachable-role REPLICATION are now explicit.
    Raw function bodies/default/policy expressions and arbitrary setting values are not exported;
    MD5 fingerprints are diagnostic, not SHA256 migration provenance or whole-row equality proof.
-5. Inspect the full visible object inventory against an owner-approved empty-target/provider
+5. Compare effective rights against the strict contract, not just the dashboard read-only label.
+   Retain actual audit/deployment/DEV CONNECT checks; PUBLIC and membership rights are additive.
+   Database CREATE/TEMP, schema CREATE, table/column writes, sequence USAGE/UPDATE, ownership,
+   grant options or elevated/reachable role rights must be absent. Provider preset sequence SELECT,
+   broad application/extension EXECUTE or future default grants exceed this metadata-only target;
+   record exact discrepancies and STOP for owner review. Reviewed built-in catalog EXECUTE is
+   necessary and excluded from the prohibition on additional application-function EXECUTE.
+   Do not automatically revoke or alter anything. Inspect the full visible object inventory
+   against an owner-approved empty-target/provider
    baseline. Target baseline has not yet been observed. Nonempty/unexplained objects, unsafe
    privileges, unknown memberships, active RLS or incomplete visibility STOP acceptance.
    Catalog counts give existence; the plan deliberately has no automatic data scan.
@@ -211,31 +261,56 @@ must use one approved snapshot or record drift limitations; no concurrent-mutati
 
 ## Concise owner procedure and authorization boundaries
 
-**Now: inspection only.** In account congofoot, Databases > PostgreSQL, inspect (do not save)
-the intended database, configured version, deployment login association and existing user list.
-Return names, role-purpose labels, per-database permission states and mechanism/source-location
-identifiers only. Check whether an existing production-only read-only login is already available
-and whether it has any DEV/other database association. Confirm the planned direct host/port.
-If custom rights/strict isolation cannot be confirmed, obtain provider clarification; no support
-message is sent automatically. Do not reveal password/token/key values or full environment screenshots.
+**Now: preparation only.** Account creation is already OWNER CONFIRMED and the dashboard
+association/read-only preset are OWNER UI VERIFIED. No account setup is requested. Reconfirm
+non-secret role/target/preset evidence without saving only if it changes. Effective rights and
+provider-specific constraints remain a later SQL/provider review gate; no DEV connection.
 
-**Later authorization A — access setup only, if absent.** Owner explicitly approves a named
-dedicated DB login and exact grant/ownership/membership/default-ACL changes, target-only provider
-selection, limits/expiry and revocation plan. Confirm provider permits custom minimal rights
-and whether UI creation inevitably adds extra EXECUTE/default grants. Inspect impacted existing
-PUBLIC/provider ACLs before authorizing any remedy; no changes to DEV/unrelated DBs implied.
-The owner or separately authorized agent may then create only the approved database user/grants.
-No new SSH/API identity, GitHub secret, production Environment change or hosting save is bundled.
+**Later authorization A — protected local storage only.** Prefer the simplest existing local
+libpq mechanism: owner-controlled service/password files outside the repository and all web roots,
+proposed directory `/Users/Apple/.config/teka-edu-prod-audit` (not created). Directory0700;
+`pg_service.conf` and `pgpass`0600; private regular files owned by the Mac user, no symlinks.
+The password file must contain just the exact host:5432:DB:audit-login entry, no wildcard:
 
-**Later authorization B — protected storage and execution.** Owner separately approves any
-credential-store write and read-only target connection. Prefer existing approved macOS Keychain
-or an owner-controlled local directory **outside the repository and every web root** (proposed
-`/Users/Apple/.config/teka-edu-prod-audit`, not created). If file-based, directory0700 and
-service/password files0600, exact hostname:5432:database:audit-login password-file entry,
-no wildcards. Enter credentials through secure owner tooling; never shell args, command history,
-chat, checked-in `.env`, logs or evidence. Keychain injection must not expose values either.
-Do not place the credential on the shared congofoot host. No GitHub secret retrieval/export.
-[libpq password-file permissions](https://www.postgresql.org/docs/16/libpq-pgpass.html).
+```text
+postgresql-congofoot.alwaysdata.net:5432:congofoot_teka_edu_prod:congofoot_readonly_user_teka_edu_prod:<OWNER_ENTERS_PASSWORD_SECURELY>
+```
+
+This is a documentation template, not a created credential file. Escape literal `:` and `\`
+in the password according to libpq rules; never paste the password in chat, shell arguments/history,
+logs, code, reports or the repository. Store through approved owner secure tooling after separate
+storage authorization; Codex neither retrieves nor copies it here. No GitHub secret creation/export,
+staging credential reuse, `.env` commit or shared congofoot host storage. An existing approved
+macOS Keychain mechanism may be used only if it can supply libpq without exposing the value;
+do not add a new credential-retrieval workflow just for this audit.
+[libpq password-file format and permissions](https://www.postgresql.org/docs/16/libpq-pgpass.html).
+
+Exact **non-secret credential-source identifier template** for later approval:
+
+```text
+credential_source_id=local-libpq:teka-prod-p1a-audit:v1
+service_file=/Users/Apple/.config/teka-edu-prod-audit/pg_service.conf
+service_name=teka-prod-audit
+password_file=/Users/Apple/.config/teka-edu-prod-audit/pgpass
+trusted_ca_path=<OWNER_APPROVED_ABSOLUTE_CA_BUNDLE_PATH>
+trusted_ca_sha256=<REVIEWED_CA_BUNDLE_SHA256>
+owner_uid=<APPROVED_MAC_UID>; directory_mode=0700; credential_file_modes=0600
+```
+
+All identifiers must resolve to actual approved protected files before execution; no password
+value belongs in the identifier. No credential source or CA has been approved or read in this task. The existing user needs
+no new provider setup; unknown effective rights are assessed without automatic changes.
+
+**Later authorization B — bounded SELECT-only execution.** Separate approval names that
+credential source, trusted CA/fingerprint, fixed host5432/DB/audit login, both current query hashes
+and a time window. For the simple psql procedure below, authorize at most two short connections:
+identity.sql first, then catalog.sql only after manual review of the identity/client TLS result.
+Each single SELECT runs in an implicit read-only transaction because the connection starts with
+`default_transaction_read_only=on`; both query guards require `transaction_read_only=on`.
+No additional BEGIN/SET/SET ROLE statement or data query is bundled. The second connection
+uses the same reviewed immutable service/CA/files; catalog.sql repeats all SQL session/identity
+guards. It is a separate catalog snapshot, not proof of one cross-query snapshot. Reapprove file,
+login, settings or digest changes; no automatic reconnection/retry.
 
 Non-secret **service configuration template**, for later owner setup only, no password field:
 
@@ -244,7 +319,7 @@ Non-secret **service configuration template**, for later owner setup only, no pa
 host=postgresql-congofoot.alwaysdata.net
 port=5432
 dbname=congofoot_teka_edu_prod
-user=congofoot_user_teka_edu_prod_audit
+user=congofoot_readonly_user_teka_edu_prod
 sslmode=verify-full
 sslrootcert=/OWNER_APPROVED_TRUSTED_CA_PATH
 connect_timeout=10
@@ -257,8 +332,13 @@ Only paths/service name may enter command arguments/environment: PGSERVICEFILE/P
 `PSQL_HISTORY=/dev/null`. No PGPASSWORD or password-bearing URL. Use libpq with a cleared,
 explicit allowlist of non-secret environment settings; no ambient PGHOST/PGUSER/PGOPTIONS,
 PGSERVICE overrides, PSQLRC, pager, shell tracing or raw stderr capture. Proposed invocation
-after approval: `psql -X --no-password -v ON_ERROR_STOP=1 -d 'service=teka-prod-audit' -f <identity.sql>`.
-Do not run the catalog file until the identity result and verified transport have been reviewed.
+after approval: `psql -X --no-password --pset=pager=off -v ON_ERROR_STOP=1 -d 'service=teka-prod-audit' -f <identity.sql>`.
+Do not run the catalog file until exactly one identity row, guard=true and successful client
+verify-full/CA/hostname evidence have been reviewed. After that gate, the second invocation differs
+only by `<catalog.sql>` and repeats the same cleared environment/TLS/file validation. Bound the
+client lifetime to30s per connection in addition to connect_timeout10s/statement15s/lock2s;
+kill only that local audit client on timeout and report NOT VERIFIED. Record UTC observation time,
+non-secret config/query fingerprints and sanitized failure class; no raw stderr/credential logs.
 The service/password files must be private, regular, owned by the intended Mac user; fail on
 symlinks, permissive modes or missing trusted CA. Sanitize errors (transport/TLS/auth/permission/
 RLS/timeout) without response bodies/credential values. Reapprove any changed login or query digest.
@@ -282,9 +362,8 @@ Revocation is separate from database recovery. An existing non-temporary login i
 
 Immediate design evidence: unchanged PR116/117 and green exact-head CI, false switches/no
 overrides/no active deploys, provider documentation, checked SELECT-only artifacts and preserved
-history. **No live target API/SQL fact is verified by this design.** The owner-confirmed configuration is now recorded separately as OWNER UI VERIFIED. Audit-login
-availability/custom permission support and all connection, credential-store, grant and data-visibility
-actions remain gated as above.
+history. **No live target API/SQL fact is verified by this design.** The owner-confirmed configuration is now recorded separately as OWNER UI VERIFIED. The owner-created audit login and PROD-only/read-only UI settings are known; authenticated/effective
+rights, custom-permission support, secure storage, SQL execution and data visibility remain gated above.
 
 P1-A metadata acceptance requires: independently confirmed account/host/DB/login association;
 approved least-privilege mechanism; server16.x and exact audit identity; client verify-full plus
@@ -297,7 +376,7 @@ Close only the database P0 facts actually proved; production readiness as a whol
 
 Expected scope: owner inspection15–30min; privilege/provider review30–60min if existing access
 fits; bounded approved metadata verification/report30–60min; provider clarification may add
-elapsed time. Estimates, not service commitments. One short direct connection; no infrastructure,
+elapsed time. Estimates, not service commitments. At most two short direct connections after explicit approval; no infrastructure,
 paid add-on or dedicated server proposed. Expected incremental spend **$0 if the current plan
 permits the needed user/scope**; Public Cloud20GB/EUR132 ex-tax yearly is OWNER UI VERIFIED,
 while actual usage/headroom and custom-permission support remain unverified. Stop for cost approval
@@ -312,19 +391,18 @@ approved rights immediately before any later connection. This task performs no p
 
 ## Review and exact resume point
 
-Separate branch `codex/production-p1a-access-plan`, based on accepted develop C. The owner's
-documentation reconciliation/publication request authorizes a focused reviewable PR, not a merge.
-Additive P0 owner-evidence report/JSON, revised P1-A plan/checkpoint and the two unchanged SELECT
-proposals only. PR116/117 reports/history, workflows, application, migration chain, baselines and
-deployment guards remain untouched. No hosting/SQL/credential/provider action follows publication.
-Preserve the original nine-file design archive in `production-p1a-design-20261009`; the new durable
-resume/index is primary `private/astra-visual-evidence/production-owner-evidence-20261009/`.
+PR118 remains OPEN/DRAFT on `codex/production-p1a-access-plan`, based on accepted develop C.
+The reviewed prior head is `422231be24fe22aa7105bceddadcd2ea866e192f`. This focused update changes
+only P1-A documentation, fixed-role SELECT proposals and offline validation; no merge or live action.
+PR116/117 heads/reports, previous indexed evidence, application/workflows/migration chain/baselines
+and all deployment guards remain preserved. The previous owner-evidence JSON is dated history;
+new audit-user facts/digest succession have a separate JSON attestation. No self-approval.
 
-Next: identify a suitable existing PROD-only audit mechanism through non-secret owner/provider
-evidence. If absent, approve exact provider-supported setup separately; then separately authorize
-protected storage and the named SELECT-only connection at reviewed SQL digests. The existing
-all-rights login is excluded from normal audit use. The exact approval template and remaining
-P0 checklist are in the [owner-evidence report](ALWAYSDATA_PRODUCTION_OWNER_EVIDENCE.md).
-No SQL, secret/grant creation, backup/restore, hosting save/restart, deploy, switch, DNS or retirement
-is authorized now. Independent review/green protected CI precede any later integration; no auto-merge.
-Reconfirm branch/file digests, pinned PR heads/CI and all false switches on resume. **STOP.**
+Next: independently review PR118 and the exact current SQL hashes, approve owner-controlled
+protected credential storage only if needed, then separately authorize the bounded two-connection
+identity/catalog procedure at the fixed login/target/CA/source/time window. The existing full-rights
+login is excluded. P1-A has NOT PASSED; production remains BLOCKED. No provider permission repair,
+credential access/write, SQL connection, backup/restore, hosting/restart/deploy, switch, DNS or
+retirement is authorized in this task. Resume from the [checkpoint](work/PRODUCTION_P1A_ACCESS_PLAN.md)
+and primary `private/astra-visual-evidence/production-p1a-existing-audit-20261009/resume.json`.
+Reconfirm GitHub heads/CI/false switches, query digests and historical evidence indexes first. **STOP.**

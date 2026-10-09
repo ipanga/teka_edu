@@ -7,7 +7,7 @@ WITH
 guard AS MATERIALIZED (
   SELECT (
     pg_catalog.current_database() = 'congofoot_teka_edu_prod'
-    AND SESSION_USER = 'congofoot_user_teka_edu_prod_audit'
+    AND SESSION_USER = 'congofoot_readonly_user_teka_edu_prod'
     AND CURRENT_USER = SESSION_USER
     AND pg_catalog.current_setting('server_version_num')::integer BETWEEN 160000 AND 169999
     AND pg_catalog.current_setting('transaction_read_only') = 'on'
@@ -72,7 +72,8 @@ ELSE pg_catalog.jsonb_build_object(
     SELECT pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(
       'from', a.rolname, 'role', b.rolname,
       'role_superuser', b.rolsuper, 'role_createdb', b.rolcreatedb,
-      'role_createrole', b.rolcreaterole, 'role_bypassrls', b.rolbypassrls,
+      'role_createrole', b.rolcreaterole, 'role_replication', b.rolreplication,
+      'role_bypassrls', b.rolbypassrls,
       'member', pg_catalog.pg_has_role(a.oid,b.oid,'MEMBER'),
       'inherited', pg_catalog.pg_has_role(a.oid,b.oid,'USAGE'),
       'can_set_role', pg_catalog.pg_has_role(a.oid,b.oid,'SET'),
@@ -103,6 +104,7 @@ ELSE pg_catalog.jsonb_build_object(
     'acl', n.nspacl,
     'audit_usage', pg_catalog.has_schema_privilege(SESSION_USER,n.oid,'USAGE'),
     'audit_create', pg_catalog.has_schema_privilege(SESSION_USER,n.oid,'CREATE'),
+    'audit_usage_grant_option', pg_catalog.has_schema_privilege(SESSION_USER,n.oid,'USAGE WITH GRANT OPTION'),
     'deployment_usage', (SELECT pg_catalog.has_schema_privilege(r.oid,n.oid,'USAGE')
       FROM roles r WHERE r.rolname='congofoot_user_teka_edu_prod'),
     'deployment_create', (SELECT pg_catalog.has_schema_privilege(r.oid,n.oid,'CREATE')
@@ -119,10 +121,18 @@ ELSE pg_catalog.jsonb_build_object(
     'row_estimate_NOT_EXACT', c.reltuples,
     'audit_select', CASE WHEN c.relkind IN ('r','p','v','m','f')
       THEN pg_catalog.has_table_privilege(SESSION_USER,c.oid,'SELECT') ELSE NULL END,
+    'audit_select_grant_option', CASE WHEN c.relkind IN ('r','p','v','m','f') THEN
+      pg_catalog.has_table_privilege(SESSION_USER,c.oid,'SELECT WITH GRANT OPTION')
+      OR pg_catalog.has_any_column_privilege(SESSION_USER,c.oid,'SELECT WITH GRANT OPTION')
+      ELSE NULL END,
     'audit_write', CASE WHEN c.relkind IN ('r','p','v','m','f') THEN
       pg_catalog.has_table_privilege(SESSION_USER,c.oid,'INSERT,UPDATE,DELETE,TRUNCATE,REFERENCES,TRIGGER')
       OR pg_catalog.has_any_column_privilege(SESSION_USER,c.oid,'INSERT,UPDATE,REFERENCES')
       ELSE NULL END,
+    'audit_sequence_select', CASE WHEN c.relkind='S'
+      THEN pg_catalog.has_sequence_privilege(SESSION_USER,c.oid,'SELECT') ELSE NULL END,
+    'audit_sequence_select_grant_option', CASE WHEN c.relkind='S'
+      THEN pg_catalog.has_sequence_privilege(SESSION_USER,c.oid,'SELECT WITH GRANT OPTION') ELSE NULL END,
     'audit_sequence_write', CASE WHEN c.relkind='S'
       THEN pg_catalog.has_sequence_privilege(SESSION_USER,c.oid,'USAGE,UPDATE') ELSE NULL END,
     'deployment_write', CASE WHEN c.relkind IN ('r','p','v','m','f') THEN
@@ -197,6 +207,7 @@ ELSE pg_catalog.jsonb_build_object(
     'security_definer', p.prosecdef, 'volatility', p.provolatile,
     'body_md5_NOT_PORTABILITY_PROOF', pg_catalog.md5(p.prosrc),
     'audit_execute', pg_catalog.has_function_privilege(SESSION_USER,p.oid,'EXECUTE'),
+    'audit_execute_grant_option', pg_catalog.has_function_privilege(SESSION_USER,p.oid,'EXECUTE WITH GRANT OPTION'),
     'configuration_names', (SELECT pg_catalog.jsonb_agg(pg_catalog.split_part(x,'=',1)
       ORDER BY pg_catalog.split_part(x,'=',1)) FROM pg_catalog.unnest(p.proconfig) x)
   ) ORDER BY p.nspname,p.proname,p.oid) FROM routines p), '[]'::pg_catalog.jsonb),

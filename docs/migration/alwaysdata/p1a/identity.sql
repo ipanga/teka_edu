@@ -1,6 +1,6 @@
 -- P1-A PROPOSAL ONLY. Not executed; separate PROD connection authorization required.
--- This candidate binds the proposed dedicated audit name. An existing approved login
--- requires a reviewed literal substitution and a new file digest before execution.
+-- Fixed login: existing owner-created PROD-only read-only user (OWNER UI VERIFIED).
+-- Authentication/effective permissions remain NOT PROVED; no alternate login allowed.
 -- Run this ONE statement first; do not concatenate/auto-run the catalog/data files.
 -- Never use staging credentials. Client verify-full must be proved outside SQL.
 SELECT
@@ -21,7 +21,7 @@ SELECT
   ssl.ssl AS session_tls, ssl.version AS tls_protocol, ssl.cipher AS tls_cipher,
   (
     pg_catalog.current_database() = 'congofoot_teka_edu_prod'
-    AND SESSION_USER = 'congofoot_user_teka_edu_prod_audit'
+    AND SESSION_USER = 'congofoot_readonly_user_teka_edu_prod'
     AND CURRENT_USER = SESSION_USER
     AND pg_catalog.current_setting('server_version_num')::integer BETWEEN 160000 AND 169999
     AND pg_catalog.current_setting('transaction_read_only') = 'on'

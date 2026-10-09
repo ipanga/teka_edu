@@ -1,0 +1,65 @@
+{
+  "recorded_at": "2026-10-09T18:38:57.257951+00:00",
+  "provenance": {
+    "source": "New owner-confirmed dashboard/account-creation statement",
+    "source_sha256": "f7ccb40a70b6b20ed35f312c53665ec080d7990575f8b615e1be50e2281445ca",
+    "inspection_time": "NOT SUPPLIED",
+    "independent_api_or_sql_verification": false,
+    "previous_owner_evidence": "production-owner-evidence-20261009.json (UNCHANGED)"
+  },
+  "target": {
+    "account": "congofoot",
+    "host": "postgresql-congofoot.alwaysdata.net",
+    "port": 5432,
+    "major_version": 16,
+    "database": "congofoot_teka_edu_prod",
+    "audit_login": "congofoot_readonly_user_teka_edu_prod",
+    "fixed_allowlist_only": true,
+    "excluded_privileged_login": "congofoot_user_teka_edu_prod"
+  },
+  "checklist": {
+    "audit_account_creation": "OWNER CONFIRMED",
+    "prod_only_association": "OWNER UI VERIFIED",
+    "read_only_preset": "OWNER UI VERIFIED",
+    "authenticated_sql_login": "NOT PROVED",
+    "effective_privileges": "NOT PROVED",
+    "tls_verify_full": "NOT PROVED",
+    "dev_isolation": "NOT PROVED",
+    "target_schema_data_history": "NOT PROVED",
+    "secure_execution_source": "NOT APPROVED",
+    "p1a_sql_gate": "NOT PASSED"
+  },
+  "query_proposals": {
+    "identity.sql": {
+      "sha256": "4201f3612525a634db1b5c39a28dfc6d0c44a10f087f90dfab97e91c15e62e63",
+      "status": "PROPOSAL ONLY / NOT EXECUTED"
+    },
+    "catalog.sql": {
+      "sha256": "e5f576c1c6f4e88a0bea8a6fb58db7f3648c416a75e333affbe632efe4ff1943",
+      "status": "PROPOSAL ONLY / NOT EXECUTED"
+    }
+  },
+  "superseded_query_proposals": {
+    "identity.sql": {
+      "sha256": "5d8b3c25cca02b98030c10d0822347110703ff305d88edb0aaafab871ed67926",
+      "status": "SUPERSEDED / NOT VALID FOR EXECUTION",
+      "previous_audit_login": "congofoot_user_teka_edu_prod_audit",
+      "pr118_head": "422231be24fe22aa7105bceddadcd2ea866e192f"
+    },
+    "catalog.sql": {
+      "sha256": "caed00e50f13468941fc9b8672ca82be546a374e8f43b6584df26db68afbe9dd",
+      "status": "SUPERSEDED / NOT VALID FOR EXECUTION",
+      "previous_audit_login": "congofoot_user_teka_edu_prod_audit",
+      "pr118_head": "422231be24fe22aa7105bceddadcd2ea866e192f"
+    }
+  },
+  "credential_source_template": "local-libpq:teka-prod-p1a-audit:v1 (PROPOSAL ONLY; no credential file created/read)",
+  "mutations": {
+    "owner_account_creation": "OWNER CONFIRMED prior owner action",
+    "codex_provider_mutations": 0,
+    "codex_credential_changes_or_values_retrieved": 0,
+    "hosted_sql_connections": 0,
+    "grant_revoke_backup_migration_deployment_dns_changes": 0
+  },
+  "production_status": "BLOCKED / NOT STARTED"
+}
