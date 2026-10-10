@@ -50,7 +50,7 @@ CATALOGS = {
     'pg_language', 'pg_depend', 'pg_database', 'pg_attribute', 'pg_attrdef',
     'pg_type', 'pg_constraint', 'pg_trigger', 'pg_index', 'pg_rewrite', 'pg_policy',
     'pg_extension', 'pg_default_acl', 'pg_shdepend', 'pg_foreign_server',
-    'pg_publication', 'pg_user_mapping', 'pg_largeobject_metadata',
+    'pg_publication', 'pg_largeobject_metadata',
     'pg_event_trigger', 'pg_inherits',
 }
 TYPES = {'int4', 'jsonb', 'regclass', 'text', 'oid'}
@@ -71,6 +71,7 @@ METADATA_KEYS = {
     'has_qualification_tree', 'has_action_tree', 'input_argument_type_oids',
     'all_argument_type_oids', 'return_type_oid', 'has_argument_defaults',
     'has_sql_body', 'has_configuration', 'definition_fingerprints', 'schema_equivalence',
+    'user_mapping_metadata_status',
 }
 
 
@@ -120,6 +121,16 @@ def validate(sql, name):
         require(len(sources) == 1 and sources[0].get('RangeVar', {}).get('relname') == 'guard'
                 and sources[0]['RangeVar'].get('schemaname') is None,
                 'CATALOG_SINGLE_GUARD_SOURCE_REQUIRED')
+    if name == 'catalog.sql':
+        args = targets[0]['ResTarget']['val']['CaseExpr']['defresult']['FuncCall']['args']
+        deferred = []
+        for index in range(0, len(args), 2):
+            key = args[index].get('A_Const', {}).get('sval', {}).get('sval')
+            if key == 'user_mapping_metadata_status':
+                deferred.append(normalized(args[index + 1]))
+            require(key != 'user_mapping_metadata_count', 'LEGACY_MAPPING_COUNT_NOT_ADMITTED')
+        require(deferred == [{'A_Const': {'sval': {'sval': 'NOT_VERIFIED'}}}],
+                'USER_MAPPING_COVERAGE_MUST_REMAIN_NOT_VERIFIED')
     ctes = {n['CommonTableExpr']['ctename']
             for n in select.get('withClause', {}).get('ctes', [])}
     functions, relations = set(), set()
@@ -322,6 +333,38 @@ def main():
             refused[label] = str(error)
         else:
             raise ValueError('INDIRECT_VALUE_ACCEPTED:' + label)
+    for label, replacement in {
+        'restricted_mapping_catalog': "(SELECT pg_catalog.count(*) FROM pg_catalog.pg_user_mapping)",
+        'unreviewed_mapping_view': "(SELECT pg_catalog.count(*) FROM pg_catalog.pg_user_mappings)",
+        'mapping_options_projection': "(SELECT u.umoptions FROM pg_catalog.pg_user_mappings u)",
+    }.items():
+        candidate = sqls['catalog.sql'].replace("'captured_at', pg_catalog.statement_timestamp(),",
+                  "'captured_at', " + replacement + ",", 1)
+        try:
+            validate(candidate, 'catalog.sql')
+        except ValueError as error:
+            require(str(error) in {'UNREVIEWED_RELATION','SENSITIVE_CATALOG_VALUE'},
+                    'RESTRICTED_MAPPING_REGRESSION_REASON')
+            refused[label] = str(error)
+        else:
+            raise ValueError('UNREVIEWED_MAPPING_ACCESS_ACCEPTED')
+    for label, replacement in {
+        'mapping_missing_status': "'removed_mapping_status', 'NOT_VERIFIED'",
+        'mapping_zero_count': "'user_mapping_metadata_status', 0",
+        'mapping_null_status': "'user_mapping_metadata_status', NULL",
+        'mapping_false_status': "'user_mapping_metadata_status', FALSE",
+        'mapping_pass_status': "'user_mapping_metadata_status', 'PASS'",
+        'mapping_legacy_key': "'user_mapping_metadata_count', 'NOT_VERIFIED'",
+    }.items():
+        candidate = sqls['catalog.sql'].replace("'user_mapping_metadata_status', 'NOT_VERIFIED'",replacement,1)
+        try:
+            validate(candidate, 'catalog.sql')
+        except ValueError as error:
+            require(str(error) in {'USER_MAPPING_COVERAGE_MUST_REMAIN_NOT_VERIFIED',
+                                  'LEGACY_MAPPING_COUNT_NOT_ADMITTED'},'MAPPING_STATUS_REGRESSION_REASON')
+            refused[label] = str(error)
+        else:
+            raise ValueError('MAPPING_COVERAGE_LOSS_ACCEPTED')
     print(json.dumps({'syntax_and_select_ast': 'PASS', 'fixed_identity_session_guard': 'PASS',
                       'pglast_version': pglast.__version__,
                       'postgresql_parser_version': parser.get_postgresql_version(),

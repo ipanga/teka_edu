@@ -1,5 +1,27 @@
 # P1-A design checkpoint
 
+## Current catalog publication checkpoint — 2026-10-10
+
+The current reviewed catalog digest is
+`8b9d67cafaa3dc8268720f4dab72d999ce0fba20d6d5fc09fc7fb0d51f670649`.
+The prior `288442fc6bd44520e4cb0b16f6d73e64c01ad4e3e91592915958bdadb47d2bbf`
+is **SUPERSEDED FOR EXECUTION**; older entries below are preserved historical
+evidence. Direct restricted user-mapping access is removed; mapping coverage is
+fixed **NOT VERIFIED**, not absence. The accepted identity result remains valid
+and is not rerun. SQL/sanitizer and complete supervisor independent reviews passed
+with explicit limitations.
+
+See the [current exact-artifact review and execution boundary](../migration/alwaysdata/p1a/REVIEW.md)
+for the 138 offline safety regressions, private-only supervisor/sanitizer bindings,
+publication/CI gates and proposed one-attempt procedure. Final published-head CI
+and fresh private head-binding review are required before readiness is claimed.
+No connection or execution is authorized by this checkpoint. PR #118 remains
+draft/unmerged; all deployment switches must stay false. **Production migration
+BLOCKED / NOT STARTED.** Earlier instructions to rerun identity or request a window
+do not override this current boundary.
+
+## Historical preparation records
+
 ## Current correction — 2026-10-09
 
 Owner-independent verdict on PR118 head `4d705f9864198eda12641ea3585a5af27c3482d5`:

@@ -1,0 +1,45 @@
+{
+  "scope": "SANITIZED_PRE_PUBLICATION_REVIEW_REFERENCES_ONLY",
+  "catalog_sha256": "8b9d67cafaa3dc8268720f4dab72d999ce0fba20d6d5fc09fc7fb0d51f670649",
+  "identity_sha256": "4201f3612525a634db1b5c39a28dfc6d0c44a10f087f90dfab97e91c15e62e63",
+  "superseded_for_execution": [
+    "288442fc6bd44520e4cb0b16f6d73e64c01ad4e3e91592915958bdadb47d2bbf",
+    "e5f576c1c6f4e88a0bea8a6fb58db7f3648c416a75e333affbe632efe4ff1943"
+  ],
+  "baseline_pr118_head": "5a25e69f67030b8a2dc395a707a5f9ebb37a0cc7",
+  "private_sql_review": {
+    "verdict": "PASS_WITH_EXPLICIT_LIMITATIONS",
+    "record_sha256": "109b3c2973f3f956c01ce0830d74978804ae7a8beb71cd392ff506160ee2f7a5",
+    "manifest_sha256": "14b5ee5f0cfcf3d0cd0e5ed770526b131a8a96f1c04ff8221e99f1feed6da51e"
+  },
+  "private_supervisor_review": {
+    "verdict": "PASS",
+    "record_sha256": "b2d850146920076168db4d04675abdb35355f5a400841f7c762e11c74aa32bac",
+    "manifest_sha256": "0f74ada5779752e972b1207ec40a35f51d5e80e026de9d0315ae10f19da39445"
+  },
+  "reviewed_private_sanitizer_sha256": "bebe0e3b06baac31469ea3201f8abaf8a9006cf1c03792a0750ed322378207fb",
+  "reviewed_private_contract_sha256": "366b6792e1ae39197404c6648665b9ed89639b2e7f92d926a13c9ca10fbfdead",
+  "offline_validation": {
+    "unsafe_AST_regressions_refused": 138,
+    "contract_sections": 18,
+    "direct_system_relations": 25,
+    "timing_groups": 40,
+    "sanitizer_groups": 95,
+    "synthetic_descriptor_groups": 6
+  },
+  "execution_authorization": false,
+  "publication_requires": [
+    "Exact published catalog/identity hashes",
+    "Reviewed repository validator continuity",
+    "Fresh private published-head supervisor binding review",
+    "All normal required published-head CI",
+    "Three false repository switches and no Environment overrides or conflicting jobs"
+  ],
+  "limitations": [
+    "User mapping presence/count/absence NOT VERIFIED",
+    "Hosted ACL/EXECUTE/custom view/runtime behavior unverified",
+    "Historical permission-error cause UNKNOWN",
+    "No semantic schema/data/history/full isolation or recovery acceptance",
+    "Production migration BLOCKED / NOT STARTED"
+  ]
+}

@@ -281,7 +281,7 @@ ELSE pg_catalog.jsonb_build_object(
   ), '[]'::pg_catalog.jsonb),
   'foreign_server_count', (SELECT pg_catalog.count(*) FROM pg_catalog.pg_foreign_server),
   'publication_count', (SELECT pg_catalog.count(*) FROM pg_catalog.pg_publication),
-  'user_mapping_metadata_count', (SELECT pg_catalog.count(*) FROM pg_catalog.pg_user_mapping),
+  'user_mapping_metadata_status', 'NOT_VERIFIED',
   'large_object_metadata_count', (SELECT pg_catalog.count(*) FROM pg_catalog.pg_largeobject_metadata),
   'event_trigger_count', (SELECT pg_catalog.count(*) FROM pg_catalog.pg_event_trigger),
   'inheritance', COALESCE((SELECT pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(

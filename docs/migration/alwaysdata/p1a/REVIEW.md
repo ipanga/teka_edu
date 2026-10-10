@@ -1,4 +1,89 @@
-# P1-A restricted catalog revision — fresh review required
+# P1-A catalog correction — publication checkpoint
+
+## Current 2026-10-10 correction
+
+This checkpoint publishes the exact independently reviewed correction. It is
+preparation only: no database connection, SQL execution, permission repair,
+backup, migration, deployment, restart or PR merge is authorized. PR #118 remains
+draft and production migration remains **BLOCKED / NOT STARTED**.
+
+- Current catalog SHA-256:
+  `8b9d67cafaa3dc8268720f4dab72d999ce0fba20d6d5fc09fc7fb0d51f670649`.
+- Previous `288442fc6bd44520e4cb0b16f6d73e64c01ad4e3e91592915958bdadb47d2bbf`:
+  **SUPERSEDED FOR EXECUTION**. The earlier `e5f576c1…1943` revision and all
+  consumed authorizations remain historical evidence, never reusable authority.
+- Identity SHA-256 remains
+  `4201f3612525a634db1b5c39a28dfc6d0c44a10f087f90dfab97e91c15e62e63`.
+  The accepted identity result is retained; do not repeat that query without
+  demonstrated need and separate authorization.
+- Catalog guard AST SHA-256 remains
+  `6450675a0db805f0b63ba2140efb12b91bfc35960e22ad492a586a1de04d38e9`.
+
+Exactly one SQL line replaces direct `pg_catalog.pg_user_mapping` counting with
+`user_mapping_metadata_status = NOT_VERIFIED`. PostgreSQL 16 restricts ordinary
+access to that catalog. The documented `pg_user_mappings` view was considered
+without `umoptions` but not admitted: it would add a privileged system-view trust
+dependency. Neither relation nor mapping options are read by this revision.
+[Catalog restriction](https://www.postgresql.org/docs/16/catalog-pg-user-mapping.html),
+[system view](https://www.postgresql.org/docs/16/view-pg-user-mappings.html).
+
+The complete direct-relation review found this upstream restriction among the
+original 26 scanned system relations. The corrected query retains 25: 23 base
+catalogs and the previously reviewed `pg_roles` / `pg_stat_ssl` views. Actual
+provider ACLs, EXECUTE permissions and customized view definitions remain
+unverified. User-mapping presence/count/absence is **NOT VERIFIED**, never zero or
+proof of absence. Other metadata, identity/session/TLS guards, built-in-only
+restrictions and fail-closed behavior remain unchanged. No deparsers, expression
+trees, routine bodies, application relations or user-defined output functions
+are introduced. The historical permission error's precise cause is still unknown.
+
+The private supervisor, sanitizer, contract, synthetic fixtures and runtime
+evidence stay outside Git. The reviewed sanitizer accepts PostgreSQL JSONB OIDs
+only as canonical unsigned decimal strings; actual int2 vectors remain numeric.
+Its output remains fixed sanitized statuses/counts, with no raw catalog JSON,
+object names, ACLs, OIDs, credentials or arbitrary diagnostic text published.
+This wire-format correction is separate from the historical permission error.
+
+The repository validator is the reviewed version with only its original
+repository-root path binding retained. It rejects both mapping relations,
+`umoptions`, legacy count keys and missing/numeric/null/deceptive coverage status.
+Offline validation passes PostgreSQL 16 parsing, exact guards, SELECT-only AST and
+138 unsafe regressions. Private validation additionally passes 18 result-section
+bindings, 40 timing groups, 95 sanitizer groups and six synthetic descriptor
+groups. These tests do not execute SQL or prove hosted permissions/runtime.
+
+Independent SQL/sanitizer **PASS WITH EXPLICIT LIMITATIONS** and complete private
+supervisor **PASS** are recorded by digest in
+[sanitized review references](REVIEW_EVIDENCE.json). Publishing advances the PR
+head: the previous private runner's old-head binding must not be reused. A new
+protected private checkpoint must bind the actual published head and pass fresh
+independent review. Normal required PR CI must pass for that head separately.
+
+After publication, read PR #118 for the exact head/checks and use the owner's
+protected private resume checkpoint for final supervisor/manifest bindings.
+Only after exact published bytes, private review continuity, full CI and guards
+pass is the package ready for **separate execution authorization**. No UTC window
+is requested or consumed by publication.
+
+Future proposed attempt: exact audit login `congofoot_readonly_user_teka_edu_prod`
+at `postgresql-congofoot.alwaysdata.net:5432`, database
+`congofoot_teka_edu_prod`, client/libpq 16.15 and TLS `verify-full` with the approved
+CA/service fingerprints. Password entry is owner-only private native Terminal
+`psql -W`, no password file. Total limit 60 seconds requires fresh explicit owner
+approval; connection 10 seconds, statement 15 seconds, lock 2 seconds, one client,
+zero retries. Main deadline includes password entry and sanitization; a separate
+two-second reap allowance and normal OS scheduling assumptions remain explicit.
+Before any connection, recheck fingerprints/permissions/target, exact PR/head,
+all three false switches, no Environment overrides or conflicting jobs, and
+create a fresh single-use authorization/guard record only after owner approval.
+
+This restricted inventory cannot establish semantic schema equivalence, exact
+data/history contents, complete visibility/isolation, deployment-role login or
+recovery readiness. Incomplete visibility stays NOT VERIFIED. No broader grants
+or privileged-user fallback are proposed. Staging and production share the
+`congofoot` Unix account; distinct SSH credentials do not provide full isolation.
+
+## Historical 2026-10-09 restricted revision — superseded for execution
 
 This is a SQL correction and review packet, not execution approval. PR118 stays
 draft/unmerged. No PROD/DEV connection, SQL execution, grants, backups, migrations,
