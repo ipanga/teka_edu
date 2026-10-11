@@ -383,24 +383,42 @@ export function assertProductionGates(
     throw new Error("Reviewed empty-PROD rollback coverage is insufficient");
   protectedArchive(rollback.dump_path, rollback.dump_sha256);
   const recovery = JSON.parse(readFileSync(approval.recoveryPath, "utf8"));
+  const stagingReference = recovery.source_kind === "alwaysdata-staging-canonical";
+  const sourceMatches = stagingReference
+    ? recovery.release_sha === releaseSha &&
+      recovery.host === "postgresql-congofoot.alwaysdata.net" &&
+      recovery.port === 5432 &&
+      recovery.database === "congofoot_teka_edu_dev" &&
+      recovery.login === "congofoot_user_teka_edu_dev" &&
+      recovery.server_major === 16 &&
+      recovery.archive_format === "custom" &&
+      recovery.dump_client_major === 16 &&
+      recovery.archive_verified === true &&
+      recovery.schema_baseline_comparison === true &&
+      recovery.schema_sha256 === replay.schema_sha256 &&
+      isDeepStrictEqual(recovery.migrations, metadata(migrations)) &&
+      recovery.pending === 0 &&
+      recovery.supabase_unverified_changes_accepted === true
+    : recovery.source_kind === undefined &&
+      recovery.project === "eganrivpkjhozkkahyxy" &&
+      recovery.host === "db.eganrivpkjhozkkahyxy.supabase.co" &&
+      recovery.database === "postgres" &&
+      recovery.login === "postgres" &&
+      recovery.server_major === 17 &&
+      recovery.auth_users === 0 &&
+      recovery.auth_identities === 0 &&
+      recovery.storage_buckets === 0 &&
+      recovery.storage_objects === 0 &&
+      recovery.original_restore_verified === true &&
+      recovery.restored_archive_sha256 === recovery.archive_sha256;
   if (
     recovery.status !== "PASS" ||
-    recovery.project !== "eganrivpkjhozkkahyxy" ||
-    recovery.host !== "db.eganrivpkjhozkkahyxy.supabase.co" ||
-    recovery.database !== "postgres" ||
-    recovery.login !== "postgres" ||
-    recovery.server_major !== 17 ||
+    !sourceMatches ||
     recovery.tls_verify_full !== true ||
     recovery.backup_scope_verified !== true ||
-    recovery.auth_users !== 0 ||
-    recovery.auth_identities !== 0 ||
-    recovery.storage_buckets !== 0 ||
-    recovery.storage_objects !== 0 ||
     recovery.canonical?.tables !== 36 ||
     recovery.canonical?.rows !== 6170 ||
     recovery.canonical?.exact !== true ||
-    recovery.original_restore_verified !== true ||
-    recovery.restored_archive_sha256 !== recovery.archive_sha256 ||
     recovery.independent_sha256 !== recovery.archive_sha256 ||
     recovery.source_frozen !== true ||
     recovery.independent_physical_media_verified !== true ||
@@ -418,7 +436,17 @@ export function assertProductionGates(
   return {
     source_sha256: recovery.archive_sha256 as string,
     independent_sha256: recovery.independent_sha256 as string,
-    source_restore_verified: true,
+    // Archive integrity is not a restoration test. Do not turn the staging
+    // reference approval into a claim that this original archive was restored.
+    source_restore_verified: !stagingReference,
+    ...(stagingReference
+      ? {
+          source_kind: "alwaysdata-staging-canonical",
+          source_archive_verified: true,
+          source_reference_verified: true,
+          supabase_unverified_changes_accepted: true,
+        }
+      : {}),
     target_snapshot_sha256: rollback.dump_sha256 as string,
   };
 }

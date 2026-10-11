@@ -5,6 +5,33 @@ File, Blob and browser `localStorage` APIs. There is no backend endpoint, cloud 
 analytics or observation logging. After the page is loaded, export/import works without a
 network connection. Loading the page itself still needs the application; this is not PWA caching.
 
+## Alwaysdata migration readiness
+
+The transfer goes from `https://teka-edu.vercel.app` to
+`https://tekaedu.tootiye.com/progression`. Their browser storage is separate. Visit the
+source in the browser/profile that holds the progress, export locally, and import the file
+on the destination after its reviewed application release is activated. A DNS change or
+an application deployment does not move browser progress automatically.
+
+The JSON utility and old-origin exporter are implemented; no backend or database access is
+needed. The old Vercel release can remain unchanged while the owner uses the console or
+bookmarklet exporter below. Keep the old origin available and do not clear its storage
+until the owner has checked the imported sessions.
+
+Focused local validation on 2026-10-11 passed 66 session-storage/transfer unit tests and
+11 Chromium browser tests. Coverage includes phone, tablet and laptop/MacBook viewports,
+offline file transfer between two isolated synthetic origins, unchanged source storage,
+preservation of destination sessions, repeated import, invalid files, blocked storage,
+quota failure and the generated bookmarklet. No production browser data was accessed.
+
+These checks establish software readiness, not completion of the owner's transfer.
+Physical mobile Safari/Chrome bookmark editing, file saving and file selection remain to
+be checked on the devices holding progress. If browser policy blocks the old-origin
+exporter, retain that browser's data and use its available developer console or consider
+a separately reviewed export-screen deployment on the old origin. A different device or
+browser cannot recover that profile's storage. The destination page also still needs its
+separately approved deployment before a real-domain transfer is available.
+
 ## Transfer between browsers or origins
 
 1. In the browser and origin holding the progress, open **Transférer ma progression** and
@@ -85,7 +112,7 @@ node --import tsx scripts/local-progress-export-console.ts
 
 Regenerate when authored sessions change and review the resulting code diff. A unit test
 checks that the committed script matches the current catalogue. This command only writes
-the local static code file; it does not control a browser or access production.
+the three local static exporter files; it does not control a browser or access production.
 
 ## Format and failure behavior
 

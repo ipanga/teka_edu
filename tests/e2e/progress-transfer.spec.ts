@@ -199,6 +199,64 @@ test("owner-console export on local old-v2 fixture leaves source data unchanged"
   expect(await page.evaluate(() => JSON.stringify(localStorage))).toBe(before);
 });
 
+test("JSON file crosses isolated synthetic origins without changing the source or overwriting destination progress", async ({
+  page,
+  context,
+}) => {
+  // The reserved .test origin is fulfilled locally; no old production page or data is accessed.
+  const source = await context.newPage();
+  await source.route("http://teka-progress-source.test/**", (route) =>
+    route.fulfill({
+      contentType: "text/html",
+      body: "<!doctype html><title>Source fixture</title>",
+    }),
+  );
+  await source.goto("http://teka-progress-source.test/");
+  await source.evaluate((entries) => {
+    for (const entry of entries) localStorage.setItem(entry.key, entry.value);
+    localStorage.setItem("unrelated.fixture", "source only");
+  }, fixture.entries);
+  const sourceBefore = await source.evaluate(() => JSON.stringify(localStorage));
+  await page.goto("/progression");
+  expect(new URL(source.url()).origin).not.toBe(new URL(page.url()).origin);
+  expect(await page.evaluate(() => localStorage.length)).toBe(0);
+  await page.evaluate((prefix) => {
+    localStorage.setItem(`${prefix}1.position`, "1");
+    localStorage.setItem("unrelated.fixture", "destination only");
+  }, prefix);
+
+  await context.setOffline(true);
+  const downloaded = source.waitForEvent("download");
+  await source.evaluate(
+    await readFile(new URL("../../docs/progress-export-console.js", import.meta.url), "utf8"),
+  );
+  const exported = await downloaded;
+  await page
+    .getByLabel("Choisir un fichier de progression JSON")
+    .setInputFiles((await exported.path())!);
+  await expect(page.getByRole("status")).toContainText("Fichier validé");
+  const backupDownloaded = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Sauvegarder et importer" }).click();
+  const backup = await backupDownloaded;
+  expect(JSON.parse(await readFile((await backup.path())!, "utf8")).entries).toEqual([
+    { key: `${prefix}1.position`, value: "1" },
+  ]);
+  await expect(page.getByRole("status")).toContainText("1 séances ajoutées");
+  expect(
+    await page.evaluate(
+      (prefix) => [
+        localStorage.getItem(`${prefix}1.progress`),
+        localStorage.getItem(`${prefix}1.position`),
+        localStorage.getItem(`${prefix}2.progress`),
+        localStorage.getItem(`${prefix}2.position`),
+        localStorage.getItem("unrelated.fixture"),
+      ],
+      prefix,
+    ),
+  ).toEqual([null, "1", "in_progress", "0", "destination only"]);
+  expect(await source.evaluate(() => JSON.stringify(localStorage))).toBe(sourceBefore);
+});
+
 for (const viewport of [
   { name: "phone", width: 390, height: 844 },
   { name: "tablet", width: 768, height: 1024 },

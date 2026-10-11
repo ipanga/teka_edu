@@ -234,6 +234,74 @@ describe("protected production runner preparation", () => {
           /Source recovery/,
         );
       }
+      const stagingRecovery = {
+        ...recovery,
+        source_kind: "alwaysdata-staging-canonical",
+        release_sha: release,
+        host: production.PGHOST,
+        port: 5432,
+        database: "congofoot_teka_edu_dev",
+        login: "congofoot_user_teka_edu_dev",
+        server_major: 16,
+        archive_format: "custom",
+        dump_client_major: 16,
+        archive_verified: true,
+        schema_baseline_comparison: true,
+        schema_sha256: replay.schema_sha256,
+        migrations: metadata(migrations),
+        pending: 0,
+        supabase_unverified_changes_accepted: true,
+        // The new path must not require or manufacture Supabase evidence.
+        project: undefined,
+        auth_users: undefined,
+        auth_identities: undefined,
+        storage_buckets: undefined,
+        storage_objects: undefined,
+        original_restore_verified: undefined,
+        restored_archive_sha256: undefined,
+      };
+      writeFileSync(recoveryPath, JSON.stringify(stagingRecovery));
+      expect(assertProductionGates(migrations, approval, release)).toMatchObject({
+        source_kind: "alwaysdata-staging-canonical",
+        source_archive_verified: true,
+        source_reference_verified: true,
+        source_restore_verified: false,
+        supabase_unverified_changes_accepted: true,
+      });
+      for (const patch of [
+        { source_kind: "other" },
+        { release_sha: "b".repeat(40) },
+        { host: "db.eganrivpkjhozkkahyxy.supabase.co" },
+        { port: 6543 },
+        { database: production.PGDATABASE },
+        { login: production.PGUSER },
+        { server_major: 17 },
+        { tls_verify_full: false },
+        { archive_format: "plain" },
+        { dump_client_major: 17 },
+        { archive_verified: false },
+        { backup_scope_verified: false },
+        { schema_baseline_comparison: false },
+        { schema_sha256: "0".repeat(64) },
+        { migrations: metadata(migrations).slice(1) },
+        {
+          migrations: metadata(migrations).map((m, i) =>
+            i ? m : { ...m, source_sha256: "0".repeat(64) },
+          ),
+        },
+        { pending: 1 },
+        { canonical: { tables: 36, rows: 6170, exact: false } },
+        { supabase_unverified_changes_accepted: false },
+        { source_frozen: false },
+        { independent_sha256: "0".repeat(64) },
+        { independent_physical_media_verified: false },
+        { independent_volume: "local" },
+      ]) {
+        writeFileSync(recoveryPath, JSON.stringify({ ...stagingRecovery, ...patch }));
+        expect(() => assertProductionGates(migrations, approval, release)).toThrow(
+          /Source recovery/,
+        );
+      }
       save();
       chmodSync(snapshot, 0o644);
       expect(() => assertProductionGates(migrations, approval, release)).toThrow(/private regular/);

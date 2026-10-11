@@ -136,6 +136,18 @@ describe("production app target isolation", () => {
 });
 
 describe("completed production DB and recovery receipt", () => {
+  const stagingReceipt = () => ({
+    ...receipt(),
+    recovery: {
+      ...receipt().recovery,
+      source_kind: "alwaysdata-staging-canonical",
+      source_archive_verified: true,
+      source_reference_verified: true,
+      supabase_unverified_changes_accepted: true,
+      source_restore_verified: false,
+    },
+  });
+
   it("accepts a matching completed receipt for at most 24 hours", () => {
     expect(validateProductionDatabaseGate(receipt(), sha, now).status).toBe("PASS");
     expect(() =>
@@ -145,6 +157,38 @@ describe("completed production DB and recovery receipt", () => {
         now,
       ),
     ).not.toThrow();
+  });
+
+  it("accepts the verified staging reference without claiming a source restore", () => {
+    expect(validateProductionDatabaseGate(stagingReceipt(), sha, now).status).toBe("PASS");
+    const valid = stagingReceipt();
+    for (const delta of [
+      { source_kind: "unexpected-source" },
+      { source_kind: undefined },
+      { source_archive_verified: false },
+      { source_archive_verified: undefined },
+      { source_reference_verified: false },
+      { source_reference_verified: undefined },
+      { supabase_unverified_changes_accepted: false },
+      { supabase_unverified_changes_accepted: undefined },
+      { source_restore_verified: true },
+      { source_restore_verified: undefined },
+      { independent_sha256: "d".repeat(64) },
+    ])
+      expect(() =>
+        validateProductionDatabaseGate(
+          { ...valid, recovery: { ...valid.recovery, ...delta } },
+          sha,
+          now,
+        ),
+      ).toThrow("Completed production DB verification and recovery receipt required");
+    expect(() =>
+      validateProductionDatabaseGate(
+        { ...receipt(), recovery: { ...receipt().recovery, source_kind: "unexpected-source" } },
+        sha,
+        now,
+      ),
+    ).toThrow("Completed production DB verification and recovery receipt required");
   });
 
   it("rejects stale, future, wrong-environment, incomplete, or unverified receipts", () => {

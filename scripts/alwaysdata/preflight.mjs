@@ -95,6 +95,15 @@ export function validateProductionDatabaseGate(report, sha, now = Date.now()) {
   const recorded = typeof report?.recorded_at === "string" ? Date.parse(report.recorded_at) : NaN;
   const recovery = report?.recovery;
   const hex = (value) => typeof value === "string" && /^[a-f0-9]{64}$/.test(value);
+  // The owner-approved staging rebuild uses a verified canonical reference and
+  // protected archives. Archive integrity must not be reported as a restore drill.
+  const sourceApproved =
+    recovery?.source_kind === "alwaysdata-staging-canonical"
+      ? recovery.source_archive_verified === true &&
+        recovery.source_reference_verified === true &&
+        recovery.supabase_unverified_changes_accepted === true &&
+        recovery.source_restore_verified === false
+      : recovery?.source_kind === undefined && recovery?.source_restore_verified === true;
   if (
     !/^[a-f0-9]{40}$/.test(sha ?? "") ||
     report?.status !== "PASS" ||
@@ -120,7 +129,7 @@ export function validateProductionDatabaseGate(report, sha, now = Date.now()) {
     report.gates?.idempotency !== true ||
     !hex(recovery?.source_sha256) ||
     recovery?.source_sha256 !== recovery?.independent_sha256 ||
-    recovery?.source_restore_verified !== true ||
+    !sourceApproved ||
     !hex(recovery?.target_snapshot_sha256)
   )
     throw new Error("Completed production DB verification and recovery receipt required");

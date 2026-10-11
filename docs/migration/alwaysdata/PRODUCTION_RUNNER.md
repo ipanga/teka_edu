@@ -49,27 +49,55 @@ an owner/reviewer responsibility.
   `pre_migration_history: 0`, `pre_migration_application_objects: 0`, `dump_verified: true`,
   `coverage: "atomic-apply-and-protected-empty-prod-dump"`, and `dump_path`/`dump_sha256`.
   Creating this protected target snapshot requires separate authorization.
-- `--source-recovery-record`: `status: "PASS"`, the confirmed Supabase project/host/
-  database/login, `server_major: 17`, `tls_verify_full: true`, `backup_scope_verified: true`,
-  four zero counts (`auth_users`, `auth_identities`, `storage_buckets`, `storage_objects`),
-  `canonical: { tables: 36, rows: 6170, exact: true }`, `original_restore_verified: true`,
-  `restored_archive_sha256` equal to `archive_sha256`, and `source_frozen: true`.
-  `archive_path` and `independent_path` must refer to SHA-matched copies on different
-  filesystems; `independent_sha256` must equal `archive_sha256`. The owner must
-  independently confirm distinct physical media with `independent_physical_media_verified: true`
-  and `independent_volume: "VALERY"`; different filesystem IDs alone do not prove this.
+- `--source-recovery-record`: use the owner-approved staging canonical reference
+  route below. The earlier Supabase/PG17 original-backup route remains supported for
+  historical compatibility, but is optional and no longer blocks this migration.
+
+### Current source: accepted Alwaysdata staging reference
+
+Use `source_kind: "alwaysdata-staging-canonical"`, `status: "PASS"`, the exact current
+`release_sha`, host `postgresql-congofoot.alwaysdata.net`, numeric `port: 5432`,
+`database: "congofoot_teka_edu_dev"`, `login: "congofoot_user_teka_edu_dev"`,
+`server_major: 16`, `tls_verify_full: true`, `backup_scope_verified: true`,
+`archive_format: "custom"`, `dump_client_major: 16`, `archive_verified: true`,
+`canonical: { tables: 36, rows: 6170, exact: true }`, `pending: 0`, exact `migrations`
+metadata matching the reviewed 46 source/execution hashes, and
+`schema_baseline_comparison: true` with `schema_sha256` equal to the reviewed replay.
+Set `supabase_unverified_changes_accepted: true` only with the owner's recorded
+acceptance that unverified Supabase-only changes may be absent from this reference.
+
+`archive_verified` means a successful PG16 custom dump, successful `pg_restore --list`
+and full archive extraction to `/dev/null`, followed by file integrity checks. It is
+**not** an original-archive restoration test. The receipt truthfully records
+`source_restore_verified: false`, plus the explicit staging source kind and verified
+archive/reference/accepted-omission flags. Do not manufacture a restore result.
+
+`archive_path` and `independent_path` must refer to SHA-matched copies on different
+filesystems; `independent_sha256` must equal `archive_sha256`. Confirm distinct physical
+media with `independent_physical_media_verified: true` and `independent_volume: "VALERY"`.
+Different filesystem IDs alone do not prove separate physical media. `source_frozen: true`
+means a short, confirmed hold on staging database/content changes across comparison,
+backup and final PROD comparison; it does not stop feature branches or unrelated develop work.
 
 Archives must be private regular files outside the repository/web root. SHA-256 is
 checked with bounded-memory reads. Symlink leaves and changed file identity are
-rejected. Keep records and archives under owner-controlled encrypted local storage;
-keep the independent copy on APFS-encrypted VALERY. No additional `age` layer or new
-recovery keys are required. Source scope, freeze and an **actual original-backup PG17
-restore** are required; the existing synthetic recovery drill does not meet those gates.
+rejected. Use the FileVault-protected Mac and APFS-encrypted VALERY. No `age` layer,
+new encryption keys, custom audit supervisor or Supabase connection is required.
 
-If inspection reveals real non-canonical data, Auth/Storage usage, extra migrations,
-objects or denied visibility, stop and reconcile scope. The canonical-only rebuild
-must not silently overwrite or discard live source data. It does not make a PostgreSQL
-17 dump directly restorable into PostgreSQL 16.
+The staging dump is a recovery copy, **not input to PROD initialization**. Replay the
+migrations as the PROD login so DEV credentials, ownership, history target labels and
+staging-specific settings are not copied. Stop on staging drift or any unexpected
+PROD objects/data. The PROD target snapshot and exact target-state gates remain mandatory.
+See [STAGING_REFERENCE_CUTOVER.md](STAGING_REFERENCE_CUTOVER.md) for the operational order.
+
+### Preserved alternative recovery evidence
+
+The original record without `source_kind` still requires the exact Supabase PROD
+project/direct host/database/login, PG17, verified scope, zero Auth/Storage usage,
+complete canonical comparison, original archive restored successfully, matching restore
+archive digest, source freeze and independent protected copy. No such successful source
+inspection or backup exists yet. The failed attempts and optional CA correction remain
+historical evidence; their consumed authorizations cannot be reused.
 
 ## Future operator procedure — do not execute yet
 
@@ -102,12 +130,18 @@ receipt created only after successful managed verification.
 
 ## Remaining sequence
 
-1. Approve and run the prepared limited source inspection; resolve any differences.
-2. Confirm actual dump scope and capacity; authorize one standard PG17 custom dump.
-3. Verify its independent VALERY copy and restore the original archive in the existing
-   isolated PG17 recovery design; review PG16 canonical rebuild portability.
-4. Resolve the exact PROD deployment-role/object/isolation baseline and snapshot gate.
-5. Review/merge production preparation only when separately authorized; obtain exact
-   release CI evidence, then authorize PROD preflight/apply/managed verification.
-6. Separately authorize protected manual application activation and browser transfer.
-   Retain Vercel/Supabase through health/smoke/rollback acceptance and later retirement approval.
+1. Finish review/CI of the staging-reference update; keep all deploy switches disabled.
+2. Prepare a short staging DB change hold, exact source comparison and standard PG16
+   backup with a verified independent VALERY copy. Preserve any necessary target
+   recovery copy after fresh PROD deployment-login preflight. No Supabase audit is required.
+3. Resolve any actual target baseline/isolation failure before proposing writes.
+4. Obtain one owner confirmation immediately before exact PROD apply and managed
+   verification; use truthful current records and release-bound CI evidence.
+5. Integrate/promote the exact application release only with merge approval; obtain
+   separate public-site activation approval before enabling the manual PROD workflow.
+6. Validate public health, lessons/calendar/navigation/media, responsive views and
+   progress transfer. Keep rollback providers for a proposed seven-day observation,
+   with retirement and Docker deletion requiring later separate approval.
+
+Production readiness is not a prerequisite for ordinary feature/develop work. Existing
+staging remains accepted and is neither rebuilt nor reset by this procedure.
