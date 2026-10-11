@@ -3,6 +3,23 @@ import { generateSchoolDays } from "@/domain/calendar/school-days";
 import { generateDailyPlan } from "@/domain/programme/daily-plan";
 import { getProgramme, getReferenceData, type ReferenceData } from "@/lib/content/reference-data";
 import { monthLabel, type SessionMonth } from "./navigation";
+import type { TransferSession } from "./session-transfer";
+
+/** Only identity and activity bounds cross the client boundary for local file validation. */
+export function transferSessions(data: ReferenceData = getReferenceData()): TransferSession[] {
+  return data.programmes.flatMap((programme) =>
+    programme.schoolYearIds.flatMap((schoolYearId) =>
+      sessionCatalogue(programme.levelId, schoolYearId, data).flatMap((month) =>
+        month.sessions.map(({ schoolYearId, levelId, instructionalDay, activityCount }) => ({
+          schoolYearId,
+          levelId,
+          instructionalDay,
+          activityCount,
+        })),
+      ),
+    ),
+  );
+}
 
 /** Public navigation is a projection of complete, approved plans, never a hand-written month list. */
 export function sessionCatalogue(

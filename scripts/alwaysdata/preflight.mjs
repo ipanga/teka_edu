@@ -1,10 +1,11 @@
-import { mkdtempSync, writeFileSync, rmSync, appendFileSync } from "node:fs";
+import { mkdtempSync, writeFileSync, rmSync, appendFileSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { execFileSync } from "node:child_process";
 import { isDeepStrictEqual } from "node:util";
 import { pathToFileURL } from "node:url";
 import { createHash } from "node:crypto";
+import { deploymentTarget, SITE_COMMAND } from "./targets.mjs";
 
 const normalize = (v) =>
   Array.isArray(v)
@@ -40,14 +41,15 @@ export function assertPreflightConfig(env) {
   for (const name of secretNames)
     if (!env[name]?.trim()) throw new Error(`Missing secret: ${name}`);
 }
-export function validatePreflightSiteConfig(site) {
+export function validatePreflightSiteConfig(site, targetName = "staging") {
+  const target = deploymentTarget(targetName);
   const expected = {
-    id: 1083502,
+    id: target.siteId,
     type: "nodejs",
     nodejs_version: "22",
-    addresses: ["staging-tekaedu.tootiye.com"],
-    working_directory: "www/tekaedu-staging",
-    command: "/usr/alwaysdata/nodejs/22/bin/node current/runtime.mjs",
+    addresses: [target.address],
+    working_directory: target.root.replace(/^\/home\/congofoot\//, ""),
+    command: SITE_COMMAND,
   };
   const actual = {
     ...site,
@@ -68,7 +70,9 @@ export function validatePreflightSiteConfig(site) {
   );
   // Report field names only: a malformed command/field could itself contain a credential.
   if (mismatches.length)
-    throw new Error(`Site 1083502 fields differ from expected values: ${mismatches.join(", ")}`);
+    throw new Error(
+      `Site ${target.siteId} fields differ from expected values: ${mismatches.join(", ")}`,
+    );
   return expected;
 }
 export function validatePreflightSiteEnvironment(site) {
@@ -80,10 +84,90 @@ export function validatePreflightSiteEnvironment(site) {
     );
   return true;
 }
-export function validatePreflightSite(site) {
-  const expected = validatePreflightSiteConfig(site);
+export function validatePreflightSite(site, targetName = "staging") {
+  const expected = validatePreflightSiteConfig(site, targetName);
   validatePreflightSiteEnvironment(site);
   return expected;
+}
+// Production application deployment consumes a completed DB verification receipt.
+// This performs local validation only and never needs a database credential or connection.
+export function validateProductionDatabaseGate(report, sha, now = Date.now()) {
+  const recorded = typeof report?.recorded_at === "string" ? Date.parse(report.recorded_at) : NaN;
+  const recovery = report?.recovery;
+  const hex = (value) => typeof value === "string" && /^[a-f0-9]{64}$/.test(value);
+  if (
+    !/^[a-f0-9]{40}$/.test(sha ?? "") ||
+    report?.status !== "PASS" ||
+    report.target !== "production" ||
+    report.release_sha !== sha ||
+    !Number.isFinite(recorded) ||
+    recorded > now ||
+    now - recorded > 24 * 60 * 60 * 1000 ||
+    report.identity?.database !== "congofoot_teka_edu_prod" ||
+    report.identity?.login !== "congofoot_user_teka_edu_prod" ||
+    !Number.isInteger(report.identity?.version) ||
+    report.identity.version < 160000 ||
+    report.identity.version >= 170000 ||
+    report.identity?.tls !== true ||
+    report.history !== 46 ||
+    report.pending !== 0 ||
+    report.canonical?.tables !== 36 ||
+    report.canonical?.rows !== 6170 ||
+    report.canonical?.exact !== true ||
+    report.schema_baseline_comparison !== true ||
+    report.gates?.access !== true ||
+    report.gates?.integrity !== true ||
+    report.gates?.idempotency !== true ||
+    !hex(recovery?.source_sha256) ||
+    recovery?.source_sha256 !== recovery?.independent_sha256 ||
+    recovery?.source_restore_verified !== true ||
+    !hex(recovery?.target_snapshot_sha256)
+  )
+    throw new Error("Completed production DB verification and recovery receipt required");
+  return {
+    status: "PASS",
+    target: "production",
+    release_sha: sha,
+    recorded_at: report.recorded_at,
+  };
+}
+export function readProductionDatabaseGate(file, checksum, sha, now = Date.now()) {
+  if (!/^[a-f0-9]{64}$/.test(checksum ?? ""))
+    throw new Error("Production DB receipt SHA256 required");
+  let report;
+  try {
+    const bytes = readFileSync(file);
+    if (createHash("sha256").update(bytes).digest("hex") !== checksum) throw new Error("checksum");
+    report = JSON.parse(bytes.toString("utf8"));
+  } catch {
+    throw new Error("Production DB receipt file or checksum invalid");
+  }
+  return validateProductionDatabaseGate(report, sha, now);
+}
+export function assertProductionDeploymentConfig(env) {
+  if (
+    env.GITHUB_EVENT_NAME !== "workflow_dispatch" ||
+    env.GITHUB_REF !== "refs/heads/main" ||
+    !/^[a-f0-9]{40}$/.test(env.GITHUB_SHA ?? "") ||
+    env.TEKA_RELEASE_SHA !== env.GITHUB_SHA ||
+    env.ALWAYSDATA_PRODUCTION_DEPLOY_ENABLED !== "true" ||
+    env.ALWAYSDATA_PRODUCTION_OWNER_CONFIRMATION !== `DEPLOY ${env.GITHUB_SHA}` ||
+    env.ALWAYSDATA_PRODUCTION_QUIESCENCE_CONFIRMED !== "true"
+  )
+    throw new Error("Manual main production activation, exact SHA and owner confirmation required");
+  for (const [name, value] of Object.entries({
+    ALWAYSDATA_SSH_HOST: "ssh-congofoot.alwaysdata.net",
+    ALWAYSDATA_SSH_PORT: "22",
+    ALWAYSDATA_SSH_USER: "congofoot",
+  }))
+    if (env[name] !== value) throw new Error(`Configuration mismatch: ${name}`);
+  for (const [name, value] of Object.entries(env))
+    if (
+      /^(PG|SUPABASE_|DATABASE_URL$|DIRECT_DATABASE_URL$|NEXT_PUBLIC_SUPABASE_)/.test(name) &&
+      value
+    )
+      throw new Error("Production app deployment must not receive database configuration");
+  return true;
 }
 export async function inspectPreflightApi(
   token,
