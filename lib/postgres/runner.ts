@@ -52,7 +52,7 @@ export const IDENTITY_SQL = `select jsonb_build_object('database',current_databa
 
 /** Catalog-only checks against the PROD login. Never connects to DEV. */
 export async function assertProductionTargetState(session: Session, empty: boolean) {
-  const safe = await session.json<boolean>(`select (
+  const safe = await session.json<boolean>(`select pg_catalog.to_jsonb(
     not has_database_privilege(current_user,'congofoot_teka_edu_dev','CONNECT')
     and exists(select 1 from pg_roles where rolname='congofoot_user_teka_edu_dev')
     and not has_database_privilege('congofoot_user_teka_edu_dev',current_database(),'CONNECT')
@@ -103,7 +103,7 @@ export async function assertProductionApplicationShape(session: Session) {
       from pg_catalog.pg_class c join pg_catalog.pg_namespace n on n.oid=c.relnamespace join pg_catalog.pg_attribute a on a.attrelid=c.oid
       where n.nspname='public' and c.relkind='r' and a.attnum>0 and not a.attisdropped),
     functions(name,sha) as (values ${functions})
-    select (
+    select pg_catalog.to_jsonb(
       not exists(select 1 from pg_catalog.pg_namespace where nspname not in ('public','extensions','private','teka_migrations','information_schema') and nspname !~ '^pg_')
       and
       not exists((select * from actual except all select * from expected) union all (select * from expected except all select * from actual))
@@ -148,12 +148,12 @@ export async function initialize(session: Session, connection: Connection) {
 /** Gate and lock the history relation before reading rows or invoking type output. */
 export async function assertProductionHistoryShape(session: Session) {
   const exists = await session.json<boolean>(
-    "select exists(select 1 from pg_catalog.pg_class c join pg_catalog.pg_namespace n on n.oid=c.relnamespace where n.nspname='teka_migrations' and c.relname='history');",
+    "select pg_catalog.to_jsonb(exists(select 1 from pg_catalog.pg_class c join pg_catalog.pg_namespace n on n.oid=c.relnamespace where n.nspname='teka_migrations' and c.relname='history'));",
   );
   if (!exists) return;
   // LOCK performs no query evaluation. Unsupported relation kinds fail before row access.
   await session.query("lock table only teka_migrations.history in access share mode;");
-  const safe = await session.json<boolean>(`select (
+  const safe = await session.json<boolean>(`select pg_catalog.to_jsonb(
     c.relkind='r' and c.relam=2 and c.relpersistence='p' and not c.relispartition and c.reloftype=0
     and not c.relrowsecurity and not c.relforcerowsecurity
     and pg_catalog.has_table_privilege(c.oid,'SELECT')

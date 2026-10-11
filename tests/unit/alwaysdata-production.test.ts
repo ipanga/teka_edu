@@ -329,6 +329,56 @@ describe("production immutable artifact and offline app deployment", () => {
     expect(workflow).toContain("bash scripts/alwaysdata/deploy.sh production");
   });
 
+  it("initializes runner paths in a deploy step without forbidden job env contexts", () => {
+    // Parse the actual YAML using the parser already bundled with ESLint.
+    const workflow = JSON.parse(
+      execFileSync(
+        process.execPath,
+        [
+          "node_modules/js-yaml/bin/js-yaml.js",
+          ".github/workflows/deploy-alwaysdata-production.yml",
+        ],
+        { encoding: "utf8", stdio: "pipe" },
+      ),
+    ) as {
+      on: Record<string, unknown>;
+      jobs: Record<
+        string,
+        {
+          env?: Record<string, string>;
+          if?: string;
+          environment?: { name: string };
+          steps?: { name?: string; run?: string }[];
+        }
+      >;
+    };
+    expect(Object.keys(workflow.on)).toEqual(["workflow_dispatch"]);
+    for (const job of Object.values(workflow.jobs))
+      expect(JSON.stringify(job.env ?? {})).not.toMatch(/\$\{\{\s*runner(?:\.|\[)/);
+    const deploy = workflow.jobs.deploy!;
+    expect(deploy.if).toContain("github.event_name == 'workflow_dispatch'");
+    expect(deploy.if).toContain("github.ref == 'refs/heads/main'");
+    expect(deploy.environment?.name).toBe("production");
+    const initialization = deploy.steps?.[0];
+    expect(initialization?.name).toBe("Prepare deployment paths");
+    expect(initialization?.run).toBeTypeOf("string");
+    const directory = mkdtempSync(path.join(tmpdir(), "teka workflow paths "));
+    const envFile = path.join(directory, "github-env");
+    try {
+      execFileSync("/bin/bash", ["-euo", "pipefail", "-c", initialization!.run!], {
+        env: { NODE_ENV: "test", RUNNER_TEMP: directory, GITHUB_ENV: envFile },
+        stdio: "pipe",
+      });
+      expect(readFileSync(envFile, "utf8").trim().split("\n")).toEqual([
+        `PRODUCTION_DB_GATE_FILE=${directory}/production-db-verification.json`,
+        `ARTIFACT_DIR=${directory}/alwaysdata-production-artifact`,
+        `EVIDENCE_DIR=${directory}/alwaysdata-production-evidence`,
+      ]);
+    } finally {
+      rmSync(directory, { recursive: true, force: true });
+    }
+  });
+
   it("accepts a healthy first production release without forced rollback or any live service calls", () => {
     const directory = mkdtempSync(path.join(tmpdir(), "teka-prod-deploy-"));
     const quote = (value: string) => "'" + value.replaceAll("'", "'\\''") + "'";

@@ -107,11 +107,12 @@ jobs:
     environment:
       name: production
       url: https://tekaedu.tootiye.com
-    env:
-      PRODUCTION_DB_GATE_FILE: ${{ runner.temp }}/production-db-verification.json
-      ARTIFACT_DIR: ${{ runner.temp }}/alwaysdata-production-artifact
-      EVIDENCE_DIR: ${{ runner.temp }}/alwaysdata-production-evidence
     steps:
+      - name: Prepare deployment paths
+        run: |
+          printf '%s\n' "PRODUCTION_DB_GATE_FILE=$RUNNER_TEMP/production-db-verification.json" >> "$GITHUB_ENV"
+          printf '%s\n' "ARTIFACT_DIR=$RUNNER_TEMP/alwaysdata-production-artifact" >> "$GITHUB_ENV"
+          printf '%s\n' "EVIDENCE_DIR=$RUNNER_TEMP/alwaysdata-production-evidence" >> "$GITHUB_ENV"
       - uses: actions/checkout@v7
         with:
           ref: ${{ github.sha }}

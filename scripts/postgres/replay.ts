@@ -31,9 +31,9 @@ async function productionCatalogShapeRegression(connection: Connection) {
   });
   try {
     assert.equal(
-      await fixture.json<boolean>(`select current_database()='teka_portability' and current_user='postgres'
+      await fixture.json<boolean>(`select pg_catalog.to_jsonb(current_database()='teka_portability' and current_user='postgres'
         and current_setting('server_version_num')::integer >= 160000
-        and current_setting('server_version_num')::integer < 170000;`),
+        and current_setting('server_version_num')::integer < 170000);`),
       true,
       "production shape regressions require the isolated PG16 bootstrap fixture",
     );
@@ -42,12 +42,12 @@ async function productionCatalogShapeRegression(connection: Connection) {
     // ROLLBACK restores it before the unchanged pgTAP suites run below.
     await fixture.query("drop extension pgtap;");
     assert.equal(
-      await fixture.json<boolean>(`select
+      await fixture.json<boolean>(`select pg_catalog.to_jsonb(
         (select a.attnum=8 from pg_catalog.pg_attribute a where a.attrelid='public.curriculum_sources'::regclass and a.attname='published_on')
         and (select a.attnum=11 from pg_catalog.pg_attribute a where a.attrelid='public.activities'::regclass and a.attname='payload')
         and (select a.attnum=12 from pg_catalog.pg_attribute a where a.attrelid='public.activities'::regclass and a.attname='role')
         and (select count(*)=2 from pg_catalog.pg_index i join pg_catalog.pg_class c on c.oid=i.indexrelid
-          where i.indrelid='teka_migrations.history'::regclass and c.relname in ('history_pkey','history_filename_key'));`),
+          where i.indrelid='teka_migrations.history'::regclass and c.relname in ('history_pkey','history_filename_key')));`),
       true,
       "physical column ordering and normal history indexes must match the reviewed fixture",
     );
