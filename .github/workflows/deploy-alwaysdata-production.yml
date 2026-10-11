@@ -1,0 +1,158 @@
+# Manual opt-in application path. PROD DB migration/verification is completed separately.
+# The existing Vercel PRODUCTION_DEPLOY_ENABLED switch is never used by this workflow.
+name: Deploy alwaysdata production
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_sha:
+        description: Exact reviewed main SHA (40 lowercase hex characters)
+        required: true
+        type: string
+      owner_confirmation:
+        description: Type DEPLOY followed by a space and the exact release SHA
+        required: true
+        type: string
+      quiescence_confirmed:
+        description: Owner confirms the verified PROD DB remains quiescent
+        required: true
+        type: boolean
+        default: false
+      db_verification_sha256:
+        description: SHA256 of the protected completed PROD DB verification receipt
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: deploy-alwaysdata-production
+  cancel-in-progress: false
+
+env:
+  ALWAYSDATA_PRODUCTION_DEPLOY_ENABLED: ${{ vars.ALWAYSDATA_PRODUCTION_DEPLOY_ENABLED }}
+  ALWAYSDATA_SSH_HOST: ${{ vars.ALWAYSDATA_SSH_HOST }}
+  ALWAYSDATA_SSH_PORT: ${{ vars.ALWAYSDATA_SSH_PORT }}
+  ALWAYSDATA_SSH_USER: ${{ vars.ALWAYSDATA_SSH_USER }}
+  TEKA_RELEASE_SHA: ${{ inputs.release_sha }}
+  ALWAYSDATA_PRODUCTION_OWNER_CONFIRMATION: ${{ inputs.owner_confirmation }}
+  ALWAYSDATA_PRODUCTION_QUIESCENCE_CONFIRMED: ${{ inputs.quiescence_confirmed }}
+  PRODUCTION_DB_GATE_SHA256: ${{ inputs.db_verification_sha256 }}
+
+jobs:
+  guard:
+    name: Require manual main release and explicit owner confirmation
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+      - name: Validate disabled-by-default activation and exact commit
+        run: |
+          node --input-type=module - <<'JS'
+          import { assertProductionDeploymentConfig } from './scripts/alwaysdata/preflight.mjs';
+          assertProductionDeploymentConfig(process.env);
+          if (!/^[a-f0-9]{64}$/.test(process.env.PRODUCTION_DB_GATE_SHA256 ?? '')) throw Error('Receipt SHA256 required');
+          JS
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+
+  ci:
+    name: CI
+    needs: guard
+    uses: ./.github/workflows/ci.yml
+
+  artifact:
+    name: Package and verify exact production Linux application artifact
+    needs: ci
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Build and package without production credentials
+        env:
+          SUPABASE_SECRET_KEY: sb_secret_ci_sentinel_not_a_real_key
+          DATABASE_URL: postgresql://ci:ci-sentinel-database-url@127.0.0.1:54322/postgres
+          DIRECT_DATABASE_URL: postgresql://ci:ci-sentinel-direct-url@127.0.0.1:54322/postgres
+        run: |
+          npm run build
+          npm run check:client-bundle
+          node scripts/alwaysdata/package.mjs "$RUNNER_TEMP/alwaysdata-production-release" "$GITHUB_SHA" production
+      - name: Boot immutable Linux artifact and require exact production health and media
+        run: node scripts/alwaysdata/verify-artifact.mjs "$RUNNER_TEMP/alwaysdata-production-release" production
+      - uses: actions/upload-artifact@v7
+        with:
+          name: alwaysdata-production-release-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/alwaysdata-production-release/release.tar.gz
+            ${{ runner.temp }}/alwaysdata-production-release/artifact.json
+          retention-days: 14
+
+  deploy:
+    name: Consume completed PROD DB verification and install application only
+    needs: [ci, artifact]
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    # The owner must configure required reviewers for this production environment.
+    environment:
+      name: production
+      url: https://tekaedu.tootiye.com
+    steps:
+      - name: Prepare deployment paths
+        run: |
+          printf '%s\n' "PRODUCTION_DB_GATE_FILE=$RUNNER_TEMP/production-db-verification.json" >> "$GITHUB_ENV"
+          printf '%s\n' "ARTIFACT_DIR=$RUNNER_TEMP/alwaysdata-production-artifact" >> "$GITHUB_ENV"
+          printf '%s\n' "EVIDENCE_DIR=$RUNNER_TEMP/alwaysdata-production-evidence" >> "$GITHUB_ENV"
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Validate protected completed verification receipt before provider credentials
+        env:
+          ALWAYSDATA_PRODUCTION_DB_VERIFICATION_JSON: ${{ secrets.ALWAYSDATA_PRODUCTION_DB_VERIFICATION }}
+        run: |
+          umask 077
+          printf '%s' "$ALWAYSDATA_PRODUCTION_DB_VERIFICATION_JSON" > "$PRODUCTION_DB_GATE_FILE"
+          unset ALWAYSDATA_PRODUCTION_DB_VERIFICATION_JSON
+          node --input-type=module - <<'JS'
+          import { assertProductionDeploymentConfig, readProductionDatabaseGate } from './scripts/alwaysdata/preflight.mjs';
+          assertProductionDeploymentConfig(process.env);
+          readProductionDatabaseGate(process.env.PRODUCTION_DB_GATE_FILE, process.env.PRODUCTION_DB_GATE_SHA256, process.env.GITHUB_SHA);
+          JS
+      - run: npm ci
+      - uses: actions/download-artifact@v8
+        with:
+          name: alwaysdata-production-release-${{ github.sha }}
+          path: ${{ runner.temp }}/alwaysdata-production-artifact
+      - run: npx playwright install --with-deps chromium
+      - name: Install atomic production application release and verify strict health
+        env:
+          ALWAYSDATA_SSH_PRIVATE_KEY: ${{ secrets.ALWAYSDATA_SSH_PRIVATE_KEY }}
+          ALWAYSDATA_SSH_KNOWN_HOSTS: ${{ secrets.ALWAYSDATA_SSH_KNOWN_HOSTS }}
+          ALWAYSDATA_API_TOKEN: ${{ secrets.ALWAYSDATA_API_TOKEN }}
+        run: bash scripts/alwaysdata/deploy.sh production
+      - name: Keep application health and rollback status evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: alwaysdata-production-app-evidence-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/alwaysdata-production-evidence/
+            playwright-report/
+          retention-days: 14
+      - name: Remove protected receipt from the runner
+        if: always()
+        run: rm -f "$PRODUCTION_DB_GATE_FILE"

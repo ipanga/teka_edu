@@ -44,6 +44,12 @@ export default async function LevelHomePage({ params }: PageProps<"/maternelle/[
           </Link>
         </>
       )}
+      <Link
+        href="/progression"
+        className="inline-flex min-h-11 items-center font-medium text-emerald-800 underline"
+      >
+        Transférer ma progression
+      </Link>
     </main>
   );
 }

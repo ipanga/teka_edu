@@ -1,30 +1,35 @@
 import { pathToFileURL } from "node:url";
+import { parseArgs } from "node:util";
 import { validatePreflightSite } from "./preflight.mjs";
-export const SITE_ID = 1083502;
-export const STAGING_URL = "https://staging-tekaedu.tootiye.com";
-export const SITE_COMMAND = "/usr/alwaysdata/nodejs/22/bin/node current/runtime.mjs";
+import { deploymentTarget, SITE_COMMAND } from "./targets.mjs";
+export { SITE_COMMAND };
+export const SITE_ID = deploymentTarget().siteId;
+export const STAGING_URL = deploymentTarget().url;
 // Deployment uses the independently verified, redacted site contract from develop.
-export function assertSite(site) {
-  validatePreflightSite(site);
+export function assertSite(site, targetName = "staging") {
+  validatePreflightSite(site, targetName);
 }
-export function assertHealth(body, sha) {
+export function assertHealth(body, sha, targetName = "staging") {
+  const target = deploymentTarget(targetName);
   if (
     body.status !== "ok" ||
-    body.environment !== "staging" ||
+    body.environment !== target.environment ||
     body.commit !== sha ||
     body.supabaseProjectRef !== null
   )
-    throw new Error("Strict staging health identity mismatch");
+    throw new Error(`Strict ${target.environment} health identity mismatch`);
 }
-export async function waitHealth(sha, attempts = 30) {
+export async function waitHealth(sha, attempts = 30, targetName = "staging") {
+  const target = deploymentTarget(targetName);
   for (let i = 0; i < attempts; i++) {
     try {
-      const response = await fetch(STAGING_URL + "/api/health?release=" + sha, {
+      const response = await fetch(target.url + "/api/health?release=" + sha, {
         cache: "no-store",
         signal: AbortSignal.timeout(10000),
+        ...(target.environment === "production" ? { redirect: "error" } : {}),
       });
       if (!response.ok) throw new Error("HTTP health failure");
-      assertHealth(await response.json(), sha);
+      assertHealth(await response.json(), sha, targetName);
       return;
     } catch {
       if (i === attempts - 1)
@@ -110,7 +115,7 @@ function transportFailure(stage, error) {
     retryable: timedOut || safeCodes.some((code) => TRANSIENT_CODES.has(code)),
   });
 }
-async function apiRequest(method, url, headers, fetcher) {
+async function apiRequest(method, url, headers, fetcher, targetName) {
   const stage = method === "GET" ? "API_SITE_GET" : "API_RESTART_POST";
   const controller = new AbortController();
   let timer;
@@ -158,7 +163,7 @@ async function apiRequest(method, url, headers, fetcher) {
             throw transportFailure(stage, error);
           }
           try {
-            assertSite(site);
+            assertSite(site, targetName);
           } catch {
             throw new ApiFailure(stage, "SITE_IDENTITY_INVALID");
           }
@@ -180,8 +185,10 @@ export async function siteAction(
   {
     fetcher = globalThis.fetch,
     sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms)),
+    targetName = "staging",
   } = {},
 ) {
+  const target = deploymentTarget(targetName);
   if (!["inspect", "restart"].includes(action))
     throw new ApiFailure("API_CONFIG", "ACTION_INVALID");
   const token = process.env.ALWAYSDATA_API_TOKEN;
@@ -189,12 +196,12 @@ export async function siteAction(
   const headers = {
     Authorization: "Basic " + Buffer.from(token + " account=congofoot:").toString("base64"),
   };
-  const base = "https://api.alwaysdata.com/v1/site/" + SITE_ID + "/";
+  const base = "https://api.alwaysdata.com/v1/site/" + target.siteId + "/";
   let inspection;
   for (let attempt = 0; attempt < 3; attempt++) {
     try {
       inspection = {
-        http_status: await apiRequest("GET", base, headers, fetcher),
+        http_status: await apiRequest("GET", base, headers, fetcher, targetName),
         attempts: attempt + 1,
       };
       break;
@@ -208,7 +215,7 @@ export async function siteAction(
   if (action === "inspect") return inspection;
   if (action === "restart") {
     try {
-      await apiRequest("POST", base + "restart/", headers, fetcher);
+      await apiRequest("POST", base + "restart/", headers, fetcher, targetName);
     } catch (error) {
       // A lost response cannot tell us whether the restart happened. Never retry
       // this POST or perform recovery here; the owner must first inspect state.
@@ -221,14 +228,22 @@ export async function siteAction(
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   try {
-    const [action, sha] = process.argv.slice(2);
+    const {
+      positionals: [action, sha],
+      values,
+    } = parseArgs({
+      args: process.argv.slice(2),
+      allowPositionals: true,
+      options: { target: { type: "string", default: "staging" } },
+    });
+    const target = deploymentTarget(values.target);
     if (!["inspect", "restart", "health"].includes(action))
       throw new Error("Explicit site action required");
     if (action === "health") {
       if (!/^[a-f0-9]{40}$/.test(sha ?? "")) throw new Error("Full SHA required");
-      await waitHealth(sha);
-    } else await siteAction(action);
-    console.log("PASS: staging " + action);
+      await waitHealth(sha, 30, values.target);
+    } else await siteAction(action, { targetName: values.target });
+    console.log("PASS: " + target.environment + " " + action);
   } catch (error) {
     console.error("FAIL: " + formatSiteFailure(error));
     process.exitCode = 1;

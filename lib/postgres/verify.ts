@@ -69,7 +69,7 @@ export async function inventory(session: Session) {
   );
 }
 
-export async function verifyAccess(session: Session, managed: boolean) {
+export async function verifyAccess(session: Session, managed: boolean, production = false) {
   const result = await session.json<Record<string, boolean>>(`select jsonb_build_object(
     'rls', not exists (select 1 from pg_class c join pg_namespace n on n.oid=c.relnamespace where n.nspname='public' and c.relkind in ('r','p') and not c.relrowsecurity),
     'policies', not exists (select 1 from pg_policies where schemaname='public'),
@@ -77,7 +77,7 @@ export async function verifyAccess(session: Session, managed: boolean) {
     'function_privileges', not exists (select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace cross join lateral aclexplode(coalesce(p.proacl,acldefault('f',p.proowner))) a where n.nspname='private' and (p.prosecdef or a.grantee not in (p.proowner,(select oid from pg_roles where rolname=current_user)${managed ? ", (select oid from pg_roles where rolname='congofoot')" : ""}))),
     'schema_privileges', not exists (select 1 from pg_namespace n cross join lateral aclexplode(coalesce(n.nspacl,acldefault('n',n.nspowner))) a where n.nspname in ('private','teka_migrations') and a.grantee not in (n.nspowner,(select oid from pg_roles where rolname=current_user)${managed ? ", (select oid from pg_roles where rolname='congofoot')" : ""})),
     'public_schema_create', not exists (select 1 from pg_namespace n cross join lateral aclexplode(coalesce(n.nspacl,acldefault('n',n.nspowner))) a where n.nspname='public' and a.grantee=0 and a.privilege_type='CREATE'),
-    'cross_environment_isolation', ${managed ? "not has_database_privilege(current_user,'congofoot_teka_edu_prod','CONNECT')" : "true"},
+    'cross_environment_isolation', ${managed ? `not has_database_privilege(current_user,'${production ? "congofoot_teka_edu_dev" : "congofoot_teka_edu_prod"}','CONNECT')` : "true"},
     'btree_gist', exists (select 1 from pg_extension where extname='btree_gist')
   );`);
   if (Object.values(result).some((passed) => !passed))

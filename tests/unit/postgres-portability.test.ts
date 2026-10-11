@@ -141,8 +141,8 @@ describe("ordered protected history", () => {
   });
 });
 describe("target and server identity", () => {
-  it("blocks every production command and incomplete targets", () => {
-    expect(() => connectionFor("production", staging)).toThrow(/blocked/);
+  it("blocks unapproved production commands and incomplete targets", () => {
+    expect(() => connectionFor("production", staging)).toThrow(/approval/);
     expect(() => connectionFor("", local)).toThrow(/Explicit/);
   });
   it("rejects database/login/host crossover and weak TLS", () => {

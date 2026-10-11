@@ -14,9 +14,19 @@ export class Session {
     reject: (error: Error) => void;
   };
   constructor(connection: Connection) {
-    this.child = spawn("psql", ["-X", "-qAt", "--no-password", "-v", "ON_ERROR_STOP=1"], {
-      env: connection.env,
-    });
+    this.child = spawn(
+      "psql",
+      [
+        "-X",
+        "-qAt",
+        connection.env.TEKA_POSTGRES_PASSWORD_PROMPT === "true" ? "--password" : "--no-password",
+        "-v",
+        "ON_ERROR_STOP=1",
+      ],
+      {
+        env: connection.env,
+      },
+    );
     this.child.stderr.on("data", (chunk: Buffer) => {
       this.diagnostic += chunk.toString();
     });
@@ -33,7 +43,10 @@ export class Session {
     });
     const fail = () => {
       this.closed = true;
-      let message = this.diagnostic.trim() || "psql process failed or disconnected";
+      let message =
+        connection.target === "production"
+          ? "Production PostgreSQL client failed; private diagnostics withheld"
+          : this.diagnostic.trim() || "psql process failed or disconnected";
       if (connection.env.PGPASSWORD)
         message = message.replaceAll(connection.env.PGPASSWORD, "[redacted]");
       this.pending?.reject(new Error(message));
