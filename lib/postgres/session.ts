@@ -54,6 +54,20 @@ export type SessionDiagnostics = {
   client_exit: { observed: boolean; code: number | null; signal: string | null };
 };
 
+/** Structured, sanitized failure for callers that must not inspect server error text. */
+export class PostgresClientError extends Error {
+  readonly diagnostics: SessionDiagnostics;
+
+  constructor(diagnostics: SessionDiagnostics) {
+    const failure = diagnostics.failure;
+    super(
+      `PostgreSQL client failure: ${failure?.classification ?? "UNKNOWN"}; SQLSTATE=${failure?.sqlstate ?? "UNKNOWN"}; phase=${failure?.phase ?? "UNKNOWN"}`,
+    );
+    this.name = "PostgresClientError";
+    this.diagnostics = structuredClone(diagnostics);
+  }
+}
+
 /** No SQL text, stderr, host/user strings or query results enter the diagnostic record. */
 export class Session {
   private child: ChildProcessWithoutNullStreams;
@@ -292,12 +306,7 @@ export class Session {
         sqlstate: this.sqlstate,
         phase: this.failurePhase(),
       };
-    const failure = this.state.failure;
-    this.pending?.reject(
-      new Error(
-        `PostgreSQL client failure: ${failure.classification}; SQLSTATE=${failure.sqlstate ?? "UNKNOWN"}; phase=${failure.phase}`,
-      ),
-    );
+    this.pending?.reject(new PostgresClientError(this.state));
     this.pending = undefined;
     this.stderrTail = "";
     this.buffer = "";
@@ -377,7 +386,9 @@ export class Session {
 
   close(): Promise<SessionDiagnostics> {
     if (this.closing) return this.closing;
-    this.clearDeadline();
+    // Stop a future deadline, but preserve an escalation already armed by an expired
+    // deadline. The normal CLI catch calls close() immediately after query rejection.
+    if (this.deadline) clearTimeout(this.deadline);
     this.closing = (async () => {
       if (!this.closed) {
         try {
@@ -395,14 +406,20 @@ export class Session {
           ]);
           if (timer) clearTimeout(timer);
         };
-        await wait(2000);
-        if (!this.closed) {
-          this.terminate("SIGTERM");
-          await wait(250);
-        }
-        if (!this.closed) {
-          this.terminate("SIGKILL");
-          await wait(250);
+        if (this.deadlineKill) {
+          // The watchdog owns TERM -> 250 ms -> KILL. Allow its remaining grace
+          // and a bounded exit acknowledgement, without sending duplicate signals.
+          await wait(500);
+        } else {
+          await wait(2000);
+          if (!this.closed) {
+            this.terminate("SIGTERM");
+            await wait(250);
+          }
+          if (!this.closed) {
+            this.terminate("SIGKILL");
+            await wait(250);
+          }
         }
         if (!this.closed) this.fail("UNKNOWN");
       }

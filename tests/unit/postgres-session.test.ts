@@ -1,6 +1,6 @@
 import { EventEmitter } from "node:events";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { Session, type OperationLabel } from "@/lib/postgres/session";
+import { PostgresClientError, Session, type OperationLabel } from "@/lib/postgres/session";
 import type { Connection } from "@/lib/postgres/target";
 
 const mocks = vi.hoisted(() => ({ spawn: vi.fn() }));
@@ -102,6 +102,87 @@ describe("single-process sanitized PostgreSQL session diagnostics (no native pro
     expect(session.diagnostics().failure?.phase).toBe("AFTER_COMMIT_ACK");
     expect(session.diagnostics().transaction.commit_acknowledged).toBe(1);
     expect(session.diagnostics().transaction.rollback_sent).toBe(0);
+  });
+  it("preserves 250 ms escalation through normal query catch and close", async () => {
+    vi.useFakeTimers();
+    const session = new Session(connection, { deadlineMs: 1000 });
+    connected();
+    await complete(session, "begin;");
+    const completion = session.query("commit;").catch((error: unknown) => {
+      expect(error).toBeInstanceOf(PostgresClientError);
+      return session.close();
+    });
+    await vi.advanceTimersByTimeAsync(1000);
+    expect(child.kill.mock.calls).toEqual([["SIGTERM"]]);
+    await vi.advanceTimersByTimeAsync(249);
+    expect(child.kill.mock.calls).toEqual([["SIGTERM"]]);
+    await vi.advanceTimersByTimeAsync(1);
+    expect(child.kill.mock.calls).toEqual([["SIGTERM"], ["SIGKILL"]]);
+    child.emit("close", null, "SIGKILL");
+    await expect(completion).resolves.toMatchObject({
+      failure: { classification: "CLIENT_DEADLINE", phase: "AROUND_COMMIT" },
+      client_exit: { observed: true, code: null, signal: "SIGKILL" },
+      transaction: { commit_sent: 1, commit_acknowledged: 0, rollback_sent: 0 },
+    });
+    expect(mocks.spawn).toHaveBeenCalledTimes(1);
+    await vi.advanceTimersByTimeAsync(3000);
+    expect(child.kill).toHaveBeenCalledTimes(2);
+  });
+  it("cancels escalation on observed TERM exit during deadline cleanup", async () => {
+    vi.useFakeTimers();
+    const session = new Session(connection, { deadlineMs: 1000 });
+    connected();
+    const completion = session.query("select 1;").catch(() => session.close());
+    await vi.advanceTimersByTimeAsync(1000);
+    await vi.advanceTimersByTimeAsync(100);
+    child.emit("close", null, "SIGTERM");
+    await expect(completion).resolves.toMatchObject({
+      client_exit: { observed: true, code: null, signal: "SIGTERM" },
+      failure: { classification: "CLIENT_DEADLINE" },
+    });
+    await vi.advanceTimersByTimeAsync(3000);
+    expect(child.kill.mock.calls).toEqual([["SIGTERM"]]);
+  });
+  it("bounds deadline cleanup when even SIGKILL receives no exit acknowledgement", async () => {
+    vi.useFakeTimers();
+    const session = new Session(connection, { deadlineMs: 1000 });
+    connected();
+    const completion = session.query("commit;").catch(() => session.close());
+    await vi.advanceTimersByTimeAsync(1500);
+    await expect(completion).resolves.toMatchObject({
+      client_exit: { observed: false, code: null, signal: null },
+      failure: { classification: "CLIENT_DEADLINE", phase: "AROUND_COMMIT" },
+      transaction: { commit_acknowledged: 0, rollback_acknowledged: 0 },
+    });
+    expect(child.kill.mock.calls).toEqual([["SIGTERM"], ["SIGKILL"]]);
+    await vi.advanceTimersByTimeAsync(3000);
+    expect(child.kill).toHaveBeenCalledTimes(2);
+  });
+  it("cancels a future deadline during ordinary clean shutdown", async () => {
+    vi.useFakeTimers();
+    const session = new Session(connection, { deadlineMs: 1000 });
+    const closing = session.close();
+    await vi.advanceTimersByTimeAsync(500);
+    child.emit("close", 0, null);
+    await expect(closing).resolves.toMatchObject({ client_exit: { observed: true, code: 0 } });
+    await vi.advanceTimersByTimeAsync(3000);
+    expect(child.kill).not.toHaveBeenCalled();
+  });
+  it("exports structured assertion SQLSTATE without server error contents", async () => {
+    const session = new Session(connection);
+    connected();
+    const pending = session.query("select synthetic_assertion();");
+    error("ERROR:  P0001\nSECRET_SENTINEL\n", 3);
+    const failure = await pending.catch((value: unknown) => value);
+    expect(failure).toBeInstanceOf(PostgresClientError);
+    expect((failure as PostgresClientError).diagnostics.failure).toEqual({
+      classification: "SQLSTATE_ERROR",
+      sqlstate: "P0001",
+      phase: "AFTER_CONNECTION_ACK",
+    });
+    expect(JSON.stringify(failure)).not.toContain("SECRET_SENTINEL");
+    (failure as PostgresClientError).diagnostics.transaction.commit_acknowledged = 99;
+    expect(session.diagnostics().transaction.commit_acknowledged).toBe(0);
   });
   it("spawns once with SQLSTATE-only server diagnostics and no shell", () => {
     new Session(connection);

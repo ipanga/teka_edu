@@ -4,6 +4,7 @@ import { spawnSync } from "node:child_process";
 import assert from "node:assert/strict";
 import { connectionFor, type Connection } from "@/lib/postgres/target";
 import { Session } from "@/lib/postgres/session";
+import { isManagedAssertionFailure } from "./replay-errors";
 import { ROOT, loadMigrations, sha256, toolingDigest } from "@/lib/postgres/migrations";
 import {
   apply,
@@ -220,7 +221,7 @@ async function main() {
           readFileSync(path.join(ROOT, "scripts/postgres/assertions.sql"), "utf8"),
         );
         await assertionProbe.query("select pg_temp.plan(1);");
-        await assert.rejects(assertionProbe.query(sql), /Assertion (failed|count mismatch)/);
+        await assert.rejects(assertionProbe.query(sql), isManagedAssertionFailure);
       } finally {
         assertionProbe.close();
       }
