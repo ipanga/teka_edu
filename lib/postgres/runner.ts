@@ -141,7 +141,7 @@ export async function initialize(session: Session, connection: Connection) {
   await session.query(
     "set statement_timeout='120s'; set lock_timeout='5s'; set search_path=pg_catalog,public,extensions;",
   );
-  const identity = await session.json<Identity>(IDENTITY_SQL);
+  const identity = await session.json<Identity>(IDENTITY_SQL, "IDENTITY");
   assertIdentity(connection, identity);
   return identity;
 }
@@ -175,12 +175,13 @@ export async function history(session: Session, connection?: Connection): Promis
   if (!exists) return [];
   return session.json<History[]>(
     "select coalesce(jsonb_agg(to_jsonb(t) order by t.version),'[]') from (select version,filename,source_sha256,execution_sha256,adapter_version,target,release_sha from teka_migrations.history order by version) t;",
+    "HISTORY",
   );
 }
 export async function list(session: Session, migrations: Migration[], connection: Connection) {
   await session.query("begin read only;");
   try {
-    const identity = await session.json<Identity>(IDENTITY_SQL);
+    const identity = await session.json<Identity>(IDENTITY_SQL, "IDENTITY");
     assertIdentity(connection, identity);
     if (connection.target === "production") await assertProductionTargetState(session, false);
     const applied = await history(session, connection);
@@ -226,7 +227,7 @@ export async function preflight(session: Session, migrations: Migration[], conne
       await assertProductionTargetState(session, state.applied === 0);
     if (state.applied === 0 && (capabilities.tables !== 0 || capabilities.private_objects !== 0))
       throw new Error("Target is unexpectedly non-empty without migration history");
-    if (state.applied === 0 && (await session.json<number>(UNEXPECTED_OBJECTS_SQL)) !== 0)
+    if (state.applied === 0 && (await session.json<number>(UNEXPECTED_OBJECTS_SQL, "SCHEMA")) !== 0)
       throw new Error("Unexpected application schema objects without migration history");
     return { ...state, capabilities, install_permission: "not proved by read-only preflight" };
   } finally {
@@ -464,9 +465,9 @@ export async function apply(
   canonicalTables();
   await session.query("begin;");
   try {
-    await session.query(`select pg_advisory_xact_lock(${LOCK_KEY}::bigint);`);
+    await session.query(`select pg_advisory_xact_lock(${LOCK_KEY}::bigint);`, "ADVISORY_LOCK");
     // Identity and history must be read again AFTER acquiring the transaction lock.
-    const identity = await session.json<Identity>(IDENTITY_SQL);
+    const identity = await session.json<Identity>(IDENTITY_SQL, "IDENTITY");
     assertIdentity(connection, identity);
     if (connection.target === "production") await assertProductionTargetState(session, false);
     const applied = await history(session, connection);
@@ -474,7 +475,7 @@ export async function apply(
     if (connection.target === "production")
       await assertProductionTargetState(session, applied.length === 0);
     if (applied.length === 0) {
-      const count = await session.json<number>(UNEXPECTED_OBJECTS_SQL);
+      const count = await session.json<number>(UNEXPECTED_OBJECTS_SQL, "SCHEMA");
       if (count !== 0)
         throw new Error("Target is unexpectedly non-empty without migration history");
     }
@@ -483,7 +484,8 @@ export async function apply(
       await verifyAccess(session, true, true);
     }
     if (connection.target !== "production" || applied.length === 0)
-      await session.query(`create schema if not exists extensions; revoke all on schema extensions from public;
+      await session.query(
+        `create schema if not exists extensions; revoke all on schema extensions from public;
       create schema if not exists private; revoke all on schema private from public;
       create schema if not exists teka_migrations; revoke all on schema teka_migrations from public;
       create extension if not exists btree_gist with schema extensions;
@@ -493,11 +495,14 @@ export async function apply(
         execution_sha256 text not null check(execution_sha256 ~ '^[a-f0-9]{64}$'),
         adapter_version text not null, applied_at timestamptz not null default now(),
         release_sha text not null check(release_sha ~ '^[a-f0-9]{40}$'),target text not null check(target in (${connection.target === "production" ? "'production'" : "'local','staging'"}))
-      ); revoke all on table teka_migrations.history from public;`);
+      ); revoke all on table teka_migrations.history from public;`,
+        "BOOTSTRAP",
+      );
     for (const migration of pending) {
       await session.query(
         migration.sql +
           `\ninsert into teka_migrations.history (version,filename,source_sha256,execution_sha256,adapter_version,release_sha,target) values (${[migration.version, migration.filename, migration.source_sha256, migration.execution_sha256, migration.adapter_version, releaseSha, connection.target].map(literal).join(",")});`,
+        "MIGRATION",
       );
     }
     if (connection.target === "production") await assertProductionApplicationShape(session);

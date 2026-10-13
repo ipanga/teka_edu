@@ -34,6 +34,7 @@ export async function verifyCanonical(session: Session) {
   for (const table of canonicalTables()) {
     const actual = await session.json<unknown[]>(
       `select coalesce(jsonb_agg(to_jsonb(t)), '[]') from (select ${table.columns.map((column) => identifier(column.name)).join(",")} from public.${identifier(table.table)} order by ${table.key.map(identifier).join(",")}) t;`,
+      "CANONICAL",
     );
     // Key ordering from referenceTables is JS string ordering, not PostgreSQL collation.
     const rows = (values: unknown[]) => values.map((row) => JSON.stringify(normalize(row))).sort();
@@ -66,6 +67,7 @@ export type Inventory = {
 export async function inventory(session: Session) {
   return session.json<Inventory>(
     readFileSync(path.join(ROOT, "scripts/postgres/inventory.sql"), "utf8"),
+    "SCHEMA",
   );
 }
 
@@ -89,6 +91,7 @@ export async function verifyAccess(session: Session, managed: boolean, productio
     );
   const privileges = await session.json<unknown[]>(
     readFileSync(path.join(ROOT, "scripts/postgres/access-inventory.sql"), "utf8"),
+    "ACCESS",
   );
   return { ...result, privileges };
 }
@@ -150,7 +153,7 @@ export async function behavioralTests(session: Session, inTransaction = false) {
           "rollback to savepoint teka_integrity; release savepoint teka_integrity;\n",
         );
     }
-    const output = await session.query(sql);
+    const output = await session.query(sql, "INTEGRITY");
     if (!output.includes("assertions passed:"))
       throw new Error(`Incomplete managed assertion suite: ${filename}`);
     results.push({ filename, assertions: Number(output.match(/assertions passed: (\d+)/)?.[1]) });
@@ -166,10 +169,10 @@ export async function syncIdempotency(session: Session) {
       throw new Error("Idempotency verification requires PostgreSQL track_counts");
     const counters =
       "select coalesce(jsonb_object_agg(relname,n_tup_ins+n_tup_upd+n_tup_del),'{}') from pg_stat_xact_user_tables where schemaname='public';";
-    const before = await session.json<Record<string, number>>(counters);
-    await session.query(referenceSyncSql(getReferenceData()));
+    const before = await session.json<Record<string, number>>(counters, "IDEMPOTENCY");
+    await session.query(referenceSyncSql(getReferenceData()), "IDEMPOTENCY");
     await verifyCanonical(session);
-    const after = await session.json<Record<string, number>>(counters);
+    const after = await session.json<Record<string, number>>(counters, "IDEMPOTENCY");
     const mutations = Object.entries(after)
       .map(([table, count]) => ({ table, changes: count - (before[table] ?? 0) }))
       .filter(({ changes }) => changes !== 0);

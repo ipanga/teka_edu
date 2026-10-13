@@ -1,0 +1,135 @@
+-- Preparation only: a fresh owner authorization is required before connection.
+-- Native psql 16; startup settings are pinned in PROD_STATE_INSPECTION.md.
+-- Only fixed markers, booleans and aggregate counts leave this script.
+\set ON_ERROR_STOP on
+\set VERBOSITY sqlstate
+\set SHOW_CONTEXT never
+\echo TEKA_PHASE_CONNECTION_ESTABLISHED
+
+BEGIN ISOLATION LEVEL REPEATABLE READ READ ONLY;
+\echo TEKA_PHASE_BEGIN_READ_ONLY_ACKNOWLEDGED
+
+SELECT
+  pg_catalog.current_database() = 'congofoot_teka_edu_prod'
+  AND CURRENT_USER = 'congofoot_user_teka_edu_prod'
+  AND SESSION_USER = 'congofoot_user_teka_edu_prod'
+  AND pg_catalog.current_setting('server_version_num')::integer = 160015
+  AND pg_catalog.current_setting('default_transaction_read_only') = 'on'
+  AND pg_catalog.current_setting('transaction_read_only') = 'on'
+  AND pg_catalog.current_setting('transaction_isolation') = 'repeatable read'
+  AND pg_catalog.current_setting('search_path') = 'pg_catalog'
+  AND pg_catalog.current_setting('row_security') = 'off'
+  AND pg_catalog.current_setting('statement_timeout') = '15s'
+  AND pg_catalog.current_setting('lock_timeout') = '2s'
+  AND COALESCE((SELECT ssl FROM pg_catalog.pg_stat_ssl
+    WHERE pid = pg_catalog.pg_backend_pid()), false)
+  AND EXISTS (SELECT 1 FROM pg_catalog.pg_roles WHERE rolname = CURRENT_USER
+    AND NOT rolsuper AND NOT rolcreaterole AND NOT rolreplication AND NOT rolbypassrls)
+  AS identity_session_guard
+\gset
+\if :identity_session_guard
+\echo TEKA_PHASE_IDENTITY_SESSION_TLS_PASS
+\else
+\echo TEKA_FAILURE_IDENTITY_SESSION_TLS_GUARD
+-- Deliberate built-in SQLSTATE 22012 forces a nonzero ON_ERROR_STOP exit.
+SELECT 1 / 0;
+\endif
+
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c
+  JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+  WHERE n.nspname = 'teka_migrations' AND c.relname = 'history') AS history_exists
+\gset
+\set history_records 0
+
+\if :history_exists
+-- No query evaluation; prevents relation replacement between shape check/count.
+LOCK TABLE ONLY teka_migrations.history IN ACCESS SHARE MODE;
+SELECT COALESCE((SELECT
+  c.relkind = 'r' AND c.relam = 2 AND c.relpersistence = 'p'
+  AND NOT c.relispartition AND c.reloftype = 0
+  AND NOT c.relrowsecurity AND NOT c.relforcerowsecurity
+  AND pg_catalog.has_schema_privilege(n.oid, 'USAGE')
+  AND pg_catalog.has_table_privilege(c.oid, 'SELECT')
+  AND NOT EXISTS (SELECT 1 FROM pg_catalog.pg_inherits
+    WHERE inhparent = c.oid OR inhrelid = c.oid)
+  AND NOT EXISTS (SELECT 1 FROM pg_catalog.pg_rewrite WHERE ev_class = c.oid)
+  AND (SELECT pg_catalog.count(*) FROM pg_catalog.pg_attribute
+    WHERE attrelid = c.oid AND attnum > 0) = 8
+  AND (SELECT pg_catalog.count(*) FROM pg_catalog.pg_attribute
+    WHERE attrelid = c.oid AND attnum > 0 AND NOT attisdropped AND attnotnull
+    AND attgenerated = '' AND attidentity = '' AND (
+      (attname IN ('version','filename','source_sha256','execution_sha256',
+        'adapter_version','release_sha','target') AND atttypid = 25)
+      OR (attname = 'applied_at' AND atttypid = 1184))) = 8
+  -- A count may use an index: reject custom AM/opclass/expression paths too.
+  AND NOT EXISTS (SELECT 1 FROM pg_catalog.pg_index i
+    JOIN pg_catalog.pg_class ix ON ix.oid = i.indexrelid
+    WHERE i.indrelid = c.oid AND NOT (
+      ix.relam = 403 AND ix.relkind = 'i' AND i.indisvalid AND i.indisready
+      AND i.indnatts = 1 AND i.indnkeyatts = 1
+      AND i.indexprs IS NULL AND i.indpred IS NULL
+      AND i.indkey[0] IN (1,2)
+      AND EXISTS (SELECT 1 FROM pg_catalog.pg_opclass oc
+        JOIN pg_catalog.pg_namespace onsp ON onsp.oid = oc.opcnamespace
+        WHERE oc.oid = i.indclass[0] AND onsp.nspname = 'pg_catalog'
+          AND oc.opcname = 'text_ops' AND oc.opcmethod = 403 AND oc.opcintype = 25)))
+  FROM pg_catalog.pg_class c
+  JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+  WHERE n.nspname = 'teka_migrations' AND c.relname = 'history'), false)
+  AS history_shape_guard
+\gset
+\if :history_shape_guard
+SELECT pg_catalog.count(*) AS history_records FROM ONLY teka_migrations.history
+\gset
+\echo TEKA_PHASE_HISTORY_COUNT_ACKNOWLEDGED
+\else
+\echo TEKA_FAILURE_HISTORY_VISIBILITY_OR_SHAPE
+SELECT 1 / 0;
+\endif
+\endif
+
+-- Count catalog objects without deparsing definitions or reading application data.
+WITH namespaces AS (
+  SELECT oid, nspname FROM pg_catalog.pg_namespace
+  WHERE nspname <> 'information_schema' AND nspname !~ '^pg_'
+)
+SELECT pg_catalog.jsonb_build_object(
+  'identity_session_tls_guard', true,
+  'server_version_num', 160015,
+  'history_exists', :'history_exists'::boolean,
+  'migration_records', :history_records,
+  'application_tables', (SELECT pg_catalog.count(*) FROM pg_catalog.pg_class c
+    JOIN namespaces n ON n.oid = c.relnamespace
+    WHERE n.nspname = 'public' AND c.relkind IN ('r','p')),
+  'non_system_relations', (SELECT pg_catalog.count(*) FROM pg_catalog.pg_class c
+    JOIN namespaces n ON n.oid = c.relnamespace),
+  'non_system_routines', (SELECT pg_catalog.count(*) FROM pg_catalog.pg_proc p
+    JOIN namespaces n ON n.oid = p.pronamespace),
+  'non_system_types', (SELECT pg_catalog.count(*) FROM pg_catalog.pg_type t
+    JOIN namespaces n ON n.oid = t.typnamespace),
+  'other_non_system_objects', (
+    (SELECT pg_catalog.count(*) FROM pg_catalog.pg_operator x JOIN namespaces n ON n.oid=x.oprnamespace)
+    + (SELECT pg_catalog.count(*) FROM pg_catalog.pg_collation x JOIN namespaces n ON n.oid=x.collnamespace)
+    + (SELECT pg_catalog.count(*) FROM pg_catalog.pg_opclass x JOIN namespaces n ON n.oid=x.opcnamespace)
+    + (SELECT pg_catalog.count(*) FROM pg_catalog.pg_opfamily x JOIN namespaces n ON n.oid=x.opfnamespace)
+    + (SELECT pg_catalog.count(*) FROM pg_catalog.pg_conversion x JOIN namespaces n ON n.oid=x.connamespace)),
+  'non_system_schemas', (SELECT pg_catalog.count(*) FROM namespaces),
+  'public_schema_present', EXISTS (SELECT 1 FROM namespaces WHERE nspname='public'),
+  'private_schema_present', EXISTS (SELECT 1 FROM namespaces WHERE nspname='private'),
+  'extensions_schema_present', EXISTS (SELECT 1 FROM namespaces WHERE nspname='extensions'),
+  'history_schema_present', EXISTS (SELECT 1 FROM namespaces WHERE nspname='teka_migrations'),
+  'unexpected_schemas', (SELECT pg_catalog.count(*) FROM namespaces
+    WHERE nspname NOT IN ('public','private','extensions','teka_migrations')),
+  'plpgsql_present', EXISTS (SELECT 1 FROM pg_catalog.pg_extension WHERE extname='plpgsql'),
+  'btree_gist_present', EXISTS (SELECT 1 FROM pg_catalog.pg_extension WHERE extname='btree_gist'),
+  'unexpected_extensions', (SELECT pg_catalog.count(*) FROM pg_catalog.pg_extension
+    WHERE extname NOT IN ('plpgsql','btree_gist')),
+  'foreign_wrappers', (SELECT pg_catalog.count(*) FROM pg_catalog.pg_foreign_data_wrapper),
+  'foreign_servers', (SELECT pg_catalog.count(*) FROM pg_catalog.pg_foreign_server),
+  'large_objects', (SELECT pg_catalog.count(*) FROM pg_catalog.pg_largeobject_metadata),
+  'publications', (SELECT pg_catalog.count(*) FROM pg_catalog.pg_publication)
+);
+\echo TEKA_PHASE_AGGREGATE_INVENTORY_ACKNOWLEDGED
+ROLLBACK;
+\echo TEKA_PHASE_READ_ONLY_ROLLBACK_ACKNOWLEDGED
+\echo TEKA_INSPECTION_COMPLETE
