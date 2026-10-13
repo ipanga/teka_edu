@@ -303,10 +303,18 @@ export function assertReplayGates(
 
 export type ProductionApproval = {
   approved: boolean;
+  initializationOnly?: boolean;
   replayPath?: string;
   rollbackPath?: string;
   recoveryPath?: string;
 };
+
+export function assertInitialProductionState(applied: number, pending: number) {
+  if (applied !== 0 || pending !== 46)
+    throw new Error(
+      "Initial production apply requires empty history and exactly 46 pending migrations",
+    );
+}
 
 function protectedArchive(filename: unknown, digest: unknown) {
   if (
@@ -472,6 +480,8 @@ export async function apply(
     if (connection.target === "production") await assertProductionTargetState(session, false);
     const applied = await history(session, connection);
     const pending = pendingMigrations(migrations, applied, connection.target);
+    if (connection.target === "production" && productionApproval?.initializationOnly)
+      assertInitialProductionState(applied.length, pending.length);
     if (connection.target === "production")
       await assertProductionTargetState(session, applied.length === 0);
     if (applied.length === 0) {

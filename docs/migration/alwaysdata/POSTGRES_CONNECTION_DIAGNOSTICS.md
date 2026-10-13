@@ -35,6 +35,8 @@ Production `apply` and `verify` now require an explicit `--execution-timeout-sec
 
 Connection 15s, statement 120s and lock 5s policies are unchanged. Noninteractive staging and local callers retain their existing behavior unless an explicit Session deadline is supplied. There is no automatic reconnect, migration replay, destructive reset or restore, including around COMMIT. The October 12 independent review applies to the earlier diagnostic version; the new watchdog requires fresh review and CI evidence bound to its exact revised release before production use.
 
+Initial production `apply` also requires `--initialization-only`. After acquiring the transaction advisory lock and reading guarded history, the runner requires zero applied migrations and exactly 46 pending migrations, then checks the empty-object baseline before bootstrap. Partial or completed history is rejected instead of being resumed under an initialization authorization. Staging and CI replay retain their existing behavior.
+
 ## Next separate authorization
 
 Use the prepared [minimal native read-only state inspection](PROD_STATE_INSPECTION.md), not the migration runner, to establish the initial committed state. No full canonical comparison or migration reapply is part of that inspection. If it finds 46 history records and 36 application tables, prepare a focused read-only exact comparison. If it finds no observed committed application initialization, review the old failure evidence before considering a new apply. Any partial, unexpected or inaccessible state requires a targeted owner decision.

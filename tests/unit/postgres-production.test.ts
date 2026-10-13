@@ -13,6 +13,7 @@ import {
   assertProductionHistoryShape,
   assertProductionApplicationShape,
   metadata,
+  assertInitialProductionState,
 } from "@/lib/postgres/runner";
 import { verifyAccess } from "@/lib/postgres/verify";
 import type { Session } from "@/lib/postgres/session";
@@ -45,6 +46,16 @@ const production = {
 const migrations = loadMigrations();
 
 describe("protected production runner preparation", () => {
+  it("initialization cannot resume a partial or completed history", () => {
+    expect(() => assertInitialProductionState(0, 46)).not.toThrow();
+    for (const [applied, pending] of [
+      [1, 45],
+      [46, 0],
+      [0, 45],
+      [0, 47],
+    ])
+      expect(() => assertInitialProductionState(applied!, pending!)).toThrow("empty history");
+  });
   it("accepts only the explicitly approved production host/database/login/TLS allowlist", () => {
     expect(connectionFor("production", production).target).toBe("production");
     for (const patch of [

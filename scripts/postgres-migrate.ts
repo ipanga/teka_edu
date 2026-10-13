@@ -34,6 +34,8 @@ export async function main(args = process.argv.slice(2)): Promise<number> {
     const target = value("--target") ?? "";
     if (["local", "staging", "production"].includes(target)) reportedTarget = target;
     reportedCommand = command;
+    if (target === "production" && command === "apply" && !args.includes("--initialization-only"))
+      throw new Error("Initial production apply requires --initialization-only");
     const timeout = value("--execution-timeout-seconds");
     if (target === "production" && ["apply", "verify"].includes(command) && timeout === undefined)
       throw new Error("Production apply/verify require an explicit bounded client deadline");
@@ -76,6 +78,7 @@ export async function main(args = process.argv.slice(2)): Promise<number> {
       );
     const productionApproval = {
       approved: args.includes("--production-approved"),
+      initializationOnly: args.includes("--initialization-only"),
       replayPath: value("--replay-evidence"),
       rollbackPath: value("--rollback-record"),
       recoveryPath: value("--source-recovery-record"),

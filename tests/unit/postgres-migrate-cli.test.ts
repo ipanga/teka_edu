@@ -45,6 +45,7 @@ import { main } from "@/scripts/postgres-migrate";
 const release = "a".repeat(40);
 const args = (command = "list") => [
   command,
+  ...(command === "apply" ? ["--initialization-only"] : []),
   "--target",
   "production",
   "--production-approved",
@@ -91,6 +92,11 @@ afterEach(() => vi.restoreAllMocks());
 const failureReport = () => JSON.parse(String(stderr.mock.calls.at(-1)?.[0]));
 
 describe("offline migration CLI diagnostics", () => {
+  it("rejects a production apply without the initial-empty-state restriction", async () => {
+    expect(await main(args("apply").filter((v) => v !== "--initialization-only"))).toBe(1);
+    expect(mocks.spawn).not.toHaveBeenCalled();
+    expect(mocks.prompt).not.toHaveBeenCalled();
+  });
   it("requires an explicit production apply deadline before any prompt or client", async () => {
     const unbounded = args("apply").slice(0, -2);
     expect(await main(unbounded)).toBe(1);
