@@ -60,6 +60,8 @@ jobs:
           docker exec -u root "$POSTGRES_CONTAINER" bash -c 'apt-get update -qq && apt-get install -y postgresql-16-pgtap'
           psql -X -v ON_ERROR_STOP=1 -U postgres -d postgres -c 'CREATE ROLE teka_migrator LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE; CREATE ROLE teka_probe LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE;'
           psql -X -v ON_ERROR_STOP=1 -U postgres -c 'ALTER DATABASE teka_portability OWNER TO teka_migrator; GRANT CREATE ON SCHEMA public TO teka_migrator; CREATE SCHEMA extensions AUTHORIZATION teka_migrator; CREATE EXTENSION pgtap WITH SCHEMA extensions;'
+      - name: Native migration batching and controlled-latency comparison (isolated PG16 only)
+        run: node --import tsx scripts/postgres/transport-benchmark.ts --output-dir "$RUNNER_TEMP/teka-postgres-evidence"
       - name: Replay and verify exact checkout, then repeat and test failure guards
         run: npm run db:portability -- --output-dir "$RUNNER_TEMP/teka-postgres-evidence"
       - name: Upload PostgreSQL verification evidence

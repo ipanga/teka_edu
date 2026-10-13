@@ -289,7 +289,10 @@ export function assertReplayGates(
     replay.gates?.access !== true ||
     replay.gates?.idempotency !== true ||
     replay.gates?.pgtap !== true ||
-    replay.gates?.negative_tests !== true
+    replay.gates?.negative_tests !== true ||
+    replay.gates?.migration_batches !== true ||
+    replay.gates?.transport_benchmark !== true ||
+    !/^[a-f0-9]{64}$/.test(replay.transport_benchmark_sha256 ?? "")
   )
     throw new Error("CI clean replay evidence does not satisfy managed apply gates");
   const baseline = path.join(ROOT, "docs/migration/alwaysdata/expected-schema.json");
@@ -513,6 +516,7 @@ export async function apply(
         migration.sql +
           `\ninsert into teka_migrations.history (version,filename,source_sha256,execution_sha256,adapter_version,release_sha,target) values (${[migration.version, migration.filename, migration.source_sha256, migration.execution_sha256, migration.adapter_version, releaseSha, connection.target].map(literal).join(",")});`,
         "MIGRATION",
+        migration.version,
       );
     }
     if (connection.target === "production") await assertProductionApplicationShape(session);

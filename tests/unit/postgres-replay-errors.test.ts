@@ -7,6 +7,16 @@ function failure(overrides: Partial<SessionDiagnostics["failure"]> = {}) {
     connection_acknowledged: true,
     invocations: 1,
     retries: 0,
+    migration_batches: [],
+    client_timing: {
+      deadline_ms: null,
+      deadline_fired_ms: null,
+      term_sent_ms: null,
+      kill_sent_ms: null,
+      exit_ms: null,
+      cleanup_started_ms: null,
+      cleanup_completed_ms: null,
+    },
     last_sent: { ordinal: 1, label: "QUERY" },
     last_acknowledged: null,
     transaction: {

@@ -150,6 +150,7 @@ describe("protected production runner preparation", () => {
         status: "PASS",
         release_sha: release,
         tooling_sha256: toolingDigest(),
+        transport_benchmark_sha256: "a".repeat(64),
         schema_baseline_comparison: true,
         server: { version: 160015 },
         migrations: metadata(migrations),
@@ -160,6 +161,8 @@ describe("protected production runner preparation", () => {
           idempotency: true,
           pgtap: true,
           negative_tests: true,
+          migration_batches: true,
+          transport_benchmark: true,
           production_catalog_shapes: true,
         },
         schema_sha256: sha256(

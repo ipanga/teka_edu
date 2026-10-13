@@ -5,6 +5,7 @@ import { connectionFor } from "@/lib/postgres/target";
 import { Session } from "@/lib/postgres/session";
 import { preparePasswordPrompt, type PasswordOperation } from "@/lib/postgres/password-prompt";
 import { loadMigrations } from "@/lib/postgres/migrations";
+import { renderMigrationBatch } from "@/lib/postgres/batch";
 import {
   initialize,
   list,
@@ -68,6 +69,8 @@ export async function main(args = process.argv.slice(2)): Promise<number> {
       TEKA_POSTGRES_PASSWORD_PROMPT: args.includes("--password") ? "true" : "false",
     });
     const migrations = loadMigrations();
+    if (command === "apply")
+      for (const migration of migrations) renderMigrationBatch(migration.sql);
     if (command === "apply" && connection.target === "staging")
       assertStagingGates(
         migrations,

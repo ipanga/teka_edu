@@ -184,13 +184,145 @@ describe("single-process sanitized PostgreSQL session diagnostics (no native pro
     (failure as PostgresClientError).diagnostics.transaction.commit_acknowledged = 99;
     expect(session.diagnostics().transaction.commit_acknowledged).toBe(0);
   });
+  it("batches migration input and records local completion separately from server ACK", async () => {
+    vi.useFakeTimers();
+    const session = new Session(connection);
+    connected();
+    let completed: ((error?: Error | null) => void) | undefined;
+    child.stdin.write.mockImplementationOnce((_input: string, callback: typeof completed) => {
+      completed = callback;
+      return false;
+    });
+    const pending = session.query("select 1; select 2;", "MIGRATION", "20260911203000");
+    expect(child.stdin.write.mock.calls[1]![0]).toMatch(/^select 1\\; select 2\\;\n\\g\n\\echo/);
+    await vi.advanceTimersByTimeAsync(20);
+    completed!();
+    expect(session.diagnostics().migration_batches[0]).toMatchObject({
+      ordinal: 1,
+      version: "20260911203000",
+      backpressure: true,
+      write_completed_ms: 20,
+      drain_completed_ms: null,
+      acknowledgement_ms: null,
+      expected_statement_count: 2,
+    });
+    child.stdin.emit("drain");
+    await vi.advanceTimersByTimeAsync(30);
+    acknowledge(1);
+    await pending;
+    expect(session.diagnostics().migration_batches[0]).toMatchObject({
+      drain_completed_ms: 20,
+      acknowledgement_ms: 50,
+      elapsed_ms: 50,
+    });
+    expect(JSON.stringify(session.diagnostics())).not.toContain("select");
+    expect(mocks.spawn).toHaveBeenCalledTimes(1);
+  });
+  it("bounds a stalled write without claiming input completion or server ACK", async () => {
+    vi.useFakeTimers();
+    const session = new Session(connection, { deadlineMs: 1000 });
+    connected();
+    child.stdin.write.mockReturnValueOnce(false);
+    const ended = session
+      .query("select 1;", "MIGRATION", "20260911203000")
+      .catch(() => session.close());
+    await vi.advanceTimersByTimeAsync(1500);
+    const report = await ended;
+    expect(report).toMatchObject({
+      failure: { classification: "CLIENT_DEADLINE" },
+      migration_batches: [
+        { write_completed_ms: null, drain_completed_ms: null, acknowledgement_ms: null },
+      ],
+      client_timing: {
+        deadline_ms: 1000,
+        deadline_fired_ms: 1000,
+        term_sent_ms: 1000,
+        kill_sent_ms: 1250,
+        cleanup_completed_ms: 1500,
+      },
+    });
+    expect(child.stdin.listenerCount("drain")).toBe(0);
+  });
+  it("sanitizes write callback failure and detaches pending drain observation", async () => {
+    const session = new Session(connection);
+    connected();
+    let completeWrite: ((error?: Error | null) => void) | undefined;
+    child.stdin.write.mockImplementationOnce((_input: string, callback: typeof completeWrite) => {
+      completeWrite = callback;
+      return false;
+    });
+    const pending = session.query("select 'SECRET_SENTINEL';", "MIGRATION", "20260911203000");
+    completeWrite!(new Error("SECRET_SENTINEL"));
+    await expect(pending).rejects.toThrow("CLIENT_WRITE_ERROR");
+    expect(child.stdin.listenerCount("drain")).toBe(0);
+    expect(JSON.stringify(session.diagnostics())).not.toContain("SECRET_SENTINEL");
+    expect(session.diagnostics().migration_batches[0]?.write_completed_ms).toBeNull();
+  });
+  it("enriches late SQLSTATE after a large-write error without losing migration attribution", async () => {
+    const session = new Session(connection);
+    connected();
+    await complete(session, "begin;");
+    let callback: ((error?: Error | null) => void) | undefined;
+    child.stdin.write.mockImplementationOnce((_input: string, cb: typeof callback) => {
+      callback = cb;
+      return false;
+    });
+    const pending = session.query("select 1;", "MIGRATION", "20260911203000");
+    callback!(new Error("PRIVATE_SENTINEL"));
+    await expect(pending).rejects.toThrow("CLIENT_WRITE_ERROR");
+    child.stderr.emit("data", Buffer.from("ERROR:  P0001\nPRIVATE_SENTINEL\n"));
+    child.emit("close", 3, null);
+    expect(session.diagnostics()).toMatchObject({
+      failure: { classification: "SQLSTATE_ERROR", sqlstate: "P0001", phase: "DURING_TRANSACTION" },
+      migration_batches: [
+        {
+          ordinal: 2,
+          version: "20260911203000",
+          acknowledgement_ms: null,
+          write_completed_ms: null,
+        },
+      ],
+    });
+    expect(JSON.stringify(session.diagnostics())).not.toContain("PRIVATE_SENTINEL");
+  });
+  it("bounds migration timing records and sends no 47th batch", async () => {
+    const session = new Session(connection);
+    connected();
+    for (let i = 0; i < 46; i++) {
+      const pending = session.query("select 1;", "MIGRATION", String(20260911000000 + i));
+      acknowledge(i + 1);
+      await pending;
+    }
+    await expect(session.query("select 1;", "MIGRATION", "20260911203000")).rejects.toThrow(
+      "bounded",
+    );
+    expect(session.diagnostics().migration_batches).toHaveLength(46);
+    expect(child.stdin.write).toHaveBeenCalledTimes(47);
+  });
+  it("rejects malformed versions/renderings before input submission", async () => {
+    const session = new Session(connection);
+    connected();
+    await expect(session.query("select 1;", "MIGRATION")).rejects.toThrow("version");
+    await expect(session.query("select 1;", "MIGRATION", "SECRET")).rejects.toThrow("version");
+    await expect(session.query("select 1;", "QUERY", "20260911203000")).rejects.toThrow("only");
+    await expect(session.query("select :SECRET;", "MIGRATION", "20260911203000")).rejects.toThrow(
+      "SQL withheld",
+    );
+    expect(child.stdin.write).toHaveBeenCalledTimes(1);
+  });
   it("spawns once with SQLSTATE-only server diagnostics and no shell", () => {
     new Session(connection);
     expect(mocks.spawn).toHaveBeenCalledTimes(1);
     expect(mocks.spawn).toHaveBeenCalledWith(
       "psql",
       ["-X", "-qAt", "--no-password", "-v", "ON_ERROR_STOP=1", "-v", "VERBOSITY=sqlstate"],
-      { env: connection.env },
+      {
+        env: {
+          ...connection.env,
+          PGCLIENTENCODING: "UTF8",
+          PGOPTIONS: "-c standard_conforming_strings=on",
+        },
+      },
     );
     expect(child.stdin.write).toHaveBeenCalledTimes(1);
     expect(child.stdin.write.mock.calls[0]![0]).toMatch(
@@ -327,7 +459,7 @@ describe("single-process sanitized PostgreSQL session diagnostics (no native pro
     connected();
     await complete(session, "begin;");
     await complete(session, "select 1;", "IDENTITY");
-    const promise = session.query("select SECRET_SENTINEL;", "MIGRATION");
+    const promise = session.query("select SECRET_SENTINEL;", "MIGRATION", "20260911203000");
     error("ERROR:  42501\n");
     await expect(promise).rejects.toThrow("DURING_TRANSACTION");
     expect(session.diagnostics().last_acknowledged).toEqual({ ordinal: 2, label: "IDENTITY" });

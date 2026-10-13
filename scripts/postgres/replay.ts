@@ -4,6 +4,7 @@ import { spawnSync } from "node:child_process";
 import assert from "node:assert/strict";
 import { connectionFor, type Connection } from "@/lib/postgres/target";
 import { Session } from "@/lib/postgres/session";
+import { renderMigrationBatch } from "@/lib/postgres/batch";
 import { isManagedAssertionFailure } from "./replay-errors";
 import { ROOT, loadMigrations, sha256, toolingDigest } from "@/lib/postgres/migrations";
 import {
@@ -115,6 +116,7 @@ async function main() {
   mkdirSync(directory, { recursive: true });
   const connection = connectionFor("local", process.env);
   const migrations = loadMigrations();
+  for (const migration of migrations) renderMigrationBatch(migration.sql);
   const releaseSha = spawnSync("git", ["rev-parse", "HEAD"], {
     cwd: ROOT,
     encoding: "utf8",
@@ -247,11 +249,44 @@ async function main() {
     writeFileSync(path.join(directory, "pgtap.txt"), pgtap.stdout + pgtap.stderr);
     assert.equal(pgtap.status, 0, "portable pgTAP suites must pass; inspect pgtap.txt");
     await verify(session, connection, migrations);
+    const migrationTimings = session.diagnostics().migration_batches;
+    assert.equal(migrationTimings.length, 46);
+    assert.deepEqual(
+      migrationTimings.map((entry) => entry.version),
+      migrations.map((entry) => entry.version),
+    );
+    assert(
+      migrationTimings.every(
+        (entry) => entry.write_completed_ms !== null && entry.acknowledgement_ms !== null,
+      ),
+    );
+    const benchmarkBytes = readFileSync(path.join(directory, "transport-benchmark.json"));
+    const benchmark = JSON.parse(benchmarkBytes.toString("utf8"));
+    assert.equal(benchmark.status, "PASS");
+    assert.equal(benchmark.release_sha, releaseSha);
+    assert.equal(benchmark.source_clean, true);
+    assert.equal(benchmark.tooling_sha256, toolingDigest());
+    assert.equal(benchmark.native_parser_and_fingerprint_equivalence, true);
+    assert.equal(benchmark.native_large_write_backpressure, true);
+    assert.equal(benchmark.negative_P0001_and_atomic_failure, true);
+    assert.equal(benchmark.results.length, 6);
+    assert(
+      benchmark.results.every(
+        (result: {
+          before: { migration_query_messages: number };
+          after: { migration_query_messages: number };
+        }) =>
+          result.before.migration_query_messages === 104 &&
+          result.after.migration_query_messages === 1,
+      ),
+    );
     const schemaText = JSON.stringify(replay.schema, null, 2) + "\n";
     writeFileSync(path.join(directory, "expected-schema.json"), schemaText);
     const evidence = {
       status: "PASS",
       recorded_at: new Date().toISOString(),
+      transport_benchmark_sha256: sha256(benchmarkBytes),
+      migration_transport: { mode: "psql-backslash-semicolon", batches: migrationTimings },
       release_sha: releaseSha,
       tooling_sha256: toolingDigest(),
       server,
@@ -269,6 +304,8 @@ async function main() {
         pgtap: true,
         negative_tests: true,
         production_catalog_shapes: true,
+        migration_batches: true,
+        transport_benchmark: true,
       },
       negative_tests: {
         advisory_lock: true,

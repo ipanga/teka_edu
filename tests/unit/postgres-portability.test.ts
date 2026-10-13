@@ -204,6 +204,7 @@ describe("target and server identity", () => {
         status: "PASS",
         release_sha: release,
         tooling_sha256: toolingDigest(),
+        transport_benchmark_sha256: "a".repeat(64),
         server: { version: 160015 },
         migrations: metadata(migrations),
         canonical: { tables: 36, rows: 6170 },
@@ -213,6 +214,8 @@ describe("target and server identity", () => {
           idempotency: true,
           pgtap: true,
           negative_tests: true,
+          migration_batches: true,
+          transport_benchmark: true,
         },
         schema_baseline_comparison: true,
         schema_sha256: sha256(

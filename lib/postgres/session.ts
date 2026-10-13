@@ -1,6 +1,7 @@
 import { spawn, type ChildProcessWithoutNullStreams } from "node:child_process";
 import { randomBytes } from "node:crypto";
 import type { Connection } from "./target";
+import { renderMigrationBatch } from "./batch";
 
 const LABELS = [
   "QUERY",
@@ -22,6 +23,20 @@ const LABELS = [
 ] as const;
 export type OperationLabel = (typeof LABELS)[number];
 type Operation = { ordinal: number; label: OperationLabel };
+export type MigrationTiming = {
+  ordinal: number;
+  version: string;
+  render_started_ms: number;
+  render_completed_ms: number;
+  submission_started_ms: number;
+  input_bytes: number;
+  expected_statement_count: number;
+  write_completed_ms: number | null;
+  backpressure: boolean;
+  drain_completed_ms: number | null;
+  acknowledgement_ms: number | null;
+  elapsed_ms: number | null;
+};
 type Classification =
   | "AUTHENTICATION_REJECTED"
   | "TLS_CERTIFICATE"
@@ -30,6 +45,7 @@ type Classification =
   | "CONNECTION_TIMEOUT"
   | "CLIENT_DEADLINE"
   | "SQLSTATE_ERROR"
+  | "CLIENT_WRITE_ERROR"
   | "CLIENT_PROCESS_ERROR"
   | "CLIENT_SIGNAL"
   | "CLIENT_EXIT"
@@ -42,6 +58,16 @@ export type SessionDiagnostics = {
   retries: 0;
   last_sent: Operation | null;
   last_acknowledged: Operation | null;
+  migration_batches: MigrationTiming[];
+  client_timing: {
+    deadline_ms: number | null;
+    deadline_fired_ms: number | null;
+    term_sent_ms: number | null;
+    kill_sent_ms: number | null;
+    exit_ms: number | null;
+    cleanup_started_ms: number | null;
+    cleanup_completed_ms: number | null;
+  };
   transaction: {
     begin_sent: number;
     begin_acknowledged: number;
@@ -71,6 +97,8 @@ export class PostgresClientError extends Error {
 /** No SQL text, stderr, host/user strings or query results enter the diagnostic record. */
 export class Session {
   private child: ChildProcessWithoutNullStreams;
+  private startedAt = performance.now();
+  private readonly drainListeners = new Set<() => void>();
   private buffer = "";
   private output = "";
   private stderrTail = "";
@@ -100,6 +128,16 @@ export class Session {
     retries: 0,
     last_sent: null,
     last_acknowledged: null,
+    migration_batches: [],
+    client_timing: {
+      deadline_ms: null,
+      deadline_fired_ms: null,
+      term_sent_ms: null,
+      kill_sent_ms: null,
+      exit_ms: null,
+      cleanup_started_ms: null,
+      cleanup_completed_ms: null,
+    },
     transaction: {
       begin_sent: 0,
       begin_acknowledged: 0,
@@ -150,17 +188,27 @@ export class Session {
           "-v",
           "VERBOSITY=sqlstate",
         ],
-        { env: connection.env },
+        {
+          env: {
+            ...connection.env,
+            PGCLIENTENCODING: "UTF8",
+            PGOPTIONS: "-c standard_conforming_strings=on",
+          },
+        },
       );
     } catch {
       throw new Error("PostgreSQL client could not start; private diagnostics withheld");
     }
+    this.startedAt = performance.now();
+    this.state.client_timing.deadline_ms = options?.deadlineMs ?? null;
     this.child.stderr.on("data", (chunk: Buffer) => this.classifyStderr(chunk));
     this.child.stdout.on("data", (chunk: Buffer) => this.receive(chunk));
     this.child.on("error", () => this.fail("CLIENT_PROCESS_ERROR"));
     this.child.stdin.on("error", () => this.fail("CLIENT_PROCESS_ERROR"));
     this.child.on("close", (code: number | null, signal: NodeJS.Signals | null) => {
       this.clearDeadline();
+      this.clearDrains();
+      this.state.client_timing.exit_ms = this.elapsed();
       this.closed = true;
       this.state.client_exit = { observed: true, code, signal };
       if (this.pending || code !== 0 || signal)
@@ -179,6 +227,7 @@ export class Session {
     }
     if (options?.deadlineMs !== undefined) {
       this.deadline = setTimeout(() => {
+        this.state.client_timing.deadline_fired_ms = this.elapsed();
         this.fail("CLIENT_DEADLINE");
         this.terminate("SIGTERM");
         if (!this.closed)
@@ -240,9 +289,13 @@ export class Session {
     if (
       this.state.failure &&
       this.stderrClass &&
-      ["CLIENT_PROCESS_ERROR", "CLIENT_EXIT", "CLIENT_SIGNAL", "UNKNOWN"].includes(
-        this.state.failure.classification,
-      )
+      [
+        "CLIENT_PROCESS_ERROR",
+        "CLIENT_WRITE_ERROR",
+        "CLIENT_EXIT",
+        "CLIENT_SIGNAL",
+        "UNKNOWN",
+      ].includes(this.state.failure.classification)
     ) {
       this.state.failure.classification = this.stderrClass;
       this.state.failure.sqlstate = this.sqlstate;
@@ -273,6 +326,13 @@ export class Session {
         const pending = this.pending;
         this.pending = undefined;
         this.state.last_acknowledged = pending.operation;
+        const timing = this.state.migration_batches.find(
+          (entry) => entry.ordinal === pending.operation.ordinal,
+        );
+        if (timing) {
+          timing.acknowledgement_ms = this.elapsed();
+          timing.elapsed_ms = timing.acknowledgement_ms - timing.render_started_ms;
+        }
         if (pending.transaction) {
           this.state.transaction[`${pending.transaction}_acknowledged`]++;
           this.latestTransactionEvent = `${pending.transaction}_acknowledged`;
@@ -308,18 +368,37 @@ export class Session {
       };
     this.pending?.reject(new PostgresClientError(this.state));
     this.pending = undefined;
+    this.clearDrains();
     this.stderrTail = "";
     this.buffer = "";
     this.output = "";
   }
 
-  query(sql: string, label?: OperationLabel): Promise<string> {
+  query(sql: string, label?: OperationLabel, migrationVersion?: string): Promise<string> {
     if (this.closed || this.closing || this.state.failure)
       return Promise.reject(new Error("PostgreSQL session is unavailable; no retry attempted"));
     if (this.pending)
       return Promise.reject(new Error("Concurrent queries on one session are forbidden"));
     if (label !== undefined && !LABELS.includes(label))
       return Promise.reject(new Error("PostgreSQL operation label is not allowlisted"));
+    const renderStarted = this.elapsed();
+    let batch: ReturnType<typeof renderMigrationBatch> | undefined;
+    if (label === "MIGRATION") {
+      if (
+        !migrationVersion ||
+        !/^[0-9]{14}$/.test(migrationVersion) ||
+        this.state.migration_batches.length >= 46
+      )
+        return Promise.reject(new Error("Migration timing requires a bounded reviewed version"));
+      try {
+        batch = renderMigrationBatch(sql);
+      } catch {
+        return Promise.reject(new Error("Migration batch rendering failed; SQL withheld"));
+      }
+    } else if (migrationVersion !== undefined) {
+      return Promise.reject(new Error("Migration version is valid only for migration batches"));
+    }
+    const renderCompleted = this.elapsed();
     const normalized = sql.trim().toLowerCase();
     const transaction = /^begin(?:\s+read\s+only)?\s*;/.test(normalized)
       ? "begin"
@@ -350,8 +429,42 @@ export class Session {
         this.latestTransactionEvent = `${transaction}_sent`;
       }
       this.pending = { marker, operation, transaction, resolve, reject };
+      const input = (batch?.input ?? sql + "\n") + `\\echo ${marker}\n`;
+      const timing: MigrationTiming | undefined = batch
+        ? {
+            ordinal: operation.ordinal,
+            version: migrationVersion!,
+            render_started_ms: renderStarted,
+            render_completed_ms: renderCompleted,
+            submission_started_ms: this.elapsed(),
+            input_bytes: Buffer.byteLength(input),
+            expected_statement_count: batch.statements,
+            write_completed_ms: null,
+            backpressure: false,
+            drain_completed_ms: null,
+            acknowledgement_ms: null,
+            elapsed_ms: null,
+          }
+        : undefined;
+      if (timing) this.state.migration_batches.push(timing);
       try {
-        this.child.stdin.write(sql + `\n\\echo ${marker}\n`);
+        // The callback proves only local Writable completion, never server receipt.
+        const accepted = this.child.stdin.write(input, (error?: Error | null) => {
+          if (error) {
+            this.fail("CLIENT_WRITE_ERROR");
+            return;
+          }
+          if (timing) timing.write_completed_ms = this.elapsed();
+        });
+        if (timing && accepted === false && !this.state.failure && !this.closed) {
+          timing.backpressure = true;
+          const drained = () => {
+            this.drainListeners.delete(drained);
+            timing.drain_completed_ms = this.elapsed();
+          };
+          this.drainListeners.add(drained);
+          this.child.stdin.once("drain", drained);
+        }
       } catch {
         this.fail("CLIENT_PROCESS_ERROR");
       }
@@ -371,7 +484,18 @@ export class Session {
     return structuredClone(this.state);
   }
 
+  private elapsed() {
+    return Math.round((performance.now() - this.startedAt) * 1000) / 1000;
+  }
+
+  private clearDrains() {
+    for (const listener of this.drainListeners) this.child.stdin.removeListener("drain", listener);
+    this.drainListeners.clear();
+  }
+
   private terminate(signal: NodeJS.Signals) {
+    if (signal === "SIGTERM") this.state.client_timing.term_sent_ms ??= this.elapsed();
+    if (signal === "SIGKILL") this.state.client_timing.kill_sent_ms ??= this.elapsed();
     try {
       this.child.kill(signal);
     } catch {
@@ -386,6 +510,7 @@ export class Session {
 
   close(): Promise<SessionDiagnostics> {
     if (this.closing) return this.closing;
+    this.state.client_timing.cleanup_started_ms = this.elapsed();
     // Stop a future deadline, but preserve an escalation already armed by an expired
     // deadline. The normal CLI catch calls close() immediately after query rejection.
     if (this.deadline) clearTimeout(this.deadline);
@@ -423,6 +548,8 @@ export class Session {
         }
         if (!this.closed) this.fail("UNKNOWN");
       }
+      this.clearDrains();
+      this.state.client_timing.cleanup_completed_ms = this.elapsed();
       return this.diagnostics();
     })();
     return this.closing;
