@@ -4,6 +4,8 @@ import { loadMigrations, executableSql } from "@/lib/postgres/migrations";
 
 describe("PostgreSQL 16 SQL-aware stdin batching", () => {
   it.each([
+    ["-- comment;\rselect 1;", "-- comment;\rselect 1\\;\n\\g\n", 1],
+    ["-- comment;\r\nselect 1;", "-- comment;\r\nselect 1\\;\n\\g\n", 1],
     ["select 1; select 2;", "select 1\\; select 2\\;\n\\g\n", 2],
     ["select 'a;b', 'it''s;fine';", "select 'a;b', 'it''s;fine'\\;\n\\g\n", 1],
     [
@@ -58,6 +60,10 @@ describe("PostgreSQL 16 SQL-aware stdin batching", () => {
     "/* outer /* inner */",
     "select E'dangling\\';",
     "select 1;\n\\! echo PRIVATE",
+    "select 1; -- comment\r\\! echo PRIVATE\nselect 2;",
+    "select 1; -- comment\r\n\\! echo PRIVATE\nselect 2;",
+    "select 1; -- comment\rcommit;",
+    "select 1; -- comment\r\nrollback;",
     "select :SECRET;",
     "select :'SECRET';",
     "begin; select 1;",

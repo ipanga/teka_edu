@@ -25,8 +25,9 @@ export function renderMigrationBatch(sql: string): { input: string; statements: 
   let i = 0;
   while (i < sql.length) {
     if (sql.startsWith("--", i)) {
-      const end = sql.indexOf("\n", i + 2);
-      opaque(end < 0 ? sql.length : end);
+      let end = i + 2;
+      while (end < sql.length && sql[end] !== "\n" && sql[end] !== "\r") end++;
+      opaque(end);
     } else if (sql.startsWith("/*", i)) {
       let end = i + 2;
       let depth = 1;

@@ -211,7 +211,8 @@ async function nativeLargeAndLexicalRegression() {
     await session.query("begin;");
     const value = "x".repeat(1024 * 1024);
     await session.query(
-      String.raw`create temporary table teka_transport_large("semi;colon" text);
+      "-- CR comment;\r-- CRLF comment;\r\n" +
+        String.raw`create temporary table teka_transport_large("semi;colon" text);
 insert into pg_temp.teka_transport_large values ('${value}');
 do $🥭$ begin perform U&'d\0061;ta'; perform E'it\'s;ok'; end; $🥭$;`,
       "MIGRATION",
