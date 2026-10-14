@@ -94,6 +94,13 @@ export class PostgresClientError extends Error {
   }
 }
 
+/** Distinguish local JSON parsing from SQLSTATE/client failures without retaining output. */
+export class PostgresJsonResultError extends Error {
+  constructor() {
+    super("PostgreSQL JSON result is invalid; contents withheld");
+  }
+}
+
 /** No SQL text, stderr, host/user strings or query results enter the diagnostic record. */
 export class Session {
   private child: ChildProcessWithoutNullStreams;
@@ -476,7 +483,7 @@ export class Session {
     try {
       return JSON.parse(result) as T;
     } catch {
-      throw new Error("PostgreSQL JSON result is invalid; contents withheld");
+      throw new PostgresJsonResultError();
     }
   }
 

@@ -6,7 +6,8 @@ import { referenceTables, referenceSyncSql } from "@/lib/supabase/reference-sql"
 import audit from "@/docs/migration/alwaysdata/migration-audit.json";
 import canonicalHash from "@/docs/migration/alwaysdata/canonical-sha256.json";
 import { ROOT, executableSql, sha256 } from "./migrations";
-import { Session } from "./session";
+import { Session, PostgresJsonResultError } from "./session";
+import { AccessValidationError, validateAccessResult } from "./access-result";
 
 export function canonicalTables() {
   const tables = referenceTables(getReferenceData());
@@ -72,27 +73,31 @@ export async function inventory(session: Session) {
 }
 
 export async function verifyAccess(session: Session, managed: boolean, production = false) {
-  const result = await session.json<Record<string, boolean>>(`select jsonb_build_object(
+  let value: unknown;
+  try {
+    value = await session.json<unknown>(`select jsonb_build_object(
     'rls', not exists (select 1 from pg_class c join pg_namespace n on n.oid=c.relnamespace where n.nspname='public' and c.relkind in ('r','p') and not c.relrowsecurity),
     'policies', not exists (select 1 from pg_policies where schemaname='public'),
-    'table_privileges', not exists (select 1 from pg_class c join pg_namespace n on n.oid=c.relnamespace cross join lateral aclexplode(coalesce(c.relacl,acldefault('r',c.relowner))) a where n.nspname='public' and c.relkind in ('r','p') and a.grantee not in (c.relowner,(select oid from pg_roles where rolname=current_user)${managed ? ", (select oid from pg_roles where rolname='congofoot')" : ""})),
-    'function_privileges', not exists (select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace cross join lateral aclexplode(coalesce(p.proacl,acldefault('f',p.proowner))) a where n.nspname='private' and (p.prosecdef or a.grantee not in (p.proowner,(select oid from pg_roles where rolname=current_user)${managed ? ", (select oid from pg_roles where rolname='congofoot')" : ""}))),
-    'schema_privileges', not exists (select 1 from pg_namespace n cross join lateral aclexplode(coalesce(n.nspacl,acldefault('n',n.nspowner))) a where n.nspname in ('private','teka_migrations') and a.grantee not in (n.nspowner,(select oid from pg_roles where rolname=current_user)${managed ? ", (select oid from pg_roles where rolname='congofoot')" : ""})),
+    'table_privileges', not exists (select 1 from pg_class c join pg_namespace n on n.oid=c.relnamespace cross join lateral aclexplode(coalesce(c.relacl,acldefault('r',c.relowner))) a where n.nspname='public' and c.relkind in ('r','p') and a.grantee <> c.relowner and a.grantee <> (select oid from pg_roles where rolname=current_user)${managed ? " and not exists (select 1 from pg_roles r where r.rolname='congofoot' and r.oid=a.grantee)" : ""}),
+    'function_privileges', not exists (select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace cross join lateral aclexplode(coalesce(p.proacl,acldefault('f',p.proowner))) a where n.nspname='private' and (p.prosecdef or a.grantee <> p.proowner and a.grantee <> (select oid from pg_roles where rolname=current_user)${managed ? " and not exists (select 1 from pg_roles r where r.rolname='congofoot' and r.oid=a.grantee)" : ""})),
+    'schema_privileges', not exists (select 1 from pg_namespace n cross join lateral aclexplode(coalesce(n.nspacl,acldefault('n',n.nspowner))) a where n.nspname in ('private','teka_migrations') and a.grantee <> n.nspowner and a.grantee <> (select oid from pg_roles where rolname=current_user)${managed ? " and not exists (select 1 from pg_roles r where r.rolname='congofoot' and r.oid=a.grantee)" : ""}),
     'public_schema_create', not exists (select 1 from pg_namespace n cross join lateral aclexplode(coalesce(n.nspacl,acldefault('n',n.nspowner))) a where n.nspname='public' and a.grantee=0 and a.privilege_type='CREATE'),
     'cross_environment_isolation', ${managed ? `not has_database_privilege(current_user,'${production ? "congofoot_teka_edu_dev" : "congofoot_teka_edu_prod"}','CONNECT')` : "true"},
     'btree_gist', exists (select 1 from pg_extension where extname='btree_gist')
   );`);
-  if (Object.values(result).some((passed) => !passed))
-    throw new Error(
-      `Access/security check failed: ${Object.entries(result)
-        .filter(([, passed]) => !passed)
-        .map(([key]) => key)
-        .join(", ")}`,
-    );
-  const privileges = await session.json<unknown[]>(
-    readFileSync(path.join(ROOT, "scripts/postgres/access-inventory.sql"), "utf8"),
-    "ACCESS",
-  );
+  } catch (error: unknown) {
+    if (error instanceof PostgresJsonResultError)
+      throw new AccessValidationError("ACCESS_RESULT_PARSE");
+    throw error; // SQLSTATE/client diagnostics retain their original classification.
+  }
+  const result = validateAccessResult(value);
+  let sql: string;
+  try {
+    sql = readFileSync(path.join(ROOT, "scripts/postgres/access-inventory.sql"), "utf8");
+  } catch {
+    throw new AccessValidationError("ACCESS_INVENTORY_READ");
+  }
+  const privileges = await session.json<unknown[]>(sql, "ACCESS");
   return { ...result, privileges };
 }
 

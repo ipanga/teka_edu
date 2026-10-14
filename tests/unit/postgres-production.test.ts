@@ -386,7 +386,16 @@ describe("protected production runner preparation", () => {
   it("uses the PROD-to-DEV isolation check and managed owner allowance during verification", async () => {
     const json = vi
       .fn()
-      .mockResolvedValueOnce({ cross_environment_isolation: true })
+      .mockResolvedValueOnce({
+        rls: true,
+        policies: true,
+        table_privileges: true,
+        function_privileges: true,
+        schema_privileges: true,
+        public_schema_create: true,
+        cross_environment_isolation: true,
+        btree_gist: true,
+      })
       .mockResolvedValueOnce([]);
     await verifyAccess({ json } as unknown as Session, true, true);
     expect(json.mock.calls[0]?.[0]).toContain("'congofoot_teka_edu_dev','CONNECT'");

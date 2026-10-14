@@ -6,6 +6,7 @@ import { connectionFor, type Connection } from "@/lib/postgres/target";
 import { Session } from "@/lib/postgres/session";
 import { renderMigrationBatch } from "@/lib/postgres/batch";
 import { isManagedAssertionFailure } from "./replay-errors";
+import { accessSecurityRegression } from "./access-regression";
 import { ROOT, loadMigrations, sha256, toolingDigest } from "@/lib/postgres/migrations";
 import {
   apply,
@@ -141,6 +142,7 @@ async function main() {
       "second apply must be a no-op",
     );
     await productionCatalogShapeRegression(connection);
+    const securityRegression = await accessSecurityRegression(connection);
 
     // Re-read-after-lock regression: an earlier listing is green, but another operator
     // corrupts history before the blocked application session obtains the lock.
@@ -297,6 +299,7 @@ async function main() {
       integrity: checked.integrity,
       access: checked.access,
       idempotency: checked.idempotency,
+      access_security_regression: securityRegression,
       gates: {
         integrity: true,
         access: true,
@@ -304,6 +307,7 @@ async function main() {
         pgtap: true,
         negative_tests: true,
         production_catalog_shapes: true,
+        access_security_regressions: true,
         migration_batches: true,
         transport_benchmark: true,
       },

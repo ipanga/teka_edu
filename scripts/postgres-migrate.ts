@@ -6,6 +6,7 @@ import { Session } from "@/lib/postgres/session";
 import { preparePasswordPrompt, type PasswordOperation } from "@/lib/postgres/password-prompt";
 import { loadMigrations } from "@/lib/postgres/migrations";
 import { renderMigrationBatch } from "@/lib/postgres/batch";
+import { sanitizedAccessFailure } from "@/lib/postgres/access-result";
 import {
   initialize,
   list,
@@ -172,7 +173,7 @@ export async function main(args = process.argv.slice(2)): Promise<number> {
       );
     else console.log(text);
     return 0;
-  } catch {
+  } catch (error: unknown) {
     // Never serialize Error.message, SQL, stderr, paths or credential-bearing arguments.
     if (session) {
       try {
@@ -187,6 +188,7 @@ export async function main(args = process.argv.slice(2)): Promise<number> {
       target: reportedTarget,
       command: reportedCommand,
       failure_stage: phase,
+      application_failure: sanitizedAccessFailure(error),
       diagnostics: session?.diagnostics() ?? null,
       automatic_retries: 0,
       reset_or_restore_attempted: false,

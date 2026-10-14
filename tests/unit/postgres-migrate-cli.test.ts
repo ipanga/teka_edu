@@ -41,6 +41,7 @@ vi.mock("@/lib/postgres/session", () => ({
   },
 }));
 import { main } from "@/scripts/postgres-migrate";
+import { AccessValidationError } from "@/lib/postgres/access-result";
 
 const release = "a".repeat(40);
 const args = (command = "list") => [
@@ -184,5 +185,40 @@ describe("offline migration CLI diagnostics", () => {
     expect(await main(args())).toBe(1);
     expect(failureReport().failure_stage).toBe("INITIALIZE");
     expect(JSON.stringify(stderr.mock.calls)).not.toContain("secret");
+  });
+  it.each([
+    "ACCESS_RESULT_PARSE",
+    "ACCESS_RESULT_SHAPE",
+    "ACCESS_ASSERTION_FAILED",
+    "ACCESS_INVENTORY_READ",
+  ] as const)("publishes only fixed %s application diagnostics", async (classification) => {
+    const error = new AccessValidationError(classification, ["table_privileges"]);
+    error.message = "synthetic-password/private-object/ACL";
+    mocks.apply.mockRejectedValue(error);
+    const d = {
+      ...successful(),
+      last_sent: { ordinal: 97, label: "ROLLBACK" },
+      last_acknowledged: { ordinal: 97, label: "ROLLBACK" },
+      transaction: {
+        begin_sent: 1,
+        begin_acknowledged: 1,
+        commit_sent: 0,
+        commit_acknowledged: 0,
+        rollback_sent: 1,
+        rollback_acknowledged: 1,
+      },
+    };
+    mocks.close.mockResolvedValue(d);
+    mocks.diagnostics.mockReturnValue(d);
+    expect(await main(args("apply"))).toBe(1);
+    expect(failureReport().application_failure).toEqual({
+      classification,
+      failed_fields: classification === "ACCESS_ASSERTION_FAILED" ? ["table_privileges"] : [],
+    });
+    expect(failureReport().diagnostics).toEqual(d);
+    expect(mocks.apply).toHaveBeenCalledTimes(1);
+    expect(mocks.verify).not.toHaveBeenCalled();
+    expect(JSON.stringify(stderr.mock.calls)).not.toContain("synthetic-password");
+    expect(stdout).not.toHaveBeenCalled();
   });
 });
