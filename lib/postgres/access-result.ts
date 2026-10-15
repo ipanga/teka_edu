@@ -13,6 +13,7 @@ export type AccessClassification =
   | "ACCESS_RESULT_PARSE"
   | "ACCESS_RESULT_SHAPE"
   | "ACCESS_ASSERTION_FAILED"
+  | "ACCESS_AUDIT_GUARD"
   | "ACCESS_INVENTORY_READ";
 
 /** Only fixed categories and approved assertion names can leave this error. */
@@ -25,6 +26,7 @@ export class AccessValidationError extends Error {
       "ACCESS_RESULT_PARSE",
       "ACCESS_RESULT_SHAPE",
       "ACCESS_ASSERTION_FAILED",
+      "ACCESS_AUDIT_GUARD",
       "ACCESS_INVENTORY_READ",
     ].includes(classification)
       ? classification

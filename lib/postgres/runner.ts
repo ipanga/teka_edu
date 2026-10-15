@@ -14,6 +14,7 @@ import { createHash } from "node:crypto";
 import path from "node:path";
 import { isDeepStrictEqual } from "node:util";
 import { Session, literal } from "./session";
+import { restrictProductionAuditObjects } from "./audit-policy";
 import { assertIdentity, type Connection, type Identity } from "./target";
 import {
   ROOT,
@@ -519,7 +520,11 @@ export async function apply(
         migration.version,
       );
     }
-    if (connection.target === "production") await assertProductionApplicationShape(session);
+    if (connection.target === "production") {
+      await assertProductionApplicationShape(session);
+      if (productionApproval?.initializationOnly && applied.length === 0)
+        await restrictProductionAuditObjects(session);
+    }
     const canonical = await verifyCanonical(session);
     const schema = await inventory(session);
     verifySourceInventory(

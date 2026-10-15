@@ -8,6 +8,7 @@ import canonicalHash from "@/docs/migration/alwaysdata/canonical-sha256.json";
 import { ROOT, executableSql, sha256 } from "./migrations";
 import { Session, PostgresJsonResultError } from "./session";
 import { AccessValidationError, validateAccessResult } from "./access-result";
+import { PRODUCTION_AUDIT_ROLE, auditRoleGuardSql } from "./audit-policy";
 
 export function canonicalTables() {
   const tables = referenceTables(getReferenceData());
@@ -73,14 +74,56 @@ export async function inventory(session: Session) {
 }
 
 export async function verifyAccess(session: Session, managed: boolean, production = false) {
+  // Consultation applies only to this source-hash-checked registry, never every public object.
+  const approvedTables = production
+    ? canonicalTables()
+        .map((table) => "'" + table.table.replaceAll("'", "''") + "'")
+        .join(",")
+    : "";
+  const auditTableException = production
+    ? ` and not exists (select 1 from pg_roles ar where ar.rolname='${PRODUCTION_AUDIT_ROLE}'
+        and ar.oid=a.grantee and c.relowner=(select oid from pg_roles where rolname=current_user)
+        and c.relkind='r' and c.relname in (${approvedTables})
+        and a.privilege_type='SELECT' and not a.is_grantable)`
+    : "";
+  const auditTableGuard = production
+    ? ` and ${auditRoleGuardSql()}
+      and not exists (select 1 from pg_roles ar cross join pg_class c join pg_namespace n on n.oid=c.relnamespace
+        where ar.rolname='${PRODUCTION_AUDIT_ROLE}' and n.nspname='public' and c.relkind in ('r','p')
+        and (has_table_privilege(ar.oid,c.oid,'INSERT,UPDATE,DELETE,TRUNCATE,REFERENCES,TRIGGER,SELECT WITH GRANT OPTION')
+          or has_any_column_privilege(ar.oid,c.oid,'INSERT,UPDATE,REFERENCES,SELECT WITH GRANT OPTION')))
+      and not exists (select 1 from pg_class c join pg_namespace n on n.oid=c.relnamespace
+        join pg_attribute col on col.attrelid=c.oid and col.attnum>0 and not col.attisdropped
+        cross join lateral aclexplode(col.attacl) ca
+        where n.nspname='public' and c.relkind in ('r','p') and ca.grantee<>c.relowner
+        and ca.grantee<>(select oid from pg_roles where rolname=current_user)
+        and not exists (select 1 from pg_roles mr where mr.rolname='congofoot' and mr.oid=ca.grantee))`
+    : "";
+  const auditFunctionGuard = production
+    ? ` and not exists (select 1 from pg_roles ar cross join pg_proc p join pg_namespace n on n.oid=p.pronamespace
+      where ar.rolname='${PRODUCTION_AUDIT_ROLE}' and n.nspname in ('public','private') and has_function_privilege(ar.oid,p.oid,'EXECUTE'))`
+    : "";
+  const historyGuard = production
+    ? ` and not exists (select 1 from pg_class hc join pg_namespace hn on hn.oid=hc.relnamespace
+        cross join lateral aclexplode(coalesce(hc.relacl,acldefault('r',hc.relowner))) ha
+        where hn.nspname='teka_migrations' and hc.relname='history' and ha.grantee<>hc.relowner
+        and ha.grantee<>(select oid from pg_roles where rolname=current_user)
+        and not exists (select 1 from pg_roles mr where mr.rolname='congofoot' and mr.oid=ha.grantee))
+      and not exists (select 1 from pg_class hc join pg_namespace hn on hn.oid=hc.relnamespace
+        join pg_attribute col on col.attrelid=hc.oid and col.attnum>0 and not col.attisdropped
+        cross join lateral aclexplode(col.attacl) ha
+        where hn.nspname='teka_migrations' and hc.relname='history' and ha.grantee<>hc.relowner
+        and ha.grantee<>(select oid from pg_roles where rolname=current_user)
+        and not exists (select 1 from pg_roles mr where mr.rolname='congofoot' and mr.oid=ha.grantee))`
+    : "";
   let value: unknown;
   try {
     value = await session.json<unknown>(`select jsonb_build_object(
     'rls', not exists (select 1 from pg_class c join pg_namespace n on n.oid=c.relnamespace where n.nspname='public' and c.relkind in ('r','p') and not c.relrowsecurity),
     'policies', not exists (select 1 from pg_policies where schemaname='public'),
-    'table_privileges', not exists (select 1 from pg_class c join pg_namespace n on n.oid=c.relnamespace cross join lateral aclexplode(coalesce(c.relacl,acldefault('r',c.relowner))) a where n.nspname='public' and c.relkind in ('r','p') and a.grantee <> c.relowner and a.grantee <> (select oid from pg_roles where rolname=current_user)${managed ? " and not exists (select 1 from pg_roles r where r.rolname='congofoot' and r.oid=a.grantee)" : ""}),
-    'function_privileges', not exists (select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace cross join lateral aclexplode(coalesce(p.proacl,acldefault('f',p.proowner))) a where n.nspname='private' and (p.prosecdef or a.grantee <> p.proowner and a.grantee <> (select oid from pg_roles where rolname=current_user)${managed ? " and not exists (select 1 from pg_roles r where r.rolname='congofoot' and r.oid=a.grantee)" : ""})),
-    'schema_privileges', not exists (select 1 from pg_namespace n cross join lateral aclexplode(coalesce(n.nspacl,acldefault('n',n.nspowner))) a where n.nspname in ('private','teka_migrations') and a.grantee <> n.nspowner and a.grantee <> (select oid from pg_roles where rolname=current_user)${managed ? " and not exists (select 1 from pg_roles r where r.rolname='congofoot' and r.oid=a.grantee)" : ""}),
+    'table_privileges', not exists (select 1 from pg_class c join pg_namespace n on n.oid=c.relnamespace cross join lateral aclexplode(coalesce(c.relacl,acldefault('r',c.relowner))) a where n.nspname='public' and c.relkind in ('r','p') and a.grantee <> c.relowner and a.grantee <> (select oid from pg_roles where rolname=current_user)${managed ? " and not exists (select 1 from pg_roles r where r.rolname='congofoot' and r.oid=a.grantee)" : ""}${auditTableException})${auditTableGuard},
+    'function_privileges', not exists (select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace cross join lateral aclexplode(coalesce(p.proacl,acldefault('f',p.proowner))) a where n.nspname='private' and (p.prosecdef or a.grantee <> p.proowner and a.grantee <> (select oid from pg_roles where rolname=current_user)${managed ? " and not exists (select 1 from pg_roles r where r.rolname='congofoot' and r.oid=a.grantee)" : ""}))${auditFunctionGuard},
+    'schema_privileges', not exists (select 1 from pg_namespace n cross join lateral aclexplode(coalesce(n.nspacl,acldefault('n',n.nspowner))) a where n.nspname in ('private','teka_migrations') and a.grantee <> n.nspowner and a.grantee <> (select oid from pg_roles where rolname=current_user)${managed ? " and not exists (select 1 from pg_roles r where r.rolname='congofoot' and r.oid=a.grantee)" : ""})${historyGuard},
     'public_schema_create', not exists (select 1 from pg_namespace n cross join lateral aclexplode(coalesce(n.nspacl,acldefault('n',n.nspowner))) a where n.nspname='public' and a.grantee=0 and a.privilege_type='CREATE'),
     'cross_environment_isolation', ${managed ? `not has_database_privilege(current_user,'${production ? "congofoot_teka_edu_dev" : "congofoot_teka_edu_prod"}','CONNECT')` : "true"},
     'btree_gist', exists (select 1 from pg_extension where extname='btree_gist')

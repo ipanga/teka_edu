@@ -35,7 +35,7 @@ export async function accessSecurityRegression(connection: Connection) {
       "fresh isolated security fixture required",
     );
     await fixture.query(
-      "create role teka_access_probe nologin nosuperuser nocreatedb nocreaterole noreplication nobypassrls;",
+      "create role teka_access_probe nologin nosuperuser nocreatedb nocreaterole noreplication nobypassrls; create role congofoot_readonly_user_teka_edu_prod login nosuperuser nocreatedb nocreaterole noreplication nobypassrls;",
     );
     // Empty local permission-catalog stub. Never connect to the DEV-named database.
     await fixture.query("create database congofoot_teka_edu_dev owner teka_migrator;");
@@ -125,7 +125,8 @@ export async function accessSecurityRegression(connection: Connection) {
         "table_privileges",
       ],
     ] as const)
-      await probe(name, sql, [field]);
+      // PUBLIC CREATE also reaches the auditor; the PROD role-profile guard rejects it.
+      await probe(name, sql, name === "public_create" ? ["table_privileges", field] : [field]);
     await assert.rejects(session.json("select 'invalid JSON'::text;"), PostgresJsonResultError);
     assert.equal(
       session.diagnostics().failure,
