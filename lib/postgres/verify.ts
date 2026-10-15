@@ -6,7 +6,9 @@ import { referenceTables, referenceSyncSql } from "@/lib/supabase/reference-sql"
 import audit from "@/docs/migration/alwaysdata/migration-audit.json";
 import canonicalHash from "@/docs/migration/alwaysdata/canonical-sha256.json";
 import { ROOT, executableSql, sha256 } from "./migrations";
-import { Session } from "./session";
+import { Session, PostgresJsonResultError } from "./session";
+import { AccessValidationError, validateAccessResult } from "./access-result";
+import { PRODUCTION_AUDIT_ROLE, auditRoleGuardSql } from "./audit-policy";
 
 export function canonicalTables() {
   const tables = referenceTables(getReferenceData());
@@ -34,6 +36,7 @@ export async function verifyCanonical(session: Session) {
   for (const table of canonicalTables()) {
     const actual = await session.json<unknown[]>(
       `select coalesce(jsonb_agg(to_jsonb(t)), '[]') from (select ${table.columns.map((column) => identifier(column.name)).join(",")} from public.${identifier(table.table)} order by ${table.key.map(identifier).join(",")}) t;`,
+      "CANONICAL",
     );
     // Key ordering from referenceTables is JS string ordering, not PostgreSQL collation.
     const rows = (values: unknown[]) => values.map((row) => JSON.stringify(normalize(row))).sort();
@@ -66,30 +69,78 @@ export type Inventory = {
 export async function inventory(session: Session) {
   return session.json<Inventory>(
     readFileSync(path.join(ROOT, "scripts/postgres/inventory.sql"), "utf8"),
+    "SCHEMA",
   );
 }
 
-export async function verifyAccess(session: Session, managed: boolean) {
-  const result = await session.json<Record<string, boolean>>(`select jsonb_build_object(
+export async function verifyAccess(session: Session, managed: boolean, production = false) {
+  // Consultation applies only to this source-hash-checked registry, never every public object.
+  const approvedTables = production
+    ? canonicalTables()
+        .map((table) => "'" + table.table.replaceAll("'", "''") + "'")
+        .join(",")
+    : "";
+  const auditTableException = production
+    ? ` and not exists (select 1 from pg_roles ar where ar.rolname='${PRODUCTION_AUDIT_ROLE}'
+        and ar.oid=a.grantee and c.relowner=(select oid from pg_roles where rolname=current_user)
+        and c.relkind='r' and c.relname in (${approvedTables})
+        and a.privilege_type='SELECT' and not a.is_grantable)`
+    : "";
+  const auditTableGuard = production
+    ? ` and ${auditRoleGuardSql()}
+      and not exists (select 1 from pg_roles ar cross join pg_class c join pg_namespace n on n.oid=c.relnamespace
+        where ar.rolname='${PRODUCTION_AUDIT_ROLE}' and n.nspname='public' and c.relkind in ('r','p')
+        and (has_table_privilege(ar.oid,c.oid,'INSERT,UPDATE,DELETE,TRUNCATE,REFERENCES,TRIGGER,SELECT WITH GRANT OPTION')
+          or has_any_column_privilege(ar.oid,c.oid,'INSERT,UPDATE,REFERENCES,SELECT WITH GRANT OPTION')))
+      and not exists (select 1 from pg_class c join pg_namespace n on n.oid=c.relnamespace
+        join pg_attribute col on col.attrelid=c.oid and col.attnum>0 and not col.attisdropped
+        cross join lateral aclexplode(col.attacl) ca
+        where n.nspname='public' and c.relkind in ('r','p') and ca.grantee<>c.relowner
+        and ca.grantee<>(select oid from pg_roles where rolname=current_user)
+        and not exists (select 1 from pg_roles mr where mr.rolname='congofoot' and mr.oid=ca.grantee))`
+    : "";
+  const auditFunctionGuard = production
+    ? ` and not exists (select 1 from pg_roles ar cross join pg_proc p join pg_namespace n on n.oid=p.pronamespace
+      where ar.rolname='${PRODUCTION_AUDIT_ROLE}' and n.nspname in ('public','private') and has_function_privilege(ar.oid,p.oid,'EXECUTE'))`
+    : "";
+  const historyGuard = production
+    ? ` and not exists (select 1 from pg_class hc join pg_namespace hn on hn.oid=hc.relnamespace
+        cross join lateral aclexplode(coalesce(hc.relacl,acldefault('r',hc.relowner))) ha
+        where hn.nspname='teka_migrations' and hc.relname='history' and ha.grantee<>hc.relowner
+        and ha.grantee<>(select oid from pg_roles where rolname=current_user)
+        and not exists (select 1 from pg_roles mr where mr.rolname='congofoot' and mr.oid=ha.grantee))
+      and not exists (select 1 from pg_class hc join pg_namespace hn on hn.oid=hc.relnamespace
+        join pg_attribute col on col.attrelid=hc.oid and col.attnum>0 and not col.attisdropped
+        cross join lateral aclexplode(col.attacl) ha
+        where hn.nspname='teka_migrations' and hc.relname='history' and ha.grantee<>hc.relowner
+        and ha.grantee<>(select oid from pg_roles where rolname=current_user)
+        and not exists (select 1 from pg_roles mr where mr.rolname='congofoot' and mr.oid=ha.grantee))`
+    : "";
+  let value: unknown;
+  try {
+    value = await session.json<unknown>(`select jsonb_build_object(
     'rls', not exists (select 1 from pg_class c join pg_namespace n on n.oid=c.relnamespace where n.nspname='public' and c.relkind in ('r','p') and not c.relrowsecurity),
     'policies', not exists (select 1 from pg_policies where schemaname='public'),
-    'table_privileges', not exists (select 1 from pg_class c join pg_namespace n on n.oid=c.relnamespace cross join lateral aclexplode(coalesce(c.relacl,acldefault('r',c.relowner))) a where n.nspname='public' and c.relkind in ('r','p') and a.grantee not in (c.relowner,(select oid from pg_roles where rolname=current_user)${managed ? ", (select oid from pg_roles where rolname='congofoot')" : ""})),
-    'function_privileges', not exists (select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace cross join lateral aclexplode(coalesce(p.proacl,acldefault('f',p.proowner))) a where n.nspname='private' and (p.prosecdef or a.grantee not in (p.proowner,(select oid from pg_roles where rolname=current_user)${managed ? ", (select oid from pg_roles where rolname='congofoot')" : ""}))),
-    'schema_privileges', not exists (select 1 from pg_namespace n cross join lateral aclexplode(coalesce(n.nspacl,acldefault('n',n.nspowner))) a where n.nspname in ('private','teka_migrations') and a.grantee not in (n.nspowner,(select oid from pg_roles where rolname=current_user)${managed ? ", (select oid from pg_roles where rolname='congofoot')" : ""})),
+    'table_privileges', not exists (select 1 from pg_class c join pg_namespace n on n.oid=c.relnamespace cross join lateral aclexplode(coalesce(c.relacl,acldefault('r',c.relowner))) a where n.nspname='public' and c.relkind in ('r','p') and a.grantee <> c.relowner and a.grantee <> (select oid from pg_roles where rolname=current_user)${managed ? " and not exists (select 1 from pg_roles r where r.rolname='congofoot' and r.oid=a.grantee)" : ""}${auditTableException})${auditTableGuard},
+    'function_privileges', not exists (select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace cross join lateral aclexplode(coalesce(p.proacl,acldefault('f',p.proowner))) a where n.nspname='private' and (p.prosecdef or a.grantee <> p.proowner and a.grantee <> (select oid from pg_roles where rolname=current_user)${managed ? " and not exists (select 1 from pg_roles r where r.rolname='congofoot' and r.oid=a.grantee)" : ""}))${auditFunctionGuard},
+    'schema_privileges', not exists (select 1 from pg_namespace n cross join lateral aclexplode(coalesce(n.nspacl,acldefault('n',n.nspowner))) a where n.nspname in ('private','teka_migrations') and a.grantee <> n.nspowner and a.grantee <> (select oid from pg_roles where rolname=current_user)${managed ? " and not exists (select 1 from pg_roles r where r.rolname='congofoot' and r.oid=a.grantee)" : ""})${historyGuard},
     'public_schema_create', not exists (select 1 from pg_namespace n cross join lateral aclexplode(coalesce(n.nspacl,acldefault('n',n.nspowner))) a where n.nspname='public' and a.grantee=0 and a.privilege_type='CREATE'),
-    'cross_environment_isolation', ${managed ? "not has_database_privilege(current_user,'congofoot_teka_edu_prod','CONNECT')" : "true"},
+    'cross_environment_isolation', ${managed ? `not has_database_privilege(current_user,'${production ? "congofoot_teka_edu_dev" : "congofoot_teka_edu_prod"}','CONNECT')` : "true"},
     'btree_gist', exists (select 1 from pg_extension where extname='btree_gist')
   );`);
-  if (Object.values(result).some((passed) => !passed))
-    throw new Error(
-      `Access/security check failed: ${Object.entries(result)
-        .filter(([, passed]) => !passed)
-        .map(([key]) => key)
-        .join(", ")}`,
-    );
-  const privileges = await session.json<unknown[]>(
-    readFileSync(path.join(ROOT, "scripts/postgres/access-inventory.sql"), "utf8"),
-  );
+  } catch (error: unknown) {
+    if (error instanceof PostgresJsonResultError)
+      throw new AccessValidationError("ACCESS_RESULT_PARSE");
+    throw error; // SQLSTATE/client diagnostics retain their original classification.
+  }
+  const result = validateAccessResult(value);
+  let sql: string;
+  try {
+    sql = readFileSync(path.join(ROOT, "scripts/postgres/access-inventory.sql"), "utf8");
+  } catch {
+    throw new AccessValidationError("ACCESS_INVENTORY_READ");
+  }
+  const privileges = await session.json<unknown[]>(sql, "ACCESS");
   return { ...result, privileges };
 }
 
@@ -150,7 +201,7 @@ export async function behavioralTests(session: Session, inTransaction = false) {
           "rollback to savepoint teka_integrity; release savepoint teka_integrity;\n",
         );
     }
-    const output = await session.query(sql);
+    const output = await session.query(sql, "INTEGRITY");
     if (!output.includes("assertions passed:"))
       throw new Error(`Incomplete managed assertion suite: ${filename}`);
     results.push({ filename, assertions: Number(output.match(/assertions passed: (\d+)/)?.[1]) });
@@ -166,10 +217,10 @@ export async function syncIdempotency(session: Session) {
       throw new Error("Idempotency verification requires PostgreSQL track_counts");
     const counters =
       "select coalesce(jsonb_object_agg(relname,n_tup_ins+n_tup_upd+n_tup_del),'{}') from pg_stat_xact_user_tables where schemaname='public';";
-    const before = await session.json<Record<string, number>>(counters);
-    await session.query(referenceSyncSql(getReferenceData()));
+    const before = await session.json<Record<string, number>>(counters, "IDEMPOTENCY");
+    await session.query(referenceSyncSql(getReferenceData()), "IDEMPOTENCY");
     await verifyCanonical(session);
-    const after = await session.json<Record<string, number>>(counters);
+    const after = await session.json<Record<string, number>>(counters, "IDEMPOTENCY");
     const mutations = Object.entries(after)
       .map(([table, count]) => ({ table, changes: count - (before[table] ?? 0) }))
       .filter(({ changes }) => changes !== 0);

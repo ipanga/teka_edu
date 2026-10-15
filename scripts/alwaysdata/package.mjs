@@ -13,6 +13,7 @@ import path from "node:path";
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
 import { pathToFileURL } from "node:url";
+import { releaseMetadata } from "./targets.mjs";
 export const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
 export function inventory(root) {
   const files = [];
@@ -38,8 +39,8 @@ export function inventory(root) {
   walk(root);
   return files.sort((a, b) => a.path.localeCompare(b.path));
 }
-export function packageRelease(root, output, sha) {
-  if (!/^[a-f0-9]{40}$/.test(sha)) throw new Error("Full Git SHA required");
+export function packageRelease(root, output, sha, targetName = "staging") {
+  const metadata = releaseMetadata(sha, targetName);
   for (const file of [".next/standalone/server.js", ".next/static", "public"])
     if (!existsSync(path.join(root, file))) throw new Error("Missing standalone build: " + file);
   const payload = path.join(output, "payload");
@@ -66,14 +67,8 @@ export function packageRelease(root, output, sha) {
     dereference: true,
   });
   cpSync(path.join(root, "scripts/alwaysdata/runtime.mjs"), path.join(payload, "runtime.mjs"));
-  writeFileSync(
-    path.join(payload, "release.json"),
-    JSON.stringify(
-      { sha, environment: "staging", url: "https://staging-tekaedu.tootiye.com", node_major: 22 },
-      null,
-      2,
-    ) + "\n",
-  );
+  cpSync(new URL("./targets.mjs", import.meta.url), path.join(payload, "targets.mjs"));
+  writeFileSync(path.join(payload, "release.json"), JSON.stringify(metadata, null, 2) + "\n");
   const files = inventory(payload);
   const forbidden = [
     process.env.SUPABASE_SECRET_KEY,
@@ -104,4 +99,6 @@ export function packageRelease(root, output, sha) {
   return { archive, files: files.length };
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href)
-  console.log(packageRelease(process.cwd(), path.resolve(process.argv[2]), process.argv[3]));
+  console.log(
+    packageRelease(process.cwd(), path.resolve(process.argv[2]), process.argv[3], process.argv[4]),
+  );

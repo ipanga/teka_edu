@@ -2,10 +2,15 @@
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { isDeepStrictEqual } from "node:util";
+import { releaseMetadata, deploymentTarget } from "./targets.mjs";
 const __dirname = import.meta.dirname;
 const release = JSON.parse(fs.readFileSync(path.join(__dirname, "release.json"), "utf8"));
 if (!/^[a-f0-9]{40}$/.test(release.sha) || Number(process.versions.node.split(".")[0]) !== 22)
   throw new Error("Reviewed full release SHA and Node22 required");
+if (!isDeepStrictEqual(release, releaseMetadata(release.sha, release.environment)))
+  throw new Error("Release target metadata mismatch");
+const target = deploymentTarget(release.environment);
 if (
   !process.env.IP ||
   !process.env.PORT ||
@@ -24,8 +29,8 @@ for (const name of Object.keys(process.env)) {
 Object.assign(process.env, {
   NODE_ENV: "production",
   HOSTNAME: process.env.IP,
-  NEXT_PUBLIC_APP_ENV: "staging",
-  NEXT_PUBLIC_APP_URL: "https://staging-tekaedu.tootiye.com",
+  NEXT_PUBLIC_APP_ENV: target.environment,
+  NEXT_PUBLIC_APP_URL: target.url,
   NEXT_PUBLIC_DEFAULT_LOCALE: "fr",
   NEXT_PUBLIC_DEFAULT_COUNTRY: "CD",
   NEXT_PUBLIC_ENABLE_ENGLISH_SCAFFOLDING: "true",

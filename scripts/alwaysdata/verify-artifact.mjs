@@ -5,7 +5,9 @@ import path from "node:path";
 import { execFileSync, spawn } from "node:child_process";
 import { setTimeout } from "node:timers/promises";
 import { assertHealth } from "./site.mjs";
+import { deploymentTarget } from "./targets.mjs";
 const directory = path.resolve(process.argv[2]);
+const target = deploymentTarget(process.argv[3]);
 const artifact = JSON.parse(fs.readFileSync(path.join(directory, "artifact.json")));
 const root = fs.mkdtempSync(path.join(os.tmpdir(), "teka-artifact-"));
 let server;
@@ -17,12 +19,13 @@ try {
       "-c",
       `import importlib.util,pathlib,sys
 s=importlib.util.spec_from_file_location('release',sys.argv[1]);m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
-m.install(pathlib.Path(sys.argv[2]),pathlib.Path(sys.argv[3]),sys.argv[4],sys.argv[5])`,
+m.install(pathlib.Path(sys.argv[2]),pathlib.Path(sys.argv[3]),sys.argv[4],sys.argv[5],sys.argv[6])`,
       path.resolve("scripts/alwaysdata/remote.py"),
       root,
       path.join(directory, "release.tar.gz"),
       artifact.sha,
       artifact.sha256,
+      target.environment,
     ],
     { stdio: "inherit" },
   );
@@ -40,7 +43,7 @@ m.install(pathlib.Path(sys.argv[2]),pathlib.Path(sys.argv[3]),sys.argv[4],sys.ar
         signal: AbortSignal.timeout(2000),
       });
       if (!response.ok) throw new Error("HTTP health failure");
-      assertHealth(await response.json(), artifact.sha);
+      assertHealth(await response.json(), artifact.sha, target.environment);
       ready = true;
       break;
     } catch {
@@ -56,7 +59,7 @@ m.install(pathlib.Path(sys.argv[2]),pathlib.Path(sys.argv[3]),sys.argv[4],sys.ar
   if (!response.ok || hash(Buffer.from(await response.arrayBuffer())) !== media.sha256)
     throw new Error("Artifact public media serving differs from manifest");
   console.log(
-    "PASS: immutable standalone artifact, Node22 startup, strict staging health and public media",
+    `PASS: immutable standalone artifact, Node22 startup, strict ${target.environment} health and public media`,
   );
 } finally {
   if (server && server.exitCode === null) {

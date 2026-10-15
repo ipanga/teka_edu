@@ -1,0 +1,698 @@
+{
+  "preparation_only": true,
+  "production_execution_authorized": false,
+  "source_reference_head": "895ed054cff4fa4e97ebdbfa7b29db1c3ed5ded6",
+  "canonical_source_sha256": "5771b03bf6b4db7db6408b445de897fed3bbe5dc282d7871f8e5a00fca9805cb",
+  "historical_digests_source_sha256": "8588931baed5ec3b6c1f27b3a38a32651d36cd67c3633fa377eff1096345f67c",
+  "schema_inventory_source_sha256": "6ac61a2e220c366798fdfd3b17947835cf86787b77985310a8f73ef8486792fa",
+  "historical_provider_usage_source_sha256": "682345d46a8a6b0a60651a23b6cb796055da85ad7e463955cef951d179ca2742",
+  "evidenced_application_namespaces": ["public", "private"],
+  "evidenced_supporting_namespaces": ["extensions", "supabase_migrations", "auth", "storage"],
+  "provider_allowlist_complete": false,
+  "backup_scope": "NOT VERIFIED",
+  "rebuild_scope": "NOT VERIFIED",
+  "owner_namespace_classification_required": true,
+  "inspection_scope": "APPROVED_41_HEAP_RELATIONS_ONLY",
+  "backup_size_estimate": "HEURISTIC: archive=2*database+1GiB; working=3*archive+2*database+8GiB; not guaranteed archive size or an upper bound",
+  "canonical_serialization": "PG17 jsonb text of explicit column-order arrays; SHA256 per row; sort lowercase row digests in C order; SHA256 of concatenation; duplicate multiplicity retained",
+  "application_tables": 36,
+  "application_columns": 213,
+  "canonical_rows": 6170,
+  "canonical_tables": [
+    {
+      "table": "education_stages",
+      "columns": ["id", "position", "name"],
+      "rows": 1,
+      "sha256": "caffaf5579cfa73a5c000923baf2228278cb74df04860d5f7e7e21878ccf4431"
+    },
+    {
+      "table": "school_levels",
+      "columns": ["id", "stage_id", "position", "name"],
+      "rows": 3,
+      "sha256": "afc88eb55760451fdcbabd990d18a8c8802d62f82a624fc0f52c7351f76aa273"
+    },
+    {
+      "table": "school_years",
+      "columns": [
+        "id",
+        "label",
+        "starts_on",
+        "ends_on",
+        "instructional_weekdays",
+        "authority",
+        "verification",
+        "source",
+        "notes"
+      ],
+      "rows": 1,
+      "sha256": "2f219b27960d51898c4bb95f4ff234f3f4d0c18fb6d70a821c5f4c71c1e5def8"
+    },
+    {
+      "table": "school_periods",
+      "columns": ["school_year_id", "position", "term", "starts_on", "ends_on"],
+      "rows": 6,
+      "sha256": "daf2e82d0aac6d1735ab81e4812f893b35aff6b78c6a37aa6fe83e6eb4862230"
+    },
+    {
+      "table": "public_holidays",
+      "columns": [
+        "id",
+        "name",
+        "month",
+        "day",
+        "valid_from",
+        "valid_until",
+        "authority",
+        "verification",
+        "source",
+        "notes"
+      ],
+      "rows": 10,
+      "sha256": "791d78381d28b1efc2ce2a9dc57ee727f96d4af58a08337c84b0410ee1b99675"
+    },
+    {
+      "table": "calendar_exceptions",
+      "columns": [
+        "id",
+        "school_year_id",
+        "kind",
+        "starts_on",
+        "ends_on",
+        "name",
+        "public_holiday_id",
+        "authority",
+        "verification",
+        "source",
+        "notes"
+      ],
+      "rows": 4,
+      "sha256": "fa6e6fd9c1c27f23857ec54c6fc186eaa31691fa98fede890d17c4593409b758"
+    },
+    {
+      "table": "curricula",
+      "columns": [
+        "id",
+        "stage_id",
+        "name",
+        "version",
+        "status",
+        "reference_title",
+        "reference_publisher",
+        "reference_citation",
+        "reference_url",
+        "reference_verification",
+        "adaptation_note"
+      ],
+      "rows": 1,
+      "sha256": "1dc4e627dcdc21bce711d13de62bfa26491513f47e0fa7c404251a7a51341cd8"
+    },
+    {
+      "table": "curriculum_age_bands",
+      "columns": ["curriculum_id", "code", "position", "label"],
+      "rows": 3,
+      "sha256": "a145853a1cd711b0dfb1efa5cf409e2608b465da24b476c920073c0c62f588f1"
+    },
+    {
+      "table": "curriculum_levels",
+      "columns": ["curriculum_id", "level_id", "stage_id", "reference_section", "age_band_code"],
+      "rows": 3,
+      "sha256": "d1755088454920da79b7d052264a6cbf4656d63e1452b9563bd2214b4ebcae15"
+    },
+    {
+      "table": "curriculum_domains",
+      "columns": ["curriculum_id", "code", "kind", "position", "title", "is_active"],
+      "rows": 6,
+      "sha256": "c5fd4c37608a6d3690f093d30a28d111ac37269a50b9acf8615f673a24e11531"
+    },
+    {
+      "table": "curriculum_sources",
+      "columns": [
+        "curriculum_id",
+        "code",
+        "title",
+        "citation",
+        "url",
+        "published_on",
+        "sha256",
+        "verification"
+      ],
+      "rows": 3,
+      "sha256": "c108efe2c4be260615b38f1a2068c395773783704ba098bab0ec71bc40535950"
+    },
+    {
+      "table": "curriculum_source_domains",
+      "columns": ["curriculum_id", "source_code", "domain_code"],
+      "rows": 6,
+      "sha256": "86da9155159a97715fdea7eb88624f687781f7a3f9cefa03910467cb9de1dc5b"
+    },
+    {
+      "table": "curriculum_subdomains",
+      "columns": ["curriculum_id", "code", "domain_code", "position", "title"],
+      "rows": 19,
+      "sha256": "9c468e8e3aec24ca20bdc6f06787d3aa6e6b64358f47962afbec09589ce65635"
+    },
+    {
+      "table": "curriculum_competencies",
+      "columns": ["curriculum_id", "code", "subdomain_code", "position", "title"],
+      "rows": 38,
+      "sha256": "b96c32ddf20ed18e7c7f7a1d26d499321afda0ab6c5e07e8b1a231558346cfe1"
+    },
+    {
+      "table": "learning_objectives",
+      "columns": [
+        "curriculum_id",
+        "code",
+        "competency_code",
+        "position",
+        "statement",
+        "group_title",
+        "origin",
+        "source_code",
+        "source_page"
+      ],
+      "rows": 398,
+      "sha256": "6475cb51575845f5aec56a7ad0916694677413d0e7416dede6da7b21f4eaf719"
+    },
+    {
+      "table": "learning_objective_age_bands",
+      "columns": ["curriculum_id", "objective_code", "age_band_code"],
+      "rows": 417,
+      "sha256": "70443d144c5d61393ec8c72e2ee346a438fcc97d19b8b72f60eb5ce695329c1a"
+    },
+    {
+      "table": "success_examples",
+      "columns": [
+        "curriculum_id",
+        "competency_code",
+        "age_band_code",
+        "position",
+        "statement",
+        "group_title",
+        "source_code",
+        "source_page"
+      ],
+      "rows": 529,
+      "sha256": "aa686f5e2420d941b522ea8e61d67f6a271abb8ef46391698b5a675e463f3382"
+    },
+    {
+      "table": "materials",
+      "columns": ["code", "name", "category", "alternatives", "safety_note"],
+      "rows": 19,
+      "sha256": "e4fea9d5e8cd84bcf21b176d95e08baf10ac70753f44fc957f8854da21d055b6"
+    },
+    {
+      "table": "activity_types",
+      "columns": ["code"],
+      "rows": 15,
+      "sha256": "9425cf13859ef1dc0098bc93161975c7d35b4082c768bd04ce3f82ae4d48ae87"
+    },
+    {
+      "table": "lessons",
+      "columns": [
+        "id",
+        "curriculum_id",
+        "domain_code",
+        "title",
+        "summary",
+        "stage",
+        "difficulty",
+        "theme_id",
+        "parent_guidance",
+        "origin",
+        "status",
+        "reviewer",
+        "reviewer_role",
+        "reviewed_on",
+        "reviewed_digest",
+        "review_notes",
+        "review_kind",
+        "review_outcome"
+      ],
+      "rows": 264,
+      "sha256": "6ffe7f6d83cd8ba5220c8f0f14e2333900b0786c7e68cdd2478bd00a78a20f20"
+    },
+    {
+      "table": "lesson_levels",
+      "columns": ["lesson_id", "level_id"],
+      "rows": 264,
+      "sha256": "77d5ed3b0006d45a66f181c0f06fdc613d0693490fad386acec85c363bc1c778"
+    },
+    {
+      "table": "lesson_objectives",
+      "columns": ["lesson_id", "curriculum_id", "objective_code", "role"],
+      "rows": 620,
+      "sha256": "4546bdac3518771b2c38ece22b591a34dfb47caa1775c534bcb8bf7138869373"
+    },
+    {
+      "table": "activities",
+      "columns": [
+        "id",
+        "lesson_id",
+        "curriculum_id",
+        "position",
+        "type",
+        "title",
+        "child_instruction",
+        "adult_guidance",
+        "minutes",
+        "mode",
+        "role",
+        "payload"
+      ],
+      "rows": 471,
+      "sha256": "f4b7170459eca57e5dab1fc5d173198c00fd790a5e8eaf172cccc9cc5af747a3"
+    },
+    {
+      "table": "media_assets",
+      "columns": ["id", "kind", "file", "alt", "origin", "provenance"],
+      "rows": 54,
+      "sha256": "e12d5c5d2de88653eb4088019e8e6658924b57adbf7f20999cd2e9ebb6a83c0b"
+    },
+    {
+      "table": "media_asset_tags",
+      "columns": ["media_id", "position", "tag"],
+      "rows": 178,
+      "sha256": "66daf53b9fd16772cd58b011a9114957edc63f9bb7d1afc0a00bedad90ebf0d2"
+    },
+    {
+      "table": "activity_media",
+      "columns": ["activity_id", "position", "media_id"],
+      "rows": 140,
+      "sha256": "7f29209082bd63d6b40fdd3317a913a62780c2547ca822d30b5ff56d408c440c"
+    },
+    {
+      "table": "activity_objectives",
+      "columns": ["activity_id", "curriculum_id", "objective_code"],
+      "rows": 706,
+      "sha256": "1fc3ec5a6943f0209300b9438fff81e3ef3ce932ba2c2afc1925dead50b916b4"
+    },
+    {
+      "table": "activity_materials",
+      "columns": ["activity_id", "material_code"],
+      "rows": 653,
+      "sha256": "ce2382fc85ad55d99e6d7ff3572f52c7215e7a93bb205ec90cffa9677187b141"
+    },
+    {
+      "table": "activity_vocabulary",
+      "columns": ["activity_id", "position", "french", "english"],
+      "rows": 388,
+      "sha256": "88099102febeb41d4ecc558dccb0fd871ec75d23130fe1be02b0b2cca894b548"
+    },
+    {
+      "table": "activity_scaffolds",
+      "columns": ["activity_id", "language", "child_instruction"],
+      "rows": 463,
+      "sha256": "d68b529c06f6fa7cf67e1c9911485af0e8e57f03b56af04edaf5b94df23b8a86"
+    },
+    {
+      "table": "teaching_texts",
+      "columns": ["id", "kind", "title", "minutes", "origin", "provenance", "illustration_id"],
+      "rows": 21,
+      "sha256": "3f5db4dfe43199b64216debc87ef030754160abf625184080788c5f4654fc4f5"
+    },
+    {
+      "table": "teaching_text_lines",
+      "columns": ["text_id", "position", "line"],
+      "rows": 173,
+      "sha256": "918b5fb3a7fd841e800db3a76b5a2fed1b012bd10ba1e338aeda95262ac1304f"
+    },
+    {
+      "table": "annual_plans",
+      "columns": ["id", "curriculum_id", "level_id", "school_year_id", "instructional_days"],
+      "rows": 2,
+      "sha256": "903179f8ca817e5915fb26673b11e6400d12d4093995a1306f59fdb21956ef8d"
+    },
+    {
+      "table": "annual_plan_phases",
+      "columns": ["plan_id", "code", "name", "from_day", "to_day", "focus"],
+      "rows": 12,
+      "sha256": "78f8f1493147f9ffabdbc23e7266fbef63c99ab8410fc9019050a07f64431cc8"
+    },
+    {
+      "table": "annual_plan_entries",
+      "columns": [
+        "plan_id",
+        "curriculum_id",
+        "objective_code",
+        "domain_code",
+        "phase",
+        "introduce_from_day",
+        "introduce_by_day",
+        "reinforce_until_day",
+        "consolidate_by_day",
+        "planned_revisits",
+        "cadence",
+        "needs_dedicated_lesson",
+        "embeddable",
+        "home_feasibility"
+      ],
+      "rows": 278,
+      "sha256": "bba45163f43bbecda238601833f06e324c0fe0e35373ee4b0492ec428d667f78"
+    },
+    {
+      "table": "school_year_curricula",
+      "columns": ["school_year_id", "stage_id", "curriculum_id"],
+      "rows": 1,
+      "sha256": "1ce5e96a21b0c2ab4ffe7e9c0931804d3605786fa55c8c427293aee448fff756"
+    }
+  ],
+  "migrations": 46,
+  "history_sha256": "c0deeb4439a335b6ae73bb8b2d1df1212a895c43979d7fd642137528fed7d375",
+  "history": [
+    {
+      "version": "20260911203000",
+      "name": "educational_foundation",
+      "statement_count": 50,
+      "joined_sha256": "40516e854fe448f3fb3566aa73f4074b695576940e977345e9ac78c4bafba6d4",
+      "full_row_sha256": "54ec74b6049e83eace691749ec2563faedc4bcbba3b551b21c9fb7d733771dcd"
+    },
+    {
+      "version": "20260911204157",
+      "name": "reference_data_2026_2027",
+      "statement_count": 20,
+      "joined_sha256": "6ee50974277acfa479bc2a385b911670523e1af634d769e3f2502d65da4fe86b",
+      "full_row_sha256": "609d7333762bfab61ff7a56b17be2571af689dd18ac4b43805954d0601aa587b"
+    },
+    {
+      "version": "20260911222600",
+      "name": "curriculum_objectives_and_lessons",
+      "statement_count": 71,
+      "joined_sha256": "ece9a506a0cd98ef2b78c5201d1c721388260d38e28729d36a6e2ef8720d71ec",
+      "full_row_sha256": "7c8fb067a74b6c1b7ec2b253d9e31beb8599b3a0d6e8b9f4c838090c5e6bb50b"
+    },
+    {
+      "version": "20260911222858",
+      "name": "curriculum_objectives_and_pilot_lessons",
+      "statement_count": 56,
+      "joined_sha256": "599f46cdbcbe12bf0b9c453e4ff2b366613f3e77e39fdcb3dfde91e9ed1e225d",
+      "full_row_sha256": "c3a9409a3ebfe27a2c871b5bc72f6695923d34665099dbe67ff26bd06c022450"
+    },
+    {
+      "version": "20260912002000",
+      "name": "content_quality_gate",
+      "statement_count": 17,
+      "joined_sha256": "da0e325c01673bad02339f9c1f3b80107bd1e144c8c9c155aa70826d379c0d50",
+      "full_row_sha256": "87aeb87d1a46977d5beb088508ede56e328abfcff8133e8a617f80bedb1be41c"
+    },
+    {
+      "version": "20260912091922",
+      "name": "content_quality_gate_data",
+      "statement_count": 56,
+      "joined_sha256": "b2116711d73446c2139ee3aa86b2ab6c1f315ee36597df9bcae0405fcd8d4b1d",
+      "full_row_sha256": "2c50103f5d92488ed8403b6f5017693d9b2f406dcebb48520efe63049ef05fe4"
+    },
+    {
+      "version": "20260912120000",
+      "name": "september_programme",
+      "statement_count": 19,
+      "joined_sha256": "c67baf691e6e7ebd5167e78e09f8368c2d1b0a729d721e6abc0902060dc0df45",
+      "full_row_sha256": "57c87062eb6023bc569a9a68ef6f2ef7fa176f92d3f9481d6809ce7144a6352a"
+    },
+    {
+      "version": "20260912175902",
+      "name": "september_programme_data",
+      "statement_count": 66,
+      "joined_sha256": "8204cb54a3ba8e7985d5a3a8ceb03df17484c8a710969b8a2a8c31d3d884abe9",
+      "full_row_sha256": "d0049ffddd3ec1f85a257a3105606bd750de10afafffb059de83dafa2c44196a"
+    },
+    {
+      "version": "20260912200000",
+      "name": "media_assets",
+      "statement_count": 11,
+      "joined_sha256": "73097d44551256de6144dd79102ca562942283d8e849b857ccdd06f6d9bfc343",
+      "full_row_sha256": "af1585eb2f6e8c0081770b130d8ae801818e9bfcd7324130ffa4e461ea9868ad"
+    },
+    {
+      "version": "20260912202935",
+      "name": "media_registry_data",
+      "statement_count": 72,
+      "joined_sha256": "5a184e7ffd566cbaea7aec5cf1a5c91f93462db8f9a1f9c83ce1f69005b140de",
+      "full_row_sha256": "b1be966f4030d51df3df678344c0ed95fe592c4c7b6302eb0063c9d6e609dfb9"
+    },
+    {
+      "version": "20260913060000",
+      "name": "media_illustrations",
+      "statement_count": 4,
+      "joined_sha256": "38df5ccb1aae884e649efe302284723c19ce50ad099075ba4e40d35d16090565",
+      "full_row_sha256": "282a109f346812209a4048635b35477ce2bc493c0582df3f5b8956a3386947e5"
+    },
+    {
+      "version": "20260913065828",
+      "name": "media_illustrations_data",
+      "statement_count": 72,
+      "joined_sha256": "9b1d51aed7b0ac7920402fd52260d678fb356f1e5292b9d4c1927db317b848e7",
+      "full_row_sha256": "4611a9f759bbb4993c2886b013b00bf190dcfa6230c2d04e4f30ca657bfcdd05"
+    },
+    {
+      "version": "20260914200033",
+      "name": "week1_review_corrections",
+      "statement_count": 72,
+      "joined_sha256": "a3316e3f4007ece055ac8fb130c979b037f886b4751e22035f4c722af05311ea",
+      "full_row_sha256": "f69208140f6b163c9b6be9846bb37681d4ad8c6ffcb6abebdfb7faa01dbbc701"
+    },
+    {
+      "version": "20260915090000",
+      "name": "review_kind",
+      "statement_count": 7,
+      "joined_sha256": "f2f227b4d215c41f748640ccd33c1d7138b4f400b9de065ba73f805516fd9d40",
+      "full_row_sha256": "7af7ad361c933c47555ecffacec99eb9a60674d6740b404c101e0e79dc9c8007"
+    },
+    {
+      "version": "20260915100000",
+      "name": "maternelle_1_september",
+      "statement_count": 72,
+      "joined_sha256": "26267605b6d613946694debaafe2d781e85c4b2cc4edae1609ac82b46a3a48b0",
+      "full_row_sha256": "c3b0e42f77e979e08db44f2fd00d4067139fa1847840e3cc18824790c2261649"
+    },
+    {
+      "version": "20260915110000",
+      "name": "maternelle_1_week_1_corrections",
+      "statement_count": 72,
+      "joined_sha256": "942cec5b9c5f04541ea419839b79d7c558b5e849f957c8f727506cd2deaf5d3c",
+      "full_row_sha256": "a1303c1a27b6231c0e1b4a671f7a41927e6dadec33ba4c9089ac15bccd18b3c8"
+    },
+    {
+      "version": "20260915120000",
+      "name": "week_1_approved_and_progression",
+      "statement_count": 72,
+      "joined_sha256": "6a269a96e29ceb7f01d9e59ab2a050782a920b174f0f7f63df669c08125fbeaa",
+      "full_row_sha256": "76c3dbc62669b4e4f4d804d444d9da44a8ea3e0874c8130aae5fa7f6767f9689"
+    },
+    {
+      "version": "20260915130000",
+      "name": "week_2_corrections",
+      "statement_count": 72,
+      "joined_sha256": "abdc453077a5048ac6b600065191c8007f268eca7be2e4d25126605e8efb4fa7",
+      "full_row_sha256": "ff651a4ddf94f44032a918d31e1a4dbd1c956bcc05496f60207c46dd89d1d97d"
+    },
+    {
+      "version": "20260915140000",
+      "name": "weeks_1_2_approved",
+      "statement_count": 72,
+      "joined_sha256": "d0f206ffa19c14fc7afd0b5e425e8720c339471c2108dd22fb99c15669069f0b",
+      "full_row_sha256": "19074f28a0af057fcf304b813d4c01d85d08f64c28b90e720e8078f4e23d501f"
+    },
+    {
+      "version": "20260915150000",
+      "name": "week_3_corrections",
+      "statement_count": 72,
+      "joined_sha256": "ec8f4725c7a39f5792e6488288ed5f5e39929b0942cdda835334e75cd51ded35",
+      "full_row_sha256": "faaff803e3a1fd2184d3d2ab832c34be739dcac174040914e87fdd4a62296a5d"
+    },
+    {
+      "version": "20260915160000",
+      "name": "week_3_approved",
+      "statement_count": 72,
+      "joined_sha256": "144ec126836967c199e4a7211f607153438bf151dcec380e9586a181604919bf",
+      "full_row_sha256": "d7ec80ac998f342426f892b71e377f2b7ef13e06afb4281c04cdf22468fb775a"
+    },
+    {
+      "version": "20260915170000",
+      "name": "week_4_corrections",
+      "statement_count": 72,
+      "joined_sha256": "f434227654edc1638d7a9500de58a4a9f5d6fa5b164ea51300fa4c1737f1c7a5",
+      "full_row_sha256": "576e18c2fe074cf1392716875919609b381c475c6d32f7623a088ebdb375ddd1"
+    },
+    {
+      "version": "20260915180000",
+      "name": "lisa_visual_and_approved_debt",
+      "statement_count": 72,
+      "joined_sha256": "fff5120a60caa5396b842f589c109b8a7dcca6d1403bac48b792bc310f3f8663",
+      "full_row_sha256": "9307a137232b72c2f1a464cb681be9537b6bd7089d5c56425c576eedfaadf49f"
+    },
+    {
+      "version": "20260915190000",
+      "name": "media_fingerprint_and_weeks_1_4",
+      "statement_count": 72,
+      "joined_sha256": "4ed79511a327b12d6d1755a908e524e5604fe433d79fab5989bc50e8260392e0",
+      "full_row_sha256": "58f2478c779d4402306aabe5da3b3a7de5156ac1ad302b621f9edb6d7c563d90"
+    },
+    {
+      "version": "20260915200000",
+      "name": "week_5_corrections",
+      "statement_count": 72,
+      "joined_sha256": "6bf17c0bf45f4cf5a8b7018d1adbb82bc9a0033211a68500884bd953287fc938",
+      "full_row_sha256": "af06c18bc87c886e4826887bf0454daa4a4fdd9895bf13a2cc88c97a85bfa25f"
+    },
+    {
+      "version": "20260915210000",
+      "name": "week_5_approved",
+      "statement_count": 72,
+      "joined_sha256": "ef1cd7b85c8917220c3c8fcc58bf2b5c4e66e9d605718937ecb4526a1fb82baf",
+      "full_row_sha256": "802099aca6b582266504bdcf50a1f0ec0680457916a5ee25ec42551c6d7fb555"
+    },
+    {
+      "version": "20260916183458",
+      "name": "week1_review_corrections_m3",
+      "statement_count": 72,
+      "joined_sha256": "7dfd88fccbf554e0ea4cf3cf40c6327fcd25e81b8c4f2f9b4873eccb251afdb7",
+      "full_row_sha256": "6fdf6b53ef05f25ac85fa2cc6ad5012250c9e8dedb55f11285dc13e041cf9995"
+    },
+    {
+      "version": "20260917132516",
+      "name": "week1_safety_and_review_scope",
+      "statement_count": 72,
+      "joined_sha256": "59be92fe02aae375fdb475f89719c2e76b508d98712efa8a8645e4fd2ef0049c",
+      "full_row_sha256": "c584fefe9b0cedc87d264c8a8e4154422bc159bea450f0f7f7c90503f1c0ec7d"
+    },
+    {
+      "version": "20260917185354",
+      "name": "approve_maternelle_3_week_1",
+      "statement_count": 72,
+      "joined_sha256": "739724d8b93198f0717287ea638f55df42344d744aa23314d5af0ea2e5815102",
+      "full_row_sha256": "553dfa1d23b4cfb49b7c86a10f929752b5bd70993e4be1db6ea616353bd77f90"
+    },
+    {
+      "version": "20260917205257",
+      "name": "week2_review_corrections",
+      "statement_count": 72,
+      "joined_sha256": "dc6d43800953a833d2c97b84ac720bc8143cfb54fcb9a3dec38522c2c307da89",
+      "full_row_sha256": "8e49db92c99c86b638b9f99aa334e918dfebeb5f3f40f406e96f54c5d99cee15"
+    },
+    {
+      "version": "20260918173226",
+      "name": "week2_second_review_and_text_digest",
+      "statement_count": 72,
+      "joined_sha256": "5cf28f82ea92e30b0807517f902d5917dee25eea485595a232ed3f2273e1c0b6",
+      "full_row_sha256": "983c3ab8af27afb3933208fc3596aeb3d61a207dbe194a0847ccdb47ff556453"
+    },
+    {
+      "version": "20260919114821",
+      "name": "week2_final_corrections",
+      "statement_count": 72,
+      "joined_sha256": "0afa498fa34b7993124b82a7767ee28e35c0de061c619fa251d3d2b98242c423",
+      "full_row_sha256": "faa75d167a50012e225b8b1689f1eed91bbcaed8e44b082bd72de81d184dabe5"
+    },
+    {
+      "version": "20260919122247",
+      "name": "approve_maternelle_3_week_2",
+      "statement_count": 72,
+      "joined_sha256": "03bce192ec0e06dea23819071f2b694e7c0f412b1003a7a4eb43961002870882",
+      "full_row_sha256": "a89fadd64fd614e4a0d7cf6cb52b57cc60900f11d367e7ca855fc5c10161c5c9"
+    },
+    {
+      "version": "20260919130752",
+      "name": "week3_review_corrections",
+      "statement_count": 72,
+      "joined_sha256": "96c0783e36fbcf184e2dd09174d7a12d928078a220d4e28d773e97aed19a183d",
+      "full_row_sha256": "34fd425e3733ed9e742512b50e02928922549bb1b89b561e7eff026fa7484072"
+    },
+    {
+      "version": "20260919174810",
+      "name": "week3_second_review",
+      "statement_count": 72,
+      "joined_sha256": "f77770150c52f8b4710c9fc7828b688202aec0a35871252037d9964961dcb1f4",
+      "full_row_sha256": "6fc5ca46bd3da79712fbe9f1feb14ebbf8d7b972b30ef83352a1d8486f1e0969"
+    },
+    {
+      "version": "20260919182510",
+      "name": "approve_maternelle_3_week_3",
+      "statement_count": 72,
+      "joined_sha256": "5e42ec35b348570052e8511dc26102d023f8cd03f3abecad3dfb8b586fd574e5",
+      "full_row_sha256": "fa81444f98b2be503f1f9767970eb1c62c3db6ffaef22da6ec51aab2d3f5ca63"
+    },
+    {
+      "version": "20260919194738",
+      "name": "week4_review_corrections",
+      "statement_count": 72,
+      "joined_sha256": "1e4f0d971aea65efc41e81aeb058d1b0154a1269b6b5b3e68fd61d4953340f32",
+      "full_row_sha256": "f1792f93ec1c508cc404fe801ae7fcff9914836f6f4fc1939ab88c1f24396969"
+    },
+    {
+      "version": "20260920083109",
+      "name": "week4_second_review_corrections",
+      "statement_count": 72,
+      "joined_sha256": "caebc1429fdeb032332b54ce9f42b304169913d89a2b20ebfed431a1d283c6c3",
+      "full_row_sha256": "75dba78e73eaa765ac601f7cd55431642089176f2a0f6aaa1fc70d0bb9cd4e13"
+    },
+    {
+      "version": "20260920134804",
+      "name": "approve_maternelle_3_week_4",
+      "statement_count": 72,
+      "joined_sha256": "780a9617c8df3ece374523ced51903716a7009484eba947d60d7a739c9cb0994",
+      "full_row_sha256": "d6d2e5dfbea684678107c12579cd14952e2029fd0e8110db07726552de2228d7"
+    },
+    {
+      "version": "20260920200532",
+      "name": "week5_review_corrections",
+      "statement_count": 72,
+      "joined_sha256": "59aeb22e8699d4f024223732a4e9eff8b73755d0b3fc3459d3a1c31b099b5048",
+      "full_row_sha256": "12dfeb35f19fcdeefda6520aa5cb47f931ddbf1c3c2c85f5c58bc7bae5a481ef"
+    },
+    {
+      "version": "20260920204404",
+      "name": "approve_maternelle_3_week_5",
+      "statement_count": 72,
+      "joined_sha256": "8f317b0fa1041f697b614dd2259e174235f285703f4dcf25d0023688e3f4cc1d",
+      "full_row_sha256": "46f047b2302831ae4e1e81514488795ba40af7a5fb208c8fe1fa9738161fce20"
+    },
+    {
+      "version": "20260923192024",
+      "name": "september_visual_upgrade",
+      "statement_count": 72,
+      "joined_sha256": "5be43a8f87d0ec75eaea98dafe1f8e694f81397893913215849676c96c5c0360",
+      "full_row_sha256": "21e02052370ca4f6d42c69584a075acd8c41feebe3780e1e60ad77cec69b83df"
+    },
+    {
+      "version": "20260926173653",
+      "name": "september_reconfirmation",
+      "statement_count": 72,
+      "joined_sha256": "66002f8a8773d8fbfa9a904d25ac78099ddca73e8c06e68d72fea5b6eb716c6b",
+      "full_row_sha256": "02fe121548265071cd1d2884c1228bd3eabcc3427d81c5de005e81edf7024638"
+    },
+    {
+      "version": "20261001192741",
+      "name": "media_asset_webp_paths",
+      "statement_count": 2,
+      "joined_sha256": "1f96940291c0fe67425d67de67cac88549a61a5fd4fa335a2c0efff5ffae6487",
+      "full_row_sha256": "4f91936d538a2bd13ecd389ee3eff1799eef5cec2dbdc481399c08e41bbd0834"
+    },
+    {
+      "version": "20261001192742",
+      "name": "final_september_rich_media_reference",
+      "statement_count": 72,
+      "joined_sha256": "4db799acc43c0090b28df1a7188d07b3df24a483f26eb0ff086e8c8ee1b14607",
+      "full_row_sha256": "58587ad3df2c64bbbbffa513359f628324970be3ef3371aa9c327460e9bab274"
+    },
+    {
+      "version": "20261003195954",
+      "name": "october_maternelle_3_approved",
+      "statement_count": 72,
+      "joined_sha256": "fa6d93b038b540efd1649d9e87c97a6c7251addff01086cb5abaf4d067c75c1e",
+      "full_row_sha256": "5536753989e779ddef29b5d980c94de35ee7a740f4ed406985ec12ef1e41b066"
+    }
+  ],
+  "application_routines": [
+    {
+      "schema": "private",
+      "name": "check_dated_row_within_school_year",
+      "source_sha256": "5186ad9ca2f61f205a36e07c3a50e723816d582aa6faa6d3f4620bf4151af87c"
+    },
+    {
+      "schema": "private",
+      "name": "check_school_year_contains_dated_rows",
+      "source_sha256": "b9c97df375756016d15135b5f1a2264bc23c680471e8aebef7280e6e3707be05"
+    }
+  ],
+  "source_query_sha256": "29830f443a6d19b24db228864319fbb43b678c3ff5b0e6c2cec53f97224859cc"
+}

@@ -67,6 +67,12 @@ export default function HomePage() {
       </section>
       <footer className="flex flex-col gap-3 border-t border-stone-200 pt-4">
         <p className="text-base text-stone-600">C’est vous qui menez la séance, avec l’enfant.</p>
+        <Link
+          href="/progression"
+          className="inline-flex min-h-11 items-center font-medium text-emerald-800 underline"
+        >
+          Transférer ma progression
+        </Link>
         <details>
           <summary className="min-h-11 cursor-pointer py-3 text-base font-medium text-stone-600">
             À propos de cette version d’essai

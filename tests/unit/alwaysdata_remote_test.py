@@ -18,8 +18,8 @@ class Releases(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.base=pathlib.Path(self.tmp.name);self.root=self.base/'site'
     def tearDown(self): self.tmp.cleanup()
-    def archive(self,sha,extra=None):
-        files={'release.json':json.dumps({'sha':sha,'environment':'staging','url':'https://staging-tekaedu.tootiye.com','node_major':22}).encode(),'server.js':b'// fixture','runtime.mjs':b'// fixture'}
+    def archive(self,sha,extra=None,target='staging'):
+        files={'release.json':json.dumps({'sha':sha,'environment':target,'url':release.deployment_target(target)['url'],'node_major':22}).encode(),'server.js':b'// fixture','runtime.mjs':b'// fixture'}
         files['manifest.json']=json.dumps({'sha':sha,'files':[{'path':p,'sha256':hashlib.sha256(data).hexdigest()} for p,data in files.items()]}).encode()
         target=self.base/(sha+'.tgz')
         with tarfile.open(target,'w:gz') as package:
@@ -59,6 +59,30 @@ class Releases(unittest.TestCase):
         archive,checksum=self.archive(sha);release.install(self.root,archive,sha,checksum)
         (self.root/'current').symlink_to(self.base)
         with self.assertRaises(ValueError):release.switch(self.root,sha)
+
+    def test_production_identity_and_first_release_pointer(self):
+        sha='c'*40;archive,checksum=self.archive(sha,target='production')
+        self.assertEqual(release.deployment_target('production')['root'],'/home/congofoot/www/tekaedu-prod')
+        for target in ['prod','local','/arbitrary/root']:
+            with self.assertRaises(ValueError):release.install(self.root,archive,sha,checksum,target)
+        with self.assertRaisesRegex(ValueError,'identity mismatch'):
+            release.install(self.root,archive,sha,checksum)
+        self.assertEqual(release.inspect_current(self.root,'production'),{'sha':None})
+        release.install(self.root,archive,sha,checksum,'production')
+        self.assertEqual(release.switch(self.root,sha,'production'),{'sha':sha,'previous':None})
+        self.assertEqual(release.inspect_current(self.root,'production'),{'sha':sha})
+        self.assertFalse((self.root/'previous').exists())
+        with self.assertRaisesRegex(ValueError,'identity mismatch'):release.switch(self.root,sha)
+        (self.root/'releases'/sha/'server.js').write_text('tampered')
+        with self.assertRaisesRegex(ValueError,'checksum'):release.inspect_current(self.root,'production')
+
+    def test_production_refuses_cross_environment_previous_release(self):
+        a,b='a'*40,'b'*40
+        archive,checksum=self.archive(a);release.install(self.root,archive,a,checksum);release.switch(self.root,a)
+        archive,checksum=self.archive(b,target='production');release.install(self.root,archive,b,checksum,'production')
+        with self.assertRaisesRegex(ValueError,'identity mismatch'):release.switch(self.root,b,'production')
+        self.assertEqual((self.root/'current').resolve().name,a)
+        self.assertFalse((self.root/'previous').exists())
 
     def test_python36_context_reproduces_post_rename_failure(self):
         destination=self.base/'renamed'
